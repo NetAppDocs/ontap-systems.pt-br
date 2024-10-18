@@ -1,0 +1,46 @@
+---
+permalink: a200/chassis-replace-complete-system-restore-rma.html 
+sidebar: sidebar 
+keywords: aff a200, verify and set HA state,  complete the replacement process 
+summary: Você deve verificar o estado de HA do chassi e devolver a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. 
+---
+= Restaure e verifique a configuração - AFF A200
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+
+
+== Etapa 1: Verifique e defina o estado HA do chassi
+
+[role="lead"]
+Você deve verificar o estado de HA do chassi e, se necessário, atualizar o estado para corresponder à configuração do sistema.
+
+.Passos
+. No modo de manutenção, a partir de qualquer um dos módulos do controlador, apresentar o estado HA do módulo do controlador local e do chassis: `ha-config show`
++
+O estado HA deve ser o mesmo para todos os componentes.
+
+. Se o estado do sistema apresentado para o chassis não corresponder à configuração do sistema:
++
+.. Defina o estado HA para o chassis: `ha-config modify chassis _HA-state_`
++
+O valor para HA-State pode ser um dos seguintes:
+
++
+*** `ha`
+*** `non-ha`
+
+
+.. Confirme se a definição foi alterada: `ha-config show`
+
+
+. Se você ainda não o fez, recable o resto de seu sistema.
+
+
+
+
+== Passo 2: Devolva a peça com falha ao NetApp
+
+Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

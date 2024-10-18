@@ -1,0 +1,32 @@
+---
+permalink: asa150/install-setup.html 
+sidebar: sidebar 
+keywords: asa a150, a150, asa, install, setup, initial configuration 
+summary: Instale e configure o sistema. 
+---
+= Comece aqui: Escolha sua experiência de instalação e configuração
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para a maioria das configurações, você pode escolher entre diferentes formatos de conteúdo.
+
+* link:../asa150/install-quick-guide.html["Passos rápidos"]
++
+Um PDF imprimível de instruções passo a passo com links em direto para conteúdo adicional.
+
+* link:../asa150/install-videos.html["Passos de vídeo"]
++
+Instruções passo a passo em vídeo.
+
+* link:../asa150/install-detailed-guide.html["Passos detalhados"]
++
+Instruções passo a passo on-line com links ao vivo para conteúdo adicional.
+
+
+
+Se o sistema estiver em uma configuração IP do MetroCluster, consulte https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/index.html["Instale a Configuração IP do MetroCluster"] as instruções.
+
+*Aviso:* se o seu sistema estiver sendo instalado com o ONTAP 9.13.1P8 - 9.13.1P11, ONTAP 9.14.1P1 - 9.14.1P7 ou ONTAP 9.15,1 - 9.15.1P2 e o seu sistema contiver 10 ou mais unidades de estado sólido internas, você deve tomar medidas adicionais para preparar o sistema para a instalação. Consulte problema  https://mysupport.netapp.com/site/bugs-online/product/ONTAP/JiraNgage/CONTAP-285173["CONTAP-285173 - ADP não deixa uma partição raiz sobressalente em um AFF A150 com 10 ou mais unidades internas"^].

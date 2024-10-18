@@ -1,0 +1,39 @@
+---
+permalink: sas3/overview-cabling-rules-examples.html 
+sidebar: sidebar 
+keywords: disk, shelves, shelf, iom12, module, single-controller, configuration, support, platform, sas, cabling, cable, rule, controller, shelf-to-shelf, connection, rule, controller-to-stack, mini-sas, hd, optical, cable, rule, sas cabling rules 
+summary: As regras, exemplos e planilhas de cabeamento SAS a seguir estão disponíveis para ajudá-lo a vincular suas gavetas de unidades SAS a IOM12 módulos ao sistema de storage. 
+---
+= Visão geral das regras de cabeamento SAS, planilhas e exemplos - prateleiras com módulos IOM12/IOM12B
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para ajudá-lo a vincular suas gavetas de unidade SAS a módulos IOM12/IOM12B ao sistema de storage, você pode usar qualquer uma das regras de cabeamento SAS, planilhas e exemplos de conteúdo disponíveis conforme necessário.
+
+*Regras e conceitos de cabeamento SAS*
+
+* link:install-cabling-rules.html#configuration-rules["Configurações"]
+* link:install-cabling-rules.html#controller-slot-numbering-rules["Numeração do slot do controlador"]
+* link:install-cabling-rules.html#shelf-to-shelf-connection-rules["Conexões de prateleira a prateleira"]
+* link:install-cabling-rules.html#controller-to-stack-connection-rules["Conexões de controlador para pilha"]
+* link:install-cabling-rules.html#mini-sas-hd-sas-optical-cable-rules["Cabos óticos Mini-SAS HD SAS"]
+* link:install-cabling-rules.html#tri-path-ha-connectivity["Conetividade HA de três vias"]
+
+
+* Folhas de trabalho de cabeamento e exemplos*
+
+* link:install-cabling-worksheets-examples-multipath.html["Configurações de HA multipath"]
+* link:install-cabling-worksheets-examples-fas2600.html["Plataformas com storage interno"]
+* link:install-worksheets-examples-quadpath.html["Configurações de HA de quatro vias"]
+
+
+*Modelos de Planilha de cabeamento*
+
+* link:install-cabling-worksheet-template-multipath.html["Conetividade multipathed"]
+* link:install-cabling-worksheet-template-quadpath.html["Conetividade de quatro vias"]
+* link:install-cabling-worksheets-how-to-read-multipath.html["Como ler uma Planilha para conetividade multipathed"]
+* link:install-cabling-worksheets-how-to-read-quadpath.html["Como ler uma Planilha para conetividade quad-pathed"]
+

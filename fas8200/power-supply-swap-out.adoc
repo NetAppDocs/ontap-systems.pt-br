@@ -1,0 +1,110 @@
+---
+permalink: fas8200/power-supply-swap-out.html 
+sidebar: sidebar 
+keywords: fas8200, swap out a power supply 
+summary: Trocar uma fonte de alimentação envolve desligar, desconetar e remover a fonte de alimentação antiga e instalar, conetar e ligar a fonte de alimentação de substituição. 
+---
+= Troque uma fonte de alimentação - FAS8200
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Trocar uma fonte de alimentação envolve desligar, desconetar e remover a fonte de alimentação antiga e instalar, conetar e ligar a fonte de alimentação de substituição.
+
+Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+
+* As fontes de alimentação são redundantes e hot-swap.
+* Este procedimento é escrito para substituir uma fonte de alimentação de cada vez.
++
+
+NOTE: É uma prática recomendada substituir a fonte de alimentação dentro de dois minutos após a remoção do chassi. O sistema continua a funcionar, mas o ONTAP envia mensagens ao console sobre a fonte de alimentação degradada até que a fonte de alimentação seja substituída.
+
+* O número de fontes de alimentação no sistema depende do modelo.
+* As fontes de alimentação são auto-variando.
++
+.. Identifique a fonte de alimentação que deseja substituir, com base em mensagens de erro do console ou através dos LEDs das fontes de alimentação.
+.. Se você ainda não está aterrado, aterre-se adequadamente.
+.. Desligue a fonte de alimentação e desligue os cabos de alimentação:
++
+... Desligue o interrutor de alimentação da fonte de alimentação.
+... Abra o retentor do cabo de alimentação e, em seguida, desligue o cabo de alimentação da fonte de alimentação.
+... Desconete o cabo de alimentação da fonte de alimentação.
+
+
+.. Prima o trinco de libertação no manípulo do excêntrico da fonte de alimentação e, em seguida, baixe o manípulo do excêntrico até à posição totalmente aberta para libertar a fonte de alimentação do plano intermédio.
++
+image::../media/drw_rxl_psu.png[Remover uma fonte de alimentação]
+
++
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+| Fonte de alimentação 
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Trinco de libertação do manípulo do excêntrico
+
+
+
+ a| 
+image:../media/icon_round_3.png["Legenda número 3"]
+ a| 
+LEDs de alimentação e falha
+
+
+
+ a| 
+image:../media/icon_round_4.png["Legenda número 4"]
+ a| 
+Pega do came
+
+
+
+ a| 
+image:../media/icon_round_5.png["Legenda número 5"]
+ a| 
+Mecanismo de bloqueio do cabo de alimentação
+
+|===
+.. Utilize a pega do came para fazer deslizar a fonte de alimentação para fora do sistema.
++
+
+CAUTION: Ao remover uma fonte de alimentação, utilize sempre duas mãos para suportar o seu peso.
+
+.. Certifique-se de que o interrutor ligar/desligar da nova fonte de alimentação está na posição desligada.
+.. Utilizando ambas as mãos, apoie e alinhe as extremidades da fonte de alimentação com a abertura no chassis do sistema e, em seguida, empurre cuidadosamente a fonte de alimentação para o chassis utilizando a pega do excêntrico.
++
+As fontes de alimentação são chaveadas e só podem ser instaladas de uma forma.
+
++
+
+NOTE: Não utilize força excessiva ao deslizar a fonte de alimentação para o sistema. Pode danificar o conetor.
+
+.. Empurre firmemente a pega do excêntrico da fonte de alimentação para a encaixar totalmente no chassis e, em seguida, empurre a pega do excêntrico para a posição fechada, certificando-se de que o trinco de libertação do manípulo do excêntrico se encaixa na posição de bloqueio.
+.. Reconecte o cabeamento da fonte de alimentação:
++
+... Volte a ligar o cabo de alimentação à fonte de alimentação e à fonte de alimentação.
+... Fixe o cabo de alimentação à fonte de alimentação utilizando o retentor do cabo de alimentação.
+
+
+
+
++
+Uma vez que a alimentação é restaurada à fonte de alimentação, o LED de estado deve estar verde.
+
++
+.. Ligue a alimentação da nova fonte de alimentação e, em seguida, verifique o funcionamento dos LEDs de atividade da fonte de alimentação.
++
+Os LEDs da fonte de alimentação acendem-se quando a fonte de alimentação se encontra online.
+
+.. Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"^] página para obter mais informações.
+
+
+

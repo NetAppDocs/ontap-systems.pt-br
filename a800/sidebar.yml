@@ -1,0 +1,79 @@
+---
+section: a800
+title: Sistemas AFF A800
+entries:
+- title: Instalar e configurar
+  pdf-filename: Instalação e configuração do AFF A800
+  entries:
+  - title: Escolha a experiência de instalação e configuração
+    url: "/a800/install-setup.html"
+  - title: Passos rápidos
+    url: "/a800/install-quick-guide.html"
+  - title: Passos de vídeo
+    url: "/a800/install-videos.html"
+  - title: Passos detalhados
+    url: "/a800/install-detailed-guide.html"
+- title: Manutenção
+  pdf-filename: Manutenção da AFF A800
+  entries:
+  - title: Visão geral
+    url: "/a800/maintain-overview.html"
+  - title: Suporte de arranque
+    pdf-filename: Mídia de inicialização do AFF A800
+    entries:
+    - title: Visão geral
+      url: "/a800/bootmedia-replace-overview.html"
+    - title: Verifique as chaves de criptografia
+      url: "/a800/bootmedia-encryption-preshutdown-checks.html"
+    - title: Desligue o controlador desativado
+      url: "/a800/bootmedia-shutdown.html"
+    - title: Substitua a imagem de inicialização
+      url: "/a800/bootmedia-replace.html"
+    - title: Imagem de recuperação de inicialização
+      url: "/a800/bootmedia-recovery-image-boot-non-2n-mcc.html"
+    - title: Restaure OKM, NSE e NVE
+      url: "/a800/bootmedia-encryption-restore.html"
+    - title: Devolver artigo com falha ao NetApp
+      url: "/a800/bootmedia-complete-rma.html"
+  - title: Chassis
+    pdf-filename: Chassis AFF A800
+    entries:
+    - title: Visão geral
+      url: "/a800/chassis-replace-overview.html"
+    - title: Desligue o controlador desativado
+      url: "/a800/chassis-replace-shutdown.html"
+    - title: Substitua o chassi
+      url: "/a800/chassis-replace-move-hardware.html"
+    - title: Substituição completa do chassis
+      url: "/a800/chassis-replace-complete-system-restore-rma.html"
+  - title: Controlador
+    pdf-filename: Módulo do controlador AFF A800
+    entries:
+    - title: Visão geral
+      url: "/a800/controller-replace-overview.html"
+    - title: Desligue o controlador desativado
+      url: "/a800/controller-replace-shutdown.html"
+    - title: Substitua o controlador
+      url: "/a800/controller-replace-move-hardware.html"
+    - title: Restaure a configuração do sistema
+      url: "/a800/controller-replace-system-config-restore-and-verify.html"
+    - title: Sistema Recable
+      url: "/a800/controller-replace-recable-reassign-disks.html"
+    - title: Substituição completa do controlador
+      url: "/a800/controller-replace-restore-system-rma.html"
+  - title: DIMM
+    url: "/a800/dimm-replace.html"
+  - title: Condução
+    url: "/a800/drive-replace.html"
+  - title: Ventoinha
+    url: "/a800/fan-replace.html"
+  - title: NVDIMM
+    url: "/a800/nvdimm-replace.html"
+  - title: Bateria NVDIMM
+    url: "/a800/nvdimm-battery-replace.html"
+  - title: Placa PCIe
+    url: "/a800/pci-cards-and-risers-replace.html"
+  - title: Fonte de alimentação
+    url: "/a800/power-supply-replace.html"
+  - title: Bateria de relógio em tempo real
+    url: "/a800/rtc-battery-replace.html"

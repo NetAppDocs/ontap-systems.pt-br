@@ -1,0 +1,165 @@
+---
+permalink: a200/rtc-battery-replace.html 
+sidebar: sidebar 
+keywords: aff a200, replace the rtc battery 
+summary: 'Você substitui a bateria do relógio em tempo real (RTC) no módulo do controlador para que os serviços e aplicativos do sistema que dependem da sincronização precisa de tempo continuem funcionando.' 
+---
+= Substitua a bateria do relógio em tempo real - AFF A200
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você substitui a bateria do relógio em tempo real (RTC) no módulo do controlador para que os serviços e aplicativos do sistema que dependem da sincronização precisa de tempo continuem funcionando.
+
+.Sobre esta tarefa
+* Pode utilizar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema
+* Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+
+
+
+
+== Passo 1: Desligue o controlador desativado
+
+Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
+
+Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
+
+.Passos
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=_number_of_hours_down_h`
++
+A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Se o controlador afetado fizer parte de um par de HA, desative a giveback automática a partir do console do controlador íntegro: `storage failover modify -node local -auto-giveback false`
+. Leve o controlador prejudicado para o prompt Loader:
++
+[cols="1,2"]
+|===
+| Se o controlador afetado estiver a apresentar... | Então... 
+
+
+ a| 
+O prompt Loader
+ a| 
+Vá para Remover módulo do controlador.
+
+
+
+ a| 
+A aguardar pela giveback...
+ a| 
+Pressione Ctrl-C e responda `y`.
+
+
+
+ a| 
+Prompt do sistema ou prompt de senha (digite a senha do sistema)
+ a| 
+Assuma ou interrompa o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
+
+|===
+. Se o sistema tiver apenas um módulo de controlador no chassi, desligue as fontes de alimentação e desconete os cabos de alimentação do controlador prejudicado da fonte de alimentação.
+
+
+
+
+== Passo 2: Remova o módulo do controlador
+
+Para aceder aos componentes no interior do controlador, tem de remover primeiro o módulo do controlador do sistema e, em seguida, remover a tampa do módulo do controlador.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Solte o gancho e a alça de loop que prendem os cabos ao dispositivo de gerenciamento de cabos e, em seguida, desconete os cabos do sistema e os SFPs (se necessário) do módulo do controlador, mantendo o controle de onde os cabos estavam conetados.
++
+Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar o dispositivo de gerenciamento de cabos, os cabos sejam organizados.
+
+. Retire e reserve os dispositivos de gerenciamento de cabos dos lados esquerdo e direito do módulo do controlador.
++
+image::../media/drw_25xx_cable_management_arm.png[Inserir ou remover o ARM de gerenciamento de cabos]
+
+. Aperte o trinco na pega do excêntrico até que este se solte, abra totalmente o manípulo do excêntrico para libertar o módulo do controlador do plano médio e, em seguida, utilizando duas mãos, puxe o módulo do controlador para fora do chassis.
++
+image::../media/drw_2240_x_opening_cam_latch.png[Abrir o trinco do puxador da árvore de cames]
+
+. Vire o módulo do controlador ao contrário e coloque-o numa superfície plana e estável.
+. Abra a tampa deslizando as patilhas azuis para soltar a tampa e, em seguida, rode a tampa para cima e abra-a.
++
+image::../media/drw_2600_opening_pcm_cover.png[Abrir ou fechar o módulo do controlador]
+
+
+
+
+
+== Passo 3: Substitua a bateria RTC
+
+Para substituir a bateria do RTC, localize-a no interior do controlador e siga a sequência específica de passos.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Localize a bateria do RTC.
++
+image::../media/drw_2600_rtc_battery.png[Retirar a bateria do RTC]
+
+. Empurre cuidadosamente a bateria para fora do suporte, rode-a para fora do suporte e, em seguida, levante-a para fora do suporte.
++
+
+NOTE: Observe a polaridade da bateria ao removê-la do suporte. A bateria está marcada com um sinal de mais e deve ser posicionada corretamente no suporte. Um sinal de mais perto do suporte indica-lhe como a bateria deve ser posicionada.
+
+. Retire a bateria de substituição do saco de transporte antiestático.
+. Localize o suporte da bateria vazio no módulo do controlador.
+. Observe a polaridade da bateria RTC e, em seguida, insira-a no suporte inclinando a bateria em ângulo e empurrando-a para baixo.
+. Inspecione visualmente a bateria para se certificar de que está completamente instalada no suporte e de que a polaridade está correta.
+
+
+
+
+== Etapa 4: Reinstale o módulo do controlador e defina a hora/data após a substituição da bateria do RTC
+
+Depois de substituir um componente no módulo do controlador, tem de reinstalar o módulo do controlador no chassis do sistema, repor a hora e a data no controlador e, em seguida, iniciá-lo.
+
+.Passos
+. Se ainda não o tiver feito, feche a tampa da conduta de ar ou do módulo do controlador.
+. Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
++
+Não introduza completamente o módulo do controlador no chassis até ser instruído a fazê-lo.
+
+. Recable o sistema, conforme necessário.
++
+Se você removeu os conversores de Mídia (QSFPs ou SFPs), lembre-se de reinstalá-los se você estiver usando cabos de fibra ótica.
+
+. Se as fontes de alimentação estiverem desconetadas, conete-as novamente e reinstale os retentores do cabo de alimentação.
+. Conclua a reinstalação do módulo do controlador:
++
+.. Com a alavanca do came na posição aberta, empurre firmemente o módulo do controlador até que ele atenda ao plano médio e esteja totalmente assentado e, em seguida, feche a alavanca do came para a posição travada.
++
+
+NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
+
+.. Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos.
+.. Prenda os cabos ao dispositivo de gerenciamento de cabos com o gancho e a alça de loop.
+.. Volte a ligar os cabos de alimentação às fontes de alimentação e às fontes de alimentação e, em seguida, ligue a alimentação para iniciar o processo de arranque.
+.. Interrompa o controlador no prompt DO Loader.
+
+
+. Redefina a hora e a data no controlador:
++
+.. Verifique a data e a hora no controlador saudável com o `show date` comando.
+.. No prompt Loader no controlador de destino, verifique a hora e a data.
+.. Se necessário, modifique a data com o `set date mm/dd/yyyy` comando.
+.. Se necessário, defina a hora, em GMT, usando o `set time hh:mm:ss` comando.
+.. Confirme a data e a hora no controlador de destino.
+
+
+. No prompt Loader, digite `bye` para reinicializar as placas PCIe e outros componentes e deixar a controladora reiniciar.
+. Volte a colocar o controlador em funcionamento normal, devolvendo o respetivo armazenamento: `storage failover giveback -ofnode _impaired_node_name_`
+. Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true`
+
+
+
+
+== Passo 5: Devolva a peça com falha ao NetApp
+
+Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

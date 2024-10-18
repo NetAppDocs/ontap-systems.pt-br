@@ -1,0 +1,352 @@
+---
+permalink: fas2800/controller-replace-move-hardware.html 
+sidebar: sidebar 
+keywords: fas2800, move the controller module hardware 
+summary: Para substituir o hardware do módulo do controlador, é necessário remover o controlador prejudicado, mover os componentes FRU para o módulo do controlador de substituição, instalar o módulo do controlador de substituição no chassis e, em seguida, inicializar o sistema para o modo de manutenção. 
+---
+= Substitua o hardware do módulo do controlador - FAS2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Substitua o hardware do módulo do controlador prejudicado removendo o controlador prejudicado, movendo os componentes da FRU para o módulo do controlador de substituição, instalando o módulo do controlador de substituição no chassi e, em seguida, inicializando o módulo do controlador de substituição.
+
+.Animação - substitua um módulo do controlador
+video::c83a3301-3161-4d65-86e8-af540147576a[panopto]
+
+
+== Passo 1: Remova o módulo do controlador
+
+Retire o módulo do controlador desativado do chassis.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Solte o gancho e a alça de loop que prendem os cabos ao dispositivo de gerenciamento de cabos e, em seguida, desconete os cabos do sistema e os SFPs (se necessário) do módulo do controlador, mantendo o controle de onde os cabos estavam conetados.
++
+Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar o dispositivo de gerenciamento de cabos, os cabos sejam organizados.
+
+. Retire e reserve os dispositivos de gerenciamento de cabos dos lados esquerdo e direito do módulo do controlador.
+. Se você deixou os módulos SFP no sistema depois de remover os cabos, mova-os para o módulo controlador de substituição.
+. Aperte o trinco na pega do excêntrico até que este se solte, abra totalmente o manípulo do excêntrico para libertar o módulo do controlador do plano médio e, em seguida, utilizando duas mãos, puxe o módulo do controlador para fora do chassis.
++
+image::../media/drw_2240_x_opening_cam_latch.svg[drw 2240 x trinco do came de abertura]
+
+. Vire o módulo do controlador ao contrário e coloque-o numa superfície plana e estável.
+. Abra a tampa pressionando os botões azuis nas laterais do módulo do controlador para soltar a tampa e, em seguida, gire a tampa para cima e para fora do módulo do controlador.
++
+image::../media/drw_2850_open_controller_module_cover_IEOPS-695.svg[Tampa do módulo de controlador aberto drw 2850 IEOPS 695]
+
+
+
+[cols="1,3"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Botão de liberação da tampa do módulo do controlador
+
+|===
+
+
+== Passo 2: Mova a bateria do NVMEM
+
+Retire a bateria do NVMEM do módulo do controlador desativado e instale-a no módulo do controlador de substituição.
+
+
+NOTE: Não ligue a bateria do NVMEM até ser direcionado para o fazer.
+
+image::../media/drw_2850_replace_nvbattery_IEOPS-715.svg[drw 2850 substitua o nvbattery IEOPS 715]
+
+[cols="1,3"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Botão de libertação da bateria do NVMEM
+
+
+
+ a| 
+image::../media/icon_round_2.png[ícone redondo 2]
+ a| 
+Ficha da bateria NVMEM
+
+|===
+. Retire a bateria do módulo do controlador:
++
+.. Prima o botão azul na parte lateral do módulo do controlador.
+.. Deslize a bateria para cima até que ela solte os suportes de fixação e, em seguida, levante a bateria para fora do módulo do controlador.
+.. Desligue a ficha da bateria apertando o clipe na face da ficha da bateria para soltar a ficha da tomada e, em seguida, desligue o cabo da bateria da tomada.
+
+
+. Desloque a bateria para o módulo do controlador de substituição e instale-a:
++
+.. Alinhar a bateria com os suportes de fixação na parede lateral de chapa metálica.
+.. Deslize a bateria para baixo até que o trinco da bateria encaixe e encaixe na abertura na parede lateral.
++
+
+NOTE: Não ligue ainda a bateria. Você o conetará assim que o restante dos componentes for movido para o módulo de substituição do controlador.
+
+
+
+
+
+
+
+== Passo 3: Remova a placa mezzanine
+
+Remova a placa de e/S e a placa de mezanino PCIe do módulo do controlador afetado.
+
+image::../media/drw_2850_replace_HIC_IEOPS-700.svg[drw 2850 Substituir HIC IEOPS 700]
+
+[cols="1,3"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Placa de e/S
+
+
+
+ a| 
+image::../media/icon_round_2.png[ícone redondo 2]
+ a| 
+Placa mezanino PCIe
+
+|===
+. Remova a placa de e/S deslizando-a diretamente para fora do módulo do controlador.
+. Desaperte os parafusos de aperto manual na placa do mezanino.
++
+
+NOTE: Você pode soltar os parafusos com os dedos ou uma chave de fenda.
+
+. Levante a placa do mezanino e coloque-a de lado em uma superfície antiestática.
+
+
+
+
+== Passo 4: Mova a Mídia de inicialização
+
+Retire o suporte de arranque do módulo do controlador avariado e instale-o no módulo do controlador de substituição.
+
+. Depois de remover a placa mezzanine, localize a Mídia de inicialização usando a ilustração a seguir ou o mapa FRU no módulo do controlador:
++
+image::../media/drw_2850_replace_boot_media_IEOPS-696.svg[drw 2850 substitua o suporte de arranque IEOPS 696]
+
++
+[cols="1,3"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Botão de libertação do suporte de arranque
+
+|===
+. Remova o suporte de arranque:
++
+.. Prima o botão azul no alojamento do material de arranque para soltar o material de arranque do respetivo alojamento.
+.. Rode o suporte de arranque para cima e, em seguida, puxe-o suavemente para fora da tomada do suporte de arranque.
++
+
+NOTE: Não torça nem puxe o suporte de arranque diretamente para cima, pois isto pode danificar o suporte ou o suporte de arranque.
+
+
+
+. Instale o suporte de arranque no módulo do controlador de substituição:
++
+.. Alinhe as extremidades do suporte de arranque de substituição com a tomada de suporte de arranque e, em seguida, empurre-o cuidadosamente para dentro do encaixe.
+.. Verifique o suporte de arranque para se certificar de que está encaixado corretamente e completamente no encaixe.
++
+Se necessário, retire o suporte de arranque e volte a colocá-lo no socket.
+
+.. Prima o botão de bloqueio azul no alojamento do suporte de suporte de arranque, rode o suporte de arranque totalmente para baixo e, em seguida, solte o botão de bloqueio para bloquear o suporte de arranque no devido lugar.
+
+
+
+
+
+
+== Passo 5: Instale a placa mezzanine no controlador de substituição
+
+Instale a placa mezzanine no módulo do controlador de substituição.
+
+. Reinstale a placa mezzanine:
++
+.. Alinhe a placa mezzanine com o soquete na placa-mãe.
+.. Empurre cuidadosamente o cartão para baixo para colocar o cartão na tomada.
+.. Aperte os três parafusos de aperto manual na placa do mezanino.
+
+
+. Volte a instalar a placa de e/S.
+
+
+
+
+== Passo 6: Mova os DIMMs
+
+Remova os DIMMs do módulo do controlador prejudicado e instale-os no módulo do controlador de substituição.
+
+image::../media/drw_2850_replace_dimms_IEOPS-699.svg[drw 2850 substitua dimms IEOPS 699]
+
+[cols="1,3"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Travas de travamento do DIMM
+
+
+
+ a| 
+image::../media/icon_round_2.png[ícone redondo 2]
+ a| 
+DIMM
+
+|===
+. Localize os DIMMs no módulo do controlador
++
+
+NOTE: Observe a localização do DIMM nos soquetes para que você possa inserir o DIMM no mesmo local no módulo do controlador de substituição e na orientação adequada.
+
+. Remova os DIMMs do módulo do controlador prejudicado:
++
+.. Ejete o DIMM do slot empurrando lentamente as duas abas do ejetor do DIMM em ambos os lados do DIMM.
++
+O DIMM girará um pouco para cima.
+
+.. Gire o DIMM o máximo possível e deslize o DIMM para fora do soquete.
++
+
+NOTE: Segure cuidadosamente o DIMM pelas bordas para evitar a pressão nos componentes da placa de circuito DIMM.
+
+
+
+. Verifique se a bateria do NVMEM não está conetada ao módulo do controlador de substituição.
+. Instale os DIMMs no controlador de substituição no mesmo local em que estavam no controlador prejudicado:
++
+.. Empurre com cuidado, mas firmemente, na borda superior do DIMM até que as abas do ejetor se encaixem no lugar sobre os entalhes nas extremidades do DIMM.
++
+O DIMM encaixa firmemente no slot, mas deve entrar facilmente. Caso contrário, realinhar o DIMM com o slot e reinseri-lo.
+
++
+
+NOTE: Inspecione visualmente o DIMM para verificar se ele está alinhado uniformemente e totalmente inserido no slot.
+
+
+
+. Repita estas etapas para o outro DIMM.
+
+
+
+
+== Passo 7: Mova um módulo de cache
+
+Retire o módulo de armazenamento em cache do módulo do controlador afetado, instale-o no módulo do controlador de substituição.
+
+image::../media/drw_2850_replace_caching module_IEOPS-697.svg[drw 2850 substitua o módulo de cache IEOPS 697]
+
+[cols="1,3"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Botão de bloqueio do módulo de armazenamento em cache
+
+|===
+. Localize o módulo de armazenamento em cache perto da parte traseira do módulo do controlador e retire-o:
++
+.. Prima o botão de bloqueio azul e rode o módulo de armazenamento em cache para cima.
+.. Puxe cuidadosamente o módulo de armazenamento em cache para fora do alojamento.
+
+
+. Instale o módulo de armazenamento em cache no módulo do controlador de substituição:
++
+.. Alinhe as extremidades do módulo de armazenamento em cache com o encaixe no alojamento e, em seguida, empurre-o cuidadosamente para dentro do encaixe.
+.. Verifique se o módulo de armazenamento em cache está assentado diretamente e completamente no soquete.
++
+Se necessário, remova o módulo de cache e recoloque-o no soquete.
+
+.. Pressione o botão de bloqueio azul, gire o módulo de cache totalmente para baixo e solte o botão de bloqueio para bloquear o módulo de armazenamento em cache no lugar.
+
+
+. Ligue a bateria do NVMEM.
++
+Certifique-se de que a ficha se fixa à tomada de alimentação da bateria na placa-mãe.
+
++
+
+NOTE: Se a ligação à bateria for difícil, retire a bateria do módulo do controlador, ligue-a e, em seguida, volte a instalar a bateria no módulo do controlador.
+
+. Volte a instalar a tampa do módulo do controlador.
+
+
+
+
+== Passo 8: Instale a bateria NV
+
+Instale a bateria NV no módulo do controlador de substituição.
+
+. Volte a ligar a ficha da bateria à tomada no módulo do controlador.
++
+Certifique-se de que a ficha se fixa à tomada da bateria na placa-mãe.
+
+. Alinhar a bateria com os suportes de fixação na parede lateral de chapa metálica.
+. Deslize a bateria para baixo até que o trinco da bateria encaixe e encaixe na abertura na parede lateral.
+. Volte a instalar a tampa do módulo do controlador e bloqueie-a no lugar.
+
+
+
+
+== Passo 9: Instale o controlador
+
+Instale o módulo do controlador de substituição no chassis do sistema e no ONTAP de arranque.
+
+
+NOTE: O sistema pode atualizar o firmware do sistema quando ele é inicializado. Não aborte este processo. O procedimento requer que você interrompa o processo de inicialização, o que você normalmente pode fazer a qualquer momento depois de solicitado a fazê-lo. No entanto, se o sistema atualizar o firmware do sistema quando ele é inicializado, você deve esperar até que a atualização seja concluída antes de interromper o processo de inicialização.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Se ainda não o tiver feito, substitua a tampa no módulo do controlador.
+. Rode o módulo do controlador.
+. Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
++
+
+NOTE: Não introduza completamente o módulo do controlador no chassis até ser instruído a fazê-lo.
+
+. Conclua a reinstalação do módulo do controlador:
++
+.. Com a alavanca do came na posição aberta, empurre firmemente o módulo do controlador até que ele atenda ao plano médio e esteja totalmente assentado e, em seguida, feche a alavanca do came para a posição travada.
++
+
+NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
+
++
+O controlador começa a arrancar assim que estiver sentado no chassis.
+
+.. Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos.
+.. Prenda os cabos ao dispositivo de gerenciamento de cabos com o gancho e a alça de loop.
++
+
+NOTE: Você deve procurar uma mensagem de console de atualização automática de firmware. Se a mensagem de atualização for exibida, não pressione `Ctrl-C` para interromper o processo de inicialização até que você veja uma mensagem confirmando que a atualização está concluída. Se a atualização do firmware for cancelada, o processo de inicialização será encerrado para o prompt Loader. Você deve executar o `update_flash` comando e, em seguida, entrar `bye -g` para reinicializar o sistema.
+
+
+
+
+
+*Importante:* durante o processo de inicialização, você pode ver os seguintes prompts:
+
+* Um aviso de uma incompatibilidade de ID do sistema e pedindo para substituir a ID do sistema. Responda `y` a este aviso.
+* Um aviso de que, ao entrar no modo de manutenção em uma configuração HA, você deve garantir que o controlador saudável permaneça inativo. Responda `y` a este aviso.
+

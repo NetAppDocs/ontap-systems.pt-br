@@ -1,0 +1,300 @@
+---
+permalink: a700s/pci-cards-and-risers-replace.html 
+sidebar: sidebar 
+keywords: aff a700s, aff, a700s, replace, pcie, card, disconnect, cable, riser, shut, down, reinstall, complete, replacement, process, replace a pcie card, shut down the impaired controller, remove the controller module, replace a pcie card, reinstall the controller module, complete the replacement process 
+summary: Para substituir uma placa PCIe, você deve desconetar os cabos das placas na riser, remover a riser, substituir a riser e reconetá-la nessa riser. 
+---
+= Substitua uma placa PCIe - AFF A700s
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para substituir uma placa PCIe, você deve desconetar os cabos das placas na riser, remover a riser, substituir a riser e reconetá-la nessa riser.
+
+* Pode utilizar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema
+* Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+
+
+
+
+== Passo 1: Desligue o controlador desativado
+
+Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
+
+Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
+
+.Passos
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=_number_of_hours_down_h`
++
+A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Se o controlador afetado fizer parte de um par de HA, desative a giveback automática a partir do console do controlador íntegro: `storage failover modify -node local -auto-giveback false`
+. Leve o controlador prejudicado para o prompt Loader:
++
+[cols="1,2"]
+|===
+| Se o controlador afetado estiver a apresentar... | Então... 
+
+
+ a| 
+O prompt Loader
+ a| 
+Vá para Remover módulo do controlador.
+
+
+
+ a| 
+A aguardar pela giveback...
+ a| 
+Pressione Ctrl-C e responda `y`.
+
+
+
+ a| 
+Prompt do sistema ou prompt de senha (digite a senha do sistema)
+ a| 
+Assuma ou interrompa o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
+
+|===
+
+
+
+
+== Passo 2: Remova o módulo do controlador
+
+Deve remover o módulo do controlador do chassis quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Solte o gancho e a alça de loop que prendem os cabos ao dispositivo de gerenciamento de cabos e, em seguida, desconete os cabos do sistema e os SFPs (se necessário) do módulo do controlador, mantendo o controle de onde os cabos estavam conetados.
++
+Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar o dispositivo de gerenciamento de cabos, os cabos sejam organizados.
+
+. Desconete a fonte de alimentação do módulo do controlador da fonte e desconete o cabo da fonte de alimentação.
+. Retire o dispositivo de gestão de cabos do módulo do controlador e coloque-o de lado.
+. Prima ambos os trincos de bloqueio para baixo e, em seguida, rode ambos os trincos para baixo ao mesmo tempo.
++
+O módulo do controlador desloca-se ligeiramente para fora do chassis.
+
++
+image::../media/drw_a700s_pcm_remove.png[Soltar o módulo do controlador]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Trinco de bloqueio
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Pino de bloqueio
+
+|===
+. Faça deslizar o módulo do controlador para fora do chassis.
++
+Certifique-se de que suporta a parte inferior do módulo do controlador enquanto o desliza para fora do chassis.
+
+. Coloque o módulo do controlador numa superfície estável e plana e, em seguida, abra a conduta de ar:
++
+.. Pressione as patilhas de bloqueio nas laterais da conduta de ar em direção ao centro do módulo do controlador.
+.. Deslize a conduta de ar em direção aos módulos da ventoinha e, em seguida, rode-a para cima até à posição completamente aberta.
++
+image::../media/drw_a700s_open_air_duct.png[Abra a conduta de ar]
+
+
+
++
+[cols="1,3"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Patilhas de bloqueio da conduta de ar
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Risers
+
+
+
+ a| 
+image:../media/icon_round_3.png["Legenda número 3"]
+ a| 
+Conduta de ar
+
+|===
+
+
+
+
+== Etapa 3: Substitua uma placa PCIe
+
+Para substituir uma placa PCIe, você deve remover o cabeamento e quaisquer SFPs das portas nas placas PCIe no riser de destino, remover o riser do módulo da controladora, remover e substituir a placa PCIe, reinstalar o riser e reinstalá-lo.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Remova a riser PCIe do módulo da controladora:
++
+.. Remova todos os módulos SFP que possam estar nas placas PCIe.
+.. Gire a trava de travamento do módulo no lado esquerdo da riser para cima e em direção aos módulos da ventoinha.
++
+A riser PCIe levanta-se ligeiramente do módulo da controladora.
+
+.. Levante a riser PCIe para cima, mova-a em direção aos ventiladores de modo que a aba de chapa metálica na riser limpe a borda do módulo controlador, levante a riser para fora do módulo controlador e, em seguida, coloque-a em uma superfície estável e plana.
++
+image::../media/drw_a700s_pcie_replace.png[Substitua uma placa PCIe]
+
++
+[cols="1,3"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Conduta de ar
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Trava de travamento da riser
+
+
+
+ a| 
+image:../media/icon_round_3.png["Legenda número 3"]
+ a| 
+Suporte de bloqueio do cartão
+
+
+
+ a| 
+image:../media/icon_round_4.png["Legenda número 4"]
+ a| 
+Riser 2 (riser central) e placas PCI nos slots riser 2 e 3.
+
+|===
+
+
+. Remova a placa PCIe da riser:
++
+.. Gire o riser para que você possa acessar a placa PCIe.
+.. Pressione o suporte de travamento na lateral da riser PCIe e gire-o até a posição aberta.
+.. Remova a placa PCIe da riser.
+
+
+. Instale a placa PCIe no mesmo slot no riser PCIe:
++
+.. Alinhe a placa com a guia da placa no riser e o soquete da placa no riser e, em seguida, deslize-a diretamente para o soquete no riser.
++
+
+NOTE: Certifique-se de que a placa está completamente encaixada no soquete riser.
+
+.. Rode o trinco de bloqueio para o lugar até encaixar na posição de bloqueio.
+
+
+. Instale a riser no módulo do controlador:
++
+.. Alinhe o lábio da riser com a parte inferior da chapa metálica do módulo do controlador.
+.. Guie a riser ao longo dos pinos no módulo da controladora e baixe a riser para dentro do módulo da controladora.
+.. Desloque o trinco de bloqueio para baixo e clique-o na posição de bloqueio.
++
+Quando bloqueado, a trava de travamento fica alinhada com a parte superior da riser e a riser fica bem no módulo da controladora.
+
+.. Reinsira todos os módulos SFP que foram removidos das placas PCIe.
+
+
+
+
+
+
+== Etapa 4: Reinstale o módulo do controlador
+
+Depois de substituir um componente dentro do módulo do controlador, você deve reinstalar o módulo do controlador no chassi do sistema e iniciá-lo.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Se ainda não o tiver feito, feche a conduta de ar:
++
+.. Desloque a conduta de ar até ao módulo do controlador.
+.. Faça deslizar a conduta de ar na direção dos tirantes até que as patilhas de bloqueio encaixem no lugar.
+.. Inspecione a conduta de ar para se certificar de que está corretamente encaixada e trancada no lugar.
++
+image::../media/drw_a700s_close_air_duct.png[Fechar a conduta de ar]
+
++
+[cols="1,3"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Patilhas de bloqueio
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Deslize o êmbolo
+
+|===
+
+
+. Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
++
+
+NOTE: Não introduza completamente o módulo do controlador no chassis até ser instruído a fazê-lo.
+
+. Recable o sistema, conforme necessário.
++
+Se você removeu os conversores de Mídia (QSFPs ou SFPs), lembre-se de reinstalá-los se você estiver usando cabos de fibra ótica.
+
+. Ligue o cabo de alimentação à fonte de alimentação, volte a instalar o anel de bloqueio do cabo de alimentação e, em seguida, ligue a fonte de alimentação à fonte de alimentação.
+. Conclua a reinstalação do módulo do controlador:
++
+.. Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos.
+.. Empurre firmemente o módulo do controlador para dentro do chassi até que ele atenda ao plano médio e esteja totalmente assentado.
++
+Os trincos de bloqueio sobem quando o módulo do controlador está totalmente assente.
+
++
+
+NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
+
++
+O módulo do controlador começa a arrancar assim que estiver totalmente assente no chassis.
+
+.. Rode os trincos de bloqueio para cima, inclinando-os de forma a que estes limpem os pinos de bloqueio e, em seguida, baixe-os para a posição de bloqueio.
+
+
+. Se o sistema estiver configurado para suportar interconexão de cluster de 10 GbE e conexões de dados em NICs de 40 GbE ou portas integradas, converta essas portas em conexões de 10 GbE usando o comando nicadmin Convert do modo de manutenção.
++
+
+NOTE: Certifique-se de sair do modo de manutenção depois de concluir a conversão.
+
+. Volte a colocar o controlador em funcionamento normal, devolvendo o respetivo armazenamento: `storage failover giveback -ofnode _impaired_node_name_`
+. Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true`
+
+
+
+
+== Passo 5: Devolva a peça com falha ao NetApp
+
+Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

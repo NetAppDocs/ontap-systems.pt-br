@@ -1,0 +1,260 @@
+---
+permalink: fas2800/dimm-replace.html 
+sidebar: sidebar 
+keywords: fas2800, replace, dimm, shut, down, impaired, controller, controller, metrocluster, replace, system, reinstall, module, filed, part, aggregates, 
+summary: 'É necessário substituir um DIMM no módulo do controlador quando o sistema registar um número crescente de códigos de correção de erros (ECC); se não o fizer, o sistema entra em pânico.' 
+---
+= Substitua um DIMM - FAS2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+É necessário substituir um DIMM no módulo do controlador quando o sistema registar um número crescente de códigos de correção de erros (ECC); se não o fizer, o sistema entra em pânico.
+
+Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+
+Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor.
+
+.Animação - substitua um DIMM
+video::6c035199-9b79-494b-9c65-af9a015ffaf0[panopto]
+
+
+== Passo 1: Desligue o controlador desativado
+
+Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
+
+Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
+
+.Passos
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=_number_of_hours_down_h`
++
+A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Se o controlador afetado fizer parte de um par de HA, desative a giveback automática a partir do console do controlador íntegro: `storage failover modify -node local -auto-giveback false`
+. Leve o controlador prejudicado para o prompt Loader:
++
+[cols="1,2"]
+|===
+| Se o controlador afetado estiver a apresentar... | Então... 
+
+
+ a| 
+O prompt Loader
+ a| 
+Vá para Remover módulo do controlador.
+
+
+
+ a| 
+A aguardar pela giveback...
+ a| 
+Pressione Ctrl-C e responda `y`.
+
+
+
+ a| 
+Prompt do sistema ou prompt de senha (digite a senha do sistema)
+ a| 
+Assuma ou interrompa o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
+
+|===
+
+
+
+
+== Passo 2: Remova o módulo do controlador
+
+Retire o módulo do controlador do sistema e, em seguida, retire a tampa do módulo do controlador.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Solte o gancho e a alça de loop que prendem os cabos ao dispositivo de gerenciamento de cabos e, em seguida, desconete os cabos do sistema e os SFPs (se necessário) do módulo do controlador, mantendo o controle de onde os cabos estavam conetados.
++
+Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar o dispositivo de gerenciamento de cabos, os cabos sejam organizados.
+
+. Retire e reserve os dispositivos de gerenciamento de cabos dos lados esquerdo e direito do módulo do controlador.
+. Aperte o trinco na pega do excêntrico até que este se solte, abra totalmente o manípulo do excêntrico para libertar o módulo do controlador do plano médio e, em seguida, utilizando duas mãos, puxe o módulo do controlador para fora do chassis.
++
+image::../media/drw_2240_x_opening_cam_latch.svg[drw 2240 x trinco do came de abertura]
+
+. Vire o módulo do controlador ao contrário e coloque-o numa superfície plana e estável.
+. Abra a tampa pressionando os botões azuis nas laterais do módulo do controlador para soltar a tampa e, em seguida, gire a tampa para cima e para fora do módulo do controlador.
++
+image::../media/drw_2850_open_controller_module_cover_IEOPS-695.svg[Tampa do módulo de controlador aberto drw 2850 IEOPS 695]
+
+
+
+[cols="1,3"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Botão de liberação da tampa do módulo do controlador
+
+|===
+
+
+== Etapa 3: Substitua os DIMMs
+
+Localize o DIMM dentro do controlador, remova-o e substitua-o.
+
+
+NOTE: Antes de substituir um DIMM, você precisa desconetar a bateria do NVMEM do módulo do controlador.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
++
+Você deve executar um desligamento normal do sistema antes de substituir os componentes do sistema para evitar a perda de dados não gravados na memória não volátil (NVMEM). O LED está localizado na parte de trás do módulo do controlador. Procure o seguinte ícone:
+
++
+image::../media/drw_hw_nvram_icon.svg[ícone NVRAM hw drw]
+
+. Se o LED NVMEM não estiver piscando, não há conteúdo no NVMEM; você pode pular as etapas a seguir e prosseguir para a próxima tarefa neste procedimento.
+. Se o LED NVMEM estiver intermitente, existem dados no NVMEM e tem de desligar a bateria para limpar a memória:
++
+.. Retire a bateria do módulo do controlador premindo o botão azul na parte lateral do módulo do controlador.
+.. Deslize a bateria para cima até que ela solte os suportes de fixação e, em seguida, levante a bateria para fora do módulo do controlador.
+.. Localize o cabo da bateria, prima o grampo na ficha da bateria para soltar o grampo de bloqueio da tomada e, em seguida, desligue o cabo da bateria da tomada.
+.. Confirme se o LED NVMEM já não está aceso.
+.. Volte a ligar o conetor da bateria e volte a verificar o LED na parte posterior do controlador.
+.. Desligue o cabo da bateria.
+
+
+. Localize os DIMMs no módulo do controlador.
+. Observe a orientação e a localização do DIMM no soquete para que você possa inserir o DIMM de substituição na orientação adequada.
+. Ejete o DIMM de seu slot, empurrando lentamente as duas abas do ejetor do DIMM em ambos os lados do DIMM e, em seguida, deslize o DIMM para fora do slot.
++
+O DIMM girará um pouco para cima.
+
+. Gire o DIMM o máximo possível e deslize o DIMM para fora do soquete.
++
+
+NOTE: Segure cuidadosamente o DIMM pelas bordas para evitar a pressão nos componentes da placa de circuito DIMM.
+
++
+image::../media/drw_2850_replace_dimms_IEOPS-699.svg[drw 2850 substitua dimms IEOPS 699]
+
++
+[cols="1,3"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Botão de libertação da bateria do NVRAM
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+Ficha da bateria NVRAM
+
+
+
+ a| 
+image::../media/icon_round_3.png[Legenda número 3]
+ a| 
+Patilhas do ejetor DIMM
+
+
+
+ a| 
+image::../media/icon_round_4.png[Legenda número 4]
+ a| 
+DIMMs
+
+|===
+. Remova o DIMM de substituição do saco de transporte antiestático, segure o DIMM pelos cantos e alinhe-o com o slot.
++
+O entalhe entre os pinos no DIMM deve estar alinhado com a guia no soquete.
+
+. Insira o DIMM diretamente no slot.
++
+O DIMM encaixa firmemente no slot, mas deve entrar facilmente. Caso contrário, realinhar o DIMM com o slot e reinseri-lo.
+
++
+
+NOTE: Inspecione visualmente o DIMM para verificar se ele está alinhado uniformemente e totalmente inserido no slot.
+
+. Empurre com cuidado, mas firmemente, na borda superior do DIMM até que as abas do ejetor se encaixem no lugar sobre os entalhes nas extremidades do DIMM.
+. Reconecte a bateria do NVMe RM:
++
+.. Ligue a bateria do NVRAM.
++
+Certifique-se de que a ficha se fixa à tomada de alimentação da bateria na placa-mãe.
+
+.. Alinhe a bateria com os suportes de fixação na parede lateral de chapa metálica.
+.. Deslize a bateria para baixo até que o trinco da bateria encaixe e encaixe na abertura na parede lateral.
+
+
+. Volte a instalar a tampa do módulo do controlador.
+
+
+
+
+== Etapa 4: Reinstale o módulo do controlador
+
+Volte a instalar o módulo do controlador no chassis.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Se ainda não o tiver feito, substitua a tampa no módulo do controlador.
+. Vire o módulo do controlador ao contrário e alinhe a extremidade com a abertura no chassis.
+. Empurre cuidadosamente o módulo do controlador até meio do sistema. Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
++
+
+NOTE: Não introduza completamente o módulo do controlador no chassis até ser instruído a fazê-lo.
+
+. Recable o sistema, conforme necessário.
++
+Se você removeu os conversores de Mídia (QSFPs ou SFPs), lembre-se de reinstalá-los se você estiver usando cabos de fibra ótica.
+
+. Conclua a reinstalação do módulo do controlador:
++
+.. Com a alavanca do came na posição aberta, empurre firmemente o módulo do controlador até que ele atenda ao plano médio e esteja totalmente assentado e, em seguida, feche a alavanca do came para a posição travada.
++
+
+NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
+
++
+O controlador começa a arrancar assim que estiver sentado no chassis.
+
+.. Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos.
+.. Prenda os cabos ao dispositivo de gerenciamento de cabos com o gancho e a alça de loop.
+
+
+. Reinicie o módulo do controlador.
++
+
+NOTE: Durante o processo de inicialização, você pode ver os seguintes prompts:
+
++
+** Um aviso de uma incompatibilidade de ID do sistema e pedindo para substituir a ID do sistema.
+** Um aviso de que, ao entrar no modo de manutenção em uma configuração HA, você deve garantir que o controlador saudável permaneça inativo. Você pode responder com segurança `y` a esses prompts.
+
+
+
+
+
+
+== Passo 5: Restaurar a giveback automática e AutSupport
+
+Restaure a giveback automática e o AutoSupport se tiverem sido desativados.
+
+. Restaure a giveback automática usando o `storage failover modify -node local -auto-giveback true` comando.
+. Se uma janela de manutenção do AutoSupport foi acionada, encerre-a usando o `system node autosupport invoke -node * -type all -message MAINT=END` comando.
+
+
+
+
+== Passo 6: Devolva a peça com falha ao NetApp
+
+Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

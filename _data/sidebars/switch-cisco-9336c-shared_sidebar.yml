@@ -1,0 +1,23 @@
+---
+prefix: switch-cisco-9336c-shared
+entries:
+- title: Switches compartilhados Cisco Nexus 9336C-FX2
+  url: "/index.html"
+- title: Guia de configuração e configuração para switches compartilhados Cisco
+  url: "/9336c_setup_and_configuration_guide_for_cisco_shared_switches.html"
+- title: Instalar o software NX-os e arquivos de configuração de referência (RCFs)
+  url: "/9336c_install_nx-os_software_and_reference_configuration_files_@rcfs@.html"
+- title: Migre de um cluster sem switch com armazenamento DAT adicionando dois novos
+    switches compartilhados
+  url: "/9336c_migrate_from_a_switchless_cluster_with_dat_storage_by_adding_two_new_shared_switches.html"
+- title: Migre de uma configuração comutada com armazenamento DAT adicionando dois
+    novos switches compartilhados
+  url: "/9336c_migrate_from_a_switched_configuration_with_dat_storage_by_adding_two_new_shared_switches.html"
+- title: Migre de uma configuração sem switch com armazenamento SAT reutilizando os
+    switches de armazenamento
+  url: "/9336c_migrate_from_a_switchless_configuration_with_sat_storage_by_reusing_the_storage_switches.html"
+- title: Migrar de um cluster comutado com armazenamento SAT reutilizando os switches
+    de armazenamento
+  url: "/9336c_migrate_from_a_switched_cluster_with_sat_storage_by_reusing_the_storage_switches.html"
+- title: Substitua um switch compartilhado Cisco Nexus 9336C-FX2
+  url: "/9336c_replace_a_cisco_nexus_9336c-fx2_shared_switch.html"

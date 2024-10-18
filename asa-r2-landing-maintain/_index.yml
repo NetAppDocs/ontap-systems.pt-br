@@ -1,0 +1,57 @@
+---
+indexpage:
+  title: Manter os sistemas ASA R2
+  summary: Saiba como manter seus sistemas ASA R2.
+  keywords: maintain asa a1k, a70, a90
+  lead: Talvez seja necessário executar procedimentos de manutenção no hardware. Os
+    procedimentos específicos para a manutenção dos componentes do sistema ASA R2
+    estão nesta seção.
+  tiles:
+  - title: ASA A1K
+    links:
+    - title: Suporte de arranque
+      url: "../asa-r2-a1k/bootmedia-overview.html"
+    - title: Controlador
+      url: "../asa-r2-a1k/controller-replace-workflow.html"
+    - title: DIMM
+      url: "../asa-r2-a1k/dimm-replace.html"
+    - title: Ventoinha
+      url: "../asa-r2-a1k/fan-replace.html"
+    - title: NVRAM
+      url: "../asa-r2-a1k/nvram-replace.html"
+    - title: Bateria NV
+      url: "../asa-r2-a1k/nvdimm-battery-replace.html"
+    - title: Módulo de e/S.
+      url: "../asa-r2-a1k/io-module-overview.html"
+    - title: Fonte de alimentação
+      url: "../asa-r2-a1k/power-supply-replace.html"
+    - title: Bateria de relógio em tempo real
+      url: "../asa-r2-a1k/rtc-battery-replace.html"
+    - title: Módulo de gestão do sistema
+      url: "../asa-r2-a1k/system-management-replace.html"
+  - title: ASA A70 e ASA A90
+    links:
+    - title: Suporte de arranque
+      url: "../asa-r2-70-90/bootmedia-overview.html"
+    - title: Chassis
+      url: "../asa-r2-70-90/chassis-replace-workflow.html"
+    - title: Controlador
+      url: "../asa-r2-70-90/controller-replace-workflow.html"
+    - title: DIMM
+      url: "../asa-r2-70-90/dimm-replace.html"
+    - title: Condução
+      url: "../asa-r2-70-90/drive-replace.html"
+    - title: Ventoinha
+      url: "../asa-r2-70-90/fan-swap-out.html"
+    - title: NVRAM
+      url: "../asa-r2-70-90/nvram-replace.html"
+    - title: Bateria NV
+      url: "../asa-r2-70-90/nvdimm-battery-replace.html"
+    - title: Módulo de e/S.
+      url: "../asa-r2-70-90/io-module-overview.html"
+    - title: Fonte de alimentação
+      url: "../asa-r2-70-90/power-supply-replace.html"
+    - title: Bateria de relógio em tempo real
+      url: "../asa-r2-70-90/rtc-battery-replace.html"
+    - title: Módulo de gestão do sistema
+      url: "../asa-r2-70-90/system-management-replace.html"

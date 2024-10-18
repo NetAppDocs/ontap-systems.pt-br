@@ -1,0 +1,66 @@
+---
+permalink: c400/bootmedia-2n-mcc-switchback.html 
+sidebar: sidebar 
+keywords: aff c400, aff, c400, fru, replacement, two-node, metrocluster, configuration, switchback, operation, operating, system, sync-source, storage,virtual, machine, svm, impair, site, serving, data, local, disk, pool, switch, aggregate, switch back aggregates in a two-node metrocluster configuration 
+summary: 'Depois de concluir a substituição da FRU em uma configuração de MetroCluster de dois nós, você pode executar a operação de switchback do MetroCluster. Isso retorna a configuração para seu estado operacional normal, com as máquinas virtuais de armazenamento de fonte sincronizada (SVMs) no site anteriormente prejudicado agora ativo e fornecendo dados dos pools de discos locais.' 
+---
+= Alterne agregados em uma configuração de MetroCluster de dois nós - AFF C400
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois de concluir a substituição da FRU em uma configuração de MetroCluster de dois nós, você pode executar a operação de switchback do MetroCluster. Isso retorna a configuração ao seu estado operacional normal, com as máquinas virtuais de armazenamento de origem sincronizada (SVMs) no site anteriormente prejudicado agora ativo e fornecendo dados dos pools de discos locais.
+
+Esta tarefa só se aplica a configurações de MetroCluster de dois nós.
+
+.Passos
+. Verifique se todos os nós estão no `enabled` estado: `metrocluster node show`
++
+[listing]
+----
+cluster_B::>  metrocluster node show
+
+DR                           Configuration  DR
+Group Cluster Node           State          Mirroring Mode
+----- ------- -------------- -------------- --------- --------------------
+1     cluster_A
+              controller_A_1 configured     enabled   heal roots completed
+      cluster_B
+              controller_B_1 configured     enabled   waiting for switchback recovery
+2 entries were displayed.
+----
+. Verifique se a ressincronização está concluída em todos os SVMs: `metrocluster vserver show`
+. Verifique se todas as migrações automáticas de LIF que estão sendo executadas pelas operações de recuperação foram concluídas com sucesso: `metrocluster check lif show`
+. Execute o switchback usando o `metrocluster switchback` comando de qualquer nó no cluster sobrevivente.
+. Verifique se a operação de comutação foi concluída: `metrocluster show`
++
+A operação de switchback ainda está em execução quando um cluster está no `waiting-for-switchback` estado:
+
++
+[listing]
+----
+cluster_B::> metrocluster show
+Cluster              Configuration State    Mode
+--------------------	------------------- 	---------
+ Local: cluster_B configured       	switchover
+Remote: cluster_A configured       	waiting-for-switchback
+----
++
+A operação de switchback é concluída quando os clusters estão no `normal` estado.:
+
++
+[listing]
+----
+cluster_B::> metrocluster show
+Cluster              Configuration State    Mode
+--------------------	------------------- 	---------
+ Local: cluster_B configured      		normal
+Remote: cluster_A configured      		normal
+----
++
+Se um switchback estiver demorando muito tempo para terminar, você pode verificar o status das linhas de base em andamento usando o `metrocluster config-replication resync-status show` comando.
+
+. Restabelecer qualquer configuração SnapMirror ou SnapVault.
+

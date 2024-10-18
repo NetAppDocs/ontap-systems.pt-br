@@ -1,0 +1,79 @@
+---
+section: c800
+title: Sistemas AFF C800
+entries:
+- title: Instalar e configurar
+  pdf-filename: Instalação e configuração do AFF C800
+  entries:
+  - title: Escolha a experiência de instalação e configuração
+    url: "/c800/install-setup.html"
+  - title: Passos rápidos
+    url: "/c800/install-quick-guide.html"
+  - title: Passos de vídeo
+    url: "/c800/install-videos.html"
+  - title: Passos detalhados
+    url: "/c800/install-detailed-guide.html"
+- title: Manutenção
+  pdf-filename: Manutenção da AFF C800
+  entries:
+  - title: Visão geral
+    url: "/c800/maintain-overview.html"
+  - title: Suporte de arranque
+    pdf-filename: Mídia de inicialização do AFF C800
+    entries:
+    - title: Visão geral
+      url: "/c800/bootmedia-replace-overview.html"
+    - title: Verifique as chaves de criptografia integradas
+      url: "/c800/bootmedia-encryption-preshutdown-checks.html"
+    - title: Desligue o controlador desativado
+      url: "/c800/bootmedia-shutdown.html"
+    - title: Substitua a imagem de inicialização
+      url: "/c800/bootmedia-replace.html"
+    - title: Imagem de recuperação de inicialização
+      url: "/c800/bootmedia-recovery-image-boot-non-2n-mcc.html"
+    - title: Restaure OKM, NSE e NVE
+      url: "/c800/bootmedia-encryption-restore.html"
+    - title: Devolver artigo com falha ao NetApp
+      url: "/c800/bootmedia-complete-rma.html"
+  - title: Chassis
+    pdf-filename: Chassis AFF C800
+    entries:
+    - title: Visão geral
+      url: "/c800/chassis-replace-overview.html"
+    - title: Desligue o controlador desativado
+      url: "/c800/chassis-replace-shutdown.html"
+    - title: Substitua o material de fixação
+      url: "/c800/chassis-replace-move-hardware.html"
+    - title: Substituição completa
+      url: "/c800/chassis-replace-complete-system-restore-rma.html"
+  - title: Controlador
+    pdf-filename: Módulo do controlador AFF C800
+    entries:
+    - title: Visão geral
+      url: "/c800/controller-replace-overview.html"
+    - title: Desligue o controlador desativado
+      url: "/c800/controller-replace-shutdown.html"
+    - title: Substitua o módulo do controlador
+      url: "/c800/controller-replace-move-hardware.html"
+    - title: Restaure a configuração do sistema
+      url: "/c800/controller-replace-system-config-restore-and-verify.html"
+    - title: Sistema Recable
+      url: "/c800/controller-replace-recable-reassign-disks.html"
+    - title: Substituição completa
+      url: "/c800/controller-replace-restore-system-rma.html"
+  - title: DIMM
+    url: "/c800/dimm-replace.html"
+  - title: Condução
+    url: "/c800/drive-replace.html"
+  - title: Ventoinha
+    url: "/c800/fan-replace.html"
+  - title: NVDIMM
+    url: "/c800/nvdimm-replace.html"
+  - title: Bateria NVDIMM
+    url: "/c800/nvdimm-battery-replace.html"
+  - title: Placa PCIe
+    url: "/c800/pci-cards-and-risers-replace.html"
+  - title: Fonte de alimentação
+    url: "/c800/power-supply-replace.html"
+  - title: Bateria de relógio em tempo real
+    url: "/c800/rtc-battery-replace.html"

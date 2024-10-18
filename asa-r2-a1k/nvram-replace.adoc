@@ -1,0 +1,250 @@
+---
+permalink: asa-r2-a1k/nvram-replace.html 
+sidebar: sidebar 
+keywords: asa r2 a1k, replace an nvdimm 
+summary: 'O módulo NVRAM consiste no NVRAM12 e DIMMs e até dois módulos flash Cache SSD NVMe (módulos flash Cache ou cache) por módulo NVRAM.' 
+---
+= Substitua o NVRAM - ASA A1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O módulo NVRAM consiste no hardware NVRAM12 e DIMMs substituíveis em campo. Você pode substituir um módulo NVRAM com falha ou os DIMMs dentro do módulo NVRAM. Para substituir um módulo NVRAM com falha, você deve remover o módulo do gabinete, mover os DIMMs para o módulo de substituição e instalar o módulo NVRAM de substituição no gabinete.
+
+Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em https://support.netapp.com["Suporte à NetApp"]Contato com .
+
+Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor.
+
+
+
+== Passo 1: Desligue o controlador desativado
+
+Desligue ou assuma o controlador desativado.
+
+Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
+
+.Sobre esta tarefa
+* Se você tiver um sistema SAN, você deve ter verificado mensagens de  `cluster kernel-service show`evento ) para o blade SCSI do controlador afetado. O `cluster kernel-service show` comando (do modo avançado priv) exibe o nome do nó, link:https://docs.netapp.com/us-en/ontap/system-admin/display-nodes-cluster-task.html["status do quorum"]desse nó, o status de disponibilidade desse nó e o status operacional desse nó.
++
+Cada processo SCSI-blade deve estar em quórum com os outros nós no cluster. Qualquer problema deve ser resolvido antes de prosseguir com a substituição.
+
+* Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
+
+
+.Passos
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
++
+A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas: `cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Desative a giveback automática a partir da consola do controlador saudável: `storage failover modify –node local -auto-giveback false`
++
+
+NOTE: Quando vir _do pretende desativar a auto-giveback?_, introduza `y`.
+
+. Leve o controlador prejudicado para o prompt Loader:
++
+[cols="1,2"]
+|===
+| Se o controlador afetado estiver a apresentar... | Então... 
+
+
+ a| 
+O prompt Loader
+ a| 
+Vá para a próxima etapa.
+
+
+
+ a| 
+A aguardar pela giveback...
+ a| 
+Pressione Ctrl-C e responda `y` quando solicitado.
+
+
+
+ a| 
+Prompt do sistema ou prompt de senha
+ a| 
+Assuma ou interrompa o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
+
+|===
+
+
+
+
+== Passo 2: Substitua o módulo NVRAM
+
+Para substituir o módulo NVRAM, localize-o no slot 4/5 no gabinete e siga a sequência específica de etapas.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Desconete o cabo de alimentação de ambas as PSUs.
+. Gire a bandeja de gerenciamento de cabos para baixo puxando cuidadosamente os pinos nas extremidades da bandeja e girando-a para baixo.
+. Remova o módulo NVRAM desativado do compartimento:
++
+.. Prima o botão do excêntrico de bloqueio.
+.. Rode o trinco do excêntrico para baixo o mais longe possível.
+.. Remova o módulo NVRAM desativado do compartimento prendendo o dedo na abertura da alavanca do came e puxando o módulo para fora do compartimento.
++
+image::../media/drw_a1k_nvram12_remove_replace_ieops-1380.svg[Remova o módulo NVRAM12 e os DIMMs]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+| Botão de bloqueio do came 
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Patilhas de bloqueio do DIMM
+
+|===
+
+
+. Coloque o módulo NVRAM numa superfície estável.
+. Remova os DIMMs, um de cada vez, do módulo NVRAM prejudicado e instale-os no módulo NVRAM de substituição.
+. Instale o módulo NVRAM de substituição no compartimento:
++
+.. Alinhe o módulo com as bordas da abertura do compartimento no slot 4/5.
+.. Deslize cuidadosamente o módulo para dentro da ranhura e, em seguida, rode o trinco do excêntrico até ao fim para bloquear o módulo no lugar.
+
+
+. Recable as PSUs.
+. Rode o tabuleiro de gestão de cabos para cima até à posição fechada.
+
+
+
+
+== Etapa 3: Substitua um DIMM NVRAM
+
+Para substituir DIMMs NVRAM no módulo NVRAM, você deve remover o módulo NVRAM e, em seguida, substituir o DIMM de destino.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Desconete o cabo de alimentação de ambas as PSUs.
+. Gire a bandeja de gerenciamento de cabos para baixo puxando cuidadosamente os pinos nas extremidades da bandeja e girando-a para baixo.
+. Remova o módulo NVRAM de destino do compartimento.
++
+image::../media/drw_a1k_nvram12_remove_replace_ieops-1380.svg[Remova o módulo NVRAM 12 e DIMMs]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+| Botão de bloqueio do came 
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Patilhas de bloqueio do DIMM
+
+|===
+. Coloque o módulo NVRAM numa superfície estável.
+. Localize o DIMM a ser substituído dentro do módulo NVRAM.
++
+
+NOTE: Consulte a etiqueta do mapa da FRU na lateral do módulo NVRAM para determinar os locais dos slots DIMM 1 e 2.
+
+. Remova o DIMM pressionando as abas de travamento do DIMM e levantando o DIMM para fora do soquete.
+. Instale o DIMM de substituição alinhando o DIMM com o soquete e empurrando cuidadosamente o DIMM para dentro do soquete até que as abas de travamento travem posição.
+. Instale o módulo NVRAM no compartimento:
++
+.. Deslize cuidadosamente o módulo para dentro da ranhura até que o trinco do excêntrico comece a engatar com o pino do excêntrico de e/S e, em seguida, rode o trinco do excêntrico totalmente para cima para bloquear o módulo no devido lugar.
+
+
+. Recable as PSUs.
+. Rode o tabuleiro de gestão de cabos para cima até à posição fechada.
+
+
+
+
+== Passo 4: Reinicie o controlador
+
+Depois de substituir a FRU, você deve reiniciar o módulo do controlador.
+
+. Para inicializar o ONTAP a partir do prompt Loader, digite _bye_.
+
+
+
+
+== Etapa 5: Verifique o estado do controlador
+
+Você deve confirmar o estado do controlador dos controladores conetados ao pool de discos ao inicializar o controlador.
+
+.Passos
+. Se o controlador estiver no modo Manutenção (mostrando o `*>` prompt), saia do modo Manutenção e vá para o prompt Loader: _Halt_
+. A partir do prompt Loader no controlador, inicialize o controlador e digite _y_ quando solicitado a substituir o ID do sistema devido a uma incompatibilidade de ID do sistema.
+. Aguarde até que a mensagem aguardando a giveback... seja exibida no console do controlador com o módulo de substituição e, em seguida, a partir do controlador de integridade, verifique o estado do sistema: _Storage failover show_
++
+Na saída do comando, você verá uma mensagem indicando o estado dos controladores.
+
++
+[listing]
+----
+
+                              Takeover
+Node           Partner        Possible State Description
+-------------- -------------- -------- -------------------------------------
+<nodename>
+               <nodename>-   true     Connected to <nodename>-P2-3-178.
+               P2-3-178                Waiting for cluster applications to
+                                       come online on the local node.
+AFF-A90-NBC-P2-3-178
+               <nodename>-   true     Connected to <nodename>-P2-3-177,
+               P2-3-177                Partial giveback
+2 entries were displayed.
+
+----
+. Devolver o controlador:
++
+.. A partir do controlador de integridade, devolva o armazenamento do controlador substituído: _Storage failover giveback -ofnode replacement_node_name_
++
+O controlador liga de volta o seu conjunto de armazenamento e completa a inicialização.
+
++
+Se você for solicitado a substituir o ID do sistema devido a uma incompatibilidade de ID do sistema, digite _y_.
+
++
+
+NOTE: Se o giveback for vetado, você pode considerar substituir os vetos.
+
++
+Para obter mais informações, consulte o https://docs.netapp.com/us-en/ontap/high-availability/ha_manual_giveback.html#if-giveback-is-interrupted["Comandos manuais de giveback"^] tópico para substituir o veto.
+
+.. Após a conclusão do giveback, confirme se o par de HA está saudável e que o controle é possível: _Storage failover show_
+
+
+. Verifique se os discos que os pools de discos são como esperado: `storage disk show -ownership`
++
+[listing]
+----
+node1:> storage disk show -ownership
+
+Disk     Aggregate  Home Owner    DR Home      Home ID       Owner ID    DR Home ID  Reserver Pool
+-------- --------- ------------- ------------- ------------- ----------- ----------- ----------- ----------- ------
+1.0.0 pod_NVME_SSD_1
+
+0 0 - 0 Pool0
+1.0.1 pod_NVME_SSD_1
+0 0 - 0 Pool0
+1.0.2 pod_NVME_SSD_1
+0 0 - 0 Pool0
+----
+
+
+
+
+== Passo 5: Devolva a peça com falha ao NetApp
+
+Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

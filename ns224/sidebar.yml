@@ -1,0 +1,60 @@
+---
+section: ns224
+title: Gavetas NS224
+entries:
+- title: Gaveta para adicionar quente
+  entries:
+  - title: Fluxo de trabalho de adição automática
+    url: "/ns224/hot-add-shelf-overview.html"
+  - title: Requisitos e práticas recomendadas
+    url: "/ns224/requirements-hot-add-shelf.html"
+  - title: Prepare-se para adicionar a quente
+    url: "/ns224/prepare-hot-add-shelf.html"
+  - title: Instale a prateleira para adicionar quente
+    url: "/ns224/install-hot-add-shelf.html"
+  - title: Prateleira de cabos para hot-add
+    entries:
+    - title: Visão geral do cabeamento
+      url: "/ns224/cable-overview-hot-add-shelf.html"
+    - title: Sistemas AFF
+      url: "/ns224/cable-aff-systems-hot-add-shelf.html"
+    - title: Sistemas ASA
+      url: "/ns224/cable-asa-systems-hot-add-shelf.html"
+    - title: Sistemas de fim de disponibilidade
+      url: "/ns224/cable-eoa-systems-hot-add-shelf.html"
+  - title: Complete hot-add
+    url: "/ns224/complete-hot-add-shelf.html"
+- title: Alterar ID do compartimento
+  url: "/ns224/change-shelf-id.html"
+- title: Prateleiras de cabos como storage conetado a switch
+  url: "/ns224/cable-as-switch-attached.html"
+- title: Manutenção
+  pdf-filename: NS224 prateleira manter
+  entries:
+  - title: Suporte de arranque
+    url: "/ns224/service-replace-boot-media.html"
+  - title: DIMM
+    url: "/ns224/service-replace-dimm.html"
+  - title: Condução
+    url: "/ns224/service-replace-drive.html"
+  - title: Compartimento de unidades
+    pdf-filename: Substitua o compartimento de unidades NS224
+    entries:
+    - title: Visão geral da manutenção da prateleira
+      url: "/ns224/ns224-shelf-overview.html"
+    - title: Prateleira de substituição a frio
+      url: "/ns224/cold-replace-shelf.html"
+    - title: Unidade de adição a quente
+      url: "/ns224/hot-add-drive.html"
+    - title: Hot-remova a prateleira
+      url: "/ns224/hot-remove-shelf.html"
+    - title: LEDs da prateleira do monitor
+      url: "/ns224/service-monitor-leds.html"
+  - title: Ventoinha
+    url: "/ns224/service-replace-fan.html"
+  - title: Módulo NSM
+    url: "/ns224/service-replace-nsm100.html"
+  - title: Fonte de alimentação
+    url: "/ns224/service-replace-power-supply.html"
+  - title: Bateria de relógio em tempo real
+    url: "/ns224/service-replace-rtc-battery.html"

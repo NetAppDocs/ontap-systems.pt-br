@@ -1,0 +1,234 @@
+---
+permalink: a700s/rtc-battery-replace.html 
+sidebar: sidebar 
+keywords: aff a700s, aff, a700s, replace, real-time, clock, rtc, battery, controller, system, service, application, synchronization, function, impair, module, reinstall, replacement, complete, process, replace the real-time clock battery, shut down the impaired controller, remove the controller module, replace the rtc battery, reinstall the controller module and setting time/date after rtc battery replacement, complete the replacement process 
+summary: 'Você substitui a bateria do relógio em tempo real (RTC) no módulo do controlador para que os serviços e aplicativos do sistema que dependem da sincronização precisa de tempo continuem funcionando.' 
+---
+= Substitua a bateria do relógio em tempo real - AFF A700s
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você substitui a bateria do relógio em tempo real (RTC) no módulo do controlador para que os serviços e aplicativos do sistema que dependem da sincronização precisa de tempo continuem funcionando.
+
+* Pode utilizar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema
+* Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+
+
+
+
+== Passo 1: Desligue o controlador desativado
+
+Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
+
+Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
+
+.Passos
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=_number_of_hours_down_h`
++
+A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Se o controlador afetado fizer parte de um par de HA, desative a giveback automática a partir do console do controlador íntegro: `storage failover modify -node local -auto-giveback false`
+. Leve o controlador prejudicado para o prompt Loader:
++
+[cols="1,2"]
+|===
+| Se o controlador afetado estiver a apresentar... | Então... 
+
+
+ a| 
+O prompt Loader
+ a| 
+Vá para Remover módulo do controlador.
+
+
+
+ a| 
+A aguardar pela giveback...
+ a| 
+Pressione Ctrl-C e responda `y`.
+
+
+
+ a| 
+Prompt do sistema ou prompt de senha (digite a senha do sistema)
+ a| 
+Assuma ou interrompa o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
+
+|===
+
+
+
+
+== Passo 2: Remova o módulo do controlador
+
+Deve remover o módulo do controlador do chassis quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Solte o gancho e a alça de loop que prendem os cabos ao dispositivo de gerenciamento de cabos e, em seguida, desconete os cabos do sistema e os SFPs (se necessário) do módulo do controlador, mantendo o controle de onde os cabos estavam conetados.
++
+Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar o dispositivo de gerenciamento de cabos, os cabos sejam organizados.
+
+. Desconete a fonte de alimentação do módulo do controlador da fonte e desconete o cabo da fonte de alimentação.
+. Retire o dispositivo de gestão de cabos do módulo do controlador e coloque-o de lado.
+. Prima ambos os trincos de bloqueio para baixo e, em seguida, rode ambos os trincos para baixo ao mesmo tempo.
++
+O módulo do controlador desloca-se ligeiramente para fora do chassis.
+
++
+image::../media/drw_a700s_pcm_remove.png[Soltar o módulo do controlador]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Trinco de bloqueio
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Pino de bloqueio
+
+|===
+. Faça deslizar o módulo do controlador para fora do chassis.
++
+Certifique-se de que suporta a parte inferior do módulo do controlador enquanto o desliza para fora do chassis.
+
+. Coloque o módulo do controlador numa superfície estável e plana e, em seguida, abra a conduta de ar:
++
+.. Pressione as patilhas de bloqueio nas laterais da conduta de ar em direção ao centro do módulo do controlador.
+.. Deslize a conduta de ar em direção aos módulos da ventoinha e, em seguida, rode-a para cima até à posição completamente aberta.
++
+image::../media/drw_a700s_open_air_duct.png[Opoen a conduta de ar]
+
++
+[cols="1,3"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Patilhas de bloqueio da conduta de ar
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Risers
+
+
+
+ a| 
+image:../media/icon_round_3.png["Legenda número 3"]
+ a| 
+Conduta de ar
+
+|===
+
+
+
+
+
+
+== Passo 3: Substitua a bateria RTC
+
+Para substituir a bateria do RTC, localize-a no interior do controlador e siga a sequência específica de passos.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Localize a bateria do RTC.
++
+image::../media/drw_a700s_rtc_battery_replace.png[Substitua a bateria do RTC]
+
++
+[cols="1,3"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Conduta de ar
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Bateria e alojamento RTC
+
+|===
+. Empurre cuidadosamente a bateria para fora do suporte, rode-a para fora do suporte e, em seguida, levante-a para fora do suporte.
++
+
+NOTE: Observe a polaridade da bateria ao removê-la do suporte. A bateria está marcada com um sinal de mais e deve ser posicionada corretamente no suporte. Um sinal de mais perto do suporte indica-lhe como a bateria deve ser posicionada.
+
+. Retire a bateria de substituição do saco de transporte antiestático.
+. Observe a polaridade da bateria RTC e, em seguida, insira-a no suporte inclinando a bateria em ângulo e empurrando-a para baixo.
+. Inspecione visualmente a bateria para se certificar de que está completamente instalada no suporte e de que a polaridade está correta.
+
+
+
+
+== Etapa 4: Reinstale o módulo do controlador e ajuste a hora/data após a substituição da bateria do RTC
+
+Depois de substituir um componente no módulo do controlador, tem de reinstalar o módulo do controlador no chassis do sistema, repor a hora e a data no controlador e, em seguida, iniciá-lo.
+
+. Se ainda não o tiver feito, feche a tampa da conduta de ar ou do módulo do controlador.
+. Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
++
+Não introduza completamente o módulo do controlador no chassis até ser instruído a fazê-lo.
+
+. Recable o sistema, conforme necessário.
++
+Se você removeu os conversores de Mídia (QSFPs ou SFPs), lembre-se de reinstalá-los se você estiver usando cabos de fibra ótica.
+
+. Se as fontes de alimentação estiverem desconetadas, conete-as novamente e reinstale os retentores do cabo de alimentação.
+. Conclua a reinstalação do módulo do controlador:
++
+.. Empurre firmemente o módulo do controlador para dentro do chassi até que ele atenda ao plano médio e esteja totalmente assentado.
++
+Os trincos de bloqueio sobem quando o módulo do controlador está totalmente assente.
+
++
+
+NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
+
++
+O módulo do controlador começa a arrancar assim que estiver totalmente assente no chassis.
+
+.. Rode os trincos de bloqueio para cima, inclinando-os de forma a que estes limpem os pinos de bloqueio e, em seguida, baixe-os para a posição de bloqueio.
+.. Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos.
+.. Interrompa o controlador no prompt DO Loader.
+
+
+. Redefina a hora e a data no controlador:
++
+.. Verifique a data e a hora no controlador saudável com o `show date` comando.
+.. No prompt Loader no controlador de destino, verifique a hora e a data.
+.. Se necessário, modifique a data com o `set date mm/dd/yyyy` comando.
+.. Se necessário, defina a hora, em GMT, usando o `set time hh:mm:ss` comando.
+.. Confirme a data e a hora no controlador de destino.
+
+
+. No prompt Loader, digite `bye` para reinicializar as placas PCIe e outros componentes e deixar a controladora reiniciar.
+. Volte a colocar o controlador em funcionamento normal, devolvendo o respetivo armazenamento: `storage failover giveback -ofnode _impaired_node_name_`
+. Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true`
+
+
+
+
+== Passo 5: Devolva a peça com falha ao NetApp
+
+Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

@@ -1,0 +1,49 @@
+---
+permalink: a700/fan-swap-out.html 
+sidebar: sidebar 
+keywords: aff a700, swap, fan, service, task, return, failed, part 
+summary: Para trocar um módulo de ventilador sem interromper o serviço, você deve executar uma sequência específica de tarefas. 
+---
+= Troque um ventilador - AFF A700
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para trocar um módulo de ventilador sem interromper o serviço, você deve executar uma sequência específica de tarefas.
+
+
+NOTE: Tem de substituir o módulo da ventoinha no espaço de dois minutos após o retirar do chassis. O fluxo de ar do sistema é interrompido e o módulo do controlador ou módulos são desligados após dois minutos para evitar o sobreaquecimento.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Retire a moldura (se necessário) com duas mãos, segurando as aberturas de cada lado da moldura e puxando-a na sua direção até que a moldura se solte dos pernos esféricos na estrutura do chassis.
+. Identifique o módulo da ventoinha que deve substituir verificando as mensagens de erro da consola e observando o LED de atenção em cada módulo da ventoinha.
+. Prima o botão laranja no módulo da ventoinha e puxe o módulo da ventoinha para fora do chassis, certificando-se de que o apoia com a mão livre.
++
+
+CAUTION: Os módulos da ventoinha são curtos. Apoie sempre a parte inferior do módulo da ventoinha com a mão livre para que não caia subitamente do chassis e o machuque.
+
++
+image::../media/drw_9000_remove_install_fan.png[Remova ou instale uma ventoinha]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Botão laranja de libertação
+
+|===
+. Coloque o módulo da ventoinha de lado.
+. Alinhe as extremidades do módulo do ventilador de substituição com a abertura no chassi e, em seguida, deslize-o para dentro do chassi até que ele se encaixe no lugar.
++
+Quando inserido num sistema ativo, o LED âmbar de atenção pisca quatro vezes quando o módulo da ventoinha é inserido com sucesso no chassis.
+
+. Alinhe a moldura com os pernos esféricos e, em seguida, empurre cuidadosamente a moldura para os pernos esféricos.
+. Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"^] página para obter mais informações.
+

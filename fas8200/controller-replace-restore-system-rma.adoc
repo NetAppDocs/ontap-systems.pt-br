@@ -1,0 +1,131 @@
+---
+permalink: fas8200/controller-replace-restore-system-rma.html 
+sidebar: sidebar 
+keywords: fas8200, how to restore NetApp Storage Encryption, how to complete the replacement process 
+summary: 'Para restaurar o sistema para a operação completa, você deve restaurar a configuração de criptografia de armazenamento NetApp (se necessário), instalar licenças para a nova controladora e devolver a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Entre em Contato com o suporte técnico em https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"], 888-463-8277 (América do Norte), 00-800-44-638277 (Europa) ou 800-800-80-800 (Ásia/Pacífico) se precisar do número de RMA ou de ajuda adicional com o procedimento de substituição.' 
+---
+= Restauração completa do sistema - FAS8200
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para restaurar o sistema para a operação completa, você deve restaurar a configuração de criptografia de armazenamento NetApp (se necessário), instalar licenças para a nova controladora e devolver a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit.
+
+
+
+== Passo 1: Instale licenças para o controlador de substituição no ONTAP
+
+Você deve instalar novas licenças para o nó _replacement_ se o nó prejudicado estiver usando recursos do ONTAP que exigem uma licença padrão (node-locked). Para recursos com licenças padrão, cada nó no cluster deve ter sua própria chave para o recurso.
+
+.Sobre esta tarefa
+Até instalar chaves de licença, os recursos que exigem licenças padrão continuam disponíveis para o nó _replacement_. No entanto, se o nó prejudicado for o único nó no cluster com uma licença para o recurso, nenhuma alteração de configuração será permitida. Além disso, o uso de recursos não licenciados no nó pode colocá-lo fora de conformidade com o seu contrato de licença, então você deve instalar a chave de licença de substituição ou chaves no nó _replacement_ o mais rápido possível.
+
+.Antes de começar
+As chaves de licença devem estar no formato de 28 carateres.
+
+Você tem um período de carência de 90 dias para instalar as chaves de licença. Após o período de carência, todas as licenças antigas são invalidadas. Depois que uma chave de licença válida é instalada, você tem 24 horas para instalar todas as chaves antes que o período de carência termine.
+
+
+NOTE: Se o sistema estava executando inicialmente o ONTAP 9.10,1 ou posterior, use o procedimento documentado em  https://kb.netapp.com/on-prem/ontap/OHW/OHW-KBs/Post_Motherboard_Replacement_Process_to_update_Licensing_on_a_AFF_FAS_system#Internal_Notes^["Pós-processo de substituição da placa-mãe para atualizar o licenciamento em um sistema AFF/FAS"]. Se não tiver certeza da versão inicial do ONTAP para o seu sistema, consulte link:https://hwu.netapp.com["NetApp Hardware Universe"^] para obter mais informações.
+
+.Passos
+. Se você precisar de novas chaves de licença, obtenha chaves de licença de substituição na https://mysupport.netapp.com/site/global/dashboard["Site de suporte da NetApp"] seção meu suporte em licenças de software.
++
+
+NOTE: As novas chaves de licença que você precisa são geradas automaticamente e enviadas para o endereço de e-mail em arquivo. Se você não receber o e-mail com as chaves de licença no prazo de 30 dias, entre em Contato com o suporte técnico.
+
+. Instale cada chave de licença: `+system license add -license-code license-key, license-key...+`
+. Remova as licenças antigas, se desejar:
++
+.. Verifique se há licenças não utilizadas: `license clean-up -unused -simulate`
+.. Se a lista estiver correta, remova as licenças não utilizadas: `license clean-up -unused`
+
+
+
+
+
+
+== Passo 2: Verifique LIFs e Registre o número de série
+
+Antes de retornar o nó _replacement_ ao serviço, você deve verificar se os LIFs estão em suas portas iniciais e Registrar o número de série do nó _replacement_ se o AutoSupport estiver ativado e redefinir a giveback automática.
+
+.Passos
+. Verifique se as interfaces lógicas estão relatando para o servidor doméstico e as portas: `network interface show -is-home false`
++
+Se algum LIFs estiver listado como false, reverta-os para suas portas iniciais: `network interface revert -vserver * -lif *`
+
+. Registre o número de série do sistema com o suporte da NetApp.
++
+** Se o AutoSupport estiver ativado, envie uma mensagem AutoSupport para Registrar o número de série.
+** Se o AutoSupport não estiver ativado, ligue https://mysupport.netapp.com["Suporte à NetApp"] para registar o número de série.
+
+
+. Se uma janela de manutenção do AutoSupport foi acionada, encerre-a usando o `system node autosupport invoke -node * -type all -message MAINT=END` comando.
+. Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true`
+
+
+
+
+== Etapa 3: Alterne agregados de volta em uma configuração de MetroCluster de dois nós
+
+Depois de concluir a substituição da FRU em uma configuração de MetroCluster de dois nós, você pode executar a operação de switchback do MetroCluster. Isso retorna a configuração ao seu estado operacional normal, com as máquinas virtuais de armazenamento de origem sincronizada (SVMs) no site anteriormente prejudicado agora ativo e fornecendo dados dos pools de discos locais.
+
+Esta tarefa só se aplica a configurações de MetroCluster de dois nós.
+
+.Passos
+. Verifique se todos os nós estão no `enabled` estado: `metrocluster node show`
++
+[listing]
+----
+cluster_B::>  metrocluster node show
+
+DR                           Configuration  DR
+Group Cluster Node           State          Mirroring Mode
+----- ------- -------------- -------------- --------- --------------------
+1     cluster_A
+              controller_A_1 configured     enabled   heal roots completed
+      cluster_B
+              controller_B_1 configured     enabled   waiting for switchback recovery
+2 entries were displayed.
+----
+. Verifique se a ressincronização está concluída em todos os SVMs: `metrocluster vserver show`
+. Verifique se todas as migrações automáticas de LIF que estão sendo executadas pelas operações de recuperação foram concluídas com sucesso: `metrocluster check lif show`
+. Execute o switchback usando o `metrocluster switchback` comando de qualquer nó no cluster sobrevivente.
+. Verifique se a operação de comutação foi concluída: `metrocluster show`
++
+A operação de switchback ainda está em execução quando um cluster está no `waiting-for-switchback` estado:
+
++
+[listing]
+----
+cluster_B::> metrocluster show
+Cluster              Configuration State    Mode
+--------------------	------------------- 	---------
+ Local: cluster_B configured       	switchover
+Remote: cluster_A configured       	waiting-for-switchback
+----
++
+A operação de switchback é concluída quando os clusters estão no `normal` estado.:
+
++
+[listing]
+----
+cluster_B::> metrocluster show
+Cluster              Configuration State    Mode
+--------------------	------------------- 	---------
+ Local: cluster_B configured      		normal
+Remote: cluster_A configured      		normal
+----
++
+Se um switchback estiver demorando muito tempo para terminar, você pode verificar o status das linhas de base em andamento usando o `metrocluster config-replication resync-status show` comando.
+
+. Restabelecer qualquer configuração SnapMirror ou SnapVault.
+
+
+
+
+== Passo 4: Devolva a peça com falha ao NetApp
+
+Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

@@ -1,0 +1,95 @@
+---
+section: fas9000
+title: Sistemas FAS9000
+entries:
+- title: Instalar e configurar
+  pdf-filename: Instalação e configuração do FAS9000
+  entries:
+  - title: Escolha a experiência de instalação e configuração
+    url: "/fas9000/install-setup.html"
+  - title: Passos rápidos
+    url: "/fas9000/install-quick-guide.html"
+  - title: Passos de vídeo
+    url: "/fas9000/install-videos.html"
+  - title: Passos detalhados
+    url: "/fas9000/install-detailed-guide.html"
+- title: Manutenção
+  pdf-filename: Manutenção da FAS9000
+  entries:
+  - title: Visão geral
+    url: "/fas9000/maintain-overview.html"
+  - title: Suporte de arranque
+    pdf-filename: Mídia de inicialização do FAS9000
+    entries:
+    - title: Visão geral
+      url: "/fas9000/bootmedia-replace-overview.html"
+    - title: Verifique as chaves de criptografia integradas
+      url: "/fas9000/bootmedia-encryption-preshutdown-checks.html"
+    - title: Desligue o controlador desativado
+      url: "/fas9000/bootmedia-shutdown.html"
+    - title: Substitua a imagem de inicialização
+      url: "/fas9000/bootmedia-replace.html"
+    - title: Imagem de recuperação de inicialização
+      url: "/fas9000/bootmedia-recovery-image-boot-options.html"
+    - title: Volte a configurar o MetroCluster
+      url: "/fas9000/bootmedia-2n-mcc-switchback.html"
+    - title: Restaure OKM, NSE e NVE
+      url: "/fas9000/bootmedia-encryption-restore.html"
+    - title: Devolver artigo com falha ao NetApp
+      url: "/fas9000/bootmedia-complete-rma.html"
+  - title: Módulo de armazenamento em cache
+    url: "/fas9000/caching-module-and-core-dump-module-replace.html"
+  - title: Módulo de armazenamento em cache (hot-swap)
+    url: "/fas9000/caching-module-hot-swap.html"
+  - title: Chassis
+    pdf-filename: Chassis FAS9000
+    entries:
+    - title: Visão geral
+      url: "/fas9000/chassis-replace-overview.html"
+    - title: Desligue o controlador desativado
+      url: "/fas9000/chassis-replace-shutdown.html"
+    - title: Substitua o material de fixação
+      url: "/fas9000/chassis-replace-move-hardware.html"
+    - title: Substituição completa
+      url: "/fas9000/chassis-replace-complete-system-restore-rma.html"
+  - title: Controlador
+    pdf-filename: Controlador FAS9000
+    entries:
+    - title: Visão geral
+      url: "/fas9000/controller-replace-overview.html"
+    - title: Desligue o controlador desativado
+      url: "/fas9000/controller-replace-shutdown.html"
+    - title: Substitua o módulo do controlador
+      url: "/fas9000/controller-replace.html"
+    - title: Restaure a configuração do sistema
+      url: "/fas9000/controller-replace-system-config-restore-and-verify.html"
+    - title: Sistema Recable
+      url: "/fas9000/controller-replace-recable-reassign-disks.html"
+    - title: Restauração completa do sistema
+      url: "/fas9000/controller-replace-complete-system-restoration.html"
+  - title: DCPM
+    url: "/fas9000/dcpm-nvram10-battery-replace.html"
+  - title: DIMM
+    url: "/fas9000/dimm-replace.html"
+  - title: Ventoinha
+    url: "/fas9000/fan-swap-out.html"
+  - title: Módulo de e/S.
+    pdf-filename: Módulo de e/S FAS9000
+    url: "/fas9000/pci-cards-and-risers-replace.html"
+  - title: LED USB
+    url: "/fas9000/led-module-replace.html"
+  - title: NVRAM
+    url: "/fas9000/nvram-module-or-nvram-dimm-replacement.html"
+  - title: Fonte de alimentação
+    url: "/fas9000/power-supply-swap-out.html"
+  - title: Bateria de relógio em tempo real
+    url: "/fas9000/rtc-battery-replace.html"
+  - title: Módulo X91148A
+    pdf-filename: Módulo FAS9000 X91148A
+    entries:
+    - title: Visão geral
+      url: "/fas9000/x91148a-module-install-overview.html"
+    - title: Adicione o módulo X91148A no sistema com slots abertos
+      url: "/fas9000/x91148a-modules-with-open-slots-add.html"
+    - title: Adicione X91148A commodule no sistema sem slots abertos
+      url: "/fas9000/x91148a-modules-with-no-open-slots-add.html"

@@ -1,0 +1,123 @@
+= 
+:allow-uri-read: 
+
+
+A Mídia de inicialização de substituição que você instalou é sem uma imagem de inicialização, então você precisa transferir uma imagem de inicialização usando uma unidade flash USB.
+
+* Você deve ter uma unidade flash USB, formatada para FAT32, com pelo menos 4GBGB de capacidade.
+* Uma cópia da mesma versão de imagem do ONTAP que a que o controlador afetado estava a executar. Você pode baixar a imagem apropriada da seção Downloads no site de suporte da NetApp
++
+** Se a NVE estiver ativada, transfira a imagem com encriptação de volume NetApp, conforme indicado no botão de transferência.
+** Se a NVE não estiver ativada, transfira a imagem sem encriptação de volume NetApp, conforme indicado no botão de transferência.
+
+
+* Se o seu sistema for um par de HA, tem de ter uma ligação de rede.
+* Se o seu sistema for um sistema autónomo, não necessita de uma ligação de rede, mas tem de efetuar uma reinicialização adicional ao restaurar o sistema de ficheiros var.
++
+.. Transfira e copie a imagem de serviço apropriada do site de suporte da NetApp para a unidade flash USB.
++
+... Transfira a imagem de serviço para o seu espaço de trabalho no seu computador portátil.
+... Descompacte a imagem de serviço.
++
+
+NOTE: Se você estiver extraindo o conteúdo usando o Windows, não use o WinZip para extrair a imagem netboot. Use outra ferramenta de extração, como 7-Zip ou WinRAR.
+
++
+Há duas pastas no arquivo de imagem de serviço descompactado:
+
++
+**** `boot`
+**** `efi`
+
+
+... Copie a `efi` pasta para o diretório superior da unidade flash USB.
++
+A unidade flash USB deve ter a pasta efi e a mesma versão de imagem de serviço (BIOS) do que o controlador deficiente está executando.
+
+... Retire a unidade flash USB do seu computador portátil.
+
+
+.. Se ainda não o tiver feito, feche a conduta de ar:
++
+... Desloque a conduta de ar até ao módulo do controlador.
+... Faça deslizar a conduta de ar na direção dos tirantes até que as patilhas de bloqueio encaixem no lugar.
+... Inspecione a conduta de ar para se certificar de que está corretamente encaixada e trancada no lugar.
++
+image::../media/drw_a800_close_air_duct.png[Fechar o gráfico da conduta de ar do módulo do controlador AFF A70-90]
+
++
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+
+
+
+ a| 
+Conduta de ar
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+
+
+
+| Risers 
+|===
+
+
+.. Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
+.. Reinstale o dispositivo de gerenciamento de cabos e reconete o sistema, conforme necessário.
++
+Ao reativar, lembre-se de reinstalar os conversores de Mídia (SFPs ou QSFPs) se eles foram removidos.
+
+.. Ligue o cabo de alimentação à fonte de alimentação e volte a instalar o fixador do cabo de alimentação.
+.. Introduza a unidade flash USB na ranhura USB do módulo do controlador.
++
+Certifique-se de que instala a unidade flash USB na ranhura identificada para dispositivos USB e não na porta da consola USB.
+
+.. Empurre cuidadosamente o módulo do controlador até que os ganchos de bloqueio do módulo do controlador comecem a subir, empurre firmemente os ganchos de bloqueio para terminar de assentar o módulo do controlador e, em seguida, rode os ganchos de bloqueio para a posição de bloqueio sobre os pinos no módulo do controlador.
++
+O controlador começa a arrancar assim que é completamente instalado no chassis.
+
+.. Interrompa o processo de inicialização pressionando Ctrl-C para parar no prompt DO Loader.
++
+Se você perder essa mensagem, pressione Ctrl-C, selecione a opção para inicializar no modo Manutenção e, em seguida `halt`, o controlador para inicializar NO Loader.
+
+.. Embora as variáveis de ambiente e bootargs sejam mantidas, você deve verificar se todas as variáveis de ambiente de inicialização necessárias e bootargs estão corretamente definidas para o seu tipo de sistema e configuração usando o `printenv bootarg name` comando e corrigir quaisquer erros usando o `setenv variable-name <value>` comando.
++
+... Verifique as variáveis de ambiente de inicialização:
++
+**** `bootarg.init.boot_clustered`
+**** `partner-sysid`
+**** `bootarg.init.flash_optimized` Para AFF C190/AFF A220 (All Flash FAS)
+**** `bootarg.init.san_optimized` Para AFF A220 e todos os Arrays SAN
+**** `bootarg.init.switchless_cluster.enable`
+
+
+... Se o Gerenciador de chaves Externo estiver habilitado, verifique os valores de inicialização listados na `kenv` saída ASUP:
++
+**** `bootarg.storageencryption.support <value>`
+**** `bootarg.keymanager.support <value>`
+**** `kmip.init.interface <value>`
+**** `kmip.init.ipaddr <value>`
+**** `kmip.init.netmask <value>`
+**** `kmip.init.gateway <value>`
+
+
+... Se o Gerenciador de chaves integrado estiver habilitado, verifique os valores de bootarg listados na `kenv` saída ASUP:
++
+**** `bootarg.storageencryption.support <value>`
+**** `bootarg.keymanager.support <value>`
+**** `bootarg.onboard_keymanager <value>`
+
+
+... Salve as variáveis de ambiente que você alterou com o `savenv` comando
+... Confirme as alterações usando o `printenv _variable-name_` comando.
+
+
+
+
+

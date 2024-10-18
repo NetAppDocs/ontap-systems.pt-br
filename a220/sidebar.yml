@@ -1,0 +1,81 @@
+---
+section: a220
+title: Sistemas AFF A220
+entries:
+- title: Instalar e configurar
+  pdf-filename: Instalação e configuração do AFF A220
+  entries:
+  - title: Escolha a experiência de instalação e configuração
+    url: "/a220/install-setup.html"
+  - title: Passos rápidos
+    url: "/a220/install-quick-guide.html"
+  - title: Passos de vídeos
+    url: "/a220/install-videos.html"
+  - title: Passos detalhados
+    url: "/a220/install-detailed-guide.html"
+- title: Manutenção
+  pdf-filename: Manutenção da AFF A220
+  entries:
+  - title: Visão geral
+    url: "/a220/maintain-overview.html"
+  - title: Suporte de arranque
+    pdf-filename: Mídia de inicialização do AFF A220
+    entries:
+    - title: Visão geral
+      url: "/a220/bootmedia-replace-overview.html"
+    - title: Verifique as chaves de criptografia
+      url: "/a220/bootmedia-encryption-preshutdown-checks.html"
+    - title: Desligue o controlador desativado
+      url: "/a220/bootmedia-shutdown.html"
+    - title: Substitua a imagem de inicialização
+      url: "/a220/bootmedia-replace.html"
+    - title: Imagem de recuperação de inicialização
+      url: "/a220/bootmedia-recovery-image-boot-non-2n-mcc.html"
+    - title: Restaure OKM, NSE e NVE
+      url: "/a220/bootmedia-encryption-restore.html"
+    - title: Devolver artigo com falha ao NetApp
+      url: "/a220/bootmedia-complete-rma.html"
+  - title: Módulo de armazenamento em cache
+    pdf-filename: Módulo de armazenamento em cache AFF A220
+    url: "/a220/caching-module-replace.html"
+  - title: Chassis
+    pdf-filename: AFF A220 e A220 chassis
+    entries:
+    - title: Visão geral
+      url: "/a220/chassis-replace-overview.html"
+    - title: Desligue o controlador desativado
+      url: "/a220/chassis-replace-shutdown.html"
+    - title: Substitua o material de fixação
+      url: "/a220/chassis-replace-move-hardware.html"
+    - title: Restaure a configuração
+      url: "/a220/chassis-replace-complete-system-restore-rma.html"
+  - title: Controlador
+    pdf-filename: Controlador AFF A220
+    entries:
+    - title: Visão geral
+      url: "/a220/controller-replace-overview.html"
+    - title: Desligue o controlador desativado
+      url: "/a220/controller-replace-shutdown.html"
+    - title: Substitua o hardware do controlador
+      url: "/a220/controller-replace-move-hardware.html"
+    - title: Restaure a configuração do sistema
+      url: "/a220/controller-replace-system-config-restore-and-verify.html"
+    - title: Sistema Recable
+      url: "/a220/controller-replace-recable-reassign-disks.html"
+    - title: Restauração completa do sistema
+      url: "/a220/controller-replace-restore-system-rma.html"
+  - title: DIMM
+    pdf-filename: DIMM AFF A220
+    url: "/a220/dimm-replace.html"
+  - title: Condução
+    pdf-filename: Unidade AFF A220
+    url: "/a220/drive-replace.html"
+  - title: Bateria NVMEM
+    pdf-filename: AFF A220 e A220 NVMEM bateria
+    url: "/a220/nvmem-nvram-battery-replace.html"
+  - title: Fonte de alimentação
+    pdf-filename: Fonte de alimentação AFF A220 e A220
+    url: "/a220/power-supply-swap-out.html"
+  - title: Bateria de relógio em tempo real
+    pdf-filename: Bateria de relógio em tempo real AFF A220
+    url: "/a220/rtc-battery-replace.html"

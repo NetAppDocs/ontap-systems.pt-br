@@ -1,0 +1,191 @@
+---
+permalink: fas2800/pci-cards-and-risers-replace.html 
+sidebar: sidebar 
+keywords: fas2800, fas2800, replace, pcie, mezzanine, card, disconnect, cable, sfp, qsfp, module, fail, mezzanine, shut, down, impair, controller, pcie, switch, aggregate, two-node, metrocluster, complete, replacement, process, replace a pcie or mezzanine card, shut down the impaired controller, remove the controller module, replace a pcie card, replace the mezzanine card, install the controller module, switch back aggregates in a two-node metrocluster configuration, restore the controller module to operation, complete the replacement process 
+summary: Para substituir uma placa PCIe ou mezzanine, você deve desconetar os cabos e todos os módulos SFP e QSFP das placas, substituir a placa PCIe ou mezzanine com falha e, em seguida, voltar a digitalizar as placas. 
+---
+= Substitua uma placa mezzanine - FAS2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Substitua a placa mezzanine desconetanto os cabos e todos os módulos SFP e QSFP da placa, substitua a placa mezzanine com falha e, em seguida, reconetável as placas.
+
+* Pode utilizar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema
+* Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+
+
+.Animação - substitua a placa mezzanine
+video::a8ec891d-f6f6-4479-9ca2-af47017254ff[panopto]
+
+
+== Passo 1: Desligue o controlador desativado
+
+Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
+
+Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
+
+.Passos
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=_number_of_hours_down_h`
++
+A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Se o controlador afetado fizer parte de um par de HA, desative a giveback automática a partir do console do controlador íntegro: `storage failover modify -node local -auto-giveback false`
+. Leve o controlador prejudicado para o prompt Loader:
++
+[cols="1,2"]
+|===
+| Se o controlador afetado estiver a apresentar... | Então... 
+
+
+ a| 
+O prompt Loader
+ a| 
+Vá para Remover módulo do controlador.
+
+
+
+ a| 
+A aguardar pela giveback...
+ a| 
+Pressione Ctrl-C e responda `y`.
+
+
+
+ a| 
+Prompt do sistema ou prompt de senha (digite a senha do sistema)
+ a| 
+Assuma ou interrompa o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
+
+|===
+
+
+
+
+== Passo 2: Remova o módulo do controlador
+
+Retire o módulo do controlador do sistema e, em seguida, retire a tampa do módulo do controlador.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Solte o gancho e a alça de loop que prendem os cabos ao dispositivo de gerenciamento de cabos e, em seguida, desconete os cabos do sistema e os SFPs (se necessário) do módulo do controlador, mantendo o controle de onde os cabos estavam conetados.
++
+Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar o dispositivo de gerenciamento de cabos, os cabos sejam organizados.
+
+. Retire e reserve os dispositivos de gerenciamento de cabos dos lados esquerdo e direito do módulo do controlador.
+. Aperte o trinco na pega do excêntrico até que este se solte, abra totalmente o manípulo do excêntrico para libertar o módulo do controlador do plano médio e, em seguida, utilizando duas mãos, puxe o módulo do controlador para fora do chassis.
++
+image::../media/drw_2850_pcm_remove_install_IEOPS-694.svg[drw 2850 pcm remover instalação IEOPS 694]
+
+. Vire o módulo do controlador ao contrário e coloque-o numa superfície plana e estável.
+. Abra a tampa pressionando os botões azuis nas laterais do módulo do controlador para soltar a tampa e, em seguida, gire a tampa para cima e para fora do módulo do controlador.
++
+image::../media/drw_2850_open_controller_module_cover_IEOPS-695.svg[Tampa do módulo de controlador aberto drw 2850 IEOPS 695]
+
+
+
+[cols="1,3"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Botão de liberação da tampa do módulo do controlador
+
+|===
+
+
+== Passo 3: Substitua a placa mezzanine
+
+Volte a colocar a placa do mezanino.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Remova a placa mezzanine usando a ilustração a seguir ou o mapa da FRU no módulo do controlador:
++
+image::../media/drw_2850_replace_HIC_IEOPS-700.svg[drw 2850 Substituir HIC IEOPS 700]
+
++
+[cols="1,3"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Placa de e/S
+
+
+
+ a| 
+image::../media/icon_round_2.png[ícone redondo 2]
+ a| 
+Placa mezanino PCIe
+
+|===
++
+.. Remova a placa de e/S deslizando-a diretamente para fora do módulo do controlador.
+.. Solte os parafusos de aperto manual na placa do mezanino e levante a placa do mezanino diretamente para cima.
++
+
+NOTE: Você pode soltar os parafusos com os dedos ou uma chave de fenda. Se utilizar os dedos, poderá ter de rodar a bateria NV para cima para obter uma melhor compra com o dedo no parafuso de aperto manual ao lado.
+
+
+
+. Reinstale a placa mezzanine:
++
+.. Alinhe o soquete no plugue da placa mezzanine de substituição com o soquete na placa-mãe e, em seguida, encaixe suavemente a placa diretamente no soquete.
+.. Aperte os três parafusos de aperto manual na placa do mezanino.
+.. Volte a instalar a placa de e/S.
+
+
+. Volte a instalar a tampa do módulo do controlador e bloqueie-a no lugar.
+
+
+
+
+== Passo 4: Instale o módulo do controlador
+
+Reinstale o módulo do controlador.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Se ainda não o tiver feito, substitua a tampa no módulo do controlador.
+. Vire o módulo do controlador ao contrário e alinhe a extremidade com a abertura no chassis.
+. Empurre cuidadosamente o módulo do controlador até meio do sistema. Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
++
+
+NOTE: Não introduza completamente o módulo do controlador no chassis até ser instruído a fazê-lo.
+
+. Recable o sistema, conforme necessário.
++
+Se você removeu os conversores de Mídia (QSFPs ou SFPs), lembre-se de reinstalá-los se você estiver usando cabos de fibra ótica.
+
+. Conclua a reinstalação do módulo do controlador:
++
+.. Com a alavanca do came na posição aberta, empurre firmemente o módulo do controlador até que ele atenda ao plano médio e esteja totalmente assentado e, em seguida, feche a alavanca do came para a posição travada.
++
+
+NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
+
++
+O controlador começa a arrancar assim que estiver sentado no chassis.
+
+.. Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos.
+.. Prenda os cabos ao dispositivo de gerenciamento de cabos com o gancho e a alça de loop.
+
+
+. Volte a colocar o controlador em funcionamento normal, devolvendo o respetivo armazenamento: `storage failover giveback -ofnode _impaired_node_name_`
+. Restaure a giveback automática usando o `storage failover modify -node local -auto-giveback true` comando.
+. Se uma janela de manutenção do AutoSupport foi acionada, encerre-a usando o `system node autosupport invoke -node * -type all -message MAINT=END` comando.
+
+
+
+
+== Passo 5: Devolva a peça com falha ao NetApp
+
+Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

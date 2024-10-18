@@ -1,0 +1,262 @@
+---
+permalink: a220/nvmem-nvram-battery-replace.html 
+sidebar: sidebar 
+keywords: aff a220, replace, nvmem, battery, shut, down, impaired, controller, controller, aggregates, metrocluster, configuration, reinstall 
+summary: Para substituir uma bateria NVMEM no sistema, tem de remover o módulo do controlador do sistema, abri-lo, substituir a bateria e fechar e substituir o módulo do controlador. 
+---
+= Substitua a bateria do NVMEM - AFF A220
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para substituir uma bateria NVMEM no sistema, tem de remover o módulo do controlador do sistema, abri-lo, substituir a bateria e fechar e substituir o módulo do controlador.
+
+Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+
+
+
+== Passo 1: Desligue o controlador desativado
+
+Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
+
+.Sobre esta tarefa
+* Se você tiver um sistema SAN, você deve ter verificado mensagens de  `cluster kernel-service show`evento ) para o blade SCSI do controlador afetado. O `cluster kernel-service show` comando (do modo avançado priv) exibe o nome do nó, link:https://docs.netapp.com/us-en/ontap/system-admin/display-nodes-cluster-task.html["status do quorum"]desse nó, o status de disponibilidade desse nó e o status operacional desse nó.
++
+Cada processo SCSI-blade deve estar em quórum com os outros nós no cluster. Qualquer problema deve ser resolvido antes de prosseguir com a substituição.
+
+* Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
+
+
+.Passos
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
++
+A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas: `cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Desative a giveback automática a partir da consola do controlador saudável: `storage failover modify –node local -auto-giveback false`
++
+
+NOTE: Quando vir _do pretende desativar a auto-giveback?_, introduza `y`.
+
+. Leve o controlador prejudicado para o prompt Loader:
++
+[cols="1,2"]
+|===
+| Se o controlador afetado estiver a apresentar... | Então... 
+
+
+ a| 
+O prompt Loader
+ a| 
+Vá para a próxima etapa.
+
+
+
+ a| 
+A aguardar pela giveback...
+ a| 
+Pressione Ctrl-C e responda `y` quando solicitado.
+
+
+
+ a| 
+Prompt do sistema ou prompt de senha
+ a| 
+Assuma ou interrompa o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
+
+|===
+. Se o sistema tiver apenas um módulo de controlador no chassi, desligue as fontes de alimentação e desconete os cabos de alimentação do controlador prejudicado da fonte de alimentação.
+
+
+
+
+== Passo 2: Remova o módulo do controlador
+
+Para aceder aos componentes no interior do controlador, tem de remover primeiro o módulo do controlador do sistema e, em seguida, remover a tampa do módulo do controlador.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Solte o gancho e a alça de loop que prendem os cabos ao dispositivo de gerenciamento de cabos e, em seguida, desconete os cabos do sistema e os SFPs (se necessário) do módulo do controlador, mantendo o controle de onde os cabos estavam conetados.
++
+Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar o dispositivo de gerenciamento de cabos, os cabos sejam organizados.
+
+. Retire e reserve os dispositivos de gerenciamento de cabos dos lados esquerdo e direito do módulo do controlador.
++
+image::../media/drw_25xx_cable_management_arm.png[Inserir ou remover o ARM de gerenciamento de cabos]
+
+. Aperte o trinco na pega do excêntrico até que este se solte, abra totalmente o manípulo do excêntrico para libertar o módulo do controlador do plano médio e, em seguida, utilizando duas mãos, puxe o módulo do controlador para fora do chassis.
++
+image::../media/drw_2240_x_opening_cam_latch.png[Abrir o trinco do puxador da árvore de cames]
+
+. Vire o módulo do controlador ao contrário e coloque-o numa superfície plana e estável.
+. Abra a tampa deslizando as patilhas azuis para soltar a tampa e, em seguida, rode a tampa para cima e abra-a.
+
+
+
+
+== Passo 3: Substitua a bateria do NVMEM
+
+Para substituir a bateria NVMEM no sistema, tem de remover a bateria NVMEM avariada do sistema e substituí-la por uma nova bateria NVMEM.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Verifique o LED NVMEM:
++
+** Se o sistema estiver em uma configuração de HA, vá para a próxima etapa.
+** Se o seu sistema estiver numa configuração autónoma, desligue o módulo do controlador e, em seguida, verifique o LED NVRAM identificado pelo ícone NV.
++
+image::../media/drw_hw_nvram_icon.png[LED NV]
+
++
+
+NOTE: O LED do NVRAM pisca enquanto separa o conteúdo da memória flash quando você interrompe o sistema. Depois que o destage estiver completo, o LED desliga-se.
+
++
+*** Se a energia for perdida sem um desligamento normal, o LED NVMEM pisca até que o destage esteja concluído e, em seguida, o LED se desligue.
+*** Se o LED estiver ligado e ligado, os dados não gravados são armazenados no NVMEM.
++
+Isso geralmente ocorre durante um desligamento não controlado depois que o ONTAP foi inicializado com êxito.
+
+
+
+
+
+. Localize a bateria do NVMEM no módulo do controlador.
++
+image::../media/drw_2600_nvmem_batt_repl_animated_gif.png[Substituição da bateria do NVMEM]
+
+. Localize a ficha da bateria e aperte o clipe na face da ficha da bateria para soltar a ficha da tomada e, em seguida, desligue o cabo da bateria da tomada.
+. Retire a bateria do módulo do controlador e coloque-a de lado.
+. Retire a bateria de substituição da respetiva embalagem.
+. Prenda o cabo da bateria à volta do canal do cabo na parte lateral do suporte da bateria.
+. Posicione a bateria alinhando as nervuras da chave do suporte da bateria aos entalhes "V" na parede lateral de chapa metálica.
+. Deslize a bateria para baixo ao longo da parede lateral de chapa metálica até que as patilhas de suporte no gancho lateral para dentro das ranhuras da bateria, e o trinco da bateria engata e encaixe na abertura na parede lateral.
+. Volte a ligar a ficha da bateria ao módulo do controlador.
+
+
+
+
+== Etapa 4: Reinstale o módulo do controlador
+
+Depois de substituir os componentes no módulo do controlador, volte a instalá-lo no chassis.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Se ainda não o tiver feito, substitua a tampa no módulo do controlador.
+. Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
++
+
+NOTE: Não introduza completamente o módulo do controlador no chassis até ser instruído a fazê-lo.
+
+. Recable o sistema, conforme necessário.
++
+Se você removeu os conversores de Mídia (QSFPs ou SFPs), lembre-se de reinstalá-los se você estiver usando cabos de fibra ótica.
+
+. Conclua a reinstalação do módulo do controlador:
++
+[cols="1,2"]
+|===
+| Se o seu sistema estiver em... | Em seguida, execute estas etapas... 
+
+
+ a| 
+Um par de HA
+ a| 
+O módulo do controlador começa a arrancar assim que estiver totalmente assente no chassis.
+
+.. Com a alavanca do came na posição aberta, empurre firmemente o módulo do controlador até que ele atenda ao plano médio e esteja totalmente assentado e, em seguida, feche a alavanca do came para a posição travada.
++
+
+NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
+
++
+O controlador começa a arrancar assim que estiver sentado no chassis.
+
+.. Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos.
+.. Prenda os cabos ao dispositivo de gerenciamento de cabos com o gancho e a alça de loop.
+
+
+
+
+ a| 
+Uma configuração autônoma
+ a| 
+.. Com a alavanca do came na posição aberta, empurre firmemente o módulo do controlador até que ele atenda ao plano médio e esteja totalmente assentado e, em seguida, feche a alavanca do came para a posição travada.
++
+
+NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
+
+.. Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos.
+.. Prenda os cabos ao dispositivo de gerenciamento de cabos com o gancho e a alça de loop.
+.. Volte a ligar os cabos de alimentação às fontes de alimentação e às fontes de alimentação e, em seguida, ligue a alimentação para iniciar o processo de arranque.
+
+
+|===
+
+
+
+
+== Etapa 5: Alterne agregados de volta em uma configuração de MetroCluster de dois nós
+
+Depois de concluir a substituição da FRU em uma configuração de MetroCluster de dois nós, você pode executar a operação de switchback do MetroCluster. Isso retorna a configuração ao seu estado operacional normal, com as máquinas virtuais de armazenamento de origem sincronizada (SVMs) no site anteriormente prejudicado agora ativo e fornecendo dados dos pools de discos locais.
+
+Esta tarefa só se aplica a configurações de MetroCluster de dois nós.
+
+.Passos
+. Verifique se todos os nós estão no `enabled` estado: `metrocluster node show`
++
+[listing]
+----
+cluster_B::>  metrocluster node show
+
+DR                           Configuration  DR
+Group Cluster Node           State          Mirroring Mode
+----- ------- -------------- -------------- --------- --------------------
+1     cluster_A
+              controller_A_1 configured     enabled   heal roots completed
+      cluster_B
+              controller_B_1 configured     enabled   waiting for switchback recovery
+2 entries were displayed.
+----
+. Verifique se a ressincronização está concluída em todos os SVMs: `metrocluster vserver show`
+. Verifique se todas as migrações automáticas de LIF que estão sendo executadas pelas operações de recuperação foram concluídas com sucesso: `metrocluster check lif show`
+. Execute o switchback usando o `metrocluster switchback` comando de qualquer nó no cluster sobrevivente.
+. Verifique se a operação de comutação foi concluída: `metrocluster show`
++
+A operação de switchback ainda está em execução quando um cluster está no `waiting-for-switchback` estado:
+
++
+[listing]
+----
+cluster_B::> metrocluster show
+Cluster              Configuration State    Mode
+--------------------	------------------- 	---------
+ Local: cluster_B configured       	switchover
+Remote: cluster_A configured       	waiting-for-switchback
+----
++
+A operação de switchback é concluída quando os clusters estão no `normal` estado.:
+
++
+[listing]
+----
+cluster_B::> metrocluster show
+Cluster              Configuration State    Mode
+--------------------	------------------- 	---------
+ Local: cluster_B configured      		normal
+Remote: cluster_A configured      		normal
+----
++
+Se um switchback estiver demorando muito tempo para terminar, você pode verificar o status das linhas de base em andamento usando o `metrocluster config-replication resync-status show` comando.
+
+. Restabelecer qualquer configuração SnapMirror ou SnapVault.
+
+
+
+
+== Passo 6: Devolva a peça com falha ao NetApp
+
+Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

@@ -1,0 +1,60 @@
+---
+indexpage:
+  title: Documentação dos sistemas de hardware ONTAP
+  summary: Os sistemas de storage AFF, ASA e FAS da NetApp oferecem storage all-flash
+    ou híbrido de classe empresarial, com escalabilidade horizontal e de ponta com
+    o gerenciamento de dados mais avançado do setor. Use os documentos neste site
+    para instalar, expandir, atualizar e manter seus sistemas AFF, ASA e FAS, juntamente
+    com compartimentos de armazenamento e switches de cluster.
+  keywords: aff, fas, asa
+  lead: Os sistemas de storage de hardware ONTAP da NetApp fornecem storage all-flash
+    ou híbrido de classe empresarial, com escalabilidade horizontal e de ponta com
+    o gerenciamento de dados mais avançado do setor. Use os documentos neste site
+    para instalar, expandir, atualizar e manter seus sistemas.
+  tiles:
+  - title: Comece agora
+    links:
+    - title: O que há de novo
+      url: "/whats-new.html"
+    - title: Início rápido
+      url: "/get-up-and-run.html"
+    - title: Notas de versão do ONTAP
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508
+  - title: Plataformas de storage
+    links:
+    - title: Sistemas AFF
+      url: "/aff-landing/index.html"
+    - title: Sistemas ASA
+      url: "/allsan-landing/index.html"
+    - title: Sistemas ASA R2
+      url: "/asa-r2/index.html"
+    - title: Sistemas FAS
+      url: "/fas/index.html"
+    - title: Sistemas de fim de disponibilidade
+      url: "/endofavail/index.html"
+  - title: Compartimentos e switches
+    links:
+    - title: Compartimentos de unidades
+      url: "/drive-shelves/index.html"
+    - title: Interrutores
+      url: https://docs.netapp.com/us-en/ontap-systems-switches/index.html
+  - title: Recursos DOC
+    links:
+    - title: Atualização de plataforma (a maioria dos sistemas)
+      url: https://docs.netapp.com/us-en/ontap-systems-upgrade/index.html
+    - title: Atualização da plataforma (configuração MetroCluster)
+      url: https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/concept_choosing_an_upgrade_method_mcc.html
+    - title: Software ONTAP
+      url: https://docs.netapp.com/us-en/ontap/index.html
+    - title: Consultor digital
+      url: https://docs.netapp.com/us-en/active-iq/index.html
+  - title: Ferramentas e suporte
+    links:
+    - title: Matriz de interoperabilidade do NetApp
+      url: https://mysupport.netapp.com/matrix/#welcome
+    - title: NetApp Hardware Universe
+      url: https://hwu.netapp.com/
+    - title: Base de dados de Conhecimento da NetApp
+      url: https://kb.netapp.com/
+    - title: Active IQ (login necessário)
+      url: https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor

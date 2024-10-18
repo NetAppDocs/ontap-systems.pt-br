@@ -1,0 +1,33 @@
+= 
+:allow-uri-read: 
+
+
+Antes de desligar o controlador com deficiência e verificar o status das chaves de criptografia integradas, você deve verificar o status do controlador com deficiência, desativar a giveback automática e verificar a versão do ONTAP que está sendo executada.
+
+Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
+
+.Passos
+. Verifique o estado do controlador afetado:
++
+** Se o controlador prejudicado estiver no prompt de login, faça login como `admin`.
+** Se o controlador afetado estiver no prompt DO Loader e fizer parte da configuração do HA, faça login como `admin` no controlador íntegro.
+
+
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+A seguinte mensagem do AutoSupport suprime a criação automática de casos por duas horas: 'cluster1:*> nó do sistema AutoSupport invoke -node * -type all -message MANINT.2h
+
+. Verifique a versão do ONTAP que o sistema está sendo executado no controlador com deficiência se estiver em cima ou no controlador parceiro se o controlador com deficiência estiver inativo, usando o `version -v` comando:
++
+** Se <lno-DARE> ou 1Ono-DARE> for exibido na saída do comando, o sistema não suporta NVE, prossiga para link:../fas2800/bootmedia-impaired-controller-shutdown.html["Desligue o controlador desativado"].
+** Se o <lno-DARE> não for exibido na saída do comando e o sistema estiver executando o ONTAP 9.6 ou posterior, vá para a próxima seção, link:../fas2800/bootmedia-encryption-preshutdown-checks.html#check-nve-or-nse-on-systems-running-ontap-9-6-and-later["Verifique o NVE ou o NSE em sistemas que executam o ONTAP 9.6 e posterior"].
+
+
+. Desativar a giveback automática a partir do controlador saudável:
++
+....
+`storage failover modify -node local -auto-giveback false`
+or
+`storage failover modify -node local -auto-giveback-after-panic false`
+....
+

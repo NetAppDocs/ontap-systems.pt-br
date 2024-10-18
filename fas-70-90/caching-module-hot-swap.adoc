@@ -1,0 +1,333 @@
+---
+permalink: fas-70-90/caching-module-hot-swap.html 
+sidebar: sidebar 
+keywords: fas70, fas90, hot swap, replace, FlashCache module carrier, caching module, FlashCache 
+summary: 'O transportador do módulo NVMe SSD FlashCache contém um ou dois módulos FlashCache (módulos de armazenamento em cache) com uma única unidade de armazenamento em cache SSD integrada a cada módulo de armazenamento em cache. Os módulos de armazenamento em cache podem ser trocados a quente, mas o carregador do módulo FlashCache não é trocado a quente.' 
+---
+= Substitua o carregador do módulo FlashCache ou um módulo de cache - FAS70 e FAS90
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O transportador do módulo NVMe SSD FlashCache contém um ou dois módulos FlashCache (módulos de armazenamento em cache) com uma única unidade SSD FlashCache integrada a cada módulo de armazenamento em cache.
+
+O FAS70 suporta 2TB módulos de cache e o FAS90 suporta 4TB módulos de cache. Não é possível misturar módulos de cache de capacidade diferente no carregador de módulos FlashCache.
+
+Você pode executar qualquer um dos seguintes procedimentos dependendo do que precisa ser substituído: Todo o portador do módulo Flashcache ou um módulo de cache.
+
+* <<Substitua o suporte do módulo FlashCache>>
+* <<Substitua o módulo de armazenamento em cache>>
+
+
+
+
+== Substitua o suporte do módulo FlashCache
+
+O suporte do módulo FlashCache está localizado no slot 6 e abriga até dois módulos FlashCache. Não é possível trocar a operadora do módulo FlashCache
+
+.Antes de começar
+* Certifique-se de que seu sistema de armazenamento tenha o sistema operacional apropriado para o carregador de módulos FlashCache de substituição.
+* Confirme se todos os outros componentes estão funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+
+
+
+
+=== Etapa 1: Encerre o nó prejudicado
+
+Encerre ou assuma o controlador afetado utilizando uma das seguintes opções.
+
+.Opção 1 da maioria dos sistemas
+[%collapsible]
+====
+Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
+
+.Sobre esta tarefa
+Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
+
+.Passos
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando um comando AutoSupport message: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+O seguinte comando AutoSupport suprime a criação automática de casos por duas horas: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Desative a giveback automática a partir da consola do controlador saudável: `storage failover modify –node local -auto-giveback false`
+. Leve o controlador prejudicado para o prompt Loader:
++
+[cols="1,2"]
+|===
+| Se o controlador afetado estiver a apresentar... | Então... 
+
+
+ a| 
+O prompt Loader
+ a| 
+Vá para a próxima etapa.
+
+
+
+ a| 
+`Waiting for giveback...`
+ a| 
+Pressione Ctrl-C e responda `y` quando solicitado.
+
+
+
+ a| 
+Prompt do sistema ou prompt de senha (digite a senha do sistema)
+ a| 
+Parar ou assumir o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
+
+|===
+
+
+====
+.Opção 2 Configuração do MetroCluster
+[%collapsible]
+====
+
+NOTE: Não use este procedimento se o sistema estiver em uma configuração de MetroCluster de dois nós.
+
+Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
+
+* Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
+* Se você tiver uma configuração MetroCluster, você deve ter confirmado que o estado de configuração do MetroCluster está configurado e que os nós estão em um estado ativado e normal (`metrocluster node show`).
+
+
+.Passos
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando um comando AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+O seguinte comando AutoSupport suprime a criação automática de casos por duas horas: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Desative a giveback automática a partir da consola do controlador saudável: `storage failover modify –node local -auto-giveback false`
+. Leve o controlador prejudicado para o prompt Loader:
++
+[cols="1,2"]
+|===
+| Se o controlador afetado estiver a apresentar... | Então... 
+
+
+ a| 
+O prompt Loader
+ a| 
+Vá para a próxima etapa.
+
+
+
+ a| 
+A aguardar pela giveback...
+ a| 
+Pressione Ctrl-C e responda `y` quando solicitado.
+
+
+
+ a| 
+Prompt do sistema ou prompt de senha (digite a senha do sistema)
+ a| 
+Parar ou assumir o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
+
+|===
+
+
+====
+
+
+=== Passo 2: Substitua o suporte do módulo FlashCache
+
+Execute as etapas a seguir para substituir o carregador do módulo FlashCache.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Localize o portador do módulo FlashCache com falha, no slot 6, pelo LED de atenção âmbar aceso na parte frontal do suporte do módulo FlashCache.
++
+image::../media/drw_fas70-90_remove_caching_module_carrier_ieops-1772.svg[Remova o suporte do módulo FlashCache]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Suporte do módulo FlashCache
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Números de slot do módulo de armazenamento em cache
+
+
+
+ a| 
+image:../media/icon_round_3.png["Legenda número 3"]
+ a| 
+Pega do came do suporte do módulo FlashCache
+
+
+
+ a| 
+image:../media/icon_round_4.png["Legenda número 4"]
+ a| 
+LED de avaria do suporte do módulo FlashCache
+
+|===
+. Remova a portadora do módulo FlashCache com falha:
++
+.. Gire a bandeja de gerenciamento de cabos para baixo puxando os botões de ambos os lados no interior da bandeja de gerenciamento de cabos e, em seguida, gire a bandeja para baixo.
+.. Aperte a aba azul na parte inferior do suporte do módulo FlashCache.
+.. Rode a patilha para longe do módulo.
+
+
+. Puxe o suporte do módulo FlashCache para fora do módulo do controlador e coloque-o num tapete antiestático.
+. Mova os módulos de cache para o suporte de módulos FlashCache de substituição:
++
+.. Aperte a aba Terra Cotta na parte superior do módulo de armazenamento em cache e gire a alça da came para longe do módulo de armazenamento em cache.
+.. Remova o módulo do compartimento prendendo o dedo na abertura da alavanca do came e puxando o módulo para fora do suporte do módulo FlashCache.
+.. Instale o módulo de armazenamento em cache no mesmo slot no suporte do módulo FlashCache de substituição e gire a alça do came para a posição fechada no módulo de armazenamento em cache para bloqueá-lo no lugar.
+
+
+. Repita estas etapas se houver um segundo módulo de cache.
+. Instale o suporte do módulo FlashCache de substituição no sistema:
++
+.. Alinhe o módulo com as extremidades da abertura da ranhura do compartimento.
+.. Deslize cuidadosamente o módulo para dentro da ranhura até ao compartimento e, em seguida, rode o trinco da came até ao fim para bloquear o módulo no lugar.
+.. Rode o tabuleiro de gestão de cabos para cima até à posição fechada.
+
+
+
+
+
+
+=== Passo 3: Reinicie o controlador
+
+Depois de substituir o carregador do módulo FlashCache, você deve reinicializar o módulo do controlador.
+
+.Passos
+. No prompt DO Loader, reinicie o nó: _Bye_
++
+
+NOTE: Isso reinicializa as placas de e/S e outros componentes e reinicializa o nó.
+
+. Retorne o nó à operação normal: _Failover de armazenamento giveback -ofnode prejudicado_node_name_
+. Se a giveback automática foi desativada, reative-a: _Storage failover modifique -node local -auto-giveback True_
+
+
+
+
+=== Passo 4: Devolva a peça com falha ao NetApp
+
+Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.
+
+
+
+== Substitua o módulo de armazenamento em cache
+
+.Antes de começar
+Os módulos FlashCache (módulos de cache) estão localizados no slot 6-1 ou no slot 6-2 ou no slot 6-1 e slot 6-2.
+
+Você pode trocar os módulos de armazenamento em cache individuais por módulos de armazenamento em cache da mesma capacidade do mesmo fornecedor ou de um fornecedor compatível diferente.
+
+.Antes de começar
+* Verifique se o módulo de armazenamento em cache de substituição tem a mesma capacidade que o com falha, do mesmo fornecedor ou de um fornecedor compatível diferente.
+* Confirme se todos os outros componentes estão funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+* As unidades nos módulos de armazenamento em cache não são unidades substituíveis em campo (FRU). Você deve substituir todo o módulo de armazenamento em cache.
+
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Localize o módulo de armazenamento em cache com falha, no slot 6, pelo LED âmbar de atenção aceso na parte frontal do módulo de armazenamento em cache.
+. Prepare a ranhura do módulo de armazenamento em cache para substituição da seguinte forma:
++
+.. Registre a capacidade do módulo de cache, o número de peça e o número de série no nó de destino: _System node run local sysconfig -AV 6_
+.. No nível de privilégio de administrador, prepare o slot do módulo de cache de destino para remoção, respondendo `y` quando solicitado se deseja continuar: _Módulo de slot do controlador do sistema remove -node_name -slot_number_ o seguinte comando prepara o slot 6-1 em node1 para remoção e exibe uma mensagem de que é seguro remover:
++
+[listing]
+----
+::> system controller slot module remove -node node1 -slot 6-1
+
+Warning: SSD module in slot 6-1 of the node node1 will be powered off for removal.
+Do you want to continue? (y|n): _y_
+The module has been successfully removed from service and powered off. It can now be safely removed.
+----
+.. Exiba o status do slot com o `system controller slot module show` comando.
++
+O status do slot do módulo de cache é exibido `powered-off` na saída da tela para o módulo de cache que precisa ser substituído.
+
+
+
++
+
+NOTE: Consulte a https://docs.netapp.com/us-en/ontap-cli-9121/["Command man pages"^] para obter mais detalhes sobre a sua versão do ONTAP.
+
+. Remova o módulo de armazenamento em cache:
++
+image::../media/drw_fas70-90_caching_module_remove_ieops-1773.svg[Retire o módulo de armazenamento em cache]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Pega do came do módulo de armazenamento em cache
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+LED de avaria do módulo de armazenamento em cache
+
+|===
++
+.. Gire a bandeja de gerenciamento de cabos para baixo puxando os botões de ambos os lados no interior da bandeja de gerenciamento de cabos e, em seguida, gire a bandeja para baixo.
+.. Prima o botão de libertação de terra cotta na parte frontal do módulo de armazenamento em cache.
+.. Rode o manípulo do excêntrico o mais longe possível.
+.. Remova o módulo do módulo de armazenamento em cache do compartimento prendendo o dedo na abertura da alavanca do came e puxando o módulo para fora do suporte do módulo FlashCache.
++
+Certifique-se de oferecer suporte ao módulo de armazenamento em cache enquanto o remove da operadora do módulo FlashCache.
+
+
+
+. Instale o módulo de armazenamento em cache de substituição:
++
+.. Alinhe as extremidades do módulo de armazenamento em cache com a abertura no módulo do controlador.
+.. Empurre cuidadosamente o módulo de armazenamento em cache para dentro do compartimento até que a pega do excêntrico engate.
+.. Rode a pega do excêntrico até encaixar no devido lugar.
+.. Rode o tabuleiro de gestão de cabos para cima até à posição fechada.
+
+
+. Coloque o módulo de armazenamento em cache de substituição on-line usando o `system controller slot module insert` comando da seguinte forma:
++
+O comando a seguir prepara o slot 6-1 no node1 para ligar e exibe uma mensagem de que ele está ligado:
+
++
+[listing]
+----
+::> system controller slot module insert -node node1 -slot 6-1
+
+Warning: NVMe module in slot 6-1 of the node localhost will be powered on and initialized.
+Do you want to continue? (y|n): `y`
+
+The module has been successfully powered on, initialized and placed into service.
+----
+. Verifique o status do slot usando o `system controller slot module show` comando.
++
+Certifique-se de que a saída do comando reporta o status para o as `powered-on` e pronto para operação.
+
+. Verifique se o módulo de armazenamento em cache de substituição está on-line e reconhecido e, em seguida, confirme visualmente se o LED de atenção âmbar não está aceso: `sysconfig -av slot_number`
++
+
+NOTE: Se você substituir o módulo de cache por um módulo de cache de um fornecedor diferente, o nome do novo fornecedor será exibido na saída do comando.
+
+. Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"^] página para obter mais informações.
+

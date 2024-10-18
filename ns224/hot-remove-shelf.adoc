@@ -1,0 +1,206 @@
+---
+permalink: ns224/hot-remove-shelf.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, drive, aggregate, ha, pair, serving, data, i/o, hot-remove an ns224 
+summary: 'Você pode remover a quente um compartimento de unidade de NS224 TB que teve os agregados removidos das unidades, em um par de HA que está ativo e fornecendo dados (e/S em andamento).' 
+---
+= Hot-remover uma prateleira - NS224 prateleiras
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+É possível remover a quente um compartimento de unidade de NS224 TB que teve os agregados removidos das unidades, em um par de HA ativo e fornecendo dados (e/S em andamento).
+
+.Antes de começar
+* Seu par de HA não pode estar no estado de takeover.
+* Você precisa ter removido todos os agregados das unidades (as unidades devem ser sobressalentes) na gaveta que você está removendo.
++
+
+NOTE: Se você tentar este procedimento com agregados na gaveta que você está removendo, você pode falhar o sistema com um pânico multidisco.
+
++
+Você pode usar o `storage aggregate offline -aggregate _aggregate_name_` comando e, em seguida, o `storage aggregate delete -aggregate _aggregate_name_` comando.
+
+* Se o seu sistema for enviado em um gabinete do sistema, você precisará de uma chave de fenda Phillips para remover os parafusos que prendem a prateleira aos montantes traseiros do gabinete.
+
+
+.Sobre esta tarefa
+* Se você estiver removendo mais de uma prateleira a quente, remova uma prateleira de cada vez.
+* *Prática recomendada:* a prática recomendada é remover a propriedade da unidade depois de remover os agregados das unidades na gaveta que você está removendo.
++
+A remoção das informações de propriedade de uma unidade sobressalente permite que a unidade seja adequadamente integrada a outro nó (conforme necessário).
+
++
+O procedimento para remover a propriedade de unidades pode ser encontrado nos discos e agrega conteúdo:
+
++
+https://docs.netapp.com/us-en/ontap/disks-aggregates/index.html["Visão geral de discos e agregados"^]
+
+
+
+
+NOTE: O procedimento requer que você desative a atribuição automática de acionamento. Reative a atribuição automática de unidades no final deste procedimento (depois de remover a gaveta).
+
+* Se necessário, você pode ligar os LEDs de localização da prateleira (azul) para ajudar a localizar fisicamente a prateleira afetada: `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
++
+Se você não souber `_shelf_name_` o do compartimento afetado, execute o `storage shelf show` comando.
+
++
+Uma prateleira tem três LEDs de localização: Um no painel de visualização do operador e um em cada módulo NSM. Os LEDs de localização permanecem acesos durante 30 minutos. Você pode desativá-los digitando o mesmo comando, mas usando a opção Off.
+
+* Depois de desconetar uma prateleira de portas compatíveis com RoCE não dedicadas (a bordo dos controladores, em placas PCIe compatíveis com RoCE, uma combinação de ambos, ou em módulos de e/S), você tem a opção de reconfigurar essas portas para uso em rede.
++
+
+NOTE: Se o seu par de HA estiver executando uma versão do ONTAP 9.6, será necessário reinicializar os controladores, um de cada vez. Se o seu par de HA estiver executando o ONTAP 9.7 ou posterior, você não precisará reinicializar os controladores, a menos que uma ou ambas as controladoras estejam no modo de manutenção. Este procedimento pressupõe que nenhum controlador está no modo de manutenção.
+
+
+
+.Passos
+. Aterre-se corretamente.
+. Verifique se as unidades na gaveta que você está removendo não têm agregados (são sobressalentes) e se a propriedade foi removida:
++
+.. Digite o comando a seguir para listar todas as unidades no compartimento que você está removendo: `storage disk show -shelf _shelf_number_`
++
+Você pode inserir o comando em qualquer um dos módulos do controlador.
+
+.. Verifique a saída para verificar se não há agregados nas unidades.
++
+As unidades sem agregados têm um traço na `Container Name` coluna.
+
+.. Verifique a saída para verificar se a propriedade foi removida das unidades.
++
+As unidades sem propriedade têm um traço na `Owner` coluna.
+
++
+
+NOTE: Se você tiver unidades com falha, elas serão exibidas quebradas `Container Type` na coluna. (As unidades com falha não têm propriedade.)
+
++
+A saída a seguir mostra que as unidades na gaveta que está sendo removida (gaveta 2) estão no estado correto para remover a gaveta. Os agregados são removidos em todas as unidades; portanto, um traço aparece `Container Name` na coluna para cada unidade. A propriedade também é removida em todas as unidades; portanto, um traço aparece `Owner` na coluna para cada unidade.
+
+
+
++
+[listing]
+----
+cluster1::> storage disk show -shelf 2
+
+           Usable           Disk     Container   Container
+Disk         Size Shelf Bay Type     Type        Name       Owner
+-------- -------- ----- --- ------   ----------- ---------- ---------
+...
+2.2.4           -     2   4 SSD-NVM  spare                -         -
+2.2.5           -     2   5 SSD-NVM  spare                -         -
+2.2.6           -     2   6 SSD-NVM  broken               -         -
+2.2.7           -     2   7 SSD-NVM  spare                -         -
+...
+----
+. Localize fisicamente a prateleira que você está removendo.
+. Desconete o cabeamento da gaveta que você está removendo:
++
+.. Desconete os cabos de alimentação das fontes de alimentação abrindo o retentor do cabo de alimentação se forem fontes de alimentação CA ou desaparafusando os dois parafusos de polegar se forem fontes de alimentação CC e, em seguida, desconete os cabos de alimentação das fontes de alimentação.
++
+As fontes de alimentação não têm um interrutor de alimentação.
+
+.. Desconete o cabeamento de storage (da gaveta até as controladoras).
+
+
+. Remova fisicamente a prateleira do rack ou gabinete.
++
+
+NOTE: Uma prateleira NS224 totalmente carregada pode pesar até 66,78 lbs (30,29 kg) e requer duas pessoas para levantar ou usar um elevador hidráulico. Evite remover os componentes da prateleira (da parte frontal ou traseira da prateleira) para reduzir o peso da prateleira, pois o peso da prateleira ficará desequilibrado.
+
++
+
+NOTE: Se o seu sistema foi enviado num armário, tem de primeiro desapertar os dois parafusos Phillips que fixam a prateleira aos suportes verticais traseiros. Os parafusos estão localizados nas paredes internas da prateleira do módulo NSM inferior. Você deve remover ambos os módulos NSM para acessar os parafusos.
+
+. Se estiver removendo mais de uma prateleira, repita as etapas 2 a 5.
++
+Caso contrário, vá para a próxima etapa.
+
+. Se você desativou a atribuição automática de unidade quando removeu a propriedade das unidades, reative-a: `storage disk option modify -autoassign on`
++
+Você executa o comando em ambos os módulos do controlador.
+
+. Você tem a opção de reconfigurar as portas compatíveis com RoCE não dedicadas para uso em rede, executando as seguintes subetapas.
++
+Caso contrário, você é feito com este procedimento.
+
++
+.. Verifique os nomes das portas não dedicadas, atualmente configuradas para uso em armazenamento: `storage port show`
++
+Você pode inserir o comando em qualquer um dos módulos do controlador.
+
++
+
+NOTE: As portas não dedicadas configuradas para uso de armazenamento são exibidas na saída da seguinte forma: Se seu par de HA estiver executando o ONTAP 9.8 ou posterior, as portas não dedicadas serão exibidas `storage` `Mode` na coluna. Se o seu par de HA estiver executando o ONTAP 9.7 ou 9,6, as portas não dedicadas, que são exibidas `false` `Is Dedicated?` na coluna, também serão exibidas `enabled` na `State` coluna.
+
+.. Conclua o conjunto de etapas aplicáveis à versão do ONTAP que seu par de HA está sendo executado:
++
+[cols="1,2"]
+|===
+| Se o seu par HA estiver em execução... | Então... 
+
+
+ a| 
+ONTAP 9 .8 ou posterior
+ a| 
+... Reconfigure as portas não dedicadas para utilização em rede, no primeiro módulo do controlador: `storage port modify -node _node name_ -port _port name_ -mode network`
++
+Você deve executar este comando para cada porta que você está reconfigurando.
+
+... Repita o passo acima para reconfigurar as portas no segundo módulo do controlador.
+... Vá para a subetapa 8c para verificar todas as alterações de porta.
+
+
+
+
+ a| 
+ONTAP 9,7
+ a| 
+... Reconfigure as portas não dedicadas para utilização em rede, no primeiro módulo do controlador: `storage port disable -node _node name_ -port _port name_`
++
+Você deve executar este comando para cada porta que você está reconfigurando.
+
+... Repita o passo acima para reconfigurar as portas no segundo módulo do controlador.
+... Vá para a subetapa 8c para verificar todas as alterações de porta.
+
+
+
+
+ a| 
+Uma versão do ONTAP 9.6
+ a| 
+... Reconfigure as portas compatíveis com RoCE para utilização em rede, no primeiro módulo de controlador: `storage port disable -node _node name_ -port _port name_`
++
+Você deve executar este comando para cada porta que você está reconfigurando.
+
+... Reinicie o módulo do controlador para que as alterações de porta entrem em vigor:
++
+`system node reboot -node _node name_ -reason _reason_ for the reboot`
+
++
+
+NOTE: A reinicialização deve ser concluída antes de prosseguir para a próxima etapa. A reinicialização pode levar até 15 minutos.
+
+... Reconfigure as portas no segundo módulo do controlador, repetindo o primeiro passo (a).
+... Reinicie o segundo controlador para que as alterações de porta entrem em vigor, repetindo o segundo passo (b).
+... Vá para a subetapa 8c para verificar todas as alterações de porta.
+
+
+|===
+.. Verifique se as portas não dedicadas de ambos os módulos do controlador são reconfiguradas para uso em rede: `storage port show`
++
+Você pode inserir o comando em qualquer um dos módulos do controlador.
+
++
+Se o seu par de HA estiver executando o ONTAP 9.8 ou posterior, as portas não dedicadas serão exibidas `network` `Mode` na coluna.
+
++
+Se o seu par de HA estiver executando o ONTAP 9.7 ou 9,6, as portas não dedicadas, que são exibidas `false` `Is Dedicated?` na coluna, também serão exibidas `disabled` na `State` coluna.
+
+
+
+

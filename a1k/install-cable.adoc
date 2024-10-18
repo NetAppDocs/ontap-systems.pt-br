@@ -1,0 +1,256 @@
+---
+permalink: a1k/install-cable.html 
+sidebar: sidebar 
+keywords: aff a1k, prepare installation 
+summary: As portas de rede de gerenciamento nos controladores são conetadas aos switches. As portas de interconexão de HA e interconexão de cluster são cabeadas em ambas as controladoras. Os módulos do controlador estão ligados ao armazenamento externo, se tiverem sido encomendados. 
+---
+= Cable the hardware - AFF A1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois de instalar o hardware de rack para seu sistema de storage AFF A1K, instale os cabos de rede das controladoras e conete os cabos entre as controladoras e as gavetas de storage.
+
+.Antes de começar
+Verifique a seta da ilustração nos diagramas de cabeamento para a orientação adequada da guia de puxar do conetor de cabo.
+
+image::../media/drw_cable_pull_tab_direction_ieops-1699.svg[Exemplo de orientação da patilha de puxar do cabo]
+
+* Ao inserir o conetor, você deve senti-lo clicar no lugar; se você não sentir que ele clique, remova-o, vire a cabeça do cabo e tente novamente.
+* Se estiver conetando a um switch ótico, insira o transcetor plugável de fator de forma pequeno (SFP) na porta do controlador antes de fazer o cabeamento para a porta.
+
+
+
+
+== Passo 1: Conete os controladores de armazenamento à sua rede
+
+Conete os controladores de storage à rede host.
+
+.Antes de começar
+Contacte o administrador da rede para obter informações sobre como ligar o sistema de armazenamento aos comutadores.
+
+.Sobre esta tarefa
+Esses procedimentos mostram configurações comuns. Tenha em mente que o cabeamento específico depende dos componentes solicitados para o seu sistema de armazenamento. Para obter detalhes abrangentes de configuração e prioridade de slot, link:https://hwu.netapp.com["NetApp Hardware Universe"^]consulte .
+
+[role="tabbed-block"]
+====
+.Opção 1: Conetar os controladores a um cluster ONTAP sem switch
+--
+Conete os controladores de storage uns aos outros para criar as conexões de cluster do ONTAP e, em seguida, conete as portas Ethernet de cada controlador à rede do host.
+
+.Passos
+. Use o cabo de interconexão cluster/HA para conetar as portas e1a a e1a e as portas e7a a e7a.
++
+
+NOTE: O tráfego de interconexão de cluster e o tráfego de HA compartilham as mesmas portas físicas.
+
++
+.. Conete a porta e1a no controlador A à porta e1a no controlador B.
+.. Conete a porta e7a no controlador A à porta e7a no controlador B.
++
+*Cabos de interconexão de cluster/HA*
+
++
+image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[Cabo de HA de cluster]
+
++
+image::../media/drw_a1k_tnsc_cluster_cabling_ieops-1648.svg[Diagrama de cabeamento de cluster sem switch de dois nós]
+
+
+
+. Conete as portas do módulo Ethernet à rede host.
++
+A seguir estão alguns exemplos típicos de cabeamento de rede de host. Consulte link:https://hwu.netapp.com["NetApp Hardware Universe"^] para obter a configuração específica do sistema.
+
++
+.. Ligue as portas e9a e e9b ao comutador de rede de dados Ethernet, conforme ilustrado.
++
+
+NOTE: Para obter o máximo desempenho do sistema para tráfego de cluster e HA, não use as portas e1b e E7B para conexões de rede de host. Use uma placa de host separada para maximizar o desempenho.
+
++
+*Cabo de 100 GbE*
+
++
+image::../media/oie_cable_sfp_gbe_copper.png[100GB cabo Ethernet]
+
++
+image::../media/drw_a1k_network_cabling1_ieops-1649.svg[Cabo para rede Ethernet 100GB]
+
+.. Conete seus switches de rede host de 10/25 GbE.
++
+*Host de 10/25 GbE*
+
++
+image::../media/oie_cable_sfp_gbe_copper.png[Cabo Ethernet 10/25GB]
+
++
+image::../media/drw_a1k_network_cabling2_ieops-1650.svg[Cabo para rede Ethernet 10/25GB]
+
+
+
+. Use os cabos RJ-45 de 1000BASEBASE-T para conetar as portas de gerenciamento de controladora (chave inglesa) aos switches de rede de gerenciamento.
++
+image::../media/oie_cable_rj45.png[Cabos RJ-45]
+
++
+*CABOS RJ-45 DE 1000BASEBASE-T*
+
++
+image::../media/drw_a1k_management_connection_ieops-1651.svg[Conete-se à sua rede de gerenciamento]
+
+
+
+
+IMPORTANT: Não conete os cabos de energia ainda.
+
+--
+.Opção 2: Conetar os controladores a um cluster ONTAP comutado
+--
+Conete os controladores de storage aos switches de rede do cluster para criar as conexões do cluster ONTAP e, em seguida, conete as portas Ethernet de cada controlador à rede do host.
+
+.Passos
+. Faça as seguintes conexões de cabeamento:
++
+
+NOTE: O tráfego de interconexão de cluster e o tráfego de HA compartilham as mesmas portas físicas.
+
++
+.. Conete a porta e1a no controlador A e a porta e1a no controlador B ao switch de rede do cluster A..
+.. Conete a porta e7a no controlador A e a porta e7a no controlador B ao switch de rede do cluster B.
++
+*Cabo de 100 GbE*
+
++
+image::../media/oie_cable100_gbe_qsfp28.png[Cabo de 100 GB]
+
++
+image::../media/drw_a1k_switched_cluster_cabling_ieops-1652.svg[Conexões do cluster de cabos à rede do cluster]
+
+
+
+. Conete as portas do módulo Ethernet à rede host.
++
+A seguir estão alguns exemplos típicos de cabeamento de rede de host. Consulte link:https://hwu.netapp.com["NetApp Hardware Universe"^] para obter a configuração específica do sistema.
+
++
+.. Ligue as portas e9a e e9b ao comutador de rede de dados Ethernet, conforme ilustrado.
++
+
+NOTE: Para obter o máximo desempenho do sistema para tráfego de cluster e HA, não use as portas e1b e E7B para conexões de rede de host. Use uma placa de host separada para maximizar o desempenho.
+
++
+*Cabo de 100 GbE*
+
++
+image::../media/oie_cable_sfp_gbe_copper.png[100GB cabo Ethernet]
+
++
+image::../media/drw_a1k_network_cabling1_ieops-1649.svg[Cabo para rede Ethernet 100GB]
+
+.. Conete seus switches de rede host de 10/25 GbE.
++
+*Host de 4 portas e 10/25 GbE*
+
++
+image::../media/oie_cable_sfp_gbe_copper.png[Cabo Ethernet 10/25GB]
+
++
+image::../media/drw_a1k_network_cabling2_ieops-1650.svg[Cabo para rede Ethernet 10/25GB]
+
+
+
+. Conete as portas de gerenciamento de controladora (Wrench) aos switches de rede de gerenciamento com cabos RJ-45 de 1000BASEBASE-T.
++
+image::../media/oie_cable_rj45.png[Cabos RJ-45]
+
++
+*CABOS RJ-45 DE 1000BASEBASE-T*
+
++
+image::../media/drw_a1k_management_connection_ieops-1651.svg[Conete-se à sua rede de gerenciamento]
+
+
+
+
+IMPORTANT: Não conete os cabos de energia ainda.
+
+--
+====
+
+
+== Etapa 2: Conecte os controladores de storage às gavetas de storage
+
+Os procedimentos de cabeamento a seguir mostram como conectar suas controladoras a uma gaveta e a duas gavetas. É possível conectar diretamente até quatro gavetas aos controladores.
+
+[role="tabbed-block"]
+====
+.Opção 1: Conetar a uma gaveta de armazenamento de NS224 GB
+--
+Conete cada controlador aos módulos NSM no compartimento NS224. Os gráficos mostram o cabeamento de cada uma das controladoras: O cabeamento da controladora A é exibido em azul e o cabeamento da controladora B é exibido em amarelo.
+
+*Cabos de cobre 100 GbE QSFP28*
+
+image::../media/oie_cable100_gbe_qsfp28.png[Cabo de cobre de 100 GbE QSFP28]
+
+.Passos
+. No controlador A, ligue as seguintes portas:
++
+.. Conete a porta e11a à porta NSM A e0a.
+.. Conete a porta e11b à porta NSM B e0b.
++
+image:../media/drw_a1k_1shelf_cabling_a_ieops-1703.svg["Controladora A e11a e e11b em uma única gaveta de NS224 U."]
+
+
+
+. No controlador B, ligue as seguintes portas:
++
+.. Conete a porta e11a à porta NSM B e0a.
+.. Conete a porta e11b à porta NSM A e0b.
++
+image:../media/drw_a1k_1shelf_cabling_b_ieops-1704.svg["Controladora de cabos B portas e11a e e11b para uma única gaveta de NS224 U."]
+
+
+
+
+
+--
+.Opção 2: Conete-se a duas gavetas de armazenamento NS224
+--
+Conecte cada controladora aos módulos do NSM nas duas gavetas NS224. Os gráficos mostram o cabeamento de cada uma das controladoras: O cabeamento da controladora A é exibido em azul e o cabeamento da controladora B é exibido em amarelo.
+
+*Cabos de cobre 100 GbE QSFP28*
+
+image::../media/oie_cable100_gbe_qsfp28.png[Cabo de cobre de 100 GbE QSFP28]
+
+.Passos
+. No controlador A, ligue as seguintes portas:
++
+.. Conete a porta e11a ao compartimento 1 NSM A porta e0a.
+.. Conete a porta e11b à porta e0b do NSM B da gaveta 2.
+.. Conete a porta e10a ao compartimento 2 NSM A porta e0a.
+.. Conete a porta e10b ao compartimento 1 NSM A porta e0b.
++
+image:../media/drw_a1k_2shelf_cabling_a_ieops-1705.svg["Conexões controlador a compartimento para o controlador A"]
+
+
+
+. No controlador B, ligue as seguintes portas:
++
+.. Conete a porta e11a à porta e0a do NSM B da gaveta 1.
+.. Conete a porta e11b ao compartimento 2 NSM A porta e0b.
+.. Conete a porta e10a à porta e0a do NSM B da gaveta 2.
+.. Conete a porta e10b ao compartimento 1 NSM A porta e0b.
++
+image:../media/drw_a1k_2shelf_cabling_b_ieops-1706.svg["Conexões controlador para compartimento para o controlador B"]
+
+
+
+
+
+--
+====
+.O que se segue?
+Depois de ter cabeado o hardware do seu sistema AFF A1K, link:install-power-hardware.html["Ligue o sistema de armazenamento AFF A1K"]você .

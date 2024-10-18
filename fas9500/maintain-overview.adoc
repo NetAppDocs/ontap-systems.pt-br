@@ -1,0 +1,86 @@
+---
+permalink: fas9500/maintain-overview.html 
+sidebar: sidebar 
+keywords: FAS9500 maintenance, maintenance, repairing FAS9500, repairing aff FAS9500, replace FAS9500 components, replace FAS9500 components 
+summary: Mantenha o hardware ASA FAS9500 
+---
+= Mantenha o hardware FAS9500
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para o sistema de armazenamento FAS9500, pode executar procedimentos de manutenção nos seguintes componentes.
+
+
+
+== Suporte de arranque
+
+A Mídia de inicialização armazena um conjunto primário e secundário de arquivos de imagem de inicialização que o sistema usa quando ele é inicializado.
+
+
+
+== Módulo de armazenamento em cache
+
+Você deve substituir o módulo de cache do controlador quando o sistema Registrar uma única mensagem AutoSupport (ASUP) informando que o módulo ficou offline.
+
+
+
+== Chassis
+
+O chassi é o gabinete físico que abriga todos os componentes do controlador, como a unidade controladora/CPU, fonte de alimentação e e/S.
+
+
+
+== Controlador
+
+Um controlador consiste em uma placa, firmware e software. Controla as unidades e implementa as funções do ONTAP.
+
+
+
+== DCPM
+
+O DCPM (módulo de alimentação do controlador de destage) contém a bateria de NVRAM11 V.
+
+
+
+== DIMM
+
+Você deve substituir um DIMM (módulo de memória dual in-line) quando houver uma incompatibilidade de memória ou se tiver um DIMM com falha.
+
+
+
+== Ventoinha
+
+A ventoinha arrefece o controlador.
+
+
+
+== Módulo de e/S.
+
+O módulo I/o (módulo de entrada/saída) é um componente de hardware que atua como intermediário entre o controlador e vários dispositivos ou sistemas que precisam trocar dados com o controlador.
+
+
+
+== LED USB
+
+O módulo LED USB fornece conetividade às portas da consola e ao estado do sistema.
+
+
+
+== NVRAM
+
+O módulo NVRAM (memória de acesso aleatório não volátil) permite que o controlador retenha dados em ciclos de energia ou reinicializações do sistema.
+
+
+
+== Fonte de alimentação
+
+Uma fonte de alimentação fornece uma fonte de alimentação redundante em um compartimento de controladora.
+
+
+
+== Bateria de relógio em tempo real
+
+Uma bateria de relógio em tempo real preserva as informações de data e hora do sistema se a energia estiver desligada.

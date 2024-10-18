@@ -1,0 +1,86 @@
+---
+permalink: a70-90/index.html 
+sidebar: sidebar 
+keywords: aff a70 aff a90 maintenance, maintenance, repairing a70 aff a90,  replace a70 aff a90 components 
+summary: Mantenha o hardware AFF A70 e AFF A90 
+---
+= Manter o hardware AFF A70 e AFF A90
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para os sistemas de armazenamento AFF A70 e A90, é possível executar procedimentos de manutenção nos seguintes componentes.
+
+
+
+== Suporte de arranque
+
+A Mídia de inicialização armazena um conjunto primário e secundário de arquivos de imagem de inicialização que o sistema usa quando ele é inicializado.
+
+
+
+== Chassis
+
+O chassi é o gabinete físico que abriga todos os componentes do controlador, como a unidade controladora/CPU, fonte de alimentação e e/S.
+
+
+
+== Controlador
+
+Um controlador consiste em uma placa, firmware e software. Controla as unidades e implementa as funções do ONTAP.
+
+
+
+== DIMM
+
+Você deve substituir um DIMM (módulo de memória dual in-line) quando houver uma incompatibilidade de memória ou se tiver um DIMM com falha.
+
+
+
+== Condução
+
+Uma unidade é um dispositivo que fornece a Mídia de armazenamento físico para dados.
+
+
+
+== Ventoinha
+
+A ventoinha arrefece o controlador.
+
+
+
+== NVDIMM
+
+O NVDIMM (módulo de memória em linha dupla não volátil) gerencia a transferência de dados da memória volátil para o armazenamento não volátil e mantém a integridade dos dados em caso de perda de energia ou desligamento do sistema.
+
+
+
+== Bateria NVDIMM
+
+Uma bateria NVDIMM é responsável por manter a energia do módulo NVDIMM.
+
+
+
+== Placa PCIe
+
+Uma placa PCIe (Peripheral Component Interconnect Express) é uma placa de expansão que se coneta ao slot PCIe da placa-mãe.
+
+
+
+== Fonte de alimentação
+
+Uma fonte de alimentação fornece uma fonte de alimentação redundante em um compartimento de controladora.
+
+
+
+== Bateria de relógio em tempo real
+
+Uma bateria de relógio em tempo real preserva as informações de data e hora do sistema se a energia estiver desligada.
+
+
+
+== Módulo de gestão do sistema
+
+O módulo Gerenciamento do sistema fornece a interface entre o controlador e um console ou laptop para fins de manutenção do controlador ou do sistema. O módulo de gestão do sistema contém o suporte de arranque e guarda o número de série do sistema (SSN).

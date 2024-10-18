@@ -1,0 +1,243 @@
+= Passo 1: Desligue o controlador desativado
+:allow-uri-read: 
+
+
+Para substituir uma placa mezzanine com falha, você deve remover os cabos e quaisquer módulos SFP ou QSFP, substituir a placa, reinstalar os módulos SFP ou QSFP e reabilitar as placas. Para instalar uma nova placa mezzanine, você deve ter os cabos apropriados e módulos SFP ou QSFP.
+
+.Sobre esta tarefa
+* Pode utilizar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema
+* Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+
+
+
+
+== Passo 1: Desligue o controlador desativado
+
+Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
+
+.Sobre esta tarefa
+* Se você tiver um sistema SAN, você deve ter verificado mensagens de  `cluster kernel-service show`evento ) para o blade SCSI do controlador afetado. O `cluster kernel-service show` comando (do modo avançado priv) exibe o nome do nó, link:https://docs.netapp.com/us-en/ontap/system-admin/display-nodes-cluster-task.html["status do quorum"]desse nó, o status de disponibilidade desse nó e o status operacional desse nó.
++
+Cada processo SCSI-blade deve estar em quórum com os outros nós no cluster. Qualquer problema deve ser resolvido antes de prosseguir com a substituição.
+
+* Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
+
+
+.Passos
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
++
+A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas: `cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Desative a giveback automática a partir da consola do controlador saudável: `storage failover modify –node local -auto-giveback false`
++
+
+NOTE: Quando vir _do pretende desativar a auto-giveback?_, introduza `y`.
+
+. Leve o controlador prejudicado para o prompt Loader:
++
+[cols="1,2"]
+|===
+| Se o controlador afetado estiver a apresentar... | Então... 
+
+
+ a| 
+O prompt Loader
+ a| 
+Vá para a próxima etapa.
+
+
+
+ a| 
+A aguardar pela giveback...
+ a| 
+Pressione Ctrl-C e responda `y` quando solicitado.
+
+
+
+ a| 
+Prompt do sistema ou prompt de senha
+ a| 
+Assuma ou interrompa o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
+
+|===
+
+
+
+
+== Passo 2: Remova o módulo do controlador
+
+Retire o módulo do controlador do chassis quando substituir um componente no interior do módulo do controlador.
+
+Certifique-se de etiquetar os cabos para que saiba de onde vieram.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Desconete as fontes de alimentação do módulo do controlador da fonte.
+. Solte os fixadores do cabo de alimentação e, em seguida, desconete os cabos das fontes de alimentação.
+. Insira o dedo indicador no mecanismo de travamento em ambos os lados do módulo do controlador, pressione a alavanca com o polegar e puxe o controlador cuidadosamente alguns centímetros para fora do chassi.
++
+
+NOTE: Se tiver dificuldade em remover o módulo do controlador, coloque os dedos indicadores através dos orifícios dos dedos a partir do interior (cruzando os braços).
+
++
+image::../media/drw_a250_pcm_remove_install.png[Abrir o mecanismo de bloqueio]
+
++
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+| Alavanca 
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Mecanismo de bloqueio
+
+|===
+. Usando ambas as mãos, segure os lados do módulo do controlador e puxe-o suavemente para fora do chassi e coloque-o em uma superfície plana e estável.
+. Rode o parafuso de aperto manual na parte frontal do módulo do controlador no sentido contrário ao dos ponteiros do relógio e abra a tampa do módulo do controlador.
++
+image::../media/drw_a250_open_controller_module_cover.png[Abrir a tampa do módulo do controlador]
+
++
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+| Parafuso de aperto manual 
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Tampa do módulo do controlador.
+
+|===
+
+
+
+
+== Passo 3: Substitua ou instale uma placa mezzanine
+
+Para substituir uma placa mezzanine, você deve remover a placa prejudicada e instalar a placa de substituição; para instalar uma placa mezzanine, você deve remover a placa frontal e instalar a nova placa.
+
+Use o vídeo a seguir ou as etapas tabuladas para substituir uma placa mezzanine:
+
+.Animação - substitua uma placa mezzanine
+video::d8e7d4d9-8d28-4be1-809b-ac5b01643676[panopto]
+. Para substituir uma placa mezzanine:
+. Localize e substitua a placa mezzanine prejudicada no módulo do controlador.
++
+image::../media/drw_a250_replace_mezz_card.png[Retirar a placa mezzanine]
+
++
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+| Remova os parafusos na face do módulo do controlador. 
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Desaperte o parafuso no módulo do controlador.
+
+
+
+ a| 
+image:../media/icon_round_3.png["Legenda número 3"]
+ a| 
+Retire a placa do mezanino.
+
+|===
++
+.. Desconete qualquer cabeamento associado à placa mezzanine prejudicada.
++
+Certifique-se de etiquetar os cabos para que saiba de onde vieram.
+
+.. Remova todos os módulos SFP ou QSFP que possam estar na placa mezzanine prejudicada e reserve.
+.. Utilizando a chave de fendas magnética nº 1, retire os parafusos da face do módulo do controlador e coloque-os de lado com segurança no íman.
+.. Usando a chave de fenda magnética nº 1, solte o parafuso na placa mezzanine prejudicada.
+.. Usando a chave de fenda magnética nº 1, levante cuidadosamente a placa mezzanine prejudicada diretamente para fora do soquete e coloque-a de lado.
+.. Retire a placa mezzanine de substituição do saco de transporte antiestático e alinhe-a com a face interior do módulo do controlador.
+.. Alinhe cuidadosamente a placa do mezanino de substituição no lugar.
+.. Usando a chave de fenda magnética nº 1, insira e aperte os parafusos na face do módulo do controlador e na placa mezzanine.
++
+
+NOTE: Não aplique força ao apertar o parafuso na placa mezzanine; você pode rachá-lo.
+
+.. Insira todos os módulos SFP ou QSFP que foram removidos da placa mezzanine prejudicada na placa mezzanine de substituição.
+
+
+. Para instalar uma placa mezzanine:
+. Você instala uma nova placa mezzanine se seu sistema não tiver uma.
++
+.. Usando a chave de fenda magnética nº 1, remova os parafusos da face do módulo do controlador e da placa frontal que cobre a ranhura do cartão mezanino e coloque-os de lado com segurança no ímã.
+.. Retire a placa mezzanine do saco de transporte antiestático e alinhe-a com a face interior do módulo do controlador.
+.. Alinhe cuidadosamente a placa do mezanino no lugar.
+.. Usando a chave de fenda magnética nº 1, insira e aperte os parafusos na face do módulo do controlador e na placa mezzanine.
++
+
+NOTE: Não aplique força ao apertar o parafuso na placa mezzanine; você pode rachá-lo.
+
+
+
+
+
+
+
+== Etapa 4: Reinstale o módulo do controlador
+
+Depois de substituir um componente dentro do módulo do controlador, você deve reinstalar o módulo do controlador no chassi do sistema e iniciá-lo.
+
+. Feche a tampa do módulo do controlador e aperte o parafuso de aperto manual.
++
+image::../media/drw_a250_close_controller_module_cover.png[Fechar a tampa do módulo do controlador]
+
++
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+| Tampa do módulo do controlador 
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Parafuso de aperto manual
+
+|===
+. Insira o módulo do controlador no chassis:
++
+.. Certifique-se de que os braços do mecanismo de engate estão bloqueados na posição totalmente estendida.
+.. Utilizando ambas as mãos, alinhe e deslize suavemente o módulo do controlador para dentro dos braços do mecanismo de bloqueio até parar.
+.. Coloque os dedos indicadores através dos orifícios dos dedos a partir do interior do mecanismo de bloqueio.
+.. Pressione os polegares para baixo nas patilhas cor-de-laranja na parte superior do mecanismo de bloqueio e empurre suavemente o módulo do controlador sobre o batente.
+.. Solte os polegares da parte superior dos mecanismos de travamento e continue empurrando até que os mecanismos de travamento se encaixem no lugar.
++
+O módulo do controlador começa a arrancar assim que estiver totalmente assente no chassis. Esteja preparado para interromper o processo de inicialização.
+
+
+
++
+O módulo do controlador deve ser totalmente inserido e alinhado com as bordas do chassi.
+
+. Recable o sistema, conforme necessário.
+. Volte a colocar o controlador em funcionamento normal, devolvendo o respetivo armazenamento: `storage failover giveback -ofnode _impaired_node_name_`
+. Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true`
+
+
+
+
+== Passo 5: Devolva a peça com falha ao NetApp
+
+Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

@@ -1,0 +1,18 @@
+---
+permalink: a700/chassis-replace-overview.html 
+sidebar: sidebar 
+keywords: aff a700, fas9000, chassis replacement 
+summary: Substituir um chassis com deficiência o novo chassis do mesmo modelo que o chassis com deficiência. 
+---
+= Descrição geral da substituição do chassis - AFF A700
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+
+* Pode utilizar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema.
+* Este procedimento é disruptivo. Para um cluster de dois nós, você terá uma interrupção de serviço completa e uma interrupção parcial em um cluster de vários nós.
+

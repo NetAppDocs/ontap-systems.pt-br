@@ -1,0 +1,60 @@
+= Passo 1: Recable o controlador
+:allow-uri-read: 
+
+
+Recable as conexões de armazenamento e rede e, em seguida, devolva o controlador.
+
+
+
+== Passo 1: Recable o controlador
+
+Recable as conexões de rede e armazenamento do módulo do controlador.
+
+.Passos
+. Recable o módulo do controlador para armazenamento e conexões de rede.
+. Verifique se o cabeamento está correto usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"]o .
++
+.. Baixe e instale o Config Advisor.
+.. Insira as informações do sistema de destino e clique em coletar dados.
+.. Clique na guia cabeamento e examine a saída. Certifique-se de que todos os compartimentos de disco sejam exibidos e todos os discos apareçam na saída, corrigindo quaisquer problemas de cabeamento encontrados.
+.. Verifique outro cabeamento clicando na guia apropriada e, em seguida, examinando a saída do Config Advisor.
+
+
+
+
+
+
+== Passo 2: Devolva o controlador
+
+Transfira a propriedade dos recursos de armazenamento de volta para o controlador de substituição.
+
+. Se o sistema de armazenamento tiver a encriptação configurada, tem de restaurar a funcionalidade armazenamento ou encriptação de volume utilizando o seguinte procedimento para reiniciar o sistema:
++
+.. Inicialize no Menu e execute a opção 10
+.. Introduza a frase-passe e os dados de cópia de segurança e, em seguida, efetue o arranque normal https://kb.netapp.com/on-prem/ontap/DM/Encryption/Encryption-KBs/Restore_onboard_key_management_encryption_keys["Restaurar chaves de criptografia integradas de gerenciamento de chaves"] consulte .
+.. Execute apenas o CFO giveback
+.. Execute Onboard Sync e verifique se o SVM-KEK está definido como True See https://kb.netapp.com/on-prem/ontap/DM/Encryption/Encryption-KBs/Onboard_keymanager_sync_fails_after_motherboard_replacement["Giveback após falha na substituição do MB - a operação foi vetada pelo gerenciador de chaves"]
+.. Giveback SFO, (sem força)
+
+
+. Se o sistema não tiver a encriptação configurada, execute o seguinte procedimento para reiniciar o sistema:
++
+.. Inicialize no Menu e execute a opção 1.
+.. Devolver o controlador:
+.. A partir do controlador saudável, devolva o armazenamento do controlador substituído: `storage failover giveback -ofnode _replacement_node_name_`
++
+O controlador _replacement_ recupera seu armazenamento e completa a inicialização.
+
++
+
+NOTE: Se o giveback for vetado, você pode considerar substituir os vetos.
+
++
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["Encontre o conteúdo de Configuração de alta disponibilidade para sua versão do ONTAP 9"]
+
+.. Após a conclusão do giveback, confirme que o par de HA está saudável e que a aquisição é possível: `storage failover show`
+
+
+. Verifique se os volumes esperados estão presentes para cada controlador: `vol show -node node-name`
+. Se você desativou o controle automático na reinicialização, ative-o a partir do controlador íntegro: `storage failover modify -node replacement-node-name -onreboot true`
+

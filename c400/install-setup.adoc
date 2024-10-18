@@ -1,0 +1,34 @@
+---
+permalink: c400/install-setup.html 
+sidebar: sidebar 
+keywords: aff c400, install, setup, initial configuration 
+summary: Instale e configure o sistema. 
+---
+= Comece aqui: Escolha sua experiência de instalação e configuração
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para a maioria das configurações, você pode escolher entre diferentes formatos de conteúdo.
+
+* link:../c400/install-quick-guide.html["Passos rápidos"]
++
+Um PDF imprimível de instruções passo a passo com links em direto para conteúdo adicional.
+
+* link:../c400/install-videos.html["Passos de vídeo"]
++
+Instruções passo a passo em vídeo.
+
+* link:../c400/install-detailed-guide.html["Passos detalhados"]
++
+Instruções passo a passo on-line com links ao vivo para conteúdo adicional.
+
+
+
+Para configurações do MetroCluster, consulte:
+
+* https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/index.html["Instale a configuração IP do MetroCluster"]
+* https://docs.netapp.com/us-en/ontap-metrocluster/install-fc/index.html["Instalar a configuração conectada à estrutura do MetroCluster"]
+

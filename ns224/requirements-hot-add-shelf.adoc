@@ -1,0 +1,60 @@
+---
+permalink: ns224/requirements-hot-add-shelf.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, requirement 
+summary: Para adicionar um compartimento de unidade de NS224 TB, seu par de HA precisa atender a certos requisitos. 
+---
+= Requisitos e práticas recomendadas para um hot-add - NS224 prateleiras
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de adicionar uma prateleira a quente, certifique-se de rever os requisitos e as práticas recomendadas.
+
+
+
+== Requisitos
+
+Para adicionar uma gaveta de NS224 TB, seu par de HA precisa atender a certos requisitos.
+
+* *Versão ONTAP suportada*: O modelo de plataforma e a versão do ONTAP devem suportar a gaveta NS224 e as unidades que você está adicionando. Consulte https://hwu.netapp.com["NetApp Hardware Universe"^]
+* *Número de gavetas*: Seu par de HA precisa ter menos que o número máximo de gavetas compatíveis, pelo menos o número de gavetas que você planeja adicionar a quente.
++
+Você não pode ter excedido o número máximo de compartimentos compatíveis com o seu par de HA após a adição de gavetas.  https://hwu.netapp.com["NetApp Hardware Universe"^]Consulte .
+
+* *Cabeamento*:
++
+** Certifique-se de que tem o número e o tipo corretos de cabos para ligar a prateleira.  https://hwu.netapp.com["NetApp Hardware Universe"^]Consulte .
+** Se você estiver adicionando uma gaveta a um par de HA que já tenha uma gaveta de NS224 TB, seu par de HA não poderá ter nenhuma mensagem de erro de cabeamento de storage e deverá ser cabeado como HA multipath.
++
+Você pode executar  https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^] para exibir quaisquer mensagens de erro de cabeamento de armazenamento e as ações corretivas que você deve tomar.
+
+
+
+
+
+
+
+== Práticas recomendadas
+
+Familiarize-se com as práticas recomendadas a seguir antes de adicionar uma prateleira NS224.
+
+* *Prática recomendada:* a melhor prática é ter a versão atual do https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["Pacote de Qualificação de disco"^] instalado antes de adicionar uma prateleira.
++
+Ter a versão atual do DQP instalada permite que seu sistema reconheça e use unidades recém-qualificadas. Isso evita mensagens de eventos do sistema sobre ter informações de unidade não atuais e prevenção do particionamento de unidade porque as unidades não são reconhecidas. O DQP também notifica você sobre o firmware da unidade não atual.
+
+* *Melhor prática:* a melhor prática é correr https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^] antes e depois de adicionar uma prateleira a quente.
++
+A execução do Active IQ Config Advisor antes de adicionar um shelf a quente fornece um snap shot da conetividade existente do shelf Ethernet (ENET), verifica as versões de firmware do módulo de gaveta NVMe (NSM) e permite verificar uma ID de gaveta que já está em uso no par de HA.
+
++
+Executar o Active IQ Config Advisor após adicionar um compartimento a quente permite verificar se as gavetas estão cabeadas corretamente e se as IDs de gaveta são exclusivas do par de HA.
+
+* *Prática recomendada:* a melhor prática é ter versões atuais https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["Firmware do módulo de gaveta NVMe (NSM)"^] de e https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["firmware da unidade"^] em seu sistema de armazenamento antes de adicionar uma nova prateleira.
++
+
+NOTE: Não reverta o firmware para uma versão que não suporte a gaveta e seus componentes.
+
+

@@ -1,0 +1,45 @@
+---
+permalink: platform-supplemental/42u-1280mm-power-on.html 
+sidebar: sidebar 
+keywords: connect, system, component, pdu, cable, ac, power, source, cabinet, power on the system cabinet 
+summary: É necessário conetar os componentes do sistema às PDUs, encaminhar os cabos PDU para as fontes de alimentação CA, conectá-los às fontes de alimentação e ligar o sistema. 
+---
+= Ligue o gabinete do sistema
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+É necessário conetar os componentes do sistema às PDUs, encaminhar os cabos PDU para as fontes de alimentação CA, conectá-los às fontes de alimentação e ligar o sistema.
+
+
+IMPORTANT: Para evitar uma interrupção do sistema se uma PDU falhar, não conete ambos os cabos de alimentação de qualquer componente em uma PDU. Distribua a carga através dos PDS que estão ligados a diferentes circuitos, como mostra a ilustração.
+
+Você deve ter circuitos de alimentação separados disponíveis para cada PDU em seu gabinete do sistema.
+
+. Ligue o equipamento às PDUs:
++
+.. Ligue as fontes de alimentação do controlador a diferentes PDUs ligadas a diferentes fontes de alimentação.
+.. Conete as fontes de alimentação do compartimento de unidades a diferentes PDUs conetadas a diferentes fontes de alimentação.
+.. Conete todas as fontes de alimentação do switch a diferentes PDUs conetadas a diferentes fontes de alimentação.
++
+image::../media/cabinet_power_cabling_IEOPS-1320.svg[Cabeamento de alimentação do gabinete IEOPS 1320]
+
++
+Passe os cabos de alimentação da PDU através de uma das seguintes aberturas no gabinete do sistema:
+
++
+*** A parte superior do gabinete do sistema
+*** Entre a parte inferior da porta traseira e a estrutura do armário do sistema
+*** Através da abertura do piso e sob o armário do sistema
+
+
+
+
+. Desligue os interrutores de alimentação ou disjuntores nas PDUs.
+. Ligue cada cabo de alimentação PDU a fontes de alimentação CA individuais que estejam em circuitos CA separados.
+. Ligue os interrutores de alimentação ou disjuntores às PDUs.
+. Ligue a alimentação dos seus componentes e, em seguida, inicie o sistema.
+. Feche e tranque as portas do armário do sistema.
+

@@ -1,0 +1,91 @@
+---
+section: a700
+title: Sistemas AFF A700
+entries:
+- title: Instalar e configurar
+  pdf-filename: Instalação e configuração do AFF A700
+  entries:
+  - title: Escolha a experiência de instalação e configuração
+    url: "/a700/install-setup.html"
+  - title: Passos rápidos
+    url: "/a700/install-quick-guide.html"
+  - title: Passos de vídeo
+    url: "/a700/install-videos.html"
+  - title: Passos detalhados
+    url: "/a700/install-detailed-guide.html"
+- title: Manutenção
+  pdf-filename: Manutenção da AFF A700
+  entries:
+  - title: Visão geral
+    url: "/a700/maintain-overview.html"
+  - title: Suporte de arranque
+    pdf-filename: Mídia de inicialização do AFF A700
+    entries:
+    - title: Visão geral
+      url: "/a700/bootmedia-replace-overview.html"
+    - title: Verifique as chaves de criptografia
+      url: "/a700/bootmedia-encryption-preshutdown-checks.html"
+    - title: Desligue o controlador desativado
+      url: "/a700/bootmedia-shutdown.html"
+    - title: Substitua a imagem de inicialização
+      url: "/a700/bootmedia-replace.html"
+    - title: Imagem de recuperação de inicialização
+      url: "/a700/bootmedia-recovery-image-boot-options.html"
+    - title: Volte a configurar o MetroCluster
+      url: "/a700/bootmedia-2n-mcc-switchback.html"
+    - title: Restaure OKM, NSE e NVE
+      url: "/a700/bootmedia-encryption-restore.html"
+    - title: Devolver artigo com falha ao NetApp
+      url: "/a700/bootmedia-complete-rma.html"
+  - title: Chassis
+    pdf-filename: Chassis AFF A700
+    entries:
+    - title: Visão geral
+      url: "/a700/chassis-replace-overview.html"
+    - title: Desligue o controlador desativado
+      url: "/a700/chassis-replace-shutdown.html"
+    - title: Substitua o material de fixação
+      url: "/a700/chassis-replace-move-hardware.html"
+    - title: Substituição completa
+      url: "/a700/chassis-replace-complete-system-restore-rma.html"
+  - title: Módulo do controlador
+    pdf-filename: Controlador AFF A700
+    entries:
+    - title: Visão geral
+      url: "/a700/controller-replace-overview.html"
+    - title: Desligue o controlador desativado
+      url: "/a700/controller-replace-shutdown.html"
+    - title: Substitua o módulo do controlador
+      url: "/a700/controller-replace.html"
+    - title: Restaure a configuração do sistema
+      url: "/a700/controller-replace-system-config-restore-and-verify.html"
+    - title: Sistema Recable
+      url: "/a700/controller-replace-recable-reassign-disks.html"
+    - title: Restauração completa do sistema
+      url: "/a700/controller-replace-complete-system-restoration.html"
+  - title: DCPM
+    url: "/a700/dcpm-nvram10-battery-replace.html"
+  - title: DIMM
+    url: "/a700/dimm-replace.html"
+  - title: Ventoinha
+    url: "/a700/fan-swap-out.html"
+  - title: Módulo de e/S.
+    pdf-filename: Módulo de e/S AFF A700
+    url: "/a700/pci-cards-and-risers-replace.html"
+  - title: Módulo USB LED
+    url: "/a700/led-module-replace.html"
+  - title: NVRAM
+    url: "/a700/nvram-module-or-nvram-dimm-replacement.html"
+  - title: Fonte de alimentação
+    url: "/a700/power-supply-swap-out.html"
+  - title: Bateria RTC
+    url: "/a700/rtc-battery-replace.html"
+  - title: Módulo X91148A
+    pdf-filename: Módulo AFF A700 X91148A
+    entries:
+    - title: Visão geral
+      url: "/a700/x91148a-module-install-overview.html"
+    - title: Sistema AFF A700 com slots abertos
+      url: "/a700/x91148a-modules-with-open-slots-add.html"
+    - title: Sistema AFF A700 sem slots abertos
+      url: "/a700/x91148a-modules-with-no-open-slots-add.html"

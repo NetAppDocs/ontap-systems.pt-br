@@ -1,0 +1,75 @@
+---
+permalink: asa400/index.html 
+sidebar: sidebar 
+keywords: asa A400 maintenance, maintenance, repairing A400, repairing asa A400, replace asa A400 components, replace asa A400 components 
+summary: Mantenha o hardware ASA A400 
+---
+= Manter o hardware do ASA A400
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para o sistema de armazenamento ASA A400, pode executar procedimentos de manutenção nos seguintes componentes.
+
+
+
+== Suporte de arranque
+
+A Mídia de inicialização armazena um conjunto primário e secundário de arquivos de imagem de inicialização que o sistema usa quando ele é inicializado.
+
+
+
+== Chassis
+
+O chassi é o gabinete físico que abriga todos os componentes do controlador, como a unidade controladora/CPU, fonte de alimentação e e/S.
+
+
+
+== Controlador
+
+Um controlador consiste em uma placa, firmware e software. Controla as unidades e implementa as funções do ONTAP.
+
+
+
+== DIMM
+
+Você deve substituir um DIMM (módulo de memória dual in-line) quando houver uma incompatibilidade de memória ou se tiver um DIMM com falha.
+
+
+
+== Ventoinha
+
+A ventoinha arrefece o controlador.
+
+
+
+== Bateria NVDIMM
+
+Uma bateria NVDIMM é responsável por manter a energia do módulo NVDIMM.
+
+
+
+== NVDIMM
+
+ The NVDIMM (non-volatile dual in-line memory module) manages the data transfer from the volatile memory to the non-volatile storage, and maintains data integrity in the event of a power loss or system shutdown.
+
+
+== Placa PCIe ou Mezzanine
+
+Uma placa PCIe (Peripheral Component Interconnect Express) é uma placa de expansão que se coneta ao slot PCIe da placa-mãe.
+
+Uma placa Mezzanine é uma placa de expansão projetada para ser inserida em um slot especializado na placa-mãe.
+
+
+
+== Fonte de alimentação
+
+Uma fonte de alimentação fornece uma fonte de alimentação redundante em um compartimento de controladora.
+
+
+
+== Bateria do relógio em tempo real
+
+Uma bateria de relógio em tempo real preserva as informações de data e hora do sistema se a energia estiver desligada.

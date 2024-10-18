@@ -1,0 +1,148 @@
+= 
+:allow-uri-read: 
+
+
+A forma como você utiliza uma gaveta de NS224 TB para adicionar hot-add depende de você ter um par de HA AFF A400 ou AFF C400.
+
+.Antes de começar
+* Tem de ter revisto a link:requirements-hot-add-shelf.html["requisitos e práticas recomendadas de adição dinâmica"].
+* Você deve ter concluído os procedimentos aplicáveis no link:prepare-hot-add-shelf.html["Prepare-se para adicionar uma prateleira a quente"].
+* Você precisa ter instalado as gavetas, ligado e definido as IDs de gaveta como descrito em link:prepare-hot-add-shelf.html["Instale uma prateleira para adicionar um hot-add"].
+
+
+* Prateleira de cabos para um par AFF A400 HA*
+
+Para um par de HA AFF A400, é possível adicionar mais quente a duas gavetas e usar portas integradas e0c/e0d e portas no slot 5 conforme necessário.
+
+.Passos
+. Se você estiver adicionando um compartimento usando um conjunto de portas compatíveis com RoCE (portas integradas compatíveis com RoCE) em cada controladora e esse for o único compartimento de NS224 TB do seu par de HA, execute as seguintes etapas.
++
+Caso contrário, vá para a próxima etapa.
+
++
+.. Compartimento de cabos NSM A porta e0a para a porta e0c do controlador A.
+.. Compartimento de cabos NSM A porta e0b para a porta e0d do controlador B.
+.. Compartimento de cabos NSM B porta e0a para a porta e0c do controlador B.
+.. Compartimento de cabos NSM B porta e0b para a porta e0d do controlador A.
++
+A ilustração a seguir mostra o cabeamento de uma gaveta hot-added usando um conjunto de portas compatíveis com RoCE em cada controladora:
+
++
+image::../media/drw_ns224_a400_1shelf.png[Cabeamento de um AFF A400 com uma gaveta de NS224 U e um conjunto de portas integradas]
+
+
+
+. Se você estiver adicionando uma ou duas prateleiras usando dois conjuntos de portas compatíveis com RoCE (portas compatíveis com RoCE e placa PCIe) em cada controladora, execute as seguintes etapas.
++
+[cols="1,3"]
+|===
+| Compartimentos | Cabeamento 
+
+
+ a| 
+Gaveta 1
+ a| 
+.. Cabo NSM A porta e0a para controlador A porta e0c.
+.. Cabo NSM A porta e0b para o slot B do controlador 5 porta 2 (e5b).
+.. Cabo NSM B porta e0a para a porta e0c do controlador B.
+.. Cabo NSM B porta e0b para o slot 5 do controlador A porta 2 (e5b).
+.. Se você estiver adicionando uma segunda prateleira a quente, conclua as subetapas "'prateleira 2"; caso contrário, vá para a etapa 3.
+
+
+
+
+ a| 
+Gaveta 2
+ a| 
+.. Cabo NSM A porta e0a para controlador A slot 5 porta 1 (E5A).
+.. Cabo NSM A porta e0b para a porta e0d do controlador B.
+.. Cabo NSM B porta e0a para o slot B do controlador 5 porta 1 (E5A).
+.. Cabo NSM B porta e0b para a porta e0d do controlador A.
+.. Avance para o passo 3.
+
+
+|===
++
+A ilustração a seguir mostra o cabeamento de duas prateleiras adicionadas a quente:
+
++
+image::../media/drw_ns224_a400_2shelves_IEOPS-983.svg[Cabeamento para um AFF A400 com duas gavetas NS224 e um conjunto de portas integradas e um conjunto de portas em placas PCIe]
+
+. Verifique se o compartimento hot-added está cabeado corretamente usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]o .
++
+Se forem gerados erros de cabeamento, siga as ações corretivas fornecidas.
+
+. Se tiver desativado a atribuição automática de condução como parte da preparação para este procedimento, terá de atribuir manualmente a propriedade da unidade e, em seguida, voltar a ativar a atribuição automática de condução, se necessário. link:complete-hot-add-shelf.html["Complete o hot-add"]Consulte .
++
+Caso contrário, você é feito com este procedimento.
+
+
+
+* Prateleira de cabos para um par AFF C400 HA*
+
+Para um par de HA da AFF C400, é possível adicionar mais quente a duas gavetas e usar portas nos slots 4 e 5, conforme necessário.
+
+.Passos
+. Se você estiver adicionando um compartimento usando um conjunto de portas compatíveis com RoCE em cada controladora e esse for o único compartimento de NS224 TB do seu par de HA, execute as seguintes etapas.
++
+Caso contrário, vá para a próxima etapa.
+
++
+.. Compartimento de cabos NSM A porta e0a para a porta 1 do slot 4 do controlador A (e4a).
+.. Compartimento de cabos NSM A porta e0b para a porta 2 (e4b) do slot B do controlador 4.
+.. Compartimento de cabos NSM B porta e0a para a porta 1 (e4a) do slot B do controlador B slot 4.
+.. Compartimento de cabos NSM B porta e0b para o slot 4 do controlador A porta 2 (e4b).
++
+A ilustração a seguir mostra o cabeamento de uma gaveta hot-added usando um conjunto de portas compatíveis com RoCE em cada controladora:
+
++
+image::../media/drw_ns224_c400_1shelf_IEOPS-985.svg[Cabeamento para um AFF C400 com uma gaveta NS224 e um conjunto de portas de placa PCIe]
+
+
+
+. Se você estiver adicionando uma ou duas gavetas usando dois conjuntos de portas compatíveis com RoCE em cada controladora, execute as seguintes etapas.
++
+[cols="1,3"]
+|===
+| Compartimentos | Cabeamento 
+
+
+ a| 
+Gaveta 1
+ a| 
+.. Cabo NSM A porta e0a para controlador A slot 4 porta 1 (e4a).
+.. Cabo NSM A porta e0b para o slot B do controlador 5 porta 2 (e5b).
+.. Cabo NSM B porta e0a para o slot 4 da porta do controlador B porta 1 (e4a).
+.. Cabo NSM B porta e0b para o slot 5 do controlador A porta 2 (e5b).
+.. Se você estiver adicionando uma segunda prateleira a quente, conclua as subetapas "'prateleira 2"; caso contrário, vá para a etapa 3.
+
+
+
+
+ a| 
+Gaveta 2
+ a| 
+.. Cabo NSM A porta e0a para controlador A slot 5 porta 1 (E5A).
+.. Cabo NSM A porta e0b para o slot B do controlador 4 porta 2 (e4b).
+.. Cabo NSM B porta e0a para o slot B do controlador 5 porta 1 (E5A).
+.. Cabo NSM B porta e0b para o slot 4 do controlador A porta 2 (e4b).
+.. Avance para o passo 3.
+
+
+|===
++
+A ilustração a seguir mostra o cabeamento de duas prateleiras adicionadas a quente:
+
++
+image::../media/drw_ns224_c400_2shelves_IEOPS-984.svg[Cabeamento para um AFF C400 com duas gavetas NS224 e dois conjuntos de portas de placa PCIe]
+
+. Verifique se o compartimento hot-added está cabeado corretamente usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]o .
++
+Se forem gerados erros de cabeamento, siga as ações corretivas fornecidas.
+
+
+
+.O que se segue?
+Se você desativou a atribuição automática de unidade como parte da preparação para este procedimento, será necessário atribuir manualmente a propriedade da unidade e, em seguida, reativar a atribuição automática de unidade, se necessário. Vá para link:complete-hot-add-shelf.html["Complete o hot-add"].
+
+Caso contrário, você é feito com o procedimento de hot-add prateleira.

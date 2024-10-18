@@ -1,0 +1,20 @@
+---
+permalink: sas3/sas3-shelf-overview.html 
+sidebar: sidebar 
+keywords: sas3, shelves, shelf, sas3 shelves, drive, aggregate, shelf maintenance 
+summary: visão geral da manutenção da prateleira sas3. 
+---
+= Visão geral da manutenção de prateleiras - prateleiras SAS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode executar as seguintes ações para manter seu compartimento SAS:
+
+* link:hot-add-drive.html["Adicionar uma unidade a quente"]
+* link:cold-replace-shelf.html["Frio-substitua uma prateleira"]
+* link:hot-remove-shelf.html["Remova a prateleira a quente"]
+* link:service-monitor-leds.html["LEDs da prateleira do monitor"]
+

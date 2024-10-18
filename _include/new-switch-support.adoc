@@ -1,0 +1,84 @@
+= 
+:allow-uri-read: 
+
+
+[cols="20,65,15"]
+|===
+| Interrutores | Descrição | Disponível a partir do início 
+
+
+ a| 
+https://hwu.netapp.com/Switch/Index["Switch NVIDIA IP SN2100"]
+ a| 
+O switch de storage NVIDIA IP SN2100 é compatível com configurações MetroCluster IP que usam as plataformas A900/FAS9500.
+ a| 
+ONTAP 9.12,1
+
+
+
+ a| 
+https://hwu.netapp.com/Switch/Index["Switch NVIDIA IP SN2100 (X190006)"]
+ a| 
+O switch de armazenamento NVIDIA IP SN2100 é compatível com configurações IP do MetroCluster que usam as seguintes plataformas:
+
+* FAS500f/AFF A250
+* FAS8300/AFF A400
+* FAS8700
+* FAS9000/AFF A700
+* AFF A800
+
+ a| 
+ONTAP 9.10.1P3
+
+
+
+ a| 
+https://hwu.netapp.com/Switch/Index["Switch Cisco de 36 portas de 100 GbE (X190200)"]
+ a| 
+Dá suporte a uma infraestrutura compartilhada (cluster, HA e storage conectado a switch) no mesmo par de switches Cisco Nexus 9336C-FX2, incluindo suporte para configurações IP MetroCluster.
+ a| 
+ONTAP 9.9,1
+
+
+
+ a| 
+https://hwu.netapp.com/Switch/Index["Switch Cisco de 36 portas de 100 GbE (X190200 e X190210)"]
+ a| 
+Switch de interconexão de cluster Cisco Nexus 9336C-FX2X compatível com switch de storage e switch de storage para controladores AFF/FAS, bem como para conectividade de dados de front-end.
+ a| 
+ONTAP 9,8
+
+
+
+ a| 
+https://hwu.netapp.com/Switch/Index["Switch Broadcom BES-53248 (X190005 e X190005R)"]
+ a| 
+Suporte ao switch de interconexão de cluster BES-53248 Broadcom para controladores AFF/FAS com portas de 40 GbE/100GbE GbE.
+ a| 
+ONTAP 9,8
+
+
+
+ a| 
+https://hwu.netapp.com/Switch/Index["Switch Cisco de 36 portas de 100 GbE (X190200)"] https://hwu.netapp.com/Switch/Index["Switch Cisco de 32 portas de 100 GbE (X190100 e X190100R)"]
+ a| 
+O switch Cisco Nexus 100 GbE pode ser usado como um switch de storage dedicado para conectar gavetas de unidade NVMe NS224 às seguintes plataformas:
+
+* AFF A800/AFF ASA A800
+* AFF A700/AFF ASA A700
+* AFF A400/AFF ASA A400
+* AFF A320
+
+ a| 
+ONTAP 9,8
+
+
+
+ a| 
+https://hwu.netapp.com/Switch/Index["Switch Broadcom BES-53248 (X190005 e X190005R)"]
+ a| 
+Suporte ao switch de interconexão de cluster BES-53248 Broadcom para controladores AFF/FAS com portas de 10 GbE/25GbE GbE.
+ a| 
+ONTAP 9.5P8
+
+|===

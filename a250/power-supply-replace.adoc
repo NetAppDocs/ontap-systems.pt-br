@@ -1,0 +1,173 @@
+---
+permalink: a250/power-supply-replace.html 
+sidebar: sidebar 
+keywords: aff a250, replace a power supply 
+summary: 'A substituição de uma fonte de alimentação envolve desconetar a fonte de alimentação de destino (PSU) da fonte de alimentação, desconetar o cabo de alimentação, remover a fonte de alimentação antiga e instalar a fonte de alimentação de substituição e reconectá-la à fonte de alimentação.' 
+---
+= Substitua uma fonte de alimentação - AFF A250
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A substituição de uma fonte de alimentação (PSU) envolve desconetar a fonte de alimentação de destino, desconetar o cabo de alimentação, remover a fonte de alimentação antiga e instalar a fonte de alimentação de substituição e, em seguida, reconectá-la à fonte de alimentação.
+
+* As fontes de alimentação são redundantes e hot-swap.
+* Este procedimento é escrito para substituir uma PSU de cada vez.
++
+
+NOTE: É uma prática recomendada substituir a PSU dentro de dois minutos após removê-la do chassi. O sistema continua funcionando, mas o ONTAP envia mensagens para o console sobre a PSU degradada até que a PSU seja substituída.
+
+* As fontes de alimentação são auto-variando.
++
+
+IMPORTANT: Não misture PSUs com diferentes classificações de eficiência. Sempre substitua como por like.
+
+
+
+Use o procedimento apropriado para o seu tipo de PSU; AC ou DC.
+
+[role="tabbed-block"]
+====
+.Opção 1: Substituir uma PSU CA
+--
+Use o vídeo a seguir ou as etapas tabuladas para substituir a PSU:
+
+.Animação - substitua a PSU CA
+video::86487f5e-20ff-43e6-99ae-ac5b015c1aa5[panopto]
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Identifique a PSU que você deseja substituir, com base em mensagens de erro do console ou através do LED vermelho de falha na PSU.
+. Desligar a PSU:
++
+.. Abra o retentor do cabo de alimentação e, em seguida, desconete o cabo de alimentação da PSU.
+
+
+. Remova a PSU girando a alça para cima, pressione a aba de travamento e puxe a PSU para fora do módulo do controlador.
++
+
+CAUTION: A PSU é curta. Utilize sempre as duas mãos para o apoiar quando o retirar do módulo do controlador, de modo a que não se liberte subitamente do módulo do controlador e o machuque.
+
++
+image::../media/drw_a250_replace_psu.png[Retirar a fonte de alimentação]
+
++
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+| Patilha azul de bloqueio da PSU 
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Fonte de alimentação
+
+|===
+. Instale a PSU de substituição no módulo do controlador:
++
+.. Utilizando ambas as mãos, apoie e alinhe as extremidades da PSU com a abertura no módulo do controlador.
+.. Empurre cuidadosamente a PSU para dentro do módulo do controlador até que a patilha de bloqueio encaixe no lugar.
++
+As fontes de alimentação apenas engatarão adequadamente com o conetor interno e trancam no lugar de uma forma.
+
++
+
+NOTE: Para evitar danificar o conetor interno, não utilize força excessiva ao deslizar a PSU para o sistema.
+
+
+
+. Reconecte o cabeamento da PSU:
++
+.. Volte a ligar o cabo de alimentação à PSU.
+.. Fixe o cabo de alimentação à PSU utilizando o retentor do cabo de alimentação.
+
+
++
+Uma vez que a energia é restaurada para a PSU, o LED de status deve estar verde.
+
+. Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"^] página para obter mais informações.
+
+
+--
+.Opção 2: Substituir uma PSU CC
+--
+Para substituir uma PSU CC, execute as etapas a seguir.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Identifique a PSU que você deseja substituir, com base em mensagens de erro do console ou através do LED vermelho de falha na PSU.
+. Desligar a PSU:
++
+.. Desaperte o conetor do cabo de alimentação D-SUB DC utilizando os parafusos de orelhas na ficha.
+.. Desconete o cabo de alimentação da PSU e coloque-o de lado.
+
+
+. Remova a PSU girando a alça para cima, pressione a aba de travamento e puxe a PSU para fora do módulo do controlador.
++
+
+CAUTION: A PSU é curta. Utilize sempre as duas mãos para o apoiar quando o retirar do módulo do controlador, de modo a que não se liberte subitamente do módulo do controlador e o machuque.
+
++
+image::../media/drw_dcpsu_remove-replace-generic_IEOPS-788.svg[Remova uma PSU CC]
+
++
+[cols="1,3"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Parafusos de orelhas
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Conetor do cabo de alimentação CC D-SUB
+
+
+
+ a| 
+image:../media/icon_round_3.png["Legenda número 3"]
+ a| 
+Pega da fonte de alimentação
+
+
+
+ a| 
+image:../media/icon_round_4.png["Legenda número 4"]
+ a| 
+Patilha azul de bloqueio da PSU
+
+|===
+. Instale a PSU de substituição no módulo do controlador:
++
+.. Utilizando ambas as mãos, apoie e alinhe as extremidades da PSU com a abertura no módulo do controlador.
+.. Empurre cuidadosamente a PSU para dentro do módulo do controlador até que a patilha de bloqueio encaixe no lugar.
++
+As fontes de alimentação apenas engatarão adequadamente com o conetor interno e trancam no lugar de uma forma.
+
++
+
+NOTE: Para evitar danificar o conetor interno, não utilize força excessiva ao deslizar a PSU para o sistema.
+
+
+
+. Volte a ligar o cabo de alimentação D-SUB DC:
++
+.. Ligue o conetor do cabo de alimentação à PSU.
+.. Fixe o cabo de alimentação à PSU com os parafusos de aperto manual.
++
+Uma vez que a energia é restaurada para a PSU, o LED de status deve estar verde.
+
+
+
+. Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"^] página para obter mais informações.
+
+
+--
+====

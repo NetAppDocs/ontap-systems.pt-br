@@ -1,0 +1,372 @@
+---
+permalink: fas9000/caching-module-and-core-dump-module-replace.html 
+sidebar: sidebar 
+keywords: aff a700, fas9000, replace caching module 
+summary: 'Você deve substituir o módulo de cache no módulo do controlador quando o sistema Registrar uma única mensagem AutoSupport (ASUP) informando que o módulo ficou offline; se não o fizer, isso resultará na degradação do desempenho.' 
+---
+= Substitua o módulo de armazenamento em cache ou adicione/substitua um módulo de despejo de núcleo - FAS9000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve substituir o módulo de cache no módulo do controlador quando o sistema Registrar uma única mensagem AutoSupport (ASUP) informando que o módulo ficou offline; se não o fizer, isso resultará na degradação do desempenho. Se o AutoSupport não estiver ativado, você pode localizar o módulo de cache com falha pelo LED de falha na parte frontal do módulo. Você também pode adicionar ou substituir o módulo de despejo de núcleo 1TB, X9170A, que é necessário se você estiver instalando compartimentos de unidades NS224 em um sistema AFF A700.
+
+.Antes de começar
+* Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor.
+* Para obter instruções sobre a troca a quente do módulo de cache, link:../fas9000/caching-module-hot-swap.html["Troca automática de um módulo de cache"]consulte .
+* Ao remover, substituir ou adicionar módulos de cache ou despejo de núcleo, o nó de destino deve ser interrompido ao Loader.
+* O AFF A700 suporta o módulo de despejo de 1TB núcleos, X9170A, que é necessário se você estiver adicionando NS224 gavetas de unidade.
+* Os módulos de despejo de núcleo podem ser instalados nos slots 6-1 e 6-2. A prática recomendada é instalar o módulo no slot 6-1.
+* O módulo de despejo de núcleo X9170A não é hot-swap.
+
+
+
+
+== Passo 1: Desligue o controlador desativado
+
+Você pode desligar ou assumir o controlador prejudicado usando procedimentos diferentes, dependendo da configuração do hardware do sistema de armazenamento.
+
+[role="tabbed-block"]
+====
+.Opção 1: A maioria das configurações
+--
+Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
+
+.Sobre esta tarefa
+* Se você tiver um sistema SAN, você deve ter verificado mensagens de  `cluster kernel-service show`evento ) para o blade SCSI do controlador afetado. O `cluster kernel-service show` comando (do modo avançado priv) exibe o nome do nó, link:https://docs.netapp.com/us-en/ontap/system-admin/display-nodes-cluster-task.html["status do quorum"]desse nó, o status de disponibilidade desse nó e o status operacional desse nó.
++
+Cada processo SCSI-blade deve estar em quórum com os outros nós no cluster. Qualquer problema deve ser resolvido antes de prosseguir com a substituição.
+
+* Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
+
+
+.Passos
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
++
+A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas: `cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Desative a giveback automática a partir da consola do controlador saudável: `storage failover modify –node local -auto-giveback false`
++
+
+NOTE: Quando vir _do pretende desativar a auto-giveback?_, introduza `y`.
+
+. Leve o controlador prejudicado para o prompt Loader:
++
+[cols="1,2"]
+|===
+| Se o controlador afetado estiver a apresentar... | Então... 
+
+
+ a| 
+O prompt Loader
+ a| 
+Vá para a próxima etapa.
+
+
+
+ a| 
+A aguardar pela giveback...
+ a| 
+Pressione Ctrl-C e responda `y` quando solicitado.
+
+
+
+ a| 
+Prompt do sistema ou prompt de senha
+ a| 
+Assuma ou interrompa o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
+
+|===
+
+
+--
+.Opção 2: O controlador está em um MetroCluster de dois nós
+--
+Para desligar o controlador desativado, você deve determinar o status do controlador e, se necessário, trocar o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador prejudicado.
+
+.Sobre esta tarefa
+* Você deve deixar as fontes de alimentação ligadas no final deste procedimento para fornecer energia ao controlador de integridade.
+
+
+.Passos
+. Verifique o estado do MetroCluster para determinar se o controlador afetado mudou automaticamente para o controlador saudável: `metrocluster show`
+. Dependendo se ocorreu uma mudança automática, proceda de acordo com a seguinte tabela:
++
+[cols="1,2"]
+|===
+| Se o controlador deficiente... | Então... 
+
+
+ a| 
+Mudou automaticamente
+ a| 
+Avance para o passo seguinte.
+
+
+
+ a| 
+Não mudou automaticamente
+ a| 
+Execute uma operação de comutação planejada a partir do controlador íntegro: `metrocluster switchover`
+
+
+
+ a| 
+Não mudou automaticamente, tentou mudar com o comando e o switchover `metrocluster switchover` foi vetado
+ a| 
+Reveja as mensagens de veto e, se possível, resolva o problema e tente novamente. Se você não conseguir resolver o problema, entre em Contato com o suporte técnico.
+
+|===
+. Ressincronize os agregados de dados executando o `metrocluster heal -phase aggregates` comando do cluster sobrevivente.
++
+[listing]
+----
+controller_A_1::> metrocluster heal -phase aggregates
+[Job 130] Job succeeded: Heal Aggregates is successful.
+----
++
+Se a cura for vetada, você tem a opção de reemitir o `metrocluster heal` comando com o `-override-vetoes` parâmetro. Se você usar esse parâmetro opcional, o sistema substituirá quaisquer vetos de software que impeçam a operação de recuperação.
+
+. Verifique se a operação foi concluída usando o comando MetroCluster operation show.
++
+[listing]
+----
+controller_A_1::> metrocluster operation show
+    Operation: heal-aggregates
+      State: successful
+Start Time: 7/25/2016 18:45:55
+   End Time: 7/25/2016 18:45:56
+     Errors: -
+----
+. Verifique o estado dos agregados utilizando o `storage aggregate show` comando.
++
+[listing]
+----
+controller_A_1::> storage aggregate show
+Aggregate     Size Available Used% State   #Vols  Nodes            RAID Status
+--------- -------- --------- ----- ------- ------ ---------------- ------------
+...
+aggr_b2    227.1GB   227.1GB    0% online       0 mcc1-a2          raid_dp, mirrored, normal...
+----
+. Curar os agregados raiz usando o `metrocluster heal -phase root-aggregates` comando.
++
+[listing]
+----
+mcc1A::> metrocluster heal -phase root-aggregates
+[Job 137] Job succeeded: Heal Root Aggregates is successful
+----
++
+Se a recuperação for vetada, você terá a opção de reemitir o `metrocluster heal` comando com o parâmetro -override-vetos. Se você usar esse parâmetro opcional, o sistema substituirá quaisquer vetos de software que impeçam a operação de recuperação.
+
+. Verifique se a operação heal está concluída usando o `metrocluster operation show` comando no cluster de destino:
++
+[listing]
+----
+
+mcc1A::> metrocluster operation show
+  Operation: heal-root-aggregates
+      State: successful
+ Start Time: 7/29/2016 20:54:41
+   End Time: 7/29/2016 20:54:42
+     Errors: -
+----
+. No módulo do controlador desativado, desligue as fontes de alimentação.
+
+
+--
+====
+
+
+== Passo 2: Substitua ou adicione um módulo de cache
+
+Os módulos NVMe SSD Flash Cache (FlashCache ou módulos de cache) são módulos separados. Eles estão localizados na parte frontal do módulo NVRAM. Para substituir ou adicionar um módulo de armazenamento em cache, localize-o na parte traseira do sistema na ranhura 6 e, em seguida, siga a sequência específica de passos para o substituir.
+
+.Antes de começar
+Dependendo da situação, seu sistema de storage precisa atender a certos critérios:
+
+* Ele deve ter o sistema operacional apropriado para o módulo de cache que você está instalando.
+* A TI precisa dar suporte à capacidade de armazenamento em cache.
+* O nó de destino deve estar no prompt DO Loader antes de adicionar ou substituir o módulo de cache.
+* O módulo de armazenamento em cache de substituição deve ter a mesma capacidade que o módulo de armazenamento em cache com falha, mas pode ser de um fornecedor compatível diferente.
+* Todos os outros componentes do sistema de armazenamento devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Localize o módulo de armazenamento em cache com falha, no slot 6, pelo LED âmbar de atenção aceso na parte frontal do módulo de armazenamento em cache.
+. Remova o módulo de armazenamento em cache:
++
+
+NOTE: Se você estiver adicionando outro módulo de cache ao seu sistema, remova o módulo em branco e vá para a próxima etapa.
+
++
+image::../media/drw_9000_remove_flashcache.png[Módulo de armazenamento em cache remover]
+
++
+|===
+
+
+| image:../media/icon_round_1.png["Legenda número 1"] | Botão laranja de libertação. 
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+| Pega do came do módulo de armazenamento em cache. 
+|===
++
+.. Prima o botão laranja de libertação na parte frontal do módulo de armazenamento em cache.
++
+
+NOTE: Não utilize o trinco de came de e/S numerado e com letras para ejetar o módulo de cache. A trava de came de e/S numerada e com letras ejeta todo o módulo NVRAM10 e não o módulo de cache.
+
+.. Rode a pega do came até que o módulo de cache comece a deslizar para fora do módulo NVRAM10.
+.. Puxe cuidadosamente a pega do excêntrico na sua direção para remover o módulo de armazenamento em cache do módulo NVRAM10.
++
+Certifique-se de que suporta o módulo de cache enquanto o remove do módulo NVRAM10.
+
+
+
+. Instale o módulo de armazenamento em cache:
++
+.. Alinhe as extremidades do módulo de cache com a abertura no módulo NVRAM10.
+.. Empurre cuidadosamente o módulo de armazenamento em cache para dentro do compartimento até que a pega do excêntrico engate.
+.. Rode a pega do excêntrico até encaixar no devido lugar.
+
+
+
+
+
+
+== Passo 3: Adicionar ou substituir um módulo de despejo de memória X9170A
+
+O despejo do núcleo do cache 1TB, X9170A, é usado somente nos sistemas AFF A700. O módulo de despejo do núcleo não pode ser trocado a quente. O módulo de despejo de núcleo normalmente está localizado na parte frontal do módulo NVRAM no slot 6-1 na parte traseira do sistema. Para substituir ou adicionar o módulo de despejo do núcleo, localize o slot 6-1 e, em seguida, siga a sequência específica de etapas para adicioná-lo ou substituí-lo.
+
+.Antes de começar
+* Seu sistema deve estar executando o ONTAP 9.8 ou posterior para adicionar um módulo de despejo de memória.
+* O módulo de despejo de núcleo X9170A não é hot-swap.
+* O nó de destino deve estar no prompt DO Loader antes de adicionar ou substituir o módulo de despejo de código.
+* Você deve ter recebido dois módulos de despejo de X9170 núcleos; um para cada controlador.
+* Todos os outros componentes do sistema de armazenamento devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Se você estiver substituindo um módulo de despejo de núcleo com falha, localize e remova-o:
++
+image::../media/drw_9000_remove_flashcache.png[Módulo de armazenamento em cache remover]
+
++
+[cols="1,3"]
+|===
+
+
+| image:../media/icon_round_1.png["Legenda número 1"] | Botão laranja de libertação. 
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Manípulo do excêntrico do módulo de descarga do núcleo.
+
+|===
++
+.. Localize o módulo com falha pelo LED âmbar de atenção na parte frontal do módulo.
+.. Pressione o botão laranja de liberação na parte frontal do módulo de descarga do núcleo.
++
+
+NOTE: Não utilize o trinco do came de e/S numerado e com letras para ejetar o módulo de descarga do núcleo. A trava de came de e/S numerada e com letras ejeta todo o módulo NVRAM10 e não o módulo de despejo do núcleo.
+
+.. Gire a alça do came até que o módulo de despejo do núcleo comece a deslizar para fora do módulo NVRAM10.
+.. Puxe cuidadosamente a pega do came em direção a si para remover o módulo de descarga do núcleo do módulo NVRAM10 e colocá-lo de lado.
++
+Certifique-se de apoiar o módulo de despejo de memória ao removê-lo do módulo NVRAM10.
+
+
+
+. Instale o módulo de despejo do núcleo:
++
+.. Se você estiver instalando um novo módulo de despejo de memória, remova o módulo em branco do slot 6-1.
+.. Alinhe as extremidades do módulo de descarga do núcleo com a abertura no módulo NVRAM10.
+.. Empurre cuidadosamente o módulo de descarga do núcleo para dentro do compartimento até que a alavanca do came engate.
+.. Rode a pega do excêntrico até encaixar no devido lugar.
+
+
+
+
+
+
+== Passo 4: Reinicie o controlador após a substituição FRU
+
+Depois de substituir a FRU, você deve reiniciar o módulo do controlador.
+
+.Passo
+. Para inicializar o ONTAP a partir do prompt Loader, digite `bye`.
+
+
+
+
+== Etapa 5: Alterne agregados de volta em uma configuração de MetroCluster de dois nós
+
+Depois de concluir a substituição da FRU em uma configuração de MetroCluster de dois nós, você pode executar a operação de switchback do MetroCluster. Isso retorna a configuração ao seu estado operacional normal, com as máquinas virtuais de armazenamento de origem sincronizada (SVMs) no site anteriormente prejudicado agora ativo e fornecendo dados dos pools de discos locais.
+
+Esta tarefa só se aplica a configurações de MetroCluster de dois nós.
+
+.Passos
+. Verifique se todos os nós estão no `enabled` estado: `metrocluster node show`
++
+[listing]
+----
+cluster_B::>  metrocluster node show
+
+DR                           Configuration  DR
+Group Cluster Node           State          Mirroring Mode
+----- ------- -------------- -------------- --------- --------------------
+1     cluster_A
+              controller_A_1 configured     enabled   heal roots completed
+      cluster_B
+              controller_B_1 configured     enabled   waiting for switchback recovery
+2 entries were displayed.
+----
+. Verifique se a ressincronização está concluída em todos os SVMs: `metrocluster vserver show`
+. Verifique se todas as migrações automáticas de LIF que estão sendo executadas pelas operações de recuperação foram concluídas com sucesso: `metrocluster check lif show`
+. Execute o switchback usando o `metrocluster switchback` comando de qualquer nó no cluster sobrevivente.
+. Verifique se a operação de comutação foi concluída: `metrocluster show`
++
+A operação de switchback ainda está em execução quando um cluster está no `waiting-for-switchback` estado:
+
++
+[listing]
+----
+cluster_B::> metrocluster show
+Cluster              Configuration State    Mode
+--------------------	------------------- 	---------
+ Local: cluster_B configured       	switchover
+Remote: cluster_A configured       	waiting-for-switchback
+----
++
+A operação de switchback é concluída quando os clusters estão no `normal` estado.:
+
++
+[listing]
+----
+cluster_B::> metrocluster show
+Cluster              Configuration State    Mode
+--------------------	------------------- 	---------
+ Local: cluster_B configured      		normal
+Remote: cluster_A configured      		normal
+----
++
+Se um switchback estiver demorando muito tempo para terminar, você pode verificar o status das linhas de base em andamento usando o `metrocluster config-replication resync-status show` comando.
+
+. Restabelecer qualquer configuração SnapMirror ou SnapVault.
+
+
+
+
+== Passo 6: Devolva a peça com falha ao NetApp
+
+Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

@@ -1,0 +1,85 @@
+---
+section: a1k
+title: Sistemas AFF A1K
+entries:
+- title: Instalar e configurar
+  pdf-filename: Instalação e configuração do AFF A1K
+  entries:
+  - title: Instale o fluxo de trabalho
+    url: "/a1k/install-overview.html"
+  - title: Rever os requisitos
+    url: "/a1k/install-requirements.html"
+  - title: Prepare-se para instalar
+    url: "/a1k/install-prepare.html"
+  - title: Instale o hardware
+    url: "/a1k/install-hardware.html"
+  - title: Hardware do cabo
+    url: "/a1k/install-cable.html"
+  - title: Ligar o sistema
+    url: "/a1k/install-power-hardware.html"
+  - title: Conclua a configuração do sistema
+    url: "/a1k/install-complete.html"
+- title: Manutenção
+  pdf-filename: Manutenção da AFF A1K
+  entries:
+  - title: Visão geral da manutenção
+    url: "/a1k/maintain-overview.html"
+  - title: Suporte de arranque
+    pdf-filename: Mídia de inicialização do AFF A1K
+    entries:
+    - title: Mídia de inicialização Substituir fluxo de trabalho
+      url: "/a1k/bootmedia-replace-workflow.html"
+    - title: Rever os requisitos
+      url: "/a1k/bootmedia-replace-requirements.html"
+    - title: Verifique as chaves de criptografia
+      url: "/a1k/bootmedia-encryption-preshutdown-checks.html"
+    - title: Desligue o controlador desativado
+      url: "/a1k/bootmedia-shutdown.html"
+    - title: Substitua o suporte de arranque
+      url: "/a1k/bootmedia-replace.html"
+    - title: Imagem de recuperação de inicialização
+      url: "/a1k/bootmedia-recovery-image-boot.html"
+    - title: Restaure a criptografia
+      url: "/a1k/bootmedia-encryption-restore.html"
+    - title: Devolver artigo com falha ao NetApp
+      url: "/a1k/bootmedia-complete-rma.html"
+  - title: Controlador
+    pdf-filename: Módulo do controlador AFF A1K
+    entries:
+    - title: Fluxo de trabalho de substituição do controlador
+      url: "/a1k/controller-replace-workflow.html"
+    - title: Rever os requisitos
+      url: "/a1k/controller-replace-requirements.html"
+    - title: Desligue o controlador desativado
+      url: "/a1k/controller-replace-shutdown.html"
+    - title: Substitua o controlador
+      url: "/a1k/controller-replace-move-hardware.html"
+    - title: Restaure a configuração do sistema
+      url: "/a1k/controller-replace-system-config-restore-and-verify.html"
+    - title: Devolver o controlador
+      url: "/a1k/controller-replace-recable-reassign-disks.html"
+    - title: Substituição completa do controlador
+      url: "/a1k/controller-replace-restore-system-rma.html"
+  - title: DIMM
+    url: "/a1k/dimm-replace.html"
+  - title: Ventoinha
+    url: "/a1k/fan-replace.html"
+  - title: NVRAM
+    url: "/a1k/nvram-replace.html"
+  - title: Bateria NV
+    url: "/a1k/nvdimm-battery-replace.html"
+  - title: Módulo de e/S.
+    pdf-filename: A1K MÓDULO DE E/S.
+    entries:
+    - title: Descrição geral do módulo I/O.
+      url: "/a1k/io-module-overview.html"
+    - title: Adicionar módulo de e/S.
+      url: "/a1k/io-module-add.html"
+    - title: Substitua o módulo de e/S.
+      url: "/a1k/io-module-replace.html"
+  - title: Fonte de alimentação
+    url: "/a1k/power-supply-replace.html"
+  - title: Bateria de relógio em tempo real
+    url: "/a1k/rtc-battery-replace.html"
+  - title: Módulo de gestão do sistema
+    url: "/a1k/system-management-replace.html"

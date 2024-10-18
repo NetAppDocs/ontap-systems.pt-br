@@ -1,0 +1,61 @@
+= 
+:allow-uri-read: 
+
+
+Em um sistema autônomo, você deve reatribuir manualmente os discos à ID do sistema do novo controlador antes de retornar o sistema à condição operacional normal.
+
+.Sobre esta tarefa
+
+NOTE: Este procedimento aplica-se apenas a sistemas que estão numa configuração autónoma.
+
+.Passos
+. Se você ainda não fez isso, reinicie o nó _replacement_, interrompa o processo de inicialização pressionando Ctrl-C e selecione a opção para inicializar no modo Manutenção no menu exibido.
+. Você deve digitar `Y` quando solicitado para substituir a ID do sistema devido a uma incompatibilidade de ID do sistema.
+. Exibir as IDs do sistema: `disk show -a`
+. Você deve anotar o ID do sistema antigo, que é exibido como parte da coluna do proprietário do disco.
++
+O exemplo a seguir mostra o ID do sistema antigo de 118073209:
+
++
+[listing]
+----
+*> disk show -a
+Local System ID: 118065481
+
+  DISK      OWNER                  POOL   SERIAL NUMBER  HOME
+--------    -------------          -----  -------------  -------------
+disk_name    system-1  (118073209)  Pool0  J8XJE9LC       system-1  (118073209)
+disk_name    system-1  (118073209)  Pool0  J8Y478RC       system-1  (118073209)
+.
+.
+.
+
+----
+. Reatribua a propriedade do disco usando as informações de ID do sistema obtidas a partir do comando disk show: `disk reassign -s old system ID disk reassign -s 118073209`
+. Verifique se os discos foram atribuídos corretamente: `disk show -a`
++
+Os discos pertencentes ao nó de substituição devem apresentar a nova ID do sistema. O exemplo a seguir mostra agora os discos de propriedade do System-1 a nova ID do sistema, 118065481:
+
++
+[listing]
+----
+*> disk show -a
+Local System ID: 118065481
+
+  DISK      OWNER                  POOL   SERIAL NUMBER  HOME
+--------    -------------          -----  -------------  -------------
+disk_name    system-1  (118065481)  Pool0  J8Y0TDZC       system-1  (118065481)
+disk_name    system-1  (118065481)  Pool0  J8Y0TDZC       system-1  (118065481)
+.
+.
+.
+
+----
+. Se o sistema de storage tiver o Storage ou o volume Encryption configurado, você deverá restaurar a funcionalidade Storage ou volume Encryption usando um dos procedimentos a seguir, dependendo se você estiver usando o gerenciamento de chaves integrado ou externo:
++
+** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-onboard-key-management-encryption-keys-task.html["Restaurar chaves de criptografia integradas de gerenciamento de chaves"^]
+** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-external-encryption-keys-93-later-task.html["Restaurar chaves de criptografia de gerenciamento de chaves externas"^]
+
+
+. Inicialize o nó: `boot_ontap`
+

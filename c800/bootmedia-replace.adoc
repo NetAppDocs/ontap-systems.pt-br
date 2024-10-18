@@ -1,0 +1,264 @@
+---
+permalink: c800/bootmedia-replace.html 
+sidebar: sidebar 
+keywords: aff c800, replace the boot media 
+summary: Localize o suporte de arranque com falha no módulo do controlador removendo o Riser 3 no módulo do controlador antes de poder substituir o suporte de arranque. 
+---
+= Substitua o suporte de arranque - AFF C800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para substituir o suporte de arranque, tem de remover o módulo do controlador afetado, instalar o suporte de arranque de substituição e transferir a imagem de arranque para uma unidade flash USB.
+
+
+
+== Passo 1: Remova o módulo do controlador
+
+Deve remover o módulo do controlador do chassis quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Desconete as fontes de alimentação do módulo do controlador da fonte.
+. Solte os fixadores do cabo de alimentação e, em seguida, desconete os cabos das fontes de alimentação.
+. Solte o gancho e a alça de loop que prendem os cabos ao dispositivo de gerenciamento de cabos e, em seguida, desconete os cabos do sistema e os módulos SFP e QSFP (se necessário) do módulo do controlador, mantendo o controle de onde os cabos foram conetados.
++
+Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar o dispositivo de gerenciamento de cabos, os cabos sejam organizados.
+
+. Retire o dispositivo de gestão de cabos do módulo do controlador e coloque-o de lado.
+. Prima ambos os trincos de bloqueio para baixo e, em seguida, rode ambos os trincos para baixo ao mesmo tempo.
++
+O módulo do controlador desloca-se ligeiramente para fora do chassis.
+
++
+image::../media/drw_a800_pcm_remove.png[Soltar o módulo do controlador]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Trinco de bloqueio
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Pino de bloqueio
+
+|===
+. Faça deslizar o módulo do controlador para fora do chassis.
++
+Certifique-se de que suporta a parte inferior do módulo do controlador enquanto o desliza para fora do chassis.
+
+. Coloque o módulo do controlador numa superfície estável e plana e, em seguida, abra a conduta de ar:
++
+.. Pressione as patilhas de bloqueio nas laterais da conduta de ar em direção ao centro do módulo do controlador.
+.. Deslize a conduta de ar em direção aos módulos da ventoinha e, em seguida, rode-a para cima até à posição completamente aberta.
+
+
+
+
+image::../media/drw_a800_open_air_duct.png[Abrir a conduta de ar]
+
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Patilhas de bloqueio da conduta de ar
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Deslize a conduta de ar em direção aos módulos do ventilador
+
+
+
+ a| 
+image:../media/icon_round_3.png["Legenda número 3"]
+ a| 
+Gire a conduta de ar em direção aos módulos do ventilador
+
+|===
+
+
+== Passo 2: Substitua o suporte de arranque
+
+Localize o suporte de arranque com falha no módulo do controlador removendo o Riser 3 no módulo do controlador antes de poder substituir o suporte de arranque.
+
+Você precisa de uma chave de fenda Phillips para remover o parafuso que prende o suporte de inicialização no lugar.
+
+. Localize o suporte de arranque:
++
+image::../media/drw_a800_boot_media_replace.png[Substitua o suporte de arranque]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Conduta de ar
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Riser 3
+
+
+
+ a| 
+image:../media/icon_round_3.png["Legenda número 3"]
+ a| 
+Chave de fendas Phillips nº 1
+
+
+
+ a| 
+image:../media/icon_round_4.png["Legenda número 4"]
+ a| 
+Parafuso do suporte de arranque
+
+
+
+ a| 
+image:../media/icon_round_5.png["Legenda número 5"]
+ a| 
+Suporte de arranque
+
+|===
+. Retire o suporte de arranque do módulo do controlador:
++
+.. Utilizando uma chave de fendas Phillips nº 1, retire o parafuso que segura o suporte de arranque e coloque o parafuso de lado num local seguro.
+.. Agarrando os lados do suporte de arranque, rode suavemente o suporte de arranque para cima e, em seguida, puxe o suporte de arranque para fora do encaixe e coloque-o de lado.
+
+
+. Instale o suporte de arranque de substituição no módulo do controlador:
++
+.. Alinhe as extremidades do suporte de arranque com o alojamento do encaixe e, em seguida, empurre-o suavemente no encaixe.
+.. Rode o suporte de arranque para baixo em direção à placa-mãe.
+.. Fixe o suporte de arranque à placa-mãe utilizando o parafuso do suporte de arranque.
++
+Não aperte demasiado o parafuso ou poderá danificar o suporte de arranque.
+
+
+
+. Reinstale a riser no módulo do controlador.
+. Fechar a conduta de ar:
++
+.. Rode a conduta de ar para baixo.
+.. Faça deslizar a conduta de ar na direção dos tirantes até encaixar.
+
+
+
+
+
+
+== Passo 3: Transfira a imagem de arranque para o suporte de arranque
+
+A Mídia de inicialização de substituição que você instalou é sem uma imagem de inicialização, então você precisa transferir uma imagem de inicialização usando uma unidade flash USB.
+
+.Antes de começar
+* Você deve ter uma unidade flash USB, formatada para FAT32, com pelo menos 4GBGB de capacidade.
+* Uma cópia da mesma versão de imagem do ONTAP que a que o controlador afetado estava a executar. Você pode baixar a imagem apropriada da seção Downloads no site de suporte da NetApp
++
+** Se a NVE estiver ativada, transfira a imagem com encriptação de volume NetApp, conforme indicado no botão de transferência.
+** Se a NVE não estiver ativada, transfira a imagem sem encriptação de volume NetApp, conforme indicado no botão de transferência.
+
+
+* Se o seu sistema for um par de HA, tem de ter uma ligação de rede.
+* Se o seu sistema for um sistema autónomo, não necessita de uma ligação de rede, mas tem de efetuar uma reinicialização adicional ao restaurar o sistema de ficheiros var.
+
+
+.Passos
+. Transfira e copie a imagem de serviço apropriada do site de suporte da NetApp para a unidade flash USB.
++
+.. Transfira a imagem de serviço para o seu espaço de trabalho no seu computador portátil.
+.. Descompacte a imagem de serviço.
++
+
+NOTE: Se você estiver extraindo o conteúdo usando o Windows, não use o WinZip para extrair a imagem netboot. Use outra ferramenta de extração, como 7-Zip ou WinRAR.
+
++
+Há duas pastas no arquivo de imagem de serviço descompactado:
+
++
+*** inicialização
+*** efi
+
+
+.. Copie a pasta efi para o diretório superior da unidade flash USB.
++
+
+NOTE: Se a imagem de serviço não tiver uma pasta efi, link:https://kb.netapp.com/onprem/ontap/hardware/EFI_folder_missing_from_Service_Image_download_file_used_for_boot_device_recovery_for_FAS_and_AFF_models["Pasta EFI ausente do arquivo de download de imagem de serviço usado para recuperação de dispositivo de inicialização para modelos FAS e AFF"]consulte .
+
+
+
++
+A unidade flash USB deve ter a pasta efi e a mesma versão de imagem de serviço (BIOS) do que o controlador deficiente está executando.
+
++
+.. Retire a unidade flash USB do seu computador portátil.
+
+
+. Se ainda não o tiver feito, feche a conduta de ar:
++
+.. Desloque a conduta de ar até ao módulo do controlador.
+.. Faça deslizar a conduta de ar na direção dos tirantes até que as patilhas de bloqueio encaixem no lugar.
+.. Inspecione a conduta de ar para se certificar de que está corretamente encaixada e trancada no lugar.
++
+image::../media/drw_a800_close_air_duct.png[Feche a conduta de ar]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Conduta de ar
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Risers
+
+|===
+
+
+. Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
+. Reinstale o dispositivo de gerenciamento de cabos e reconete o sistema, conforme necessário.
++
+Ao reativar, lembre-se de reinstalar os conversores de Mídia (SFPs ou QSFPs) se eles foram removidos.
+
+. Ligue o cabo de alimentação à fonte de alimentação e volte a instalar o fixador do cabo de alimentação.
+. Introduza a unidade flash USB na ranhura USB do módulo do controlador.
++
+Certifique-se de que instala a unidade flash USB na ranhura identificada para dispositivos USB e não na porta da consola USB.
+
+. Empurre cuidadosamente o módulo do controlador até que os ganchos de bloqueio do módulo do controlador comecem a subir, empurre firmemente os ganchos de bloqueio para terminar de assentar o módulo do controlador e, em seguida, rode os ganchos de bloqueio para a posição de bloqueio sobre os pinos no módulo do controlador.
++
+O controlador começa a arrancar assim que é completamente instalado no chassis.
+
+. Interrompa o processo de inicialização pressionando Ctrl-C para parar no prompt DO Loader.
++
+Se você perder essa mensagem, pressione Ctrl-C, selecione a opção para inicializar no modo Manutenção e, em seguida, interrompa o controlador para inicializar NO Loader.
+
+

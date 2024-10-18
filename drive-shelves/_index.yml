@@ -1,0 +1,63 @@
+---
+indexpage:
+  title: Compartimentos de unidades para sistemas de hardware ONTAP
+  summary: As gavetas NS224 e SAS foram projetadas especificamente para os sistemas
+    NetApp AFF e FAS a fim de dar suporte às diversas demandas de negócios e aplicações.
+  keywords: install ns224, hot-add, shelves, cable, drive-shelves
+  lead: As NS224 gavetas e SAS da NetApp ajudam a oferecer a performance, resiliência
+    e flexibilidade necessárias para a transformação digital.
+  tiles:
+  - title: Instale as NS224 gavetas
+    links:
+    - title: Gaveta para adicionar quente
+      url: "../ns224/hot-add-shelf-overview.html"
+    - title: Alterar ID do compartimento
+      url: "../ns224/change-shelf-id.html"
+    - title: Prateleiras de cabos como storage conetado a switch
+      url: "../ns224/cable-as-switch-attached.html"
+  - title: Instalar gavetas SAS
+    links:
+    - title: Instale o compartimento no novo sistema de storage
+      url: "../sas3/install-new-system.html"
+    - title: Gaveta para adicionar quente
+      url: "../sas3/install-hot-add-shelf.html"
+    - title: Alterar ID do compartimento
+      url: "../sas3/install-change-shelf-id.html"
+    - title: Gaveta de adicionar quente à stack de IOM6 gavetas (stack misto)
+      url: "../sas3/iom12-hot-add-mix.html"
+    - title: Regras de cabeamento SAS, planilhas e exemplos
+      url: "../sas3/overview-cabling-rules-examples.html"
+  - title: Manter NS224 gavetas
+    links:
+    - title: Suporte de arranque
+      url: "../ns224/service-replace-boot-media.html"
+    - title: DIMM
+      url: "../ns224/service-replace-dimm.html"
+    - title: Condução
+      url: "../ns224/service-replace-drive.html"
+    - title: Compartimento de unidades
+      url: "../ns224/ns224-shelf-overview.html"
+    - title: Ventoinha
+      url: "../ns224/service-replace-fan.html"
+    - title: Módulo NSM
+      url: "../ns224/service-replace-nsm100.html"
+    - title: Fonte de alimentação
+      url: "../ns224/service-replace-power-supply.html"
+    - title: Bateria RTC
+      url: "../ns224/service-replace-rtc-battery.html"
+  - title: Mantenha as gavetas SAS
+    links:
+    - title: Unidade de disco no compartimento de DS224C TB ou DS212C TB
+      url: "../sas3/service-hot-swap-drive-ds224c-ds212c.html"
+    - title: Unidade de disco no compartimento de DS460C U.
+      url: "../sas3/service-hot-swap-drive-ds460c.html"
+    - title: Gaveta de unidade na gaveta DS460C
+      url: "../sas3/service-replace-drawer-ds460c.html"
+    - title: Compartimento de unidades
+      url: "../sas3/sas3-shelf-overview.html"
+    - title: Ventilador na prateleira DS460C
+      url: "../sas3/service-replace-fan-ds460c.html"
+    - title: Módulo IOM12/IOM12B
+      url: "../sas3/service-hot-swap-iom.html"
+    - title: Fonte de alimentação
+      url: "../sas3/service-hot-swap-power-supply.html"

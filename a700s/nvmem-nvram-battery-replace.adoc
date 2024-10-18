@@ -1,0 +1,219 @@
+---
+permalink: a700s/nvmem-nvram-battery-replace.html 
+sidebar: sidebar 
+keywords: aff a700s, aff, a700s, replace, nvram, battery, system, remove, controller, reinstall, shut, down, impair, complete, replacement, process, replace the nvram battery, shut down the impaired controller, remove the controller module, replace the nvram battery, reinstall the controller module, complete the replacement process 
+summary: Para substituir uma bateria NVRAM no sistema, tem de remover o módulo do controlador do sistema, remover a bateria, substituir a bateria e, em seguida, reinstalar o módulo do controlador. 
+---
+= Substitua a bateria do NVRAM - AFF A700s
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para substituir uma bateria NVRAM no sistema, tem de remover o módulo do controlador do sistema, remover a bateria, substituir a bateria e, em seguida, reinstalar o módulo do controlador.
+
+Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+
+
+
+== Passo 1: Desligue o controlador desativado
+
+Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
+
+Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
+
+.Passos
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=_number_of_hours_down_h`
++
+A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Se o controlador afetado fizer parte de um par de HA, desative a giveback automática a partir do console do controlador íntegro: `storage failover modify -node local -auto-giveback false`
+. Leve o controlador prejudicado para o prompt Loader:
++
+[cols="1,2"]
+|===
+| Se o controlador afetado estiver a apresentar... | Então... 
+
+
+ a| 
+O prompt Loader
+ a| 
+Vá para Remover módulo do controlador.
+
+
+
+ a| 
+A aguardar pela giveback...
+ a| 
+Pressione Ctrl-C e responda `y`.
+
+
+
+ a| 
+Prompt do sistema ou prompt de senha (digite a senha do sistema)
+ a| 
+Assuma ou interrompa o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
+
+|===
+
+
+
+
+== Passo 2: Remova o módulo do controlador
+
+Deve remover o módulo do controlador do chassis quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Desconete a fonte de alimentação do módulo do controlador da fonte e desconete o cabo da fonte de alimentação.
+. Solte o gancho e a alça de loop que prendem os cabos ao dispositivo de gerenciamento de cabos e, em seguida, desconete os cabos do sistema e os SFPs (se necessário) do módulo do controlador, mantendo o controle de onde os cabos estavam conetados.
++
+Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar o dispositivo de gerenciamento de cabos, os cabos sejam organizados.
+
+. Retire o dispositivo de gestão de cabos do módulo do controlador e coloque-o de lado.
+. Prima ambos os trincos de bloqueio para baixo e, em seguida, rode ambos os trincos para baixo ao mesmo tempo.
++
+O módulo do controlador desloca-se ligeiramente para fora do chassis.
+
++
+image::../media/drw_a700s_pcm_remove.png[Soltar o módulo do controlador]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Trinco de bloqueio
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Pino de bloqueio
+
+|===
+. Faça deslizar o módulo do controlador para fora do chassis.
++
+Certifique-se de que suporta a parte inferior do módulo do controlador enquanto o desliza para fora do chassis.
+
+. Coloque o módulo do controlador de lado num local seguro.
+
+
+
+
+== Passo 3: Substitua a bateria do NVRAM
+
+Para substituir a bateria NVRAM, tem de remover a bateria NVRAM avariada do módulo do controlador e instalar a bateria NVRAM de substituição no módulo do controlador.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Localize a bateria NVRAM no lado esquerdo do módulo riser, Riser 1.
++
+image::../media/drw_a700s_nvme_battery_replace.png[Substitua a bateria do NVRAM]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Ficha da bateria NVRAM
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Patilha azul de bloqueio da bateria do NVRAM
+
+|===
+. Localize a ficha da bateria e aperte o clipe na face da ficha da bateria para soltar a ficha da tomada e, em seguida, desligue o cabo da bateria da tomada.
+. Empurre a patilha de bloqueio azul no suporte da bateria, de forma a que o trinco se solte do suporte.
+. Deslize a bateria para baixo no suporte da riser, levante a bateria para fora do controlador e, em seguida, coloque-a de lado.
+. Deslize a bateria de substituição para baixo ao longo da parede lateral de chapa metálica até que as patilhas de suporte no gancho lateral nas ranhuras da bateria e o trinco da bateria engata e bloqueia no lugar.
+. Ligue a ficha da bateria à tomada riser e certifique-se de que a ficha fica fixa no lugar.
+
+
+
+
+== Etapa 4: Reinstale o módulo do controlador
+
+Depois de substituir um componente dentro do módulo do controlador, você deve reinstalar o módulo do controlador no chassi do sistema e iniciá-lo.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Se ainda não o tiver feito, feche a conduta de ar:
++
+.. Desloque a conduta de ar até ao módulo do controlador.
+.. Faça deslizar a conduta de ar na direção dos tirantes até que as patilhas de bloqueio encaixem no lugar.
+.. Inspecione a conduta de ar para se certificar de que está corretamente encaixada e trancada no lugar.
++
+image::../media/drw_a700s_close_air_duct.png[Fechar a conduta de ar]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Patilhas de bloqueio
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Deslize o êmbolo
+
+|===
+
+
+. Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
++
+
+NOTE: Não introduza completamente o módulo do controlador no chassis até ser instruído a fazê-lo.
+
+. Recable o sistema, conforme necessário.
++
+Se você removeu os conversores de Mídia (QSFPs ou SFPs), lembre-se de reinstalá-los se você estiver usando cabos de fibra ótica.
+
+. Ligue o cabo de alimentação à fonte de alimentação, volte a instalar o anel de bloqueio do cabo de alimentação e, em seguida, ligue a fonte de alimentação à fonte de alimentação.
+. Conclua a reinstalação do módulo do controlador:
++
+.. Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos.
+.. Empurre firmemente o módulo do controlador para dentro do chassi até que ele atenda ao plano médio e esteja totalmente assentado.
++
+Os trincos de bloqueio sobem quando o módulo do controlador está totalmente assente.
+
++
+
+NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
+
++
+O módulo do controlador começa a arrancar assim que estiver totalmente assente no chassis.
+
+.. Rode os trincos de bloqueio para cima, inclinando-os de forma a que estes limpem os pinos de bloqueio e, em seguida, baixe-os para a posição de bloqueio.
+
+
+. Se o sistema estiver configurado para suportar interconexão de cluster de 10 GbE e conexões de dados em NICs de 40 GbE ou portas integradas, converta essas portas em conexões de 10 GbE usando o comando nicadmin Convert do modo de manutenção.
++
+
+NOTE: Certifique-se de sair do modo de manutenção depois de concluir a conversão.
+
+. Volte a colocar o controlador em funcionamento normal, devolvendo o respetivo armazenamento: `storage failover giveback -ofnode _impaired_node_name_`
+. Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true`
+
+
+
+
+== Passo 5: Devolva a peça com falha ao NetApp
+
+Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

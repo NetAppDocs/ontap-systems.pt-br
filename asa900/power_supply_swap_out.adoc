@@ -1,0 +1,89 @@
+---
+permalink: asa900/power_supply_swap_out.html 
+sidebar: sidebar 
+keywords:  
+summary: Trocar uma fonte de alimentação envolve desligar, desconetar e remover a fonte de alimentação antiga e instalar, conetar e ligar a fonte de alimentação de substituição. 
+---
+= Troque uma fonte de alimentação - ASA A900
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Trocar uma fonte de alimentação envolve desligar, desconetar e remover a fonte de alimentação e instalar, conetar e ligar a fonte de alimentação de substituição.
+
+Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+
+.Sobre esta tarefa
+* As fontes de alimentação são redundantes e hot-swap.
+* Este procedimento é escrito para substituir uma fonte de alimentação de cada vez.
++
+
+NOTE: É uma prática recomendada substituir a fonte de alimentação dentro de dois minutos após a remoção do chassi. O sistema continua a funcionar, mas o ONTAP envia mensagens ao console sobre a fonte de alimentação degradada até que a fonte de alimentação seja substituída.
+
+* Existem quatro fontes de alimentação no sistema.
+* As fontes de alimentação são auto-variando.
++
+
+IMPORTANT: Não misture PSUs com diferentes classificações de eficiência. Sempre substitua como por like.
+
+
+
+.Passos
+. Identifique a fonte de alimentação que deseja substituir, com base em mensagens de erro do console ou através dos LEDs das fontes de alimentação.
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Desligue a fonte de alimentação e desligue os cabos de alimentação:
++
+.. Desligue o interrutor de alimentação da fonte de alimentação.
+.. Abra o retentor do cabo de alimentação e, em seguida, desligue o cabo de alimentação da fonte de alimentação.
+
+
+. Prima e mantenha premido o botão terra cotta na pega da fonte de alimentação e, em seguida, puxe a fonte de alimentação para fora do chassis.
++
+CUIDADO:
+
++
+Ao remover uma fonte de alimentação, utilize sempre duas mãos para suportar o seu peso.
+
++
+.Animação - Remover/instalar a PSU
+video::6d0eee92-72e2-4da4-a4fa-adf9016b57ff[panopto]
++
+image::../media/drw_9000_remove_install_psu_module.svg[Remova ou instale um módulo da PSU]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Botão de bloqueio
+
+|===
+. Certifique-se de que o interrutor ligar/desligar da nova fonte de alimentação está na posição desligada.
+. Utilizando ambas as mãos, apoie e alinhe as extremidades da fonte de alimentação com a abertura no chassis do sistema e, em seguida, empurre cuidadosamente a fonte de alimentação para o chassis até encaixar no devido lugar.
++
+As fontes de alimentação são chaveadas e só podem ser instaladas de uma forma.
+
++
+
+IMPORTANT: Não utilize força excessiva ao deslizar a fonte de alimentação para o sistema. Pode danificar o conetor.
+
+. Reconecte o cabeamento da fonte de alimentação:
++
+.. Volte a ligar o cabo de alimentação à fonte de alimentação.
+.. Fixe o cabo de alimentação à fonte de alimentação utilizando o retentor do cabo de alimentação.
++
+Uma vez que a alimentação é restaurada à fonte de alimentação, o LED de estado deve estar verde.
+
+
+
+. Ligue a alimentação da nova fonte de alimentação e, em seguida, verifique o funcionamento dos LEDs de atividade da fonte de alimentação.
++
+O LED verde de alimentação acende-se quando a PSU está totalmente inserida no chassis e o LED âmbar de atenção pisca inicialmente, mas desliga-se após alguns momentos.
+
+. Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"^] página para obter mais informações.
+

@@ -1,0 +1,58 @@
+= 
+:allow-uri-read: 
+
+
+Restaure a imagem do suporte de arranque.
+
+.Passos
+. No prompt DO Loader, digite o comando _boot_recovery -Partner_.
++
+A tela exibirá a mensagem `Starting boot media recovery (BMR) process press Ctrl-C to abort...` e iniciará as verificações iniciais e a instalação dos arquivos de recuperação de inicialização.
+
++
+.. Se o Onboard Key Manager (OKM) estiver configurado, você verá o seguinte exibido:
++
+....
+key manager is configured.
+Entering Bootmenu Option 10...
+
+This option must be used only in disaster recovery procedures. Are you sure? (y or n):
+....
+
+
+. Digite _y_ no prompt.
+. Digite a senha do gerenciador de chaves integrado quando você vir `Enter the passphrase for onboard key management:`
+. Digite a frase-passe para o gerenciador de chaves integrado novamente quando solicitado a confirmar a senha.
++
+....
+Enter the passphrase for onboard key management:
+Enter the passphrase again to confirm:
+Enter the backup data:
+TmV0QXBwIEtleSBCbG9iAAECAAAEAAAAcAEAAAAAAAA3yR6UAAAAACEAAAAAAAAA
+QAAAAAAAAACJz1u2AAAAAPX84XY5AU0p4Jcb9t8wiwOZoqyJPJ4L6/j5FHJ9yj/w
+RVDO1sZB1E4HO79/zYc82nBwtiHaSPWCbkCrMWuQQDsiAAAAAAAAACgAAAAAAAAA
+3WTh7gAAAAAAAAAAAAAAAAIAAAAAAAgAZJEIWvdeHr5RCAvHGclo+wAAAAAAAAAA
+IgAAAAAAAAAoAAAAAAAAAEOTcR0AAAAAAAAAAAAAAAACAAAAAAAJAGr3tJA/LRzU
+QRHwv+1aWvAAAAAAAAAAACQAAAAAAAAAgAAAAAAAAABHVFpxAAAAAHUgdVq0EKNp
+.
+.
+.
+.
+....
++
+Você verá o seguinte quando o processo de recuperação estiver concluído:
+
++
+....
+Trying to recover keymanager secrets....
+Setting recovery material for the onboard key manager
+Recovery secrets set successfully
+Trying to delete any existing km_onboard.wkeydb file.
+
+Successfully recovered keymanager secrets.
+....
+. Monitore o processo BMR enquanto executa a configuração de backup de restauração, arquivo env, mdb e rdb do parceiro.
++
+Quando a restauração estiver concluída, o nó reiniciará para concluir o processo.
+
+

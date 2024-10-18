@@ -1,0 +1,74 @@
+---
+permalink: asa-c250/maintain-overview.html 
+sidebar: sidebar 
+keywords: asa C250 maintenance, maintenance, repairing C250, repairing asa C250, replace asa C250 components, replace asa C250 components 
+summary: Mantenha o hardware ASA C250 
+---
+= Manter o hardware do ASA C250
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para o sistema de armazenamento ASA C250, pode executar procedimentos de manutenção nos seguintes componentes.
+
+
+
+== Suporte de arranque
+
+A Mídia de inicialização armazena um conjunto primário e secundário de arquivos de imagem de inicialização que o sistema usa quando ele é inicializado.
+
+
+
+== Chassis
+
+O chassi é o gabinete físico que abriga todos os componentes do controlador, como a unidade controladora/CPU, fonte de alimentação e e/S.
+
+
+
+== Controlador
+
+Um controlador consiste em uma placa, firmware e software. Controla as unidades e implementa as funções do ONTAP.
+
+
+
+== DIMM
+
+Você deve substituir um DIMM (módulo de memória dual in-line) quando houver uma incompatibilidade de memória ou se tiver um DIMM com falha.
+
+
+
+== Condução
+
+Uma unidade é um dispositivo que fornece a Mídia de armazenamento físico para dados.
+
+
+
+== Ventoinha
+
+A ventoinha arrefece o controlador.
+
+
+
+== Placa mezzanine
+
+Um cartão Mezzanine é uma placa de circuito impresso que se coneta diretamente a outro cartão de plug-in.
+
+
+
+== Bateria NVEM
+
+Uma bateria é incluída com o controlador e preserva os dados em cache se a energia CA falhar.
+
+
+
+== Fonte de alimentação
+
+Uma fonte de alimentação fornece uma fonte de alimentação redundante em um compartimento de controladora.
+
+
+
+== Bateria de relógio em tempo real
+
+Uma bateria de relógio em tempo real preserva as informações de data e hora do sistema se a energia estiver desligada.

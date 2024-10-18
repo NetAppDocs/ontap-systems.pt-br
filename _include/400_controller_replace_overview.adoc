@@ -1,0 +1,27 @@
+= 
+:allow-uri-read: 
+
+
+Tem de rever os pré-requisitos para o procedimento de substituição e selecionar o correto para a sua versão do sistema operativo ONTAP.
+
+* Todas as gavetas de unidades devem estar funcionando corretamente.
+* Se o sistema estiver em uma configuração do MetroCluster, você deverá revisar a seção https://docs.netapp.com/us-en/ontap-metrocluster/disaster-recovery/concept_choosing_the_correct_recovery_procedure_parent_concept.html["Escolher o procedimento de recuperação correto"] para determinar se deve usar esse procedimento.
++
+Se esse for o procedimento que você deve usar, observe que o procedimento de substituição da controladora de um controlador em uma configuração de MetroCluster de quatro ou oito nós é o mesmo que em um par de HA. Nenhuma etapa específica do MetroCluster é necessária porque a falha é restrita a um par de HA e os comandos de failover de storage podem ser usados para fornecer operações sem interrupções durante a substituição.
+
+* Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor.
+* Você deve estar substituindo um módulo de controlador por um módulo de controlador do mesmo tipo de modelo. Você não pode atualizar seu sistema apenas substituindo o módulo do controlador.
+* Não é possível alterar nenhuma unidade ou compartimentos de unidades como parte deste procedimento.
+* Neste procedimento, o dispositivo de inicialização é movido do controlador prejudicado para o controlador _replacement_, de modo que o controlador _replacement_ inicialize na mesma versão do ONTAP que o módulo do controlador antigo.
+* É importante que você aplique os comandos nessas etapas nos sistemas corretos:
++
+** O controlador _prejudicado_ é o controlador que está sendo substituído.
+** O _nó de substituição_ é o novo controlador que está substituindo o controlador prejudicado.
+** O controlador _Healthy_ é o controlador sobrevivente.
+
+
+* Você deve sempre capturar a saída do console do controlador para um arquivo de texto.
++
+Isso fornece um Registro do procedimento para que você possa solucionar qualquer problema que possa encontrar durante o processo de substituição.
+
+

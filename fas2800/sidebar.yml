@@ -1,0 +1,84 @@
+---
+section: fas2800
+title: FAS2800 sistemas
+entries:
+- title: Instalar e configurar
+  pdf-filename: FAS2800 Instalação e Configuração
+  entries:
+  - title: Escolha a experiência de instalação e configuração
+    url: "/fas2800/install-setup.html"
+  - title: Passos rápidos
+    url: "/fas2800/install-quick-guide.html"
+  - title: Passos de vídeos
+    url: "/fas2800/install-videos.html"
+  - title: Passos detalhados
+    url: "/fas2800/install-detailed-guide.html"
+- title: Manutenção
+  pdf-filename: FAS2800 manter
+  entries:
+  - title: Visão geral
+    url: "/fas2800/maintain-overview.html"
+  - title: Suporte de arranque
+    pdf-filename: FAS2800 suporte de arranque
+    entries:
+    - title: Visão geral
+      url: "/fas2800/bootmedia-replace-overview.html"
+    - title: Verifique as chaves de criptografia integradas
+      url: "/fas2800/bootmedia-encryption-preshutdown-checks.html"
+    - title: Desligue o controlador desativado
+      url: "/fas2800/bootmedia-shutdown.html"
+    - title: Substitua a imagem de inicialização
+      url: "/fas2800/bootmedia-replace.html"
+    - title: Imagem de recuperação de inicialização
+      url: "/fas2800/bootmedia-recovery-image-boot-non-2n-mcc.html"
+    - title: Restaure OKM, NSE e NVE
+      url: "/fas2800/bootmedia-encryption-restore.html"
+    - title: Devolver artigo com falha ao NetApp
+      url: "/fas2800/bootmedia-complete-rma.html"
+  - title: Módulo de armazenamento em cache
+    pdf-filename: FAS2800 módulo de cache
+    url: "/fas2800/caching-module-replace.html"
+  - title: Chassis
+    pdf-filename: FAS2800 chassis
+    entries:
+    - title: Visão geral
+      url: "/fas2800/chassis-replace-overview.html"
+    - title: Desligue o controlador desativado
+      url: "/fas2800/chassis-replace-shutdown.html"
+    - title: Substitua o material de fixação
+      url: "/fas2800/chassis-replace-move-hardware.html"
+    - title: Restaure a configuração
+      url: "/fas2800/chassis-replace-complete-system-restore-rma.html"
+  - title: Controlador
+    pdf-filename: Controlador FAS2800
+    entries:
+    - title: Visão geral
+      url: "/fas2800/controller-replace-overview.html"
+    - title: Desligue o controlador desativado
+      url: "/fas2800/controller-replace-shutdown.html"
+    - title: Substitua o hardware do controlador
+      url: "/fas2800/controller-replace-move-hardware.html"
+    - title: Restaure a configuração do sistema
+      url: "/fas2800/controller-replace-system-config-restore-and-verify.html"
+    - title: Sistema Recable
+      url: "/fas2800/controller-replace-recable-reassign-disks.html"
+    - title: Restauração completa do sistema
+      url: "/fas2800/controller-replace-restore-system-rma.html"
+  - title: DIMM
+    pdf-filename: FAS2800 DIMM
+    url: "/fas2800/dimm-replace.html"
+  - title: Condução
+    pdf-filename: Unidade de FAS2800 TB
+    url: "/fas2800/drive-replace.html"
+  - title: Bateria NVMEM
+    pdf-filename: FAS2800 bateria NVMEM
+    url: "/fas2800/nvmem-nvram-battery-replace.html"
+  - title: Placa mezzanine
+    pdf-filename: FAS2800 cartão Mezzanine
+    url: "/fas2800/pci-cards-and-risers-replace.html"
+  - title: Fonte de alimentação
+    pdf-filename: Fonte de alimentação FAS2800
+    url: "/fas2800/power-supply-swap-out.html"
+  - title: Bateria de relógio em tempo real
+    pdf-filename: FAS2800 bateria de relógio em tempo real
+    url: "/fas2800/rtc-battery-replace.html"

@@ -1,0 +1,18 @@
+= 
+:allow-uri-read: 
+
+
+Para sistemas de storage que você configurou anteriormente para usar criptografia de armazenamento ou volume, você deve executar etapas adicionais para fornecer a funcionalidade de criptografia ininterrupta. Pode ignorar esta tarefa em sistemas de armazenamento que não tenham a encriptação de armazenamento ou volume ativada.
+
+
+NOTE: Esta etapa não é necessária ao substituir um DIMM.
+
+.Passos
+. Use um dos procedimentos a seguir, dependendo se você estiver usando o gerenciamento de chaves externas ou integradas:
++
+** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-onboard-key-management-encryption-keys-task.html["Restaurar chaves de criptografia integradas de gerenciamento de chaves"^]
+** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-external-encryption-keys-93-later-task.html["Restaurar chaves de criptografia de gerenciamento de chaves externas"^]
+
+
+. Reponha o SED MSID
+

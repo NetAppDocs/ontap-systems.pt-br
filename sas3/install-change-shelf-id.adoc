@@ -1,0 +1,90 @@
+---
+permalink: sas3/install-change-shelf-id.html 
+sidebar: sidebar 
+keywords: change, shelf, id, system, ontap, run, hot-add, ontap, controller, module, available, serve, data, unown, spare, offline, aggregate 
+summary: 'Você pode alterar o ID de um shelf em um sistema quando o ONTAP ainda não estiver em execução ou quando adicionar um shelf antes de ser cabeado ao sistema. Você também pode alterar um ID de gaveta quando o ONTAP está ativo e em execução (os módulos de controladora estão disponíveis para fornecer dados) e todas as unidades na gaveta são não possuídas, sobressalentes ou parte de agregados desalinhados.' 
+---
+= Alterar a ID de um compartimento - prateleiras com módulos IOM12/IOM12B
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode alterar o ID de um shelf em um sistema quando o ONTAP ainda não estiver em execução ou quando adicionar um shelf antes de ser cabeado ao sistema. Você também pode alterar o ID de um compartimento quando o ONTAP estiver ativo e em execução (os módulos da controladora estão disponíveis para fornecer dados) e todas as unidades da gaveta forem de propriedade não pertencentes, sobressalentes ou parte de agregado(s) desconetado(s).
+
+.Antes de começar
+* Se o ONTAP estiver ativo e em execução (os módulos do controlador estão disponíveis para fornecer dados), você precisará ter verificado que todas as unidades na gaveta são não pertencentes, sobressalentes ou parte de agregado(s) desconetado(s).
++
+Você pode verificar o estado das unidades usando o `storage disk show -shelf _shelf_number_` comando. A saída na coluna tipo de contentor deve exibir sobressalente ou quebrado se for uma unidade com falha. Além disso, as colunas Nome do contentor e proprietário devem ter um traço.
+
+* Você pode verificar IDs de gaveta já em uso no sistema executando o Active IQ Config Advisor ou usando o `storage shelf show -fields shelf-id` comando.
++
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp Downloads: Config Advisor"]
+
+
+
+.Sobre esta tarefa
+* Um ID válido do compartimento é de 00 a 99.
+* As IDs de gaveta devem ser exclusivas em um par de HA ou configuração de controladora única.
++
+Se você tiver uma plataforma com storage interno, as IDs de gaveta deverão ser exclusivas no compartimento de disco interno e em todas as gavetas de disco conetadas externamente.
+
+* É necessário desligar um ciclo de prateleira para que o ID do compartimento entre em vigor.
++
+O período de tempo que espera antes de voltar a ligar a alimentação depende do estado do ONTAP, conforme descrito mais adiante neste procedimento.
+
+
+
+.Passos
+. Ligue a alimentação do compartimento de disco, se ele ainda não estiver ligado.
+. Remova a tampa da extremidade esquerda para localizar o botão próximo aos LEDs da prateleira.
+. Altere o primeiro número do ID do compartimento pressionando e mantendo pressionado o botão laranja até que o primeiro número no visor digital pisque, o que pode levar até três segundos.
++
+[NOTE]
+====
+Se a ID demorar mais de três segundos a piscar, prima novamente o botão, certificando-se de que o pressiona completamente.
+
+Isto ativa o modo de programação da ID do compartimento de disco.
+
+====
+. Pressione o botão para avançar o número até atingir o número desejado de 0 a 9.
++
+O primeiro número continua a piscar.
+
+. Altere o segundo número da ID do compartimento pressionando e mantendo pressionado o botão até que o segundo número no visor digital pisque, o que pode levar até três segundos.
++
+O primeiro número no visor digital pára de piscar.
+
+. Pressione o botão para avançar o número até atingir o número desejado de 1 a 9.
++
+O segundo número continua a piscar.
+
+. Bloqueie o número pretendido e saia do modo de programação premindo e mantendo premido o botão até que o segundo número pare de piscar, o que pode demorar até três segundos.
++
+Ambos os números no visor digital começam a piscar e o LED âmbar no painel do visor do operador acende-se após cerca de cinco segundos, alertando-o de que a ID pendente do compartimento do disco ainda não entrou em vigor.
+
+. Ligue o compartimento de disco para fazer com que o ID do compartimento entre em vigor.
++
+Tem de desligar ambos os interrutores de alimentação, aguardar o período de tempo adequado e, em seguida, ligá-los novamente para concluir o ciclo de alimentação.
+
++
+** Se o ONTAP ainda não estiver em execução ou se você estiver adicionando um compartimento (que ainda não tenha sido habilitado para o sistema), aguarde pelo menos 10 segundos.
+** Se o ONTAP estiver em execução (controladores disponíveis para fornecimento de dados) e todas as unidades de disco na gaveta não forem de propriedade, sobressalentes ou parte de agregado(s) desagregado(s), aguarde pelo menos 70 segundos.
++
+Esse tempo permite que o ONTAP exclua adequadamente o endereço do compartimento antigo e atualize a cópia do novo endereço do compartimento.
+
+
+
+. Volte a colocar a tampa da extremidade esquerda.
+. Repita as etapas de 1 a 9 para cada compartimento de disco adicional.
+. Verifique se o sistema não tem IDs de gaveta duplicadas.
++
+Quando dois ou mais compartimentos de disco têm a mesma ID, o sistema atribui ao compartimento de disco duplicado um número de ID flexível igual ou superior a 100. Tem de alterar o número de ID virtual (duplicado).
+
++
+.. Execute o Active IQ Config Advisor para verificar se há alertas duplicados de ID de gaveta ou execute o `storage shelf show -fields shelf-id` comando para ver uma lista de IDs de gaveta já em uso, incluindo quaisquer IDs duplicados.
+.. Se o sistema tiver IDs de gaveta duplicadas, altere as IDs de gaveta duplicadas repetindo este procedimento.
+
+
+

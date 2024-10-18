@@ -1,0 +1,133 @@
+= 
+:allow-uri-read: 
+
+
+Os módulos NVMe SSD FlashCache (módulos FlashCache ou cache) estão localizados na parte frontal do módulo NVRAM10 apenas no slot 6 de sistemas FAS9000. A partir do ONTAP 9.4, você pode trocar o módulo de armazenamento em cache com a mesma capacidade do mesmo ou de outro fornecedor suportado.
+
+.Antes de começar
+Dependendo da situação, seu sistema de storage precisa atender a certos critérios:
+
+* Ele deve ter o sistema operacional apropriado para o módulo de cache que você está instalando.
+* A TI precisa dar suporte à capacidade de armazenamento em cache.
+* O módulo de armazenamento em cache de substituição deve ter a mesma capacidade que o módulo de armazenamento em cache com falha, mas pode ser de um fornecedor compatível diferente.
+* Todos os outros componentes do sistema de armazenamento devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Localize o módulo de armazenamento em cache com falha, no slot 6, pelo LED âmbar de atenção aceso na parte frontal do módulo de armazenamento em cache.
+. Prepare a ranhura do módulo de armazenamento em cache para substituição da seguinte forma:
++
+.. Para o ONTAP 9.7 e versões anteriores:
++
+... Registre a capacidade do módulo de armazenamento em cache, o número de peça e o número de série no nó de destino: `system node run local sysconfig -av 6`
+... No nível de privilégio de administrador, prepare o slot NVMe de destino para substituição, respondendo `y` quando solicitado se deseja continuar: `system controller slot module replace -node _node_name -slot slot_number_` O seguinte comando prepara o slot 6-2 no node1 para substituição e exibe uma mensagem de que é seguro substituir:
++
+[listing]
+----
+::> system controller slot module replace -node node1 -slot 6-2
+
+Warning: NVMe module in slot 6-2 of the node node1 will be powered off for replacement.
+Do you want to continue? (y|n): `y`
+
+The module has been successfully powered off.  It can now be safely replaced.
+After the replacement module is inserted, use the "system controller slot module insert" command to place the module into service.
+----
+... Exiba o status do slot com o comando show do módulo do slot do controlador do sistema.
++
+O status do slot NVMe exibe aguardando substituição na saída da tela para o módulo de cache que precisa ser substituído.
+
+
+
+.. Para o ONTAP 9.8 e posterior:
++
+... Registre a capacidade do módulo de armazenamento em cache, o número de peça e o número de série no nó de destino: `system node run local sysconfig -av 6`
+... No nível de privilégio de administrador, prepare o slot NVMe de destino para remoção, respondendo `y` quando solicitado se deseja continuar: `system controller slot module remove -node node_name -slot slot_number` O seguinte comando prepara o slot 6-2 em node1 para remoção e exibe uma mensagem de que é seguro remover:
++
+[listing]
+----
+::> system controller slot module remove -node node1 -slot 6-2
+
+Warning: SSD module in slot 6-2 of the node node1 will be powered off for removal.
+Do you want to continue? (y|n): `y`
+
+The module has been successfully removed from service and powered off. It can now be safely removed.
+----
+... Exiba o status do slot com o `system controller slot module show` comando.
++
+O status do slot NVMe é exibido `powered-off` na saída da tela para o módulo de cache que precisa ser substituído.
+
+
+
+
+
++
+
+NOTE: Consulte a https://docs.netapp.com/us-en/ontap-cli-9121/["Command man pages"^] para obter mais detalhes sobre a sua versão do ONTAP.
+
+. Remova o módulo de armazenamento em cache:
++
+image::../media/drw_9000_remove_flashcache.png[Substituição do módulo de armazenamento em cache]
+
++
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Botão laranja de libertação.
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Pega do came do módulo de armazenamento em cache.
+
+|===
++
+.. Prima o botão laranja de libertação na parte frontal do módulo de armazenamento em cache.
++
+
+NOTE: Não utilize o trinco de came de e/S numerado e com letras para ejetar o módulo de cache. A trava de came de e/S numerada e com letras ejeta todo o módulo NVRAM10 e não o módulo de cache.
+
+.. Rode a pega do came até que o módulo de cache comece a deslizar para fora do módulo NVRAM10.
+.. Puxe cuidadosamente a pega do excêntrico na sua direção para remover o módulo de armazenamento em cache do módulo NVRAM10.
++
+Certifique-se de que suporta o módulo de cache enquanto o remove do módulo NVRAM10.
+
+
+
+. Instale o módulo de armazenamento em cache:
++
+.. Alinhe as extremidades do módulo de cache com a abertura no módulo NVRAM10.
+.. Empurre cuidadosamente o módulo de armazenamento em cache para dentro do compartimento até que a pega do excêntrico engate.
+.. Rode a pega do excêntrico até encaixar no devido lugar.
+
+
+. Coloque o módulo de armazenamento em cache de substituição on-line usando o `system controller slot module insert` comando da seguinte forma:
++
+O comando a seguir prepara o slot 6-2 no node1 para ligar e exibe uma mensagem de que ele está ligado:
+
++
+[listing]
+----
+::> system controller slot module insert -node node1 -slot 6-2
+
+Warning: NVMe module in slot 6-2 of the node localhost will be powered on and initialized.
+Do you want to continue? (y|n): `y`
+
+The module has been successfully powered on, initialized and placed into service.
+----
+. Verifique o status do slot usando o `system controller slot module show` comando.
++
+Certifique-se de que a saída do comando reporta o status para o slot 6-1 ou 6-2 como `powered-on` e pronto para operação.
+
+. Verifique se o módulo de armazenamento em cache de substituição está on-line e reconhecido e, em seguida, confirme visualmente se o LED de atenção âmbar não está aceso: `sysconfig -av slot_number`
++
+
+NOTE: Se você substituir o módulo de cache por um módulo de cache de um fornecedor diferente, o nome do novo fornecedor será exibido na saída do comando.
+
+. Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"^] página para obter mais informações.
+

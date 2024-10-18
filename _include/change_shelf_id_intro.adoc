@@ -1,0 +1,27 @@
+= 
+:allow-uri-read: 
+
+
+.Antes de começar
+* Se o ONTAP estiver ativo e em execução (os módulos do controlador estão disponíveis para fornecer dados), você precisará ter verificado que todas as unidades na gaveta são não pertencentes, sobressalentes ou parte de agregado(s) desconetado(s).
++
+Você pode verificar o estado das unidades usando o `storage disk show -shelf _shelf_number_` comando. A saída na `Container Type` coluna deve ser exibida `spare` ou `broken` se for uma unidade com falha. Além disso, as `Container Name` colunas e `Owner` devem ter um traço.
+
+* Você precisa de um clipe de papel com um lado endireitado ou uma caneta esferográfica de ponta estreita.
++
+Utilize o clipe de papel ou a caneta esferográfica para aceder ao botão ID da prateleira através do pequeno orifício, à direita dos LEDs, no painel do visor do operador (ODP).
+
+
+
+.Sobre esta tarefa
+* Um ID válido do compartimento é de 00 a 99.
+* As IDs de gaveta devem ser exclusivas dentro de um par de HA.
+* É necessário desligar um compartimento (Desconete os dois cabos de energia, aguarde o tempo apropriado e, em seguida, conectá-los novamente) para que o ID do compartimento entre em vigor.
++
+O tempo que você espera antes de conetar os cabos de energia novamente depende do estado do ONTAP, conforme descrito posteriormente neste procedimento.
+
++
+
+NOTE: As gavetas NS224 não têm interrutores de alimentação nas fontes de alimentação.
+
+

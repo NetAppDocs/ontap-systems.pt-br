@@ -1,0 +1,332 @@
+= Novo suporte do adaptador
+:allow-uri-read: 
+
+
+
+
+== Novo suporte do adaptador
+
+[cols="4*"]
+|===
+| Número de peça do adaptador | Descrição | Categoria | Disponível a partir do início 
+
+
+ a| 
+https://hwu.netapp.com/adapter/index["X91148A"]
+ a| 
+2 portas 100GbE RoCE QSFP28
+ a| 
+* Armazenamento
+* Rede
+* HA/MetroCluster
+
+ a| 
+ONTAP 9,8
+
+
+
+ a| 
+https://hwu.netapp.com/adapter/index["X91122A"]
+ a| 
+2 portas 25GbE RoCE QSFP28
+ a| 
+* Rede
+* HA/MetroCluster
+
+ a| 
+ONTAP 9,8
+
+
+
+ a| 
+https://hwu.netapp.com/adapter/index["X9170A"]
+ a| 
+Módulo SSD NVMe (1 TB)
+ a| 
+Dispositivo de despejo de memória
+ a| 
+ONTAP 9,8
+
+|===
+
+
+== Novo suporte do interrutor
+
+[cols="25h,~,~"]
+|===
+| Interrutores | Descrição | Disponível a partir do início 
+
+
+ a| 
+https://hwu.netapp.com/Switch/Index["Switch Cisco de 36 portas de 100 GbE (X190200)"]
+ a| 
+Dá suporte a uma infraestrutura compartilhada (cluster, HA e storage conectado a switch) no mesmo par de switches Cisco Nexus 9336C-FX2, incluindo suporte para configurações IP MetroCluster.
+ a| 
+ONTAP 9.9,1
+
+
+
+ a| 
+https://hwu.netapp.com/Switch/Index["Switch Cisco de 36 portas de 100 GbE (X190200 e X190210)"]
+ a| 
+Switch de interconexão de cluster Cisco Nexus 9336C-FX2X compatível com switch de storage e switch de storage para controladores AFF/FAS, bem como para conectividade de dados de front-end.
+ a| 
+ONTAP 9,8
+
+
+
+ a| 
+https://hwu.netapp.com/Switch/Index["Switch Broadcom BES-53248 (X190005 e X190005R)"]
+ a| 
+Suporte ao switch de interconexão de cluster BES-53248 Broadcom para controladores AFF/FAS com portas de 40 GbE/100GbE GbE.
+ a| 
+ONTAP 9,8
+
+
+
+ a| 
+https://hwu.netapp.com/Switch/Index["Switch Cisco de 36 portas de 100 GbE (X190200)"] https://hwu.netapp.com/Switch/Index["Switch Cisco de 32 portas de 100 GbE (X190100 e X190100R)"]
+ a| 
+O switch Cisco Nexus 100 GbE pode ser usado como um switch de storage dedicado para conectar gavetas de unidade NVMe NS224 às seguintes plataformas:
+
+* AFF A800/AFF ASA A800
+* AFF A700/AFF ASA A700
+* AFF A400/AFF ASA A400
+* AFF A320
+
+ a| 
+ONTAP 9,8
+
+
+
+ a| 
+https://hwu.netapp.com/Switch/Index["Switch Broadcom BES-53248 (X190005 e X190005R)"]
+ a| 
+Suporte ao switch de interconexão de cluster BES-53248 Broadcom para controladores AFF/FAS com portas de 10 GbE/25GbE GbE.
+ a| 
+ONTAP 9.5P8
+
+|===
+
+
+== Suporte a nova plataforma
+
+[cols="2*"]
+|===
+| Plataformas (com links para folhas de dados) | Disponível a partir do início 
+
+
+ a| 
+https://hwu.netapp.com/ProductSpecs/Index["FAS9500"]
+ a| 
+ONTAP 9.10.1P3 e 9.11.1
+
+
+
+ a| 
+https://www.netapp.com/pdf.html?item=/media/7828-ds-3582.pdf["AFF A900"]
+ a| 
+ONTAP 9.10,1
+
+
+
+ a| 
+https://www.netapp.com/pdf.html?item=/media/7828-ds-3582.pdf["AFF A250/AFF ASA A250"]
+ a| 
+ONTAP 9,8
+
+
+
+ a| 
+https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["FAS500f"]
+ a| 
+ONTAP 9,8
+
+
+
+ a| 
+https://www.netapp.com/pdf.html?item=/media/7828-ds-3582.pdf["AFF ASA A800"]
+ a| 
+ONTAP 9,8
+
+
+
+ a| 
+https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["FAS8300"]
+ a| 
+ONTAP 9,7
+
+
+
+ a| 
+https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["FAS8700"]
+ a| 
+ONTAP 9,7
+
+
+
+ a| 
+https://www.netapp.com/pdf.html?item=/media/7828-ds-3582.pdf["AFF A400"]
+ a| 
+ONTAP 9,7
+
+
+
+ a| 
+https://www.netapp.com/pdf.html?item=/media/17190-na-382.pdf["AFF ASA A220"]
+ a| 
+ONTAP 9,7
+
+
+
+ a| 
+https://www.netapp.com/pdf.html?item=/media/7828-ds-3582.pdf["AFF ASA A700"]
+ a| 
+ONTAP 9,7
+
+
+
+ a| 
+https://www.netapp.com/pdf.html?item=/media/7623-ds-3989.pdf["AFF C190"^]
+ a| 
+ONTAP 9,6
+
+
+
+ a| 
+https://www.netapp.com/pdf.html?item=/media/17190-na-382.pdf["AFF A320"]
+ a| 
+ONTAP 9,6
+
+|===
+
+
+== Novo suporte da prateleira
+
+[cols="2*"]
+|===
+| Compartimentos | Disponível a partir do início 
+
+
+ a| 
+NS224
+ a| 
+ONTAP 9,6
+
+|===
+
+
+== Novas atualizações de hardware
+
+[cols="25h,~,~"]
+|===
+| Funcionalidade | Descrição e onde saber mais | Disponível a partir do início 
+
+
+ a| 
+Suporte expandido para plataforma para NS224 compartimentos de unidades
+ a| 
+As plataformas a seguir são compatíveis com NS224 gavetas de unidades:
+
+* AFF A800/AFF ASA A800
+* AFF A700/AFF ASA A700
+* AFF A250/AFF ASA A250
+* FAS500f
+
+ a| 
+ONTAP 9,8
+
+
+
+ a| 
+Adição dinâmica de 12GB gavetas SAS a 6Gb stacks de storage SAS
+ a| 
+Agora é compatível com uma transição de velocidade única de 6Gb Gbps para 12GB Gbps em uma pilha de storage SAS. Isso permite a expansão de storage de 6Gb stacks existentes com 12GB gavetas.
+
+https://docs.netapp.com/platstor/topic/com.netapp.doc.hw-ds-mix-hotadd/home.html["Gavetas de adição dinâmica com IOM12 módulos para uma stack de gavetas com IOM6 módulos"]
+ a| 
+ONTAP 9.7P4
+
+ONTAP 9.6P9
+
+ONTAP 9.5P14
+
+|===
+
+
+== Novos aprimoramentos de hardware
+
+Os procedimentos de atualização de hardware foram simplificados no ONTAP 9.8 com a introdução do recurso de colocação automática de portas. Quando você estiver atualizando um sistema executando o ONTAP 9.8, você deve usar o procedimento correto para considerar o recurso de posicionamento de porta.
+
+Consulte a tabela a seguir para ver os procedimentos de atualização disponíveis. Consulte cada guia para obter detalhes adicionais para determinar se o procedimento é apropriado.
+
+Para obter procedimentos adicionais específicos do MetroCluster, https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/concept_choosing_an_upgrade_method_mcc.html["Escolher um método de atualização ou atualização"] consulte .
+
+[cols="4*"]
+|===
+| Versão de ONTAP | Localização | Sem interrupções | Suporta MetroCluster 
+
+
+ a| 
+9,8 a 9,0.x
+ a| 
+https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade/upgrade-decide-to-use-this-guide.html["Guia expresso de atualização de hardware do controlador"] (Movimentação do armazenamento físico existente)
+ a| 
+Não
+ a| 
+Não
+
+
+
+ a| 
+https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade/upgrade-decide-to-use-this-guide.html["Guia expresso de atualização de hardware do controlador"] (Movendo volumes para um novo armazenamento)
+ a| 
+Sim
+ a| 
+Não
+
+
+
+ a| 
+9,8
+ a| 
+https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade/upgrade-decide-to-use-this-guide.html["Usando os comandos "system controller replace" para atualizar o hardware do controlador executando o ONTAP 9.8"]
+ a| 
+Sim
+ a| 
+Sim (FC)
+
+
+
+ a| 
+9,8
+ a| 
+https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade-arl-manual-app/index.html["Use a realocação de agregados para atualizar manualmente o hardware da controladora executando o ONTAP 9.8 ou posterior"]
+ a| 
+Sim
+ a| 
+Sim (FC)
+
+
+
+ a| 
+9,7 a 9,5
+ a| 
+https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade-arl-auto/index.html["Usando os comandos "system controller replace" para atualizar o hardware do controlador executando o ONTAP 9.5 para o ONTAP 9.7"]
+ a| 
+Sim
+ a| 
+Sim (FC)
+
+
+
+ a| 
+9,7 e anteriores
+ a| 
+https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade-arl-manual/index.html["Atualizando as controladoras com realocação agregada para atualizar manualmente o hardware da controladora executando o ONTAP 9.7 e versões anteriores"]
+ a| 
+Sim
+ a| 
+Sim (FC)
+
+|===

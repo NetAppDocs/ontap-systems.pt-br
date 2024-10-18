@@ -1,0 +1,37 @@
+= 
+:allow-uri-read: 
+
+
+Quando for necessário storage adicional, é possível adicionar um compartimento máximo de NS224 TB a um par de HA AFF A250 ou AFF C250.
+
+.Antes de começar
+* Tem de ter revisto a link:requirements-hot-add-shelf.html["requisitos e práticas recomendadas de adição dinâmica"].
+* Você deve ter concluído os procedimentos aplicáveis no link:prepare-hot-add-shelf.html["Prepare-se para adicionar uma prateleira a quente"].
+* Você precisa ter instalado as gavetas, ligado e definido as IDs de gaveta como descrito em link:prepare-hot-add-shelf.html["Instale uma prateleira para adicionar um hot-add"].
+
+
+.Sobre esta tarefa
+Quando vista da parte traseira do chassi da plataforma, a porta da placa compatível com RoCE à esquerda é a porta "a" (e1a) e a porta à direita é a porta "b" (e1b).
+
+.Passos
+. Faça o cabeamento das conexões da prateleira:
++
+.. Compartimento de cabos NSM A porta e0a para controlador A slot 1 porta a (e1a).
+.. Compartimento de cabos NSM A porta e0b para a porta b (e1b) do slot 1 do controlador B.
+.. Compartimento de cabos NSM B porta e0a para a porta a (e1a) do slot B do controlador B slot 1.
+.. Compartimento de cabos NSM B porta e0b para a porta b (e1b) do slot 1 do controlador A. A ilustração a seguir mostra o cabeamento da prateleira quando concluída.
++
+image::../media/drw_ns224_a250_c250_f500f_1shelf_ieops-1824.svg[Cabeamento para um AFF A250 C250 ou FAS500f com uma gaveta NS224 e um conjunto de portas de placa PCIe]
+
+
+
+. Verifique se o compartimento hot-added está cabeado corretamente usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]o .
++
+Se forem gerados erros de cabeamento, siga as ações corretivas fornecidas.
+
+
+
+.O que se segue?
+Se você desativou a atribuição automática de unidade como parte da preparação para este procedimento, será necessário atribuir manualmente a propriedade da unidade e, em seguida, reativar a atribuição automática de unidade, se necessário. Vá para link:complete-hot-add-shelf.html["Complete o hot-add"].
+
+Caso contrário, você é feito com o procedimento de hot-add prateleira.

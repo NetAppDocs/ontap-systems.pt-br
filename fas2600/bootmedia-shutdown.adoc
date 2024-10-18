@@ -1,0 +1,51 @@
+---
+permalink: fas2600/bootmedia-shutdown.html 
+sidebar: sidebar 
+keywords: fas2600, shut down the controller 
+summary: Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador desativado. 
+---
+= Desligue o controlador desativado - FAS2600
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador desativado.
+
+.Passos
+. Leve o controlador prejudicado para o prompt Loader:
++
+[cols="1,2"]
+|===
+| Se o controlador afetado apresentar... | Então... 
+
+
+ a| 
+O prompt Loader
+ a| 
+Vá para Remover módulo do controlador.
+
+
+
+ a| 
+`Waiting for giveback...`
+ a| 
+Pressione Ctrl-C e responda `y` quando solicitado.
+
+
+
+ a| 
+Prompt do sistema ou prompt de senha (digite a senha do sistema)
+ a| 
+Assuma ou interrompa o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode impaired_node_name`
+
+Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
+
+|===
+. No prompt Loader, digite: `printenv` Para capturar todas as variáveis ambientais de inicialização. Salve a saída no arquivo de log.
++
+
+NOTE: Este comando pode não funcionar se o dispositivo de inicialização estiver corrompido ou não funcional.
+
+

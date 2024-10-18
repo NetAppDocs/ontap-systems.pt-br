@@ -1,0 +1,35 @@
+---
+permalink: asa-r2-a1k/controller-replace-restore-system-rma.html 
+sidebar: sidebar 
+keywords: asa r2 a1k, how to restore NetApp Storage Encryption, how to complete the replacement process 
+summary: 'Para restaurar o sistema para a operação completa, você deve verificar os LIfs, verificar a integridade do cluster e retornar a peça com falha ao NetApp. Entre em Contato com o suporte técnico em https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"], 888-463-8277 (América do Norte), 00-800-44-638277 (Europa) ou 800-800-80-800 (Ásia/Pacífico) se precisar do número de RMA ou de ajuda adicional com o procedimento de substituição.' 
+---
+= Substituição completa do controlador - ASA A1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para restaurar o sistema para a operação completa, você deve verificar os LIfs, verificar a integridade do cluster e retornar a peça com falha ao NetApp.
+
+
+
+== Etapa 1: Verificar LIFs e verificar a integridade do cluster
+
+Antes de devolver o nó _replacement_ ao serviço, você deve verificar se os LIFs estão em suas portas domésticas, verificar o estado do cluster e redefinir a giveback automática.
+
+.Passos
+. Verifique se as interfaces lógicas estão relatando para o servidor doméstico e as portas: `network interface show -is-home false`
++
+Se algum LIFs estiver listado como false, reverta-os para suas portas iniciais: `network interface revert -vserver * -lif *`
+
+. Verifique a integridade do cluster. Consulte o https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["Como realizar uma verificação de integridade do cluster com um script no ONTAP"^] artigo da KB para obter mais informações.
+. Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true`
+
+
+
+
+== Passo 2: Devolva a peça com falha ao NetApp
+
+Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

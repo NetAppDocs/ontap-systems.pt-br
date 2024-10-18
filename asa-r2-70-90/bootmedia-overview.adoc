@@ -1,0 +1,16 @@
+---
+permalink: asa-r2-70-90/bootmedia-overview.html 
+sidebar: sidebar 
+keywords: asa r2 a70, a90, overview, the boot media 
+summary: Saiba mais sobre o método manual para substituir a Mídia de inicialização. 
+---
+= Visão geral da recuperação manual de Mídia de inicialização - ASA A70 e ASA A90
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pode substituir manualmente um suporte de arranque com falha utilizando o módulo USB para a imagem de arranque.
+
+A substituição manual de suportes de arranque utiliza o método tradicional de transferir a imagem ONTAP a partir do site de suporte da NetApp, transferir a imagem para uma unidade USB, transferi-la para o suporte de arranque de substituição de destino e percorrer manualmente as opções do menu de arranque para instalar a imagem ONTAP no suporte de arranque de substituição.

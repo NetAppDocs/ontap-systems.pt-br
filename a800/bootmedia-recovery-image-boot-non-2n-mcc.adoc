@@ -1,0 +1,122 @@
+---
+permalink: a800/bootmedia-recovery-image-boot-non-2n-mcc.html 
+sidebar: sidebar 
+keywords: aff a800, boot the recovery image 
+summary: Você deve inicializar a imagem ONTAP a partir da unidade USB, restaurar o sistema de arquivos e verificar as variáveis ambientais. 
+---
+= Inicie a imagem de recuperação - AFF A800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve inicializar a imagem ONTAP a partir da unidade USB, restaurar o sistema de arquivos e verificar as variáveis ambientais.
+
+. A partir do prompt Loader, inicialize a imagem de recuperação da unidade flash USB: `boot_recovery`
++
+A imagem é transferida da unidade flash USB.
+
+. Quando solicitado, insira o nome da imagem ou aceite a imagem padrão exibida dentro dos colchetes na tela.
+. Restaure o sistema de ficheiros var:
++
+[cols="1,2"]
+|===
+| Se o seu sistema tem... | Então... 
+
+
+ a| 
+Uma ligação de rede
+ a| 
+.. Pressione `y` quando solicitado para restaurar a configuração de backup.
+.. Defina o controlador saudável para nível de privilégio avançado: `set -privilege advanced`
+.. Execute o comando Restore backup: `system node restore-backup -node local -target-address _impaired_node_IP_address_`
+.. Retorne o controlador ao nível de administração: `set -privilege admin`
+.. Pressione `y` quando solicitado a usar a configuração restaurada.
+.. Pressione `y` quando solicitado para reiniciar o controlador.
+
+
+
+
+ a| 
+Sem ligação à rede
+ a| 
+.. Pressione `n` quando solicitado para restaurar a configuração de backup.
+.. Reinicie o sistema quando solicitado pelo sistema.
+.. Selecione a opção *Update flash from backup config* (Sync flash) no menu exibido.
++
+Se for solicitado que você continue com a atualização, `*y*` pressione .
+
+
+
+
+
+ a| 
+Sem conexão de rede e está em uma configuração IP MetroCluster
+ a| 
+.. Pressione `n` quando solicitado para restaurar a configuração de backup.
+.. Reinicie o sistema quando solicitado pelo sistema.
+.. Aguarde que as ligações de armazenamento iSCSI se liguem.
++
+Você pode prosseguir depois de ver as seguintes mensagens:
+
++
+[listing]
+----
+date-and-time [node-name:iscsi.session.stateChanged:notice]: iSCSI session state is changed to Connected for the target iSCSI-target (type: dr_auxiliary, address: ip-address).
+date-and-time [node-name:iscsi.session.stateChanged:notice]: iSCSI session state is changed to Connected for the target iSCSI-target (type: dr_partner, address: ip-address).
+date-and-time [node-name:iscsi.session.stateChanged:notice]: iSCSI session state is changed to Connected for the target iSCSI-target (type: dr_auxiliary, address: ip-address).
+date-and-time [node-name:iscsi.session.stateChanged:notice]: iSCSI session state is changed to Connected for the target iSCSI-target (type: dr_partner, address: ip-address).
+----
+.. Selecione a opção *Update flash from backup config* (Sync flash) no menu exibido.
++
+Se for solicitado que você continue com a atualização, `*y*` pressione .
+
+
+
+|===
+. Certifique-se de que as variáveis ambientais estão definidas como esperado:
++
+.. Leve o controlador para o prompt Loader.
+.. Verifique as configurações de variáveis de ambiente com o `printenv` comando.
+.. Se uma variável de ambiente não for definida como esperado, modifique-a com o `setenv _environment_variable_name_ _changed_value_` comando.
+.. Salve suas alterações usando o `savenv` comando.
+
+
+. O próximo depende da configuração do sistema:
++
+** Se o sistema tiver o gerenciador de chaves integrado, NSE ou NVE configurado, vá para xref:bootmedia-encryption-restore.adoc[Restaure OKM, NSE e NVE conforme necessário]
+** Se o sistema não tiver o gerenciador de chaves integrado, NSE ou NVE configurado, execute as etapas nesta seção.
+
+
+. No prompt Loader, digite o `boot_ontap` comando.
++
+[cols="1,2"]
+|===
+| Se você ver... | Então... 
+
+
+ a| 
+O aviso de início de sessão
+ a| 
+Vá para a próxima etapa.
+
+
+
+ a| 
+A aguardar pela giveback...
+ a| 
+.. Faça login no controlador do parceiro.
+.. Confirme se o controlador de destino está pronto para giveback com o `storage failover show` comando.
+
+
+|===
+. Conete o cabo do console ao controlador do parceiro.
+. Devolva o controlador usando o `storage failover giveback -fromnode local` comando
+. No prompt do cluster, verifique as interfaces lógicas com o `net int -is-home false` comando.
++
+Se alguma interface estiver listada como "false", reverta essas interfaces de volta para sua porta inicial usando o `net int revert` comando.
+
+. Mova o cabo do console para o controlador reparado e execute o `version -v` comando para verificar as versões do ONTAP.
+. Restaure o giveback automático se você o desativou usando o `storage failover modify -node local -auto-giveback true` comando.
+

@@ -1,0 +1,74 @@
+---
+permalink: fas8200/maintain-overview.html 
+sidebar: sidebar 
+keywords: fas2600 maintenance, maintenance, repairing fas2600, repairing fas2600, replace aff fas2600 components, replace aff fas2600 components 
+summary: Mantenha o hardware fas2600 
+---
+= Mantenha o hardware FAS8200
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para o sistema de armazenamento FAS8200, pode executar procedimentos de manutenção nos seguintes componentes.
+
+
+
+== Suporte de arranque
+
+A Mídia de inicialização armazena um conjunto primário e secundário de arquivos de imagem de inicialização que o sistema usa quando ele é inicializado.
+
+
+
+== Módulo de armazenamento em cache
+
+Você deve substituir o módulo de cache do controlador quando o sistema Registrar uma única mensagem AutoSupport (ASUP) informando que o módulo ficou offline.
+
+
+
+== Chassis
+
+O chassi é o gabinete físico que abriga todos os componentes do controlador, como a unidade controladora/CPU, fonte de alimentação e e/S.
+
+
+
+== Controlador
+
+Um controlador consiste em uma placa, firmware e software. Controla as unidades e implementa as funções do ONTAP.
+
+
+
+== DIMM
+
+Você deve substituir um DIMM (módulo de memória dual in-line) quando houver uma incompatibilidade de memória ou se tiver um DIMM com falha.
+
+
+
+== Condução
+
+Uma unidade é um dispositivo que fornece a Mídia de armazenamento físico para dados.
+
+
+
+== Bateria NVEM
+
+Uma bateria é incluída com um controlador e preserva os dados em cache se a energia CA falhar.
+
+
+
+== Placa PCIe
+
+Uma placa PCIe (Peripheral Component Interconnect Express) é uma placa de expansão que se coneta ao slot PCIe da placa-mãe.
+
+
+
+== Fonte de alimentação
+
+Uma fonte de alimentação fornece uma fonte de alimentação redundante em um compartimento de controladora.
+
+
+
+== Bateria do relógio em tempo real
+
+Uma bateria de relógio em tempo real preserva as informações de data e hora do sistema se a energia estiver desligada.

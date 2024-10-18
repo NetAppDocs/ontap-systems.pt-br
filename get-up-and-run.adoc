@@ -1,0 +1,126 @@
+---
+permalink: get-up-and-run.html 
+sidebar: sidebar 
+keywords:  
+summary: Para começar a trabalhar com os sistemas de hardware da ONTAP, você instala componentes de hardware, faz o cabeamento do hardware e configura o storage no ONTAP. 
+---
+= Comece a trabalhar com os sistemas de hardware ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para começar a trabalhar com os sistemas de hardware da ONTAP, você instala componentes de hardware, faz o cabeamento do hardware e configura o storage no ONTAP.
+
+Se o sistema estiver em uma configuração do MetroCluster, vá para o https://docs.netapp.com/us-en/ontap-metrocluster/index.html["MetroCluster doc site"] e siga as instruções de instalação aplicáveis ao tipo de configuração do MetroCluster.
+
+Use o fluxo de trabalho a seguir para implantar o sistema de storage quando ele não estiver configurado em uma configuração do MetroCluster.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"] Instale os interrutores
+[role="quick-margin-para"]
+Instale seus switches no rack ou gabinete. Acesse as instruções a seguir para o modelo do switch.
+
+[role="quick-margin-para"]
+**Switches de cluster**
+
+[role="quick-margin-list"]
+* link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-bes-53248/install-hardware-bes53248.html["Instale o interrutor BES-53248"^]
+* link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2/install-switch-9336c-cluster.html["Instale o switch Cisco Nexus 9336C-FX2"^]
+* link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-nvidia-sn2100/install-hardware-sn2100-cluster.html["Instale o interrutor NVIDIA SN2100"^]
+
+
+[role="quick-margin-para"]
+**Switches de armazenamento**
+
+[role="quick-margin-list"]
+* link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2-storage/install-9336c-storage.html["Instale o switch Cisco Nexus 9336C-FX2"^]
+* link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-nvidia-sn2100-storage/configure-overview-sn2100-storage.html["Instale o interrutor NVIDIA SN2100"^]
+
+
+[role="quick-margin-para"]
+**Switches compartilhados**
+
+[role="quick-margin-list"]
+* link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2-shared/install-9336c-shared.html["Instale o switch Cisco Nexus 9336C-FX2"^](Em inglês)
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"] Instale o sistema de storage e as gavetas de storage
+[role="quick-margin-para"]
+Instale seu sistema de armazenamento e prateleiras de armazenamento no gabinete ou rack. Acesse as instruções de instalação e configuração do modelo da sua plataforma.
+
+[role="quick-margin-para"]
+**Sistemas AFF Série A**
+
+[role="quick-margin-list"]
+* link:a1k/install-overview.html["AFF A1K"]
+* link:a70-90/install-overview.html["AFF A70"]
+* link:a70-90/install-overview.html["AFF A90"]
+* link:a150/install-setup.html["AFF A150"]
+* link:a250/install-setup.html["AFF A250"]
+* link:a400/install-setup.html["AFF A400"]
+* link:a800/install-setup.html["AFF A800"]
+* link:a900/install_setup.html["AFF A900"]
+
+
+[role="quick-margin-para"]
+**Sistemas AFF Série C**
+
+[role="quick-margin-list"]
+* link:c190/install-setup.html["AFF C190"]
+* link:c250/install-setup.html["AFF C250"]
+* link:c400/install-setup.html["AFF C400"]
+* link:c800/install-setup.html["AFF C800"]
+
+
+[role="quick-margin-para"]
+**Sistemas ASA Série A**
+
+[role="quick-margin-list"]
+* link:asa150/install-setup.html["ASA A150"]
+* link:asa250/install-setup.html["ASA A250"]
+* link:asa400/install-setup.html["ASA A400"]
+* link:asa800/install-setup.html["ASA A800"]
+* link:asa900/install_setup.html["ASA A900"]
+
+
+[role="quick-margin-para"]
+**Sistemas ASA Série C**
+
+[role="quick-margin-list"]
+* link:asa-c250/install-setup.html["ASA C250"]
+* link:asa-c400/install-setup.html["ASA C400"]
+* link:asa-c800/install-setup.html["ASA C800"]
+
+
+[role="quick-margin-para"]
+**Sistemas ASA R2**
+
+[role="quick-margin-list"]
+* https://docs.netapp.com/us-en/asa-r2/index.html["Sistemas ASA R2"]
+
+
+[role="quick-margin-para"]
+**Sistemas FAS**
+
+[role="quick-margin-list"]
+* link:fas-70-90/install-overview.html["FAS70 e FAS90"]
+* link:fas2700/install-setup.html["FAS2700"]
+* link:fas2800/install-setup.html["FAS2800"]
+* link:fas8300/install-setup.html["FAS8300"]
+* link:fas8300/install-setup.html["FAS8700"]
+* link:fas9500/install_setup.html["FAS9500"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"] Ligue os cabos
+[role="quick-margin-para"]
+Faça o cabeamento dos controladores à rede e, em seguida, faça o cabeamento dos controladores às gavetas. As instruções de instalação e configuração do modelo da sua plataforma incluem instruções para fazer o cabeamento das portas da controladora para a rede e para os switches.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Seis"] Configure o cluster do ONTAP
+[role="quick-margin-para"]
+Depois de instalar e configurar os controladores e switches, você deve concluir a configuração do storage no ONTAP. Acesse as instruções a seguir de acordo com a configuração de implantação.
+
+[role="quick-margin-list"]
+* Para implantações do ONTAP, https://docs.netapp.com/us-en/ontap/task_configure_ontap.html["Configurar o ONTAP"] consulte .
+* Para implantações do ONTAP com MetroCluster, https://docs.netapp.com/us-en/ontap-metrocluster/["Configure o MetroCluster com o ONTAP"] consulte .
+

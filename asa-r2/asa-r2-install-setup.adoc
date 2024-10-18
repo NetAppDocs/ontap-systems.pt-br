@@ -1,0 +1,24 @@
+---
+permalink: asa-r2/asa-r2-install-setup.html 
+sidebar: sidebar 
+keywords: asa r2 a1k, a70, a90, install, setup, initial configuration 
+summary: Instale e configure o sistema. 
+---
+= Instale e configure seus sistemas ASA R2
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Aceda a https://docs.netapp.com/us-en/asa-r2/index.html["Documentação dos sistemas ASA R2"^] para saber como instalar, utilizar e gerir o seu sistema ASA R2.
+
+O https://docs.netapp.com/us-en/asa-r2/index.html["Documentação dos sistemas ASA R2"^] inclui informações como:
+
+* Instruções de instalação e configuração
+* Instruções de administração para configuração do sistema, como provisionamento de storage SAN, clonagem de dados e redimensionamento do storage local.
+* Instruções para gerenciar seu sistema, incluindo gerenciamento do acesso do cliente, proteção de dados e proteção de dados.
+* Instruções de monitoramento e solução de problemas, incluindo informações sobre alertas, eventos de cluster e logs do sistema.
+
+
+Os procedimentos de manutenção específicos para cada tipo de sistema ASA R2 encontram-se na link:../asa-r2-landing-maintain/index.html["Secção de manutenção dos sistemas ASA R2"].

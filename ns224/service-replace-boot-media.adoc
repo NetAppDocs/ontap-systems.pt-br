@@ -1,0 +1,176 @@
+---
+permalink: ns224/service-replace-boot-media.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, boot, media, run, ontap, nvme, module, nsm, firmware, version, nondisruptive, i/o 
+summary: Quando a Mídia de inicialização falhar em um compartimento de NS224 unidades em um par de HA que esteja executando o ONTAP 9.7 ou posterior, ou se o compartimento estiver executando o firmware do módulo de gaveta NVMe versão 1,1x ou posterior, você poderá substituir a Mídia de inicialização. A substituição da Mídia de inicialização pode ser feita sem interrupções, enquanto o compartimento de unidades está ligado e e e/S está em andamento. 
+---
+= Substitua a Mídia de inicialização - NS224 prateleiras
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando a Mídia de inicialização falhar em um compartimento de NS224 unidades em um par de HA que esteja executando o ONTAP 9.7 ou posterior, ou se o compartimento estiver executando o firmware do módulo de gaveta NVMe (NSM) versão 0111 ou posterior, você poderá substituir a Mídia de inicialização. A substituição da Mídia de inicialização pode ser feita sem interrupções, enquanto o compartimento de unidades está ligado e e e/S está em andamento.
+
+.Antes de começar
+* Seu par de HA já deve estar executando o ONTAP 9.7 ou posterior, que tenha a versão mínima suportada do firmware NSM, ou seu par de HA já deve estar executando uma versão do ONTAP 9.6 com a versão de firmware NSM 0111 ou posterior.
++
+Você pode inserir o `storage shelf show -module` comando no console de qualquer controlador para verificar a versão do firmware do NSM na gaveta.
+
++
+[NOTE]
+====
+Se o compartimento não estiver executando a versão 0111 ou posterior do firmware do NSM, não será possível substituir o suporte de inicialização, será necessário substituir o módulo NSM.
+
+link:service-replace-nsm100.html["Substitua um módulo NSM - NS224 prateleiras"^]
+
+====
+* Você precisa de uma chave de fenda Phillips nº 1.
++
+O parafuso utilizado para fixar o suporte de arranque à placa requer uma chave de fendas Phillips nº 1; a utilização de um tipo diferente de chave de fendas pode retirar o parafuso.
+
+* O módulo NSM do parceiro do compartimento deve estar ativo e em execução e ser cabeado corretamente, de modo que seu compartimento mantenha a conectividade quando você remover o módulo NSM com a FRU (módulo NSM de destino) com falha.
++
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp Downloads: Config Advisor"^]
+
+* Todos os outros componentes do sistema devem estar a funcionar corretamente.
+
+
+.Sobre esta tarefa
+* Após a substituição do suporte de arranque, a imagem de arranque do módulo NSM parceiro da prateleira é automaticamente copiada para o suporte de arranque de substituição.
++
+Isso pode levar até cinco minutos.
+
+* Aguarde pelo menos 70 segundos entre a remoção e a instalação do módulo de gaveta NVMe (NSM).
++
+Isso permite tempo suficiente para que o ONTAP processe o evento de remoção de NSM.
+
+* Se necessário, você pode ligar os LEDs de localização da prateleira (azul) para ajudar a localizar fisicamente a prateleira afetada: `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
++
+Se você não souber `_shelf_name_` o do compartimento afetado, execute o `storage shelf show` comando.
+
++
+Uma prateleira tem três LEDs de localização: Um no painel de visualização do operador e um em cada módulo NSM. Os LEDs de localização permanecem acesos durante 30 minutos. Você pode desativá-los digitando o mesmo comando, mas usando a `off` opção.
+
+* Depois de substituir o suporte de arranque, pode devolver a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit.
++
+Se você precisar do número RMA ou de ajuda adicional com o procedimento de substituição, entre em Contato com o suporte técnico em https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"^], 888-463-8277 (América do Norte), 00-800-44-638277 (Europa) ou 800-800-80-800 (Ásia/Pacífico).
+
+* Você pode usar a animação a seguir ou as etapas escritas para substituir o suporte de inicialização.
++
+.Volte a colocar o suporte de arranque do compartimento NS224
+video::20ed85f9-1f80-4e0e-9219-ab4600070d8a[panopto]
+
+
+.Passos
+. Certifique-se de que ambos os módulos NSM na gaveta estejam executando a mesma versão do firmware: Versão 0200 ou posterior.
+. Aterre-se corretamente.
+. Desconete o cabeamento do módulo NSM que contém a FRU que você está substituindo:
++
+.. Desconete o cabo de alimentação da fonte de alimentação abrindo o retentor do cabo de alimentação se for uma fonte de alimentação CA ou desapertando os dois parafusos de orelhas se for uma fonte de alimentação CC e, em seguida, desconete o cabo de alimentação da fonte de alimentação.
++
+As fontes de alimentação não têm um interrutor de alimentação.
+
+.. Desconete o cabeamento de armazenamento das portas do módulo NSM.
++
+Anote as portas do módulo NSM às quais cada cabo está conetado. Reconete os cabos às mesmas portas quando você reinserir o módulo NSM, mais adiante neste procedimento.
+
+
+
+. Retire o módulo NSM da prateleira:
++
+.. Passe os dedos indicadores através dos orifícios dos dedos dos mecanismos de bloqueio em ambos os lados do módulo NSM.
++
+
+NOTE: Se você estiver removendo o módulo NSM inferior e se o trilho inferior estiver obstruindo o acesso aos mecanismos de travamento, coloque seus dedos indicadores através dos orifícios dos dedos a partir do interior (cruzando os braços).
+
+.. Com os polegares, pressione e segure as abas laranja na parte superior dos mecanismos de travamento.
++
+Os mecanismos de bloqueio levantam-se, limpando os pinos de bloqueio na prateleira.
+
+.. Puxe suavemente até que o módulo NSM esteja cerca de um terço da saída da prateleira, segure os lados do módulo NSM com as duas mãos para suportar o seu peso e, em seguida, coloque-o em uma superfície plana e estável.
++
+Quando começar a puxar, os braços do mecanismo de engate estendem-se do módulo NSM e trancam-se na sua posição totalmente estendida.
+
+
+
+. Desaperte o parafuso de orelhas da tampa do módulo NSM e abra a tampa.
+. Localize fisicamente a Mídia de inicialização com falha.
++
+O suporte da bagageira está localizado ao longo da parede do chassis da prateleira, em frente à fonte de alimentação.
+
+. Substitua o suporte de arranque:
++
+.. Utilizando a chave de fendas Phillips nº 1, retire cuidadosamente o parafuso que fixa a extremidade inferior (entalhada) do suporte de arranque à placa.
+.. Retire o suporte de arranque rodando ligeiramente a extremidade ranhurada para cima e, em seguida, puxando-o suavemente na sua direção até que se solte do encaixe.
++
+Você pode segurar a Mídia de inicialização colocando o polegar e o indicador nas bordas laterais, na extremidade entalhada
+
+.. Desembale o suporte de arranque do saco antiestático.
+.. Introduza o suporte de arranque de substituição, empurrando-o suavemente para dentro do encaixe até que fique encaixado de forma justa e completa no encaixe.
++
+Você pode segurar a Mídia de inicialização colocando o polegar e o indicador nas bordas laterais, na extremidade entalhada Certifique-se de que o lado com o dissipador de calor está virado para cima.
+
++
+Quando corretamente encaixada, e quando você solta o suporte de inicialização, a extremidade entalhada do suporte de inicialização fica inclinada para cima, longe da placa, porque ainda não está presa com o parafuso.
+
+.. Segure cuidadosamente a extremidade entalhada do suporte de arranque enquanto insere e aperte o parafuso com a chave de parafusos para fixar o suporte de arranque no lugar.
++
+
+NOTE: Aperte o parafuso apenas o suficiente para segurar o suporte de arranque firmemente no devido lugar, mas não aperte demasiado.
+
+
+
+. Feche a tampa do módulo NSM e, em seguida, aperte o parafuso de orelhas.
+. Volte a inserir o módulo NSM na prateleira:
++
+.. Certifique-se de que os braços do mecanismo de engate estão bloqueados na posição totalmente estendida.
+.. Utilizando ambas as mãos, deslize cuidadosamente o módulo NSM para dentro da prateleira até que o peso do módulo NSM esteja totalmente suportado pela prateleira.
+.. Empurre o módulo NSM para dentro da prateleira até parar (cerca de meia polegada da parte de trás da prateleira).
++
+Pode colocar os polegares nas patilhas cor-de-laranja na parte da frente de cada presilha (dos braços do mecanismo de fecho) para empurrar o módulo NSM.
+
+.. Passe os dedos indicadores através dos orifícios dos dedos dos mecanismos de bloqueio em ambos os lados do módulo NSM.
++
+
+NOTE: Se você estiver inserindo o módulo NSM inferior e se o trilho inferior estiver obstruindo o acesso aos mecanismos de travamento, coloque seus dedos indicadores através dos orifícios dos dedos a partir do interior (cruzando os braços).
+
+.. Com os polegares, pressione e segure as abas laranja na parte superior dos mecanismos de travamento.
+.. Empurre suavemente para a frente para colocar as travas sobre o batente.
+.. Solte os polegares da parte superior dos mecanismos de travamento e, em seguida, continue empurrando até que os mecanismos de travamento se encaixem no lugar.
++
+O módulo NSM deve ser totalmente inserido na prateleira e nivelado com as bordas da prateleira.
+
+
+
+. Reconecte o cabeamento ao módulo NSM:
++
+.. Reconecte o cabeamento de storage às mesmas duas portas de módulo NSM.
++
+Os cabos são inseridos com a presilha do conetor voltada para cima. Quando um cabo é inserido corretamente, ele clica no lugar.
+
+.. Volte a ligar o cabo de alimentação à fonte de alimentação e, em seguida, fixe o cabo de alimentação com o fixador do cabo de alimentação, se for uma fonte de alimentação CA, ou aperte os dois parafusos de orelhas se for uma fonte de alimentação CC.
++
+Quando estiver a funcionar corretamente, o LED bicolor de uma fonte de alimentação acende-se a verde.
+
++
+Além disso, ambos os LEDs LNK (verde) da porta do módulo NSM acendem-se. Se um LED LNK não acender, recoloque o cabo.
+
+
+
+. Verifique se os LEDs atenção (âmbar) no módulo NSM que contém o suporte de arranque com falha e o painel de visualização do operador da prateleira já não estão acesos.
++
+Pode demorar entre 5 a 10 minutos para que os LEDs de atenção se desliguem. Esta é a quantidade de tempo que o módulo NSM demora a reiniciar e a cópia da imagem do suporte de arranque é concluída.
+
++
+Se os LEDs de avaria permanecerem ligados, o suporte de arranque poderá não estar corretamente instalado ou poderá haver outro problema e deverá contactar o suporte técnico para obter assistência.
+
+. Verifique se o módulo NSM está cabeado corretamente, executando o Active IQ Config Advisor.
++
+Se forem gerados erros de cabeamento, siga as ações corretivas fornecidas.
+
++
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp Downloads: Config Advisor"^]
+
+

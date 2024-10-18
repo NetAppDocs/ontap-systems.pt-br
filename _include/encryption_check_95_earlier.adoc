@@ -1,0 +1,133 @@
+= Verifique a configuração do NVE
+:allow-uri-read: 
+
+
+Antes de desligar a controladora prejudicada, você precisa verificar se o sistema tem a criptografia de volume NetApp (NVE) ou a criptografia de armazenamento NetApp (NSE) ativada. Se sim, você precisa verificar a configuração.
+
+.Passos
+. Ligue o cabo da consola ao controlador desativado.
+. Verifique se o NVE está configurado para quaisquer volumes no cluster: `volume show -is-encrypted true`
++
+Se algum volume estiver listado na saída, o NVE será configurado e você precisará verificar a configuração do NVE. Se nenhum volume estiver listado, verifique se o NSE está configurado.
+
+. Verifique se o NSE está configurado: `storage encryption disk show`
++
+** Se o comando OUTPUT listar os detalhes da unidade com informações de ID de modo e chave, o NSE está configurado e você precisa verificar a configuração do NSE.
+** Se o NVE e o NSE não estiverem configurados, é seguro desligar o controlador desativado.
+
+
+
+
+
+
+== Verifique a configuração do NVE
+
+.Passos
+. Exibir as IDs de chave das chaves de autenticação armazenadas nos servidores de gerenciamento de chaves: `security key-manager query`
++
+** Se a `Restored` coluna for exibida `yes` e todos os gerenciadores de chaves forem exibidos `available`, é seguro desligar o controlador prejudicado.
+** Se a `Restored` coluna exibir algo diferente `yes`de , ou se algum gerenciador de chaves for exibido `unavailable`, você precisará concluir algumas etapas adicionais.
+** Se você vir a mensagem que este comando não é suportado quando o gerenciamento de chaves integradas está ativado, você precisará concluir algumas outras etapas adicionais.
+
+
+. Se a `Restored` coluna exibir algo diferente `yes`de , ou se algum gerenciador de chaves for exibido `unavailable`:
++
+.. Recuperar e restaurar todas as chaves de autenticação e IDs de chave associadas: `security key-manager restore -address *`
++
+Se o comando falhar, entre em Contato com o suporte da NetApp.
+
++
+http://mysupport.netapp.com/["mysupport.NetApp.com"]
+
+.. Verifique se a `Restored` coluna é exibida `yes` para todas as chaves de autenticação e se todos os gerenciadores de chaves são `available`exibidos : `security key-manager query`
+.. Desligue o controlador desativado.
+
+
+. Se você viu a mensagem que este comando não é suportado quando o gerenciamento de chaves integradas estiver ativado, exiba as chaves armazenadas no gerenciador de chaves integrado: `security key-manager key show -detail`
++
+.. Se a `Restored` coluna exibir `yes` manualmente fazer backup das informações de gerenciamento de chaves integradas:
++
+*** Vá para o modo de privilégio avançado e entre `y` quando solicitado a continuar: `set -priv advanced`
+*** Digite o comando para exibir as informações de backup do OKM: `security key-manager backup show`
+*** Copie o conteúdo das informações de backup para um arquivo separado ou seu arquivo de log. Você vai precisar dele em cenários de desastre onde você pode precisar recuperar manualmente OKM.
+*** Voltar ao modo de administração: `set -priv admin`
+*** Desligue o controlador desativado.
+
+
+.. Se a `Restored` coluna apresentar algo diferente `yes`de :
++
+*** Execute o assistente de configuração do gerenciador de chaves: `security key-manager setup -node target/impaired node name`
++
+
+NOTE: Insira a senha de gerenciamento de chaves integradas do cliente no prompt. Se a frase-passe não puder ser fornecida, contacte http://mysupport.netapp.com/["mysupport.NetApp.com"]
+
+*** Verifique se a `Restored` coluna é exibida `yes` para todas as chaves de autenticação: `security key-manager key show -detail`
+*** Vá para o modo de privilégio avançado e entre `y` quando solicitado a continuar: `set -priv advanced`
+*** Digite o comando para exibir as informações de backup do OKM: `security key-manager backup show`
+*** Copie o conteúdo das informações de backup para um arquivo separado ou seu arquivo de log. Você vai precisar dele em cenários de desastre onde você pode precisar recuperar manualmente OKM.
+*** Voltar ao modo de administração: `set -priv admin`
+*** Pode desligar o controlador com segurança.
+
+
+
+
+
+
+
+
+== Verifique a configuração do NSE
+
+.Passos
+. Exibir as IDs de chave das chaves de autenticação armazenadas nos servidores de gerenciamento de chaves: `security key-manager query`
++
+** Se a `Restored` coluna for exibida `yes` e todos os gerenciadores de chaves forem exibidos `available`, é seguro desligar o controlador prejudicado.
+** Se a `Restored` coluna exibir algo diferente `yes`de , ou se algum gerenciador de chaves for exibido `unavailable`, você precisará concluir algumas etapas adicionais.
+** Se você vir a mensagem que este comando não é suportado quando o gerenciamento de chaves integradas está ativado, você precisará concluir algumas outras etapas adicionais
+
+
+. Se a `Restored` coluna exibir algo diferente `yes`de , ou se algum gerenciador de chaves for exibido `unavailable`:
++
+.. Recuperar e restaurar todas as chaves de autenticação e IDs de chave associadas: `security key-manager restore -address *`
++
+Se o comando falhar, entre em Contato com o suporte da NetApp.
+
++
+http://mysupport.netapp.com/["mysupport.NetApp.com"]
+
+.. Verifique se a `Restored` coluna é exibida `yes` para todas as chaves de autenticação e se todos os gerenciadores de chaves são `available`exibidos : `security key-manager query`
+.. Desligue o controlador desativado.
+
+
+. Se você viu a mensagem que este comando não é suportado quando o gerenciamento de chaves integradas estiver ativado, exiba as chaves armazenadas no gerenciador de chaves integrado: `security key-manager key show -detail`
++
+.. Se a `Restored` coluna for exibida `yes`, faça backup manual das informações de gerenciamento de chaves integradas:
++
+*** Vá para o modo de privilégio avançado e entre `y` quando solicitado a continuar: `set -priv advanced`
+*** Digite o comando para exibir as informações de backup do OKM:  `security key-manager backup show`
+*** Copie o conteúdo das informações de backup para um arquivo separado ou seu arquivo de log. Você vai precisar dele em cenários de desastre onde você pode precisar recuperar manualmente OKM.
+*** Voltar ao modo de administração: `set -priv admin`
+*** Desligue o controlador desativado.
+
+
+.. Se a `Restored` coluna apresentar algo diferente `yes`de :
++
+*** Execute o assistente de configuração do gerenciador de chaves: `security key-manager setup -node target/impaired node name`
++
+
+NOTE: Insira a senha OKM do cliente no prompt. Se a frase-passe não puder ser fornecida, contacte http://mysupport.netapp.com/["mysupport.NetApp.com"]
+
+*** Verifique se a `Restored` coluna mostra `yes` todas as chaves de autenticação: `security key-manager key show -detail`
+*** Vá para o modo de privilégio avançado e entre `y` quando solicitado a continuar: `set -priv advanced`
+*** Digite o comando para fazer backup das informações do OKM: ``security key-manager backup show``
++
+
+NOTE: Certifique-se de que as informações OKM são salvas no arquivo de log. Essas informações serão necessárias em cenários de desastre onde o OKM pode precisar ser recuperado manualmente.
+
+*** Copie o conteúdo das informações de backup para um arquivo separado ou seu log. Você vai precisar dele em cenários de desastre onde você pode precisar recuperar manualmente OKM.
+*** Voltar ao modo de administração: `set -priv admin`
+*** Pode desligar o controlador com segurança.
+
+
+
+
+

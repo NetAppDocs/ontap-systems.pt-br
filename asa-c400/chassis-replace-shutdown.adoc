@@ -1,0 +1,174 @@
+---
+permalink: asa-c400/chassis-replace-shutdown.html 
+sidebar: sidebar 
+keywords: asa c400, asa, c400, component, system, function, properly, contact, technical, support, replace, chassis, shut, down, controller, replacing, remove, module, fan, equipment, rack, cabinet, ha, state, switch, back, aggregate, two-node, metrocluster, configuration, complete, replacement, process, replace the chassis, shut down the controllers when replacing a chassis, remove the controller modules, move the fans, replace a chassis from within the equipment rack or system cabinet, install the controller modules, verify and set the ha state of the chassis, switch back aggregates in a two-node metrocluster configuration, complete the replacement process 
+summary: Para substituir o chassi, você deve desligar os controladores. 
+---
+= Desligue os controladores - ASA C400
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Encerre ou assuma o controlador afetado utilizando o procedimento adequado para a sua configuração.
+
+
+
+== Opção 1: Desligue os controladores ao substituir um chassi
+
+Desligue os controladores para que possa efetuar a manutenção no chassis.
+
+Este procedimento destina-se a sistemas com duas configurações de nós. Se tiver um sistema com mais de dois nós, https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_perform_a_graceful_shutdown_and_power_up_of_one_HA_pair_in_a_4__node_cluster["Como executar um desligamento eficiente e ligar um par de HA em um cluster de quatro nós"^] consulte .
+
+.Antes de começar
+* Impedir que todos os clientes/hosts acessem dados no sistema NetApp.
+* Suspender trabalhos de cópia de segurança externos.
+* Certifique-se de que tem as permissões e credenciais necessárias:
++
+** Credenciais de administrador local para o ONTAP.
+** Senha do NetApp Onboard Key Management (OKM) em todo o cluster se estiver usando criptografia de storage ou NVE/NAE.
+** BMC accessability para cada controlador.
+
+
+* Certifique-se de que tem as ferramentas e o equipamento necessários para a substituição.
+* Como uma prática recomendada antes do desligamento, você deve:
++
+** Execute mais https://kb.netapp.com/onprem/ontap/os/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["verificações de integridade do sistema"].
+** Atualize o ONTAP para uma versão recomendada para o sistema.
+** Resolva qualquer https://activeiq.netapp.com/["Alertas e riscos de bem-estar do Active IQ"]. Tome nota de quaisquer avarias atualmente no sistema, tais como LEDs nos componentes do sistema.
+
+
+
+
+.Passos
+. Faça login no cluster através de SSH ou faça login de qualquer nó no cluster usando um cabo de console local e um laptop/console.
+. Desligue o AutoSupport e indique quanto tempo espera que o sistema fique offline:
++
+`system node autosupport invoke -node * -type all -message "MAINT=8h Power Maintenance"`
+
+. Identifique o endereço SP/BMC de todos os nós:
++
+`system service-processor show -node * -fields address`
+
+. Saia do shell do cluster: `exit`
+. Faça login no SP/BMC via SSH usando o endereço IP de qualquer um dos nós listados na saída da etapa anterior.
++
+Se o estiver usando um console/laptop, faça login no controlador usando as mesmas credenciais de administrador de cluster.
+
++
+
+NOTE: Abra uma sessão SSH para cada conexão SP/BMC para que você possa monitorar o progresso.
+
+. Parar os dois nós localizados no chassi com deficiência:
++
+`system node halt -node <node>,<node2> -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true`
+
++
+
+NOTE: Para clusters que usam o SnapMirror síncrono operando no modo StrictSync: `system node halt -node <node>,<node2>  -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true -ignore-strict-sync-warnings true`
+
+. Digite *y* para cada controlador no cluster quando você vir `_Warning: Are you sure you want to halt node "cluster <node-name> number"?
+{y|n}:_`
+. Aguarde que cada controlador pare e exiba o prompt Loader.
+
+
+.O que se segue?
+* Se o sistema for um NetApp StorageGRID ou ONTAP S3 usado como camada de nuvem FabricPool, consulte o https://kb.netapp.com/onprem/ontap/hardware/What_is_the_procedure_for_graceful_shutdown_and_power_up_of_a_storage_system_during_scheduled_power_outage#["Desligue e ligue o seu sistema de armazenamento Guia de resolução"] procedimento após executar este desligamento.
+* Se estiver usando SSDs, https://kb.netapp.com/Support_Bulletins/Customer_Bulletins/SU490["SU490: Práticas recomendadas de SSD (impacto: Crítico): Evite o risco de falha de unidade e perda de dados se desligado por mais de dois meses"] consulte após executar este procedimento de desligamento.
+
+
+
+
+== Opção 2: Encerre um controlador em uma configuração de MetroCluster de dois nós
+
+Para desligar o controlador desativado, você deve determinar o status do controlador e, se necessário, trocar o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador prejudicado.
+
+.Sobre esta tarefa
+* Você deve deixar as fontes de alimentação ligadas no final deste procedimento para fornecer energia ao controlador de integridade.
+
+
+.Passos
+. Verifique o estado do MetroCluster para determinar se o controlador afetado mudou automaticamente para o controlador saudável: `metrocluster show`
+. Dependendo se ocorreu uma mudança automática, proceda de acordo com a seguinte tabela:
++
+[cols="1,2"]
+|===
+| Se o controlador deficiente... | Então... 
+
+
+ a| 
+Mudou automaticamente
+ a| 
+Avance para o passo seguinte.
+
+
+
+ a| 
+Não mudou automaticamente
+ a| 
+Execute uma operação de comutação planejada a partir do controlador íntegro: `metrocluster switchover`
+
+
+
+ a| 
+Não mudou automaticamente, tentou mudar com o comando e o switchover `metrocluster switchover` foi vetado
+ a| 
+Reveja as mensagens de veto e, se possível, resolva o problema e tente novamente. Se você não conseguir resolver o problema, entre em Contato com o suporte técnico.
+
+|===
+. Ressincronize os agregados de dados executando o `metrocluster heal -phase aggregates` comando do cluster sobrevivente.
++
+[listing]
+----
+controller_A_1::> metrocluster heal -phase aggregates
+[Job 130] Job succeeded: Heal Aggregates is successful.
+----
++
+Se a cura for vetada, você tem a opção de reemitir o `metrocluster heal` comando com o `-override-vetoes` parâmetro. Se você usar esse parâmetro opcional, o sistema substituirá quaisquer vetos de software que impeçam a operação de recuperação.
+
+. Verifique se a operação foi concluída usando o comando MetroCluster operation show.
++
+[listing]
+----
+controller_A_1::> metrocluster operation show
+    Operation: heal-aggregates
+      State: successful
+Start Time: 7/25/2016 18:45:55
+   End Time: 7/25/2016 18:45:56
+     Errors: -
+----
+. Verifique o estado dos agregados utilizando o `storage aggregate show` comando.
++
+[listing]
+----
+controller_A_1::> storage aggregate show
+Aggregate     Size Available Used% State   #Vols  Nodes            RAID Status
+--------- -------- --------- ----- ------- ------ ---------------- ------------
+...
+aggr_b2    227.1GB   227.1GB    0% online       0 mcc1-a2          raid_dp, mirrored, normal...
+----
+. Curar os agregados raiz usando o `metrocluster heal -phase root-aggregates` comando.
++
+[listing]
+----
+mcc1A::> metrocluster heal -phase root-aggregates
+[Job 137] Job succeeded: Heal Root Aggregates is successful
+----
++
+Se a recuperação for vetada, você terá a opção de reemitir o `metrocluster heal` comando com o parâmetro -override-vetos. Se você usar esse parâmetro opcional, o sistema substituirá quaisquer vetos de software que impeçam a operação de recuperação.
+
+. Verifique se a operação heal está concluída usando o `metrocluster operation show` comando no cluster de destino:
++
+[listing]
+----
+
+mcc1A::> metrocluster operation show
+  Operation: heal-root-aggregates
+      State: successful
+ Start Time: 7/29/2016 20:54:41
+   End Time: 7/29/2016 20:54:42
+     Errors: -
+----
+. No módulo do controlador desativado, desligue as fontes de alimentação.
+

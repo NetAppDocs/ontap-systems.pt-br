@@ -1,0 +1,129 @@
+---
+permalink: fas2600/bootmedia-replace.html 
+sidebar: sidebar 
+keywords: fas2600, locate, boot, media, controller, direction, replace 
+summary: Você deve localizar o suporte de inicialização no controlador e seguir as instruções para substituí-lo. 
+---
+= Substitua o suporte de arranque - FAS2600
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para substituir o suporte de arranque, tem de remover o módulo do controlador afetado, instalar o suporte de arranque de substituição e transferir a imagem de arranque para uma unidade flash USB.
+
+
+
+== Passo 1: Remova o módulo do controlador
+
+Para aceder aos componentes no interior do controlador, tem de remover primeiro o módulo do controlador do sistema e, em seguida, remover a tampa do módulo do controlador.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Solte o gancho e a alça de loop que prendem os cabos ao dispositivo de gerenciamento de cabos e, em seguida, desconete os cabos do sistema e os SFPs (se necessário) do módulo do controlador, mantendo o controle de onde os cabos estavam conetados.
++
+Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar o dispositivo de gerenciamento de cabos, os cabos sejam organizados.
+
+. Retire e reserve os dispositivos de gerenciamento de cabos dos lados esquerdo e direito do módulo do controlador.
++
+image::../media/drw_25xx_cable_management_arm.png[Inserir ou remover o ARM de gerenciamento de cabos]
+
+. Aperte o trinco na pega do excêntrico até que este se solte, abra totalmente o manípulo do excêntrico para libertar o módulo do controlador do plano médio e, em seguida, utilizando duas mãos, puxe o módulo do controlador para fora do chassis.
++
+image::../media/drw_2240_x_opening_cam_latch.png[Abrir o trinco do puxador da árvore de cames]
+
+. Vire o módulo do controlador ao contrário e coloque-o numa superfície plana e estável.
+. Abra a tampa deslizando as patilhas azuis para soltar a tampa e, em seguida, rode a tampa para cima e abra-a.
++
+image::../media/drw_2600_opening_pcm_cover.png[Abrir ou fechar o módulo do controlador]
+
+
+
+
+
+== Passo 2: Substitua o suporte de arranque
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Localize a Mídia de inicialização usando a ilustração a seguir ou o mapa da FRU no módulo do controlador:
++
+image::../media/drw_2600_boot_media_move_aminated_gif.png[Localizar o suporte de arranque]
+
+. Prima o botão azul no alojamento do suporte do suporte de arranque para soltar o suporte de arranque do respetivo alojamento e, em seguida, puxe-o cuidadosamente para fora do suporte de suporte de arranque.
++
+
+NOTE: Não torça nem puxe o suporte de arranque diretamente para cima, pois isto pode danificar o suporte ou o suporte de arranque.
+
+. Alinhe as extremidades do suporte de arranque de substituição com a tomada de suporte de arranque e, em seguida, empurre-o cuidadosamente para dentro do encaixe.
+. Verifique o suporte de arranque para se certificar de que está encaixado corretamente e completamente no encaixe.
++
+Se necessário, retire o suporte de arranque e volte a colocá-lo no socket.
+
+. Prima o suporte de arranque para baixo para engatar o botão de bloqueio no alojamento do suporte de suporte de arranque.
+. Feche a tampa do módulo do controlador.
+
+
+
+
+== Passo 3: Transfira a imagem de arranque para o suporte de arranque
+
+Pode instalar a imagem do sistema no suporte de arranque de substituição utilizando uma unidade flash USB com a imagem instalada. No entanto, tem de restaurar o sistema de ficheiros var durante este procedimento.
+
+* Você deve ter uma unidade flash USB, formatada para FAT32, com pelo menos 4GBGB de capacidade.
+* Uma cópia da mesma versão de imagem do ONTAP que a que o controlador afetado estava a executar. Você pode baixar a imagem apropriada da seção Downloads no site de suporte da NetApp
++
+** Se a NVE estiver ativada, transfira a imagem com encriptação de volume NetApp, conforme indicado no botão de transferência.
+** Se a NVE não estiver ativada, transfira a imagem sem encriptação de volume NetApp, conforme indicado no botão de transferência.
+
+
+* Se o seu sistema for um par de HA, tem de ter uma ligação de rede.
+* Se o seu sistema for um sistema autónomo, não necessita de uma ligação de rede, mas tem de efetuar uma reinicialização adicional ao restaurar o sistema de ficheiros var.
+
+
+.Passos
+. Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
+. Reinstale o dispositivo de gerenciamento de cabos e reconete o sistema, conforme necessário.
++
+Ao reativar, lembre-se de reinstalar os conversores de Mídia (SFPs) se eles foram removidos.
+
+. Introduza a unidade flash USB na ranhura USB do módulo do controlador.
++
+Certifique-se de que instala a unidade flash USB na ranhura identificada para dispositivos USB e não na porta da consola USB.
+
+. Empurre o módulo do controlador totalmente para dentro do sistema, certificando-se de que a alça da came limpa a unidade flash USB, empurre firmemente a alça da came para terminar de assentar o módulo do controlador, empurre a alça da came para a posição fechada e, em seguida, aperte o parafuso de aperto manual.
++
+O controlador começa a arrancar assim que é completamente instalado no chassis.
+
+. Interrompa o processo de inicialização para parar no prompt DO Loader pressionando Ctrl-C quando você vir iniciando o AUTOBOOT pressione Ctrl-C para abortar....
++
+Se você perder essa mensagem, pressione Ctrl-C, selecione a opção para inicializar no modo Manutenção e, em seguida, interrompa o controlador para inicializar NO Loader.
+
+. Para sistemas com um controlador no chassi, reconete a alimentação e ligue as fontes de alimentação.
++
+O sistema começa a inicializar e pára no prompt DO Loader.
+
+. Defina o tipo de conexão de rede no prompt DO Loader:
++
+** Se estiver a configurar DHCP: `ifconfig e0a -auto`
++
+
+NOTE: A porta de destino configurada é a porta de destino utilizada para comunicar com o controlador afetado a partir do controlador saudável durante a restauração do sistema de ficheiros var com uma ligação de rede. Você também pode usar a porta e0M neste comando.
+
+** Se estiver a configurar ligações manuais: `ifconfig e0a -addr=filer_addr -mask=netmask -gw=gateway-dns=dns_addr-domain=dns_domain`
++
+*** Filer_addr é o endereço IP do sistema de armazenamento.
+*** Netmask é a máscara de rede da rede de gerenciamento conetada ao parceiro HA.
+*** gateway é o gateway da rede.
+*** DNS_addr é o endereço IP de um servidor de nomes em sua rede.
+*** DNS_domain é o nome de domínio do sistema de nomes de domínio (DNS).
++
+Se você usar esse parâmetro opcional, não precisará de um nome de domínio totalmente qualificado no URL do servidor netboot. Você só precisa do nome de host do servidor.
+
+
+
+
+
++
+
+NOTE: Outros parâmetros podem ser necessários para sua interface. Você pode digitar `help ifconfig` no prompt do firmware para obter detalhes.
+
+

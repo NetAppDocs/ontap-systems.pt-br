@@ -1,0 +1,79 @@
+= 
+:allow-uri-read: 
+
+
+Quando for necessário storage adicional, é possível adicionar mais três gavetas de unidade de NS224 TB adicionais (para um total de quatro gavetas) a um par de HA da AFF A900.
+
+.Antes de começar
+* Tem de ter revisto a link:requirements-hot-add-shelf.html["requisitos e práticas recomendadas de adição dinâmica"].
+* Você deve ter concluído os procedimentos aplicáveis no link:prepare-hot-add-shelf.html["Prepare-se para adicionar uma prateleira a quente"].
+* Você precisa ter instalado as gavetas, ligado e definido as IDs de gaveta como descrito em link:prepare-hot-add-shelf.html["Instale uma prateleira para adicionar um hot-add"].
+
+
+.Sobre esta tarefa
+* Esse procedimento pressupõe que o seu par de HA tenha pelo menos uma gaveta de NS224 existente e que você esteja adicionando mais três gavetas adicionais.
+* Se o seu par de HA tiver apenas uma gaveta de NS224 TB existente, esse procedimento pressupõe que o compartimento seja cabeado por dois módulos de e/S 100GbE compatíveis com RoCE em cada controladora.
+
+
+.Passos
+. Se a gaveta de NS224 TB que você está adicionando quente for a segunda gaveta de NS224 TB no par de HA, execute as seguintes etapas.
++
+Caso contrário, vá para a próxima etapa.
+
++
+.. Compartimento de cabos NSM A porta e0a para controlador A slot 10 porta a (e10a).
+.. Compartimento de cabos NSM A porta e0b para a porta b (E2B) do slot 2 do controlador B.
+.. Compartimento de cabos NSM B porta e0a para a porta a (e10a) do slot B do controlador B slot 10.
+.. Compartimento de cabos NSM B porta e0b para a porta b (E2B) do slot 2 do controlador A.
+
+
++
+A ilustração a seguir mostra o cabeamento da segunda gaveta (e a primeira gaveta).
+
++
+image::../media/drw_ns224_a900_2shelves.png[Cabeamento de um AFF A900 com duas gavetas NS224 e dois módulos de e/S]
+
+. Se a gaveta de NS224 TB que você está adicionando quente for a terceira gaveta de NS224 TB no par de HA, execute as seguintes etapas.
++
+Caso contrário, vá para a próxima etapa.
+
++
+.. Compartimento de cabos NSM A porta e0a para controlador A slot 1 porta a (e1a).
+.. Compartimento de cabos NSM A porta e0b para a porta b (e11b) do slot 11 do controlador B.
+.. Compartimento de cabos NSM B porta e0a para a porta a (e1a) do slot B do controlador B slot 1.
+.. Compartimento de cabos NSM B porta e0b para a porta b (e11b) do slot 11 do controlador A.
++
+A ilustração a seguir mostra o cabeamento da terceira prateleira.
+
++
+image::../media/drw_ns224_a900_3shelves.png[Cabeamento de um AFF A900 com três gavetas NS224 e quatro módulos de e/S]
+
+
+
+. Se a gaveta NS224 que você está adicionando quente for a quarta gaveta NS224 no par de HA, execute as seguintes etapas.
++
+Caso contrário, vá para a próxima etapa.
+
++
+.. Compartimento de cabos NSM A porta e0a para controlador A slot 11 porta a (e11a).
+.. Compartimento de cabos NSM A porta e0b para a porta b (e1b) do slot 1 do controlador B.
+.. Compartimento de cabos NSM B porta e0a para a porta a (e11a) do slot B do controlador B slot 11.
+.. Compartimento de cabos NSM B porta e0b para a porta b (e1b) do slot 1 do controlador A.
++
+A ilustração a seguir mostra o cabeamento da quarta prateleira.
+
++
+image::../media/drw_ns224_a900_4shelves.png[Cabeamento de um AFF A900 com quatro gavetas NS224 e quatro módulos de e/S]
+
+
+
+. Verifique se o compartimento hot-added está cabeado corretamente usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]o .
++
+Se forem gerados erros de cabeamento, siga as ações corretivas fornecidas.
+
+
+
+.O que se segue?
+Se você desativou a atribuição automática de unidade como parte da preparação para este procedimento, será necessário atribuir manualmente a propriedade da unidade e, em seguida, reativar a atribuição automática de unidade, se necessário. Vá para link:complete-hot-add-shelf.html["Complete o hot-add"].
+
+Caso contrário, você é feito com o procedimento de hot-add prateleira.

@@ -1,0 +1,38 @@
+---
+indexpage:
+  title: Sistemas ASA R2
+  summary: A documentação do sistema de armazenamento ASA R2 permite instalar, configurar
+    e manter o sistema ASA R2.
+  keywords: asa r2, asa a1k, asa a70, asa a90, install, setup, maintain
+  lead: Os novos sistemas NetApp ASA R2 (ASA A1K, ASA A70 e ASA A90) fornecem uma
+    solução unificada de hardware e software que cria uma experiência simplificada
+    específica para as necessidades dos clientes somente de SAN.
+  tiles:
+  - title: Comece agora
+    links:
+    - title: Saiba mais sobre os sistemas de armazenamento ASA R2
+      url: https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html
+    - title: Datasheet do ASA
+      url: https://www.netapp.com/data-storage/all-flash-san-storage-array/
+  - title: Instalar e manter os sistemas ASA R2
+    links:
+    - title: Instale os sistemas ASA R2
+      url: https://docs.netapp.com/us-en/asa-r2/install-setup/install-setup-workflow.html
+    - title: Manter os sistemas ASA R2
+      url: "../asa-r2-landing-maintain/index.html"
+  - title: Gerenciar dados em sistemas ASA R2
+    links:
+    - title: Provisionamento de storage SAN
+      url: https://docs.netapp.com/us-en/asa-r2/manage-data/provision-san-storage.html
+    - title: Clone dados
+      url: https://docs.netapp.com/us-en/asa-r2/manage-data/data-cloning.html
+    - title: Modificar unidades de armazenamento
+      url: https://docs.netapp.com/us-en/asa-r2/manage-data/modify-storage-units.html
+  - title: Proteger e proteger os dados em sistemas ASA R2
+    links:
+    - title: Criar instantâneos
+      url: https://docs.netapp.com/us-en/asa-r2/data-protection/create-snapshots.html
+    - title: Configurar a replicação de instantâneos
+      url: https://docs.netapp.com/us-en/asa-r2/data-protection/snapshot-replication.html
+    - title: Criptografia de dados em repouso
+      url: https://docs.netapp.com/us-en/asa-r2/secure-data/encrypt-data-at-rest.html

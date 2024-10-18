@@ -1,0 +1,94 @@
+= 
+:allow-uri-read: 
+
+
+Para desligar o controlador desativado, você deve determinar o status do controlador e, se necessário, trocar o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador prejudicado.
+
+.Sobre esta tarefa
+* Você deve deixar as fontes de alimentação ligadas no final deste procedimento para fornecer energia ao controlador de integridade.
+
+
+.Passos
+. Verifique o estado do MetroCluster para determinar se o controlador afetado mudou automaticamente para o controlador saudável: `metrocluster show`
+. Dependendo se ocorreu uma mudança automática, proceda de acordo com a seguinte tabela:
++
+[cols="1,2"]
+|===
+| Se o controlador deficiente... | Então... 
+
+
+ a| 
+Mudou automaticamente
+ a| 
+Avance para o passo seguinte.
+
+
+
+ a| 
+Não mudou automaticamente
+ a| 
+Execute uma operação de comutação planejada a partir do controlador íntegro: `metrocluster switchover`
+
+
+
+ a| 
+Não mudou automaticamente, tentou mudar com o comando e o switchover `metrocluster switchover` foi vetado
+ a| 
+Reveja as mensagens de veto e, se possível, resolva o problema e tente novamente. Se você não conseguir resolver o problema, entre em Contato com o suporte técnico.
+
+|===
+. Ressincronize os agregados de dados executando o `metrocluster heal -phase aggregates` comando do cluster sobrevivente.
++
+[listing]
+----
+controller_A_1::> metrocluster heal -phase aggregates
+[Job 130] Job succeeded: Heal Aggregates is successful.
+----
++
+Se a cura for vetada, você tem a opção de reemitir o `metrocluster heal` comando com o `-override-vetoes` parâmetro. Se você usar esse parâmetro opcional, o sistema substituirá quaisquer vetos de software que impeçam a operação de recuperação.
+
+. Verifique se a operação foi concluída usando o comando MetroCluster operation show.
++
+[listing]
+----
+controller_A_1::> metrocluster operation show
+    Operation: heal-aggregates
+      State: successful
+Start Time: 7/25/2016 18:45:55
+   End Time: 7/25/2016 18:45:56
+     Errors: -
+----
+. Verifique o estado dos agregados utilizando o `storage aggregate show` comando.
++
+[listing]
+----
+controller_A_1::> storage aggregate show
+Aggregate     Size Available Used% State   #Vols  Nodes            RAID Status
+--------- -------- --------- ----- ------- ------ ---------------- ------------
+...
+aggr_b2    227.1GB   227.1GB    0% online       0 mcc1-a2          raid_dp, mirrored, normal...
+----
+. Curar os agregados raiz usando o `metrocluster heal -phase root-aggregates` comando.
++
+[listing]
+----
+mcc1A::> metrocluster heal -phase root-aggregates
+[Job 137] Job succeeded: Heal Root Aggregates is successful
+----
++
+Se a recuperação for vetada, você terá a opção de reemitir o `metrocluster heal` comando com o parâmetro -override-vetos. Se você usar esse parâmetro opcional, o sistema substituirá quaisquer vetos de software que impeçam a operação de recuperação.
+
+. Verifique se a operação heal está concluída usando o `metrocluster operation show` comando no cluster de destino:
++
+[listing]
+----
+
+mcc1A::> metrocluster operation show
+  Operation: heal-root-aggregates
+      State: successful
+ Start Time: 7/29/2016 20:54:41
+   End Time: 7/29/2016 20:54:42
+     Errors: -
+----
+. No módulo do controlador desativado, desligue as fontes de alimentação.
+

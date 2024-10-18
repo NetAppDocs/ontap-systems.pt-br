@@ -1,0 +1,175 @@
+---
+permalink: ns224/service-replace-power-supply.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, replace, fail, power, supply, nondisruptive, drive, i/o, progress, hot-swap, hot-swap a power supply 
+summary: Você pode substituir uma fonte de alimentação com falha sem interrupções em um compartimento de unidade de NS224 TB que esteja ligado e enquanto e/S estiver em andamento. 
+---
+= Fonte de alimentação a hot-swap - NS224 prateleiras
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode substituir uma fonte de alimentação com falha sem interrupções em um compartimento de unidade de NS224 TB que esteja ligado e enquanto e/S estiver em andamento.
+
+.Sobre esta tarefa
+* Não misture fontes de alimentação com diferentes classificações de eficiência ou com diferentes tipos de entrada.
++
+Sempre substitua como por like.
+
+* Se você estiver substituindo mais de uma fonte de alimentação, deve fazê-lo uma de cada vez para que a prateleira mantenha a energia.
+* *Prática recomendada:* a melhor prática é substituir a fonte de alimentação dentro de dois minutos após a remoção do módulo NSM.
++
+Se você exceder os dois minutos, o compartimento continuará funcionando, mas o ONTAP enviará mensagens ao console sobre a fonte de alimentação degradada até que a fonte de alimentação seja substituída.
+
+* Não reverta o firmware para uma versão que não suporte a gaveta e seus componentes.
+* Se necessário, você pode ligar os LEDs de localização da prateleira (azul) para ajudar a localizar fisicamente a prateleira afetada: `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
++
+Se você não souber `shelf_name` o do compartimento afetado, execute o `storage shelf show` comando.
+
++
+Uma prateleira tem três LEDs de localização: Um no painel de visualização do operador e um em cada módulo NSM. Os LEDs de localização permanecem acesos durante 30 minutos. Você pode desativá-los digitando o mesmo comando, mas usando a opção Off.
+
+* Quando desembalar a fonte de alimentação de substituição, guarde todos os materiais de embalagem para utilização quando devolver a fonte de alimentação com falha.
++
+Se você precisar do número RMA ou de ajuda adicional com o procedimento de substituição, entre em Contato com o suporte técnico em https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"^], 888-463-8277 (América do Norte), 00-800-44-638277 (Europa) ou 800-800-80-800 (Ásia/Pacífico).
+
+
+
+Use o procedimento apropriado para o seu tipo de PSU: AC ou DC.
+
+[role="tabbed-block"]
+====
+.Opção 1: Substituir uma fonte de alimentação CA
+--
+Para substituir uma fonte de alimentação CA, você pode assistir à animação ou concluir as etapas a seguir.
+
+.Troca a quente de uma fonte de alimentação em uma prateleira de NS224
+video::5794da63-99aa-425a-825f-aa86002f154d[panopto]
+.Passos
+. Aterre-se corretamente.
+. Identifique fisicamente a fonte de alimentação com falha.
++
+O sistema regista uma mensagem de aviso na consola do sistema, indicando qual a fonte de alimentação falhou. Além disso, o LED de atenção (âmbar) no painel de visualização do operador da prateleira acende-se e o LED bicolor na fonte de alimentação com falha acende-se a vermelho.
+
+. Desconete o cabo de alimentação da fonte de alimentação abrindo o retentor do cabo de alimentação e, em seguida, desconete o cabo de alimentação da fonte de alimentação.
++
+As fontes de alimentação não têm um interrutor de alimentação.
+
+. Retire a fonte de alimentação:
++
+.. Rode o manípulo para cima, para a sua posição horizontal e, em seguida, segure-o.
+.. Com o polegar, prima a patilha azul para soltar o mecanismo de bloqueio.
+.. Retire a fonte de alimentação do módulo NSM enquanto utiliza a outra mão para suportar o peso.
+
+
+. Insira a fonte de alimentação de substituição:
++
+.. Utilizando ambas as mãos, apoie e alinhe as extremidades da fonte de alimentação com a abertura no módulo NSM.
+.. Empurre cuidadosamente a fonte de alimentação para o módulo NSM até que o mecanismo de bloqueio encaixe no lugar.
++
+
+NOTE: Não utilize força excessiva ou poderá danificar o conetor interno.
+
+.. Gire a alça para baixo, de modo que esteja fora do caminho das operações normais.
+
+
+. Ligue o cabo de alimentação à fonte de alimentação e fixe o cabo de alimentação com o fixador do cabo de alimentação.
++
+Quando estiver a funcionar corretamente, o LED bicolor de uma fonte de alimentação acende-se a verde.
+
+
+
+--
+.Opção 2: Substituir uma fonte de alimentação CC
+--
+Para substituir uma fonte de alimentação CC, execute as etapas a seguir.
+
+. Aterre-se corretamente.
+. Identifique fisicamente a fonte de alimentação com falha.
++
+O sistema regista uma mensagem de aviso na consola do sistema, indicando qual a fonte de alimentação falhou. Além disso, o LED de atenção (âmbar) no painel de visualização do operador da prateleira acende-se e o LED bicolor na fonte de alimentação com falha acende-se a vermelho.
+
+. Desligue a fonte de alimentação:
++
+.. Desaperte os dois parafusos de orelhas no conetor do cabo de alimentação DC D-SUB.
++
+A ilustração e a tabela no passo 4 mostram os dois parafusos de orelhas (item 1) e o conetor do cabo de alimentação DC D-SUB (item 2).
+
+.. Desligue o conetor do cabo de alimentação DC D-SUB da fonte de alimentação e coloque-o de lado.
+
+
+. Retire a fonte de alimentação:
++
+.. Rode o manípulo para cima, para a sua posição horizontal e, em seguida, segure-o.
+.. Com o polegar, prima a patilha azul para soltar o mecanismo de bloqueio.
+.. Retire a fonte de alimentação do módulo NSM enquanto utiliza a outra mão para suportar o peso.
++
+
+NOTE: A fonte de alimentação é curta. Utilize sempre as duas mãos para o apoiar quando o retirar do módulo NSM, de modo a que não se liberte do módulo NSM e o danifique.
+
++
+image::../media/drw_dcpsu_remove-replace-generic_IEOPS-788.svg[Remova uma PSU CC]
+
++
+[cols="1,3"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Parafusos de orelhas
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Conetor do cabo de alimentação CC D-SUB
+
+
+
+ a| 
+image:../media/icon_round_3.png["Legenda número 3"]
+ a| 
+Pega da fonte de alimentação
+
+
+
+ a| 
+image:../media/icon_round_4.png["Legenda número 4"]
+ a| 
+Patilha de bloqueio da fonte de alimentação azul
+
+|===
+
+
+. Insira a fonte de alimentação de substituição:
++
+.. Utilizando ambas as mãos, apoie e alinhe as extremidades da fonte de alimentação com a abertura no módulo NSM.
+.. Empurre cuidadosamente a fonte de alimentação para o módulo NSM até que o mecanismo de bloqueio encaixe no lugar.
++
+Uma fonte de alimentação deve engatar adequadamente com o conetor interno e o mecanismo de bloqueio. Repita este passo se sentir que a fonte de alimentação não está corretamente encaixada.
+
++
+
+NOTE: Não utilize força excessiva ou poderá danificar o conetor interno.
+
+.. Gire a alça para baixo, de modo que esteja fora do caminho das operações normais.
+
+
+. Volte a ligar o cabo de alimentação D-SUB DC:
++
+Uma vez que a alimentação é restaurada à fonte de alimentação, o LED de estado deve estar verde.
+
++
+.. Ligue o conetor do cabo de alimentação DC D-SUB à fonte de alimentação.
+.. Aperte os dois parafusos de orelhas para fixar o conetor do cabo de alimentação DC D-SUB à fonte de alimentação.
+
+
+
+
+--
+====

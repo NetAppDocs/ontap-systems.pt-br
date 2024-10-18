@@ -1,0 +1,61 @@
+= 
+:allow-uri-read: 
+
+
+Depois de substituir o chassi, ligue os componentes do cluster pela seguinte ordem:
+
+* Ligue o interrutor
+* Ligue as gavetas de unidades
+* Ligue os controladores
+
+
+.Passos
+. Ligue o interrutor:
++
+.. Volte a ligar cada cabo de alimentação da PDU à PSU.
+.. Coloque cada interrutor basculante da PSU na POSIÇÃO ON (LIGADO) (se aplicável).
+.. Aguarde até que o interrutor se ligue.
+.. Verifique se existem luzes de avaria no interrutor (dianteiro e traseiro).
+.. Ligue ao comutador através do endereço IP de gestão.
+.. Confirme a integridade do switch (consulte a documentação do fornecedor do switch para obter mais detalhes).
+.. Repita para cada interrutor até que todos os interrutores estejam ligados e em bom estado.
+
+
+. Ligue as gavetas de unidades:
++
+.. Volte a ligar cada cabo de alimentação da PDU à PSU.
+.. Coloque cada interrutor basculante da PSU na POSIÇÃO ON (LIGADO) (se aplicável).
+.. Aguarde que todos os compartimentos de disco sejam ativados e que as unidades sejam acionadas.
+.. Certifique-se de que todas as IDs de gaveta sejam os valores esperados.
+.. Verifique se existem luzes de avaria na prateleira de discos (dianteira e traseira) que não existiam antes do encerramento.
+
+
+. Ligue os controladores:
++
+.. Volte a ligar cada cabo de alimentação da PDU à PSU.
+.. Coloque cada interrutor basculante da PSU na POSIÇÃO ON (LIGADO) (se aplicável). Os pares HA que não estão no mesmo chassi devem ser ligados simultaneamente.
+.. Aguarde que os controladores no chassi sejam ligados.
+.. Verifique se existem luzes de avaria no chassis e nos controladores (dianteiros e traseiros).
+.. Repita para cada controlador/chassi até que todos estejam ligados.
+.. Conete-se ao endereço IP SP ou BMC dos nós via SSH. Use este comando para obter o endereço IP antes de desligar:
++
+`system service-processor show -node * -fields address`
+
+.. Execute verificações adicionais de integridade do sistema:
++
+... Resolva qualquer https://activeiq.netapp.com/["Alertas e riscos de bem-estar do Active IQ"]
+... Executar https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"]
+... Verifique o estado do sistema conforme descrito em https://kb.netapp.com/onprem/ontap/os/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["Como realizar uma verificação de integridade do cluster com um script no ONTAP"]
+
+
+.. Gerar uma tarefa de manutenção mensagem AutoSupport completa:
++
+`system node autosupport invoke -node * -type all -message MAINT=end`
+
+.. Certifique-se de que a giveback automática está ativa:
++
+`storage failover modify -node local -auto-giveback true`
+
+
+
+

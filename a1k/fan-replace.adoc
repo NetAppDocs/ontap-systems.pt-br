@@ -1,0 +1,53 @@
+---
+permalink: a1k/fan-replace.html 
+sidebar: sidebar 
+keywords: aff a1k, replace a fan 
+summary: Tem de remover o módulo do controlador do chassis quando substituir um módulo da ventoinha avariado e substituí-lo por um novo módulo da ventoinha. 
+---
+= Substitua uma ventoinha - AFF A1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para substituir um módulo da ventoinha sem interromper o serviço, tem de executar uma sequência específica de tarefas.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Retire a moldura (se necessário) com duas mãos, segurando as aberturas de cada lado da moldura e puxando-a na sua direção até que a moldura se solte dos pernos esféricos na estrutura do chassis.
+. Identifique o módulo da ventoinha que deve substituir verificando as mensagens de erro da consola e observando o LED de atenção em cada módulo da ventoinha.
++
+De frente para o módulo do controlador, os módulos do ventilador estão numerados de 1 a 5, da esquerda para a direita.
+
++
+
+NOTE: Há um único LED para cada ventilador. Fica verde quando a ventoinha está a funcionar corretamente e âmbar quando não está.
+
+. Prima o botão preto no módulo da ventoinha e puxe o módulo da ventoinha para fora do chassis, certificando-se de que o suporta com a mão livre.
++
+
+IMPORTANT: Os módulos da ventoinha são curtos. Apoie sempre a parte inferior do módulo da ventoinha com a mão livre para que não caia subitamente do chassis e o machuque.
+
++
+image::../media/drw_a1k_fan_remove_replace_ieops-1376.svg[Substituição da ventoinha]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Botão de libertação preto
+
+|===
+. Coloque o módulo da ventoinha de lado.
+. Alinhe as extremidades do módulo do ventilador de substituição com a abertura no chassi e, em seguida, deslize-o para dentro do chassi até que ele se encaixe no lugar.
++
+Quando inserido num sistema ativo, o LED âmbar de atenção desliga-se assim que a ventoinha é reconhecida por esse sistema.
+
+. Alinhe a moldura com os pernos esféricos e, em seguida, empurre cuidadosamente a moldura para os pernos esféricos.
+. Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"^] página para obter mais informações.
+

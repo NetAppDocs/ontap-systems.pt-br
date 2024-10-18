@@ -1,0 +1,35 @@
+---
+permalink: asa250/bootmedia-replace-overview.html 
+sidebar: sidebar 
+keywords: asa a250, replace the boot media 
+summary: 'A Mídia de inicialização armazena um conjunto primário e secundário de arquivos de sistema (imagem de inicialização) que o sistema usa quando ele é inicializado.' 
+---
+= Visão geral e requisitos ASA A250
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A Mídia de inicialização armazena um conjunto primário e secundário de arquivos do sistema (imagem de inicialização) que o sistema usa quando ele é inicializado.
+
+.Antes de começar
+* Tem de ter uma unidade flash USB, formatada para MBR/FAT32, com a quantidade de armazenamento adequada para guardar o `image_xxx.tgz` ficheiro.
+* Você também deve copiar o `image_xxx.tgz` arquivo para a unidade flash USB para uso posterior neste procedimento.
+
+
+.Sobre esta tarefa
+* Os métodos sem interrupções e disruptivos para substituir uma Mídia de inicialização exigem que você restaure o `var` sistema de arquivos:
++
+** Para substituição sem interrupções, o par de HA deve estar conetado a uma rede para restaurar o `var` sistema de arquivos.
+** Para a substituição disruptiva, não é necessário uma ligação de rede para restaurar o `var` sistema de ficheiros, mas o processo requer duas reinicializações.
+
+
+* Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor.
+* É importante que você aplique os comandos nestas etapas no controlador correto:
++
+** O nó _prejudicado_ é o controlador no qual você está realizando a manutenção.
+** O nó _Healthy_ é o parceiro de HA do controlador prejudicado.
+
+
+

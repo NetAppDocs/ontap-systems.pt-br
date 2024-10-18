@@ -1,0 +1,12 @@
+= 
+:allow-uri-read: 
+
+
+Para substituir o chassi, você deve mover o painel frontal, os módulos do controlador e as unidades NVMe do chassi com deficiência para o chassi de substituição e, em seguida, remover o chassi com deficiência do rack de equipamentos ou do gabinete do sistema e instalar o chassi de substituição em seu lugar.
+
+.Sobre esta tarefa
+* Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+* Pode utilizar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema.
+* Esse procedimento foi escrito com a suposição de que você está movendo o painel frontal, as unidades NVMe e os módulos da controladora para o novo chassi e que o chassi de substituição é um novo componente da NetApp.
+* Este procedimento é disruptivo. Para um cluster de dois nós, você terá uma interrupção de serviço completa e uma interrupção parcial em um cluster de vários nós.
+

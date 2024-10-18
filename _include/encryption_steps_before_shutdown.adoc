@@ -1,0 +1,26 @@
+= 
+:allow-uri-read: 
+
+
+Antes de desligar o controlador com deficiência e verificar o estado das chaves de encriptação integradas, tem de verificar o estado do controlador com deficiência, desativar a giveback automática e verificar qual a versão do ONTAP que está a ser executada no sistema.
+
+Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro mostrar falso quanto à qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; consulte o link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^].
+
+.Passos
+. Verifique o estado do controlador afetado:
++
+** Se o controlador prejudicado estiver no prompt de login, faça login como `admin`.
+** Se o controlador afetado estiver no prompt DO Loader e fizer parte da configuração do HA, faça login como `admin` no controlador íntegro.
+** Se o controlador prejudicado estiver em uma configuração autônoma e no prompt DO Loader, entre em Contato link:http://mysupport.netapp.com/["mysupport.NetApp.com"^]com .
+
+
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Verifique a versão do ONTAP que o sistema está sendo executado no controlador com deficiência se estiver em cima ou no controlador parceiro se o controlador com deficiência estiver inativo, usando o `version -v` comando:
++
+** Se <lno-DARE> ou 1Ono-DARE> for exibido na saída do comando, o sistema não suporta NVE, prossiga para desligar o controlador.
+
+
+

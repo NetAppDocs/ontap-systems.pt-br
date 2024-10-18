@@ -1,0 +1,57 @@
+---
+sidebar: sidebar 
+permalink: a70-90/install-requirements.html 
+keywords: a1a70-90k, install, setup, cautions 
+summary: Reveja o equipamento necessário e as precauções de elevação para a sua plataforma e prateleiras. 
+---
+= Requisitos de instalação - AFF A70 e AFF A90
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Reveja o equipamento necessário e as precauções de elevação para o seu sistema de armazenamento AFF A70 ou AFF A90 e prateleiras de armazenamento.
+
+
+
+== Equipamento necessário para instalação
+
+Para instalar o sistema de storage AFF A70 ou AFF A90, você precisa dos seguintes equipamentos e ferramentas.
+
+* Acesso a um navegador da Web para configurar o sistema de armazenamento
+* Fita de descarga eletrostática (ESD)
+* Lanterna
+* Computador portátil ou console com conexão USB/serial
+* Clipe de papel ou caneta esferográfica de ponta estreita para definir NS224 IDs de prateleira de armazenamento
+* Chave de fendas Phillips nº 2
+
+
+
+
+== Precauções de elevação
+
+Os sistemas de storage AFF A70 e AFF A90 e NS224 compartimentos de storage são pesados. Tenha cuidado ao levantar e mover estes itens.
+
+
+
+=== Sistemas de storage AFF A70 e AFF A90
+
+Um sistema de armazenamento AFF A70 ou um sistema de armazenamento AFF A90 podem pesar até 68,8 kg (151,68 lbs). Para levantar o sistema, utilize quatro pessoas ou um elevador hidráulico.
+
+image::../media/drw_a70-90_weight_icon_ieops-1730.svg[Ícone de aviso de peso do AFF A90 e do AFF A70]
+
+
+
+=== NS224 gaveta
+
+Uma prateleira de armazenamento de NS224 kg pode pesar até 66,78 lbs (30,29 kg). Para levantar a prateleira de armazenamento, utilize duas pessoas ou um elevador hidráulico. Mantenha todos os componentes na prateleira de armazenamento (dianteira e traseira) para evitar o desbalanceamento do peso da prateleira.
+
+image::../media/drw_ns224_lifting_weight_ieops-1716.svg[NS224 precaução de elevação]
+
+.Informações relacionadas
+* https://library.netapp.com/ecm/ecm_download_file/ECMP12475945["Informações de segurança e avisos regulamentares"^]
+
+
+.O que se segue?
+Depois de analisar os requisitos de hardware, você link:install-prepare.html["Prepare-se para instalar o sistema de storage AFF A70 ou AFF A90"].

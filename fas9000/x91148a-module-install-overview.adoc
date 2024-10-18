@@ -1,0 +1,21 @@
+---
+permalink: fas9000/x91148a-module-install-overview.html 
+sidebar: sidebar 
+keywords: aff a700, fas9000, add, x91148a, storage, module, NIC, no open, slots, open slots, system 
+summary: Você pode adicionar um módulo de e/S ao sistema substituindo uma NIC ou um adaptador de armazenamento por um novo em um sistema totalmente preenchido ou adicionando uma nova NIC ou adaptador de armazenamento em um slot de chassi vazio no sistema. 
+---
+= Visão geral da adição de um módulo X91148A - AFF A9000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode adicionar um módulo de e/S ao sistema substituindo uma NIC ou um adaptador de armazenamento por um novo em um sistema totalmente preenchido ou adicionando uma nova NIC ou adaptador de armazenamento em um slot de chassi vazio no sistema.
+
+.Antes de começar
+* Verifique o https://hwu.netapp.com/["NetApp Hardware Universe"] para se certificar de que o novo módulo de e/S é compatível com o seu sistema e a versão do ONTAP que você está executando.
+* Se houver vários slots disponíveis, verifique as prioridades do slot https://hwu.netapp.com/["NetApp Hardware Universe"] e use a melhor disponível para seu módulo de e/S.
+* Para adicionar um módulo de e/S sem interrupções, você deve adquirir o controlador de destino, remover a tampa cega do slot no slot de destino ou remover um módulo de e/S existente, adicionar o módulo de e/S novo ou de substituição e, em seguida, giveback o controlador de destino.
+* Certifique-se de que todos os outros componentes estão a funcionar corretamente.
+

@@ -1,0 +1,46 @@
+= 
+:allow-uri-read: 
+
+
+[cols="4*"]
+|===
+| Número de peça do adaptador | Descrição | Categoria | Disponível a partir do início 
+
+
+ a| 
+https://hwu.netapp.com/adapter/index["X91148A"]
+ a| 
+2 portas 100GbE RoCE QSFP28
+ a| 
+* Armazenamento
+* Rede
+* HA/MetroCluster
+
+ a| 
+ONTAP 9,8
+
+
+
+ a| 
+https://hwu.netapp.com/adapter/index["X91122A"]
+ a| 
+2 portas 25GbE RoCE QSFP28
+ a| 
+* Rede
+* HA/MetroCluster
+
+ a| 
+ONTAP 9,8
+
+
+
+ a| 
+https://hwu.netapp.com/adapter/index["X9170A"]
+ a| 
+Módulo SSD NVMe (1 TB)
+ a| 
+Dispositivo de despejo de memória
+ a| 
+ONTAP 9,8
+
+|===

@@ -1,0 +1,24 @@
+= 
+:allow-uri-read: 
+
+
+Reveja os requisitos para o procedimento de substituição do controlador e selecione o correto para a sua versão do sistema operativo ONTAP.
+
+* Todas as gavetas de unidades devem estar funcionando corretamente.
+* O controlador saudável deve ser capaz de assumir o controlador que está a ser substituído (referido neste procedimento como ""controlador deficiente"").
+* Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor.
+* É necessário substituir um módulo controlador por um módulo controlador do mesmo tipo de modelo. Você não pode atualizar seu sistema apenas substituindo o módulo do controlador.
+* Não é possível alterar nenhuma unidade ou compartimentos de unidades como parte deste procedimento.
+* Como o dispositivo de inicialização está localizado no módulo Gerenciamento do sistema instalado na parte traseira do sistema, você não precisa mover o dispositivo de inicialização ao substituir um módulo controlador.
+* É importante que você aplique os comandos nessas etapas nos sistemas corretos:
++
+** O controlador _prejudicado_ é o controlador que está sendo substituído.
+** O controlador _replacement_ é o novo controlador que está substituindo o controlador prejudicado.
+** O controlador _Healthy_ é o controlador sobrevivente.
+
+
+* Você deve sempre capturar a saída do console do controlador para um arquivo de log de texto.
++
+Isso fornece um Registro do procedimento para que você possa solucionar qualquer problema que possa encontrar durante o processo de substituição.
+
+

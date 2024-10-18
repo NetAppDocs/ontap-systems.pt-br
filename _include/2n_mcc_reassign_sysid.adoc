@@ -1,0 +1,124 @@
+= 
+:allow-uri-read: 
+
+
+Em uma configuração MetroCluster de dois nós executando o ONTAP, você deve reatribuir manualmente os discos à ID do sistema da nova controladora antes de retornar o sistema à condição operacional normal.
+
+.Sobre esta tarefa
+Este procedimento aplica-se apenas a sistemas em uma configuração de MetroCluster de dois nós executando o ONTAP.
+
+Você deve ter certeza de emitir os comandos neste procedimento no nó correto:
+
+* O nó _prejudicado_ é o nó no qual você está realizando a manutenção.
+* O nó _replacement_ é o novo nó que substituiu o nó prejudicado como parte deste procedimento.
+* O nó _Healthy_ é o parceiro de DR do nó prejudicado.
+
+
+.Passos
+. Se ainda não o tiver feito, reinicie o nó _replacement_, interrompa o processo de inicialização entrando `Ctrl-C`e selecione a opção para inicializar no modo Manutenção no menu exibido.
++
+Você deve digitar `Y` quando solicitado para substituir a ID do sistema devido a uma incompatibilidade de ID do sistema.
+
+. Veja os IDs de sistema antigos a partir do nó saudável: ``metrocluster node show -fields node-systemid`,dr-Partner-systemid'
++
+Neste exemplo, o Node_B_1 é o nó antigo, com o ID do sistema antigo de 118073209:
+
++
+[listing]
+----
+dr-group-id cluster         node                 node-systemid dr-partner-systemid
+ ----------- --------------------- -------------------- ------------- -------------------
+ 1           Cluster_A             Node_A_1             536872914     118073209
+ 1           Cluster_B             Node_B_1             118073209     536872914
+ 2 entries were displayed.
+----
+. Veja a nova ID do sistema no prompt do modo de manutenção no nó prejudicado: `disk show`
++
+Neste exemplo, o novo ID do sistema é 118065481:
+
++
+[listing]
+----
+Local System ID: 118065481
+    ...
+    ...
+----
+. Reatribua a propriedade do disco (para sistemas FAS) ou a propriedade de LUN (para sistemas FlexArray), utilizando as informações de ID do sistema obtidas a partir do comando disk show: `disk reassign -s old system ID`
++
+No caso do exemplo anterior, o comando é: `disk reassign -s 118073209`
+
++
+Você pode responder `Y` quando solicitado a continuar.
+
+. Verifique se os discos (ou LUNs FlexArray) foram atribuídos corretamente: `disk show -a`
++
+Verifique se os discos pertencentes ao nó _replacement_ mostram o novo ID do sistema para o nó _replacement_. No exemplo a seguir, os discos pertencentes ao System-1 agora mostram a nova ID do sistema, 118065481:
+
++
+[listing]
+----
+*> disk show -a
+Local System ID: 118065481
+
+  DISK     OWNER                 POOL   SERIAL NUMBER  HOME
+-------    -------------         -----  -------------  -------------
+disk_name   system-1  (118065481) Pool0  J8Y0TDZC       system-1  (118065481)
+disk_name   system-1  (118065481) Pool0  J8Y09DXC       system-1  (118065481)
+.
+.
+.
+----
+. A partir do nó saudável, verifique se todos os coredumps são salvos:
++
+.. Mude para o nível de privilégio avançado: `set -privilege advanced`
++
+Você pode responder `Y` quando solicitado a continuar no modo avançado. O prompt do modo avançado é exibido (*>).
+
+.. Verifique se os coredumps estão salvos: `system node run -node _local-node-name_ partner savecore`
++
+Se o comando output indicar que o savecore está em andamento, aguarde que o savecore seja concluído antes de emitir o giveback. Você pode monitorar o progresso do savecore usando o `system node run -node _local-node-name_ partner savecore -s command` .</info>.
+
+.. Voltar ao nível de privilégio de administrador: `set -privilege admin`
+
+
+. Se o nó _replacement_ estiver no modo Manutenção (mostrando o prompt *>), saia do modo Manutenção e vá para o prompt Loader: `halt`
+. Inicialize o nó _replacement_: `boot_ontap`
+. Após o nó _replacement_ ter sido totalmente inicializado, execute um switchback: `metrocluster switchback`
+. Verifique a configuração do MetroCluster: `metrocluster node show - fields configuration-state`
++
+[listing]
+----
+node1_siteA::> metrocluster node show -fields configuration-state
+
+dr-group-id            cluster node           configuration-state
+-----------            ---------------------- -------------- -------------------
+1 node1_siteA          node1mcc-001           configured
+1 node1_siteA          node1mcc-002           configured
+1 node1_siteB          node1mcc-003           configured
+1 node1_siteB          node1mcc-004           configured
+
+4 entries were displayed.
+----
+. Verifique a operação da configuração do MetroCluster no Data ONTAP:
++
+.. Verifique se há alertas de integridade em ambos os clusters: `system health alert show`
+.. Confirme se o MetroCluster está configurado e no modo normal: `metrocluster show`
+.. Execute uma verificação MetroCluster: `metrocluster check run`
+.. Apresentar os resultados da verificação MetroCluster: `metrocluster check show`
+.. Execute o Config Advisor. Vá para a página Config Advisor no site de suporte da NetApp em https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor/["Support.NetApp.com/NOW/download/Tools/config_ADVISOR/"].
++
+Depois de executar o Config Advisor, revise a saída da ferramenta e siga as recomendações na saída para resolver quaisquer problemas descobertos.
+
+
+
+. Simular uma operação de comutação:
++
+.. A partir do prompt de qualquer nó, altere para o nível de privilégio avançado: `set -privilege advanced`
++
+Você precisa responder com `y` quando solicitado para continuar no modo avançado e ver o prompt do modo avançado (*>).
+
+.. Execute a operação de switchback com o parâmetro -simule: `metrocluster switchover -simulate`
+.. Voltar ao nível de privilégio de administrador: `set -privilege admin`
+
+
+

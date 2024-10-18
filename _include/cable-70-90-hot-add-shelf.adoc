@@ -1,0 +1,97 @@
+= 
+:allow-uri-read: 
+
+
+É possível adicionar até duas gavetas de NS224 TB a um par de HA AFF A70 ou AFF A90 quando for necessário storage adicional (para a gaveta interna).
+
+.Antes de começar
+* Tem de ter revisto a link:requirements-hot-add-shelf.html["requisitos e práticas recomendadas de adição dinâmica"].
+* Você deve ter concluído os procedimentos aplicáveis no link:prepare-hot-add-shelf.html["Prepare-se para adicionar uma prateleira a quente"].
+* Você precisa ter instalado as gavetas, ligado e definido as IDs de gaveta como descrito em link:prepare-hot-add-shelf.html["Instale uma prateleira para adicionar um hot-add"].
+
+
+.Sobre esta tarefa
+* Esse procedimento pressupõe que seu par de HA tenha apenas storage interno (sem compartimentos externos) e que você esteja adicionando mais duas gavetas adicionais e dois módulos de e/S com capacidade para RoCE em cada controladora.
+* Este procedimento aborda os seguintes cenários de adição dinâmica:
++
+** Adição automática da primeira gaveta a um par de HA com um módulo de e/S compatível com RoCE em cada controladora.
+** Adição automática da primeira gaveta a um par de HA com dois módulos de e/S compatíveis com RoCE em cada controladora.
+** Adição rápida da segunda gaveta a um par de HA com dois módulos de e/S compatíveis com RoCE em cada controladora.
+
+
+
+
+.Passos
+. Se você estiver adicionando um compartimento usando um conjunto de portas compatíveis com RoCE (um módulo de e/S compatível com RoCE) em cada módulo de controladora e esse for o único compartimento de NS224 TB do seu par de HA, execute as seguintes etapas.
++
+Caso contrário, vá para a próxima etapa.
+
++
+
+NOTE: Esta etapa pressupõe que você instalou o módulo de e/S compatível com RoCE no slot 11.
+
++
+.. Compartimento de cabos NSM A porta e0a para controlador A slot 11 porta a (e11a).
+.. Compartimento de cabos NSM A porta e0b para a porta b (e11b) do slot 11 do controlador B.
+.. Compartimento de cabos NSM B porta e0a para a porta a (e11a) do slot B do controlador B slot 11.
+.. Compartimento de cabos NSM B porta e0b para a porta b (e11b) do slot 11 do controlador A.
++
+A ilustração a seguir mostra o cabeamento de uma gaveta hot-added usando um módulo de e/S compatível com RoCE em cada módulo de controladora:
+
++
+image::../media/drw_ns224_vino_i_1shelf_1card_ieops-1639.svg[Cabeamento para AFF A70 ou A90 com uma gaveta e um módulo de e/S]
+
+
+
+. Se você estiver adicionando uma ou duas gavetas usando dois conjuntos de portas compatíveis com RoCE (dois módulos de e/S compatíveis com RoCE) em cada módulo de controladora, execute as subetapas aplicáveis.
++
+
+NOTE: Esta etapa pressupõe que você instalou os módulos de e/S compatíveis com RoCE nos slots 11 e 8.
+
++
+[cols="1,3"]
+|===
+| Compartimentos | Cabeamento 
+
+
+ a| 
+Gaveta 1
+ a| 
+.. Cabo NSM A porta e0a para controlador A slot 11 porta a (e11a).
+.. Cabo NSM A porta e0b para a porta b (e8b) do slot 8 do controlador B.
+.. Cabo NSM B porta e0a para o slot B do controlador 11 porta a (e11a).
+.. Cabo NSM B porta e0b para o slot 8 do controlador A porta b (e8b).
+.. Se você estiver adicionando uma segunda prateleira a quente, conclua as subetapas "'prateleira 2"; caso contrário, vá para a etapa 3.
+
+
+A ilustração a seguir mostra o cabeamento de uma gaveta hot-added usando dois módulos de e/S compatíveis com RoCE em cada módulo de controladora:
+
+image::../media/drw_ns224_vino_i_1shelf_2cards_ieops-1640.svg[Cabeamento para AFF A70 ou A90 com uma gaveta e dois módulos de e/S]
+
+
+
+ a| 
+Gaveta 2
+ a| 
+.. Cabo NSM A porta e0a para controlador A slot 8 porta a (e8a).
+.. Cabo NSM A porta e0b para a porta b (e11b) do slot 11 do controlador B.
+.. Cabo NSM B porta e0a para o slot B do controlador 8 porta a (e8a).
+.. Cabo NSM B porta e0b para o slot 11 do controlador A porta b (e11b).
+.. Avance para o passo 3.
+
+
+A ilustração a seguir mostra o cabeamento de duas prateleiras hot-added usando dois módulos de e/S compatíveis com RoCE em cada módulo de controladora:
+
+image::../media/drw_ns224_vino_i_2shelves_2cards_ieops-1641.svg[Cabeamento para AFF A70 ou A90 com duas gavetas e dois módulos de e/S]
+
+|===
+. Verifique se o compartimento hot-added está cabeado corretamente usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]o .
++
+Se forem gerados erros de cabeamento, siga as ações corretivas fornecidas.
+
+
+
+.O que se segue?
+Se você desativou a atribuição automática de unidade como parte da preparação para este procedimento, será necessário atribuir manualmente a propriedade da unidade e, em seguida, reativar a atribuição automática de unidade, se necessário. Vá para link:complete-hot-add-shelf.html["Complete o hot-add"].
+
+Caso contrário, você é feito com o procedimento de hot-add prateleira.

@@ -1,0 +1,69 @@
+= 
+:allow-uri-read: 
+
+
+Transfira a propriedade dos recursos de armazenamento de volta para o controlador de substituição.
+
+.Passos
+. Se o sistema de armazenamento tiver a encriptação configurada, tem de restaurar a funcionalidade armazenamento ou encriptação de volume utilizando o seguinte procedimento para reiniciar o sistema:
++
+.. Inicialize no Menu e execute a opção 10
+.. Introduza a frase-passe e os dados de cópia de segurança e, em seguida, efetue o arranque normal https://kb.netapp.com/on-prem/ontap/DM/Encryption/Encryption-KBs/Restore_onboard_key_management_encryption_keys["Restaurar chaves de criptografia integradas de gerenciamento de chaves"] consulte .
+.. Execute apenas o CFO giveback
+.. Execute Onboard Sync e verifique se o SVM-KEK está definido como True See https://kb.netapp.com/on-prem/ontap/DM/Encryption/Encryption-KBs/Onboard_keymanager_sync_fails_after_motherboard_replacement["Giveback após falha na substituição do MB - a operação foi vetada pelo gerenciador de chaves"]
+.. Giveback SFO, (sem força)
+
+
+. Se o sistema não tiver a encriptação configurada, execute o seguinte procedimento para reiniciar o sistema:
++
+.. Inicialize no Menu e execute a opção 1.
+.. Devolver o controlador:
+.. A partir do controlador saudável, devolva o armazenamento do controlador substituído: `storage failover giveback -ofnode _replacement_node_name_`
++
+O controlador _replacement_ recupera seu armazenamento e completa a inicialização.
+
++
+
+NOTE: Se o giveback for vetado, você pode considerar substituir os vetos.
+
++
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["Encontre o conteúdo de Configuração de alta disponibilidade para sua versão do ONTAP 9"]
+
+.. Após a conclusão do giveback, confirme que o par de HA está saudável e que a aquisição é possível: `storage failover show`
+
+
+. Se o sistema estiver em uma configuração MetroCluster, monitore o status do controlador: `metrocluster node show`
++
+A configuração do MetroCluster leva alguns minutos após a substituição para retornar a um estado normal, quando cada controlador mostrará um estado configurado, com espelhamento de DR ativado e um modo normal. O `metrocluster node show -fields node-systemid` comando output exibe o ID do sistema antigo até que a configuração do MetroCluster retorne a um estado normal.
+
+. Se o controlador estiver em uma configuração MetroCluster, dependendo do estado MetroCluster, verifique se o campo ID inicial do DR mostra o proprietário original do disco se o proprietário original for um controlador no local de desastre.
++
+Isso é necessário se ambos os seguintes itens forem verdadeiros:
+
++
+** A configuração do MetroCluster está em um estado de switchover.
+** O controlador _replacement_ é o atual proprietário dos discos no local de desastre.
++
+https://docs.netapp.com/us-en/ontap-metrocluster/manage/concept_understanding_mcc_data_protection_and_disaster_recovery.html#disk-ownership-changes-during-ha-takeover-and-metrocluster-switchover-in-a-four-node-metrocluster-configuration["Alterações na propriedade do disco durante o takeover de HA e o switchover do MetroCluster em uma configuração de MetroCluster de quatro nós"]
+
+
+
+. Se o sistema estiver em uma configuração do MetroCluster, verifique se cada controlador está configurado: `metrocluster node show - fields configuration-state`
++
+[listing]
+----
+node1_siteA::> metrocluster node show -fields configuration-state
+
+dr-group-id            cluster node           configuration-state
+-----------            ---------------------- -------------- -------------------
+1 node1_siteA          node1mcc-001           configured
+1 node1_siteA          node1mcc-002           configured
+1 node1_siteB          node1mcc-003           configured
+1 node1_siteB          node1mcc-004           configured
+
+4 entries were displayed.
+----
+. Verifique se os volumes esperados estão presentes para cada controlador: `vol show -node node-name`
+. Se você desativou o controle automático na reinicialização, ative-o a partir do controlador íntegro: `storage failover modify -node replacement-node-name -onreboot true`
+. Se o AutoSupport estiver ativado, restaure/dessuprimir a criação automática de casos usando o `system node autosupport invoke -node * -type all -message MAINT=END` comando.
+

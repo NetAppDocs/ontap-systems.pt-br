@@ -1,0 +1,129 @@
+---
+permalink: fas2700/chassis-replace-shutdown.html 
+sidebar: sidebar 
+keywords: fas2700, aff a220, replace, chassis, shut down, controller, metrocluster, power, supply, ha, state, controller, configuration, switch, aggregates, replace, move, remove, swap 
+summary: Para substituir o chassi, você deve desligar os controladores. 
+---
+= Desligue os controladores - FAS2700
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Encerre ou assuma o controlador afetado utilizando o procedimento adequado para a sua configuração.
+
+
+
+== Opção 1: A maioria das configurações
+
+Desligue os controladores para que possa efetuar a manutenção no chassis.
+
+Este procedimento destina-se a sistemas com duas configurações de nós. Se tiver um sistema com mais de dois nós, https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_perform_a_graceful_shutdown_and_power_up_of_one_HA_pair_in_a_4__node_cluster["Como executar um desligamento eficiente e ligar um par de HA em um cluster de quatro nós"^] consulte .
+
+.Antes de começar
+* Impedir que todos os clientes/hosts acessem dados no sistema NetApp.
+* Suspender trabalhos de cópia de segurança externos.
+* Certifique-se de que tem as permissões e credenciais necessárias:
++
+** Credenciais de administrador local para o ONTAP.
+** Senha do NetApp Onboard Key Management (OKM) em todo o cluster se estiver usando criptografia de storage ou NVE/NAE.
+** BMC accessability para cada controlador.
+
+
+* Certifique-se de que tem as ferramentas e o equipamento necessários para a substituição.
+* Como uma prática recomendada antes do desligamento, você deve:
++
+** Execute mais https://kb.netapp.com/onprem/ontap/os/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["verificações de integridade do sistema"].
+** Atualize o ONTAP para uma versão recomendada para o sistema.
+** Resolva qualquer https://activeiq.netapp.com/["Alertas e riscos de bem-estar do Active IQ"]. Tome nota de quaisquer avarias atualmente no sistema, tais como LEDs nos componentes do sistema.
+
+
+
+
+.Passos
+. Faça login no cluster através de SSH ou faça login de qualquer nó no cluster usando um cabo de console local e um laptop/console.
+. Desligue o AutoSupport e indique quanto tempo espera que o sistema fique offline:
++
+`system node autosupport invoke -node * -type all -message "MAINT=8h Power Maintenance"`
+
+. Identifique o endereço SP/BMC de todos os nós:
++
+`system service-processor show -node * -fields address`
+
+. Saia do shell do cluster: `exit`
+. Faça login no SP/BMC via SSH usando o endereço IP de qualquer um dos nós listados na saída da etapa anterior.
++
+Se o estiver usando um console/laptop, faça login no controlador usando as mesmas credenciais de administrador de cluster.
+
++
+
+NOTE: Abra uma sessão SSH para cada conexão SP/BMC para que você possa monitorar o progresso.
+
+. Parar os dois nós localizados no chassi com deficiência:
++
+`system node halt -node <node>,<node2> -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true`
+
++
+
+NOTE: Para clusters que usam o SnapMirror síncrono operando no modo StrictSync: `system node halt -node <node>,<node2>  -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true -ignore-strict-sync-warnings true`
+
+. Digite *y* para cada controlador no cluster quando você vir `_Warning: Are you sure you want to halt node "cluster <node-name> number"?
+{y|n}:_`
+. Aguarde que cada controlador pare e exiba o prompt Loader.
+
+
+.O que se segue?
+* Se o sistema for um NetApp StorageGRID ou ONTAP S3 usado como camada de nuvem FabricPool, consulte o https://kb.netapp.com/onprem/ontap/hardware/What_is_the_procedure_for_graceful_shutdown_and_power_up_of_a_storage_system_during_scheduled_power_outage#["Desligue e ligue o seu sistema de armazenamento Guia de resolução"] procedimento após executar este desligamento.
+* Se estiver usando SSDs, https://kb.netapp.com/Support_Bulletins/Customer_Bulletins/SU490["SU490: Práticas recomendadas de SSD (impacto: Crítico): Evite o risco de falha de unidade e perda de dados se desligado por mais de dois meses"] consulte após executar este procedimento de desligamento.
+
+
+
+
+== Opção 2: O controlador está em uma configuração MetroCluster
+
+
+NOTE: Não use este procedimento se o sistema estiver em uma configuração de MetroCluster de dois nós.
+
+Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
+
+* Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
+* Se você tiver uma configuração MetroCluster, você deve ter confirmado que o estado de configuração do MetroCluster está configurado e que os nós estão em um estado ativado e normal (`metrocluster node show`).
+
+
+.Passos
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Desative a giveback automática a partir da consola do controlador saudável: `storage failover modify –node local -auto-giveback false`
+. Leve o controlador prejudicado para o prompt Loader:
++
+[cols="1,2"]
+|===
+| Se o controlador afetado estiver a apresentar... | Então... 
+
+
+ a| 
+O prompt Loader
+ a| 
+Vá para a próxima etapa.
+
+
+
+ a| 
+A aguardar pela giveback...
+ a| 
+Pressione Ctrl-C e responda `y` quando solicitado.
+
+
+
+ a| 
+Prompt do sistema ou prompt de senha (digite a senha do sistema)
+ a| 
+Assuma ou interrompa o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
+
+|===
+

@@ -1,0 +1,81 @@
+---
+permalink: sas3/service-replace-fan-ds460c.html 
+sidebar: sidebar 
+keywords: ds460c, drive, shelf, fan, module, cooling, disk, replace, replace a fan module in a ds460c disk shelf 
+summary: Cada compartimento de unidades DS460C inclui dois módulos de ventilador. Se um módulo do ventilador falhar, você deve substituí-lo o mais rápido possível para garantir que a prateleira tenha resfriamento adequado. Quando você remove o módulo de ventilador com falha, não é necessário desligar a energia do compartimento de disco. 
+---
+= Substitua um módulo do ventilador em um compartimento de disco DS460C - prateleiras por módulos IOM12/IOM12B
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cada compartimento de unidades DS460C inclui dois módulos de ventilador. Se um módulo do ventilador falhar, você deve substituí-lo o mais rápido possível para garantir que a prateleira tenha resfriamento adequado. Quando você remove o módulo de ventilador com falha, não é necessário desligar a energia do compartimento de disco.
+
+.Sobre esta tarefa
+Deve certificar-se de que remove e substitui o módulo da ventoinha no espaço de 30 minutos para evitar o sobreaquecimento do sistema.
+
+.Passos
+. Coloque proteção antiestática.
+. Desembale o novo módulo da ventoinha e coloque-o numa superfície nivelada perto da prateleira.
++
+Guarde todo o material de embalagem para utilização quando devolver o ventilador avariado.
+
+. Na parte de trás do compartimento de disco, observe os LEDs de atenção para localizar o módulo do ventilador que você precisa remover.
++
+Tem de substituir o módulo da ventoinha que tem o respetivo LED de atenção ligado.
+
++
+image::../media/28_dwg_e2860_de460c_single_fan_canister_with_led_callout.gif[Localização do LED de atenção]
+
++
+|===
+
+
+| Item | Nome do LED | Estado | Descrição 
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+| Atenção  a| 
+Âmbar sólido
+ a| 
+A ventoinha tem uma avaria
+
+|===
+. Prima a patilha cor-de-laranja para soltar o manípulo do módulo da ventoinha.
++
+image::../media/28_dwg_e2860_de460c_single_fan_canister_with_orange_tab_callout.gif[Patilha de libertação do módulo da ventoinha]
+
++
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+| Patilha de libertação do módulo da ventoinha 
+|===
+. Utilize a pega do módulo da ventoinha para retirar o módulo da ventoinha da prateleira.
++
+image::../media/28_dwg_e2860_de460c_fan_canister_handle_with_callout.gif[Manípulo do módulo da ventoinha estendida]
+
++
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+| Pega para puxar o módulo da ventoinha para fora 
+|===
+. Deslize o módulo da ventoinha de substituição totalmente para dentro da prateleira, movendo a pega do módulo da ventoinha para o lado até que esta fique presa com a patilha cor-de-laranja.
+. Verifique o LED de atenção âmbar no novo módulo da ventoinha.
++
+
+NOTE: Depois de substituir o módulo da ventoinha, o LED de atenção permanece aceso (âmbar fixo) enquanto o firmware verifica se o módulo da ventoinha foi instalado corretamente. O LED apaga-se após este processo estar concluído.
+
+. Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit.
++
+Entre em Contato com o suporte técnico em https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"], 888-463-8277 (América do Norte), 00-800-44-638277 (Europa) ou 800-800-80-800 (Ásia/Pacífico) se precisar do número RMA.
+
+

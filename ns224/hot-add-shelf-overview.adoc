@@ -1,0 +1,33 @@
+---
+permalink: ns224/hot-add-shelf-overview.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, overview 
+summary: Para adicionar um compartimento de unidade de NS224 TB, seu par de HA precisa atender a certos requisitos. 
+---
+= Fluxo de trabalho de adição dinâmica - NS224 gavetas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Siga estas etapas do fluxo de trabalho para adicionar a gaveta NS224.
+
+.Antes de começar
+Para adicionar uma gaveta de NS224 TB, seu par de HA precisa atender a certos requisitos. Reveja o link:requirements-hot-add-shelf.html["requisitos e práticas recomendadas de adição dinâmica"].
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"]link:prepare-hot-add-shelf.html["Prepare-se para adicionar a prateleira a quente"]
+[role="quick-margin-para"]
+Dependendo do modelo da sua plataforma, talvez seja necessário instalar placas PCIe ou módulos de e/S compatíveis com RoCE adicionais, configurar as portas Ethernet não dedicadas compatíveis com RoCE para uso de armazenamento, reabilitar uma gaveta existente em dois conjuntos de portas em slots diferentes para resiliência contra falha de slot e desativar a atribuição automática de unidade se você estiver atribuindo manualmente a propriedade da unidade.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"]link:install-hot-add-shelf.html["Instale a prateleira"]
+[role="quick-margin-para"]
+Para instalar a prateleira, instale o kit de trilho para a prateleira e, em seguida, instale e fixe a prateleira no rack ou gabinete de telecomunicações. Em seguida, conecte os cabos de energia à alimentação da gaveta e atribua um ID exclusivo da gaveta para garantir que a gaveta seja distinta no par de HA.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"]link:cable-overview-hot-add-shelf.html["Coloque o cabo na prateleira"]
+[role="quick-margin-para"]
+Faça o cabeamento da gaveta que você está adicionando quente, de modo que ela tenha duas conexões a cada controladora no par de HA.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"]link:complete-hot-add-shelf.html["Complete o seu hot-add"]
+[role="quick-margin-para"]
+Se você desativou a atribuição automática de unidade como parte da preparação para o hot-add, será necessário atribuir manualmente a propriedade da unidade e, em seguida, reativar a atribuição automática de unidade, se necessário.

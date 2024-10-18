@@ -1,0 +1,200 @@
+---
+permalink: fas8200/bootmedia-shutdown.html 
+sidebar: sidebar 
+keywords: fas8200, shut down the impaired controller 
+summary: Você pode desligar ou assumir o controlador prejudicado usando procedimentos diferentes, dependendo da configuração do hardware do sistema de armazenamento. 
+---
+= Desligue o controlador desativado - FAS8200
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+
+
+== Opção 1: A maioria dos sistemas
+
+[role="lead"]
+Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador desativado. Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador desativado.
+
+.Passos
+. Leve o controlador prejudicado para o prompt Loader:
++
+[cols="1,2"]
+|===
+| Se o controlador afetado apresentar... | Então... 
+
+
+ a| 
+O prompt Loader
+ a| 
+Vá para Remover módulo do controlador.
+
+
+
+ a| 
+`Waiting for giveback...`
+ a| 
+Pressione Ctrl-C e responda `y` quando solicitado.
+
+
+
+ a| 
+Prompt do sistema ou prompt de senha (digite a senha do sistema)
+ a| 
+Assuma ou interrompa o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode impaired_node_name`
+
+Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
+
+|===
+. No prompt Loader, digite: `printenv` Para capturar todas as variáveis ambientais de inicialização. Salve a saída no arquivo de log.
++
+
+NOTE: Este comando pode não funcionar se o dispositivo de inicialização estiver corrompido ou não funcional.
+
+
+
+
+
+== Opção 2: O controlador está em uma configuração MetroCluster
+
+
+NOTE: Não use este procedimento se o sistema estiver em uma configuração de MetroCluster de dois nós.
+
+Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
+
+* Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
+* Se você tiver uma configuração MetroCluster, você deve ter confirmado que o estado de configuração do MetroCluster está configurado e que os nós estão em um estado ativado e normal (`metrocluster node show`).
+
+
+.Passos
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Desative a giveback automática a partir da consola do controlador saudável: `storage failover modify –node local -auto-giveback false`
+. Leve o controlador prejudicado para o prompt Loader:
++
+[cols="1,2"]
+|===
+| Se o controlador afetado estiver a apresentar... | Então... 
+
+
+ a| 
+O prompt Loader
+ a| 
+Vá para a próxima etapa.
+
+
+
+ a| 
+A aguardar pela giveback...
+ a| 
+Pressione Ctrl-C e responda `y` quando solicitado.
+
+
+
+ a| 
+Prompt do sistema ou prompt de senha (digite a senha do sistema)
+ a| 
+Assuma ou interrompa o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
+
+|===
+
+
+
+
+== Opção 3: O controlador está em um MetroCluster de dois nós
+
+Para desligar o controlador desativado, você deve determinar o status do controlador e, se necessário, trocar o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador prejudicado.
+
+.Sobre esta tarefa
+* Você deve deixar as fontes de alimentação ligadas no final deste procedimento para fornecer energia ao controlador de integridade.
+
+
+.Passos
+. Verifique o estado do MetroCluster para determinar se o controlador afetado mudou automaticamente para o controlador saudável: `metrocluster show`
+. Dependendo se ocorreu uma mudança automática, proceda de acordo com a seguinte tabela:
++
+[cols="1,2"]
+|===
+| Se o controlador deficiente... | Então... 
+
+
+ a| 
+Mudou automaticamente
+ a| 
+Avance para o passo seguinte.
+
+
+
+ a| 
+Não mudou automaticamente
+ a| 
+Execute uma operação de comutação planejada a partir do controlador íntegro: `metrocluster switchover`
+
+
+
+ a| 
+Não mudou automaticamente, tentou mudar com o comando e o switchover `metrocluster switchover` foi vetado
+ a| 
+Reveja as mensagens de veto e, se possível, resolva o problema e tente novamente. Se você não conseguir resolver o problema, entre em Contato com o suporte técnico.
+
+|===
+. Ressincronize os agregados de dados executando o `metrocluster heal -phase aggregates` comando do cluster sobrevivente.
++
+[listing]
+----
+controller_A_1::> metrocluster heal -phase aggregates
+[Job 130] Job succeeded: Heal Aggregates is successful.
+----
++
+Se a cura for vetada, você tem a opção de reemitir o `metrocluster heal` comando com o `-override-vetoes` parâmetro. Se você usar esse parâmetro opcional, o sistema substituirá quaisquer vetos de software que impeçam a operação de recuperação.
+
+. Verifique se a operação foi concluída usando o comando MetroCluster operation show.
++
+[listing]
+----
+controller_A_1::> metrocluster operation show
+    Operation: heal-aggregates
+      State: successful
+Start Time: 7/25/2016 18:45:55
+   End Time: 7/25/2016 18:45:56
+     Errors: -
+----
+. Verifique o estado dos agregados utilizando o `storage aggregate show` comando.
++
+[listing]
+----
+controller_A_1::> storage aggregate show
+Aggregate     Size Available Used% State   #Vols  Nodes            RAID Status
+--------- -------- --------- ----- ------- ------ ---------------- ------------
+...
+aggr_b2    227.1GB   227.1GB    0% online       0 mcc1-a2          raid_dp, mirrored, normal...
+----
+. Curar os agregados raiz usando o `metrocluster heal -phase root-aggregates` comando.
++
+[listing]
+----
+mcc1A::> metrocluster heal -phase root-aggregates
+[Job 137] Job succeeded: Heal Root Aggregates is successful
+----
++
+Se a recuperação for vetada, você terá a opção de reemitir o `metrocluster heal` comando com o parâmetro -override-vetos. Se você usar esse parâmetro opcional, o sistema substituirá quaisquer vetos de software que impeçam a operação de recuperação.
+
+. Verifique se a operação heal está concluída usando o `metrocluster operation show` comando no cluster de destino:
++
+[listing]
+----
+
+mcc1A::> metrocluster operation show
+  Operation: heal-root-aggregates
+      State: successful
+ Start Time: 7/29/2016 20:54:41
+   End Time: 7/29/2016 20:54:42
+     Errors: -
+----
+. No módulo do controlador desativado, desligue as fontes de alimentação.
+

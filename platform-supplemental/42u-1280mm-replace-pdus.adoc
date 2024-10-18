@@ -1,0 +1,49 @@
+---
+permalink: platform-supplemental/42u-1280mm-replace-pdus.html 
+sidebar: sidebar 
+keywords: replace, fail, PDU, system, cabinet, replace, exist, replace pdu 
+summary: Você pode substituir uma PDU com falha no gabinete do sistema ou substituir uma PDU existente por um tipo diferente de PDU. 
+---
+= Substitua as PDUs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode substituir uma PDU com falha no gabinete do sistema ou substituir uma PDU existente por um tipo diferente de PDU.
+
+A PDU de substituição deve ser suportada pelo gabinete do sistema e deve fornecer energia suficiente para o equipamento instalado.
+
+https://hwu.netapp.com/["hwu.NetApp.com"]
+
+. Desligue os disjuntores na PDU prejudicada e, em seguida, desconete a PDU prejudicada da fonte de alimentação CA.
+. Aterre-se ao gabinete do sistema e, em seguida, desconete os cabos de alimentação de cada um dos componentes do sistema e da PDU prejudicada.
+. Remova os parafusos da estrutura PDU, parafuso inferior primeiro.
++
+
+NOTE: Certifique-se de que suporta a PDU com uma mão enquanto remove o último parafuso da parte superior da PDU. Isto impede que a PDU caia ou caia na sua direção depois de o parafuso ser removido.
+
+. Remova a PDU prejudicada do gabinete do sistema.
++
+Certifique-se de que acompanha os parafusos de montagem para que possa reutilizá-los ao instalar a PDU de substituição.
+
+. Retire os suportes da PDU prejudicada e, em seguida, instale-os na parte de trás da PDU de substituição.
+. Enquanto apoia a PDU de substituição, alinhe o slot no suporte de montagem da PDU com os orifícios superiores da estrutura no interior do gabinete do sistema e, em seguida, fixe a PDU à estrutura do gabinete do sistema usando os parafusos de montagem da PDU prejudicada.
+. Fixe a parte inferior da PDU à estrutura do armário do sistema e, em seguida, aperte todos os parafusos de montagem.
+. Verifique se todos os interrutores de alimentação ou disjuntores estão na posição desligada.
++
+Se os disjuntores não estiverem na posição desligada, empurre uma pequena chave de fenda ou um clipe de papel endireitado na ranhura à direita da etiqueta desligada para acionar o disjuntor e desligar o circuito.
+
+. Conete os cabos de alimentação que você desconetou do sistema de armazenamento, dos switches e das gavetas de unidades na PDU de substituição, conetando cada componente à tomada PDU diretamente em frente ao componente.
++
+
+TIP: Uma prática recomendada é distribuir a carga total entre os ramos da PDU, tornando cada carga de ramificação o mais igual possível.
+
+. Bloqueie cada ficha do cabo de alimentação componente no lugar com o grampo de fixação do cabo acima, deslizando a extremidade curva do grampo de fixação do cabo sobre o ressalto da ficha.
+. Ligue o cabo de alimentação da PDU à fonte de alimentação CA.
+. Ligue os interrutores de alimentação da PDU ou os disjuntores da PDU.
++
+Para disjuntores PDU, o botão está ligado quando está alinhado com a estrutura PDU.
+
+

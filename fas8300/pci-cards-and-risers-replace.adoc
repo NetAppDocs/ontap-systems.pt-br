@@ -1,0 +1,426 @@
+---
+permalink: fas8300/pci-cards-and-risers-replace.html 
+sidebar: sidebar 
+keywords: fas8300, fas8700, replace, pcie, mezzanine, card, controller, metrocluster, reinstall, controller, aggregate, reinstall, controller 
+summary: Para substituir uma placa PCIe ou mezzanine, você deve desconetar os cabos e todos os módulos SFP e QSFP das placas, substituir a placa PCIe ou mezzanine com falha e, em seguida, voltar a digitalizar as placas. 
+---
+= Substitua uma placa PCIe ou mezzanine - FAS8300 e FAS8700
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para substituir uma placa PCIe ou mezzanine, você deve desconetar os cabos e todos os módulos SFP e QSFP das placas, substituir a placa PCIe ou mezzanine com falha e, em seguida, voltar a digitalizar as placas.
+
+* Pode utilizar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema
+* Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+
+
+
+
+== Passo 1: Desligue o controlador desativado
+
+Você pode desligar ou assumir o controlador prejudicado usando procedimentos diferentes, dependendo da configuração do hardware do sistema de armazenamento.
+
+[role="tabbed-block"]
+====
+.Opção 1: A maioria das configurações
+--
+Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
+
+.Sobre esta tarefa
+* Se você tiver um sistema SAN, você deve ter verificado mensagens de  `cluster kernel-service show`evento ) para o blade SCSI do controlador afetado. O `cluster kernel-service show` comando (do modo avançado priv) exibe o nome do nó, link:https://docs.netapp.com/us-en/ontap/system-admin/display-nodes-cluster-task.html["status do quorum"]desse nó, o status de disponibilidade desse nó e o status operacional desse nó.
++
+Cada processo SCSI-blade deve estar em quórum com os outros nós no cluster. Qualquer problema deve ser resolvido antes de prosseguir com a substituição.
+
+* Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
+
+
+.Passos
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
++
+A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas: `cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Desative a giveback automática a partir da consola do controlador saudável: `storage failover modify –node local -auto-giveback false`
++
+
+NOTE: Quando vir _do pretende desativar a auto-giveback?_, introduza `y`.
+
+. Leve o controlador prejudicado para o prompt Loader:
++
+[cols="1,2"]
+|===
+| Se o controlador afetado estiver a apresentar... | Então... 
+
+
+ a| 
+O prompt Loader
+ a| 
+Vá para a próxima etapa.
+
+
+
+ a| 
+A aguardar pela giveback...
+ a| 
+Pressione Ctrl-C e responda `y` quando solicitado.
+
+
+
+ a| 
+Prompt do sistema ou prompt de senha
+ a| 
+Assuma ou interrompa o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
+
+|===
+
+
+--
+.Opção 2: O controlador está em um MetroCluster de dois nós
+--
+Para desligar o controlador desativado, você deve determinar o status do controlador e, se necessário, trocar o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador prejudicado.
+
+.Sobre esta tarefa
+* Você deve deixar as fontes de alimentação ligadas no final deste procedimento para fornecer energia ao controlador de integridade.
+
+
+.Passos
+. Verifique o estado do MetroCluster para determinar se o controlador afetado mudou automaticamente para o controlador saudável: `metrocluster show`
+. Dependendo se ocorreu uma mudança automática, proceda de acordo com a seguinte tabela:
++
+[cols="1,2"]
+|===
+| Se o controlador deficiente... | Então... 
+
+
+ a| 
+Mudou automaticamente
+ a| 
+Avance para o passo seguinte.
+
+
+
+ a| 
+Não mudou automaticamente
+ a| 
+Execute uma operação de comutação planejada a partir do controlador íntegro: `metrocluster switchover`
+
+
+
+ a| 
+Não mudou automaticamente, tentou mudar com o comando e o switchover `metrocluster switchover` foi vetado
+ a| 
+Reveja as mensagens de veto e, se possível, resolva o problema e tente novamente. Se você não conseguir resolver o problema, entre em Contato com o suporte técnico.
+
+|===
+. Ressincronize os agregados de dados executando o `metrocluster heal -phase aggregates` comando do cluster sobrevivente.
++
+[listing]
+----
+controller_A_1::> metrocluster heal -phase aggregates
+[Job 130] Job succeeded: Heal Aggregates is successful.
+----
++
+Se a cura for vetada, você tem a opção de reemitir o `metrocluster heal` comando com o `-override-vetoes` parâmetro. Se você usar esse parâmetro opcional, o sistema substituirá quaisquer vetos de software que impeçam a operação de recuperação.
+
+. Verifique se a operação foi concluída usando o comando MetroCluster operation show.
++
+[listing]
+----
+controller_A_1::> metrocluster operation show
+    Operation: heal-aggregates
+      State: successful
+Start Time: 7/25/2016 18:45:55
+   End Time: 7/25/2016 18:45:56
+     Errors: -
+----
+. Verifique o estado dos agregados utilizando o `storage aggregate show` comando.
++
+[listing]
+----
+controller_A_1::> storage aggregate show
+Aggregate     Size Available Used% State   #Vols  Nodes            RAID Status
+--------- -------- --------- ----- ------- ------ ---------------- ------------
+...
+aggr_b2    227.1GB   227.1GB    0% online       0 mcc1-a2          raid_dp, mirrored, normal...
+----
+. Curar os agregados raiz usando o `metrocluster heal -phase root-aggregates` comando.
++
+[listing]
+----
+mcc1A::> metrocluster heal -phase root-aggregates
+[Job 137] Job succeeded: Heal Root Aggregates is successful
+----
++
+Se a recuperação for vetada, você terá a opção de reemitir o `metrocluster heal` comando com o parâmetro -override-vetos. Se você usar esse parâmetro opcional, o sistema substituirá quaisquer vetos de software que impeçam a operação de recuperação.
+
+. Verifique se a operação heal está concluída usando o `metrocluster operation show` comando no cluster de destino:
++
+[listing]
+----
+
+mcc1A::> metrocluster operation show
+  Operation: heal-root-aggregates
+      State: successful
+ Start Time: 7/29/2016 20:54:41
+   End Time: 7/29/2016 20:54:42
+     Errors: -
+----
+. No módulo do controlador desativado, desligue as fontes de alimentação.
+
+
+--
+====
+
+
+== Passo 2: Remova o módulo do controlador
+
+Para aceder aos componentes no interior do módulo do controlador, tem de remover o módulo do controlador do chassis.
+
+Você pode usar a animação, ilustração ou as etapas escritas a seguir para remover o módulo do controlador do chassi.
+
+.Animação - retire o módulo do controlador
+video::75b6fa91-96b9-4323-b156-aae10007c9a5[panopto]
+image::../media/drw_A400_Remove_controller.png[Soltar o módulo do controlador]
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Solte os fixadores do cabo de alimentação e, em seguida, desconete os cabos das fontes de alimentação.
+. Solte o gancho e a alça de loop que prendem os cabos ao dispositivo de gerenciamento de cabos e, em seguida, desconete os cabos do sistema e os SFPs (se necessário) do módulo do controlador, mantendo o controle de onde os cabos estavam conetados.
++
+Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar o dispositivo de gerenciamento de cabos, os cabos sejam organizados.
+
+. Retire o dispositivo de gestão de cabos do módulo do controlador e coloque-o de lado.
+. Prima ambos os trincos de bloqueio para baixo e, em seguida, rode ambos os trincos para baixo ao mesmo tempo.
++
+O módulo do controlador desloca-se ligeiramente para fora do chassis.
+
+. Faça deslizar o módulo do controlador para fora do chassis.
++
+Certifique-se de que suporta a parte inferior do módulo do controlador enquanto o desliza para fora do chassis.
+
+. Coloque o módulo do controlador numa superfície estável e plana.
+
+
+
+
+== Etapa 3: Substitua uma placa PCIe
+
+Para substituir uma placa PCIe, você deve localizar a placa PCIe com falha, remover a riser que contém a placa do módulo da controladora, substituir a placa e reinstalar a riser PCIe no módulo da controladora.
+
+Você pode usar a animação, ilustração ou as etapas escritas a seguir para substituir uma placa PCIe.
+
+.Animação - substitua uma placa PCIe
+video::84339f87-321c-400e-985e-aae10182cd24[panopto]
+image:../media/drw_A400_Replace-PCIe-cards.png["Remover as placas PCIe"]
+
+.Passos
+. Remova o riser que contém a placa a ser substituída:
++
+.. Abra a conduta de ar premindo as patilhas de bloqueio nas laterais da conduta de ar, deslize-a em direção à parte de trás do módulo do controlador e, em seguida, rode-a para a posição completamente aberta.
+.. Remova quaisquer módulos SFP ou QSFP que possam estar nas placas PCIe.
+.. Gire a trava de travamento da riser no lado esquerdo da riser para cima e em direção à conduta de ar.
++
+A riser levanta-se ligeiramente do módulo do controlador.
+
+.. Levante a riser para cima e coloque-a de lado sobre uma superfície plana estável,
+
+
+. Remova a placa PCIe da riser:
++
+.. Gire o riser para que você possa acessar a placa PCIe.
+.. Pressione o suporte de travamento na lateral da riser PCIe e gire-o até a posição aberta.
+.. Apenas para os tirantes 2 e 3, rode o painel lateral para cima.
+.. Remova a placa PCIe da riser empurrando cuidadosamente o suporte e levante a placa diretamente para fora do soquete.
+
+
+. Instale a placa PCIe de substituição na riser alinhando a placa com o soquete, pressione a placa no soquete e feche o painel lateral na riser, se houver.
++
+Certifique-se de que alinha corretamente a placa na ranhura e exerce uma pressão uniforme sobre a placa quando a coloca na tomada. A placa PCIe deve estar totalmente e uniformemente encaixada no slot.
+
++
+
+NOTE: Se você estiver instalando uma placa no slot inferior e não conseguir ver bem o soquete da placa, remova a placa superior para que você possa ver o soquete da placa, instalar a placa e reinstalar a placa que você removeu do slot superior.
+
+. Reinstale a riser:
++
+.. Alinhe a riser com os pinos na lateral do soquete da riser, abaixe a riser para baixo nos pinos.
+.. Empurre a riser diretamente no soquete da placa-mãe.
+.. Rode o trinco para baixo, alinhado com a chapa metálica na riser.
+
+
+
+
+
+
+== Passo 4: Substitua a placa mezzanine
+
+A placa mezzanine está localizada sob o riser número 3 (slots 4 e 5). Você deve remover esse riser para acessar a placa mezzanine, substituir a placa mezzanine e reinstalar o riser número 3. Consulte o mapa da FRU no módulo do controlador para obter mais informações.
+
+Você pode usar a animação, ilustração ou as etapas escritas a seguir para substituir a placa mezzanine.
+
+.Animação - substitua a placa mezzanine
+video::4e00f5b1-8ca5-4cd6-9881-aadb01578e52[panopto]
+image::../media/drw_A400_Replace-mezz-card.png[Retirar a placa mezzanine]
+
+.Passos
+. Remova o riser número 3 (slots 4 e 5):
++
+.. Abra a conduta de ar premindo as patilhas de bloqueio nas laterais da conduta de ar, deslize-a em direção à parte de trás do módulo do controlador e, em seguida, rode-a para a posição completamente aberta.
+.. Remova quaisquer módulos SFP ou QSFP que possam estar nas placas PCIe.
+.. Gire a trava de travamento da riser no lado esquerdo da riser para cima e em direção à conduta de ar.
++
+A riser levanta-se ligeiramente do módulo do controlador.
+
+.. Levante a riser e, em seguida, coloque-a de lado em uma superfície estável e plana.
+
+
+. Substitua a placa mezzanine:
++
+.. Remova todos os módulos QSFP ou SFP da placa.
+.. Solte os parafusos de aperto manual na placa do mezanino e levante cuidadosamente a placa diretamente para fora do soquete e coloque-a de lado.
+.. Alinhe a placa de mezanino de substituição sobre o soquete e os pinos-guia e empurre cuidadosamente a placa para dentro do soquete.
+.. Aperte os parafusos de aperto manual na placa do mezanino.
+
+
+. Reinstale a riser:
++
+.. Alinhe a riser com os pinos na lateral do soquete da riser, abaixe a riser para baixo nos pinos.
+.. Empurre a riser diretamente no soquete da placa-mãe.
+.. Rode o trinco para baixo, alinhado com a chapa metálica na riser.
+
+
+
+
+
+
+== Passo 5: Instale o módulo do controlador
+
+Depois de ter substituído o componente no módulo do controlador, tem de reinstalar o módulo do controlador no chassis e, em seguida, iniciá-lo no modo de manutenção.
+
+Você pode usar a animação, ilustração ou as etapas escritas a seguir para instalar o módulo do controlador no chassi.
+
+.Animação - instale o módulo do controlador
+video::9249fdb8-1522-437d-9280-aae10007c97b[panopto]
+image::../media/drw_A400_Install_controller_source.png[Instalar o controlador]
+
+.Passos
+. Se ainda não o tiver feito, feche a conduta de ar.
+. Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
++
+
+NOTE: Não introduza completamente o módulo do controlador no chassis até ser instruído a fazê-lo.
+
+. Recable o sistema, conforme necessário.
++
+Se você removeu os conversores de Mídia (QSFPs ou SFPs), lembre-se de reinstalá-los se você estiver usando cabos de fibra ótica.
+
+. Conclua a instalação do módulo do controlador:
++
+.. Ligue o cabo de alimentação à fonte de alimentação, volte a instalar o anel de bloqueio do cabo de alimentação e, em seguida, ligue a fonte de alimentação à fonte de alimentação.
+.. Utilizando os trincos de bloqueio, empurre firmemente o módulo do controlador para dentro do chassis até que este se encontre com o plano médio e esteja totalmente assente.
++
+Os trincos de bloqueio sobem quando o módulo do controlador está totalmente assente.
+
++
+
+NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
+
++
+O módulo do controlador começa a arrancar assim que estiver totalmente assente no chassis. Esteja preparado para interromper o processo de inicialização.
+
+.. Assente totalmente o módulo do controlador no chassis, rodando os trincos de bloqueio para cima, inclinando-os para que estes limpem os pinos de bloqueio, empurre cuidadosamente o controlador totalmente para dentro e, em seguida, baixe os trincos de bloqueio para a posição de bloqueio.
+.. Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos.
+.. Interrompa o processo normal de inicialização e inicialize no Loader pressionando `Ctrl-C`.
++
+
+NOTE: Se o sistema parar no menu de inicialização, selecione a opção para inicializar NO Loader.
+
+.. No prompt Loader, digite `bye` para reinicializar as placas PCIe e outros componentes e deixar a controladora reiniciar.
+
+
+. Volte a colocar o controlador em funcionamento normal, devolvendo o respetivo armazenamento: `storage failover giveback -ofnode _impaired_node_name_`
+. Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true`
+
+
+
+
+== Etapa 6: Alterne agregados de volta em uma configuração de MetroCluster de dois nós
+
+Depois de concluir a substituição da FRU em uma configuração de MetroCluster de dois nós, você pode executar a operação de switchback do MetroCluster. Isso retorna a configuração ao seu estado operacional normal, com as máquinas virtuais de armazenamento de origem sincronizada (SVMs) no site anteriormente prejudicado agora ativo e fornecendo dados dos pools de discos locais.
+
+Esta tarefa só se aplica a configurações de MetroCluster de dois nós.
+
+.Passos
+. Verifique se todos os nós estão no `enabled` estado: `metrocluster node show`
++
+[listing]
+----
+cluster_B::>  metrocluster node show
+
+DR                           Configuration  DR
+Group Cluster Node           State          Mirroring Mode
+----- ------- -------------- -------------- --------- --------------------
+1     cluster_A
+              controller_A_1 configured     enabled   heal roots completed
+      cluster_B
+              controller_B_1 configured     enabled   waiting for switchback recovery
+2 entries were displayed.
+----
+. Verifique se a ressincronização está concluída em todos os SVMs: `metrocluster vserver show`
+. Verifique se todas as migrações automáticas de LIF que estão sendo executadas pelas operações de recuperação foram concluídas com sucesso: `metrocluster check lif show`
+. Execute o switchback usando o `metrocluster switchback` comando de qualquer nó no cluster sobrevivente.
+. Verifique se a operação de comutação foi concluída: `metrocluster show`
++
+A operação de switchback ainda está em execução quando um cluster está no `waiting-for-switchback` estado:
+
++
+[listing]
+----
+cluster_B::> metrocluster show
+Cluster              Configuration State    Mode
+--------------------	------------------- 	---------
+ Local: cluster_B configured       	switchover
+Remote: cluster_A configured       	waiting-for-switchback
+----
++
+A operação de switchback é concluída quando os clusters estão no `normal` estado.:
+
++
+[listing]
+----
+cluster_B::> metrocluster show
+Cluster              Configuration State    Mode
+--------------------	------------------- 	---------
+ Local: cluster_B configured      		normal
+Remote: cluster_A configured      		normal
+----
++
+Se um switchback estiver demorando muito tempo para terminar, você pode verificar o status das linhas de base em andamento usando o `metrocluster config-replication resync-status show` comando.
+
+. Restabelecer qualquer configuração SnapMirror ou SnapVault.
+
+
+
+
+== Passo 7: Restaure o módulo do controlador para a operação
+
+Você deve reajustar o sistema, devolver o módulo do controlador e, em seguida, reativar a giveback automática.
+
+.Passos
+. Recable o sistema, conforme necessário.
++
+Se você removeu os conversores de Mídia (QSFPs ou SFPs), lembre-se de reinstalá-los se você estiver usando cabos de fibra ótica.
+
+. Volte a colocar o controlador em funcionamento normal, devolvendo o respetivo armazenamento: `storage failover giveback -ofnode _impaired_node_name_`
+. Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true`
+
+
+
+
+== Passo 8: Devolva a peça com falha ao NetApp
+
+Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

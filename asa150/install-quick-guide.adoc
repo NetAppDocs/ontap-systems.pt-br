@@ -1,0 +1,21 @@
+---
+permalink: asa150/install-quick-guide.html 
+sidebar: sidebar 
+keywords: asa a150, a150, asa, quick, guide, graphic, instructions, install, rack, cable 
+summary: Este guia fornece instruções gráficas para uma instalação típica do seu sistema, desde o empilhamento em rack e cabeamento, até o lançamento inicial do sistema. 
+---
+= Guia rápido - ASA A150
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+*Aviso:* se o seu sistema estiver sendo instalado com o ONTAP 9.13.1P8 - 9.13.1P11, ONTAP 9.14.1P1 - 9.14.1P7 ou ONTAP 9.15,1 - 9.15.1P2 e o seu sistema contiver 10 ou mais unidades de estado sólido internas, você deve tomar medidas adicionais para preparar o sistema para a instalação. Consulte problema  https://mysupport.netapp.com/site/bugs-online/product/ONTAP/JiraNgage/CONTAP-285173["CONTAP-285173 - ADP não deixa uma partição raiz sobressalente em um AFF A150 com 10 ou mais unidades internas"^].
+
+As instruções de instalação e configuração fornecem instruções gráficas para uma instalação típica do seu sistema, desde o empilhamento em rack e cabeamento, até a apresentação inicial do sistema. Use este guia se estiver familiarizado com a instalação de sistemas NetApp.
+
+Use o link: link:../media/PDF/Jan_2024_Rev2_AFFA150_ISI_IEOPS-1480.pdf["Instruções de instalação e configuração do sistema AFF A150"^]
+
+
+NOTE: O ASA A150 utiliza o mesmo procedimento de instalação que o sistema AFF A150.

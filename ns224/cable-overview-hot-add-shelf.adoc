@@ -1,0 +1,61 @@
+---
+permalink: ns224/cable-overview-hot-add-shelf.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, cable, hot-add an ns224 drive shelf 
+summary: Você faz a adição de cabos para cada gaveta de NS224 TB, de modo que cada gaveta tenha duas conexões a cada controladora no par de HA. 
+---
+= Visão geral do cabeamento para um hot-add - NS224 gavetas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você faz a adição de cabos para cada gaveta de NS224 TB, de modo que cada gaveta tenha duas conexões a cada controladora no par de HA.
+
+Esta seção de cabeamento descreve como fazer o cabeamento da gaveta NS224 para os seguintes sistemas de storage:
+
+* link:cable-aff-systems-hot-add-shelf.html["Cabo para sistemas AFF"]
+* link:cable-asa-systems-hot-add-shelf.html["Cabo para sistemas ASA"]
+* link:cable-eoa-systems-hot-add-shelf.html["Cabo para sistemas EOA"]
+
+
+
+
+== Sobre esta tarefa
+
+* Familiarize-se com a orientação adequada do conetor do cabo e a localização e rotulagem das portas nos módulos das prateleiras NS224 NSM100.
++
+** Os cabos são inseridos com a presilha do conetor voltada para cima.
++
+Quando um cabo é inserido corretamente, ele clica no lugar.
+
++
+Depois de conetar ambas as extremidades do cabo, os LEDs LNK (verde) da prateleira e da porta do controlador acendem-se. Se um LED LNK de porta não acender, recoloque o cabo.
+
++
+image::../media/oie_cable_pull_tab_up.png[Os cabos são inseridos com a presilha de puxar do conetor voltada para cima]
+
+** Você pode usar a ilustração a seguir para ajudá-lo a identificar fisicamente as portas da gaveta NSM100, e0a e e0b.
++
+Um compartimento de NS224U contém dois módulos de NSM100U. O módulo superior entra no slot A (NSM A) e o módulo inferior entra no slot B (NSM B).
+
++
+Cada módulo NSM100 inclui 2 portas x 100GbE QSFP28: e0a e e0b.
+
++
+image::../media/drw_ns224_back_ports.png[Localização das portas e0a e e0b do módulo NS224 NSM100]
+
+
+
+* Depois de ter cabeado uma gaveta hot-Added, o ONTAP reconhece a gaveta:
++
+** A propriedade da unidade é atribuída se a atribuição automática da unidade estiver ativada.
+** O firmware do compartimento do NSM e da unidade devem ser atualizados automaticamente, se necessário.
++
+
+NOTE: As atualizações de firmware podem levar até 30 minutos.
+
+
+
+

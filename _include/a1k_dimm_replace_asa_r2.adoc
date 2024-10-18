@@ -1,0 +1,205 @@
+= Passo 1: Desligue o controlador desativado
+:allow-uri-read: 
+
+
+É necessário substituir um DIMM no módulo do controlador quando o sistema registar um número crescente de códigos de correção de erros (ECC); se não o fizer, o sistema entra em pânico.
+
+.Antes de começar
+Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+
+Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor.
+
+
+
+== Passo 1: Desligue o controlador desativado
+
+Desligue ou assuma o controlador desativado.
+
+Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
+
+.Sobre esta tarefa
+* Se você tiver um sistema SAN, você deve ter verificado mensagens de  `cluster kernel-service show`evento ) para o blade SCSI do controlador afetado. O `cluster kernel-service show` comando (do modo avançado priv) exibe o nome do nó, link:https://docs.netapp.com/us-en/ontap/system-admin/display-nodes-cluster-task.html["status do quorum"]desse nó, o status de disponibilidade desse nó e o status operacional desse nó.
++
+Cada processo SCSI-blade deve estar em quórum com os outros nós no cluster. Qualquer problema deve ser resolvido antes de prosseguir com a substituição.
+
+* Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
+
+
+.Passos
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
++
+A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas: `cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Desative a giveback automática a partir da consola do controlador saudável: `storage failover modify –node local -auto-giveback false`
++
+
+NOTE: Quando vir _do pretende desativar a auto-giveback?_, introduza `y`.
+
+. Leve o controlador prejudicado para o prompt Loader:
++
+[cols="1,2"]
+|===
+| Se o controlador afetado estiver a apresentar... | Então... 
+
+
+ a| 
+O prompt Loader
+ a| 
+Vá para a próxima etapa.
+
+
+
+ a| 
+A aguardar pela giveback...
+ a| 
+Pressione Ctrl-C e responda `y` quando solicitado.
+
+
+
+ a| 
+Prompt do sistema ou prompt de senha
+ a| 
+Assuma ou interrompa o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
+
+|===
+
+
+
+
+== Passo 2: Remova o módulo do controlador
+
+Você deve remover o módulo do controlador do gabinete quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
+
+. Verifique o LED de status do NVRAM localizado no slot 4/5 do sistema. Há também um LED NVRAM no painel frontal do módulo do controlador. Procure o ícone NV:
++
+image::../media/drw_a1K-70-90_nvram-led_ieops-1463.svg[Gráfico de localização do LED de estado e atenção do NVRAM]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+LED de estado do NVRAM
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+LED de atenção NVRAM
+
+|===
++
+
+NOTE: Se o LED de status do NVRAM estiver piscando, isso pode significar que o módulo do controlador não foi tomado ou interrompido corretamente (dados não comprometidos). Se o módulo do controlador afetado não tiver sido tomado com sucesso pelo módulo do controlador parceiro, contacte https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de continuar com este procedimento.
+
++
+O comportamento geral do LED de estado do NVRAM no módulo do controlador desativado é o seguinte:
+
++
+** O LED de estado do NVRAM pisca quando a alimentação é removida do módulo do controlador e o módulo do controlador está no estado "aguardando a giveback" ou o módulo do controlador não é tomado ou interrompido corretamente (dados não confirmados).
+** O LED de estado do NVRAM pisca quando o módulo do controlador é removido do compartimento e pode significar que o módulo do controlador não é tomado ou interrompido corretamente (dados não confirmados). Confirme se o módulo do controlador foi corretamente adquirido pelo módulo do controlador parceiro ou se o módulo do controlador afetado mostra `waiting for giveback`. Em seguida, o LED piscando pode ser ignorado (e o controlador pode ser removido do gabinete).
+
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Na parte da frente da unidade, prenda os dedos nos orifícios dos cames de bloqueio, aperte as patilhas nas alavancas do excêntrico e, com cuidado, mas rode firmemente ambas as travas na sua direção ao mesmo tempo.
++
+O módulo do controlador move-se ligeiramente para fora do compartimento.
+
++
+image::../media/drw_a1k_pcm_remove_replace_ieops-1375.svg[Controlador remover gráfico]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+| Travas do came de travamento 
+|===
+. Deslize o módulo do controlador para fora do compartimento e coloque-o em uma superfície plana e estável.
++
+Certifique-se de que suporta a parte inferior do módulo do controlador enquanto o desliza para fora do compartimento.
+
+
+
+
+
+== Etapa 3: Substitua um DIMM
+
+Você deve substituir um DIMM quando o sistema relatar uma condição de falha permanente para esse DIMM.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Abra a conduta de ar do controlador na parte superior do controlador.
++
+.. Insira os dedos nas reentrâncias nas extremidades distantes da conduta de ar.
+.. Levante a conduta de ar e rode-a para cima o mais longe possível.
+
+
+. Localize os DIMMs no módulo do controlador e identifique o DIMM para substituição.
+. Ejete o DIMM de seu slot, empurrando lentamente as duas abas do ejetor do DIMM em ambos os lados do DIMM e, em seguida, deslize o DIMM para fora do slot.
++
+
+IMPORTANT: Segure cuidadosamente o DIMM pelas bordas para evitar a pressão nos componentes da placa de circuito DIMM.
+
++
+image::../media/drw_a1k_dimms_ieops-1512.svg[DIMM Substituir]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Guias de ejetor DIMM e DIMM
+
+|===
+. Remova o DIMM de substituição do saco de transporte antiestático, segure o DIMM pelos cantos e alinhe-o com o slot.
++
+O entalhe entre os pinos no DIMM deve estar alinhado com a guia no soquete.
+
+. Certifique-se de que as abas do ejetor DIMM no conetor estão na posição aberta e insira o DIMM diretamente no slot.
++
+O DIMM encaixa firmemente no slot, mas deve entrar facilmente. Caso contrário, realinhar o DIMM com o slot e reinseri-lo.
+
++
+
+IMPORTANT: Inspecione visualmente o DIMM para verificar se ele está alinhado uniformemente e totalmente inserido no slot.
+
+. Empurre com cuidado, mas firmemente, na borda superior do DIMM até que as abas do ejetor se encaixem no lugar sobre os entalhes nas extremidades do DIMM.
+. Feche a conduta de ar do controlador.
+
+
+
+
+== Passo 4: Instale o controlador
+
+Reinstale o módulo do controlador e inicialize-o.
+
+. Se ainda não o tiver feito, feche a conduta de ar.
+. Alinhe a extremidade do módulo do controlador com a abertura no compartimento e deslize o módulo do controlador para dentro do chassi com as alavancas giradas para longe da frente do sistema.
+. Assim que o módulo do controlador o impedir de deslizar para mais longe, rode as pegas do excêntrico para dentro até que fiquem presas por baixo das ventoinhas
++
+
+NOTE: Não use força excessiva ao deslizar o módulo do controlador para dentro do compartimento para evitar danificar os conetores.
+
++
+O módulo do controlador começa a inicializar assim que estiver totalmente encaixado no compartimento.
+
+. Restaure o giveback automático se você o desativou usando o `storage failover modify -node local -auto-giveback true` comando.
+. Se o AutoSupport estiver ativado, restaure/dessuprimir a criação automática de casos usando o `system node autosupport invoke -node * -type all -message MAINT=END` comando.
+
+
+
+
+== Passo 5: Devolva a peça com falha ao NetApp
+
+Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

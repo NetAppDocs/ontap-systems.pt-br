@@ -1,0 +1,129 @@
+= 
+:allow-uri-read: 
+
+
+Durante o processo de atualização movendo o storage, você liga o node3 e o node4, inicializa a imagem de software e configura os nós. O layout físico da porta entre nós originais e novos pode ser diferente. O mapeamento de portas entre nós originais e de substituição deve ser feito para identificar o layout adequado das portas e conexões.
+
+.Sobre esta tarefa
+Se a versão do ONTAP em execução nos novos nós for diferente da versão nos nós originais, você deve ter baixado o arquivo correto [ONTAP_version>_image.tgz do site de suporte da NetApp para um diretório acessível à Web (consulte a Etapa 4). Você precisa do arquivo ONTAP_version>_image.tgz para executar um netboot do sistema.
+
+.Passos
+. Ligue a alimentação para node3 e pressione imediatamente Ctrl-C no terminal do console para acessar o prompt DO Loader.
++
+Se node3 e node4 estiverem no mesmo chassis, avance para o passo 2. Caso contrário, avance para o passo 3.
+
+. Se o node3 e o node4 estiverem em uma configuração de chassi único (com controladores no mesmo chassi):
++
+.. Conete um console serial ao node4.
+.. Ligue a alimentação para node4, se ainda não ESTIVER LIGADA, e interrompa o processo de inicialização pressionando Ctrl-C no terminal do console para acessar o prompt Loader.
++
+A energia já deve ESTAR LIGADA se ambos os controladores estiverem no mesmo chassi.
+
++
+Deixe o node4 no prompt Loader; você retorna a este procedimento e repita estas etapas depois que o node3 for instalado.
+
+
+
+. No prompt Loader, digite o seguinte comando: `set-defaults`
+. No prompt Loader, configure a conexão netboot para um LIF de gerenciamento:
++
+[cols="1,2"]
+|===
+| Se o endereço IP for... | Então... 
+
+
+ a| 
+DHCP
+ a| 
+ Configure the automatic connection:
+`ifconfig e0M -auto`
+
+
+
+ a| 
+ Static a| 
+ Configure the manual connection:
+`ifconfig e0M -addr=ip_addr -mask=netmask` `-gw=gateway`
+
+|===
+. No prompt Loader, execute netboot no node3:
++
+[cols="1,2"]
+|===
+| Para... | Então... 
+
+
+ a| 
+*Sistemas das séries FAS2200, FAS2500, FAS3200, FAS6200, FAS/AFF8000*
+ a| 
+`+netboot http://web_server_ip/path_to_web-accessible_directory/netboot/kernel+`
+
+
+
+ a| 
+*Todos os outros sistemas*
+ a| 
+`+netboot http://web_server_ip/path_to_web-accessible_directory/<ontap_version>_image.tgz+`
+
+|===
++
+O path_to_the_web-accessible_Directory é a localização do arquivo baixado (ONTAP_version>_image.tgz).
+
++
+
+NOTE: Se você não conseguir netboot dos novos controladores, entre em Contato com o suporte técnico.
+
+. No menu de arranque, selecione a opção *(7) Instalar primeiro o novo software* para transferir e instalar a nova imagem de software no dispositivo de arranque.
++
+Ignore a seguinte mensagem: "Este procedimento não é suportado para atualização sem interrupções em um par de HA". Isso se aplica a atualizações de software sem interrupções, e não a atualizações de controladores.
+
+. Se você for solicitado a continuar o procedimento, digite `y` e, quando solicitado a fornecer o pacote, digite o URL do arquivo de imagem: `+http://web_server_ip/path_to_web-accessible_directory/<ontap_version>_image.tgz+`.
++
+Introduza o nome de utilizador/palavra-passe, se aplicável, ou prima Enter para continuar.
+
+. Digite `n` para ignorar a recuperação de backup quando você vir um prompt semelhante ao seguinte:
++
+[listing]
+----
+Do you want to restore the backup configuration now? {y|n}
+----
+. Reinicie entrando `y` quando você vir um prompt semelhante ao seguinte:
++
+[listing]
+----
+The node must be rebooted to start using the newly installed software. Do you want to reboot now? {y|n}
+----
+. Interrompa o processo de reinicialização pressionando Ctrl-C para exibir o menu de inicialização quando o sistema solicitar que você o faça.
+. No menu de arranque, selecione *(5) Inicialização do modo de manutenção* para aceder ao modo de manutenção.
+. Se necessário, faça alterações nas portas FC ou CNA no nó e reinicie o nó para o modo Manutenção.
++
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanag/home.html["Guia de administração de SAN ONTAP 9"]
+
++
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=30092["Encontre o Guia de Administração de SAN para sua versão do Data ONTAP 8"]
+
+. Você deve verificar se o comando output mostra ha:
++
+[listing]
+----
+*> ha-config show
+   Chassis HA configuration: ha
+   Controller HA configuration: ha
+----
++
+Os sistemas Registram em uma PROM, quer estejam em um par de HA ou em uma configuração independente. O estado deve ser o mesmo em todos os componentes do sistema autônomo ou do par de HA
+
++
+O comando ha-config modificar controlador ha configura ha para a configuração do controlador. O comando ha-config modificar chassis ha configura ha para a configuração do chassi.
+
++
+https://docs.netapp.com/us-en/ontap/high-availability/index.html["Gerenciamento de par HA"^]
+
++
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=30092["Encontre o Guia de Configuração de alta disponibilidade para a sua versão do Data ONTAP 8"]
+
+. Sair do modo de manutenção: `halt`
++
+O sistema pára no prompt DO Loader.
+
+

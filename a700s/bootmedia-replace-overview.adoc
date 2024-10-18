@@ -1,0 +1,28 @@
+---
+permalink: a700s/bootmedia-replace-overview.html 
+sidebar: sidebar 
+keywords: aff a700s, aff, a700s, primary, boot, media, store, ontap, image, system, restore, primary, media, secondary, usb, flash, drive, replace, replace the boot media 
+summary: A Mídia de inicialização principal armazena a imagem de inicialização do ONTAP que o sistema usa quando ele é inicializado. Pode restaurar a imagem principal do suporte de arranque utilizando a imagem ONTAP no suporte de arranque secundário ou, se necessário, utilizando uma unidade flash USB. 
+---
+= Descrição geral da substituição do suporte de arranque - AFF A700s
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A Mídia de inicialização principal armazena a imagem de inicialização do ONTAP que o sistema usa quando ele é inicializado. Pode restaurar a imagem principal do suporte de arranque utilizando a imagem ONTAP no suporte de arranque secundário ou, se necessário, utilizando uma unidade flash USB.
+
+Se a Mídia de inicialização secundária tiver falhado ou estiver faltando o arquivo image.tgz, você deve restaurar a Mídia de inicialização primária usando uma unidade flash USB. A unidade deve ser formatada para FAT32 e deve ter a quantidade apropriada de armazenamento para manter o arquivo image_xxx.tgz.
+
+* O processo de substituição restaura o sistema de arquivos var da Mídia de inicialização secundária ou da unidade flash USB para a Mídia de inicialização principal.
+* Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor.
+* É importante que você aplique os comandos nestas etapas no controlador correto:
++
+** O controlador _prejudicado_ é o controlador no qual você está realizando a manutenção.
+** O controlador _Healthy_ é o parceiro de HA do controlador prejudicado.
+
+
+
+
+Se você precisar substituir a Mídia de inicialização secundária enquanto a Mídia de inicialização principal estiver instalada e saudável, entre em Contato com o suporte da NetApp e mencione o https://kb.netapp.com/on-prem/ontap/OHW/OHW-KBs/How_to_replace_the_secondary_boot_device_of_an_a700s["Como substituir o dispositivo de inicialização secundário de um AFF A700s"^] artigo da KB.

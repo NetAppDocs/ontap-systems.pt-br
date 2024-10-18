@@ -1,0 +1,21 @@
+---
+permalink: fas8200/chassis-replace-overview.html 
+sidebar: sidebar 
+keywords: fas8200, replace the chassis 
+summary: Substituir um chassis com deficiência o novo chassis do mesmo modelo que o chassis com deficiência. 
+---
+= Descrição geral da substituição do chassis - FAS8200
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para substituir o chassis, tem de mover as fontes de alimentação, as ventoinhas e os módulos do controlador do chassis danificado para o novo chassis e trocar o chassis danificado do rack de equipamento ou do armário do sistema pelo novo chassis do mesmo modelo que o chassis danificado.
+
+Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+
+* Pode utilizar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema.
+* Este procedimento é escrito com a suposição de que você está movendo o módulo do controlador ou os módulos para o novo chassi e que o chassi é um novo componente do NetApp.
+* Este procedimento é disruptivo. Para um cluster de duas controladoras, você terá uma interrupção de serviço completa e uma interrupção parcial em um cluster de vários nós.
+

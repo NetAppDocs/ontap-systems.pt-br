@@ -1,0 +1,137 @@
+= Passo 1: Remova os módulos do controlador
+:allow-uri-read: 
+
+
+Mova as fontes de alimentação, as unidades de disco rígido e o módulo do controlador do chassis danificado para o novo chassis e troque o chassis danificado pelo novo chassis do mesmo modelo que o chassis danificado.
+
+
+
+== Passo 1: Remova os módulos do controlador
+
+Para substituir o chassis, tem de remover os módulos do controlador do chassis antigo.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Solte os fixadores do cabo de alimentação e, em seguida, desconete os cabos das fontes de alimentação.
+. Solte o gancho e a alça de loop que prendem os cabos ao dispositivo de gerenciamento de cabos e, em seguida, desconete os cabos do sistema do módulo do controlador, mantendo o controle de onde os cabos estavam conetados.
++
+Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar o dispositivo de gerenciamento de cabos, os cabos sejam organizados.
+
+. Retire o dispositivo de gestão de cabos do módulo do controlador e coloque-o de lado.
+. Prima ambos os trincos de bloqueio para baixo e, em seguida, rode ambos os trincos para baixo ao mesmo tempo.
++
+O módulo do controlador desloca-se ligeiramente para fora do chassis.
+
++
+image::../media/drw_a800_pcm_remove.png[Solte o módulo do controlador]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Trinco de bloqueio
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Pino de bloqueio
+
+|===
+. Faça deslizar o módulo do controlador para fora do chassis.
++
+Certifique-se de que suporta a parte inferior do módulo do controlador enquanto o desliza para fora do chassis.
+
+. Coloque o módulo do controlador de lado num local seguro e repita estes passos para o outro módulo do controlador no chassis.
+
+
+
+
+== Passo 2: Mova as unidades para o novo chassi
+
+Você precisa mover as unidades de cada abertura do compartimento no chassi antigo para a mesma abertura do compartimento no novo chassi.
+
+. Retire cuidadosamente a moldura da parte frontal do sistema.
+. Remova as unidades:
++
+.. Prima o botão de libertação na parte superior da face do suporte por baixo dos LEDs.
+.. Puxe o manípulo do excêntrico para a posição totalmente aberta para retirar a transmissão do plano médio e, em seguida, deslize cuidadosamente a unidade para fora do chassis.
++
+A transmissão deve desengatar-se do chassis, permitindo que deslize para fora do chassis.
+
++
+
+NOTE: Ao remover uma unidade, utilize sempre duas mãos para suportar o seu peso.
+
++
+
+NOTE: Os acionamentos são frágeis. Manuseie-os o mínimo possível para evitar danos.
+
+
+
+. Alinhe a unidade do chassi antigo com a mesma abertura do compartimento no novo chassi.
+. Empurre cuidadosamente a unidade para dentro do chassis o mais longe possível.
++
+O manípulo do excêntrico engata e começa a rodar para cima.
+
+. Empurre firmemente a unidade o resto do caminho para dentro do chassis e, em seguida, bloqueie a pega do excêntrico empurrando-a para cima e contra o suporte da unidade.
++
+Certifique-se de que fecha lentamente o manípulo do excêntrico de forma a que fique corretamente alinhado com a parte dianteira do suporte da transmissão. Ele clica quando é seguro.
+
+. Repita o processo para as unidades restantes no sistema.
+
+
+
+
+== Etapa 3: Substitua um chassi de dentro do rack de equipamentos ou do gabinete do sistema
+
+Você deve remover o chassi existente do rack de equipamentos ou do gabinete do sistema antes de instalar o chassi de substituição.
+
+. Retire os parafusos dos pontos de montagem do chassis.
+. Com duas pessoas, deslize o chassi antigo para fora dos trilhos do rack em um gabinete do sistema ou rack de equipamentos e, em seguida, coloque-o de lado.
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Usando duas pessoas, instale o chassi de substituição no rack de equipamentos ou no gabinete do sistema guiando o chassi nos trilhos do rack em um gabinete do sistema ou rack de equipamentos.
+. Deslize o chassi até o rack de equipamentos ou o gabinete do sistema.
+. Fixe a parte frontal do chassi ao rack de equipamentos ou ao gabinete do sistema usando os parafusos removidos do chassi antigo.
+. Se ainda não o tiver feito, instale a moldura.
+
+
+
+
+== Passo 4: Instale os módulos do controlador
+
+Depois de instalar os módulos do controlador no novo chassi, você precisa iniciá-lo.
+
+Para pares de HA com dois módulos de controlador no mesmo chassi, a sequência em que você instala o módulo de controlador é especialmente importante porque ele tenta reiniciar assim que você o senta completamente no chassi.
+
+. Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
++
+
+NOTE: Não introduza completamente o módulo do controlador no chassis até ser instruído a fazê-lo.
+
+. Recable o console para o módulo do controlador e, em seguida, reconete a porta de gerenciamento.
+. Ligue os cabos de alimentação às fontes de alimentação e volte a instalar os fixadores do cabo de alimentação.
+. Conclua a reinstalação do módulo do controlador:
++
+.. Empurre firmemente o módulo do controlador para dentro do chassi até que ele atenda ao plano médio e esteja totalmente assentado.
++
+Os trincos de bloqueio sobem quando o módulo do controlador está totalmente assente.
+
++
+
+NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
+
++
+O módulo do controlador começa a arrancar assim que estiver totalmente assente no chassis. Esteja preparado para interromper o processo de inicialização.
+
+.. Rode os trincos de bloqueio para cima, inclinando-os de forma a que estes limpem os pinos de bloqueio e, em seguida, baixe-os para a posição de bloqueio.
+.. Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos.
+.. Interrompa o processo de inicialização normal pressionando `Ctrl-C`.
+
+
+. Repita os passos anteriores para instalar o segundo controlador no novo chassis.
+

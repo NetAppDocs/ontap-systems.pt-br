@@ -1,0 +1,33 @@
+---
+permalink: a200/bootmedia-replace-overview.html 
+sidebar: sidebar 
+keywords: aff a200, nondisruptive, disruptive, replace the boot media 
+summary: 'A Mídia de inicialização armazena um conjunto primário e secundário de arquivos de sistema (imagem de inicialização) que o sistema usa quando ele é inicializado. Dependendo da configuração da rede, você pode realizar uma substituição sem interrupções ou disruptiva.' 
+---
+= Descrição geral da substituição do suporte de arranque - AFF A200
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A Mídia de inicialização armazena um conjunto primário e secundário de arquivos do sistema (imagem de inicialização) que o sistema usa quando ele é inicializado. Dependendo da configuração da rede, você pode realizar uma substituição sem interrupções ou disruptiva.
+
+.O que você vai precisar
+Tem de ter uma unidade flash USB, formatada para FAT32, com a quantidade de armazenamento adequada para guardar o `image_xxx.tgz` ficheiro.
+
+.Antes de começar
+* Os métodos sem interrupções e disruptivos para substituir uma Mídia de inicialização exigem que você restaure o sistema de arquivos var:
++
+** Para substituição sem interrupções, o par de HA deve ser conetado a uma rede para restaurar o sistema de arquivos var.
+** Para a substituição disruptiva, não é necessário uma ligação de rede para restaurar o sistema de ficheiros var, mas o processo requer duas reinicializações.
+
+
+* Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor.
+* É importante que você aplique os comandos nestas etapas no controlador correto:
++
+** O controlador _prejudicado_ é o controlador no qual você está realizando a manutenção.
+** O controlador _Healthy_ é o parceiro de HA do controlador prejudicado.
+
+
+

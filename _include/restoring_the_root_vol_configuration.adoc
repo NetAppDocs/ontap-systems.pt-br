@@ -1,0 +1,45 @@
+= 
+:allow-uri-read: 
+
+
+Você deve restaurar as informações de configuração do volume raiz para os dispositivos de inicialização.
+
+.Sobre esta tarefa
+Você precisa executar estas etapas em node3 e node4, completando cada etapa em um nó e, em seguida, o outro antes de passar para a próxima etapa.
+
+.Passos
+. Acesse o menu de inicialização no prompt Loader: `boot_ontap menu`
+. No menu de inicialização, selecione (6) Atualizar flash a partir da configuração de backup e digite``y`` quando solicitado a continuar.
++
+[listing]
+----
+Please choose one of the following:
+
+(1) Normal Boot.
+(2) Boot without /etc/rc.
+(3) Change password.
+(4) Clean configuration and initialize all disks.
+(5) Maintenance mode boot.
+(6) Update flash from backup config.
+(7) Install new software first.
+(8) Reboot node.
+(9) Configure Advanced Drive Partitioning.
+Selection (1-9)? 6
+
+This will replace all flash-based configuration with the last backup to
+disks. Are you sure you want to continue?: y
+----
++
+O processo de atualização do flash é executado por vários minutos e, em seguida, o sistema reinicia.
+
+. Quando for solicitado que confirme a incompatibilidade da ID do sistema, introduza `y`.
++
+[listing]
+----
+WARNING: System id mismatch. This usually occurs when replacing CF or NVRAM cards!
+Override system id? {y|n} [n] y
+----
++
+A sequência de arranque prossegue normalmente.
+
+

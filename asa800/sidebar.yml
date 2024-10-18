@@ -1,0 +1,79 @@
+---
+section: asa800
+title: Sistemas ASA A800
+entries:
+- title: Instalar e configurar
+  pdf-filename: Instalação e configuração do ASA A800
+  entries:
+  - title: Escolha a experiência de instalação e configuração
+    url: "/asa800/install-setup.html"
+  - title: Passos rápidos
+    url: "/asa800/install-quick-guide.html"
+  - title: Passos de vídeo
+    url: "/asa800/install-videos.html"
+  - title: Passos detalhados
+    url: "/asa800/install-detailed-guide.html"
+- title: Manutenção
+  pdf-filename: Manutenção da ASA A800
+  entries:
+  - title: Visão geral
+    url: "/asa800/maintain-overview.html"
+  - title: Suporte de arranque
+    pdf-filename: Mídia de inicialização do ASA A800
+    entries:
+    - title: Visão geral
+      url: "/asa800/bootmedia-replace-overview.html"
+    - title: Verifique as chaves de criptografia integradas
+      url: "/asa800/bootmedia-encryption-preshutdown-checks.html"
+    - title: Desligue o controlador desativado
+      url: "/asa800/bootmedia-shutdown.html"
+    - title: Substitua a imagem de inicialização
+      url: "/asa800/bootmedia-replace.html"
+    - title: Imagem de recuperação de inicialização
+      url: "/asa800/bootmedia-recovery-image-boot-non-2n-mcc.html"
+    - title: Restaure OKM, NSE e NVE
+      url: "/asa800/bootmedia-encryption-restore.html"
+    - title: Devolver artigo com falha ao NetApp
+      url: "/asa800/bootmedia-complete-rma.html"
+  - title: Chassis
+    pdf-filename: Chassis ASA A800
+    entries:
+    - title: Visão geral
+      url: "/asa800/chassis-replace-overview.html"
+    - title: Desligue o controlador desativado
+      url: "/asa800/chassis-replace-shutdown.html"
+    - title: Substitua o chassi
+      url: "/asa800/chassis-replace-move-hardware.html"
+    - title: Substituição completa do chassis
+      url: "/asa800/chassis-replace-complete-system-restore-rma.html"
+  - title: Controlador
+    pdf-filename: Módulo do controlador ASA A800
+    entries:
+    - title: Visão geral
+      url: "/asa800/controller-replace-overview.html"
+    - title: Desligue o controlador desativado
+      url: "/asa800/controller-replace-shutdown.html"
+    - title: Substitua o controlador
+      url: "/asa800/controller-replace-move-hardware.html"
+    - title: Restaure a configuração do sistema
+      url: "/asa800/controller-replace-system-config-restore-and-verify.html"
+    - title: Sistema Recable
+      url: "/asa800/controller-replace-recable-reassign-disks.html"
+    - title: Substituição completa do controlador
+      url: "/asa800/controller-replace-restore-system-rma.html"
+  - title: DIMM
+    url: "/asa800/dimm-replace.html"
+  - title: Condução
+    url: "/asa800/drive-replace.html"
+  - title: Ventoinha
+    url: "/asa800/fan-replace.html"
+  - title: NVDIMM
+    url: "/asa800/nvdimm-replace.html"
+  - title: Bateria NVDIMM
+    url: "/asa800/nvdimm-battery-replace.html"
+  - title: Placa PCIe
+    url: "/asa800/pci-cards-and-risers-replace.html"
+  - title: Fonte de alimentação
+    url: "/asa800/power-supply-replace.html"
+  - title: Bateria de relógio em tempo real
+    url: "/asa800/rtc-battery-replace.html"

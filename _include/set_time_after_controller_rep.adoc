@@ -1,0 +1,30 @@
+= 
+:allow-uri-read: 
+
+
+Você deve verificar a hora e a data no módulo do controlador de substituição em relação ao módulo do controlador de integridade em um par de HA, ou em um servidor de tempo confiável em uma configuração autônoma. Se a hora e a data não corresponderem, tem de os repor no módulo do controlador de substituição para evitar possíveis interrupções nos clientes devido a diferenças de tempo.
+
+.Sobre esta tarefa
+É importante que você aplique os comandos nas etapas nos sistemas corretos:
+
+* O nó _replacement_ é o novo nó que substituiu o nó prejudicado como parte deste procedimento.
+* O nó _Healthy_ é o parceiro de HA do nó _replacement_.
+
+
+.Passos
+. Se o nó _replacement_ não estiver no prompt Loader, interrompa o sistema para o prompt Loader.
+. No nó _Healthy_, verifique a hora do sistema: `cluster date show`
++
+A data e a hora são baseadas no fuso horário configurado.
+
+. No prompt DO Loader, verifique a data e a hora no nó _replacement_: `show date`
++
+A data e a hora são dadas em GMT.
+
+. Se necessário, defina a data em GMT no nó de substituição: `set date _mm/dd/yyyy_`
+. Se necessário, defina a hora em GMT no nó de substituição: `set time _hh:mm:ss_`
+. No prompt DO Loader, confirme a data e a hora no nó _replacement_: `show date`
++
+A data e a hora são dadas em GMT.
+
+

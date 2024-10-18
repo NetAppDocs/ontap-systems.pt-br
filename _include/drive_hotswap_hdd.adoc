@@ -1,0 +1,87 @@
+= 
+:allow-uri-read: 
+
+
+. Se você quiser atribuir manualmente a propriedade da unidade para a unidade de substituição, você precisa desativar a unidade de substituição de atribuição automática de unidade, se ela estiver ativada
++
+
+NOTE: Atribua manualmente a propriedade da unidade e, em seguida, reative a atribuição automática da unidade mais adiante neste procedimento.
+
++
+.. Verifique se a atribuição automática de unidades está ativada: `storage disk option show`
++
+Você pode inserir o comando em qualquer um dos módulos do controlador.
+
++
+Se a atribuição automática de unidade estiver ativada, a saída será exibida `on` na coluna "'Auto Assign'" (para cada módulo do controlador).
+
+.. Se a atribuição automática de condução estiver ativada, desative-a: `storage disk option modify -node node_name -autoassign off`
++
+Tem de desativar a atribuição automática de condução em ambos os módulos do controlador.
+
+
+
+. Aterre-se corretamente.
+. Retire cuidadosamente a moldura da parte frontal da plataforma.
+. Identifique a unidade de disco com falha a partir da mensagem de aviso da consola do sistema e do LED de avaria iluminado na unidade de disco
+. Pressione o botão de liberação na face da unidade de disco.
++
+Dependendo do sistema de armazenamento, as unidades de disco têm o botão de liberação localizado na parte superior ou à esquerda da face da unidade de disco.
+
++
+Por exemplo, a ilustração a seguir mostra uma unidade de disco com o botão de liberação localizado na parte superior da face da unidade de disco:
+
++
+image::../media/2240_removing_disk.gif[Remova uma unidade com o botão de liberação na parte superior]
+
++
+A alavanca do came nas molas da unidade de disco abrem parcialmente e a unidade de disco solta-se do plano médio.
+
+. Puxe o manípulo do excêntrico para a posição totalmente aberta para retirar a unidade do disco do plano médio.
++
+image::../media/drw_drive_open.gif[Remova uma unidade com o botão de liberação no meio]
+
+. Deslize ligeiramente a unidade de disco para fora e deixe o disco girar com segurança, o que pode levar menos de um minuto e, em seguida, usando ambas as mãos, remova a unidade de disco da prateleira de disco.
+. Com a alça do came na posição aberta, insira a unidade de disco de substituição no compartimento da unidade, pressionando firmemente até que a unidade de disco pare.
++
+
+NOTE: Aguarde pelo menos 10 segundos antes de inserir uma nova unidade de disco. Isso permite que o sistema reconheça que uma unidade de disco foi removida.
+
++
+
+NOTE: Se os compartimentos de unidade da plataforma não estiverem totalmente carregados com unidades, é importante colocar a unidade de substituição no mesmo compartimento da unidade do qual você removeu a unidade com falha.
+
++
+
+NOTE: Use duas mãos ao inserir a unidade de disco, mas não coloque as mãos nas placas de unidade de disco expostas na parte inferior do transportador de disco.
+
+. Feche a alça do came de modo que a unidade de disco fique totalmente encaixada no plano médio e a alça encaixe no lugar.
++
+Certifique-se de que fecha a pega do came lentamente de forma a que fique corretamente alinhada com a face da unidade de disco.
+
+. Se estiver substituindo outra unidade de disco, repita as etapas 4 a 9.
+. Volte a instalar a moldura.
+. Se você desativou a atribuição automática de unidade na Etapa 1, atribua manualmente a propriedade da unidade e, em seguida, reative a atribuição automática de unidade, se necessário.
++
+.. Exibir todas as unidades não possuídas: `storage disk show -container-type unassigned`
++
+Você pode inserir o comando em qualquer um dos módulos do controlador.
+
+.. Atribuir cada unidade: `storage disk assign -disk disk_name -owner owner_name`
++
+Você pode inserir o comando em qualquer um dos módulos do controlador.
+
++
+Você pode usar o caractere curinga para atribuir mais de uma unidade de uma vez.
+
+.. Reative a atribuição automática de condução, se necessário: `storage disk option modify -node node_name -autoassign on`
++
+Você deve reativar a atribuição automática de acionamento em ambos os módulos do controlador.
+
+
+
+. Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit.
++
+Entre em Contato com o suporte técnico em https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"], 888-463-8277 (América do Norte), 00-800-44-638277 (Europa) ou 800-800-80-800 (Ásia/Pacífico) se precisar do número de RMA ou de ajuda adicional com o procedimento de substituição.
+
+

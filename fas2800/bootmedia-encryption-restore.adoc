@@ -1,0 +1,82 @@
+---
+permalink: fas2800/bootmedia-encryption-restore.html 
+sidebar: sidebar 
+keywords: fas 2800, post, boot, media, okm, nse, nve, onboard key manager, netapp storage encryption, netapp volume encryption 
+summary: 'Uma vez que as variáveis de ambiente estejam marcadas, você deve concluir etapas específicas para sistemas que tenham o Gerenciador de chaves integrado (OKM), a criptografia de armazenamento NetApp (NSE) ou a criptografia de volume NetApp (NVE) ativada.' 
+---
+= Restaure OKM, NSE e NVE conforme necessário - FAS2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois de verificar as variáveis de ambiente, é necessário concluir etapas específicas para sistemas que tenham o Gerenciador de chaves integrado (OKM), a criptografia de armazenamento NetApp (NSE) ou a criptografia de volume NetApp (NVE) ativados usando as configurações capturadas no início deste procedimento.
+
+
+NOTE: Se o NSE ou o NVE estiverem ativados juntamente com o Onboard Key Manager, você deverá restaurar as configurações capturadas no início deste procedimento.
+
+.Passos
+. Conete o cabo do console ao controlador de destino.
+. Use o `boot_ontap` comando no prompt Loader para inicializar o controlador.
+. Verifique a saída da consola:
++
+[cols="1,3"]
+|===
+| Se o console exibir... | Então... 
+
+
+ a| 
+O aviso de início de sessão
+ a| 
+Avance para o passo 7.
+
+
+
+ a| 
+A aguardar pela giveback...
+ a| 
+.. Faça login no controlador do parceiro.
+.. Confirme se o controlador de destino está pronto para giveback com o `storage failover show` comando.
+
+
+|===
+. Mova o cabo do console para o controlador parceiro e devolva o armazenamento do controlador de destino usando o `storage failover giveback -fromnode local -only-cfo-aggregates true local` comando.
++
+** Se o comando falhar por causa de um disco com falha, desengate fisicamente o disco com falha, mas deixe o disco no slot até que uma substituição seja recebida.
+** Se o comando falhar devido a uma sessão CIFS aberta, verifique com o cliente como fechar as sessões CIFS.
++
+
+NOTE: Encerrar CIFS pode causar perda de dados.
+
+** Se o comando falhar porque o parceiro está "não pronto", aguarde 5 minutos para que os NVMEMs sincronizem.
+** Se o comando falhar por causa de um processo NDMP, SnapMirror ou SnapVault, desative o processo. Consulte o Centro de Documentação apropriado para obter mais informações.
+
+
+. Aguarde 3 minutos e verifique o status do failover com o `storage failover show` comando.
+. No prompt do clustershell, digite o `net int show -is-home false` comando para listar as interfaces lógicas que não estão em seu controlador principal e porta.
++
+Se alguma interface estiver listada como `false`, reverta essas interfaces de volta para sua porta inicial usando o `net int revert -vserver Cluster -lif _nodename_` comando.
+
+. Mova o cabo do console para o controlador de destino e execute o `version -v` comando para verificar as versões do ONTAP.
+. Restaure o giveback automático se você o desativou usando o `storage failover modify -node local -auto-giveback true` comando.
+. Use o `storage encryption disk show` prompt at the clustershell, para revisar a saída.
+. Use o `security key-manager key query` comando para exibir as IDs de chave das chaves de autenticação armazenadas nos servidores de gerenciamento de chaves.
++
+** Se a `Restored` coluna `yes/true` estiver concluída, pode concluir o processo de substituição.
+** Se a `Key Manager type` `external` `Restored` coluna for diferente `yes/true` de , use o `security key-manager external restore` comando para restaurar os IDs de chave das chaves de autenticação.
++
+
+NOTE: Se o comando falhar, entre em Contato com o suporte ao Cliente.
+
+** Se a `Key Manager type` `onboard` `Restored` coluna for diferente `yes/true` de , use o `security key-manager onboard sync` comando para sincronizar novamente o tipo Gerenciador de chaves.
++
+Use a consulta de chave do gerenciador de chaves de segurança para verificar se a `Restored` coluna é `yes/true` para todas as chaves de autenticação.
+
+
+
+. Conete o cabo do console ao controlador do parceiro.
+. Devolva o controlador usando o `storage failover giveback -fromnode local` comando.
+. Restaure o giveback automático se você o desativou usando o `storage failover modify -node local -auto-giveback true` comando.
+. Se o AutoSupport estiver ativado, restaure/anule a criação automática de casos utilizando o. `system node autosupport invoke -node * -type all -message MAINT=END`
+

@@ -1,0 +1,456 @@
+---
+permalink: sas3/install-new-system.html 
+sidebar: sidebar 
+keywords: install, cabling, cable, disk, shelves, shelf, iom12, module, system, installation, system, ha, pair, single-controller, configuration, cabinet, rack, requirement, install and cable disk shelves with iom12 modules for a new system installation, requirements for installing and cabling disk shelves with iom12 modules for a new system installation, considerations for installing and cabling disk shelves with iom12 modules for a new system installation, install disk shelves with iom12 modules for a new system installation, cable disk shelves with iom12 modules for a new system installation, DS460C, transport DS460C, move DS460C, remove drives from DS460C, DS460C drive handling, iom12b 
+summary: Se o seu novo sistema - par de HA ou configuração de controlador único - não veio instalado em um gabinete, você precisa instalar e fazer o cabeamento das gavetas de disco em um rack. 
+---
+= Instale e as gavetas de cabos para uma nova instalação do sistema - prateleiras com módulos IOM12/IOM12B
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se o seu novo sistema - par de HA ou configuração de controlador único - não tiver sido instalado em um gabinete, você poderá instalar e enviar os cabos das gavetas de disco em um rack.
+
+
+
+== Requisitos para instalação e cabeamento de compartimentos de disco com módulos IOM12/IOM12B para uma nova instalação do sistema
+
+Antes de instalar e fazer o cabeamento das gavetas de disco, você precisa atender a certos requisitos.
+
+* Você deve ter as instruções de instalação e configuração para o modelo da sua plataforma.
++
+As instruções de instalação e configuração abordam o procedimento completo para a instalação, configuração e configuração do sistema. Você só usa este procedimento (_Instalação e prateleiras de cabos para uma nova instalação do sistema_) em conjunto com as instruções de instalação e configuração da plataforma se precisar de informações detalhadas sobre instalação ou cabeamento das prateleiras de disco para o sistema de armazenamento.
+
++
+As instruções de instalação e configuração podem ser encontradas navegando até a documentação do modelo da plataforma.
+
++
+link:../index.html["Documentação do sistema AFF e FAS"]
+
+* No momento, os compartimentos de disco e as controladoras não devem ser ligados.
+* Se você estiver usando cabos óticos SAS HD mini-SAS, você deve ter cumprido as regras no link:install-cabling-rules.html#mini-sas-hd-sas-optical-cable-rules["Regras de cabo ótico mini-SAS HD SAS"].
+
+
+
+
+== Considerações para a instalação e cabeamento de compartimentos de disco com módulos IOM12/IOM12B para uma nova instalação do sistema
+
+Você deve se familiarizar com os aspetos e as práticas recomendadas sobre esse procedimento antes de instalar e fazer o cabeamento das gavetas de disco.
+
+
+
+=== Considerações gerais
+
+* Os compartimentos de disco com módulos IOM12/IOM12B são fornecidos com IDs de gaveta predefinidas para 00.
++
+
+NOTE: Se você tiver um par de HA com pelo menos duas stacks, o compartimento de disco que contém os agregados raiz da segunda stack terá o ID do shelf predefinido para 10.
+
++
+Você precisa definir IDs de gaveta para que elas sejam exclusivas na configuração de par de HA ou controlador único. Você pode definir manualmente IDs de gaveta ou ter IDs de gaveta atribuídas automaticamente a todas as gavetas de disco no par de HA ou na configuração de controladora única usando um comando no modo de manutenção. Instruções para ambos os métodos são fornecidas.
+
+* Os compartimentos de disco que contêm os agregados raiz podem ser identificados pelas etiquetas na caixa do compartimento de disco e no chassi do compartimento de disco.
++
+As etiquetas mostram o número da pilha; por exemplo, *Loop ou Stack: 1* e *Loop ou Stack: 2*. As gavetas de disco que não contêm os agregados raiz mostram apenas o número de série do compartimento de disco nas etiquetas.
+
+* Se na configuração e configuração do sistema, você não configurar o sistema para usar atribuição automática de propriedade de disco, você precisará atribuir manualmente a propriedade do disco.
+* O caminho de controlo alternativo (IBACP) na banda é ativado automaticamente.
++
+O IBACP não é compatível com configurações de caminho único ou HA de caminho único.
+
+
+
+
+
+=== Considerações de práticas recomendadas
+
+* A prática recomendada é ter a versão atual do Pacote de Qualificação de disco (DQP) instalada.
++
+Ter a versão atual do DQP instalada permite que seu sistema reconheça e utilize unidades de disco recém-qualificadas; portanto, evitando mensagens de eventos do sistema sobre ter informações de unidades de disco não atuais. Você também evita a possível prevenção do particionamento de disco porque as unidades de disco não são reconhecidas. O DQP também notifica você sobre firmware de unidade de disco não atual.
+
++
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["NetApp Downloads: Pacote de Qualificação de disco"^]
+
+* A prática recomendada é baixar e executar o Config Advisor após uma nova instalação do sistema.
++
+Executar o Config Advisor após uma nova instalação do sistema permite verificar se as conexões SAS são cabeadas corretamente e se as IDs de gaveta são exclusivas no par de HA ou na configuração de controladora única.
+
++
+Se forem gerados erros de cabeamento SAS ou ID de gaveta duplicados, siga as ações corretivas fornecidas.
+
++
+Você precisa de acesso à rede para baixar o Config Advisor.
+
++
+https://mysupport.netapp.com/site/tools["NetApp Downloads: Config Advisor"^]
+
+
+
+
+
+=== Considerações sobre manuseio de cabos SAS
+
+* Inspecione visualmente a porta SAS para verificar a orientação adequada do conetor antes de conectá-lo.
++
+Os conetores do cabo SAS são chaveados. Quando orientado corretamente para uma porta SAS, o conetor clica no lugar e, se a energia do compartimento de disco estiver ligada na altura, o LED LNK da porta SAS do compartimento de disco acende-se a verde. Para compartimentos de disco, você insere um conetor de cabo SAS com a aba de puxar orientada para baixo (na parte inferior do conetor).
+
++
+Para controladores, a orientação das portas SAS pode variar dependendo do modelo da plataforma; portanto, a orientação correta do conetor do cabo SAS varia.
+
+* Para evitar um desempenho degradado, não torça, dobre, aperte ou pise nos cabos.
++
+Os cabos têm um raio de curvatura mínimo. As especificações do fabricante do cabo definem o raio mínimo da curvatura; contudo, uma diretriz geral para o raio mínimo da curvatura é 10 vezes o diâmetro do cabo.
+
+* O uso de envoltórios de velcro em vez de amarras para agrupar e fixar os cabos do sistema permite ajustes mais fáceis dos cabos.
+
+
+
+
+=== Considerações sobre o manuseio da unidade DS460C
+
+* As unidades são empacotadas separadamente do chassi da gaveta.
++
+Você deve fazer o inventário das unidades juntamente com o resto do equipamento do sistema que você recebeu.
+
+* Depois de descompactar as unidades, você deve salvar os materiais de embalagem para uso futuro.
++
+
+CAUTION: *Possível perda de acesso aos dados:* se, no futuro, você mover a prateleira para uma parte diferente do data center ou transportar a prateleira para um local diferente, você precisa remover as unidades das gavetas da unidade para evitar possíveis danos às gavetas e unidades da unidade.
+
++
+
+NOTE: Mantenha as unidades de disco em seu saco ESD até que você esteja pronto para instalá-las.
+
+* Ao manusear as unidades, utilize sempre uma pulseira antiestática ligada à terra a uma superfície não pintada no chassis do compartimento de armazenamento para evitar descargas estáticas.
++
+Se uma pulseira não estiver disponível, toque numa superfície não pintada no chassis do compartimento de armazenamento antes de manusear a unidade de disco.
+
+
+
+
+
+== Instale as gavetas de disco com módulos IOM12/IOM12B para uma nova instalação do sistema
+
+Instale as gavetas de disco em um rack usando os kits de montagem em rack fornecidos com as gavetas de disco.
+
+. Instale o kit de montagem em rack (para instalações de rack de dois ou quatro colunas) fornecido com a prateleira de disco usando o folheto de instalação fornecido com o kit.
++
+
+NOTE: Se você estiver instalando várias gavetas de disco, você deve instalá-las da parte inferior para a parte superior do rack para a melhor estabilidade.
+
++
+
+NOTE: Não coloque a prateleira de disco em um rack de telecomunicações; o peso da prateleira de disco pode fazer com que ela caia no rack sob seu próprio peso.
+
+. Instale e fixe o compartimento de disco nos suportes de suporte e no rack usando o folheto de instalação fornecido com o kit.
++
+Para tornar um compartimento de disco mais leve e fácil de manobrar, remova as fontes de alimentação e os módulos de e/S (IOMs).
+
++
+Para gavetas de disco de DS460C TB, embora as unidades sejam embaladas separadamente, o que torna a prateleira mais leve, uma prateleira vazia de DS460C kg ainda pesa aproximadamente 132 lb (60kg lb); portanto, tenha o seguinte cuidado ao mover uma prateleira.
+
++
+
+CAUTION: Recomenda-se que utilize um elevador mecanizado ou quatro pessoas utilizando as pegas de elevação para mover com segurança uma prateleira DS460C vazia.
+
++
+A sua remessa DS460C foi embalada com quatro alças de elevação destacáveis (duas para cada lado). Para utilizar as pegas de elevação, instale-as inserindo as patilhas das pegas nas ranhuras laterais da prateleira e empurrando-as para cima até encaixarem no lugar. Em seguida, ao deslizar a prateleira do disco para os trilhos, você descola um conjunto de alças de cada vez usando o trinco do polegar. A ilustração a seguir mostra como conetar uma alça de elevação.
+
++
+image::../media/drw_ds460c_handles.gif[Instalar as pegas de elevação]
+
+. Reinstale todas as fontes de alimentação e IOMs removidas antes de instalar o compartimento de disco no rack.
+. Se você estiver instalando um compartimento de disco DS460C, instale as unidades nas gavetas da unidade; caso contrário, vá para a próxima etapa.
++
+[NOTE]
+====
+Utilize sempre uma pulseira antiestática ligada à terra a uma superfície não pintada no chassis do compartimento de armazenamento para evitar descargas estáticas.
+
+Se uma pulseira não estiver disponível, toque numa superfície não pintada no chassis do compartimento de armazenamento antes de manusear a unidade de disco.
+
+====
++
+Se você adquiriu um compartimento parcialmente preenchido, o que significa que o compartimento tem menos de 60 unidades compatíveis, para cada gaveta, instale as unidades da seguinte forma:
+
++
+** Instale as primeiras quatro unidades nos slots dianteiros (0, 3, 6 e 9).
++
+
+NOTE: *Risco de mau funcionamento do equipamento:* para permitir um fluxo de ar adequado e evitar o sobreaquecimento, instale sempre as quatro primeiras unidades nas ranhuras dianteiras (0, 3, 6 e 9).
+
+** Para as unidades restantes, distribua-as uniformemente em cada gaveta.
++
+A ilustração a seguir mostra como as unidades são numeradas de 0 a 11 em cada gaveta de unidade dentro da gaveta.
+
++
+image::../media/dwg_trafford_drawer_with_hdds_callouts.gif[Numeração da unidade]
+
++
+... Abra a gaveta superior da prateleira.
+... Remova uma unidade de seu saco ESD.
+... Levante a alavanca do came na unidade para a vertical.
+... Alinhe os dois botões levantados em cada lado do suporte da unidade com a folga correspondente no canal da unidade na gaveta da unidade.
++
+image::../media/28_dwg_e2860_de460c_drive_cru.gif[Localização dos botões levantados na condução]
+
++
+[cols="10,90"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Botão levantado no lado direito do suporte da transmissão
+
+|===
+... Baixe a unidade em linha reta para baixo e, em seguida, rode a pega do came para baixo até que a unidade encaixe no devido lugar sob o trinco de desbloqueio laranja.
+... Repita as subetapas anteriores para cada unidade na gaveta.
++
+Você deve ter certeza de que os slots 0, 3, 6 e 9 em cada gaveta contêm unidades.
+
+... Empurre cuidadosamente a gaveta da unidade de volta para dentro do compartimento.
++
+|===
+
+
+ a| 
+image:../media/2860_dwg_e2860_de460c_gentle_close.gif["Fechar cuidadosamente a gaveta"]
+
+
+
+ a| 
+
+CAUTION: *Possível perda de acesso aos dados:* nunca bata a gaveta fechada. Empurre a gaveta lentamente para dentro para evitar estressar a gaveta e causar danos à matriz de armazenamento.
+
+|===
+... Feche a gaveta da unidade empurrando ambas as alavancas em direção ao centro.
+... Repita estas etapas para cada gaveta na gaveta de disco.
+... Fixe a moldura frontal.
+
+
+
+
+. Se você estiver adicionando vários compartimentos de disco, repita este procedimento para cada compartimento de disco que você está instalando.
+
+
+
+NOTE: Não ligue as gavetas de disco no momento.
+
+
+
+== Prateleiras de discos de cabo com módulos IOM12/IOM12B para uma nova instalação do sistema
+
+Suas conexões SAS do compartimento de disco a cabo - de prateleira a prateleira (conforme aplicável) e controlador a compartimento - para estabelecer a conectividade de storage do sistema.
+
+.Antes de começar
+Você precisa atender aos requisitos <<Requisitos para instalação e cabeamento de compartimentos de disco com módulos IOM12/IOM12B para uma nova instalação do sistema>>e instalar as gavetas de disco no rack.
+
+.Sobre esta tarefa
+Depois que você faz o cabeamento das gavetas de disco, os liga, define as IDs das gavetas e completa configuração e configuração do sistema.
+
+.Passos
+. Faça o cabeamento das conexões de prateleira a prateleira dentro de cada stack se ela tiver mais de um compartimento de disco; caso contrário, vá para a próxima etapa:
++
+Para obter uma explicação detalhada e exemplos de cabeamento "padrão" de prateleira a prateleira e cabeamento "amplo" de prateleira a prateleira, link:install-cabling-rules.html#shelf-to-shelf-connection-rules["regras de conexão de prateleira para prateleira"]consulte .
+
++
+[cols="2*"]
+|===
+| Se... | Então... 
+
+
+ a| 
+Você está fazendo o cabeamento de uma HA multipath, HA de três caminhos, multipath, HA de caminho único ou configuração de caminho único
+ a| 
+Cable as conexões de prateleira a prateleira como conetividade "padrão" (usando as portas IOM 3 e 1):
+
+.. Começando com a primeira gaveta lógica na stack, conecte Iom A porta 3 à IOM A porta 1 da próxima gaveta até que cada Iom A na stack seja conectada.
+.. Repita a subetapa a para IOM B.
+.. Repita as subetapas a e b para cada pilha.
+
+
+
+
+ a| 
+Você está fazendo o cabeamento de uma configuração de HA ou quad-path
+ a| 
+Cable as conexões de prateleira a prateleira como conectividade "ampla": Você faz a conexão padrão usando as portas IOM 3 e 1 e, em seguida, a conectividade dupla usando as portas IOM 4 e 2.
+
+.. Começando com a primeira gaveta lógica na stack, conecte Iom A porta 3 à IOM A porta 1 da próxima gaveta até que cada Iom A na stack seja conectada.
+.. Começando com a primeira gaveta lógica na stack, conecte Iom A porta 4 à IOM A porta 2 da próxima gaveta até que cada Iom A na stack seja conectada.
+.. Repita as subetapas a e b para IOM B.
+.. Repita as subetapas de a a c para cada pilha.
+
+
+|===
+. Identifique os pares de portas SAS do controlador que podem ser usados para fazer o cabo das conexões controlador para pilha.
++
+.. Verifique as planilhas de cabeamento e exemplos de cabeamento de controladora para stack para ver se existe uma Planilha completa para sua configuração.
++
+link:install-cabling-worksheets-examples-fas2600.html["Exemplos de cabeamento e planilhas de cabeamento de controladora a stack para plataformas com storage interno"]
+
++
+link:install-cabling-worksheets-examples-multipath.html["Planilhas de cabeamento e exemplos de cabeamento de controladora a stack para configurações de HA multipath"]
+
++
+link:install-worksheets-examples-quadpath.html["Exemplo de cabeamento e Planilha de cabeamento de controladora a stack para uma configuração HA de quatro caminhos com dois HBAs SAS de quatro portas"]
+
+.. A próxima etapa depende se existe uma Planilha concluída para sua configuração:
++
+[cols="2*"]
+|===
+| Se... | Então... 
+
+
+ a| 
+Há uma Planilha completa para sua configuração
+ a| 
+Vá para a próxima etapa.
+
+Utilize a folha de cálculo concluída existente.
+
+
+
+ a| 
+Não há Planilha completa para sua configuração
+ a| 
+Preencha o modelo de Planilha de cabeamento de controladora a stack apropriado:
+
+link:install-cabling-worksheet-template-multipath.html["Modelo de Planilha de cabeamento de controladora para stack para conectividade multipathed"]
+
+link:install-cabling-worksheet-template-quadpath.html["Modelo de folha de trabalho de cabeamento de controladora para pilha para conetividade quad-pathed"]
+
+|===
+
+
+. Faça o cabeamento das conexões controladora para pilha usando a Planilha concluída.
++
+Se necessário, estão disponíveis instruções sobre como ler uma folha de cálculo para ligações de controlador de cabo para pilha:
+
++
+link:install-cabling-worksheets-how-to-read-multipath.html["Como ler uma Planilha para conexões de cabo controlador para pilha para conetividade multipathed"]
+
++
+link:install-cabling-worksheets-how-to-read-quadpath.html["Como ler uma Planilha para conexões de controlador para pilha de cabo para conetividade quad-pathed"]
+
+. Conete as fontes de alimentação de cada compartimento de disco:
++
+.. Conete os cabos de alimentação primeiro às gavetas de disco, fixando-os no lugar com o retentor do cabo de alimentação e, em seguida, conete os cabos de alimentação a diferentes fontes de alimentação para obter resiliência.
+.. Ligue as fontes de alimentação de cada compartimento de disco e aguarde até que as unidades de disco sejam acionadas.
+
+
+. Defina as IDs de gaveta e a configuração completa do sistema:
++
+Você precisa definir IDs de gaveta para que elas sejam exclusivas na configuração de par de HA ou controlador único, incluindo o compartimento de disco interno nos sistemas aplicáveis.
+
++
+[cols="2*"]
+|===
+| Se... | Então... 
+
+
+ a| 
+Você está configurando manualmente IDs de gaveta
+ a| 
+.. Acesse o botão ID da prateleira atrás da tampa da extremidade esquerda.
+.. Altere o ID do compartimento para um ID exclusivo (00 a 99).
+.. Ligue o compartimento de disco para fazer com que o ID do compartimento entre em vigor.
++
+Aguarde pelo menos 10 segundos antes de ligar novamente a alimentação para concluir o ciclo de alimentação. O ID do compartimento pisca e o LED âmbar do painel do operador pisca até ligar o compartimento de disco.
+
+.. Ligue os controladores e conclua a configuração e configuração do sistema conforme as instruções de instalação e configuração do modelo da sua plataforma.
+
+
+
+
+ a| 
+Você está atribuindo automaticamente todas as IDs de gaveta no seu par de HA ou na configuração de controladora única
+
+[NOTE]
+====
+As IDs de gaveta são atribuídas por ordem sequencial de 00 a 99. Para sistemas com um compartimento de disco interno, a atribuição de ID do compartimento começa com o compartimento de disco interno.
+
+==== a| 
+.. Ligue os controladores.
+.. À medida que os controladores começam a arrancar, prima `Ctrl-C` para cancelar o processo AUTOBOOT quando vir a mensagem `Starting AUTOBOOT press Ctrl-C to abort`.
++
+
+NOTE: Se você perder o prompt e os controladores iniciarem no ONTAP, interrompa ambos os controladores e, em seguida, inicialize ambos os controladores no menu de inicialização entrando `boot_ontap menu` em seu prompt Loader.
+
+.. Inicialize um controlador para o modo de manutenção:``boot_ontap menu``
++
+Você só precisa atribuir IDs de gaveta em um controlador.
+
+.. No menu de arranque, selecione a opção 5 para o modo de manutenção.
+.. Atribuir automaticamente IDs de gaveta: `sasadmin expander_set_shelf_id -a`
+.. Sair do modo de manutenção:``halt``
+.. Abra o sistema inserindo o seguinte comando no prompt Loader de ambos os controladores:``boot_ontap``
++
+As IDs de gaveta aparecem nas janelas de exibição digital do compartimento de disco.
+
++
+
+NOTE: Antes de iniciar o sistema, a melhor prática é aproveitar essa oportunidade para verificar se o cabeamento está correto e um agregado raiz está presente.
+
+.. Conclua a configuração e configuração do sistema conforme as instruções de instalação e configuração do modelo da sua plataforma.
+
+
+|===
+. Se, como parte da configuração e configuração do sistema, você não ativou a atribuição automática de propriedade do disco, atribua manualmente a propriedade do disco; caso contrário, vá para a próxima etapa:
++
+.. Exibir todos os discos não possuídos:``storage disk show -container-type unassigned``
+.. Atribuir cada disco:``storage disk assign -disk _disk_name_ -owner _owner_name_``
++
+Você pode usar o caractere curinga para atribuir mais de um disco de uma vez.
+
+
+
+. Faça o download e execute o Config Advisor conforme as instruções de instalação e configuração do modelo da plataforma para verificar se as conexões SAS são cabeadas corretamente e não há IDs de gaveta duplicadas no sistema.
++
+Se forem gerados erros de cabeamento SAS ou ID de gaveta duplicados, siga as ações corretivas fornecidas.
+
++
+https://mysupport.netapp.com/site/tools["NetApp Downloads: Config Advisor"^]
+
++
+Você também pode executar o `storage shelf show -fields shelf-id` comando para ver uma lista de IDs de gaveta já em uso (e duplicados, se houver) no sistema.
+
+. Verifique se o ACP na banda foi ativado automaticamente. `storage shelf acp show`
++
+Na saída, "in-band" é listado como "ativo" para cada nó.
+
+
+
+
+
+== Mova ou transporte DS460C prateleiras
+
+Se, no futuro, você mover DS460C gavetas para uma parte diferente do data center ou transportar as gavetas para um local diferente, precisará remover as unidades das gavetas da unidade para evitar possíveis danos às gavetas e unidades da unidade.
+
+* Se, ao instalar DS460C gavetas como parte da nova instalação do sistema, você salvou os materiais de embalagem da unidade, use-os para reembalar as unidades antes de movê-las.
++
+Se você não salvou os materiais de embalagem, você deve colocar drives em superfícies almofadadas ou usar embalagens almofadadas alternativas. Nunca empilhar unidades umas sobre as outras.
+
+* Antes de manusear as unidades, use uma pulseira antiestática aterrada em uma superfície não pintada no chassi do gabinete de armazenamento.
++
+Se uma correia de pulso não estiver disponível, toque numa superfície não pintada no chassis do compartimento de armazenamento antes de manusear uma unidade.
+
+* Você deve tomar medidas para lidar com as unidades com cuidado:
++
+** Utilize sempre duas mãos ao remover, instalar ou transportar uma unidade para suportar o seu peso.
++
+
+CAUTION: Não coloque as mãos sobre as placas de acionamento expostas na parte inferior do suporte da transmissão.
+
+** Tenha cuidado para não bater as transmissões contra outras superfícies.
+** As unidades devem ser mantidas longe de dispositivos magnéticos.
++
+
+CAUTION: Os campos magnéticos podem destruir todos os dados em uma unidade e causar danos irreparáveis ao circuito da unidade.
+
+
+
+

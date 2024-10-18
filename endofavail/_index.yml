@@ -1,0 +1,74 @@
+---
+indexpage:
+  title: Sistemas de término da disponibilidade
+  summary: A documentação do sistema de armazenamento permite instalar, configurar
+    e manter o sistema ASA.
+  keywords: storage, system, end of availability, supported switches, maintain, a200,
+    a220, a300, a320, a700, a700s, c190
+  lead: Os sistemas de fim de disponibilidade não estão mais disponíveis para compra,
+    mas ainda são compatíveis.
+  tiles:
+  - title: Instalar e configurar
+    links:
+    - title: AFF A200
+      url: "../a200/install-setup.html"
+    - title: AFF A220
+      url: "../a220/install-setup.html"
+    - title: AFF A300
+      url: "../a300/install-setup.html"
+    - title: AFF A320
+      url: "../a320/install-setup.html"
+    - title: AFF A700
+      url: "../a700/install-setup.html"
+    - title: AFF A700s
+      url: "../a700s/install-setup.html"
+    - title: AFF C190
+      url: "../c190/install-setup.html"
+    - title: FAS2600
+      url: "../fas2600/install-setup.html"
+    - title: FAS8200
+      url: "../fas8200/install-setup.html"
+    - title: FAS500f
+      url: "../fas500f/install-setup.html"
+    - title: FAS9000
+      url: "../fas9000/install-setup.html"
+  - title: Mantenha o seu sistema
+    links:
+    - title: AFF A200
+      url: "../a200/maintain-overview.html"
+    - title: AFF A220
+      url: "../a220/maintain-overview.html"
+    - title: AFF A300
+      url: "../a300/maintain-overview.html"
+    - title: AFF A320
+      url: "../a320/maintain-overview.html"
+    - title: AFF A700
+      url: "../a700/maintain-overview.html"
+    - title: AFF A700s
+      url: "../a700s/maintain-overview.html"
+    - title: AFF C190
+      url: "../c190/maintain-overview.html"
+    - title: FAS2600
+      url: "../fas2600/maintain-overview.html"
+    - title: FAS500f
+      url: "../fas500f/maintain-overview.html"
+    - title: FAS8200
+      url: "../fas8200/maintain-overview.html"
+    - title: FAS9000
+      url: "../fas9000/maintain-overview.html"
+  - title: Interrutores suportados
+    links:
+    - title: BES-53248 com suporte Broadcom
+      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-bes-53248/configure-new-switch-overview.html
+    - title: Cisco 9336C-FX2
+      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2/configure-switch-overview-9336c-cluster.html
+    - title: Cisco 9336-FX2 em configurações compartilhadas
+      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2-shared/configure-switch-overview-9336c-shared.html
+    - title: NVIDIA SN2100
+      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-nvidia-sn2100/configure-overview-sn2100-cluster.html
+  - title: Mais recursos de documentação
+    links:
+    - title: Atualização de hardware do sistema
+      url: https://docs.netapp.com/us-en/ontap-systems-upgrade/
+    - title: Atualização do software ONTAP
+      url: https://docs.netapp.com/us-en/ontap/upgrade/index.html

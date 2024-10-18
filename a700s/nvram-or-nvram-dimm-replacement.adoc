@@ -1,0 +1,378 @@
+---
+permalink: a700s/nvram-or-nvram-dimm-replacement.html 
+sidebar: sidebar 
+keywords: aff a700s, aff, a700s, replace, fail, nvram, card, remove, riser, controller, module, system, id, nvram, dimm, shut, down, reassign, disk, restore, encryption, functionality, complete, replacement, process, replace the nvram module and/or nvram dimms, shut down the impaired controller, shut down the impaired controller, remove the controller module, remove the nvram card, reinstall the controller module and booting the system, reassign disks, restore storage and volume encryption functionality, complete the replacement process 
+summary: Para substituir uma placa NVRAM com falha, você deve remover a riser NVRAM, Riser 1, do módulo da controladora, remover a placa com falha da riser, instalar a nova placa NVRAM na riser e reinstalar a riser no módulo da controladora. Uma vez que a ID do sistema é derivada da placa NVRAM, se substituir o módulo, os discos pertencentes ao sistema são reatribuídos à nova ID do sistema. 
+---
+= Substitua o módulo NVRAM e os DIMMs NVRAM - AFF A700s
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para substituir uma placa NVRAM com falha, você deve remover a riser NVRAM, Riser 1, do módulo da controladora, remover a placa com falha da riser, instalar a nova placa NVRAM na riser e reinstalar a riser no módulo da controladora. Uma vez que a ID do sistema é derivada da placa NVRAM, se substituir o módulo, os discos pertencentes ao sistema são reatribuídos à nova ID do sistema.
+
+.Antes de começar
+* Todas as gavetas de disco devem estar funcionando corretamente.
+* Se o seu sistema estiver em um par de HA, a controladora do parceiro deverá poder assumir o controle associado ao módulo NVRAM que está sendo substituído.
+* Este procedimento utiliza a seguinte terminologia:
++
+** O controlador _prejudicado_ é o controlador no qual você está realizando a manutenção.
+** O controlador _Healthy_ é o parceiro de HA do controlador prejudicado.
+
+
+* Este procedimento inclui etapas para reatribuir discos automaticamente ou manualmente ao módulo de controladora associado ao novo módulo NVRAM. Você deve reatribuir os discos quando direcionado para o procedimento. Concluir a reatribuição do disco antes da giveback pode causar problemas.
+* Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor.
+* Não é possível alterar nenhum disco ou compartimentos de disco como parte deste procedimento.
+
+
+
+
+== Passo 1: Desligue o controlador desativado
+
+.Passos
+Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
+
+Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
+
+.Passos
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=_number_of_hours_down_h`
++
+A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Se o controlador afetado fizer parte de um par de HA, desative a giveback automática a partir do console do controlador íntegro: `storage failover modify -node local -auto-giveback false`
+. Leve o controlador prejudicado para o prompt Loader:
++
+[cols="1,2"]
+|===
+| Se o controlador afetado estiver a apresentar... | Então... 
+
+
+ a| 
+O prompt Loader
+ a| 
+Vá para Remover módulo do controlador.
+
+
+
+ a| 
+A aguardar pela giveback...
+ a| 
+Pressione Ctrl-C e responda `y`.
+
+
+
+ a| 
+Prompt do sistema ou prompt de senha (digite a senha do sistema)
+ a| 
+Assuma ou interrompa o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
+
+|===
++
+** Se você estiver usando a criptografia de armazenamento NetApp, você deve ter redefinido o MSID usando as instruções na seção "'Returning SEDs to Undesprotegido mode" do _Guia de Energia de criptografia ONTAP 9 NetApp_.
++
+https://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-nve/home.html["Guia de alimentação de encriptação ONTAP 9 NetApp"]
+
+
+
+
+
+
+
+== Passo 2: Remova o módulo do controlador
+
+Deve remover o módulo do controlador do chassis quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Solte o gancho e a alça de loop que prendem os cabos ao dispositivo de gerenciamento de cabos e, em seguida, desconete os cabos do sistema e os SFPs (se necessário) do módulo do controlador, mantendo o controle de onde os cabos estavam conetados.
++
+Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar o dispositivo de gerenciamento de cabos, os cabos sejam organizados.
+
+. Desconete a fonte de alimentação do módulo do controlador da fonte e desconete o cabo da fonte de alimentação.
+. Retire o dispositivo de gestão de cabos do módulo do controlador e coloque-o de lado.
+. Prima ambos os trincos de bloqueio para baixo e, em seguida, rode ambos os trincos para baixo ao mesmo tempo.
++
+O módulo do controlador desloca-se ligeiramente para fora do chassis.
+
++
+image::../media/drw_a700s_pcm_remove.png[Solte o módulo do controlador]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Trinco de bloqueio
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Pino de bloqueio
+
+|===
+. Faça deslizar o módulo do controlador para fora do chassis.
++
+Certifique-se de que suporta a parte inferior do módulo do controlador enquanto o desliza para fora do chassis.
+
+. Coloque o módulo do controlador numa superfície estável e plana e, em seguida, abra a conduta de ar:
++
+.. Pressione as patilhas de bloqueio nas laterais da conduta de ar em direção ao centro do módulo do controlador.
+.. Deslize a conduta de ar em direção aos módulos da ventoinha e, em seguida, rode-a para cima até à posição completamente aberta.
++
+image::../media/drw_a700s_open_air_duct.png[Abra a conduta de ar]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Patilhas de bloqueio da conduta de ar
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Risers
+
+
+
+ a| 
+image:../media/icon_round_3.png["Legenda número 3"]
+ a| 
+Conduta de ar
+
+|===
+
+
+
+
+
+
+== Passo 3: Remova a placa NVRAM
+
+A substituição do NVRAM consiste em remover a riser NVRAM, Riser 1, do módulo do controlador, desconetar a bateria NVRAM da placa NVRAM, remover a placa NVRAM com falha e instalar a placa NVRAM de substituição e reinstalar a riser NVRAM novamente no módulo do controlador.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Remova a riser NVRAM, Riser 1, do módulo do controlador:
++
+.. Gire a trava de travamento da riser no lado esquerdo da riser para cima e em direção aos ventiladores.
++
+A riser NVRAM levanta-se ligeiramente do módulo da controladora.
+
+.. Levante a riser NVRAM, mova-a em direção aos ventiladores de modo que a aba de chapa metálica no riser limpe a borda do módulo do controlador, levante a riser diretamente para fora do módulo do controlador e, em seguida, coloque-a em uma superfície estável e plana para que você possa acessar a placa NVRAM.
++
+image::../media/drw_a700s_nvme_replace.png[Volte a colocar a placa NVRAM]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Conduta de ar
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Trava de travamento do riser 1
+
+
+
+ a| 
+image:../media/icon_round_3.png["Legenda número 3"]
+ a| 
+Ficha do cabo da bateria NVRAM que liga à placa NVRAM
+
+
+
+ a| 
+image:../media/icon_round_4.png["Legenda número 4"]
+ a| 
+Suporte de bloqueio do cartão
+
+
+
+ a| 
+image:../media/icon_round_5.png["Legenda número 5"]
+ a| 
+Cartão NVRAM
+
+|===
+
+
+. Remova a placa NVRAM do módulo riser:
++
+.. Gire o módulo riser para que você possa acessar a placa NVRAM.
+.. Desconete o cabo da bateria do NVRAM conetado à placa NVRAM.
+.. Pressione o suporte de travamento na lateral do riser NVRAM e gire-o para a posição aberta.
+.. Remova a placa NVRAM do módulo riser.
+
+
+. Instale a placa NVRAM na riser NVRAM:
++
+.. Alinhe a placa com a guia da placa no módulo riser e o soquete da placa no riser.
+.. Deslize a placa diretamente para dentro do soquete da placa.
++
+
+NOTE: Certifique-se de que a placa está completamente encaixada no soquete riser.
+
+.. Ligue o cabo da bateria à tomada na placa NVRAM.
+.. Desloque o trinco de bloqueio para a posição de bloqueio e certifique-se de que este bloqueia no devido lugar.
+
+
+. Instale a riser no módulo do controlador:
++
+.. Alinhe o lábio da riser com a parte inferior da chapa metálica do módulo do controlador.
+.. Guie a riser ao longo dos pinos no módulo da controladora e baixe a riser para dentro do módulo da controladora.
+.. Desloque o trinco de bloqueio para baixo e clique-o na posição de bloqueio.
++
+Quando bloqueado, a trava de travamento fica alinhada com a parte superior da riser e a riser fica bem no módulo da controladora.
+
+.. Reinsira todos os módulos SFP que foram removidos das placas PCIe.
+
+
+
+
+
+
+== Passo 4: Reinstale o módulo do controlador e inicializando o sistema
+
+Depois de substituir uma FRU no módulo do controlador, você deve reinstalar o módulo do controlador e reiniciá-lo.
+
+Para pares de HA com dois módulos de controlador no mesmo chassi, a sequência em que você instala o módulo de controlador é especialmente importante porque ele tenta reiniciar assim que você o senta completamente no chassi.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
++
+
+NOTE: Não introduza completamente o módulo do controlador no chassis até ser instruído a fazê-lo.
+
+. Recable o sistema, conforme necessário.
++
+Se você removeu os conversores de Mídia (QSFPs ou SFPs), lembre-se de reinstalá-los se você estiver usando cabos de fibra ótica.
+
+. Ligue o cabo de alimentação à fonte de alimentação, volte a instalar o anel de bloqueio do cabo de alimentação e, em seguida, ligue a fonte de alimentação à fonte de alimentação.
+. Conclua a reinstalação do módulo do controlador:
++
+.. Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos.
+.. Empurre firmemente o módulo do controlador para dentro do chassi até que ele atenda ao plano médio e esteja totalmente assentado.
++
+Os trincos de bloqueio sobem quando o módulo do controlador está totalmente assente.
+
++
+
+NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
+
++
+O módulo do controlador começa a arrancar assim que estiver totalmente assente no chassis. Esteja preparado para interromper o processo de inicialização.
+
+.. Rode os trincos de bloqueio para cima, inclinando-os de forma a que estes limpem os pinos de bloqueio e, em seguida, baixe-os para a posição de bloqueio.
+.. Interrompa o processo de inicialização pressionando `Ctrl-C` quando vir `Press Ctrl-C for Boot Menu`.
+.. Selecione a opção para iniciar no modo Manutenção a partir do menu apresentado.
+
+
+
+
+
+
+== Etapa 5: Verifique a alteração da ID do sistema em um sistema HA
+
+Você deve confirmar a alteração do ID do sistema quando você inicializar o controlador _replacement_ e, em seguida, verificar se a alteração foi implementada.
+
+Este procedimento aplica-se apenas a sistemas que executam o ONTAP em um par de HA.
+
+. Se o controlador _replacement_ estiver no modo Manutenção (mostrando o `*>` prompt, saia do modo Manutenção e vá para o prompt Loader: `halt`
+. A partir do prompt Loader no controlador _replacement_, inicialize o controlador, inserindo `y` se for solicitado a substituir o ID do sistema devido a uma incompatibilidade de ID do sistema:``boot_ontap``
+. Aguarde até que a `Waiting for giveback...` mensagem seja exibida no console do controlador _replacement_ e, em seguida, a partir do controlador saudável, verifique se o novo ID do sistema do parceiro foi atribuído automaticamente: `storage failover show`
++
+Na saída do comando, você verá uma mensagem informando que a ID do sistema foi alterada no controlador prejudicado, mostrando as IDs antigas e novas corretas. No exemplo a seguir, o node2 foi substituído e tem um novo ID de sistema de 151759706.
+
++
+[listing]
+----
+node1> `storage failover show`
+                                    Takeover
+Node              Partner           Possible     State Description
+------------      ------------      --------     -------------------------------------
+node1             node2             false        System ID changed on partner (Old:
+                                                  151759755, New: 151759706), In takeover
+node2             node1             -            Waiting for giveback (HA mailboxes)
+----
+. A partir do controlador saudável, verifique se todos os coredumps são salvos:
++
+.. Mude para o nível de privilégio avançado: `set -privilege advanced`
++
+Você pode responder `Y` quando solicitado a continuar no modo avançado. O prompt do modo avançado é exibido (*>).
+
+.. Salve quaisquer coredumps: `system node run -node _local-node-name_ partner savecore`
+.. Aguarde que o comando "avecore" seja concluído antes de emitir o giveback.
++
+Você pode inserir o seguinte comando para monitorar o progresso do comando savecore: `system node run -node _local-node-name_ partner savecore -s`
+
+.. Voltar ao nível de privilégio de administrador: `set -privilege admin`
+
+
+. Devolver o controlador:
++
+.. A partir do controlador saudável, devolva o armazenamento do controlador substituído: `storage failover giveback -ofnode _replacement_node_name_`
++
+O controlador _replacement_ recupera seu armazenamento e completa a inicialização.
+
++
+Se você for solicitado a substituir a ID do sistema devido a uma incompatibilidade de ID do sistema, `y` digite .
+
++
+
+NOTE: Se o giveback for vetado, você pode considerar substituir os vetos.
+
++
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["Encontre o Guia de Configuração de alta disponibilidade para a sua versão do ONTAP 9"]
+
+.. Após a conclusão do giveback, confirme que o par de HA está saudável e que a aquisição é possível: `storage failover show`
++
+A saída do `storage failover show` comando não deve incluir a ID do sistema alterada na mensagem do parceiro.
+
+
+
+. Verifique se os discos foram atribuídos corretamente: `storage disk show -ownership`
++
+Os discos pertencentes ao controlador _replacement_ devem mostrar o novo ID do sistema. No exemplo a seguir, os discos de propriedade de node1 agora mostram o novo ID do sistema, 1873775277:
+
++
+[listing]
+----
+node1> `storage disk show -ownership`
+
+Disk  Aggregate Home  Owner  DR Home  Home ID    Owner ID  DR Home ID Reserver  Pool
+----- ------    ----- ------ -------- -------    -------    -------  ---------  ---
+1.0.0  aggr0_1  node1 node1  -        1873775277 1873775277  -       1873775277 Pool0
+1.0.1  aggr0_1  node1 node1           1873775277 1873775277  -       1873775277 Pool0
+.
+.
+.
+----
+. Verifique se os volumes esperados estão presentes para cada controlador: `vol show -node node-name`
+. Se você desativou o controle automático na reinicialização, ative-o a partir do controlador íntegro: `storage failover modify -node replacement-node-name -onreboot true`
+
+
+
+
+== Passo 6: Devolva a peça com falha ao NetApp
+
+Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

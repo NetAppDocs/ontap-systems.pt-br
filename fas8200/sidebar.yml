@@ -1,0 +1,77 @@
+---
+section: fas8200
+title: Sistemas FAS8200
+entries:
+- title: Instalar e configurar
+  pdf-filename: Instalação e configuração do FAS8200
+  entries:
+  - title: Folha de cálculo de configuração do cluster
+    url: "/fas8200/install-worksheet-linkout.html"
+  - title: Escolha a experiência de instalação e configuração
+    url: "/fas8200/install-setup.html"
+  - title: Passos rápidos
+    url: "/fas8200/install-setup-linkout.html"
+- title: Manutenção
+  pdf-filename: Manutenção da FAS8200
+  entries:
+  - title: Visão geral
+    url: "/fas8200/maintain-overview.html"
+  - title: Suporte de arranque
+    pdf-filename: Mídia de inicialização do FAS8200
+    entries:
+    - title: Visão geral
+      url: "/fas8200/bootmedia-replace-overview.html"
+    - title: Verifique as chaves de criptografia integradas
+      url: "/fas8200/bootmedia-encryption-preshutdown-checks.html"
+    - title: Desligue o controlador desativado
+      url: "/fas8200/bootmedia-shutdown.html"
+    - title: Substitua o suporte de arranque
+      url: "/fas8200/bootmedia-replace.html"
+    - title: Imagem de recuperação de inicialização
+      url: "/fas8200/bootmedia-recovery-image-boot-options.html"
+    - title: Volte a configurar o MetroCluster
+      url: "/fas8200/bootmedia-2n-mcc-switchback.html"
+    - title: Restaure OKM, NSE e NVE
+      url: "/fas8200/bootmedia-encryption-restore.html"
+    - title: Devolver artigo com falha ao NetApp
+      url: "/fas8200/bootmedia-complete-rma.html"
+  - title: Módulo de armazenamento em cache
+    url: "/fas8200/caching-module-replace.html"
+  - title: Chassis
+    pdf-filename: Chassis FAS8200
+    entries:
+    - title: Visão geral
+      url: "/fas8200/chassis-replace-overview.html"
+    - title: Desligue o controlador desativado
+      url: "/fas8200/chassis-replace-shutdown.html"
+    - title: Substitua o material de fixação
+      url: "/fas8200/chassis-replace-move-hardware.html"
+    - title: Restaure a configuração
+      url: "/fas8200/chassis-replace-complete-system-restore-rma.html"
+  - title: Controlador
+    pdf-filename: Módulo do controlador FAS8200
+    entries:
+    - title: Visão geral
+      url: "/fas8200/controller-replace-overview.html"
+    - title: Desligue o controlador desativado
+      url: "/fas8200/controller-replace-shutdown.html"
+    - title: Substitua o módulo do controlador
+      url: "/fas8200/controller-replace-move-hardware.html"
+    - title: Restaure a configuração do sistema
+      url: "/fas8200/controller-replace-system-config-restore-and-verify.html"
+    - title: Sistema Recable
+      url: "/fas8200/controller-replace-recable-reassign-disks.html"
+    - title: Restauração completa do sistema
+      url: "/fas8200/controller-replace-restore-system-rma.html"
+  - title: DIMM
+    url: "/fas8200/dimm-replace.html"
+  - title: Ventoinha
+    url: "/fas8200/fan-swap-out.html"
+  - title: Bateria NVMEM
+    url: "/fas8200/nvmem-nvram-battery-replace.html"
+  - title: Placa PCIe
+    url: "/fas8200/pci-cards-and-risers-replace.html"
+  - title: Fonte de alimentação
+    url: "/fas8200/power-supply-swap-out.html"
+  - title: Bateria de relógio em tempo real
+    url: "/fas8200/rtc-battery-replace.html"

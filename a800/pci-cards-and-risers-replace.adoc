@@ -1,0 +1,376 @@
+---
+permalink: a800/pci-cards-and-risers-replace.html 
+sidebar: sidebar 
+keywords: aff a800, replace a pcie card 
+summary: Para substituir uma placa PCIe, você deve desconetar os cabos das placas, remover os módulos SFP e QSFP das placas antes de remover o riser, reinstalar o riser e reinstalar os módulos SFP e QSFP antes de fazer o cabeamento das placas. 
+---
+= Substitua uma placa PCIe - AFF A800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para substituir uma placa PCIe, você deve desconetar os cabos das placas, remover os módulos SFP e QSFP das placas antes de remover o riser, reinstalar o riser e reinstalar os módulos SFP e QSFP antes de fazer o cabeamento das placas.
+
+* Pode utilizar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema
+* Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+
+
+
+
+== Passo 1: Desligue o controlador desativado
+
+Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
+
+.Sobre esta tarefa
+* Se você tiver um sistema SAN, você deve ter verificado mensagens de  `cluster kernel-service show`evento ) para o blade SCSI do controlador afetado. O `cluster kernel-service show` comando (do modo avançado priv) exibe o nome do nó, link:https://docs.netapp.com/us-en/ontap/system-admin/display-nodes-cluster-task.html["status do quorum"]desse nó, o status de disponibilidade desse nó e o status operacional desse nó.
++
+Cada processo SCSI-blade deve estar em quórum com os outros nós no cluster. Qualquer problema deve ser resolvido antes de prosseguir com a substituição.
+
+* Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
+
+
+.Passos
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
++
+A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas: `cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Desative a giveback automática a partir da consola do controlador saudável: `storage failover modify –node local -auto-giveback false`
++
+
+NOTE: Quando vir _do pretende desativar a auto-giveback?_, introduza `y`.
+
+. Leve o controlador prejudicado para o prompt Loader:
++
+[cols="1,2"]
+|===
+| Se o controlador afetado estiver a apresentar... | Então... 
+
+
+ a| 
+O prompt Loader
+ a| 
+Vá para a próxima etapa.
+
+
+
+ a| 
+A aguardar pela giveback...
+ a| 
+Pressione Ctrl-C e responda `y` quando solicitado.
+
+
+
+ a| 
+Prompt do sistema ou prompt de senha
+ a| 
+Assuma ou interrompa o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
+
+|===
+
+
+
+
+== Passo 2: Remova o módulo do controlador
+
+Deve remover o módulo do controlador do chassis quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Desconete as fontes de alimentação do módulo do controlador da fonte.
+. Solte os fixadores do cabo de alimentação e, em seguida, desconete os cabos das fontes de alimentação.
+. Solte o gancho e a alça de loop que prendem os cabos ao dispositivo de gerenciamento de cabos e, em seguida, desconete os cabos do sistema e os módulos SFP e QSFP (se necessário) do módulo do controlador, mantendo o controle de onde os cabos foram conetados.
++
+Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar o dispositivo de gerenciamento de cabos, os cabos sejam organizados.
+
+. Retire o dispositivo de gestão de cabos do módulo do controlador e coloque-o de lado.
+. Prima ambos os trincos de bloqueio para baixo e, em seguida, rode ambos os trincos para baixo ao mesmo tempo.
++
+O módulo do controlador desloca-se ligeiramente para fora do chassis.
+
++
+image::../media/drw_a800_pcm_remove.png[Solte o módulo do controlador]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Trinco de bloqueio
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Pino de bloqueio
+
+|===
+. Faça deslizar o módulo do controlador para fora do chassis.
++
+Certifique-se de que suporta a parte inferior do módulo do controlador enquanto o desliza para fora do chassis.
+
+. Coloque o módulo do controlador numa superfície estável e plana e, em seguida, abra a conduta de ar:
++
+.. Pressione as patilhas de bloqueio nas laterais da conduta de ar em direção ao centro do módulo do controlador.
+.. Deslize a conduta de ar em direção aos módulos da ventoinha e, em seguida, rode-a para cima até à posição completamente aberta.
++
+image::../media/drw_a800_open_air_duct.png[Abra a conduta de ar]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Patilhas de bloqueio da conduta de ar
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Deslize a conduta de ar em direção aos módulos do ventilador
+
+
+
+ a| 
+image:../media/icon_round_3.png["Legenda número 3"]
+ a| 
+Gire a conduta de ar em direção aos módulos do ventilador
+
+|===
+
+
+
+
+
+
+== Etapa 3: Substitua uma placa PCIe
+
+Para substituir uma placa PCIe, você deve remover o cabeamento e quaisquer QSFPs e SFPs das portas nas placas PCIe no riser de destino, remover o riser do módulo da controladora, remover e substituir a placa PCIe, reinstalar o riser e quaisquer QSFPs e SFPs nas portas e fazer o cabo das portas.
+
+. Determine se o cartão que você está substituindo é do Riser 1 ou se é do Riser 2 ou 3.
++
+** Se estiver a substituir a placa PCIe 100GbE no Riser 1, siga os passos 2 - 3 e 6 - 7.
+** Se você estiver substituindo uma placa PCIe da Riser 2 ou 3, siga as etapas 4 a 7.
+
+
+. Remova o Riser 1 do módulo do controlador:
++
+.. Remova os módulos QSFP que podem estar na placa PCIe.
+.. Gire a trava de travamento do riser no lado esquerdo da riser para cima e em direção aos módulos do ventilador.
++
+A riser levanta-se ligeiramente do módulo do controlador.
+
+.. Levante a riser, mova-a em direção aos ventiladores de modo que a aba de chapa metálica na riser limpe a borda do módulo do controlador, levante a riser para fora do módulo do controlador e, em seguida, coloque-a em uma superfície estável e plana.
++
+image::../media/drw_a800_pcie_1_replace.png[Substitua a placa PCI no riser 1]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Conduta de ar
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Trava de travamento da riser
+
+
+
+ a| 
+image:../media/icon_round_3.png["Legenda número 3"]
+ a| 
+Suporte de bloqueio do cartão
+
+
+
+ a| 
+image:../media/icon_round_4.png["Legenda número 4"]
+ a| 
+Riser 1 (riser esquerdo) com placa PCIe 100GbE no slot 1.
+
+|===
+
+
+. Remova a placa PCIe da Riser 1:
++
+.. Gire o riser para que você possa acessar a placa PCIe.
+.. Pressione o suporte de travamento na lateral da riser PCIe e gire-o até a posição aberta.
+.. Remova a placa PCIe da riser.
+
+
+. Remova a riser PCIe do módulo da controladora:
++
+.. Remova quaisquer módulos SFP ou QSFP que possam estar nas placas PCIe.
+.. Gire a trava de travamento do riser no lado esquerdo da riser para cima e em direção aos módulos do ventilador.
++
+A riser levanta-se ligeiramente do módulo do controlador.
+
+.. Levante a riser, mova-a em direção aos ventiladores de modo que a aba de chapa metálica na riser limpe a borda do módulo do controlador, levante a riser para fora do módulo do controlador e, em seguida, coloque-a em uma superfície estável e plana.
++
+image::../media/drw_a800_pcie_2_5_replace.gif[Substitua as placas PCI 2 a 5 nos risers médio e direito]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Conduta de ar
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Trava de travamento do riser 2 (riser central) ou 3 (riser direito)
+
+
+
+ a| 
+image:../media/icon_round_3.png["Legenda número 3"]
+ a| 
+Suporte de bloqueio do cartão
+
+
+
+ a| 
+image:../media/icon_round_4.png["Legenda número 4"]
+ a| 
+Painel lateral no riser 2 ou 3
+
+
+
+ a| 
+image:../media/icon_round_5.png["Legenda número 5"]
+ a| 
+Placas PCIe no riser 2 ou 3
+
+|===
+
+
+. Remova a placa PCIe da riser:
++
+.. Gire o riser para que você possa acessar as placas PCIe.
+.. Pressione o suporte de travamento na lateral da riser PCIe e gire-o até a posição aberta.
+.. Gire o painel lateral para fora da riser.
+.. Remova a placa PCIe da riser.
+
+
+. Instale a placa PCIe no mesmo slot da riser:
++
+.. Alinhe a placa com o soquete da placa no riser e, em seguida, deslize-a diretamente para o soquete no riser.
++
+
+NOTE: Certifique-se de que a placa está completamente encaixada no soquete riser.
+
+.. Para a riser 2 ou 3, feche o painel lateral.
+.. Rode o trinco de bloqueio para o lugar até encaixar na posição de bloqueio.
+
+
+. Instale a riser no módulo do controlador:
++
+.. Alinhe o lábio da riser com a parte inferior da chapa metálica do módulo do controlador.
+.. Guie a riser ao longo dos pinos no módulo da controladora e baixe a riser para dentro do módulo da controladora.
+.. Desloque o trinco de bloqueio para baixo e clique-o na posição de bloqueio.
++
+Quando bloqueado, a trava de travamento fica alinhada com a parte superior da riser e a riser fica bem no módulo da controladora.
+
+.. Reinsira todos os módulos SFP que foram removidos das placas PCIe.
+
+
+
+
+
+
+== Etapa 4: Reinstale o módulo do controlador
+
+Depois de substituir um componente dentro do módulo do controlador, você deve reinstalar o módulo do controlador no chassi do sistema e iniciá-lo.
+
+. Se ainda não o tiver feito, feche a conduta de ar:
++
+.. Desloque a conduta de ar até ao módulo do controlador.
+.. Faça deslizar a conduta de ar na direção dos tirantes até que as patilhas de bloqueio encaixem no lugar.
+.. Inspecione a conduta de ar para se certificar de que está corretamente encaixada e trancada no lugar.
++
+image::../media/drw_a800_close_air_duct.png[Feche a conduta de ar]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Patilhas de bloqueio
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Deslize o êmbolo
+
+|===
+
+
+. Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
++
+
+NOTE: Não introduza completamente o módulo do controlador no chassis até ser instruído a fazê-lo.
+
+. Faça o cabeamento apenas das portas de gerenciamento e console, para que você possa acessar o sistema para executar as tarefas nas seções a seguir.
++
+
+NOTE: Você conetará o resto dos cabos ao módulo do controlador posteriormente neste procedimento.
+
+. Conclua a reinstalação do módulo do controlador:
++
+.. Empurre firmemente o módulo do controlador para dentro do chassi até que ele atenda ao plano médio e esteja totalmente assentado.
++
+Os trincos de bloqueio sobem quando o módulo do controlador está totalmente assente.
+
++
+
+NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
+
+.. Rode os trincos de bloqueio para cima, inclinando-os de forma a que estes limpem os pinos de bloqueio e, em seguida, baixe-os para a posição de bloqueio.
+
+
+. Conete os cabos do sistema e os módulos do transcetor ao módulo do controlador e reinstale o dispositivo de gerenciamento de cabos.
+. Ligue os cabos de alimentação às fontes de alimentação e volte a instalar os fixadores do cabo de alimentação.
++
+O módulo do controlador começa a arrancar assim que está ligado à alimentação. Esteja preparado para interromper o processo de inicialização.
+
++
+
+NOTE: Se o sistema tiver fontes de alimentação CC, certifique-se de que os parafusos de aperto manual do cabo da fonte de alimentação estão apertados.
+
+. Volte a colocar o controlador em funcionamento normal, devolvendo o respetivo armazenamento: `storage failover giveback -ofnode _impaired_node_name_`
+. Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true`
+
+
+
+
+== Passo 5: Devolva a peça com falha ao NetApp
+
+Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

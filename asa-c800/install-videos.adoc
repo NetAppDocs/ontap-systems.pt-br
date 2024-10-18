@@ -1,0 +1,30 @@
+---
+permalink: asa-c800/install-videos.html 
+sidebar: sidebar 
+keywords: asa c800, hardware installation and cabling video, perform end-to-end software configuration video 
+summary: 'Há dois vídeos: Um mostrando como montar e fazer o cabeamento do sistema e outro mostrando um exemplo de como usar a Configuração Guiada do System Manager para executar a configuração inicial do sistema.' 
+---
+= Vídeos - ASA C800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Há dois vídeos - um mostrando como montar e fazer o cabeamento do sistema e outro mostrando um exemplo de como usar a Configuração Guiada do System Manager para executar a configuração inicial do sistema.
+
+
+
+== Vídeo um de dois: Instalação de hardware e cabeamento
+
+O vídeo a seguir mostra como instalar e fazer o cabo do seu novo sistema.
+
+."Animação - Instalação e Configuração de um ASA C800
+video::2a61ed74-a0ce-46c3-86d2-ab4b013c0030[panopto]
+
+
+== Vídeo dois de dois: Execute a configuração de software completa
+
+O vídeo a seguir mostra a configuração de software de ponta a ponta para sistemas que executam o ONTAP 9.2 e posterior.
+
+video::WAE0afWhj1c?[youtube]

@@ -1,0 +1,157 @@
+= Opção 1: Inicialize a imagem de recuperação na maioria dos sistemas
+:allow-uri-read: 
+
+
+O procedimento para inicializar o nó prejudicado a partir da imagem de recuperação depende se o sistema está em uma configuração MetroCluster de dois nós.
+
+
+
+== Opção 1: Inicialize a imagem de recuperação na maioria dos sistemas
+
+Você deve inicializar a imagem ONTAP a partir da unidade USB, restaurar o sistema de arquivos e verificar as variáveis ambientais.
+
+Este procedimento aplica-se a sistemas que não estão em uma configuração de MetroCluster de dois nós.
+
+.Passos
+. A partir do prompt Loader, inicialize a imagem de recuperação da unidade flash USB: `boot_recovery`
++
+A imagem é transferida da unidade flash USB.
+
+. Quando solicitado, insira o nome da imagem ou aceite a imagem padrão exibida dentro dos colchetes na tela.
+. Restaure o `var` sistema de arquivos:
++
+[cols="1,2"]
+|===
+| Se o seu sistema tem... | Então... 
+
+
+ a| 
+Uma ligação de rede
+ a| 
+.. Pressione `y` quando solicitado para restaurar a configuração de backup.
+.. Defina o nó saudável para nível de privilégio avançado: `set -privilege advanced`
+.. Execute o comando Restore backup: `system node restore-backup -node local -target-address _impaired_node_IP_address_`
+.. Retorne o nó ao nível de administrador: `set -privilege admin`
+.. Pressione `y` quando solicitado a usar a configuração restaurada.
+.. Pressione `y` quando solicitado para reinicializar o nó.
+
+
+
+
+ a| 
+Sem ligação à rede
+ a| 
+.. Pressione `n` quando solicitado para restaurar a configuração de backup.
+.. Reinicie o sistema quando solicitado pelo sistema.
+.. Selecione a opção *Update flash from backup config* (Sync flash) no menu exibido.
++
+Se for solicitado que você continue com a atualização, `y` pressione .
+
+
+
+
+
+ a| 
+Sem conexão de rede e está em uma configuração IP MetroCluster
+ a| 
+.. Pressione `n` quando solicitado para restaurar a configuração de backup.
+.. Reinicie o sistema quando solicitado pelo sistema.
+.. Aguarde que as ligações de armazenamento iSCSI se liguem.
++
+Você pode prosseguir depois de ver as seguintes mensagens:
+
++
+[listing]
+----
+date-and-time [node-name:iscsi.session.stateChanged:notice]: iSCSI session state is changed to Connected for the target iSCSI-target (type: dr_auxiliary, address: ip-address).
+date-and-time [node-name:iscsi.session.stateChanged:notice]: iSCSI session state is changed to Connected for the target iSCSI-target (type: dr_partner, address: ip-address).
+date-and-time [node-name:iscsi.session.stateChanged:notice]: iSCSI session state is changed to Connected for the target iSCSI-target (type: dr_auxiliary, address: ip-address).
+date-and-time [node-name:iscsi.session.stateChanged:notice]: iSCSI session state is changed to Connected for the target iSCSI-target (type: dr_partner, address: ip-address).
+----
+.. Selecione a opção *Update flash from backup config* (Sync flash) no menu exibido.
++
+Se for solicitado que você continue com a atualização, `y` pressione .
+
+
+
+|===
+. Certifique-se de que as variáveis ambientais estão definidas como esperado:
++
+.. Leve o nó para o prompt Loader.
+.. Verifique as configurações de variáveis de ambiente com o `printenv` comando.
+.. Se uma variável de ambiente não for definida como esperado, modifique-a com o `setenv __environment-variable-name__ __changed-value__` comando.
+.. Salve suas alterações usando o `savenv` comando.
+
+
+. O próximo depende da configuração do sistema:
++
+** Se o sistema tiver o gerenciador de chaves integrado, NSE ou NVE configurado, vá para xref:bootmedia-encryption-restore.adoc[Restaure OKM, NSE e NVE conforme necessário]
+** Se o sistema não tiver o gerenciador de chaves integrado, NSE ou NVE configurado, execute as etapas nesta seção.
+
+
+. No prompt Loader, digite o `boot_ontap` comando.
++
+[cols="1,2"]
+|===
+| *Se você ver... | Então...* 
+
+
+ a| 
+O aviso de início de sessão
+ a| 
+Vá para a próxima etapa.
+
+
+
+ a| 
+A aguardar pela giveback...
+ a| 
+.. Faça login no nó do parceiro.
+.. Confirme se o nó de destino está pronto para giveback com o `storage failover show` comando.
+
+
+|===
+. Conete o cabo do console ao nó do parceiro.
+. Devolva o nó usando o `storage failover giveback -fromnode local` comando.
+. No prompt do cluster, verifique as interfaces lógicas com o `net int -is-home false` comando.
++
+Se alguma interface estiver listada como "false", reverta essas interfaces de volta para sua porta inicial usando o `net int revert` comando.
+
+. Mova o cabo do console para o nó reparado e execute o `version -v` comando para verificar as versões do ONTAP.
+. Restaure o giveback automático se você o desativou usando o `storage failover modify -node local -auto-giveback true` comando.
+
+
+
+
+== Opção 2: Inicialize a imagem de recuperação em uma configuração MetroCluster de dois nós
+
+Você deve inicializar a imagem ONTAP a partir da unidade USB e verificar as variáveis ambientais.
+
+Este procedimento se aplica a sistemas em uma configuração de MetroCluster de dois nós.
+
+.Passos
+. A partir do prompt Loader, inicialize a imagem de recuperação da unidade flash USB: `boot_recovery`
++
+A imagem é transferida da unidade flash USB.
+
+. Quando solicitado, insira o nome da imagem ou aceite a imagem padrão exibida dentro dos colchetes na tela.
+. Após a instalação da imagem, inicie o processo de restauração:
++
+.. Pressione `n` quando solicitado para restaurar a configuração de backup.
+.. Pressione `y` quando solicitado a reinicializar para começar a usar o software recém-instalado.
++
+Você deve estar preparado para interromper o processo de inicialização quando solicitado.
+
+
+
+. À medida que o sistema for inicializado, pressione `Ctrl-C` depois que a `Press Ctrl-C for Boot Menu` mensagem for exibida. E, quando o Menu de inicialização for exibido, selecione a opção 6.
+. Verifique se as variáveis ambientais estão definidas como esperado.
++
+.. Leve o nó para o prompt Loader.
+.. Verifique as configurações de variáveis de ambiente com o `printenv` comando.
+.. Se uma variável de ambiente não for definida como esperado, modifique-a com o `setenv __environment-variable-name__ __changed-value__` comando.
+.. Salve suas alterações usando o `savenv` comando.
+.. Reinicie o nó.
+
+
+

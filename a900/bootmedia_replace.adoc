@@ -1,0 +1,197 @@
+---
+permalink: a900/bootmedia_replace.html 
+sidebar: sidebar 
+keywords: AFF A900, replace, boot, media, controller, directions. replace boot media, transfer image 
+summary: Tem de remover e abrir o módulo do controlador, localizar e substituir o suporte de arranque no controlador e, em seguida, transferir a imagem para o suporte de arranque de substituição. 
+---
+= Remova o controlador, substitua o suporte de arranque e transfira a imagem de arranque - AFF A900
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Tem de desligar o módulo do controlador, remover e abrir o módulo do controlador, localizar e substituir o suporte de arranque no controlador e, em seguida, transferir a imagem para o suporte de arranque de substituição.
+
+
+
+== Passo 1: Remova o módulo do controlador
+
+Para aceder aos componentes no interior do controlador, tem de remover primeiro o módulo do controlador do sistema e, em seguida, remover a tampa do módulo do controlador.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Desconete os cabos do módulo do controlador desativado e mantenha o controle de onde os cabos foram conetados.
+. Deslize o botão terra cotta na pega do came para baixo até que este se destranque.
++
+.Animação - Remover o controlador
+video::256721fd-4c2e-40b3-841a-adf2000df5fa[panopto]
++
+image::../media/drw_a900_remove_PCM.png[Solte o controlador]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Botão de libertação do manípulo do excêntrico
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Pega do came
+
+|===
+. Rode o manípulo do excêntrico de forma a desengatar completamente o módulo do controlador do chassis e, em seguida, deslize o módulo do controlador para fora do chassis.
++
+Certifique-se de que suporta a parte inferior do módulo do controlador enquanto o desliza para fora do chassis.
+
+. Coloque a tampa do módulo do controlador para cima sobre uma superfície estável e plana, pressione o botão azul na tampa, deslize a tampa para a parte traseira do módulo do controlador e, em seguida, gire a tampa para cima e levante-a do módulo do controlador.
++
+image::../media/drw_a900_PCM_open.png[Levante a tampa do módulo do controlador]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Botão de bloqueio da tampa do módulo do controlador
+
+|===
+
+
+
+
+== Passo 2: Substitua o suporte de arranque
+
+Você deve localizar o suporte de inicialização no controlador e seguir as instruções para substituí-lo.
+
+.Passos
+. Levante a conduta de ar preta na parte de trás do módulo do controlador e, em seguida, localize o suporte de arranque utilizando a ilustração a seguir ou o mapa da FRU no módulo do controlador:
++
+.Animação - Substituir Mídia de inicialização
+video::c5080658-765e-4d29-8456-adf2000e1495[panopto]
++
+image::../media/drw_a900_remove_boot_dev.png[Remova o suporte de arranque]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Prima o separador de libertação
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Suporte de arranque
+
+|===
+. Prima o botão azul no alojamento do suporte do suporte de arranque para soltar o suporte de arranque do respetivo alojamento e, em seguida, puxe-o cuidadosamente para fora do suporte de suporte de arranque.
++
+
+NOTE: Não torça nem puxe o suporte de arranque diretamente para cima, pois isto pode danificar o suporte ou o suporte de arranque.
+
+. Alinhe as extremidades do suporte de arranque de substituição com a tomada de suporte de arranque e, em seguida, empurre-o cuidadosamente para dentro do encaixe.
+. Verifique o suporte de arranque para se certificar de que está encaixado corretamente e completamente no encaixe.
++
+Se necessário, retire o suporte de arranque e volte a colocá-lo no socket.
+
+. Prima o suporte de arranque para baixo para engatar o botão de bloqueio no alojamento do suporte de suporte de arranque.
+. Reinstale a tampa do módulo do controlador alinhando os pinos na tampa com os slots no suporte da placa-mãe e, em seguida, deslize a tampa para o lugar.
+
+
+
+
+== Passo 3: Transfira a imagem de arranque para o suporte de arranque
+
+Pode instalar a imagem do sistema no suporte de arranque de substituição utilizando uma unidade flash USB com a imagem instalada. No entanto, tem de restaurar o sistema de ficheiros var durante este procedimento.
+
+.Antes de começar
+* Você deve ter uma unidade flash USB, formatada para FAT32, com pelo menos 4GBGB de capacidade.
+* Faça o download de uma cópia da mesma versão de imagem do ONTAP que a controladora prejudicada estava sendo executada. Você pode baixar a imagem apropriada da seção Downloads no site de suporte da NetApp. Use o `version -v` comando para exibir se sua versão do ONTAP oferece suporte a NVE. Se o comando output for exibido `<10no- DARE>`, sua versão do ONTAP não suporta NVE.
++
+** Se a NVE for suportada pela sua versão do ONTAP, transfira a imagem com encriptação de volume NetApp, conforme indicado no botão de transferência.
+** Se não for suportado NVE, transfira a imagem sem encriptação de volume NetApp, conforme indicado no botão de transferência.
+
+
+* Se o seu sistema for um sistema autónomo, não necessita de uma ligação de rede, mas tem de efetuar uma reinicialização adicional ao restaurar o sistema de ficheiros var.
+
+
+.Passos
+. Se não o tiver feito, transfira e copie a imagem de serviço adequada do https://mysupport.netapp.com/["Site de suporte da NetApp"] para a unidade flash USB.
++
+.. Transfira a imagem de serviço a partir do link Downloads na página, para o seu espaço de trabalho no seu computador portátil.
+.. Descompacte a imagem de serviço.
++
+
+NOTE: Se você estiver extraindo o conteúdo usando o Windows, não use o WinZip para extrair a imagem netboot. Use outra ferramenta de extração, como 7-Zip ou WinRAR.
+
++
+A unidade flash USB deve ter a imagem ONTAP apropriada do que o controlador afetado está a executar.
+
+
+
+. Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
+. Recable o módulo do controlador, conforme necessário.
+. Introduza a unidade flash USB na ranhura USB do módulo do controlador.
++
+Certifique-se de que instala a unidade flash USB na ranhura identificada para dispositivos USB e não na porta da consola USB.
+
+. Empurre o módulo do controlador totalmente para dentro do sistema, certificando-se de que a pega da câmara limpa a unidade flash USB, empurre firmemente a pega da câmara para terminar de assentar o módulo do controlador e, em seguida, empurre a pega da câmara para a posição fechada.
++
+O controlador começa a arrancar assim que é completamente instalado no chassis.
+
+. Interrompa o processo de inicialização para parar no prompt DO Loader pressionando Ctrl-C quando você vir iniciando o AUTOBOOT pressione Ctrl-C para abortar....
++
+Se você perder essa mensagem, pressione Ctrl-C, selecione a opção para inicializar no modo Manutenção e, em seguida, interrompa o controlador para inicializar NO Loader.
+
+. Defina o tipo de conexão de rede no prompt DO Loader:
++
+** Se estiver a configurar DHCP: `ifconfig e0a -auto`
++
+
+NOTE: A porta de destino configurada é a porta de destino utilizada para comunicar com o controlador afetado a partir do controlador saudável durante a restauração do sistema de ficheiros var com uma ligação de rede. Você também pode usar a porta e0M neste comando.
+
+** Se estiver a configurar ligações manuais: `ifconfig e0a -addr=filer_addr -mask=netmask -gw=gateway-dns=dns_addr-domain=dns_domain`
++
+*** Filer_addr é o endereço IP do sistema de armazenamento.
+*** Netmask é a máscara de rede da rede de gerenciamento conetada ao parceiro HA.
+*** gateway é o gateway da rede.
+*** DNS_addr é o endereço IP de um servidor de nomes em sua rede.
+*** DNS_domain é o nome de domínio do sistema de nomes de domínio (DNS).
++
+Se você usar esse parâmetro opcional, não precisará de um nome de domínio totalmente qualificado no URL do servidor netboot. Você só precisa do nome de host do servidor.
+
+
+
+
+
++
+
+NOTE: Outros parâmetros podem ser necessários para sua interface. Você pode inserir a ajuda ifconfig no prompt do firmware para obter detalhes.
+
+. Se o controlador estiver em um MetroCluster elástico ou conetado à malha, será necessário restaurar a configuração do adaptador FC:
++
+.. Arranque para o modo de manutenção: `boot_ontap maint`
+.. Defina as portas MetroCluster como iniciadores: `ucadmin modify -m fc -t iniitator adapter_name`
+.. Parar para voltar ao modo de manutenção: `halt`
+
+
++
+As alterações serão implementadas quando o sistema for inicializado.
+
+

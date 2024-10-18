@@ -1,0 +1,720 @@
+---
+permalink: fas9500/install_detailed_guide.html 
+sidebar: sidebar 
+keywords: FAS9500 
+summary: Este a fornece instruções detalhadas passo a passo para a instalação de um sistema NetApp típico. 
+---
+= Passos detalhados - FAS9500
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+este artigo fornece instruções detalhadas passo a passo para instalar um sistema NetApp típico. Use este artigo se você quiser instruções de instalação mais detalhadas.
+
+
+
+== Passo 1: Prepare-se para a instalação
+
+Para instalar seu sistema, você precisa criar uma conta no site de suporte da NetApp, Registrar seu sistema e obter chaves de licença. Você também precisa fazer o inventário do número e do tipo apropriados de cabos para o seu sistema e coletar informações específicas de rede.
+
+Você precisa ter acesso ao https://hwu.netapp.com["NetApp Hardware Universe"^] para obter informações sobre os requisitos do site, bem como informações adicionais sobre o sistema configurado.
+
+.O que você precisa
+Você também pode querer ter acesso ao http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["ONTAP 9 Notas de versão"^] para sua versão do ONTAP para obter mais informações sobre este sistema.
+
+Você precisa fornecer o seguinte em seu site:
+
+* Espaço em rack para o sistema de armazenamento
+* Chave de fendas Phillips nº 2
+* Cabos de rede adicionais para conetar seu sistema ao switch de rede e laptop ou console com um navegador da Web
+
+
+.Passos
+. Desembale o conteúdo de todas as caixas.
+. Registre o número de série do sistema nos controladores.
++
+image::../media/drw_ssn_label.svg[Exemplo de número de série do sistema]
+
+. Faça um inventário e anote o número e os tipos de cabos que você recebeu.
++
+A tabela a seguir identifica os tipos de cabos que você pode receber. Se você receber um cabo não listado na tabela, consulte o Hardware Universe para localizar o cabo e identificar seu uso.
+
++
+https://hwu.netapp.com["NetApp Hardware Universe"^]
+
++
+[cols="1,2,1,2"]
+|===
+| Tipo de cabo... | Número de peça e comprimento | Tipo de conetor | Para... 
+
+
+ a| 
+Cabo de dados de 25 GbE
+ a| 
+X66240A-05 (112-00639), 0,5m
+
+X66240A-2 (112-00598), 2m
+
+X66240A-5 (112-00600), 5m
+ a| 
+image::../media/oie_cable_sfp_gbe_copper.png[Conetor de cobre GbE SFP]
+ a| 
+Cabo de rede
+
+
+
+ a| 
+FC de 32 GB (op SFP)
+ a| 
+X66250-2 (112-00342), 2m
+
+X66250-5 (112-00344), 5m
+
+X66250-15 (112-00346), 15m
+ a| 
+image::../media/oie_cable_sfp_gbe_copper.png[Conetor de cobre GbE SFP]
+ a| 
+Cabo de rede ótica FC
+
+
+
+ a| 
+Cabo de rede de 40 GbE
+ a| 
+X66100-1 (112-00542), 1m
+
+X66100-3 (112-00543), 3m
+
+X66100-5 (112-00544), 5m
+ a| 
+image::../media/oie_cable100_gbe_qsfp28.png[Conetor QSFP de 100 GbE]
+ a| 
+Dados Ethernet, rede de cluster
+
+
+
+ a| 
+Cabo de 100 GbE
+ a| 
+X66211B-1 (112-00573), 1m
+
+X66211B-2 (112-00574), 2m
+
+X66211B-5 (112-00576), 5m
+ a| 
+image::../media/oie_cable100_gbe_qsfp28.png[Conetor QSFP de 100 GbE]
+ a| 
+Rede,
+
+Dados Ethernet,
+
+rede de cluster
+
+
+
+ a| 
+Cabos óticos
+ a| 
+X66031A (112-00436), 1m
+
+X66032A (112-00437), 2m
+
+X66033A (112-00438), 3m
+ a| 
+image::../media/oie_cable_fiber_lc_connector.png[conetor lc de fibra de cabo oie]
+ a| 
+Rede ótica FC
+
+
+
+ a| 
+Cat 6, RJ-45 (dependente da encomenda)
+ a| 
+Números de peça X6585-R6 (112-00291), 3m
+
+X6562-R6 (112-00196), 5m
+ a| 
+image::../media/oie_cable_rj45.png[Conetor RJ-45]
+ a| 
+Rede de gerenciamento e dados Ethernet
+
+
+
+ a| 
+Armazenamento
+ a| 
+X66031A (112-00436), 1m
+
+X66032A (112-00437), 2m
+
+X66033A (112-00438), 3m
+ a| 
+image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[cabo oie mini sas hd para mini sas hd]
+ a| 
+Armazenamento
+
+
+
+ a| 
+Cabo micro-USB da consola
+ a| 
+Não aplicável
+ a| 
+Imagem::../media/oie_cable_micro_USB.pngMicro conetor USB]
+ a| 
+Conexão de console durante a configuração de software em laptop/console não Windows ou Mac
+
+
+
+ a| 
+Cabos de alimentação
+ a| 
+Não aplicável
+ a| 
+image::../media/oie_cable_power.png[Cabos de alimentação]
+ a| 
+Ligar o sistema
+
+|===
+. Reveja https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["Guia de configuração do ONTAP"^] o e recolha as informações necessárias listadas nesse guia.
+
+
+
+
+== Passo 2: Instale o hardware
+
+Você precisa instalar seu sistema em um rack de 4 colunas ou gabinete do sistema NetApp, conforme aplicável.
+
+. Instale os kits de calhas, conforme necessário.
+. Instale e fixe o seu sistema utilizando as instruções incluídas no kit de calhas.
++
+
+NOTE: Você precisa estar ciente das preocupações de segurança associadas ao peso do sistema.
+
++
+A etiqueta à esquerda indica um chassis vazio, enquanto a etiqueta à direita indica um sistema totalmente preenchido.
+
++
+image::../media/drw_9500_lifting_icon.svg[Etiqueta de aviso de levantamento de peso]
+
+. Conete os dispositivos de gerenciamento de cabos (como mostrado).
++
+image::../media/drw_9500_cable_management_arms.svg[Pegas de elevação e dispositivo de gestão de cabos]
+
+. Coloque a moldura na parte frontal do sistema.
+
+
+
+
+== Passo 3: Controladores de cabo para a sua rede
+
+Você pode conetar os controladores à rede usando o método de cluster sem switch de dois nós ou usando a rede de interconexão de cluster.
+
+[role="tabbed-block"]
+====
+.Opção 1: Cluster sem switch de dois nós
+--
+A rede de gerenciamento, a rede de dados e as portas de gerenciamento nos controladores são conetadas aos switches. As portas de interconexão de cluster são cabeadas em ambos os controladores.
+
+.Antes de começar
+Tem de ter contactado o administrador da rede para obter informações sobre a ligação do sistema aos comutadores.
+
+Certifique-se de que verifica a direção das patilhas de puxar do cabo ao inserir os cabos nas portas. As presilhas de cabos estão disponíveis para todas as portas do módulo de rede.
+
+image::../media/oie_cable_pull_tab_up.png[Direção da patilha de puxar do cabo]
+
+
+NOTE: Ao inserir o conetor, você deve sentir que ele clique no lugar; se você não sentir que ele clique, remova-o, vire-o e tente novamente.
+
+. Use a animação ou ilustração para concluir o cabeamento entre os controladores e os switches:
++
+.Animação - cabeamento de cluster sem switch de dois nós
+video::da08295f-ba8c-4de7-88c3-ae7c0170408d[panopto]
++
+image::../media/drw_9500_tnsc_network_cabling.svg[cabeamento de rede tnsc drw 9500]
+
++
+[cols="20%,80%"]
+|===
+| Passo | Execute em cada controlador 
+
+
+ a| 
+imagem::../media/icon_square_1_green.png
+ a| 
+Portas de interconexão do cluster de cabos:
+
+** Ranhura A4 e B4 (e4a)
+** Ranhura A8 e B8 (e8a)
+
+
+image::../media/oie_cable100_gbe_qsfp28.png[Conetor QSFP de 100 GbE]
+
+
+
+ a| 
+image::../media/icon_square_2_yellow.png[Ícone de legenda 2]
+ a| 
+Portas de gerenciamento do controlador de cabo (chave inglesa).
+
+imagem::../media/oie_cable_rj45.png
+
+
+
+ a| 
+image::../media/icon_square_3_orange.png[Ícone de legenda 3]
+ a| 
+Cabo de switches de rede FC de 32 GB:
+
+Portas no slot A3 e B3 (E3A e e3c) e no slot A9 e B9 (e9a e e9c) para os switches de rede FC de 32 GB.
+
+image::../media/oie_cable_sfp_gbe_copper.png[Conetor de cobre GbE SFP]
+
+40GbE switches de rede de host:
+
+Portas b do lado do host do cabo no slot A4 e B4 (e4b) e no slot A8 e B8 (e8b) para o switch do host.
+
+image::../media/oie_cable100_gbe_qsfp28.png[Conetor QSFP de 100 GbE]
+
+
+
+ a| 
+imagem::../media/icon_square_4_red.png
+ a| 
+Conexões do cabo de 25 GbE:
+
+Portas de cabos nos slots A5 e B5 (5a, 5b, 5c e 5D) e nos slots A7 e B7 (7a, 7b, 7c e 7D) para os switches de rede de 25 GbE.
+
+image::../media/oie_cable_sfp_gbe_copper.png[Conetor de cobre GbE SFP]
+
+
+
+ a| 
+** Prenda os cabos aos braços de gestão do cabo (não ilustrado).
+** Ligue os cabos de alimentação às PSUs e ligue-os a diferentes fontes de alimentação (não apresentadas). A PSU 1 e 3 fornecem energia para todos os componentes do lado A, enquanto PSU2 e PSU4 fornecem energia para todos os componentes do lado B.
+
+ a| 
+image::../media/oie_cable_power.png[Cabos de alimentação]
+
+image::../media/drw_a900fas9500_power_icon_IEOPS-1142.svg[Fontes de alimentação]
+
+|===
+
+
+--
+.Opção 2: Cluster comutado
+--
+A rede de gerenciamento, a rede de dados e as portas de gerenciamento nos controladores são conetadas aos switches. A interconexão de cluster e as portas de HA são cabeadas para o switch cluster/HA.
+
+.Antes de começar
+Tem de ter contactado o administrador da rede para obter informações sobre a ligação do sistema aos comutadores.
+
+Certifique-se de que verifica a direção das patilhas de puxar do cabo ao inserir os cabos nas portas. As presilhas de cabos estão disponíveis para todas as portas do módulo de rede.
+
+image::../media/oie_cable_pull_tab_up.png[Direção da patilha de puxar do cabo]
+
+
+NOTE: Ao inserir o conetor, você deve sentir que ele clique no lugar; se você não sentir que ele clique, remova-o, vire-o e tente novamente.
+
+. Use a animação ou ilustração para concluir o cabeamento entre os controladores e os switches:
++
+.Animação - cabeamento de cluster comutado
+video::3ad3f118-8339-4683-865f-ae7c0170400c[panopto]
++
+image::../media/drw_9500_switched_network_cabling.svg[cabeamento de rede comutada drw 9500]
+
++
+[cols="20%,80%"]
+|===
+| Passo | Execute em cada controlador 
+
+
+ a| 
+image::../media/icon_square_1_green.png[Legenda número 1]
+ a| 
+Portas a de interconexão do cluster de cabos:
+
+** Slot A4 e B4 (e4a) para o switch de rede do cluster.
+** Slot A8 e B8 (e8a) para o switch de rede do cluster.
+
+
+image::../media/oie_cable100_gbe_qsfp28.png[Conetor QSFP de 100 GbE]
+
+
+
+ a| 
+image::../media/icon_square_2_yellow.png[Ícone de legenda 2]
+ a| 
+Portas de gerenciamento do controlador de cabo (chave inglesa).
+
+image::../media/oie_cable_rj45.png[Conetor RJ-45]
+
+
+
+ a| 
+image::../media/icon_square_3_orange.png[Ícone de legenda 3]
+ a| 
+Cabo de switches de rede FC de 32 GB:
+
+Portas no slot A3 e B3 (E3A e e3c) e no slot A9 e B9 (e9a e e9c) para os switches de rede FC de 32 GB.
+
+image::../media/oie_cable_sfp_gbe_copper.png[Conetor de cobre GbE SFP]
+
+40GbE switches de rede de host:
+
+Portas b do lado do host do cabo no slot A4 e B4 (e4b) e no slot A8 e B8 (e8b) para o switch do host.
+
+image::../media/oie_cable100_gbe_qsfp28.png[Conetor QSFP de 100 GbE]
+
+
+
+ a| 
+image::../media/icon_square_4_red.png[Ícone de legenda 4]
+ a| 
+Conexões do cabo de 25 GbE:
+
+Portas de cabos nos slots A5 e B5 (5a, 5b, 5c e 5D) e nos slots A7 e B7 (7a, 7b, 7c e 7D) para os switches de rede de 25 GbE.
+
+imagem::../media/oie_cable_sfp_gbe_copper.png
+
+
+
+ a| 
+** Prenda os cabos aos braços de gestão do cabo (não ilustrado).
+** Ligue os cabos de alimentação às PSUs e ligue-os a diferentes fontes de alimentação (não apresentadas). A PSU 1 e 3 fornecem energia para todos os componentes do lado A, enquanto PSU2 e PSU4 fornecem energia para todos os componentes do lado B.
+
+ a| 
+image::../media/oie_cable_power.png[Cabos de alimentação]
+
+image::../media/drw_a900fas9500_power_icon_IEOPS-1142.svg[Fontes de alimentação]
+
+|===
+
+
+--
+====
+
+
+== Etapa 4: Controladores de cabos para compartimentos de unidades
+
+Cable gavetas de unidades de DS212C TB ou DS224C TB aos seus controladores.
+
+
+NOTE: Para obter mais informações sobre cabeamento SAS e planilhas, consulte link:../sas3/overview-cabling-rules-examples.html["Visão geral das regras de cabeamento SAS, planilhas e exemplos - prateleiras com IOM12 módulos"]
+
+.Antes de começar
+* Conclua a Planilha de cabeamento SAS do seu sistema. link:../sas3/overview-cabling-rules-examples.html["Visão geral das regras de cabeamento SAS, planilhas e exemplos - prateleiras com IOM12 módulos"]Consulte .
+* Certifique-se de que verifica a seta da ilustração para a orientação adequada da presilha de puxar do conetor do cabo. A presilha de puxar do cabo para os módulos de armazenamento está para cima, enquanto as presilhas de puxar nas prateleiras estão para baixo.
+
+
+image::../media/oie_cable_pull_tab_up.png[Direção da patilha de puxar do cabo]
+
+image::../media/oie_cable_pull_tab_down.png[Direção da patilha de puxar do cabo]
+
+
+NOTE: Ao inserir o conetor, você deve sentir que ele clique no lugar; se você não sentir que ele clique, remova-o, vire-o e tente novamente.
+
+. Use a animação a seguir ou os desenhos para cabeamento das controladoras para três (stack de 1 PB de um compartimento de unidades e uma stack de dois compartimentos de unidades) gavetas de DS224C unidades.
++
+.Animação - Cable suas prateleiras de unidade
+video::c958aae6-9d08-4d3d-a213-ae7c017040cd[panopto]
++
+image::../media/drw_9500_sas_shelf_cabling.svg[cabeamento de gaveta sas drw 9500]
+
++
+[cols="20%,80%"]
+|===
+| Passo | Execute em cada controlador 
+
+
+ a| 
+image::../media/icon_square_1_blue.png[ícone quadrado 1 azul]
+ a| 
+Conecte a pilha um do compartimento de unidades às controladoras, usando o gráfico para referência.
+
+image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[cabo oie mini sas hd para mini sas hd]
+
+Cabo mini-SAS
+
+
+
+ a| 
+image::../media/icon_square_2_yellow.png[Ícone de legenda 2]
+ a| 
+Conecte a pilha dois do compartimento de unidades às controladoras, usando o gráfico para referência.
+
+image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[cabo oie mini sas hd para mini sas hd]
+
+Cabo mini-SAS
+
+|===
+
+
+
+
+== Passo 5: Conclua a configuração e configuração do sistema
+
+Você pode concluir a configuração e configuração do sistema usando a descoberta de cluster com apenas uma conexão com o switch e laptop, ou conetando-se diretamente a um controlador no sistema e, em seguida, conetando-se ao switch de gerenciamento.
+
+[role="tabbed-block"]
+====
+.Opção 1: Se a deteção de rede estiver ativada
+--
+Se tiver a deteção de rede ativada no seu computador portátil, pode concluir a configuração e configuração do sistema utilizando a deteção automática de cluster.
+
+. Use a animação ou o desenho a seguir para definir uma ou mais IDs de gaveta de unidade:
++
+.Animação - defina a ID do seu compartimento e n.o 8217;s.
+video::95a29da1-faa3-4ceb-8a0b-ac7600675aa6[panopto]
++
+image::../media/drw_power-on_set_shelf_ID_set.svg[Conjunto de ID da prateleira de conjuntos de alimentação drw]
+
++
+[cols="20%,80%"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Retire a tampa da extremidade.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+Pressione e segure o botão ID do compartimento até que o primeiro dígito pisque e pressione para avançar para 0-9.
+
+
+NOTE: O primeiro dígito continua a piscar
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+Mantenha pressionado o botão ID do compartimento até que o segundo dígito pisque e, em seguida, pressione para avançar para 0-9.
+
+
+NOTE: O primeiro dígito pára de piscar e o segundo dígito continua a piscar.
+
+
+
+ a| 
+image::../media/icon_round_4.png[Legenda número 4]
+ a| 
+Volte a colocar a tampa da extremidade.
+
+
+
+ a| 
+image::../media/icon_round_5.png[Legenda número 5]
+ a| 
+Aguarde 10 segundos até que o LED âmbar (!) apareça e, em seguida, ligue o compartimento de unidades para definir a ID do compartimento.
+
+|===
+. Ligue os interruptores de energia das fontes de alimentação para ambos os nós.
++
+.Animação - ligue a alimentação dos controladores
+video::a905e56e-c995-4704-9673-adfa0005a891[panopto]
++
+image::../media/drw_9500_power-on.svg[alimentação drw 9500 ligada]
+
++
+
+NOTE: A inicialização inicial pode levar até oito minutos.
+
+. Certifique-se de que o seu computador portátil tem a deteção de rede ativada.
++
+Consulte a ajuda online do seu computador portátil para obter mais informações.
+
+. Use a animação a seguir para conetar seu laptop ao switch de gerenciamento.
++
+.Animação - Conete seu laptop ao interrutor de gerenciamento
+video::d61f983e-f911-4b76-8b3a-ab1b0066909b[panopto]
++
+image::../media/dwr_laptop_to_switch_only.svg[computador portátil dwr apenas para mudar]
+
+. Selecione um ícone ONTAP listado para descobrir:
++
+image::../media/drw_autodiscovery_controler_select.svg[seleção do controlador de deteção automática drw]
+
++
+.. Abra o Explorador de ficheiros.
+.. Clique em rede no painel esquerdo.
+.. Clique com o botão direito do rato e selecione Atualizar.
+.. Clique duas vezes no ícone ONTAP e aceite quaisquer certificados exibidos na tela.
++
+
+NOTE: XXXXX é o número de série do sistema para o nó de destino.
+
++
+O System Manager é aberto.
+
+
+
+. Utilize a configuração guiada do System Manager para configurar o sistema utilizando os dados recolhidos no https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["Guia de configuração do ONTAP"^].
+. Configure a sua conta e transfira o Active IQ Config Advisor:
++
+.. Inicie sessão na sua conta existente ou crie uma conta.
++
+https://mysupport.netapp.com/eservice/public/now.do["Registro de suporte da NetApp"^]
+
+.. Registe o seu sistema.
++
+https://mysupport.netapp.com/eservice/registerSNoAction.do?moduleName=RegisterMyProduct["Registro de produto NetApp"^]
+
+.. Baixar Active IQ Config Advisor.
++
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp Downloads: Config Advisor"^]
+
+
+
+. Verifique a integridade do sistema executando o Config Advisor.
+. Depois de concluir a configuração inicial, vá para a https://www.netapp.com/data-management/oncommand-system-documentation/["Recursos de documentação do Gerenciador de sistema do ONTAP  ONTAP"^] página para obter informações sobre como configurar recursos adicionais no ONTAP.
+
+
+--
+.Opção 2: Se a deteção de rede não estiver ativada
+--
+Se não estiver a utilizar um computador portátil ou uma consola Windows ou Mac ou se a deteção automática não estiver ativada, tem de concluir a configuração e a configuração utilizando esta tarefa.
+
+. Faça o cabo e configure o seu laptop ou console:
++
+.. Defina a porta de console no laptop ou console para 115.200 baud com N-8-1.
++
+
+NOTE: Consulte a ajuda on-line do seu laptop ou console para saber como configurar a porta do console.
+
+.. Conete o cabo do console ao laptop ou console usando o cabo do console fornecido com o sistema e conete o laptop ao switch na sub-rede de gerenciamento.
++
+image::../media/drw_9500_cable_console_switch_controller.svg[controlador do interrutor da consola do cabo drw 9500]
+
+.. Atribua um endereço TCP/IP ao laptop ou console, usando um que esteja na sub-rede de gerenciamento.
+
+
+. Use a animação a seguir para definir uma ou mais IDs de gaveta de unidade:
++
+.Animação - defina a ID do seu compartimento e n.o 8217;s.
+video::95a29da1-faa3-4ceb-8a0b-ac7600675aa6[panopto]
++
+image::../media/drw_power-on_set_shelf_ID_set.svg[Conjunto de ID da prateleira de conjuntos de alimentação drw]
+
++
+[cols="20%,80%"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Retire a tampa da extremidade.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+Pressione e segure o botão ID do compartimento até que o primeiro dígito pisque e pressione para avançar para 0-9.
+
+
+NOTE: O primeiro dígito continua a piscar
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+Mantenha pressionado o botão ID do compartimento até que o segundo dígito pisque e, em seguida, pressione para avançar para 0-9.
+
+
+NOTE: O primeiro dígito pára de piscar e o segundo dígito continua a piscar.
+
+
+
+ a| 
+image::../media/icon_round_4.png[Legenda número 4]
+ a| 
+Volte a colocar a tampa da extremidade.
+
+
+
+ a| 
+image::../media/icon_round_5.png[Legenda número 5]
+ a| 
+Aguarde 10 segundos até que o LED âmbar (!) apareça e, em seguida, ligue o compartimento de unidades para definir a ID do compartimento.
+
+|===
+. Ligue os interruptores de energia das fontes de alimentação para ambos os nós.
++
+.Animação - ligue a alimentação dos controladores
+video::a905e56e-c995-4704-9673-adfa0005a891[panopto]
++
+image::../media/drw_9500_power-on.svg[alimentação drw 9500 ligada]
+
+
+
+
+NOTE: A inicialização inicial pode levar até oito minutos.
+
+. Atribua um endereço IP de gerenciamento de nó inicial a um dos nós.
++
+[cols="1,2"]
+|===
+| Se a rede de gestão tiver DHCP... | Então... 
+
+
+ a| 
+Configurado
+ a| 
+Registre o endereço IP atribuído aos novos controladores.
+
+
+
+ a| 
+Não configurado
+ a| 
+.. Abra uma sessão de console usando PuTTY, um servidor de terminal ou o equivalente para o seu ambiente.
++
+
+NOTE: Verifique a ajuda on-line do seu laptop ou console se você não sabe como configurar o PuTTY.
+
+.. Insira o endereço IP de gerenciamento quando solicitado pelo script.
+
+
+|===
+. Usando o System Manager em seu laptop ou console, configure seu cluster:
++
+.. Aponte seu navegador para o endereço IP de gerenciamento de nó.
++
+
+NOTE: O formato para o endereço é https://x.x.x.x+.
+
+.. Configure o sistema utilizando os dados recolhidos no https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["Guia de configuração do ONTAP"^] .
+
+
+. Configure a sua conta e transfira o Active IQ Config Advisor:
++
+.. Inicie sessão na sua conta existente ou crie uma conta.
++
+https://mysupport.netapp.com/eservice/public/now.do["Registro de suporte da NetApp"^]
+
+.. Registe o seu sistema.
++
+https://mysupport.netapp.com/eservice/registerSNoAction.do?moduleName=RegisterMyProduct["Registro de produto NetApp"^]
+
+.. Baixar Active IQ Config Advisor.
++
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp Downloads: Config Advisor"^]
+
+
+
+. Verifique a integridade do sistema executando o Config Advisor.
+. Depois de concluir a configuração inicial, vá para a https://www.netapp.com/data-management/oncommand-system-documentation/["Recursos de documentação do Gerenciador de sistema do ONTAP  ONTAP"^] página para obter informações sobre como configurar recursos adicionais no ONTAP.
+
+
+--
+====

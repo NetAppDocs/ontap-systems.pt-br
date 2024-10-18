@@ -1,0 +1,87 @@
+---
+section: fas9500
+title: Sistemas FAS9500
+entries:
+- title: Instalar e configurar
+  pdf-filename: Instalação e configuração do FAS9500
+  entries:
+  - title: Escolha a experiência de instalação e configuração
+    url: "/fas9500/install_setup.html"
+  - title: Passos rápidos
+    url: "/fas9500/install_quick_guide.html"
+  - title: Passos de vídeo
+    url: "/fas9500/install_videos.html"
+  - title: Passos detalhados
+    url: "/fas9500/install_detailed_guide.html"
+- title: Manutenção
+  pdf-filename: Manutenção da FAS9500
+  entries:
+  - title: Visão geral
+    url: "/fas9500/maintain-overview.html"
+  - title: Suporte de arranque
+    pdf-filename: Mídia de inicialização do FAS9500
+    entries:
+    - title: Visão geral
+      url: "/fas9500/bootmedia_replace_overview.html"
+    - title: Verificações de pré-encerramento para chaves de criptografia integradas
+      url: "/fas9500/bootmedia_encryption_preshutdown_checks.html"
+    - title: Desligue o controlador desativado
+      url: "/fas9500/bootmedia_impaired_controller_shutdown.html"
+    - title: Substitua a imagem de inicialização
+      url: "/fas9500/bootmedia_replace.html"
+    - title: Inicie a imagem de recuperação
+      url: "/fas9500/bootmedia_recovery_image.html"
+    - title: Etapas de substituição de Mídia de pós-inicialização para OKM, NSE e
+        NVE
+      url: "/fas9500/bootmedia_encryption_restore.html"
+    - title: Devolva a peça com falha ao NetApp
+      url: "/fas9500/bootmedia_complete_rma.html"
+  - title: Módulo de armazenamento em cache
+    url: "/fas9500/caching_module_hot_swap.html"
+  - title: Chassis
+    pdf-filename: Chassis FAS9500
+    entries:
+    - title: Visão geral
+      url: "/fas9500/chassis_replace_overview.html"
+    - title: Desligue o controlador desativado
+      url: "/fas9500/chassis_replace_shutdown.html"
+    - title: Substitua o material de fixação
+      url: "/fas9500/chassis_replace_move_hardware.html"
+    - title: Restaurar e verificar a configuração
+      url: "/fas9500/chassis_replace_complete_system_restore_rma.html"
+  - title: Módulo do controlador
+    pdf-filename: Módulo do controlador FAS9500
+    entries:
+    - title: Visão geral
+      url: "/fas9500/controller_replace_overview.html"
+    - title: Desligue o controlador desativado
+      url: "/fas9500/controller_replace_shutdown.html"
+    - title: Substitua o hardware do módulo do controlador
+      url: "/fas9500/controller_replace.html"
+    - title: Restaure e verifique a configuração do sistema
+      url: "/fas9500/controller_replace_system_config_restore_and_verify.html"
+    - title: Recable o sistema
+      url: "/fas9500/controller_replace_recable_reassign_disks.html"
+    - title: Restauração completa do sistema
+      url: "/fas9500/controller_replace_complete_system_restoration_rma.html"
+  - title: DIMM
+    url: "/fas9500/dimm_replace.html"
+  - title: DCPM
+    url: "/fas9500/dcpm-nvram11-battery-replace.html"
+  - title: Ventoinha
+    url: "/fas9500/fan_swap_out.html"
+  - title: Módulo de e/S.
+    pdf-filename: Módulo de e/S FAS9500
+    entries:
+    - title: Substitua
+      url: "/fas9500/pci_cards_and_risers_replace.html"
+    - title: Adicionar
+      url: "/fas9500/add_io_module.html"
+  - title: LED USB
+    url: "/fas9500/led_module_replace.html"
+  - title: NVRAM
+    url: "/fas9500/nvram_module_or_nvram_dimm_replacement.html"
+  - title: Fonte de alimentação
+    url: "/fas9500/power_supply_swap_out.html"
+  - title: Bateria de relógio em tempo real
+    url: "/fas9500/rtc_battery_replace.html"

@@ -1,0 +1,245 @@
+---
+permalink: a700s/bootmedia-transfer-boot-image.html 
+sidebar: sidebar 
+keywords: aff a700s, aff, a700s, procedure, secondary, boot, media, restore, fail, image, tgz, file, trasnfer, usb, flash, drive, transfer the boot image to the boot medai using a usb flash drive 
+summary: Este procedimento só deve ser utilizado se a restauração secundária do suporte de arranque falhar ou se o ficheiro image.tgz não for encontrado no suporte de arranque secundário. 
+---
+= Transfira a imagem de arranque para o suporte de arranque - AFF A700s
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pode instalar a imagem do sistema no suporte de arranque de substituição utilizando a imagem no segundo suporte de arranque instalado no módulo do controlador, o método principal para restaurar a imagem do sistema ou transferindo a imagem de arranque para o suporte de arranque utilizando uma unidade flash USB quando a restauração secundária do suporte de arranque falhou ou se o ficheiro image.tgz não for encontrado no suporte de arranque secundário.
+
+
+
+== Opção 1: Transfira arquivos para a Mídia de inicialização usando recuperação de backup a partir da segunda Mídia de inicialização
+
+Pode instalar a imagem do sistema no suporte de arranque de substituição utilizando a imagem no segundo suporte de arranque instalado no módulo do controlador. Este é o método principal para transferir os ficheiros multimédia de arranque para o suporte de arranque de substituição em sistemas com dois suportes de arranque no módulo do controlador.
+
+A imagem na Mídia de inicialização secundária deve conter um `image.tgz` arquivo e não deve estar relatando falhas. Se o ficheiro image.tgz estiver em falta ou se o suporte de dados de arranque comunicar falhas, não pode utilizar este procedimento. Tem de transferir a imagem de arranque para o suporte de arranque de substituição utilizando o procedimento de substituição da unidade flash USB.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Se ainda não o tiver feito, feche a conduta de ar:
++
+.. Desloque a conduta de ar até ao módulo do controlador.
+.. Faça deslizar a conduta de ar na direção dos tirantes até que as patilhas de bloqueio encaixem no lugar.
+.. Inspecione a conduta de ar para se certificar de que está corretamente encaixada e trancada no lugar.
++
+image::../media/drw_a700s_close_air_duct.png[Fechar a conduta de ar]
+
++
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Conduta de ar
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Risers
+
+|===
+
+
+. Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
+. Reinstale o dispositivo de gerenciamento de cabos e reconete o sistema, conforme necessário.
++
+Ao reativar, lembre-se de reinstalar os conversores de Mídia (SFPs) se eles foram removidos.
+
+. Recable a fonte de alimentação e, em seguida, conete-a à fonte de alimentação.
++
+Certifique-se de que volta a ligar o anel de bloqueio do cabo de alimentação no cabo de alimentação.
+
+. Empurre cuidadosamente o módulo do controlador até que os ganchos de bloqueio do módulo do controlador comecem a subir, empurre firmemente os ganchos de bloqueio para terminar de assentar o módulo do controlador e, em seguida, rode os ganchos de bloqueio para a posição de bloqueio sobre os pinos no módulo do controlador.
++
+O controlador começa a arrancar assim que é completamente instalado no chassis.
+
+. Interrompa o processo de inicialização pressionando Ctrl-C para parar no prompt DO Loader.
++
+Se você perder essa mensagem, pressione Ctrl-C, selecione a opção para inicializar no modo Manutenção e, em seguida, interrompa o controlador para inicializar NO Loader.
+
+. A partir do prompt Loader, inicialize a imagem de recuperação a partir da Mídia de inicialização secundária: `boot_recovery`
++
+A imagem é transferida a partir do suporte de arranque secundário.
+
+. Quando solicitado, insira o nome da imagem ou aceite a imagem padrão exibida dentro dos colchetes na tela.
+. Após a instalação da imagem, inicie o processo de restauração:
++
+.. Registe o endereço IP do controlador afetado que é apresentado no ecrã.
+.. Pressione `y` quando solicitado para restaurar a configuração de backup.
+.. Pressione `y` quando solicitado para confirmar que o procedimento de backup foi bem-sucedido.
+
+
+. A partir do controlador parceiro no nível avançado de privilégio, inicie a sincronização de configuração utilizando o endereço IP registado na etapa anterior: `system node restore-backup -node local -target-address _impaired_node_IP_address_`
+. Depois que a sincronização da configuração for concluída sem erros, pressione `y` quando solicitado para confirmar que o procedimento de backup foi bem-sucedido.
+.  `y`Pressione quando solicitado a usar a cópia restaurada e pressione `y` quando solicitado a reinicializar o controlador.
+. Saia do nível de privilégio avançado no controlador saudável.
+
+
+
+
+== Opção 2: Transfira a imagem de arranque para o suporte de arranque utilizando uma unidade flash USB
+
+Este procedimento só deve ser utilizado se a restauração secundária do suporte de arranque falhar ou se o ficheiro image.tgz não for encontrado no suporte de arranque secundário.
+
+* Você deve ter uma unidade flash USB, formatada para FAT32, com pelo menos 4GBGB de capacidade.
+* Uma cópia da mesma versão de imagem do ONTAP que a que o controlador afetado estava a executar. Você pode baixar a imagem apropriada da seção Downloads no site de suporte da NetApp
++
+** Se a NVE estiver ativada, transfira a imagem com encriptação de volume NetApp, conforme indicado no botão de transferência.
+** Se a NVE não estiver ativada, transfira a imagem sem encriptação de volume NetApp, conforme indicado no botão de transferência.
+
+
+* Se o seu sistema for um par de HA, tem de ter uma ligação de rede.
+* Se o seu sistema for um sistema autónomo, não necessita de uma ligação de rede, mas tem de efetuar uma reinicialização adicional ao restaurar o sistema de ficheiros var.
+
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Se ainda não o tiver feito, feche a conduta de ar:
++
+.. Desloque a conduta de ar até ao módulo do controlador.
+.. Faça deslizar a conduta de ar na direção dos tirantes até que as patilhas de bloqueio encaixem no lugar.
+.. Inspecione a conduta de ar para se certificar de que está corretamente encaixada e trancada no lugar.
++
+image::../media/drw_a700s_close_air_duct.png[Fechar a conduta de ar]
+
++
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Conduta de ar
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Risers
+
+|===
+
+
+. Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
+. Reinstale o dispositivo de gerenciamento de cabos e reconete o sistema, conforme necessário.
++
+Ao reativar, lembre-se de reinstalar os conversores de Mídia (SFPs) se eles foram removidos.
+
+. Recable a fonte de alimentação e, em seguida, conete-a à fonte de alimentação.
++
+Certifique-se de que volta a ligar o anel de bloqueio do cabo de alimentação no cabo de alimentação.
+
+. Introduza a unidade flash USB na ranhura USB do módulo do controlador.
++
+Certifique-se de que instala a unidade flash USB na ranhura identificada para dispositivos USB e não na porta da consola USB.
+
+. Empurre cuidadosamente o módulo do controlador até que os ganchos de bloqueio do módulo do controlador comecem a subir, empurre firmemente os ganchos de bloqueio para terminar de assentar o módulo do controlador e, em seguida, rode os ganchos de bloqueio para a posição de bloqueio sobre os pinos no módulo do controlador.
++
+O controlador começa a arrancar assim que é completamente instalado no chassis.
+
+. Interrompa o processo de inicialização pressionando Ctrl-C para parar no prompt DO Loader.
++
+Se você perder essa mensagem, pressione Ctrl-C, selecione a opção para inicializar no modo Manutenção e, em seguida, interrompa o controlador para inicializar NO Loader.
+
+. Embora as variáveis de ambiente e bootargs sejam mantidas, você deve verificar se todas as variáveis de ambiente de inicialização necessárias e bootargs estão corretamente definidas para o seu tipo de sistema e configuração usando o `printenv bootarg name` comando e corrigir quaisquer erros usando o `setenv variable-name <value>` comando.
++
+.. Verifique as variáveis de ambiente de inicialização:
++
+*** `bootarg.init.boot_clustered`
+*** `partner-sysid`
+*** `bootarg.init.flash_optimized` Para AFF C190/AFF A220 (All Flash FAS)
+*** `bootarg.init.san_optimized` Para AFF A220 e array all-flash SAN
+*** `bootarg.init.switchless_cluster.enable`
+
+
+.. Se o Gerenciador de chaves Externo estiver habilitado, verifique os valores de inicialização listados na `kenv` saída ASUP:
++
+*** `bootarg.storageencryption.support <value>`
+*** `bootarg.keymanager.support <value>`
+*** `kmip.init.interface <value>`
+*** `kmip.init.ipaddr <value>`
+*** `kmip.init.netmask <value>`
+*** `kmip.init.gateway <value>`
+
+
+.. Se o Gerenciador de chaves integrado estiver habilitado, verifique os valores de bootarg listados na `kenv` saída ASUP:
++
+*** `bootarg.storageencryption.support <value>`
+*** `bootarg.keymanager.support <value>`
+*** `bootarg.onboard_keymanager <value>`
+
+
+.. Salve as variáveis de ambiente que você alterou com o `savenv` comando
+.. Confirme as alterações usando o `printenv _variable-name_` comando.
+
+
+. A partir do prompt Loader, inicialize a imagem de recuperação da unidade flash USB: `boot_recovery`
++
+A imagem é transferida da unidade flash USB.
+
+. Quando solicitado, insira o nome da imagem ou aceite a imagem padrão exibida dentro dos colchetes na tela.
+. Após a instalação da imagem, inicie o processo de restauração:
++
+.. Registe o endereço IP do controlador afetado que é apresentado no ecrã.
+.. Pressione `y` quando solicitado para restaurar a configuração de backup.
+.. Pressione `y` quando solicitado para confirmar que o procedimento de backup foi bem-sucedido.
+
+
+.  `y`Pressione quando solicitado a usar a cópia restaurada e pressione `y` quando solicitado a reinicializar o controlador.
+. A partir do controlador parceiro no nível avançado de privilégio, inicie a sincronização de configuração utilizando o endereço IP registado na etapa anterior: `system node restore-backup -node local -target-address _impaired_node_IP_address_`
+. Depois que a sincronização da configuração for concluída sem erros, pressione `y` quando solicitado para confirmar que o procedimento de backup foi bem-sucedido.
+.  `y`Pressione quando solicitado a usar a cópia restaurada e pressione `y` quando solicitado a reinicializar o controlador.
+. Verifique se as variáveis ambientais estão definidas como esperado.
++
+.. Leve o controlador para o prompt Loader.
++
+A partir do prompt do ONTAP, você pode emitir o comando 'stem node halt -skip-lif-migration-before-shutdown true -ignore-quórum-warnings true -inhibit-overall true'.
+
+.. Verifique as configurações de variáveis de ambiente com o `printenv` comando.
+.. Se uma variável de ambiente não for definida como esperado, modifique-a com o `setenv __environment-variable-name__ __changed-value__` comando.
+.. Salve suas alterações usando o `savenv` comando.
+.. Reinicie o controlador.
+
+
+. Com o controlador desativado reinicializado exibindo a `Waiting for giveback...` mensagem, execute um giveback do controlador saudável:
++
+[cols="1,2"]
+|===
+| Se o seu sistema estiver em... | Então... 
+
+
+ a| 
+Um par de HA
+ a| 
+Depois que o controlador afetado estiver a apresentar a `Waiting for giveback...` mensagem, efetue uma giveback a partir do controlador saudável:
+
+.. A partir do controlador saudável: `storage failover giveback -ofnode partner_node_name`
++
+O controlador prejudicado recupera seu armazenamento, termina a inicialização e, em seguida, reinicia e é novamente tomado pelo controlador saudável.
+
++
+
+NOTE: Se o giveback for vetado, você pode considerar substituir os vetos.
+
++
+https://docs.netapp.com/us-en/ontap/high-availability/index.html["Gerenciamento de par HA"^]
+
+.. Monitorize o progresso da operação de giveback utilizando o `storage failover show-giveback` comando.
+.. Após a conclusão da operação de giveback, confirme se o par de HA está saudável e se a aquisição é possível usando o `storage failover show` comando.
+.. Restaure o giveback automático se você o desativou usando o `storage failover modify` comando.
+
+
+|===
+. Saia do nível de privilégio avançado no controlador saudável.
+

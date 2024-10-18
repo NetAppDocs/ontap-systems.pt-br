@@ -1,0 +1,113 @@
+---
+permalink: a700/chassis-replace-complete-system-restore-rma.html 
+sidebar: sidebar 
+keywords: aff a700, fas9000, sysdiages, ha-config, switchback, chassis 
+summary: Você precisa verificar o estado de HA do chassi e devolver a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. 
+---
+= Conclua o processo de restauração e substituição - AFF A700
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve verificar o estado de HA do chassi e devolver a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit.
+
+
+
+== Etapa 1: Verifique e defina o estado HA do chassi
+
+Você deve verificar o estado de HA do chassi e, se necessário, atualizar o estado para corresponder à configuração do sistema.
+
+.Passos
+. No modo de manutenção, a partir de qualquer um dos módulos do controlador, apresentar o estado HA do módulo do controlador local e do chassis: `ha-config show`
++
+O estado HA deve ser o mesmo para todos os componentes.
+
+. Se o estado do sistema apresentado para o chassis não corresponder à configuração do sistema:
++
+.. Defina o estado HA para o chassis: `ha-config modify chassis _HA-state_`
++
+O valor para `HA-state` pode ser um dos seguintes:
+
++
+*** `ha`
+*** `mcc`
+*** `mcc-2n`
+*** `mccip`
+*** `non-ha`
+
+
+.. Confirme se a definição foi alterada: `ha-config show`
+
+
+. Se você ainda não o fez, recable o resto de seu sistema.
+. Sair do modo de manutenção: `halt`
++
+É apresentado o aviso Loader.
+
+
+
+
+
+== Etapa 2: Alterne agregados de volta em uma configuração de MetroCluster de dois nós
+
+Depois de concluir a substituição da FRU em uma configuração de MetroCluster de dois nós, você pode executar a operação de switchback do MetroCluster. Isso retorna a configuração ao seu estado operacional normal, com as máquinas virtuais de armazenamento de origem sincronizada (SVMs) no site anteriormente prejudicado agora ativo e fornecendo dados dos pools de discos locais.
+
+Esta tarefa só se aplica a configurações de MetroCluster de dois nós.
+
+.Passos
+. Verifique se todos os nós estão no `enabled` estado: `metrocluster node show`
++
+[listing]
+----
+cluster_B::>  metrocluster node show
+
+DR                           Configuration  DR
+Group Cluster Node           State          Mirroring Mode
+----- ------- -------------- -------------- --------- --------------------
+1     cluster_A
+              controller_A_1 configured     enabled   heal roots completed
+      cluster_B
+              controller_B_1 configured     enabled   waiting for switchback recovery
+2 entries were displayed.
+----
+. Verifique se a ressincronização está concluída em todos os SVMs: `metrocluster vserver show`
+. Verifique se todas as migrações automáticas de LIF que estão sendo executadas pelas operações de recuperação foram concluídas com sucesso: `metrocluster check lif show`
+. Execute o switchback usando o `metrocluster switchback` comando de qualquer nó no cluster sobrevivente.
+. Verifique se a operação de comutação foi concluída: `metrocluster show`
++
+A operação de switchback ainda está em execução quando um cluster está no `waiting-for-switchback` estado:
+
++
+[listing]
+----
+cluster_B::> metrocluster show
+Cluster              Configuration State    Mode
+--------------------	------------------- 	---------
+ Local: cluster_B configured       	switchover
+Remote: cluster_A configured       	waiting-for-switchback
+----
++
+A operação de switchback é concluída quando os clusters estão no `normal` estado.:
+
++
+[listing]
+----
+cluster_B::> metrocluster show
+Cluster              Configuration State    Mode
+--------------------	------------------- 	---------
+ Local: cluster_B configured      		normal
+Remote: cluster_A configured      		normal
+----
++
+Se um switchback estiver demorando muito tempo para terminar, você pode verificar o status das linhas de base em andamento usando o `metrocluster config-replication resync-status show` comando.
+
+. Restabelecer qualquer configuração SnapMirror ou SnapVault.
+
+
+
+
+== Passo 3: Devolva a peça com falha ao NetApp
+
+Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

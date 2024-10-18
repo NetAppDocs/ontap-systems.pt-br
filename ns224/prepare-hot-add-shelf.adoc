@@ -1,0 +1,299 @@
+---
+permalink: ns224/prepare-hot-add-shelf.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, requirement, preparation, applicable, complete, drive, hot-add an ns224 drive shelf 
+summary: É possível adicionar um compartimento de unidade de NS224 TB depois que o par de HA atender a certos requisitos e depois que as tarefas de preparação aplicáveis ao seu par de HA forem concluídas. 
+---
+= Prepare-se para um hot-add - NS224 prateleiras
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Conclua as tarefas de preparação aplicáveis ao seu par de HA antes de adicionar um compartimento de NS224 TB a quente.
+
+Quando terminar com as tarefas de preparação aplicáveis, vá para link:prepare-hot-add-shelf.html["Instale uma prateleira para adicionar um hot-add"].
+
+
+
+== Instale placas PCIe ou módulos de e/S compatíveis com RoCE
+
+Se o modelo da sua plataforma suportar o uso de placas PCIe ou módulos de e/S compatíveis com RoCE, seu par de HA deve ter portas Ethernet suficientes disponíveis com RoCE para suportar o número de prateleiras que você está adicionando.
+
+.Passos
+. Para cada gaveta que você está adicionando, verifique se há duas portas compatíveis com RoCE em cada controladora.
++
+Essas portas podem estar integradas aos controladores, em placas PCIe compatíveis com RoCE, uma combinação de ambos, ou em módulos de e/S compatíveis com RoCE, conforme suportado pelo modelo da sua plataforma.
+
+. Se o seu par de HA não tiver portas compatíveis com RoCE suficientes, instale as placas PCIe ou módulos de e/S adicionais nos slots corretos da controladora, conforme suportado pelo modelo da plataforma.
++
+.. Identifique os slots corretos do controlador para o modelo da sua plataforma.  https://hwu.netapp.com["NetApp Hardware Universe"^]Consulte .
+.. Consulte a documentação do modelo da plataforma para obter instruções de instalação da placa PCIe ou do módulo de e/S.
+
+
+
+
+
+
+== Configurar portas compatíveis com RoCE para uso de armazenamento
+
+Se o seu par de HA tiver portas Ethernet não dedicadas compatíveis com RoCE que você esteja usando para adicionar um compartimento NS224, configure as portas para uso de storage (não para uso em rede).
+
+.Antes de começar
+* Certifique-se de que instalou quaisquer placas PCIe ou módulos de e/S compatíveis com RoCE adicionais em cada controlador.
+
+
+.Sobre esta tarefa
+* Para alguns modelos de plataforma, quando uma placa PCIe compatível com RoCE ou um módulo de e/S é instalado em um slot suportado em uma controladora, as portas são automaticamente padrão para uso de armazenamento (em vez de rede); no entanto, é recomendável que você conclua o seguinte procedimento para verificar se as portas compatíveis com RoCE estão configuradas para uso de armazenamento.
+* Se você determinar que as portas não dedicadas com capacidade para RoCE no seu par de HA não estão configuradas para uso de storage, será um procedimento sem interrupções configurá-las.
++
+Dependendo da versão do ONTAP que seu par de HA estiver em execução, talvez seja necessário reinicializar os controladores:
+
++
+** Se o seu par de HA estiver executando uma versão do ONTAP 9.6, será necessário reinicializar os controladores, um de cada vez.
+** Se o seu par de HA estiver executando o ONTAP 9.7 ou posterior, você não precisará reinicializar os controladores, a menos que uma ou ambas as controladoras estejam no modo de manutenção. Este procedimento pressupõe que nenhum controlador está no modo de manutenção.
+
+
+* Se, no futuro, você precisar alterar as portas de uso de armazenamento para uso de rede, digite o comando , `storage port modify -node _node_name_ -port _port_name_ -mode network`.
+
+
+.Passos
+. Faça login no cluster usando SSH ou a porta serial do console.
+. Digite o seguinte comando para verificar se as portas não dedicadas no par de HA estão configuradas para uso em armazenamento:
++
+`storage port show`
+
++
+** Se o seu par de HA estiver executando o ONTAP 9.8 ou posterior, as portas não dedicadas serão exibidas `storage` `Mode` na coluna.
+** Se o seu par de HA estiver executando o ONTAP 9.7 ou 9,6, as portas não dedicadas, que são exibidas `false` `Is Dedicated?` na coluna, também serão exibidas `enabled` na `State` coluna.
++
+[NOTE]
+====
+Quando portas não dedicadas não são configuradas para uso de armazenamento, o comando output exibe o seguinte:
+
+*** Se o seu par de HA estiver executando o ONTAP 9.8 ou posterior, as portas não dedicadas serão exibidas `network` `Mode` na coluna.
+*** Se o seu par de HA estiver executando o ONTAP 9.7 ou 9,6, as portas não dedicadas, que são exibidas `false` `Is Dedicated?`` na coluna, também serão exibidas `disabled` na `State` coluna.
+
+
+====
+
+
+. Se as portas não dedicadas estiverem configuradas para uso de armazenamento, você será feito com este procedimento.
++
+Caso contrário, você precisa configurar as portas executando as etapas 4 a 7.
+
+. Configure as portas não dedicadas para uso de storage em um dos controladores:
++
+Você deve repetir o comando aplicável para cada porta que você está configurando.
+
++
+[cols="1,3"]
+|===
+| Se o seu par HA estiver em execução... | Use este comando... 
+
+
+ a| 
+ONTAP 9 .8 ou posterior
+ a| 
+`storage port modify -node _node_name_ -port _port_name_ -mode storage`
+
+
+
+ a| 
+ONTAP 9 .7 ou 9,6
+ a| 
+`storage port enable -node _node_name_ -port _port_name_`
+
+|===
+. Se o seu par de HA estiver executando o ONTAP 9.6, reinicie o controlador para que as alterações de porta entrem em vigor: `system node reboot -node _node_name_ -reason _reason_for_the_reboot_`.
++
+Caso contrário, vá para a próxima etapa.
+
++
+
+NOTE: A reinicialização pode levar até 15 minutos.
+
+. Repita os passos para o segundo controlador:
++
+[cols="1,3"]
+|===
+| Se o seu par HA estiver em execução... | Então... 
+
+
+ a| 
+ONTAP 9,7 ou posterior
+ a| 
+.. Repita o passo 4.
+.. Avance para o passo 7.
+
+
+
+
+ a| 
+ONTAP 9,6
+ a| 
+.. Repita os passos 4 e 5.
++
+
+NOTE: O primeiro controlador já deve ter concluído a reinicialização.
+
+.. Avance para o passo 7.
+
+
+|===
+. Verifique se as portas não dedicadas em ambos os controladores estão configuradas para uso no storage: `storage port show`
++
+** Se o seu par de HA estiver executando o ONTAP 9.8 ou posterior, as portas não dedicadas serão exibidas `storage` `Mode` na coluna.
+** Se o seu par de HA estiver executando o ONTAP 9.7 ou 9,6, as portas não dedicadas, que são exibidas `false` `Is Dedicated?` na coluna, também serão exibidas `enabled` na `State` coluna.
+
+
+
+
+
+
+== Gavetas existentes recuperáveis
+
+Antes de adicionar prateleiras adicionais a quente, dependendo do modelo da sua plataforma, talvez seja necessário reinstalar uma gaveta existente (depois de instalar as placas PCIe ou módulos de e/S compatíveis com RoCE adicionais) em dois conjuntos de portas em slots diferentes para resiliência contra falha de slot.
+
+.Antes de começar
+* Certifique-se de que instalou quaisquer placas PCIe ou módulos de e/S compatíveis com RoCE adicionais em cada controlador.
+* Certifique-se de que as portas não dedicadas nas placas PCIe compatíveis com RoCE ou nos módulos de e/S instalados estão configuradas para uso em armazenamento.
+
+
+.Sobre esta tarefa
+* A desativação de conexões de porta é um procedimento sem interrupções quando a gaveta tem conectividade multipath-HA.
+* Você move um cabo de cada vez para manter sempre a conetividade com a prateleira durante este procedimento.
++
+
+NOTE: Mover um cabo não requer nenhum tempo de espera entre desconetar o cabo de uma porta e conectá-lo a outra porta.
+
+* Se necessário, consulte as ilustrações de cabeamento de prateleira para o modelo de sua plataforma link:cable-overview-hot-add-shelf.html["Visão geral do cabeamento para um hot-add"]na .
+
+
+.Passos
+. Recable as conexões do compartimento existente em dois conjuntos de portas compatíveis com RoCE em diferentes slots, conforme aplicável ao modelo da sua plataforma.
+
+
+[role="tabbed-block"]
+====
+.AFF A1K
+--
+Siga um destes procedimentos se você estiver adicionando uma segunda prateleira ou uma quarta prateleira a quente.
+
+
+NOTE: Se você tiver um par de HA do AFF A1K e adicionar um terceiro compartimento e instalar um terceiro ou quarto módulo de e/S compatível com RoCE em cada controladora, a terceira gaveta será cabeada apenas para o terceiro ou terceiro e quarto módulos de e/S. Não é necessário reinstalar nenhuma gaveta existente.
+
+* Se você estiver adicionando uma segunda prateleira, reconetável a primeira prateleira através dos módulos de e/S compatíveis com RoCE no slot 11 e slot 10 em cada controladora.
++
+As subetapas assumem que a gaveta existente é cabeada para um módulo de e/S compatível com RoCE no slot 11 em cada controladora.
+
++
+.. No controlador A, mova o cabo do slot 11 porta b (e11b) para o slot 10 porta b (e10b).
+.. Repita o mesmo movimento do cabo no controlador B.
+
+
+* Se você estiver adicionando uma quarta prateleira, reconetável a terceira prateleira através dos módulos de e/S compatíveis com RoCE no slot 9 e slot 8 em cada controladora.
++
+As subetapas assumem que a terceira gaveta é cabeada para um módulo de e/S compatível com RoCE no slot 9 em cada controladora.
+
++
+.. No controlador A, mova o cabo do slot 9 porta b (e9b) para o slot 8 porta b (e8b).
+.. Repita o mesmo movimento do cabo no controlador B.
+
+
+
+
+--
+.AFF A70 ou AFF A90
+--
+Se você estiver adicionando uma segunda prateleira, reconetável a primeira prateleira através dos módulos de e/S compatíveis com RoCE no slot 11 e slot 8 em cada controladora.
+
+As subetapas assumem que a gaveta existente é cabeada para um módulo de e/S compatível com RoCE no slot 11 em cada controladora.
+
+. No controlador A, mova o cabo do slot 11 porta b (e11b) para o slot 8 porta b (e8b).
+. Repita o mesmo movimento do cabo no controlador B.
+
+
+--
+.AFF A800 ou AFF C800
+--
+Se você estiver adicionando uma segunda gaveta, reconetável a primeira prateleira através dos dois conjuntos de portas compatíveis com RoCE no slot 5 e slot 3 em cada controladora.
+
+As subetapas assumem que a gaveta existente é cabeada para placas PCIe compatíveis com RoCE no slot 5 em cada controladora.
+
+. No controlador A, mova o cabo do slot 5 porta b (e5b) para o slot 3 porta b (e3b).
+. Repita o mesmo movimento do cabo no controlador B.
+
+
+--
+.AFF A700
+--
+Se você estiver adicionando uma segunda gaveta, reconetável a primeira prateleira através dos dois conjuntos de portas compatíveis com RoCE no slot 3 e slot 7 em cada controladora.
+
+As subetapas assumem que a gaveta existente é cabeada para módulos de e/S compatíveis com RoCE no slot 3 em cada controladora.
+
+. No controlador A, mova o cabo do slot 3 porta b (e3b) para o slot 7 porta b (E7B).
+. Repita o mesmo movimento do cabo no controlador B.
+
+
+--
+.AFF A400 ou AFF C400
+--
+Se você estiver adicionando uma segunda prateleira, dependendo do modelo da sua plataforma, faça um dos seguintes procedimentos:
+
+* No AFF A400:
++
+Recable a primeira gaveta através dos dois conjuntos de portas compatíveis com RoCE, integradas e0c/e0d e no slot 5, em cada controladora.
+
++
+As subetapas assumem que o compartimento existente é cabeado para as portas integradas compatíveis com RoCE e0c/e0d em cada controladora.
+
++
+.. No controlador A, mova o cabo da porta e0d para a porta b (e5b) do slot 5.
+.. Repita o mesmo movimento do cabo no controlador B.
+
+
+* No AFF C400:
++
+Recable a primeira prateleira através dos dois conjuntos de portas compatíveis com RoCE no slot 4 e slot 5, em cada controlador.
+
++
+As subetapas assumem que o compartimento existente é cabeado para portas compatíveis com RoCE no slot 4 em cada controladora.
+
++
+.. No controlador A, mova o cabo do slot 4 porta a (e4a) para o slot 5 porta b (e5b).
+.. Repita o mesmo movimento do cabo no controlador B.
+
+
+
+
+--
+====
+. Verifique se a gaveta cabeada está cabeada corretamente usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]o .
++
+Se forem gerados erros de cabeamento, siga as ações corretivas fornecidas.
+
+
+
+
+
+== Desativar a atribuição automática de condução
+
+Se você estiver atribuindo manualmente a propriedade da unidade para o compartimento NS224 que você está adicionando a quente, então você precisará desativar a atribuição automática de unidade se estiver ativada.
+
+Se você não tiver certeza se deve atribuir manualmente a propriedade da unidade ou se deseja entender a atribuição automática de políticas de propriedade da unidade para seu sistema de armazenamento, vá para https://docs.netapp.com/us-en/ontap/disks-aggregates/disk-autoassignment-policy-concept.html["Sobre a atribuição automática de propriedade de disco"^].
+
+.Passos
+. Verifique se a atribuição automática de unidades está ativada: `storage disk option show`
++
+Você pode inserir o comando em qualquer nó.
+
++
+Se a atribuição automática de unidades estiver ativada, a saída será exibida `on` `Auto Assign` na coluna (para cada nó).
+
+. Se a atribuição automática de condução estiver ativada, desative-a: `storage disk option modify -node _node_name_ -autoassign off`
++
+Você deve desativar a atribuição automática de unidade em ambos os nós.
+
+

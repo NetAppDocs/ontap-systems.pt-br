@@ -1,0 +1,59 @@
+= Passo 1: Substitua o módulo USB LED
+:allow-uri-read: 
+
+
+O módulo LED USB fornece conetividade às portas da consola e ao estado do sistema. A substituição deste módulo não requer ferramentas e não interrompe o serviço.
+
+
+
+== Passo 1: Substitua o módulo USB LED
+
+.Passos
+. Retire o módulo USB LED desativado:
++
+.Animação - Remover/instalar módulo LED-USB
+video::eb715462-cc20-454f-bcf9-adf9016af84e[panopto]
++
+image::../media/drw_a900_remove_replace_LED_mod.png[Remova um módulo USB LED]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Botão de bloqueio
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Módulo LED USB
+
+|===
++
+.. Com a moldura removida, localize o módulo USB LED na parte frontal do chassi, no lado inferior esquerdo.
+.. Deslize o trinco para ejetar parcialmente o módulo.
+.. Puxe o módulo para fora do compartimento para o desligar do plano médio. Não deixe a ranhura vazia.
+
+
+. Instale o novo módulo USB LED:
++
+.. Alinhe o módulo com o compartimento com o entalhe no canto do módulo posicionado perto do trinco deslizante no chassi. O compartimento impedirá que você instale o módulo de cabeça para baixo.
+.. Empurre o módulo para dentro do compartimento até que ele esteja totalmente encaixado no chassi.
++
+Ouve-se um estalido quando o módulo está seguro e ligado ao plano médio.
+
+
+
+
+
+
+
+== Etapa 2: Retorne o componente com falha
+
+. Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"^] página para obter mais informações.
+

@@ -1,0 +1,44 @@
+= 
+:allow-uri-read: 
+
+
+Você deve inicializar a imagem ONTAP a partir da unidade USB, restaurar o sistema de arquivos e verificar as variáveis ambientais.
+
+. A partir do prompt Loader, inicialize a imagem de recuperação da unidade flash USB: `boot_recovery <image_name>`
++
+A imagem é transferida da unidade flash USB.
+
+. Quando solicitado, insira o nome da imagem ou aceite a imagem padrão exibida dentro dos colchetes na tela.
+. Restaure o sistema de ficheiros var:
++
+[cols="1,2"]
+|===
+| Se o seu sistema estiver em execução... | Então... 
+
+
+ a| 
+ONTAP 9.16,0 ou anterior
+ a| 
+.. No controlador prejudicado, prima _Y_ quando vir `Do you want to restore the backup configuration now?`
+.. No controlador prejudicado, pressione _Y_ quando solicitado a substituir `/etc/ssh/ssh_host_ecdsa_key`.
+.. No controlador de parceiro saudável, defina o controlador prejudicado para nível de privilégio avançado: `set -privilege advanced`.
+.. No controlador do parceiro saudável, execute o comando Restore backup: `system node restore-backup -node local -target-address impaired_node_IP_address`.
++
+*NOTA:* se você vir qualquer mensagem que não seja uma restauração bem-sucedida, entre em Contato https://support.netapp.com["Suporte à NetApp"]com .
+
+.. No controlador do parceiro saudável, devolva o controlador afetado ao nível de administração: `set -privilege admin`.
+.. No controlador prejudicado, pressione _y_ quando vir `Was the restore backup procedure successful?`.
+.. No controlador prejudicado, pressione _y_ quando vir `...would you like to use this restored copy now?`.
+.. No controlador prejudicado, pressione _y_ quando solicitado a reinicializar o controlador prejudicado e pressione _ctrl-c_ para o Menu de inicialização.
+.. Se o sistema não usar encyption, selecione _Option 1 normal Boot._, caso contrário, vá para link:bootmedia_encryption_restore.html["Restaure os gerenciadores de chaves"].
+.. Conete o cabo do console ao controlador do parceiro.
+.. Devolva o controlador usando o comando _storage failover giveback -fromnode local_.
+.. Restaure o giveback automático se você o desativou usando o comando _storage failover modify -node local -auto-giveback True_.
+.. Se o AutoSupport estiver ativado, restaure/dessuprime a criação automática de casos usando o comando _system node AutoSupport invoke -node * -type all -message
++
+*NOTA:* se o processo falhar, entre em Contato https://support.netapp.com["Suporte à NetApp"]com .
+
+
+
+|===
+

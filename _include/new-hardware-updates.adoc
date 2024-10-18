@@ -1,0 +1,47 @@
+= 
+:allow-uri-read: 
+
+
+[cols="25h,~,~"]
+|===
+| Funcionalidade | Descrição e onde saber mais | Disponível a partir do início 
+
+
+ a| 
+Interrutor de interconexão de vários clusters
+ a| 
+As configurações de vários clusters permitem que vários clusters compartilhem o mesmo switch de cluster, fornecido por meio de dois novos arquivos de configuração de referência para configurações de nó 4x4 e 2x8.
+ a| 
+ONTAP 9.14,1
+
+
+
+ a| 
+Suporte expandido para plataforma para NS224 compartimentos de unidades
+ a| 
+As plataformas a seguir são compatíveis com NS224 gavetas de unidades:
+
+* AFF A800/AFF ASA A800
+* AFF A700/AFF ASA A700
+* AFF A250/AFF ASA A250
+* FAS500f
+
+ a| 
+ONTAP 9,8
+
+
+
+ a| 
+Adição dinâmica de 12GB gavetas SAS a 6Gb stacks de storage SAS
+ a| 
+Agora é compatível com uma transição de velocidade única de 6Gb Gbps para 12GB Gbps em uma pilha de storage SAS. Isso permite a expansão de storage de 6Gb stacks existentes com 12GB gavetas.
+
+https://docs.netapp.com/platstor/topic/com.netapp.doc.hw-ds-mix-hotadd/home.html["Gavetas de adição dinâmica com IOM12 módulos para uma stack de gavetas com IOM6 módulos"]
+ a| 
+ONTAP 9.7P4
+
+ONTAP 9.6P9
+
+ONTAP 9.5P14
+
+|===

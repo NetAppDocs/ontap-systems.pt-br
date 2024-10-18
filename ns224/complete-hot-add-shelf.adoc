@@ -1,0 +1,35 @@
+---
+permalink: ns224/complete-hot-add-shelf.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, complete, drive, hot-add an ns224 drive shelf 
+summary: Se você desativou a atribuição automática de unidade como parte da preparação para o hot-add do compartimento de unidades NS224, será necessário atribuir manualmente a propriedade da unidade e, em seguida, reativar a atribuição automática de unidades, se necessário. 
+---
+= Complete o hot-add - NS224 prateleiras
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se você desativou a atribuição automática de unidade como parte da preparação para o hot-add de gaveta NS224, será necessário atribuir manualmente a propriedade da unidade e, em seguida, reativar a atribuição automática de unidade, se necessário.
+
+.Antes de começar
+Você já precisa ter cabeado sua gaveta conforme as instruções para seu par de HA. link:cable-overview-hot-add-shelf.html["Visão geral do cabeamento para um hot-add"]Consulte .
+
+.Passos
+. Exibir todas as unidades não possuídas: `storage disk show -container-type unassigned`
++
+Você pode inserir o comando em qualquer um dos controladores.
+
+. Atribuir cada unidade: `storage disk assign -disk _disk_name_ -owner _owner_name_`
++
+Você pode inserir o comando em qualquer um dos controladores.
+
++
+Você pode usar o caractere Wild card para atribuir mais de uma unidade de uma vez.
+
+. Reative a atribuição automática de condução, se necessário: `storage disk option modify -node _node_name_ -autoassign on`
++
+É necessário reativar a atribuição automática de unidades em ambos os controladores.
+
+

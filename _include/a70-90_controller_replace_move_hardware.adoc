@@ -1,0 +1,430 @@
+= Passo 1: Remova o módulo do controlador
+:allow-uri-read: 
+
+
+Para substituir o controlador, tem de remover o controlador afetado, mover os componentes FRU do módulo do controlador afetado para o módulo do controlador de substituição, instalar o módulo do controlador de substituição no chassis e, em seguida, arrancar o sistema para o modo de manutenção.
+
+
+
+== Passo 1: Remova o módulo do controlador
+
+Deve remover o módulo do controlador do chassis quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
+
+. Na parte frontal do chassis, utilize os polegares para empurrar firmemente cada unidade até sentir um batente positivo. Isso garante que as unidades estejam firmemente assentadas contra o plano médio do chassi.
++
+image::../media/drw_a800_drive_seated_IEOPS-960.svg[Acionamentos do disco do assento]
+
+. Verifique o NVRAM âmbar se o LED de status localizado no slot 4/5 na parte traseira do módulo do controlador desativado está desligado. Procure o ícone NV.
++
+image::../media/drw_a1K-70-90_nvram-led_ieops-1463.svg[Gráfico de localização do LED de estado e atenção do NVRAM]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+LED de estado do NVRAM
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+LED de atenção NVRAM
+
+|===
++
+
+NOTE: Se o LED de status do NVRAM estiver piscando, isso pode significar que o módulo do controlador não foi tomado ou interrompido corretamente (dados não comprometidos). Se o módulo do controlador afetado não tiver sido tomado com sucesso pelo módulo do controlador parceiro, contacte https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de continuar com este procedimento.
+
++
+O comportamento geral do LED de estado do NVRAM no módulo do controlador desativado é o seguinte:
+
++
+** O LED de estado do NVRAM pisca quando a alimentação é removida do módulo do controlador e o sistema de armazenamento está no estado "aguardando a giveback", ou o módulo do controlador não é tomado ou interrompido corretamente (dados não confirmados).
+** O LED de estado do NVRAM pisca quando o módulo do controlador é removido do chassis e pode significar que o módulo do controlador não é tomado ou parado corretamente (dados não confirmados). Confirme se o módulo do controlador foi corretamente adquirido pelo módulo do controlador parceiro ou se o módulo do controlador afetado mostra `waiting for giveback`. Em seguida, o LED intermitente pode ser ignorado (e o módulo do controlador pode ser removido do chassis).
+
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Desconete os cabos da fonte de alimentação do módulo do controlador das fontes de alimentação (PSU) do módulo do controlador.
++
+
+NOTE: Se o sistema tiver alimentação CC, desligue o bloco de alimentação das PSUs.
+
+. Desconete os cabos do sistema e os módulos SFP e QSFP (se necessário) do módulo do controlador, mantendo o controle de onde os cabos estavam conetados.
++
+Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar o dispositivo de gerenciamento de cabos, os cabos sejam organizados.
+
+. Remova o dispositivo de gerenciamento de cabos do módulo do controlador.
+. Prima ambos os trincos de bloqueio para baixo e, em seguida, rode ambos os trincos para baixo ao mesmo tempo.
++
+O módulo do controlador desloca-se ligeiramente para fora do chassis.
+
++
+image::../media/drw_a70-90_pcm_remove_replace_ieops-1365.svg[Controlador remover gráfico]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+| Um trinco de bloqueio 
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Pino de bloqueio
+
+|===
+. Deslize o módulo do controlador para fora do chassis e coloque-o numa superfície plana e estável.
++
+Certifique-se de que suporta a parte inferior do módulo do controlador enquanto o desliza para fora do chassis.
+
+
+
+
+
+== Passo 2: Mova as fontes de alimentação
+
+Mova as fontes de alimentação para o controlador de substituição.
+
+. Rode a pega do excêntrico de forma a que possa ser utilizada para retirar a fonte de alimentação do módulo do controlador enquanto prime a patilha de bloqueio.
++
+
+CAUTION: A fonte de alimentação é curta. Utilize sempre as duas mãos para o apoiar quando o retirar do módulo do controlador, de modo a que não se liberte subitamente do módulo do controlador e o machuque.
+
++
+image::../media/drw_a70-90_psu_remove_replace_ieops-1368.svg[Remoção da PSU]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+| Patilha de bloqueio da PSU de terracota 
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+Fonte de alimentação
+
+|===
+. Mova a fonte de alimentação para o novo módulo do controlador e, em seguida, instale-a.
+. Utilizando ambas as mãos, apoie e alinhe as extremidades da fonte de alimentação com a abertura no módulo do controlador e, em seguida, empurre cuidadosamente a fonte de alimentação para o módulo do controlador até que a patilha de bloqueio encaixe no lugar.
++
+As fontes de alimentação apenas engatarão adequadamente com o conetor interno e trancam no lugar de uma forma.
+
++
+
+NOTE: Para evitar danificar o conetor interno, não utilize força excessiva ao deslizar a fonte de alimentação para o sistema.
+
+
+
+
+
+== Passo 3: Mova os fãs
+
+Mova os módulos das ventoinhas para o módulo do controlador de substituição.
+
+. Retire o módulo da ventoinha apertando as patilhas de bloqueio na parte lateral do módulo da ventoinha e, em seguida, levantando o módulo da ventoinha diretamente para fora do módulo do controlador.
++
+image::../media/drw_a70-90_fan_remove_replace_ieops-1366.svg[Remova as ventoinhas]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Patilhas de bloqueio da ventoinha
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+Módulo da ventoinha
+
+|===
+. Mova o módulo da ventoinha para o módulo do controlador de substituição e, em seguida, instale o módulo da ventoinha alinhando as extremidades com a abertura no módulo do controlador e, em seguida, deslizando o módulo da ventoinha para o módulo do controlador até que os trincos de bloqueio encaixem no lugar.
+. Repita estes passos para os restantes módulos do ventilador.
+
+
+
+
+== Passo 4: Mova a bateria NV
+
+Mova a bateria NV para o módulo do controlador de substituição.
+
+. Abra a tampa da conduta de ar no meio do módulo do controlador e localize a bateria NV.
++
+image::../media/drw_a70-90_remove_replace_nvmembat_ieops-1369.svg[Mova a bateria NV]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+| Conduta de ar da bateria NV 
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+Ficha da bateria NV
+
+|===
++
+*Atenção:* o LED do módulo NV pisca enquanto separa o conteúdo da memória flash quando você interrompe o sistema. Depois que o destage estiver completo, o LED desliga-se.
+
+. Levante a bateria para aceder à ficha da bateria.
+. Aperte o clipe na face da ficha da bateria para soltar a ficha da tomada e, em seguida, desligue o cabo da bateria da tomada.
+. Levante a bateria para fora da conduta de ar e do módulo do controlador.
+. Desloque a bateria para o módulo do controlador de substituição e, em seguida, instale-a no módulo do controlador de substituição:
++
+.. Abra a conduta de ar da bateria NV no módulo do controlador de substituição.
+.. Ligue a ficha da bateria à tomada e certifique-se de que a ficha fica fixa.
+.. Insira a bateria na ranhura e pressione firmemente a bateria para baixo para se certificar de que está bloqueada no lugar.
+.. Feche a conduta de ar da bateria NV.
+
+
+
+
+
+
+== Passo 5: Mova os DIMMs do sistema
+
+Mova os DIMMs para o módulo do controlador de substituição.
+
+. Abra a conduta de ar do controlador na parte superior do controlador.
++
+.. Insira os dedos nas reentrâncias nas extremidades distantes da conduta de ar.
+.. Levante a conduta de ar e rode-a para cima o mais longe possível.
+
+
+. Localize os DIMMs do sistema na placa-mãe.
++
+image::../media/drw_a70_90_dimm_ieops-1513.svg[Mapa de DIMM]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+| DIMM do sistema 
+|===
+. Observe a orientação do DIMM no soquete para que você possa inserir o DIMM no módulo do controlador de substituição na orientação adequada.
+. Ejete o DIMM de seu slot, empurrando lentamente as duas abas do ejetor do DIMM em ambos os lados do DIMM e, em seguida, deslize o DIMM para fora do slot.
++
+
+NOTE: Segure cuidadosamente o DIMM pelas bordas para evitar a pressão nos componentes da placa de circuito DIMM.
+
+. Localize o slot no módulo do controlador de substituição onde você está instalando o DIMM.
+. Insira o DIMM diretamente no slot.
++
+O DIMM encaixa firmemente no slot, mas deve entrar facilmente. Caso contrário, realinhar o DIMM com o slot e reinseri-lo.
+
++
+
+NOTE: Inspecione visualmente o DIMM para verificar se ele está alinhado uniformemente e totalmente inserido no slot.
+
+. Empurre com cuidado, mas firmemente, na borda superior do DIMM até que as abas do ejetor se encaixem no lugar sobre os entalhes nas extremidades do DIMM.
+. Repita estas etapas para os DIMMs restantes.
+. Feche a conduta de ar do controlador.
+
+
+
+
+== Passo 6: Mova os módulos de e/S.
+
+Mova os módulos de e/S para o módulo do controlador de substituição.
+
+image::../media/drw_a70_90_io_remove_replace_ieops-1532.svg[Remova o módulo de e/S.]
+
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+| Alavanca do came do módulo de e/S. 
+|===
+. Desconete qualquer cabeamento do módulo de e/S de destino.
++
+Certifique-se de etiquetar os cabos para que saiba de onde vieram.
+
+. Rode o ARM de gestão de cabos para baixo puxando os botões no interior do ARM de gestão de cabos e rodando-o para baixo.
+. Retire os módulos de e/S do módulo do controlador:
++
+.. Prima o botão de engate do came do módulo de e/S alvo.
+.. Rode o trinco do excêntrico para baixo o mais longe possível. Para módulos horizontais, gire o came para longe do módulo o mais longe possível.
+.. Retire o módulo do módulo do controlador encaixando o dedo na abertura da alavanca do came e puxando o módulo para fora do módulo do controlador.
++
+Certifique-se de manter o controle de qual slot o módulo de e/S estava.
+
+.. Instale o módulo de e/S de substituição no módulo do controlador de substituição, deslizando suavemente o módulo de e/S para a ranhura até que o trinco do excêntrico de e/S comece a engatar com o pino do excêntrico de e/S e, em seguida, empurre o trinco do excêntrico de e/S totalmente para cima para bloquear o módulo no devido lugar.
+
+
+. Repita estas etapas para mover os módulos de e/S restantes, exceto os módulos nos slots 6 e 7, para o módulo do controlador de substituição.
++
+
+NOTE: Para mover os módulos de e/S dos slots 6 e 7, você deve mover o transportador que contém esses módulos de e/S do módulo do controlador prejudicado para o módulo do controlador de substituição.
+
+. Mova o transportador que contém os módulos de e/S nos slots 6 e 7 para o módulo de controlador de substituição:
++
+.. Prima o botão na pega mais direita na pega do suporte. ..deslize o transportador para fora do módulo do controlador afetado, insira-o no módulo do controlador de substituição na mesma posição que estava no módulo do controlador desativado.
+.. Empurre cuidadosamente o suporte até ao módulo do controlador de substituição até este encaixar no devido lugar.
+
+
+
+
+
+
+== Passo 7: Mova o módulo Gerenciamento do sistema
+
+Desloque o módulo de gestão do sistema para o módulo do controlador de substituição.
+
+image::../media/drw_a70-90_sys-mgmt_replace_ieops-1373.svg[Substitua o módulo de gestão do sistema]
+
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Trinco do excêntrico do módulo de gestão do sistema
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+Botão de bloqueio do suporte de arranque
+
+
+
+ a| 
+image::../media/icon_round_3.png[Legenda número 3]
+ a| 
+Módulo de gestão do sistema de substituição
+
+|===
+. Retire o módulo de gestão do sistema do módulo do controlador afetado:
++
+.. Prima o botão do came de gestão do sistema.
+.. Rode a alavanca do excêntrico totalmente para baixo.
+.. Coloque o dedo na alavanca do came e puxe o módulo diretamente para fora do sistema.
+
+
+. Instale o módulo de gestão do sistema no módulo do controlador de substituição no mesmo slot em que estava no módulo do controlador desativado:
++
+.. Alinhe as extremidades do módulo de gestão do sistema com a abertura do sistema e empurre-o cuidadosamente para dentro do módulo do controlador.
+.. Deslize cuidadosamente o módulo para dentro da ranhura até que o trinco do excêntrico comece a engatar com o pino do excêntrico de e/S e, em seguida, rode o trinco do excêntrico totalmente para cima para bloquear o módulo no devido lugar.
+
+
+
+
+
+
+== Passo 8: Mova o módulo NVRAM
+
+Mova o módulo NVRAM para o módulo do controlador de substituição.
+
+image::../media/drw_a70-90_nvram12_remove_replace_ieops-1370.svg[Remova o módulo NVRAM12 e os DIMMs]
+
+[cols="1,4"]
+|===
+
+
+| image:../media/icon_round_1.png["Legenda número 1"]  a| 
+Botão de bloqueio do came
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+| Guia de travamento do DIMM 
+|===
+. Retire o módulo NVRAM do módulo do controlador desativado:
++
+.. Prima o botão do trinco do excêntrico.
++
+O botão do came afasta-se do chassis.
+
+.. Rode o trinco do excêntrico o mais longe possível.
+.. Remova o módulo NVRAM do compartimento prendendo o dedo na abertura da alavanca do came e puxando o módulo para fora do compartimento.
+
+
+. Instale o módulo NVRAM na ranhura 4/5 do módulo do controlador de substituição:
++
+.. Alinhe o módulo com as extremidades da abertura do chassis na ranhura 4/5.
+.. Deslize cuidadosamente o módulo para dentro da ranhura e, em seguida, empurre o trinco do came totalmente para cima para bloquear o módulo no lugar.
+
+
+
+
+
+
+== Passo 9: Instale o módulo do controlador
+
+Reinstale o módulo do controlador e reinicie-o.
+
+. Certifique-se de que a conduta de ar está completamente fechada, rodando-a até onde for.
++
+Ele deve estar alinhado com a chapa metálica do módulo do controlador.
+
+. Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
++
+
+NOTE: Não introduza completamente o módulo do controlador no chassis até ser instruído a fazê-lo.
+
+. Recable o sistema de armazenamento, conforme necessário.
++
+Se você removeu os transcetores (QSFPs ou SFPs), lembre-se de reinstalá-los se estiver usando cabos de fibra ótica.
+
++
+
+NOTE: Certifique-se de que o cabo da consola está ligado ao módulo do controlador reparado de forma a receber mensagens da consola quando for reiniciado. O controlador reparado recebe energia do controlador em estado de funcionamento e começa a reiniciar assim que estiver completamente encaixado no chassis.
+
+. Conclua a reinstalação do módulo do controlador:
++
+.. Empurre firmemente o módulo do controlador para dentro do chassi até que ele atenda ao plano médio e esteja totalmente assentado.
++
+Os trincos de bloqueio sobem quando o módulo do controlador está totalmente assente.
+
++
+
+NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
+
+.. Rode os trincos de bloqueio para cima, para a posição de bloqueio.
+
+
++
+
+NOTE: Se o controlador inicializar no prompt Loader, reinicialize-o com o `boot_ontap` comando.
+
+. Conete os cabos de alimentação às fontes de alimentação.
++
+
+NOTE: Se você tiver fontes de alimentação CC, reconete o bloco de alimentação às fontes de alimentação depois que o módulo do controlador estiver totalmente encaixado no chassi.
+
+. Restaure o giveback automático se você o desativou usando o `storage failover modify -node local -auto-giveback true` comando.
+. Se o AutoSupport estiver ativado, restaure/dessuprimir a criação automática de casos usando o `system node autosupport invoke -node * -type all -message MAINT=END` comando.
+. Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos e reconete o controlador.
+

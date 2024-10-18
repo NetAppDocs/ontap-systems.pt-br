@@ -1,0 +1,307 @@
+= Passo 1: Desligue o controlador desativado
+:allow-uri-read: 
+
+
+O módulo de gerenciamento do sistema, localizado na parte traseira do controlador no slot 8, contém componentes integrados para gerenciamento do sistema, bem como portas para gerenciamento externo. O controlador de destino deve ser desligado para substituir um módulo de gestão do sistema afetado ou substituir o suporte de arranque.
+
+O módulo de gerenciamento do sistema tem os seguintes componentes integrados:
+
+* Suporte de arranque, permitindo a substituição do suporte de arranque sem remover o módulo do controlador.
+* BMC
+* Switch de gerenciamento
+
+
+O módulo Gerenciamento do sistema também contém as seguintes portas para gerenciamento externo:
+
+* RJ45 Série
+* Série USB (tipo C)
+* USB Type-A (recuperação de arranque)
+* Ethernet de e0M RJ45 GB
+
+
+Para substituir o módulo de gestão do sistema ou o suporte de arranque, tem de desligar o controlador afetado.
+
+.Antes de começar
+* Este procedimento utiliza a seguinte terminologia:
++
+** O controlador prejudicado é o controlador no qual você está realizando a manutenção.
+** O controlador de integridade é o parceiro de HA do controlador com deficiência.
+
+
+* Todos os outros componentes do sistema devem estar funcionando corretamente.
+* O controlador do parceiro deve ser capaz de assumir o controlador afetado.
+* Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor.
+
+
+
+
+== Passo 1: Desligue o controlador desativado
+
+Encerre ou assuma o controlador afetado utilizando uma das seguintes opções.
+
+[role="tabbed-block"]
+====
+.Opção 1: A maioria dos sistemas
+--
+Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
+
+.Sobre esta tarefa
+* Se você tiver um sistema SAN, você deve ter verificado mensagens de  `cluster kernel-service show`evento ) para o blade SCSI do controlador afetado. O `cluster kernel-service show` comando (do modo avançado priv) exibe o nome do nó, link:https://docs.netapp.com/us-en/ontap/system-admin/display-nodes-cluster-task.html["status do quorum"]desse nó, o status de disponibilidade desse nó e o status operacional desse nó.
++
+Cada processo SCSI-blade deve estar em quórum com os outros nós no cluster. Qualquer problema deve ser resolvido antes de prosseguir com a substituição.
+
+* Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
+
+
+.Passos
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
++
+A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas: `cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Desative a giveback automática a partir da consola do controlador saudável: `storage failover modify –node local -auto-giveback false`
++
+
+NOTE: Quando vir _do pretende desativar a auto-giveback?_, introduza `y`.
+
+. Leve o controlador prejudicado para o prompt Loader:
++
+[cols="1,2"]
+|===
+| Se o controlador afetado estiver a apresentar... | Então... 
+
+
+ a| 
+O prompt Loader
+ a| 
+Vá para a próxima etapa.
+
+
+
+ a| 
+A aguardar pela giveback...
+ a| 
+Pressione Ctrl-C e responda `y` quando solicitado.
+
+
+
+ a| 
+Prompt do sistema ou prompt de senha
+ a| 
+Assuma ou interrompa o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
+
+|===
+
+
+--
+.Opção 2: O controlador está em um MetroCluster
+--
+Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
+
+* Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
+* Você deve ter confirmado que o estado de configuração do MetroCluster está configurado e que os nós estão em um estado ativado e normal (`metrocluster node show`).
+
+
+.Passos
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Desative a giveback automática a partir da consola do controlador saudável: `storage failover modify –node local -auto-giveback false`
+. Leve o controlador prejudicado para o prompt Loader:
++
+[cols="1,2"]
+|===
+| Se o controlador afetado estiver a apresentar... | Então... 
+
+
+ a| 
+O prompt Loader
+ a| 
+Vá para a próxima seção.
+
+
+
+ a| 
+A aguardar pela giveback...
+ a| 
+Pressione Ctrl-C e responda `y` quando solicitado.
+
+
+
+ a| 
+Prompt do sistema ou prompt de senha (digite a senha do sistema)
+ a| 
+Assuma ou interrompa o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
+
+|===
+
+
+--
+====
+
+
+== Passo 2: Substitua o módulo de gestão do sistema afetado
+
+Substitua o módulo de gestão do sistema afetado.
+
+. Na parte frontal do chassis, utilize os polegares para empurrar firmemente cada unidade até sentir um batente positivo. Isso garante que as unidades estejam firmemente assentadas contra o plano médio do chassi.
++
+
+NOTE: Certifique-se de que o NVRAM foi concluído antes de prosseguir.
+
++
+image::../media/drw_a800_drive_seated_IEOPS-960.svg[Acionamentos do disco do assento]
+
+. Vá para a parte traseira do chassis. Se você ainda não está aterrado, aterre-se adequadamente.
+. Desligue a alimentação do módulo do controlador puxando o módulo do controlador para fora cerca de três polegadas:
++
+.. Prima ambos os trincos de bloqueio do módulo do controlador e, em seguida, rode ambos os trincos para baixo ao mesmo tempo.
+.. Puxe o módulo do controlador a cerca de 3 polegadas do chassis para desengatar a alimentação.
+
+
+. Gire a bandeja de gerenciamento de cabos para baixo puxando os botões de ambos os lados no interior da bandeja de gerenciamento de cabos e, em seguida, gire a bandeja para baixo.
+. Retire o módulo de gestão do sistema:
++
+.. Retire todos os cabos ligados ao módulo de gestão do sistema. Certifique-se de que a etiqueta onde os cabos foram conetados, para que você possa conectá-los às portas corretas quando reinstalar o módulo.
++
+image::../media/drw_70-90_sys-mgmt_remove_ieops-1817.svg[Substitua o módulo de gestão do sistema]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Trinco do excêntrico do módulo de gestão do sistema
+
+|===
+
+
+. Retire o módulo de gestão do sistema:
++
+.. Prima o botão do came de gestão do sistema. A alavanca do excêntrico afasta-se do chassis.
+.. Rode a alavanca do excêntrico totalmente para baixo.
+.. Coloque o dedo na alavanca do came e puxe o módulo diretamente para fora do sistema.
+.. Coloque o módulo de gestão do sistema num tapete anti-estático, de forma a que o suporte de arranque fique acessível.
+
+
+. Mova o suporte de arranque para o módulo de gestão do sistema de substituição:
++
+image::../media/drw_a70-90_sys-mgmt_replace_ieops-1373.svg[Suporte de arranque Substituir]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Trinco do excêntrico do módulo de gestão do sistema
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+Botão de bloqueio do suporte de arranque
+
+
+
+ a| 
+image::../media/icon_round_3.png[Legenda número 3]
+ a| 
+Suporte de arranque
+
+|===
++
+.. Prima o botão azul de trancamento. O suporte de arranque roda ligeiramente para cima.
+.. Rode o suporte de arranque para cima, deslize-o para fora do encaixe.
+.. Instale o suporte de arranque no módulo de gestão do sistema de substituição:
++
+... Alinhe as extremidades do suporte de arranque com o alojamento do encaixe e, em seguida, empurre-o suavemente no encaixe.
+... Rode o suporte de arranque para baixo na direção de até engatar o botão de bloqueio. Prima o bloqueio azul, se necessário.
+
+
+
+
+. Instale o módulo de gestão do sistema:
++
+.. Alinhe as extremidades do módulo de gestão do sistema de substituição com a abertura do sistema e empurre-o cuidadosamente para dentro do módulo do controlador.
+.. Deslize cuidadosamente o módulo para dentro da ranhura até que o trinco do excêntrico comece a engatar com o pino do excêntrico de e/S e, em seguida, rode o trinco do excêntrico totalmente para cima para bloquear o módulo no devido lugar.
+
+
+. Recable o módulo de Gestão do sistema.
+. Volte a ligar a alimentação ao módulo do controlador:
++
+.. Empurre firmemente o módulo do controlador para dentro do chassi até que ele atenda ao plano médio e esteja totalmente assentado.
++
+Os trincos de bloqueio sobem quando o módulo do controlador está totalmente assente.
+
+.. Rode os trincos de bloqueio para cima, para a posição de bloqueio.
+
+
+. Rode o tabuleiro de gestão de cabos para cima até à posição fechada.
+
+
+
+
+== Passo 3: Reinicie o módulo do controlador
+
+Reinicie o módulo do controlador.
+
+. Digite _bye_ no prompt DO Loader.
+. Retorne o controlador à operação normal, devolvendo seu armazenamento: _Storage failover giveback -ofnode _imideed_node_name__
+. Restaure a giveback automática usando o `storage failover modify -node local -auto-giveback true` comando.
+. Se uma janela de manutenção do AutoSupport foi acionada, encerre-a usando o `system node autosupport invoke -node * -type all -message MAINT=END` comando.
+
+
+
+
+== Passo 4: Instale licenças e Registre o número de série
+
+Você deve instalar novas licenças para o nó se o nó afetado estiver usando recursos do ONTAP que exigem uma licença padrão (node-locked). Para recursos com licenças padrão, cada nó no cluster deve ter sua própria chave para o recurso.
+
+.Sobre esta tarefa
+Até instalar chaves de licença, os recursos que exigem licenças padrão continuam disponíveis para o nó. No entanto, se o nó fosse o único nó no cluster com uma licença para o recurso, nenhuma alteração de configuração será permitida. Além disso, o uso de recursos não licenciados no nó pode deixá-lo fora de conformidade com o contrato de licença, portanto, você deve instalar a chave de licença de substituição ou as chaves no para o nó o mais rápido possível.
+
+.Antes de começar
+As chaves de licença devem estar no formato de 28 carateres.
+
+Você tem um período de carência de 90 dias para instalar as chaves de licença. Após o período de carência, todas as licenças antigas são invalidadas. Depois que uma chave de licença válida é instalada, você tem 24 horas para instalar todas as chaves antes que o período de carência termine.
+
+
+NOTE: Se o sistema estava executando inicialmente o ONTAP 9.10,1 ou posterior, use o procedimento documentado em link:https://kb.netapp.com/on-prem/ontap/OHW/OHW-KBs/Post_Motherboard_Replacement_Process_to_update_Licensing_on_a_AFF_FAS_system#Internal_Notes["Pós-processo de substituição da placa-mãe para atualizar o licenciamento em um sistema AFF/FAS"^]. Se não tiver certeza da versão inicial do ONTAP para o seu sistema, consulte link:https://hwu.netapp.com["NetApp Hardware Universe"^] para obter mais informações.
+
+.Passos
+. Se você precisar de novas chaves de licença, obtenha chaves de licença de substituição na https://mysupport.netapp.com/site/global/dashboard["Site de suporte da NetApp"] seção meu suporte em licenças de software.
++
+
+NOTE: As novas chaves de licença que você precisa são geradas automaticamente e enviadas para o endereço de e-mail em arquivo. Se você não receber o e-mail com as chaves de licença no prazo de 30 dias, entre em Contato com o suporte técnico.
+
+. Instale cada chave de licença: `+system license add -license-code license-key, license-key...+`
+. Remova as licenças antigas, se desejar:
++
+.. Verifique se há licenças não utilizadas: `license clean-up -unused -simulate`
+.. Se a lista estiver correta, remova as licenças não utilizadas: `license clean-up -unused`
+
+
+. Registre o número de série do sistema com o suporte da NetApp.
++
+** Se o AutoSupport estiver ativado, envie uma mensagem AutoSupport para Registrar o número de série.
+** Se o AutoSupport não estiver ativado, ligue https://mysupport.netapp.com["Suporte à NetApp"] para registar o número de série.
+
+
+
+
+
+
+== Passo 5: Devolva a peça com falha ao NetApp
+
+Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

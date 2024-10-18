@@ -1,0 +1,15 @@
+= 
+:allow-uri-read: 
+
+
+Antes de substituir o suporte de arranque, certifique-se de que verifica os seguintes requisitos.
+
+* Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor.
+* É importante que você aplique os comandos nestas etapas no controlador correto:
++
+** O controlador _prejudicado_ é o controlador no qual você está realizando a manutenção.
+** O controlador _Healthy_ é o parceiro de HA do controlador prejudicado.
+
+
+* Não deve haver portas do cluster defeituosas no controlador prejudicado.
+

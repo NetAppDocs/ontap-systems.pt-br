@@ -1,0 +1,192 @@
+= Etapa 1: Encerre o nó prejudicado
+:allow-uri-read: 
+
+
+Use este procedimento para substituir um módulo de e/S com falha.
+
+* Você pode usar esse procedimento com todas as versões do ONTAP compatíveis com seu sistema de storage.
+* Todos os outros componentes do sistema de armazenamento devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+
+
+
+
+== Etapa 1: Encerre o nó prejudicado
+
+Encerre ou assuma o controlador afetado utilizando uma das seguintes opções.
+
+[role="tabbed-block"]
+====
+.Opção 1: A maioria dos sistemas
+--
+Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
+
+.Sobre esta tarefa
+Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
+
+.Passos
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando um comando AutoSupport message: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+O seguinte comando AutoSupport suprime a criação automática de casos por duas horas: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Desative a giveback automática a partir da consola do controlador saudável: `storage failover modify –node local -auto-giveback false`
+. Leve o controlador prejudicado para o prompt Loader:
++
+[cols="1,2"]
+|===
+| Se o controlador afetado estiver a apresentar... | Então... 
+
+
+ a| 
+O prompt Loader
+ a| 
+Vá para a próxima etapa.
+
+
+
+ a| 
+`Waiting for giveback...`
+ a| 
+Pressione Ctrl-C e responda `y` quando solicitado.
+
+
+
+ a| 
+Prompt do sistema ou prompt de senha (digite a senha do sistema)
+ a| 
+Parar ou assumir o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
+
+|===
+
+
+--
+.Opção 2: O controlador está em um MetroCluster
+--
+
+NOTE: Não use este procedimento se o sistema estiver em uma configuração de MetroCluster de dois nós.
+
+Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
+
+* Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
+* Se você tiver uma configuração MetroCluster, você deve ter confirmado que o estado de configuração do MetroCluster está configurado e que os nós estão em um estado ativado e normal (`metrocluster node show`).
+
+
+.Passos
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando um comando AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+O seguinte comando AutoSupport suprime a criação automática de casos por duas horas: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Desative a giveback automática a partir da consola do controlador saudável: `storage failover modify –node local -auto-giveback false`
+. Leve o controlador prejudicado para o prompt Loader:
++
+[cols="1,2"]
+|===
+| Se o controlador afetado estiver a apresentar... | Então... 
+
+
+ a| 
+O prompt Loader
+ a| 
+Vá para a próxima etapa.
+
+
+
+ a| 
+A aguardar pela giveback...
+ a| 
+Pressione Ctrl-C e responda `y` quando solicitado.
+
+
+
+ a| 
+Prompt do sistema ou prompt de senha (digite a senha do sistema)
+ a| 
+Parar ou assumir o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
+
+|===
+
+
+--
+====
+
+
+== Passo 2: Substitua um módulo de e/S com falha
+
+Para substituir um módulo de e/S, localize-o dentro do gabinete e siga a sequência específica de etapas.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Desconete qualquer cabeamento do módulo de e/S de destino.
+. Gire a bandeja de gerenciamento de cabos para baixo puxando os botões de ambos os lados no interior da bandeja de gerenciamento de cabos e, em seguida, gire a bandeja para baixo.
++
+
+NOTE: Esta ilustração a seguir mostra a remoção de um módulo de e/S horizontal e vertical. Normalmente, você só removerá um módulo de e/S.
+
++
+image:../media/drw_a1k_io_remove_replace_ieops-1382.svg["Remova o módulo de e/S."]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+| Trinco do came de e/S. 
+|===
++
+Certifique-se de etiquetar os cabos para que saiba de onde vieram.
+
+. Remova o módulo de e/S de destino do compartimento:
++
+.. Prima o botão do came no módulo alvo.
+.. Rode o trinco do excêntrico para longe do módulo o mais longe possível.
+.. Remova o módulo do compartimento prendendo o dedo na abertura da alavanca do came e puxando o módulo para fora do compartimento.
++
+Certifique-se de manter o controle de qual slot o módulo de e/S estava.
+
+
+
+. Coloque o módulo de e/S de lado.
+. Instale o módulo de e/S de substituição no compartimento:
++
+.. Alinhe o módulo com as extremidades da abertura da ranhura do compartimento.
+.. Deslize cuidadosamente o módulo para dentro da ranhura até ao compartimento e, em seguida, rode o trinco da came até ao fim para bloquear o módulo no lugar.
+
+
+. Faça o cabo do módulo de e/S.
+. Rode o tabuleiro de gestão de cabos para cima até à posição fechada.
+
+
+
+
+== Passo 3: Reinicie o controlador
+
+Depois de substituir um módulo de e/S, tem de reiniciar o módulo do controlador.
+
+
+NOTE: Se o novo módulo de e/S não for o mesmo modelo que o módulo com falha, você deve primeiro reiniciar o BMC.
+
+.Passos
+. Reinicie o BMC se o módulo de substituição não for o mesmo modelo do módulo antigo:
++
+.. No prompt Loader, mude para o modo de privilégio avançado: _SET Privilege Advanced_
+.. Reinicie o BMC: _SP Reboot_
+
+
+. No prompt DO Loader, reinicie o nó: _Bye_
++
+
+NOTE: Isso reinicializa as placas de e/S e outros componentes e reinicializa o nó.
+
+. Retorne o nó à operação normal: _Failover de armazenamento giveback -ofnode prejudicado_node_name_
+. Se a giveback automática foi desativada, reative-a: _Storage failover modifique -node local -auto-giveback True_
+
+
+
+
+== Passo 4: Devolva a peça com falha ao NetApp
+
+Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

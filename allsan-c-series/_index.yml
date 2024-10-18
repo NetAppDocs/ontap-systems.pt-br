@@ -1,0 +1,53 @@
+---
+indexpage:
+  title: Sistemas C-Series All-Flash SAN Array (ASA)
+  summary: A documentação do sistema de storage permite instalar, configurar e manter
+    seu sistema ASA Série C.
+  keywords: allsan, asa, flash, array, c-series, systems, configuration, asa-c250,
+    c-400, c-800
+  lead: O array all-flash SAN (ASA) da NetApp oferece uma experiência de SAN dedicada
+    e simplificada que fornece disponibilidade contínua de dados para os bancos de
+    dados essenciais da sua organização e outros workloads de SAN.
+  tiles:
+  - title: Comece agora
+    links:
+    - title: Configuração do software ASA
+      url: https://docs.netapp.com/us-en/ontap/task_asa_software_configuration.html
+    - title: Datasheet do ASA
+      url: https://www.netapp.com/data-storage/san-storage-area-network/
+    - title: Resumo da solução da ASA
+      url: https://www.netapp.com/pdf.html?item=/media/19466-SB-4081.pdf
+    - title: Relatório técnico da ASA
+      url: https://www.netapp.com/pdf.html?item=/media/85671-tr-4968.pdf
+  - title: Instalar e configurar
+    links:
+    - title: ASA C250
+      url: "../asa-c250/install-setup.html"
+    - title: ASA C400
+      url: "../asa-c400/install-setup.html"
+    - title: ASA C800
+      url: "../asa-c800/install-setup.html"
+  - title: Mantenha o seu sistema
+    links:
+    - title: ASA C250
+      url: "../asa-c250/maintain-overview.html"
+    - title: ASA C400
+      url: "../asa-c400/maintain-overview.html"
+    - title: ASA C800
+      url: "../asa-c800/maintain-overview.html"
+  - title: Interrutores suportados
+    links:
+    - title: BES-53248 com suporte Broadcom
+      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-bes-53248/configure-new-switch-overview.html
+    - title: Cisco 9336C-FX2
+      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2/configure-switch-overview-9336c-cluster.html
+    - title: Cisco 9336-FX2 em configurações compartilhadas
+      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2-shared/configure-switch-overview-9336c-shared.html
+    - title: NVIDIA SN2100
+      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-nvidia-sn2100/configure-overview-sn2100-cluster.html
+  - title: Mais recursos de documentação
+    links:
+    - title: Atualização de hardware do sistema
+      url: https://docs.netapp.com/us-en/ontap-systems-upgrade/
+    - title: Atualização do software ONTAP
+      url: https://docs.netapp.com/us-en/ontap/upgrade/index.html

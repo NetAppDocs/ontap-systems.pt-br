@@ -1,0 +1,201 @@
+= 
+:allow-uri-read: 
+
+
+Restaure a imagem do ONTAP a partir do nó do parceiro quando a Mídia de inicialização estiver corrompida.
+
+.Sobre esta tarefa
+Se a Mídia de inicialização de um nó estiver corrompida, o processo de inicialização será interrompido no prompt DO Loader e exibirá mensagens de erro de inicialização.
+
+Quando você encontrar essas mensagens de erro de inicialização, você precisa restaurar a imagem ONTAP do nó do parceiro.
+
+.Mostrar exemplo de mensagens de erro de inicialização
+[%collapsible]
+====
+....
+Can't find primary boot device u0a.0
+Can't find backup boot device u0a.1
+ACPI RSDP Found at 0x777fe014
+
+Starting AUTOBOOT press Ctrl-C to abort...
+Could not load fat://boot0/X86_64/freebsd/image1/kernel: Device not found
+
+ERROR: Error booting OS on: 'boot0' file: fat://boot0/X86_64/Linux/image1/vmlinuz (boot0, fat)
+ERROR: Error booting OS on: 'boot0' file: fat://boot0/X86_64/freebsd/image1/kernel (boot0, fat)
+
+Autoboot of PRIMARY image failed. Device not found (-6)
+LOADER-A>
+....
+====
+.Passos
+. No prompt Loader, digite o comando:
++
+`boot_recovery -partner`
+
++
+O ecrã apresenta a seguinte mensagem:
+
++
+`Starting boot media recovery (BMR) process. Press Ctrl-C to abort…`
+
+. Monitore o processo de recuperação de Mídia de inicialização à medida que O Loader configura as portas de cluster locais e é executado `netboot` a partir do nó do parceiro.
++
+Quando o netboot está em execução, a `Starting BMR` mensagem é exibida.
+
+. Dependendo do método de criptografia, selecione a opção que corresponde à sua configuração de nó único:
++
+[role="tabbed-block"]
+====
+.Sem criptografia
+--
+Se nenhuma criptografia for detetada, o processo de recuperação de Mídia de inicialização continuará sem exigir o gerenciamento de chaves.
+
+Continue a monitorar o processo de recuperação à medida que restaura a configuração de backup, arquivo env, mdb e rdb do nó do parceiro.
+
+Quando o processo de recuperação estiver concluído, o nó será reiniciado. As seguintes mensagens indicam uma recuperação bem-sucedida:
+
+....
+
+varfs_backup_restore: update checksum for varfs.tgz
+varfs_backup_restore: restore using /cfcard/x86_64/freebsd/oldvarfs.tgz
+varfs_backup_restore: attempting to restore /var/kmip to the boot device
+varfs_backup_restore: failed to restore /var/kmip to the boot device
+varfs_backup_restore: Rebooting to load the new varfs
+.
+Terminated
+varfs_backup_restore: bootarg.abandon_varfs is set! Skipping /var backup.
+
+....
+--
+.Gerenciador de chaves integrado (OKM)
+--
+Se o Gerenciador de chaves integrado (OKM) for detetado, o sistema exibirá o seguinte prompt.
+
+....
+key manager is configured.
+Entering Bootmenu Option 10...
+
+This option must be used only in disaster recovery procedures. Are you sure? (y or n):
+....
+.. No prompt de opção Bootmenu, digite `Y` para confirmar que deseja usar a opção de recuperação bootmedia.
+.. Digite a senha do gerenciador de chaves integrado quando solicitado e digite a senha novamente para confirmar.
++
+.Mostrar exemplo de prompts de frase-passe
+[%collapsible]
+=====
+....
+Enter the passphrase for onboard key management:
+Enter the passphrase again to confirm:
+Enter the backup data:
+TmV0QXBwIEtleSBCbG9iAAECAAAEAAAAcAEAAAAAAAA3yR6UAAAAACEAAAAAAAAA
+QAAAAAAAAACJz1u2AAAAAPX84XY5AU0p4Jcb9t8wiwOZoqyJPJ4L6/j5FHJ9yj/w
+RVDO1sZB1E4HO79/zYc82nBwtiHaSPWCbkCrMWuQQDsiAAAAAAAAACgAAAAAAAAA
+3WTh7gAAAAAAAAAAAAAAAAIAAAAAAAgAZJEIWvdeHr5RCAvHGclo+wAAAAAAAAAA
+IgAAAAAAAAAoAAAAAAAAAEOTcR0AAAAAAAAAAAAAAAACAAAAAAAJAGr3tJA/LRzU
+QRHwv+1aWvAAAAAAAAAAACQAAAAAAAAAgAAAAAAAAABHVFpxAAAAAHUgdVq0EKNp
+.
+.
+.
+.
+....
+=====
+.. Continue a monitorar o processo de recuperação à medida que restaura a configuração de backup, arquivo env, mdb e rdb do nó do parceiro.
++
+Quando o processo de recuperação estiver concluído, o nó será reiniciado. As seguintes mensagens indicam uma recuperação bem-sucedida:
+
++
+....
+Trying to recover keymanager secrets....
+Setting recovery material for the onboard key manager
+Recovery secrets set successfully
+Trying to delete any existing km_onboard.wkeydb file.
+
+Successfully recovered keymanager secrets.
+....
+
+
+--
+.Gerenciador de chaves externo (EKM)
+--
+Se o EKM estiver configurado, o sistema exibirá o seguinte prompt.
+
+....
+Error when fetching key manager config from partner <IP>: 28
+
+Has key manager been configured on this system? {y|n}
+....
+.. Introduza `Y` se EKM tiver sido configurado.
++
+....
+key manager is configured.
+Entering Bootmenu Option 11...
+....
++
+Você será solicitado para as configurações de EKM que foram usadas inicialmente durante a configuração.
+
+.. Insira cada configuração do EKM quando solicitado.
+.. Verifique se os atributos do UUUID do cluster e UUUID do Keystore estão corretos.
++
+*** No nó do parceiro, recupere o UUID do cluster usando o seguinte comando.
++
+`cluster identity show`
+
+*** No nó do parceiro, recupere o UUID do Keystore usando os seguintes comandos.
++
+`vserver show -type admin`
+
++
+`key-manager keystore show -vserver <nodename>`
+
+*** Se o nó do parceiro não estiver disponível, use a chave Mroot-AK para recuperar o UUID:
++
+**** Para o UUUID do cluster, digite o seguinte comando:
++
+`x-NETAPP-ClusterName: <cluster name>`
+
+**** Para o Keystore UUID, digite o seguinte comando:
++
+`x-NETAPP-KeyUsage: MROOT-AK`
+
+
+
+
+
+.. Insira os valores de UUUID de armazenamento de chaves e UUUID de cluster quando solicitado.
+.. Dependendo se a chave for restaurada com sucesso, execute uma das seguintes ações:
++
+*** Se a chave for restaurada com êxito, o processo de recuperação continua e reinicializa o nó. Avance para o passo 4.
+*** Se a chave não for restaurada com êxito, o sistema irá parar e apresentar mensagens de erro e aviso. Execute novamente o processo de recuperação.
++
+.Mostrar exemplo de mensagens de aviso e erro de recuperação de chave
+[%collapsible]
+=====
+....
+
+ERROR: kmip_init: halting this system with encrypted mroot...
+
+WARNING: kmip_init: authentication keys might not be available.
+
+System cannot connect to key managers.
+
+ERROR: kmip_init: halting this system with encrypted mroot...
+
+Terminated
+
+Uptime: 11m32s
+
+System halting...
+
+LOADER-B>
+....
+=====
+
+
+
+
+--
+====
+
+
+. Quando o nó for reiniciado, verifique se a recuperação da Mídia de inicialização foi bem-sucedida, confirmando que o sistema está novamente on-line e operacional.
+

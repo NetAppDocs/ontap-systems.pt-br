@@ -1,0 +1,321 @@
+---
+permalink: fas8200/controller-replace-move-hardware.html 
+sidebar: sidebar 
+keywords: fas8200, move the controller module hardware 
+summary: Para substituir o hardware do módulo do controlador, é necessário remover o controlador prejudicado, mover os componentes FRU para o módulo do controlador de substituição, instalar o módulo do controlador de substituição no chassis e, em seguida, inicializar o sistema para o modo de manutenção. 
+---
+= Substitua o hardware do módulo do controlador - FAS8200
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para substituir o hardware do módulo do controlador, é necessário remover o controlador prejudicado, mover os componentes FRU para o módulo do controlador de substituição, instalar o módulo do controlador de substituição no chassis e, em seguida, inicializar o sistema para o modo de manutenção.
+
+
+
+== Passo 1: Abra o módulo do controlador
+
+Para substituir o módulo do controlador, tem de remover primeiro o módulo do controlador antigo do chassis.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Solte o gancho e a alça de loop que prendem os cabos ao dispositivo de gerenciamento de cabos e, em seguida, desconete os cabos do sistema e os SFPs (se necessário) do módulo do controlador, mantendo o controle de onde os cabos estavam conetados.
++
+Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar o dispositivo de gerenciamento de cabos, os cabos sejam organizados.
+
+. Retire e reserve os dispositivos de gerenciamento de cabos dos lados esquerdo e direito do módulo do controlador.
++
+image::../media/drw_32xx_cbl_mgmt_arm.png[Retirar os braços de gestão do cabo]
+
+. Se você deixou os módulos SFP no sistema depois de remover os cabos, mova-os para o novo módulo do controlador.
+. Desaperte o parafuso de aperto manual na pega do excêntrico no módulo do controlador.
++
+image::../media/drw_8020_cam_handle_thumbscrew.png[Desapertar o parafuso de aperto manual para abrir a pega do excêntrico]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Parafuso de aperto manual
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Pega do came
+
+|===
+. Puxe a alavanca do came para baixo e comece a deslizar o módulo do controlador para fora do chassis.
++
+Certifique-se de que suporta a parte inferior do módulo do controlador enquanto o desliza para fora do chassis.
+
+
+
+
+
+== Passo 2: Mova o dispositivo de inicialização
+
+Você deve localizar o suporte de inicialização e seguir as instruções para removê-lo do controlador antigo e inseri-lo no novo controlador.
+
+. Localize a Mídia de inicialização usando a ilustração a seguir ou o mapa da FRU no módulo do controlador:
++
+image::../media/drw_rxl_boot_media.png[Removendo Mídia de inicialização hte]
+
+. Prima o botão azul no alojamento do suporte do suporte de arranque para soltar o suporte de arranque do respetivo alojamento e, em seguida, puxe-o cuidadosamente para fora do suporte de suporte de arranque.
++
+
+NOTE: Não torça nem puxe o suporte de arranque diretamente para cima, pois isto pode danificar o suporte ou o suporte de arranque.
+
+. Mova o suporte de arranque para o novo módulo do controlador, alinhe as extremidades do suporte de arranque com o alojamento da tomada e, em seguida, empurre-o suavemente para dentro do encaixe.
+. Verifique o suporte de arranque para se certificar de que está encaixado corretamente e completamente no encaixe.
++
+Se necessário, retire o suporte de arranque e volte a colocá-lo no socket.
+
+. Prima o suporte de arranque para baixo para engatar o botão de bloqueio no alojamento do suporte de suporte de arranque.
+
+
+
+
+== Passo 3: Mova a bateria do NVMEM
+
+Para mover a bateria do NVMEM do módulo do controlador antigo para o novo módulo do controlador, tem de executar uma sequência específica de passos.
+
+. Verifique o LED NVMEM:
++
+** Se o sistema estiver em uma configuração de HA, vá para a próxima etapa.
+** Se o seu sistema estiver numa configuração autónoma, desligue o módulo do controlador e, em seguida, verifique o LED NVRAM identificado pelo ícone NV.
++
+image::../media/drw_hw_nvram_icon.png[LED NV]
+
++
+
+NOTE: O LED do NVRAM pisca enquanto separa o conteúdo da memória flash quando você interrompe o sistema. Depois que o destage estiver completo, o LED desliga-se.
+
++
+*** Se a energia for perdida sem um desligamento normal, o LED NVMEM pisca até que o destage esteja concluído e, em seguida, o LED se desligue.
+*** Se o LED estiver ligado e ligado, os dados não gravados são armazenados no NVMEM.
++
+Isso geralmente ocorre durante um desligamento não controlado depois que o ONTAP foi inicializado com êxito.
+
+
+
+
+
+. Abra a conduta de ar da CPU e localize a bateria do NVMEM.
++
+image::../media/drw_rxl_nvmem_battery.png[Substituição da bateria do NVMEM]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Patilha de bloqueio da bateria
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Bateria NVMEM
+
+|===
+. Segure a bateria e pressione a patilha de bloqueio azul marcada com PUSH e, em seguida, levante a bateria para fora do suporte e do módulo do controlador.
+. Retire a bateria do módulo do controlador e coloque-a de lado.
+
+
+
+
+== Passo 4: Mova os DIMMs
+
+Para mover os DIMMs, localize-os e mova-os do controlador antigo para o controlador de substituição e siga a sequência específica de passos.
+
+. Localize os DIMMs no módulo do controlador.
+. Observe a orientação do DIMM no soquete para que você possa inserir o DIMM no módulo do controlador de substituição na orientação adequada.
+. Ejete o DIMM de seu slot, empurrando lentamente as duas abas do ejetor do DIMM em ambos os lados do DIMM e, em seguida, deslize o DIMM para fora do slot.
++
+
+NOTE: Segure cuidadosamente o DIMM pelas bordas para evitar a pressão nos componentes da placa de circuito DIMM.
+
++
+O número e a colocação dos DIMMs do sistema dependem do modelo do sistema.
+
++
+A ilustração a seguir mostra a localização dos DIMMs do sistema:
+
++
+image::../media/drw_rxl_dimms.png[Substituição de DIMMs]
+
+. Localize o slot onde você está instalando o DIMM.
+. Certifique-se de que as abas do ejetor DIMM no conetor estão na posição aberta e insira o DIMM diretamente no slot.
++
+O DIMM encaixa firmemente no slot, mas deve entrar facilmente. Caso contrário, realinhar o DIMM com o slot e reinseri-lo.
+
++
+
+NOTE: Inspecione visualmente o DIMM para verificar se ele está alinhado uniformemente e totalmente inserido no slot.
+
+. Repita estas etapas para os DIMMs restantes.
+. Mova a bateria do NVMEM para o módulo do controlador de substituição.
+. Alinhe a patilha ou as patilhas no suporte da bateria com os entalhes no lado do módulo do controlador e, em seguida, empurre cuidadosamente o compartimento da bateria até que o compartimento da bateria encaixe no lugar.
+
+
+
+
+== Passo 5: Mova uma placa PCIe
+
+Para mover as placas PCIe, localize-as e mova-as do controlador antigo para o controlador de substituição e siga a sequência específica de passos.
+
+Você deve ter o novo módulo de controladora pronto para que você possa mover as placas PCIe diretamente do antigo módulo de controladora para os slots correspondentes no novo.
+
+. Desaperte o parafuso de aperto manual no painel lateral do módulo do controlador.
+. Rode o painel lateral para fora do módulo do controlador.
++
+image::../media/drw_rxl_pcie.png[Remover ou instalar uma placa PCIe]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Painel lateral
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Placa PCIe
+
+|===
+. Remova a placa PCIe do módulo antigo da controladora e reserve-a.
++
+Certifique-se de manter o controle de qual slot a placa PCIe estava.
+
+. Repita a etapa anterior para as placas PCIe restantes no módulo antigo da controladora.
+. Abra o novo painel lateral do módulo do controlador, se necessário, deslize a placa de enchimento da placa PCIe, conforme necessário, e instale cuidadosamente a placa PCIe.
++
+Certifique-se de que alinha corretamente a placa na ranhura e exerce uma pressão uniforme sobre a placa quando a coloca na tomada. O cartão deve estar totalmente e uniformemente assentado no slot.
+
+. Repita a etapa anterior para as placas PCIe restantes que você reservou.
+. Feche o painel lateral e aperte o parafuso de aperto manual.
+
+
+
+
+== Passo 6: Mova um módulo de cache
+
+Você deve mover os módulos de cache dos módulos do controlador prejudicados para o módulo do controlador de substituição ao substituir um módulo do controlador.
+
+. Localize o módulo de armazenamento em cache na parte traseira do módulo do controlador e retire-o:
++
+.. Prima a patilha de libertação.
+.. Retire o dissipador de calor.
++
+O sistema de armazenamento vem com dois slots disponíveis para o módulo de cache e apenas um slot é ocupado, por padrão.
+
++
+image::../media/drw_rxl_fcache.png[Remova e substitua o módulo de armazenamento em cache]
+
+
+
+. Mova o módulo de armazenamento em cache para o novo módulo do controlador e, em seguida, alinhe as extremidades do módulo de armazenamento em cache com o alojamento do soquete e empurre-o suavemente para dentro do soquete.
+. Verifique se o módulo de armazenamento em cache está assentado diretamente e completamente no soquete. Se necessário, remova o módulo de cache e recoloque-o no soquete.
+. Recoloque e empurre o dissipador de calor para baixo para engatar o botão de travamento no compartimento do módulo de cache.
+. Repita os passos se tiver um segundo módulo de cache. Feche a tampa do módulo do controlador.
+
+
+
+
+== Passo 7: Instale o controlador
+
+Depois de instalar os componentes do antigo módulo do controlador no novo módulo do controlador, tem de instalar o novo módulo do controlador no chassis do sistema e arrancar o sistema operativo.
+
+Para pares de HA com dois módulos de controlador no mesmo chassi, a sequência em que você instala o módulo de controlador é especialmente importante porque ele tenta reiniciar assim que você o senta completamente no chassi.
+
+
+NOTE: O sistema pode atualizar o firmware do sistema quando ele é inicializado. Não aborte este processo. O procedimento requer que você interrompa o processo de inicialização, o que você normalmente pode fazer a qualquer momento depois de solicitado a fazê-lo. No entanto, se o sistema atualizar o firmware do sistema quando ele é inicializado, você deve esperar até que a atualização seja concluída antes de interromper o processo de inicialização.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Se ainda não o tiver feito, feche a conduta de ar da CPU.
+. Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
++
+
+NOTE: Não introduza completamente o módulo do controlador no chassis até ser instruído a fazê-lo.
+
+. Faça o cabeamento apenas das portas de gerenciamento e console, para que você possa acessar o sistema para executar as tarefas nas seções a seguir.
++
+
+NOTE: Você conetará o resto dos cabos ao módulo do controlador posteriormente neste procedimento.
+
+. Conclua a reinstalação do módulo do controlador:
++
+[cols="1,2"]
+|===
+| Se o seu sistema estiver em... | Em seguida, execute estas etapas... 
+
+
+ a| 
+Um par de HA
+ a| 
+ The controller module begins to boot as soon as it is fully seated in the chassis. Be prepared to interrupt the boot process.
+.. Com a alavanca do came na posição aberta, empurre firmemente o módulo do controlador até que ele atenda ao plano médio e esteja totalmente assentado e, em seguida, feche a alavanca do came para a posição travada. Aperte o parafuso de aperto manual na pega do came na parte de trás do módulo do controlador.
++
+
+NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
+
++
+O controlador começa a arrancar assim que estiver sentado no chassis.
+
+.. Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos.
+.. Prenda os cabos ao dispositivo de gerenciamento de cabos com o gancho e a alça de loop.
+.. Quando a mensagem for exibida `Press Ctrl-C for Boot Menu`, pressione `Ctrl-C` para interromper o processo de inicialização.
++
+
+NOTE: Se você perder o prompt e o módulo do controlador inicializar no ONTAP, digite `halt` e, em seguida, no prompt Loader ENTER `boot_ontap`, pressione `Ctrl-C` quando solicitado e, em seguida, inicialize no modo Manutenção.
+
+.. Selecione a opção para iniciar no modo Manutenção a partir do menu apresentado.
+
+
+
+
+ a| 
+Uma configuração autônoma
+ a| 
+.. Com a alavanca do came na posição aberta, empurre firmemente o módulo do controlador até que ele atenda ao plano médio e esteja totalmente assentado e, em seguida, feche a alavanca do came para a posição travada. Aperte o parafuso de aperto manual na pega do came na parte de trás do módulo do controlador.
++
+
+NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
+
+.. Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos.
+.. Prenda os cabos ao dispositivo de gerenciamento de cabos com o gancho e a alça de loop.
+.. Volte a ligar os cabos de alimentação às fontes de alimentação e às fontes de alimentação, ligue a alimentação para iniciar o processo de arranque e, em seguida, prima `Ctrl-C` depois de ver a `Press Ctrl-C for Boot Menu` mensagem.
++
+
+NOTE: Se você perder o prompt e o módulo do controlador inicializar no ONTAP, digite `halt` e, em seguida, no prompt Loader ENTER `boot_ontap`, pressione `Ctrl-C` quando solicitado e, em seguida, inicialize no modo Manutenção.
+
+.. No menu de arranque, selecione a opção para o modo de manutenção.
+
+
+|===
++
+*Importante:* durante o processo de inicialização, você pode ver os seguintes prompts:
+
++
+** Um aviso de uma incompatibilidade de ID do sistema e pedindo para substituir a ID do sistema.
+** Um aviso de que, ao entrar no modo de manutenção em uma configuração HA, você deve garantir que o controlador saudável permaneça inativo. Você pode responder com segurança `y` a esses prompts.
+
+
+

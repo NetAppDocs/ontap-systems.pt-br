@@ -1,0 +1,114 @@
+= 
+:allow-uri-read: 
+
+
+Você pode adicionar um módulo X91148A em um slot de módulo vazio em seu sistema como uma NIC 100GbE ou um módulo de armazenamento para as NS224 prateleiras de armazenamento.
+
+* Seu sistema deve estar executando o ONTAP 9.8 e posterior.
+* Para adicionar sem interrupções o módulo X91148A, você deve adquirir o controlador de destino, remover a tampa cega do slot no slot de destino, adicionar o módulo e, em seguida, giveback o controlador de destino.
+* Deve haver um ou mais slots abertos disponíveis no seu sistema.
+* Se houver vários slots disponíveis, instale o módulo de acordo com a matriz de prioridade de slot para o módulo X91148A no https://hwu.netapp.com["NetApp Hardware Universe"^].
+* Se você estiver adicionando o módulo X91148A como um módulo de armazenamento, você deve instalar os slots de módulo 3 e/ou 7.
+* Se você estiver adicionando o módulo X91148A como uma NIC 100GbE, você poderá usar qualquer slot aberto. No entanto, por padrão, os slots 3 e 7 são definidos como slots de armazenamento. Se você deseja usar esses slots como slots de rede e não adicionar NS224 prateleiras, você deve modificar os slots para uso em rede com o `storage port modify -node _node name_ -port _port name_ -mode network` comando. Consulte https://hwu.netapp.com["NetApp Hardware Universe"^] a para outros slots que podem ser usados pelo módulo X91148A para rede.
+* Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+
+
+[role="tabbed-block"]
+====
+--
+.Opção 1: Adicionar um módulo X91148A como um módulo NIC
+Para adicionar um módulo X91148A como um módulo NIC em um sistema com slots abertos, você deve seguir a sequência específica de etapas.
+
+.Passos
+. Desligar o controlador A:
++
+.. Desativar a giveback automática: `storage failover modify -node local -auto-giveback false`
+.. Assuma o nó de destino: `storage failover takeover -ofnode _target_node_name_`
++
+A conexão do console mostra que o nó cai para o prompt Loader quando o controle estiver concluído.
+
+
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Retire o obturador da ranhura alvo:
++
+.. Prima o botão de came com letras e numerados.
+.. Rode o trinco da árvore de cames para baixo até estar na posição horizontal.
+.. Retire o obturador.
+
+
+. Instale o módulo X91148A:
++
+.. Alinhe o módulo X91148A com as extremidades da ranhura.
+.. Deslize o módulo X91148A para dentro do slot até que o trinco do came de e/S numerado e com letras comece a engatar com o pino do came de e/S.
+.. Empurre o trinco da came de e/S totalmente para cima para bloquear o módulo no devido lugar.
+
+
+. Ligue o módulo aos interrutores de dados.
+. Reinicie o controlador A A A partir do prompt Loader: `bye`
++
+
+NOTE: Isso reinicializa as placas PCIe e outros componentes e reinicializa o nó.
+
+. Giveback o nó do nó do parceiro: `storage failover giveback -ofnode _target_node_name_`
+. Ative o giveback automático se ele foi desativado: `storage failover modify -node local -auto-giveback true`
+. Repita estes passos para o controlador B.
+
+
+--
+.Opção 2: Adicionar um módulo X91148A como um módulo de armazenamento
+--
+Para adicionar um módulo X91148A como um módulo de armazenamento em um sistema com slots abertos, você deve seguir a sequência específica de etapas.
+
+* Este procedimento presume que as faixas horárias 3 e/ou 7 estejam abertas.
+
+
+.Passos
+. Desligar o controlador A:
++
+.. Desativar a giveback automática: `storage failover modify -node local -auto-giveback false`
+.. Assuma o nó de destino: `storage failover takeover -ofnode target_node_name`
++
+A conexão do console mostra que o nó cai para o prompt Loader quando o controle estiver concluído.
+
+
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Retire o obturador da ranhura alvo:
++
+.. Prima o botão de came com letras e numerados.
+.. Rode o trinco da árvore de cames para baixo até estar na posição horizontal.
+.. Retire o obturador.
+
+
+. Instale o módulo X91148A na ranhura 3:
++
+.. Alinhe o módulo X91148A com as extremidades da ranhura.
+.. Deslize o módulo X91148A para dentro do slot até que o trinco do came de e/S numerado e com letras comece a engatar com o pino do came de e/S.
+.. Empurre o trinco da came de e/S totalmente para cima para bloquear o módulo no devido lugar.
+.. Se estiver a instalar um segundo módulo X91148A para armazenamento, repita este passo para o módulo no slot 7.
+
+
+. Reinicie o controlador A:
++
+** Se o módulo de substituição não for o mesmo modelo que o módulo antigo, reinicie o BMC :
++
+... A partir do prompt Loader, mude para o modo de privilégio avançado: `set -privilege advanced`
+... Reinicie o BMC: `sp reboot`
+
+
+** Se o módulo de substituição for o mesmo que o módulo antigo, inicie a partir do prompt Loader: `bye`
++
+
+NOTE: Isso reinicializa as placas PCIe e outros componentes e reinicializa o nó.
+
+
+
+. Giveback o nó do nó do parceiro: `storage failover giveback -ofnode target_node_name`
+. Ative o giveback automático se ele foi desativado: `storage failover modify -node local -auto-giveback true`
+. Repita estes passos para o controlador B.
+. Instale e faça o cabeamento das NS224 prateleiras, conforme descrito em link:../ns224/hot-add-shelf-overview.html["Fluxo de trabalho de adição automática"].
+
+
+--
+====

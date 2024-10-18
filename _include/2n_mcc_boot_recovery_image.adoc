@@ -1,0 +1,34 @@
+= 
+:allow-uri-read: 
+
+
+Você deve inicializar a imagem ONTAP a partir da unidade USB e verificar as variáveis ambientais.
+
+Este procedimento se aplica a sistemas em uma configuração de MetroCluster de dois nós.
+
+.Passos
+. A partir do prompt Loader, inicialize a imagem de recuperação da unidade flash USB: `boot_recovery`
++
+A imagem é transferida da unidade flash USB.
+
+. Quando solicitado, insira o nome da imagem ou aceite a imagem padrão exibida dentro dos colchetes na tela.
+. Após a instalação da imagem, inicie o processo de restauração:
++
+.. Pressione `n` quando solicitado para restaurar a configuração de backup.
+.. Pressione `y` quando solicitado a reinicializar para começar a usar o software recém-instalado.
++
+Você deve estar preparado para interromper o processo de inicialização quando solicitado.
+
+
+
+. À medida que o sistema for inicializado, pressione `Ctrl-C` depois que a `Press Ctrl-C for Boot Menu` mensagem for exibida. E, quando o Menu de inicialização for exibido, selecione a opção 6.
+. Verifique se as variáveis ambientais estão definidas como esperado.
++
+.. Leve o nó para o prompt Loader.
+.. Verifique as configurações de variáveis de ambiente com o `printenv` comando.
+.. Se uma variável de ambiente não for definida como esperado, modifique-a com o `setenv __environment-variable-name__ __changed-value__` comando.
+.. Salve suas alterações usando o `savenv` comando.
+.. Reinicie o nó.
+
+
+

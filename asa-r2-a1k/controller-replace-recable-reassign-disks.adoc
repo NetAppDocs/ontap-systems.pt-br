@@ -1,0 +1,47 @@
+---
+permalink: asa-r2-a1k/controller-replace-recable-reassign-disks.html 
+sidebar: sidebar 
+keywords: asa r2 a1k, how to recable the system, how to reassign disks 
+summary: Reinicie o sistema. 
+---
+= Devolver o controlador - ASA A1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Transfira a propriedade dos recursos de armazenamento de volta para o controlador de substituição.
+
+.Passos
+. Se o sistema de armazenamento tiver a encriptação configurada, tem de restaurar a funcionalidade armazenamento ou encriptação de volume utilizando o seguinte procedimento para reiniciar o sistema:
++
+.. Inicialize no Menu e execute a opção 10
+.. Introduza a frase-passe e os dados de cópia de segurança e, em seguida, efetue o arranque normal https://kb.netapp.com/on-prem/ontap/DM/Encryption/Encryption-KBs/Restore_onboard_key_management_encryption_keys["Restaurar chaves de criptografia integradas de gerenciamento de chaves"] consulte .
+.. Execute apenas o CFO giveback
+.. Execute Onboard Sync e verifique se o SVM-KEK está definido como True See https://kb.netapp.com/on-prem/ontap/DM/Encryption/Encryption-KBs/Onboard_keymanager_sync_fails_after_motherboard_replacement["Giveback após falha na substituição do MB - a operação foi vetada pelo gerenciador de chaves"]
+.. Giveback SFO, (sem força)
+
+
+. Se o sistema não tiver a encriptação configurada, execute o seguinte procedimento para reiniciar o sistema:
++
+.. Inicialize no Menu e execute a opção 1.
+.. Devolver o controlador:
+.. A partir do controlador saudável, devolva o armazenamento do controlador substituído: `storage failover giveback -ofnode _replacement_node_name_`
++
+O controlador _replacement_ recupera seu armazenamento e completa a inicialização.
+
++
+
+NOTE: Se o giveback for vetado, você pode considerar substituir os vetos.
+
++
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["Encontre o conteúdo de Configuração de alta disponibilidade para sua versão do ONTAP 9"]
+
+.. Após a conclusão do giveback, confirme que o par de HA está saudável e que a aquisição é possível: `storage failover show`
+
+
+. Verifique se os volumes esperados estão presentes para cada controlador: `vol show -node node-name`
+. Se você desativou o controle automático na reinicialização, ative-o a partir do controlador íntegro: `storage failover modify -node replacement-node-name -onreboot true`
+. Se o AutoSupport estiver ativado, restaure/dessuprimir a criação automática de casos usando o `system node autosupport invoke -node * -type all -message MAINT=END` comando.
+

@@ -1,0 +1,86 @@
+---
+permalink: ns224/install-hot-add-shelf.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, install, hot-add an ns224 drive shelf 
+summary: É possível adicionar um compartimento de unidade de NS224 TB depois que o par de HA atender a certos requisitos e depois que as tarefas de preparação aplicáveis ao seu par de HA forem concluídas. 
+---
+= Instale uma gaveta para adicionar mais quente - NS224 prateleiras
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você precisa instalar uma gaveta de NS224 U em um gabinete ou rack de telecomunicações, conetar os cabos de energia (que liga automaticamente a gaveta) e definir a ID da gaveta.
+
+.Antes de começar
+* Certifique-se de que tem um clipe de papel com um lado endireitado ou uma caneta esferográfica de ponta estreita.
++
+Para alterar a ID da prateleira, use o clipe de papel ou a caneta esferográfica para acessar o botão ID da prateleira atrás do Painel do Mostrador do Operador (ODP) para a etapa alterar ID da prateleira.
+
+* Entenda que uma prateleira NS224 totalmente carregada pode pesar até 66,78 lbs (30,29 kg) e requer duas pessoas para levantar ou usar um elevador hidráulico. Evite remover os componentes da prateleira (da parte frontal ou traseira da prateleira) para reduzir o peso da prateleira, pois o peso da prateleira ficará desequilibrado.
+
+
+.Passos
+. Instale o kit de trilho para a prateleira, conforme necessário, usando as instruções incluídas no kit.
++
+
+NOTE: Não instale a prateleira com flange.
+
+. Instale a prateleira:
++
+.. Posicione a parte de trás da prateleira sobre os trilhos e, em seguida, apoie a prateleira a partir da parte inferior e deslize-a para o gabinete ou rack de telecomunicações.
++
+Se você estiver instalando várias gavetas, coloque a primeira gaveta diretamente acima das controladoras. Coloque a segunda gaveta diretamente sob as controladoras. Repita este padrão para quaisquer prateleiras adicionais.
+
+.. Prenda a prateleira ao gabinete ou rack de telecomunicações usando os parafusos de montagem incluídos no kit.
+
+
+. Ligue a alimentação:
++
+.. Conete os cabos de energia à gaveta e fixe-os no lugar.
++
+Se forem fontes de alimentação CA, fixe-as no lugar com o retentor do cabo de alimentação.
+
++
+Se forem fontes de alimentação CC, fixe-as no lugar com os dois parafusos de orelhas.
+
+.. Conecte os cabos de energia a diferentes fontes de energia para resiliência.
++
+Uma prateleira liga-se quando ligada a uma fonte de alimentação; não tem interrutores de alimentação. Quando estiver a funcionar corretamente, o LED bicolor de uma fonte de alimentação acende-se a verde.
+
+
+
+. Defina o ID do compartimento para um número exclusivo no par de HA:
++
+Para obter instruções mais detalhadas, link:change-shelf-id.html["Alterar o ID de um compartimento - NS224 gavetas"^]consulte .
+
++
+.. Retire a tampa da extremidade esquerda e localize o pequeno orifício à direita dos LEDs.
+.. Insira a extremidade de um clipe de papel ou ferramenta semelhante no pequeno orifício para alcançar o botão ID da prateleira.
+.. Prima e mantenha premido o botão (durante até 15 segundos) até o primeiro número no visor digital piscar e, em seguida, solte o botão.
++
+Se a ID demorar mais de 15 segundos a piscar, prima e mantenha premido o botão novamente, certificando-se de que o prime completamente.
+
+.. Pressione e solte o botão para avançar o número até atingir o número desejado de 0 a 9.
+.. Repita as subetapas 4c e 4D para definir o segundo número do ID do compartimento.
++
+Pode demorar até três segundos (em vez de 15 segundos) para o número piscar.
+
+.. Prima e mantenha premido o botão até o segundo número deixar de piscar.
++
+Após cerca de cinco segundos, ambos os números começam a piscar e o LED âmbar no ODP acende-se.
+
+.. Ligue o compartimento para fazer com que o ID do compartimento entre em vigor.
++
+Você deve desconetar os dois cabos de energia da gaveta, esperar 10 segundos e conectá-los novamente.
+
++
+Quando a energia é restaurada para as fontes de alimentação, seus LEDs bicolored acendem-se a verde.
+
+
+
+
+
+.O que se segue?
+Faça o cabo da sua prateleira hot-add. Vá para link:cable-overview-hot-add-shelf.html["Visão geral do cabeamento para um hot-add"].

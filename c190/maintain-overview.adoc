@@ -1,0 +1,68 @@
+---
+permalink: c190/maintain-overview.html 
+sidebar: sidebar 
+keywords: c190 maintenance, maintenance, repairing c190, repairing c190, replace c190 components, replace c190 components 
+summary: Mantenha o hardware AFF C190 
+---
+= Manter o hardware do AFF C190
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para o sistema de armazenamento AFF C190, pode executar procedimentos de manutenção nos seguintes componentes.
+
+
+
+== Suporte de arranque
+
+A Mídia de inicialização armazena um conjunto primário e secundário de arquivos de imagem de inicialização que o sistema usa quando ele é inicializado.
+
+
+
+== Chassis
+
+O chassi é o gabinete físico que abriga todos os componentes do controlador, como a unidade controladora/CPU, fonte de alimentação e e/S.
+
+
+
+== Controlador
+
+Um controlador consiste em uma placa, firmware e software. Controla as unidades e implementa as funções do ONTAP.
+
+
+
+== DIMM
+
+Você deve substituir um DIMM (módulo de memória dual in-line) quando houver uma incompatibilidade de memória ou se tiver um DIMM com falha.
+
+
+
+== Condução
+
+Uma unidade é um dispositivo que fornece a Mídia de armazenamento físico para dados.
+
+
+
+== Ventoinha
+
+A ventoinha arrefece o controlador.
+
+
+
+== Bateria NVMEM
+
+Uma bateria é incluída com o controlador e fornece a energia de reserva se a energia CA falhar.
+
+
+
+== Fonte de alimentação
+
+Uma fonte de alimentação fornece uma fonte de alimentação redundante em um compartimento de controladora.
+
+
+
+== Bateria de relógio em tempo real
+
+Uma bateria de relógio em tempo real preserva as informações de data e hora do sistema se a energia estiver desligada.

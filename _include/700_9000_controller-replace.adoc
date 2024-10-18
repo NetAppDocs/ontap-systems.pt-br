@@ -1,0 +1,200 @@
+= Passo 1: Remova o módulo do controlador
+:allow-uri-read: 
+
+
+Para substituir o hardware do módulo do controlador, você deve remover o nó prejudicado, mover os componentes FRU para o módulo do controlador de substituição, instalar o módulo do controlador de substituição no chassi e, em seguida, inicializar o sistema para o modo de manutenção.
+
+
+
+== Passo 1: Remova o módulo do controlador
+
+Para aceder aos componentes no interior do controlador, tem de remover primeiro o módulo do controlador do sistema e, em seguida, remover a tampa do módulo do controlador.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Desconete os cabos do módulo do controlador desativado e mantenha o controle de onde os cabos foram conetados.
+. Deslize o botão laranja na pega do came para baixo até que este se destranque.
+
+
+image::../media/drw_9000_remove_pcm.png[Retire o módulo do controlador]
+
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Botão de libertação do manípulo do excêntrico
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Pega do came
+
+|===
+. Rode o manípulo do excêntrico de forma a desengatar completamente o módulo do controlador do chassis e, em seguida, deslize o módulo do controlador para fora do chassis.
++
+Certifique-se de que suporta a parte inferior do módulo do controlador enquanto o desliza para fora do chassis.
+
+. Coloque a tampa do módulo do controlador para cima sobre uma superfície estável e plana, pressione o botão azul na tampa, deslize a tampa para a parte traseira do módulo do controlador e, em seguida, gire a tampa para cima e levante-a do módulo do controlador.
++
+image::../media/drw_9000_pcm_open.png[Abra ou feche o módulo do controlador]
+
+
+
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Botão de bloqueio da tampa do módulo do controlador
+
+|===
+
+
+== Passo 2: Mova a Mídia de inicialização
+
+Você deve localizar o suporte de inicialização e seguir as instruções para removê-lo do controlador antigo e inseri-lo no novo controlador.
+
+.Passos
+. Levante a conduta de ar preta na parte de trás do módulo do controlador e, em seguida, localize o suporte de arranque utilizando a ilustração a seguir ou o mapa da FRU no módulo do controlador:
++
+image::../media/drw_9000_remove_boot_dev.gif[Remova o dispositivo de inicialização]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Prima o separador de libertação
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Suporte de arranque
+
+|===
+. Prima o botão azul no alojamento do suporte do suporte de arranque para soltar o suporte de arranque do respetivo alojamento e, em seguida, puxe-o cuidadosamente para fora do suporte de suporte de arranque.
++
+
+NOTE: Não torça nem puxe o suporte de arranque diretamente para cima, pois isto pode danificar o suporte ou o suporte de arranque.
+
+. Mova o suporte de arranque para o novo módulo do controlador, alinhe as extremidades do suporte de arranque com o alojamento da tomada e, em seguida, empurre-o suavemente para dentro do encaixe.
+. Verifique o suporte de arranque para se certificar de que está encaixado corretamente e completamente no encaixe.
++
+Se necessário, retire o suporte de arranque e volte a colocá-lo no socket.
+
+. Prima o suporte de arranque para baixo para engatar o botão de bloqueio no alojamento do suporte de suporte de arranque.
+
+
+
+
+== Etapa 3: Mova os DIMMs do sistema
+
+Para mover os DIMMs, localize-os e mova-os do controlador antigo para o controlador de substituição e siga a sequência específica de passos.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Localize os DIMMs no módulo do controlador.
+. Observe a orientação do DIMM no soquete para que você possa inserir o DIMM no módulo do controlador de substituição na orientação adequada.
+. Ejete o DIMM de seu slot, empurrando lentamente as duas abas do ejetor do DIMM em ambos os lados do DIMM e, em seguida, deslize o DIMM para fora do slot.
++
+
+NOTE: Segure cuidadosamente o DIMM pelas bordas para evitar a pressão nos componentes da placa de circuito DIMM.
+
++
+image::../media/drw_9000_replace_pcm_dimms.png[Remova os DIMMs do controlador]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Patilhas do ejetor DIMM
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+DIMM
+
+|===
+. Localize o slot onde você está instalando o DIMM.
+. Certifique-se de que as abas do ejetor DIMM no conetor estão na posição aberta e insira o DIMM diretamente no slot.
++
+O DIMM encaixa firmemente no slot, mas deve entrar facilmente. Caso contrário, realinhar o DIMM com o slot e reinseri-lo.
+
++
+
+NOTE: Inspecione visualmente o DIMM para verificar se ele está alinhado uniformemente e totalmente inserido no slot.
+
+. Insira o DIMM diretamente no slot.
++
+O DIMM encaixa firmemente no slot, mas deve entrar facilmente. Caso contrário, realinhar o DIMM com o slot e reinseri-lo.
+
++
+
+NOTE: Inspecione visualmente o DIMM para verificar se ele está alinhado uniformemente e totalmente inserido no slot.
+
+. Empurre com cuidado, mas firmemente, na borda superior do DIMM até que as abas do ejetor se encaixem no lugar sobre os entalhes nas extremidades do DIMM.
+. Repita estas etapas para os DIMMs restantes.
+
+
+
+
+== Passo 4: Instale o controlador
+
+Depois de instalar os componentes no módulo do controlador, tem de instalar o módulo do controlador novamente no chassis do sistema e arrancar o sistema operativo.
+
+Para pares de HA com dois módulos de controlador no mesmo chassi, a sequência em que você instala o módulo de controlador é especialmente importante porque ele tenta reiniciar assim que você o senta completamente no chassi.
+
+
+NOTE: O sistema pode atualizar o firmware do sistema quando ele é inicializado. Não aborte este processo. O procedimento requer que você interrompa o processo de inicialização, o que você normalmente pode fazer a qualquer momento depois de solicitado a fazê-lo. No entanto, se o sistema atualizar o firmware do sistema quando ele é inicializado, você deve esperar até que a atualização seja concluída antes de interromper o processo de inicialização.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Se ainda não o tiver feito, substitua a tampa no módulo do controlador.
+. Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
++
+
+NOTE: Não introduza completamente o módulo do controlador no chassis até ser instruído a fazê-lo.
+
+. Faça o cabeamento apenas das portas de gerenciamento e console, para que você possa acessar o sistema para executar as tarefas nas seções a seguir.
++
+
+NOTE: Você conetará o resto dos cabos ao módulo do controlador posteriormente neste procedimento.
+
+. Conclua a reinstalação do módulo do controlador:
++
+.. Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos.
+.. Empurre firmemente o módulo do controlador para dentro do chassi até que ele atenda ao plano médio e esteja totalmente assentado.
++
+Os trincos de bloqueio sobem quando o módulo do controlador está totalmente assente.
+
++
+
+NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
+
++
+O módulo do controlador começa a arrancar assim que estiver totalmente assente no chassis. Esteja preparado para interromper o processo de inicialização.
+
+.. Rode os trincos de bloqueio para cima, inclinando-os de forma a que estes limpem os pinos de bloqueio e, em seguida, baixe-os para a posição de bloqueio.
+.. Interrompa o processo de inicialização pressionando `Ctrl-C` quando vir `Press Ctrl-C for Boot Menu`.
+.. Selecione a opção para iniciar no modo Manutenção a partir do menu apresentado.
+
+
+

@@ -1,0 +1,177 @@
+---
+permalink: fas9000/x91148a-modules-with-no-open-slots-add.html 
+sidebar: sidebar 
+keywords: aff a700, fas9000, add, x91148a, storage, module, no, open, slots, system, nic 
+summary: Você deve remover mais um ou mais módulos de NIC ou armazenamento existentes em seu sistema para instalar um ou mais módulos de armazenamento X91148A em seu sistema totalmente preenchido. 
+---
+= Adicione um módulo de armazenamento X91148A em um sistema sem slots abertos - FAS9000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve remover mais um ou mais módulos de NIC ou armazenamento existentes em seu sistema para instalar um ou mais módulos de armazenamento X91148A em seu sistema totalmente preenchido.
+
+* Seu sistema deve estar executando o ONTAP 9.8 e posterior.
+* Para adicionar sem interrupções o módulo X91148A, você deve adquirir o controlador de destino, adicionar o módulo e, em seguida, giveback o controlador de destino.
+* Se você estiver adicionando o módulo X91148A como um adaptador de armazenamento, você deve instalar o módulo nos slots 3 e/ou 7.
+* Se você estiver adicionando o módulo X91148A como uma NIC 100GbE, você poderá usar qualquer slot aberto. No entanto, por padrão, os slots 3 e 7 são definidos como slots de armazenamento. Se você deseja usar esses slots como slots de rede e não adicionar NS224 prateleiras, você deve modificar os slots para uso em rede com o `storage port modify -node _node name_ -port _port name_ -mode network` comando para cada porta. Consulte https://hwu.netapp.com["NetApp Hardware Universe"^] a para outros slots que podem ser usados pelo módulo X91148A para rede.
+* Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+
+
+[role="tabbed-block"]
+====
+--
+.Opção 1: Adicionar um módulo X91148A como um módulo NIC
+Você deve remover uma ou mais NIC ou módulos de armazenamento existentes em seu sistema para instalar um ou mais módulos NIC X91148A em seu sistema totalmente preenchido.
+
+.Passos
+. Se você estiver adicionando um módulo X91148A em um slot que contém um módulo NIC com o mesmo número de portas que o módulo X91148A, os LIFs migrarão automaticamente quando seu módulo controlador for desligado. Se o módulo NIC que está sendo substituído tiver mais portas do que o módulo X91148A, você deve reatribuir permanentemente os LIFs afetados a uma porta inicial diferente. Consulte https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["Migração de um LIF"^] para obter informações sobre como usar o System Manager para mover permanentemente os LIFs
+. Desligar o controlador A:
++
+.. Desativar a giveback automática: `storage failover modify -node local -auto-giveback false`
+.. Assuma o nó de destino: `storage failover takeover -ofnode _target_node_name_`
++
+A conexão do console mostra que o nó cai para o prompt Loader quando o controle estiver concluído.
+
+
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Desconete qualquer cabeamento do módulo de e/S de destino.
+. Retire o módulo de e/S alvo do chassis:
++
+.. Prima o botão de came com letras e numerados.
++
+O botão do came afasta-se do chassis.
+
+.. Rode o trinco da árvore de cames para baixo até estar na posição horizontal.
++
+O módulo de e/S desengata do chassis e desloca-se cerca de 1/2 polegadas para fora do slot de e/S.
+
+.. Retire o módulo de e/S do chassis puxando as patilhas de puxar nas laterais da face do módulo.
++
+Certifique-se de manter o controle de qual slot o módulo de e/S estava.
+
++
+image::../media/drw_9000_remove_pcie_module.png[Remover um módulo PCIe]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Trinco do came de e/S com letras e numerado
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Trinco da came de e/S completamente desbloqueado
+
+|===
+
+
+. Instale o módulo X91148A na ranhura alvo:
++
+.. Alinhe o módulo X91148A com as extremidades da ranhura.
+.. Deslize o módulo X91148A para dentro do slot até que o trinco do came de e/S numerado e com letras comece a engatar com o pino do came de e/S.
+.. Empurre o trinco da came de e/S totalmente para cima para bloquear o módulo no devido lugar.
+
+
+. Repita as etapas de remoção e instalação para substituir módulos adicionais para o controlador A.
+. Ligue o módulo ou os módulos aos interrutores de dados.
+. Reinicie o controlador A A A partir do prompt Loader: `bye`
++
+
+NOTE: Isso reinicializa as placas PCIe e outros componentes e reinicializa o nó.
+
+. Giveback o nó do nó do parceiro: `storage failover giveback -ofnode target_node_name`
+. Ative o giveback automático se ele foi desativado: `storage failover modify -node local -auto-giveback true`
+. Se você adicionou o módulo X91148A como um módulo NIC nos slots 3 ou 7, para rede, use o `storage port modify -node _node name_ -port _port name_ -mode network` comando para cada porta.
+. Repita estes passos para o controlador B.
+
+
+--
+.Opção 2: Adicionando um módulo X91148A como um módulo de armazenamento
+--
+Você deve remover uma ou mais NIC ou módulos de armazenamento existentes em seu sistema para instalar um ou mais módulos de armazenamento X91148A em seu sistema totalmente preenchido.
+
+* Este procedimento presume que você esteja instalando o módulo X91148A nos slots 3 e/ou 7.
+
+
+.Passos
+. Se você estiver adicionando um módulo X91148A como um módulo de armazenamento nos slots 3 e/ou 7 em um slot que tenha um módulo NIC existente nele, use o System Manager para migrar permanentemente as LIFs para diferentes portas residenciais, conforme descrito em https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["Migração de um LIF"^].
+. Desligar o controlador A:
++
+.. Desativar a giveback automática: `storage failover modify -node local -auto-giveback false`
+.. Assuma o nó de destino: `storage failover takeover -ofnode target_node_name`
++
+A conexão do console mostra que o nó cai para o prompt Loader quando o controle estiver concluído.
+
+
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Desconete qualquer cabeamento do módulo de e/S de destino.
+. Retire o módulo de e/S alvo do chassis:
++
+.. Prima o botão de came com letras e numerados.
++
+O botão do came afasta-se do chassis.
+
+.. Rode o trinco da árvore de cames para baixo até estar na posição horizontal.
++
+O módulo de e/S desengata do chassis e desloca-se cerca de 1/2 polegadas para fora do slot de e/S.
+
+.. Retire o módulo de e/S do chassis puxando as patilhas de puxar nas laterais da face do módulo.
++
+Certifique-se de manter o controle de qual slot o módulo de e/S estava.
+
++
+image::../media/drw_9000_remove_pcie_module.png[Remover um módulo PCIe]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Trinco do came de e/S com letras e numerado
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Trinco da came de e/S completamente desbloqueado
+
+|===
+
+
+. Instale o módulo X91148A na ranhura 3:
++
+.. Alinhe o módulo X91148A com as extremidades da ranhura.
+.. Deslize o módulo X91148A para dentro do slot até que o trinco do came de e/S numerado e com letras comece a engatar com o pino do came de e/S.
+.. Empurre o trinco da came de e/S totalmente para cima para bloquear o módulo no devido lugar.
+.. Se você estiver instalando um segundo módulo X91148A para armazenamento, repita as etapas de remoção e instalação do módulo no slot 7.
+
+
+. Reinicie o controlador A A A partir do prompt Loader: `bye`
++
+
+NOTE: Isso reinicializa as placas PCIe e outros componentes e reinicializa o nó.
+
+. Giveback o nó do nó do parceiro: `storage failover giveback -ofnode _target_node_name_`
+. Ative o giveback automático se ele foi desativado: `storage failover modify -node local -auto-giveback true`
+. Repita estes passos para o controlador B.
+. Instale e faça o cabeamento das NS224 prateleiras, conforme descrito em link:../ns224/hot-add-shelf-overview.html["Fluxo de trabalho de adição automática"].
+
+
+--
+====

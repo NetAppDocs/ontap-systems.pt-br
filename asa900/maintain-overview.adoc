@@ -1,0 +1,79 @@
+---
+permalink: asa900/maintain-overview.html 
+sidebar: sidebar 
+keywords: asa A900 maintenance, maintenance, repairing asa A900, repairing asa A900, replace asa A900 components, replace asa A900 components 
+summary: Mantenha o hardware ASA A900 
+---
+= Manter o hardware do ASA A900
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para o sistema de armazenamento ASA A900, pode executar procedimentos de manutenção nos seguintes componentes.
+
+
+
+== Suporte de arranque
+
+A Mídia de inicialização armazena um conjunto primário e secundário de arquivos de imagem de inicialização que o sistema usa quando ele é inicializado.
+
+
+
+== Chassis
+
+O chassi é o gabinete físico que abriga todos os componentes do controlador, como a unidade controladora/CPU, fonte de alimentação e e/S.
+
+
+
+== Controlador
+
+Um controlador consiste em uma placa, firmware e software. Controla as unidades e implementa as funções do ONTAP.
+
+
+
+== DIMM
+
+Você deve substituir um DIMM (módulo de memória dual in-line) quando houver uma incompatibilidade de memória ou se tiver um DIMM com falha.
+
+
+
+== DCPM
+
+O DCPM (módulo de alimentação do controlador de destage) contém a bateria de NVRAM11 V.
+
+
+
+== Ventoinha
+
+A ventoinha arrefece o controlador.
+
+
+
+== Módulo de e/S.
+
+O módulo I/o (módulo de entrada/saída) é um componente de hardware que atua como intermediário entre o controlador e vários dispositivos ou sistemas que precisam trocar dados com o controlador.
+
+
+
+== LED USB
+
+O módulo LED USB fornece conetividade às portas da consola e ao estado do sistema.
+
+
+
+== NVRAM
+
+ The NVRAM module (Non-Volatile Random Access Memory) allows the controller to retain data across power cycles or system reboots.
+
+
+== Fonte de alimentação
+
+Uma fonte de alimentação fornece uma fonte de alimentação redundante em um compartimento de controladora.
+
+
+
+== Bateria de relógio em tempo real
+
+Uma bateria de relógio em tempo real preserva as informações de data e hora do sistema se a energia estiver desligada.

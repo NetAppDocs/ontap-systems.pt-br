@@ -1,0 +1,188 @@
+---
+permalink: fas2600/controller-replace-recable-reassign-disks.html 
+sidebar: sidebar 
+keywords: fas2600, how to recable the system, how to reassign disks 
+summary: Você deve remarcar o armazenamento e confirmar a reatribuição do disco. 
+---
+= Recable o sistema e reatribuir discos - FAS2600
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Continue o procedimento de substituição reativando o armazenamento e confirmando a reatribuição do disco.
+
+
+
+== Passo 1: Recable o sistema
+
+Recable as conexões de rede e armazenamento do módulo do controlador.
+
+.Passos
+. Recable o módulo do controlador para armazenamento e conexões de rede.
+. Verifique se o cabeamento está correto usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"]o .
++
+.. Baixe e instale o Config Advisor.
+.. Insira as informações do sistema de destino e clique em coletar dados.
+.. Clique na guia cabeamento e examine a saída. Certifique-se de que todos os compartimentos de disco sejam exibidos e todos os discos apareçam na saída, corrigindo quaisquer problemas de cabeamento encontrados.
+.. Verifique outro cabeamento clicando na guia apropriada e, em seguida, examinando a saída do Config Advisor.
+
+
+
+
+
+
+== Etapa 2: Reatribuir discos
+
+Se o sistema de storage estiver em um par de HA, a ID do sistema do novo módulo de controladora será automaticamente atribuída aos discos quando o giveback ocorrer no final do procedimento. Em um sistema autônomo, você deve reatribuir manualmente a ID aos discos. Tem de utilizar o procedimento correto para a sua configuração.
+
+
+
+=== Opção 1: Verifique a alteração da ID do sistema em um sistema HA
+
+Você deve confirmar a alteração do ID do sistema quando você inicializar o controlador _replacement_ e, em seguida, verificar se a alteração foi implementada.
+
+Este procedimento aplica-se apenas a sistemas que executam o ONTAP em um par de HA.
+
+. Se o controlador _replacement_ estiver no modo Manutenção (mostrando o `*>` prompt, saia do modo Manutenção e vá para o prompt Loader: `halt`
+. A partir do prompt Loader no controlador _replacement_, inicialize o controlador, inserindo `y` se for solicitado a substituir o ID do sistema devido a uma incompatibilidade de ID do sistema: `boot_ontap`
+. Aguarde até que a `Waiting for giveback...` mensagem seja exibida no console do controlador _replacement_ e, em seguida, a partir do controlador saudável, verifique se o novo ID do sistema do parceiro foi atribuído automaticamente: `storage failover show`
++
+Na saída do comando, você verá uma mensagem informando que a ID do sistema foi alterada no controlador prejudicado, mostrando as IDs antigas e novas corretas. No exemplo a seguir, o node2 foi substituído e tem um novo ID de sistema de 151759706.
+
++
+[listing]
+----
+node1> `storage failover show`
+                                    Takeover
+Node              Partner           Possible     State Description
+------------      ------------      --------     -------------------------------------
+node1             node2             false        System ID changed on partner (Old:
+                                                  151759755, New: 151759706), In takeover
+node2             node1             -            Waiting for giveback (HA mailboxes)
+----
+. A partir do controlador saudável, verifique se todos os coredumps são salvos:
++
+.. Mude para o nível de privilégio avançado: `set -privilege advanced`
++
+Você pode responder `Y` quando solicitado a continuar no modo avançado. O prompt do modo avançado é exibido (*>).
+
+.. Salve quaisquer coredumps: `system node run -node _local-node-name_ partner savecore`
+.. Aguarde que o comando "avecore" seja concluído antes de emitir o giveback.
++
+Você pode inserir o seguinte comando para monitorar o progresso do comando savecore: `system node run -node _local-node-name_ partner savecore -s`
+
+.. Voltar ao nível de privilégio de administrador: `set -privilege admin`
+
+
+. Se o sistema de storage tiver o Storage ou o volume Encryption configurado, você deverá restaurar a funcionalidade Storage ou volume Encryption usando um dos procedimentos a seguir, dependendo se você estiver usando o gerenciamento de chaves integrado ou externo:
++
+** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-onboard-key-management-encryption-keys-task.html["Restaurar chaves de criptografia integradas de gerenciamento de chaves"^]
+** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-external-encryption-keys-93-later-task.html["Restaurar chaves de criptografia de gerenciamento de chaves externas"^]
+
+
+. Devolver o controlador:
++
+.. A partir do controlador saudável, devolva o armazenamento do controlador substituído: `storage failover giveback -ofnode _replacement_node_name_`
++
+O controlador _replacement_ recupera seu armazenamento e completa a inicialização.
+
++
+Se você for solicitado a substituir a ID do sistema devido a uma incompatibilidade de ID do sistema, `y` digite .
+
++
+
+NOTE: Se o giveback for vetado, você pode considerar substituir os vetos.
+
++
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["Encontre o conteúdo de Configuração de alta disponibilidade para sua versão do ONTAP 9"]
+
+.. Após a conclusão do giveback, confirme que o par de HA está saudável e que a aquisição é possível: `storage failover show`
++
+A saída do `storage failover show` comando não deve incluir a ID do sistema alterada na mensagem do parceiro.
+
+
+
+. Verifique se os discos foram atribuídos corretamente: `storage disk show -ownership`
++
+Os discos pertencentes ao controlador _replacement_ devem mostrar o novo ID do sistema. No exemplo a seguir, os discos de propriedade de node1 agora mostram o novo ID do sistema, 1873775277:
+
++
+[listing]
+----
+node1> `storage disk show -ownership`
+
+Disk  Aggregate Home  Owner  DR Home  Home ID    Owner ID  DR Home ID Reserver  Pool
+----- ------    ----- ------ -------- -------    -------    -------  ---------  ---
+1.0.0  aggr0_1  node1 node1  -        1873775277 1873775277  -       1873775277 Pool0
+1.0.1  aggr0_1  node1 node1           1873775277 1873775277  -       1873775277 Pool0
+.
+.
+.
+----
+. Verifique se os volumes esperados estão presentes para cada controlador: `vol show -node node-name`
+. Se você desativou o controle automático na reinicialização, ative-o a partir do controlador íntegro: `storage failover modify -node replacement-node-name -onreboot true`
+
+
+
+
+=== Opção 2: Reatribuir manualmente a ID do sistema em um sistema autônomo no ONTAP
+
+Em um sistema autônomo, você deve reatribuir manualmente os discos à ID do sistema do novo controlador antes de retornar o sistema à condição operacional normal.
+
+.Sobre esta tarefa
+
+NOTE: Este procedimento aplica-se apenas a sistemas que estão numa configuração autónoma.
+
+.Passos
+. Se você ainda não fez isso, reinicie o nó _replacement_, interrompa o processo de inicialização pressionando Ctrl-C e selecione a opção para inicializar no modo Manutenção no menu exibido.
+. Você deve digitar `Y` quando solicitado para substituir a ID do sistema devido a uma incompatibilidade de ID do sistema.
+. Exibir as IDs do sistema: `disk show -a`
+. Você deve anotar o ID do sistema antigo, que é exibido como parte da coluna do proprietário do disco.
++
+O exemplo a seguir mostra o ID do sistema antigo de 118073209:
+
++
+[listing]
+----
+*> disk show -a
+Local System ID: 118065481
+
+  DISK      OWNER                  POOL   SERIAL NUMBER  HOME
+--------    -------------          -----  -------------  -------------
+disk_name    system-1  (118073209)  Pool0  J8XJE9LC       system-1  (118073209)
+disk_name    system-1  (118073209)  Pool0  J8Y478RC       system-1  (118073209)
+.
+.
+.
+
+----
+. Reatribua a propriedade do disco usando as informações de ID do sistema obtidas a partir do comando disk show: `disk reassign -s old system ID disk reassign -s 118073209`
+. Verifique se os discos foram atribuídos corretamente: `disk show -a`
++
+Os discos pertencentes ao nó de substituição devem apresentar a nova ID do sistema. O exemplo a seguir mostra agora os discos de propriedade do System-1 a nova ID do sistema, 118065481:
+
++
+[listing]
+----
+*> disk show -a
+Local System ID: 118065481
+
+  DISK      OWNER                  POOL   SERIAL NUMBER  HOME
+--------    -------------          -----  -------------  -------------
+disk_name    system-1  (118065481)  Pool0  J8Y0TDZC       system-1  (118065481)
+disk_name    system-1  (118065481)  Pool0  J8Y0TDZC       system-1  (118065481)
+.
+.
+.
+
+----
+. Se o sistema de storage tiver o Storage ou o volume Encryption configurado, você deverá restaurar a funcionalidade Storage ou volume Encryption usando um dos procedimentos a seguir, dependendo se você estiver usando o gerenciamento de chaves integrado ou externo:
++
+** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-onboard-key-management-encryption-keys-task.html["Restaurar chaves de criptografia integradas de gerenciamento de chaves"^]
+** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-external-encryption-keys-93-later-task.html["Restaurar chaves de criptografia de gerenciamento de chaves externas"^]
+
+
+. Inicialize o nó: `boot_ontap`
+

@@ -1,0 +1,80 @@
+---
+permalink: a700s/power-supply-swap-out.html 
+sidebar: sidebar 
+keywords: aff a700s, aff, a700s, swap, power, supply, disconnect, target, psu, source, unplug, cable, install, reconnect, swap out a power supply 
+summary: 'A troca de uma fonte de alimentação envolveu a desconexão da fonte de alimentação de destino (PSU) da fonte de alimentação, a desconexão do cabo de alimentação, a remoção da fonte de alimentação antiga e a instalação da fonte de alimentação de substituição e, em seguida, a reconexão à fonte de alimentação.' 
+---
+= Troque uma fonte de alimentação - AFF A700s
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A troca de uma fonte de alimentação envolveu a desconexão da fonte de alimentação de destino (PSU) da fonte de alimentação, a desconexão do cabo de alimentação, a remoção da fonte de alimentação antiga e a instalação da fonte de alimentação de substituição e, em seguida, a nova conexão à fonte de alimentação.
+
+* As fontes de alimentação são redundantes e hot-swap.
+* Este procedimento é escrito para substituir uma fonte de alimentação de cada vez.
++
+
+NOTE: É uma prática recomendada substituir a fonte de alimentação dentro de dois minutos após a remoção do chassi. O sistema continua a funcionar, mas o ONTAP envia mensagens ao console sobre a fonte de alimentação degradada até que a fonte de alimentação seja substituída.
+
+* O número de fontes de alimentação no sistema depende do modelo.
+* As fontes de alimentação são auto-variando.
+
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Identifique a fonte de alimentação que deseja substituir, com base em mensagens de erro do console ou através dos LEDs das fontes de alimentação.
+. Desligue a fonte de alimentação:
++
+.. Abra o retentor do cabo de alimentação e, em seguida, desligue o cabo de alimentação da fonte de alimentação.
+.. Desconete o cabo de alimentação da fonte de alimentação.
+
+
+. Rode a pega do excêntrico de forma a que possa ser utilizada para retirar a fonte de alimentação do módulo do controlador enquanto prime a patilha de bloqueio.
++
+
+CAUTION: A fonte de alimentação é curta. Utilize sempre as duas mãos para o apoiar quando o retirar do módulo do controlador, de modo a que não se liberte subitamente do módulo do controlador e o machuque.
+
++
+image::../media/drw_a700s_replace_psu.png[Substitua uma PSU]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Patilha de bloqueio da fonte de alimentação azul
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Fonte de alimentação
+
+|===
+. Utilizando ambas as mãos, apoie e alinhe as extremidades da fonte de alimentação com a abertura no módulo do controlador e, em seguida, empurre cuidadosamente a fonte de alimentação para o módulo do controlador até que a patilha de bloqueio encaixe no lugar.
++
+As fontes de alimentação apenas engatarão adequadamente com o conetor interno e trancam no lugar de uma forma.
+
++
+
+NOTE: Para evitar danificar o conetor interno, não utilize força excessiva ao deslizar a fonte de alimentação para o sistema.
+
+. Feche a pega da came, balançando-a até onde for.
+. Reconecte o cabeamento da fonte de alimentação:
++
+.. Volte a ligar o cabo de alimentação à fonte de alimentação e à fonte de alimentação.
+.. Fixe o cabo de alimentação à fonte de alimentação utilizando o retentor do cabo de alimentação.
+
+
++
+Uma vez que a alimentação é restaurada à fonte de alimentação, o LED de estado deve estar verde.
+
+. Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"^] página para obter mais informações.
+

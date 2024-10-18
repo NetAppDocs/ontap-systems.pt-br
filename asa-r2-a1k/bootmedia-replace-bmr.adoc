@@ -1,0 +1,84 @@
+---
+permalink: asa-r2-a1k/bootmedia-replace-bmr.html 
+sidebar: sidebar 
+keywords: asa r2 a1k, replace the boot media 
+summary: Localize o suporte de arranque com falha no módulo do controlador removendo o Riser 3 no módulo do controlador antes de poder substituir o suporte de arranque. 
+---
+= Substitua o suporte de arranque - ASA A1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para substituir o suporte de arranque, tem de remover o módulo de gestão do sistema da parte de trás do sistema, remover o suporte de arranque deficiente, instalar o suporte de arranque de substituição no módulo de gestão do sistema.
+
+.Passos
+O suporte de arranque encontra-se no interior do módulo de gestão do sistema e é acedido removendo o módulo do sistema.
+
+image::../media/drw_a1k_boot_media_remove_replace_ieops-1377.svg[Mídia de inicialização Substituir gráfico]
+
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Trinco do excêntrico do módulo de gestão do sistema
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+Botão de bloqueio do suporte de arranque
+
+
+
+ a| 
+image::../media/icon_round_3.png[Legenda número 3]
+ a| 
+Suporte de arranque
+
+|===
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Desconete os cabos da fonte de alimentação das PSUs do controlador.
++
+
+NOTE: Se o sistema de armazenamento tiver fontes de alimentação CC, desconete o bloco de cabos de alimentação das unidades de fonte de alimentação (PSUs).
+
++
+.. Retire todos os cabos ligados ao módulo de gestão do sistema. Certifique-se de que identifica onde os cabos foram ligados, para que possa ligá-los às portas corretas quando reinstalar o módulo.
+.. Gire a bandeja de gerenciamento de cabos para baixo puxando os botões de ambos os lados no interior da bandeja de gerenciamento de cabos e, em seguida, gire a bandeja para baixo.
+.. Prima o botão do came de gestão do sistema.
+.. Rode o trinco do excêntrico para baixo o mais longe possível.
+.. Retire o módulo de gestão do sistema do compartimento, prendendo o dedo na abertura da alavanca do came e puxando o módulo para fora do compartimento.
+.. Coloque o módulo de gestão do sistema num tapete anti-estático, de forma a que o suporte de arranque fique acessível.
+
+
+. Retire o suporte de arranque do módulo de gestão:
++
+.. Prima o botão azul de trancamento.
+.. Rode o suporte de arranque para cima, deslize-o para fora do encaixe e coloque-o de lado.
+
+
+. Instale o suporte de arranque de substituição no módulo de gestão do sistema:
++
+.. Alinhe as extremidades do suporte de arranque com o alojamento do encaixe e, em seguida, empurre-o suavemente no encaixe.
+.. Rode o suporte de arranque para baixo em direção ao botão de bloqueio.
+.. Prima o botão de bloqueio, rode o suporte de arranque totalmente para baixo e, em seguida, solte o botão de bloqueio.
+
+
+. Volte a instalar o módulo de gestão do sistema.
++
+.. Alinhe o módulo com as extremidades da abertura da ranhura do compartimento.
+.. Deslize cuidadosamente o módulo para dentro da ranhura até ao compartimento e, em seguida, rode o trinco da came até ao fim para bloquear o módulo no lugar.
+
+
+. Rode o tabuleiro de gestão de cabos para cima até à posição fechada.
++
+.. Recable o módulo de Gestão do sistema.
+
+
+

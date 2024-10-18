@@ -1,0 +1,219 @@
+---
+permalink: a320/bootmedia-replace.html 
+sidebar: sidebar 
+keywords: aff, a320, aff a320, boot, media, store, primary, secondary, set, system, boot, image, file, replace, replace the boot media 
+summary: 'A Mídia de inicialização armazena um conjunto primário e secundário de arquivos de sistema (imagem de inicialização) que o sistema usa quando ele é inicializado.' 
+---
+= Substitua o suporte de arranque - AFF A320
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+Para substituir o suporte de arranque, tem de remover o módulo do controlador afetado, instalar o suporte de arranque de substituição e transferir a imagem de arranque para uma unidade flash USB.
+
+
+
+== Passo 1: Remova o módulo do controlador
+
+[role="lead"]
+Para aceder aos componentes no interior do módulo do controlador, tem de remover o módulo do controlador do chassis.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Desconete a fonte de alimentação do módulo do controlador da fonte de alimentação.
+. Solte o gancho e a alça de loop que prendem os cabos ao dispositivo de gerenciamento de cabos e, em seguida, desconete os cabos do sistema e os SFPs (se necessário) do módulo do controlador, mantendo o controle de onde os cabos estavam conetados.
++
+image::../media/drw_a320_controller_cable_unplug_animated_gif.png[Remover o dispositivo de gerenciamento de cabos]
+
++
+Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar o dispositivo de gerenciamento de cabos, os cabos sejam organizados.
+
+. Retire e reserve os dispositivos de gerenciamento de cabos dos lados esquerdo e direito do módulo do controlador.
+. Retire o módulo do controlador do chassis:
++
+image::../media/drw_a320_controller_remove_animated_gif.png[Remover o controlador]
+
++
+.. Insira o indicador no mecanismo de travamento em ambos os lados do módulo do controlador.
+.. Prima a patilha cor-de-laranja na parte superior do mecanismo de bloqueio até este libertar o pino de bloqueio no chassis.
++
+O gancho do mecanismo de travamento deve estar quase na vertical e deve estar livre do pino do chassi.
+
+.. Puxe cuidadosamente o módulo do controlador algumas polegadas na sua direção para que possa agarrar os lados do módulo do controlador.
+.. Usando ambas as mãos, puxe cuidadosamente o módulo do controlador para fora do chassi e coloque-o em uma superfície plana e estável.
+
+
+
+
+
+
+== Passo 2: Substitua o suporte de arranque
+
+Deve localizar o suporte de arranque no módulo do controlador e, em seguida, seguir as instruções para o substituir.
+
+. Abra a conduta de ar e localize o suporte de arranque utilizando a seguinte ilustração ou o mapa da FRU no módulo do controlador:
+. Localize e remova o suporte de arranque do módulo do controlador:
++
+image::../media/drw_a320_boot_media_replace_animated_gif.png[Substitua o suporte de arranque]
+
++
+.. Pressione o botão azul na extremidade do suporte de inicialização até que o lábio do suporte de inicialização apague o botão azul.
+.. Rode o suporte de arranque para cima e puxe cuidadosamente o suporte de arranque para fora do encaixe.
++
+... Verifique o suporte de arranque para se certificar de que está encaixado corretamente e completamente no encaixe.
+
+
+
+
++
+Se necessário, retire o suporte de arranque e volte a colocá-lo no socket.
+
+. Bloqueie o suporte de arranque no devido lugar:
++
+.. Rode o suporte de arranque para baixo em direção à placa-mãe.
+.. Colocando um dedo na extremidade do suporte de arranque com o botão azul, prima a extremidade do suporte de arranque para engatar o botão de bloqueio azul.
+.. Enquanto pressiona o suporte de arranque, levante o botão azul de bloqueio para bloquear o suporte de arranque no lugar.
+
+
+. Feche a conduta de ar.
+
+
+
+
+== Passo 3: Transfira a imagem de arranque para o suporte de arranque utilizando uma unidade flash USB
+
+A Mídia de inicialização de substituição que você instalou não tem uma imagem de inicialização, então você precisa transferir uma imagem de inicialização usando uma unidade flash USB.
+
+* Você deve ter uma unidade flash USB, formatada para MBR/FAT32, com pelo menos 4GBGB de capacidade
+* Uma cópia da mesma versão de imagem do ONTAP que a que o controlador afetado estava a executar. Você pode baixar a imagem apropriada da seção Downloads no site de suporte da NetApp
++
+** Se a NVE estiver ativada, transfira a imagem com encriptação de volume NetApp, conforme indicado no botão de transferência.
+** Se a NVE não estiver ativada, transfira a imagem sem encriptação de volume NetApp, conforme indicado no botão de transferência.
+
+
+* Se o seu sistema for um par de HA, tem de ter uma ligação de rede.
+* Se o seu sistema for um sistema autónomo, não necessita de uma ligação de rede, mas tem de efetuar uma reinicialização adicional ao restaurar o sistema de ficheiros var.
++
+.. Transfira e copie a imagem de serviço apropriada do site de suporte da NetApp para a unidade flash USB.
++
+... Transfira a imagem de serviço para o seu espaço de trabalho no seu computador portátil.
+... Descompacte a imagem de serviço.
++
+
+NOTE: Se você estiver extraindo o conteúdo usando o Windows, não use o winzip para extrair a imagem netboot. Use outra ferramenta de extração, como 7-Zip ou WinRAR.
+
++
+Há duas pastas no arquivo de imagem de serviço descompactado:
+
++
+**** inicialização
+**** efi
+
+
+... Copie a pasta efi para o diretório superior da unidade flash USB.
++
+
+NOTE: Se a imagem de serviço não tiver uma pasta efi, link:https://kb.netapp.com/onprem/ontap/hardware/EFI_folder_missing_from_Service_Image_download_file_used_for_boot_device_recovery_for_FAS_and_AFF_models["Pasta EFI ausente do arquivo de download de imagem de serviço usado para recuperação de dispositivo de inicialização para modelos FAS e AFF"]consulte .
+
++
+A unidade flash USB deve ter a pasta efi e a mesma versão de imagem de serviço (BIOS) do que o controlador deficiente está executando.
+
+... Retire a unidade flash USB do seu computador portátil.
+
+
+.. Se ainda não o tiver feito, feche a conduta de ar.
+.. Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
+.. Reinstale o dispositivo de gerenciamento de cabos e reconete o sistema, conforme necessário.
++
+Ao reativar, lembre-se de reinstalar os conversores de Mídia (SFPs ou QSFPs) se eles foram removidos.
+
+.. Ligue o cabo de alimentação à fonte de alimentação e volte a instalar o fixador do cabo de alimentação.
+.. Introduza a unidade flash USB na ranhura USB do módulo do controlador.
++
+Certifique-se de que instala a unidade flash USB na ranhura identificada para dispositivos USB e não na porta da consola USB.
+
+.. Conclua a reinstalação do módulo do controlador:
++
+... Certifique-se de que os braços do trinco estão bloqueados na posição estendida.
+... Utilizando os braços de engate, empurre o módulo do controlador para dentro do compartimento do chassis até parar.
++
+
+NOTE: Não empurre para baixo o mecanismo de bloqueio na parte superior dos braços do trinco. Fazendo isso com levante o mecanismo de bloqueio e proíba deslizar o módulo do controlador para dentro do chassi.
+
+... Prima e mantenha premidas as patilhas cor-de-laranja na parte superior do mecanismo de bloqueio.
+... Empurre cuidadosamente o módulo do controlador para dentro do compartimento do chassis até que esteja alinhado com as extremidades do chassis.
++
+
+NOTE: Os braços do mecanismo de engate deslizam para o chassis.
+
++
+O módulo do controlador começa a arrancar assim que estiver totalmente assente no chassis.
+
+... Solte os trincos para bloquear o módulo do controlador no devido lugar.
+... Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos.
+
+
+.. Interrompa o processo de inicialização pressionando Ctrl-C para parar no prompt DO Loader.
++
+Se você perder essa mensagem, pressione Ctrl-C, selecione a opção para inicializar no modo Manutenção e, em seguida, interrompa o nó para inicializar NO Loader.
+
+.. A partir do prompt Loader, inicialize a imagem de recuperação da unidade flash USB: `boot_recovery`
++
+A imagem é transferida da unidade flash USB.
+
+.. Quando solicitado, insira o nome da imagem ou aceite a imagem padrão exibida dentro dos colchetes na tela.
+.. Após a instalação da imagem, inicie o processo de restauração:
++
+... Registe o endereço IP do nó afetado que é apresentado no ecrã.
+... Pressione `y` quando solicitado para restaurar a configuração de backup.
+... Pressione `y` quando solicitado a substituir /etc/ssh/ssh_host_dsa_key.
+
+
+.. A partir do nó do parceiro no nível de privilégio avançado, inicie a sincronização de configuração usando o endereço IP gravado na etapa anterior: `system node restore-backup -node local -target-address _impaired_node_IP_address_`
+.. Se a restauração for bem-sucedida, pressione `y` no nó prejudicado quando solicitado a usar a cópia restaurada?.
+.. Pressione `y` quando vir confirmar que o procedimento de backup foi bem-sucedido e, em seguida, pressione `y` quando solicitado para reinicializar o nó.
+.. Verifique se as variáveis ambientais estão definidas como esperado.
++
+... Leve o nó para o prompt Loader.
++
+No prompt do ONTAP, você pode emitir o comando system node halt -skip-lif-migration-before-shutdown true -ignore-quórum-warnings true -inhibit-overall true.
+
+... Verifique as configurações de variáveis de ambiente com o `printenv` comando.
+... Se uma variável de ambiente não for definida como esperado, modifique-a com o `setenv __environment-variable-name__ __changed-value__` comando.
+... Salve suas alterações usando o `savenv` comando.
+... Reinicie o nó.
+
+
+.. Com o nó prejudicado reinicializado exibindo a `Waiting for giveback...` mensagem, execute um giveback do nó saudável:
++
+[cols="1,2"]
+|===
+| Se o seu sistema estiver em... | Então... 
+
+
+ a| 
+Um par de HA
+ a| 
+Depois que o nó prejudicado estiver exibindo a `Waiting for giveback...` mensagem, execute um giveback do nó saudável:
+
+... Do nó saudável: `storage failover giveback -ofnode partner_node_name`
++
+O nó prejudicado recupera seu armazenamento, termina a inicialização e, em seguida, reinicia e é novamente tomado pelo nó saudável.
+
++
+
+NOTE: Se o giveback for vetado, você pode considerar substituir os vetos.
+
++
+https://docs.netapp.com/us-en/ontap/high-availability/index.html["Gerenciamento de par HA"^]
+
+... Monitorize o progresso da operação de giveback utilizando o `storage failover show-giveback` comando.
+... Após a conclusão da operação de giveback, confirme se o par de HA está saudável e se a aquisição é possível usando o `storage failover show` comando.
+... Restaure o giveback automático se você o tiver desativado usando o comando de modificação de failover de armazenamento.
+
+
+|===
+.. Saia do nível de privilégio avançado no nó saudável.
+
+
+

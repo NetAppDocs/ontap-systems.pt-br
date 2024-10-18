@@ -1,0 +1,81 @@
+---
+section: fas2700
+title: FAS2700 sistemas
+entries:
+- title: Instalar e configurar
+  pdf-filename: FAS2700 Instalação e Configuração
+  entries:
+  - title: Escolha a experiência de instalação e configuração
+    url: "/fas2700/install-setup.html"
+  - title: Passos rápidos
+    url: "/fas2700/install-quick-guide.html"
+  - title: Passos de vídeos
+    url: "/fas2700/install-videos.html"
+  - title: Passos detalhados
+    url: "/fas2700/install-detailed-guide.html"
+- title: Manutenção
+  pdf-filename: FAS2700 manter
+  entries:
+  - title: Visão geral
+    url: "/fas2700/maintain-overview.html"
+  - title: Suporte de arranque
+    pdf-filename: FAS2700 suporte de arranque
+    entries:
+    - title: Visão geral
+      url: "/fas2700/bootmedia-replace-overview.html"
+    - title: Verifique as chaves de criptografia integradas
+      url: "/fas2700/bootmedia-encryption-preshutdown-checks.html"
+    - title: Desligue o controlador desativado
+      url: "/fas2700/bootmedia-shutdown.html"
+    - title: Substitua a imagem de inicialização
+      url: "/fas2700/bootmedia-replace.html"
+    - title: Imagem de recuperação de inicialização
+      url: "/fas2700/bootmedia-recovery-image-boot-non-2n-mcc.html"
+    - title: Restaure OKM, NSE e NVE
+      url: "/fas2700/bootmedia-encryption-restore.html"
+    - title: Devolver artigo com falha ao NetApp
+      url: "/fas2700/bootmedia-complete-rma.html"
+  - title: Módulo de armazenamento em cache
+    pdf-filename: FAS2700 módulo de cache
+    url: "/fas2700/caching-module-replace.html"
+  - title: Chassis
+    pdf-filename: FAS2700 chassis
+    entries:
+    - title: Visão geral
+      url: "/fas2700/chassis-replace-overview.html"
+    - title: Desligue o controlador desativado
+      url: "/fas2700/chassis-replace-shutdown.html"
+    - title: Substitua o material de fixação
+      url: "/fas2700/chassis-replace-move-hardware.html"
+    - title: Restaure a configuração
+      url: "/fas2700/chassis-replace-complete-system-restore-rma.html"
+  - title: Controlador
+    pdf-filename: Controlador FAS2700
+    entries:
+    - title: Visão geral
+      url: "/fas2700/controller-replace-overview.html"
+    - title: Desligue o controlador desativado
+      url: "/fas2700/controller-replace-shutdown.html"
+    - title: Substitua o hardware do controlador
+      url: "/fas2700/controller-replace-move-hardware.html"
+    - title: Restaure a configuração do sistema
+      url: "/fas2700/controller-replace-system-config-restore-and-verify.html"
+    - title: Sistema Recable
+      url: "/fas2700/controller-replace-recable-reassign-disks.html"
+    - title: Restauração completa do sistema
+      url: "/fas2700/controller-replace-restore-system-rma.html"
+  - title: DIMM
+    pdf-filename: FAS2700 DIMM
+    url: "/fas2700/dimm-replace.html"
+  - title: Condução
+    pdf-filename: Unidade de FAS2700 TB
+    url: "/fas2700/drive-replace.html"
+  - title: Bateria NVMEM
+    pdf-filename: AFF A220 e FAS2700 NVMEM bateria
+    url: "/fas2700/nvmem-nvram-battery-replace.html"
+  - title: Fonte de alimentação
+    pdf-filename: Fonte de alimentação AFF A220 e FAS2700
+    url: "/fas2700/power-supply-swap-out.html"
+  - title: Bateria de relógio em tempo real
+    pdf-filename: FAS2700 bateria de relógio em tempo real
+    url: "/fas2700/rtc-battery-replace.html"

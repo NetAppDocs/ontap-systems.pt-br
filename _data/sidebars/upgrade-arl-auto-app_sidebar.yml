@@ -1,0 +1,118 @@
+---
+prefix: upgrade-arl-auto-app
+entries:
+- title: Use a realocação de agregados para atualizar o hardware do controlador
+  entries:
+  - title: Visão geral
+    url: "/using_aggregate_relocation_to_upgrade_controller_hardware_overview.html"
+  - title: Automatize o processo de atualização do controlador
+    url: "/automating_the_controller_upgrade_process.html"
+- title: Decida se deve usar o guia de realocação agregado
+  url: "/deciding_whether_to_use_the_aggregate_relocation_guide.html"
+- title: Ferramentas e documentação necessárias
+  url: "/required_tools_and_documentation.html"
+- title: Diretrizes para atualização de controladores com ARL
+  url: "/guidelines_for_upgrading_controllers_with_arl.html"
+- title: Verifique a integridade da configuração do MetroCluster
+  url: "/verifying_the_health_of_the_metrocluster_configuration.html"
+- title: Verifique se há erros de configuração do MetroCluster
+  url: "/checking_for_metrocluster_configuration_errors.html"
+- title: Verifique o switchover, a recuperação e o switchback
+  url: "/verifying_switchover,_healing,_and_switchback.html"
+- title: Visão geral da atualização ARL
+  url: "/overview_of_the_arl_upgrade.html"
+- title: Atualize o par de nós
+  url: "/upgrading_the_node_pair.html"
+- title: Fase 1 preparar-se para a atualização
+  entries:
+  - title: Visão geral
+    url: "/stage_1_preparing_for_upgrade_overview.html"
+  - title: Prepare os nós para atualização
+    url: "/preparing_the_nodes_for_upgrade.html"
+  - title: Obtenha um endereço IP de um servidor de gerenciamento de chaves externo
+      para criptografia de armazenamento
+    url: "/getting_an_ip_address_of_an_external_key_management_server_for_storage_encryption.html"
+- title: Etapa 2 relocate e aposentando node1
+  entries:
+  - title: Visão geral
+    url: "/stage_2_relocating_and_retiring_node1_overview.html"
+  - title: Realocar agregados não-raiz e LIFs de dados nas de propriedade do node1
+      para o node2
+    url: "/relocating_non-root_aggregates_and_nas_data_lifs_owned_by_node1_to_node2.html"
+  - title: Realocar agregados com falha ou vetado
+    url: "/relocating_failed_or_vetoed_aggregates.html"
+  - title: Aposentar-se node1
+    url: "/retiring_node1.html"
+  - title: Prepare-se para netboot
+    url: "/preparing_for_netboot.html"
+- title: Etapa 3 Instalação e inicialização node3
+  entries:
+  - title: Visão geral
+    url: "/stage_3_installing_and_booting_node3_overview.html"
+  - title: Instale e inicialize node3
+    url: "/installing_and_booting_node3.html"
+  - title: Defina a configuração FC ou UTA/UTA2 em node3
+    url: "/setting_the_fc_or_uta_uta2_configuration_on_node3.html"
+  - title: Verifique a instalação do node3
+    url: "/verifying_the_node3_installation.html"
+  - title: Restaure a configuração do gerenciador de chaves no node3
+    url: "/restoring_key-manager_configuration_on_node3.html"
+  - title: Migre agregados que não sejam raiz e LIFs de dados nas pertencentes ao
+      node1 de node2 para node3
+    url: "/moving_non-root_aggregates_and_nas_data_lifs_owned_by_node1_from_node2_to_node3.html"
+- title: Etapa 4 relocate e aposentando node2
+  entries:
+  - title: Visão geral
+    url: "/stage_4_relocating_and_retiring_node2_overview.html"
+  - title: Realocar agregados não-raiz e LIFs de dados nas de node2 para node3
+    url: "/relocating_non-root_aggregates_and_nas_data_lifs_from_node2_to_node3.html"
+  - title: Aposentar-se node2
+    url: "/retiring_node2.html"
+- title: Etapa 5 Instalação e inicialização node4
+  entries:
+  - title: Visão geral
+    url: "/stage_5_installing_and_booting_node4_overview.html"
+  - title: Instale e inicialize node4
+    url: "/installing_and_booting_node4.html"
+  - title: Defina a configuração FC ou UTA/UTA2 em node4
+    url: "/setting_the_fc_or_uta_uta2_configuration_on_node4.html"
+  - title: Verifique a instalação do node4
+    url: "/verifying_the_node4_installation.html"
+  - title: Restaure a configuração do gerenciador de chaves no node4
+    url: "/restoring_key-manager_configuration_on_node4.html"
+  - title: Migre agregados que não sejam raiz e LIFs de dados nas pertencentes ao
+      node2 de node3 para node4
+    url: "/moving_non-root_aggregates_and_nas_data_lifs_owned_by_node2_from_node3_to_node4.html"
+- title: Etapa 6 concluir a atualização
+  entries:
+  - title: Visão geral
+    url: "/stage_6_completing_the_upgrade_overview.html"
+  - title: Concluir a atualização para a configuração do MetroCluster FC
+    url: "/completing_the_upgrade_for_metrocluster_fc_configuration.html"
+  - title: Certifique-se de que os novos controladores estão configurados corretamente
+    url: "/ensuring_that_the_new_controllers_are_set_up_correctly.html"
+  - title: Configure a criptografia de armazenamento no novo módulo do controlador
+    url: "/setting_up_storage_encryption_on_the_new_controller_module.html"
+  - title: Configure a encriptação de volume NetApp no novo módulo do controlador
+    url: "/setting_up_netapp_volume_encryption_on_the_new_controller_module.html"
+  - title: Desativar o sistema antigo
+    url: "/decommissioning_the_old_system.html"
+  - title: Retomar as operações do SnapMirror
+    url: "/resuming_snapmirror_operations.html"
+- title: Solução de problemas
+  entries:
+  - title: Visão geral
+    url: "/troubleshooting_overview.html"
+  - title: Falhas de realocação de agregados
+    url: "/aggregate_relocation_failures.html"
+  - title: Verifique se há falha de realocação de agregados
+    url: "/checking_for_aggregate_relocation_failure.html"
+  - title: Agregados originalmente em node1 são propriedade de node4 após a conclusão
+      da atualização
+    url: "/aggregates_originally_on_node1_are_owned_by_node4_after_completion_of_the_upgrade.html"
+  - title: Reinicializa, pânicos ou ciclos de energia
+    url: "/reboots_panics_or_power_cycles.html"
+  - title: Problemas que podem surgir em várias etapas do procedimento
+    url: "/issues_that_can_arise_in_multiple_stages_of_the_procedure.html"
+  - title: Falha de migração de LIF
+    url: "/lif_migration_failure.html"

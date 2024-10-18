@@ -1,0 +1,260 @@
+= 
+:allow-uri-read: 
+
+
+Restaure a configuração OKM (Onboard Key Manager) no menu de inicialização do ONTAP.
+
+.Antes de começar
+* Certifique-se de que tem as seguintes informações enquanto restaura a configuração OKM:
++
+** Frase-passe de todo o cluster introduzida https://docs.netapp.com/us-en/ontap/encryption-at-rest/enable-onboard-key-management-96-later-nse-task.html["ao ativar o gerenciamento de chaves integradas"].
+** https://docs.netapp.com/us-en/ontap/encryption-at-rest/backup-key-management-information-manual-task.html["Informações de cópia de segurança para o Gestor de chaves integrado"].
+
+
+* Execute o https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_verify_onboard_key_management_backup_and_cluster-wide_passphrase["Como verificar o backup integrado do gerenciamento de chaves e a senha em todo o cluster"] procedimento antes de prosseguir.
+
+
+.Passos
+. Conete o cabo do console ao controlador de destino.
+. No menu de inicialização do ONTAP, selecione a opção apropriada:
++
+[cols="1a,2a"]
+|===
+| Versão de ONTAP | Selecione esta opção 
+
+
+ a| 
+ONTAP 9 .8 ou posterior
+ a| 
+Selecione a opção 10.
+
+.Mostrar exemplo de menu de inicialização
+[%collapsible]
+====
+....
+
+Please choose one of the following:
+
+(1)  Normal Boot.
+(2)  Boot without /etc/rc.
+(3)  Change password.
+(4)  Clean configuration and initialize all disks.
+(5)  Maintenance mode boot.
+(6)  Update flash from backup config.
+(7)  Install new software first.
+(8)  Reboot node.
+(9)  Configure Advanced Drive Partitioning.
+(10) Set Onboard Key Manager recovery secrets.
+(11) Configure node for external key management.
+Selection (1-11)? 10
+
+....
+====
+
+
+ a| 
+ONTAP 9 F.7 e anteriores
+ a| 
+Selecione a opção oculta `recover_onboard_keymanager`
+
+.Mostrar exemplo de menu de inicialização
+[%collapsible]
+====
+....
+
+Please choose one of the following:
+
+(1)  Normal Boot.
+(2)  Boot without /etc/rc.
+(3)  Change password.
+(4)  Clean configuration and initialize all disks.
+(5)  Maintenance mode boot.
+(6)  Update flash from backup config.
+(7)  Install new software first.
+(8)  Reboot node.
+(9)  Configure Advanced Drive Partitioning.
+Selection (1-19)? recover_onboard_keymanager
+
+....
+====
+|===
+. Confirme se deseja continuar o processo de recuperação.
++
+.Mostrar prompt de exemplo
+[%collapsible]
+====
+`This option must be used only in disaster recovery procedures. Are you sure? (y or n):`
+
+====
+. Introduza duas vezes a frase-passe de todo o cluster.
++
+Ao inserir a senha, o console não mostrará nenhuma entrada.
+
++
+.Mostrar prompt de exemplo
+[%collapsible]
+====
+`Enter the passphrase for onboard key management:`
+
+`Enter the passphrase again to confirm:`
+
+====
+. Introduza as informações de cópia de segurança.
++
+.. Cole todo o conteúdo da linha DE BACKUP INICIAL através da linha DE BACKUP FINAL.
++
+.Mostrar prompt de exemplo
+[%collapsible]
+====
+....
+Enter the backup data:
+
+--------------------------BEGIN BACKUP--------------------------
+0123456789012345678901234567890123456789012345678901234567890123
+1234567890123456789012345678901234567890123456789012345678901234
+2345678901234567890123456789012345678901234567890123456789012345
+3456789012345678901234567890123456789012345678901234567890123456
+4567890123456789012345678901234567890123456789012345678901234567
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+0123456789012345678901234567890123456789012345678901234567890123
+1234567890123456789012345678901234567890123456789012345678901234
+2345678901234567890123456789012345678901234567890123456789012345
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+---------------------------END BACKUP---------------------------
+
+....
+====
+.. Pressione a tecla Enter duas vezes no final da entrada.
++
+O processo de recuperação é concluído.
+
++
+.Mostrar prompt de exemplo
+[%collapsible]
+====
+....
+
+Enter the backup data:
+
+Trying to recover keymanager secrets....
+Setting recovery material for the onboard key manager
+Recovery secrets set successfully
+Trying to delete any existing km_onboard.wkeydb file.
+
+Successfully recovered keymanager secrets.
+
+***********************************************************************************
+* Select option "(1) Normal Boot." to complete recovery process.
+*
+* Run the "security key-manager onboard sync" command to synchronize the key database after the node reboots.
+***********************************************************************************
+
+....
+====
+
+
++
+
+WARNING: Não prossiga se a saída exibida for diferente `Successfully recovered keymanager secrets` de . Execute a solução de problemas para corrigir o erro.
+
+. Selecione a opção 1 no menu de inicialização para continuar inicializando no ONTAP.
++
+.Mostrar prompt de exemplo
+[%collapsible]
+====
+....
+
+***********************************************************************************
+* Select option "(1) Normal Boot." to complete the recovery process.
+*
+***********************************************************************************
+
+
+(1)  Normal Boot.
+(2)  Boot without /etc/rc.
+(3)  Change password.
+(4)  Clean configuration and initialize all disks.
+(5)  Maintenance mode boot.
+(6)  Update flash from backup config.
+(7)  Install new software first.
+(8)  Reboot node.
+(9)  Configure Advanced Drive Partitioning.
+(10) Set Onboard Key Manager recovery secrets.
+(11) Configure node for external key management.
+Selection (1-11)? 1
+
+....
+====
+. Confirme se o console do controlador exibe o seguinte:
++
+`Waiting for giveback...(Press Ctrl-C to abort wait)`
+
+. A partir do nó do parceiro, giveback o controlador do parceiro:
++
+`storage failover giveback -fromnode local -only-cfo-aggregates true`.
+
+. Depois de inicializar apenas com o CFO agregado, execute o seguinte comando:
++
+`security key-manager onboard sync` comando.
+
+. Introduza a frase-passe de todo o cluster para o Gestor de chaves integrado.
++
+.Mostrar prompt de exemplo
+[%collapsible]
+====
+....
+
+Enter the cluster-wide passphrase for the Onboard Key Manager:
+
+All offline encrypted volumes will be brought online and the corresponding volume encryption keys (VEKs) will be restored automatically within 10 minutes. If any offline encrypted volumes are not brought online automatically, they can be brought online manually using the "volume online -vserver <vserver> -volume <volume_name>" command.
+
+....
+====
++
+
+NOTE: Se a sincronização for bem-sucedida, o prompt do cluster será retornado sem mensagens adicionais. Se a sincronização falhar, uma mensagem de erro será exibida antes de retornar ao prompt do cluster. Não continue até que o erro seja corrigido e a sincronização seja executada com êxito.
+
+. Certifique-se de que todas as chaves estão sincronizadas:
++
+`security key-manager key query -restored false`.
+
++
+`There are no entries matching your query.`
+
++
+
+NOTE: Nenhum resultado deve aparecer ao filtrar para FALSE no parâmetro restaurado.
+
+. Giveback o nó do parceiro:
++
+`storage failover giveback -fromnode local`
+
+. Restaure o giveback automático, se você o desativou, digitando o seguinte comando:
++
+`storage failover modify -node local -auto-giveback true`
+
+. Se o AutoSupport estiver ativado, restaure a criação automática de casos inserindo o seguinte comando:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
+

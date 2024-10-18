@@ -1,0 +1,38 @@
+= Devolva a peça com falha ao NetApp
+:allow-uri-read: 
+
+
+Você pode substituir um módulo USB LED sem interromper o serviço.
+
+O módulo USB LED FAS9000 ou AFF A700 fornece conetividade às portas da consola e ao estado do sistema. A substituição deste módulo não requer ferramentas.
+
+.Passos
+. Retire o módulo USB LED antigo:
++
+image::../media/led_3.png[Retire o módulo USB LED]
+
++
+.. Com a moldura removida, localize o módulo USB LED na parte frontal do chassi, no lado inferior esquerdo.
+.. Deslize o trinco para ejetar parcialmente o módulo.
+.. Puxe o módulo para fora do compartimento para o desligar do plano médio. Não deixe a ranhura vazia.
+
+
+. Instale o novo módulo USB LED:
++
+image::../media/led_4.png[Instale o módulo USB LED]
+
++
+.. Alinhe o módulo com o compartimento com o entalhe no canto do módulo posicionado perto do trinco deslizante no chassi. O compartimento impedirá que você instale o módulo de cabeça para baixo.
+.. Empurre o módulo para dentro do compartimento até que ele esteja totalmente encaixado no chassi.
++
+Ouve-se um estalido quando o módulo está seguro e ligado ao plano médio.
+
+
+
+
+
+
+
+== Devolva a peça com falha ao NetApp
+
+Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

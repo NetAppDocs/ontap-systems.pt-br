@@ -1,0 +1,20 @@
+= 
+:allow-uri-read: 
+
+
+Antes de retornar o nó _replacement_ ao serviço, você deve verificar se os LIFs estão em suas portas iniciais e Registrar o número de série do nó _replacement_ se o AutoSupport estiver ativado e redefinir a giveback automática.
+
+.Passos
+. Verifique se as interfaces lógicas estão relatando para o servidor doméstico e as portas: `network interface show -is-home false`
++
+Se algum LIFs estiver listado como false, reverta-os para suas portas iniciais: `network interface revert -vserver * -lif *`
+
+. Registre o número de série do sistema com o suporte da NetApp.
++
+** Se o AutoSupport estiver ativado, envie uma mensagem AutoSupport para Registrar o número de série.
+** Se o AutoSupport não estiver ativado, ligue https://mysupport.netapp.com["Suporte à NetApp"] para registar o número de série.
+
+
+. Se uma janela de manutenção do AutoSupport foi acionada, encerre-a usando o `system node autosupport invoke -node * -type all -message MAINT=END` comando.
+. Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true`
+

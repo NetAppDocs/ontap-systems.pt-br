@@ -1,0 +1,57 @@
+---
+permalink: sas3/install-cabling-worksheets-how-to-read-multipath.html 
+sidebar: sidebar 
+keywords: example, guide, read, apply, complete, worksheet, cable, controller-to-stack, connection, disk, shelves, shelf, iom12, multipathed, connectivity, hot to read a worksheet to cable controller-to-stack connections for multipathed connectivity 
+summary: Você pode usar este exemplo para guiá-lo através de como ler e aplicar uma Planilha concluída a conexões de controlador de cabo para pilha para compartimentos de disco com IOM12 módulos para conetividade multipathed. 
+---
+= Como ler uma Planilha para conexões de controlador para pilha de cabos para conetividade multipathed - gavetas com módulos IOM12/IOM12B
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar este exemplo para guiá-lo através de como ler e aplicar uma Planilha concluída a conexões de controlador de cabo para pilha para compartimentos de disco com módulos IOM12/IOM12B para conetividade multipathed.
+
+.Antes de começar
+Se você tiver uma plataforma com armazenamento interno, use a seguinte Planilha:
+
+link:install-cabling-worksheets-examples-fas2600.html["Exemplos de cabeamento e planilhas de cabeamento de controladora a stack para plataformas com storage interno"]
+
+.Sobre esta tarefa
+* Este procedimento faz referência ao exemplo de cabeamento e Planilha a seguir para demonstrar como ler uma Planilha para conexões de controladora a pilha de cabo.
++
+A configuração usada neste exemplo é uma configuração de HA multipath com dois HBAs SAS de quatro portas (oito portas SAS) em cada controladora e duas stacks de compartimentos de disco com módulos IOM12/IOM12B. Os pares de portas são cabeados ignorando todos os outros pares de portas na Planilha.
+
++
+
+NOTE: Quando você tem mais pares de portas do que precisa para fazer o cabeamento das pilhas no sistema, a prática recomendada é ignorar pares de portas para otimizar as portas SAS no sistema. Ao otimizar as portas SAS, você otimiza o desempenho do seu sistema.
+
+* Se você tiver uma configuração de controladora única, ignore as subetapas b e d para o cabeamento de uma segunda controladora.
+* Se necessário, consulte a link:install-cabling-rules.html["Regras e conceitos de cabeamento de SAS"] para obter informações sobre a convenção de numeração de slots do controlador, a conetividade de prateleira a prateleira e a conectividade de controlador a prateleira (incluindo o uso de pares de portas).
+
+
+Os pares de portas são cabeados usando cada outro par de portas na Planilha: 1A/2b e 1c/2D.
+
+image::../media/drw_worksheet_mpha_skipped_template.gif[Planilha de cabeamento para conetividade multipathed usando pares de portas ignorados]
+
+image::../media/drw_mpha_slots_1_and_2_two_4porthbas_two_stacks_skipped.gif[Exemplo de cabeamento para conetividade multipathed usando pares de portas ignorados]
+
+.Passos
+. Par de portas de cabo 1a/2b em cada controlador para empilhar 1:
++
+.. Controladora de cabos 1 porta 1a para stack 1, primeira gaveta IOM A porta 1.
+.. Controladora de cabos 2 porta 1a para stack 1, primeira gaveta IOM B porta 1.
+.. Controladora de cabos 1 porta 2b para stack 1, última gaveta IOM B porta 3.
+.. Controladora de cabos 2 porta 2b para stack 1, última gaveta IOM A porta 3.
+
+
+. Par de portas de cabo 1c/2D em cada controlador para empilhar 2:
++
+.. Controladora de cabos 1 porta 1c para stack 2, primeira gaveta IOM A porta 1.
+.. Controladora de cabos 2 porta 1c para stack 2, primeira gaveta IOM B porta 1.
+.. Controladora de cabos 1 porta 2D para stack 2, última gaveta IOM B porta 3.
+.. Controladora de cabos 2 porta 2D para stack 2, última gaveta IOM A porta 3.
+
+
+

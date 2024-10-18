@@ -1,0 +1,462 @@
+---
+permalink: c190/install-detailed-guide.html 
+sidebar: sidebar 
+keywords: aff c190, detailed installation 
+summary: Esta seção fornece instruções detalhadas passo a passo para a instalação de um sistema AFF C190. 
+---
+= Passos detalhados - AFF C190
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Esta seção fornece instruções detalhadas passo a passo para a instalação de um sistema AFF C190.
+
+
+
+== Passo 1: Prepare-se para a instalação
+
+Para instalar o seu sistema AFF C190, crie uma conta e registe o sistema. Você também precisa fazer o inventário do número e do tipo apropriados de cabos para o seu sistema e coletar informações específicas de rede.
+
+.Antes de começar
+* Certifique-se de que tem acesso a link:https://hwu.netapp.com["NetApp Hardware Universe"^] (HWU) para obter informações sobre os requisitos do local, bem como informações adicionais sobre o seu sistema configurado.
+* Certifique-se de que tem acesso ao link:http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["Notas de versão"^] para a sua versão do ONTAP para obter mais informações sobre este sistema.
+* Certifique-se de que você tem os seguintes itens em seu site:
++
+** Espaço em rack para o sistema de armazenamento
+** Chave de fendas Phillips nº 2
+** Cabos de rede adicionais para conetar seu sistema ao switch de rede e laptop ou console com um navegador da Web
+** Um laptop ou console com uma conexão RJ-45 e acesso a um navegador da Web
+
+
+
+
+.Passos
+. Desembale o conteúdo de todas as caixas.
+. Registre o número de série do sistema nos controladores.
++
+image::../media/drw_ssn_label.png[Exemplo de número de série do sistema]
+
+. Configure a sua conta:
++
+.. Inicie sessão na sua conta existente ou crie uma conta.
+.. Registe o seu sistema (link:https://mysupport.netapp.com/eservice/registerSNoAction.do?moduleName=RegisterMyProduct["Registro de produto NetApp"^]).
+
+
+. Baixe e instale link:https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp Downloads: Config Advisor"^] em seu laptop.
+. Faça um inventário e anote o número e os tipos de cabos que você recebeu.
++
+A tabela a seguir identifica os tipos de cabos que você pode receber. Se receber um cabo não listado na tabela, consulte link:https://hwu.netapp.com["NetApp Hardware Universe"^] para localizar o cabo e identificar a respetiva utilização.
+
++
+[cols="1,2,1,2"]
+|===
+| Tipo de cabo... | Número de peça e comprimento | Tipo de conetor | Para... 
+
+
+ a| 
+Cabo de 10 GbE (dependente da ordem)
+ a| 
+X6566B-05-R6 (112-00297), 0,5m
+
+X6566B-2-R6 (112-00299), 2m
+ a| 
+image:../media/oie_cable_sfp_gbe_copper.png["Conetor de cobre GbE SFP"]
+ a| 
+Rede de interconexão de cluster
+
+
+
+ a| 
+X6566B-2-R6 (112-00299), 2m
+
+X6566B-3-R6 (112-00300), 3m
+
+X6566B-5-R6 (112-00301), 5m
+ a| 
+Dados
+
+
+
+ a| 
+Cabos de rede ótica (dependendo da ordem)
+ a| 
+X6553-R6 (112-00188), 2m
+
+X6536-R6 (112-00090), 5m
+
+X6554-R6 (112-00189), 15m
+ a| 
+image:../media/oie_sfp_optical.png["Cabo de rede ótico SFP"]
+
+image::../media/oie_cable_fiber_lc_connector.png[Cabo LC de rede de canal de fibra]
+ a| 
+Rede de host SFP e FC
+
+
+
+ a| 
+Cat 6, RJ-45 (dependente da encomenda)
+ a| 
+X6585-R6 (112-00291), 3m
+
+X6562-R6 (112-00196), 5m
+ a| 
+image:../media/oie_cable_rj45.png["Conetor do cabo RJ-45"]
+ a| 
+Host Ethernet e rede de gerenciamento
+
+
+
+ a| 
+Cabo micro-USB da consola
+ a| 
+Não aplicável
+ a| 
+image:../media/oie_cable_micro_usb.png["Conetor micro USB"]
+ a| 
+Conexão de console durante a configuração de software em laptop/console não Windows ou Mac
+
+
+
+ a| 
+Cabos de alimentação
+ a| 
+Não aplicável
+ a| 
+image:../media/oie_cable_power.png["Cabos de alimentação"]
+ a| 
+Ligar o sistema
+
+|===
+. Faça o download e complete o link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2839002["Folha de trabalho de configuração do cluster"^].
+
+
+
+
+== Passo 2: Instale o hardware
+
+Instale o sistema em um rack de 4 colunas ou gabinete do sistema NetApp, conforme aplicável.
+
+.Passos
+. Instale os kits de calhas, conforme necessário.
+. Instale e fixe o seu sistema utilizando as instruções incluídas no kit de calhas.
++
+
+NOTE: Você precisa estar ciente das preocupações de segurança associadas ao peso do sistema.
+
++
+image::../media/drw_oie_fas2700_weight_caution.png[Cuidado com o elevador para duas pessoas]
+
+. Conete os dispositivos de gerenciamento de cabos (como mostrado).
++
+image::../media/drw_cable_management_arm_install.png[Anexando dispositivos de gerenciamento de cabos]
+
+. Coloque a moldura na parte frontal do sistema.
+
+
+
+
+== Passo 3: Controladores de cabo para a sua rede
+
+Conete os controladores à rede usando o método de cluster sem switch de dois nós ou o método de rede de interconexão de cluster.
+
+A tabela a seguir identifica o tipo de cabo com o número de chamada e a cor do cabo nas ilustrações para cabeamento de rede de cluster sem switch de dois nós e cabeamento de rede comutada de cluster.
+
+[cols="20%,80%"]
+|===
+| Cabeamento | Tipo de ligação 
+
+
+ a| 
+image::../media/icon_square_1_green.png[ícone quadrado 1 verde]
+ a| 
+Interconexão de cluster
+
+
+
+ a| 
+image::../media/icon_square_2_yellow.png[Legenda número 2]
+ a| 
+Controladores para switches de rede de dados de host
+
+
+
+ a| 
+image::../media/icon_square_3_orange.png[Legenda número 3]
+ a| 
+Controladores para switch de rede de gerenciamento
+
+|===
+[role="tabbed-block"]
+====
+.Opção 1: Cluster sem switch de dois nós
+--
+Saiba como fazer o cabeamento de um cluster sem switch de dois nós.
+
+.Antes de começar
+Contacte o administrador da rede para obter informações sobre como ligar o sistema aos comutadores.
+
+Certifique-se de que verifica a seta da ilustração para a orientação adequada da presilha de puxar do conetor do cabo.
+
+image::../media/oie_cable_pull_tab_down.png[Conetor de cabo com patilha de puxar na parte inferior]
+
+
+NOTE: Ao inserir o conetor, você deve senti-lo clicar no lugar; se você não sentir que ele clique, remova-o, vire-o e tente novamente.
+
+
+NOTE: Se estiver conetando a um switch ótico, insira o SFP na porta do controlador antes de fazer o cabeamento para a porta.
+
+.Sobre esta tarefa
+Consulte as ilustrações de cabeamento a seguir quando houver cabeamento entre as controladoras e os switches.
+
+UTA2 configurações de rede de dados::
++
+--
+image::../media/drw_c190_tnsc_unified_network_cabling_animated_gif.png[Animação de cabeamento de rede unificado de cluster sem switch de dois nós]
+
+--
+Configurações de rede Ethernet::
++
+--
+image::../media/drw_c190_tnsc_ethernet_network_cabling_animated_gif.png[Animação de cabeamento de rede Eternet cluster sem switch de dois nós]
+
+--
+
+
+Execute as seguintes etapas em cada módulo do controlador.
+
+.Passos
+. Cable as portas de interconexão de cluster e0a a e0a e e0b a e0b com o cabo de interconexão de cluster. E image:../media/drw_c190_u_tnsc_clust_cbling.png["Cabeamento de interconexão de cluster"]
+. Ligue os controladores a uma rede de dados UTA2 ou a uma rede Ethernet.
++
+UTA2 configurações de rede de dados:: Use um dos seguintes tipos de cabo para fazer o cabeamento das portas de dados e0c/0C e e0d/0d ou e0e/0e e e0f/0f para sua rede de host.
++
+--
+image:../media/drw_c190_u_fc_10gbe_cabling.png["Conexões de porta de dados"]
+
+--
+Configurações de rede Ethernet:: Use o cabo Cat 6 RJ45 para fazer o cabeamento das portas e0c a e0f para a rede host. Na ilustração a seguir.
++
+--
+image:../media/drw_c190_e_rj45_cbling.png["Cabeamento de rede de host"]
+
+--
+
+
+. Faça o cabeamento das e0M portas aos switches de rede de gerenciamento com os cabos RJ45.
++
+image:../media/drw_c190_u_mgmt_cabling.png["Cabeamento de porta de gerenciamento"]
+
+
+
+
+IMPORTANT: NÃO conete os cabos de energia neste momento.
+
+--
+.Opção 2: Cluster comutado
+--
+Saiba como fazer o cabeamento de um cluster comutado.
+
+.Antes de começar
+Contacte o administrador da rede para obter informações sobre como ligar o sistema aos comutadores.
+
+Certifique-se de que verifica a seta da ilustração para a orientação adequada da presilha de puxar do conetor do cabo.
+
+image::../media/oie_cable_pull_tab_down.png[Conetor de cabo com patilha de puxar na parte inferior]
+
+
+NOTE: Ao inserir o conetor, você deve senti-lo clicar no lugar; se você não sentir que ele clique, remova-o, vire-o e tente novamente.
+
+
+NOTE: Se estiver conetando a um switch ótico, insira o SFP na porta do controlador antes de fazer o cabeamento para a porta.
+
+.Sobre esta tarefa
+Consulte as ilustrações de cabeamento a seguir quando houver cabeamento entre as controladoras e os switches.
+
+Configurações de rede unificada::
++
+--
+image::../media/drw_c190_switched_unified_network_cabling_animated_gif.png[Animação de cabeamento de rede unificado de cluster comutado]
+
+--
+Configurações de rede Ethernet::
++
+--
+image::../media/drw_c190_switched_ethernet_network_cabling_animated.png[Animação de cabeamento de rede Ethernet de cluster comutada]
+
+--
+
+
+Execute as seguintes etapas em cada módulo do controlador.
+
+.Passos
+. Cabo e0a e e0b para os switches de interconexão de cluster com o cabo de interconexão de cluster.
++
+image:../media/drw_c190_u_switched_clust_cbling.png["Cabeamento de interconexão Clusterinterconnect"]
+
+. Ligue os controladores a uma rede de dados UTA2 ou a uma rede Ethernet.
++
+UTA2 configurações de rede de dados:: Use um dos seguintes tipos de cabo para fazer o cabeamento das portas de dados e0c/0C e e0d/0d ou e0e/0e e e0f/0f para sua rede de host.
++
+--
+image:../media/drw_c190_u_fc_10gbe_cabling.png["Conexões de porta de dados"]
+
+--
+Configurações de rede Ethernet:: Use o cabo Cat 6 RJ45 para fazer o cabeamento das portas e0c a e0f para a rede host.
++
+--
+image:../media/drw_c190_e_rj45_cbling.png["Cabeamento de rede de host"]
+
+--
+
+
+. Faça o cabeamento das e0M portas aos switches de rede de gerenciamento com os cabos RJ45.
++
+image:../media/drw_c190_u_mgmt_cabling.png["Cabeamento de porta de gerenciamento"]
+
+
+
+
+IMPORTANT: NÃO conete os cabos de energia neste momento.
+
+--
+====
+
+
+== Passo 4: Conclua a configuração do sistema
+
+Conclua a configuração e a configuração do sistema usando a descoberta de cluster apenas com uma conexão com o switch e laptop, ou conetando-se diretamente a um controlador no sistema e, em seguida, conetando-se ao switch de gerenciamento.
+
+[role="tabbed-block"]
+====
+.Opção 1: Se a deteção de rede estiver ativada
+--
+Saiba como concluir a configuração do sistema se tiver a deteção de rede ativada no seu computador portátil.
+
+.Passos
+. Conete os cabos de alimentação às fontes de alimentação do controlador e, em seguida, conete-os a fontes de alimentação em diferentes circuitos.
+. Ligue os interruptores de energia para ambos os nós.
++
+image::../media/drw_turn_on_power_switches_to_psus.png[Ligar a alimentação]
+
++
+
+NOTE: A inicialização inicial pode levar até oito minutos.
+
+. Certifique-se de que o seu computador portátil tem a deteção de rede ativada.
++
+Consulte a ajuda online do seu computador portátil para obter mais informações.
+
+. Ligue o seu computador portátil ao interrutor de gestão:
+
+
+image::../media/dwr_laptop_to_switch_only.svg[computador portátil dwr apenas para mudar]
+
+. Selecione um ícone ONTAP listado para descobrir:
++
+image::../media/drw_autodiscovery_controler_select.png[Selecione um ícone ONTAP]
+
++
+.. Abra o Explorador de ficheiros.
+.. Clique em *rede* no painel esquerdo.
+.. Clique com o botão direito do rato e selecione *Refresh*.
+.. Clique duas vezes no ícone ONTAP e aceite quaisquer certificados exibidos na tela.
++
+
+NOTE: XXXXX é o número de série do sistema para o nó de destino.
+
++
+O System Manager é aberto.
+
+
+
+. Utilize a configuração guiada do System Manager para configurar o sistema utilizando os dados recolhidos no link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["Guia de configuração do ONTAP"^].
+. Verifique a integridade do sistema executando o Config Advisor.
+. Depois de concluir a configuração inicial, acesse o link:https://docs.netapp.com/us-en/ontap-family/["Documentação do ONTAP"] site para obter informações sobre como configurar recursos adicionais no ONTAP.
++
+
+NOTE: A configuração de porta padrão para sistemas de configuração unificada é o modo CNA; se estiver conetando a uma rede host FC, você terá que modificar as portas para o modo FC.
+
+
+
+--
+.Opção 2: Se a deteção de rede não estiver ativada
+--
+Saiba como concluir a configuração do sistema se a deteção de rede não estiver ativada no seu computador portátil.
+
+.Passos
+. Faça o cabo e configure o seu laptop ou console:
++
+.. Defina a porta de console no laptop ou console para 115.200 baud com N-8-1.
++
+
+NOTE: Consulte a ajuda on-line do seu laptop ou console para saber como configurar a porta do console.
+
+.. Conete o cabo do console ao laptop ou console e conete a porta do console no controle usando o cabo do console fornecido com o sistema.
++
+image::../media/drw_console_connect_fas2700_affa200.png[Conexão à porta do console]
+
+.. Conete o laptop ou o console ao switch na sub-rede de gerenciamento.
++
+image::../media/drw_client_to_mgmt_subnet_fas2700_affa220.png[Ligar à sub-rede de gestão]
+
+.. Atribua um endereço TCP/IP ao laptop ou console, usando um que esteja na sub-rede de gerenciamento.
+
+
+. Conete os cabos de alimentação às fontes de alimentação do controlador e, em seguida, conete-os a fontes de alimentação em diferentes circuitos.
+. Ligue os interruptores de energia para ambos os nós.
++
+image::../media/drw_turn_on_power_switches_to_psus.png[Ligar a alimentação]
+
++
+
+NOTE: A inicialização inicial pode levar até oito minutos.
+
+. Atribua um endereço IP de gerenciamento de nó inicial a um dos nós.
++
+[cols="1,2"]
+|===
+| Se a rede de gestão tiver DHCP... | Então... 
+
+
+ a| 
+Configurado
+ a| 
+Registre o endereço IP atribuído aos novos controladores.
+
+
+
+ a| 
+Não configurado
+ a| 
+.. Abra uma sessão de console usando PuTTY, um servidor de terminal ou o equivalente para o seu ambiente.
++
+
+NOTE: Verifique a ajuda on-line do seu laptop ou console se você não sabe como configurar o PuTTY.
+
+.. Insira o endereço IP de gerenciamento quando solicitado pelo script.
+
+
+|===
+. Usando o System Manager em seu laptop ou console, configure seu cluster:
++
+.. Aponte seu navegador para o endereço IP de gerenciamento de nó.
++
+
+NOTE: O formato para o endereço é https://x.x.x.x+.
+
+.. Configure o sistema utilizando os dados recolhidos no link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["Guia de configuração do ONTAP"^].
+
+
+. Verifique a integridade do sistema executando o Config Advisor.
+. Depois de concluir a configuração inicial, acesse o link:https://docs.netapp.com/us-en/ontap-family/["ONTAP "] site para obter informações sobre como configurar recursos adicionais no ONTAP.
++
+
+NOTE: A configuração de porta padrão para sistemas de configuração unificada é o modo CNA; se estiver conetando a uma rede host FC, você terá que modificar as portas para o modo FC.
+
+
+
+--
+====

@@ -1,0 +1,84 @@
+---
+section: a900
+title: Sistemas AFF A900
+entries:
+- title: Instalar e configurar
+  pdf-filename: Instalação e configuração do AFF A900
+  entries:
+  - title: Escolha a experiência de instalação e configuração
+    url: "/a900/install_setup.html"
+  - title: Passos rápidos
+    url: "/a900/install_quick_guide.html"
+  - title: Passos de vídeo
+    url: "/a900/install_videos.html"
+  - title: Passos detalhados
+    url: "/a900/install_detailed_guide.html"
+- title: Manutenção
+  pdf-filename: Manutenção da AFF A900
+  entries:
+  - title: Visão geral
+    url: "/a900/maintain-overview.html"
+  - title: Suporte de arranque
+    pdf-filename: Mídia de inicialização do AFF A900
+    entries:
+    - title: Visão geral
+      url: "/a900/bootmedia_replace_overview.html"
+    - title: Verifique as chaves de criptografia
+      url: "/a900/bootmedia_encryption_preshutdown_checks.html"
+    - title: Desligue o controlador desativado
+      url: "/a900/bootmedia-shutdown.html"
+    - title: Substitua a imagem de inicialização
+      url: "/a900/bootmedia_replace.html"
+    - title: Imagem de recuperação de inicialização
+      url: "/a900/bootmedia_recovery_image.html"
+    - title: Restaure a criptografia
+      url: "/a900/bootmedia_encryption_restore.html"
+    - title: Devolver artigo com falha ao NetApp
+      url: "/a900/bootmedia_complete_rma.html"
+  - title: Chassis
+    pdf-filename: Chassis AFF A900
+    entries:
+    - title: Visão geral
+      url: "/a900/chassis_replace_overview.html"
+    - title: Desligue o controlador desativado
+      url: "/a900/chassis_replace_shutdown.html"
+    - title: Substitua o chassi
+      url: "/a900/chassis_replace_move_hardware.html"
+    - title: Restaure e verifique a configuração
+      url: "/a900/chassis_replace_complete_system_restore_rma.html"
+  - title: Controlador
+    pdf-filename: Módulo do controlador AFF A900
+    entries:
+    - title: Visão geral
+      url: "/a900/controller_replace_overview.html"
+    - title: Desligue o controlador desativado
+      url: "/a900/controller_replace_shutdown.html"
+    - title: Substitua o controlador
+      url: "/a900/controller_replace.html"
+    - title: Restaure e verifique a configuração do sistema
+      url: "/a900/controller_replace_system_config_restore_and_verify.html"
+    - title: Sistema Recable
+      url: "/a900/controller_replace_recable_reassign_disks.html"
+    - title: Restauração completa do sistema
+      url: "/a900/controller_replace_complete_system_restoration_rma.html"
+  - title: DIMM
+    url: "/a900/dimm_replace.html"
+  - title: DCPM
+    url: "/a900/dcpm-nvram11-battery-replace.html"
+  - title: Ventoinha
+    url: "/a900/fan_swap_out.html"
+  - title: Módulo de e/S.
+    pdf-filename: Módulo de e/S AFF A900
+    entries:
+    - title: Substitua o módulo de e/S.
+      url: "/a900/pci_cards_and_risers_replace.html"
+    - title: Adicionar módulo de e/S.
+      url: "/a900/add_io_module.html"
+  - title: LED USB
+    url: "/a900/led_module_replace.html"
+  - title: NVRAM
+    url: "/a900/nvram_module_or_nvram_dimm_replacement.html"
+  - title: Fonte de alimentação
+    url: "/a900/power_supply_swap_out.html"
+  - title: Bateria de relógio em tempo real
+    url: "/a900/rtc_battery_replace.html"

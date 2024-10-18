@@ -1,0 +1,72 @@
+---
+permalink: fas2600/power-supply-swap-out.html 
+sidebar: sidebar 
+keywords: fas2600, power supply replacement 
+summary: Trocar uma fonte de alimentação envolve desligar, desconetar e remover a fonte de alimentação antiga e instalar, conetar e ligar a fonte de alimentação de substituição. 
+---
+= Troque uma fonte de alimentação - FAS2600
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Trocar uma fonte de alimentação envolve desligar, desconetar e remover a fonte de alimentação antiga e instalar, conetar e ligar a fonte de alimentação de substituição.
+
+Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+
+* As fontes de alimentação são redundantes e hot-swap.
+* Este procedimento é escrito para substituir uma fonte de alimentação de cada vez.
++
+
+NOTE: O resfriamento é integrado à fonte de alimentação, portanto, você deve substituir a fonte de alimentação dentro de dois minutos após a remoção para evitar o superaquecimento devido à redução do fluxo de ar. Como o chassi fornece uma configuração de resfriamento compartilhada para os dois nós de HA, um atraso maior que dois minutos encerrará todos os módulos de controladora no chassi. Se ambos os módulos do controlador desligarem, certifique-se de que ambas as fontes de alimentação estão inseridas, desligue ambas durante 30 segundos e, em seguida, ligue ambas.
+
+* O número de fontes de alimentação no sistema depende do modelo.
+* As fontes de alimentação são auto-variando.
+
+
+link:https://youtu.be/fTOMwENNi9M["Vídeo de substituição da fonte de alimentação AFF FAS2600"^]
+
+. Identifique a fonte de alimentação que deseja substituir, com base em mensagens de erro do console ou através dos LEDs das fontes de alimentação.
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Desligue a fonte de alimentação e desligue os cabos de alimentação:
++
+.. Desligue o interrutor de alimentação da fonte de alimentação.
+.. Abra o retentor do cabo de alimentação e, em seguida, desligue o cabo de alimentação da fonte de alimentação.
+.. Desconete o cabo de alimentação da fonte de alimentação.
+
+
+. Aperte o trinco na pega do excêntrico da fonte de alimentação e, em seguida, abra a pega do excêntrico para libertar totalmente a fonte de alimentação do plano intermédio.
++
+image::../media/drw_2600_psu_repl_animated_gif.png[Abrir o manípulo do excêntrico]
+
+. Utilize a pega do came para fazer deslizar a fonte de alimentação para fora do sistema.
++
+
+CAUTION: Ao remover uma fonte de alimentação, utilize sempre duas mãos para suportar o seu peso.
+
+. Certifique-se de que o interrutor ligar/desligar da nova fonte de alimentação está na posição desligada.
+. Utilizando ambas as mãos, apoie e alinhe as extremidades da fonte de alimentação com a abertura no chassis do sistema e, em seguida, empurre cuidadosamente a fonte de alimentação para o chassis utilizando a pega do excêntrico.
++
+As fontes de alimentação são chaveadas e só podem ser instaladas de uma forma.
+
++
+
+NOTE: Não utilize força excessiva ao deslizar a fonte de alimentação para o sistema. Pode danificar o conetor.
+
+. Feche a pega do excêntrico de forma a que o trinco encaixe na posição de bloqueio e a fonte de alimentação fique totalmente assente.
+. Reconecte o cabeamento da fonte de alimentação:
++
+.. Volte a ligar o cabo de alimentação à fonte de alimentação e à fonte de alimentação.
+.. Fixe o cabo de alimentação à fonte de alimentação utilizando o retentor do cabo de alimentação.
+
+
++
+Uma vez que a alimentação é restaurada à fonte de alimentação, o LED de estado deve estar verde.
+
+. Ligue a alimentação da nova fonte de alimentação e, em seguida, verifique o funcionamento dos LEDs de atividade da fonte de alimentação.
++
+Os LEDs da fonte de alimentação acendem-se quando a fonte de alimentação se encontra online.
+
+. Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"^] página para obter mais informações.
+

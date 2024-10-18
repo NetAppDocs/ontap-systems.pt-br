@@ -1,0 +1,62 @@
+---
+permalink: a320/power-supply-replace.html 
+sidebar: sidebar 
+keywords: aff, a320, aff a320, replace, replacing, power, supply, psu, involve, disconnect, target, source, unplug, cable, replacement, replace a power supply 
+summary: A substituição de uma fonte de alimentação envolve desconetar a fonte de alimentação de destino da fonte de alimentação, desconetar o cabo de alimentação, remover a fonte de alimentação antiga e instalar a fonte de alimentação de substituição e, em seguida, reconetar a fonte de alimentação de substituição à fonte de alimentação. 
+---
+= Substitua uma fonte de alimentação - AFF A320
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A substituição de uma fonte de alimentação (PSU) envolve desconetar a fonte de alimentação de destino, desconetar o cabo de alimentação, remover a fonte de alimentação antiga e instalar a fonte de alimentação de substituição e, em seguida, reconetar a fonte de alimentação de substituição à fonte de alimentação.
+
+* As fontes de alimentação são redundantes e hot-swap.
+* Este procedimento é escrito para substituir uma fonte de alimentação de cada vez.
++
+
+NOTE: É uma prática recomendada substituir a fonte de alimentação dentro de dois minutos após a remoção do chassi. O sistema continua a funcionar, mas o ONTAP envia mensagens ao console sobre a fonte de alimentação degradada até que a fonte de alimentação seja substituída.
+
+* As fontes de alimentação são auto-variando.
+
+
+.Passos
+image::../media/drw_a320_psu_replace_animated_gif.png[Substitua uma PSU]
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Identifique a fonte de alimentação que deseja substituir, com base em mensagens de erro do console ou através dos LEDs das fontes de alimentação.
+. Desligue a fonte de alimentação:
++
+.. Abra o retentor do cabo de alimentação e, em seguida, desligue o cabo de alimentação da fonte de alimentação.
+.. Desconete o cabo de alimentação da fonte de alimentação.
+
+
+. Retire a fonte de alimentação:
++
+.. Rode a pega do excêntrico de forma a que possa ser utilizada para retirar a fonte de alimentação do chassis.
+.. Prima a patilha de bloqueio azul para libertar a fonte de alimentação do chassis.
+.. Utilizando ambas as mãos, puxe a fonte de alimentação para fora do chassis e, em seguida, coloque-a de lado.
+
+
+. Utilizando ambas as mãos, apoie e alinhe as extremidades da fonte de alimentação com a abertura no módulo do controlador e, em seguida, empurre cuidadosamente a fonte de alimentação para o módulo do controlador até que a patilha de bloqueio encaixe no lugar.
++
+As fontes de alimentação apenas engatarão adequadamente com o conetor interno e trancam no lugar de uma forma.
+
++
+
+NOTE: Para evitar danificar o conetor interno, não utilize força excessiva ao deslizar a fonte de alimentação para o sistema.
+
+. Rode a pega do excêntrico de forma a que fique nivelada com a fonte de alimentação.
+. Reconecte o cabeamento da fonte de alimentação:
++
+.. Volte a ligar o cabo de alimentação à fonte de alimentação e à fonte de alimentação.
+.. Fixe o cabo de alimentação à fonte de alimentação utilizando o retentor do cabo de alimentação.
+
+
++
+Uma vez que a alimentação é restaurada à fonte de alimentação, o LED de estado deve estar verde.
+
+. Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"^] página para obter mais informações.
+

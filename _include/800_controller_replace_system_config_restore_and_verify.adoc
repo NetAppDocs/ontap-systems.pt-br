@@ -1,0 +1,61 @@
+= Passo 1: Defina e verifique a hora do sistema
+:allow-uri-read: 
+
+
+Depois de concluir a substituição de hardware e a inicialização para o modo de manutenção, você verifica a configuração de sistema de baixo nível do controlador de substituição e reconfigura as configurações do sistema conforme necessário.
+
+
+
+== Passo 1: Defina e verifique a hora do sistema
+
+Você deve verificar a hora e a data no módulo do controlador de substituição em relação ao módulo do controlador de integridade em um par de HA, ou em um servidor de tempo confiável em uma configuração autônoma. Se a hora e a data não corresponderem, tem de os repor no módulo do controlador de substituição para evitar possíveis interrupções nos clientes devido a diferenças de tempo.
+
+.Sobre esta tarefa
+É importante que você aplique os comandos nas etapas nos sistemas corretos:
+
+* O nó _replacement_ é o novo nó que substituiu o nó prejudicado como parte deste procedimento.
+* O nó _Healthy_ é o parceiro de HA do nó _replacement_.
+
+
+.Passos
+. Se o nó _replacement_ não estiver no prompt Loader, interrompa o sistema para o prompt Loader.
+. No nó _Healthy_, verifique a hora do sistema: `cluster date show`
++
+A data e a hora são baseadas no fuso horário configurado.
+
+. No prompt DO Loader, verifique a data e a hora no nó _replacement_: `show date`
++
+A data e a hora são dadas em GMT.
+
+. Se necessário, defina a data em GMT no nó de substituição: `set date _mm/dd/yyyy_`
+. Se necessário, defina a hora em GMT no nó de substituição: `set time _hh:mm:ss_`
+. No prompt DO Loader, confirme a data e a hora no nó _replacement_: `show date`
++
+A data e a hora são dadas em GMT.
+
+
+
+
+
+== Etapa 2: Verifique e defina o estado HA do chassi
+
+Você deve verificar o `HA` estado do módulo do controlador e, se necessário, atualizar o estado para corresponder à configuração do sistema.
+
+. No modo Manutenção a partir do novo módulo do controlador, verifique se todos os componentes apresentam o `HA` mesmo estado: `ha-config show`
++
+O estado HA deve ser o mesmo para todos os componentes.
+
+. Se o estado do sistema apresentado do módulo do controlador não corresponder à configuração do sistema, defina o `HA` estado para o módulo do controlador: `ha-config modify controller ha-state`
++
+O valor para HA-State pode ser um dos seguintes:
+
++
+** `ha`
+** `mcc`
+** `mccip`
+** `non-ha`
+
+
+. Se o estado do sistema apresentado do módulo do controlador não corresponder à configuração do sistema, defina o `HA` estado para o módulo do controlador: `ha-config modify controller ha-state`
+. Confirme se a definição foi alterada: `ha-config show`
+

@@ -1,0 +1,114 @@
+= Passo 1: Remova os módulos do controlador
+:allow-uri-read: 
+
+
+Mova as ventoinhas, os discos rígidos e o módulo do controlador do chassis danificado para o novo chassis e troque o chassis danificado pelo novo chassis do mesmo modelo que o chassis danificado.
+
+
+
+== Passo 1: Remova os módulos do controlador
+
+Para substituir o chassis, tem de remover os módulos do controlador do chassis antigo.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Solte os fixadores do cabo de alimentação e, em seguida, desconete os cabos das fontes de alimentação.
+. Solte o gancho e a alça de loop que prendem os cabos ao dispositivo de gerenciamento de cabos e, em seguida, desconete os cabos do sistema e os SFPs (se necessário) do módulo do controlador, mantendo o controle de onde os cabos estavam conetados.
++
+Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar o dispositivo de gerenciamento de cabos, os cabos sejam organizados.
+
+. Retire e reserve os dispositivos de gerenciamento de cabos dos lados esquerdo e direito do módulo do controlador.
+. Prima ambos os trincos de bloqueio para baixo e, em seguida, rode ambos os trincos para baixo ao mesmo tempo.
++
+O módulo do controlador desloca-se ligeiramente para fora do chassis.
+
+. Faça deslizar o módulo do controlador para fora do chassis.
++
+Certifique-se de que suporta a parte inferior do módulo do controlador enquanto o desliza para fora do chassis.
+
+. Coloque o módulo do controlador de lado num local seguro e repita estes passos para o outro módulo do controlador no chassis.
+
+
+
+
+== Passo 2: Mova os fãs
+
+Para mover os módulos do ventilador para o chassi de substituição ao substituir o chassi, você deve executar uma sequência específica de tarefas.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Retire a moldura (se necessário) com duas mãos, segurando as aberturas de cada lado da moldura e puxando-a na sua direção até que a moldura se solte dos pernos esféricos na estrutura do chassis.
+. Pressione o trinco de desbloqueio no manípulo do excêntrico do módulo da ventoinha e, em seguida, rode o manípulo do excêntrico para baixo.
++
+O módulo da ventoinha afasta-se um pouco do chassis.
+
+. Puxe o módulo da ventoinha diretamente para fora do chassis, certificando-se de que o apoia com a mão livre para que não saia do chassis.
++
+
+CAUTION: Os módulos da ventoinha são curtos. Apoie sempre a parte inferior do módulo da ventoinha com a mão livre para que não caia subitamente do chassis e o machuque.
+
+. Coloque o módulo da ventoinha de lado.
+. Repita os passos anteriores para quaisquer módulos de ventoinha restantes.
+. Insira o módulo da ventoinha no chassis de substituição, alinhando-o com a abertura e, em seguida, deslizando-o para o chassis.
+. Empurre firmemente a pega do came do módulo da ventoinha para que fique totalmente assente no chassis.
++
+O manípulo do came levanta-se ligeiramente quando o módulo do ventilador está completamente encaixado.
+
+. Desloque o manípulo do excêntrico para a posição fechada, certificando-se de que o trinco de libertação do manípulo do excêntrico encaixa na posição de bloqueio.
+. Repita estes passos para os restantes módulos do ventilador.
+
+
+
+
+== Etapa 3: Substitua um chassi de dentro do rack de equipamentos ou do gabinete do sistema
+
+Você deve remover o chassi existente do rack de equipamentos ou do gabinete do sistema antes de instalar o chassi de substituição.
+
+. Retire os parafusos dos pontos de montagem do chassis.
+. Com duas pessoas, deslize o chassi antigo para fora dos trilhos do rack em um gabinete do sistema ou rack de equipamentos e, em seguida, coloque-o de lado.
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Usando duas pessoas, instale o chassi de substituição no rack de equipamentos ou no gabinete do sistema guiando o chassi nos trilhos do rack em um gabinete do sistema ou rack de equipamentos.
+. Deslize o chassi até o rack de equipamentos ou o gabinete do sistema.
+. Fixe a parte frontal do chassi ao rack de equipamentos ou ao gabinete do sistema usando os parafusos removidos do chassi antigo.
+. Se ainda não o tiver feito, instale a moldura.
+
+
+
+
+== Passo 4: Instale os módulos do controlador
+
+Depois de instalar os módulos do controlador no novo chassi, você precisa iniciá-lo.
+
+Para pares de HA com dois módulos de controlador no mesmo chassi, a sequência em que você instala o módulo de controlador é especialmente importante porque ele tenta reiniciar assim que você o senta completamente no chassi.
+
+. Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
++
+
+NOTE: Não introduza completamente o módulo do controlador no chassis até ser instruído a fazê-lo.
+
+. Recable o console para o módulo do controlador e, em seguida, reconete a porta de gerenciamento.
+. Conclua a instalação do módulo do controlador:
++
+.. Ligue o cabo de alimentação à fonte de alimentação, volte a instalar o anel de bloqueio do cabo de alimentação e, em seguida, ligue a fonte de alimentação à fonte de alimentação.
+.. Utilizando os trincos de bloqueio, empurre firmemente o módulo do controlador para dentro do chassis até que os trincos de bloqueio comecem a subir.
++
+
+NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
+
+.. Assente totalmente o módulo do controlador no chassis, rodando os trincos de bloqueio para cima, inclinando-os para que estes limpem os pinos de bloqueio, empurre cuidadosamente o controlador totalmente para dentro e, em seguida, baixe os trincos de bloqueio para a posição de bloqueio.
++
+O módulo do controlador começa a arrancar assim que estiver totalmente assente no chassis. Esteja preparado para interromper o processo de inicialização.
+
+.. Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos.
+.. Interrompa o processo normal de inicialização e inicialize no Loader pressionando `Ctrl-C`.
++
+
+NOTE: Se o sistema parar no menu de inicialização, selecione a opção para inicializar NO Loader.
+
+.. No prompt Loader, digite `bye` para reinicializar as placas PCIe e outros componentes.
+.. Interrompa o processo de inicialização e inicialize no prompt DO Loader pressionando `Ctrl-C`.
++
+Se o sistema parar no menu de inicialização, selecione a opção para inicializar NO Loader.
+
+
+
+. Repita os passos anteriores para instalar o segundo controlador no novo chassis.
+

@@ -1,0 +1,200 @@
+---
+permalink: ns224/service-replace-nsm100.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, replace, impair, nvme, module, nsm, nondisruptive, drive, i/o, nsm, replace an nsm module 
+summary: 'Você pode substituir um módulo de gaveta NVMe prejudicada (NSM) sem interrupções em um compartimento de unidade de NS224 TB que esteja ligado e enquanto e/S estiver em andamento.' 
+---
+= Substitua um módulo NSM - NS224 prateleiras
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode substituir um módulo de gaveta NVMe (NSM) danificado sem interrupções em um compartimento de unidade de NS224 TB que está ligado e enquanto e/S está em andamento.
+
+.Antes de começar
+* O módulo NSM do parceiro do compartimento deve estar ativo e em execução e ser cabeado corretamente para que o compartimento mantenha a conectividade quando você remover o módulo NSM com falha.
++
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp Downloads: Config Advisor"^]
+
+* Todos os outros componentes do sistema devem estar a funcionar corretamente.
+
+
+.Sobre esta tarefa
+* A substituição do módulo NSM envolve a movimentação dos DIMMs, ventiladores e fonte de alimentação do módulo NSM prejudicado para o módulo NSM de substituição.
++
+Você não move a bateria do relógio em tempo real (RTC) ou o suporte de inicialização. Eles vêm pré-instalados no módulo NSM de substituição.
+
+* Aguarde pelo menos 70 segundos entre a remoção e a instalação do módulo de gaveta NVMe (NSM).
++
+Isso permite tempo suficiente para que o ONTAP processe o evento de remoção de NSM.
+
+* *Prática recomendada:* a prática recomendada é ter versões atuais do firmware do módulo de gaveta NVMe (NSM) e do firmware da unidade em seu sistema antes de substituir componentes FRU.
++
+https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["Downloads do NetApp: Firmware da gaveta de disco"^]
+
++
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["Downloads do NetApp: Firmware da unidade de disco"^]
+
++
+[NOTE]
+====
+Não reverta o firmware para uma versão que não suporte a gaveta e seus componentes.
+
+====
+* O firmware do shelf (NSM) é atualizado automaticamente (sem interrupções) em um novo módulo NSM que tenha uma versão de firmware não atual.
++
+As verificações de firmware do módulo NSM ocorrem a cada 10 minutos. Uma atualização de firmware do módulo NSM pode levar até 30 minutos.
+
+* Se necessário, você pode ligar os LEDs de localização da prateleira (azul) para ajudar a localizar fisicamente a prateleira afetada: `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
++
+Se você não souber `shelf_name` o do compartimento afetado, execute o `storage shelf show` comando.
+
++
+Uma prateleira tem três LEDs de localização: Um no painel de visualização do operador e um em cada módulo NSM. Os LEDs de localização permanecem acesos durante 30 minutos. Você pode desativá-los digitando o mesmo comando, mas usando a `off` opção.
+
+* Quando você desembalar o módulo NSM de substituição, salve todos os materiais de embalagem para uso quando retornar o módulo NSM com falha.
++
+Se você precisar do número RMA ou de ajuda adicional com o procedimento de substituição, entre em Contato com o suporte técnico em https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"^], 888-463-8277 (América do Norte), 00-800-44-638277 (Europa) ou 800-800-80-800 (Ásia/Pacífico).
+
+* Você pode usar a animação a seguir ou as etapas escritas para substituir um módulo NSM.
++
+.Substitua um módulo NSM em um compartimento NS224
+video::f57693b3-b164-4014-a827-aa86002f4b34[panopto]
+
+
+.Passos
+. Aterre-se corretamente.
+. Identifique fisicamente o módulo NSM com deficiência.
++
+O sistema regista uma mensagem de aviso na consola do sistema, indicando qual módulo está desativado. Além disso, o LED atenção (âmbar) no painel de visualização do operador da prateleira de acionamento e o módulo desativado acendem-se.
+
+. Desconete o cabeamento do módulo NSM desativado:
++
+.. Desconete o cabo de alimentação da fonte de alimentação abrindo o retentor do cabo de alimentação se for uma fonte de alimentação CA ou desaparafusando os dois parafusos polegares se for uma fonte de alimentação CC e, em seguida, desconete o cabo de alimentação da fonte de alimentação.
++
+As fontes de alimentação não têm um interrutor de alimentação.
+
+.. Desconete o cabeamento de armazenamento das portas do módulo NSM.
++
+Anote as portas do módulo NSM às quais cada cabo está conetado. Você reconeta os cabos às mesmas portas no módulo NSM de substituição, posteriormente neste procedimento.
+
+
+
+. Retire o módulo NSM da prateleira:
++
+.. Passe os dedos indicadores através dos orifícios dos dedos dos mecanismos de bloqueio em ambos os lados do módulo NSM.
++
+
+NOTE: Se você estiver removendo o módulo NSM inferior e se o trilho inferior estiver obstruindo o acesso aos mecanismos de travamento, coloque seus dedos indicadores através dos orifícios dos dedos a partir do interior (cruzando os braços).
+
+.. Com os polegares, pressione e segure as abas laranja na parte superior dos mecanismos de travamento.
++
+Os mecanismos de bloqueio levantam-se, limpando os pinos de bloqueio na prateleira.
+
+.. Puxe suavemente até que o módulo NSM esteja cerca de um terço da saída da prateleira, segure os lados do módulo NSM com as duas mãos para suportar o seu peso e, em seguida, coloque-o em uma superfície plana e estável.
++
+Quando começar a puxar, os braços do mecanismo de engate estendem-se do módulo NSM e trancam-se na sua posição totalmente estendida.
+
+
+
+. Desembale o módulo NSM de substituição e coloque-o numa superfície nivelada perto do módulo NSM afetado.
+. Abra a tampa do módulo NSM com problemas e o módulo NSM de substituição desapertando o parafuso de aperto manual em cada tampa.
++
+
+NOTE: A etiqueta FRU na tampa do módulo NSM mostra a localização dos DIMMs e ventiladores.
+
+. Mova os DIMMs do módulo NSM com deficiência para o módulo NSM de substituição:
++
+.. Observe a orientação dos DIMMs nos slots para que você possa inserir os DIMMs no módulo NSM de substituição usando a mesma orientação.
+.. Ejete um DIMM do slot empurrando lentamente as abas do ejetor em ambas as extremidades do slot DIMM e, em seguida, levante o DIMM para fora do slot.
++
+
+NOTE: Segure cuidadosamente o DIMM pelos cantos ou bordas para evitar a pressão nos componentes da placa de circuito DIMM. As patilhas do ejetor permanecem na posição aberta.
+
+.. Segure o DIMM pelos cantos e, em seguida, insira o DIMM diretamente em um slot no módulo NSM de substituição.
++
+O entalhe na parte inferior do DIMM, entre os pinos, deve estar alinhado com a guia no slot.
+
++
+Quando inserido corretamente, o DIMM deve entrar facilmente, mas encaixar firmemente no slot. Caso contrário, insira novamente o DIMM.
+
+.. Empurre com cuidado, mas firmemente, para baixo na borda superior do DIMM até que as abas do ejetor se encaixem no lugar sobre os entalhes em ambas as extremidades do DIMM.
+.. Repita as subetapas de 7a a 7D para os DIMMs restantes.
+
+
+. Mova as ventoinhas do módulo NSM desativado para o módulo NSM de substituição:
++
+.. Segure firmemente uma ventoinha pelas laterais, onde os pontos de toque azuis estão localizados e, em seguida, levante-a verticalmente para desligá-la da tomada.
++
+Pode ser necessário balançar suavemente a ventoinha para a frente e para trás para a desligar antes de a levantar.
+
+.. Alinhe a ventoinha com as guias no módulo NSM de substituição e, em seguida, empurre para baixo até que o conetor do módulo da ventoinha esteja totalmente assente no encaixe.
+.. Repita os subpassos 8a e 8b para os restantes fãs.
+
+
+. Feche a tampa de cada módulo NSM e, em seguida, aperte cada parafuso de aperto manual.
+. Mova a fonte de alimentação do módulo NSM desativado para o módulo NSM de substituição:
++
+.. Rode o manípulo para cima, para a sua posição horizontal e, em seguida, segure-o.
+.. Com o polegar, prima a patilha azul para soltar o mecanismo de bloqueio.
+.. Retire a fonte de alimentação do módulo NSM enquanto utiliza a outra mão para suportar o peso.
+.. Utilizando ambas as mãos, apoie e alinhe as extremidades da fonte de alimentação com a abertura no módulo NSM de substituição.
+.. Empurre cuidadosamente a fonte de alimentação para o módulo NSM até que o mecanismo de bloqueio encaixe no lugar.
++
+
+NOTE: Não utilize força excessiva ou poderá danificar o conetor interno.
+
+.. Gire a alça para baixo, de modo que esteja fora do caminho das operações normais.
+
+
+. Insira o módulo NSM de substituição na prateleira:
++
+.. Certifique-se de que os braços do mecanismo de engate estão bloqueados na posição totalmente estendida.
+.. Utilizando ambas as mãos, deslize cuidadosamente o módulo NSM para dentro da prateleira até que o peso do módulo NSM esteja totalmente suportado pela prateleira.
+.. Empurre o módulo NSM para dentro da prateleira até parar (cerca de meia polegada da parte de trás da prateleira).
++
+Pode colocar os polegares nas patilhas cor-de-laranja na parte da frente de cada presilha (dos braços do mecanismo de fecho) para empurrar o módulo NSM.
+
+.. Passe os dedos indicadores através dos orifícios dos dedos dos mecanismos de bloqueio em ambos os lados do módulo NSM.
++
+
+NOTE: Se você estiver inserindo o módulo NSM inferior e se o trilho inferior estiver obstruindo o acesso aos mecanismos de travamento, coloque seus dedos indicadores através dos orifícios dos dedos a partir do interior (cruzando os braços).
+
+.. Com os polegares, pressione e segure as abas laranja na parte superior dos mecanismos de travamento.
+.. Empurre suavemente para a frente para colocar as travas sobre o batente.
+.. Solte os polegares da parte superior dos mecanismos de travamento e, em seguida, continue empurrando até que os mecanismos de travamento se encaixem no lugar.
++
+O módulo NSM deve ser totalmente inserido na prateleira e nivelado com as bordas da prateleira.
+
+
+
+. Reconecte o cabeamento ao módulo NSM:
++
+.. Reconecte o cabeamento de storage às mesmas duas portas de módulo NSM.
++
+Os cabos são inseridos com a presilha do conetor voltada para cima. Quando um cabo é inserido corretamente, ele clica no lugar.
+
+.. Volte a ligar o cabo de alimentação à fonte de alimentação e, em seguida, fixe o cabo de alimentação com o fixador do cabo de alimentação, se for uma fonte de alimentação CA, ou aperte os dois parafusos de orelhas se for uma fonte de alimentação CC.
++
+Quando estiver a funcionar corretamente, o LED bicolor de uma fonte de alimentação acende-se a verde.
+
++
+Além disso, ambos os LEDs LNK (verde) da porta do módulo NSM acendem-se. Se um LED LNK não acender, recoloque o cabo.
+
+
+
+. Verifique se o LED atenção (âmbar) no painel de visualização do operador da prateleira já não está aceso.
++
+O LED de atenção do painel do visor do operador desliga-se após o reinício do módulo NSM. Isso pode levar de três a cinco minutos.
+
+. Verifique se o módulo NSM está cabeado corretamente, executando o Active IQ Config Advisor.
++
+Se forem gerados erros de cabeamento, siga as ações corretivas fornecidas.
+
++
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp Downloads: Config Advisor"^]
+
+. Certifique-se de que ambos os módulos NSM na gaveta estejam executando a mesma versão do firmware: Versão 0200 ou posterior.
+

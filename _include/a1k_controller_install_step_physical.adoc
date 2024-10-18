@@ -1,0 +1,19 @@
+= 
+:allow-uri-read: 
+
+
+Reinstale o módulo do controlador e inicialize-o.
+
+. Se ainda não o tiver feito, feche a conduta de ar.
+. Alinhe a extremidade do módulo do controlador com a abertura no compartimento e deslize o módulo do controlador para dentro do chassi com as alavancas giradas para longe da frente do sistema.
+. Assim que o módulo do controlador o impedir de deslizar para mais longe, rode as pegas do excêntrico para dentro até que fiquem presas por baixo das ventoinhas
++
+
+NOTE: Não use força excessiva ao deslizar o módulo do controlador para dentro do compartimento para evitar danificar os conetores.
+
++
+O módulo do controlador começa a inicializar assim que estiver totalmente encaixado no compartimento.
+
+. Restaure o giveback automático se você o desativou usando o `storage failover modify -node local -auto-giveback true` comando.
+. Se o AutoSupport estiver ativado, restaure/dessuprimir a criação automática de casos usando o `system node autosupport invoke -node * -type all -message MAINT=END` comando.
+

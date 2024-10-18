@@ -1,0 +1,33 @@
+---
+permalink: fas9000/bootmedia-replace-overview.html 
+sidebar: sidebar 
+keywords: aff a700, fas9000, replace, boot, media, primary, secondary, image, disruptive, nondisruptive 
+summary: 'A Mídia de inicialização armazena um conjunto primário e secundário de arquivos do sistema (imagem de inicialização) que o sistema usa quando ele é inicializado. Dependendo da configuração da rede, você pode realizar uma substituição sem interrupções ou disruptiva.' 
+---
+= Descrição geral da substituição do suporte de arranque - FAS9000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A Mídia de inicialização armazena um conjunto primário e secundário de arquivos do sistema (imagem de inicialização) que o sistema usa quando ele é inicializado. Dependendo da configuração da rede, você pode realizar uma substituição sem interrupções ou disruptiva.
+
+Tem de ter uma unidade flash USB, formatada para FAT32, com a quantidade de armazenamento adequada para manter o `image_xxx.tgz`.
+
+Você também deve copiar o `image_xxx.tgz` arquivo para a unidade flash USB para uso posterior neste procedimento.
+
+* Os métodos sem interrupções e disruptivos para substituir uma Mídia de inicialização exigem que você restaure o `var` sistema de arquivos:
++
+** Para substituição sem interrupções, o par de HA não requer conexão com uma rede para restaurar o `var` sistema de arquivos. O par de HA em um único chassi tem uma conexão e0S interna, que é usada para transferir `var` a configuração entre eles.
+** Para a substituição disruptiva, não é necessário uma ligação de rede para restaurar o `var` sistema de ficheiros, mas o processo requer duas reinicializações.
+
+
+* Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor.
+* É importante que você aplique os comandos nessas etapas no nó correto:
++
+** O nó _prejudicado_ é o nó no qual você está realizando a manutenção.
+** O nó _Healthy_ é o parceiro de HA do nó prejudicado.
+
+
+

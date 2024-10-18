@@ -1,0 +1,16 @@
+= 
+:allow-uri-read: 
+
+
+Antes de substituir o suporte de arranque, certifique-se de que verifica os seguintes requisitos.
+
+* Tem de ter uma unidade flash USB, formatada para FAT32, com a quantidade de armazenamento adequada para guardar o `image_xxx.tgz` ficheiro.
+* Você deve copiar o `image_xxx.tgz` arquivo para a unidade flash USB para uso posterior neste procedimento.
+* Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu o NetApp.
+* É importante que você aplique os comandos nestas etapas no controlador correto:
++
+** O controlador _prejudicado_ é o controlador no qual você está realizando a manutenção.
+** O controlador _Healthy_ é o parceiro de HA do controlador prejudicado.
+
+
+

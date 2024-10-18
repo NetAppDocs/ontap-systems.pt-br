@@ -1,0 +1,171 @@
+---
+permalink: sas3/service-hot-swap-iom.html 
+sidebar: sidebar 
+keywords: system, configuration, whether, perform, nondisruptive, iom12, module, hot-swap, disruptive, replacement, hot-swap or replace an iom12/iom12b module, iom12b 
+summary: A configuração do sistema determina se você pode executar uma troca a quente sem interrupções de módulos IOM12/IOM12B ou uma substituição disruptiva de módulos IOM12/IOM12B quando um módulo IOM12/IOM12B falha. 
+---
+= Troque a quente ou substitua um módulo IOM12/IOM12B - prateleiras por módulos IOM12/IOM12B
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A configuração do sistema determina se você pode executar uma troca a quente IOM de gaveta sem interrupções ou uma substituição de IOM de gaveta disruptiva quando uma IOM de gaveta falha.
+
+.Antes de começar
+Todos os outros componentes do sistema - incluindo o outro módulo IOM12/IOM12B - devem estar funcionando corretamente.
+
+.Sobre esta tarefa
+* Este procedimento se aplica a prateleiras com IOM12 módulos e prateleiras com IOM12B módulos.
++
+
+NOTE: Esse procedimento é para hot-swaps ou substituições de IOM de gaveta semelhantes. Isto significa que só pode substituir um módulo IOM12 por outro módulo IOM12 ou substituir um módulo IOM12B por outro módulo IOM12B. (Sua prateleira pode ter dois módulos IOM12 ou ter dois módulos IOM12B.)
+
+* Os módulos IOM12 e os módulos IOM12B podem ser distinguidos pela sua aparência:
++
+Os IOM12 módulos distinguem-se por uma etiqueta "IOM12":
+
++
+image::../media/drw_iom12.gif[Frente do IOM12]
+
++
+Os IOM12B módulos distinguem-se por uma faixa azul e uma etiqueta "IOM12B":
+
++
+image::../media/iom12b.png[Frente do IOM12B]
+
+* Para configurações com vários caminhos (HA ou multipath), HA de três caminhos e caminhos quádruplos (HA de quatro caminhos ou quatro caminhos), você pode trocar a quente uma IOM de gaveta (substituir sem interrupções uma IOM de gaveta em um sistema que está ligado e fornecendo dados - e/S em andamento).
+* Para configurações de HA de caminho único das séries FAS2600 e FAS2700, você precisa executar uma operação de takeover e giveback para substituir uma IOM de gaveta em um sistema que está ativado e fornecendo dados - e/S está em andamento.
+* Para configurações de caminho único da série FAS2600, você precisa parar o sistema para substituir uma IOM de gaveta.
++
+
+NOTE: Se você tentar trocar uma gaveta IOM em um compartimento de disco por uma conexão de caminho único, perderá todo o acesso às unidades de disco na gaveta de disco, bem como às gavetas de disco abaixo. Você também pode derrubar todo o seu sistema.
+
+* A prática recomendada é ter as versões atuais do firmware da gaveta de disco (IOM) e das unidades de disco em seu sistema antes de adicionar novas gavetas de disco, componentes de FRU de gaveta ou cabos SAS.
++
+As versões atuais do firmware podem ser encontradas no site de suporte da NetApp.
+
++
+https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["Downloads do NetApp: Firmware da gaveta de disco"^]
+
++
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["Downloads do NetApp: Firmware da unidade de disco"^]
+
+* O firmware da gaveta de disco (IOM) é atualizado automaticamente (sem interrupções) em uma nova IOM de gaveta com uma versão de firmware não atual.
++
+As verificações de firmware da OIM da gaveta ocorrem a cada dez minutos. Uma atualização de firmware IOM pode levar até 30 minutos.
+
+* Se necessário, você pode ligar os LEDs de localização (azul) do compartimento de disco para ajudar a localizar fisicamente o compartimento de disco afetado: `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
++
+Uma gaveta de disco tem três LEDs de localização: Um no painel de exibição do operador e um em cada gaveta IOM. Os LEDs de localização permanecem acesos durante 30 minutos. Você pode desativá-los digitando o mesmo comando, mas usando a opção Off.
+
+* Se necessário, você pode consultar a seção LEDs do compartimento de disco de monitoramento para obter informações sobre o significado e a localização dos LEDs do compartimento de disco no painel de exibição do operador e nos componentes FRU.
+
+
+.Passos
+. Aterre-se corretamente.
+. Desembale a nova gaveta IOM e coloque-a em uma superfície nivelada perto da gaveta de disco.
++
+Guarde todos os materiais de embalagem para utilização ao devolver a IOM da prateleira com falha.
+
+. Identifique fisicamente a IOM da gaveta com falha a partir da mensagem de aviso do console do sistema e do LED de atenção iluminada (âmbar) na IOM da gaveta com falha.
+. Execute uma das seguintes ações com base no tipo de configuração que você tem:
++
+[cols="2*"]
+|===
+| Se você tem um... | Então... 
+
+
+ a| 
+Multipath HA, tri-path HA, multipath, quad-path HA ou configuração quad-path
+ a| 
+Vá para a próxima etapa.
+
+
+
+ a| 
+Configuração HA de caminho único das séries FAS2600 e FAS2700
+ a| 
+.. Determine o nó de destino (o nó ao qual a IOM da gaveta com falha pertence).
++
+Iom A pertence ao controlador 1. IOM B pertence ao controlador 2.
+
+.. Assuma o nó de destino: `storage failover takeover -bynode _partner HA node_`
+
+
+
+
+ a| 
+Configuração de caminho único da série FAS2600
+ a| 
+.. Desligue o sistema a partir da consola do sistema: `halt`
+.. Verifique se o sistema parou verificando o console do sistema de armazenamento.
+
+
+|===
+. Desconete o cabeamento da gaveta IOM que você está removendo.
++
+Anote as portas IOM da gaveta às quais cada cabo está conetado.
+
+. Pressione a trava laranja na alça da came IOM da prateleira até que ela se solte e, em seguida, abra a alça da came totalmente para liberar a IOM da prateleira do plano médio.
++
+image::../media/drw_iom_latch.png[Solte o trinco da alavanca do came]
+
++
+image::../media/drw_iom_open.png[Alavanca do came na posição aberta]
+
+. Use a alça do came para deslizar a gaveta IOM para fora da gaveta de disco.
++
+Ao manusear uma prateleira IOM, utilize sempre as duas mãos para suportar o seu peso.
+
+. Aguarde pelo menos 70 segundos após a remoção da gaveta IOM antes de instalar a nova IOM de gaveta.
++
+Aguardar pelo menos 70 segundos permite ao condutor registar corretamente a ID da prateleira.
+
+. Usando duas mãos, com a alça da came da nova IOM da gaveta na posição aberta, apoie e alinhe as bordas da nova IOM da gaveta com a abertura na gaveta de disco e, em seguida, empurre firmemente a nova IOM da gaveta até que ela atenda ao plano médio.
++
+
+NOTE: Não use força excessiva ao deslizar a gaveta IOM para dentro da gaveta de disco; você pode danificar os conetores.
+
+. Feche a pega do excêntrico de forma a que o trinco encaixe na posição de bloqueio e a prateleira IOM fique totalmente assente.
+. Reconecte o cabeamento.
++
+Os conetores de cabo SAS são chaveados; quando orientados corretamente para uma porta IOM, o conetor clica no lugar e o LED LNK da porta IOM acende-se a verde. Você insere um conetor de cabo SAS em uma porta IOM com a aba de puxar orientada para baixo (na parte inferior do conetor).
+
+. Execute uma das seguintes ações com base no tipo de configuração que você tem:
++
+[cols="2*"]
+|===
+| Se você tem um... | Então... 
+
+
+ a| 
+Multipath HA, tri-path HA, multipath, quad-path HA ou configuração quad-path
+ a| 
+Vá para a próxima etapa.
+
+
+
+ a| 
+Configuração HA de caminho único das séries FAS2600 e FAS2700
+ a| 
+Devolver o nó de destino: `storage failover giveback -fromnode partner_HA_node`
+
+
+
+ a| 
+Configuração de caminho único da série FAS2600
+ a| 
+Reinicie o sistema.
+
+|===
+. Verifique se os links da porta IOM da gaveta foram estabelecidos.
++
+Para cada porta de módulo que você cabeou, o LED LNK (verde) acende quando uma ou mais das quatro faixas SAS estabeleceram um link (com um adaptador ou outro compartimento de disco).
+
+. Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit.
++
+Entre em Contato com o suporte técnico em https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"], 888-463-8277 (América do Norte), 00-800-44-638277 (Europa) ou 800-800-80-800 (Ásia/Pacífico) se precisar do número de RMA ou de ajuda adicional com o procedimento de substituição.
+
+

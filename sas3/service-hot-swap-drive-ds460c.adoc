@@ -1,0 +1,260 @@
+---
+permalink: sas3/service-hot-swap-drive-ds460c.html 
+sidebar: sidebar 
+keywords: hot-swap, fail, disk, drive, ds460c, nondisruptive, replace, system, power, serving, data, i/o, hot-swap a disk drive in a ds460c disk shelf 
+summary: Você pode trocar a quente uma unidade de disco com falha em um compartimento de disco de DS460C TB. 
+---
+= Troque a quente uma unidade de disco em um compartimento de disco de DS460C TB - compartimentos com módulos de IOM12 TB/IOM12B TB
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode trocar a quente uma unidade de disco com falha em um compartimento de disco de DS460C TB.
+
+.Antes de começar
+* A unidade de disco de substituição deve ser suportada pelo compartimento de disco DS460C.
++
+https://hwu.netapp.com["NetApp Hardware Universe"]
+
+* Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, entre em Contato com o suporte técnico.
+* A unidade de disco que está a remover tem de estar avariada.
++
+Você pode verificar se a unidade de disco está com falha executando o `storage disk show -broken` comando. A unidade de disco com falha aparece na lista de unidades de disco com falha. Se isso não acontecer, você deve esperar, e executar o comando novamente.
+
++
+
+NOTE: Dependendo do tipo e da capacidade da unidade de disco, pode levar até várias horas para que a unidade de disco apareça na lista de unidades de disco com falha.
+
+* Se você estiver substituindo um disco de criptografia automática (SED), siga as instruções para substituir um SED na documentação do ONTAP para sua versão do ONTAP.
++
+As instruções na documentação do ONTAP descrevem as etapas adicionais que você deve executar antes e depois de substituir uma SED.
+
++
+https://docs.netapp.com/us-en/ontap/encryption-at-rest/index.html["Visão geral da criptografia NetApp com a CLI"]
+
+
+
+.Sobre esta tarefa
+* Deve tomar medidas para evitar descargas eletrostáticas (ESD):
++
+** Mantenha a unidade de disco no saco ESD até que esteja pronto para instalá-la.
+** Abra o saco ESD à mão ou corte a parte superior com uma tesoura.
++
+
+NOTE: Não insira uma ferramenta de metal ou faca no saco ESD.
+
+** Utilize sempre uma pulseira antiestática ligada à terra a uma superfície não pintada no chassis do compartimento de armazenamento.
++
+Se uma pulseira não estiver disponível, toque numa superfície não pintada no chassis do compartimento de armazenamento antes de manusear a unidade de disco.
+
+
+
+* Você deve tomar medidas para lidar com unidades de disco cuidadosamente:
++
+** Sempre use duas mãos ao remover, instalar ou transportar uma unidade de disco para suportar seu peso.
++
+
+NOTE: Não coloque as mãos nas placas de unidade de disco expostas na parte inferior do suporte de unidade de disco.
+
+** Você deve colocar unidades de disco em superfícies almofadadas e nunca empilhar unidades de disco umas sobre as outras.
+** Você deve ter cuidado para não bater unidades de disco contra outras superfícies.
+
+
+* As unidades de disco devem ser mantidas longe de dispositivos magnéticos.
++
+
+NOTE: Os campos magnéticos podem destruir todos os dados na unidade de disco e causar danos irreparáveis aos circuitos da unidade de disco.
+
+* A prática recomendada é ter a versão atual do Pacote de Qualificação de disco (DQP) instalada antes de trocar uma unidade de disco a quente.
++
+Ter a versão atual do DQP instalada permite que seu sistema reconheça e utilize unidades de disco recém-qualificadas; portanto, evitando mensagens de eventos do sistema sobre ter informações de unidades de disco não atuais. Você também evita a possível prevenção do particionamento de disco porque as unidades de disco não são reconhecidas. O DQP também notifica você sobre firmware de unidade de disco não atual.
+
++
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["NetApp Downloads: Pacote de Qualificação de disco"^]
+
+* A prática recomendada é ter as versões atuais do firmware da gaveta de disco (IOM) e das unidades de disco em seu sistema antes de adicionar novas gavetas de disco, componentes de FRU de gaveta ou cabos SAS.
++
+As versões atuais do firmware podem ser encontradas no site de suporte da NetApp.
+
++
+https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["Downloads do NetApp: Firmware da gaveta de disco"]
+
++
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["Downloads do NetApp: Firmware da unidade de disco"]
+
+* O firmware da unidade de disco é atualizado automaticamente (sem interrupções) em novas unidades de disco com versões de firmware não atuais.
++
+
+NOTE: As verificações de firmware da unidade de disco ocorrem a cada dois minutos.
+
+* Se necessário, você pode ligar os LEDs de localização (azul) do compartimento de disco para ajudar a localizar fisicamente o compartimento de disco afetado: `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
++
+Uma gaveta de disco tem três LEDs de localização: Um no painel de exibição do operador e um em cada gaveta IOM. Os LEDs de localização permanecem acesos durante 30 minutos. Você pode desativá-los digitando o mesmo comando, mas usando a opção Off.
+
+* Se necessário, você pode consultar a seção LEDs do compartimento de disco de monitoramento para obter informações sobre o significado e a localização dos LEDs do compartimento de disco no painel de exibição do operador e nos componentes FRU.
+* O compartimento de unidades DS460C consiste em cinco gavetas de unidade (gaveta de unidades 1 na parte superior através da gaveta de unidades 5 na parte inferior) que contêm cada uma 12 ranhuras de unidade.
++
+image::../media/28_dwg_e2860_de460c_front_no_callouts.gif[Vista frontal do compartimento de unidades]
+
+* A ilustração a seguir mostra como as unidades são numeradas de 0 a 11 em cada gaveta de unidade dentro da gaveta.
++
+image::../media/dwg_trafford_drawer_with_hdds_callouts.gif[Numeração da unidade]
+
+
+
+.Passos
+. Se você quiser atribuir manualmente a propriedade do disco para a unidade de disco de substituição, será necessário desativar a atribuição automática de unidade se ela estiver ativada; caso contrário, vá para a próxima etapa.
++
+
+NOTE: Você precisa atribuir manualmente a propriedade de disco se as unidades de disco na stack forem de propriedade de ambas as controladoras de um par de HA.
+
++
+
+NOTE: Atribua manualmente a propriedade do disco e, em seguida, reative a atribuição automática de unidade mais adiante neste procedimento.
+
++
+.. Verifique se a atribuição automática de unidades está ativada:``storage disk option show``
++
+Se você tiver um par de HA, poderá inserir o comando no console de qualquer controlador.
+
++
+Se a atribuição automática de unidade estiver ativada, a saída mostrará "'on'" (para cada controlador) na coluna "'Auto Assign'".
+
+.. Se a atribuição automática de unidades estiver ativada, é necessário desativá-la:``storage disk option modify -node _node_name_ -autoassign off``
++
+Você precisa desativar a atribuição automática de unidades em ambos os controladores em um par de HA.
+
+
+
+. Aterre-se corretamente.
+. Desembale a nova unidade de disco e coloque-a numa superfície nivelada perto da prateleira de disco.
++
+Salve todos os materiais de embalagem para uso ao retornar a unidade de disco com falha.
+
++
+
+NOTE: O NetApp requer que todas as unidades de disco retornadas estejam em um saco com classificação ESD.
+
+. Identifique a unidade de disco com falha a partir da mensagem de aviso da consola do sistema e do LED âmbar de atenção iluminado na gaveta da unidade.
++
+Os suportes de unidades SAS de 2,5 e 3,5 polegadas não contêm LEDs. Em vez disso, você deve olhar para os LEDs de atenção nas gavetas da unidade para determinar qual unidade falhou.
+
++
+O LED de atenção (âmbar) da gaveta da unidade pisca para que você possa abrir a gaveta da unidade correta para identificar qual unidade substituir.
+
++
+O LED de atenção da gaveta da unidade está no lado dianteiro esquerdo em frente de cada unidade, com um símbolo de aviso na pega da unidade logo atrás do LED.
+
+. Abra a gaveta que contém a unidade com falha:
++
+.. Desengate a gaveta da unidade puxando ambas as alavancas.
+.. Utilizando as alavancas estendidas, puxe cuidadosamente a gaveta da unidade para fora até parar.
+.. Olhe para a parte superior da gaveta da unidade para encontrar o LED de atenção que reside na gaveta na frente de cada unidade.
+
+
+. Remova a unidade com falha da gaveta aberta:
++
+.. Puxe cuidadosamente a trava de liberação laranja que está na frente da unidade que você deseja remover.
++
+image::../media/trafford_drive_rel_button.gif[Trinco de libertação laranja]
+
++
+[cols="1,3"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+| Trinco de libertação laranja 
+|===
+.. Abra o manípulo do excêntrico e levante ligeiramente a unidade.
+.. Aguarde 30 segundos.
+.. Utilize a pega do excêntrico para levantar a unidade da prateleira.
++
+image::../media/92_dwg_de6600_install_or_remove_drive.gif[Instalar ou remover uma unidade]
+
+.. Coloque a unidade numa superfície antiestática e amortecida, longe de campos magnéticos.
+
+
+. Insira a unidade de substituição na gaveta:
++
+.. Levante a alavanca do came na nova unidade para a vertical.
+.. Alinhe os dois botões levantados em cada lado do suporte da unidade com a folga correspondente no canal da unidade na gaveta da unidade.
++
+image::../media/28_dwg_e2860_de460c_drive_cru.gif[Localização dos botões levantados na condução]
+
++
+[cols="1,3"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+| Botão levantado no lado direito do suporte da transmissão 
+|===
+.. Baixe a unidade em linha reta para baixo e, em seguida, rode a pega do came para baixo até que a unidade encaixe no devido lugar sob o trinco de desbloqueio laranja.
+.. Empurre cuidadosamente a gaveta da unidade de volta para dentro do compartimento.
++
+image:../media/2860_dwg_e2860_de460c_gentle_close.gif["Fechar cuidadosamente a gaveta"]
+
++
+
+CAUTION: *Possível perda de acesso aos dados:* nunca bata a gaveta fechada. Empurre a gaveta lentamente para dentro para evitar estressar a gaveta e causar danos à matriz de armazenamento.
+
+.. Feche a gaveta da unidade empurrando ambas as alavancas em direção ao centro.
++
+O LED de atividade verde da unidade substituída na parte frontal da gaveta da unidade acende-se quando a unidade é inserida corretamente.
+
+
+
+. Se estiver substituindo outra unidade de disco, repita as etapas 4 a 7.
+. Verifique o LED de atividade e o LED de atenção na unidade que você substituiu.
++
+[cols="1,2"]
+|===
+| Estado do LED | Descrição 
+
+
+ a| 
+O LED de atividade está aceso ou intermitente e o LED de atenção está apagado
+ a| 
+A nova unidade está a funcionar corretamente.
+
+
+
+ a| 
+O LED de atividade está desligado
+ a| 
+A unidade pode não estar instalada corretamente. Retire a unidade, aguarde 30 segundos e, em seguida, volte a instalá-la.
+
+
+
+ a| 
+O LED atenção está aceso
+ a| 
+A nova unidade pode estar com defeito. Substitua-a por outra unidade nova.
+
+
+NOTE: Quando você insere uma unidade pela primeira vez, seu LED de atenção pode estar ligado. No entanto, o LED deve apagar-se dentro de um minuto.
+
+|===
+. Se você desativou a atribuição automática de propriedade de disco na Etapa 1, atribua manualmente a propriedade de disco e, em seguida, reative a atribuição automática de propriedade de disco, se necessário:
++
+.. Exibir todos os discos não possuídos:``storage disk show -container-type unassigned``
+.. Atribuir cada disco:``storage disk assign -disk _disk_name_ -owner _owner_name_``
++
+Você pode usar o caractere curinga para atribuir mais de um disco de uma vez.
+
+.. Reative a atribuição automática de propriedade de disco, se necessário:``storage disk option modify -node _node_name_ -autoassign on``
++
+É necessário rehabilitar a atribuição automática de propriedade de disco em ambas as controladoras de um par de HA.
+
+
+
+. Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit.
++
+Entre em Contato com o suporte técnico em https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"], 888-463-8277 (América do Norte), 00-800-44-638277 (Europa) ou 800-800-80-800 (Ásia/Pacífico) se precisar do número de RMA ou de ajuda adicional com o procedimento de substituição.
+
+

@@ -1,0 +1,193 @@
+---
+permalink: a200/chassis-replace-move-hardware.html 
+sidebar: sidebar 
+keywords: aff a200, move hardware components, replace the chassis 
+summary: Mova as fontes de alimentação, as unidades de disco rígido e o módulo ou os módulos do controlador do chassis danificado para o novo chassis e troque o chassis danificado do rack de equipamentos ou do armário do sistema pelo novo chassis do mesmo modelo que o chassis danificado. 
+---
+= Mova e substitua o hardware - AFF A200
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mova as fontes de alimentação, as unidades de disco rígido e o módulo ou os módulos do controlador do chassis danificado para o novo chassis e troque o chassis danificado do rack de equipamentos ou do armário do sistema pelo novo chassis do mesmo modelo que o chassis danificado.
+
+
+
+== Passo 1: Mova a fonte de alimentação
+
+Mova a fonte de alimentação do chassi antigo para o chassi de substituição.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Desligue a fonte de alimentação e desligue os cabos de alimentação:
++
+.. Desligue o interrutor de alimentação da fonte de alimentação.
+.. Abra o retentor do cabo de alimentação e, em seguida, desligue o cabo de alimentação da fonte de alimentação.
+.. Desconete o cabo de alimentação da fonte de alimentação.
+
+
+. Aperte o trinco na pega do excêntrico da fonte de alimentação e, em seguida, abra a pega do excêntrico para libertar totalmente a fonte de alimentação do plano intermédio.
+. Utilize a pega do came para fazer deslizar a fonte de alimentação para fora do sistema.
++
+
+CAUTION: Ao remover uma fonte de alimentação, utilize sempre duas mãos para suportar o seu peso.
+
+. Repita as etapas anteriores para qualquer fonte de alimentação restante.
+. Utilizando ambas as mãos, apoie e alinhe as extremidades da fonte de alimentação com a abertura no chassis do sistema e, em seguida, empurre cuidadosamente a fonte de alimentação para o chassis utilizando a pega do excêntrico.
++
+As fontes de alimentação são chaveadas e só podem ser instaladas de uma forma.
+
++
+
+CAUTION: Não utilize força excessiva ao deslizar a fonte de alimentação para o sistema. Pode danificar o conetor.
+
+. Feche a pega do excêntrico de forma a que o trinco encaixe na posição de bloqueio e a fonte de alimentação fique totalmente assente.
+. Volte a ligar o cabo de alimentação e fixe-o à fonte de alimentação utilizando o mecanismo de bloqueio do cabo de alimentação.
++
+
+NOTE: Ligue apenas o cabo de alimentação à fonte de alimentação. Não ligue o cabo de alimentação a uma fonte de alimentação neste momento.
+
+
+
+
+
+== Passo 2: Remova o módulo do controlador
+
+Retire o módulo ou os módulos do controlador do chassis antigo.
+
+.Passos
+. Solte o gancho e a alça de loop que prendem os cabos ao dispositivo de gerenciamento de cabos e, em seguida, desconete os cabos do sistema e os SFPs (se necessário) do módulo do controlador, mantendo o controle de onde os cabos estavam conetados.
++
+Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar o dispositivo de gerenciamento de cabos, os cabos sejam organizados.
+
+. Retire e reserve os dispositivos de gerenciamento de cabos dos lados esquerdo e direito do módulo do controlador.
++
+image::../media/drw_25xx_cable_management_arm.png[Inserir ou remover o ARM de gerenciamento de cabos]
+
+. Aperte o trinco na pega do excêntrico até que este se solte, abra totalmente o manípulo do excêntrico para libertar o módulo do controlador do plano médio e, em seguida, utilizando duas mãos, puxe o módulo do controlador para fora do chassis.
++
+image::../media/drw_2240_x_opening_cam_latch.png[Abrir o trinco do puxador da árvore de cames]
+
+. Coloque o módulo do controlador de lado num local seguro e repita estes passos se tiver outro módulo do controlador no chassis.
+
+
+
+
+== Passo 3: Mova as unidades para o novo chassi
+
+Mova as unidades de cada abertura do compartimento no chassi antigo para a mesma abertura do compartimento no novo chassi.
+
+.Passos
+. Retire cuidadosamente a moldura da parte frontal do sistema.
+. Remova as unidades:
++
+.. Prima o botão de libertação na parte superior da face do suporte por baixo dos LEDs.
+.. Puxe o manípulo do excêntrico para a posição totalmente aberta para retirar a transmissão do plano médio e, em seguida, deslize cuidadosamente a unidade para fora do chassis.
++
+A transmissão deve desengatar-se do chassis, permitindo que deslize para fora do chassis.
+
++
+
+NOTE: Ao remover uma unidade, utilize sempre duas mãos para suportar o seu peso.
+
++
+
+NOTE: Os acionamentos são frágeis. Manuseie-os o mínimo possível para evitar danos.
+
+
+
+. Alinhe a unidade do chassi antigo com a mesma abertura do compartimento no novo chassi.
+. Empurre cuidadosamente a unidade para dentro do chassis o mais longe possível.
++
+O manípulo do excêntrico engata e começa a rodar para cima.
+
+. Empurre firmemente a unidade o resto do caminho para dentro do chassis e, em seguida, bloqueie a pega do excêntrico empurrando-a para cima e contra o suporte da unidade.
++
+Certifique-se de que fecha lentamente o manípulo do excêntrico de forma a que fique corretamente alinhado com a parte dianteira do suporte da transmissão. Ele clica quando é seguro.
+
+. Repita o processo para as unidades restantes no sistema.
+
+
+
+
+== Etapa 4: Substitua um chassi de dentro do rack de equipamentos ou do gabinete do sistema
+
+Você deve remover o chassi existente do rack de equipamentos ou do gabinete do sistema antes de instalar o chassi de substituição.
+
+.Passos
+. Retire os parafusos dos pontos de montagem do chassis.
+. Com a ajuda de duas ou três pessoas, deslize o chassi antigo dos trilhos do rack em um gabinete do sistema ou suportes _L_ em um rack de equipamentos e, em seguida, coloque-o de lado.
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Usando duas ou três pessoas, instale o chassi de substituição no rack de equipamentos ou no gabinete do sistema guiando o chassi para os trilhos do rack em um gabinete do sistema ou suportes _L_ em um rack de equipamentos.
+. Deslize o chassi até o rack de equipamentos ou o gabinete do sistema.
+. Fixe a parte frontal do chassi ao rack de equipamentos ou ao gabinete do sistema usando os parafusos removidos do chassi antigo.
+. Se ainda não o tiver feito, instale a moldura.
+
+
+
+
+== Passo 5: Instale o controlador
+
+Depois de instalar o módulo do controlador e quaisquer outros componentes no novo chassi, você deve inicializar o sistema.
+
+.Sobre esta tarefa
+Para pares de HA com dois módulos de controlador no mesmo chassi, a sequência em que você instala o módulo de controlador é especialmente importante porque ele tenta reiniciar assim que você o senta completamente no chassi.
+
+.Passos
+. Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
++
+
+NOTE: Não introduza completamente o módulo do controlador no chassis até ser instruído a fazê-lo.
+
+. Recable o console para o módulo do controlador e, em seguida, reconete a porta de gerenciamento.
+. Repita as etapas anteriores se houver um segundo controlador a ser instalado no novo chassi.
+. Conclua a instalação do módulo do controlador:
++
+[cols="1,2"]
+|===
+| Se o seu sistema estiver em... | Em seguida, execute estas etapas... 
+
+
+ a| 
+Um par de HA
+ a| 
+.. Com a alavanca do came na posição aberta, empurre firmemente o módulo do controlador até que ele atenda ao plano médio e esteja totalmente assentado e, em seguida, feche a alavanca do came para a posição travada.
++
+
+CAUTION: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
+
+.. Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos.
+.. Prenda os cabos ao dispositivo de gerenciamento de cabos com o gancho e a alça de loop.
+.. Repita os passos anteriores para o segundo módulo do controlador no novo chassis.
+
+
+
+
+ a| 
+Uma configuração autônoma
+ a| 
+.. Com a alavanca do came na posição aberta, empurre firmemente o módulo do controlador até que ele atenda ao plano médio e esteja totalmente assentado e, em seguida, feche a alavanca do came para a posição travada.
++
+
+CAUTION: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
+
+.. Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos.
+.. Prenda os cabos ao dispositivo de gerenciamento de cabos com o gancho e a alça de loop.
+.. Reinstale o painel obturador e, em seguida, passe à próxima etapa.
+
+
+|===
+. Ligue as fontes de alimentação a diferentes fontes de alimentação e, em seguida, ligue-as.
+. Inicialize cada controlador para o modo de manutenção:
++
+.. À medida que cada controlador inicia o arranque, prima `Ctrl-C` para interromper o processo de arranque quando vir a mensagem `Press Ctrl-C for Boot Menu`.
++
+
+NOTE: Se você perder o prompt e os módulos do controlador iniciarem no ONTAP, digite `halt` e, em seguida, no prompt Loader ENTER `boot_ontap`, pressione `Ctrl-C` quando solicitado e, em seguida, repita esta etapa.
+
+.. No menu de arranque, selecione a opção para o modo de manutenção.
+
+
+

@@ -1,0 +1,415 @@
+---
+permalink: asa900/nvram_module_or_nvram_dimm_replacement.html 
+sidebar: sidebar 
+keywords:  
+summary: 'O módulo NVRAM consiste no NVRAM11 e DIMMs e até dois módulos flash Cache SSD NVMe (módulos flash Cache ou cache) por módulo NVRAM.' 
+---
+= Substitua o módulo NVRAM e os DIMMs NVRAM - ASA A900
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O módulo NVRAM consiste no NVRAM11 e DIMMs. Você pode substituir um módulo NVRAM com falha ou os DIMMs dentro do módulo NVRAM. Para substituir um módulo NVRAM com falha, você deve removê-lo do chassi, mover os DIMMs para o módulo de substituição e instalar o módulo NVRAM de substituição no chassi.
+
+Para substituir e DIMM NVRAM, você deve remover o módulo NVRAM do chassi, substituir o DIMM com falha no módulo e reinstalar o módulo NVRAM.
+
+.Sobre esta tarefa
+Uma vez que a ID do sistema é derivada do módulo NVRAM, se substituir o módulo, os discos pertencentes ao sistema são reatribuídos a uma nova ID do sistema.
+
+.Antes de começar
+* Todas as gavetas de disco devem estar funcionando corretamente.
+* Se o seu sistema estiver em um par de HA, a controladora do parceiro deverá poder assumir o controle associado ao módulo NVRAM que está sendo substituído.
+* Este procedimento utiliza a seguinte terminologia:
++
+** O controlador prejudicado é o controlador no qual você está realizando a manutenção.
+** O controlador de integridade é o parceiro de HA do controlador com deficiência.
+
+
+* Este procedimento inclui etapas para reatribuir automaticamente os discos ao módulo do controlador associado ao novo módulo NVRAM. Você deve reatribuir os discos quando direcionado para o procedimento. Concluir a reatribuição do disco antes da giveback pode causar problemas.
+* Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor.
+* Não é possível alterar nenhum disco ou compartimentos de disco como parte deste procedimento.
+
+
+
+
+== Passo 1: Desligue o controlador desativado
+
+Encerre ou assuma o controlador afetado utilizando uma das seguintes opções.
+
+[role="tabbed-block"]
+====
+.Opção 1: A maioria dos sistemas
+--
+Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
+
+.Sobre esta tarefa
+* Se você tiver um sistema SAN, você deve ter verificado mensagens de  `cluster kernel-service show`evento ) para o blade SCSI do controlador afetado. O `cluster kernel-service show` comando (do modo avançado priv) exibe o nome do nó, link:https://docs.netapp.com/us-en/ontap/system-admin/display-nodes-cluster-task.html["status do quorum"]desse nó, o status de disponibilidade desse nó e o status operacional desse nó.
++
+Cada processo SCSI-blade deve estar em quórum com os outros nós no cluster. Qualquer problema deve ser resolvido antes de prosseguir com a substituição.
+
+* Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
+
+
+.Passos
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
++
+A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas: `cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Desative a giveback automática a partir da consola do controlador saudável: `storage failover modify –node local -auto-giveback false`
++
+
+NOTE: Quando vir _do pretende desativar a auto-giveback?_, introduza `y`.
+
+. Leve o controlador prejudicado para o prompt Loader:
++
+[cols="1,2"]
+|===
+| Se o controlador afetado estiver a apresentar... | Então... 
+
+
+ a| 
+O prompt Loader
+ a| 
+Vá para a próxima etapa.
+
+
+
+ a| 
+A aguardar pela giveback...
+ a| 
+Pressione Ctrl-C e responda `y` quando solicitado.
+
+
+
+ a| 
+Prompt do sistema ou prompt de senha
+ a| 
+Assuma ou interrompa o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
+
+|===
+
+
+--
+.Opção 2: O controlador está em um MetroCluster
+--
+
+NOTE: Não use este procedimento se o sistema estiver em uma configuração de MetroCluster de dois nós.
+
+Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
+
+* Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
+* Se você tiver uma configuração MetroCluster, você deve ter confirmado que o estado de configuração do MetroCluster está configurado e que os nós estão em um estado ativado e normal (`metrocluster node show`).
+
+
+.Passos
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Desative a giveback automática a partir da consola do controlador saudável: `storage failover modify –node local -auto-giveback false`
+. Leve o controlador prejudicado para o prompt Loader:
++
+[cols="1,2"]
+|===
+| Se o controlador afetado estiver a apresentar... | Então... 
+
+
+ a| 
+O prompt Loader
+ a| 
+Vá para a próxima etapa.
+
+
+
+ a| 
+A aguardar pela giveback...
+ a| 
+Pressione Ctrl-C e responda `y` quando solicitado.
+
+
+
+ a| 
+Prompt do sistema ou prompt de senha (digite a senha do sistema)
+ a| 
+Assuma ou interrompa o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
+
+|===
+
+
+--
+====
+
+
+== Passo 2: Substitua o módulo NVRAM
+
+Para substituir o módulo NVRAM, localize-o na ranhura 6 no chassis e siga a sequência específica de passos.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Retire o módulo NVRAM alvo do chassis:
++
+.. Prima o botão de came com letras e numerados.
++
+O botão do came afasta-se do chassis.
+
+.. Rode o trinco da árvore de cames para baixo até estar na posição horizontal.
++
+O módulo NVRAM desengata-se do chassis e desloca-se para fora alguns centímetros.
+
+.. Retire o módulo NVRAM do chassis puxando as patilhas de puxar nas laterais da face do módulo.
++
+.Animação - substitua o módulo NVRAM
+video::6eb2d864-9d35-4a23-b6c2-adf9016b359f[panopto]
++
+image::../media/drw_a900_move-remove_NVRAM_module.png[Remova o módulo NVRAM]
+
+
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Trinco de came numerado e com letras
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Trinco do came completamente desbloqueado
+
+|===
+. Coloque o módulo NVRAM numa superfície estável e retire a tampa do módulo NVRAM, premindo o botão azul de bloqueio na tampa e, em seguida, mantendo premido o botão azul, deslize a tampa para fora do módulo NVRAM.
++
+image::../media/drw_a900_remove_NVRAM_module_contents.png[Remova o conteúdo do módulo NVRAM]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Botão de bloqueio da tampa
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Guias de ejetor DIMM e DIMM
+
+|===
+. Remova os DIMMs, um de cada vez, do módulo NVRAM antigo e instale-os no módulo NVRAM de substituição.
+. Feche a tampa do módulo.
+. Instale o módulo NVRAM de substituição no chassis:
++
+.. Alinhe o módulo com as extremidades da abertura do chassis na ranhura 6.
+.. Deslize cuidadosamente o módulo para dentro da ranhura até que o trinco do excêntrico numerado e com letras comece a engatar com o pino do excêntrico de e/S e, em seguida, empurre o trinco do excêntrico totalmente para cima para bloquear o módulo no devido lugar.
+
+
+
+
+
+
+== Etapa 3: Substitua um DIMM NVRAM
+
+Para substituir DIMMs NVRAM no módulo NVRAM, você deve remover o módulo NVRAM, abrir o módulo e, em seguida, substituir o DIMM de destino.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Retire o módulo NVRAM alvo do chassis:
++
+.. Prima o botão de came com letras e numerados.
++
+O botão do came afasta-se do chassis.
+
+.. Rode o trinco da árvore de cames para baixo até estar na posição horizontal.
++
+O módulo NVRAM desengata-se do chassis e desloca-se para fora alguns centímetros.
+
+.. Retire o módulo NVRAM do chassis puxando as patilhas de puxar nas laterais da face do módulo.
++
+.Animação - Substituir DIMM NVRAM
+video::0ae4e603-c22b-4930-8070-adf2000e38b5[panopto]
++
+image::../media/drw_a900_move-remove_NVRAM_module.png[Remova o módulo NVRAM]
+
+
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Trinco de came numerado e com letras
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+trinco do came completamente desbloqueado
+
+|===
+. Coloque o módulo NVRAM numa superfície estável e retire a tampa do módulo NVRAM, premindo o botão azul de bloqueio na tampa e, em seguida, mantendo premido o botão azul, deslize a tampa para fora do módulo NVRAM.
++
+image::../media/drw_a900_remove_NVRAM_module_contents.png[Remova o conteúdo do módulo NVRAM]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Botão de bloqueio da tampa
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Guias de ejetor DIMM e DIMM
+
+|===
+. Localize o DIMM a ser substituído dentro do módulo NVRAM e, em seguida, remova-o pressionando as abas de travamento do DIMM e levantando o DIMM para fora do soquete.
+. Instale o DIMM de substituição alinhando o DIMM com o soquete e empurrando cuidadosamente o DIMM para dentro do soquete até que as abas de travamento travem posição.
+. Feche a tampa do módulo.
+. Instale o módulo NVRAM no chassis:
++
+.. Alinhe o módulo com as extremidades da abertura do chassis na ranhura 6.
+.. Deslize cuidadosamente o módulo para dentro da ranhura até que o trinco do excêntrico numerado e com letras comece a engatar com o pino do excêntrico de e/S e, em seguida, empurre o trinco do excêntrico totalmente para cima para bloquear o módulo no devido lugar.
+
+
+
+
+
+
+== Passo 4: Reinicie o controlador
+
+Depois de substituir a FRU, você deve reiniciar o módulo do controlador.
+
+. Para inicializar o ONTAP a partir do prompt Loader, digite `bye`.
+
+
+
+
+== Etapa 5: Reatribuir discos
+
+Você deve confirmar a alteração do ID do sistema quando inicializar o controlador de substituição e, em seguida, verificar se a alteração foi implementada.
+
+
+CAUTION: A reatribuição de disco só é necessária quando substituir o módulo NVRAM e não se aplica à substituição do DIMM NVRAM.
+
+.Passos
+. Se o controlador de substituição estiver no modo de manutenção (mostrando o `*>` prompt), saia do modo de manutenção e vá para o prompt Loader: `halt`
+. A partir do prompt Loader no controlador de substituição, inicialize o controlador e insira y se for solicitado a substituir a ID do sistema devido a uma incompatibilidade de ID do sistema.
+. Aguarde até que a mensagem a aguardar pela giveback... seja apresentada na consola do controlador com o módulo de substituição e, em seguida, a partir do controlador de integridade, verifique se a nova ID do sistema do parceiro foi atribuída automaticamente: `storage failover show`
++
+Na saída do comando, você verá uma mensagem informando que a ID do sistema foi alterada no controlador prejudicado, mostrando as IDs antigas e novas corretas. No exemplo a seguir, o node2 foi substituído e tem um novo ID de sistema de 151759706.
+
++
+[listing]
+----
+node1:> storage failover show
+                                    Takeover
+Node              Partner           Possible     State Description
+------------      ------------      --------     -------------------------------------
+node1             node2             false        System ID changed on partner (Old:
+                                                  151759755, New: 151759706), In takeover
+node2             node1             -            Waiting for giveback (HA mailboxes)
+----
+. Devolver o controlador:
++
+.. A partir do controlador saudável, devolva o armazenamento do controlador substituído: `storage failover giveback -ofnode replacement_node_name`
++
+O controlador de substituição recupera seu armazenamento e completa a inicialização.
+
++
+Se você for solicitado a substituir a ID do sistema devido a uma incompatibilidade de ID do sistema, `y` digite .
+
++
+
+NOTE: Se o giveback for vetado, você pode considerar substituir os vetos.
+
++
+Para obter mais informações, consulte o https://docs.netapp.com/us-en/ontap/high-availability/ha_manual_giveback.html#if-giveback-is-interrupted["Comandos manuais de giveback"^] tópico para substituir o veto.
+
+.. Após a conclusão do giveback, confirme que o par de HA está saudável e que a aquisição é possível: `storage failover show`
++
+A saída do `storage failover show` comando não deve incluir a ID do sistema alterada na mensagem do parceiro.
+
+
+
+. Verifique se os discos foram atribuídos corretamente: `storage disk show -ownership`
++
+Os discos pertencentes ao controlador de substituição devem apresentar a nova ID do sistema. No exemplo a seguir, os discos de propriedade de node1 agora mostram o novo ID do sistema, 151759706:
+
++
+[listing]
+----
+node1:> storage disk show -ownership
+
+Disk  Aggregate Home  Owner  DR Home  Home ID    Owner ID  DR Home ID Reserver  Pool
+----- ------    ----- ------ -------- -------    -------    -------  ---------  ---
+1.0.0  aggr0_1  node1 node1  -        151759706  151759706  -       151759706 Pool0
+1.0.1  aggr0_1  node1 node1           151759706  151759706  -       151759706 Pool0
+.
+.
+.
+----
+. Se o sistema estiver em uma configuração MetroCluster, monitore o status do controlador: `metrocluster node show`
++
+A configuração do MetroCluster leva alguns minutos após a substituição para retornar a um estado normal, quando cada controlador mostrará um estado configurado, com espelhamento de DR ativado e um modo normal. O `metrocluster node show -fields node-systemid` comando output exibe o ID do sistema antigo até que a configuração do MetroCluster retorne a um estado normal.
+
+. Se o controlador estiver em uma configuração MetroCluster, dependendo do estado MetroCluster, verifique se o campo ID inicial do DR mostra o proprietário original do disco se o proprietário original for um controlador no local de desastre.
++
+Isso é necessário se ambos os seguintes itens forem verdadeiros:
+
++
+** A configuração do MetroCluster está em um estado de switchover.
+** O controlador de substituição é o proprietário atual dos discos no local de desastre.
++
+Consulte https://docs.netapp.com/us-en/ontap-metrocluster/manage/concept_understanding_mcc_data_protection_and_disaster_recovery.html#disk-ownership-changes-during-ha-takeover-and-metrocluster-switchover-in-a-four-node-metrocluster-configuration["Alterações na propriedade do disco durante o takeover de HA e o switchover do MetroCluster em uma configuração de MetroCluster de quatro nós"] para obter mais informações.
+
+
+
+. Se o sistema estiver em uma configuração do MetroCluster, verifique se cada controlador está configurado: `metrocluster node show - fields configuration-state`
++
+[listing]
+----
+node1_siteA::> metrocluster node show -fields configuration-state
+
+dr-group-id            cluster node           configuration-state
+-----------            ---------------------- -------------- -------------------
+1 node1_siteA          node1mcc-001           configured
+1 node1_siteA          node1mcc-002           configured
+1 node1_siteB          node1mcc-003           configured
+1 node1_siteB          node1mcc-004           configured
+
+4 entries were displayed.
+----
+. Verifique se os volumes esperados estão presentes para cada controlador: `vol show -node node-name`
+. Se a encriptação de armazenamento estiver ativada, tem de restaurar a funcionalidade.
+. Se você desativou o controle automático na reinicialização, ative-o a partir do controlador íntegro: `storage failover modify -node replacement-node-name -onreboot true`
+
+
+
+
+== Passo 6: Devolva a peça com falha ao NetApp
+
+Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

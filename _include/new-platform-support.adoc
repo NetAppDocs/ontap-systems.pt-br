@@ -1,0 +1,214 @@
+= 
+:allow-uri-read: 
+
+
+[cols="2*"]
+|===
+| Plataformas | Disponível a partir do início 
+
+
+ a| 
+https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["Sistemas ASA R2"]
+
+* ASA A1K
+* ASA A70
+* ASA A90
+
+ a| 
+ONTAP 9.16,0
+
+
+
+ a| 
+https://www.netapp.com/data-storage/fas/["FAS70 e FAS90"]
+ a| 
+ONTAP 9.15,1
+
+
+
+ a| 
+* https://www.netapp.com/pdf.html?item=/media/7828-DS-3582-AFF-A-Series.pdf["AFF A1K"]
+* https://www.netapp.com/pdf.html?item=/media/7828-DS-3582-AFF-A-Series.pdf["AFF A70"]
+* https://www.netapp.com/pdf.html?item=/media/7828-DS-3582-AFF-A-Series.pdf["AFF A90"]
+
+ a| 
+ONTAP 9.15,1
+
+
+
+ a| 
+https://www.netapp.com/data-storage/all-flash-san-storage-array/["ASA C250"]
+ a| 
+ONTAP 9.13.1P1
+
+
+
+ a| 
+https://www.netapp.com/data-storage/all-flash-san-storage-array/["ASA C400"]
+ a| 
+ONTAP 9.13.1P1
+
+
+
+ a| 
+https://www.netapp.com/data-storage/all-flash-san-storage-array/["ASA C800"]
+ a| 
+ONTAP 9.13.1P1
+
+
+
+ a| 
+https://hwu.netapp.com/ProductSpecs/Index["FAS2820"]
+ a| 
+ONTAP 9.13,1
+
+
+
+ a| 
+https://www.netapp.com/pdf.html?item=/media/85736-DS-4254-NetApp-ASA.pdf["ASA A150"]
+ a| 
+ONTAP 9.13,1
+
+
+
+ a| 
+https://www.netapp.com/pdf.html?item=/media/85736-DS-4254-NetApp-ASA.pdf["ASA A250"]
+ a| 
+ONTAP 9.13,1
+
+
+
+ a| 
+https://www.netapp.com/pdf.html?item=/media/85736-DS-4254-NetApp-ASA.pdf["ASA A400"]
+ a| 
+ONTAP 9.13,1
+
+
+
+ a| 
+https://www.netapp.com/pdf.html?item=/media/85736-DS-4254-NetApp-ASA.pdf["ASA A900"]
+ a| 
+ONTAP 9.13,1
+
+
+
+ a| 
+* https://www.netapp.com/media/81583-da-4240-aff-c-series.pdf["AFF C250"]
+* https://www.netapp.com/media/81583-da-4240-aff-c-series.pdf["AFF C400"]
+* https://www.netapp.com/media/81583-da-4240-aff-c-series.pdf["AFF C800"]
+
+ a| 
+ONTAP 9.12.1P1
+
+ONTAP 9.13,1 GA e versões posteriores do ONTAP
+
+[NOTE]
+====
+Essas plataformas não são suportadas com o ONTAP 9.13,1 RC1.
+
+====
+
+
+ a| 
+https://www.netapp.com/pdf.html?item=/media/7828-DS-3582-AFF-A-Series.pdf["AFF A150"]
+
+[NOTE]
+====
+Não tente instalar ou inicializar o sistema de storage AFF A150 com uma versão não suportada do ONTAP. Se você tentar instalar ou inicializar seu sistema com uma versão não suportada do ONTAP, o ONTAP permitirá isso (o ONTAP não bloqueará a tentativa). A consequência é que o seu sistema de armazenamento AFF A150 será criado como um sistema de armazenamento FAS2750.
+
+==== a| 
+ONTAP 9.13,1 e versões posteriores do ONTAP
+
+ONTAP 9.12.1P1
+
+ONTAP 9.11.1P8
+
+ONTAP 9.10.1P12
+
+
+
+ a| 
+https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["FAS9500"]
+ a| 
+ONTAP 9.11,1
+
+ONTAP 9.10.1P3
+
+
+
+ a| 
+https://www.netapp.com/pdf.html?item=/media/7828-ds-3582.pdf["AFF A900"]
+ a| 
+ONTAP 9.10,1
+
+
+
+ a| 
+https://www.netapp.com/pdf.html?item=/media/7828-ds-3582.pdf["AFF A250/AFF ASA A250"]
+ a| 
+ONTAP 9,8
+
+
+
+ a| 
+https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["FAS500f"]
+ a| 
+ONTAP 9,8
+
+
+
+ a| 
+https://www.netapp.com/pdf.html?item=/media/7828-ds-3582.pdf["AFF ASA A800"]
+ a| 
+ONTAP 9,8
+
+
+
+ a| 
+https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["FAS8300"]
+ a| 
+ONTAP 9,7
+
+
+
+ a| 
+https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["FAS8700"]
+ a| 
+ONTAP 9,7
+
+
+
+ a| 
+https://www.netapp.com/pdf.html?item=/media/7828-ds-3582.pdf["AFF A400"]
+ a| 
+ONTAP 9,7
+
+
+
+ a| 
+https://www.netapp.com/pdf.html?item=/media/17190-na-382.pdf["AFF ASA A220"]
+ a| 
+ONTAP 9,7
+
+
+
+ a| 
+https://www.netapp.com/pdf.html?item=/media/7828-ds-3582.pdf["AFF ASA A700"]
+ a| 
+ONTAP 9,7
+
+
+
+ a| 
+https://www.netapp.com/pdf.html?item=/media/7623-ds-3989.pdf["AFF C190"^]
+ a| 
+ONTAP 9,6
+
+
+
+ a| 
+https://www.netapp.com/pdf.html?item=/media/17190-na-382.pdf["AFF A320"]
+ a| 
+ONTAP 9,6
+
+|===

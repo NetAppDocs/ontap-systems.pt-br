@@ -1,0 +1,77 @@
+---
+section: asa250
+title: Sistemas ASA A250
+entries:
+- title: Instalar e configurar
+  pdf-filename: Instalação e configuração do ASA A250
+  entries:
+  - title: Escolha a experiência de instalação e configuração
+    url: "/asa250/install-setup.html"
+  - title: Passos rápidos
+    url: "/asa250/install-quick-guide.html"
+  - title: Passos de vídeo
+    url: "/asa250/install-videos.html"
+  - title: Passos detalhados
+    url: "/asa250/install-detailed-guide.html"
+- title: Manutenção
+  pdf-filename: Manutenção da ASA A250
+  entries:
+  - title: Visão geral
+    url: "/asa250/maintain-overview.html"
+  - title: Suporte de arranque
+    pdf-filename: Mídia de inicialização do ASA A250
+    entries:
+    - title: Visão geral
+      url: "/asa250/bootmedia-replace-overview.html"
+    - title: Verifique as chaves de criptografia integradas
+      url: "/asa250/bootmedia-encryption-preshutdown-checks.html"
+    - title: Desligue o controlador desativado
+      url: "/asa250/bootmedia-shutdown.html"
+    - title: Substitua o suporte de arranque
+      url: "/asa250/bootmedia-replace.html"
+    - title: Imagem de recuperação de inicialização
+      url: "/asa250/bootmedia-recovery-image-boot-non-2n-mcc.html"
+    - title: Restaure OKM, NSE e NVE
+      url: "/asa250/bootmedia-encryption-restore.html"
+    - title: Devolver artigo com falha ao NetApp
+      url: "/asa250/bootmedia-complete-rma.html"
+  - title: Chassis
+    pdf-filename: Chassis ASA A250
+    entries:
+    - title: Visão geral
+      url: "/asa250/chassis-replace-overview.html"
+    - title: Desligue o controlador desativado
+      url: "/asa250/chassis-replace-shutdown.html"
+    - title: Substitua o chassi
+      url: "/asa250/chassis-replace-move-hardware.html"
+    - title: Substituição completa do chassis
+      url: "/asa250/chassis-replace-complete-system-restore-rma.html"
+  - title: Controlador
+    pdf-filename: Módulo do controlador ASA A250
+    entries:
+    - title: Visão geral
+      url: "/asa250/controller-replace-overview.html"
+    - title: Desligue o controlador desativado
+      url: "/asa250/controller-replace-shutdown.html"
+    - title: Substitua o controlador
+      url: "/asa250/controller-replace-move-hardware.html"
+    - title: Restaure a configuração do sistema
+      url: "/asa250/controller-replace-system-config-restore-and-verify.html"
+    - title: Sistema Recable
+      url: "/asa250/controller-replace-recable-reassign-disks.html"
+    - title: Restauração completa do sistema
+      url: "/asa250/controller-replace-restore-system-rma.html"
+  - title: DIMM
+    url: "/asa250/dimm-replace.html"
+  - title: Condução
+    url: "/asa250/drive-replace.html"
+  - title: Ventoinha
+    url: "/asa250/fan-replace.html"
+  - title: Placa mezzanine
+    url: "/asa250/mezzanine-replace.html"
+  - title: Bateria NVMEM
+    url: "/asa250/nvmem-nvram-battery-replace.html"
+  - title: Fonte de alimentação
+    url: "/asa250/power-supply-replace.html"
+  - title: Bateria de relógio em tempo real
+    url: "/asa250/rtc-battery-replace.html"

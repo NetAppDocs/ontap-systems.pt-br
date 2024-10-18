@@ -1,0 +1,26 @@
+---
+permalink: asa150/install-videos.html 
+sidebar: sidebar 
+keywords: asa a150, a150, asa, asa a220, video, rack, cable, system, manager, guided, setup, configuration 
+summary: 'Há dois vídeos: Um mostrando como montar e fazer o cabeamento do sistema e outro mostrando um exemplo de como usar a Configuração Guiada do System Manager para executar a configuração inicial do sistema.' 
+---
+= Passos de vídeo - ASA A150
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Use os vídeos a seguir para saber como montar e fazer o cabeamento do sistema e executar a configuração inicial do sistema.
+
+Se você tiver uma configuração do MetroCluster, use o https://docs.netapp.com/us-en/ontap-metrocluster/index.html["Documentação do MetroCluster"^].
+
+*Aviso:* se o seu sistema estiver sendo instalado com o ONTAP 9.13.1P8 - 9.13.1P11, ONTAP 9.14.1P1 - 9.14.1P7 ou ONTAP 9.15,1 - 9.15.1P2 e o seu sistema contiver 10 ou mais unidades de estado sólido internas, você deve tomar medidas adicionais para preparar o sistema para a instalação. Consulte problema  https://mysupport.netapp.com/site/bugs-online/product/ONTAP/JiraNgage/CONTAP-285173["CONTAP-285173 - ADP não deixa uma partição raiz sobressalente em um AFF A150 com 10 ou mais unidades internas"^].
+
+Instalação de hardware e cabeamento:: O vídeo a seguir mostra como instalar e fazer o cabo do sistema.
+
+
+.Animação - Instalação e configuração de um AFF A150
+video::561d941a-f387-4eb9-a10a-afb30029eb36[panopto]
+
+NOTE: O ASA A150 utiliza o mesmo procedimento de instalação que o sistema AFF A150.

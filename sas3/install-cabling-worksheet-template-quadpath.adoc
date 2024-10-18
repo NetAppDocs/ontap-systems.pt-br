@@ -1,0 +1,80 @@
+---
+permalink: sas3/install-cabling-worksheet-template-quadpath.html 
+sidebar: sidebar 
+keywords: complete, completing, worksheet, template, controller, sas, port, pair, cable, controller, disk, shelves, shelf, iom12, quad-pathed, connectivity, ha, pair, controller-to-stack, controller-to-stack cabling worksheet template for quad-pathed connectivity 
+summary: Ao concluir o modelo de Planilha, você pode definir os pares de portas SAS do controlador que você pode usar para enviar controladores a pilhas de compartimentos de disco com módulos IOM12/IOM12B para obter conetividade quad-pathed em um par de HA ou configuração de controladora única. Você também pode usar a Planilha completa para percorrer o cabeamento das conexões quad-pathed para sua configuração. 
+---
+= Modelo de folha de cálculo de cabeamento de controlador para stack para conetividade quad-pathed - compartimentos com módulos IOM1/IOM12B2
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ao concluir o modelo de Planilha, você pode definir os pares de portas SAS do controlador que você pode usar para enviar controladores a pilhas de compartimentos de disco com módulos IOM12/IOM12B para obter conetividade quad-pathed em um par de HA ou configuração de controladora única. Você também pode usar a Planilha completa para percorrer o cabeamento das conexões quad-pathed para sua configuração.
+
+.Sobre sua tarefa
+* Este procedimento e modelo de folha de cálculo é aplicável à conetividade de quatro vias de cabeamento para uma configuração de HA ou quatro vias com uma ou mais pilhas.
++
+Exemplos de planilhas concluídas são fornecidos para configurações de HA e quad-path.
+
++
+Uma configuração com dois HBAs SAS de quatro portas e duas pilhas de compartimentos de disco com módulos IOM12/IOM12B é usada para os exemplos de Planilha.
+
+* O modelo de Planilha permite até duas pilhas; você precisa adicionar mais colunas, se necessário.
+* A conetividade de quatro vias para conexões de controlador para pilha consiste em dois conjuntos de cabeamento multipathed: O primeiro conjunto de cabeamento é chamado de ""caminhos"; o segundo conjunto de cabeamento é chamado de "caminhos quádruplos".
++
+O segundo conjunto de cabeamento é chamado de "quad-pathed" porque a conclusão desse conjunto de cabeamento dá a você a conetividade quad-pathed de um controlador para uma stack em um par de HA ou configuração de controladora única.
+
+* As portas IOM 1 e 3 da gaveta de disco são sempre usadas para cabeamento multipathed e as portas IOM 2 e 4 são sempre usadas para cabeamento de quatro vias, conforme designado pelos cabeçalhos das colunas da Planilha.
+* Nos exemplos de Planilha, os pares de portas são designados para cabeamento multipathed ou cabeamento quad pathed para a pilha aplicável.
++
+Cada par de portas designado para cabeamento multipathed é circundado por um oval que é a cor associada à pilha para a qual é cabeado. Cada par de portas designado para o cabeamento de caminhos quádruplos é circundado por um retângulo que é a cor associada à pilha para a qual é cabeado. A pilha 1 está associada à cor azul; a pilha 2 está associada à cor laranja.
+
+* Se necessário, consulte a link:install-cabling-rules.html["Regras e conceitos de cabeamento de SAS"] para obter informações sobre a convenção de numeração de slots do controlador, a conetividade de prateleira a prateleira e a conectividade de controlador a prateleira (incluindo o uso de pares de portas).
+* Se necessário, depois de concluir a folha de trabalho, pode consultar link:install-cabling-worksheets-how-to-read-quadpath.html["Como ler uma Planilha para conexões de controlador para pilha de cabo para conetividade quad-pathed"]o .
+
+
+image::../media/drw_worksheet_quad_pathed_template_nau.gif[Modelo de folha de cálculo de cabeamento de quatro caminhos]
+
+.Passos
+. Nas caixas acima das caixas cinza, liste todas as portas SAS A no sistema e, em seguida, todas as portas SAS C no sistema em sequência de slots (0, 1, 2, 3, etc.).
++
+Por exemplo: 1A, 2a, 1c, 2c
+
+. Nas caixas cinza, liste todas as portas SAS B no sistema e, em seguida, todas as portas SAS D no sistema em sequência de slots (0, 1, 2, 3 e assim por diante).
++
+Por exemplo: 1B, 2b, 1D, 2D
+
+. Nas caixas abaixo das caixas cinza, reescreva a lista de portas D e B para que a primeira porta da lista seja movida para o final da lista.
++
+Por exemplo: 2B, 1D, 2D, 1b
+
+. Identifique os dois conjuntos de pares de portas para se conetar à pilha 1 desenhando um oval em torno do primeiro conjunto de pares de portas e um retângulo em torno do segundo conjunto de pares de portas.
++
+Ambos os conjuntos de cabeamento são necessários para obter conetividade quad-pathed de cada controlador para empilhar 1 em seu par de HA ou configuração de controladora única.
+
++
+O exemplo a seguir usa o par de portas 1a/2b para o cabeamento multipathed e o par de portas 2a/1D para o cabeamento quad pathed para empilhar 1.
+
++
+image::../media/drw_worksheet_qpha_slots_1_and_2_two_4porthbas_two_stacks_set1_circled_nau.gif[Planilha de cabeamento de HA de quatro caminhos que mostra os pares de portas conetados à stack 1]
+
+. Identifique os dois conjuntos de pares de portas para se conetar à pilha 2 desenhando um oval em torno do primeiro conjunto de pares de portas e um retângulo em torno do segundo conjunto de pares de portas.
++
+Ambos os conjuntos de cabeamento são necessários para obter conetividade quad-pathed de cada controlador para empilhar 1 em seu par de HA ou configuração de controladora única.
+
++
+O exemplo a seguir usa o par de portas 1c/2D para o cabeamento multipathed e o par de portas 2c/1b para o cabeamento quad pathed para empilhar 2.
+
++
+image::../media/drw_worksheet_qpha_slots_1_and_2_two_4porthbas_two_stacks_nau.gif[Planilha de cabeamento de HA de quatro caminhos que mostra os pares de portas conetados à stack 2]
+
+. Se você tiver uma configuração de caminho quádruplo (controlador único), cruze as informações do controlador 2; você só precisa de informações do controlador 1 para fazer o cabeamento das conexões controlador para pilha.
++
+O exemplo a seguir mostra que as informações do controlador 2 estão riscadas.
+
++
+image::../media/drw_worksheet_qp_slots_1_and_2_two_4porthbas_two_stacks_nau.gif[Folha de cálculo de cabeamento de controladora única de caminho quádruplo que mostra os pares de portas conetados à stack 1 e 2]
+
+

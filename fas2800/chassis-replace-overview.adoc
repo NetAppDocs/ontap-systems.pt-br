@@ -1,0 +1,21 @@
+---
+permalink: fas2800/chassis-replace-overview.html 
+sidebar: sidebar 
+keywords: fas2800, replace, chassis, shut down, controller, metrocluster, power, supply, ha, state, controller, configuration, switch, aggregates, replace, move, remove, swap 
+summary: Substituir um chassis com deficiência o novo chassis do mesmo modelo que o chassis com deficiência. 
+---
+= Descrição geral da substituição do chassis - FAS2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para substituir o chassi, você deve mover as fontes de alimentação, os discos rígidos e o módulo ou módulos do controlador do chassi com deficiência para o novo chassi e trocar o chassi com deficiência do rack de equipamentos ou do gabinete do sistema pelo novo chassi do mesmo modelo que o chassi com deficiência.
+
+Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+
+* Pode utilizar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema.
+* Este procedimento é escrito com a suposição de que você está movendo todas as unidades e módulos de controladora ou módulos para o novo chassi e que o chassi é um novo componente da NetApp.
+* Este procedimento é disruptivo. Para um cluster de duas controladoras, você terá uma interrupção de serviço completa e uma interrupção parcial em um cluster de vários nós.
+

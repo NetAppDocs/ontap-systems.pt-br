@@ -1,0 +1,71 @@
+---
+permalink: asa900/chassis_replace_complete_system_restore_rma.html 
+sidebar: sidebar 
+keywords: ASA a900, verify and set HA state, complete the replacement process 
+summary: Você deve verificar o estado de HA do chassi e devolver a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. 
+---
+= Restaure e verifique a configuração - ASA A900
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para concluir a substituição do chassis, tem de concluir tarefas específicas.
+
+
+
+== Etapa 1: Verifique e defina o estado HA do chassi
+
+Você deve verificar o estado de HA do chassi e, se necessário, atualizar o estado para corresponder à configuração do sistema.
+
+. No modo de manutenção, a partir de qualquer um dos módulos do controlador, apresentar o estado HA do módulo do controlador local e do chassis: `ha-config show`
++
+O estado HA deve ser o mesmo para todos os componentes.
+
+. Se o estado do sistema apresentado para o chassis não corresponder à configuração do sistema:
++
+.. Defina o estado HA para o chassis: `ha-config modify chassis _ha-state_`
++
+O valor para HA-State pode ser um dos seguintes:
+
++
+*** ha
+*** não ha
+
+
+
+
+. Confirme se a definição foi alterada: `ha-config show`
+. Se você ainda não o fez, recable o resto de seu sistema.
+
+
+
+
+== Passo 2: Abra o sistema
+
+. Se você não tiver feito isso, conete os cabos de alimentação de volta às PSUs.
+. Ligue as PSUs alternando o botão BASCULANTE para *ON* e aguarde até que os controladores se liguem completamente.
+. Verifique a parte dianteira e traseira do chassis e dos controladores quanto a quaisquer luzes de avaria após o arranque.
+. Conete-se ao endereço IP SP ou BMC dos nós via SSH. Esse será o mesmo endereço usado para encerrar os nós.
+. Execute verificações de integridade adicionais conforme descrito em https://kb.netapp.com/onprem/ontap/os/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["How_to_Perform_a_cluster_health_check_with_a_script_in_ONTAP"^]
+. Ligue novamente o AutoSupport (termine a mensagem da janela de manutenção):
+`system node autosupport invoke -node * -type all -message MAINT=end`
+
+
+[]
+====
+
+NOTE: Como prática recomendada, você deve fazer o seguinte:
+
+* Resolver qualquer https://activeiq.netapp.com/["Alertas e riscos de bem-estar do Active IQ"^] um (o Active IQ levará tempo para processar o suporte automático pós-ativação - esperar um atraso nos resultados)
+* Executar https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]
+* Verifique o estado do sistema utilizando https://kb.netapp.com/onprem/ontap/os/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["How_to_Perform_a_cluster_health_check_with_a_script_in_ONTAP"^]
+
+
+====
+
+
+== Passo 3: Devolva a peça com falha ao NetApp
+
+Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.
