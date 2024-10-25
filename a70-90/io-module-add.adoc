@@ -186,7 +186,6 @@ NOTE: Isso reinicializa as placas PCIe e outros componentes e reinicializa o nó
 . Repita estes passos para o controlador B.
 . Restaure o giveback automático se você o desativou usando o `storage failover modify -node local -auto-giveback true` comando.
 . Se o AutoSupport estiver ativado, restaure/dessuprimir a criação automática de casos usando o `system node autosupport invoke -node * -type all -message MAINT=END` comando.
-. Se você instalou um módulo de e/S de storage, instale e faça o cabeamento das NS224 gavetas, conforme descrito em link:../ns224/hot-add-shelf-overview.html["Fluxo de trabalho de adição automática"].
 
 
 
@@ -212,7 +211,7 @@ Os LIFs migrarão automaticamente quando seu módulo de controlador for desligad
  a| 
 Módulo de e/S NIC com menos portas
  a| 
-Reatribua permanentemente os LIFs ASAected para uma porta inicial diferente. Consulte https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["Migração de um LIF"^] para obter informações sobre como usar o System Manager para mover permanentemente os LIFs.
+Reatribua permanentemente os LIFs afetados a uma porta inicial diferente. Consulte https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["Migração de um LIF"^] para obter informações sobre como usar o System Manager para mover permanentemente os LIFs.
 
 
 

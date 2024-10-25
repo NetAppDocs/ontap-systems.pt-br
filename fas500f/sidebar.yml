@@ -23,7 +23,7 @@ entries:
     entries:
     - title: Visão geral
       url: "/fas500f/bootmedia-replace-overview.html"
-    - title: Verifique as chaves de criptografia integradas
+    - title: Verifique as chaves de criptografia
       url: "/fas500f/bootmedia-encryption-preshutdown-checks.html"
     - title: Encerre o nó
       url: "/fas500f/bootmedia-shutdown.html"
@@ -31,7 +31,7 @@ entries:
       url: "/fas500f/bootmedia-replace.html"
     - title: Imagem de recuperação de inicialização
       url: "/fas500f/bootmedia-recovery-image-boot-non-2n-mcc.html"
-    - title: Restaure OKM, NSE e NVE
+    - title: Restaure a criptografia
       url: "/fas500f/bootmedia-encryption-restore.html"
     - title: Devolver artigo com falha ao NetApp
       url: "/fas500f/bootmedia-complete-rma.html"

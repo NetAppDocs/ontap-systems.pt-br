@@ -4,169 +4,191 @@ sidebar: sidebar
 keywords: fas500f, check onboard encryption keys as needed 
 summary: Antes de desligar o controlador com deficiência e verificar o estado das chaves de encriptação integradas, tem de verificar o estado do controlador com deficiência, desativar a giveback automática e verificar a versão do ONTAP em execução. 
 ---
-= Verifique as chaves de criptografia integradas - FAS500f
+= Verifique o suporte e o status da chave de criptografia - FAS500f
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Antes de desligar o controlador com deficiência e verificar o estado das chaves de encriptação integradas, tem de verificar o estado do controlador com deficiência, desativar a giveback automática e verificar a versão do ONTAP em execução.
+Antes de desligar o controlador desativado, verifique se a sua versão do ONTAP suporta encriptação de volume NetApp (NVE) e se o sistema de gestão de chaves está corretamente configurado.
 
-Antes de desligar o controlador com deficiência e verificar o estado das chaves de encriptação integradas, tem de verificar o estado do controlador com deficiência, desativar a giveback automática e verificar qual a versão do ONTAP que está a ser executada no sistema.
 
-Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro mostrar falso quanto à qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; consulte o link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^].
 
-.Passos
-. Verifique o estado do controlador afetado:
+== Passo 1: Verifique se a sua versão do ONTAP suporta encriptação de volume NetApp
+
+Verifique se sua versão do ONTAP suporta criptografia de volume NetApp (NVE). Esta informação é crucial para transferir a imagem ONTAP correta.
+
+. Determine se sua versão do ONTAP suporta criptografia executando o seguinte comando:
 +
-** Se o controlador prejudicado estiver no prompt de login, faça login como `admin`.
-** Se o controlador afetado estiver no prompt DO Loader e fizer parte da configuração do HA, faça login como `admin` no controlador íntegro.
-** Se o controlador prejudicado estiver em uma configuração autônoma e no prompt DO Loader, entre em Contato link:http://mysupport.netapp.com/["mysupport.NetApp.com"^]com .
-
-
-. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
-+
-A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
-
-. Verifique a versão do ONTAP que o sistema está sendo executado no controlador com deficiência se estiver em cima ou no controlador parceiro se o controlador com deficiência estiver inativo, usando o `version -v` comando:
-+
-** Se <lno-DARE> ou 1Ono-DARE> for exibido na saída do comando, o sistema não suporta NVE, prossiga para desligar o controlador.
-** Se o <lno-DARE> não for exibido na saída do comando e o sistema estiver executando o ONTAP 9.6 ou posterior, vá para a próxima seção.
-
-
-. Se o controlador afetado fizer parte de uma configuração de HA, desative a funcionalidade automática giveback do controlador saudável: `storage failover modify -node local -auto-giveback false` Ou `storage failover modify -node local -auto-giveback-after-panic false`
-
-
-
-
-== Verifique o NVE ou o NSE em sistemas que executam o ONTAP 9.6 e posterior
-
-Antes de desligar a controladora prejudicada, você precisa verificar se o sistema tem a criptografia de volume NetApp (NVE) ou a criptografia de armazenamento NetApp (NSE) ativada. Se sim, você precisa verificar a configuração.
-
-. Verifique se o NVE está em uso para quaisquer volumes no cluster: `volume show -is-encrypted true`
-+
-Se algum volume estiver listado na saída, o NVE será configurado e você precisará verificar a configuração do NVE. Se nenhum volume estiver listado, verifique se o NSE está configurado e em uso.
-
-. Verifique se o NSE está configurado e em uso: `storage encryption disk show`
-+
-** Se o comando OUTPUT listar os detalhes da unidade com informações de ID de modo e chave, o NSE está configurado e você precisa verificar a configuração do NSE e em uso.
-** Se não forem apresentados discos, o NSE não está configurado.
-** Se o NVE e o NSE não estiverem configurados, nenhuma unidade será protegida com chaves NSE, é seguro desligar o controlador desativado.
-
-
-
-
-
-
-== Verifique a configuração do NVE
-
-. Exibir as IDs de chave das chaves de autenticação armazenadas nos servidores de gerenciamento de chaves: `security key-manager key query`
-+
-
-NOTE: Após o lançamento do ONTAP 9.6, você pode ter tipos adicionais de gerenciador de chaves. Os tipos são `KMIP`, `AKV` e `GCP`. O processo para confirmar esses tipos é o mesmo que os tipos de confirmação `external` ou `onboard` gerenciador de chaves.
+`version -v`
 
 +
-** Se o `Key Manager` tipo for exibido `external` e a `Restored` coluna for exibida `yes`, é seguro desligar o controlador prejudicado.
-** Se o `Key Manager` tipo for exibido `onboard` e a `Restored` coluna for exibida `yes`, você precisará concluir algumas etapas adicionais.
-** Se o `Key Manager` tipo for exibido `external` e a `Restored` coluna exibir qualquer outra coisa que não `yes`o , você precisará concluir algumas etapas adicionais.
-** Se o `Key Manager` tipo for exibido `onboard` e a `Restored` coluna exibir qualquer outra coisa que não `yes`o , você precisará concluir algumas etapas adicionais.
+Se a saída incluir `1Ono-DARE`, o NVE não é suportado na versão do cluster.
 
-
-. Se o `Key Manager` tipo for exibido `onboard` e a `Restored` coluna for exibida `yes`, faça backup manual das informações OKM:
+. Dependendo se o NVE é compatível com o seu sistema, execute uma das seguintes ações:
 +
-.. Vá para o modo de privilégio avançado e entre `y` quando solicitado a continuar: `set -priv advanced`
-.. Digite o comando para exibir as informações de gerenciamento de chaves: `security key-manager onboard show-backup`
-.. Copie o conteúdo das informações de backup para um arquivo separado ou seu arquivo de log. Você vai precisar dele em cenários de desastre onde você pode precisar recuperar manualmente OKM.
-.. Voltar ao modo de administração: `set -priv admin`
-.. Desligue o controlador desativado.
+** Se for suportado NVE, transfira a imagem ONTAP com encriptação de volume NetApp.
+** Se a NVE não for suportada, transfira a imagem ONTAP *sem* encriptação de volume NetApp.
 
 
-. Se o `Key Manager` tipo for exibido `external` e a `Restored` coluna exibir algo diferente `yes`de :
+
+
+
+
+== Passo 2: Determine se é seguro desligar o controlador
+
+Para desligar um controlador com segurança, primeiro identifique se o External Key Manager (EKM) ou o Onboard Key Manager (OKM) está ativo. Em seguida, verifique o gerenciador de chaves em uso, exiba as informações de chave apropriadas e tome medidas com base no status das chaves de autenticação.
+
+. Determine qual gerenciador de chaves está habilitado em seu sistema:
 +
-.. Restaure as chaves de autenticação de gerenciamento de chaves externas para todos os nós no cluster: `security key-manager external restore`
+[cols="1a,2a"]
+|===
+| Versão de ONTAP | Execute este comando 
+
+
+ a| 
+ONTAP 9.14,1 ou posterior
+ a| 
+`security key-manager keystore show`
+
+** Se EKM estiver ativado, `EKM` é listado na saída do comando.
+** Se OKM estiver ativado, `OKM` o será listado na saída do comando.
+** Se nenhum gerenciador de chaves estiver habilitado, `No key manager keystores configured` o será listado na saída do comando.
+
+
+
+
+ a| 
+ONTAP 9.13,1 ou anterior
+ a| 
+`security key-manager show-key-store`
+
+** Se EKM estiver ativado, `external` é listado na saída do comando.
+** Se OKM estiver ativado, `onboard` o será listado na saída do comando.
+** Se nenhum gerenciador de chaves estiver habilitado, `No key managers configured` o será listado na saída do comando.
+
+
+|===
+. Dependendo se um gerenciador de chaves está configurado no sistema, selecione uma das opções a seguir.
 +
-Se o comando falhar, entre em Contato com o suporte da NetApp.
+[role="tabbed-block"]
+====
+.Nenhum gerenciador de chaves configurado
+--
+Pode desligar o controlador com segurança. Vá para link:bootmedia-shutdown.html["desligue o controlador desativado"].
+
+--
+.Gestor de chaves externo ou integrado configurado
+--
+.. Digite o seguinte comando de consulta para exibir o status das chaves de autenticação no gerenciador de chaves.
++
+`security key-manager key query`
+
+.. Verifique a saída para o valor na `Restored` coluna do seu gerenciador de chaves.
++
+Esta coluna indica se as chaves de autenticação do seu gerenciador de chaves (EKM ou OKM) foram restauradas com êxito.
+
+
+
+--
+====
+
+
+. Dependendo se o sistema estiver usando o Gerenciador de chaves Externo ou o Gerenciador de chaves integrado, selecione uma das opções a seguir.
++
+[role="tabbed-block"]
+====
+.Gerenciador de chaves externo
+--
+Dependendo do valor de saída exibido na `Restored` coluna, siga as etapas apropriadas.
+
+[cols="1a,2a"]
+|===
+| Valor de saída `Restored` na coluna | Siga estes passos... 
+
+
+ a| 
+`true`
+ a| 
+Pode desligar o controlador com segurança. Vá para link:bootmedia-shutdown.html["desligue o controlador desativado"].
+
+
+
+ a| 
+Qualquer outra coisa que não `true`
+ a| 
+.. Restaure as chaves de autenticação de gerenciamento de chaves externas para todos os nós no cluster usando o seguinte comando:
++
+`security key-manager external restore`
 
 +
-http://mysupport.netapp.com/["mysupport.NetApp.com"^]
+Se o comando falhar, contactar http://mysupport.netapp.com/["Suporte à NetApp"^].
 
-.. Verifique se a `Restored` coluna é igual a `yes` todas as chaves de autenticação: `security key-manager key query`
-.. Desligue o controlador desativado.
-
-
-. Se o `Key Manager` tipo for exibido `onboard` e a `Restored` coluna exibir algo diferente `yes`de :
+.. Verifique se a `Restored` coluna é exibida `true` para todas as chaves de autenticação inserindo o  `security key-manager key query` comando.
 +
-.. Digite o comando Onboard security key-manager sync: `security key-manager onboard sync`
+Se todas as chaves de autenticação forem `true`, pode desligar o controlador com segurança. Vá para link:bootmedia-shutdown.html["desligue o controlador desativado"].
+
+
+
+|===
+--
+.Gerenciador de chaves integrado
+--
+Dependendo do valor de saída exibido na `Restored` coluna, siga as etapas apropriadas.
+
+[cols="1a,2a"]
+|===
+| Valor de saída `Restored` na coluna | Siga estes passos... 
+
+
+ a| 
+`true`
+ a| 
+Faça backup manual das informações OKM.
+
+.. Vá para o modo avançado entrando `set -priv advanced` e, em seguida, entre `Y` quando solicitado.
+.. Digite o seguinte comando para exibir as informações de gerenciamento de chaves:
 +
+`security key-manager onboard show-backup`
 
-NOTE: Insira a senha alfanumérica de gerenciamento de chaves integradas de 32 carateres do cliente no prompt. Se a frase-passe não puder ser fornecida, contacte o suporte da NetApp. http://mysupport.netapp.com/["mysupport.NetApp.com"^]
-
-.. Verifique se a `Restored` coluna mostra `yes` todas as chaves de autenticação: `security key-manager key query`
-.. Verifique se o `Key Manager` tipo mostra `onboard`e faça backup manual das informações OKM.
-.. Vá para o modo de privilégio avançado e entre `y` quando solicitado a continuar: `set -priv advanced`
-.. Digite o comando para exibir as informações de backup de gerenciamento de chaves: `security key-manager onboard show-backup`
-.. Copie o conteúdo das informações de backup para um arquivo separado ou seu arquivo de log. Você vai precisar dele em cenários de desastre onde você pode precisar recuperar manualmente OKM.
-.. Voltar ao modo de administração: `set -priv admin`
-.. Pode desligar o controlador com segurança.
-
-
-
-
-
-
-== Verifique a configuração do NSE
-
-. Exibir as IDs de chave das chaves de autenticação armazenadas nos servidores de gerenciamento de chaves: `security key-manager key query -key-type NSE-AK`
+.. Copie o conteúdo das informações de backup para um arquivo separado ou seu arquivo de log.
 +
+Você vai precisar dele em cenários de desastre onde você pode precisar recuperar manualmente OKM.
 
-NOTE: Após o lançamento do ONTAP 9.6, você pode ter tipos adicionais de gerenciador de chaves. Os tipos são `KMIP`, `AKV` e `GCP`. O processo para confirmar esses tipos é o mesmo que os tipos de confirmação `external` ou `onboard` gerenciador de chaves.
+.. Pode desligar o controlador com segurança. Vá para link:bootmedia-shutdown.html["desligue o controlador desativado"].
 
+
+
+
+ a| 
+Qualquer outra coisa que não `true`
+ a| 
+.. Digite o comando Onboard security key-manager sync:
 +
-** Se o `Key Manager` tipo for exibido `external` e a `Restored` coluna for exibida `yes`, é seguro desligar o controlador prejudicado.
-** Se o `Key Manager` tipo for exibido `onboard` e a `Restored` coluna for exibida `yes`, você precisará concluir algumas etapas adicionais.
-** Se o `Key Manager` tipo for exibido `external` e a `Restored` coluna exibir qualquer outra coisa que não `yes`o , você precisará concluir algumas etapas adicionais.
-** Se o `Key Manager` tipo for exibido `external` e a `Restored` coluna exibir qualquer outra coisa que não `yes`o , você precisará concluir algumas etapas adicionais.
+`security key-manager onboard sync`
 
-
-. Se o `Key Manager` tipo for exibido `onboard` e a `Restored` coluna for exibida `yes`, faça backup manual das informações OKM:
+.. Digite a senha alfanumérica de gerenciamento de chaves integradas de 32 carateres quando solicitado.
 +
-.. Vá para o modo de privilégio avançado e entre `y` quando solicitado a continuar: `set -priv advanced`
-.. Digite o comando para exibir as informações de gerenciamento de chaves: `security key-manager onboard show-backup`
-.. Copie o conteúdo das informações de backup para um arquivo separado ou seu arquivo de log. Você vai precisar dele em cenários de desastre onde você pode precisar recuperar manualmente OKM.
-.. Voltar ao modo de administração: `set -priv admin`
-.. Pode desligar o controlador com segurança.
+Se a frase-passe não puder ser fornecida, http://mysupport.netapp.com/["Suporte à NetApp"^] contacte .
 
-
-. Se o `Key Manager` tipo for exibido `external` e a `Restored` coluna exibir algo diferente `yes`de :
+.. Verifique se a `Restored` coluna exibe `true` todas as chaves de autenticação:
 +
-.. Restaure as chaves de autenticação de gerenciamento de chaves externas para todos os nós no cluster: `security key-manager external restore`
+`security key-manager key query`
+
+.. Verifique se o `Key Manager` tipo é exibido `onboard` e, em seguida, faça backup manual das informações OKM.
+.. Digite o comando para exibir as informações de backup de gerenciamento de chaves:
 +
-Se o comando falhar, entre em Contato com o suporte da NetApp.
+`security key-manager onboard show-backup`
 
+.. Copie o conteúdo das informações de backup para um arquivo separado ou seu arquivo de log.
 +
-http://mysupport.netapp.com/["mysupport.NetApp.com"^]
+Você vai precisar dele em cenários de desastre onde você pode precisar recuperar manualmente OKM.
 
-.. Verifique se a `Restored` coluna é igual a `yes` todas as chaves de autenticação: `security key-manager key query`
-.. Pode desligar o controlador com segurança.
-
-
-. Se o `Key Manager` tipo for exibido `onboard` e a `Restored` coluna exibir algo diferente `yes`de :
-+
-.. Digite o comando Onboard security key-manager sync: `security key-manager onboard sync`
-+
-Insira a senha alfanumérica de gerenciamento de chaves integradas de 32 carateres do cliente no prompt. Se a frase-passe não puder ser fornecida, contacte o suporte da NetApp.
-
-+
-http://mysupport.netapp.com/["mysupport.NetApp.com"^]
-
-.. Verifique se a `Restored` coluna mostra `yes` todas as chaves de autenticação: `security key-manager key query`
-.. Verifique se o `Key Manager` tipo mostra `onboard`e faça backup manual das informações OKM.
-.. Vá para o modo de privilégio avançado e entre `y` quando solicitado a continuar: `set -priv advanced`
-.. Digite o comando para exibir as informações de backup de gerenciamento de chaves: `security key-manager onboard show-backup`
-.. Copie o conteúdo das informações de backup para um arquivo separado ou seu arquivo de log. Você vai precisar dele em cenários de desastre onde você pode precisar recuperar manualmente OKM.
-.. Voltar ao modo de administração: `set -priv admin`
-.. Pode desligar o controlador com segurança.
+.. Pode desligar o controlador com segurança. Vá para link:bootmedia-shutdown.html["desligue o controlador desativado"].
 
 
+|===
+--
+====
 

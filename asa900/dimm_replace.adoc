@@ -11,7 +11,7 @@ summary: 'É necessário substituir um DIMM no módulo do controlador quando o s
 
 
 [role="lead"]
-É necessário substituir um DIMM no módulo do controlador quando o sistema registar um número crescente de códigos de correção de erros (ECC); se não o fizer, o sistema entra em pânico.
+Você deve substituir um DIMM no controlador quando seu sistema de armazenamento encontrar erros como erros CECC excessivos (códigos de correção de erros Correctable) que são baseados em alertas do Monitor de integridade ou erros ECC incorrigíveis, geralmente causados por uma única falha de DIMM que impede o sistema de armazenamento de inicializar o ONTAP.
 
 .Antes de começar
 Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.

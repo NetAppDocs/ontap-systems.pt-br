@@ -23,7 +23,7 @@ entries:
     entries:
     - title: Visão geral
       url: "/fas8300/bootmedia-replace-overview.html"
-    - title: Verifique as chaves de criptografia integradas
+    - title: Verifique as chaves de criptografia
       url: "/fas8300/bootmedia-encryption-preshutdown-checks.html"
     - title: Desligue o controlador desativado
       url: "/fas8300/bootmedia-shutdown.html"
@@ -33,7 +33,7 @@ entries:
       url: "/fas8300/bootmedia-recovery-image-boot-options.html"
     - title: Volte a configurar o MetroCluster
       url: "/fas8300/bootmedia-2n-mcc-switchback.html"
-    - title: Restaure OKM, NSE e NVE
+    - title: Restaure a criptografia
       url: "/fas8300/bootmedia-encryption-restore.html"
     - title: Devolver artigo com falha ao NetApp
       url: "/fas8300/bootmedia-complete-rma.html"

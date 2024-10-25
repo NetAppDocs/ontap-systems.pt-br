@@ -23,7 +23,7 @@ entries:
     entries:
     - title: Visão geral
       url: "/asa800/bootmedia-replace-overview.html"
-    - title: Verifique as chaves de criptografia integradas
+    - title: Verifique as chaves de criptografia
       url: "/asa800/bootmedia-encryption-preshutdown-checks.html"
     - title: Desligue o controlador desativado
       url: "/asa800/bootmedia-shutdown.html"
@@ -31,7 +31,7 @@ entries:
       url: "/asa800/bootmedia-replace.html"
     - title: Imagem de recuperação de inicialização
       url: "/asa800/bootmedia-recovery-image-boot-non-2n-mcc.html"
-    - title: Restaure OKM, NSE e NVE
+    - title: Restaure a criptografia
       url: "/asa800/bootmedia-encryption-restore.html"
     - title: Devolver artigo com falha ao NetApp
       url: "/asa800/bootmedia-complete-rma.html"

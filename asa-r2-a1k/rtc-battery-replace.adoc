@@ -188,8 +188,9 @@ NOTE: Não use força excessiva ao deslizar o módulo do controlador para dentro
 +
 O módulo do controlador começa a inicializar assim que estiver totalmente encaixado no compartimento.
 
-. Restaure o giveback automático se você o desativou usando o `storage failover modify -node local -auto-giveback true` comando.
-. Se o AutoSupport estiver ativado, restaure/dessuprimir a criação automática de casos usando o `system node autosupport invoke -node * -type all -message MAINT=END` comando.
+. Devolva o controlador afetado ao funcionamento normal, devolvendo o respetivo armazenamento: `storage failover giveback -ofnode _impaired_node_name_`.
+. Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true`.
+. Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos: `system node autosupport invoke -node * -type all -message MAINT=END`.
 
 
 
@@ -213,8 +214,6 @@ NOTE: Se o sistema parar no menu de inicialização, selecione a opção  `Reboo
 +
 .. Confirme a data e a hora no controlador de destino.
 .. No prompt Loader, digite _bye_ para reinicializar as placas PCIe e outros componentes e deixar a controladora reiniciar.
-.. Retorne o controlador à operação normal, devolvendo seu armazenamento: _Storage failover giveback -ofnode _imideed_node_name__
-.. Se a giveback automática foi desativada, reative-a: _Storage failover modifique -node local -auto-giveback True_
 
 
 

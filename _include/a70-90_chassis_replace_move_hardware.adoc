@@ -151,48 +151,28 @@ Certifique-se de que fecha lentamente o manípulo do excêntrico de forma a que 
 
 == Etapa 4: Reinstale os módulos do controlador
 
-Reinstale o módulo do controlador e reinicie-o.
+Reinstale os módulos do controlador no chassi e reinicialize-os.
 
-. Certifique-se de que a conduta de ar está completamente fechada, rodando-a até onde for.
+. Se abrir a conduta de ar, feche a conduta de ar rodando-a até onde for.
 +
-Ele deve estar alinhado com a chapa metálica do módulo do controlador.
+Ele deve ficar nivelado contra a chapa metálica do módulo do controlador.
 
-. Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
+. Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o controlador até ao chassis.
 +
-
-NOTE: Não introduza completamente o módulo do controlador no chassis até ser instruído a fazê-lo.
-
-. Recable o sistema de armazenamento, conforme necessário.
-+
-Se você removeu os transcetores (QSFPs ou SFPs), lembre-se de reinstalá-los se estiver usando cabos de fibra ótica.
-
-+
-
-NOTE: Certifique-se de que o cabo da consola está ligado ao módulo do controlador reparado de forma a receber mensagens da consola quando for reiniciado. O controlador reparado recebe energia do controlador em estado de funcionamento e começa a reiniciar assim que estiver completamente encaixado no chassis.
-
-. Conclua a reinstalação do módulo do controlador:
-+
-.. Empurre firmemente o módulo do controlador para dentro do chassi até que ele atenda ao plano médio e esteja totalmente assentado.
-+
-Os trincos de bloqueio sobem quando o módulo do controlador está totalmente assente.
-
-+
-
-NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
-
 .. Rode os trincos de bloqueio para cima, para a posição de bloqueio.
-
-
+.. Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos e reconete o controlador.
 +
+Se você removeu os conversores de Mídia (QSFPs ou SFPs), lembre-se de reinstalá-los se você estiver usando cabos de fibra ótica.
 
-NOTE: Se o controlador inicializar no prompt Loader, reinicialize-o com o `boot_ontap` comando.
 
+
+. Repita os passos anteriores para instalar o segundo controlador no novo chassis.
 . Conete os cabos de alimentação às fontes de alimentação.
 +
 
 NOTE: Se você tiver fontes de alimentação CC, reconete o bloco de alimentação às fontes de alimentação depois que o módulo do controlador estiver totalmente encaixado no chassi.
 
-. Restaure o giveback automático se você o desativou usando o `storage failover modify -node local -auto-giveback true` comando.
-. Se o AutoSupport estiver ativado, restaure/dessuprimir a criação automática de casos usando o `system node autosupport invoke -node * -type all -message MAINT=END` comando.
-. Repita os passos anteriores para instalar o segundo controlador no novo chassis.
++
+O módulo do controlador começa a arrancar assim que é instalado e a energia é restaurada. Se ele inicializar no prompt Loader, reinicie o controlador com o `boot_ontap` comando.
+
 

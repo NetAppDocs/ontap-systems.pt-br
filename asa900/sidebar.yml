@@ -23,7 +23,7 @@ entries:
     entries:
     - title: Visão geral
       url: "/asa900/bootmedia_replace_overview.html"
-    - title: Verifique as chaves de criptografia integradas
+    - title: Verifique as chaves de criptografia
       url: "/asa900/bootmedia_encryption_preshutdown_checks.html"
     - title: Desligue o controlador desativado
       url: "/asa900/bootmedia_impaired_controller_shutdown.html"
@@ -31,7 +31,7 @@ entries:
       url: "/asa900/bootmedia_replace.html"
     - title: Imagem de recuperação de inicialização
       url: "/asa900/bootmedia_recovery_image.html"
-    - title: Restaure OKM, NSE e NVE
+    - title: Restaure a criptografia
       url: "/asa900/bootmedia_encryption_restore.html"
     - title: Devolver artigo com falha ao NetApp
       url: "/asa900/bootmedia_complete_rma.html"

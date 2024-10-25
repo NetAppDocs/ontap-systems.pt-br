@@ -293,8 +293,9 @@ NOTE: Se o controlador inicializar no prompt Loader, reinicialize-o com o `boot_
 
 NOTE: Se você tiver fontes de alimentação CC, reconete o bloco de alimentação às fontes de alimentação depois que o módulo do controlador estiver totalmente encaixado no chassi.
 
-. Restaure o giveback automático se você o desativou usando o `storage failover modify -node local -auto-giveback true` comando.
-. Se o AutoSupport estiver ativado, restaure/dessuprimir a criação automática de casos usando o `system node autosupport invoke -node * -type all -message MAINT=END` comando.
+. Devolva o controlador afetado ao funcionamento normal, devolvendo o respetivo armazenamento: `storage failover giveback -ofnode _impaired_node_name_`.
+. Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true`.
+. Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos: `system node autosupport invoke -node * -type all -message MAINT=END`.
 
 
 

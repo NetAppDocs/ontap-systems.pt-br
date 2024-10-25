@@ -23,7 +23,7 @@ entries:
     entries:
     - title: Visão geral
       url: "/c250/bootmedia-replace-overview.html"
-    - title: Verifique as chaves de criptografia integradas
+    - title: Verifique as chaves de criptografia
       url: "/c250/bootmedia-encryption-preshutdown-checks.html"
     - title: Desligue o controlador desativado
       url: "/c250/bootmedia-shutdown.html"
@@ -31,7 +31,7 @@ entries:
       url: "/c250/bootmedia-replace.html"
     - title: Imagem de recuperação de inicialização
       url: "/c250/bootmedia-recovery-image-boot-non-2n-mcc.html"
-    - title: Restaure OKM, NSE e NVE
+    - title: Restaure a criptografia
       url: "/c250/bootmedia-encryption-restore.html"
     - title: Devolver artigo com falha ao NetApp
       url: "/c250/bootmedia-complete-rma.html"

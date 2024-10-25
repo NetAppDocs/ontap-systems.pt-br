@@ -216,6 +216,9 @@ NOTE: Consulte a etiqueta do mapa da FRU na lateral do módulo NVRAM para determ
 Depois de substituir a FRU, você deve reiniciar o módulo do controlador.
 
 . Para inicializar o ONTAP a partir do prompt Loader, digite _bye_.
+. Devolva o controlador afetado ao funcionamento normal, devolvendo o respetivo armazenamento: `_storage failover giveback -ofnode _impaired_node_name_`.
+. Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true` .
+. Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos: `system node autosupport invoke -node * -type all -message MAINT=END`.
 
 
 
@@ -316,9 +319,9 @@ dr-group-id            cluster node           configuration-state
 4 entries were displayed.
 ----
 . Verifique se os volumes esperados estão presentes para cada controlador: `vol show -node node-name`
-. Se a encriptação de armazenamento estiver ativada, tem de restaurar a funcionalidade.
-. Se você desativou o controle automático na reinicialização, ative-o a partir do controlador íntegro: _Storage failover modifique -node replacement-node-node-nome -onreboot true_
-. Se o AutoSupport estiver ativado, restaure/dessuprimir a criação automática de casos usando o `system node autosupport invoke -node * -type all -message MAINT=END` comando.
+. Devolva o controlador afetado ao funcionamento normal, devolvendo o respetivo armazenamento: `storage failover giveback -ofnode _impaired_node_name_`.
+. Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true`.
+. Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos: `system node autosupport invoke -node * -type all -message MAINT=END`.
 
 
 

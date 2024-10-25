@@ -11,7 +11,7 @@ summary: 'É necessário substituir um DIMM no módulo do controlador quando o s
 
 
 [role="lead"]
-É necessário substituir um DIMM no módulo do controlador quando o sistema registar um número crescente de códigos de correção de erros (ECC); se não o fizer, o sistema entra em pânico.
+Você deve substituir um DIMM no controlador quando seu sistema de armazenamento encontrar erros como erros CECC excessivos (códigos de correção de erros Correctable) que são baseados em alertas do Monitor de integridade ou erros ECC incorrigíveis, geralmente causados por uma única falha de DIMM que impede o sistema de armazenamento de inicializar o ONTAP.
 
 .Antes de começar
 Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
@@ -255,8 +255,9 @@ NOTE: Não use força excessiva ao deslizar o módulo do controlador para dentro
 +
 O módulo do controlador começa a inicializar assim que estiver totalmente encaixado no compartimento.
 
-. Restaure o giveback automático se você o desativou usando o `storage failover modify -node local -auto-giveback true` comando.
-. Se o AutoSupport estiver ativado, restaure/dessuprimir a criação automática de casos usando o `system node autosupport invoke -node * -type all -message MAINT=END` comando.
+. Devolva o controlador afetado ao funcionamento normal, devolvendo o respetivo armazenamento: `storage failover giveback -ofnode _impaired_node_name_`.
+. Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true`.
+. Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos: `system node autosupport invoke -node * -type all -message MAINT=END`.
 
 
 

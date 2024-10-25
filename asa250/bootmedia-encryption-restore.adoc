@@ -4,183 +4,435 @@ sidebar: sidebar
 keywords: asa a250, post boot media replacement steps for okm, nse, and nve 
 summary: 'Uma vez que as variáveis de ambiente estejam marcadas, você deve concluir etapas específicas para sistemas que tenham o Gerenciador de chaves integrado (OKM), a criptografia de armazenamento NetApp (NSE) ou a criptografia de volume NetApp (NVE) ativada.' 
 ---
-= Restaure OKM, NSE e NVE conforme necessário - ASA A250
+= Restaurar encriptação - ASA A250
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Depois que as variáveis de ambiente estiverem marcadas, você deverá concluir etapas específicas para sistemas que tenham o Gerenciador de chaves integrado (OKM), a criptografia de armazenamento NetApp (NSE) ou a criptografia de volume NetApp (NVE) habilitados.
+Restaure a encriptação no suporte de arranque de substituição.
 
-. Determine qual seção você deve usar para restaurar suas configurações OKM, NSE ou NVE: Se o NSE ou NVE estiverem ativados junto com o Gerenciador de chaves integrado, você deverá restaurar as configurações capturadas no início deste procedimento.
+Você deve concluir etapas específicas para sistemas que tenham o Gerenciador de chaves integrado (OKM), a criptografia de armazenamento NetApp (NSE) ou a criptografia de volume NetApp (NVE) habilitados usando as configurações capturadas no início do procedimento de substituição de Mídia de inicialização.
+
+Dependendo de qual um gerenciador de chaves está configurado no sistema, selecione uma das seguintes opções para restaurá-lo no menu de inicialização.
+
+* link:["Opção 1: Restaure a configuração do Gerenciador de chaves integrado"]
+* link:["Opção 2: Restaure a configuração do Gerenciador de chaves Externo"]
+
+
+
+
+== Opção 1: Restaure a configuração do Gerenciador de chaves integrado
+
+Restaure a configuração OKM (Onboard Key Manager) no menu de inicialização do ONTAP.
+
+.Antes de começar
+* Certifique-se de que tem as seguintes informações enquanto restaura a configuração OKM:
 +
-** Se o NSE ou NVE estiverem ativados e o Gerenciador de chaves integrado estiver habilitado, vá para <<Restaure o NVE ou o NSE quando o Gerenciador de chaves integrado estiver habilitado>>.
-** Se o NSE ou NVE estiverem ativados para o ONTAP 9.6, vá para <<Restaure o NSE/NVE em sistemas executando o ONTAP 9.6 e posterior>>.
+** Frase-passe de todo o cluster introduzida https://docs.netapp.com/us-en/ontap/encryption-at-rest/enable-onboard-key-management-96-later-nse-task.html["ao ativar o gerenciamento de chaves integradas"].
+** https://docs.netapp.com/us-en/ontap/encryption-at-rest/backup-key-management-information-manual-task.html["Informações de cópia de segurança para o Gestor de chaves integrado"].
 
 
+* Execute o https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_verify_onboard_key_management_backup_and_cluster-wide_passphrase["Como verificar o backup integrado do gerenciamento de chaves e a senha em todo o cluster"] procedimento antes de prosseguir.
 
-
-
-
-== Restaure o NVE ou o NSE quando o Gerenciador de chaves integrado estiver habilitado
 
 .Passos
 . Conete o cabo do console ao controlador de destino.
-. Use o `boot_ontap` comando no prompt Loader para inicializar o controlador.
-. Verifique a saída da consola:
+. No menu de inicialização do ONTAP, selecione a opção apropriada no menu de inicialização.
 +
-[cols="1,2"]
+[cols="1a,2a"]
 |===
-| *Se o console exibir...* | *Então...* 
+| Versão de ONTAP | Selecione esta opção 
 
 
  a| 
-O prompt Loader
+ONTAP 9 .8 ou posterior
  a| 
-Inicialize o controlador no menu de inicialização: `boot_ontap menu`
+Selecione a opção 10.
 
+.Mostrar exemplo de menu de inicialização
+[%collapsible]
+====
+....
+
+Please choose one of the following:
+
+(1)  Normal Boot.
+(2)  Boot without /etc/rc.
+(3)  Change password.
+(4)  Clean configuration and initialize all disks.
+(5)  Maintenance mode boot.
+(6)  Update flash from backup config.
+(7)  Install new software first.
+(8)  Reboot node.
+(9)  Configure Advanced Drive Partitioning.
+(10) Set Onboard Key Manager recovery secrets.
+(11) Configure node for external key management.
+Selection (1-11)? 10
+
+....
+====
 
 
  a| 
-Esperando por giveback
+ONTAP 9 F.7 e anteriores
  a| 
-.. Digite `Ctrl-C` no prompt
-.. Na mensagem: Você deseja interromper esse nó em vez de esperar [y/n]? , introduza: `y`
-.. No prompt Loader, digite o `boot_ontap menu` comando.
+Selecione a opção oculta `recover_onboard_keymanager`
 
+.Mostrar exemplo de menu de inicialização
+[%collapsible]
+====
+....
 
+Please choose one of the following:
+
+(1)  Normal Boot.
+(2)  Boot without /etc/rc.
+(3)  Change password.
+(4)  Clean configuration and initialize all disks.
+(5)  Maintenance mode boot.
+(6)  Update flash from backup config.
+(7)  Install new software first.
+(8)  Reboot node.
+(9)  Configure Advanced Drive Partitioning.
+Selection (1-19)? recover_onboard_keymanager
+
+....
+====
 |===
-. No Menu de inicialização, digite o comando oculto `recover_onboard_keymanager` e responda `y` no prompt
-. Introduza a frase-passe para o gestor de chaves integrado que obteve do cliente no início deste procedimento.
-. Quando solicitado a inserir os dados de backup, cole os dados de backup capturados no início deste procedimento, quando solicitado. Cole a saída do `security key-manager backup show` comando OU `security key-manager onboard show-backup`
+. Confirme se deseja continuar o processo de recuperação.
 +
-
-NOTE: Os dados são emitidos a partir de qualquer um dos `security key-manager backup show` comandos ou `security key-manager onboard show-backup`.
-
-+
-Exemplo de dados de backup:
-
-+
-[]
+.Mostrar prompt de exemplo
+[%collapsible]
 ====
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA . . . AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-
---------------------------------------------------------------
+`This option must be used only in disaster recovery procedures. Are you sure? (y or n):`
 
 ====
-. No menu Boot (Inicialização), selecione a opção para normal Boot (Inicialização normal).
+. Introduza duas vezes a frase-passe de todo o cluster.
 +
-O sistema arranca para aguardar o prompt de espera para giveback...
+Ao inserir a senha, o console não mostrará nenhuma entrada.
 
-. Confirme se o controlador de destino está pronto para giveback com o `storage failover show` comando.
-. Giveback apenas o CFO agrega com o `storage failover giveback -fromnode local -only-cfo-aggregates true` comando.
 +
-** Se o comando falhar por causa de um disco com falha, desengate fisicamente o disco com falha, mas deixe o disco no slot até que uma substituição seja recebida.
-** Se o comando falhar devido a sessões CIFS abertas, verifique com o cliente como fechar sessões CIFS.
+.Mostrar prompt de exemplo
+[%collapsible]
+====
+`Enter the passphrase for onboard key management:`
+
+`Enter the passphrase again to confirm:`
+
+====
+. Introduza as informações de cópia de segurança.
++
+.. Cole todo o conteúdo da linha DE BACKUP INICIAL através da linha DE BACKUP FINAL.
++
+.Mostrar prompt de exemplo
+[%collapsible]
+====
+....
+Enter the backup data:
+
+--------------------------BEGIN BACKUP--------------------------
+0123456789012345678901234567890123456789012345678901234567890123
+1234567890123456789012345678901234567890123456789012345678901234
+2345678901234567890123456789012345678901234567890123456789012345
+3456789012345678901234567890123456789012345678901234567890123456
+4567890123456789012345678901234567890123456789012345678901234567
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+0123456789012345678901234567890123456789012345678901234567890123
+1234567890123456789012345678901234567890123456789012345678901234
+2345678901234567890123456789012345678901234567890123456789012345
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+---------------------------END BACKUP---------------------------
+
+....
+====
+.. Pressione a tecla Enter duas vezes no final da entrada.
++
+O processo de recuperação é concluído.
+
++
+.Mostrar prompt de exemplo
+[%collapsible]
+====
+....
+
+Trying to recover keymanager secrets....
+Setting recovery material for the onboard key manager
+Recovery secrets set successfully
+Trying to delete any existing km_onboard.wkeydb file.
+
+Successfully recovered keymanager secrets.
+
+***********************************************************************************
+* Select option "(1) Normal Boot." to complete recovery process.
+*
+* Run the "security key-manager onboard sync" command to synchronize the key database after the node reboots.
+***********************************************************************************
+
+....
+====
+
+
 +
 
-NOTE: Encerrar CIFS pode causar perda de dados.
+WARNING: Não prossiga se a saída exibida for diferente `Successfully recovered keymanager secrets` de . Execute a solução de problemas para corrigir o erro.
 
-** Se o comando falhar porque o parceiro "não está pronto", aguarde 5 minutos para que os NVMEMs sincronizem.
-** Se o comando falhar por causa de um processo NDMP, SnapMirror ou SnapVault, desative o processo. Consulte o Centro de Documentação apropriado para obter mais informações.
-
-
-. Uma vez que o giveback seja concluído, verifique o status de failover e giveback com os `storage failover show` comandos e ``storage failover show`-giveback.
+. Selecione a opção 1 no menu de inicialização para continuar inicializando no ONTAP.
 +
-Apenas os agregados CFO (agregados de raiz e agregados de dados de estilo CFO) serão mostrados.
+.Mostrar prompt de exemplo
+[%collapsible]
+====
+....
 
-. Mova o cabo do console para o controlador de destino.
+***********************************************************************************
+* Select option "(1) Normal Boot." to complete the recovery process.
+*
+***********************************************************************************
+
+
+(1)  Normal Boot.
+(2)  Boot without /etc/rc.
+(3)  Change password.
+(4)  Clean configuration and initialize all disks.
+(5)  Maintenance mode boot.
+(6)  Update flash from backup config.
+(7)  Install new software first.
+(8)  Reboot node.
+(9)  Configure Advanced Drive Partitioning.
+(10) Set Onboard Key Manager recovery secrets.
+(11) Configure node for external key management.
+Selection (1-11)? 1
+
+....
+====
+. Confirme se o console do controlador exibe a seguinte mensagem.
 +
-.. Se você estiver executando o ONTAP 9.6 ou posterior, execute a sincronização integrada do gerenciador de chaves de segurança:
-.. Execute o `security key-manager onboard sync` comando e insira a senha quando solicitado.
-.. Digite o `security key-manager key query` comando para ver uma exibição detalhada de todas as chaves armazenadas no gerenciador de chaves integrado e verifique se a `Restored` coluna é `yes/true` para todas as chaves de autenticação.
+`Waiting for giveback...(Press Ctrl-C to abort wait)`
+
+. A partir do nó do parceiro, giveback do controlador do parceiro inserindo o seguinte comando.
++
+`storage failover giveback -fromnode local -only-cfo-aggregates true`.
+
+. Depois de inicializar apenas com o agregado CFO, execute o seguinte comando.
++
+`security key-manager onboard sync`
+
+. Introduza a frase-passe de todo o cluster para o Gestor de chaves integrado.
++
+.Mostrar prompt de exemplo
+[%collapsible]
+====
+....
+
+Enter the cluster-wide passphrase for the Onboard Key Manager:
+
+All offline encrypted volumes will be brought online and the corresponding volume encryption keys (VEKs) will be restored automatically within 10 minutes. If any offline encrypted volumes are not brought online automatically, they can be brought online manually using the "volume online -vserver <vserver> -volume <volume_name>" command.
+
+....
+====
 +
 
-NOTE: Se a `Restored` coluna for diferente `yes/true` do , contacte o apoio ao Cliente.
+NOTE: Se a sincronização for bem-sucedida, o prompt do cluster será retornado sem mensagens adicionais. Se a sincronização falhar, uma mensagem de erro será exibida antes de retornar ao prompt do cluster. Não continue até que o erro seja corrigido e a sincronização seja executada com êxito.
 
-.. Aguarde 10 minutos para que a chave seja sincronizada no cluster.
-
-
-. Mova o cabo do console para o controlador do parceiro.
-. Devolva o controlador de destino usando o `storage failover giveback -fromnode local` comando.
-. Verifique o status da giveback, 3 minutos após a conclusão do relatório, usando o `storage failover show` comando.
+. Certifique-se de que todas as chaves são sincronizadas digitando o seguinte comando.
 +
-Se a giveback não estiver concluída após 20 minutos, contacte o apoio ao Cliente.
+`security key-manager key query -restored false`.
 
-. No prompt do clustershell, digite o `net int show -is-home false` comando para listar as interfaces lógicas que não estão em seu controlador principal e porta.
 +
-Se alguma interface estiver listada como `false`, reverta essas interfaces de volta para sua porta inicial usando o `net int revert -vserver Cluster -lif _nodename_` comando.
+`There are no entries matching your query.`
 
-. Mova o cabo do console para o controlador de destino e execute o `version -v` comando para verificar as versões do ONTAP.
-. Restaure o giveback automático se você o desativou usando o `storage failover modify -node local -auto-giveback true` comando.
++
+
+NOTE: Nenhum resultado deve aparecer ao filtrar para FALSE no parâmetro restaurado.
+
+. Troque o nó do parceiro digitando o seguinte comando.
++
+`storage failover giveback -fromnode local`
+
+. Restaure o giveback automático, se você o desativou, digitando o seguinte comando.
++
+`storage failover modify -node local -auto-giveback true`
+
+. Se o AutoSupport estiver ativado, restaure a criação automática de casos inserindo o seguinte comando.
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
 
 
 
 
-== Restaure o NSE/NVE em sistemas executando o ONTAP 9.6 e posterior
+
+== Opção 2: Restaure a configuração do Gerenciador de chaves Externo
+
+Restaure a configuração do Gerenciador de chaves Externo no menu de inicialização do ONTAP.
+
+.Antes de começar
+Você precisa das seguintes informações para restaurar a configuração do EKM (External Key Manager).
+
+* Uma cópia do arquivo /cfcard/kmip/servers.cfg de outro nó de cluster ou as seguintes informações:
++
+** O endereço do servidor KMIP.
+** A porta KMIP.
+
+
+* Uma cópia do `/cfcard/kmip/certs/client.crt` arquivo de outro nó de cluster ou do certificado do cliente.
+* Uma cópia do `/cfcard/kmip/certs/client.key` arquivo de outro nó de cluster ou da chave do cliente.
+* Cópia `/cfcard/kmip/certs/CA.pem` do arquivo de outro nó de cluster ou CA(s) do servidor KMIP.
+
 
 .Passos
 . Conete o cabo do console ao controlador de destino.
-. Use o `boot_ontap` comando no prompt Loader para inicializar o controlador.
-. Verifique a saída da consola:
+. Selecione a opção 11 no menu de inicialização do ONTAP.
 +
-|===
+.Mostrar exemplo de menu de inicialização
+[%collapsible]
+====
+....
 
-
-| *Se o console exibir...* | *Então...* 
-
-
- a| 
-O aviso de início de sessão
- a| 
-Avance para o passo 7.
-
-
-
- a| 
-A aguardar pela giveback...
- a| 
-.. Faça login no controlador do parceiro.
-.. Confirme se o controlador de destino está pronto para giveback com o `storage failover show` comando.
-
-
-|===
-. Mova o cabo do console para o controlador parceiro e devolva o armazenamento do controlador de destino usando o `storage failover giveback -fromnode local -only-cfo-aggregates true local` comando.
+(1)  Normal Boot.
+(2)  Boot without /etc/rc.
+(3)  Change password.
+(4)  Clean configuration and initialize all disks.
+(5)  Maintenance mode boot.
+(6)  Update flash from backup config.
+(7)  Install new software first.
+(8)  Reboot node.
+(9)  Configure Advanced Drive Partitioning.
+(10) Set Onboard Key Manager recovery secrets.
+(11) Configure node for external key management.
+Selection (1-11)? 11
+....
+====
+. Quando solicitado, confirme que você reuniu as informações necessárias.
 +
-** Se o comando falhar por causa de um disco com falha, desengate fisicamente o disco com falha, mas deixe o disco no slot até que uma substituição seja recebida.
-** Se o comando falhar devido a sessões CIFS abertas, verifique com o cliente como fechar sessões CIFS.
+.Mostrar prompt de exemplo
+[%collapsible]
+====
+....
+Do you have a copy of the /cfcard/kmip/certs/client.crt file? {y/n}
+Do you have a copy of the /cfcard/kmip/certs/client.key file? {y/n}
+Do you have a copy of the /cfcard/kmip/certs/CA.pem file? {y/n}
+Do you have a copy of the /cfcard/kmip/servers.cfg file? {y/n}
+....
+====
+. Quando solicitado, insira as informações do cliente e do servidor.
 +
-
-NOTE: Encerrar CIFS pode causar perda de dados.
-
-** Se o comando falhar porque o parceiro "não está pronto", aguarde 5 minutos para que os NVMEMs sincronizem.
-** Se o comando falhar por causa de um processo NDMP, SnapMirror ou SnapVault, desative o processo. Consulte o Centro de Documentação apropriado para obter mais informações.
-
-
-. Aguarde 3 minutos e verifique o status do failover com o `storage failover show` comando.
-. No prompt do clustershell, digite o `net int show -is-home false` comando para listar as interfaces lógicas que não estão em seu controlador principal e porta.
+.Mostrar prompt
+[%collapsible]
+====
+....
+Enter the client certificate (client.crt) file contents:
+Enter the client key (client.key) file contents:
+Enter the KMIP server CA(s) (CA.pem) file contents:
+Enter the server configuration (servers.cfg) file contents:
+....
+====
 +
-Se alguma interface estiver listada como `false`, reverta essas interfaces de volta para sua porta inicial usando o `net int revert -vserver Cluster -lif _nodename_` comando.
+.Mostrar exemplo
+[%collapsible]
+====
+....
+Enter the client certificate (client.crt) file contents:
+-----BEGIN CERTIFICATE-----
+MIIDvjCCAqagAwIBAgICN3gwDQYJKoZIhvcNAQELBQAwgY8xCzAJBgNVBAYTAlVT
+MRMwEQYDVQQIEwpDYWxpZm9ybmlhMQwwCgYDVQQHEwNTVkwxDzANBgNVBAoTBk5l
+MSUbQusvzAFs8G3P54GG32iIRvaCFnj2gQpCxciLJ0qB2foiBGx5XVQ/Mtk+rlap
+Pk4ECW/wqSOUXDYtJs1+RB+w0+SHx8mzxpbz3mXF/X/1PC3YOzVNCq5eieek62si
+Fp8=
+-----END CERTIFICATE-----
 
-. Mova o cabo do console para o controlador de destino e execute o `version -v` comando para verificar as versões do ONTAP.
-. Restaure o giveback automático se você o desativou usando o `storage failover modify -node local -auto-giveback true` comando.
-. Use o `storage encryption disk show` prompt at the clustershell, para revisar a saída.
-. Use o `security key-manager key query` comando para exibir as IDs de chave das chaves de autenticação armazenadas nos servidores de gerenciamento de chaves.
+Enter the client key (client.key) file contents:
+-----BEGIN RSA PRIVATE KEY-----
+<key_value>
+-----END RSA PRIVATE KEY-----
+
+Enter the KMIP server CA(s) (CA.pem) file contents:
+-----BEGIN CERTIFICATE-----
+MIIEizCCA3OgAwIBAgIBADANBgkqhkiG9w0BAQsFADCBjzELMAkGA1UEBhMCVVMx
+7yaumMQETNrpMfP+nQMd34y4AmseWYGM6qG0z37BRnYU0Wf2qDL61cQ3/jkm7Y94
+EQBKG1NY8dVyjphmYZv+
+-----END CERTIFICATE-----
+
+Enter the IP address for the KMIP server: 10.10.10.10
+Enter the port for the KMIP server [5696]:
+
+System is ready to utilize external key manager(s).
+Trying to recover keys from key servers....
+kmip_init: configuring ports
+Running command '/sbin/ifconfig e0M'
+..
+..
+kmip_init: cmd: ReleaseExtraBSDPort e0M
+....
+====
 +
-** Se a `Restored` coluna `yes/true` estiver concluída, pode concluir o processo de substituição.
-** Se a `Key Manager type` `external` `Restored` coluna for diferente `yes/true` de , use o `security key-manager external restore` comando para restaurar os IDs de chave das chaves de autenticação.
+Depois de inserir as informações do cliente e do servidor, o processo de recuperação é concluído.
+
 +
-
-NOTE: Se o comando falhar, entre em Contato com o suporte ao Cliente.
-
-** Se a `Key Manager type` `onboard` `Restored` coluna for diferente `yes/true` de , use o `security key-manager onboard sync` comando para sincronizar novamente o tipo Gerenciador de chaves.
+.Mostrar exemplo
+[%collapsible]
+====
+....
+System is ready to utilize external key manager(s).
+Trying to recover keys from key servers....
+[Aug 29 21:06:28]: 0x808806100: 0: DEBUG: kmip2::main: [initOpenssl]:460: Performing initialization of OpenSSL
+Successfully recovered keymanager secrets.
+....
+====
+. Selecione a opção 1 no menu de inicialização para continuar inicializando no ONTAP.
 +
-Use o `security key-manager key query` comando para verificar se a `Restored` coluna é `yes/true` para todas as chaves de autenticação.
+.Mostrar prompt de exemplo
+[%collapsible]
+====
+....
+
+***********************************************************************************
+* Select option "(1) Normal Boot." to complete the recovery process.
+*
+***********************************************************************************
 
 
+(1)  Normal Boot.
+(2)  Boot without /etc/rc.
+(3)  Change password.
+(4)  Clean configuration and initialize all disks.
+(5)  Maintenance mode boot.
+(6)  Update flash from backup config.
+(7)  Install new software first.
+(8)  Reboot node.
+(9)  Configure Advanced Drive Partitioning.
+(10) Set Onboard Key Manager recovery secrets.
+(11) Configure node for external key management.
+Selection (1-11)? 1
 
-. Conete o cabo do console ao controlador do parceiro.
-. Devolva o controlador usando o `storage failover giveback -fromnode local` comando.
-. Restaure o giveback automático se você o desativou usando o `storage failover modify -node local -auto-giveback true` comando.
+....
+====
+. Restaure o giveback automático, se você o desativou, digitando o seguinte comando.
++
+`storage failover modify -node local -auto-giveback true`
+
+. Se o AutoSupport estiver ativado, restaure a criação automática de casos inserindo o seguinte comando.
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
 

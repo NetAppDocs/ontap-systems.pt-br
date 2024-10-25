@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff a150, a150, aff, post, boot, media, okm, nse, nve, onboard key manager, netapp storage encryption, netapp volume encryption 
 summary: 'Uma vez que as variáveis de ambiente estejam marcadas, você deve concluir etapas específicas para sistemas que tenham o Gerenciador de chaves integrado (OKM), a criptografia de armazenamento NetApp (NSE) ou a criptografia de volume NetApp (NVE) ativada.' 
 ---
-= Restaure OKM, NSE e NVE conforme necessário - AFF A150
+= Restaurar encriptação - AFF A150
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Restaure a encriptação no suporte de arranque de substituição.
+
 Você deve concluir etapas específicas para sistemas que tenham o Gerenciador de chaves integrado (OKM), a criptografia de armazenamento NetApp (NSE) ou a criptografia de volume NetApp (NVE) habilitados usando as configurações capturadas no início do procedimento de substituição de Mídia de inicialização.
 
 Dependendo de qual um gerenciador de chaves está configurado no sistema, selecione uma das seguintes opções para restaurá-lo no menu de inicialização.
