@@ -198,4 +198,16 @@ LOADER-B>
 
 
 . Quando o nó for reiniciado, verifique se a recuperação da Mídia de inicialização foi bem-sucedida, confirmando que o sistema está novamente on-line e operacional.
+. Volte a colocar o controlador afetado em funcionamento normal, devolvendo o respetivo armazenamento:
++
+`storage failover giveback -ofnode _impaired_node_name_`.
+
+. Se a giveback automática foi desativada, reative-a:
++
+`storage failover modify -node local -auto-giveback true`.
+
+. Se o AutoSupport estiver ativado, restaure a criação automática de casos:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`.
+
 

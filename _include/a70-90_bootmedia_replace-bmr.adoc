@@ -68,4 +68,17 @@ image::../media/drw_a800_drive_seated_IEOPS-960.svg[Unidade drw A800 com sede IE
 .. Recable o módulo de Gestão do sistema.
 
 
+. Volte a instalar o controlador e volte a ligar a alimentação ao módulo do controlador:
++
+.. Empurre firmemente o módulo do controlador para dentro do chassi até que ele atenda ao plano médio e esteja totalmente assentado.
++
+Os trincos de bloqueio sobem quando o módulo do controlador está totalmente assente.
+
+.. Rode os trincos de bloqueio para cima, para a posição de bloqueio.
++
+O controlador começa a inicializar assim que estiver sentado e a energia for restaurada.
+
+
+
+. Interrompa o processo de inicialização pressionando Ctrl-C para parar no prompt DO Loader.
 

@@ -2374,7 +2374,6 @@
   <block id="fc5ee1a4ca46ff0160eeada84fe673fc" category="admonition">Se encontrar um problema durante a reinicialização, consulte<block ref="5f4b19e33781d4df6c59a005be26e607" category="inline-link-rx"></block></block>
   <block id="cfedf0b233356261eb909e7add24bded" category="list-text">Devolva o módulo do controlador do módulo do controlador do parceiro. _failover de armazenamento giveback -ofnode target_node_name_</block>
   <block id="86e8e2badf42560bb0b1ed3bac3933fa" category="paragraph">Instale e faça o cabeamento das NS224 prateleiras, conforme descrito em <block ref="4dfda7c2f93914990922f65bd50f90b3" category="inline-link-macro-rx"></block>.</block>
-  <block id="35f2b79f2ef05c6cbaae401c14dbe36d" category="list-text">No controlador de parceiro saudável, defina o controlador prejudicado para nível de privilégio avançado:<block ref="0a654c13d63710f829bc02c4cbec79ee" prefix=" " category="inline-code"></block>.</block>
   <block id="56bce10b49b12be932b0ca38009e1da1" category="paragraph">Para substituir o suporte de arranque, tem de remover o módulo de gestão do sistema da parte de trás do sistema, remover o suporte de arranque afetado e instalar o suporte de arranque de substituição no módulo de gestão do sistema.</block>
   <block id="7acc547c8acfbe4a745ca72a3e0e83e4" category="image-alt">Unidade drw A800 com sede IEOPS 960</block>
   <block id="1d2bcd4906e89f4b93900e7a729cfa23" category="list-text">Desligue a alimentação do módulo do controlador puxando o módulo do controlador para fora cerca de três polegadas:</block>
@@ -2544,35 +2543,6 @@
   <block id="baef154cbd04341d2c81cd5f404ffa42" category="list-text">Se a chave não for restaurada com êxito, o sistema irá parar e apresentar mensagens de erro e aviso. Execute novamente o processo de recuperação.</block>
   <block id="1b3e0ac05a9037c92315146268065f35" category="example-title">Mostrar exemplo de mensagens de aviso e erro de recuperação de chave</block>
   <block id="1c46e0ff0264d9660c3f0213e88d21b7" category="list-text">Quando o nó for reiniciado, verifique se a recuperação da Mídia de inicialização foi bem-sucedida, confirmando que o sistema está novamente on-line e operacional.</block>
-  <block id="edd9ce1e4d9cc655a3b0e8c6c36049db" category="paragraph">Restaure a imagem do suporte de arranque.</block>
-  <block id="dbc253985631ee33fc6976832d319aa9" category="list-text">No prompt DO Loader, digite o comando _boot_recovery -Partner_.</block>
-  <block id="9071774e0d4e739ca2fe57b55c805c89" category="paragraph">A tela exibirá a mensagem<block ref="a42d5407fe60b5716cd9fdd4d4063f27" prefix=" " category="inline-code"></block> e iniciará as verificações iniciais e a instalação dos arquivos de recuperação de inicialização.</block>
-  <block id="c3fcf34a186ddf28b42002ccdea5bb89" category="list-text">Se o Gerenciador de chaves externas (EKM) estiver configurado, você verá o seguinte exibido:</block>
-  <block id="e41b0fa291ba7a2f8d02db37d829dfe6" category="list-text">Digite _y_ se um gerenciador de chaves tiver sido configurado.</block>
-  <block id="8652886cdac2e198b58233db3fe44eb6" category="paragraph">A opção Bootmenu 11 solicitará ao usuário todas as informações de configuração do EKM para que os arquivos de configuração possam ser reconstruídos.</block>
-  <block id="3fd9d3baae5e410a98ba4eb52a03ab26" category="list-text">Introduza a Confiuração EKM em cada aviso.</block>
-  <block id="4cbdd1cac9566795166b3d9206cbcf86" category="paragraph">*NOTA:* a maior parte desta informação foi introduzida quando o EKM foi originalmente ativado. Deve introduzir as mesmas informações que foram introduzidas durante a configuração inicial do EKM.</block>
-  <block id="b5a73f8c93bdb89882d1ca9e462b0e2a" category="list-text">Verifique se o<block ref="1cc9af734f039af6fc9db1cd2f09ad05" prefix=" " category="inline-code"></block> e<block ref="878efc5de6def52e25be6f622fb5a7ee" prefix=" " category="inline-code"></block> estão corretos.</block>
-  <block id="5fb974d016811ca21ebd195d4c257e8e" category="list-text">No nó do parceiro, recupere o UUID do cluster com o <block ref="73bad5beeda4a2a6bd01d97def1d4e67" prefix=" " category="inline-code"></block> comando.</block>
-  <block id="923bf1a61097d8e90a02dbe1a7df32ad" category="list-text">No nó parceiro, recupere o UUID do Keystore com o<block ref="2f710df81fb8b58c1792ebb010c82902" prefix=" " category="inline-code"></block> comando e o<block ref="f2892b1a90652446a2c8a2dce1d42eee" prefix=" " category="inline-code"></block> comando.</block>
-  <block id="dc96ebaefbca0b39bdff8d2d09a5fc61" category="paragraph">*OBSERVAÇÃO:* se o nó do parceiro não estiver disponível, o UUID do Keystore e UUID do cluster podem ser obtidos a partir da chave Mroot-AK localizada no servidor de chaves configurado.</block>
-  <block id="a1af56a72048fea6d9e9cfde4d42ba60" category="paragraph">Verifique<block ref="b8bbecc4d00a5d5b7dc368313818ee3e" prefix=" " category="inline-code"></block> o para os atributos UUUID do cluster e<block ref="8a298935cfa9f81db49083081a35f190" prefix=" " category="inline-code"></block> UUID do Keystore para garantir que você tenha as chaves corretas.</block>
-  <block id="d887305d2b2206bc86e35b35a47e130f" category="list-text">Se a chave for restaurada corretamente, o processo de recuperação continua e reinicializa o nó.</block>
-  <block id="e4b7511a00ba0effd6c938bde56c85b1" category="paragraph">O ecrã apresenta a mensagem<block ref="a42d5407fe60b5716cd9fdd4d4063f27" prefix=" " category="inline-code"></block> e inicia as verificações iniciais.</block>
-  <block id="d1de7a2b347063926ee7045aa2c0d40f" category="list-text">Monitore o processo à medida que O Loader configura as portas do cluster local e executa o netboot através<block ref="41e7db54f2498671a212595a5bc3f9c4" prefix=" " category="inline-code"></block>do .</block>
-  <block id="7d7167e676e301c377a23cf821f58e87" category="paragraph">Uma vez que o netboot está sendo executado,<block ref="78a0f5e144f919e879f7037c4f29865c" prefix=" " category="inline-code"></block> é exibido na tela e o processo conclui o processo de instalação.</block>
-  <block id="e9bdba49a952b52d8fc36e6ae32295bf" category="list-text">Se o Key Manager não estiver configurado, você verá a seguinte mensagem:</block>
-  <block id="233309cf2a420789e8fcc1627010277c" category="list-text">Se você vir a seguinte mensagem, OKM (Onboard Key Manager) está configurado:</block>
-  <block id="0062654a58ca10b6a4b1ffce37755e67" category="paragraph">Vá para para concluir o processo de recuperação.</block>
-  <block id="e6424e7ff2e258bc2ce037ee38b77931" category="list-text">Se vir a seguinte mensagem, o External Key Manager (EKM) está configurado. Vá para o tópico EKM e complete o processo de recuperação:</block>
-  <block id="b5b024aba6aeeef11aba1df77e7bc935" category="list-text">Monitore o processo BMR enquanto executa a configuração de backup de restauração, arquivo env, mdb e rdb do parceiro.</block>
-  <block id="1fd38840c77d72c3a907f5a961467b12" category="list-text">O nó reinicializa e o BMR está concluído quando você vir o seguinte:</block>
-  <block id="76e65f6de5f0ef338defad156e9302d6" category="list-text">Se o Onboard Key Manager (OKM) estiver configurado, você verá o seguinte exibido:</block>
-  <block id="16881782fee9167d362ad031a7bd4efa" category="list-text">Digite _y_ no prompt.</block>
-  <block id="efdeb95716fc588d0e0896e9945962d6" category="list-text">Digite a senha do gerenciador de chaves integrado quando você vir<block ref="2b673e138bf62e9f201d2fe3f4e48e85" prefix=" " category="inline-code"></block></block>
-  <block id="d1da2db4d465ceb969bae13f9a2c1665" category="list-text">Digite a frase-passe para o gerenciador de chaves integrado novamente quando solicitado a confirmar a senha.</block>
-  <block id="d6b5f802b07df1179c13649ed53524f0" category="paragraph">Você verá o seguinte quando o processo de recuperação estiver concluído:</block>
-  <block id="c6980bbd79483c6809cc84795b7d14d6" category="paragraph">Quando a restauração estiver concluída, o nó reiniciará para concluir o processo.</block>
   <block id="ca97995b5e50e8b10ac1fc3b62cf50d1" category="paragraph">É possível adicionar até duas gavetas de NS224 TB a um par de HA AFF A70 ou AFF A90 quando for necessário storage adicional (para a gaveta interna).</block>
   <block id="c8eac505350cb0f1af11cd259653ff42" category="inline-link-macro">requisitos e práticas recomendadas de adição dinâmica</block>
   <block id="41f1f5d5c9c84b4192d60dae68221e74" category="list-text">Tem de ter revisto a <block ref="4ce128836e76285f9c9ed40b724d2cac" category="inline-link-macro-rx"></block>.</block>
@@ -7718,7 +7688,6 @@
   <block id="6b6aa0b6d9b620cfef1de19db2c781e5" category="paragraph">Os LEDs de uma fonte de alimentação CA ou CC (PSU) indicam se a PSU está funcionando normalmente ou se há problemas de hardware.</block>
   <block id="ddf6d4204e991f952d5f65cedae767ce" category="paragraph">A ilustração e as tabelas a seguir descrevem o LED em uma PSU. (A ilustração é uma PSU CA; no entanto, a localização do LED é a mesma na PSU DC):</block>
   <block id="e23e0b24b8028a3ca10d97610ed2cdc4" category="image-alt">LED de atividade de alimentação da fonte de alimentação</block>
-  <block id="7609b319dac3aca8b9d7c805388fc5e6" category="paragraph">O LED bicolor indica alimentação/atividade a verde e uma avaria a âmbar.</block>
   <block id="0cb6b469a5da43eb5225c25fab0b5ff0" category="cell">Potência/atividade (verde)</block>
   <block id="cd5f6c10b859eea6eaed71a2e494c0db" category="paragraph">Sem alimentação CA/CC para o compartimento</block>
   <block id="aade40c62d1308360c2f119536da1c63" category="paragraph">Sem alimentação CA/CC para a PSU</block>
@@ -8604,7 +8573,6 @@
   <block id="e4a252d9b1af57bdcc80fe662dcbc613" category="list-text">Se você tiver uma configuração de controladora única (multipath), cruze as informações da controladora 2.</block>
   <block id="0fcdd37339799214965dc9b420a21536" category="image-alt">Folha de cálculo de cablagem multipathed preenchida</block>
   <block id="5b07090bafdc58182b6f01852ecbad05" category="summary">Ao concluir o modelo de Planilha, você pode definir os pares de portas SAS do controlador que você pode usar para enviar controladores a pilhas de compartimentos de disco com módulos IOM12/IOM12B para obter conetividade quad-pathed em um par de HA ou configuração de controladora única. Você também pode usar a Planilha completa para percorrer o cabeamento das conexões quad-pathed para sua configuração.</block>
-  <block id="5d57c73dbe661f28ff4ab36825900d40" category="doc">Modelo de folha de cálculo de cabeamento de controlador para stack para conetividade quad-pathed - compartimentos com módulos IOM1/IOM12B2</block>
   <block id="f8688b55e48596e9efbee0294dc9b0af" category="list-title">Sobre sua tarefa</block>
   <block id="0410b8cb4945f84623b17f2f6249cf4a" category="list-text">Este procedimento e modelo de folha de cálculo é aplicável à conetividade de quatro vias de cabeamento para uma configuração de HA ou quatro vias com uma ou mais pilhas.</block>
   <block id="70c45a3fea4e20bf8f37ec9e02cb575c" category="paragraph">Exemplos de planilhas concluídas são fornecidos para configurações de HA e quad-path.</block>
@@ -10316,4 +10284,18 @@
   <block id="3d7237c5aa2d20431d9cae1d4abbadb9" category="doc">Restaurar encriptação - FAS9000</block>
   <block id="13e7cf07309f0d95eee5aa49b6842dc0" category="doc">Verifique o suporte e o status da chave de criptografia - FAS9500</block>
   <block id="e4d9374bc79ce9095fb021e03551599f" category="doc">Restaurar encriptação - FAS9500</block>
+  <block id="bd5c047c4a41e95a8a9424888875e56a" category="list-text">Ligue o módulo de e/S ao dispositivo designado.</block>
+  <block id="2d8241a8fe54414b6494b29d26d8b251" category="list-text">A partir do nó saudável, restaure o giveback automático se você o desativou usando o<block ref="6f0c6616b99fea33a3020e0e0dcbe3c6" prefix=" " category="inline-code"></block> comando.</block>
+  <block id="9d462bd05672844aeab0d3d5d323d66a" category="list-text">Volte a instalar o controlador e volte a ligar a alimentação ao módulo do controlador:</block>
+  <block id="4d872659b015ad414d5e68440a7ddfd6" category="paragraph">O controlador começa a inicializar assim que estiver sentado e a energia for restaurada.</block>
+  <block id="6f3fa8086df2fa20b3e903512f693396" category="list-text">Volte a colocar o controlador afetado em funcionamento normal, devolvendo o respetivo armazenamento:</block>
+  <block id="c2e17c0358bcab54416e83b4418be536" category="paragraph"><block ref="30edaf7c9fa43c78aeaf4b8fabb7af1a" prefix="" category="inline-code"></block>.</block>
+  <block id="32c032e6d73023a7bc6955f5bc422d4d" category="list-text">Se a giveback automática foi desativada, reative-a:</block>
+  <block id="929b41baf89e2c5975631c98cabedd59" category="paragraph"><block ref="6f0c6616b99fea33a3020e0e0dcbe3c6" prefix="" category="inline-code"></block>.</block>
+  <block id="af4b4d5cc6a7f6d9937999949dd33233" category="list-text">Se o AutoSupport estiver ativado, restaure a criação automática de casos:</block>
+  <block id="0306ff5f8ff1d760b409c6f7f1b3b8bd" category="paragraph"><block ref="9ac424c0d7b432975df36a19daf50c9c" prefix="" category="inline-code"></block>.</block>
+  <block id="e48348202fcdb5533fd8d224264fdc58" category="paragraph">Diretiva não resolvida no &lt;stdin&gt; - include:../_include/bootmedia_recovery_image.adoc[]</block>
+  <block id="1ae221b034a7bacf99b88892279c2462" category="paragraph">O LED bicolor indica alimentação/atividade quando verde e uma avaria quando vermelho.</block>
+  <block id="7ea17d80896a391ffe01665c36e03909" category="cell">Atenção (vermelho)</block>
+  <block id="ede3a6bd0f0cd8205608f251691a19e1" category="doc">Modelo de folha de cálculo de cabeamento de controlador para stack para conetividade quad-pathed - compartimentos com módulos IOM12/IOM12B</block>
 </blocks>

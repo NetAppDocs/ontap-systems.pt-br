@@ -156,13 +156,7 @@ Botão de bloqueio do came
 .. Deslize cuidadosamente o módulo todo para dentro da ranhura e, em seguida, rode o trinco do excêntrico totalmente para cima para bloquear o módulo no lugar.
 
 
-. Faça o cabo do módulo de e/S.
-+
-Se o módulo de e/S for uma NIC, faça o cabo do módulo para os switches de dados.
-
-+
-Se o módulo de e/S for um módulo de armazenamento, prenda-o ao compartimento NS224.
-
+. Ligue o módulo de e/S ao dispositivo designado.
 +
 
 NOTE: Certifique-se de que quaisquer slots de e/S não utilizados tenham espaços em branco instalados para evitar possíveis problemas térmicos.
@@ -175,7 +169,7 @@ NOTE: Isso reinicializa as placas PCIe e outros componentes e reinicializa o nó
 
 . Devolver o controlador do controlador parceiro: _Storage failover giveback -ofnode target_node_name_
 . Repita estes passos para o controlador B.
-. Restaure o giveback automático se você o desativou usando o `storage failover modify -node local -auto-giveback true` comando.
+. A partir do nó saudável, restaure o giveback automático se você o desativou usando o `storage failover modify -node local -auto-giveback true` comando.
 . Se o AutoSupport estiver ativado, restaure/dessuprimir a criação automática de casos usando o `system node autosupport invoke -node * -type all -message MAINT=END` comando.
 
 
@@ -361,7 +355,7 @@ Certifique-se de manter o controle de qual slot o módulo de e/S estava.
 .. Deslize cuidadosamente o módulo para dentro da ranhura até ao chassis e, em seguida, rode o trinco do excêntrico até ao fim para bloquear o módulo no devido lugar.
 
 
-. Faça o cabo do módulo de e/S.
+. Ligue o módulo de e/S ao dispositivo designado.
 . Repita os passos de remoção e instalação para substituir módulos adicionais para o módulo do controlador.
 . Rode o tabuleiro de gestão de cabos para a posição de bloqueio.
 . Reinicie o módulo do controlador a partir do prompt Loader:_bye_

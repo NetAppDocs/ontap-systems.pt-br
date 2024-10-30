@@ -154,13 +154,7 @@ image:../media/icon_round_1.png["Legenda número 1"]
 .. Deslize cuidadosamente o módulo para dentro da ranhura até ao compartimento e, em seguida, rode o trinco da came até ao fim para bloquear o módulo no lugar.
 
 
-. Faça o cabo do módulo de e/S.
-+
-Se o módulo de e/S for uma NIC, faça o cabo do módulo para os switches de dados.
-
-+
-Se o módulo de e/S for um módulo de armazenamento, prenda-o ao compartimento NS224.
-
+. Ligue o módulo de e/S ao dispositivo designado.
 +
 
 NOTE: Certifique-se de que quaisquer slots de e/S não utilizados tenham espaços em branco instalados para evitar possíveis problemas térmicos.
@@ -173,7 +167,7 @@ NOTE: Isso reinicializa as placas PCIe e outros componentes e reinicializa o nó
 
 . Devolver o controlador do controlador parceiro: _Storage failover giveback -ofnode target_node_name_
 . Repita estes passos para o controlador B.
-. Restaure o giveback automático se você o desativou usando o `storage failover modify -node local -auto-giveback true` comando.
+. A partir do nó saudável, restaure o giveback automático se você o desativou usando o `storage failover modify -node local -auto-giveback true` comando.
 . Se o AutoSupport estiver ativado, restaure/dessuprimir a criação automática de casos usando o `system node autosupport invoke -node * -type all -message MAINT=END` comando.
 . Se você instalou um módulo de e/S de storage, instale e faça o cabeamento das NS224 gavetas, conforme descrito em link:../ns224/hot-add-shelf-overview.html["Fluxo de trabalho de adição automática"].
 
@@ -355,7 +349,7 @@ Certifique-se de manter o controle de qual slot o módulo de e/S estava.
 .. Deslize cuidadosamente o módulo para dentro da ranhura até ao compartimento e, em seguida, rode o trinco da came até ao fim para bloquear o módulo no lugar.
 
 
-. Faça o cabo do módulo de e/S.
+. Ligue o módulo de e/S ao dispositivo designado.
 . Repita as etapas de remoção e instalação para substituir módulos adicionais para o controlador.
 . Rode o tabuleiro de gestão de cabos para cima até à posição fechada.
 . Reinicie o controlador a partir do prompt Loader:_bye_
