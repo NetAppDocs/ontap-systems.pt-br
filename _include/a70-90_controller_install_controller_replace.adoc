@@ -1,0 +1,50 @@
+= 
+:allow-uri-read: 
+
+
+Reinstale o módulo do controlador e reinicie-o.
+
+. Certifique-se de que a conduta de ar está completamente fechada, rodando-a até onde for.
++
+Ele deve estar alinhado com a chapa metálica do módulo do controlador.
+
+. Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
++
+
+NOTE: Não introduza completamente o módulo do controlador no chassis até ser instruído a fazê-lo.
+
+. Reinstale o ARM de gerenciamento de cabos, se removido, mas não reconete nenhum cabo ao controlador de substituição.
+. Conete o cabo do console à porta do console do módulo do controlador de substituição e reconete-o ao laptop para que ele receba mensagens do console quando ele for reinicializado. O controlador de substituição recebe energia do controlador em estado de funcionamento e começa a reiniciar assim que estiver completamente encaixado no chassis.
+. Conclua a reinstalação do módulo do controlador:
++
+.. Empurre firmemente o módulo do controlador para dentro do chassi até que ele atenda ao plano médio e esteja totalmente assentado.
++
+Os trincos de bloqueio sobem quando o módulo do controlador está totalmente assente.
+
++
+
+NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
+
+.. Rode os trincos de bloqueio para cima, para a posição de bloqueio.
+
+
++
+
+NOTE: O controlador inicializa no prompt Loader assim que ele estiver totalmente assentado.
+
+. No prompt Loader, digite `show date` para exibir a data e a hora no controlador de substituição. A data e a hora estão em GMT.
++
+
+NOTE: A hora apresentada é hora local nem sempre GMT e é apresentada no modo 24hrD.
+
+. Defina a hora atual em GMT com o `set time hh:mm:ss` comando. Você pode obter o GMT atual do nó do parceiro o comando 'date -u'.
+. Recable o sistema de armazenamento, conforme necessário.
++
+Se você removeu os transcetores (QSFPs ou SFPs), lembre-se de reinstalá-los se estiver usando cabos de fibra ótica.
+
+. Conete os cabos de alimentação às fontes de alimentação.
++
+
+NOTE: Se você tiver fontes de alimentação CC, reconete o bloco de alimentação às fontes de alimentação depois que o módulo do controlador estiver totalmente encaixado no chassi.
+
+

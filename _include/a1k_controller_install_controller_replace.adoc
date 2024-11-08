@@ -15,9 +15,17 @@ Ele deve estar alinhado com a chapa metálica do módulo do controlador.
 NOTE: Não use força excessiva ao deslizar o módulo do controlador para dentro do compartimento para evitar danificar os conetores.
 
 +
-O módulo do controlador começa a inicializar assim que estiver totalmente encaixado no compartimento.
 
-. Devolva o controlador afetado ao funcionamento normal, devolvendo o respetivo armazenamento: `storage failover giveback -ofnode _impaired_node_name_`.
-. Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true`.
-. Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos: `system node autosupport invoke -node * -type all -message MAINT=END`.
+NOTE: O controlador inicializa no prompt Loader assim que ele estiver totalmente assentado.
+
+. No prompt Loader, digite `show date` para exibir a data e a hora no controlador de substituição. A data e a hora estão em GMT.
++
+
+NOTE: A hora apresentada é hora local nem sempre GMT e é apresentada no modo 24hrD.
+
+. Defina a hora atual em GMT com o `set time hh:mm:ss` comando. Você pode obter o GMT atual do nó do parceiro o comando 'date -u'.
+. Recable o sistema de armazenamento, conforme necessário.
++
+Se você removeu os transcetores (QSFPs ou SFPs), lembre-se de reinstalá-los se estiver usando cabos de fibra ótica.
+
 

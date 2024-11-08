@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas2800, replace, chassis, shut down, controller, metrocluster, power, supply, ha, state, controller, configuration, switch, aggregates, replace, move, remove, swap 
 summary: Para substituir o chassi, você deve desligar os controladores. 
 ---
-= Desligue os controladores - FAS2800
+= Desligue os controladores - FAS2820
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -48,7 +48,7 @@ Este procedimento destina-se a sistemas com duas configurações de nós. Se tiv
 . Saia do shell do cluster: `exit`
 . Faça login no SP/BMC via SSH usando o endereço IP de qualquer um dos nós listados na saída da etapa anterior.
 +
-Se o estiver usando um console/laptop, faça login no controlador usando as mesmas credenciais de administrador de cluster.
+Se você estiver usando um console/laptop, faça login no controlador usando as mesmas credenciais de administrador de cluster.
 
 +
 
@@ -65,9 +65,4 @@ NOTE: Para clusters que usam o SnapMirror síncrono operando no modo StrictSync:
 . Digite *y* para cada controlador no cluster quando você vir `_Warning: Are you sure you want to halt node "cluster <node-name> number"?
 {y|n}:_`
 . Aguarde que cada controlador pare e exiba o prompt Loader.
-
-
-.O que se segue?
-* Se o sistema for um NetApp StorageGRID ou ONTAP S3 usado como camada de nuvem FabricPool, consulte o https://kb.netapp.com/onprem/ontap/hardware/What_is_the_procedure_for_graceful_shutdown_and_power_up_of_a_storage_system_during_scheduled_power_outage#["Desligue e ligue o seu sistema de armazenamento Guia de resolução"] procedimento após executar este desligamento.
-* Se estiver usando SSDs, https://kb.netapp.com/Support_Bulletins/Customer_Bulletins/SU490["SU490: Práticas recomendadas de SSD (impacto: Crítico): Evite o risco de falha de unidade e perda de dados se desligado por mais de dois meses"] consulte após executar este procedimento de desligamento.
 

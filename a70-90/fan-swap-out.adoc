@@ -155,15 +155,8 @@ LED de atenção NVRAM
 
 |===
 +
-
-NOTE: Se o LED de status do NVRAM estiver piscando, isso pode significar que o módulo do controlador não foi tomado ou interrompido corretamente (dados não comprometidos). Se o módulo do controlador afetado não tiver sido tomado com sucesso pelo módulo do controlador parceiro, contacte https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de continuar com este procedimento.
-
-+
-O comportamento geral do LED de estado do NVRAM no módulo do controlador desativado é o seguinte:
-
-+
-** O LED de estado do NVRAM pisca quando a alimentação é removida do módulo do controlador e o sistema de armazenamento está no estado "aguardando a giveback", ou o módulo do controlador não é tomado ou interrompido corretamente (dados não confirmados).
-** O LED de estado do NVRAM pisca quando o módulo do controlador é removido do chassis e pode significar que o módulo do controlador não é tomado ou parado corretamente (dados não confirmados). Confirme se o módulo do controlador foi corretamente adquirido pelo módulo do controlador parceiro ou se o módulo do controlador afetado mostra `waiting for giveback`. Em seguida, o LED intermitente pode ser ignorado (e o módulo do controlador pode ser removido do chassis).
+** Se o LED NV estiver desligado, passe à próxima etapa.
+** Se o LED NV estiver intermitente, aguarde que o intermitente pare. Se a intermitência continuar durante mais de 5 minutos, contacte o suporte técnico para obter assistência.
 
 
 . Se você ainda não está aterrado, aterre-se adequadamente.
@@ -191,7 +184,9 @@ image::../media/drw_a70-90_pcm_remove_replace_ieops-1365.svg[Controlador remover
 
  a| 
 image:../media/icon_round_1.png["Legenda número 1"]
-| Um trinco de bloqueio 
+ a| 
+Trinco de bloqueio
+
 
 
  a| 
@@ -222,12 +217,14 @@ image::../media/drw_a70-90_fan_remove_replace_ieops-1366.svg[Substituição da v
 |===
 
 
-| image:../media/icon_round_1.png["Legenda número 1"]  a| 
-Patilhas de bloqueio da ventoinha
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+| Patilhas de bloqueio da ventoinha 
 
 
-
-| image:../media/icon_round_2.png["Legenda número 2"] | Módulo da ventoinha 
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+| Módulo da ventoinha 
 |===
 . Alinhe as extremidades do módulo da ventoinha de substituição com a abertura no módulo do controlador e, em seguida, deslize o módulo da ventoinha de substituição para o módulo do controlador até que os trincos de bloqueio encaixem no lugar.
 

@@ -144,15 +144,8 @@ LED de atenção NVRAM
 
 |===
 +
-
-NOTE: Se o LED de status do NVRAM estiver piscando, isso pode significar que o módulo do controlador não foi tomado ou interrompido corretamente (dados não comprometidos). Se o módulo do controlador afetado não tiver sido tomado com sucesso pelo módulo do controlador parceiro, contacte https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de continuar com este procedimento.
-
-+
-O comportamento geral do LED de estado do NVRAM no módulo do controlador desativado é o seguinte:
-
-+
-** O LED de estado do NVRAM pisca quando a alimentação é removida do módulo do controlador e o módulo do controlador está no estado "aguardando a giveback" ou o módulo do controlador não é tomado ou interrompido corretamente (dados não confirmados).
-** O LED de estado do NVRAM pisca quando o módulo do controlador é removido do compartimento e pode significar que o módulo do controlador não é tomado ou interrompido corretamente (dados não confirmados). Confirme se o módulo do controlador foi corretamente adquirido pelo módulo do controlador parceiro ou se o módulo do controlador afetado mostra `waiting for giveback`. Em seguida, o LED piscando pode ser ignorado (e o controlador pode ser removido do gabinete).
+** Se o LED NV estiver desligado, passe à próxima etapa.
+** Se o LED NV estiver intermitente, aguarde que o intermitente pare. Se a intermitência continuar durante mais de 5 minutos, contacte o suporte técnico para obter assistência.
 
 
 . Se você ainda não está aterrado, aterre-se adequadamente.
@@ -193,14 +186,16 @@ image::../media/drw_a1k_remove_replace_nvmembat_ieops-1379.svg[RelPACE a bateria
 |===
 
 
-| image:../media/icon_round_1.png["Legenda número 1"]  a| 
-Tampa da conduta de ar da bateria NV
-
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+| Tampa da conduta de ar da bateria NV 
 
 
  a| 
 image:../media/icon_round_2.png["Legenda número 2"]
-| Ficha da bateria NV 
+ a| 
+Ficha da bateria NV
+
 |===
 . Levante a bateria para aceder à ficha da bateria.
 . Aperte o clipe na face da ficha da bateria para soltar a ficha da tomada e, em seguida, desligue o cabo da bateria da tomada.
@@ -224,7 +219,10 @@ Certifique-se de que a ficha se encaixa na tomada.
 
 Reinstale o módulo do controlador e inicialize-o.
 
-. Se ainda não o tiver feito, feche a conduta de ar.
+. Certifique-se de que a conduta de ar está completamente fechada, rodando-a até onde for.
++
+Ele deve estar alinhado com a chapa metálica do módulo do controlador.
+
 . Alinhe a extremidade do módulo do controlador com a abertura no compartimento e deslize o módulo do controlador para dentro do chassi com as alavancas giradas para longe da frente do sistema.
 . Assim que o módulo do controlador o impedir de deslizar para mais longe, rode as pegas do excêntrico para dentro até que fiquem presas por baixo das ventoinhas
 +

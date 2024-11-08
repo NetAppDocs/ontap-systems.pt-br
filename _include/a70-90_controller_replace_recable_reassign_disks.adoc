@@ -1,91 +1,119 @@
-= Passo 1: Recable o controlador
+= Devolva o controlador
 :allow-uri-read: 
 
 
-Recable as conexões de armazenamento e rede e, em seguida, devolva o controlador.
+Verifique as conexões de armazenamento e rede e, em seguida, devolva o controlador.
 
 
 
-== Passo 1: Recable o controlador
+== Devolva o controlador
 
-Recable as conexões de rede e armazenamento do módulo do controlador.
+Redefina a encriptação se ativada e volte a colocar o controlador em funcionamento normal.
 
-.Passos
-. Recable o módulo do controlador para armazenamento e conexões de rede.
-. Verifique se o cabeamento está correto usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"]o .
+[role="tabbed-block"]
+====
+.Sem criptografia
+--
+. No prompt Loader, digite `boot_ontap`.
+. Pressione <enter> quando as mensagens do console pararem.
 +
-.. Baixe e instale o Config Advisor.
-.. Insira as informações do sistema de destino e clique em coletar dados.
-.. Clique na guia cabeamento e examine a saída. Certifique-se de que todos os compartimentos de disco sejam exibidos e todos os discos apareçam na saída, corrigindo quaisquer problemas de cabeamento encontrados.
-.. Verifique outro cabeamento clicando na guia apropriada e, em seguida, examinando a saída do Config Advisor.
+** Se você vir o prompt _login_, vá para a próxima etapa no final desta seção.
+** Se você vir _aguardando giveback_, pressione a tecla <enter>, faça login no nó do parceiro e vá para a próxima etapa no final desta seção.
 
 
+. Devolva o controlador afetado ao funcionamento normal, devolvendo o respetivo armazenamento: `storage failover giveback -ofnode _impaired_node_name_`.
+. Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true`.
+. Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos: `system node autosupport invoke -node * -type all -message MAINT=END`.
 
 
-
-
-== Passo 2: Devolva o controlador
-
-Transfira a propriedade dos recursos de armazenamento de volta para o controlador de substituição.
-
-. Se o sistema de armazenamento tiver a encriptação configurada, tem de restaurar a funcionalidade armazenamento ou encriptação de volume utilizando o seguinte procedimento para reiniciar o sistema:
+--
+.Criptografia integrada (OKM)
+--
+. No prompt Loader, digite `boot_ontap maint`.
+. Verifique a versão do firmware do TMP com o `sysconfig -v` comando.
 +
-.. Inicialize no Menu e execute a opção 10
-.. Introduza a frase-passe e os dados de cópia de segurança e, em seguida, efetue o arranque normal https://kb.netapp.com/on-prem/ontap/DM/Encryption/Encryption-KBs/Restore_onboard_key_management_encryption_keys["Restaurar chaves de criptografia integradas de gerenciamento de chaves"] consulte .
-.. Execute apenas o CFO giveback
-.. Execute Onboard Sync e verifique se o SVM-KEK está definido como True See https://kb.netapp.com/on-prem/ontap/DM/Encryption/Encryption-KBs/Onboard_keymanager_sync_fails_after_motherboard_replacement["Giveback após falha na substituição do MB - a operação foi vetada pelo gerenciador de chaves"]
-.. Giveback SFO, (sem força)
+** Se a versão for inferior a 5,63, contactar https://support.netapp.com["Suporte à NetApp"].
+** Se a versão for superior a 5,63, saia para o prompt Loader: `halt`.
 
 
-. Se o sistema não tiver a encriptação configurada, execute o seguinte procedimento para reiniciar o sistema:
-+
-.. Inicialize no Menu e execute a opção 1.
-.. Devolver o controlador:
-.. A partir do controlador saudável, devolva o armazenamento do controlador substituído: `storage failover giveback -ofnode _replacement_node_name_`
-+
-O controlador _replacement_ recupera seu armazenamento e completa a inicialização.
-
+. Inicie no menu ONTAP a partir do prompt Loader `boot_ontap menu` e selecione a opção 10.
+. Introduza a frase-passe OKM. Pode obter esta frase-passe do cliente ou https://support.netapp.com["Suporte à NetApp"] contactar .
 +
 
-NOTE: Se o giveback for vetado, você pode considerar substituir os vetos.
+NOTE: Você será solicitado duas vezes para a senha.
+
+. Insira os dados da chave de backup quando solicitado.
+. No menu de inicialização, insira a opção `1` para inicialização normal.
+. Pressione <enter> quando _Waiting for giveback_ for exibido.
+. Mova o cabo do console para o nó do parceiro e faça login como `admin`.
+. Certifique-se de que todos os despejos do núcleo no nó reparado sejam salvos indo para o modo avançado" `set -privilege advanced` e `run local partner savecore` depois .
+. Voltar à alavanca de administração `set privilege admin`: .
+. Devolver apenas os agregados CFO (o agregado raiz): `storage failover giveback -fromnode local -only-cfo-aggregates true`
++
+** Se encontrar erros, https://support.netapp.com["Suporte à NetApp"] contacte .
+
+
+. Aguarde 5 minutos após a conclusão do relatório de giveback e verifique o status de failover e o status de giveback `storage failover show`: E `storage failover show-giveback`.
+. Mova o cabo do console para o nó de substituição e entre `security key-manager onboard sync`
++
+
+NOTE: Você será solicitado a fornecer a senha do OKM para o cluster.
+
+. Verificar o estado das chaves com o seguinte comando `security key-manager key query -key-type svm-KEK`: .
++
+Se a coluna _restored_ mostrar qualquer coisa, exceto _true_, entre em Contato https://support.netapp.com["Suporte à NetApp"]com .
+
+. Devolva o controlador afetado ao funcionamento normal, devolvendo o respetivo armazenamento: `storage failover giveback -ofnode _impaired_node_name_`.
+. Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true`.
+. Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos: `system node autosupport invoke -node * -type all -message MAINT=END`.
+
+
+--
+.Gestor de chaves externo (EKM)
+--
+. Se o volume raiz estiver criptografado com o Gerenciador de chaves Externo e o cabo do console estiver conetado ao nó de substituição, insira `boot_ontap menu` e selecione a opção `11`.
+. Responda `y` ou `n` às seguintes perguntas:
++
+Você tem uma cópia do arquivo /cfcard/kmip/certs/client.crt? não é possível aceder a este site
 
 +
-http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["Encontre o conteúdo de Configuração de alta disponibilidade para sua versão do ONTAP 9"]
-
-.. Após a conclusão do giveback, confirme que o par de HA está saudável e que a aquisição é possível: `storage failover show`
-
-
-. Se o sistema estiver em uma configuração MetroCluster, monitore o status do controlador: `metrocluster node show`
-+
-A configuração do MetroCluster leva alguns minutos após a substituição para retornar a um estado normal, quando cada controlador mostrará um estado configurado, com espelhamento de DR ativado e um modo normal. O `metrocluster node show -fields node-systemid` comando output exibe o ID do sistema antigo até que a configuração do MetroCluster retorne a um estado normal.
-
-. Se o controlador estiver em uma configuração MetroCluster, dependendo do estado MetroCluster, verifique se o campo ID inicial do DR mostra o proprietário original do disco se o proprietário original for um controlador no local de desastre.
-+
-Isso é necessário se ambos os seguintes itens forem verdadeiros:
+Você tem uma cópia do arquivo /cfcard/kmip/certs/client.key? não é possível aceder a este site
 
 +
-** A configuração do MetroCluster está em um estado de switchover.
-** O controlador _replacement_ é o atual proprietário dos discos no local de desastre.
+Você tem uma cópia do arquivo /cfcard/kmip/certs/CA.pem? não é possível aceder a este site
+
 +
-https://docs.netapp.com/us-en/ontap-metrocluster/manage/concept_understanding_mcc_data_protection_and_disaster_recovery.html#disk-ownership-changes-during-ha-takeover-and-metrocluster-switchover-in-a-four-node-metrocluster-configuration["Alterações na propriedade do disco durante o takeover de HA e o switchover do MetroCluster em uma configuração de MetroCluster de quatro nós"]
+OU
 
-
-
-. Se o sistema estiver em uma configuração do MetroCluster, verifique se cada controlador está configurado: `metrocluster node show - fields configuration-state`
 +
-[listing]
-----
-node1_siteA::> metrocluster node show -fields configuration-state
+Você tem uma cópia do arquivo /cfcard/kmip/servers.cfg? não é possível aceder a este site
 
-dr-group-id            cluster node           configuration-state
------------            ---------------------- -------------- -------------------
-1 node1_siteA          node1mcc-001           configured
-1 node1_siteA          node1mcc-002           configured
-1 node1_siteB          node1mcc-003           configured
-1 node1_siteB          node1mcc-004           configured
++
+Você conhece o endereço do servidor KMIP? não é possível aceder a este site
 
-4 entries were displayed.
-----
-. Verifique se os volumes esperados estão presentes para cada controlador: `vol show -node node-name`
-. Se você desativou o controle automático na reinicialização, ative-o a partir do controlador íntegro: `storage failover modify -node replacement-node-name -onreboot true`
++
+Você conhece a porta KMIP? não é possível aceder a este site
 
++
+
+NOTE: Contacte https://support.netapp.com["Suporte à NetApp"] se tiver problemas.
+
+. Fornecer as informações para:
++
+** O conteúdo do arquivo do certificado do cliente (client.crt).
+** O conteúdo do arquivo de chave do cliente (client.key).
+** O conteúdo do arquivo de CA(s) do servidor KMIP (CA.pem).
+** O endereço IP do servidor KMIP.
+** A porta para o servidor KMIP.
+
+
+. Uma vez que o sistema processa, você verá o Menu de inicialização. Selecione "1" para o arranque normal.
+. Verificar o estado da aquisição: `storage failover show`.
+. Certifique-se de que todos os despejos do núcleo no nó reparado sejam salvos indo para o modo avançado" `set -privilege advanced` e `run local partner savecore` depois .
+. Devolva o controlador afetado ao funcionamento normal, devolvendo o respetivo armazenamento: `storage failover giveback -ofnode _impaired_node_name_`.
+. Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true`.
+. Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos: `system node autosupport invoke -node * -type all -message MAINT=END`.
+
+
+--
+====

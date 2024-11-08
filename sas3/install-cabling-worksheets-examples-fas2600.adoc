@@ -29,15 +29,15 @@ image::../media/drw_fas2600_cable_color_key.png[Chave de cor de cabo para plataf
 
 
 
-== Plataforma FAS2800 em uma configuração de HA multipath sem gavetas externas
+== Plataforma FAS2820 em uma configuração de HA multipath sem gavetas externas
 
 O exemplo a seguir mostra que nenhum cabeamento é necessário para acessar a conectividade de HA multipath:
 
-image::../media/drw_fas2800_noshelf_mpha_IEOPS-954.svg[FAS2800 ha multipath sem gavetas externas]
+image::../media/drw_fas2800_noshelf_mpha_IEOPS-954.svg[FAS2820 ha multipath sem gavetas externas]
 
 
 
-== Plataforma FAS2800 em uma configuração de HA de três caminhos sem gavetas externas
+== Plataforma FAS2820 em uma configuração de HA de três caminhos sem gavetas externas
 
 O exemplo de cabeamento a seguir mostra o cabeamento necessário entre as duas controladoras para obter conectividade tri-path:
 
@@ -45,13 +45,13 @@ image::../media/drw_fas2800_noshelf_tpha_IEOPS-955.svg[Fas2800 exemplo de cabeam
 
 
 
-== Plataforma FAS2800 em uma configuração de HA de três caminhos com uma stack de várias shelves
+== Plataforma FAS2820 em uma configuração de HA de três caminhos com uma stack de várias shelves
 
 O exemplo de cabeamento e Planilha a seguir usa o par de portas 0a/0B1:
 
-image::../media/drw_fas2800_worksheet_IEOPS-948.svg[Folha de cálculo de cabeamento de HA de três caminhos FAS2800 que mostra pares de portas para a stack 1]
+image::../media/drw_fas2800_worksheet_IEOPS-948.svg[Folha de cálculo de cabeamento de HA de três caminhos FAS2820 que mostra pares de portas para a stack 1]
 
-image::../media/drw_fas2800_withshelves_tpha_IEOPS-949.svg[FAS2800 exemplo de cabeamento de HA de três caminhos para uma stack]
+image::../media/drw_fas2800_withshelves_tpha_IEOPS-949.svg[FAS2820 exemplo de cabeamento de HA de três caminhos para uma stack]
 
 
 
@@ -60,7 +60,7 @@ image::../media/drw_fas2800_withshelves_tpha_IEOPS-949.svg[FAS2800 exemplo de ca
 O exemplo de cabeamento e Planilha a seguir usa o par de portas 0a/0b:
 
 
-NOTE: Esta secção não se aplica a sistemas FAS2800 ou FAS25XX.
+NOTE: Esta secção não se aplica a sistemas FAS2820 ou FAS25XX.
 
 image::../media/drw_fas2600_mpha_worksheet_IEOPS-1255.svg[Planilha de cabeamento de HA multipath para plataformas com storage interno e uma stack]
 

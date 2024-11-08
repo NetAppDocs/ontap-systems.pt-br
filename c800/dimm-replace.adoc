@@ -21,10 +21,9 @@ Você deve substituir o componente com falha por um componente FRU de substitui�
 
 == Passo 1: Desligue o controlador desativado
 
-Recable as conexões de rede e armazenamento do módulo do controlador.
+Verifique as conexões de rede e armazenamento do módulo do controlador.
 
 .Passos
-. Recable o módulo do controlador para armazenamento e conexões de rede.
 . Verifique se o cabeamento está correto usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"]o .
 +
 .. Baixe e instale o Config Advisor.

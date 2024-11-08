@@ -336,8 +336,6 @@
   <block id="c05037a88de91ff2d60122b1ccf7291a" category="paragraph">Isso fornece um Registro do procedimento para que você possa solucionar qualquer problema que possa encontrar durante o processo de substituição.</block>
   <block id="8fda4ed107d1ec1aebbec15e8e97e9c9" category="doc">Passo 1: Recable o sistema</block>
   <block id="ac5b5b75bd82572e4d052c9c0ed18250" category="paragraph">Para concluir o procedimento de substituição e restaurar o sistema para o funcionamento completo, tem de voltar a efetuar a remarcação do armazenamento, confirmar a reatribuição do disco, restaurar a configuração da encriptação de armazenamento NetApp (se necessário) e instalar licenças para o novo controlador. Você deve concluir uma série de tarefas antes de restaurar o sistema para a operação completa.</block>
-  <block id="fe5bb47bbec2cc6ab51288fa7ec602da" category="paragraph">Recable as conexões de rede e armazenamento do módulo do controlador.</block>
-  <block id="586605376a36631b68766c450645ce95" category="list-text">Recable o módulo do controlador para armazenamento e conexões de rede.</block>
   <block id="865e9b4ef52f3b0d3050c8b3c14eb660" category="inline-link">Active IQ Config Advisor</block>
   <block id="13edd69852bcd53467b47d0660b70558" category="list-text">Verifique se o cabeamento está correto usando<block ref="48865c7c1d8013246e4e5f705a9105de" category="inline-link-rx"></block>o .</block>
   <block id="90dc124f4910ed686c7a901f89c979a1" category="list-text">Baixe e instale o Config Advisor.</block>
@@ -2088,8 +2086,6 @@
   <block id="09c2cf2531a14305542e6aff93e691c5" category="paragraph">Módulo NIC</block>
   <block id="a286fff38dd07b679c8ce3d88b6f2962" category="inline-link-macro">desligue o controlador desativado</block>
   <block id="4332aa8c798bac1ec6c0f4c83e0df305" category="list-text">Verifique se o<block ref="c759882cd4e7fcd95f15b0df0ce7f51c" prefix=" " category="inline-code"></block> tipo é exibido<block ref="c6b9507c26062233f2341cb90db60eaa" prefix=" " category="inline-code"></block> e, em seguida, faça backup manual das informações OKM.</block>
-  <block id="7f1dab55b896652272852d94aadf9413" category="list-text">A partir do prompt Loader, inicialize a imagem de recuperação da unidade flash USB: _Boot_recovery_</block>
-  <block id="496e1cf89cb904a9a2ceccd873c325c5" category="list-text">No controlador parceiro saudável, defina o controlador prejudicado para nível de privilégio avançado: _Set -Privilege Advanced_.</block>
   <block id="2fab3e35d3a8ad1baf526d01c455141e" category="list-text">No controlador do parceiro saudável, execute o comando Restore backup:<block ref="44d388b27236c791c5fe1d30cc29bc43" prefix=" " category="inline-code"></block> .</block>
   <block id="88045ffbfc0d9ef09cd470c545082621" category="list-text">Se o sistema não usar encyption, selecione _Option 1 normal Boot._, caso contrário, vá para <block ref="f2abf47fd75193a34b6b143e08f5b248" category="inline-link-macro-rx"></block>.</block>
   <block id="53f59a608ecfcdc90a1a8b37f4c8f010" category="paragraph">Para substituir o suporte de arranque, tem de remover o módulo de gestão do sistema da parte de trás do sistema, remover o suporte de arranque deficiente, instalar o suporte de arranque de substituição no módulo de gestão do sistema.</block>
@@ -2141,10 +2137,6 @@
   <block id="883e97ce0fc5299b4c253bfe7422df99" category="image-alt">Gráfico de localização do LED de estado e atenção do NVRAM</block>
   <block id="e752b86e927b89b7fc1a7d0c5e13ef64" category="paragraph">LED de estado do NVRAM</block>
   <block id="3e0d1dbbb8d79c619401e691855e6d04" category="paragraph">LED de atenção NVRAM</block>
-  <block id="5dc97b940d2a0a8bf57b3743911070b2" category="admonition">Se o LED de status do NVRAM estiver piscando, isso pode significar que o módulo do controlador não foi tomado ou interrompido corretamente (dados não comprometidos). Se o módulo do controlador afetado não tiver sido tomado com sucesso pelo módulo do controlador parceiro, contacte<block ref="eb2c61027d5e6c8b35692c1e74187026" category="inline-link-rx"></block> antes de continuar com este procedimento.</block>
-  <block id="4e0f18112e412988fc61a484d32624af" category="paragraph">O comportamento geral do LED de estado do NVRAM no módulo do controlador desativado é o seguinte:</block>
-  <block id="6c521503338c94e4dc5bf3d3eeb13d8b" category="list-text">O LED de estado do NVRAM pisca quando a alimentação é removida do módulo do controlador e o módulo do controlador está no estado "aguardando a giveback" ou o módulo do controlador não é tomado ou interrompido corretamente (dados não confirmados).</block>
-  <block id="1fc34159d945428767817ea4688dbeb4" category="list-text">O LED de estado do NVRAM pisca quando o módulo do controlador é removido do compartimento e pode significar que o módulo do controlador não é tomado ou interrompido corretamente (dados não confirmados). Confirme se o módulo do controlador foi corretamente adquirido pelo módulo do controlador parceiro ou se o módulo do controlador afetado mostra<block ref="cbd30655d53ec6ae9cc96680b3199b33" prefix=" " category="inline-code"></block>. Em seguida, o LED piscando pode ser ignorado (e o controlador pode ser removido do gabinete).</block>
   <block id="cca9ed5787e1c9e8e02cd46db907ea96" category="list-text">Na parte da frente da unidade, prenda os dedos nos orifícios dos cames de bloqueio, aperte as patilhas nas alavancas do excêntrico e, com cuidado, mas rode firmemente ambas as travas na sua direção ao mesmo tempo.</block>
   <block id="f496c685f16af1d79af2853eb1f4f094" category="paragraph">O módulo do controlador move-se ligeiramente para fora do compartimento.</block>
   <block id="6e7081198e310340fdbd7ee3575a92db" category="image-alt">Controlador remover gráfico</block>
@@ -2197,7 +2189,6 @@
   <block id="6151adb4be9acf8b78f2772f645f81b4" category="list-text">É necessário substituir um módulo controlador por um módulo controlador do mesmo tipo de modelo. Você não pode atualizar seu sistema apenas substituindo o módulo do controlador.</block>
   <block id="b7325683a2337dcdab8a07d398701bbe" category="list-text">Se o sistema estiver em uma configuração do MetroCluster, você deverá revisar a seção<block ref="dbcae02c495cc3db61b37ce85396171e" category="inline-link-rx"></block> para determinar se deve usar esse procedimento de substituição do controlador.</block>
   <block id="ec77e5f87d39009b586c11431b08f2df" category="paragraph">Depois de concluir a substituição de hardware, verifique a configuração de sistema de baixo nível do controlador de substituição e reconfigure as definições do sistema conforme necessário.</block>
-  <block id="19b66ea26285ab6907d553e575e1e598" category="list-text">Inicialize o modo de manutenção no módulo do controlador de substituição e verifique se todos os componentes apresentam o<block ref="594c16ca0695f6665d7cf4971707adf6" prefix=" " category="inline-code"></block> mesmo estado:<block ref="fb4e6c2e33b945c3ff4d042cb66d2ed4" prefix=" " category="inline-code"></block></block>
   <block id="5ce635c93ed7a2d51e30b917452c6ec7" category="list-text"><block ref="f46f944e351f8b92e40c3308318738a3" prefix="" category="inline-code"></block> (não suportado)</block>
   <block id="9a55c0fdded61a1e549c1b9afbfc5023" category="list-text"><block ref="32b858596eeb9351eca27c2906a21da4" prefix="" category="inline-code"></block> (Não suportado em sistemas ASA)</block>
   <block id="221f15e39f2382e44ef4321b5b0e4320" category="list-text"><block ref="524b78f7770e94479dc70b1b445c5cf3" prefix="" category="inline-code"></block> (não suportado)</block>
@@ -2392,13 +2383,10 @@
   <block id="322279d0aaf25c776901bdae1ee30ea2" category="list-text"><block ref="f46f944e351f8b92e40c3308318738a3" prefix="" category="inline-code"></block> (Não suportado no ASA)</block>
   <block id="0ab01e08199504186fb2242508c77af5" category="paragraph">Mova as unidades de disco rígido e o módulo do controlador do chassis danificado para o novo chassis e troque o chassis danificado pelo novo chassis do mesmo modelo que o chassis danificado.</block>
   <block id="51f2f04b22eba49bd6c9066a5648bd67" category="list-text">Verifique o NVRAM âmbar se o LED de status localizado no slot 4/5 na parte traseira do módulo do controlador desativado está desligado. Procure o ícone NV.</block>
-  <block id="da5f7089cdcd7902b7086f24a299a313" category="list-text">O LED de estado do NVRAM pisca quando a alimentação é removida do módulo do controlador e o sistema de armazenamento está no estado "aguardando a giveback", ou o módulo do controlador não é tomado ou interrompido corretamente (dados não confirmados).</block>
-  <block id="997ed926bb92f58aed3a035708bb70c0" category="list-text">O LED de estado do NVRAM pisca quando o módulo do controlador é removido do chassis e pode significar que o módulo do controlador não é tomado ou parado corretamente (dados não confirmados). Confirme se o módulo do controlador foi corretamente adquirido pelo módulo do controlador parceiro ou se o módulo do controlador afetado mostra<block ref="cbd30655d53ec6ae9cc96680b3199b33" prefix=" " category="inline-code"></block>. Em seguida, o LED intermitente pode ser ignorado (e o módulo do controlador pode ser removido do chassis).</block>
   <block id="deb4147b46ea2ebcf52f58598b90e46b" category="list-text">Desconete os cabos da fonte de alimentação do módulo do controlador das fontes de alimentação (PSU) do módulo do controlador.</block>
   <block id="6233363b0d15d7066ec85e296a99f7eb" category="admonition">Se o sistema tiver alimentação CC, desligue o bloco de alimentação das PSUs.</block>
   <block id="afba20d4eb44e94103854196f1d30cbf" category="list-text">Desconete os cabos do sistema e os módulos SFP e QSFP (se necessário) do módulo do controlador, mantendo o controle de onde os cabos estavam conetados.</block>
   <block id="a5fd25bf69ec23e5f23fbe3cc38a7e54" category="list-text">Remova o dispositivo de gerenciamento de cabos do módulo do controlador.</block>
-  <block id="942fdbfcbfd61f0c694784bf520773d4" category="cell">Um trinco de bloqueio</block>
   <block id="32dde6c192b854cc5ef8fbf9965197f3" category="list-text">Deslize o módulo do controlador para fora do chassis e coloque-o numa superfície plana e estável.</block>
   <block id="1d25cac5c5dca5cb586b53c1d2d76932" category="list-text">Repita estes passos para o outro módulo do controlador no chassis.</block>
   <block id="3a35b79f6cdc064e1fd8bae199bb7cc1" category="list-text">Mantenha o controle de qual compartimento de unidade cada unidade era e coloque as unidades de lado em um carrinho ou mesa sem estática.</block>
@@ -2885,7 +2873,6 @@
   <block id="2a4a9d693caa859153f77cf2204d30cc" category="paragraph"><block ref="c9b37f9017fc101cecef415e707e7b5f" prefix="" category="inline-code"></block></block>
   <block id="775c4f8ef2eabc8574bb57ddd10b0b23" category="list-text">Verifique a saída para o valor na<block ref="5fdf564f22be6bd901a690f1c5a6d9eb" prefix=" " category="inline-code"></block> coluna do seu gerenciador de chaves.</block>
   <block id="0244ade962fa9d071f4def5c7ef769cc" category="paragraph">Esta coluna indica se as chaves de autenticação do seu gerenciador de chaves (EKM ou OKM) foram restauradas com êxito.</block>
-  <block id="22f8cc1607d6f80a2aa89016db8a184d" category="list-text">Dependendo se o sistema estiver usando o Gerenciador de chaves Externo ou o Gerenciador de chaves integrado, selecione uma das opções a seguir.</block>
   <block id="7f6aa2eddb31d7d07b49d6c308057b6a" category="open-title">Gerenciador de chaves externo</block>
   <block id="a26b32b28af2e3521ad3e104fee11f80" category="paragraph">Dependendo do valor de saída exibido na<block ref="5fdf564f22be6bd901a690f1c5a6d9eb" prefix=" " category="inline-code"></block> coluna, siga as etapas apropriadas.</block>
   <block id="c9fb391da0641ace637021ed0f9d1c94" category="cell">Valor de saída<block ref="5fdf564f22be6bd901a690f1c5a6d9eb" prefix=" " category="inline-code"></block> na coluna</block>
@@ -3531,17 +3518,12 @@
   <block id="ac2a6618449930e8abeb32fd078d7716" category="list-text">Identifique o endereço SP/BMC de todos os nós:</block>
   <block id="a0fd5b31be719aeb26e2fc9c6991da9f" category="list-text">Saia do shell do cluster:<block ref="f24f62eeb789199b9b2e467df3b1876b" prefix=" " category="inline-code"></block></block>
   <block id="cf814f480a03329076e1d0cf2f71d7e3" category="list-text">Faça login no SP/BMC via SSH usando o endereço IP de qualquer um dos nós listados na saída da etapa anterior.</block>
-  <block id="aed4c23042b5f25dad252449f4ddcc59" category="paragraph">Se o estiver usando um console/laptop, faça login no controlador usando as mesmas credenciais de administrador de cluster.</block>
   <block id="a3dcd96fdc725fa51c4161c8a03146ab" category="admonition">Abra uma sessão SSH para cada conexão SP/BMC para que você possa monitorar o progresso.</block>
   <block id="435d3b4c3155a5707da928ecab161564" category="list-text">Parar os dois nós localizados no chassi com deficiência:</block>
   <block id="a775efd15ce512c43b877e33a7f4e2ed" category="paragraph"><block ref="b6619702dec8da7cf250a9139ef9b0f0" prefix="" category="inline-code"></block></block>
   <block id="70072850ad1f4d17d4786c385e8f20b9" category="admonition">Para clusters que usam o SnapMirror síncrono operando no modo StrictSync:<block ref="aaef8b07a47365ee6d9bf14ea36ad5d1" prefix=" " category="inline-code"></block></block>
   <block id="2990a44118615c0a3bf6cce4a7382d56" category="list-text">Digite *y* para cada controlador no cluster quando você vir<block ref="e50c9785a9a600201730c59602a210ab" prefix=" " category="inline-code"></block></block>
   <block id="a39c8c38e51a42fcfaac22367dd19064" category="list-text">Aguarde que cada controlador pare e exiba o prompt Loader.</block>
-  <block id="3b6fc5695f8237510131da824ce788d0" category="inline-link">Desligue e ligue o seu sistema de armazenamento Guia de resolução</block>
-  <block id="6c9a996ce891c8110b4d78cd4d1df02b" category="list-text">Se o sistema for um NetApp StorageGRID ou ONTAP S3 usado como camada de nuvem FabricPool, consulte o<block ref="6db187057e0b0e01589d1a1a7f510469" category="inline-link-rx"></block> procedimento após executar este desligamento.</block>
-  <block id="ad8a5006901db5ea8481166a34f27929" category="inline-link">SU490: Práticas recomendadas de SSD (impacto: Crítico): Evite o risco de falha de unidade e perda de dados se desligado por mais de dois meses</block>
-  <block id="d647c402221a6065f23f921167ae208a" category="list-text">Se estiver usando SSDs,<block ref="13eec713a6c81535d5709aa561195b7a" category="inline-link-rx"></block> consulte após executar este procedimento de desligamento.</block>
   <block id="244b874016608f71c1442226368f5da8" category="list-text">Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport:<block ref="8c7d165004dc30be518ba575e7800648" prefix=" " category="inline-code"></block></block>
   <block id="2c605d107b8b0f8d344d6c863e4c47a9" category="paragraph">Pressione Ctrl-C e responda<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block>.</block>
   <block id="2ae25bf6a8aeb42c4073ddba26224b0c" category="summary">Depois de substituir a peça, você pode devolver a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit.</block>
@@ -3994,7 +3976,6 @@
   <block id="6794ac4e17218aaa4a21099cb6c428a5" category="doc">Substitua uma fonte de alimentação - AFF A1K</block>
   <block id="5dae7574a50de0a82f041d98e2b363d4" category="doc">Substitua a bateria do relógio em tempo real - AFF A1K</block>
   <block id="7a0d50897c7e82eeae5a76e821ede64f" category="summary">Tem de substituir .</block>
-  <block id="8696c3a11bb55bf4544256cfb1b2bd94" category="doc">Substitua o módulo de gestão do sistema - AFF A1K</block>
   <block id="ec98690855a2ac4306447ccfbffa94ef" category="doc">Devolva a peça com falha ao NetApp - AFF A200</block>
   <block id="873f086f28dc246032bb35219d36ee95" category="doc">Verifique o suporte e o status da chave de criptografia - AFF A200</block>
   <block id="14330db1bbe50472e695b6fe53ec9c46" category="doc">Inicie a imagem de recuperação - AFF A200</block>
@@ -4809,7 +4790,6 @@
   <block id="7f54aa0b6fdadc77a6c35a589cdb35b3" category="paragraph">Verifique o estado de HA do chassi e devolva a peça com falha ao NetApp.</block>
   <block id="8b2975d216e00ec9bbae796edb379021" category="doc">Substitua o módulo do controlador - AFF A70 e AFF A90</block>
   <block id="729f102b3131803a07803cd2f223d3c3" category="summary">É necessário reiniciar o armazenamento de dados do controlador.</block>
-  <block id="d17298652653b6c2396a7e0cf7ba5220" category="doc">Recable e devolver o controlador - AFF A70 e AFF A90</block>
   <block id="b851102d36222ece27890507e1841ecc" category="doc">Requisitos de substituição do controlador - AFF A70 e AFF A90</block>
   <block id="68e66200bb827544f2bc5f02c2c9a441" category="doc">Substituição completa do controlador - AFF A70 e AFF A90</block>
   <block id="7b78a43d2ef1cd56888972224b322cba" category="section-title">Etapa 1: Verificar LIFs e verificar a integridade do cluster</block>
@@ -5375,7 +5355,6 @@
   <block id="8ca3bab8fcef03d6612177d09193eade" category="list-text">Prenda os cabos aos braços de gestão do cabo (não ilustrado).</block>
   <block id="58d38e899a80743b66bf79e2320b2606" category="list-text">Ligue os cabos de alimentação às PSUs e ligue-os a diferentes fontes de alimentação (não apresentadas). A PSU 1 e 3 fornecem energia para todos os componentes do lado A, enquanto PSU2 e PSU4 fornecem energia para todos os componentes do lado B.</block>
   <block id="bd6f2f179e92d79b65397b0d15328141" category="inline-image-macro">Cabo de alimentação</block>
-  <block id="51acffc07387d62f5f13084afdbadce6" category="paragraph"><block ref="51acffc07387d62f5f13084afdbadce6" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ea20ab43b51e28478057e256ebcc6372" category="inline-image-macro">Ligações de alimentação</block>
   <block id="0fe5a7372057ea7ee4222a1697273ab7" category="paragraph"><block ref="0fe5a7372057ea7ee4222a1697273ab7" category="inline-image-macro-rx" type="image"></block></block>
   <block id="9eeb212e62f650916daef03f37d7b903" category="paragraph"><block ref="9eeb212e62f650916daef03f37d7b903" category="inline-image-macro-rx" type="image"></block></block>
@@ -5642,7 +5621,6 @@
   <block id="778ed0ff73bab9d38df4ab676b375d7d" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block><block ref="7295d6b475ca2cf21124bd198447f219" category="inline-link-macro-rx"></block></block>
   <block id="3459049c9ccd0e45188ec917dc7dca94" category="paragraph">Para substituir o módulo do chassis, tem de cumprir determinados requisitos.</block>
   <block id="8c82ee3a5a33a059aae4ab30bedbd5a5" category="doc">Substitua o hardware do módulo do controlador - ASA A70 e ASA A90</block>
-  <block id="1e314e899a3414e9234a03c7449851c1" category="doc">Recable e devolver o controlador - ASA A70 e ASA A90</block>
   <block id="f6c6b6a5348d487bef542c09ec0a4b75" category="doc">Requisitos de substituição do controlador - ASA A70 e ASA A90</block>
   <block id="63c1e704a685a7abd832fefd52c52ac5" category="doc">Restauração completa do sistema - ASA A70 e ASA A90</block>
   <block id="43df70609ea6def43d3a5dbd42ad0adc" category="doc">Desligue o controlador desativado - ASA A70 e ASA A90</block>
@@ -5710,7 +5688,6 @@
   <block id="d40d4bbeff22abe0ae50f578804e3f1d" category="doc">Substitua o NVRAM - ASA A1K</block>
   <block id="8280bf46cc1987c5763fa466b06ce943" category="doc">Substitua uma fonte de alimentação - ASA A1K</block>
   <block id="53211074b0edd2a1e49952ae0a99c70e" category="doc">Substitua a bateria do relógio em tempo real - ASA A1K</block>
-  <block id="35b0e55d79a35d4035adfd05a160d0b1" category="doc">Substitua o módulo de gerenciamento do sistema - ASA A1K</block>
   <block id="f391cb900d45daed2a3ef828c09a1546" category="doc">Devolva a peça com falha ao NetApp - ASA A150</block>
   <block id="15f3dc209220fcd5ed53507c602a5619" category="doc">Restaure OKM, NSE e NVE - ASA A150</block>
   <block id="48a9a0f255a122f383dce55509b5a79a" category="doc">Inicie a imagem de recuperação - ASA A150</block>
@@ -6175,7 +6152,6 @@
   <block id="31272abf1c9209ab4acd0bf10f129338" category="cell">ONTAP 9.16,1</block>
   <block id="bbc155fb2b111bf61c4f5ff892915e6b" category="cell">Interrutor</block>
   <block id="e29dd9091577ef2b7d9c9828cd5407af" category="paragraph">Interrutor NetApp CN1610</block>
-  <block id="f267a68fd1c8bddcc992701898021398" category="paragraph">Interrutores do cluster</block>
   <block id="a8495ee8f8ba70ddce083c14b317a765" category="list-text">Cisco 5596UP</block>
   <block id="4249daf52cc9869f5f0eb05a465153b6" category="list-text">Cisco 5596T</block>
   <block id="23c35b2f23dd1a2d9d32a286f986b138" category="inline-link">Switches Ethernet Cisco compatíveis</block>
@@ -6337,7 +6313,6 @@
   <block id="c4ed6403201dfa217ff707bb31f7629c" category="doc">Substitua o NVRAM - FAS70 e FAS90</block>
   <block id="031f9f009940597777a75796e5b17818" category="doc">Substitua uma fonte de alimentação - FAS70 e FAS90</block>
   <block id="6edcaa0f49095aafb0fa011d3fa4d4c5" category="doc">Substitua a bateria do relógio em tempo real - FAS70 e FAS90</block>
-  <block id="726f515449f8f7ce4011ad297cfea213" category="doc">Substitua o módulo de gerenciamento do sistema - FAS70 e FAS90</block>
   <block id="a47803b6b6d01b67efcc88a157378c39" category="doc">Devolver a peça com falha ao NetApp - FAS2600</block>
   <block id="d2efa0c31f219abbc043377bfd4ffa3b" category="doc">Inicie a imagem de recuperação - FAS2600</block>
   <block id="048623d528706e72f17139851220f65a" category="doc">Descrição geral da substituição do suporte de arranque - FAS2600</block>
@@ -6416,17 +6391,12 @@
   <block id="b1bae0b20bbdf563e7e4d9f0fff14ef3" category="doc">Substitua a bateria do NVMEM - FAS2700</block>
   <block id="de599e8ee2b792a05ff2446e93b3a7e5" category="doc">Troque uma fonte de alimentação - FAS2700</block>
   <block id="4091c5e7156fea8e74fb2f6ff3fe34fd" category="doc">Substitua a bateria do relógio em tempo real - FAS2700</block>
-  <block id="cf71e2640e92b433c3b638e9e94411a3" category="doc">Devolver a peça com falha ao NetApp - FAS2800</block>
-  <block id="c0dcdcb83d0bd841dcab467149d8fbce" category="doc">Verifique o suporte e o status da chave de criptografia - FAS2800</block>
-  <block id="0da3888f81e8e56d2de2a92a42b512a3" category="doc">Inicie a imagem de recuperação - FAS2800</block>
   <block id="c5ad83e174ba7727e76fc50c8366e589" category="list-text">Restaurar o sistema de ficheiros var :</block>
   <block id="1396dacdf561903f32c605f06d2cf5d8" category="list-text">Pressione<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> quando solicitado para confirmar se o backup de restauração foi bem-sucedido.</block>
   <block id="e51ecd8f185715278ef737fd290e62f5" category="list-text">Pressione<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> quando solicitado para restaurar a cópia de configuração.</block>
   <block id="1a037944aedbce3040a5314200246858" category="list-text">No prompt do cluster, verifique as interfaces lógicas com o<block ref="55cf88a325a6e0574aef732566cc984c" prefix=" " category="inline-code"></block> comando.</block>
   <block id="8c4cb494b75288cf3ce1e7ce1dee3c9d" category="paragraph">Se alguma interface estiver listada como "false", reverta essas interfaces de volta para sua porta inicial usando o<block ref="ffbe7d182280173cba10c83ec9992974" prefix=" " category="inline-code"></block> comando.</block>
   <block id="fcb4d3b1f229bc036dc2280a7c1d29c4" category="list-text">Se você não estiver usando criptografia de armazenamento, restaure o giveback automático e o AutoSupport:</block>
-  <block id="9e88aae04cfd42bd2e0b9f18c79e6b08" category="doc">Descrição geral da substituição do suporte de arranque - FAS2800</block>
-  <block id="3ab3867dfd753c1ff0d27e903bff1cc4" category="doc">Substitua o suporte de arranque - FAS2800</block>
   <block id="1a829a672d8f4a1ab6936c766164f3fe" category="image-alt">drw 2850 pcm remover instalação IEOPS 694</block>
   <block id="5d9c656065fa74e7cb14500497b33617" category="list-text">Abra a tampa pressionando os botões azuis nas laterais do módulo do controlador para soltar a tampa e, em seguida, gire a tampa para cima e para fora do módulo do controlador.</block>
   <block id="206f40d3d3a553b715b00b4ada962595" category="image-alt">Tampa do módulo de controlador aberto drw 2850 IEOPS 695</block>
@@ -6460,8 +6430,6 @@
   <block id="b455521e9b63749ce3c5c792316849ca" category="list-text">Descompacte a imagem transferida.</block>
   <block id="0f844d6324319ebe9b4aabd24f1b88dd" category="list-text">Instale o módulo do controlador:</block>
   <block id="6bfde1459ef866428e3532004887b3b8" category="list-text">Recable o módulo do controlador.</block>
-  <block id="a9b1f8d4946ebf3182e44c224cfa7997" category="doc">Desligue o controlador desativado - FAS2800</block>
-  <block id="eba8408f37a356fdabfeb21f5ae29286" category="doc">Substitua o módulo de armazenamento em cache - FAS2800</block>
   <block id="dec0306e681fc720cf31bc4851ebcee4" category="inline-link">Referência de administração do sistema ONTAP 9</block>
   <block id="b95a2b769ddc69403557ab79e1942007" category="paragraph"><block ref="b95a2b769ddc69403557ab79e1942007" category="inline-link-rx"></block></block>
   <block id="a0ff1a6d16d908c33e10409aed0ac623" category="paragraph">Retire o módulo do controlador do sistema e, em seguida, retire a tampa do módulo do controlador.</block>
@@ -6481,13 +6449,11 @@
   <block id="7712b02131dda6b0cd207e6b834af33f" category="section-title">Passo 5: Restaurar a giveback automática e AutoSupport</block>
   <block id="c7e6662de773deb97f21acca554ecb2a" category="paragraph">Restaure a giveback automática e o AutoSupport se tiverem sido desativados.</block>
   <block id="58a4b1c93d94014eec48898453bccf6b" category="list-text">Se uma janela de manutenção do AutoSupport tiver sido acionada, encerre-a utilizando o.<block ref="9ac424c0d7b432975df36a19daf50c9c" prefix=" " category="inline-code"></block></block>
-  <block id="75127c072b8dbfcfddece3f2cfd7f451" category="doc">Restaure e verifique a configuração - FAS2800</block>
   <block id="e6c254ab2bdf1b6e7e1ef07d143a13af" category="paragraph">Verifique se o estado de HA do chassi apresenta o sistema e devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit.</block>
   <block id="9596a3101174a610f7547f1a64ef5318" category="list-text">Defina o estado HA para o chassi com base na configuração existente do sistema:<block ref="8c04088c57a1d68914caed5df5031ed1" prefix=" " category="inline-code"></block></block>
   <block id="fc7de36232e6d564fdd8b86d9b96e5c3" category="list-text">Sair do modo de manutenção:<block ref="4a1bde0ea8bcda2a591f42646813c477" prefix=" " category="inline-code"></block>. É apresentado o aviso Loader.</block>
   <block id="05feda261599a7466b383d9e10f43f27" category="list-text">Inicialize os módulos do controlador.</block>
   <block id="57d485c98e6887d6e9203bac1d90bb5b" category="summary">Mova as fontes de alimentação, as unidades de disco rígido e o módulo ou módulos do controlador do chassis danificado para o chassis de substituição e troque o chassis danificado do rack de equipamentos ou do armário do sistema pelo chassis de substituição do mesmo modelo que o chassis danificado.</block>
-  <block id="4366f74c4f2ef88a08284a5d59c6119c" category="doc">Mova e substitua as ferragens - FAS2800</block>
   <block id="7c5cfb9ddad014365f0de74ba951ffc3" category="paragraph">A remoção de uma fonte de alimentação ao substituir um chassi envolve desligar, desconetar e remover a fonte de alimentação do chassi com deficiência e instalá-la e conectá-la no chassi de substituição.</block>
   <block id="075968c9cfe201324f67c6dd57423623" category="paragraph">Retire o módulo do controlador ou os módulos do chassis danificado.</block>
   <block id="ecd88b88f167b4220060f55cd515a5d0" category="list-text">Repita estes passos para o segundo módulo do controlador no chassis.</block>
@@ -6501,9 +6467,6 @@
   <block id="d9b58093a09ff3f9f4ee47e855e10b09" category="paragraph">Instale o módulo do controlador e quaisquer outros componentes no chassis de substituição, inicialize-o no modo de manutenção.</block>
   <block id="a1b1abf2b9f93afc61b501cc65856321" category="list-text">Repita os passos anteriores para o segundo controlador no chassis de substituição.</block>
   <block id="fb7c806d17ac05daec934e824397154e" category="list-text">Repita os passos anteriores para o segundo módulo do controlador no chassis de substituição.</block>
-  <block id="aa22e2fb20ea26cf3d0b89dfcd65a440" category="doc">Descrição geral da substituição do chassis - FAS2800</block>
-  <block id="40ab4deb5c724a3e2d6c8f6d96a94554" category="doc">Desligue os controladores - FAS2800</block>
-  <block id="b1431e23e98302fc2fdbdf8a76f33d8d" category="doc">Substitua o hardware do módulo do controlador - FAS2800</block>
   <block id="d27d70d1f85fe30f676b7d8f18fbcc20" category="paragraph">Substitua o hardware do módulo do controlador prejudicado removendo o controlador prejudicado, movendo os componentes da FRU para o módulo do controlador de substituição, instalando o módulo do controlador de substituição no chassi e, em seguida, inicializando o módulo do controlador de substituição.</block>
   <block id="1c196a814e5043cb74dc86df6c03ff47" category="paragraph">Retire o módulo do controlador desativado do chassis.</block>
   <block id="27d23c72f7120f51677aa7a5c4e3c7fb" category="list-text">Se você deixou os módulos SFP no sistema depois de remover os cabos, mova-os para o módulo controlador de substituição.</block>
@@ -6573,16 +6536,11 @@
   <block id="2242e742287f23709fa714deab7eb578" category="admonition">Você deve procurar uma mensagem de console de atualização automática de firmware. Se a mensagem de atualização for exibida, não pressione<block ref="76be6883bcf9e8a6aed3a347ac20e41f" prefix=" " category="inline-code"></block> para interromper o processo de inicialização até que você veja uma mensagem confirmando que a atualização está concluída. Se a atualização do firmware for cancelada, o processo de inicialização será encerrado para o prompt Loader. Você deve executar o<block ref="af718f67c26a0f44692db1ab31eb6a36" prefix=" " category="inline-code"></block> comando e, em seguida, entrar<block ref="1442f7a5af9f43702c90a69a8357a46d" prefix=" " category="inline-code"></block> para reinicializar o sistema.</block>
   <block id="5dc33b8c32ff69779a908c84d65a7b21" category="list-text">Um aviso de uma incompatibilidade de ID do sistema e pedindo para substituir a ID do sistema. Responda<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> a este aviso.</block>
   <block id="7ac264b7d08fb9d1106ac983e7478d8a" category="list-text">Um aviso de que, ao entrar no modo de manutenção em uma configuração HA, você deve garantir que o controlador saudável permaneça inativo. Responda<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> a este aviso.</block>
-  <block id="939dd100817795c3c406debd7b6667d8" category="doc">Descrição geral da substituição do módulo do controlador - FAS2800</block>
-  <block id="4f57674d148f7c749c1795267b17a2b1" category="doc">Recable o sistema e reatribuir discos - FAS2800</block>
   <block id="2675f497966bc5cad0cdd88dbe6eab31" category="list-text">Aguarde até que o<block ref="f1cce1d6823a5337ea1ed313f3bc1d65" prefix=" " category="inline-code"></block> comando seja concluído antes de emitir o giveback.</block>
   <block id="578b3122a990bee5553a818b631268ef" category="admonition">Se o giveback for vetado, resolva o problema de veto. Se o veto não for crítico para resolver, você pode substituir o veto.</block>
-  <block id="e2306cfc3634594ca9e5483d541a9eb2" category="doc">Restauração completa do sistema - FAS2800</block>
   <block id="954e375575b9fbd9370aa08dd503d453" category="paragraph">Restaure o sistema para o funcionamento completo restaurando as configurações de criptografia de armazenamento NetApp ou criptografia de volume (se necessário), instalando licenças para o controlador de substituição e retornando a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit.</block>
-  <block id="cffd34bd4c8c92699b3202d7f451d2ae" category="doc">Restaure e verifique a configuração do sistema - FAS2800</block>
   <block id="5a78b16de65a946feda8c56392de99d0" category="paragraph">Depois de concluir a substituição de hardware e inicializar o controlador de substituição, verifique a configuração de sistema de baixo nível do controlador de substituição e reconfigure as configurações do sistema conforme necessário.</block>
   <block id="3fc70ee0f25a2808ad9e1ace34edd095" category="list-text">Se o estado do sistema exibido para o controlador não corresponder à configuração do sistema, defina o estado HA para o módulo do controlador de substituição:<block ref="83ac5421ebdbb8b86762e96ecda44c4a" prefix=" " category="inline-code"></block></block>
-  <block id="30d72b7769d2368f3a2f7fcacca60c27" category="doc">Substitua um DIMM - FAS2800</block>
   <block id="041e48089a1444bcdc82526d41790e40" category="paragraph">Retire o módulo do controlador do sistema e, em seguida, retire a tampa do módulo do controlador.</block>
   <block id="8caaa86fafbf22c9627e97fb31c1eea5" category="paragraph">Localize o DIMM dentro do controlador, remova-o e substitua-o.</block>
   <block id="95da017c37970d073ec39c2d3a5f57a0" category="admonition">Antes de substituir um DIMM, você precisa desconetar a bateria do NVMEM do módulo do controlador.</block>
@@ -6599,9 +6557,7 @@
   <block id="44e9bf23cac339f1a46833e07d1be621" category="list-text">Alinhe a bateria com os suportes de fixação na parede lateral de chapa metálica.</block>
   <block id="3ab31ac30e2ad91e2f7e6a9ecd045f6e" category="list-text">Empurre cuidadosamente o módulo do controlador até meio do sistema. Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.</block>
   <block id="77eded9438a3613ba447a2592768431f" category="section-title">Passo 5: Restaurar a giveback automática e AutSupport</block>
-  <block id="8e605f57d62f3d1be204e98b9b4935f7" category="doc">Substitua a unidade SSD ou a unidade HDD - FAS2800</block>
   <block id="7484b7e82acc4757b26226229997810e" category="summary">Este processo fornece instruções detalhadas passo a passo para a instalação de um sistema de armazenamento NetApp típico.</block>
-  <block id="fde9b148f6eb9655d65658597326b4ee" category="doc">Passos detalhados - FAS2800</block>
   <block id="d9652a5ef2ee620cb0b558db1a0b0abd" category="paragraph">Este procedimento fornece instruções detalhadas passo a passo para a instalação de um sistema de armazenamento NetApp típico. Use este procedimento se desejar instruções de instalação mais detalhadas.</block>
   <block id="f4c3757c8a20a3155f18506671b4a147" category="list-text">Espaço em rack para o sistema de armazenamento em um rack de telecomunicações ou gabinete do sistema.</block>
   <block id="a7fe55285588ce3bc863c28bb05d4186" category="list-text">2U para o sistema de armazenamento</block>
@@ -6686,7 +6642,6 @@
   <block id="353960fbbf75aa5a4dd1042a20bf18dc" category="paragraph">Controlador B para as gavetas de unidades</block>
   <block id="a01af11c268599bde566d99055019251" category="paragraph">Use a animação ou as instruções passo a passo para concluir o cabeamento entre as controladoras e os compartimentos de unidades.</block>
   <block id="3b94033c8a5b93831bf0d7c1fa418f82" category="inline-link-macro">Instalar uma gaveta em um novo sistema de storage</block>
-  <block id="a50d38918f3af2fcdf9a82289745bef3" category="admonition">Não use a porta 0B2 em um FAS2800. Esta porta SAS não é utilizada pelo ONTAP e está sempre desativada. Consulte <block ref="e082bc1662f9e2eeea25ff123ac1639a" category="inline-link-macro-rx"></block> para obter mais informações.</block>
   <block id="3fc162aa6870cf22cf3e0a947b89615a" category="video-title">Animação - cabeamento do compartimento de unidade</block>
   <block id="6ac0c621e44f0d6d3cfb9a6035ba969b" category="list-text">A porta 1 da IOM a à porta 3 da IOM A na gaveta diretamente abaixo.</block>
   <block id="a2a4a3ef1017cf43a3cf109d61286633" category="list-text">Porta 1 na IOM B para a porta 3 na IOM B na gaveta diretamente abaixo.</block>
@@ -6722,18 +6677,9 @@
   <block id="c1abdda48959ad5305acdea9199b4083" category="list-text">Conete o cabo do console ao laptop ou console e conete a porta do console no controlador usando o cabo do console fornecido com o sistema de armazenamento e, em seguida, cConete o laptop ou o console ao switch na sub-rede de gerenciamento.</block>
   <block id="6f196fc99c938b047a2dbbae60694da9" category="image-alt">Computador portátil drw 2800 para mudar para controlador IEOPS 1084</block>
   <block id="ea6092d42464dfafd164efeca17f02cc" category="list-text">Configure o sistema de armazenamento usando os dados coletados em <block ref="d0fb50e606c7cb2fa74e99fa5a3520a8" category="inline-xref-macro-rx"></block>..</block>
-  <block id="5f81816799fe408c4f5d0d2b06be7dd0" category="doc">Guia rápido - FAS2800</block>
-  <block id="b0f0e558d3522c3be05dd8c2dd0af1cc" category="inline-link-macro">Instruções de instalação e configuração de sistemas FAS2800</block>
-  <block id="738ad40a42e139ed29cebf62dfc05a11" category="paragraph"><block ref="738ad40a42e139ed29cebf62dfc05a11" category="inline-link-macro-rx"></block></block>
   <block id="e8b941fcc944e0bbefda4636b0900a37" category="list-text"><block ref="e8b941fcc944e0bbefda4636b0900a37" category="inline-link-macro-rx"></block></block>
   <block id="531b14cc35d21cdbdd3198396f0be9e2" category="list-text"><block ref="531b14cc35d21cdbdd3198396f0be9e2" category="inline-link-macro-rx"></block></block>
   <block id="64bd602d0544a5fe1fc2a2419daab9cb" category="list-text"><block ref="64bd602d0544a5fe1fc2a2419daab9cb" category="inline-link-macro-rx"></block></block>
-  <block id="f2f9e5e5861340b4511769cf5cb0c85c" category="doc">Passos de vídeo - FAS2800</block>
-  <block id="89ec55d6caf5c08b62f951c13868846e" category="video-title">Animação - FAS2800 instruções de instalação e configuração</block>
-  <block id="52af7d4516c9a231debbc59d16540841" category="summary">Mantenha o hardware FAS2800</block>
-  <block id="a15b9605ee28854b0a879286a11a485d" category="doc">Mantenha o hardware FAS2800</block>
-  <block id="3bf4e15c5081d9414a6cd3448aae890e" category="paragraph">Para o sistema de armazenamento FAS2800, pode executar procedimentos de manutenção nos seguintes componentes.</block>
-  <block id="458c640b6a96cac4ef20be523ebb7f89" category="doc">Substitua a bateria do NVMEM - FAS2800</block>
   <block id="7d52b24114e5d676f50874574fb29878" category="paragraph">Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em<block ref="eb2c61027d5e6c8b35692c1e74187026" category="inline-link-rx"></block>Contato com .</block>
   <block id="26e700524d9a1c0b6c28c8ad2d207679" category="section-title">Passo 2: Remova e abra o módulo do controlador</block>
   <block id="2a0805526339647b20ef0fc7df37dd6f" category="paragraph">Retire e abra o módulo do controlador.</block>
@@ -6751,7 +6697,6 @@
   <block id="c0c80117cce7bb03ee803f73b530673c" category="list-text">Remova a bateria com falha do módulo do controlador:</block>
   <block id="ffdab672b5303a82bceb504a929ac040" category="list-text">Desligue a bateria do módulo do controlador</block>
   <block id="3236ef72d450eec8cfc673cc7faea15d" category="list-text">Retire a bateria de substituição da respetiva embalagem. Instale a bateria de substituição:</block>
-  <block id="2655035d8bc59ea5bd6dd9f09d821e65" category="doc">Substitua uma placa mezzanine - FAS2800</block>
   <block id="db5c04ca6cb958f296ff071cf8420f54" category="paragraph">Substitua a placa mezzanine desconetanto os cabos e todos os módulos SFP e QSFP da placa, substitua a placa mezzanine com falha e, em seguida, reconetável as placas.</block>
   <block id="783de30113379b15fc6135387f11b7e6" category="video-title">Animação - substitua a placa mezzanine</block>
   <block id="cf6800eb49ae54456676c105c115a1fa" category="section-title">Passo 3: Substitua a placa mezzanine</block>
@@ -6760,10 +6705,8 @@
   <block id="4bca5310f65e82fe5c4eec2c7a1c6c17" category="list-text">Alinhe o soquete no plugue da placa mezzanine de substituição com o soquete na placa-mãe e, em seguida, encaixe suavemente a placa diretamente no soquete.</block>
   <block id="f2972968e044e6666c42c0182107b4f6" category="paragraph">Reinstale o módulo do controlador.</block>
   <block id="f13ddfa8c0e2762d2f399acfc6f0806b" category="summary">A troca de uma fonte de alimentação envolve desligar, desligar e remover a fonte de alimentação prejudicada e instalar, ligar e ligar a fonte de alimentação de substituição.</block>
-  <block id="de1b8802ef132a49eb27c58d444b128f" category="doc">Troque uma fonte de alimentação - FAS2800</block>
   <block id="9b0f331e43ad447dbbb78d71a44b1734" category="video-title">Animação - substitua a fonte de alimentação</block>
   <block id="ad74e1b8d39de33b6e8b9df71820c85f" category="image-alt">drw 2850 substitua a PSU IEOPS 702</block>
-  <block id="d3b5d00b3ac932c953d2ab9864fd8409" category="doc">Substitua a bateria do relógio em tempo real - FAS2800</block>
   <block id="103256b354864966fcc74d6466bc1cc4" category="paragraph">Substitua a bateria do RTC localizando-a no interior do controlador e siga a sequência específica de passos.</block>
   <block id="51f7be1d2b3585b769547e04e7036ed9" category="image-alt">drw 2850 substitua a bateria rtc IEOPS 701</block>
   <block id="9f463a2feadd622498da11734b7d3548" category="paragraph">Reinstale o módulo do controlador e inicialize-o no prompt DO Loader.</block>
@@ -7250,8 +7193,6 @@
   <block id="6a5e44bab29f77a10ee8291f7122dcd0" category="list-text"><block ref="6a5e44bab29f77a10ee8291f7122dcd0" category="inline-link-macro-rx"></block></block>
   <block id="2ad111e68a24a4da0cc9b332319a0ae8" category="inline-link-macro">FAS2700</block>
   <block id="8e4e1285f49cb2de8e4ad6f96de7a955" category="list-text"><block ref="8e4e1285f49cb2de8e4ad6f96de7a955" category="inline-link-macro-rx"></block></block>
-  <block id="a334af0b164fc0db79711e89abe4cb0d" category="inline-link-macro">FAS2800</block>
-  <block id="6ed83ea3812e071cb890a3397f1ef8f3" category="list-text"><block ref="6ed83ea3812e071cb890a3397f1ef8f3" category="inline-link-macro-rx"></block></block>
   <block id="f9e104181ae9f5f7cb047ada1d31db67" category="list-text"><block ref="f9e104181ae9f5f7cb047ada1d31db67" category="inline-link-macro-rx"></block></block>
   <block id="7e888c9e662025943d61a7b6ab33fa3f" category="list-text"><block ref="7e888c9e662025943d61a7b6ab33fa3f" category="inline-link-macro-rx"></block></block>
   <block id="0b91391244828b90a1ed6303288f165b" category="list-text"><block ref="0b91391244828b90a1ed6303288f165b" category="inline-link-macro-rx"></block></block>
@@ -8404,10 +8345,7 @@
   <block id="6c5fe9aff643cb6f6afc0c56cef693b2" category="paragraph">Para obter informações atuais sobre configurações de cabeamento compatíveis para o modelo da sua plataforma, consulte o Hardware Universe.</block>
   <block id="e813922cd0bf97e10c1d75af7555f41d" category="list-text">As configurações de par HA devem ser cabeadas como configurações de HA multipath ou HA de caminho quádruplo com as seguintes exceções:</block>
   <block id="38c7dba0bfe978540fdb2f9598267e27" category="list-text">As plataformas com armazenamento interno não suportam conetividade HA de quatro vias.</block>
-  <block id="0fecc4c819e73e375d9c40a95ba6fec2" category="list-text">Um par de HA de FAS2800 TB pode ser cabeado como HA de três caminhos.</block>
-  <block id="bd0ab5deac45d462eafb4c6094f38b07" category="paragraph">Informações sobre a conetividade FAS2800 podem ser encontradas na <block ref="44cb6d44583fef757ae54be5d72211f9" category="inline-xref-macro-rx"></block>seção.</block>
   <block id="379f6edbaf8caad99a93caabf81a3374" category="list-text">As plataformas com storage interno podem ser cabeadas como configurações de HA de caminho único (da porta 0b/0B1 para compartimentos externos) para dar suporte à conectividade a um dispositivo externo de backup em fita SAS (da porta 0a).</block>
-  <block id="e543cae57757f63f8d1f193133213927" category="paragraph">Para FAS2800 pares de HA, embora o cabeamento para compartimentos externos seja HA de caminho único, devido à conexão interna de cada controladora da porta 0b ao seu expansor local (IOM12G) e à porta 0C ao expansor de seu parceiro, a configuração de par de HA é HA de multipath.</block>
   <block id="905e44a8d6df3feceb87ebb53cfc800e" category="list-text">As configurações de controlador único devem ser cabeadas como configurações multipath ou de caminho quádruplo, com as seguintes exceções:</block>
   <block id="9331810e62f51c7489e12877891ef496" category="list-text">As configurações de controlador único da série FAS2600 podem ser cabeadas como configurações de caminho único.</block>
   <block id="ab36d824336ef6ebffc6dcb6e6c8f5c7" category="paragraph">Como o armazenamento interno usa conetividade de caminho único, o ONTAP emite avisos ocasionais de que caminhos mistos são detetados. Para evitar esses avisos, você pode usar a conectividade de caminho único para os compartimentos de disco externos. Além disso, você pode usar conetividade de caminho único quando um dispositivo de backup de fita SAS externo é usado.</block>
@@ -8509,19 +8447,15 @@
   <block id="5cc45636165f15166974ddab3dfb0fd7" category="paragraph">A ilustração a seguir destaca a conectividade de domínio da porta de armazenamento interno (0b/0B1) a uma pilha externa de gavetas:</block>
   <block id="dd01973f9e5109874be08739c9aadac8" category="image-alt">Conetividade de domínio da porta de armazenamento interno 0b 0B1</block>
   <block id="45219ca27a4ad91c17dcca93a96dd284" category="section-title">Conetividade HA de três vias</block>
-  <block id="7125880b6305be48cdd0760966c349f2" category="paragraph">A conectividade HA Tri-path está disponível em FAS2800 pares de HA. A conectividade de HA com três caminhos, de cada controladora, para compartimentos internos (IOM12GU) e externos:</block>
   <block id="c8c29757ef852a483118b80a57d4b5ac" category="list-text">A conexão interna de cada controladora, da porta 0b ao seu IOM12G local, e a porta 0C ao IOM12G de seu parceiro, fornecem conectividade de HA de par de HA multipath.</block>
   <block id="494edf65cd0a33575dc779a9df2979d6" category="list-text">O cabeamento das portas de storage externo de cada controladora, 0a e 0B1, oferece conectividade de HA de par de HA em três caminhos.</block>
   <block id="a35c30ba1541ae1d8a44ed5229f19650" category="paragraph">As portas 0a e 0B1 são cabeadas nas duas controladoras quando não há gavetas externas ou elas são cabeadas para gavetas externas para conseguir conectividade de HA com três caminhos.</block>
   <block id="77f105a56bd1c2ae99c93daa98950ddb" category="paragraph">A seguir mostra as conexões internas e o cabeamento externo da controladora que alcança conectividade HA de três caminhos:</block>
   <block id="4bf07b5505dd28a77f6b2784e452682e" category="image-alt">Conetividade Tri path HA</block>
-  <block id="56aa5946d918a9c287c3413f16a7f6a8" category="paragraph">As FAS2800 portas SAS externas:</block>
   <block id="49c992eee9e3421ed1fbdca1cea6cc70" category="list-text">A porta 0a é do HBA interno (como outras plataformas com uma prateleira interna).</block>
   <block id="21f39b91f6bc9739ca0f20af09effa4e" category="list-text">A porta 0B1 é da gaveta interna (como as portas 0b em outras plataformas com uma gaveta interna).</block>
   <block id="cd00b581ae35cc28e22b76f1f56e73a3" category="list-text">A porta 0B2 não é utilizada. Está desativado. Se um cabo estiver conetado a ele, uma mensagem de erro será gerada.</block>
-  <block id="3709879cf4b397082ed4cccaa4fc0561" category="image-alt">FAS2800 portas sas externas</block>
   <block id="f5d03e0aa6d32340b1284f6bb82c8ee3" category="inline-link-macro">Exemplos de cabeamento e planilhas de cabeamento de controladora a stack para plataformas com storage interno</block>
-  <block id="4d29df0cb21d81560d8799a21074035f" category="paragraph">Exemplos de cabeamento de par de HA FAS2800 podem ser encontrados <block ref="c19123e6031c139d66f534ae4311d605" category="inline-link-macro-rx"></block>na seção.</block>
   <block id="5b19d4f8bb5c1509ddbcb3050340348d" category="section-title">Regras de cabo ótico mini-SAS HD SAS</block>
   <block id="cfabee74f7cf81c29938b44cfcd37eae" category="paragraph">Você pode usar cabos óticos mini-SAS HD SAS - cabos de cabo ótico ativo multimodo (AOC) com conetores HD mini-SAS HD para mini-SAS e cabos multimodos (OM4) com conetores HD para LC mini-SAS - para alcançar conetividade SAS de longa distância para certas configurações que têm prateleiras de disco com módulos IOM12.</block>
   <block id="0500445e8d76472cb131af54eda14d19" category="list-text">Sua plataforma e versão do ONTAP devem suportar o uso de cabos óticos SAS HD mini-SAS: Cabos de cabo ótico ativo multimodo (AOC) com conetores HD HD para mini-SAS mini-SAS e cabos multicondutor (OM4) com conetores HD para LC mini-SAS.</block>
@@ -8604,19 +8538,12 @@
   <block id="71fba59d34f73a8fd5b9be78ee7cbb14" category="image-alt">Chave tipo cabo para plataformas com armazenamento integrado</block>
   <block id="ee547c1c638ccba345b1cbcb32709bcc" category="list-text">Os exemplos de cabeamento mostram conexões de controlador para stack e de prateleira para prateleira em duas cores diferentes para distinguir a conectividade por meio de IOM A (domínio A) e IOM B (domínio B).</block>
   <block id="29a8cc812811f08ee47c54a882a55cf7" category="image-alt">Chave de cor de cabo para plataformas com armazenamento integrado</block>
-  <block id="559ab6a66b2bfa274b38981fac849dbe" category="section-title">Plataforma FAS2800 em uma configuração de HA multipath sem gavetas externas</block>
   <block id="c551f9f047036ae88cefbff0f867bfd7" category="paragraph">O exemplo a seguir mostra que nenhum cabeamento é necessário para acessar a conectividade de HA multipath:</block>
-  <block id="3fd3aba750a8134d082e5da9728cba9d" category="image-alt">FAS2800 ha multipath sem gavetas externas</block>
-  <block id="dce517c194d8aadca050f89acd9479f9" category="section-title">Plataforma FAS2800 em uma configuração de HA de três caminhos sem gavetas externas</block>
   <block id="96093137909588511c6efc52b70c20f0" category="paragraph">O exemplo de cabeamento a seguir mostra o cabeamento necessário entre as duas controladoras para obter conectividade tri-path:</block>
   <block id="78bfb4ec92649c11f6ff3c0d7da078c8" category="image-alt">Fas2800 exemplo de cabeamento de HA com três caminhos sem gavetas externas</block>
-  <block id="45eccdceb680b5fc042ecd5f2cb2f360" category="section-title">Plataforma FAS2800 em uma configuração de HA de três caminhos com uma stack de várias shelves</block>
   <block id="f9fe60b0d5b0a173d8e8a93ef1fad4fa" category="paragraph">O exemplo de cabeamento e Planilha a seguir usa o par de portas 0a/0B1:</block>
-  <block id="3ab84f5b92d635701b7da25b1d7183ef" category="image-alt">Folha de cálculo de cabeamento de HA de três caminhos FAS2800 que mostra pares de portas para a stack 1</block>
-  <block id="ab79ce4bb4c74fd2fa5161b751278cde" category="image-alt">FAS2800 exemplo de cabeamento de HA de três caminhos para uma stack</block>
   <block id="4efb7705f98005596f065e30ddf32363" category="section-title">Plataformas com storage interno em uma configuração de HA multipath com uma stack de várias shelves</block>
   <block id="ff82ea2b354e0f934f26abf26044a994" category="paragraph">O exemplo de cabeamento e Planilha a seguir usa o par de portas 0a/0b:</block>
-  <block id="b1e743b8776f5252291595e89248eca8" category="admonition">Esta secção não se aplica a sistemas FAS2800 ou FAS25XX.</block>
   <block id="a565db44d0bce22f1abe371257922823" category="image-alt">Planilha de cabeamento de HA multipath para plataformas com storage interno e uma stack</block>
   <block id="ebe16c7c11294d83888309527c7aa402" category="image-alt">Exemplo de cabeamento de HA multipath para plataformas com storage interno</block>
   <block id="8498d609d156c09f9b21ae8adb760b18" category="section-title">Configuração multipath da série FAS2600 com uma stack de várias shelves</block>
@@ -9953,7 +9880,6 @@
   <block id="926cbecf3e76b90a2bcdbc9c4519fc77" category="sidebar">Fluxo de trabalho de substituição do chassis</block>
   <block id="0861a4c5524aee3e491db29774dd89a8" category="sidebar">Desligue os controladores</block>
   <block id="12a66472ea6e6007bdd278fb5f5f4773" category="sidebar">AFF A70, módulo do controlador AFF A90</block>
-  <block id="26916af0dde7f17e1c0020bc61152522" category="sidebar">Recable e devolver o controlador</block>
   <block id="37e0009e8f9c1c6982a732432e86d180" category="sidebar">Módulo de e/S AFF A70 e AFF A90</block>
   <block id="abff35a157d2dacb23862f65107e6046" category="sidebar">Sistemas AFF A700</block>
   <block id="32f4ca4d86bfc7a1abf3647cecc1958a" category="sidebar">Instalação e configuração do AFF A700</block>
@@ -10025,17 +9951,13 @@
   <block id="ca7dce9cd06f0f2ef6e548c8c26d54d9" category="sidebar">Módulo do controlador ASA C800</block>
   <block id="03f15d4e5abe2379224af55ea714e8fd" category="sidebar">Sistemas ASA A70 e ASA A90</block>
   <block id="ed435995b7240e9abb5c8ccc0579cb96" category="sidebar">O ASA A70 e o ASA A90 mantêm-se</block>
-  <block id="a81626227e94d15884d465e1127d3af4" category="sidebar">Mídia de inicialização ASA A70 e ASA A90</block>
   <block id="9c00140ee30800a9dd0418b3e4b50890" category="sidebar">Descrição geral do suporte de arranque</block>
   <block id="e0f5268186ba6af55aa3b68c29a31380" category="sidebar">Restaure a imagem no suporte de arranque</block>
   <block id="6fa3989bed64ee0002fbcb3ee0b95f27" category="sidebar">Chassis ASA A70 e ASA A90</block>
   <block id="64f587f0cd70365f99f4bf02b573698f" category="sidebar">Controlador ASA A70 e ASA A90</block>
-  <block id="d431e47bf770a9393ee9f239dc2035b5" category="sidebar">Módulo de e/S ASA A70 e ASA A90</block>
   <block id="7b51a70874531a1eb0a69494afcf3fc1" category="sidebar">Sistemas ASA A1K</block>
   <block id="81bf1a749a21a3e7b187281a18e24c73" category="sidebar">ASA A1K manter</block>
-  <block id="9482f3836d9bb6259f467a0685f5e3b4" category="sidebar">Mídia de inicialização do ASA A1K</block>
   <block id="2d5a952fbb91c4ae00f6cf700a7a8912" category="sidebar">Controlador ASA A1K</block>
-  <block id="21b2ca1e48faf28d5918cce56ce73345" category="sidebar">Módulo de e/S ASA A1K</block>
   <block id="993e462812a0efac53b2d3871190571f" category="sidebar">Sistemas ASA A150</block>
   <block id="368f4ad51a183b3227240865f154992a" category="sidebar">Instalação e configuração do ASA A150</block>
   <block id="84e77b935658c3a7085640c008aa60e8" category="sidebar">Manutenção da ASA A150</block>
@@ -10136,19 +10058,6 @@
   <block id="d1d724370ac4931ceb4406d2e17a6217" category="sidebar">AFF A220 e FAS2700 NVMEM bateria</block>
   <block id="64567073c265f39653af49885ec68a63" category="sidebar">Fonte de alimentação AFF A220 e FAS2700</block>
   <block id="abf01648d47e7b2a7ff0a2d4727b1bb3" category="sidebar">FAS2700 bateria de relógio em tempo real</block>
-  <block id="84f80d47c3a3934ba083c16827645698" category="sidebar">FAS2800 sistemas</block>
-  <block id="0822c3a3c2088294acf4b156198fab16" category="sidebar">FAS2800 Instalação e Configuração</block>
-  <block id="52082133ddafec6f44b27acdb0e80d2a" category="sidebar">FAS2800 manter</block>
-  <block id="79f9aa553b7d76f8fd255e9277fa5ed0" category="sidebar">FAS2800 suporte de arranque</block>
-  <block id="e8beac267c4a923aec553646307b83eb" category="sidebar">FAS2800 módulo de cache</block>
-  <block id="c1c62fce3287ee9fb4c1d797a1feba55" category="sidebar">FAS2800 chassis</block>
-  <block id="94e71ac35b9db70fff06a5064f80e3f9" category="sidebar">Controlador FAS2800</block>
-  <block id="ff67b04dba165a63ada544868c9096f3" category="sidebar">FAS2800 DIMM</block>
-  <block id="082f3ddfd8b928e971f0ca5feb57e067" category="sidebar">Unidade de FAS2800 TB</block>
-  <block id="7f6c436a2d5532b606b07a676e696d32" category="sidebar">FAS2800 bateria NVMEM</block>
-  <block id="aee81807d892ce8f0557ee7ba4da62af" category="sidebar">FAS2800 cartão Mezzanine</block>
-  <block id="9287ab39836157b975fad28f9782a821" category="sidebar">Fonte de alimentação FAS2800</block>
-  <block id="3dfd3fa9bee4e9b9ad14ec588c8e9ed4" category="sidebar">FAS2800 bateria de relógio em tempo real</block>
   <block id="6068fc2d3e06aeff53e2c84fd7bd9e9e" category="sidebar">Sistemas FAS500f</block>
   <block id="d8763c6ad52728ece5b2ff77bdb94ed2" category="sidebar">Instalação e configuração do FAS500f</block>
   <block id="5e2a7c08e7cea15db838b2247d53da3d" category="sidebar">Manutenção da FAS500f</block>
@@ -10258,7 +10167,6 @@
   <block id="0f791bd55bfa2fd01f0eba9b2a93ae03" category="doc">Restaurar encriptação - ASA A250</block>
   <block id="6a3dc34ad6a214d72bd704b1c631ac27" category="doc">Verifique o suporte e o status da chave de criptografia - ASA A400</block>
   <block id="0a1b1a82d29b54f3c96fa637e88dbed7" category="doc">Verifique o suporte e o status da chave de criptografia - ASA A800</block>
-  <block id="a4cc434d6b8cdf1077083caf578280ed" category="paragraph">Diretiva não resolvida no &lt;stdin&gt; - include:../_include/800_bootmedia_encryption_preshutdown_checks.adoc[]</block>
   <block id="a462f90654e012446c7de81d57862efa" category="doc">Verifique o suporte e o status da chave de criptografia - ASA A900</block>
   <block id="e6b007124129e06cf12d3969e2e3ed17" category="doc">Restaurar encriptação - ASA A900</block>
   <block id="9b07e08c3c5e2bcabe683268fcd03412" category="doc">Verifique o suporte e o status da chave de criptografia - AFF C190</block>
@@ -10274,7 +10182,6 @@
   <block id="f69fe3fd7c25297cb61a32bc5fc76020" category="doc">Restaurar criptografia - FAS2600</block>
   <block id="5d4211964469579f1f45285fc12474dd" category="doc">Verifique o suporte e o status da chave de criptografia - AFF A220 e FAS2700</block>
   <block id="73bc3dac4ffabefd42b1c26a096bbc4e" category="doc">Restaurar criptografia - AFF A220 e FAS2700</block>
-  <block id="c0e6c6c0a121f35fdbf7c8694a70b562" category="doc">Restaurar criptografia - FAS2800</block>
   <block id="cbae18ebc2b8ffd413dbf0fb20bf3f9d" category="doc">Verifique o suporte e o status da chave de criptografia - FAS500f</block>
   <block id="a7b0a510fdfaae6ab395e09cd164f2f8" category="doc">Restaurar encriptação - FAS500f</block>
   <block id="8de2c4c1d0c319cb07b6837fd62d106e" category="doc">Verifique o suporte e o status da chave de criptografia - FAS8200</block>
@@ -10294,8 +10201,163 @@
   <block id="929b41baf89e2c5975631c98cabedd59" category="paragraph"><block ref="6f0c6616b99fea33a3020e0e0dcbe3c6" prefix="" category="inline-code"></block>.</block>
   <block id="af4b4d5cc6a7f6d9937999949dd33233" category="list-text">Se o AutoSupport estiver ativado, restaure a criação automática de casos:</block>
   <block id="0306ff5f8ff1d760b409c6f7f1b3b8bd" category="paragraph"><block ref="9ac424c0d7b432975df36a19daf50c9c" prefix="" category="inline-code"></block>.</block>
-  <block id="e48348202fcdb5533fd8d224264fdc58" category="paragraph">Diretiva não resolvida no &lt;stdin&gt; - include:../_include/bootmedia_recovery_image.adoc[]</block>
   <block id="1ae221b034a7bacf99b88892279c2462" category="paragraph">O LED bicolor indica alimentação/atividade quando verde e uma avaria quando vermelho.</block>
   <block id="7ea17d80896a391ffe01665c36e03909" category="cell">Atenção (vermelho)</block>
   <block id="ede3a6bd0f0cd8205608f251691a19e1" category="doc">Modelo de folha de cálculo de cabeamento de controlador para stack para conetividade quad-pathed - compartimentos com módulos IOM12/IOM12B</block>
+  <block id="ea08cb92daf9bb299780da4c66b593b3" category="paragraph">Verifique as conexões de rede e armazenamento do módulo do controlador.</block>
+  <block id="810a6e5b7c7e7dc33bd43c852dc5809d" category="admonition">O controlador inicializa no prompt Loader assim que ele estiver totalmente assentado.</block>
+  <block id="45a1b3d9bbbc077546cfb071ca46cde7" category="list-text">No prompt Loader, digite<block ref="7e17e2b336dbdd66c2f45405573b53de" prefix=" " category="inline-code"></block> para exibir a data e a hora no controlador de substituição. A data e a hora estão em GMT.</block>
+  <block id="6de41248c129d02992789fffa274dd9d" category="admonition">A hora apresentada é hora local nem sempre GMT e é apresentada no modo 24hrD.</block>
+  <block id="7ca88951bb06ba87dc8ba0b64e33c507" category="list-text">Defina a hora atual em GMT com o<block ref="0ad4ade5bf715a5335525c69a44424c1" prefix=" " category="inline-code"></block> comando. Você pode obter o GMT atual do nó do parceiro o comando 'date -u'.</block>
+  <block id="cdce55e02d4cb663168a3f407165ecce" category="list-text">Se o LED NV estiver desligado, passe à próxima etapa.</block>
+  <block id="3e206922895508e63afff7ed9697807f" category="list-text">Se o LED NV estiver intermitente, aguarde que o intermitente pare. Se a intermitência continuar durante mais de 5 minutos, contacte o suporte técnico para obter assistência.</block>
+  <block id="89991a1093220d292cce49271c032d59" category="paragraph">Verifique as conexões de armazenamento e rede e, em seguida, devolva o controlador.</block>
+  <block id="224597833baafb79ff1d8b9ef9e0bff7" category="paragraph">Redefina a encriptação se ativada e volte a colocar o controlador em funcionamento normal.</block>
+  <block id="151adffc209b320ba53a9853aae1eabe" category="open-title">Sem criptografia</block>
+  <block id="a2f6973fda0857d7d2ce0472981331ed" category="list-text">No prompt Loader, digite<block ref="ce54ef17bebf280339d340bd40dff593" prefix=" " category="inline-code"></block>.</block>
+  <block id="dab3afc1f6c32cd488de89f6f35ab456" category="list-text">Pressione &lt;enter&gt; quando as mensagens do console pararem.</block>
+  <block id="39ac0da90af5fdbc14d7e9d1dd00a3c0" category="list-text">Se você vir o prompt _login_, vá para a próxima etapa no final desta seção.</block>
+  <block id="fa2b1e9104e9f13f6d131cc17fb0365e" category="list-text">Se você vir _aguardando giveback_, pressione a tecla &lt;enter&gt;, faça login no nó do parceiro e vá para a próxima etapa no final desta seção.</block>
+  <block id="e627ab7a0073e67e496bf87be4f423de" category="open-title">Criptografia integrada (OKM)</block>
+  <block id="0de8f7ec303ccc5a2407e07df761491b" category="list-text">No prompt Loader, digite<block ref="cce56b203b8705f3487342813b7117be" prefix=" " category="inline-code"></block>.</block>
+  <block id="bff042f875521bd325254e421d748fc6" category="list-text">Verifique a versão do firmware do TMP com o<block ref="7939c23e48e62d500cafffa3ef074000" prefix=" " category="inline-code"></block> comando.</block>
+  <block id="a1321e98ac8ef25fdd0acc924f81db03" category="list-text">Se a versão for inferior a 5,63, contactar<block ref="dac6ef02422de09259cb8cc562a669a7" category="inline-link-rx"></block>.</block>
+  <block id="de95af52a6f4a4ddae350b4888862a90" category="list-text">Se a versão for superior a 5,63, saia para o prompt Loader:<block ref="4a1bde0ea8bcda2a591f42646813c477" prefix=" " category="inline-code"></block>.</block>
+  <block id="561e0c22b1763101c73e7c6a32b322b9" category="list-text">Inicie no menu ONTAP a partir do prompt Loader<block ref="d20d8416248acf69156e4b7875cc4868" prefix=" " category="inline-code"></block> e selecione a opção 10.</block>
+  <block id="072522f79d819fbe6b1aba60af265a15" category="list-text">Introduza a frase-passe OKM. Pode obter esta frase-passe do cliente ou<block ref="dac6ef02422de09259cb8cc562a669a7" category="inline-link-rx"></block> contactar .</block>
+  <block id="d910a39b6016554577eeacfc07238593" category="admonition">Você será solicitado duas vezes para a senha.</block>
+  <block id="1e32d40ea1317c1fa7e29377debeb590" category="list-text">Insira os dados da chave de backup quando solicitado.</block>
+  <block id="137e91ab373d54ca35c36fff0be47241" category="list-text">No menu de inicialização, insira a opção<block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block> para inicialização normal.</block>
+  <block id="e5954b5f665f3b9aee4023c5d8eb4f5f" category="list-text">Pressione &lt;enter&gt; quando _Waiting for giveback_ for exibido.</block>
+  <block id="68921013f9ca843f9d1bcfd514ee67de" category="list-text">Mova o cabo do console para o nó do parceiro e faça login como<block ref="21232f297a57a5a743894a0e4a801fc3" prefix=" " category="inline-code"></block>.</block>
+  <block id="92e13c6a52e1a9d4e2955cd77e4db99d" category="list-text">Certifique-se de que todos os despejos do núcleo no nó reparado sejam salvos indo para o modo avançado"<block ref="0581d0d071ad835f74bf419081ce5d75" prefix=" " category="inline-code"></block> e<block ref="7f4756e08687048c35020c40f9c8567b" prefix=" " category="inline-code"></block> depois .</block>
+  <block id="2b0a436148e337f3515c283e053a817b" category="list-text">Voltar à alavanca de administração<block ref="4282e6e28684065097c0d90042d19b11" prefix=" " category="inline-code"></block>: .</block>
+  <block id="9e989767231ec29efb85ce3345c961ff" category="list-text">Devolver apenas os agregados CFO (o agregado raiz):<block ref="291b31306c2e0668f091d41edca7e97f" prefix=" " category="inline-code"></block></block>
+  <block id="e28912f373bd8bce85f7c259590bbe92" category="list-text">Se encontrar erros,<block ref="dac6ef02422de09259cb8cc562a669a7" category="inline-link-rx"></block> contacte .</block>
+  <block id="bfc2c53d06a8a433a0fef8b142ab388e" category="list-text">Aguarde 5 minutos após a conclusão do relatório de giveback e verifique o status de failover e o status de giveback<block ref="ddf400f1cb6b8b9330ed6c79c508123c" prefix=" " category="inline-code"></block>: E<block ref="852ce55a153bc728405ba8a2c95bcdf1" prefix=" " category="inline-code"></block>.</block>
+  <block id="3b907a0f4441a9f6e0136c10af7a7ba1" category="list-text">Mova o cabo do console para o nó de substituição e entre<block ref="1fd11ad9c6fc9e17e9729cd939a2b47b" prefix=" " category="inline-code"></block></block>
+  <block id="3343b0de1fa8c9b6897b7f74eb649269" category="admonition">Você será solicitado a fornecer a senha do OKM para o cluster.</block>
+  <block id="37a4b550d08e47128eb0f17557e6b8a7" category="list-text">Verificar o estado das chaves com o seguinte comando<block ref="8d87a410a64e11591a338ede7162a6d2" prefix=" " category="inline-code"></block>: .</block>
+  <block id="724ae3f78a19c2844ef99b4ec6cb1a27" category="paragraph">Se a coluna _restored_ mostrar qualquer coisa, exceto _true_, entre em Contato<block ref="dac6ef02422de09259cb8cc562a669a7" category="inline-link-rx"></block>com .</block>
+  <block id="5b07da2161bbe720a0c37a6bd9c9f55e" category="open-title">Gestor de chaves externo (EKM)</block>
+  <block id="f2e0af4da309c40953b6db2b96031d2c" category="list-text">Se o volume raiz estiver criptografado com o Gerenciador de chaves Externo e o cabo do console estiver conetado ao nó de substituição, insira<block ref="d20d8416248acf69156e4b7875cc4868" prefix=" " category="inline-code"></block> e selecione a opção<block ref="6512bd43d9caa6e02c990b0a82652dca" prefix=" " category="inline-code"></block>.</block>
+  <block id="630f2e078780863e8f4033f8334da91c" category="list-text">Responda<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> ou<block ref="7b8b965ad4bca0e41ab51de7b31363a1" prefix=" " category="inline-code"></block> às seguintes perguntas:</block>
+  <block id="b19458ff12859c393f2fd46d02cb24d4" category="paragraph">Você tem uma cópia do arquivo /cfcard/kmip/certs/client.crt? não é possível aceder a este site</block>
+  <block id="05ac7348459861360c86dc5851e1ab0b" category="paragraph">Você tem uma cópia do arquivo /cfcard/kmip/certs/client.key? não é possível aceder a este site</block>
+  <block id="0daafd01a5c78aa4cf52e57febc9c7d9" category="paragraph">Você tem uma cópia do arquivo /cfcard/kmip/certs/CA.pem? não é possível aceder a este site</block>
+  <block id="1d00e7dce692e8dc3f6877f035e3a616" category="paragraph">OU</block>
+  <block id="05f6b998dcdacf2a7e5882ef776dfa8e" category="paragraph">Você tem uma cópia do arquivo /cfcard/kmip/servers.cfg? não é possível aceder a este site</block>
+  <block id="9254f5a10bf0e4d18aa18a91a9321bea" category="paragraph">Você conhece o endereço do servidor KMIP? não é possível aceder a este site</block>
+  <block id="1bd532b24b172acf6c82834c9f1f149b" category="paragraph">Você conhece a porta KMIP? não é possível aceder a este site</block>
+  <block id="7873bad0251ec2e56db05ae3bdd1d219" category="admonition">Contacte<block ref="dac6ef02422de09259cb8cc562a669a7" category="inline-link-rx"></block> se tiver problemas.</block>
+  <block id="3d76483db3628d1fb7af23dff5958985" category="list-text">Fornecer as informações para:</block>
+  <block id="187c2fd480071b1bb2479cfb3c633e8a" category="list-text">O conteúdo do arquivo do certificado do cliente (client.crt).</block>
+  <block id="9817b60d63d724fe9140cd15a752692b" category="list-text">O conteúdo do arquivo de chave do cliente (client.key).</block>
+  <block id="bba92a28bff776382ef5e278a33e4496" category="list-text">O conteúdo do arquivo de CA(s) do servidor KMIP (CA.pem).</block>
+  <block id="847ffa6cb9faf4d586538d4351f8da2f" category="list-text">O endereço IP do servidor KMIP.</block>
+  <block id="866a1c0ffdc1628740ac9683b931517f" category="list-text">A porta para o servidor KMIP.</block>
+  <block id="3ec523210734487192e83412d785e5fc" category="list-text">Uma vez que o sistema processa, você verá o Menu de inicialização. Selecione "1" para o arranque normal.</block>
+  <block id="7575df076a4b9992707665992f1a5c8f" category="list-text">Verificar o estado da aquisição:<block ref="ddf400f1cb6b8b9330ed6c79c508123c" prefix=" " category="inline-code"></block>.</block>
+  <block id="cad6009525ec6573ddbaaa5acfa3e80f" category="doc">Passo 1: Verifique as configurações de configuração do HA</block>
+  <block id="101e739321ca8be8abcaba4791ca6acd" category="list-text">Arranque para o modo de manutenção:<block ref="cce56b203b8705f3487342813b7117be" prefix=" " category="inline-code"></block></block>
+  <block id="bb651eca6e9947efc3cd8f7630d5d4a4" category="list-text">Digite<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> quando você vir _continuar com boot?_.</block>
+  <block id="e08749ad3e22c4cf3dc8580f3990f79e" category="paragraph">Se você vir a mensagem de aviso _incompatibilidade de ID do sistema_, digite<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block>.</block>
+  <block id="9fc49ee0bf87b92158288ad2287da435" category="list-text">Introduza<block ref="7939c23e48e62d500cafffa3ef074000" prefix=" " category="inline-code"></block> e capture o conteúdo do visor.</block>
+  <block id="7bd41559dd31cc39de8c6e9a34ce4c5a" category="admonition">Se você vir _INCOMPATIBILIDADE DE PERSONALIDADE_, entre em Contato com o suporte ao cliente.</block>
+  <block id="83a4b0a3dcc7da7a9581cb2f273b0e25" category="list-text">Na<block ref="7939c23e48e62d500cafffa3ef074000" prefix=" " category="inline-code"></block> saída, compare as informações da placa adaptadora com as placas e localizações no controlador de substituição.</block>
+  <block id="e04ae80f38da13e5a583ad8efcc36788" category="list-text">Verifique se todos os componentes apresentam o<block ref="594c16ca0695f6665d7cf4971707adf6" prefix=" " category="inline-code"></block> mesmo estado:<block ref="fb4e6c2e33b945c3ff4d042cb66d2ed4" prefix=" " category="inline-code"></block></block>
+  <block id="2a884f64eac063d19102596d983ff390" category="section-title">Passo 2: Verifique a lista de discos</block>
+  <block id="b09c84b40791547383307e9986c547e4" category="list-text">Verifique se o adaptador lista os caminhos para todos os discos com o<block ref="c41292f339fa0dd66d84b7c3a9eac054" prefix=" " category="inline-code"></block>.</block>
+  <block id="b5507fd73a4983529ea95a333b70737d" category="paragraph">Se você vir algum problema, verifique o cabeamento e recoloque os cabos.</block>
+  <block id="b9b95d927da2cee98d985b1a328995c6" category="list-text">Sair do modo de manutenção:<block ref="4a1bde0ea8bcda2a591f42646813c477" prefix=" " category="inline-code"></block>.</block>
+  <block id="f1d532893d42eeecb43413920b6d1769" category="list-text">Reinstale o ARM de gerenciamento de cabos, se removido, mas não reconete nenhum cabo ao controlador de substituição.</block>
+  <block id="357f0f49c943fa136f00f3dd57ce7e41" category="list-text">Conete o cabo do console à porta do console do módulo do controlador de substituição e reconete-o ao laptop para que ele receba mensagens do console quando ele for reinicializado. O controlador de substituição recebe energia do controlador em estado de funcionamento e começa a reiniciar assim que estiver completamente encaixado no chassis.</block>
+  <block id="344f921d0ec02fd1e7780b61a619a100" category="admonition">Depois de substituir a bateria RTC, inserir o controlador e ligar a primeira reinicialização do BIOS, você verá as seguintes mensagens de erro:<block ref="049ec00df3ddcbe28d63cf4fa733682c" prefix=" " category="inline-code"></block><block ref="6c8ad83004cc8bc224a596f5f1682744" prefix=" " category="inline-code"></block> Essas mensagens são esperadas e você pode continuar com este procedimento.</block>
+  <block id="f97ccb05cf3baac7ac118d1817e2a5fd" category="open-title">Opção 1: ONTAP 9.16,0 ou anterior</block>
+  <block id="46656bb1c59aea0ac10f1105bf4c8b13" category="list-text">No controlador para deficientes, prima<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block> quando vir<block ref="aa48693d0248bb57512e373cd7f7eebc" prefix=" " category="inline-code"></block></block>
+  <block id="19a9f99a071bb48abc6e83f398b20a0e" category="list-text">No controlador prejudicado,<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block> pressione quando solicitado a substituir _/etc/ssh/ssh_host_ecdsa_key_.</block>
+  <block id="d116a6f9fb96c43c15019792cd4a1fe9" category="list-text">No controlador para deficientes, prima<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block> quando vir<block ref="dff08971c5acbbdac6642922fde20608" prefix=" " category="inline-code"></block>.</block>
+  <block id="c724a78d41a5f05bc3f7a2f2993c497c" category="list-text">No controlador para deficientes, prima<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block> quando vir<block ref="396e369cf75815ba643925818d3ec37e" prefix=" " category="inline-code"></block>.</block>
+  <block id="6b65eb3b3f603ad188b614f3f50a9d13" category="list-text">No controlador desativado,<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block> prima quando for solicitado que reinicie o controlador desativado e prima<block ref="1b10a0464da1409d5026aa8b4f098be8" prefix=" " category="inline-code"></block> para aceder ao Menu de arranque.</block>
+  <block id="d955df273d2c08375d51dc9da0fe5684" category="open-title">Opção 2: ONTAP 9.16,1 ou posterior</block>
+  <block id="c76bf517391d0898b2c357bf0119fc92" category="list-text">No controlador afetado, prima<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block> quando for solicitado que restaure a configuração de cópia de segurança.</block>
+  <block id="5f711b3cd97054c3fbee1821e742da6d" category="paragraph">Depois que o procedimento de restauração for bem-sucedido, essa mensagem será exibida no console -<block ref="92080c75f9b065e263d7fea155b1d733" prefix=" " category="inline-code"></block>.</block>
+  <block id="9959e1ea8c67446c566e6a371f9e14cb" category="list-text">No controlador desativado,<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block> prima quando solicitado para confirmar se a cópia de segurança de restauro foi bem sucedida.</block>
+  <block id="b883391d9dfbf834ff0bda07a53554f5" category="list-text">No controlador prejudicado,<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block> pressione quando solicitado a usar a configuração restaurada.</block>
+  <block id="d0ec0afe83814a07fcdbf02b0d2e2e8b" category="list-text">No controlador prejudicado,<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block> pressione quando solicitado a reinicializar o nó.</block>
+  <block id="f3996efec422ea2910e77724e96ff04e" category="list-text">Dependendo se o sistema estiver usando o Gerenciador de chaves Externo ou o Gerenciador de chaves integrado, selecione uma das opções a seguir.</block>
+  <block id="cd979ca520736846558f2b04a04b63da" category="paragraph">Se você estiver usando um console/laptop, faça login no controlador usando as mesmas credenciais de administrador de cluster.</block>
+  <block id="4250e5b5781f94ff901cc1822461f6ae" category="doc">Substitua o módulo de gestão do sistema - AFF A1K</block>
+  <block id="b1b14a007e6d27cacb6cbf9837dd5e7e" category="doc">Devolver o controlador - AFF A70 e AFF A90</block>
+  <block id="4443f66d8d4febc600e0d4d0b3b0db91" category="doc">Devolva o controlador - ASA A70 e ASA A90</block>
+  <block id="425248bc914ee69e002743b7cff8fb0a" category="doc">Substitua o módulo de gestão do sistema - ASA A1K</block>
+  <block id="fd61dac268d25ee83789df624f74cdee" category="summary">Tem de substituir o módulo de gestão do sistema.</block>
+  <block id="fc633a3acea06ec7b13b95943af5a8f1" category="doc">Substitua o módulo de gerenciamento do sistema - FAS70 e FAS90</block>
+  <block id="3af65f186d9005b4ac041f824d01a2a6" category="doc">Devolva a peça com falha ao NetApp - FAS2820</block>
+  <block id="c6850888623b4b33ceba4c1bd9322642" category="doc">Verifique o suporte e o status da chave de criptografia - FAS2820</block>
+  <block id="0152b6e0cea632db2750cd8de20a739e" category="doc">Restaurar encriptação - FAS2820</block>
+  <block id="9e84d4138651a02fba804117209b607b" category="doc">Inicie a imagem de recuperação - FAS2820</block>
+  <block id="d4d79c1a5bf62b9ce87343c6306b87c5" category="doc">Descrição geral da substituição do suporte de arranque - FAS2820</block>
+  <block id="0d0170db1c817b32ed8190527b1999f1" category="doc">Substitua o suporte de arranque - FAS2820</block>
+  <block id="3d0983e4676ad818dc9c354efeabe635" category="doc">Desligue o controlador desativado - FAS2820</block>
+  <block id="fd167e36c21bd8b8595824591db88367" category="doc">Substitua o módulo de armazenamento em cache - FAS2820</block>
+  <block id="6e0f0070d93d5a9e57db58dbec60bc75" category="doc">Restaure e verifique a configuração - FAS2820</block>
+  <block id="0a18d7fa493ce8a36cb788672e96ec1e" category="doc">Mova e substitua o hardware - FAS2820</block>
+  <block id="565c7b6b68b9f1217d774e69ffbc1dbe" category="doc">Descrição geral da substituição do chassis - FAS2820</block>
+  <block id="c1f1fa5b2c6bd817573db541ba6be0ec" category="doc">Desligue os controladores - FAS2820</block>
+  <block id="cfb34793404191ff3dbe3c3af07650ac" category="doc">Substitua o hardware do módulo do controlador - FAS2820</block>
+  <block id="052630ced3e9a56676c8d522b3e62cd7" category="doc">Descrição geral da substituição do módulo do controlador - FAS2820</block>
+  <block id="240b8a53f6e89c6a271533ffce379d28" category="doc">Recable o sistema e reatribuir discos - FAS2820</block>
+  <block id="b5ba6d0d7c9b52750d10b7f3c708973c" category="doc">Restauração completa do sistema - FAS2820</block>
+  <block id="4aea5de6765c8ea1009a7794b03ff714" category="doc">Restaure e verifique a configuração do sistema - FAS2820</block>
+  <block id="3ccf4bf934980019516d053c16af3ea0" category="doc">Substitua um DIMM - FAS2820</block>
+  <block id="097bc371e9a668a6c26c1a9e903c37e3" category="doc">Substitua a unidade SSD ou a unidade HDD - FAS2820</block>
+  <block id="b7f90edffbb06b5a41542900d1f4c7fb" category="doc">Passos detalhados - FAS2820</block>
+  <block id="585da1007448f1bca25c91aa3d47af64" category="admonition">Não use a porta 0B2 em um FAS2820. Esta porta SAS não é utilizada pelo ONTAP e está sempre desativada. Consulte <block ref="e082bc1662f9e2eeea25ff123ac1639a" category="inline-link-macro-rx"></block> para obter mais informações.</block>
+  <block id="a28ed8e6f23ab0fb5c0e2d72362a0960" category="doc">Guia rápido - FAS2820</block>
+  <block id="137ac149c5843d9d85bc73d79efd16f3" category="inline-link-macro">Instruções de instalação e configuração de sistemas FAS2820</block>
+  <block id="e2d3adad541d6889bb95a808cb3a3d86" category="paragraph"><block ref="e2d3adad541d6889bb95a808cb3a3d86" category="inline-link-macro-rx"></block></block>
+  <block id="28a82ac904828c0e6dbc9d74c81690fd" category="doc">Passos de vídeo - FAS2820</block>
+  <block id="7b7bdd833250123834030e3857a03094" category="video-title">Animação - FAS2820 instruções de instalação e configuração</block>
+  <block id="2c46a9a35c0e8d3e16c133bd8365def8" category="summary">Mantenha o hardware FAS2820</block>
+  <block id="80c431c2178554bdd085409effc13014" category="doc">Mantenha o hardware FAS2820</block>
+  <block id="49480b187b868d6e33e8c24370a33d80" category="paragraph">Para o sistema de armazenamento FAS2820, pode executar procedimentos de manutenção nos seguintes componentes.</block>
+  <block id="0cfceb065f1a2336f776d8fd5aa71e3b" category="doc">Substitua a bateria do NVMEM - FAS2820</block>
+  <block id="5b80efc4608755948d23b9b83213414b" category="doc">Substitua uma placa mezzanine - FAS2820</block>
+  <block id="e4e0243ba4648dfa72a7dd5868dc075e" category="doc">Troque uma fonte de alimentação - FAS2820</block>
+  <block id="46ef9696d36a8067561c1d44d830adff" category="doc">Substitua a bateria do relógio em tempo real - FAS2820</block>
+  <block id="7d99df27d52ae9f3b0e4a535a7dd9657" category="list-text"><block ref="7d99df27d52ae9f3b0e4a535a7dd9657" category="inline-link-macro-rx"></block></block>
+  <block id="83c2710c5245e8b15cbca4fbf6b6b0a5" category="list-text">Um par de HA de FAS2820 TB pode ser cabeado como HA de três caminhos.</block>
+  <block id="e08be6d156a9bd6c7ea1068dd72146ce" category="paragraph">Informações sobre a conetividade FAS2820 podem ser encontradas na <block ref="44cb6d44583fef757ae54be5d72211f9" category="inline-xref-macro-rx"></block>seção.</block>
+  <block id="add37990c28070a718afe0d9c04a615c" category="paragraph">Para FAS2820 pares de HA, embora o cabeamento para compartimentos externos seja HA de caminho único, devido à conexão interna de cada controladora da porta 0b ao seu expansor local (IOM12G) e à porta 0C ao expansor de seu parceiro, a configuração de par de HA é HA de multipath.</block>
+  <block id="d722531f8634a5cafc9df78a601a4a6c" category="paragraph">A conectividade HA Tri-path está disponível em FAS2820 pares de HA. A conectividade de HA com três caminhos, de cada controladora, para compartimentos internos (IOM12GU) e externos:</block>
+  <block id="3fe5f9a895c1ba7f8e681c5859c05bb4" category="paragraph">As FAS2820 portas SAS externas:</block>
+  <block id="79b6b2666cc1773a1407b7d8a16dc193" category="image-alt">FAS2820 portas sas externas</block>
+  <block id="d9e04c77195d0978dc82c8d293ae8a2c" category="paragraph">Exemplos de cabeamento de par de HA FAS2820 podem ser encontrados <block ref="c19123e6031c139d66f534ae4311d605" category="inline-link-macro-rx"></block>na seção.</block>
+  <block id="5153e41a4944635718ee4bf1574be7dc" category="section-title">Plataforma FAS2820 em uma configuração de HA multipath sem gavetas externas</block>
+  <block id="f1550c94b34792af4c7a27f3367f5b7f" category="image-alt">FAS2820 ha multipath sem gavetas externas</block>
+  <block id="e9c922753c25d9979d7630bdab7e83fe" category="section-title">Plataforma FAS2820 em uma configuração de HA de três caminhos sem gavetas externas</block>
+  <block id="439824499df2079293c4db534dff3b28" category="section-title">Plataforma FAS2820 em uma configuração de HA de três caminhos com uma stack de várias shelves</block>
+  <block id="7dceff362ab7e3c2187d103ba7fce438" category="image-alt">Folha de cálculo de cabeamento de HA de três caminhos FAS2820 que mostra pares de portas para a stack 1</block>
+  <block id="3a6e3da839d00ede01c4513f563899aa" category="image-alt">FAS2820 exemplo de cabeamento de HA de três caminhos para uma stack</block>
+  <block id="2f9e622217b802d735475e6e1e79287d" category="admonition">Esta secção não se aplica a sistemas FAS2820 ou FAS25XX.</block>
+  <block id="0636959b49a1834e3ec5f35103cf8837" category="sidebar">Mídia de inicialização ASA A70 e ASA A90 automatizada</block>
+  <block id="da147f1227d896e3c10a7ccfe8a30bd6" category="sidebar">Manual do suporte de arranque ASA A70 e ASA A90</block>
+  <block id="917655eaf5fd8c720cd773aba74bdaf8" category="sidebar">Módulo IO ASA A70 e ASA A90</block>
+  <block id="7b9a6fdb87cb1f6f211f41d044f49a11" category="sidebar">ASA A1K Mídia de inicialização automatizada</block>
+  <block id="995c40c124bddbeb82d387a9fcb6e262" category="sidebar">Manual do suporte de arranque do ASA A1K</block>
+  <block id="3a537c99c5b869e844d774557fbcee80" category="sidebar">Módulo de e/S ASA A1K</block>
+  <block id="3006210264711079652e75e697fdde7b" category="sidebar">Sistemas FAS2820</block>
+  <block id="e9fb835c094e7078b3fdd1712ccae31c" category="sidebar">Instalação e configuração do FAS2820</block>
+  <block id="6129374f01cd3ebeb12420c58801778c" category="sidebar">Manutenção da FAS2820</block>
+  <block id="bb0a174c5a82de66489299528cf518fe" category="sidebar">Mídia de inicialização do FAS2820</block>
+  <block id="b5f3da387d229686fd3cc259cd99b323" category="sidebar">FAS2820 módulo de cache</block>
+  <block id="1271e815e1d2a4bf736cb807a3b42df6" category="sidebar">FAS2820 chassis</block>
+  <block id="2432fa0f9f02a35df250d771c0865ed4" category="sidebar">Controlador FAS2820</block>
+  <block id="ebd8fde0e8283cea13284995a7fca3a8" category="sidebar">FAS2820 DIMM</block>
+  <block id="7d64c74cf4004ffb9d88f7a2a840dc66" category="sidebar">Unidade de FAS2820 TB</block>
+  <block id="46fb54c543596cf04a5fcfe487799a87" category="sidebar">FAS2820 bateria NVMEM</block>
+  <block id="2f9958347081d2ce185d76c702380979" category="sidebar">FAS2820 cartão Mezzanine</block>
+  <block id="6283d5729bdaa96d13760bf62bbe62f2" category="sidebar">Fonte de alimentação FAS2820</block>
+  <block id="e8a44fb416b30e755ecaf489baacfd39" category="sidebar">FAS2820 bateria de relógio em tempo real</block>
 </blocks>

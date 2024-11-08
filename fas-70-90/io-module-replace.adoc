@@ -143,7 +143,9 @@ image:../media/drw_a1k_io_remove_replace_ieops-1382.svg["Remova o módulo de e/S
 
  a| 
 image:../media/icon_round_1.png["Legenda número 1"]
-| Trinco do came de e/S. 
+ a| 
+Trinco do came de e/S.
+
 |===
 +
 Certifique-se de etiquetar os cabos para que saiba de onde vieram.
@@ -187,8 +189,7 @@ NOTE: Se o novo módulo de e/S não for o mesmo modelo que o módulo com falha, 
 
 . No prompt DO Loader, reinicie o nó: _Bye_
 +
-
-NOTE: Isso reinicializa as placas de e/S e outros componentes e reinicializa o nó.
+Isso reinicializa as placas de e/S e outros componentes e reinicializa o nó.
 
 . Retorne o nó à operação normal: _Failover de armazenamento giveback -ofnode prejudicado_node_name_
 . Se a giveback automática foi desativada, reative-a: _Storage failover modifique -node local -auto-giveback True_

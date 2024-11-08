@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas2800, how to recable the system, how to reassign disks 
 summary: Você deve remarcar o armazenamento e confirmar a reatribuição do disco. 
 ---
-= Recable o sistema e reatribuir discos - FAS2800
+= Recable o sistema e reatribuir discos - FAS2820
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,10 +17,9 @@ Para concluir o procedimento de substituição e restaurar o sistema para o func
 
 == Passo 1: Recable o sistema
 
-Recable as conexões de rede e armazenamento do módulo do controlador.
+Verifique as conexões de rede e armazenamento do módulo do controlador.
 
 .Passos
-. Recable o módulo do controlador para armazenamento e conexões de rede.
 . Verifique se o cabeamento está correto usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"]o .
 +
 .. Baixe e instale o Config Advisor.

@@ -159,15 +159,8 @@ LED de atenção NVRAM
 
 |===
 +
-
-NOTE: Se o LED de status do NVRAM estiver piscando, isso pode significar que o módulo do controlador não foi tomado ou interrompido corretamente (dados não comprometidos). Se o módulo do controlador afetado não tiver sido tomado com sucesso pelo módulo do controlador parceiro, contacte https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de continuar com este procedimento.
-
-+
-O comportamento geral do LED de estado do NVRAM no módulo do controlador desativado é o seguinte:
-
-+
-** O LED de estado do NVRAM pisca quando a alimentação é removida do módulo do controlador e o sistema de armazenamento está no estado "aguardando a giveback", ou o módulo do controlador não é tomado ou interrompido corretamente (dados não confirmados).
-** O LED de estado do NVRAM pisca quando o módulo do controlador é removido do chassis e pode significar que o módulo do controlador não é tomado ou parado corretamente (dados não confirmados). Confirme se o módulo do controlador foi corretamente adquirido pelo módulo do controlador parceiro ou se o módulo do controlador afetado mostra `waiting for giveback`. Em seguida, o LED intermitente pode ser ignorado (e o módulo do controlador pode ser removido do chassis).
+** Se o LED NV estiver desligado, passe à próxima etapa.
+** Se o LED NV estiver intermitente, aguarde que o intermitente pare. Se a intermitência continuar durante mais de 5 minutos, contacte o suporte técnico para obter assistência.
 
 
 . Se você ainda não está aterrado, aterre-se adequadamente.
@@ -195,7 +188,9 @@ image::../media/drw_a70-90_pcm_remove_replace_ieops-1365.svg[Controlador remover
 
  a| 
 image:../media/icon_round_1.png["Legenda número 1"]
-| Um trinco de bloqueio 
+ a| 
+Trinco de bloqueio
+
 
 
  a| 
@@ -231,7 +226,11 @@ image::../media/drw_a70-90_rtc_bat_remove_replace_ieops-1371.svg[Substitua a bat
 |===
 
 
-| image:../media/icon_round_1.png["Legenda número 1"] | Bateria e alojamento RTC 
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Bateria e alojamento RTC
+
 |===
 . Empurre cuidadosamente a bateria para fora do suporte, rode-a para fora do suporte e, em seguida, levante-a para fora do suporte.
 +
@@ -300,7 +299,7 @@ NOTE: Se você tiver fontes de alimentação CC, reconete o bloco de alimentaç�
 
 NOTE: Depois de substituir a bateria RTC, inserir o controlador e ligar a primeira reinicialização do BIOS, você verá as seguintes mensagens de erro:
 `RTC date/time error. Reset date/time to default`
-`RTC power failure error` Essas mensagens são excluídas e você pode continuar com este procedimento.
+`RTC power failure error` Essas mensagens são esperadas e você pode continuar com este procedimento.
 
 . Verifique a data e a hora no controlador saudável com o `cluster date show` comando.
 

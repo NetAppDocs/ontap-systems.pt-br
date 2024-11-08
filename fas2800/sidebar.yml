@@ -1,9 +1,9 @@
 ---
 section: fas2800
-title: FAS2800 sistemas
+title: Sistemas FAS2820
 entries:
 - title: Instalar e configurar
-  pdf-filename: FAS2800 Instalação e Configuração
+  pdf-filename: Instalação e configuração do FAS2820
   entries:
   - title: Escolha a experiência de instalação e configuração
     url: "/fas2800/install-setup.html"
@@ -14,12 +14,12 @@ entries:
   - title: Passos detalhados
     url: "/fas2800/install-detailed-guide.html"
 - title: Manutenção
-  pdf-filename: FAS2800 manter
+  pdf-filename: Manutenção da FAS2820
   entries:
   - title: Visão geral
     url: "/fas2800/maintain-overview.html"
   - title: Suporte de arranque
-    pdf-filename: FAS2800 suporte de arranque
+    pdf-filename: Mídia de inicialização do FAS2820
     entries:
     - title: Visão geral
       url: "/fas2800/bootmedia-replace-overview.html"
@@ -36,10 +36,10 @@ entries:
     - title: Devolver artigo com falha ao NetApp
       url: "/fas2800/bootmedia-complete-rma.html"
   - title: Módulo de armazenamento em cache
-    pdf-filename: FAS2800 módulo de cache
+    pdf-filename: FAS2820 módulo de cache
     url: "/fas2800/caching-module-replace.html"
   - title: Chassis
-    pdf-filename: FAS2800 chassis
+    pdf-filename: FAS2820 chassis
     entries:
     - title: Visão geral
       url: "/fas2800/chassis-replace-overview.html"
@@ -50,7 +50,7 @@ entries:
     - title: Restaure a configuração
       url: "/fas2800/chassis-replace-complete-system-restore-rma.html"
   - title: Controlador
-    pdf-filename: Controlador FAS2800
+    pdf-filename: Controlador FAS2820
     entries:
     - title: Visão geral
       url: "/fas2800/controller-replace-overview.html"
@@ -65,20 +65,20 @@ entries:
     - title: Restauração completa do sistema
       url: "/fas2800/controller-replace-restore-system-rma.html"
   - title: DIMM
-    pdf-filename: FAS2800 DIMM
+    pdf-filename: FAS2820 DIMM
     url: "/fas2800/dimm-replace.html"
   - title: Condução
-    pdf-filename: Unidade de FAS2800 TB
+    pdf-filename: Unidade de FAS2820 TB
     url: "/fas2800/drive-replace.html"
   - title: Bateria NVMEM
-    pdf-filename: FAS2800 bateria NVMEM
+    pdf-filename: FAS2820 bateria NVMEM
     url: "/fas2800/nvmem-nvram-battery-replace.html"
   - title: Placa mezzanine
-    pdf-filename: FAS2800 cartão Mezzanine
+    pdf-filename: FAS2820 cartão Mezzanine
     url: "/fas2800/pci-cards-and-risers-replace.html"
   - title: Fonte de alimentação
-    pdf-filename: Fonte de alimentação FAS2800
+    pdf-filename: Fonte de alimentação FAS2820
     url: "/fas2800/power-supply-swap-out.html"
   - title: Bateria de relógio em tempo real
-    pdf-filename: FAS2800 bateria de relógio em tempo real
+    pdf-filename: FAS2820 bateria de relógio em tempo real
     url: "/fas2800/rtc-battery-replace.html"

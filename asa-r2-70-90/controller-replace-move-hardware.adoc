@@ -46,15 +46,8 @@ LED de atenção NVRAM
 
 |===
 +
-
-NOTE: Se o LED de status do NVRAM estiver piscando, isso pode significar que o módulo do controlador não foi tomado ou interrompido corretamente (dados não comprometidos). Se o módulo do controlador afetado não tiver sido tomado com sucesso pelo módulo do controlador parceiro, contacte https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de continuar com este procedimento.
-
-+
-O comportamento geral do LED de estado do NVRAM no módulo do controlador desativado é o seguinte:
-
-+
-** O LED de estado do NVRAM pisca quando a alimentação é removida do módulo do controlador e o sistema de armazenamento está no estado "aguardando a giveback", ou o módulo do controlador não é tomado ou interrompido corretamente (dados não confirmados).
-** O LED de estado do NVRAM pisca quando o módulo do controlador é removido do chassis e pode significar que o módulo do controlador não é tomado ou parado corretamente (dados não confirmados). Confirme se o módulo do controlador foi corretamente adquirido pelo módulo do controlador parceiro ou se o módulo do controlador afetado mostra `waiting for giveback`. Em seguida, o LED intermitente pode ser ignorado (e o módulo do controlador pode ser removido do chassis).
+** Se o LED NV estiver desligado, passe à próxima etapa.
+** Se o LED NV estiver intermitente, aguarde que o intermitente pare. Se a intermitência continuar durante mais de 5 minutos, contacte o suporte técnico para obter assistência.
 
 
 . Se você ainda não está aterrado, aterre-se adequadamente.
@@ -82,7 +75,9 @@ image::../media/drw_a70-90_pcm_remove_replace_ieops-1365.svg[Controlador remover
 
  a| 
 image:../media/icon_round_1.png["Legenda número 1"]
-| Um trinco de bloqueio 
+ a| 
+Trinco de bloqueio
+
 
 
  a| 
@@ -361,14 +356,18 @@ image::../media/drw_a70-90_nvram12_remove_replace_ieops-1370.svg[Remova o módul
 |===
 
 
-| image:../media/icon_round_1.png["Legenda número 1"]  a| 
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
 Botão de bloqueio do came
 
 
 
  a| 
 image:../media/icon_round_2.png["Legenda número 2"]
-| Guia de travamento do DIMM 
+ a| 
+Guia de travamento do DIMM
+
 |===
 . Retire o módulo NVRAM do módulo do controlador desativado:
 +
@@ -403,14 +402,8 @@ Ele deve estar alinhado com a chapa metálica do módulo do controlador.
 
 NOTE: Não introduza completamente o módulo do controlador no chassis até ser instruído a fazê-lo.
 
-. Recable o sistema de armazenamento, conforme necessário.
-+
-Se você removeu os transcetores (QSFPs ou SFPs), lembre-se de reinstalá-los se estiver usando cabos de fibra ótica.
-
-+
-
-NOTE: Certifique-se de que o cabo da consola está ligado ao módulo do controlador reparado de forma a receber mensagens da consola quando for reiniciado. O controlador reparado recebe energia do controlador em estado de funcionamento e começa a reiniciar assim que estiver completamente encaixado no chassis.
-
+. Reinstale o ARM de gerenciamento de cabos, se removido, mas não reconete nenhum cabo ao controlador de substituição.
+. Conete o cabo do console à porta do console do módulo do controlador de substituição e reconete-o ao laptop para que ele receba mensagens do console quando ele for reinicializado. O controlador de substituição recebe energia do controlador em estado de funcionamento e começa a reiniciar assim que estiver completamente encaixado no chassis.
 . Conclua a reinstalação do módulo do controlador:
 +
 .. Empurre firmemente o módulo do controlador para dentro do chassi até que ele atenda ao plano médio e esteja totalmente assentado.
@@ -426,15 +419,21 @@ NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para de
 
 +
 
-NOTE: Se o controlador inicializar no prompt Loader, reinicialize-o com o `boot_ontap` comando.
+NOTE: O controlador inicializa no prompt Loader assim que ele estiver totalmente assentado.
+
+. No prompt Loader, digite `show date` para exibir a data e a hora no controlador de substituição. A data e a hora estão em GMT.
++
+
+NOTE: A hora apresentada é hora local nem sempre GMT e é apresentada no modo 24hrD.
+
+. Defina a hora atual em GMT com o `set time hh:mm:ss` comando. Você pode obter o GMT atual do nó do parceiro o comando 'date -u'.
+. Recable o sistema de armazenamento, conforme necessário.
++
+Se você removeu os transcetores (QSFPs ou SFPs), lembre-se de reinstalá-los se estiver usando cabos de fibra ótica.
 
 . Conete os cabos de alimentação às fontes de alimentação.
 +
 
 NOTE: Se você tiver fontes de alimentação CC, reconete o bloco de alimentação às fontes de alimentação depois que o módulo do controlador estiver totalmente encaixado no chassi.
 
-. Devolva o controlador afetado ao funcionamento normal, devolvendo o respetivo armazenamento: `storage failover giveback -ofnode _impaired_node_name_`.
-. Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true`.
-. Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos: `system node autosupport invoke -node * -type all -message MAINT=END`.
-. Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos e reconete o controlador.
 

@@ -47,9 +47,9 @@ https://hwu.netapp.com["NetApp Hardware Universe"^]
 * As configurações de par HA devem ser cabeadas como configurações de HA multipath ou HA de caminho quádruplo com as seguintes exceções:
 +
 ** As plataformas com armazenamento interno não suportam conetividade HA de quatro vias.
-** Um par de HA de FAS2800 TB pode ser cabeado como HA de três caminhos.
+** Um par de HA de FAS2820 TB pode ser cabeado como HA de três caminhos.
 +
-Informações sobre a conetividade FAS2800 podem ser encontradas na <<Conetividade HA de três vias>>seção.
+Informações sobre a conetividade FAS2820 podem ser encontradas na <<Conetividade HA de três vias>>seção.
 
 ** As plataformas com storage interno podem ser cabeadas como configurações de HA de caminho único (da porta 0b/0B1 para compartimentos externos) para dar suporte à conectividade a um dispositivo externo de backup em fita SAS (da porta 0a).
 
@@ -58,7 +58,7 @@ Informações sobre a conetividade FAS2800 podem ser encontradas na <<Conetivida
 
 [NOTE]
 ====
-Para FAS2800 pares de HA, embora o cabeamento para compartimentos externos seja HA de caminho único, devido à conexão interna de cada controladora da porta 0b ao seu expansor local (IOM12G) e à porta 0C ao expansor de seu parceiro, a configuração de par de HA é HA de multipath.
+Para FAS2820 pares de HA, embora o cabeamento para compartimentos externos seja HA de caminho único, devido à conexão interna de cada controladora da porta 0b ao seu expansor local (IOM12G) e à porta 0C ao expansor de seu parceiro, a configuração de par de HA é HA de multipath.
 
 ====
 * As configurações de controlador único devem ser cabeadas como configurações multipath ou de caminho quádruplo, com as seguintes exceções:
@@ -296,7 +296,7 @@ image::../media/drw_fas2600_mpha_domain_example_IEOPS-1172.svg[Conetividade de d
 
 === Conetividade HA de três vias
 
-A conectividade HA Tri-path está disponível em FAS2800 pares de HA. A conectividade de HA com três caminhos, de cada controladora, para compartimentos internos (IOM12GU) e externos:
+A conectividade HA Tri-path está disponível em FAS2820 pares de HA. A conectividade de HA com três caminhos, de cada controladora, para compartimentos internos (IOM12GU) e externos:
 
 * A conexão interna de cada controladora, da porta 0b ao seu IOM12G local, e a porta 0C ao IOM12G de seu parceiro, fornecem conectividade de HA de par de HA multipath.
 * O cabeamento das portas de storage externo de cada controladora, 0a e 0B1, oferece conectividade de HA de par de HA em três caminhos.
@@ -309,16 +309,16 @@ A seguir mostra as conexões internas e o cabeamento externo da controladora que
 
 image::../media/drw_fas2800_concept_tpha_IEOPS-950.svg[Conetividade Tri path HA]
 
-As FAS2800 portas SAS externas:
+As FAS2820 portas SAS externas:
 
 * A porta 0a é do HBA interno (como outras plataformas com uma prateleira interna).
 * A porta 0B1 é da gaveta interna (como as portas 0b em outras plataformas com uma gaveta interna).
 * A porta 0B2 não é utilizada. Está desativado. Se um cabo estiver conetado a ele, uma mensagem de erro será gerada.
 
 
-image::../media/drw_sas3_ports_on_fas2800_IEOPS-946.svg[FAS2800 portas sas externas]
+image::../media/drw_sas3_ports_on_fas2800_IEOPS-946.svg[FAS2820 portas sas externas]
 
-Exemplos de cabeamento de par de HA FAS2800 podem ser encontrados link:install-cabling-worksheets-examples-fas2600.html["Exemplos de cabeamento e planilhas de cabeamento de controladora a stack para plataformas com storage interno"]na seção.
+Exemplos de cabeamento de par de HA FAS2820 podem ser encontrados link:install-cabling-worksheets-examples-fas2600.html["Exemplos de cabeamento e planilhas de cabeamento de controladora a stack para plataformas com storage interno"]na seção.
 
 
 

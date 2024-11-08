@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas2800, detailed, guide, prepare, install, hardware, cable, controllers, node, switchless, cluster, network, configuration, system, storage system, setup, discovery 
 summary: Este processo fornece instruções detalhadas passo a passo para a instalação de um sistema de armazenamento NetApp típico. 
 ---
-= Passos detalhados - FAS2800
+= Passos detalhados - FAS2820
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -435,7 +435,7 @@ image::../media/oie_cable_pull_tab_down.png[Puxe a direção da patilha]
 Use a animação ou as instruções passo a passo para concluir o cabeamento entre as controladoras e os compartimentos de unidades.
 
 
-IMPORTANT: Não use a porta 0B2 em um FAS2800. Esta porta SAS não é utilizada pelo ONTAP e está sempre desativada. Consulte link:../sas3/install-new-system.html["Instalar uma gaveta em um novo sistema de storage"^] para obter mais informações.
+IMPORTANT: Não use a porta 0B2 em um FAS2820. Esta porta SAS não é utilizada pelo ONTAP e está sempre desativada. Consulte link:../sas3/install-new-system.html["Instalar uma gaveta em um novo sistema de storage"^] para obter mais informações.
 
 .Animação - cabeamento do compartimento de unidade
 video::b2a7549d-8141-47dc-9e20-afe8016f4386[panopto]
