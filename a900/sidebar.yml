@@ -70,10 +70,10 @@ entries:
   - title: Módulo de e/S.
     pdf-filename: Módulo de e/S AFF A900
     entries:
-    - title: Substitua o módulo de e/S.
-      url: "/a900/pci_cards_and_risers_replace.html"
     - title: Adicionar módulo de e/S.
       url: "/a900/add_io_module.html"
+    - title: Substitua o módulo de e/S.
+      url: "/a900/pci_cards_and_risers_replace.html"
   - title: LED USB
     url: "/a900/led_module_replace.html"
   - title: NVRAM

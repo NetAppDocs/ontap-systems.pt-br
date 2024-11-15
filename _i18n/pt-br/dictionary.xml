@@ -1747,12 +1747,9 @@
   <block id="a8a4340ad9f0a9503dd05f1562a1373d" category="paragraph">Certifique-se de que a saída do comando reporta o status para o slot 6-1 ou 6-2 como<block ref="7612d64276e5b2eec62fe08b005fe652" prefix=" " category="inline-code"></block> e pronto para operação.</block>
   <block id="a904f2e8295df63a3f31580ce01700e0" category="list-text">Verifique se o módulo de armazenamento em cache de substituição está on-line e reconhecido e, em seguida, confirme visualmente se o LED de atenção âmbar não está aceso:<block ref="7f273550cb82856276d621688285fdbb" prefix=" " category="inline-code"></block></block>
   <block id="0733021a14a5c436b9b7a0e6bc3eed4e" category="admonition">Se você substituir o módulo de cache por um módulo de cache de um fornecedor diferente, o nome do novo fornecedor será exibido na saída do comando.</block>
-  <block id="329fe7c89a525def535e03c6dbc6f98f" category="doc">Opção 1: Adicione o módulo de e/S a um sistema com slots abertos</block>
-  <block id="037baf09c7ddcc7c38f81e7dbe35fa87" category="paragraph">Você pode adicionar um módulo de e/S ao seu sistema adicionando um novo nódulo de e/S a um sistema com slots vazios ou substituindo um módulo de e/S por um novo em um sistema totalmente preenchido.</block>
   <block id="55f1569cdcfb82612fcf293f23db4f6f" category="list-text">Verifique o<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> para se certificar de que o novo módulo de e/S é compatível com o seu sistema e a versão do ONTAP que você está executando.</block>
   <block id="6e4968851f4373ab9764e16cffb39389" category="list-text">Se houver vários slots disponíveis, verifique as prioridades do slot<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> e use a melhor disponível para seu módulo de e/S.</block>
   <block id="e01b6c84aaebe2321eef7b7a933b171f" category="list-text">Para adicionar sem interrupções um módulo de e/S, você deve assumir o controlador de destino, remover a tampa cega do slot no slot de destino ou remover um módulo de e/S existente, adicionar o módulo de e/S novo ou de substituição e, em seguida, giveback o controlador de destino.</block>
-  <block id="192e7ded6d54e3ac04596dc33b9c67cf" category="paragraph">Você pode adicionar um módulo de e/S em um slot de módulo vazio em seu sistema.</block>
   <block id="bc5719b37f755088b3bb793c36a74d06" category="section-title">Etapa 1: Encerre o nó prejudicado</block>
   <block id="a6efff0cc5b19d4c49cb4467336db466" category="list-text">Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando um comando AutoSupport message:<block ref="fbcb7868c4849064439910664677cb60" prefix=" " category="inline-code"></block></block>
   <block id="61612a74be5170dd342eb619d607d9a0" category="paragraph">O seguinte comando AutoSupport suprime a criação automática de casos por duas horas:<block ref="6cf51b10a85b7bdc2a6698400ee841b7" prefix=" " category="inline-code"></block></block>
@@ -1774,8 +1771,6 @@
   <block id="ff307501f6507919aa7c2196b367a42d" category="list-text">Devolver o controlador do controlador parceiro.<block ref="49c908925c3b8a3554612823f81c8964" prefix=" " category="inline-code"></block></block>
   <block id="05648a23fc430a3dcc4fb4c1fbb040cd" category="list-text">Se você estiver usando os slots 3 e/ou 7 para rede, use o<block ref="476ed8a8b3d60ed59cf37fb920c49f89" prefix=" " category="inline-code"></block> comando para converter o slot para uso em rede.</block>
   <block id="f20a0219f10b0070c92efe4269486629" category="list-text">Se você instalou um módulo de e/S de storage, instale e faça o cabeamento das NS224 gavetas, conforme descrito em <block ref="4dfda7c2f93914990922f65bd50f90b3" category="inline-link-macro-rx"></block>.</block>
-  <block id="3e0887648c519f4a3c16a1c61b2e8ec3" category="section-title">Opção 2: Adicione um módulo de e/S em um sistema sem slots abertos</block>
-  <block id="31ac56c0f673cbef254563f6a8a32626" category="paragraph">Se o sistema estiver totalmente preenchido, você poderá alterar um módulo de e/S em um slot de e/S removendo um módulo de e/S existente e substituindo-o por um módulo de e/S diferente.</block>
   <block id="cebb0168d5bfd94a91f0da51501ba6b8" category="list-text">Se você for:</block>
   <block id="e818b574f8a890f6c21405d9164bb6ef" category="cell">A substituir um...</block>
   <block id="d6737fd4fc838900efec68220d9b62d5" category="paragraph">Módulo de e/S NIC com o mesmo número de portas</block>
@@ -2078,9 +2073,6 @@
   <block id="7b71c8c5341c95139930e1f1748956d7" category="list-text">Alinhe o módulo com as extremidades da abertura da ranhura do compartimento.</block>
   <block id="0169e44348295d5766b174aa4c296a62" category="list-text">Repita as etapas de remoção e instalação para substituir módulos adicionais para o controlador.</block>
   <block id="7c99497119e4bb81fd50dbd906dfde72" category="list-text">Reinicie o controlador a partir do prompt Loader:_bye_</block>
-  <block id="270bbec39f8392e251637a1b86bbf5c3" category="list-text">Verifique a versão do BMC no controlador: _System Service-processor show_</block>
-  <block id="d6b96e8ac8bc341aa87626c9a7f76ffd" category="list-text">Atualize o firmware do BMC, se necessário: _System Service-processor image update_</block>
-  <block id="3ff703e913550c7687a9cef2aa4f646d" category="list-text">Reinicie o nó: _Bye_</block>
   <block id="db89594b0a0cbb483395a2641220f1fe" category="list-text">Habilite o giveback automático se ele foi desativado: _Storage failover modifique -node local -auto-giveback True_</block>
   <block id="4e0b6dc04aaa383038bc23130a17cb25" category="cell">Se o módulo I/o for um...</block>
   <block id="09c2cf2531a14305542e6aff93e691c5" category="paragraph">Módulo NIC</block>
@@ -2221,8 +2213,6 @@
   <block id="9a3f7fa88970e2acddf04471a151ec80" category="list-text">Remova o módulo de e/S de destino do compartimento:</block>
   <block id="2f4150c3867bbf0ce9e1aa56330f576b" category="list-text">Prima o botão do came no módulo alvo.</block>
   <block id="cb6d0d31a2a110b0d07c657262474a40" category="list-text">Instale o módulo de e/S de substituição no compartimento:</block>
-  <block id="1ac1a67458bf621b04e5e87511601b9c" category="list-text">No prompt Loader, mude para o modo de privilégio avançado: _SET Privilege Advanced_</block>
-  <block id="10c3a425fded9589c238301aa82be35e" category="list-text">Reinicie o BMC: _SP Reboot_</block>
   <block id="8c2fb795497456b969ba9307ef6f84c8" category="list-text">No prompt DO Loader, reinicie o nó: _Bye_</block>
   <block id="7abd890d238c51ed2801454d1144b6c2" category="admonition">Isso reinicializa as placas de e/S e outros componentes e reinicializa o nó.</block>
   <block id="f39bcef8471a9193d70395e440c5c30f" category="list-text">Retorne o nó à operação normal: _Failover de armazenamento giveback -ofnode prejudicado_node_name_</block>
@@ -6391,12 +6381,7 @@
   <block id="b1bae0b20bbdf563e7e4d9f0fff14ef3" category="doc">Substitua a bateria do NVMEM - FAS2700</block>
   <block id="de599e8ee2b792a05ff2446e93b3a7e5" category="doc">Troque uma fonte de alimentação - FAS2700</block>
   <block id="4091c5e7156fea8e74fb2f6ff3fe34fd" category="doc">Substitua a bateria do relógio em tempo real - FAS2700</block>
-  <block id="c5ad83e174ba7727e76fc50c8366e589" category="list-text">Restaurar o sistema de ficheiros var :</block>
   <block id="1396dacdf561903f32c605f06d2cf5d8" category="list-text">Pressione<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> quando solicitado para confirmar se o backup de restauração foi bem-sucedido.</block>
-  <block id="e51ecd8f185715278ef737fd290e62f5" category="list-text">Pressione<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> quando solicitado para restaurar a cópia de configuração.</block>
-  <block id="1a037944aedbce3040a5314200246858" category="list-text">No prompt do cluster, verifique as interfaces lógicas com o<block ref="55cf88a325a6e0574aef732566cc984c" prefix=" " category="inline-code"></block> comando.</block>
-  <block id="8c4cb494b75288cf3ce1e7ce1dee3c9d" category="paragraph">Se alguma interface estiver listada como "false", reverta essas interfaces de volta para sua porta inicial usando o<block ref="ffbe7d182280173cba10c83ec9992974" prefix=" " category="inline-code"></block> comando.</block>
-  <block id="fcb4d3b1f229bc036dc2280a7c1d29c4" category="list-text">Se você não estiver usando criptografia de armazenamento, restaure o giveback automático e o AutoSupport:</block>
   <block id="1a829a672d8f4a1ab6936c766164f3fe" category="image-alt">drw 2850 pcm remover instalação IEOPS 694</block>
   <block id="5d9c656065fa74e7cb14500497b33617" category="list-text">Abra a tampa pressionando os botões azuis nas laterais do módulo do controlador para soltar a tampa e, em seguida, gire a tampa para cima e para fora do módulo do controlador.</block>
   <block id="206f40d3d3a553b715b00b4ada962595" category="image-alt">Tampa do módulo de controlador aberto drw 2850 IEOPS 695</block>
@@ -10102,8 +10087,6 @@
   <block id="cea781d942e6e6feafc25284d025750b" category="sidebar">Módulo do controlador FAS9500</block>
   <block id="043f87552b799b527c2dd72b0313e404" category="sidebar">Substitua o hardware do módulo do controlador</block>
   <block id="774c0226814e0f61e839b7a7ba1bf4ee" category="sidebar">Módulo de e/S FAS9500</block>
-  <block id="0ebe6df8a3ac338e0512acc741823fdb" category="sidebar">Substitua</block>
-  <block id="ec211f7c20af43e742bf2570c3cb84f9" category="sidebar">Adicionar</block>
   <block id="04d800fa50ce1545b4418475b40e3ed5" category="sidebar">Gavetas NS224</block>
   <block id="9671268467391e7f925a038c0f83e411" category="sidebar">Requisitos e práticas recomendadas</block>
   <block id="df10384110caadaab35322c6cb194231" category="sidebar">Prepare-se para adicionar a quente</block>
@@ -10360,4 +10343,38 @@
   <block id="2f9958347081d2ce185d76c702380979" category="sidebar">FAS2820 cartão Mezzanine</block>
   <block id="6283d5729bdaa96d13760bf62bbe62f2" category="sidebar">Fonte de alimentação FAS2820</block>
   <block id="e8a44fb416b30e755ecaf489baacfd39" category="sidebar">FAS2820 bateria de relógio em tempo real</block>
+  <block id="227398eddfb6e692fd89b8302d75c666" category="paragraph">Se o sistema de armazenamento tiver slots vazios, instale o novo módulo de e/S em um dos slots disponíveis. Se todos os slots estiverem ocupados, remova um módulo de e/S existente para criar espaço e, em seguida, instale o novo.</block>
+  <block id="a76aaa38baa5ae3b2ab41cc1b875078f" category="open-title">Adicione o módulo I/o a um slot vazio</block>
+  <block id="f2cc9125d85f992590d6b8f3fbd46de6" category="paragraph">Você pode adicionar um novo módulo de e/S a um sistema de armazenamento com slots vazios disponíveis.</block>
+  <block id="c0f2e030aecd4084592ca2454ad9a524" category="open-title">Adicionar módulo de e/S a um sistema totalmente preenchido</block>
+  <block id="6408704f957fafc42e96a37aa68b10ce" category="paragraph">Você pode adicionar um módulo de e/S a um sistema totalmente preenchido removendo um módulo de e/S existente e instalando um novo em seu lugar.</block>
+  <block id="d9c0fee19239cdba61031cde184c8d74" category="paragraph">Certifique-se de que compreende os seguintes cenários para adicionar um novo módulo de e/S a um sistema totalmente preenchido:</block>
+  <block id="54861efdd06fc309e1c9a420feff98eb" category="cell">Cenário</block>
+  <block id="3d6623b8d5249788a0d797d4bbc5e5a1" category="cell">Ação necessária</block>
+  <block id="6be20647be40341586dcfb1dbbefcbcc" category="paragraph">NIC para NIC (mesmo número de portas)</block>
+  <block id="09109aaca603d8ac1da46aa588c46f63" category="paragraph">NIC para NIC (número diferente de portas)</block>
+  <block id="4e7b2ae169cb37276347e7c88d211db4" category="paragraph">Reatribua permanentemente os LIFs selecionados para uma porta inicial diferente. Consulte<block ref="8a81e44d8701c7e0abd4b6ad328792f0" category="inline-link-rx"></block> para obter mais informações.</block>
+  <block id="0c3f64052572f9d13d9b078656a055e4" category="paragraph">NIC para módulo de e/S de armazenamento</block>
+  <block id="deaf42dafc1e4522c0ccf86ad58f237e" category="list-text">Devolver o controlador do controlador parceiro:'failover de torage giveback -ofnode target_node_name'</block>
+  <block id="c1d0761e549ef1ce873a404f8d41a2d5" category="list-text">Reinicie o controlador a partir do prompt Loader:<block ref="bfa99df33b137bc8fb5f5407d7e58da8" prefix=" " category="inline-code"></block></block>
+  <block id="5d831aef00c06eb087aebfb790f041b7" category="section-title">Passo 2: Adicionar novo módulo de e/S.</block>
+  <block id="68c06f8f4688078ddfe1ceedef798cae" category="list-text">Devolver o controlador do controlador parceiro:</block>
+  <block id="523f5a38bba8d64b2af1cdee174a06cc" category="paragraph"><block ref="49c908925c3b8a3554612823f81c8964" prefix="" category="inline-code"></block></block>
+  <block id="b98036ad0a9b610670da83fe762dadb5" category="list-text">A partir do nó saudável, restaure o giveback automático se você o tiver desativado usando o seguinte comando:</block>
+  <block id="518d4ff09aabdcee7f75f2c44315aa32" category="list-text">Se o AutoSupport estiver ativado, restaure a criação automática de casos usando o seguinte comando:</block>
+  <block id="4bcd1563c4332086304e70dd3fb7e19a" category="list-text">Ative o giveback automático se ele foi desativado:</block>
+  <block id="1e80f086f2d3ddea0cd02baa25f9c2f1" category="list-text">Se você removeu um módulo de e/S NIC e instalou um novo módulo de e/S NIC, use o seguinte comando de rede para cada porta:</block>
+  <block id="157602c08bdec493e8c79f5e41971ab6" category="paragraph"><block ref="9dedaa5871e5e9684cbae52f5e1b987d" prefix="" category="inline-code"></block></block>
+  <block id="ff7274e5c00dade3058bf32828127837" category="list-text">Se você removeu um módulo de e/S NIC e instalou um módulo de e/S de armazenamento, instale e faça o cabeamento das prateleiras NS224, conforme descrito em <block ref="4dfda7c2f93914990922f65bd50f90b3" category="inline-link-macro-rx"></block>.</block>
+  <block id="fe7cc4281bcf5c347bdaa6bdb704b29b" category="list-text">No prompt DO Loader, reinicie o nó: 'Bye'</block>
+  <block id="440f1f310315bec96a5e23d47024d880" category="list-text">Se estiver substituindo outra unidade, repita as etapas 2 a 6.</block>
+  <block id="91dfaaed30791a3d6d5402ba403f8f73" category="paragraph">Você pode adicionar um módulo de e/S ao seu sistema de armazenamento AFF A1K quando houver slots vazios disponíveis ou quando todos os slots estiverem totalmente preenchidos.</block>
+  <block id="8b6b47c9ffbf56147eb39245a0848071" category="open-title">Opção 2: Configuração MetroCluster</block>
+  <block id="e1e5a630a2475cff2c5c9107cbfff228" category="section-title">Passo 2: Adicione o novo módulo de e/S.</block>
+  <block id="aaa31e70b1e8d53e84fc317dfdcef1ed" category="paragraph">Você pode adicionar um módulo de e/S ao seu sistema de armazenamento AFF A70 e AFF A90 quando houver slots vazios disponíveis ou quando todos os slots estiverem totalmente preenchidos.</block>
+  <block id="fc201f3061cf0fb0ac92be830093fe44" category="paragraph">Você pode adicionar um módulo de e/S ao seu sistema de armazenamento AFF A900 quando houver slots vazios disponíveis ou quando todos os slots estiverem totalmente preenchidos.</block>
+  <block id="5342cf7e14ace50bbfab26225b3e6f39" category="paragraph">Você pode adicionar um módulo de e/S ao seu sistema de armazenamento ASA A70 e ASA A90 quando houver slots vazios disponíveis ou quando todos os slots estiverem totalmente preenchidos.</block>
+  <block id="cac74c301a508cf350f8f41a7de866a0" category="paragraph">Você pode adicionar um módulo de e/S ao seu sistema de armazenamento ASA A1K quando houver slots vazios disponíveis ou quando todos os slots estiverem totalmente preenchidos.</block>
+  <block id="94aa992895c11cf963b2b749b84aa267" category="paragraph">Você pode adicionar um módulo de e/S ao seu sistema de armazenamento FAS70 e FAS90 quando houver slots vazios disponíveis ou quando todos os slots estiverem totalmente preenchidos.</block>
+  <block id="bc049e4428d592b69605104cc85d56bc" category="section-title">Passo 2: Adicione os novos módulos de e/S.</block>
 </blocks>

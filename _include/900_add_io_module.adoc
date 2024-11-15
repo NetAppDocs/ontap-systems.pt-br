@@ -1,8 +1,8 @@
-= Opção 1: Adicione o módulo de e/S a um sistema com slots abertos
+= 
 :allow-uri-read: 
 
 
-Você pode adicionar um módulo de e/S ao seu sistema adicionando um novo nódulo de e/S a um sistema com slots vazios ou substituindo um módulo de e/S por um novo em um sistema totalmente preenchido.
+Se o sistema de armazenamento tiver slots vazios, instale o novo módulo de e/S em um dos slots disponíveis. Se todos os slots estiverem ocupados, remova um módulo de e/S existente para criar espaço e, em seguida, instale o novo.
 
 .Antes de começar
 * Verifique o https://hwu.netapp.com/["NetApp Hardware Universe"^] para se certificar de que o novo módulo de e/S é compatível com o seu sistema e a versão do ONTAP que você está executando.
@@ -11,119 +11,13 @@ Você pode adicionar um módulo de e/S ao seu sistema adicionando um novo nódul
 * Certifique-se de que todos os outros componentes estão a funcionar corretamente.
 
 
-
-
-== Opção 1: Adicione o módulo de e/S a um sistema com slots abertos
-
-Você pode adicionar um módulo de e/S em um slot de módulo vazio em seu sistema.
-
-
-
-== Etapa 1: Encerre o nó prejudicado
-
-Encerre ou assuma o controlador afetado utilizando uma das seguintes opções.
-
 [role="tabbed-block"]
 ====
-.Opção 1: A maioria dos sistemas
+.Adicione o módulo I/o a um slot vazio
 --
-Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
-
-.Sobre esta tarefa
-Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
+Você pode adicionar um novo módulo de e/S a um sistema de armazenamento com slots vazios disponíveis.
 
 .Passos
-. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando um comando AutoSupport message: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
-+
-O seguinte comando AutoSupport suprime a criação automática de casos por duas horas: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
-
-. Desative a giveback automática a partir da consola do controlador saudável: `storage failover modify –node local -auto-giveback false`
-. Leve o controlador prejudicado para o prompt Loader:
-+
-[cols="1,2"]
-|===
-| Se o controlador afetado estiver a apresentar... | Então... 
-
-
- a| 
-O prompt Loader
- a| 
-Vá para a próxima etapa.
-
-
-
- a| 
-`Waiting for giveback...`
- a| 
-Pressione Ctrl-C e responda `y` quando solicitado.
-
-
-
- a| 
-Prompt do sistema ou prompt de senha (digite a senha do sistema)
- a| 
-Parar ou assumir o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode _impaired_node_name_`
-
-Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
-
-|===
-
-
---
-.Opção 2: O controlador está em um MetroCluster
---
-
-NOTE: Não use este procedimento se o sistema estiver em uma configuração de MetroCluster de dois nós.
-
-Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
-
-* Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
-* Se você tiver uma configuração MetroCluster, você deve ter confirmado que o estado de configuração do MetroCluster está configurado e que os nós estão em um estado ativado e normal (`metrocluster node show`).
-
-
-.Passos
-. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando um comando AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
-+
-O seguinte comando AutoSupport suprime a criação automática de casos por duas horas: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
-
-. Desative a giveback automática a partir da consola do controlador saudável: `storage failover modify –node local -auto-giveback false`
-. Leve o controlador prejudicado para o prompt Loader:
-+
-[cols="1,2"]
-|===
-| Se o controlador afetado estiver a apresentar... | Então... 
-
-
- a| 
-O prompt Loader
- a| 
-Vá para a próxima etapa.
-
-
-
- a| 
-A aguardar pela giveback...
- a| 
-Pressione Ctrl-C e responda `y` quando solicitado.
-
-
-
- a| 
-Prompt do sistema ou prompt de senha (digite a senha do sistema)
- a| 
-Parar ou assumir o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode _impaired_node_name_`
-
-Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
-
-|===
-
-
---
-====
-
-
-== Passo 2: Adicionar módulos de e/S.
-
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Retire o obturador da ranhura alvo:
 +
@@ -156,148 +50,40 @@ NOTE: Isso reinicializa as placas PCIe e outros componentes e reinicializa o nó
 . Se você instalou um módulo de e/S de storage, instale e faça o cabeamento das NS224 gavetas, conforme descrito em link:../ns224/hot-add-shelf-overview.html["Fluxo de trabalho de adição automática"].
 
 
+--
+.Adicionar módulo de e/S a um sistema totalmente preenchido
+--
+Você pode adicionar um módulo de e/S a um sistema totalmente preenchido removendo um módulo de e/S existente e instalando um novo em seu lugar.
 
+.Sobre esta tarefa
+Certifique-se de que compreende os seguintes cenários para adicionar um novo módulo de e/S a um sistema totalmente preenchido:
 
-== Opção 2: Adicione um módulo de e/S em um sistema sem slots abertos
-
-Se o sistema estiver totalmente preenchido, você poderá alterar um módulo de e/S em um slot de e/S removendo um módulo de e/S existente e substituindo-o por um módulo de e/S diferente.
-
-. Se você for:
-+
 [cols="1,2"]
 |===
-| A substituir um... | Então... 
+| Cenário | Ação necessária 
 
 
  a| 
-Módulo de e/S NIC com o mesmo número de portas
+NIC para NIC (mesmo número de portas)
  a| 
 Os LIFs migrarão automaticamente quando seu módulo de controlador for desligado.
 
 
 
  a| 
-Módulo de e/S NIC com menos portas
+NIC para NIC (número diferente de portas)
  a| 
-Reatribua permanentemente os LIFs afetados a uma porta inicial diferente. Consulte https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["Migração de um LIF"^] para obter informações sobre como usar o System Manager para mover permanentemente os LIFs.
+Reatribua permanentemente os LIFs selecionados para uma porta inicial diferente. Consulte https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["Migração de um LIF"^] para obter mais informações.
 
 
 
  a| 
-Módulo de e/S NIC com um módulo de e/S de armazenamento
+NIC para módulo de e/S de armazenamento
  a| 
 Use o System Manager para migrar permanentemente os LIFs para diferentes portas residenciais, conforme descrito em https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["Migração de um LIF"^].
 
 |===
-
-
-
-
-== Etapa 1: Encerre o nó prejudicado
-
-Encerre ou assuma o controlador afetado utilizando uma das seguintes opções.
-
-[role="tabbed-block"]
-====
-.Opção 1: A maioria dos sistemas
---
-Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
-
-.Sobre esta tarefa
-Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
-
 .Passos
-. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando um comando AutoSupport message: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
-+
-O seguinte comando AutoSupport suprime a criação automática de casos por duas horas: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
-
-. Desative a giveback automática a partir da consola do controlador saudável: `storage failover modify –node local -auto-giveback false`
-. Leve o controlador prejudicado para o prompt Loader:
-+
-[cols="1,2"]
-|===
-| Se o controlador afetado estiver a apresentar... | Então... 
-
-
- a| 
-O prompt Loader
- a| 
-Vá para a próxima etapa.
-
-
-
- a| 
-`Waiting for giveback...`
- a| 
-Pressione Ctrl-C e responda `y` quando solicitado.
-
-
-
- a| 
-Prompt do sistema ou prompt de senha (digite a senha do sistema)
- a| 
-Parar ou assumir o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode _impaired_node_name_`
-
-Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
-
-|===
-
-
---
-.Opção 2: O controlador está em um MetroCluster
---
-
-NOTE: Não use este procedimento se o sistema estiver em uma configuração de MetroCluster de dois nós.
-
-Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
-
-* Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
-* Se você tiver uma configuração MetroCluster, você deve ter confirmado que o estado de configuração do MetroCluster está configurado e que os nós estão em um estado ativado e normal (`metrocluster node show`).
-
-
-.Passos
-. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando um comando AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
-+
-O seguinte comando AutoSupport suprime a criação automática de casos por duas horas: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
-
-. Desative a giveback automática a partir da consola do controlador saudável: `storage failover modify –node local -auto-giveback false`
-. Leve o controlador prejudicado para o prompt Loader:
-+
-[cols="1,2"]
-|===
-| Se o controlador afetado estiver a apresentar... | Então... 
-
-
- a| 
-O prompt Loader
- a| 
-Vá para a próxima etapa.
-
-
-
- a| 
-A aguardar pela giveback...
- a| 
-Pressione Ctrl-C e responda `y` quando solicitado.
-
-
-
- a| 
-Prompt do sistema ou prompt de senha (digite a senha do sistema)
- a| 
-Parar ou assumir o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode _impaired_node_name_`
-
-Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
-
-|===
-
-
---
-====
-
-
-== Passo 2: Substitua os módulos de e/S.
-
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Desconete qualquer cabeamento do módulo de e/S de destino.
 . Retire o módulo de e/S alvo do chassis:
@@ -388,3 +174,6 @@ Instale e faça o cabeamento das NS224 prateleiras, conforme descrito em link:..
 |===
 . Repita estes passos para o controlador B.
 
+
+--
+====

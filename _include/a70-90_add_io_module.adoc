@@ -360,18 +360,12 @@ Certifique-se de manter o controle de qual slot o módulo de e/S estava.
 . Rode o tabuleiro de gestão de cabos para a posição de bloqueio.
 . Reinicie o módulo do controlador a partir do prompt Loader:_bye_
 +
-.. Verifique a versão do BMC no controlador: _System Service-processor show_
-.. Atualize o firmware do BMC, se necessário: _System Service-processor image update_
-.. Reinicie o nó: _Bye_
-+
+Isso reinicializa as placas PCIe e outros componentes e reinicializa o nó.
 
-NOTE: Isso reinicializa as placas PCIe e outros componentes e reinicializa o nó.
 
-+
+
 
 NOTE: Se encontrar um problema durante a reinicialização, consulte https://mysupport.netapp.com/site/bugs-online/product/ONTAP/BURT/1494308["BURT 1494308 - o desligamento do ambiente pode ser acionado durante a substituição do módulo de e/S."]
-
-
 
 . Devolva o módulo do controlador do módulo do controlador do parceiro. _failover de armazenamento giveback -ofnode target_node_name_
 . Habilite o giveback automático se ele foi desativado: _Storage failover modifique -node local -auto-giveback True_

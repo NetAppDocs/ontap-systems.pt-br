@@ -169,17 +169,8 @@ Certifique-se de manter o controle de qual slot o módulo de e/S estava.
 
 Depois de substituir um módulo de e/S, tem de reiniciar o módulo do controlador.
 
-
-NOTE: Se o novo módulo de e/S não for o mesmo modelo que o módulo com falha, você deve primeiro reiniciar o BMC.
-
 .Passos
-. Reinicie o BMC se o módulo de substituição não for o mesmo modelo do módulo antigo:
-+
-.. No prompt Loader, mude para o modo de privilégio avançado: _SET Privilege Advanced_
-.. Reinicie o BMC: _SP Reboot_
-
-
-. No prompt DO Loader, reinicie o nó: _Bye_
+. No prompt Loader, reinicie o nó: `bye`
 +
 
 NOTE: Isso reinicializa as placas de e/S e outros componentes e reinicializa o nó.

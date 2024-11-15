@@ -248,20 +248,13 @@ Certifique-se de manter o controle de qual slot o módulo de e/S estava.
 . Faça o cabo do módulo de e/S.
 . Repita as etapas de remoção e instalação para substituir módulos adicionais para o controlador.
 . Rode o tabuleiro de gestão de cabos para cima até à posição fechada.
-. Reinicie o controlador a partir do prompt Loader:_bye_
+. Reinicie o controlador a partir do prompt Loader: `bye`
 +
-.. Verifique a versão do BMC no controlador: _System Service-processor show_
-.. Atualize o firmware do BMC, se necessário: _System Service-processor image update_
-.. Reinicie o nó: _Bye_
-+
-
-NOTE: Isso reinicializa as placas PCIe e outros componentes e reinicializa o nó.
+Isso reinicializa as placas PCIe e outros componentes e reinicializa o nó.
 
 +
 
 NOTE: Se encontrar um problema durante a reinicialização, consulte https://mysupport.netapp.com/site/bugs-online/product/ONTAP/BURT/1494308["BURT 1494308 - o desligamento do ambiente pode ser acionado durante a substituição do módulo de e/S."]
-
-
 
 . Devolver o controlador do controlador parceiro: _Storage failover giveback -ofnode target_node_name_
 . Habilite o giveback automático se ele foi desativado: _Storage failover modifique -node local -auto-giveback True_

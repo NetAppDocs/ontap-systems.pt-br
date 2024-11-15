@@ -11,25 +11,13 @@ summary: Para substituir um módulo de e/S, você deve desconetar os cabos do m�
 
 
 [role="lead"]
-Você pode adicionar um módulo de e/S ao seu sistema de armazenamento adicionando um novo módulo de e/S a um sistema de armazenamento com slots vazios ou substituindo um módulo de e/S por um novo em um sistema de armazenamento totalmente preenchido.
-
-.Antes de começar
-* Verifique o https://hwu.netapp.com/["NetApp Hardware Universe"^] para se certificar de que o novo módulo de e/S é compatível com o sistema de armazenamento e a versão do ONTAP que você está executando.
-* Se houver vários slots disponíveis, verifique as prioridades do slot https://hwu.netapp.com/["NetApp Hardware Universe"^] e use a melhor disponível para seu módulo de e/S.
-* Certifique-se de que todos os outros componentes estão a funcionar corretamente.
+Você pode adicionar um módulo de e/S ao seu sistema de armazenamento AFF A70 e AFF A90 quando houver slots vazios disponíveis ou quando todos os slots estiverem totalmente preenchidos.
 
 
 
+== Passo 1: Desligue o módulo do controlador desativado
 
-== Opção 1: Adicione um módulo de e/S a um sistema de armazenamento com slots vazios
-
-Você pode adicionar um módulo de e/S em um slot de módulo vazio no seu sistema de armazenamento.
-
-
-
-=== Passo 1: Desligue o módulo do controlador desativado
-
-Encerre ou assuma o controlo do módulo do controlador afetado utilizando uma das seguintes opções.
+Desligue ou assuma o controlo do módulo do controlador desativado.
 
 [role="tabbed-block"]
 ====
@@ -78,7 +66,7 @@ Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctr
 
 
 --
-.Opção 2: O controlador está em um MetroCluster
+.Opção 2: Configuração MetroCluster
 --
 
 NOTE: Não use este procedimento se o sistema estiver em uma configuração de MetroCluster de dois nós.
@@ -130,39 +118,36 @@ Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctr
 ====
 
 
-=== Passo 2: Adicionar módulos de e/S.
+== Passo 2: Adicione o novo módulo de e/S.
 
+Se o sistema de armazenamento tiver slots vazios, instale o novo módulo de e/S em um dos slots disponíveis. Se todos os slots estiverem ocupados, remova um módulo de e/S existente para criar espaço e, em seguida, instale o novo.
+
+.Antes de começar
+* Verifique o https://hwu.netapp.com/["NetApp Hardware Universe"^] para se certificar de que o novo módulo de e/S é compatível com o sistema de armazenamento e a versão do ONTAP que você está executando.
+* Se houver vários slots disponíveis, verifique as prioridades do slot https://hwu.netapp.com/["NetApp Hardware Universe"^] e use a melhor disponível para seu módulo de e/S.
+* Certifique-se de que todos os outros componentes estão a funcionar corretamente.
+
+
+[role="tabbed-block"]
+====
+.Adicione o módulo I/o a um slot vazio
+--
+Você pode adicionar um novo módulo de e/S a um sistema de armazenamento com slots vazios disponíveis.
+
+.Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
-. Gire a bandeja de gerenciamento de cabos para baixo puxando os botões de ambos os lados no interior da bandeja de gerenciamento de cabos e, em seguida, gire a bandeja para baixo.
-. Retire o módulo obturador da ranhura alvo do chassis:
-+
-
-NOTE: A ilustração a seguir mostra como remover um módulo de e/S horizontal e vertical. Normalmente, você só removerá um módulo de e/S.
-
-+
-image::../media/drw_a70_90_io_remove_replace_ieops-1532.svg[Remova um módulo de e/S.]
-
-+
-[cols="1,4"]
-|===
-
-
- a| 
-image:../media/icon_round_1.png["Legenda número 1"]
- a| 
-Botão de bloqueio do came
-
-|===
+. Gire a bandeja de gerenciamento de cabos para baixo puxando os botões no interior da bandeja de gerenciamento de cabos e girando-a para baixo.
+. Retire o módulo de obturação da ranhura alvo do suporte:
 +
 .. Prima o trinco do excêntrico no módulo obturador na ranhura alvo.
 .. Rode o trinco do excêntrico para longe do módulo o mais longe possível.
-.. Retire o obturador.
+.. Remova o módulo do compartimento prendendo o dedo na abertura da alavanca do came e puxando o módulo para fora do compartimento.
 
 
 . Instale o módulo de e/S:
 +
-.. Alinhe o módulo de e/S com as extremidades da abertura da ranhura do módulo do controlador.
-.. Deslize cuidadosamente o módulo todo para dentro da ranhura e, em seguida, rode o trinco do excêntrico totalmente para cima para bloquear o módulo no lugar.
+.. Alinhe o módulo de e/S com as extremidades da abertura da ranhura do compartimento.
+.. Deslize cuidadosamente o módulo para dentro da ranhura até ao compartimento e, em seguida, rode o trinco da came até ao fim para bloquear o módulo no lugar.
 
 
 . Ligue o módulo de e/S ao dispositivo designado.
@@ -176,233 +161,104 @@ NOTE: Certifique-se de que quaisquer slots de e/S não utilizados tenham espaço
 
 NOTE: Isso reinicializa as placas PCIe e outros componentes e reinicializa o nó.
 
-. Devolver o controlador do controlador parceiro: _Storage failover giveback -ofnode target_node_name_
-. Repita estes passos para o controlador B.
-. A partir do nó saudável, restaure o giveback automático se você o desativou usando o `storage failover modify -node local -auto-giveback true` comando.
-. Se o AutoSupport estiver ativado, restaure/dessuprimir a criação automática de casos usando o `system node autosupport invoke -node * -type all -message MAINT=END` comando.
-
-
-
-
-== Opção 2: Adicione um módulo de e/S em um sistema de armazenamento sem slots vazios
-
-Você pode alterar um módulo de e/S em um slot de e/S em um sistema totalmente preenchido removendo um módulo de e/S existente e substituindo-o por um módulo de e/S diferente.
-
-. Se você for:
+. Devolver o controlador do controlador parceiro:
 +
+`storage failover giveback -ofnode target_node_name`
+
+. Repita estes passos para o controlador B.
+. A partir do nó saudável, restaure o giveback automático se você o tiver desativado usando o seguinte comando:
++
+`storage failover modify -node local -auto-giveback true`
+
+. Se o AutoSupport estiver ativado, restaure a criação automática de casos usando o seguinte comando:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
+
+
+--
+.Adicionar módulo de e/S a um sistema totalmente preenchido
+--
+Você pode adicionar um módulo de e/S a um sistema totalmente preenchido removendo um módulo de e/S existente e instalando um novo em seu lugar.
+
+.Sobre esta tarefa
+Certifique-se de que compreende os seguintes cenários para adicionar um novo módulo de e/S a um sistema totalmente preenchido:
+
 [cols="1,2"]
 |===
-| A substituir um... | Então... 
+| Cenário | Ação necessária 
 
 
  a| 
-Módulo de e/S NIC com o mesmo número de portas
+NIC para NIC (mesmo número de portas)
  a| 
 Os LIFs migrarão automaticamente quando seu módulo de controlador for desligado.
 
 
 
  a| 
-Módulo de e/S NIC com menos portas
+NIC para NIC (número diferente de portas)
  a| 
-Reatribua permanentemente os LIFs afetados a uma porta inicial diferente. Consulte https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["Migração de um LIF"^] para obter informações sobre como usar o System Manager para mover permanentemente os LIFs.
+Reatribua permanentemente os LIFs selecionados para uma porta inicial diferente. Consulte https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["Migração de um LIF"^] para obter mais informações.
 
 
 
  a| 
-Módulo de e/S NIC com um módulo de e/S de armazenamento
+NIC para módulo de e/S de armazenamento
  a| 
 Use o System Manager para migrar permanentemente os LIFs para diferentes portas residenciais, conforme descrito em https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["Migração de um LIF"^].
 
 |===
-
-
-
-
-=== Passo 1: Desligue o módulo do controlador desativado
-
-Encerre ou assuma o controlo do módulo do controlador afetado utilizando uma das seguintes opções.
-
-[role="tabbed-block"]
-====
-.Opção 1: A maioria dos sistemas
---
-Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
-
-.Sobre esta tarefa
-Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
-
 .Passos
-. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando um comando AutoSupport message: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
-+
-O seguinte comando AutoSupport suprime a criação automática de casos por duas horas: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
-
-. Desative a giveback automática a partir da consola do controlador saudável: `storage failover modify –node local -auto-giveback false`
-. Leve o controlador prejudicado para o prompt Loader:
-+
-[cols="1,2"]
-|===
-| Se o controlador afetado estiver a apresentar... | Então... 
-
-
- a| 
-O prompt Loader
- a| 
-Vá para a próxima etapa.
-
-
-
- a| 
-`Waiting for giveback...`
- a| 
-Pressione Ctrl-C e responda `y` quando solicitado.
-
-
-
- a| 
-Prompt do sistema ou prompt de senha (digite a senha do sistema)
- a| 
-Parar ou assumir o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode _impaired_node_name_`
-
-Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
-
-|===
-
-
---
-.Opção 2: O controlador está em um MetroCluster
---
-
-NOTE: Não use este procedimento se o sistema estiver em uma configuração de MetroCluster de dois nós.
-
-Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
-
-* Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
-* Se você tiver uma configuração MetroCluster, você deve ter confirmado que o estado de configuração do MetroCluster está configurado e que os nós estão em um estado ativado e normal (`metrocluster node show`).
-
-
-.Passos
-. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando um comando AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
-+
-O seguinte comando AutoSupport suprime a criação automática de casos por duas horas: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
-
-. Desative a giveback automática a partir da consola do controlador saudável: `storage failover modify –node local -auto-giveback false`
-. Leve o controlador prejudicado para o prompt Loader:
-+
-[cols="1,2"]
-|===
-| Se o controlador afetado estiver a apresentar... | Então... 
-
-
- a| 
-O prompt Loader
- a| 
-Vá para a próxima etapa.
-
-
-
- a| 
-A aguardar pela giveback...
- a| 
-Pressione Ctrl-C e responda `y` quando solicitado.
-
-
-
- a| 
-Prompt do sistema ou prompt de senha (digite a senha do sistema)
- a| 
-Parar ou assumir o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode _impaired_node_name_`
-
-Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
-
-|===
-
-
---
-====
-
-
-=== Passo 2: Substitua um módulo de e/S.
-
-Para substituir um módulo de e/S, localize-o no módulo do controlador e siga a sequência específica de passos.
-
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Desconete qualquer cabeamento do módulo de e/S de destino.
 . Gire a bandeja de gerenciamento de cabos para baixo puxando os botões no interior da bandeja de gerenciamento de cabos e girando-a para baixo.
 . Retire o módulo de e/S alvo do chassis:
 +
-
-NOTE: A ilustração a seguir mostra como remover um módulo de e/S horizontal e vertical. Normalmente, você só removerá um módulo de e/S.
-
-+
-image::../media/drw_a70_90_io_remove_replace_ieops-1532.svg[Remova um módulo de e/S.]
-
-+
-[cols="1,4"]
-|===
-
-
- a| 
-image:../media/icon_round_1.png["Legenda número 1"]
-| Botão de bloqueio do came 
-|===
-+
 .. Prima o botão do trinco do excêntrico.
-+
-O trinco do excêntrico afasta-se do chassis.
-
-.. Rode o trinco do excêntrico para baixo o mais longe possível. Para módulos horizontais, gire o came para longe do módulo o mais longe possível.
-.. Retire o módulo do chassis, prendendo o dedo na abertura da alavanca do excêntrico e puxando o módulo para fora do chassis.
+.. Rode o trinco do excêntrico para longe do módulo o mais longe possível.
+.. Remova o módulo do compartimento prendendo o dedo na abertura da alavanca do came e puxando o módulo para fora do compartimento.
 +
 Certifique-se de manter o controle de qual slot o módulo de e/S estava.
 
 
 
-. Instale o módulo de e/S na ranhura de destino:
+. Instale o módulo de e/S no slot de destino no compartimento:
 +
-.. Alinhe o módulo de e/S com as extremidades da ranhura.
-.. Deslize cuidadosamente o módulo para dentro da ranhura até ao chassis e, em seguida, rode o trinco do excêntrico até ao fim para bloquear o módulo no devido lugar.
+.. Alinhe o módulo com as extremidades da abertura da ranhura do compartimento.
+.. Deslize cuidadosamente o módulo para dentro da ranhura até ao compartimento e, em seguida, rode o trinco da came até ao fim para bloquear o módulo no lugar.
 
 
 . Ligue o módulo de e/S ao dispositivo designado.
-. Repita os passos de remoção e instalação para substituir módulos adicionais para o módulo do controlador.
-. Rode o tabuleiro de gestão de cabos para a posição de bloqueio.
-. Reinicie o módulo do controlador a partir do prompt Loader:_bye_
+. Repita as etapas de remoção e instalação para substituir módulos adicionais para o controlador.
+. Rode o tabuleiro de gestão de cabos para cima até à posição fechada.
+. Reinicie o controlador a partir do prompt Loader:_bye_
 +
-.. Verifique a versão do BMC no controlador: _System Service-processor show_
-.. Atualize o firmware do BMC, se necessário: _System Service-processor image update_
-.. Reinicie o nó: _Bye_
-+
-
-NOTE: Isso reinicializa as placas PCIe e outros componentes e reinicializa o nó.
+Isso reinicializa as placas PCIe e outros componentes e reinicializa o nó.
 
 +
 
 NOTE: Se encontrar um problema durante a reinicialização, consulte https://mysupport.netapp.com/site/bugs-online/product/ONTAP/BURT/1494308["BURT 1494308 - o desligamento do ambiente pode ser acionado durante a substituição do módulo de e/S."]
 
-
-
-. Devolva o módulo do controlador do módulo do controlador do parceiro. _failover de armazenamento giveback -ofnode target_node_name_
-. Habilite o giveback automático se ele foi desativado: _Storage failover modifique -node local -auto-giveback True_
-. Se você adicionou:
+. Devolver o controlador do controlador parceiro:
 +
-[cols="1,2"]
-|===
-| Se o módulo I/o for um... | Então... 
+`storage failover giveback -ofnode target_node_name`
+
+. Ative o giveback automático se ele foi desativado:
++
+`storage failover modify -node local -auto-giveback true`
+
+. Execute um dos seguintes procedimentos:
++
+** Se você removeu um módulo de e/S NIC e instalou um novo módulo de e/S NIC, use o seguinte comando de rede para cada porta:
++
+`storage port modify -node *_<node name>__ -port *_<port name>__ -mode network`
+
+** Se você removeu um módulo de e/S NIC e instalou um módulo de e/S de armazenamento, instale e faça o cabeamento das prateleiras NS224, conforme descrito em link:../ns224/hot-add-shelf-overview.html["Fluxo de trabalho de adição automática"].
 
 
- a| 
-Módulo NIC
- a| 
-Use o `storage port modify -node *_<node name>__ -port *_<port name>__ -mode network` comando para cada porta.
-
-
-
- a| 
-Módulo de armazenamento
- a| 
-Instale e faça o cabeamento das NS224 prateleiras, conforme descrito em link:../ns224/hot-add-shelf-overview.html["Fluxo de trabalho de adição automática"].
-
-|===
 . Repita estes passos para o controlador B.
 
+
+--
+====

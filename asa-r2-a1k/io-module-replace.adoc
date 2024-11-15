@@ -122,23 +122,13 @@ Certifique-se de manter o controle de qual slot o módulo de e/S estava.
 
 Depois de substituir um módulo de e/S, tem de reiniciar o módulo do controlador.
 
-
-NOTE: Se o novo módulo de e/S não for o mesmo modelo que o módulo com falha, você deve primeiro reiniciar o BMC.
-
 .Passos
-. Reinicie o BMC se o módulo de substituição não for o mesmo modelo do módulo antigo:
+. No prompt Loader, reinicie o nó: `bye`
 +
-.. No prompt Loader, mude para o modo de privilégio avançado: _SET Privilege Advanced_
-.. Reinicie o BMC: _SP Reboot_
+Isso reinicializa as placas de e/S e outros componentes e reinicializa o nó.
 
-
-. No prompt DO Loader, reinicie o nó: _Bye_
-+
-
-NOTE: Isso reinicializa as placas de e/S e outros componentes e reinicializa o nó.
-
-. Retorne o nó à operação normal: _Failover de armazenamento giveback -ofnode prejudicado_node_name_
-. Se a giveback automática foi desativada, reative-a: _Storage failover modifique -node local -auto-giveback True_
+. Retorne o nó à operação normal: `storage failover giveback -ofnode impaired_node_name`
+. Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true`
 
 
 
