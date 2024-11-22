@@ -1759,7 +1759,6 @@
   <block id="b3ead59e066683fe0070a3107e660906" category="admonition">Não use este procedimento se o sistema estiver em uma configuração de MetroCluster de dois nós.</block>
   <block id="159dd817f86d57640ec3082399a576f9" category="list-text">Se você tiver uma configuração MetroCluster, você deve ter confirmado que o estado de configuração do MetroCluster está configurado e que os nós estão em um estado ativado e normal <block ref="4d06f3844212ac745a73965bbb3f6e51" prefix="(" category="inline-code"></block>).</block>
   <block id="fd9366185c7040d2814e95fefcce2264" category="list-text">Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando um comando AutoSupport:<block ref="fbcb7868c4849064439910664677cb60" prefix=" " category="inline-code"></block></block>
-  <block id="741ade379895992f2a574e8e60de1571" category="section-title">Passo 2: Adicionar módulos de e/S.</block>
   <block id="44e91a10c5fb9bc923eb6ca613b41106" category="list-text">Prima o trinco do excêntrico numerado e com letras.</block>
   <block id="c45c3f1f9d099575b7abd851e7ef8b33" category="list-text">Rode o trinco da árvore de cames para baixo até estar na posição aberta.</block>
   <block id="9a08e35bf8850515585d9bd11e96351b" category="list-text">Instale o módulo de e/S:</block>
@@ -1771,13 +1770,7 @@
   <block id="ff307501f6507919aa7c2196b367a42d" category="list-text">Devolver o controlador do controlador parceiro.<block ref="49c908925c3b8a3554612823f81c8964" prefix=" " category="inline-code"></block></block>
   <block id="05648a23fc430a3dcc4fb4c1fbb040cd" category="list-text">Se você estiver usando os slots 3 e/ou 7 para rede, use o<block ref="476ed8a8b3d60ed59cf37fb920c49f89" prefix=" " category="inline-code"></block> comando para converter o slot para uso em rede.</block>
   <block id="f20a0219f10b0070c92efe4269486629" category="list-text">Se você instalou um módulo de e/S de storage, instale e faça o cabeamento das NS224 gavetas, conforme descrito em <block ref="4dfda7c2f93914990922f65bd50f90b3" category="inline-link-macro-rx"></block>.</block>
-  <block id="cebb0168d5bfd94a91f0da51501ba6b8" category="list-text">Se você for:</block>
-  <block id="e818b574f8a890f6c21405d9164bb6ef" category="cell">A substituir um...</block>
-  <block id="d6737fd4fc838900efec68220d9b62d5" category="paragraph">Módulo de e/S NIC com o mesmo número de portas</block>
   <block id="c5cb03fb8ac84e8ed0867902373368c5" category="paragraph">Os LIFs migrarão automaticamente quando seu módulo de controlador for desligado.</block>
-  <block id="5b4da5fe899903c4fb7ea38cdcd59059" category="paragraph">Módulo de e/S NIC com menos portas</block>
-  <block id="c964f542415e7614484e4edf970ab7a8" category="paragraph">Reatribua permanentemente os LIFs afetados a uma porta inicial diferente. Consulte<block ref="8a81e44d8701c7e0abd4b6ad328792f0" category="inline-link-rx"></block> para obter informações sobre como usar o System Manager para mover permanentemente os LIFs.</block>
-  <block id="f83c48dd124994c4062d124a835da954" category="paragraph">Módulo de e/S NIC com um módulo de e/S de armazenamento</block>
   <block id="6d351dbc4a7187d4512a1c505c200687" category="paragraph">Use o System Manager para migrar permanentemente os LIFs para diferentes portas residenciais, conforme descrito em<block ref="8a81e44d8701c7e0abd4b6ad328792f0" category="inline-link-rx"></block>.</block>
   <block id="35ed901089030d76b9de29f7bb8d54ce" category="paragraph">O trinco do excêntrico afasta-se do chassis.</block>
   <block id="8e110de01e4c53b1e817eb263890c2c7" category="video-title">Animação - Remover ou substituir um módulo de e/S.</block>
@@ -2041,16 +2034,11 @@
   <block id="7ac0a68ff3a0c6b3beb7f03b58c8496d" category="paragraph">Depois de substituir a bateria do RTC, tem de reinstalar o módulo do controlador. Se a bateria do RTC tiver sido deixada fora do módulo do controlador durante mais de 10 minutos, poderá ter de repor a hora e a data.</block>
   <block id="0e1569786cd5c99315511da0d9e3f2aa" category="admonition">Se o sistema parar no menu de inicialização, selecione a opção "Reboot node" (nó de reinicialização) e responda y quando solicitado e, em seguida, inicialize no Loader pressionando<block ref="76be6883bcf9e8a6aed3a347ac20e41f" prefix=" " category="inline-code"></block>.</block>
   <block id="f1eb9bf0f474a83bbe6d11b59f16da8c" category="list-text">Volte a colocar o controlador em funcionamento normal, devolvendo o respetivo armazenamento:<block ref="0bba834c69f94d8942b922666e06c777" prefix=" " category="inline-code"></block></block>
-  <block id="9f496d341d66d79304a55547445c00a2" category="doc">Opção 1: Adicione um módulo de e/S a um sistema de armazenamento com slots vazios</block>
-  <block id="c4b17ef982ae644ec1d2b995fa1534a8" category="paragraph">Você pode adicionar um módulo de e/S ao seu sistema de armazenamento adicionando um novo módulo de e/S a um sistema de armazenamento com slots vazios ou substituindo um módulo de e/S por um novo em um sistema de armazenamento totalmente preenchido.</block>
   <block id="656450ae55843844fdfca7b44cbc5678" category="list-text">Verifique o<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> para se certificar de que o novo módulo de e/S é compatível com o sistema de armazenamento e a versão do ONTAP que você está executando.</block>
-  <block id="9808a3e490e0cd81c2fab70cb489f958" category="paragraph">Você pode adicionar um módulo de e/S em um slot de módulo vazio no seu sistema de armazenamento.</block>
   <block id="3e508eeaedfdae09fad57a764b5e2b73" category="section-title">Passo 1: Desligue o módulo do controlador desativado</block>
   <block id="66a35db4b6d963b540c6a3d31a9d39e6" category="paragraph">Desligue ou assuma o controlo do módulo do controlador desativado.</block>
   <block id="78263f5226743bdd204519f0e9bd22d2" category="list-text">Gire a bandeja de gerenciamento de cabos para baixo puxando os botões no interior da bandeja de gerenciamento de cabos e girando-a para baixo.</block>
   <block id="72e0b58a2d456f6ab89ca8d83859264d" category="list-text">Retire o módulo de obturação da ranhura alvo do suporte:</block>
-  <block id="b1cd69e899e8ab2e8b0c559899a3f2d7" category="admonition">A ilustração a seguir mostra como remover um módulo de e/S horizontal e vertical. Normalmente, você só removerá um módulo de e/S.</block>
-  <block id="b0fe3ad00c115ca25f49fb3d48769b0b" category="image-alt">Remova um módulo de e/S AFF A1K</block>
   <block id="243dd5ebf726e6d6a9762938953c1a6a" category="cell">Botão de bloqueio do came</block>
   <block id="3939b3c4c6e868d0268fd9a75f3b3805" category="list-text">Prima o trinco do excêntrico no módulo obturador na ranhura alvo.</block>
   <block id="011b6189f470beb455ff657e2d7f7a63" category="list-text">Rode o trinco do excêntrico para longe do módulo o mais longe possível.</block>
@@ -2058,28 +2046,16 @@
   <block id="f47dbf934d7d51340a5c58741715b2d5" category="list-text">Alinhe o módulo de e/S com as extremidades da abertura da ranhura do compartimento.</block>
   <block id="b3fe1b3e8557371fcb101f90a1a32fd0" category="list-text">Deslize cuidadosamente o módulo para dentro da ranhura até ao compartimento e, em seguida, rode o trinco da came até ao fim para bloquear o módulo no lugar.</block>
   <block id="be9dc0332662b913cef88d5dcde78acd" category="list-text">Faça o cabo do módulo de e/S.</block>
-  <block id="040f840d8fdf859359eb680be25e8992" category="paragraph">Se o módulo de e/S for uma NIC, faça o cabo do módulo para os switches de dados.</block>
-  <block id="3072040b83655039de255184380a9271" category="paragraph">Se o módulo de e/S for um módulo de armazenamento, prenda-o ao compartimento NS224.</block>
   <block id="9056e6b74b2e2b546abd76b6e7408f4d" category="list-text">Rode o tabuleiro de gestão de cabos para cima até à posição fechada.</block>
-  <block id="a0a7e707ad35c210d4582fab4069c223" category="list-text">Devolver o controlador do controlador parceiro: _Storage failover giveback -ofnode target_node_name_</block>
   <block id="6c91356d53993ce0d1f0c1af28c7a48b" category="list-text">Se o AutoSupport estiver ativado, restaure/dessuprimir a criação automática de casos usando o<block ref="9ac424c0d7b432975df36a19daf50c9c" prefix=" " category="inline-code"></block> comando.</block>
-  <block id="026bf593d893e27d6f090dc74e403a75" category="section-title">Opção 2: Adicione um módulo de e/S em um sistema de armazenamento sem slots vazios</block>
-  <block id="a06ddc697cce62226c19e353e0f2eeba" category="paragraph">Você pode alterar um módulo de e/S em um slot de e/S em um sistema totalmente preenchido removendo um módulo de e/S existente e substituindo-o por um módulo de e/S diferente.</block>
-  <block id="47ab52c1da07a0c00e2b876e54778a95" category="paragraph">Reatribua permanentemente os LIFs selecionados para uma porta inicial diferente. Consulte<block ref="8a81e44d8701c7e0abd4b6ad328792f0" category="inline-link-rx"></block> para obter informações sobre como usar o System Manager para mover permanentemente os LIFs.</block>
-  <block id="8f6ea8b644b16793208bc55e27bc7669" category="section-title">Passo 2: Substitua um módulo de e/S.</block>
-  <block id="900056c17f40fb1a034e134a72eca912" category="image-alt">Remova o módulo de e/S do AFF A1K</block>
   <block id="8181d3a6b1640b5868632cfe5589a05d" category="list-text">Prima o botão do trinco do excêntrico.</block>
   <block id="0cfc07520b64c5be4e64fac899e6eaa9" category="list-text">Instale o módulo de e/S no slot de destino no compartimento:</block>
   <block id="7b71c8c5341c95139930e1f1748956d7" category="list-text">Alinhe o módulo com as extremidades da abertura da ranhura do compartimento.</block>
   <block id="0169e44348295d5766b174aa4c296a62" category="list-text">Repita as etapas de remoção e instalação para substituir módulos adicionais para o controlador.</block>
   <block id="7c99497119e4bb81fd50dbd906dfde72" category="list-text">Reinicie o controlador a partir do prompt Loader:_bye_</block>
-  <block id="db89594b0a0cbb483395a2641220f1fe" category="list-text">Habilite o giveback automático se ele foi desativado: _Storage failover modifique -node local -auto-giveback True_</block>
-  <block id="4e0b6dc04aaa383038bc23130a17cb25" category="cell">Se o módulo I/o for um...</block>
-  <block id="09c2cf2531a14305542e6aff93e691c5" category="paragraph">Módulo NIC</block>
   <block id="a286fff38dd07b679c8ce3d88b6f2962" category="inline-link-macro">desligue o controlador desativado</block>
   <block id="4332aa8c798bac1ec6c0f4c83e0df305" category="list-text">Verifique se o<block ref="c759882cd4e7fcd95f15b0df0ce7f51c" prefix=" " category="inline-code"></block> tipo é exibido<block ref="c6b9507c26062233f2341cb90db60eaa" prefix=" " category="inline-code"></block> e, em seguida, faça backup manual das informações OKM.</block>
   <block id="2fab3e35d3a8ad1baf526d01c455141e" category="list-text">No controlador do parceiro saudável, execute o comando Restore backup:<block ref="44d388b27236c791c5fe1d30cc29bc43" prefix=" " category="inline-code"></block> .</block>
-  <block id="88045ffbfc0d9ef09cd470c545082621" category="list-text">Se o sistema não usar encyption, selecione _Option 1 normal Boot._, caso contrário, vá para <block ref="f2abf47fd75193a34b6b143e08f5b248" category="inline-link-macro-rx"></block>.</block>
   <block id="53f59a608ecfcdc90a1a8b37f4c8f010" category="paragraph">Para substituir o suporte de arranque, tem de remover o módulo de gestão do sistema da parte de trás do sistema, remover o suporte de arranque deficiente, instalar o suporte de arranque de substituição no módulo de gestão do sistema.</block>
   <block id="40137b2ef5d6219999ccbff7acc4080e" category="paragraph">O suporte de arranque encontra-se no interior do módulo de gestão do sistema e é acedido removendo o módulo do sistema.</block>
   <block id="c7e42b88c75788e5a4dd44ffee425837" category="image-alt">Mídia de inicialização Substituir gráfico</block>
@@ -2337,24 +2313,10 @@
   <block id="bfe787834fd9e46156b1d62f2f5029f8" category="list-text">Registre o número de série do sistema com o suporte da NetApp.</block>
   <block id="523f153f577513ed6f7ddd1f4d6a7cac" category="list-text">Se o AutoSupport estiver ativado, envie uma mensagem AutoSupport para Registrar o número de série.</block>
   <block id="69d8be94d5b9ba35360160c6e3097920" category="list-text">Se o AutoSupport não estiver ativado, ligue<block ref="201cec37350c6561a61e79fe67dd46bf" category="inline-link-rx"></block> para registar o número de série.</block>
-  <block id="6f13230d5681e1c88b50f5ecbce62637" category="paragraph">Encerre ou assuma o controlo do módulo do controlador afetado utilizando uma das seguintes opções.</block>
-  <block id="d9d1de25706aa51c5367e4dafd60898e" category="list-text">Retire o módulo obturador da ranhura alvo do chassis:</block>
-  <block id="192d3ce6854b267e65d46222f8f3a24f" category="image-alt">Remova um módulo de e/S.</block>
-  <block id="75fa26086844dfcbf14f35086518217a" category="list-text">Retire o obturador.</block>
-  <block id="2b6adb50592127273fdb4bb2b68918d5" category="list-text">Alinhe o módulo de e/S com as extremidades da abertura da ranhura do módulo do controlador.</block>
-  <block id="97366bfb1dcb5b97156c347c8ad89d9a" category="list-text">Deslize cuidadosamente o módulo todo para dentro da ranhura e, em seguida, rode o trinco do excêntrico totalmente para cima para bloquear o módulo no lugar.</block>
   <block id="6181ce929bc404494408989e6b8a9b52" category="paragraph">Para substituir um módulo de e/S, localize-o no módulo do controlador e siga a sequência específica de passos.</block>
   <block id="8a9a8a0db84d9dd59b0f006930b47193" category="list-text">Prima o botão do trinco do excêntrico.</block>
   <block id="c053808d9acb931bed74754155a6e86f" category="list-text">Rode o trinco do excêntrico para baixo o mais longe possível. Para módulos horizontais, gire o came para longe do módulo o mais longe possível.</block>
-  <block id="422e2aa4ec97de509f54db9d23618f37" category="list-text">Retire o módulo do chassis, prendendo o dedo na abertura da alavanca do excêntrico e puxando o módulo para fora do chassis.</block>
-  <block id="ce8b63d25565a610d1f9564150f85914" category="list-text">Deslize cuidadosamente o módulo para dentro da ranhura até ao chassis e, em seguida, rode o trinco do excêntrico até ao fim para bloquear o módulo no devido lugar.</block>
-  <block id="fb2068c184d4dbf1c0e520d9e9b173b2" category="list-text">Repita os passos de remoção e instalação para substituir módulos adicionais para o módulo do controlador.</block>
   <block id="ed5714a7b9709284c56117bd6dc4e081" category="list-text">Rode o tabuleiro de gestão de cabos para a posição de bloqueio.</block>
-  <block id="268bccb6c35b538d967467b5d2935b49" category="list-text">Reinicie o módulo do controlador a partir do prompt Loader:_bye_</block>
-  <block id="253b24d74d0517388c6e5b078713c86a" category="inline-link">BURT 1494308 - o desligamento do ambiente pode ser acionado durante a substituição do módulo de e/S.</block>
-  <block id="fc5ee1a4ca46ff0160eeada84fe673fc" category="admonition">Se encontrar um problema durante a reinicialização, consulte<block ref="5f4b19e33781d4df6c59a005be26e607" category="inline-link-rx"></block></block>
-  <block id="cfedf0b233356261eb909e7add24bded" category="list-text">Devolva o módulo do controlador do módulo do controlador do parceiro. _failover de armazenamento giveback -ofnode target_node_name_</block>
-  <block id="86e8e2badf42560bb0b1ed3bac3933fa" category="paragraph">Instale e faça o cabeamento das NS224 prateleiras, conforme descrito em <block ref="4dfda7c2f93914990922f65bd50f90b3" category="inline-link-macro-rx"></block>.</block>
   <block id="56bce10b49b12be932b0ca38009e1da1" category="paragraph">Para substituir o suporte de arranque, tem de remover o módulo de gestão do sistema da parte de trás do sistema, remover o suporte de arranque afetado e instalar o suporte de arranque de substituição no módulo de gestão do sistema.</block>
   <block id="7acc547c8acfbe4a745ca72a3e0e83e4" category="image-alt">Unidade drw A800 com sede IEOPS 960</block>
   <block id="1d2bcd4906e89f4b93900e7a729cfa23" category="list-text">Desligue a alimentação do módulo do controlador puxando o módulo do controlador para fora cerca de três polegadas:</block>
@@ -2489,7 +2451,6 @@
   <block id="c285ffddf1786cd1a14a26bcf9b74c7d" category="paragraph"><block ref="061047859ec1e213bd771fe5350bda2c" prefix="" category="inline-code"></block></block>
   <block id="811ae15d713f8c846d0516e053f895b2" category="list-text">Monitore o processo de recuperação de Mídia de inicialização à medida que O Loader configura as portas de cluster locais e é executado<block ref="83a4445bcfef2bd179eaffaabe3b3c20" prefix=" " category="inline-code"></block> a partir do nó do parceiro.</block>
   <block id="8f616ca67798afd132662e15fc4caa28" category="paragraph">Quando o netboot está em execução, a<block ref="f6715e6f2a651bfc51d27566b1be5385" prefix=" " category="inline-code"></block> mensagem é exibida.</block>
-  <block id="ab8b7433e2ad2aa82ba07b42b4cd465d" category="list-text">Dependendo do método de criptografia, selecione a opção que corresponde à sua configuração de nó único:</block>
   <block id="39cb6e7651585d511fc148af8198837f" category="open-title">Sem criptografia</block>
   <block id="aada4d2dac8a2a5bd04bf211104ff2c5" category="paragraph">Se nenhuma criptografia for detetada, o processo de recuperação de Mídia de inicialização continuará sem exigir o gerenciamento de chaves.</block>
   <block id="69c50e084d31ca90079f6b8b4409607b" category="paragraph">Continue a monitorar o processo de recuperação à medida que restaura a configuração de backup, arquivo env, mdb e rdb do nó do parceiro.</block>
@@ -10175,7 +10136,6 @@
   <block id="13e7cf07309f0d95eee5aa49b6842dc0" category="doc">Verifique o suporte e o status da chave de criptografia - FAS9500</block>
   <block id="e4d9374bc79ce9095fb021e03551599f" category="doc">Restaurar encriptação - FAS9500</block>
   <block id="bd5c047c4a41e95a8a9424888875e56a" category="list-text">Ligue o módulo de e/S ao dispositivo designado.</block>
-  <block id="2d8241a8fe54414b6494b29d26d8b251" category="list-text">A partir do nó saudável, restaure o giveback automático se você o desativou usando o<block ref="6f0c6616b99fea33a3020e0e0dcbe3c6" prefix=" " category="inline-code"></block> comando.</block>
   <block id="9d462bd05672844aeab0d3d5d323d66a" category="list-text">Volte a instalar o controlador e volte a ligar a alimentação ao módulo do controlador:</block>
   <block id="4d872659b015ad414d5e68440a7ddfd6" category="paragraph">O controlador começa a inicializar assim que estiver sentado e a energia for restaurada.</block>
   <block id="6f3fa8086df2fa20b3e903512f693396" category="list-text">Volte a colocar o controlador afetado em funcionamento normal, devolvendo o respetivo armazenamento:</block>
@@ -10355,9 +10315,6 @@
   <block id="09109aaca603d8ac1da46aa588c46f63" category="paragraph">NIC para NIC (número diferente de portas)</block>
   <block id="4e7b2ae169cb37276347e7c88d211db4" category="paragraph">Reatribua permanentemente os LIFs selecionados para uma porta inicial diferente. Consulte<block ref="8a81e44d8701c7e0abd4b6ad328792f0" category="inline-link-rx"></block> para obter mais informações.</block>
   <block id="0c3f64052572f9d13d9b078656a055e4" category="paragraph">NIC para módulo de e/S de armazenamento</block>
-  <block id="deaf42dafc1e4522c0ccf86ad58f237e" category="list-text">Devolver o controlador do controlador parceiro:'failover de torage giveback -ofnode target_node_name'</block>
-  <block id="c1d0761e549ef1ce873a404f8d41a2d5" category="list-text">Reinicie o controlador a partir do prompt Loader:<block ref="bfa99df33b137bc8fb5f5407d7e58da8" prefix=" " category="inline-code"></block></block>
-  <block id="5d831aef00c06eb087aebfb790f041b7" category="section-title">Passo 2: Adicionar novo módulo de e/S.</block>
   <block id="68c06f8f4688078ddfe1ceedef798cae" category="list-text">Devolver o controlador do controlador parceiro:</block>
   <block id="523f5a38bba8d64b2af1cdee174a06cc" category="paragraph"><block ref="49c908925c3b8a3554612823f81c8964" prefix="" category="inline-code"></block></block>
   <block id="b98036ad0a9b610670da83fe762dadb5" category="list-text">A partir do nó saudável, restaure o giveback automático se você o tiver desativado usando o seguinte comando:</block>
@@ -10377,4 +10334,6 @@
   <block id="cac74c301a508cf350f8f41a7de866a0" category="paragraph">Você pode adicionar um módulo de e/S ao seu sistema de armazenamento ASA A1K quando houver slots vazios disponíveis ou quando todos os slots estiverem totalmente preenchidos.</block>
   <block id="94aa992895c11cf963b2b749b84aa267" category="paragraph">Você pode adicionar um módulo de e/S ao seu sistema de armazenamento FAS70 e FAS90 quando houver slots vazios disponíveis ou quando todos os slots estiverem totalmente preenchidos.</block>
   <block id="bc049e4428d592b69605104cc85d56bc" category="section-title">Passo 2: Adicione os novos módulos de e/S.</block>
+  <block id="a6448c631c301c525a61c500fdf8e46a" category="list-text">Dependendo do método de criptografia, selecione a opção que corresponde à configuração do sistema:</block>
+  <block id="92ba658b9a66d0825f0f084b7da309b7" category="list-text">Se o sistema não usar criptografia, selecione _opção 1 Inicialização normal._, caso contrário, vá para <block ref="d767082d20397ebb99e586749eda3a08" category="inline-link-macro-rx"></block>.</block>
 </blocks>

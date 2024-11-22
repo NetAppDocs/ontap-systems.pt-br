@@ -27,7 +27,7 @@ A imagem é transferida da unidade flash USB.
 .. No controlador para deficientes, prima `Y` quando vir `Was the restore backup procedure successful?`.
 .. No controlador para deficientes, prima `Y` quando vir `...would you like to use this restored copy now?`.
 .. No controlador desativado, `Y` prima quando for solicitado que reinicie o controlador desativado e prima `ctrl-c` para aceder ao Menu de arranque.
-.. Se o sistema não usar encyption, selecione _Option 1 normal Boot._, caso contrário, vá para link:bootmedia-encryption-restore.html["Restaure os gerenciadores de chaves"].
+.. Se o sistema não usar criptografia, selecione _opção 1 Inicialização normal._, caso contrário, vá para link:bootmedia-encryption-restore.html["Restaure a criptografia"].
 
 
 --
@@ -41,7 +41,7 @@ Depois que o procedimento de restauração for bem-sucedido, essa mensagem será
 .. No controlador prejudicado, `Y` pressione quando solicitado a usar a configuração restaurada.
 .. No controlador prejudicado, `Y` pressione quando solicitado a reinicializar o nó.
 .. No controlador desativado, `Y` prima quando for solicitado que reinicie o controlador desativado e prima `ctrl-c` para aceder ao Menu de arranque.
-.. Se o sistema não usar encyption, selecione _Option 1 normal Boot._, caso contrário, vá para link:bootmedia-encryption-restore.html["Restaure os gerenciadores de chaves"].
+.. Se o sistema não usar criptografia, selecione _opção 1 Inicialização normal._, caso contrário, vá para link:bootmedia-encryption-restore.html["Restaure a criptografia"].
 
 
 --
