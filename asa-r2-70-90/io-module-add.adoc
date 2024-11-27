@@ -65,7 +65,7 @@ Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctr
 
 == Passo 2: Adicione o novo módulo de e/S.
 
-Se o sistema de armazenamento tiver slots vazios, instale o novo módulo de e/S em um dos slots disponíveis. Se todos os slots estiverem ocupados, remova um módulo de e/S existente para criar espaço e, em seguida, instale o novo.
+Se o sistema de armazenamento tiver slots disponíveis, instale o novo módulo de e/S em um dos slots disponíveis. Se todos os slots estiverem ocupados, remova um módulo de e/S existente para criar espaço e, em seguida, instale o novo.
 
 .Antes de começar
 * Verifique o https://hwu.netapp.com/["NetApp Hardware Universe"^] para se certificar de que o novo módulo de e/S é compatível com o sistema de armazenamento e a versão do ONTAP que você está executando.
@@ -75,9 +75,9 @@ Se o sistema de armazenamento tiver slots vazios, instale o novo módulo de e/S 
 
 [role="tabbed-block"]
 ====
-.Adicione o módulo I/o a um slot vazio
+.Adicione o módulo de e/S a um slot disponível
 --
-Você pode adicionar um novo módulo de e/S a um sistema de armazenamento com slots vazios disponíveis.
+Você pode adicionar um novo módulo de e/S a um sistema de armazenamento com slots disponíveis.
 
 .Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
@@ -101,21 +101,24 @@ Você pode adicionar um novo módulo de e/S a um sistema de armazenamento com sl
 NOTE: Certifique-se de que quaisquer slots de e/S não utilizados tenham espaços em branco instalados para evitar possíveis problemas térmicos.
 
 . Rode o tabuleiro de gestão de cabos para cima até à posição fechada.
-. Reinicie o controlador a partir do prompt Loader: _Bye_
+. No prompt Loader, reinicie o nó:
++
+`bye`
+
 +
 
-NOTE: Isso reinicializa as placas PCIe e outros componentes e reinicializa o nó.
+NOTE: Isso reinicializa o módulo de e/S e outros componentes e reinicializa o nó.
 
 . Devolver o controlador do controlador parceiro:
 +
 `storage failover giveback -ofnode target_node_name`
 
 . Repita estes passos para o controlador B.
-. A partir do nó saudável, restaure o giveback automático se você o tiver desativado usando o seguinte comando:
+. A partir do nó saudável, restaure a giveback automática se você o tiver desativado:
 +
-`storage failover modify -node local -auto-giveback true`
+`storage failover modify -node local -auto-giveback _true_`
 
-. Se o AutoSupport estiver ativado, restaure a criação automática de casos usando o seguinte comando:
+. Se o AutoSupport estiver ativado, restaure a criação automática de casos:
 +
 `system node autosupport invoke -node * -type all -message MAINT=END`
 
