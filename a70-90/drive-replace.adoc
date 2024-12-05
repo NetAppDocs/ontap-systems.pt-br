@@ -39,6 +39,25 @@ O firmware da unidade é atualizado automaticamente (sem interrupções) em nova
 Ao substituir várias unidades de disco, você deve esperar 70 segundos entre a remoção de cada unidade de disco com falha e a inserção da unidade de disco de substituição para permitir que o sistema de armazenamento reconheça a existência de cada novo disco.
 
 .Passos
+. Se você quiser atribuir manualmente a propriedade da unidade para a unidade de substituição, você precisa desativar a unidade de substituição de atribuição automática de unidade, se ela estiver ativada
++
+
+NOTE: Atribua manualmente a propriedade da unidade e, em seguida, reative a atribuição automática da unidade mais adiante neste procedimento.
+
++
+.. Verifique se a atribuição automática de unidades está ativada: `storage disk option show`
++
+Você pode inserir o comando em qualquer um dos módulos do controlador.
+
++
+Se a atribuição automática de unidade estiver ativada, a saída será exibida `on` na coluna "'Auto Assign'" (para cada módulo do controlador).
+
+.. Se a atribuição automática de condução estiver ativada, desative-a: `storage disk option modify -node node_name -autoassign off`
++
+Tem de desativar a atribuição automática de condução em ambos os módulos do controlador.
+
+
+
 . Aterre-se corretamente.
 . Identifique fisicamente a unidade com falha.
 +
@@ -72,7 +91,26 @@ Certifique-se de que fecha lentamente a pega do excêntrico de forma a que fique
 +
 Quando o LED de atividade da unidade está sólido, significa que a unidade tem energia. Quando o LED de atividade da unidade está intermitente, significa que a unidade tem alimentação e e/S está em curso. Se o firmware da unidade estiver sendo atualizado automaticamente, o LED pisca.
 
-. Se estiver substituindo outra unidade, repita as etapas 2 a 6.
+. Se estiver substituindo outra unidade, repita as etapas 3 a 7.
+. Se você desativou a atribuição automática de unidade na Etapa 1, atribua manualmente a propriedade da unidade e, em seguida, reative a atribuição automática de unidade, se necessário.
++
+.. Exibir todas as unidades não possuídas: `storage disk show -container-type unassigned`
++
+Você pode inserir o comando em qualquer um dos módulos do controlador.
+
+.. Atribuir cada unidade: `storage disk assign -disk disk_name -owner node_name`
++
+Você pode inserir o comando em qualquer um dos módulos do controlador.
+
++
+Você pode usar o caractere curinga para atribuir mais de uma unidade de uma vez.
+
+.. Reative a atribuição automática de condução, se necessário: `storage disk option modify -node node_name -autoassign on`
++
+Você deve reativar a atribuição automática de acionamento em ambos os módulos do controlador.
+
+
+
 . Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit.
 +
 Entre em Contato com o suporte técnico em https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"], 888-463-8277 (América do Norte), 00-800-44-638277 (Europa) ou 800-800-80-800 (Ásia/Pacífico) se precisar do número de RMA ou de ajuda adicional com o procedimento de substituição.
