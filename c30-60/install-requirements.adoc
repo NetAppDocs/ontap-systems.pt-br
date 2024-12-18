@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: c30-60/install-requirements.html 
+keywords: aff c30, aff c60, install, setup, cautions 
+summary: Reveja o equipamento necessário e as precauções de elevação para a sua plataforma e prateleiras. 
+---
+= Requisitos e considerações de instalação - AFF C30 e AFF C60
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Consulte os requisitos e considerações do seu sistema de storage AFF C30 ou AFF C60.
+
+
+
+== Equipamento necessário para instalação
+
+Para instalar seu sistema de storage, você precisa dos seguintes equipamentos e ferramentas.
+
+* Acesso a um navegador da Web para configurar o sistema de armazenamento
+* Fita de descarga eletrostática (ESD)
+* Lanterna
+* Computador portátil ou console com conexão USB/serial
+* Clipe de papel ou caneta esferográfica de ponta estreita para definir NS224 IDs de prateleira de armazenamento
+* Chave de fendas Phillips nº 2
+
+
+
+
+== Precauções de elevação
+
+Os sistemas de armazenamento e as prateleiras são pesados. Tenha cuidado ao levantar e mover estes itens.
+
+
+
+=== Peso do sistema de armazenamento
+
+Tome as precauções necessárias ao mover ou elevar o sistema de armazenamento.
+
+Um sistema de armazenamento A20, A30 ou A50 pode pesar até 61,5 lbs (27,9 kg). Para levantar o sistema de armazenamento, utilize duas pessoas ou um elevador hidráulico.
+
+image::../media/drw_g_lifting_weight_ieops-1831.svg[AFF A20,A30,or an A50 weight caution icon]
+
+
+
+=== Peso da prateleira
+
+Tome as precauções necessárias ao mover ou levantar a prateleira.
+
+Uma prateleira NS224 com NSM100B módulos pode pesar até 56,8 lbs (25,8 kg). Para levantar a prateleira, use duas pessoas ou um elevador hidráulico. Mantenha todos os componentes na prateleira (dianteira e traseira) para evitar desequilibrar o peso da prateleira.
+
+image::../media/drw_ns224_nsm100b_lifting_weight_ieops-1832.svg[NS224 com NSM100b cuidado de elevação]
+
+.Informações relacionadas
+* https://library.netapp.com/ecm/ecm_download_file/ECMP12475945["Informações de segurança e avisos regulamentares"^]
+
+
+.O que se segue?
+Depois de analisar os requisitos e considerações de instalação do seu sistema de armazenamento, link:install-prepare.html["prepare-se para a instalação"]você .

@@ -1,0 +1,155 @@
+= 
+:allow-uri-read: 
+
+
+Se o sistema de armazenamento tiver slots disponíveis, instale o novo módulo de e/S em um dos slots disponíveis. Se todos os slots estiverem ocupados, remova um módulo de e/S existente para criar espaço e, em seguida, instale o novo.
+
+.Antes de começar
+* Verifique o https://hwu.netapp.com/["NetApp Hardware Universe"^] para se certificar de que o novo módulo de e/S é compatível com o sistema de armazenamento e a versão do ONTAP que você está executando.
+* Se houver vários slots disponíveis, verifique as prioridades do slot https://hwu.netapp.com/["NetApp Hardware Universe"^] e use a melhor disponível para seu módulo de e/S.
+* Todos os outros componentes do sistema de armazenamento têm de estar a funcionar corretamente; caso contrário, tem de contactar https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de prosseguir com este procedimento.
+
+
+[role="tabbed-block"]
+====
+.Adicione o módulo de e/S a um slot disponível
+--
+Você pode adicionar um novo módulo de e/S a um sistema de armazenamento com slots disponíveis.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. No controlador desativado, retire o módulo de supressão de e/S da ranhura de destino.
++
+Os slots de e/S não utilizados devem ter o módulo de supressão instalado para evitar possíveis problemas térmicos.
+
++
+image::../media/drw_g_io_blanking_module_replace_ieops-1901.svg[Retire um módulo de supressão de e/S.]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+No módulo de supressão de e/S, rode o parafuso de aperto manual no sentido contrário ao dos ponteiros do relógio para soltar.
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Puxe o módulo de supressão de e/S para fora do controlador utilizando a patilha do lado esquerdo e o parafuso de aperto manual.
+
+|===
+. Instale o novo módulo de e/S:
++
+.. Alinhe o módulo de e/S com as extremidades da abertura da ranhura do controlador.
+.. Empurre cuidadosamente o módulo de e/S totalmente para dentro da ranhura, certificando-se de que assenta corretamente o módulo no conetor.
++
+Você pode usar a aba à esquerda e o parafuso de aperto manual para empurrar o módulo de e/S.
+
+.. Rode o parafuso de aperto manual no sentido dos ponteiros do relógio para apertar.
+
+
+. Ligue o módulo de e/S aos dispositivos designados.
++
+Se você instalou um módulo de e/S de storage, instale e faça o cabeamento das NS224 gavetas, conforme descrito em https://docs.netapp.com/us-en/ontap-systems/ns224/hot-add-shelf-overview.html["Fluxo de trabalho de adição automática"^].
+
+. Reinicie o controlador prejudicado a partir do prompt Loader: `bye`
++
+Reiniciar o controlador prejudicado também reinicializa os módulos de e/S e outros componentes.
+
+. Devolver o controlador afetado do controlador parceiro: `storage failover giveback -ofnode _impaired_node_name_`
+. Repita estas etapas para adicionar um módulo de e/S ao outro controlador.
+. Restaure a giveback automática a partir da consola do controlador saudável: `storage failover modify -node local -auto-giveback _true_`
+. Se o AutoSupport estiver ativado, restaure (dessuprimir) a criação automática de casos: `system node autosupport invoke -node * -type all -message MAINT=END`
+
+
+--
+.Adicionar módulo de e/S a um sistema totalmente preenchido
+--
+Você pode adicionar um módulo de e/S a um sistema totalmente preenchido removendo um módulo de e/S existente e instalando um novo em seu lugar.
+
+.Sobre esta tarefa
+Certifique-se de que compreende os seguintes cenários para adicionar um novo módulo de e/S a um sistema totalmente preenchido:
+
+[cols="1,2"]
+|===
+| Cenário | Ação necessária 
+
+
+ a| 
+NIC para NIC (mesmo número de portas)
+ a| 
+Os LIFs migrarão automaticamente quando seu módulo de controlador for desligado.
+
+
+
+ a| 
+NIC para NIC (número diferente de portas)
+ a| 
+Reatribua permanentemente os LIFs selecionados para uma porta inicial diferente. Consulte https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["Migração de um LIF"^] para obter mais informações.
+
+
+
+ a| 
+NIC para módulo de e/S de armazenamento
+ a| 
+Use o System Manager para migrar permanentemente os LIFs para diferentes portas residenciais, conforme descrito em https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["Migração de um LIF"^].
+
+|===
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Na controladora prejudicada, desconete qualquer cabeamento do módulo de e/S de destino.
+. Remova o módulo de e/S de destino do controlador:
++
+image::../media/drw_g_io_module_replace_ieops-1900.svg[Remova um módulo de e/S.]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Rode o parafuso de aperto manual do módulo de e/S no sentido contrário ao dos ponteiros do relógio para soltar.
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Puxe o módulo de e/S para fora do controlador usando a aba da etiqueta da porta à esquerda e o parafuso de aperto manual.
+
+|===
+. Instale o novo módulo de e/S na ranhura de destino:
++
+.. Alinhe o módulo de e/S com as extremidades da ranhura.
+.. Empurre cuidadosamente o módulo de e/S totalmente para dentro da ranhura, certificando-se de que assenta corretamente o módulo no conetor.
++
+Você pode usar a aba à esquerda e o parafuso de aperto manual para empurrar o módulo de e/S.
+
+.. Rode o parafuso de aperto manual no sentido dos ponteiros do relógio para apertar.
+
+
+. Ligue o módulo de e/S aos dispositivos designados.
++
+Se você instalou um módulo de e/S de storage, instale e faça o cabeamento das NS224 gavetas, conforme descrito em https://docs.netapp.com/us-en/ontap-systems/ns224/hot-add-shelf-overview.html["Fluxo de trabalho de adição automática"^].
+
+. Repita as etapas de remoção e instalação do módulo de e/S para adicionar quaisquer módulos de e/S adicionais no controlador.
+. Reinicie o controlador prejudicado a partir do prompt Loader: `bye`
++
+Reiniciar o controlador prejudicado também reinicializa os módulos de e/S e outros componentes.
+
+. Devolver o controlador afetado do controlador parceiro: `storage failover giveback -ofnode _impaired_node_name_`
+. Restaure a giveback automática a partir da consola do controlador saudável: `storage failover modify -node local -auto-giveback _true_`
+. Se o AutoSupport estiver ativado, restaure (dessuprimir) criação automática de casos: Nó do sistema AutoSupport invoke -node * -type all -message
+. Se você instalou um módulo NIC, especifique o modo de uso para cada porta como _network_: `storage port modify -node *_<node name>_ -port *_<port name>_ -mode network`
+. Repita estes passos para o outro controlador.
+
+
+--
+====

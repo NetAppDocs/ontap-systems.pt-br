@@ -56,11 +56,11 @@ NOTE: Abra uma sessão SSH para cada conexão SP/BMC para que você possa monito
 
 . Parar os dois nós localizados no chassi com deficiência:
 +
-`system node halt -node <node>,<node2> -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true`
+`system node halt -node <node1>,<node2> -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true`
 
 +
 
-NOTE: Para clusters que usam o SnapMirror síncrono operando no modo StrictSync: `system node halt -node <node>,<node2>  -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true -ignore-strict-sync-warnings true`
+NOTE: Para clusters que usam o SnapMirror síncrono operando no modo StrictSync: `system node halt -node <node1>,<node2>  -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true -ignore-strict-sync-warnings true`
 
 . Digite *y* para cada controlador no cluster quando você vir `_Warning: Are you sure you want to halt node "cluster <node-name> number"?
 {y|n}:_`

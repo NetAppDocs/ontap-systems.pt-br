@@ -1,0 +1,38 @@
+---
+permalink: c80/install-overview.html 
+sidebar: sidebar 
+keywords: Installation, deployment, Install, deploy, Installing, deploying 
+summary: Siga estas etapas de alto nível para instalar e configurar o sistema de storage AFF C80 e implantá-lo como um par de HA no sistema ONTAP. 
+---
+= Fluxo de trabalho de instalação e configuração - AFF C80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para instalar e configurar o sistema AFF C80, você analisa os requisitos de hardware, prepara o site, instala e faz o cabo dos componentes de hardware, liga o sistema e configura o cluster do ONTAP.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"]link:install-requirements.html["Reveja os requisitos de instalação"]
+[role="quick-margin-para"]
+Reveja o equipamento e as ferramentas necessárias para instalar o sistema de armazenamento e as prateleiras de armazenamento e reveja as precauções de elevação e segurança.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"]link:install-prepare.html["Prepare-se para instalar o sistema de storage AFF C80"]
+[role="quick-margin-para"]
+Para se preparar para instalar seu sistema, você precisa preparar o local, verificar os requisitos ambientais e elétricos e garantir que há espaço suficiente no rack. Em seguida, desembale o equipamento, compare seu conteúdo com o deslizamento de embalagem e Registre o hardware para acessar os benefícios de suporte.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"]link:install-hardware.html["Instale o hardware do sistema de storage AFF C80"]
+[role="quick-margin-para"]
+Para instalar o hardware, instale os kits de trilho para o seu sistema de armazenamento e prateleiras e, em seguida, instale e proteja o sistema de armazenamento no gabinete ou rack de telecomunicações. Em seguida, deslize as prateleiras sobre os trilhos. Finalmente, conete dispositivos de gerenciamento de cabos à parte traseira do sistema de armazenamento para roteamento organizado de cabos.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"]link:install-cable.html["Faça o cabeamento das controladoras e gavetas de storage do sistema de storage AFF C80"]
+[role="quick-margin-para"]
+Para fazer o cabeamento do hardware, primeiro conete os controladores de storage à rede e, em seguida, conete os controladores às gavetas de storage.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinco"]link:install-power-hardware.html["Ligue o sistema de armazenamento AFF C80"]
+[role="quick-margin-para"]
+Antes de ligar os controladores, ligue cada gaveta NS224 e atribua um ID exclusivo do compartimento para garantir que cada gaveta seja identificada exclusivamente na configuração.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Seis"]link:install-complete.html["Configuração completa do sistema de armazenamento"]
+[role="quick-margin-para"]
+Para concluir a configuração do sistema, acesse o Gerenciador de sistema do ONTAP apontando um navegador para o endereço IP do controlador. Um assistente de configuração ajuda a concluir a configuração de cluster para o seu sistema de storage AFF C80.

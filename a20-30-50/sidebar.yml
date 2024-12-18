@@ -1,0 +1,94 @@
+---
+section: a20-30-50
+title: Sistemas AFF A20, AFF A30 e AFF A50
+entries:
+- title: Instalar e configurar
+  pdf-filename: Instalação e configuração do AFF A20, AFF A30 e AFF A50
+  entries:
+  - title: Instale o fluxo de trabalho
+    url: "/a20-30-50/install-overview.html"
+  - title: Rever os requisitos
+    url: "/a20-30-50/install-requirements.html"
+  - title: Prepare-se para instalar
+    url: "/a20-30-50/install-prepare.html"
+  - title: Instale o hardware
+    url: "/a20-30-50/install-hardware.html"
+  - title: Hardware do cabo
+    url: "/a20-30-50/install-cable.html"
+  - title: Ligar o sistema
+    url: "/a20-30-50/install-power-hardware.html"
+  - title: Conclua a configuração do sistema
+    url: "/a20-30-50/install-complete.html"
+- title: Manutenção
+  pdf-filename: AFF A20, AFF A30 e AFF A50 mantêm-se
+  entries:
+  - title: Visão geral da manutenção
+    url: "/a20-30-50/maintain-overview.html"
+  - title: Suporte de arranque
+    entries:
+    - title: Mídia de inicialização Substituir fluxo de trabalho
+      url: "/a20-30-50/bootmedia-replace-workflow.html"
+    - title: Rever os requisitos
+      url: "/a20-30-50/bootmedia-replace-requirements.html"
+    - title: Verifique as chaves de criptografia
+      url: "/a20-30-50/bootmedia-encryption-preshutdown-checks.html"
+    - title: Desligue o controlador desativado
+      url: "/a20-30-50/bootmedia-shutdown.html"
+    - title: Substitua o suporte de arranque
+      url: "/a20-30-50/bootmedia-replace.html"
+    - title: Imagem de recuperação de inicialização
+      url: "/a20-30-50/bootmedia-recovery-image-boot.html"
+    - title: Restaure a criptografia
+      url: "/a20-30-50/bootmedia-encryption-restore.html"
+    - title: Devolver artigo com falha ao NetApp
+      url: "/a20-30-50/bootmedia-complete-rma.html"
+  - title: Chassis
+    pdf-filename: Chassis AFF A20, AFF A30 e AFF A50
+    entries:
+    - title: Fluxo de trabalho de substituição do chassis
+      url: "/a20-30-50/chassis-replace-workflow.html"
+    - title: Rever os requisitos
+      url: "/a20-30-50/chassis-replace-requirements.html"
+    - title: Desligue os controladores
+      url: "/a20-30-50/chassis-replace-shutdown.html"
+    - title: Substitua o chassi
+      url: "/a20-30-50/chassis-replace-move-hardware.html"
+    - title: Substituição completa do chassis
+      url: "/a20-30-50/chassis-replace-complete-system-restore-rma.html"
+  - title: Controlador
+    pdf-filename: Módulo do controlador AFF A20, AFF A30 e AFF A50
+    entries:
+    - title: Fluxo de trabalho de substituição do controlador
+      url: "/a20-30-50/controller-replace-workflow.html"
+    - title: Rever os requisitos
+      url: "/a20-30-50/controller-replace-requirements.html"
+    - title: Desligue o controlador desativado
+      url: "/a20-30-50/controller-replace-shutdown.html"
+    - title: Substitua o controlador
+      url: "/a20-30-50/controller-replace-move-hardware.html"
+    - title: Restaure a configuração do sistema
+      url: "/a20-30-50/controller-replace-system-config-restore-and-verify.html"
+    - title: Devolver o controlador
+      url: "/a20-30-50/controller-replace-recable-reassign-disks.html"
+    - title: Substituição completa do controlador
+      url: "/a20-30-50/controller-replace-restore-system-rma.html"
+  - title: DIMM
+    url: "/a20-30-50/dimm-replace.html"
+  - title: Condução
+    url: "/a20-30-50/drive-replace.html"
+  - title: Ventoinha
+    url: "/a20-30-50/fan-replace.html"
+  - title: Módulo de e/S.
+    entries:
+    - title: Descrição geral do módulo I/O.
+      url: "/a20-30-50/io-module-overview.html"
+    - title: Adicionar módulo de e/S.
+      url: "/a20-30-50/io-module-add.html"
+    - title: Substitua o módulo de e/S.
+      url: "/a20-30-50/io-module-replace.html"
+  - title: Bateria NV
+    url: "/a20-30-50/nvdimm-battery-replace.html"
+  - title: Fonte de alimentação
+    url: "/a20-30-50/power-supply-replace.html"
+  - title: Bateria de relógio em tempo real
+    url: "/a20-30-50/rtc-battery-replace.html"

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, requirement 
 summary: Para adicionar um compartimento de unidade de NS224 TB, seu par de HA precisa atender a certos requisitos. 
 ---
-= Requisitos e práticas recomendadas para um hot-add - NS224 prateleiras
+= Requisitos e práticas recomendadas para adicionar gavetas NS224 hot-add
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -47,7 +47,7 @@ Ter a versão atual do DQP instalada permite que seu sistema reconheça e use un
 
 * *Melhor prática:* a melhor prática é correr https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^] antes e depois de adicionar uma prateleira a quente.
 +
-A execução do Active IQ Config Advisor antes de adicionar um shelf a quente fornece um snap shot da conetividade existente do shelf Ethernet (ENET), verifica as versões de firmware do módulo de gaveta NVMe (NSM) e permite verificar uma ID de gaveta que já está em uso no par de HA.
+Executar o Active IQ Config Advisor antes de adicionar um shelf a quente fornece um snapshot da conectividade existente do shelf Ethernet (ENET), verifica as versões de firmware do módulo de gaveta NVMe (NSM) e permite verificar uma ID de gaveta que já está em uso no par de HA.
 
 +
 Executar o Active IQ Config Advisor após adicionar um compartimento a quente permite verificar se as gavetas estão cabeadas corretamente e se as IDs de gaveta são exclusivas do par de HA.

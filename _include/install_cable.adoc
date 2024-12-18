@@ -183,7 +183,7 @@ Escolha uma das seguintes opções de cabeamento que corresponda à sua configur
 .Opção 1: Cable seus controladores para um compartimento de storage de NS224 TB
 [%collapsible]
 =====
-Conete cada controlador aos módulos NSM no compartimento NS224. Os gráficos mostram o cabeamento de cada uma das controladoras: O cabeamento da controladora A é exibido em azul e o cabeamento da controladora B é exibido em amarelo.
+Conete cada controlador aos NSMs no compartimento NS224. Os gráficos mostram o cabeamento de cada uma das controladoras: O cabeamento da controladora A é exibido em azul e o cabeamento da controladora B é exibido em amarelo.
 
 .Passos
 . No controlador A, ligue as seguintes portas:
@@ -210,7 +210,7 @@ image:../media/drw_a1k_1shelf_cabling_b_ieops-1704.svg["Controladora de cabos B 
 .Opção 2: Faça o cabeamento dos controladores para duas gavetas de storage NS224
 [%collapsible]
 =====
-Conecte cada controladora aos módulos do NSM nas duas gavetas NS224. Os gráficos mostram o cabeamento de cada uma das controladoras: O cabeamento da controladora A é exibido em azul e o cabeamento da controladora B é exibido em amarelo.
+Conecte cada controlador às NSMs nas duas gavetas NS224. Os gráficos mostram o cabeamento de cada uma das controladoras: O cabeamento da controladora A é exibido em azul e o cabeamento da controladora B é exibido em amarelo.
 
 .Passos
 . No controlador A, ligue as seguintes portas:
@@ -246,7 +246,7 @@ Escolha uma das seguintes opções de cabeamento que corresponda à sua configur
 .Opção 1: Conecte os controladores a um compartimento de storage de NS224 TB
 [%collapsible]
 =====
-Conete cada controlador aos módulos NSM no compartimento NS224. Os gráficos mostram o cabeamento de cada uma das controladoras: O cabeamento da controladora A é exibido em azul e o cabeamento da controladora B é exibido em amarelo.
+Conete cada controlador aos NSMs no compartimento NS224. Os gráficos mostram o cabeamento de cada uma das controladoras: O cabeamento da controladora A é exibido em azul e o cabeamento da controladora B é exibido em amarelo.
 
 *Cabos de cobre 100 GbE QSFP28*
 
@@ -269,7 +269,7 @@ image:../media/drw_a70-90_1shelf_cabling_b_ieops-1732.svg["Controladora B e11a e
 .Opção 2: Conecte seus controladores a duas gavetas de storage NS224
 [%collapsible]
 =====
-Conecte cada controladora aos módulos do NSM nas duas gavetas NS224. Os gráficos mostram o cabeamento de cada uma das controladoras: O cabeamento da controladora A é exibido em azul e o cabeamento da controladora B é exibido em amarelo.
+Conecte cada controlador às NSMs nas duas gavetas NS224. Os gráficos mostram o cabeamento de cada uma das controladoras: O cabeamento da controladora A é exibido em azul e o cabeamento da controladora B é exibido em amarelo.
 
 *Cabos de cobre 100 GbE QSFP28*
 

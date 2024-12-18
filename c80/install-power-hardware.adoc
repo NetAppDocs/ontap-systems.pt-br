@@ -1,0 +1,166 @@
+---
+permalink: c80/install-power-hardware.html 
+sidebar: sidebar 
+keywords: aff c80, power controllers 
+summary: Conete os cabos de alimentação e ligue as gavetas e os controladores. 
+---
+= Ligue o sistema de armazenamento - AFF C80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois de instalar o hardware de rack para seu sistema de storage AFF C80 e instalar os cabos das controladoras e gavetas de storage, ligue as controladoras e gavetas de storage.
+
+
+
+== Etapa 1: Ligue a prateleira e atribua o ID da prateleira
+
+Cada prateleira é distinguida por um ID de prateleira exclusivo. Esse ID garante que o compartimento seja distinto na configuração do sistema de storage.
+
+.Sobre esta tarefa
+* Um ID de compartimento externo válido é de 01 a 99.
++
+Se você tiver compartimentos internos (storage), que estão integrados às controladoras, receberá um ID de compartimento fixo de 00 GB a elas.
+
+* É necessário desligar um compartimento (Desconete os dois cabos de energia, aguarde o tempo apropriado e, em seguida, conectá-los novamente) para que a ID do compartimento entre em vigor.
+
+
+.Passos
+. Ligue a gaveta conetando os cabos de alimentação primeiro à gaveta, prendendo-os no lugar com o retentor do cabo de alimentação e, em seguida, conetando os cabos de alimentação a fontes de alimentação em circuitos diferentes.
++
+A prateleira liga-se e arranca automaticamente quando ligada à fonte de alimentação.
+
+. Remova a tampa da extremidade esquerda para acessar o botão ID da prateleira atrás da placa frontal.
++
+image::../media/drw_a900_oie_change_ns224_shelf_ID_ieops-836.svg[Altere o ID do compartimento NS224]
+
++
+[cols="20%,80%"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Tampa da extremidade da prateleira
+
+
+
+ a| 
+image::../media/icon_round_2.png[[Legenda número 2]
+ a| 
+Placa frontal da prateleira
+
+
+
+ a| 
+image::../media/icon_round_3.png[[Legenda número 3]
+ a| 
+Número de ID do compartimento
+
+
+
+ a| 
+image::../media/icon_round_4.png[[Legenda número 4]
+ a| 
+Botão ID do compartimento
+
+|===
+. Altere o primeiro número do ID do compartimento:
++
+.. Insira a extremidade reta de um clipe de papel ou caneta esferográfica com ponta fina no pequeno orifício para pressionar o botão ID da prateleira.
++
+
+NOTE: Nas prateleiras da série DS, o botão ID da prateleira é acessível diretamente na parte inferior da orelha da prateleira.
+
+.. Pressione e segure o botão ID do compartimento até que o primeiro número no visor digital pisque e solte o botão.
++
+Pode demorar até 15 segundos para o número piscar. Isto ativa o modo de programação da ID da prateleira.
+
++
+
+NOTE: Se a ID demorar mais de 15 segundos a piscar, prima e mantenha premido o botão ID da prateleira novamente, certificando-se de que o pressiona completamente.
+
+.. Pressione e solte o botão ID do compartimento para avançar o número até atingir o número desejado de 0 a 9.
++
+A duração de cada imprensa e liberação pode ser tão curta quanto um segundo.
+
++
+O primeiro número continua a piscar.
+
+
+
+. Altere o segundo número do ID do compartimento:
++
+.. Prima e mantenha premido o botão até o segundo número no visor digital piscar.
++
+Pode demorar até três segundos para o número piscar.
+
++
+O primeiro número no visor digital pára de piscar.
+
+.. Pressione e solte o botão ID do compartimento para avançar o número até atingir o número desejado de 0 a 9, ou de 1 a 9 se o sistema tiver armazenamento integrado.
++
+O segundo número continua a piscar.
+
+
+
+. Bloqueie o número pretendido e saia do modo de programação premindo e mantendo premido o botão ID da prateleira até que o segundo número pare de piscar.
++
+Pode demorar até três segundos para o número parar de piscar.
+
++
+Ambos os números no visor digital começam a piscar e o LED âmbar acende-se após cerca de cinco segundos, alertando-o de que a ID pendente do compartimento ainda não entrou em vigor.
+
+. Ligue o compartimento por pelo menos 10 segundos para fazer com que o ID do compartimento entre em vigor.
++
+.. Desconete o cabo de alimentação de ambas as fontes de alimentação da prateleira.
+.. Aguarde 10 segundos.
+.. Conete os cabos de alimentação de volta às fontes de alimentação do compartimento para concluir o ciclo de energia.
++
+Uma fonte de alimentação é ligada assim que o cabo de alimentação é ligado. O LED bicolor deve acender-se a verde.
+
+
+
+. Volte a colocar a tampa da extremidade esquerda.
+
+
+
+
+== Passo 2: Ligue os controladores
+
+Depois de ativar os compartimentos de storage e atribuir a eles IDs exclusivos, ligue a energia dos controladores de storage.
+
+.Passos
+. Ligue o computador portátil à porta da consola série. Isso permitirá que você monitore a sequência de inicialização quando os controladores estiverem ligados.
++
+.. Defina a porta do console serial no laptop para 115.200 baud com N-8-1.
++
+
+NOTE: Consulte a ajuda on-line do seu laptop para obter instruções sobre como configurar a porta do console serial.
+
+.. Conete o cabo do console ao laptop e conete a porta serial do console no controlador usando o cabo do console fornecido com o sistema de armazenamento.
+.. Conete o laptop ao switch na sub-rede de gerenciamento.
++
+image::../media/drw_a1k_70-90_console_connection_ieops-1702.svg[Ligações da consola]
+
+.. Atribua um endereço TCP/IP ao laptop, usando um que esteja na sub-rede de gerenciamento.
+
+
+. Conete os cabos de alimentação às fontes de alimentação do controlador e, em seguida, conete-os a fontes de alimentação em diferentes circuitos.
++
+image::../media/drw_affa1k_power_source_icon_ieops-1700.svg[Diagrama de ligação de alimentação genérica]
+
++
+** O sistema de armazenamento começa a arrancar. A inicialização inicial pode levar até oito minutos.
+** Os LEDs piscam e os ventiladores começam, o que indica que os controladores estão ligados.
+** Os fãs podem ser muito barulhentos quando eles começam. O ruído da ventoinha durante o arranque é normal.
+
+
+. Fixe os cabos de alimentação utilizando o dispositivo de fixação em cada fonte de alimentação.
+
+
+.O que se segue?
+Depois de ativar o sistema de armazenamento AFF C80, link:install-complete.html["conclua a configuração do sistema"]você .

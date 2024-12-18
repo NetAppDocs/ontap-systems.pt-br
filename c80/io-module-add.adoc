@@ -1,0 +1,158 @@
+---
+permalink: c80/io-module-add.html 
+sidebar: sidebar 
+keywords: c80, add I/O module 
+summary: Para substituir um módulo de e/S, você deve desconetar os cabos do módulo, remover os módulos SFP e QSFP do módulo, remover o módulo, instalar o módulo de substituição, reinstalar os módulos SFP e QSFP e, em seguida, fazer o cabo do módulo de e/S. 
+---
+= Adicionar módulo de e/S - AFF C80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se o sistema de armazenamento tiver slots disponíveis, instale o novo módulo de e/S em um dos slots disponíveis. Se todos os slots estiverem ocupados, remova um módulo de e/S existente para criar espaço e, em seguida, instale o novo.
+
+.Antes de começar
+* Verifique o https://hwu.netapp.com/["NetApp Hardware Universe"^] para se certificar de que o novo módulo de e/S é compatível com o sistema de armazenamento e a versão do ONTAP que você está executando.
+* Se houver vários slots disponíveis, verifique as prioridades do slot https://hwu.netapp.com/["NetApp Hardware Universe"^] e use a melhor disponível para seu módulo de e/S.
+* Certifique-se de que todos os outros componentes estão a funcionar corretamente.
+
+
+[role="tabbed-block"]
+====
+.Adicione o módulo de e/S a um slot disponível
+--
+Você pode adicionar um novo módulo de e/S a um sistema de armazenamento com slots disponíveis.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Gire a bandeja de gerenciamento de cabos para baixo puxando os botões no interior da bandeja de gerenciamento de cabos e girando-a para baixo.
+. Retire o módulo de obturação da ranhura alvo do suporte:
++
+.. Prima o trinco do excêntrico no módulo obturador na ranhura alvo.
+.. Rode o trinco do excêntrico para longe do módulo o mais longe possível.
+.. Remova o módulo do compartimento prendendo o dedo na abertura da alavanca do came e puxando o módulo para fora do compartimento.
+
+
+. Instale o módulo de e/S:
++
+.. Alinhe o módulo de e/S com as extremidades da abertura da ranhura do compartimento.
+.. Deslize cuidadosamente o módulo para dentro da ranhura até ao compartimento e, em seguida, rode o trinco da came até ao fim para bloquear o módulo no lugar.
+
+
+. Ligue o módulo de e/S ao dispositivo designado.
++
+
+NOTE: Certifique-se de que quaisquer slots de e/S não utilizados tenham espaços em branco instalados para evitar possíveis problemas térmicos.
+
+. Rode o tabuleiro de gestão de cabos para cima até à posição fechada.
+. No prompt Loader, reinicie o nó:
++
+`bye`
+
++
+
+NOTE: Isso reinicializa o módulo de e/S e outros componentes e reinicializa o nó.
+
+. Devolver o controlador do controlador parceiro:
++
+`storage failover giveback -ofnode target_node_name`
+
+. Repita estes passos para o controlador B.
+. A partir do nó saudável, restaure a giveback automática se você o tiver desativado:
++
+`storage failover modify -node local -auto-giveback _true_`
+
+. Se o AutoSupport estiver ativado, restaure a criação automática de casos:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
+
+
+--
+.Adicionar módulo de e/S a um sistema totalmente preenchido
+--
+Você pode adicionar um módulo de e/S a um sistema totalmente preenchido removendo um módulo de e/S existente e instalando um novo em seu lugar.
+
+.Sobre esta tarefa
+Certifique-se de que compreende os seguintes cenários para adicionar um novo módulo de e/S a um sistema totalmente preenchido:
+
+[cols="1,2"]
+|===
+| Cenário | Ação necessária 
+
+
+ a| 
+NIC para NIC (mesmo número de portas)
+ a| 
+Os LIFs migrarão automaticamente quando seu módulo de controlador for desligado.
+
+
+
+ a| 
+NIC para NIC (número diferente de portas)
+ a| 
+Reatribua permanentemente os LIFs selecionados para uma porta inicial diferente. Consulte https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["Migração de um LIF"^] para obter mais informações.
+
+
+
+ a| 
+NIC para módulo de e/S de armazenamento
+ a| 
+Use o System Manager para migrar permanentemente os LIFs para diferentes portas residenciais, conforme descrito em https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["Migração de um LIF"^].
+
+|===
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Desconete qualquer cabeamento do módulo de e/S de destino.
+. Gire a bandeja de gerenciamento de cabos para baixo puxando os botões no interior da bandeja de gerenciamento de cabos e girando-a para baixo.
+. Retire o módulo de e/S alvo do chassis:
++
+.. Prima o botão do trinco do excêntrico.
+.. Rode o trinco do excêntrico para longe do módulo o mais longe possível.
+.. Remova o módulo do compartimento prendendo o dedo na abertura da alavanca do came e puxando o módulo para fora do compartimento.
++
+Certifique-se de manter o controle de qual slot o módulo de e/S estava.
+
+
+
+. Instale o módulo de e/S no slot de destino no compartimento:
++
+.. Alinhe o módulo com as extremidades da abertura da ranhura do compartimento.
+.. Deslize cuidadosamente o módulo para dentro da ranhura até ao compartimento e, em seguida, rode o trinco da came até ao fim para bloquear o módulo no lugar.
+
+
+. Ligue o módulo de e/S ao dispositivo designado.
+. Repita as etapas de remoção e instalação para substituir módulos adicionais para o controlador.
+. Rode o tabuleiro de gestão de cabos para cima até à posição fechada.
+. Reinicie o controlador a partir do prompt Loader:_bye_
++
+Isso reinicializa as placas PCIe e outros componentes e reinicializa o nó.
+
++
+
+NOTE: Se encontrar um problema durante a reinicialização, consulte https://mysupport.netapp.com/site/bugs-online/product/ONTAP/BURT/1494308["BURT 1494308 - o desligamento do ambiente pode ser acionado durante a substituição do módulo de e/S."]
+
+. Devolver o controlador do controlador parceiro:
++
+`storage failover giveback -ofnode target_node_name`
+
+. Ative o giveback automático se ele foi desativado:
++
+`storage failover modify -node local -auto-giveback true`
+
+. Execute um dos seguintes procedimentos:
++
+** Se você removeu um módulo de e/S NIC e instalou um novo módulo de e/S NIC, use o seguinte comando de rede para cada porta:
++
+`storage port modify -node *_<node name>__ -port *_<port name>__ -mode network`
+
+** Se você removeu um módulo de e/S NIC e instalou um módulo de e/S de armazenamento, instale e faça o cabeamento das prateleiras NS224, conforme descrito em link:../ns224/hot-add-shelf-overview.html["Fluxo de trabalho de adição automática"].
+
+
+. Repita estes passos para o controlador B.
+
+
+--
+====

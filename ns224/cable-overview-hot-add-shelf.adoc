@@ -24,6 +24,7 @@ Esta seção de cabeamento descreve como fazer o cabeamento da gaveta NS224 para
 
 == Sobre esta tarefa
 
+* Este procedimento aplica-se apenas à armazenagem direta. Para ver as instruções para armazenamento conetado ao switch, veja link:cable-as-switch-attached.html["guia de cabeamento conetado ao switch"]nosso .
 * Familiarize-se com a orientação adequada do conetor do cabo e a localização e rotulagem das portas nos módulos das prateleiras NS224 NSM100.
 +
 ** Os cabos são inseridos com a presilha do conetor voltada para cima.
@@ -38,14 +39,29 @@ image::../media/oie_cable_pull_tab_up.png[Os cabos são inseridos com a presilha
 
 ** Você pode usar a ilustração a seguir para ajudá-lo a identificar fisicamente as portas da gaveta NSM100, e0a e e0b.
 +
-Um compartimento de NS224U contém dois módulos de NSM100U. O módulo superior entra no slot A (NSM A) e o módulo inferior entra no slot B (NSM B).
-
-+
-Cada módulo NSM100 inclui 2 portas x 100GbE QSFP28: e0a e e0b.
-
+[role="tabbed-block"]
+====
+.NSM100 módulos
+--
+*** Um compartimento de NS224U contém dois módulos de NSM100U. O módulo superior entra no slot A (NSM A) e o módulo inferior entra no slot B (NSM B).
+*** Cada módulo NSM100 inclui 2 portas x 100GbE QSFP28: e0a e e0b.
 +
 image::../media/drw_ns224_back_ports.png[Localização das portas e0a e e0b do módulo NS224 NSM100]
 
+
+
+--
+.NSM100B módulos
+--
+*** Um compartimento de NS224U contém dois módulos de NSM100BU. O módulo superior entra no slot A (NSM A) e o módulo inferior entra no slot B (NSM B).
+*** Cada módulo NSM100B inclui 2 portas 100GbE CX6/DX: e1a e e1b.
++
+image::../media/drw_ns224_nsmb_back_ports_ieops-2006.svg[Localização das portas e0a e e0b do módulo NS224 NSM100B]
+
+
+
+--
+====
 
 
 * Depois de ter cabeado uma gaveta hot-Added, o ONTAP reconhece a gaveta:

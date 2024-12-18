@@ -14,7 +14,7 @@ summary: 'Você pode substituir uma bateria de relógio em tempo real (RTC) com 
 Você pode substituir uma bateria de relógio em tempo real (RTC) com falha sem interrupções em um compartimento de unidade de NS224 TB que esteja ligado e enquanto e/S estiver em andamento.
 
 .Antes de começar
-* O módulo NSM do parceiro do compartimento deve estar ativo e em execução e ser cabeado corretamente, de modo que seu compartimento mantenha a conectividade quando você remover o módulo NSM com a FRU (módulo NSM de destino) com falha.
+* O NSM do parceiro do compartimento deve estar ativo e em execução, e ser cabeado corretamente, para que seu compartimento mantenha a conectividade quando você remover o NSM com a FRU (NSM de destino) com falha.
 +
 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp Downloads: Config Advisor"^]
 
@@ -26,7 +26,7 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 +
 Isso permite tempo suficiente para que o ONTAP processe o evento de remoção de NSM.
 
-* Depois de substituir a bateria RTC, reinstale o módulo NSM e o módulo inicializa, a hora do relógio em tempo real é atualizada pelo ONTAP.
+* Depois de substituir a bateria do RTC, reinstale o NSM e o módulo inicializa, a hora do relógio em tempo real é atualizada pelo ONTAP.
 * *Prática recomendada:* a prática recomendada é ter versões atuais do firmware do módulo de gaveta NVMe (NSM) e do firmware da unidade em seu sistema antes de substituir componentes FRU.
 +
 https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["Downloads do NetApp: Firmware da gaveta de disco"^]
@@ -45,52 +45,56 @@ Não reverta o firmware para uma versão que não suporte a gaveta e seus compon
 Se você não souber `shelf_name` o do compartimento afetado, execute o `storage shelf show` comando.
 
 +
-Uma prateleira tem três LEDs de localização: Um no painel de visualização do operador e um em cada módulo NSM. Os LEDs de localização permanecem acesos durante 30 minutos. Você pode desativá-los digitando o mesmo comando, mas usando a `off` opção.
+Uma prateleira tem três LEDs de localização: Um no painel de visualização do operador e um em cada NSM. Os LEDs de localização permanecem acesos durante 30 minutos. Você pode desativá-los digitando o mesmo comando, mas usando a `off` opção.
 
 * Quando desembalar a bateria RTC de substituição, guarde todos os materiais de embalagem para utilização quando devolver a bateria RTC avariada.
 +
 Se você precisar do número RMA ou de ajuda adicional com o procedimento de substituição, entre em Contato com o suporte técnico em https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"^], 888-463-8277 (América do Norte), 00-800-44-638277 (Europa) ou 800-800-80-800 (Ásia/Pacífico).
 
-* Você pode usar a animação a seguir ou as etapas escritas para substituir uma bateria RTC.
-+
+
+
+[role="tabbed-block"]
+====
+.NSM100 módulos
+--
+Para módulos NSM100, você pode usar a seguinte animação ou as etapas escritas para substituir uma bateria RTC.
+
 .Substitua uma bateria RTC em uma prateleira NS224
 video::df7a12f4-8554-4448-a3df-aa86002f2de8[panopto]
-
-
 .Passos
 . Aterre-se corretamente.
-. Desconete o cabeamento do módulo NSM que contém a FRU que você está substituindo:
+. Desconete o cabeamento do NSM que contém a FRU que você está substituindo:
 +
 .. Desconete o cabo de alimentação da fonte de alimentação abrindo o retentor do cabo de alimentação se for uma fonte de alimentação CA ou desapertando os dois parafusos de orelhas se for uma fonte de alimentação CC e, em seguida, desconete o cabo de alimentação da fonte de alimentação.
 +
 As fontes de alimentação não têm um interrutor de alimentação.
 
-.. Desconete o cabeamento de armazenamento das portas do módulo NSM.
+.. Desconete o cabeamento de armazenamento das portas NSM.
 +
-Anote as portas do módulo NSM às quais cada cabo está conetado. Reconete os cabos às mesmas portas quando você reinserir o módulo NSM, mais adiante neste procedimento.
+Anote as portas NSM às quais cada cabo está conetado. Reconete os cabos às mesmas portas quando você reinserir o NSM, mais adiante neste procedimento.
 
 
 
-. Retire o módulo NSM da prateleira:
+. Retire o NSM da prateleira:
 +
-.. Passe os dedos indicadores através dos orifícios dos dedos dos mecanismos de bloqueio em ambos os lados do módulo NSM.
+.. Passe os dedos indicadores através dos orifícios dos dedos dos mecanismos de bloqueio em ambos os lados do NSM.
 +
 
-NOTE: Se você estiver removendo o módulo NSM inferior e se o trilho inferior estiver obstruindo o acesso aos mecanismos de travamento, coloque seus dedos indicadores através dos orifícios dos dedos a partir do interior (cruzando os braços).
+NOTE: Se você estiver removendo o NSM inferior e se o trilho inferior estiver obstruindo o acesso aos mecanismos de travamento, coloque seus dedos indicadores através dos orifícios dos dedos a partir do interior (cruzando os braços).
 
 .. Com os polegares, pressione e segure as abas laranja na parte superior dos mecanismos de travamento.
 +
 Os mecanismos de bloqueio levantam-se, limpando os pinos de bloqueio na prateleira.
 
-.. Puxe suavemente até que o módulo NSM esteja cerca de um terço da saída da prateleira, segure os lados do módulo NSM com as duas mãos para suportar o seu peso e, em seguida, coloque-o em uma superfície plana e estável.
+.. Puxe suavemente até que o NSM esteja cerca de um terço da saída da prateleira, segure os lados do NSM com as duas mãos para suportar o seu peso e, em seguida, coloque-o sobre uma superfície plana e estável.
 +
-Quando começar a puxar, os braços do mecanismo de engate estendem-se do módulo NSM e trancam-se na sua posição totalmente estendida.
+Quando começar a puxar, os braços do mecanismo de bloqueio estendem-se a partir do NSM e trancam-se na posição totalmente estendida.
 
 
 
-. Desaperte o parafuso de orelhas da tampa do módulo NSM e abra a tampa.
+. Desaperte o parafuso de orelhas da tampa do NSM e abra a tampa.
 +
-A etiqueta FRU na tampa do módulo NSM mostra a localização da bateria RTC, perto da parte frontal do módulo NSM e à direita da fonte de alimentação.
+A etiqueta FRU na tampa do NSM mostra a localização da bateria do RTC, perto da parte frontal do NSM e à direita da fonte de alimentação.
 
 . Identifique fisicamente a bateria RTC com falha.
 . Substitua a bateria RTC:
@@ -99,35 +103,31 @@ A etiqueta FRU na tampa do módulo NSM mostra a localização da bateria RTC, pe
 .. Introduza a bateria de substituição no suporte a um ângulo inclinado (inclinado para longe do suporte), empurre-a para uma posição vertical e, em seguida, pressione-a firmemente no conetor até estar completamente assente.
 +
 
-NOTE: O lado positivo da bateria, marcado com um sinal de mais, é orientado para fora (afastado do suporte), correspondendo ao sinal de mais marcado na placa do módulo NSM.
+NOTE: O lado positivo da bateria, marcado com um sinal de mais, é orientado para fora (longe do suporte), correspondendo ao sinal de mais marcado na placa NSM.
 
 
 
-. Feche a tampa do módulo NSM e, em seguida, aperte o parafuso de orelhas.
-. Volte a inserir o módulo NSM na prateleira:
+. Feche a tampa do NSM e, em seguida, aperte o parafuso de orelhas.
+. Certifique-se de que os braços do mecanismo de engate estão bloqueados na posição totalmente estendida.
+. Utilizando ambas as mãos, deslize cuidadosamente o NSM para dentro da prateleira até que o peso do NSM fique totalmente suportado pela prateleira.
+. Empurre o NSM para dentro da prateleira até parar (cerca de meia polegada da parte de trás da prateleira).
 +
-.. Certifique-se de que os braços do mecanismo de engate estão bloqueados na posição totalmente estendida.
-.. Utilizando ambas as mãos, deslize cuidadosamente o módulo NSM para dentro da prateleira até que o peso do módulo NSM esteja totalmente suportado pela prateleira.
-.. Empurre o módulo NSM para dentro da prateleira até parar (cerca de meia polegada da parte de trás da prateleira).
-+
-Pode colocar os polegares nas patilhas cor-de-laranja na parte da frente de cada presilha (dos braços do mecanismo de fecho) para empurrar o módulo NSM.
+Você pode colocar os polegares nas abas laranja na frente de cada alça de dedo (dos braços do mecanismo de travamento) para empurrar o NSM.
 
-.. Passe os dedos indicadores através dos orifícios dos dedos dos mecanismos de bloqueio em ambos os lados do módulo NSM.
+. Passe os dedos indicadores através dos orifícios dos dedos dos mecanismos de bloqueio em ambos os lados do NSM.
 +
 
-NOTE: Se você estiver inserindo o módulo NSM inferior e se o trilho inferior estiver obstruindo o acesso aos mecanismos de travamento, coloque seus dedos indicadores através dos orifícios dos dedos a partir do interior (cruzando os braços).
+NOTE: Se você estiver inserindo o NSM inferior e se o trilho inferior estiver obstruindo o acesso aos mecanismos de travamento, coloque seus dedos indicadores através dos orifícios dos dedos a partir do interior (cruzando os braços).
 
-.. Com os polegares, pressione e segure as abas laranja na parte superior dos mecanismos de travamento.
-.. Empurre suavemente para a frente para colocar as travas sobre o batente.
-.. Solte os polegares da parte superior dos mecanismos de travamento e, em seguida, continue empurrando até que os mecanismos de travamento se encaixem no lugar.
+. Com os polegares, pressione e segure as abas laranja na parte superior dos mecanismos de travamento.
+. Empurre suavemente para a frente para colocar as travas sobre o batente.
+. Solte os polegares da parte superior dos mecanismos de travamento e, em seguida, continue empurrando até que os mecanismos de travamento se encaixem no lugar.
 +
-O módulo NSM deve ser totalmente inserido na prateleira e nivelado com as bordas da prateleira.
+O NSM deve ser totalmente inserido na prateleira e nivelado com as bordas da prateleira.
 
-
-
-. Reconecte o cabeamento ao módulo NSM:
+. Reconecte o cabeamento ao NSM:
 +
-.. Reconecte o cabeamento de storage às mesmas duas portas de módulo NSM.
+.. Reconecte o cabeamento de storage às mesmas duas portas NSM.
 +
 Os cabos são inseridos com a presilha do conetor voltada para cima. Quando um cabo é inserido corretamente, ele clica no lugar.
 
@@ -136,15 +136,15 @@ Os cabos são inseridos com a presilha do conetor voltada para cima. Quando um c
 Quando estiver a funcionar corretamente, o LED bicolor de uma fonte de alimentação acende-se a verde.
 
 +
-Além disso, ambos os LEDs LNK (verde) da porta do módulo NSM acendem-se. Se um LED LNK não acender, recoloque o cabo.
+Além disso, ambos os LEDs LNK da porta NSM (verde) acendem-se. Se um LED LNK não acender, recoloque o cabo.
 
 
 
-. Verifique se os LEDs atenção (âmbar) no módulo NSM que contém a bateria RTC com falha e o painel do visor do operador da prateleira já não estão acesos
+. Verifique se os LEDs atenção (âmbar) no NSM que contêm a bateria RTC com falha e o painel do visor do operador da prateleira já não estão acesos
 +
-Os LEDs de atenção do módulo NSM desligam-se depois de o módulo NSM ser reiniciado e não detetar mais um problema com a bateria RTC. Isso pode levar de três a cinco minutos.
+Os LEDs de atenção do NSM desligam-se após o reinício do NSM e não detetam mais um problema com a bateria do RTC. Isso pode levar de três a cinco minutos.
 
-. Verifique se o módulo NSM está cabeado corretamente, executando o Active IQ Config Advisor.
+. Verifique se o NSM está cabeado corretamente, executando o Active IQ Config Advisor.
 +
 Se forem gerados erros de cabeamento, siga as ações corretivas fornecidas.
 
@@ -152,3 +152,152 @@ Se forem gerados erros de cabeamento, siga as ações corretivas fornecidas.
 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp Downloads: Config Advisor"^]
 
 
+
+--
+.NSM100B módulos
+--
+.Passos
+. Aterre-se corretamente.
+. Desconete o cabeamento do NSM que contém a FRU que você está substituindo:
++
+.. Desconete o cabo de alimentação da fonte de alimentação abrindo o retentor do cabo de alimentação se for uma fonte de alimentação CA ou desapertando os dois parafusos de orelhas se for uma fonte de alimentação CC e, em seguida, desconete o cabo de alimentação da fonte de alimentação.
++
+As fontes de alimentação não têm um interrutor de alimentação.
+
+.. Desconete o cabeamento de armazenamento das portas NSM.
++
+Anote as portas NSM às quais cada cabo está conetado. Reconete os cabos às mesmas portas quando você reinserir o NSM, mais adiante neste procedimento.
+
+
+
+. Retire o NSM:
++
+image::../media/drw_g_and_t_handles_remove_ieops-1837.svg[Retire o NSM.]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Em ambas as extremidades do NSM, empurre as patilhas de bloqueio verticais para fora para soltar as pegas.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+** Puxe as pegas na sua direção para retirar o NSM do plano médio.
++
+Ao puxar, as alças se estendem para fora da prateleira. Quando sentir alguma resistência, continue puxando.
+
+** Deslize o NSM para fora da prateleira e coloque-o sobre uma superfície plana e estável.
++
+Certifique-se de que apoia a parte inferior do NSM enquanto o desliza para fora da prateleira.
+
+
+
+
+
+ a| 
+image::../media/icon_round_3.png[Legenda número 3]
+ a| 
+Rode as pegas para a posição vertical (junto às patilhas) para as afastar.
+
+|===
+. Abra a tampa do módulo rodando o parafuso de aperto manual no sentido contrário ao dos ponteiros do relógio para soltar e, em seguida, abra a tampa.
+. Localize a bateria do RTC e substitua-a.
++
+.. Remova a bateria com falha:
++
+image::../media/drw_t_rtc_battery_replace_ieops-1981.svg[Substitua a bateria do RTC]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Rode cuidadosamente a bateria RTC a um ângulo afastado do respetivo suporte.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+Levante a bateria do RTC para fora do respetivo suporte.
+
+|===
+.. Retire a bateria de substituição do saco de transporte antiestático.
+.. Observe a polaridade da bateria RTC e, em seguida, insira-a no suporte inclinando a bateria em ângulo e empurrando-a para baixo.
++
+
+NOTE: Você deve garantir que o sinal de mais na bateria corresponde ao sinal de mais na placa-mãe.
+
+.. Inspecione visualmente a bateria para se certificar de que está completamente instalada no suporte e de que a polaridade está correta.
+
+
+. Feche a tampa do NSM e rode o parafuso de aperto manual no sentido dos ponteiros do relógio até ficar apertado.
+. Insira o NSM na prateleira:
++
+image::../media/drw_g_and_t_handles_reinstall_ieops-1838.svg[Substitua o NSM.]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Se tiver girado os manípulos de NSM na vertical (junto às patilhas) para os retirar do caminho enquanto efetua a manutenção do NSM, rode-os para baixo para a posição horizontal.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+Alinhe a parte de trás do NSM com a abertura na prateleira e, em seguida, empurre cuidadosamente o NSM utilizando as pegas até estar completamente assente.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Legenda número 3]
+ a| 
+Rode as pegas para a posição vertical e bloqueie-as com as patilhas.
+
+|===
+. Recable o NSM.
++
+.. Reconecte o cabeamento de storage às mesmas duas portas NSM.
++
+Os cabos são inseridos com a presilha do conetor voltada para cima. Quando um cabo é inserido corretamente, ele clica no lugar.
+
+.. Volte a ligar o cabo de alimentação à fonte de alimentação e, em seguida, fixe o cabo de alimentação com o fixador do cabo de alimentação se for uma fonte de alimentação CA ou aperte os dois parafusos de orelhas se for uma fonte de alimentação CC e, em seguida, desligue o cabo de alimentação da fonte de alimentação.
++
+Quando estiver a funcionar corretamente, o LED bicolor de uma fonte de alimentação acende-se a verde.
+
++
+Além disso, ambos os LEDs LNK da porta NSM (verde) acendem-se. Se um LED LNK não acender, recoloque o cabo.
+
+
+
+. Verifique se os LEDs atenção (âmbar) no NSM que contêm a bateria RTC com falha e o painel do visor do operador da prateleira já não estão acesos
++
+Os LEDs de atenção do NSM desligam-se após o reinício do NSM e não detetam mais um problema com a bateria do RTC. Isso pode levar de três a cinco minutos.
+
+. Verifique se o NSM está cabeado corretamente, executando o Active IQ Config Advisor.
++
+Se forem gerados erros de cabeamento, siga as ações corretivas fornecidas.
+
++
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp Downloads: Config Advisor"^]
+
+
+
+--
+====

@@ -1,0 +1,389 @@
+---
+permalink: c30-60/rtc-battery-replace.html 
+sidebar: sidebar 
+keywords: aff c30, aff c60, replace the real-time clock battery 
+summary: 'Você substitui a bateria do relógio em tempo real (RTC) no módulo do controlador para que os serviços e aplicativos do sistema que dependem da sincronização precisa de tempo continuem funcionando.' 
+---
+= Substitua a bateria do relógio em tempo real - AFF C30 e AFF C60
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você substitui a bateria do relógio em tempo real (RTC) no controlador para que os serviços e aplicativos do sistema de armazenamento que dependem da sincronização precisa de tempo continuem funcionando.
+
+.Antes de começar
+Todos os outros componentes do sistema de armazenamento têm de estar a funcionar corretamente; caso contrário, tem de contactar https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de prosseguir com este procedimento.
+
+.Sobre esta tarefa
+* Você pode usar esse procedimento com todas as versões do ONTAP compatíveis com seu sistema de storage.
+* Se necessário, você pode ligar os LEDs de localização do sistema de armazenamento (azul) para ajudar a localizar fisicamente o sistema de armazenamento afetado. Faça login no BMC usando SSH e digite o `system location-led _on_` comando.
++
+Um sistema de armazenamento tem três LEDs de localização: Um no painel de visualização do operador e um em cada controlador. Os LEDs de localização permanecem acesos durante 30 minutos.
+
++
+Você pode desativá-los digitando o `system location-led _off_` comando. Se não tiver a certeza se os LEDs estão ligados ou desligados, pode verificar o seu estado introduzindo o `system location-led show` comando.
+
+
+
+
+
+== Passo 1: Desligue o controlador desativado
+
+Desligue ou assuma o controlador desativado.
+
+Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
+
+.Sobre esta tarefa
+* Se você tiver um sistema SAN, você deve ter verificado mensagens de  `cluster kernel-service show`evento ) para o blade SCSI do controlador afetado. O `cluster kernel-service show` comando (do modo avançado priv) exibe o nome do nó, link:https://docs.netapp.com/us-en/ontap/system-admin/display-nodes-cluster-task.html["status do quorum"]desse nó, o status de disponibilidade desse nó e o status operacional desse nó.
++
+Cada processo SCSI-blade deve estar em quórum com os outros nós no cluster. Qualquer problema deve ser resolvido antes de prosseguir com a substituição.
+
+* Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
+
+
+.Passos
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
++
+A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas: `cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Desative a giveback automática a partir da consola do controlador saudável: `storage failover modify -node local -auto-giveback false`
++
+
+NOTE: Quando vir _do pretende desativar a auto-giveback?_, introduza `y`.
+
+. Leve o controlador prejudicado para o prompt Loader:
++
+[cols="1,2"]
+|===
+| Se o controlador afetado estiver a apresentar... | Então... 
+
+
+ a| 
+O prompt Loader
+ a| 
+Vá para a próxima etapa.
+
+
+
+ a| 
+A aguardar pela giveback...
+ a| 
+Pressione Ctrl-C e responda `y` quando solicitado.
+
+
+
+ a| 
+Prompt do sistema ou prompt de senha
+ a| 
+Assuma ou interrompa o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
+
+|===
+
+
+
+
+== Passo 2: Remova o controlador
+
+Você deve remover o controlador do chassi quando substituir o controlador ou substituir um componente dentro do controlador.
+
+.Antes de começar
+Todos os outros componentes do sistema de armazenamento têm de estar a funcionar corretamente; caso contrário, tem de contactar https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de prosseguir com este procedimento.
+
+.Passos
+. No controlador desativado, certifique-se de que o LED NV está desligado.
++
+Quando o LED NV está desligado, o desaquecimento está completo e é seguro remover o controlador afetado.
+
++
+
+NOTE: Se o LED NV estiver intermitente (verde), as destage estão em curso. Tem de aguardar que o LED NV se desligue. No entanto, se a intermitência continuar durante mais de cinco minutos, contacte https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de continuar com este procedimento.
+
++
+O LED NV está localizado junto ao ícone NV no controlador.
+
++
+image::../media/drw_g_nvmem_led_ieops-1839.svg[Localização do LED de estado NV]
+
+
+
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Ícone NV e LED no controlador
+
+|===
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Desligue a alimentação do controlador desativado:
++
+
+NOTE: As fontes de alimentação (PSUs) não têm um interrutor de alimentação.
+
++
+[cols="1,2"]
+|===
+| Se você está desligando um... | Então... 
+
+
+ a| 
+PSU CA
+ a| 
+.. Abra o retentor do cabo de alimentação.
+.. Desconete o cabo de alimentação da PSU e coloque-o de lado.
+
+
+
+
+ a| 
+FONTE DE ALIMENTAÇÃO CC
+ a| 
+.. Desaperte os dois parafusos de orelhas no conetor do cabo de alimentação DC D-SUB.
+.. Desconete o cabo de alimentação da PSU e coloque-o de lado.
+
+
+|===
+. Desconete todos os cabos do controlador desativado.
++
+Mantenha o controle de onde os cabos foram conetados.
+
+. Retire o controlador desativado:
++
+A ilustração a seguir mostra a operação das alças do controlador (do lado esquerdo do controlador) ao remover um controlador:
+
++
+image::../media/drw_g_and_t_handles_remove_ieops-1837.svg[operação da alavanca do controlador para remover um controlador]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Em ambas as extremidades do controlador, empurre as patilhas de bloqueio verticais para fora para soltar as pegas.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+** Puxe as pegas na sua direção para retirar o comando do plano médio.
++
+À medida que você puxa, as alças se estendem para fora do controlador e, em seguida, você sente alguma resistência, continue puxando.
+
+** Deslize o controlador para fora do chassi enquanto suporta a parte inferior do controlador e coloque-o em uma superfície plana e estável.
+
+
+
+
+ a| 
+image::../media/icon_round_3.png[Legenda número 3]
+ a| 
+Se necessário, rode as pegas para a posição vertical (junto às patilhas) para as retirar do caminho.
+
+|===
+. Abra a tampa do controlador rodando o parafuso de aperto manual no sentido contrário ao dos ponteiros do relógio para soltar e, em seguida, abra a tampa.
+
+
+
+
+== Passo 3: Substitua a bateria RTC
+
+Retire a bateria RTC avariada e instale a bateria RTC de substituição.
+
+. Localize a bateria do RTC.
+. Retire a bateria RTC:
++
+image::../media/drw_g_rtc_battery_replace_ieops-1902.svg[Substitua a bateria do RTC]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Rode cuidadosamente a bateria RTC a um ângulo afastado do respetivo suporte.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+Levante a bateria do RTC para fora do respetivo suporte.
+
+|===
+. Instale a bateria RTC de substituição:
++
+.. Retire a bateria de substituição do saco de transporte antiestático.
+.. Posicione a bateria de modo que o sinal de mais na bateria fique voltado para fora para corresponder ao sinal de mais na placa-mãe.
+.. Insira a bateria no suporte em ângulo e, em seguida, empurre-a para uma posição vertical para que fique totalmente assente no suporte.
+.. Inspecione visualmente a bateria para se certificar de que está completamente encaixada no respetivo suporte e de que a polaridade está correta.
+
+
+
+
+
+
+== Etapa 4: Reinstale o controlador
+
+Reinstale o controlador no chassi e reinicialize-o.
+
+.Sobre esta tarefa
+A ilustração a seguir mostra a operação das alças do controlador (do lado esquerdo de um controlador) ao reinstalar o controlador e pode ser usada como referência para as demais etapas de reinstalação do controlador.
+
+image::../media/drw_g_and_t_handles_reinstall_ieops-1838.svg[operação da alavanca do controlador para instalar um controlador]
+
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Se tiver girado as pegas do controlador na vertical (junto às patilhas) para as afastar enquanto efetua a manutenção do controlador, rode-as para a posição horizontal.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+Empurre as alças para reinserir o controlador no chassi até meio e, quando instruído, empurre até que o controlador esteja totalmente assentado.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Legenda número 3]
+ a| 
+Rode as pegas para a posição vertical e bloqueie-as com as patilhas de bloqueio.
+
+|===
+.Passos
+. Feche a tampa do controlador e rode o parafuso de aperto manual no sentido dos ponteiros do relógio até ficar apertado.
+. Introduza o controlador a meio caminho no chassis.
++
+Alinhe a parte traseira do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o controlador utilizando as pegas.
+
++
+
+NOTE: Não introduza completamente o controlador no chassis até ser instruído a fazê-lo.
+
+. Conete o cabo do console à porta do console no controlador e ao laptop para que o laptop receba mensagens de console quando o controlador for reinicializado.
+. Coloque totalmente o controlador no chassis:
++
+.. Empurre firmemente as alças até que o controlador atenda ao plano médio e esteja totalmente assentado.
++
+
+NOTE: Não utilize força excessiva ao deslizar o controlador para dentro do chassis; pode danificar os conetores.
+
+.. Rode as pegas do controlador para cima e bloqueie-as com as patilhas.
++
+
+NOTE: O controlador começa a inicializar assim que estiver totalmente assentado no chassi.
+
+
+
+. Leve o controlador para o prompt Loader pressionando CTRL-C para abortar o AUTOBOOT.
+. Defina a hora e a data no controlador:
++
+Certifique-se de que está no prompt Loader do controlador.
+
++
+.. Apresentar a data e a hora no controlador:
++
+`show date`
+
++
+
+NOTE: O padrão de hora e data está em GMT. Tem a opção de apresentar na hora local e no modo 24hrD.
+
+.. Defina a hora atual em GMT:
++
+`set time hh:mm:ss`
+
++
+Você pode obter o GMT atual do nó saudável:
+
++
+`date -u`
+
+.. Defina a data atual em GMT:
++
+`set date mm/dd/yyyy`
+
++
+Você pode obter o GMT atual do nó saudável
+`date -u`
+
+
+
+. Recable o controlador conforme necessário.
+. Reconecte o cabo de alimentação à fonte de alimentação (PSU).
++
+Uma vez que a energia é restaurada para a PSU, o LED de status deve estar verde.
+
++
+[cols="1,2"]
+|===
+| Se você está reconetando um... | Então... 
+
+
+ a| 
+PSU CA
+ a| 
+.. Ligue o cabo de alimentação à PSU.
+.. Fixe o cabo de alimentação com o fixador do cabo de alimentação.
+
+
+
+
+ a| 
+FONTE DE ALIMENTAÇÃO CC
+ a| 
+.. Ligue o conetor do cabo de alimentação DC D-SUB à PSU.
+.. Aperte os dois parafusos de orelhas para fixar o conetor do cabo de alimentação D-SUB DC à PSU.
+
+
+|===
+
+
+
+
+== Passo 5: Redefina a hora e a data no controlador
+
+
+NOTE: Depois de substituir a bateria RTC, inserir o controlador e ligar a primeira reinicialização do BIOS, você verá as seguintes mensagens de erro:
+`RTC date/time error. Reset date/time to default`
+`RTC power failure error` Essas mensagens são esperadas e você pode continuar com este procedimento.
+
+. No controlador saudável, verifique a data e a hora com o `cluster date show` comando.
++
+
+NOTE: Se o seu sistema de armazenamento parar no menu de inicialização, selecione a opção  `Reboot node`e responda _y_ quando solicitado e, em seguida, inicialize no Loader pressionando _Ctrl-C_.
+
+. No controlador prejudicado, no prompt DO Loader, verifique a hora e a data: `cluster date show`
++
+.. Se necessário, modifique a data: `set date _mm/dd/yyyy_`
+.. Se necessário, defina a hora, em GMT: `set time hh:mm:ss`
+.. Confirme a data e a hora.
+
+
+. No prompt Loader, digite `bye` para reinicializar os módulos de e/S, outros componentes e deixe o controlador reinicializar.
+. Volte a colocar o controlador em funcionamento normal, devolvendo o respetivo armazenamento: `storage failover giveback -ofnode _impaired_node_name_`
+. Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback _true_`
+
+
+
+
+== Passo 6: Devolva a peça com falha ao NetApp
+
+Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

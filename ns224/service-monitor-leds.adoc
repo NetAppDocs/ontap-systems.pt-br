@@ -1,7 +1,7 @@
 ---
 permalink: ns224/service-monitor-leds.html 
 sidebar: sidebar 
-keywords: monitor, health, drive, shelf, location, status, condition, led, component, operator, display, panel, nsm, power, supply, drive, monitor drive shelf leds, operator display panel leds, nsm module leds, power supply leds, drive leds 
+keywords: monitor, health, drive, shelf, location, status, condition, led, component, operator, display, panel, nsm, power, supply, drive, monitor drive shelf leds, operator display panel leds, nsm leds, power supply leds, drive leds 
 summary: Você pode monitorar a integridade do compartimento de unidades compreendendo a localização e as condições de status dos LEDs nos componentes do compartimento de unidades. 
 ---
 = Monitore os LEDs do compartimento de unidades - NS224 gavetas
@@ -13,7 +13,7 @@ summary: Você pode monitorar a integridade do compartimento de unidades compree
 [role="lead"]
 Você pode monitorar a integridade do compartimento de unidades compreendendo a localização e as condições de status dos LEDs nos componentes do compartimento de unidades.
 
-* Os LEDs de localização (azul), no painel de exibição do operador (ODP) de uma prateleira e em ambos os módulos NSM, podem ser ativados para ajudar a localizar fisicamente a prateleira que precisa de manutenção: `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
+* Os LEDs de localização (azul), no painel de exibição do operador (ODP) de uma prateleira e em ambos os NSMs, podem ser ativados para ajudar a localizar fisicamente a prateleira que precisa de manutenção: `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
 +
 Se você não souber `_shelf_name_` o do compartimento afetado, execute o `storage shelf show` comando.
 
@@ -87,12 +87,16 @@ O administrador do sistema ativou esta função LED.
 |===
 
 
-== LEDs do módulo NSM
+== LEDs NSM
 
-Os LEDs de um módulo NSM indicam se o módulo está funcionando normalmente, se está pronto para tráfego de e/S e se há algum problema com o hardware.
+Os LEDs em um NSM indicam se o módulo está funcionando normalmente, se ele está pronto para tráfego de e/S e se há algum problema com o hardware.
 
-A ilustração e as tabelas a seguir descrevem os LEDs do módulo NSM associados à função de um módulo e à função de cada porta NVMe em um módulo.
+A ilustração e as tabelas a seguir descrevem os LEDs NSM associados à função de um módulo e à função de cada porta NVMe em um módulo.
 
+[role="tabbed-block"]
+====
+.NSM100 módulos
+--
 image::../media/drw_ns224_nsm_leds_IEOPS-1270.svg[NS224 NSM100 LEDs do módulo]
 
 [cols="1,1,2,4"]
@@ -107,7 +111,7 @@ image::../media/drw_sas3_location_icon.svg[LED de localização do painel de vis
  a| 
 Azul
  a| 
-Módulo NSM: Localização
+NSM: Localização
 
 
 
@@ -118,7 +122,7 @@ image::../media/drw_sas_fault_icon.svg[LED de atenção do painel de visualizaç
  a| 
 Âmbar
  a| 
-Módulo NSM: Atenção
+NSM: Atenção
 
 
 
@@ -143,6 +147,72 @@ image::../media/drw_sas_fault_icon.svg[LED de atenção do painel de visualizaç
 Porta/link NVMe: Atenção
 
 |===
+--
+.NSM100B módulos
+--
+image::../media/drw_ns224_nsmb_leds_ieops-2004.svg[NS224 NSM100B LEDs do módulo]
+
+[cols="1,1,2,4"]
+|===
+| Chamada para fora | Ícone LED | Cor | Descrição 
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+LNK
+ a| 
+Verde
+ a| 
+Porta/link NVMe: Status
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+image::../media/drw_sas_fault_icon.svg[LED de atenção do painel de visualização do operador]
+ a| 
+Âmbar
+ a| 
+Porta/link NVMe: Atenção
+
+
+
+ a| 
+image:../media/icon_round_3.png["Legenda número 3"]
+ a| 
+image::../media/drw_sas_fault_icon.svg[LED de atenção do painel de visualização do operador]
+ a| 
+Âmbar
+ a| 
+Módulo I/o: Estado
+
+
+
+ a| 
+image:../media/icon_round_4.png["Legenda número 4"]
+ a| 
+image::../media/drw_sas3_location_icon.svg[LED de localização do painel de visualização do operador]
+ a| 
+Azul
+ a| 
+NSM: Localização
+
+
+
+ a| 
+image:../media/icon_round_5.png["Legenda número 5"]
+ a| 
+image::../media/drw_sas_fault_icon.svg[LED de atenção do painel de visualização do operador]
+ a| 
+Âmbar
+ a| 
+NSM: Atenção
+
+|===
+--
+====
 [cols="2,1,1,1"]
 |===
 | Estado | Atenção do NSM (âmbar) | Port LNK (Verde) | Atenção da porta (âmbar) 

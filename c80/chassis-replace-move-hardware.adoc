@@ -1,0 +1,182 @@
+---
+permalink: c80/chassis-replace-move-hardware.html 
+sidebar: sidebar 
+keywords: c80, move hardware components, replace the chassis 
+summary: Mova as unidades de disco rígido e o módulo ou módulos do controlador do chassis danificado para o novo chassis e troque o chassis danificado do rack de equipamento ou do armário do sistema pelo novo chassis do mesmo modelo do chassis danificado. 
+---
+= Substitua o chassis - AFF C80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mova as unidades de disco rígido e o módulo do controlador do chassis danificado para o novo chassis e troque o chassis danificado pelo novo chassis do mesmo modelo que o chassis danificado.
+
+
+
+== Passo 1: Remova o módulo do controlador
+
+Deve remover o módulo do controlador do chassis quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
+
+. Na parte frontal do chassis, utilize os polegares para empurrar firmemente cada unidade até sentir um batente positivo. Isso garante que as unidades estejam firmemente assentadas contra o plano médio do chassi.
++
+image::../media/drw_a800_drive_seated_IEOPS-960.svg[Acionamentos do disco do assento]
+
+. Verifique o NVRAM âmbar se o LED de status localizado no slot 4/5 na parte traseira do módulo do controlador desativado está desligado. Procure o ícone NV.
++
+image::../media/drw_a1K-70-90_nvram-led_ieops-1463.svg[Gráfico de localização do LED de estado e atenção do NVRAM]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+LED de estado do NVRAM
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+LED de atenção NVRAM
+
+|===
++
+** Se o LED NV estiver desligado, passe à próxima etapa.
+** Se o LED NV estiver intermitente, aguarde que o intermitente pare. Se a intermitência continuar durante mais de 5 minutos, contacte o suporte técnico para obter assistência.
+
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Desconete os cabos da fonte de alimentação do módulo do controlador das fontes de alimentação (PSU) do módulo do controlador.
++
+
+NOTE: Se o sistema tiver alimentação CC, desligue o bloco de alimentação das PSUs.
+
+. Desconete os cabos do sistema e os módulos SFP e QSFP (se necessário) do módulo do controlador, mantendo o controle de onde os cabos estavam conetados.
++
+Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar o dispositivo de gerenciamento de cabos, os cabos sejam organizados.
+
+. Remova o dispositivo de gerenciamento de cabos do módulo do controlador.
+. Prima ambos os trincos de bloqueio para baixo e, em seguida, rode ambos os trincos para baixo ao mesmo tempo.
++
+O módulo do controlador desloca-se ligeiramente para fora do chassis.
+
++
+image::../media/drw_a70-90_pcm_remove_replace_ieops-1365.svg[Controlador remover gráfico]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Trinco de bloqueio
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Pino de bloqueio
+
+|===
+. Deslize o módulo do controlador para fora do chassis e coloque-o numa superfície plana e estável.
++
+Certifique-se de que suporta a parte inferior do módulo do controlador enquanto o desliza para fora do chassis.
+
+. Repita estes passos para o outro módulo do controlador no chassis.
+
+
+
+
+== Passo 2: Mova as unidades para o novo chassi
+
+Você precisa mover as unidades de cada abertura do compartimento no chassi antigo para a mesma abertura do compartimento no novo chassi.
+
+. Retire cuidadosamente a moldura da parte frontal do sistema.
+. Remova as unidades:
++
+.. Prima o botão de libertação na parte superior da face do suporte por baixo dos LEDs.
+.. Puxe o manípulo do excêntrico para a posição totalmente aberta para retirar a transmissão do plano médio e, em seguida, deslize cuidadosamente a unidade para fora do chassis.
++
+A transmissão deve desengatar-se do chassis, permitindo que deslize para fora do chassis.
+
++
+
+NOTE: Ao remover uma unidade, utilize sempre duas mãos para suportar o seu peso.
+
++
+
+NOTE: Os acionamentos são frágeis. Manuseie-os o mínimo possível para evitar danos.
+
+
+
+. Mantenha o controle de qual compartimento de unidade cada unidade era e coloque as unidades de lado em um carrinho ou mesa sem estática.
+
+
+
+
+== Etapa 3: Substitua o chassi de dentro do rack de equipamentos ou do gabinete do sistema
+
+Você deve remover o chassi existente do rack de equipamentos ou do gabinete do sistema antes de instalar o chassi de substituição.
+
+. Retire os parafusos dos pontos de montagem do chassis.
+. Com duas pessoas, deslize o chassi antigo para fora dos trilhos do rack em um gabinete do sistema ou rack de equipamentos e, em seguida, coloque-o de lado.
+. Usando duas pessoas, instale o chassi de substituição no rack de equipamentos ou no gabinete do sistema guiando o chassi nos trilhos do rack em um gabinete do sistema ou rack de equipamentos.
+. Deslize o chassi até o rack de equipamentos ou o gabinete do sistema.
+. Fixe a parte frontal do chassi ao rack de equipamentos ou ao gabinete do sistema usando os parafusos removidos do chassi antigo.
+. Instale as unidades do chassi antigo no chassi de substituição:
++
+.. Alinhe a unidade do chassi antigo com a mesma abertura do compartimento no novo chassi.
+
+
+. Empurre cuidadosamente a unidade para dentro do chassis o mais longe possível.
++
+O manípulo do excêntrico engata e começa a rodar para cima.
+
++
+.. Empurre firmemente a unidade o resto do caminho para dentro do chassis e, em seguida, bloqueie a pega do excêntrico empurrando-a para cima e contra o suporte da unidade.
++
+Certifique-se de que fecha lentamente o manípulo do excêntrico de forma a que fique corretamente alinhado com a parte dianteira do suporte da transmissão. Ele clica quando é seguro.
+
+.. Repita o processo para as unidades restantes no sistema.
+
+
+. Se ainda não o tiver feito, instale a moldura.
+
+
+
+
+== Etapa 4: Reinstale os módulos do controlador
+
+Reinstale os módulos do controlador no chassi e reinicialize-os.
+
+. Se abrir a conduta de ar, feche a conduta de ar rodando-a até onde for.
++
+Ele deve ficar nivelado contra a chapa metálica do módulo do controlador.
+
+. Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o controlador até ao chassis.
++
+.. Rode os trincos de bloqueio para cima, para a posição de bloqueio.
+.. Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos e reconete o controlador.
++
+Se você removeu os conversores de Mídia (QSFPs ou SFPs), lembre-se de reinstalá-los se você estiver usando cabos de fibra ótica.
+
+
+
+. Repita os passos anteriores para instalar o segundo controlador no novo chassis.
+. Conete os cabos de alimentação às fontes de alimentação.
++
+
+NOTE: Se você tiver fontes de alimentação CC, reconete o bloco de alimentação às fontes de alimentação depois que o módulo do controlador estiver totalmente encaixado no chassi.
+
++
+O módulo do controlador começa a arrancar assim que é instalado e a energia é restaurada. Se ele inicializar no prompt Loader, reinicie o controlador com o `boot_ontap` comando.
+
+

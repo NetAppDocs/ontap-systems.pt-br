@@ -23,14 +23,17 @@ NOTE: Se você tentar este procedimento com agregados na gaveta que você está 
 +
 Você pode usar o `storage aggregate offline -aggregate _aggregate_name_` comando e, em seguida, o `storage aggregate delete -aggregate _aggregate_name_` comando.
 
-* Se o seu sistema for enviado em um gabinete do sistema, você precisará de uma chave de fenda Phillips para remover os parafusos que prendem a prateleira aos montantes traseiros do gabinete.
++
+Para analisar mais informações sobre esta etapa e evitar possíveis problemas de IO, consulte o https://docs.netapp.com/us-en/ontap/disks-aggregates/index.html["Visão geral de discos e agregados"^].
+
+* Se o sistema for fornecido em um gabinete do sistema, você precisará de uma chave de fenda Phillips para remover os parafusos que prendem a prateleira aos trilhos do rack do gabinete.
 
 
 .Sobre esta tarefa
 * Se você estiver removendo mais de uma prateleira a quente, remova uma prateleira de cada vez.
-* *Prática recomendada:* a prática recomendada é remover a propriedade da unidade depois de remover os agregados das unidades na gaveta que você está removendo.
+* *Prática recomendada:* a prática recomendada é limpar a propriedade da unidade depois de remover os agregados das unidades na gaveta que você está removendo.
 +
-A remoção das informações de propriedade de uma unidade sobressalente permite que a unidade seja adequadamente integrada a outro nó (conforme necessário).
+Limpar as informações de propriedade de uma unidade sobressalente permite que a unidade seja adequadamente integrada em outro nó (conforme necessário).
 
 +
 O procedimento para remover a propriedade de unidades pode ser encontrado nos discos e agrega conteúdo:
@@ -48,12 +51,11 @@ NOTE: O procedimento requer que você desative a atribuição automática de aci
 Se você não souber `_shelf_name_` o do compartimento afetado, execute o `storage shelf show` comando.
 
 +
-Uma prateleira tem três LEDs de localização: Um no painel de visualização do operador e um em cada módulo NSM. Os LEDs de localização permanecem acesos durante 30 minutos. Você pode desativá-los digitando o mesmo comando, mas usando a opção Off.
+Uma prateleira tem três LEDs de localização: Um no painel de visualização do operador e um em cada NSM. Os LEDs de localização permanecem acesos durante 30 minutos. Você pode desativá-los digitando o mesmo comando, mas usando a opção Off.
 
 * Depois de desconetar uma prateleira de portas compatíveis com RoCE não dedicadas (a bordo dos controladores, em placas PCIe compatíveis com RoCE, uma combinação de ambos, ou em módulos de e/S), você tem a opção de reconfigurar essas portas para uso em rede.
 +
-
-NOTE: Se o seu par de HA estiver executando uma versão do ONTAP 9.6, será necessário reinicializar os controladores, um de cada vez. Se o seu par de HA estiver executando o ONTAP 9.7 ou posterior, você não precisará reinicializar os controladores, a menos que uma ou ambas as controladoras estejam no modo de manutenção. Este procedimento pressupõe que nenhum controlador está no modo de manutenção.
+Se o seu par de HA estiver executando o ONTAP 9.7 ou posterior, você não precisará reinicializar os controladores, a menos que uma ou ambas as controladoras estejam no modo de manutenção. Este procedimento pressupõe que nenhum controlador está no modo de manutenção.
 
 
 
@@ -110,11 +112,11 @@ As fontes de alimentação não têm um interrutor de alimentação.
 . Remova fisicamente a prateleira do rack ou gabinete.
 +
 
-NOTE: Uma prateleira NS224 totalmente carregada pode pesar até 66,78 lbs (30,29 kg) e requer duas pessoas para levantar ou usar um elevador hidráulico. Evite remover os componentes da prateleira (da parte frontal ou traseira da prateleira) para reduzir o peso da prateleira, pois o peso da prateleira ficará desequilibrado.
+NOTE: Uma prateleira NS224 totalmente carregada pode pesar até 66,78 lbs (30,29 kg) com NSM100 módulos ou uma média de 56,8 lbs (25,8 kg) com NSM100B módulos e requer duas pessoas para levantar ou usar um elevador hidráulico. Evite remover os componentes da prateleira (da parte frontal ou traseira da prateleira) para reduzir o peso da prateleira, pois o peso da prateleira ficará desequilibrado.
 
 +
 
-NOTE: Se o seu sistema foi enviado num armário, tem de primeiro desapertar os dois parafusos Phillips que fixam a prateleira aos suportes verticais traseiros. Os parafusos estão localizados nas paredes internas da prateleira do módulo NSM inferior. Você deve remover ambos os módulos NSM para acessar os parafusos.
+NOTE: Se o sistema foi enviado em um gabinete, primeiro você deve desapertar os dois parafusos Phillips que prendem a prateleira aos trilhos do rack. Os parafusos estão localizados nas paredes internas da prateleira do NSM inferior. Você deve remover ambos os NSMs para acessar os parafusos.
 
 . Se estiver removendo mais de uma prateleira, repita as etapas 2 a 5.
 +
@@ -124,10 +126,7 @@ Caso contrário, vá para a próxima etapa.
 +
 Você executa o comando em ambos os módulos do controlador.
 
-. Você tem a opção de reconfigurar as portas compatíveis com RoCE não dedicadas para uso em rede, executando as seguintes subetapas.
-+
-Caso contrário, você é feito com este procedimento.
-
+. Você tem a opção de reconfigurar as portas compatíveis com RoCE não dedicadas para uso em rede, executando as seguintes subetapas. Caso contrário, você é feito com este procedimento.
 +
 .. Verifique os nomes das portas não dedicadas, atualmente configuradas para uso em armazenamento: `storage port show`
 +
@@ -135,7 +134,7 @@ Você pode inserir o comando em qualquer um dos módulos do controlador.
 
 +
 
-NOTE: As portas não dedicadas configuradas para uso de armazenamento são exibidas na saída da seguinte forma: Se seu par de HA estiver executando o ONTAP 9.8 ou posterior, as portas não dedicadas serão exibidas `storage` `Mode` na coluna. Se o seu par de HA estiver executando o ONTAP 9.7 ou 9,6, as portas não dedicadas, que são exibidas `false` `Is Dedicated?` na coluna, também serão exibidas `enabled` na `State` coluna.
+NOTE: As portas não dedicadas configuradas para uso de armazenamento são exibidas na saída da seguinte forma: Se seu par de HA estiver executando o ONTAP 9.8 ou posterior, as portas não dedicadas serão exibidas `storage` `Mode` na coluna. Se o seu par de HA estiver executando o ONTAP 9,7, as portas não dedicadas, exibidas `false` `Is Dedicated?` na coluna, também serão exibidas `enabled` na `State` coluna.
 
 .. Conclua o conjunto de etapas aplicáveis à versão do ONTAP que seu par de HA está sendo executado:
 +
@@ -168,28 +167,6 @@ Você deve executar este comando para cada porta que você está reconfigurando.
 ... Vá para a subetapa 8c para verificar todas as alterações de porta.
 
 
-
-
- a| 
-Uma versão do ONTAP 9.6
- a| 
-... Reconfigure as portas compatíveis com RoCE para utilização em rede, no primeiro módulo de controlador: `storage port disable -node _node name_ -port _port name_`
-+
-Você deve executar este comando para cada porta que você está reconfigurando.
-
-... Reinicie o módulo do controlador para que as alterações de porta entrem em vigor:
-+
-`system node reboot -node _node name_ -reason _reason_ for the reboot`
-
-+
-
-NOTE: A reinicialização deve ser concluída antes de prosseguir para a próxima etapa. A reinicialização pode levar até 15 minutos.
-
-... Reconfigure as portas no segundo módulo do controlador, repetindo o primeiro passo (a).
-... Reinicie o segundo controlador para que as alterações de porta entrem em vigor, repetindo o segundo passo (b).
-... Vá para a subetapa 8c para verificar todas as alterações de porta.
-
-
 |===
 .. Verifique se as portas não dedicadas de ambos os módulos do controlador são reconfiguradas para uso em rede: `storage port show`
 +
@@ -199,7 +176,7 @@ Você pode inserir o comando em qualquer um dos módulos do controlador.
 Se o seu par de HA estiver executando o ONTAP 9.8 ou posterior, as portas não dedicadas serão exibidas `network` `Mode` na coluna.
 
 +
-Se o seu par de HA estiver executando o ONTAP 9.7 ou 9,6, as portas não dedicadas, que são exibidas `false` `Is Dedicated?` na coluna, também serão exibidas `disabled` na `State` coluna.
+Se o seu par de HA estiver executando o ONTAP 9,7, as portas não dedicadas, exibidas `false` `Is Dedicated?` na coluna, também serão exibidas `disabled` na `State` coluna.
 
 
 

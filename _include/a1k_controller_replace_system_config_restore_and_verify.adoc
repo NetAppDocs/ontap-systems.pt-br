@@ -39,7 +39,6 @@ O valor para HA-State pode ser um dos seguintes:
 ** `non-ha` (não suportado)
 
 
-. Se o estado do sistema apresentado do módulo do controlador não corresponder à configuração do sistema, defina o `HA` estado para o módulo do controlador: `ha-config modify controller ha-state`
 . Confirme se a definição foi alterada: `ha-config show`
 
 

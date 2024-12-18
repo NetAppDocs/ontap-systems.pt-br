@@ -1,0 +1,30 @@
+---
+permalink: a20-30-50/chassis-replace-workflow.html 
+sidebar: sidebar 
+keywords: aff a20, aff a30, aff a50, replace the chassis workflow 
+summary: Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor. 
+---
+= Fluxo de trabalho de substituição do chassi - AFF A20, AFF A30 e AFF A50
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Siga estas etapas do fluxo de trabalho para substituir seu chassi.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"]link:chassis-replace-requirements.html["Reveja os requisitos de substituição do chassis"]
+[role="quick-margin-para"]
+Para substituir o chassi, você deve atender a certos requisitos.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"]link:chassis-replace-shutdown.html["Desligue os controladores"]
+[role="quick-margin-para"]
+Desligue os controladores para que possa efetuar a manutenção no chassis.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"]link:chassis-replace-move-hardware.html["Substitua o chassis"]
+[role="quick-margin-para"]
+A substituição do chassi inclui mover as unidades e quaisquer lacunas de unidade, controladores (com as fontes de alimentação) e moldura do chassi com deficiência para o novo chassi e trocar o chassi com deficiência pelo novo chassi do mesmo modelo que o chassi com deficiência.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"]link:chassis-replace-complete-system-restore-rma.html["Substituição completa do chassis"]
+[role="quick-margin-para"]
+Verifique o estado de HA do chassi e devolva a peça com falha ao NetApp.

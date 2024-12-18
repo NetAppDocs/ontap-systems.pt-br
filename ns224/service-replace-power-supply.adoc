@@ -19,7 +19,7 @@ Você pode substituir uma fonte de alimentação com falha sem interrupções em
 Sempre substitua como por like.
 
 * Se você estiver substituindo mais de uma fonte de alimentação, deve fazê-lo uma de cada vez para que a prateleira mantenha a energia.
-* *Prática recomendada:* a melhor prática é substituir a fonte de alimentação dentro de dois minutos após a remoção do módulo NSM.
+* *Prática recomendada:* a melhor prática é substituir a fonte de alimentação dentro de dois minutos após a remoção do NSM.
 +
 Se você exceder os dois minutos, o compartimento continuará funcionando, mas o ONTAP enviará mensagens ao console sobre a fonte de alimentação degradada até que a fonte de alimentação seja substituída.
 
@@ -29,12 +29,20 @@ Se você exceder os dois minutos, o compartimento continuará funcionando, mas o
 Se você não souber `shelf_name` o do compartimento afetado, execute o `storage shelf show` comando.
 
 +
-Uma prateleira tem três LEDs de localização: Um no painel de visualização do operador e um em cada módulo NSM. Os LEDs de localização permanecem acesos durante 30 minutos. Você pode desativá-los digitando o mesmo comando, mas usando a opção Off.
+Uma prateleira tem três LEDs de localização: Um no painel de visualização do operador e um em cada NSM. Os LEDs de localização permanecem acesos durante 30 minutos. Você pode desativá-los digitando o mesmo comando, mas usando a opção Off.
 
 * Quando desembalar a fonte de alimentação de substituição, guarde todos os materiais de embalagem para utilização quando devolver a fonte de alimentação com falha.
 +
 Se você precisar do número RMA ou de ajuda adicional com o procedimento de substituição, entre em Contato com o suporte técnico em https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"^], 888-463-8277 (América do Norte), 00-800-44-638277 (Europa) ou 800-800-80-800 (Ásia/Pacífico).
 
+* Se você estiver substituindo uma fonte de alimentação CA por uma prateleira NS224 com NSM100 módulos, você pode assistir à animação a seguir para se familiarizar com o procedimento antes de começar.
++
+.Substitua a fonte de alimentação CA para NS224 por NSM100 módulos
+[%collapsible]
+====
+.Troca a quente de uma fonte de alimentação em uma prateleira de NS224
+video::5794da63-99aa-425a-825f-aa86002f154d[panopto]
+====
 
 
 Use o procedimento apropriado para o seu tipo de PSU: AC ou DC.
@@ -43,10 +51,8 @@ Use o procedimento apropriado para o seu tipo de PSU: AC ou DC.
 ====
 .Opção 1: Substituir uma fonte de alimentação CA
 --
-Para substituir uma fonte de alimentação CA, você pode assistir à animação ou concluir as etapas a seguir.
+Siga as etapas a seguir para substituir uma fonte de alimentação CA.
 
-.Troca a quente de uma fonte de alimentação em uma prateleira de NS224
-video::5794da63-99aa-425a-825f-aa86002f154d[panopto]
 .Passos
 . Aterre-se corretamente.
 . Identifique fisicamente a fonte de alimentação com falha.
@@ -59,15 +65,37 @@ As fontes de alimentação não têm um interrutor de alimentação.
 
 . Retire a fonte de alimentação:
 +
-.. Rode o manípulo para cima, para a sua posição horizontal e, em seguida, segure-o.
-.. Com o polegar, prima a patilha azul para soltar o mecanismo de bloqueio.
-.. Retire a fonte de alimentação do módulo NSM enquanto utiliza a outra mão para suportar o peso.
+image::../media/drw_t_psu_ac_replace_ieops-2035.svg[Remova uma PSU CA]
+
++
+[cols="1,3"]
+|===
 
 
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Rode o manípulo para cima, para a sua posição horizontal e, em seguida, segure-o.
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Com o polegar, prima a patilha azul para soltar o mecanismo de bloqueio.
+
+
+
+ a| 
+image:../media/icon_round_3.png["Legenda número 3"]
+ a| 
+Retire a fonte de alimentação do NSM enquanto utiliza a outra mão para suportar o peso.
+
+|===
 . Insira a fonte de alimentação de substituição:
 +
-.. Utilizando ambas as mãos, apoie e alinhe as extremidades da fonte de alimentação com a abertura no módulo NSM.
-.. Empurre cuidadosamente a fonte de alimentação para o módulo NSM até que o mecanismo de bloqueio encaixe no lugar.
+.. Utilizando ambas as mãos, apoie e alinhe as extremidades da fonte de alimentação com a abertura no NSM.
+.. Empurre cuidadosamente a fonte de alimentação para o NSM até que o mecanismo de bloqueio encaixe no lugar.
 +
 
 NOTE: Não utilize força excessiva ou poderá danificar o conetor interno.
@@ -103,11 +131,11 @@ A ilustração e a tabela no passo 4 mostram os dois parafusos de orelhas (item 
 . Retire a fonte de alimentação:
 +
 .. Rode o manípulo para cima, para a sua posição horizontal e, em seguida, segure-o.
-.. Com o polegar, prima a patilha azul para soltar o mecanismo de bloqueio.
-.. Retire a fonte de alimentação do módulo NSM enquanto utiliza a outra mão para suportar o peso.
+.. Com o polegar, prima a patilha de terra-cotta para soltar o mecanismo de bloqueio.
+.. Retire a fonte de alimentação do NSM enquanto utiliza a outra mão para suportar o peso.
 +
 
-NOTE: A fonte de alimentação é curta. Utilize sempre as duas mãos para o apoiar quando o retirar do módulo NSM, de modo a que não se liberte do módulo NSM e o danifique.
+NOTE: A fonte de alimentação é curta. Utilize sempre as duas mãos para o apoiar quando o retirar do NSM, de modo a que não se liberte do NSM e o machuque.
 
 +
 image::../media/drw_dcpsu_remove-replace-generic_IEOPS-788.svg[Remova uma PSU CC]
@@ -141,15 +169,15 @@ Pega da fonte de alimentação
  a| 
 image:../media/icon_round_4.png["Legenda número 4"]
  a| 
-Patilha de bloqueio da fonte de alimentação azul
+Patilha de bloqueio da fonte de alimentação azul/terra cotta
 
 |===
 
 
 . Insira a fonte de alimentação de substituição:
 +
-.. Utilizando ambas as mãos, apoie e alinhe as extremidades da fonte de alimentação com a abertura no módulo NSM.
-.. Empurre cuidadosamente a fonte de alimentação para o módulo NSM até que o mecanismo de bloqueio encaixe no lugar.
+.. Utilizando ambas as mãos, apoie e alinhe as extremidades da fonte de alimentação com a abertura no NSM.
+.. Empurre cuidadosamente a fonte de alimentação para o NSM até que o mecanismo de bloqueio encaixe no lugar.
 +
 Uma fonte de alimentação deve engatar adequadamente com o conetor interno e o mecanismo de bloqueio. Repita este passo se sentir que a fonte de alimentação não está corretamente encaixada.
 

@@ -1,0 +1,134 @@
+---
+permalink: c30-60/install-prepare.html 
+sidebar: sidebar 
+keywords: aff c30, aff c60, prepare installation 
+summary: Prepare-se para instalar sua plataforma AFF C30 e AFF C60. 
+---
+= Prepare-se para instalar - AFF C30 e AFF C60
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prepare-se para instalar o sistema de armazenamento AFF C30 ou AFF C60, preparando o local, desembalando as caixas e comparando o conteúdo das caixas com o boletim de embalagem e registrando o sistema de armazenamento para acessar os benefícios de suporte.
+
+
+
+== Passo 1: Prepare o site
+
+Para instalar seu sistema de armazenamento, certifique-se de que o local e o gabinete ou rack que você planeja usar atendam às especificações de sua configuração.
+
+.Passos
+. Use https://hwu.netapp.com["NetApp Hardware Universe"^] para confirmar se o local atende aos requisitos ambientais e elétricos do sistema de armazenamento.
+. Certifique-se de ter espaço adequado para o gabinete ou rack para o seu sistema de armazenamento, prateleiras e todos os switches:
++
+** 2U para um sistema de storage
+** 2U TB para cada compartimento de armazenamento de NS224 TB
+** 1U para a maioria dos interrutores
+
+
+
+
+. Instale todos os switches de rede necessários.
++
+Consulte o https://docs.netapp.com/us-en/ontap-systems-switches/index.html["Documentação do switch"^] para obter instruções de instalação e link:https://hwu.netapp.com["NetApp Hardware Universe"^] para obter informações sobre compatibilidade.
+
+
+
+
+
+== Passo 2: Desembale as caixas
+
+Depois de garantir que o local e o gabinete ou rack que você planeja usar para o seu sistema de armazenamento atendam às especificações necessárias, desembale todas as caixas e compare o conteúdo com os itens na guia de embalagem.
+
+.Passos
+. Abra cuidadosamente todas as caixas e coloque o conteúdo de forma organizada.
+. Compare o conteúdo que você descompactou com a lista no folheto de embalagem.
++
+
+NOTE: Você pode obter sua lista de embalagem digitalizando o código QR no lado da caixa de transporte.
+
++
+Os itens a seguir são alguns dos conteúdos que você pode ver nas caixas.
+
++
+Certifique-se de que tudo nas caixas corresponde à lista no folheto de embalagem. Se houver discrepâncias, anote-as para outras ações.
+
++
+[cols="12,9,4"]
+|===
+
+
+| *Hardware* | *Cabos* |  
+
+
+ a| 
+** Painel frontal
+** Sistema de storage
+** Kits de trilhos com instruções (opcional)
+** Prateleira de armazenamento (se você pediu armazenamento adicional)
+
+ a| 
+** Cabos Ethernet de gerenciamento (cabos RJ-45)
+** Cabos de rede
+** Cabos de energia
+** Cabos de armazenamento (se você tiver pedido armazenamento adicional)
+** Cabo USB-C da consola série
+
+|  
+|===
+
+
+
+
+== Passo 3: Registre seu sistema de armazenamento
+
+Depois de garantir que o seu local cumpre os requisitos das especificações do seu sistema de armazenamento e ter verificado que tem todas as peças que encomendou, deve registar o seu sistema de armazenamento.
+
+.Passos
+. Localize os números de série do sistema (SSN) para cada controlador que está sendo instalado. Você pode encontrar os números de série nos seguintes locais:
+. Você pode encontrar os números de série nos seguintes locais:
++
+** Sobre o deslizamento da embalagem
+** No seu e-mail de confirmação
+** Em cada controlador
++
+image::../media/drw_ssn_label.svg[Exemplo do número de série do sistema que mostra a localização do número]
+
+
+
+. Vá para http://mysupport.netapp.com/["Site de suporte da NetApp"^] .
+. Determine se você precisa Registrar seu sistema de storage:
++
+[cols="1a,2a"]
+|===
+| Se você é um... | Siga estes passos... 
+
+
+ a| 
+Cliente NetApp existente
+ a| 
+.. Inicie sessão com o seu nome de utilizador e palavra-passe.
+.. Selecione *sistemas* > *Meus sistemas*.
+.. Confirme se os novos números de série estão listados.
+.. Se não estiver, siga as instruções para novos clientes NetApp.
+
+
+
+
+ a| 
+Novo cliente da NetApp
+ a| 
+.. Clique em *Registe-se agora* e crie uma conta.
+.. Selecione *Systems* > *Register Systems*.
+.. Introduza os números de série do sistema de armazenamento e os detalhes solicitados.
+
+
+Após a aprovação do seu registo, pode transferir qualquer software necessário. O processo de aprovação pode demorar até 24 horas.
+
+|===
+
+
+.O que se segue?
+Depois de se preparar para instalar o sistema de storage, link:install-hardware.html["instale o hardware do seu sistema de armazenamento"]você .

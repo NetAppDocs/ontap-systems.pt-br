@@ -1,0 +1,122 @@
+---
+permalink: c80/controller-replace-recable-reassign-disks.html 
+sidebar: sidebar 
+keywords: c80, how to recable the system, teboot the system 
+summary: É necessário reiniciar o armazenamento de dados do controlador. 
+---
+= Recable e devolver o controlador - AFF C80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Verifique as conexões de armazenamento e rede e, em seguida, devolva o controlador.
+
+
+
+== Devolva o controlador
+
+Redefina a encriptação se ativada e volte a colocar o controlador em funcionamento normal.
+
+[role="tabbed-block"]
+====
+.Sem criptografia
+--
+. No prompt Loader, digite `boot_ontap`.
+. Pressione <enter> quando as mensagens do console pararem.
++
+** Se você vir o prompt _login_, vá para a próxima etapa no final desta seção.
+** Se você vir _aguardando giveback_, pressione a tecla <enter>, faça login no nó do parceiro e vá para a próxima etapa no final desta seção.
+
+
+. Devolva o controlador afetado ao funcionamento normal, devolvendo o respetivo armazenamento: `storage failover giveback -ofnode _impaired_node_name_`.
+. Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true`.
+. Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos: `system node autosupport invoke -node * -type all -message MAINT=END`.
+
+
+--
+.Criptografia integrada (OKM)
+--
+. No prompt Loader, digite `boot_ontap maint`.
+. Inicie no menu ONTAP a partir do prompt Loader `boot_ontap menu` e selecione a opção 10.
+. Introduza a frase-passe OKM. Pode obter esta frase-passe do cliente ou https://support.netapp.com["Suporte à NetApp"] contactar .
++
+
+NOTE: Você será solicitado duas vezes para a senha.
+
+. Insira os dados da chave de backup quando solicitado.
+. No menu de inicialização, insira a opção `1` para inicialização normal.
+. Pressione <enter> quando _Waiting for giveback_ for exibido.
+. Mova o cabo do console para o nó do parceiro e faça login como `admin`.
+. Certifique-se de que todos os despejos do núcleo no nó reparado sejam salvos indo para o modo avançado" `set -privilege advanced` e `run local partner savecore` depois .
+. Voltar à alavanca de administração `set privilege admin`: .
+. Devolver apenas os agregados CFO (o agregado raiz): `storage failover giveback -fromnode local -only-cfo-aggregates true`
++
+** Se encontrar erros, https://support.netapp.com["Suporte à NetApp"] contacte .
+
+
+. Aguarde 5 minutos após a conclusão do relatório de giveback e verifique o status de failover e o status de giveback `storage failover show`: E `storage failover show-giveback`.
+. Mova o cabo do console para o nó de substituição e entre `security key-manager onboard sync`
++
+
+NOTE: Você será solicitado a fornecer a senha do OKM para o cluster.
+
+. Verificar o estado das chaves com o seguinte comando `security key-manager key query -key-type svm-KEK`: .
++
+Se a coluna _restored_ mostrar qualquer coisa, exceto _true_, entre em Contato https://support.netapp.com["Suporte à NetApp"]com .
+
+. Devolva o controlador afetado ao funcionamento normal, devolvendo o respetivo armazenamento: `storage failover giveback -ofnode _impaired_node_name_`.
+. Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true`.
+. Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos: `system node autosupport invoke -node * -type all -message MAINT=END`.
+
+
+--
+.Gestor de chaves externo (EKM)
+--
+. Se o volume raiz estiver criptografado com o Gerenciador de chaves Externo e o cabo do console estiver conetado ao nó de substituição, insira `boot_ontap menu` e selecione a opção `11`.
+. Responda `y` ou `n` às seguintes perguntas:
++
+Você tem uma cópia do arquivo /cfcard/kmip/certs/client.crt? não é possível aceder a este site
+
++
+Você tem uma cópia do arquivo /cfcard/kmip/certs/client.key? não é possível aceder a este site
+
++
+Você tem uma cópia do arquivo /cfcard/kmip/certs/CA.pem? não é possível aceder a este site
+
++
+OU
+
++
+Você tem uma cópia do arquivo /cfcard/kmip/servers.cfg? não é possível aceder a este site
+
++
+Você conhece o endereço do servidor KMIP? não é possível aceder a este site
+
++
+Você conhece a porta KMIP? não é possível aceder a este site
+
++
+
+NOTE: Contacte https://support.netapp.com["Suporte à NetApp"] se tiver problemas.
+
+. Fornecer as informações para:
++
+** O conteúdo do arquivo do certificado do cliente (client.crt).
+** O conteúdo do arquivo de chave do cliente (client.key).
+** O conteúdo do arquivo de CA(s) do servidor KMIP (CA.pem).
+** O endereço IP do servidor KMIP.
+** A porta para o servidor KMIP.
+
+
+. Uma vez que o sistema processa, você verá o Menu de inicialização. Selecione "1" para o arranque normal.
+. Verificar o estado da aquisição: `storage failover show`.
+. Certifique-se de que todos os despejos do núcleo no nó reparado sejam salvos indo para o modo avançado" `set -privilege advanced` e `run local partner savecore` depois .
+. Devolva o controlador afetado ao funcionamento normal, devolvendo o respetivo armazenamento: `storage failover giveback -ofnode _impaired_node_name_`.
+. Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true`.
+. Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos: `system node autosupport invoke -node * -type all -message MAINT=END`.
+
+
+--
+====

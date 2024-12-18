@@ -1,0 +1,24 @@
+---
+permalink: c80/io-module-overview.html 
+sidebar: sidebar 
+keywords: AFF C80, replace io module 
+summary: 'Você deve substituir o componente com falha por um componente de unidade substituível de campo (FRU) de substituição que você recebeu de seu provedor.' 
+---
+= Descrição geral do módulo de e/S adicional e de substituição - AFF C80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode substituir um módulo de e/S com falha em seu sistema de armazenamento pelo mesmo tipo de módulo de e/S ou por um tipo diferente de módulo de e/S. Você também pode adicionar um módulo de e/S a um sistema com slots vazios.
+
+* link:io-module-add.html["Adicione um módulo de e/S."]
++
+Adicionar módulos adicionais pode melhorar a redundância, ajudando a garantir que o sistema permaneça operacional mesmo que um módulo falhe.
+
+* link:io-module-replace.html["Substitua um módulo de e/S."]
++
+A substituição de um módulo de e/S com falha pode restaurar o sistema ao seu estado de funcionamento ideal.
+
+

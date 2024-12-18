@@ -1,0 +1,328 @@
+= Passo 1: Remova o controlador
+:allow-uri-read: 
+
+
+Para substituir o suporte de arranque, tem de remover o controlador afetado, remover o suporte de arranque, instalar o suporte de arranque de substituição e transferir a imagem de arranque para uma unidade flash USB.
+
+
+
+== Passo 1: Remova o controlador
+
+Você deve remover o controlador do chassi quando substituir o controlador ou substituir um componente dentro do controlador.
+
+.Antes de começar
+Todos os outros componentes do sistema de armazenamento têm de estar a funcionar corretamente; caso contrário, tem de contactar https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de prosseguir com este procedimento.
+
+.Passos
+. No controlador desativado, certifique-se de que o LED NV está desligado.
++
+Quando o LED NV está desligado, o desaquecimento está completo e é seguro remover o controlador afetado.
+
++
+
+NOTE: Se o LED NV estiver intermitente (verde), as destage estão em curso. Tem de aguardar que o LED NV se desligue. No entanto, se a intermitência continuar durante mais de cinco minutos, contacte https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de continuar com este procedimento.
+
++
+O LED NV está localizado junto ao ícone NV no controlador.
+
++
+image::../media/drw_g_nvmem_led_ieops-1839.svg[Localização do LED de estado NV]
+
+
+
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Ícone NV e LED no controlador
+
+|===
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Desligue a alimentação do controlador desativado:
++
+
+NOTE: As fontes de alimentação (PSUs) não têm um interrutor de alimentação.
+
++
+[cols="1,2"]
+|===
+| Se você está desligando um... | Então... 
+
+
+ a| 
+PSU CA
+ a| 
+.. Abra o retentor do cabo de alimentação.
+.. Desconete o cabo de alimentação da PSU e coloque-o de lado.
+
+
+
+
+ a| 
+FONTE DE ALIMENTAÇÃO CC
+ a| 
+.. Desaperte os dois parafusos de orelhas no conetor do cabo de alimentação DC D-SUB.
+.. Desconete o cabo de alimentação da PSU e coloque-o de lado.
+
+
+|===
+. Desconete todos os cabos do controlador desativado.
++
+Mantenha o controle de onde os cabos foram conetados.
+
+. Retire o controlador desativado:
++
+A ilustração a seguir mostra a operação das alças do controlador (do lado esquerdo do controlador) ao remover um controlador:
+
++
+image::../media/drw_g_and_t_handles_remove_ieops-1837.svg[operação da alavanca do controlador para remover um controlador]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Em ambas as extremidades do controlador, empurre as patilhas de bloqueio verticais para fora para soltar as pegas.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+** Puxe as pegas na sua direção para retirar o comando do plano médio.
++
+À medida que você puxa, as alças se estendem para fora do controlador e, em seguida, você sente alguma resistência, continue puxando.
+
+** Deslize o controlador para fora do chassi enquanto suporta a parte inferior do controlador e coloque-o em uma superfície plana e estável.
+
+
+
+
+ a| 
+image::../media/icon_round_3.png[Legenda número 3]
+ a| 
+Se necessário, rode as pegas para a posição vertical (junto às patilhas) para as retirar do caminho.
+
+|===
+. Coloque o controlador num tapete anti-estático.
+. Abra a tampa do controlador rodando o parafuso de aperto manual no sentido contrário ao dos ponteiros do relógio para soltar e, em seguida, abra a tampa.
+
+
+
+
+== Passo 2: Substitua o suporte de arranque
+
+Para substituir o suporte de arranque, localize-o no interior do controlador e siga a sequência específica de passos.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Remova o suporte de arranque:
++
+image::../media/drw_g_boot_media_replace_ieops-1872.svg[Mídia de inicialização Substituir gráfico]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Localização do suporte de arranque
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+Prima a patilha azul para soltar a extremidade direita do suporte de arranque.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Legenda número 3]
+ a| 
+Levante a extremidade direita do suporte de arranque a um ligeiro ângulo para obter uma boa aderência ao longo dos lados do suporte de arranque.
+
+
+
+ a| 
+image::../media/icon_round_4.png[Legenda número 4]
+ a| 
+Puxe cuidadosamente a extremidade esquerda do suporte de arranque para fora do respetivo encaixe.
+
+|===
+. Instale o suporte de arranque de substituição:
++
+.. Remova o suporte de arranque do respetivo pacote.
+.. Faça deslizar a extremidade da tomada do suporte de arranque para o respetivo encaixe.
+.. Na extremidade oposta do suporte de arranque, prima e mantenha premida a patilha azul (na posição aberta), empurre suavemente a extremidade do suporte de arranque até parar e, em seguida, solte a patilha para bloquear o suporte de arranque.
+
+
+
+
+
+
+== Etapa 3: Reinstale o controlador
+
+Reinstale o controlador no chassi, mas não o reinicialize.
+
+.Sobre esta tarefa
+A ilustração a seguir mostra a operação das alças do controlador (do lado esquerdo de um controlador) ao reinstalar o controlador e pode ser usada como referência para as demais etapas de reinstalação do controlador.
+
+image::../media/drw_g_and_t_handles_reinstall_ieops-1838.svg[operação da alavanca do controlador para instalar um controlador]
+
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Se tiver girado as pegas do controlador na vertical (junto às patilhas) para as afastar enquanto efetua a manutenção do controlador, rode-as para a posição horizontal.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+Empurre as alças para reinserir o controlador no chassi até meio e, quando instruído, empurre até que o controlador esteja totalmente assentado.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Legenda número 3]
+ a| 
+Rode as pegas para a posição vertical e bloqueie-as com as patilhas de bloqueio.
+
+|===
+.Passos
+. Feche a tampa do controlador e rode o parafuso de aperto manual no sentido dos ponteiros do relógio até ficar apertado.
+. Introduza o controlador a meio caminho no chassis.
++
+Alinhe a parte traseira do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o controlador utilizando as pegas.
+
++
+
+NOTE: Não introduza completamente o controlador no chassis até ser instruído a fazê-lo mais tarde neste procedimento.
+
+. Reconecte os cabos ao controlador; no entanto, não conete o cabo de alimentação à fonte de alimentação (PSU) neste momento.
++
+
+NOTE: Certifique-se de que o cabo da consola está ligado ao controlador porque pretende registar e registar a sequência de arranque mais tarde no procedimento de substituição do suporte de arranque quando colocar totalmente o controlador no chassis e este começa a arrancar.
+
+
+
+
+
+== Passo 4: Transfira a imagem de arranque para o suporte de arranque
+
+A Mídia de inicialização de substituição que você instalou não tem uma imagem ONTAP, então você precisa transferir uma imagem ONTAP usando uma unidade flash USB.
+
+.Antes de começar
+* Você deve ter uma unidade flash USB, formatada para FAT32, com pelo menos 4GBGB de capacidade.
+* Você deve ter uma cópia da mesma versão de imagem do ONTAP que a controladora prejudicada estava sendo executada. Você pode baixar a imagem apropriada da https://support.netapp.com/downloads["Downloads"] seção no site de suporte da NetApp
++
+** Se for suportado NVE, transfira a imagem com encriptação de volume NetApp, conforme indicado no botão de transferência.
+** Se não for suportado NVE, transfira a imagem sem encriptação de volume NetApp, conforme indicado no botão de transferência.
+
+
+* Você deve ter uma conexão de rede entre as portas de gerenciamento de nós dos controladores (normalmente as interfaces e0M).
+
+
+.Passos
+. Transfira e copie a imagem de serviço adequada do https://mysupport.netapp.com/["Site de suporte da NetApp"] para a unidade flash USB.
++
+.. Transfira a imagem de serviço a partir do link Downloads na página, para o seu espaço de trabalho no seu computador portátil.
+.. Descompacte a imagem de serviço.
++
+
+NOTE: Se você estiver extraindo o conteúdo usando o Windows, não use o WinZip para extrair a imagem netboot. Use outra ferramenta de extração, como 7-Zip ou WinRAR.
+
++
+A unidade flash USB deve ter a imagem ONTAP apropriada do que o controlador afetado está a executar.
+
+.. Retire a unidade flash USB do seu computador portátil.
+
+
+. Insira a unidade flash USB na porta USB-A no controlador com problemas.
++
+Certifique-se de que instala a unidade flash USB na ranhura identificada para dispositivos USB e não na porta da consola USB.
+
+. Assente totalmente o controlador desativado no chassis:
++
+.. Empurre firmemente as alças até que o controlador atenda ao plano médio e esteja totalmente assentado.
++
+
+NOTE: Não utilize força excessiva ao deslizar o controlador para dentro do chassis; pode danificar os conetores.
+
++
+
+NOTE: O controlador é inicializado quando totalmente assentado no chassi. Ele obtém seu poder do controlador do parceiro.
+
+.. Rode as pegas do controlador para cima e bloqueie-as com as patilhas.
+
+
+. Interrompa o processo de inicialização pressionando Ctrl-C para parar no prompt DO Loader.
++
+Se você perder essa mensagem, pressione Ctrl-C, selecione a opção para inicializar no modo Manutenção e, em seguida, interrompa o controlador para inicializar NO Loader.
+
+. Defina o tipo de conexão de rede no prompt DO Loader:
++
+** Se estiver a configurar DHCP:
++
+`ifconfig e0M -auto`
+
++
+
+NOTE: A porta de destino configurada é a porta de destino utilizada para comunicar com o controlador afetado a partir do controlador saudável durante a restauração do sistema de ficheiros var com uma ligação de rede. Você também pode usar a porta e0M neste comando.
+
+** Se você estiver configurando conexões manuais
++
+`ifconfig e0M -addr=filer_addr -mask=netmask -gw=gateway`
+
++
+*** Filer_addr é o endereço IP do sistema de armazenamento.
+*** Netmask é a máscara de rede da rede de gerenciamento conetada ao parceiro HA.
+*** gateway é o gateway da rede.
+
+
++
+
+NOTE: Outros parâmetros podem ser necessários para sua interface. Você pode digitar `help ifconfig` no prompt do firmware para obter detalhes.
+
+
+
+. Reconecte o cabo de alimentação à fonte de alimentação (PSU) no controlador desativado.
++
+Uma vez que a energia é restaurada para a PSU, o LED de status deve estar verde.
+
++
+[cols="1,2"]
+|===
+| Se você está reconetando um... | Então... 
+
+
+ a| 
+PSU CA
+ a| 
+.. Ligue o cabo de alimentação à PSU.
+.. Fixe o cabo de alimentação com o fixador do cabo de alimentação.
+
+
+
+
+ a| 
+FONTE DE ALIMENTAÇÃO CC
+ a| 
+.. Ligue o conetor do cabo de alimentação DC D-SUB à PSU.
+.. Aperte os dois parafusos de orelhas para fixar o conetor do cabo de alimentação D-SUB DC à PSU.
+
+
+|===
+

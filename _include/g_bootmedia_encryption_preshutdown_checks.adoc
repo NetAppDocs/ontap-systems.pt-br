@@ -1,0 +1,13 @@
+= Verifique o NVE ou o NSE nos sistemas
+:allow-uri-read: 
+
+
+Antes de desligar o controlador com deficiência e verificar o status das chaves de criptografia integradas, você deve verificar o status do controlador com deficiência, desativar a giveback automática e verificar a versão do ONTAP que está sendo executada.
+
+Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
+
+
+
+== Verifique o NVE ou o NSE nos sistemas
+
+Diretiva não resolvida no <stdin> - include:../_include/encryption_check_915_later.adoc[]

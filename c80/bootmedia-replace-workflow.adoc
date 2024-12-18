@@ -1,0 +1,42 @@
+---
+permalink: c80/bootmedia-replace-workflow.html 
+sidebar: sidebar 
+keywords: aff c80, replace the boot media 
+summary: Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor. 
+---
+= Fluxo de trabalho de substituição de Mídia de inicialização - AFF C80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Siga estas etapas do fluxo de trabalho para substituir a Mídia de inicialização.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"]link:bootmedia-replace-requirements.html["Reveja os requisitos do suporte de arranque"]
+[role="quick-margin-para"]
+Reveja os requisitos para substituir o suporte de arranque.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"]link:bootmedia-encryption-preshutdown-checks.html["Verifique o suporte e o status da chave de criptografia"]
+[role="quick-margin-para"]
+Verifique se o sistema tem o gerenciador de chaves de segurança ativado ou discos criptografados.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"]link:bootmedia-shutdown.html["Desligue o controlador desativado"]
+[role="quick-margin-para"]
+Encerre ou assuma o controlador afetado para que o controlador saudável continue a fornecer dados do armazenamento do controlador afetado.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"]link:bootmedia-replace.html["Substitua o suporte de arranque"]
+[role="quick-margin-para"]
+Remova o suporte de arranque com falha do módulo de gestão do sistema e instale o suporte de arranque de substituição e, em seguida, transfira uma imagem ONTAP utilizando uma unidade flash USB.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinco"]link:bootmedia-recovery-image-boot.html["Inicie a imagem de recuperação"]
+[role="quick-margin-para"]
+Inicie a imagem ONTAP a partir da unidade USB, restaure o sistema de ficheiros e verifique as variáveis ambientais.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Seis"]link:bootmedia-encryption-restore.html["Restaure a criptografia"]
+[role="quick-margin-para"]
+Restaure a configuração do gerenciador de chaves integrado ou o gerenciador de chaves externo no menu de inicialização do ONATP.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png["Sete"]link:bootmedia-complete-rma.html["Devolva a peça com falha ao NetApp"]
+[role="quick-margin-para"]
+Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit.
