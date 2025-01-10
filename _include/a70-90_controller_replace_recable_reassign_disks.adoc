@@ -40,8 +40,6 @@ NOTE: Você será solicitado duas vezes para a senha.
 . No menu de inicialização, insira a opção `1` para inicialização normal.
 . Pressione <enter> quando _Waiting for giveback_ for exibido.
 . Mova o cabo do console para o nó do parceiro e faça login como `admin`.
-. Certifique-se de que todos os despejos do núcleo no nó reparado sejam salvos indo para o modo avançado" `set -privilege advanced` e `run local partner savecore` depois .
-. Voltar à alavanca de administração `set privilege admin`: .
 . Devolver apenas os agregados CFO (o agregado raiz): `storage failover giveback -fromnode local -only-cfo-aggregates true`
 +
 ** Se encontrar erros, https://support.netapp.com["Suporte à NetApp"] contacte .

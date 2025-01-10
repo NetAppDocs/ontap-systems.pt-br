@@ -11,7 +11,7 @@ summary: Saiba mais sobre a versão com suporte do ONTAP para sua plataforma ou 
 
 
 [role="lead"]
-Os sistemas de storage ONTAP são compatíveis com várias versões do software ONTAP. Saiba mais sobre as versões do ONTAP que seus sistemas de storage e compartimentos de unidades dão suporte.
+Os sistemas de storage ONTAP são compatíveis com várias versões do software ONTAP. Saiba mais sobre as versões do ONTAP que seus sistemas de storage e compartimentos de unidades oferecem suporte.
 
 O suporte completo à configuração e as limitações para sistemas de hardware ONTAP estão disponíveis no  https://hwu.netapp.com["NetApp Hardware Universe"]. Detalhes sobre problemas conhecidos, limitações e avisos de atualização no software ONTAP 9 estão disponíveis no https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["ONTAP 9 Notas de versão"].
 
@@ -21,7 +21,7 @@ O suporte completo à configuração e as limitações para sistemas de hardware
 --
 Os sistemas AFF A-Series e AFF C-Series oferecem uma plataforma robusta, com escalabilidade horizontal, adaptada para ambientes virtualizados. Eles podem ser implantados como sistemas autônomos ou como camadas de alta performance nas configurações do NetApp ONTAP. link:https://www.netapp.com/data-storage/all-flash-san-storage-array["Saiba mais sobre os sistemas AFF"].
 
-Os sistemas AFF A-Series e AFF C-Series são compatíveis com as seguintes versões do ONTAP.
+Os sistemas AFF A-Series e AFF C-Series são compatíveis a partir das seguintes versões do ONTAP.
 
 ONTAP 9.16,1::
 +
@@ -83,7 +83,7 @@ ONTAP 9,7::
 --
 Os sistemas ASA R2 fornecem uma solução unificada de hardware e software que cria uma experiência simplificada específica para as necessidades dos clientes somente de SAN. link:https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["Saiba mais sobre os sistemas ASA R2"].
 
-Os sistemas ASA R2 são compatíveis com as seguintes versões do ONTAP.
+Os sistemas ASA R2 são suportados a partir das seguintes versões do ONTAP.
 
 ONTAP 9.16,0::
 +
@@ -101,7 +101,7 @@ ONTAP 9.16,0::
 --
 Os sistemas ASA A-Series e ASA C-Series oferecem uma experiência de SAN simplificada e dedicada que fornece disponibilidade de dados contínua para bancos de dados empresariais essenciais e outros workloads SAN que usam o protocolo FCP ou iSCSI. link:https://www.netapp.com/data-storage/all-flash-san-storage-array["Saiba mais sobre os sistemas ASA"].
 
-Os sistemas ASA são compatíveis com as seguintes versões do ONTAP.
+Os sistemas ASA são suportados a partir das seguintes versões do ONTAP.
 
 ONTAP 9.13.1P1::
 +
@@ -144,7 +144,7 @@ ONTAP 9,7::
 --
 Os sistemas FAS oferecem storage secundário eficiente e seguro, a melhor solução para disposição em camadas, backup e recuperação de desastres. link:https://www.netapp.com/data-storage/fas/["Saiba mais sobre os sistemas FAS"].
 
-Os sistemas FAS são compatíveis com as seguintes versões do ONTAP.
+Os sistemas FAS são suportados a partir das seguintes versões do ONTAP.
 
 ONTAP 9.15,1::
 +

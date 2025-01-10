@@ -46,11 +46,9 @@ image::../media/drw_ssn_label.png[Exemplo de número de série do sistema]
 +
 A tabela a seguir identifica os tipos de cabos que você pode receber. Se receber um cabo não listado na tabela, consulte link:https://hwu.netapp.com["NetApp Hardware Universe"^] para localizar o cabo e identificar a respetiva utilização.
 
-
-
++
+[cols="1,2,1,2"]
 |===
-
-
 | Tipo de cabo... | Número de peça e comprimento | Tipo de conetor | Para... 
 
 
@@ -457,7 +455,7 @@ O System Manager é aberto.
 
 . Utilize a configuração guiada do System Manager para configurar o sistema utilizando os dados recolhidos no link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["Guia de configuração do ONTAP"^].
 . Verifique a integridade do sistema executando o Config Advisor.
-. Depois de concluir a configuração inicial, vá para a link:https://www.netapp.com/data-management/oncommand-system-documentation/["Recursos de documentação do Gerenciador de sistema do ONTAP  ONTAP"^] página para obter informações sobre como configurar recursos adicionais no ONTAP.
+. Depois de concluir a configuração inicial, vá para para https://docs.netapp.com/us-en/ontap/index.html["Documentação do ONTAP 9"^] para obter informações sobre como configurar recursos adicionais no ONTAP.
 
 
 
@@ -519,5 +517,5 @@ NOTE: O formato para o endereço é https://x.x.x.x+.
 
 
 . Verifique a integridade do sistema executando o Config Advisor.
-. Depois de concluir a configuração inicial, vá para a link:https://www.netapp.com/data-management/oncommand-system-documentation/["Recursos de documentação do Gerenciador de sistema do ONTAP  ONTAP"^] página para obter informações sobre como configurar recursos adicionais no ONTAP.
+. Depois de concluir a configuração inicial, vá para para https://docs.netapp.com/us-en/ontap/index.html["Documentação do ONTAP 9"^] para obter informações sobre como configurar recursos adicionais no ONTAP.
 

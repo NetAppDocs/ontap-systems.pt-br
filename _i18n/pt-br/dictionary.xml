@@ -2448,7 +2448,6 @@
   <block id="69c68a07899b46965d63bdd6fea6e0da" category="paragraph"><block ref="4d9c822f717329c7000654e8bae09ae4" prefix="" category="inline-code"></block></block>
   <block id="1857c0ed792dbbfc2525805e6132de0b" category="paragraph">O ecrã apresenta a seguinte mensagem:</block>
   <block id="c285ffddf1786cd1a14a26bcf9b74c7d" category="paragraph"><block ref="061047859ec1e213bd771fe5350bda2c" prefix="" category="inline-code"></block></block>
-  <block id="811ae15d713f8c846d0516e053f895b2" category="list-text">Monitore o processo de recuperação de Mídia de inicialização à medida que O Loader configura as portas de cluster locais e é executado<block ref="83a4445bcfef2bd179eaffaabe3b3c20" prefix=" " category="inline-code"></block> a partir do nó do parceiro.</block>
   <block id="8f616ca67798afd132662e15fc4caa28" category="paragraph">Quando o netboot está em execução, a<block ref="f6715e6f2a651bfc51d27566b1be5385" prefix=" " category="inline-code"></block> mensagem é exibida.</block>
   <block id="39cb6e7651585d511fc148af8198837f" category="open-title">Sem criptografia</block>
   <block id="aada4d2dac8a2a5bd04bf211104ff2c5" category="paragraph">Se nenhuma criptografia for detetada, o processo de recuperação de Mídia de inicialização continuará sem exigir o gerenciamento de chaves.</block>
@@ -4071,8 +4070,6 @@
   <block id="b3a9c9a12a5c08d26dedba9b785cdd73" category="video-title">Animação - Conete seu laptop ao interrutor de gerenciamento</block>
   <block id="b0312e5410d679be9e7767f60affd0f9" category="list-text">Use a configuração guiada pelo Gerenciador de sistema para configurar o sistema usando os dados coletados no _Guia de configuração do NetApp ONTAP_.</block>
   <block id="a0088be4d3f107601d8dc70168cc815e" category="paragraph"><block ref="a0088be4d3f107601d8dc70168cc815e" category="inline-link-rx"></block></block>
-  <block id="32ff0984d1cda5a6a82a31ba6abcaf25" category="inline-link">Recursos de documentação do Gerenciador de sistema do ONTAP &amp;amp; ONTAP</block>
-  <block id="9d0be0d6f61b9f5f1bd1c769171e1a51" category="list-text">Depois de concluir a configuração inicial, vá para a<block ref="8203f64117389bb7bbdf8d4d70d36e4d" category="inline-link-rx"></block> página para obter informações sobre como configurar recursos adicionais no ONTAP.</block>
   <block id="9e22e123b14b1f7e6da8d2bfe46c63a7" category="section-title">Opção 2: Concluir a configuração e a configuração do sistema se a deteção de rede não estiver ativada</block>
   <block id="9bd015997b6e1551fc91d1a6374fc274" category="list-text">Faça o cabo e configure o seu laptop ou console:</block>
   <block id="43a2f5067c714d18745f4ff886e4d131" category="admonition">Consulte a ajuda on-line do seu laptop ou console para saber como configurar a porta do console.</block>
@@ -4203,7 +4200,6 @@
   <block id="423ba51655c4d8cf97fea5498fc8182b" category="list-text">Clique em *rede* no painel esquerdo.</block>
   <block id="52cc73fca17e9ee46a84b54fe8d9c8f2" category="list-text">Clique com o botão direito do rato e selecione *Refresh*.</block>
   <block id="26e92d478a1389009c384007225dc825" category="list-text">Utilize a configuração guiada do System Manager para configurar o sistema utilizando os dados recolhidos no <block ref="571ad76602d16a750ecd1119ab38063c" category="inline-link-macro-rx"></block>.</block>
-  <block id="e6db50cefb25b43305353a6a987f05e3" category="list-text">Depois de concluir a configuração inicial, vá para a <block ref="9c0a34143b47aa65068059820284fe99" category="inline-link-macro-rx"></block> página para obter informações sobre como configurar recursos adicionais no ONTAP.</block>
   <block id="aeef38b8f860290dfafd28f807c628f7" category="admonition">O formato para o endereço é https://x.x.x.x+.</block>
   <block id="abda447c368c0080cdf2af6a77ea3d22" category="list-text">Configure o sistema utilizando os dados recolhidos no <block ref="571ad76602d16a750ecd1119ab38063c" category="inline-link-macro-rx"></block>.</block>
   <block id="7d9036d60bbca8f733402060d735f7ba" category="summary">Esta seção fornece instruções gráficas para uma instalação típica do seu sistema, desde o empilhamento em rack e cabeamento, até o lançamento inicial do sistema. Use este guia se estiver familiarizado com a instalação de sistemas NetApp.</block>
@@ -5332,7 +5328,6 @@
   <block id="c866cf78ea22fe8b8a7122b28202ae22" category="paragraph"><block ref="c866cf78ea22fe8b8a7122b28202ae22" category="inline-link-rx"></block></block>
   <block id="acd7b72db18d0ae87815c2b9586bcc35" category="paragraph"><block ref="acd7b72db18d0ae87815c2b9586bcc35" category="inline-link-rx"></block></block>
   <block id="3868a54921a81264bddb64b574765582" category="paragraph"><block ref="3868a54921a81264bddb64b574765582" category="inline-link-rx"></block></block>
-  <block id="5ee8cd6a87d8b25f71b533639902587c" category="list-text">Depois de concluir a configuração inicial, vá para a<block ref="3cd2da01c2a4ba58d102a6abe7a05e1f" category="inline-link-rx"></block> página para obter informações sobre como configurar recursos adicionais no ONTAP.</block>
   <block id="b3364f412d1466e4f6e340836fff9abb" category="paragraph">Se não estiver a utilizar um computador portátil ou uma consola Windows ou Mac ou se a deteção automática não estiver ativada, tem de concluir a configuração e a configuração utilizando esta tarefa.</block>
   <block id="756311dd61e5d2b34e7f3e6941908f6d" category="image-alt">Ligação do cabo da consola</block>
   <block id="79f9797d84bf75ae713143b18a0030f3" category="paragraph">As NS224 gavetas são pré-configuradas para as IDs de gaveta 00 e 01. Se você quiser alterar as IDs de gaveta, você deve criar uma ferramenta para inserir no orifício onde o botão está localizado. Consulte <block ref="59d7f7611d6a3a02163f2743d346863e" category="inline-link-macro-rx"></block> para obter instruções detalhadas.</block>
@@ -7894,10 +7889,6 @@
   <block id="3ed6da3ce264f0c66cef48e19cd15c73" category="doc">Ferramentas e equipamentos necessários</block>
   <block id="f9fe90b9a7c32c659a86cfe53f6587b1" category="list-text">O guia de hardware apropriado para as gavetas de disco</block>
   <block id="bcf8fb15c418590ecd335df2dcfad4e4" category="list-text">As instruções de instalação e configuração apropriadas para o seu sistema</block>
-  <block id="5d69fd338b800eeec5483a90a86e34c3" category="inline-link">Recursos de documentação do All Flash FAS</block>
-  <block id="94ca956ba088a0239acd4c8e7349af15" category="paragraph"><block ref="94ca956ba088a0239acd4c8e7349af15" category="inline-link-rx"></block></block>
-  <block id="bc36b7561098172a45ca8601c91c3c1c" category="inline-link">Recursos de documentação dos sistemas de storage da FAS</block>
-  <block id="ffd3191487f66e44a54010853dc2463b" category="paragraph"><block ref="ffd3191487f66e44a54010853dc2463b" category="inline-link-rx"></block></block>
   <block id="45b8f0b842002ec85fb07171d4b0d278" category="list-text">Chaves de fenda Phillips nº 1 e nº 2</block>
   <block id="ac6201b7b810f81cfaef54d4d8fe63d5" category="list-text">Controlador TORQ para parafusos do armário do sistema</block>
   <block id="830cb2795d80d2d868f65bf4fc0302ba" category="list-text">Ferramenta de nivelamento para nivelamento do armário do sistema</block>
@@ -10006,7 +9997,6 @@
   <block id="e5954b5f665f3b9aee4023c5d8eb4f5f" category="list-text">Pressione &lt;enter&gt; quando _Waiting for giveback_ for exibido.</block>
   <block id="68921013f9ca843f9d1bcfd514ee67de" category="list-text">Mova o cabo do console para o nó do parceiro e faça login como<block ref="21232f297a57a5a743894a0e4a801fc3" prefix=" " category="inline-code"></block>.</block>
   <block id="92e13c6a52e1a9d4e2955cd77e4db99d" category="list-text">Certifique-se de que todos os despejos do núcleo no nó reparado sejam salvos indo para o modo avançado"<block ref="0581d0d071ad835f74bf419081ce5d75" prefix=" " category="inline-code"></block> e<block ref="7f4756e08687048c35020c40f9c8567b" prefix=" " category="inline-code"></block> depois .</block>
-  <block id="2b0a436148e337f3515c283e053a817b" category="list-text">Voltar à alavanca de administração<block ref="4282e6e28684065097c0d90042d19b11" prefix=" " category="inline-code"></block>: .</block>
   <block id="9e989767231ec29efb85ce3345c961ff" category="list-text">Devolver apenas os agregados CFO (o agregado raiz):<block ref="291b31306c2e0668f091d41edca7e97f" prefix=" " category="inline-code"></block></block>
   <block id="e28912f373bd8bce85f7c259590bbe92" category="list-text">Se encontrar erros,<block ref="dac6ef02422de09259cb8cc562a669a7" category="inline-link-rx"></block> contacte .</block>
   <block id="bfc2c53d06a8a433a0fef8b142ab388e" category="list-text">Aguarde 5 minutos após a conclusão do relatório de giveback e verifique o status de failover e o status de giveback<block ref="ddf400f1cb6b8b9330ed6c79c508123c" prefix=" " category="inline-code"></block>: E<block ref="852ce55a153bc728405ba8a2c95bcdf1" prefix=" " category="inline-code"></block>.</block>
@@ -10629,7 +10619,6 @@
   <block id="fe464b77547b113c26b6c4a663f8d99c" category="paragraph">Tome as precauções necessárias ao mover ou levantar a prateleira.</block>
   <block id="55a163291cdcad8ab6af6a932720e193" category="inline-link-macro">Saiba mais sobre os sistemas AFF</block>
   <block id="67bacc9d73c9b4789f2c3cde9ab59ad8" category="paragraph">Os sistemas AFF A-Series e AFF C-Series oferecem uma plataforma robusta, com escalabilidade horizontal, adaptada para ambientes virtualizados. Eles podem ser implantados como sistemas autônomos ou como camadas de alta performance nas configurações do NetApp ONTAP. <block ref="587107815f5f912e7d3b8f989c8db7df" category="inline-link-macro-rx"></block>.</block>
-  <block id="a9db10f1a3e6d0ba4d022c457468e317" category="paragraph">Os sistemas AFF A-Series e AFF C-Series são compatíveis com as seguintes versões do ONTAP.</block>
   <block id="9d9de1698f7e401c78687204de906ee5" category="list-text">AFF A20</block>
   <block id="f8f6ba2d572ef729148f2d89d8ff810a" category="list-text">AFF A30</block>
   <block id="cc6089132b9a5e4af29a76834480cc1a" category="list-text">AFF A50</block>
@@ -10638,16 +10627,13 @@
   <block id="724bf3ae18d86521a5b9d77a13fcfddb" category="list-text">AFF C80</block>
   <block id="8c20e9c3f526d526af74c044baf7da64" category="inline-link-macro">Saiba mais sobre os sistemas ASA R2</block>
   <block id="77f5d8fa3689e046b946bfbacf61536e" category="paragraph">Os sistemas ASA R2 fornecem uma solução unificada de hardware e software que cria uma experiência simplificada específica para as necessidades dos clientes somente de SAN. <block ref="2f9305bd6f8a2949646123561cb92ab4" category="inline-link-macro-rx"></block>.</block>
-  <block id="d6b4d0a4c54a0ac7b309dcc0a4c68300" category="paragraph">Os sistemas ASA R2 são compatíveis com as seguintes versões do ONTAP.</block>
   <block id="e2ead389bfa8a65f29bc4e57fdaf4a7b" category="inline-link-macro">Saiba mais sobre os sistemas ASA</block>
   <block id="0f14ce10f8ff3a34f46c25bba942372c" category="paragraph">Os sistemas ASA A-Series e ASA C-Series oferecem uma experiência de SAN simplificada e dedicada que fornece disponibilidade de dados contínua para bancos de dados empresariais essenciais e outros workloads SAN que usam o protocolo FCP ou iSCSI. <block ref="9c36b794130c589d6d71e1c2ef02ceef" category="inline-link-macro-rx"></block>.</block>
-  <block id="eb0470bba41a4cbf0371d0bd107bbce5" category="paragraph">Os sistemas ASA são compatíveis com as seguintes versões do ONTAP.</block>
   <block id="2ce90a39656cd7489bede7894c2a9943" category="list-text">ASA AFF A250</block>
   <block id="7ddb32a2b45e07e265f9e454f57d2eb0" category="list-text">ASA AFF A800</block>
   <block id="b5efaabac2b0776c5f0ca29587d418e4" category="list-text">ASA AFF A400</block>
   <block id="4c71fe952f2c533bd53ba2db64f6ef23" category="inline-link-macro">Saiba mais sobre os sistemas FAS</block>
   <block id="1c95b928d9b5e4bc7aae5c9a97498da8" category="paragraph">Os sistemas FAS oferecem storage secundário eficiente e seguro, a melhor solução para disposição em camadas, backup e recuperação de desastres. <block ref="be362a4689d663d0b6df6b6c151241ba" category="inline-link-macro-rx"></block>.</block>
-  <block id="404f3f6d0927e6ee3c2ebeca58d2189b" category="paragraph">Os sistemas FAS são compatíveis com as seguintes versões do ONTAP.</block>
   <block id="017db3debbf4b1ed577798b78fd96b66" category="list-text">FAS70</block>
   <block id="649e9f4912bcf4af7efe489c6866eb1d" category="list-text">FAS90</block>
   <block id="3eab1bbd4a3f05ea0803f3bcf5fac9e5" category="list-text">FAS2750</block>
@@ -11100,7 +11086,6 @@
   <block id="967573797c1191f0df22ec6107c3aa00" category="paragraph">NSM: Localização</block>
   <block id="8d205de013ce8da6fb34e1d90ce0701b" category="paragraph">NSM: Atenção</block>
   <block id="6cdd970a99287856fae6549b1e4e2661" category="image-alt">NS224 NSM100B LEDs do módulo</block>
-  <block id="3730904429a62b0e0defc58fca36a915" category="paragraph">Módulo I/o: Estado</block>
   <block id="61252ea3598dcec72eee2b579cc93a3f" category="paragraph">Você pode substituir uma Mídia de inicialização com falha em uma gaveta de NS224. A substituição da Mídia de inicialização pode ser feita sem interrupções, enquanto o compartimento de unidades está ligado e e e/S está em andamento.</block>
   <block id="cd222c56bd862c1482d8e9937d65d53f" category="list-text">*NS224 com apenas NSM100 módulos*: O seu par de HA já deve estar executando o ONTAP 9,7 ou posterior, que tem a versão mínima suportada do firmware NSM.</block>
   <block id="93b1f886febe706b068327d5a32a6de5" category="paragraph">Se o compartimento não estiver executando a versão 0111 ou posterior do firmware do NSM, não será possível substituir o suporte de inicialização, será necessário substituir o NSM.</block>
@@ -11237,23 +11222,17 @@
   <block id="3354017d0219e20af53d56d429ce46e6" category="list-text">Feche a tampa do NSM e rode o parafuso de aperto manual no sentido dos ponteiros do relógio até ficar apertado.</block>
   <block id="ba899e38071a77eb1dfc114477d7df7e" category="summary">Saiba mais sobre a versão com suporte do ONTAP para sua plataforma ou prateleira.</block>
   <block id="7e5d96420c04db907e37ffc0f25670b5" category="doc">Compatibilidade de hardware e software ONTAP</block>
-  <block id="7d52a2ea081400d43cc4e5df6690bda4" category="paragraph">Os sistemas de storage ONTAP são compatíveis com várias versões do software ONTAP. Saiba mais sobre as versões do ONTAP que seus sistemas de storage e compartimentos de unidades dão suporte.</block>
   <block id="66a2f01bbe5e27a2d0a21ef15725c491" category="paragraph">O suporte completo à configuração e as limitações para sistemas de hardware ONTAP estão disponíveis no <block ref="ed4326c3351d8ac0e334b8b4d9b37c82" category="inline-link-rx"></block>. Detalhes sobre problemas conhecidos, limitações e avisos de atualização no software ONTAP 9 estão disponíveis no<block ref="84fe5db170ffeba3db16dd5c6d7a58db" category="inline-link-rx"></block>.</block>
   <block id="c43fddbfefcc8dab0b365319ffc7ad2f" category="summary">Saiba mais sobre as novas plataformas para sistemas de hardware ONTAP.</block>
   <block id="b1243a1d02acf9453220663ea4294abf" category="paragraph">Saiba o que há de novo para os sistemas de hardware ONTAP.</block>
   <block id="73b3856e20fbea83dc1573f8203ad6a4" category="section-title">Dezembro de 2024</block>
-  <block id="1129d1f188d1633e51b36c0cd887e4d2" category="section-title">AFF A20, AFF A30 e AFF A50</block>
-  <block id="a8eff28ccaa252cbf7a07cd04596e572" category="paragraph">Os novos sistemas de hardware AFF A20, A30 e A50 estendem recursos de gerenciamento de dados abrangentes, inteligentes e de alto desempenho para mais clientes e workloads.</block>
   <block id="909cc883ddbed6fc06a25647ba1f212b" category="paragraph">Os sistemas oferecem detecção de ransomware baseada EM ML em tempo real, integração otimizada com a nuvem e performance incomparável para workloads essenciais, incluindo IA, VMware, bancos de dados e análises, com suporte para storage de bloco, arquivo e objetos.</block>
   <block id="3c8e670cb2f634a0b68672d5f01ec686" category="inline-link-macro">Saiba mais sobre os sistemas AFF A-Series</block>
   <block id="cc41bf37432333539dd5ceeb6841880b" category="paragraph"><block ref="ec47a919cf5fb6b1b188d40c3428c9bc" category="inline-link-macro-rx"></block>.</block>
-  <block id="2bb9fccffbf46bf730e526d835bed9ef" category="section-title">AFF C30, AFF C60 e AFF C80</block>
-  <block id="b58cef9baa77e44e93bac28d90989c0f" category="paragraph">Os novos sistemas de hardware AFF C30, AFF C60 e AFF C80 tornam os ganhos de desempenho e eficiência do flash mais acessíveis às empresas, fornecendo um 1,5PB TB de capacidade de storage líder do setor em implantações de dois rack.</block>
   <block id="f96ee2b3f1f5c0e57287bc570e1eafdd" category="paragraph">A solução oferece densidade excepcional com unidades de 60TB TB, maior desempenho e maior flexibilidade de e/S.</block>
   <block id="e3433be76af8797b5b6d90a688a36fd9" category="inline-link-macro">Saiba mais sobre os sistemas AFF série C.</block>
   <block id="6541c02105210891ec02de804f02e6af" category="paragraph"><block ref="607826820a51c80a539353cde0434437" category="inline-link-macro-rx"></block>.</block>
   <block id="f31f11743f1dfba18e9f008e2956d24e" category="section-title">Setembro de 2024</block>
-  <block id="a69d86173a4fe9e3cf70845ad40fd15a" category="paragraph">Os novos sistemas de hardware ASA R2 (ASA A1K, ASA A70 e ASA A90) fornecem uma solução unificada de hardware e software que cria uma experiência simplificada específica para as necessidades dos clientes somente SAN.</block>
   <block id="d6ee5f134cf5e78f59ab20a782f67ed3" category="paragraph"><block ref="2f9305bd6f8a2949646123561cb92ab4" category="inline-link-macro-rx"></block>.</block>
   <block id="8a3c98db91e158f54dfa013fc3f590be" category="paragraph">Os novos sistemas de hardware FAS70 e FAS90 oferecem storage de backup econômico, mas de alta performance, permitindo um cofre cibernético seguro para recuperação de ataques de ransomware.</block>
   <block id="8a974b4a7078e973c2cf1c4794446802" category="paragraph"><block ref="be362a4689d663d0b6df6b6c151241ba" category="inline-link-macro-rx"></block>.</block>
@@ -11281,4 +11260,27 @@
   <block id="41d12fb2ee8b3c6f7046a51242a72a75" category="sidebar">C80 chassis</block>
   <block id="3e4165f9c6936da0daac33c7b7ca4957" category="sidebar">C80 módulo do controlador</block>
   <block id="8f31b4d50eb915a24104b3cb7a5cfcb5" category="sidebar">C80 MÓDULO DE E/S.</block>
+  <block id="325e928b605da8dd44aca29a94da895c" category="list-text">Monitore o processo de recuperação de Mídia de inicialização à medida que O Loader configura as portas locais e é executado<block ref="83a4445bcfef2bd179eaffaabe3b3c20" prefix=" " category="inline-code"></block> a partir do nó do parceiro.</block>
+  <block id="a0828c6d7f89434e71860268e9d651b2" category="list-text">Depois que o nó do parceiro estiver totalmente ativo e fornecendo dados, sincronize as chaves OKM no cluster.</block>
+  <block id="4230ba5bca3d60bf63b2c39aa992ed84" category="paragraph">Os sistemas AFF A-Series e AFF C-Series são compatíveis a partir das seguintes versões do ONTAP.</block>
+  <block id="5fce742f9b06c803a2f04474b1d16eef" category="paragraph">Os sistemas ASA R2 são suportados a partir das seguintes versões do ONTAP.</block>
+  <block id="7ca2ebdb81019f1e7c8ef7f9d66913b9" category="paragraph">Os sistemas ASA são suportados a partir das seguintes versões do ONTAP.</block>
+  <block id="5f0845697f3ce72b24247637120d7754" category="paragraph">Os sistemas FAS são suportados a partir das seguintes versões do ONTAP.</block>
+  <block id="c09b5be4c2da04f4040eef1878f258aa" category="inline-link">Documentação do ONTAP 9</block>
+  <block id="8d3ee503b5cc36e3c6b7cbecb34eb387" category="list-text">Depois de concluir a configuração inicial, vá para para<block ref="10428d07d2ebc7af9af6725963887c6d" category="inline-link-rx"></block> para obter informações sobre como configurar recursos adicionais no ONTAP.</block>
+  <block id="98c507d8c3fe68bb4281ebd9f9ea9418" category="paragraph">Módulo I/o: Atenção</block>
+  <block id="6a78e833d1d48c3ad3f5fcd87dc0f4d4" category="cell">Atenção do módulo I/O.</block>
+  <block id="402ff9cfbe902d88550764b90aa6cb76" category="paragraph">O módulo de e/S está ausente</block>
+  <block id="5f99c34270a42ab74283fdec312239c2" category="paragraph">Os sistemas de storage ONTAP são compatíveis com várias versões do software ONTAP. Saiba mais sobre as versões do ONTAP que seus sistemas de storage e compartimentos de unidades oferecem suporte.</block>
+  <block id="6e078dd140fc50f53b5f2c4385d718bd" category="section-title">NS224 gavetas com NSM100B módulos</block>
+  <block id="e0d3410def69ea25d4a73fbd6f0bbed2" category="paragraph">Os NS224 compartimentos de unidades com NSM100B módulos fornecem alto desempenho e flexibilidade para atender às suas necessidades de transformação digital.</block>
+  <block id="fc65336c1bd8a062ad4562b40078d3fe" category="inline-link-macro">Expanda seu storage do sistema de hardware com NS224 gavetas</block>
+  <block id="7b19cd7f52ff90324c1acacbd46001f8" category="paragraph"><block ref="66341a595da7a2db1d6f0b3d14139d08" category="inline-link-macro-rx"></block>.</block>
+  <block id="7158496fa6a387eea85c17aa48eba85e" category="section-title">AFF A20, AFF A30 e AFF A50</block>
+  <block id="a09039ce1af61d84b9a954849fc88067" category="paragraph">Os novos sistemas de hardware AFF A20, A30 e A50 estendem recursos de gerenciamento de dados abrangentes, inteligentes e de alto desempenho para mais clientes e workloads.</block>
+  <block id="bc44b220c4c2656e94204809ef23fa40" category="section-title">AFF C30, AFF C60 e AFF C80</block>
+  <block id="67a30af096daac591ce29425c8d0e867" category="paragraph">Os novos sistemas de hardware AFF C30, AFF C60 e AFF C80 tornam os ganhos de performance e eficiência de flash mais acessíveis às empresas, fornecendo um 1,5PB TB de capacidade de storage líder do setor em implantações de dois rack.</block>
+  <block id="007ace9cd707338f2e4f8f25ed4bb0b8" category="section-title">Compartimento de unidades de NS224 TB com módulos de compartimento de NSM100B U.</block>
+  <block id="e3f4eea829fa5771d87c60fb05124223" category="paragraph">Aprimore as funcionalidades do data center com o NS224 e o novo módulo de expansão de storage NVMe de NSM100B GB. Projetado como um substituto direto para o módulo NSM100, o novo módulo de prateleira NSM100B se integra perfeitamente à sua configuração existente. Ele dá suporte a configurações de conexão direta e conexão a switch de NS224 gavetas, oferecendo flexibilidade excepcional para otimizar a eficiência e a escalabilidade do seu sistema de storage.</block>
+  <block id="02ad6883c66e836f88f8ac60378af5d5" category="paragraph">Os novos sistemas de hardware ASA R2 (ASA A1K, ASA A70 e ASA A90) fornecem uma solução unificada de hardware e software que cria uma experiência simplificada específica para as necessidades dos clientes somente de SAN.</block>
 </blocks>

@@ -25,13 +25,13 @@ Caso contrário, vá para a próxima etapa.
 .. Compartimento de cabos NSM A porta e0b para a porta b (E2B) do slot 2 do controlador B.
 .. Compartimento de cabos NSM B porta e0a para a porta a (e10a) do slot B do controlador B slot 10.
 .. Compartimento de cabos NSM B porta e0b para a porta b (E2B) do slot 2 do controlador A.
-
-
 +
 A ilustração a seguir mostra o cabeamento da segunda gaveta (e a primeira gaveta).
 
 +
 image::../media/drw_ns224_a900_2shelves.png[Cabeamento de um AFF A900 com duas gavetas NS224 e dois módulos de e/S]
+
+
 
 . Se a gaveta de NS224 TB que você está adicionando quente for a terceira gaveta de NS224 TB no par de HA, execute as seguintes etapas.
 +

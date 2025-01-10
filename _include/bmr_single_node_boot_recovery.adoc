@@ -38,7 +38,7 @@ O ecrã apresenta a seguinte mensagem:
 +
 `Starting boot media recovery (BMR) process. Press Ctrl-C to abort…`
 
-. Monitore o processo de recuperação de Mídia de inicialização à medida que O Loader configura as portas de cluster locais e é executado `netboot` a partir do nó do parceiro.
+. Monitore o processo de recuperação de Mídia de inicialização à medida que O Loader configura as portas locais e é executado `netboot` a partir do nó do parceiro.
 +
 Quando o netboot está em execução, a `Starting BMR` mensagem é exibida.
 
@@ -120,9 +120,9 @@ Successfully recovered keymanager secrets.
 .. Quando o nó for reiniciado, verifique se a recuperação da Mídia de inicialização foi bem-sucedida, confirmando que o sistema está novamente on-line e operacional.
 .. Volte a colocar o controlador afetado em funcionamento normal, devolvendo o respetivo armazenamento:
 +
-`storage failover giveback -ofnode _impaired_node_name_`.
+`storage failover giveback -ofnode _impaired_node_name_`
 
-.. Depois de inicializar apenas com o agregado CFO, execute o seguinte comando.
+.. Depois que o nó do parceiro estiver totalmente ativo e fornecendo dados, sincronize as chaves OKM no cluster.
 +
 `security key-manager onboard sync`
 

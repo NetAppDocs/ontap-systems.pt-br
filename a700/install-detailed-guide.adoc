@@ -192,8 +192,7 @@ NOTE: Você precisa estar ciente das preocupações de segurança associadas ao 
 +
 image::../media/drw_9000_lifting_icon.png[Precauções de levantamento de peso]
 
-
-
++
 
 NOTE: A etiqueta à esquerda indica um chassis vazio, enquanto a etiqueta à direita indica um sistema totalmente preenchido.
 
@@ -230,8 +229,7 @@ NOTE: Ao inserir o conetor, você deve senti-lo clicar no lugar; se você não s
 +
 .Animação - Cable um cluster sem switch de dois nós
 video::7a55b98a-e8b8-41d5-821f-ac5b0032ead0[panopto]
-
-
++
 image::../media/drw_9000_TNSC_composite_cabling.png[Cabeamento composto de cluster sem switch de dois nós]
 
 . Vá para <<Etapa 4: Controladores de cabos para compartimentos de unidades>> para para obter instruções de cabeamento do compartimento de unidade.
@@ -257,8 +255,7 @@ NOTE: Ao inserir o conetor, você deve senti-lo clicar no lugar; se você não s
 +
 .Animação - cabeamento de cluster comutado
 video::6381b3f1-4ce5-4805-bd0a-ac5b0032f51d[panopto]
-
-
++
 image:../media/drw_9000_switched_cluster_cabling.png["Cabeamento composto de cluster comutado"]
 
 . Vá para <<Etapa 4: Controladores de cabos para compartimentos de unidades>> para para obter instruções de cabeamento do compartimento de unidade.
@@ -290,18 +287,16 @@ NOTE: Os exemplos usam DS224C prateleiras. O cabeamento é semelhante a outras g
 
 +
 ** Cabeamento de gavetas SAS nas FAS9000, AFF A700 e ASA AFF A700, ONTAP 9.7 e versões anteriores:
-
-
 +
 .Animação - armazenamento SAS por cabo - ONTAP 9.7 e anterior
 video::a312e09e-df56-47b3-9b5e-ab2300477f67[panopto]
+
+
 +
 image:../media/SAS_storage_ONTAP_9.7_and_earlier.png["Cabeamento de storage SAS para ONTAP 9.7 e anteriores"]
 
 +
 ** Cabeamento das gavetas SAS nas FAS9000, AFF A700 e ASA AFF A700, ONTAP 9.8 e posterior:
-
-
 +
 .Animação - Cabo de armazenamento SAS - ONTAP 9.8 e posterior
 video::61d23302-9526-4a2b-9335-ac5b0032eafd[panopto]
@@ -317,6 +312,8 @@ link:../sas3/install-new-system.html["Instale e as prateleiras de cabos para uma
 
 +
 image:../media/Cable_shelves_new_system_IOM12_shelves.png["Cabeamento do sistema de storage com gavetas SAS"]
+
+
 
 . Aceda a <<Passo 5: Conclua a configuração e configuração do sistema>> para concluir a configuração e configuração do sistema.
 
@@ -467,7 +464,7 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 
 
 . Verifique a integridade do sistema executando o Config Advisor.
-. Depois de concluir a configuração inicial, vá para a https://www.netapp.com/data-management/oncommand-system-documentation/["Recursos de documentação do Gerenciador de sistema do ONTAP  ONTAP"] página para obter informações sobre como configurar recursos adicionais no ONTAP.
+. Depois de concluir a configuração inicial, vá para para https://docs.netapp.com/us-en/ontap/index.html["Documentação do ONTAP 9"^] para obter informações sobre como configurar recursos adicionais no ONTAP.
 
 
 
@@ -563,5 +560,5 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 
 
 . Verifique a integridade do sistema executando o Config Advisor.
-. Depois de concluir a configuração inicial, vá para a https://www.netapp.com/data-management/oncommand-system-documentation/["Recursos de documentação do Gerenciador de sistema do ONTAP  ONTAP"] página para obter informações sobre como configurar recursos adicionais no ONTAP.
+. Depois de concluir a configuração inicial, vá para para https://docs.netapp.com/us-en/ontap/index.html["Documentação do ONTAP 9"^] para obter informações sobre como configurar recursos adicionais no ONTAP.
 
