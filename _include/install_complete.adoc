@@ -2,8 +2,6 @@
 :allow-uri-read: 
 
 
-Depois de ativar o sistema de armazenamento, você estará pronto para descobrir a rede de cluster e configurar um cluster ONTAP.
-
 
 
 == Etapa 1: Reunir informações do cluster
@@ -93,6 +91,3 @@ O nó é inicializado e, em seguida, o assistente Configuração de cluster é i
 A NetApp recomenda que você use o Gerenciador de sistemas para configurar novos clusters.  https://docs.netapp.com/us-en/ontap/task_configure_ontap.html["Configure o ONTAP em um novo cluster com o Gerenciador do sistema"^]Consulte para obter instruções de configuração.
 
 O System Manager fornece um fluxo de trabalho simples e fácil para configuração e configuração de cluster, incluindo a atribuição de um endereço IP de gerenciamento de nós, a inicialização do cluster, a criação de um nível local, a configuração de protocolos e o provisionamento inicial do armazenamento anexado.
-
-.O que se segue?
-Depois que o cluster for inicializado, baixe e execute  https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^] para confirmar a configuração.

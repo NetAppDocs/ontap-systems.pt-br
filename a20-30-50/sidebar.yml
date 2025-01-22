@@ -25,6 +25,7 @@ entries:
   - title: Visão geral da manutenção
     url: "/a20-30-50/maintain-overview.html"
   - title: Suporte de arranque
+    pdf-filename: Mídia de inicialização AFF A20, AFF A30 e AFF A50
     entries:
     - title: Mídia de inicialização Substituir fluxo de trabalho
       url: "/a20-30-50/bootmedia-replace-workflow.html"
@@ -79,6 +80,7 @@ entries:
   - title: Ventoinha
     url: "/a20-30-50/fan-replace.html"
   - title: Módulo de e/S.
+    pdf-filename: Módulo de e/S AFF A20, AFF A30 e AFF A50
     entries:
     - title: Descrição geral do módulo I/O.
       url: "/a20-30-50/io-module-overview.html"

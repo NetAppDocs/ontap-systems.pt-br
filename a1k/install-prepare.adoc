@@ -21,14 +21,13 @@ Para instalar seu sistema de armazenamento, certifique-se de que o local e o gab
 
 .Passos
 . Use https://hwu.netapp.com["NetApp Hardware Universe"^] para confirmar se o local atende aos requisitos ambientais e elétricos do sistema de armazenamento.
-. Certifique-se de que tem espaço de rack adequado:
+. Certifique-se de ter espaço adequado para o gabinete ou rack para o seu sistema de armazenamento, prateleiras e todos os switches:
 +
-** 4U em uma configuração de HA para o sistema de storage
+** 4U em uma configuração de HA
 ** 2U TB para cada compartimento de armazenamento de NS224 TB
 
 
-+
-*NOTA:* link:https://hwu.netapp.com["NetApp Hardware Universe"^]consulte para obter os requisitos de espaço em rack para outras prateleiras de armazenamento suportadas.
+
 
 . Instale todos os switches de rede necessários.
 +
@@ -68,14 +67,14 @@ Certifique-se de que tudo nas caixas corresponde à lista no folheto de embalage
 ** Dispositivo de gerenciamento de cabos
 ** Sistema de storage
 ** Kits de trilhos com instruções (opcional)
-** Compartimento de armazenamento
+** Prateleira de armazenamento (se você pediu armazenamento adicional)
 
  a| 
 ** Cabos Ethernet de gerenciamento (cabos RJ-45)
 ** Cabos de rede
 ** Cabos de energia
 ** Cabos de armazenamento (se você tiver pedido armazenamento adicional)
-** Cabo de porta serial USB-C.
+** Cabo USB-C da consola série
 
 |  
 |===
@@ -85,15 +84,19 @@ Certifique-se de que tudo nas caixas corresponde à lista no folheto de embalage
 
 == Passo 3: Registre seu sistema de armazenamento
 
-Depois de garantir que o seu local cumpre os requisitos das especificações do seu sistema de armazenamento e ter verificado que tem todas as peças que encomendou, deve registar o seu sistema.
+Depois de garantir que o seu local cumpre os requisitos das especificações do seu sistema de armazenamento e ter verificado que tem todas as peças que encomendou, deve registar o seu sistema de armazenamento.
 
 .Passos
-. Localize o número de série do seu sistema de armazenamento.
+. Localize os números de série do sistema (SSN) para cada controlador que está sendo instalado. Você pode encontrar os números de série nos seguintes locais:
+. Você pode encontrar os números de série nos seguintes locais:
 +
-Você pode encontrar o número no boletim de embalagem, em seu e-mail de confirmação ou no módulo de gerenciamento do sistema do controlador depois de descompactá-lo.
+** Sobre o deslizamento da embalagem
+** No seu e-mail de confirmação
+** No módulo de Gestão do sistema de cada controlador
+
 
 +
-image::../media/drw_ssn_label.svg[Exemplo de número de série do sistema]
+image::../media/drw_ssn_label.svg[Exemplo do número de série do sistema que mostra a localização do número]
 
 . Vá para http://mysupport.netapp.com/["Site de suporte da NetApp"^] .
 . Determine se você precisa Registrar seu sistema de storage:
@@ -108,7 +111,7 @@ Cliente NetApp existente
  a| 
 .. Inicie sessão com o seu nome de utilizador e palavra-passe.
 .. Selecione *sistemas* > *Meus sistemas*.
-.. Confirme se o novo número de série está listado.
+.. Confirme se os novos números de série estão listados.
 .. Se não estiver, siga as instruções para novos clientes NetApp.
 
 
@@ -119,7 +122,7 @@ Novo cliente da NetApp
  a| 
 .. Clique em *Registe-se agora* e crie uma conta.
 .. Selecione *Systems* > *Register Systems*.
-.. Introduza o número de série do sistema de armazenamento e os detalhes solicitados.
+.. Introduza os números de série do sistema de armazenamento e os detalhes solicitados.
 
 
 Após a aprovação do seu registo, pode transferir qualquer software necessário. O processo de aprovação pode demorar até 24 horas.

@@ -11,7 +11,7 @@ summary: Conclua a configuração e a configuração usando a descoberta de clus
 
 
 [role="lead"]
-Depois de ativar o sistema de armazenamento, você estará pronto para descobrir a rede de cluster e configurar um cluster ONTAP.
+Depois de ativar o sistema de armazenamento AFF A1K, você estará pronto para descobrir a rede de cluster e configurar um cluster ONTAP.
 
 
 
@@ -104,4 +104,4 @@ A NetApp recomenda que você use o Gerenciador de sistemas para configurar novos
 O System Manager fornece um fluxo de trabalho simples e fácil para configuração e configuração de cluster, incluindo a atribuição de um endereço IP de gerenciamento de nós, a inicialização do cluster, a criação de um nível local, a configuração de protocolos e o provisionamento inicial do armazenamento anexado.
 
 .O que se segue?
-Depois que o cluster for inicializado, baixe e execute  https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^] para confirmar a configuração.
+Depois que o cluster for inicializado, baixe e execute https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"] para confirmar a configuração.

@@ -20,7 +20,7 @@ Depois de instalar o hardware de rack para seu sistema de storage AFF A1K e inst
 Cada prateleira é distinguida por um ID de prateleira exclusivo. Esse ID garante que o compartimento seja distinto na configuração do sistema de storage.
 
 .Sobre esta tarefa
-* Um ID de compartimento externo válido é de 01 a 99.
+* Um ID válido do compartimento é de 01 a 99.
 +
 Se você tiver compartimentos internos (storage), que estão integrados às controladoras, receberá um ID de compartimento fixo de 00 GB a elas.
 
@@ -71,10 +71,6 @@ Botão ID do compartimento
 . Altere o primeiro número do ID do compartimento:
 +
 .. Insira a extremidade reta de um clipe de papel ou caneta esferográfica com ponta fina no pequeno orifício para pressionar o botão ID da prateleira.
-+
-
-NOTE: Nas prateleiras da série DS, o botão ID da prateleira é acessível diretamente na parte inferior da orelha da prateleira.
-
 .. Pressione e segure o botão ID do compartimento até que o primeiro número no visor digital pisque e solte o botão.
 +
 Pode demorar até 15 segundos para o número piscar. Isto ativa o modo de programação da ID da prateleira.
@@ -101,7 +97,7 @@ Pode demorar até três segundos para o número piscar.
 +
 O primeiro número no visor digital pára de piscar.
 
-.. Pressione e solte o botão ID do compartimento para avançar o número até atingir o número desejado de 0 a 9, ou de 1 a 9 se o sistema tiver armazenamento integrado.
+.. Pressione e solte o botão ID do compartimento para avançar o número até atingir o número desejado de 0 a 9.
 +
 O segundo número continua a piscar.
 
@@ -131,7 +127,7 @@ Uma fonte de alimentação é ligada assim que o cabo de alimentação é ligado
 
 == Passo 2: Ligue os controladores
 
-Depois de ativar os compartimentos de storage e atribuir a eles IDs exclusivos, ligue a energia dos controladores de storage.
+Depois de ativar as gavetas e atribuir a elas IDs exclusivas, ligue os controladores de storage.
 
 .Passos
 . Ligue o computador portátil à porta da consola série. Isso permitirá que você monitore a sequência de inicialização quando os controladores estiverem ligados.
@@ -141,25 +137,25 @@ Depois de ativar os compartimentos de storage e atribuir a eles IDs exclusivos, 
 
 NOTE: Consulte a ajuda on-line do seu laptop para obter instruções sobre como configurar a porta do console serial.
 
-.. Conete o cabo do console ao laptop e conete a porta serial do console no controlador usando o cabo do console fornecido com o sistema de armazenamento.
+.. Usando o cabo do console fornecido com seu sistema de armazenamento, conete uma extremidade do cabo do console ao laptop e a outra extremidade à porta do console serial no controlador A..
 .. Conete o laptop ao switch na sub-rede de gerenciamento.
 +
 image::../media/drw_a1k_70-90_console_connection_ieops-1702.svg[Ligações da consola]
 
-.. Atribua um endereço TCP/IP ao laptop, usando um que esteja na sub-rede de gerenciamento.
 
 
+. Atribua um endereço TCP/IP ao laptop, usando um que esteja na sub-rede de gerenciamento.
 . Conete os cabos de alimentação às fontes de alimentação do controlador e, em seguida, conete-os a fontes de alimentação em diferentes circuitos.
 +
-image::../media/drw_affa1k_power_source_icon_ieops-1700.svg[Diagrama de ligação de alimentação genérica]
+image::../media/drw_affa1k_power_source_icon_ieops-1700.svg[Sistema de armazenamento A1K e diagrama de ligação de alimentação A70 ou A90]
 
 +
-** O sistema de armazenamento começa a arrancar. A inicialização inicial pode levar até oito minutos.
+** O sistema começa a arrancar. A inicialização inicial pode levar até oito minutos.
 ** Os LEDs piscam e os ventiladores começam, o que indica que os controladores estão ligados.
 ** Os fãs podem ser muito barulhentos quando eles começam. O ruído da ventoinha durante o arranque é normal.
 
 
-. Fixe os cabos de alimentação utilizando o dispositivo de fixação em cada fonte de alimentação.
+. Fixe os cabos de alimentação usando o dispositivo de fixação em cada fonte de alimentação. :a1k-a70-90!:
 
 
 .O que se segue?

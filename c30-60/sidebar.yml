@@ -25,6 +25,7 @@ entries:
   - title: Visão geral da manutenção
     url: "/c30-60/maintain-overview.html"
   - title: Suporte de arranque
+    pdf-filename: Mídia de inicialização AFF C30 e AFF C60
     entries:
     - title: Mídia de inicialização Substituir fluxo de trabalho
       url: "/c30-60/bootmedia-replace-workflow.html"
@@ -79,6 +80,7 @@ entries:
   - title: Ventoinha
     url: "/c30-60/fan-replace.html"
   - title: Módulo de e/S.
+    pdf-filename: Módulo de e/S AFF C30 e AFF C60
     entries:
     - title: Descrição geral do módulo I/O.
       url: "/c30-60/io-module-overview.html"
