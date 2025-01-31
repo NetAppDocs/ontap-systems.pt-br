@@ -13,6 +13,13 @@ summary: Para substituir um módulo de e/S, você deve desconetar os cabos do m�
 [role="lead"]
 Você pode adicionar um módulo de e/S aos sistemas de armazenamento AFF C30 e AFF C60 quando houver slots disponíveis ou quando todos os slots estiverem totalmente preenchidos.
 
+.Sobre esta tarefa
+Se necessário, você pode ligar os LEDs de localização do sistema de armazenamento (azul) para ajudar a localizar fisicamente o sistema de armazenamento afetado. Faça login no BMC usando SSH e digite o `system location-led _on_` comando.
+
+Um sistema de armazenamento tem três LEDs de localização: Um no painel de visualização do operador e um em cada controlador. Os LEDs de localização permanecem acesos durante 30 minutos.
+
+Você pode desativá-los digitando o `system location-led _off_` comando. Se não tiver a certeza se os LEDs estão ligados ou desligados, pode verificar o seu estado introduzindo o `system location-led show` comando.
+
 
 
 == Passo 1: Desligue o módulo do controlador desativado

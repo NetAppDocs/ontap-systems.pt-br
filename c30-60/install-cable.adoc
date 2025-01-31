@@ -1,7 +1,7 @@
 ---
 permalink: c30-60/install-cable.html 
 sidebar: sidebar 
-keywords: aff c30, aff c60, prepare installation 
+keywords: aff c30, aff c60, cabling, cluster cabling, host network cabling, management network cabling, shelf cabling 
 summary: As portas de rede de gerenciamento nos controladores são conetadas aos switches. As portas de interconexão de HA e interconexão de cluster são cabeadas em ambas as controladoras. Os módulos do controlador estão ligados ao armazenamento externo, se tiverem sido encomendados. 
 ---
 = Faça o cabo do hardware - AFF C30 e AFF C60
@@ -38,108 +38,152 @@ Faça o cabeamento dos controladores ao cluster do ONTAP. Este procedimento dife
 ====
 .Cabeamento de cluster sem switch
 --
-Ligue os controladores uns aos outros para criar as ligações do cluster do ONTAP.
-
-.AFF A30 ou A50 com dois módulos de e/S 100GbE de 2 portas
+.AFF C30 ou AFF C60 com dois módulos de e/S de 40/100 GbE de 2 portas
 [%collapsible]
 =====
-As portas do módulo de e/S nos slots 2 e 4 são portas 40/100GbE.????? Isso se aplica apenas ao 30-50, se sim deixar as 2 notas onde estão, mas se aplica a todos os 3, em seguida, movê-lo seu novo parágrafo abaixo do texto principal da seção.????
+Ligue os controladores uns aos outros para criar as ligações do cluster do ONTAP.
 
 .Passos
 . Cable as conexões de interconexão cluster/HA:
 +
 
-NOTE: O tráfego de interconexão de cluster e o tráfego de HA compartilham as mesmas portas físicas.
+NOTE: O tráfego de interconexão de cluster e o tráfego de HA compartilham as mesmas portas físicas (nos módulos de e/S nos slots 2 e 4). As portas são de 40/100 GbE.
 
 +
 .. Controlador de cabo A porta E2A para a porta E2A do controlador B.
 .. Controlador de cabo A porta e4a para a porta e4a do controlador B.
 +
 
-NOTE: As portas E2B e e4b nos módulos de e/S nos slots 2 e 4 não são usadas e estão disponíveis para conectividade de front-end (rede host), se necessário.
+NOTE: As portas E2B e e4b do módulo de e/S não são utilizadas e estão disponíveis para conetividade de rede de host.
 
 +
-*Cabos de interconexão de cluster/HA*
+*Cabos de interconexão de cluster/HA de 100 GbE*
 
 +
-image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[Cabo de HA de cluster]
+image::../media/oie_cable100_gbe_qsfp28.png[Cabo de cluster HA de 100 GbE]
 
 +
-image::../media/drw_isi_a30-50_switchless_2p_100gbe_2card_cabling_ieops-2011.svg[Diagrama de cabeamento de cluster sem switch de dois nós usando dois módulos de e/s 100gbe]
+image::../media/drw_isi_a30-50_switchless_2p_100gbe_2card_cabling_ieops-2011.svg[diagrama de cabeamento de cluster sem switch de a30 gbe e a50 gbe usando dois módulos de e/s de 100gbe gbe]
 
 
 
 
 
 =====
-.AFF A30 ou A50 com um módulo de e/S 100GbE de 2 portas
+.AFF C30 ou AFF C60 com um módulo de e/S de 40/100 GbE de 2 portas
 [%collapsible]
 =====
-As portas do módulo de e/S nos slots 2 e 4 são portas 40/100GbE.?????
+Ligue os controladores uns aos outros para criar as ligações do cluster do ONTAP.
 
 .Passos
 . Cable as conexões de interconexão cluster/HA:
 +
 
-NOTE: O tráfego de interconexão de cluster e o tráfego de HA compartilham as mesmas portas físicas.
+NOTE: O tráfego de interconexão de cluster e o tráfego de HA compartilham as mesmas portas físicas (no módulo de e/S no slot 4). As portas são de 40/100 GbE.
 
 +
 .. Controlador de cabo A porta e4a para a porta e4a do controlador B.
 .. Controlador de cabo A porta e4b para a porta e4b do controlador B.
 +
-*Cabos de interconexão de cluster/HA*
+*Cabos de interconexão de cluster/HA de 100 GbE*
 
 +
-image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[Cabo de HA de cluster]
+image::../media/oie_cable100_gbe_qsfp28.png[Cabo de cluster HA de 100 GbE]
 
 +
-image::../media/drw_isi_a30-50_switchless_2p_100gbe_1card_cabling_ieops-1925.svg[Diagrama de cabeamento de cluster sem switch de dois nós usando um módulo de e/s 100gbe]
+image::../media/drw_isi_a30-50_switchless_2p_100gbe_1card_cabling_ieops-1925.svg[diagrama de cabeamento de cluster sem switch de a30 gbe e a50 gbe usando um módulo de e/s de 100gbe gbe]
 
 
 
 
 
 =====
-.AFF A20 com um módulo de e/S 10/25GbE de 2 portas
+.AFF C30 com um módulo de e/S de 10/25 GbE de 2 portas
 [%collapsible]
 =====
-Adicionar exemplo
+Ligue os controladores uns aos outros para criar as ligações do cluster do ONTAP.
 
-E image:../media/oie_cable_sfp_gbe_copper.png["Conetor de cobre GbE SFP"]
+.Passos
+. Cable as conexões de interconexão cluster/HA:
++
 
-E
+NOTE: O tráfego de interconexão de cluster e o tráfego de HA compartilham as mesmas portas físicas (no módulo de e/S no slot 4). As portas são de 10/25 GbE.
+
++
+.. Controlador de cabo A porta e4a para a porta e4a do controlador B.
+.. Controlador de cabo A porta e4b para a porta e4b do controlador B.
++
+*Cabos de interconexão de cluster/HA de 25 GbE*
+
++
+image:../media/oie_cable_sfp_gbe_copper.png["Conetor de cobre GbE SFP, largura de 100px mm"]
+
++
+image::../media/drw_isi_a20_switchless_2p_25gbe_cabling_ieops-2018.svg[diagrama de cabeamento de cluster sem switch de a20 gbe usando um módulo de e/s de 25 gbe]
+
+
+
+
 
 =====
 --
 .Cabeamento de cluster comutado
 --
+.AFF C30 ou AFF C60 com dois módulos de e/S de 40/100 GbE de 2 portas
+[%collapsible]
+=====
 Faça o cabeamento dos controladores aos switches de rede do cluster para criar as conexões do cluster ONTAP.
 
-.AFF A30 ou A50 com dois módulos de e/S 100GbE de 2 portas
+.Passos
+. Cable as conexões de interconexão cluster/HA:
++
+
+NOTE: O tráfego de interconexão de cluster e o tráfego de HA compartilham as mesmas portas físicas (nos módulos de e/S nos slots 2 e 4). As portas são de 40/100 GbE.
+
++
+.. Controlador de cabo A porta e4a para o switch de rede do cluster A..
+.. Controlador de cabo A porta E2A para o switch de rede do cluster B.
+.. Porta e4a do controlador de cabo B para o switch de rede do cluster A..
+.. Porta E2A do controlador de cabo B para o switch de rede do cluster B.
++
+
+NOTE: As portas E2B e e4b do módulo de e/S não são utilizadas e estão disponíveis para conetividade de rede de host.
+
++
+*Cabos de interconexão de cluster/HA de 40/100 GbE*
+
++
+image::../media/oie_cable100_gbe_qsfp28.png[Cabo de cluster HA de 40/100 GbE]
+
++
+image::../media/drw_isi_a30-50_switched_2p_100gbe_2card_cabling_ieops-2013.svg[diagrama de cabeamento de cluster comutado a30 e a50 usando dois módulos de e/s 100gbe]
+
+
+
+
+
+=====
+.AFF C30 ou AFF C60 com um módulo de e/S de 40/100 GbE de 2 portas
 [%collapsible]
 =====
-Adicionar exemplo
+Faça o cabeamento dos controladores aos switches de rede do cluster para criar as conexões do cluster ONTAP.
 
-Nota adicional: As portas 40/100GbE E2B e e4b nos módulos de e/S nos slots 2 e 4 não são utilizadas e estão disponíveis para conetividade front-end, se necessário.
-
-=====
-.AFF A30 ou A50 com um módulo de e/S 100GbE de 2 portas
-[%collapsible]
-=====
 .Passos
 . Faça o cabo dos controladores para os switches de rede do cluster:
 +
 
-NOTE: O tráfego de interconexão de cluster e o tráfego de HA compartilham as mesmas portas físicas.
+NOTE: O tráfego de interconexão de cluster e o tráfego de HA compartilham as mesmas portas físicas (no módulo de e/S no slot 4). As portas são de 40/100 GbE.
 
 +
-.. Porta e4a do controlador de cabo A e porta e4a do controlador B para o switch de rede do cluster A..
-.. Porta e4b do controlador de cabo A e porta e4b do controlador B para o switch de rede do cluster B.
+.. Controlador de cabo A porta e4a para o switch de rede do cluster A..
+.. Controlador de cabo A porta e4b para o switch de rede do cluster B.
+.. Porta e4a do controlador de cabo B para o switch de rede do cluster A..
+.. Porta e4b do controlador de cabo B para o switch de rede do cluster B.
 +
-*Cabos de interconexão de cluster/HA*
+*Cabos de interconexão de cluster/HA de 40/100 GbE*
 
 +
-image::../media/oie_cable100_gbe_qsfp28.png[Cabo de 100 GB]
+image::../media/oie_cable100_gbe_qsfp28.png[Cabo de cluster HA de 40/100 GbE]
 
 +
 image::../media/drw_isi_a30-50_2p_100gbe_1card_switched_cabling_ieops-1926.svg[Conexões do cluster de cabos à rede do cluster]
@@ -149,10 +193,33 @@ image::../media/drw_isi_a30-50_2p_100gbe_1card_switched_cabling_ieops-1926.svg[C
 
 
 =====
-.AFF A20 com um módulo de e/S 10/25GbE de 2 portas
+.AFF C30 com um módulo de e/S de 10/25 GbE de 2 portas
 [%collapsible]
 =====
-Adicionar exemplo
+Faça o cabeamento dos controladores aos switches de rede do cluster para criar as conexões do cluster ONTAP.
+
+. Faça o cabo dos controladores para os switches de rede do cluster:
++
+
+NOTE: O tráfego de interconexão de cluster e o tráfego de HA compartilham as mesmas portas físicas (no módulo de e/S no slot 4). As portas são de 10/25 GbE.
+
++
+.. Controlador de cabo A porta e4a para o switch de rede do cluster A..
+.. Controlador de cabo A porta e4b para o switch de rede do cluster B.
+.. Porta e4a do controlador de cabo B para o switch de rede do cluster A..
+.. Porta e4b do controlador de cabo B para o switch de rede do cluster B.
++
+*Cabos de interconexão de cluster/HA de 10/25 GbE*
+
++
+image:../media/oie_cable_sfp_gbe_copper.png["Conetor de cobre GbE SFP, largura de 100px mm"]
+
++
+image:../media/drw_isi_a20_switched_2p_25gbe_cabling_ieops-2019.svg["diagrama de cabeamento de cluster comutado a20 usando um módulo de e/s 25gbe"]
+
+
+
+
 
 =====
 --
@@ -161,25 +228,26 @@ Adicionar exemplo
 
 == Etapa 2: Faça o cabeamento das conexões de rede do host
 
-Faça o cabeamento dos controladores à rede host. Este procedimento difere dependendo do modelo do sistema de armazenamento e da configuração do módulo de e/S. A conectividade de host é de 40/100 GbE.???
+Faça o cabeamento dos controladores à rede host.
 
-.AFF A30 ou A50 com dois módulos de e/S 100GbE de 2 portas
+Este procedimento difere dependendo do modelo do sistema de armazenamento e da configuração do módulo de e/S.
+
+.AFF C30 ou AFF C60 com dois módulos de e/S de 40/100 GbE de 2 portas
 [%collapsible]
 ====
-Texto
-
-====
-.AFF A30 ou A50 com um módulo de e/S 100GbE de 2 portas
-[%collapsible]
-====
+.Passos
 . Faça o cabo das conexões de rede do host.
 +
 As subetapas a seguir são exemplos de cabeamento de rede de host opcional. Se necessário, link:https://hwu.netapp.com["NetApp Hardware Universe"^] consulte para obter a configuração específica do sistema de storage.
 
 +
-.. Opcional: Cabo para switches de rede host 40/100GbE.
+.. Opcional: Controladores de cabo para os switches de rede host.
 +
-Portas de cabo E2A, E2B, E2C e e2D em cada controlador para os switches de rede de host Ethernet.
+Em cada controladora, as portas de cabo E2B e e4b para os switches de rede host Ethernet.
+
++
+
+NOTE: As portas nos módulos de e/S no slot 2 e 4 são de 40/100 GbE (a conectividade de host é de 40/100 GbE).
 
 +
 *Cabos de 40/100 GbE*
@@ -188,17 +256,57 @@ Portas de cabo E2A, E2B, E2C e e2D em cada controlador para os switches de rede 
 image::../media/oie_cable_sfp_gbe_copper.png[Cabo de 40/100 GB]
 
 +
-image::../media/drw_isi_a30-50_host_2p_40-100gbe_1card_cabling_ieops-1923.svg[Cabo para switches de rede host ethernet 40/100gbe]
+image::../media/drw_isi_a30-50_host_2p_40-100gbe_2card_cabling_ieops-2014.svg[Cabo para switches de rede host ethernet 40/100gbe]
 
-.. Opcional: Cabo para switches de rede de host FC.
+.. Opcional: Controladores de cabo para switches de rede de host FC.
 +
-Portas de cabo 1a, 1b, 1c e 1D em cada controlador para os switches de rede de host FC.
+Em cada controladora, cable as portas 1a, 1b, 1c e 1D para os switches de rede de host FC.
 
 +
 *Cabos FC de 64 GB/s*
 
 +
-image::../media/oie_cable_sfp_gbe_copper.png[Cabo fc de 64 GB]
+image:../media/oie_cable_sfp_gbe_copper.png["Cabo fc de 64 GB, largura de 100px mm"]
+
++
+image::../media/drw_isi_a30-50_4p_64gb_fc_2card_cabling_ieops-2023.svg[Switches de rede de host de cabo A30 ou A50 a 64GB fc usando dois módulos de e/s]
+
+
+
+
+
+====
+.AFF C30 ou AFF C60 com um módulo de e/S de 10/25 GbE de 2 portas
+[%collapsible]
+====
+.Passos
+. Faça o cabo das conexões de rede do host.
++
+As subetapas a seguir são exemplos de cabeamento de rede de host opcional. Se necessário, link:https://hwu.netapp.com["NetApp Hardware Universe"^] consulte para obter a configuração específica do sistema de storage.
+
++
+.. Opcional: Controladores de cabo para os switches de rede host.
++
+Em cada controlador, as portas de cabo E2A, E2B, E2C e e2D para os switches de rede de host Ethernet.
+
++
+*Cabos de 10/25 GbE*
+
++
+image:../media/oie_cable_sfp_gbe_copper.png["Conetor de cobre GbE SFP, largura de 100px mm"]
+
++
+image::../media/drw_isi_a30-50_host_2p_40-100gbe_1card_cabling_ieops-1923.svg[Cabo para switches de rede host ethernet 40/100gbe]
+
+.. Opcional: Controladores de cabo para switches de rede de host FC.
++
+Em cada controladora, cable as portas 1a, 1b, 1c e 1D para os switches de rede de host FC.
+
++
+*Cabos FC de 64 GB/s*
+
++
+image:../media/oie_cable_sfp_gbe_copper.png["Cabo fc de 64 GB, largura de 100px mm"]
 
 +
 image::../media/drw_isi_a30-50_4p_64gb_fc_1card_cabling_ieops-1924.svg[Cabo para switches de rede host 64GB fc]
@@ -208,10 +316,44 @@ image::../media/drw_isi_a30-50_4p_64gb_fc_1card_cabling_ieops-1924.svg[Cabo para
 
 
 ====
-.AFF A20 com um módulo 100GbE de 2 portas
+.AFF C30 com um módulo de 10/25 GbE de 2 portas
 [%collapsible]
 ====
-adicionar texto
+.Passos
+. Faça o cabo das conexões de rede do host.
++
+As subetapas a seguir são exemplos de cabeamento de rede de host opcional. Se necessário, link:https://hwu.netapp.com["NetApp Hardware Universe"^] consulte para obter a configuração específica do sistema de storage.
+
++
+.. Opcional: Controladores de cabo para switches de rede host.
++
+Em cada controlador, as portas de cabo E2A, E2B, E2C e e2D para os switches de rede de host Ethernet.
+
++
+*Cabos de 10/25 GbE*
+
++
+image:../media/oie_cable_sfp_gbe_copper.png["Conetor de cobre GbE SFP, largura de 100pxx mm"]
+
++
+image::../media/drw_isi_a20_host_4p_25gbe_cabling_ieops-2017.svg[Cabo A20 para switches de rede host ethernet 40/100gbe]
+
+.. Opcional: Controladores de cabo para switches de rede de host FC.
++
+Em cada controladora, cable as portas 1a, 1b, 1c e 1D para os switches de rede de host FC.
+
++
+*Cabos FC de 64 GB/s*
+
++
+image:../media/oie_cable_sfp_gbe_copper.png["Cabo fc de 64 GB, largura de 100pxx mm"]
+
++
+image::../media/drw_isi_a20_4p_64gb_fc_cabling_ieops-2016.svg[Cabos de A20 a 64GB switches de rede host fc]
+
+
+
+
 
 ====
 
@@ -239,7 +381,7 @@ IMPORTANT: Não conete os cabos de energia ainda.
 
 == Etapa 4: Faça o cabeamento das conexões da prateleira
 
-Este procedimento mostra como vincular os controladores a uma gaveta de NS224 U.
+Este procedimento mostra como enviar os controladores para uma gaveta de NS224 U.
 
 .Sobre esta tarefa
 * Para obter o número máximo de gavetas compatíveis com o seu sistema de storage e para todas as opções de cabeamento, como ótico e conectado a switch, link:https://hwu.netapp.com["NetApp Hardware Universe"^]consulte .
