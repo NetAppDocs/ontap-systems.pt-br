@@ -9407,61 +9407,6 @@
   <block id="6cc45a7a318afd2ecfa9b7b05c51ce5c" category="sidebar">Mova a fonte de alimentação e o cabeamento do emblema</block>
   <block id="6d5cfac2de29a5333b0a36fb584f5df6" category="sidebar">Dobradiça da porta de marcha-atrás e trinco de bloqueio</block>
   <block id="8c8eaddfb0bbf5e47c2729602126527a" category="sidebar">Reinstale a porta e o emblema iluminado</block>
-  <block id="7bd0358c3b996edfe19bd3da912bde62" category="sidebar">Switches compartilhados Cisco Nexus 9336C-FX2</block>
-  <block id="eac9e7086f92a026c0dbe06001206204" category="sidebar">Guia de configuração e configuração para switches compartilhados Cisco</block>
-  <block id="b72c69a60f695309089392e6d394557c" category="sidebar">Instalar o software NX-os e arquivos de configuração de referência (RCFs)</block>
-  <block id="b7167dcb288bc483f270fcd135c332ec" category="sidebar">Migre de um cluster sem switch com armazenamento DAT adicionando dois novos switches compartilhados</block>
-  <block id="467a501ced0eaaee20142a975e074f95" category="sidebar">Migre de uma configuração comutada com armazenamento DAT adicionando dois novos switches compartilhados</block>
-  <block id="31a64a44fce8ed03b7b71b06a1ddc567" category="sidebar">Migre de uma configuração sem switch com armazenamento SAT reutilizando os switches de armazenamento</block>
-  <block id="62bb127cfc33134b4b7ba3eb79ae05f3" category="sidebar">Migrar de um cluster comutado com armazenamento SAT reutilizando os switches de armazenamento</block>
-  <block id="8a6725809e9d102de1fa5e1c7d8c431d" category="sidebar">Substitua um switch compartilhado Cisco Nexus 9336C-FX2</block>
-  <block id="8fb4b518ce39a0704f920c9d4f2f7b77" category="sidebar">Use a realocação de agregados para atualizar o hardware do controlador</block>
-  <block id="3ffee04e4bb020103f1bece18c2ac58e" category="sidebar">Automatize o processo de atualização do controlador</block>
-  <block id="2e4e187dce2e8970e167f157b1040ef2" category="sidebar">Decida se deve usar o guia de realocação agregado</block>
-  <block id="0e635d7a91ccc4eccdfb03e35353c899" category="sidebar">Ferramentas e documentação necessárias</block>
-  <block id="da289ccf0fe9b7b8a0a8c3f55c76c877" category="sidebar">Diretrizes para atualização de controladores com ARL</block>
-  <block id="e7323a54c9f53a295a2c4d707c7b3fce" category="sidebar">Verifique a integridade da configuração do MetroCluster</block>
-  <block id="f1b92e8f33cf66355b4b9762bf95256b" category="sidebar">Verifique se há erros de configuração do MetroCluster</block>
-  <block id="9759ad3dfabdb9631ec5fba47d71c313" category="sidebar">Verifique o switchover, a recuperação e o switchback</block>
-  <block id="32de3fe80cc3182e6d21291decbf392a" category="sidebar">Visão geral da atualização ARL</block>
-  <block id="15577d2c813239ab53fdc6f35d8a1dc5" category="sidebar">Atualize o par de nós</block>
-  <block id="eee953986530407bd81dc7dec37f7151" category="sidebar">Fase 1 preparar-se para a atualização</block>
-  <block id="83b27b00949218cb0d9ec7e1eb1c92ad" category="sidebar">Prepare os nós para atualização</block>
-  <block id="26678fb639f40f31f518f926dd61b9ab" category="sidebar">Obtenha um endereço IP de um servidor de gerenciamento de chaves externo para criptografia de armazenamento</block>
-  <block id="d410001785d5e6cf46422378e7dc305f" category="sidebar">Etapa 2 relocate e aposentando node1</block>
-  <block id="7de24b16e7313de118da7559fecd8fd4" category="sidebar">Realocar agregados não-raiz e LIFs de dados nas de propriedade do node1 para o node2</block>
-  <block id="97075c537f59de355c8d44c57697ef74" category="sidebar">Realocar agregados com falha ou vetado</block>
-  <block id="93d6a78ca650a17d67b6a45ca81b7f3f" category="sidebar">Aposentar-se node1</block>
-  <block id="550ffaa7219faf74146770514db0d8e8" category="sidebar">Prepare-se para netboot</block>
-  <block id="db0f435716365df4f28208e723c02179" category="sidebar">Etapa 3 Instalação e inicialização node3</block>
-  <block id="5ff20c188ceb23808ed9b47d8e5637ff" category="sidebar">Instale e inicialize node3</block>
-  <block id="bc26b5e5559721e19875fb91dce22cec" category="sidebar">Defina a configuração FC ou UTA/UTA2 em node3</block>
-  <block id="63ad3c4d36a1a9f413872ac57af754a7" category="sidebar">Verifique a instalação do node3</block>
-  <block id="7ce57c4ce051863fc414ccd402a178f5" category="sidebar">Restaure a configuração do gerenciador de chaves no node3</block>
-  <block id="840820d31f6c078aeb1567ce302bdd05" category="sidebar">Migre agregados que não sejam raiz e LIFs de dados nas pertencentes ao node1 de node2 para node3</block>
-  <block id="cd93c6e9e61b2d31c781ea8786cb4e81" category="sidebar">Etapa 4 relocate e aposentando node2</block>
-  <block id="43ccb3503988f16a767b1af1e29d2384" category="sidebar">Realocar agregados não-raiz e LIFs de dados nas de node2 para node3</block>
-  <block id="befd434b83717d2b7bd83967d66e9157" category="sidebar">Aposentar-se node2</block>
-  <block id="62e340083f3c5febba2fa693ce759a1a" category="sidebar">Etapa 5 Instalação e inicialização node4</block>
-  <block id="1a02fe8fc6a186319dd3345573fc3717" category="sidebar">Instale e inicialize node4</block>
-  <block id="df5267f8e4bbfa9add1dd732e6b68e41" category="sidebar">Defina a configuração FC ou UTA/UTA2 em node4</block>
-  <block id="405ab80b96586360ea83735c37305935" category="sidebar">Verifique a instalação do node4</block>
-  <block id="6d23265c57ba430c404cc6f3a940e117" category="sidebar">Restaure a configuração do gerenciador de chaves no node4</block>
-  <block id="32d978cffec9875e4d92dc55b84df69b" category="sidebar">Migre agregados que não sejam raiz e LIFs de dados nas pertencentes ao node2 de node3 para node4</block>
-  <block id="ded1f8eb21bf382d51471642d150b8d5" category="sidebar">Etapa 6 concluir a atualização</block>
-  <block id="b81d64bc331b1e2e60b2cef595c6ddf8" category="sidebar">Concluir a atualização para a configuração do MetroCluster FC</block>
-  <block id="1a4d3feb333aa03c1008e54bae47d8e9" category="sidebar">Certifique-se de que os novos controladores estão configurados corretamente</block>
-  <block id="27af4227ca8acc558df96e2723ec9b37" category="sidebar">Configure a criptografia de armazenamento no novo módulo do controlador</block>
-  <block id="da7d6f53a5e074768e000aca830b3bfa" category="sidebar">Configure a encriptação de volume NetApp no novo módulo do controlador</block>
-  <block id="ac616410952c35e808a3c7ce4ea5b4a7" category="sidebar">Desativar o sistema antigo</block>
-  <block id="140c4ad72e426b76f7e15699ae078635" category="sidebar">Retomar as operações do SnapMirror</block>
-  <block id="231cf4c70d866b616c21baddaeed0696" category="sidebar">Solução de problemas</block>
-  <block id="b02aac451baf6d7b36d981f898537961" category="sidebar">Falhas de realocação de agregados</block>
-  <block id="bdbf296139657929f989f110dccebbd3" category="sidebar">Verifique se há falha de realocação de agregados</block>
-  <block id="64f7904c016a035f1928a2cbeea82ab1" category="sidebar">Agregados originalmente em node1 são propriedade de node4 após a conclusão da atualização</block>
-  <block id="d75bd21e9af20a5036c0fbf461bc4e2d" category="sidebar">Reinicializa, pânicos ou ciclos de energia</block>
-  <block id="e33c48b52ab7d302b4af41aca3bbe858" category="sidebar">Problemas que podem surgir em várias etapas do procedimento</block>
-  <block id="06d473a91334306e0ea337d0cf403b02" category="sidebar">Falha de migração de LIF</block>
   <block id="8f7cc2c7f8ea66405c4805e7ebc09f8f" category="sidebar">Sistemas AFF A150</block>
   <block id="cafd0584cfa2700cbb38234c6c87ff44" category="sidebar">Instalação e configuração do AFF A150</block>
   <block id="b4de374d75b22d216e3867b88bd708e7" category="sidebar">Escolha a experiência de instalação e configuração</block>
@@ -10662,7 +10607,6 @@
   <block id="c486d43df45ffe41cde84a1b0fa45aa0" category="paragraph"><block ref="c486d43df45ffe41cde84a1b0fa45aa0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e3eb777419d46f8ec20ca944795a4d26" category="list-text">Se o cabeamento de um switch ótico for feito, insira o transcetor ótico na porta da controladora antes de fazer o cabeamento da porta do switch.</block>
   <block id="d16a227aab66041a81c6f88b290eb486" category="section-title">Etapa 1: Faça o cabeamento das conexões cluster/HA</block>
-  <block id="e5f780ef73bd41c1dd64af7a1a1a31ac" category="paragraph">Faça o cabeamento dos controladores ao cluster do ONTAP. Este procedimento difere dependendo do modelo do sistema de armazenamento e da configuração do módulo de e/S.</block>
   <block id="134e0586a0879fa097abfb47d5e64dbe" category="open-title">Cabeamento de cluster sem switch</block>
   <block id="ee68cf12a16ca46d58bedd8cf9051f32" category="example-title">AFF A30 ou AFF A50 com dois módulos de e/S de 40/100 GbE de 2 portas</block>
   <block id="1de8dab1beab3d5ee0495c66a3c814b7" category="paragraph">Ligue os controladores uns aos outros para criar as ligações do cluster do ONTAP.</block>
@@ -10685,7 +10629,6 @@
   <block id="6fb39f4b9d1de8f2f3a463d3f9eedd52" category="paragraph"><block ref="6fb39f4b9d1de8f2f3a463d3f9eedd52" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7e04550968face4eb31df851171941f8" category="image-alt">diagrama de cabeamento de cluster sem switch de a20 gbe usando um módulo de e/s de 25 gbe</block>
   <block id="666ce5251c9c6f25db5da3d713f9b34a" category="open-title">Cabeamento de cluster comutado</block>
-  <block id="c9802659f25463254a11923317d9fd06" category="paragraph">Faça o cabeamento dos controladores aos switches de rede do cluster para criar as conexões do cluster ONTAP.</block>
   <block id="3a343cf67a3c616a35a00f3a82358fe3" category="list-text">Controlador de cabo A porta e4a para o switch de rede do cluster A..</block>
   <block id="627172884756ce9f3fccfd51a4559c59" category="list-text">Controlador de cabo A porta E2A para o switch de rede do cluster B.</block>
   <block id="9c7f10ca7cef7791dc302ef4b9fc6cff" category="list-text">Porta e4a do controlador de cabo B para o switch de rede do cluster A..</block>
@@ -10701,35 +10644,18 @@
   <block id="3488ff918c31f4a57e74bbab6ef9bcc9" category="inline-image-macro">diagrama de cabeamento de cluster comutado a20 usando um módulo de e/s 25gbe</block>
   <block id="ae3bd4fc66b4084d0dc856b5f0230d72" category="paragraph"><block ref="ae3bd4fc66b4084d0dc856b5f0230d72" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7f99cbc2aa28ab9fed6e99fa94242b4a" category="section-title">Etapa 2: Faça o cabeamento das conexões de rede do host</block>
-  <block id="9b8a63481b35238e3f6af2aff25d8e9a" category="paragraph">Faça o cabeamento dos controladores à rede host.</block>
-  <block id="40a36b0ffd7a648bae61167d750303ae" category="paragraph">Este procedimento difere dependendo do modelo do sistema de armazenamento e da configuração do módulo de e/S.</block>
-  <block id="b3d6f5fd41d136be22908a2112c08ed2" category="list-text">Faça o cabo das conexões de rede do host.</block>
-  <block id="9ef6fba4dfd63e9f14ee44588abe6952" category="paragraph">As subetapas a seguir são exemplos de cabeamento de rede de host opcional. Se necessário, <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block> consulte para obter a configuração específica do sistema de storage.</block>
-  <block id="1c4fc31a2e3f3932ec066d51327fdee3" category="list-text">Opcional: Controladores de cabo para os switches de rede host.</block>
   <block id="8246042d23ca859d83185957ac9c4044" category="paragraph">Em cada controladora, as portas de cabo E2B e e4b para os switches de rede host Ethernet.</block>
   <block id="e827a0600a7ebd00f36ea855012f66a1" category="admonition">As portas nos módulos de e/S no slot 2 e 4 são de 40/100 GbE (a conectividade de host é de 40/100 GbE).</block>
   <block id="7329bfa51dec924de206ced093bea600" category="paragraph">*Cabos de 40/100 GbE*</block>
   <block id="8f31147c7cfeb7520dc9739e31dedc90" category="image-alt">Cabo de 40/100 GB</block>
   <block id="ec83c89c1bfd1fa2fe72db4df75b0e43" category="image-alt">Cabo para switches de rede host ethernet 40/100gbe</block>
-  <block id="a4beda8ffedc190bd2365aa3c0a3982e" category="list-text">Opcional: Controladores de cabo para switches de rede de host FC.</block>
   <block id="8f03269dbdbab70bab244893051fb6ec" category="paragraph">Em cada controladora, cable as portas 1a, 1b, 1c e 1D para os switches de rede de host FC.</block>
   <block id="241c17a1be2cc4feae5c8c6007f8aed3" category="paragraph">*Cabos FC de 64 GB/s*</block>
   <block id="176084e0e3d1d8b98919ade28704bd7b" category="inline-image-macro">Cabo fc de 64 GB, largura de 100px mm</block>
   <block id="0174aef3c6edce25256f90638a06bdca" category="paragraph"><block ref="0174aef3c6edce25256f90638a06bdca" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="3c8610994d0d0d721ba1a3c2b56d2606" category="image-alt">Switches de rede de host de cabo A30 ou A50 a 64GB fc usando dois módulos de e/s</block>
-  <block id="6070aae2c5cbb466ea4b44033555f52a" category="example-title">AFF A30 ou AFF A50 com um módulo de e/S de 10/25 GbE de 2 portas</block>
   <block id="baae66b5065d8c53c84d82ba2175779d" category="paragraph">Em cada controlador, as portas de cabo E2A, E2B, E2C e e2D para os switches de rede de host Ethernet.</block>
   <block id="c053ea984f8ec26545ef5a0f8e3c516b" category="paragraph">*Cabos de 10/25 GbE*</block>
   <block id="53b32e6926c94a5a2ab06b2fe3836135" category="image-alt">Cabo para switches de rede host 64GB fc</block>
-  <block id="2fcfbaa3d5181e463a6bbfa1a15ce7fa" category="example-title">AFF A20 com um módulo de 10/25 GbE de 2 portas</block>
-  <block id="3a6f33d3d155b4ae4ac4c5555a5a5b30" category="list-text">Opcional: Controladores de cabo para switches de rede host.</block>
-  <block id="615ea66b0774b4053f21b1c6a497d682" category="inline-image-macro">Conetor de cobre GbE SFP, largura de 100pxx mm</block>
-  <block id="3448e0c15182366c2b7b3aa1515e467c" category="paragraph"><block ref="3448e0c15182366c2b7b3aa1515e467c" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="f6e881d94dc3ef7c3a5b2444eddf6212" category="image-alt">Cabo A20 para switches de rede host ethernet 40/100gbe</block>
-  <block id="09b66647463ed1ce42bd62c5b8ec2e1a" category="paragraph">Em cada controladora, cable as portas 1a, 1b, 1c e 1D para os switches de rede de host FC.</block>
-  <block id="8e97dad8f8493822d0e00e75c6d71f3c" category="inline-image-macro">Cabo fc de 64 GB, largura de 100pxx mm</block>
-  <block id="a592636155b15ffbef0e20c00b496be4" category="paragraph"><block ref="a592636155b15ffbef0e20c00b496be4" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="be986ea08bb54dd79ad4a1cee8ab3d63" category="image-alt">Cabos de A20 a 64GB switches de rede host fc</block>
   <block id="945babbf23a8741321d27a1c4a0c4200" category="section-title">Passo 3: Faça o cabeamento das conexões de rede de gerenciamento</block>
   <block id="b88fb46fa64622aa179b7b543ddf13a5" category="paragraph">Ligue os controladores à rede de gestão.</block>
   <block id="e42848811631f979cb5744f72268013a" category="list-text">Cable as portas de gerenciamento (chave inglesa) em cada controlador para os switches de rede de gerenciamento.</block>
@@ -10757,7 +10683,6 @@
   <block id="8bfccb1f0c0fcef7c65c13971279707a" category="paragraph">Depois de instalar o hardware para o seu sistema de storage, <block ref="bca22c8e81cd07d8c060c28f352f5c5b" category="inline-link-macro-rx"></block>você .</block>
   <block id="d18e261115fca673ca85d869ef16199c" category="doc">Fluxo de trabalho de instalação e configuração - AFF A20, AFF A30 e AFF A50</block>
   <block id="3cdf8c6347bdc0a257b06253a291ef6c" category="paragraph-title"><block ref="444c1bf2e877f5617e8ce0a2ded57f4f" category="inline-image-macro-rx" type="image"></block><block ref="bce179ad419bd48e9c41b073fd99e202" category="inline-link-macro-rx"></block></block>
-  <block id="efbed9ff10698a899995d519b6515646" category="paragraph">Para se preparar para a instalação, você precisa preparar o local, verificar os requisitos ambientais e elétricos e garantir que haja espaço suficiente no rack. Em seguida, desembale o equipamento, compare seu conteúdo com o deslizamento de embalagem e Registre o hardware para acessar os benefícios de suporte.</block>
   <block id="966353821596fdf316108d72854ad8be" category="paragraph-title"><block ref="4f954e3aac01b1dc982b61d245b37a02" category="inline-image-macro-rx" type="image"></block><block ref="d8f87fb4140fea77f47017bd9ec5dcdd" category="inline-link-macro-rx"></block></block>
   <block id="14dba6115fa0ee08da437dd9fc5018c2" category="paragraph">Para instalar o hardware, instale os kits de trilho para o seu sistema de armazenamento e prateleiras e, em seguida, instale e proteja o seu sistema de armazenamento e prateleiras no gabinete ou rack de telecomunicações.</block>
   <block id="88b736e6d5561b4dc7cce39802381ee6" category="inline-link-macro">Faça o cabo do material de fixação</block>
@@ -11203,13 +11128,22 @@
   <block id="d27876edf06fef01e9d562affcf483bc" category="paragraph">Para instalar e configurar o sistema de storage AFF A20, AFF A30 ou AFF A50, leia os requisitos de instalação, prepare o local, instale e faça o cabeamento dos componentes de hardware, ligue o sistema de storage e configure o cluster do ONTAP.</block>
   <block id="2b9366d786af7f25816abf5ad658f2ab" category="inline-link-macro">Reveja os requisitos de instalação</block>
   <block id="bd9e341941a30be8d1d66fd436b9cbb4" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block><block ref="5f0905e544c52c81d90a8c636fddd0a9" category="inline-link-macro-rx"></block></block>
-  <block id="70bfeb1ef79ed88d76859531032e6795" category="paragraph">Antes de instalar o sistema de storage, o sistema de storage precisa atender aos requisitos de instalação.</block>
   <block id="a62423bfdb0c7361946c3892f20d2e7d" category="paragraph">O sistema de armazenamento pode pesar até 61,5 lbs (27,9 kg). Para levantar o sistema de armazenamento, utilize duas pessoas ou um elevador hidráulico.</block>
   <block id="05591bc7cdace84971ece26cdbd0437b" category="example-title">AFF C30 ou AFF C60 com dois módulos de e/S de 40/100 GbE de 2 portas</block>
   <block id="a25f694b3fe46b8223a96d7f7a6709e2" category="example-title">AFF C30 ou AFF C60 com um módulo de e/S de 40/100 GbE de 2 portas</block>
-  <block id="40311ade600e0691ceb4ef1447a01304" category="example-title">AFF C30 com um módulo de e/S de 10/25 GbE de 2 portas</block>
-  <block id="365c5f6cc1c974e74595f900dc07803d" category="example-title">AFF C30 ou AFF C60 com um módulo de e/S de 10/25 GbE de 2 portas</block>
-  <block id="61bc9478fe9837a2edfeec12cfef1a17" category="example-title">AFF C30 com um módulo de 10/25 GbE de 2 portas</block>
   <block id="385d33bb3589ce3f38e65ed1e314719e" category="paragraph">Para instalar e configurar o sistema de storage AFF C30 ou AFF C60, leia os requisitos de instalação, prepare o local, instale e faça o cabeamento dos componentes de hardware, ligue o sistema de storage e configure o cluster ONTAP.</block>
   <block id="d92a2bc26be46a05b32e6cc5c37b3984" category="paragraph">Consulte os requisitos do sistema de storage AFF C30 ou AFF C60.</block>
+  <block id="b3fb7cc55fec6d7df9078e2ee7739718" category="paragraph">Quando inserido corretamente, o DIMM entra facilmente, mas encaixa firmemente no slot. Caso contrário, insira novamente o DIMM.</block>
+  <block id="7e08ee4b466dc677d31c40c8b0488339" category="list-text">Verifique visualmente o DIMM para se certificar de que ele está alinhado uniformemente e totalmente inserido no slot.</block>
+  <block id="34f650ca44fabe66ff7e4095a137da22" category="list-text">Certifique-se de que todos os outros componentes do sistema de armazenamento estão a funcionar corretamente; caso contrário, contacte<block ref="eb2c61027d5e6c8b35692c1e74187026" category="inline-link-rx"></block> antes de continuar."</block>
+  <block id="54d890bf92693607c99bccb67f9933f5" category="paragraph">Faça o cabeamento dos controladores para criar as conexões do cluster ONTAP.</block>
+  <block id="d48b3cfe096b47bcb7f13e683c934beb" category="paragraph">Faça o cabeamento das controladoras à rede de host Ethernet ou FC.</block>
+  <block id="bb8661c49545cac68358046e25b8f950" category="open-title">Cabeamento de host Ethernet</block>
+  <block id="3c90cea8d34e6c024dcfcf7fbe2bc396" category="example-title">AFF A20, A30 ou AFF A50 com um módulo de e/S de 10/25 GbE de 4 portas</block>
+  <block id="91ca13b03c277f557b91f705d4455de5" category="open-title">Cabeamento de host FC</block>
+  <block id="45adc6168b3bfdd0a69aad7185cab6d2" category="example-title">AFF A20, A30 ou AFF A50 com um módulo de e/S FC de 4 portas de 64 GB/s.</block>
+  <block id="5b903193757e7495dce32499ded20f07" category="paragraph">Antes de instalar seu sistema de storage, ele deve atender aos requisitos de instalação.</block>
+  <block id="82f66f7658dd53410415bd1c67e9ccad" category="paragraph">Para se preparar para a instalação, prepare o local, verifique os requisitos ambientais e elétricos e certifique-se de que há espaço suficiente no rack. Em seguida, desembale o equipamento, compare o conteúdo com o slip de embalagem e Registre o hardware para acessar os benefícios de suporte.</block>
+  <block id="c273a3f4ab5c9add6857208b8a70d10e" category="example-title">AFF C30 ou AFF C60 com um módulo de e/S de 10/25 GbE de 4 portas</block>
+  <block id="46a9bbd60b5adf699bea6b74307aac99" category="example-title">AFF C30 ou AFF C60 com um módulo de e/S FC de 4 portas de 64 GB/s.</block>
 </blocks>

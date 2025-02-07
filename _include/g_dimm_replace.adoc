@@ -5,7 +5,7 @@
 Você deve substituir um DIMM no controlador quando seu sistema de armazenamento encontrar erros como erros CECC excessivos (códigos de correção de erros Correctable) que são baseados em alertas do Monitor de integridade ou erros ECC incorrigíveis, geralmente causados por uma única falha de DIMM que impede o sistema de armazenamento de inicializar o ONTAP.
 
 .Antes de começar
-* Todos os outros componentes do sistema de armazenamento têm de estar a funcionar corretamente; caso contrário, tem de contactar https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de prosseguir com este procedimento.
+* Certifique-se de que todos os outros componentes do sistema de armazenamento estão a funcionar corretamente; caso contrário, contacte https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de continuar."
 * Você deve substituir o componente FRU com falha por um componente FRU de substituição que você recebeu de seu provedor.
 
 
@@ -240,9 +240,9 @@ As patilhas do ejetor permanecem na posição aberta.
 O entalhe na parte inferior do DIMM, entre os pinos, deve estar alinhado com a guia no slot.
 
 +
-Quando inserido corretamente, o DIMM deve entrar facilmente, mas encaixar firmemente no slot. Caso contrário, insira novamente o DIMM.
+Quando inserido corretamente, o DIMM entra facilmente, mas encaixa firmemente no slot. Caso contrário, insira novamente o DIMM.
 
-.. Inspecione visualmente o DIMM para verificar se ele está alinhado uniformemente e totalmente inserido no slot.
+.. Verifique visualmente o DIMM para se certificar de que ele está alinhado uniformemente e totalmente inserido no slot.
 .. Empurre com cuidado, mas firmemente, para baixo na borda superior do DIMM até que as abas do ejetor se encaixem no lugar sobre os entalhes em ambas as extremidades do DIMM.
 
 
