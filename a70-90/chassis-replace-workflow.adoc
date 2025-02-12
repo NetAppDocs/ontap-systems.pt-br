@@ -15,16 +15,20 @@ Siga estas etapas do fluxo de trabalho para substituir seu chassi.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"]link:chassis-replace-requirements.html["Reveja os requisitos de substituição do chassis"]
 [role="quick-margin-para"]
-Para substituir o chassi, você deve atender a certos requisitos.
+Reveja os requisitos de substituição do chassis.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"]link:chassis-replace-shutdown.html["Desligue os controladores"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["dois"]link:chassis-replace-prepare.html["Prepare-se para a substituição do chassis"]
+[role="quick-margin-para"]
+Prepare-se para substituir o chassi localizando o sistema, reunindo credenciais do sistema e ferramentas necessárias, verificando se o chassi de substituição foi recebido e rotulando os cabos do sistema.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["três"]link:chassis-replace-shutdown.html["Desligue os controladores"]
 [role="quick-margin-para"]
 Desligue os controladores para que possa efetuar a manutenção no chassis.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"]link:chassis-replace-move-hardware.html["Substitua o chassis"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"]link:chassis-replace-move-hardware.html["Substitua o chassis"]
 [role="quick-margin-para"]
-A substituição do chassi inclui mover as fontes de alimentação, os discos rígidos e o módulo do controlador do chassi com deficiência para o novo chassi e trocar o chassi com deficiência pelo novo chassi do mesmo modelo que o chassi com deficiência.
+Substitua o chassis deslocando os componentes do chassis danificado para o chassis de substituição.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"]link:chassis-replace-complete-system-restore-rma.html["Substituição completa do chassis"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinco"]link:chassis-replace-complete-system-restore-rma.html["Complete a substituição do chassis"]
 [role="quick-margin-para"]
-Verifique o estado de HA do chassi e devolva a peça com falha ao NetApp.
+Conclua a substituição do chassi trazendo os controladores para cima, devolvendo os controladores e retornando o chassi com falha ao NetApp.

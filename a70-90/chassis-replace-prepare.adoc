@@ -1,0 +1,65 @@
+---
+permalink: a70-90/chassis-replace-prepare.html 
+sidebar: sidebar 
+keywords: aff a70, aff a90, replace the chassis 
+summary: Substituir um chassis com deficiência pelo novo chassis do mesmo modelo que o chassis com deficiência. 
+---
+= Prepare-se para substituir o chassis - AFF A70 e AFF A90
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prepare-se para substituir o chassis com deficiência pelo novo chassis do mesmo modelo que o chassis com deficiência.
+
+
+
+== Passo 1: Localize e monitore seu sistema
+
+Você deve abrir uma sessão de console e salvar Registros de sessões para referência futura e também ativar o LED de localização do sistema para encontrar o chassi com deficiência.
+
+. Conete-se à porta do console serial à interface e monitore o sistema.
+. Localize e ligue o LED de localização do controlador:
++
+.. Use o `system controller location-led show` comando para mostrar o estado atual do LED de localização.
+.. Altere o estado do LED de localização para "On" (ligado):
++
+`system controller location-led modify -node _node1_ -state on`.
+
++
+O LED de localização permanece aceso durante 30 minutos.
+
+
+
+
+
+
+
+== Passo 2: Verifique os componentes de substituição
+
+Você deve verificar se recebeu os componentes necessários, removê-los da embalagem e salvar a embalagem.
+
+. Antes de abrir a embalagem, você deve olhar para a etiqueta da embalagem e verificar:
++
+** Número de peça do componente.
+** Descrição da peça.
+** Quantidade na caixa.
+
+
+. Remova o conteúdo da embalagem e use a embalagem para retornar o componente com falha ao NetApp.
+
+
+
+
+== Passo 3: Identifique os cabos e os módulos do controlador e faça a ligação à terra
+
+Você deve rotular os cabos e controladores antes de removê-los dos módulos do controlador ou do chassi.
+
+. Identifique todos os cabos associados ao sistema de armazenamento. Isso ajuda a desativar mais tarde neste procedimento.
+. Etiquete os módulos do controlador.
+. Se você ainda não está devidamente aterrado, aterre-se.
+
+
+.O que se segue?
+Depois de se preparar para substituir o hardware do chassi do AFF A70 ou do AFF A90, é necessário link:chassis-replace-shutdown.html["desligue os controladores"].

@@ -10,38 +10,38 @@ summary: Você deve verificar o estado de HA do chassi e devolver a peça com fa
 :imagesdir: ../media/
 
 
-[role="lead"]
-Você deve verificar o estado de HA do chassi e devolver a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit.
 
 
+== Passo 1: Inicialize os controladores e devolva os controladores
 
-== Etapa 1: Verifique e defina o estado HA do chassi
+Após a reinicialização dos controladores, inicialize o ONTAP e devolva os controladores.
 
-Você deve verificar o estado de HA do chassi e, se necessário, atualizar o estado para corresponder à configuração do sistema.
-
-. No modo de manutenção, a partir de qualquer um dos módulos do controlador, apresentar o estado HA do módulo do controlador local e do chassis: `ha-config show`
+. Verifique a saída da consola:
 +
-O estado HA deve ser o mesmo para todos os componentes.
+.. Se o controlador inicializar no prompt Loader, reinicie o controlador com o `boot_ontap` comando.
+.. Se o console for exibido `waiting for giveback` após a reinicialização, faça login no controlador parceiro e verifique se o controlador substituído está pronto para giveback com o `storage failover show` comando.
 
-. Se o estado do sistema apresentado para o chassis não corresponder à configuração do sistema:
+
+. Execute a giveback:
 +
-.. Defina o estado HA para o chassis: `ha-config modify chassis _HA-state_`
-+
-O valor para HA-State pode ser um dos seguintes:
-
-+
-*** `ha`
-*** `mcc` (Não suportado no ASA)
-
-
-.. Confirme se a definição foi alterada: `ha-config show`
-
-
-. Se você ainda não o fez, recable o resto de seu sistema.
+.. Conete o cabo do console ao controlador do parceiro.
+.. Devolva o controlador com o `storage failover giveback -fromnode local` comando.
 
 
 
 
-== Passo 2: Devolva a peça com falha ao NetApp
+
+
+== Etapa 2: Verificar a integridade do sistema de armazenamento
+
+Depois que o controlador devolver o armazenamento, você deve verificar a integridade geral com https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"].
+
+. Após a conclusão do giveback, execute o Active IQ Config Advisor para verificar a integridade do sistema de storage.
+. Corrija quaisquer problemas que você encontrar.
+
+
+
+
+== Passo 3: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.
