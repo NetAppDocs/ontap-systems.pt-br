@@ -1,16 +1,7 @@
----
-permalink: asa-r2-a1k/bootmedia-recovery-image-boot.html 
-sidebar: sidebar 
-keywords: asa r2 a1k, boot the recovery image 
-summary: Você deve inicializar a imagem ONTAP a partir da unidade USB, restaurar o sistema de arquivos e verificar as variáveis ambientais. 
----
-= Inicie a imagem de recuperação - ASA A1K
+= 
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
 
-[role="lead"]
 Você deve inicializar a imagem ONTAP a partir da unidade USB, restaurar o sistema de arquivos e verificar as variáveis ambientais.
 
 .Passos
@@ -42,15 +33,30 @@ A imagem é transferida da unidade flash USB.
 --
 .Opção 2: ONTAP 9.16,1 ou posterior
 --
-.. No controlador afetado, prima `Y` quando for solicitado que restaure a configuração de cópia de segurança.
+.. No prompt DO Loader no controlador prejudicado, configure o endereço IP do módulo do controlador prejudicado:
 +
-Depois que o procedimento de restauração for bem-sucedido, essa mensagem será exibida no console - `syncflash_partner: Restore from partner complete`.
+`ifconfig e0M - auto`
 
+.. No prompt Loader, netboot o nó prejudicado:
++
+`netboot \http://_web_server_ip/path_to_web-accessible_directory_/<ontap_version>_image.tgz`
+
+.. No menu Boot (Inicialização), selecione Option(opção `7`).
+.. Digite `n` quando solicitado a restaurar a configuração de backup.
+.. Digite `y` quando solicitado a reinicializar o nó.
+.. Prima `ctrl-c` para regressar ao Menu de arranque.
++
+Se a encriptação estiver ativada, tem de a restaurar antes de continuar a restaurar a imagem de arranque. Vá para link:bootmedia-encryption-restore.html["Restaure a criptografia"].
+
+.. No controlador desativado, `Y` prima quando for solicitado que reinicie o controlador desativado e prima `ctrl-c` para aceder ao Menu de arranque.
+.. Selecione a opção `6`.
 .. No controlador desativado, `Y` prima quando solicitado para confirmar se a cópia de segurança de restauro foi bem sucedida.
 .. No controlador prejudicado, `Y` pressione quando solicitado a usar a configuração restaurada.
 .. No controlador prejudicado, `Y` pressione quando solicitado a reinicializar o nó.
-.. No controlador desativado, `Y` prima quando for solicitado que reinicie o controlador desativado e prima `ctrl-c` para aceder ao Menu de arranque.
-.. Se o sistema não usar criptografia, selecione _opção 1 Inicialização normal._, caso contrário, vá para link:bootmedia-encryption-restore.html["Restaure a criptografia"].
+.. Pressione `Y` quando solicitado para restaurar a configuração de backup.
++
+Depois que o procedimento de restauração for bem-sucedido, essa mensagem será exibida no console - `syncflash_partner: Restore from partner complete`.
+
 
 
 --

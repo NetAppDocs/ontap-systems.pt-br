@@ -2055,7 +2055,6 @@
   <block id="a286fff38dd07b679c8ce3d88b6f2962" category="inline-link-macro">desligue o controlador desativado</block>
   <block id="4332aa8c798bac1ec6c0f4c83e0df305" category="list-text">Verifique se o<block ref="c759882cd4e7fcd95f15b0df0ce7f51c" prefix=" " category="inline-code"></block> tipo é exibido<block ref="c6b9507c26062233f2341cb90db60eaa" prefix=" " category="inline-code"></block> e, em seguida, faça backup manual das informações OKM.</block>
   <block id="2fab3e35d3a8ad1baf526d01c455141e" category="list-text">No controlador do parceiro saudável, execute o comando Restore backup:<block ref="44d388b27236c791c5fe1d30cc29bc43" prefix=" " category="inline-code"></block> .</block>
-  <block id="53f59a608ecfcdc90a1a8b37f4c8f010" category="paragraph">Para substituir o suporte de arranque, tem de remover o módulo de gestão do sistema da parte de trás do sistema, remover o suporte de arranque deficiente, instalar o suporte de arranque de substituição no módulo de gestão do sistema.</block>
   <block id="40137b2ef5d6219999ccbff7acc4080e" category="paragraph">O suporte de arranque encontra-se no interior do módulo de gestão do sistema e é acedido removendo o módulo do sistema.</block>
   <block id="c7e42b88c75788e5a4dd44ffee425837" category="image-alt">Mídia de inicialização Substituir gráfico</block>
   <block id="65c48f838cd0d6bef4f7f9dfeffa6c20" category="paragraph">Trinco do excêntrico do módulo de gestão do sistema</block>
@@ -2316,7 +2315,6 @@
   <block id="8a9a8a0db84d9dd59b0f006930b47193" category="list-text">Prima o botão do trinco do excêntrico.</block>
   <block id="c053808d9acb931bed74754155a6e86f" category="list-text">Rode o trinco do excêntrico para baixo o mais longe possível. Para módulos horizontais, gire o came para longe do módulo o mais longe possível.</block>
   <block id="ed5714a7b9709284c56117bd6dc4e081" category="list-text">Rode o tabuleiro de gestão de cabos para a posição de bloqueio.</block>
-  <block id="56bce10b49b12be932b0ca38009e1da1" category="paragraph">Para substituir o suporte de arranque, tem de remover o módulo de gestão do sistema da parte de trás do sistema, remover o suporte de arranque afetado e instalar o suporte de arranque de substituição no módulo de gestão do sistema.</block>
   <block id="7acc547c8acfbe4a745ca72a3e0e83e4" category="image-alt">Unidade drw A800 com sede IEOPS 960</block>
   <block id="1d2bcd4906e89f4b93900e7a729cfa23" category="list-text">Desligue a alimentação do módulo do controlador puxando o módulo do controlador para fora cerca de três polegadas:</block>
   <block id="190e6dffac1e1ea2cdf61c6d2e1aa03f" category="list-text">Prima ambos os trincos de bloqueio do módulo do controlador e, em seguida, rode ambos os trincos para baixo ao mesmo tempo.</block>
@@ -2432,43 +2430,15 @@
   <block id="59073837e9444bf2400f497219e938ff" category="list-text">Rode o suporte de arranque para cima, deslize-o para fora do encaixe.</block>
   <block id="39ae5f56527ba81d40a11f9ee81d3594" category="list-text">Rode o suporte de arranque para baixo na direção de até engatar o botão de bloqueio. Prima o bloqueio azul, se necessário.</block>
   <block id="31b44b2bbf802ac2ba72cd5f64a91a73" category="list-text">Instale o módulo de gestão do sistema:</block>
-  <block id="4d0fdf4d7f2cb2e8d15ff7667eada8d3" category="paragraph">Restaure a imagem do ONTAP a partir do nó do parceiro quando a Mídia de inicialização estiver corrompida.</block>
-  <block id="517e2ed3d13a9db19dc610c5f11efa90" category="paragraph">Se a Mídia de inicialização de um nó estiver corrompida, o processo de inicialização será interrompido no prompt DO Loader e exibirá mensagens de erro de inicialização.</block>
-  <block id="10a398d436cab5b5badea933dda79497" category="paragraph">Quando você encontrar essas mensagens de erro de inicialização, você precisa restaurar a imagem ONTAP do nó do parceiro.</block>
-  <block id="e8693d42f65c91620e44940317084863" category="example-title">Mostrar exemplo de mensagens de erro de inicialização</block>
   <block id="03f7f0cf47c4f6389ad76450db56b50e" category="list-text">No prompt Loader, digite o comando:</block>
   <block id="69c68a07899b46965d63bdd6fea6e0da" category="paragraph"><block ref="4d9c822f717329c7000654e8bae09ae4" prefix="" category="inline-code"></block></block>
   <block id="1857c0ed792dbbfc2525805e6132de0b" category="paragraph">O ecrã apresenta a seguinte mensagem:</block>
   <block id="c285ffddf1786cd1a14a26bcf9b74c7d" category="paragraph"><block ref="061047859ec1e213bd771fe5350bda2c" prefix="" category="inline-code"></block></block>
-  <block id="8f616ca67798afd132662e15fc4caa28" category="paragraph">Quando o netboot está em execução, a<block ref="f6715e6f2a651bfc51d27566b1be5385" prefix=" " category="inline-code"></block> mensagem é exibida.</block>
-  <block id="39cb6e7651585d511fc148af8198837f" category="open-title">Sem criptografia</block>
-  <block id="aada4d2dac8a2a5bd04bf211104ff2c5" category="paragraph">Se nenhuma criptografia for detetada, o processo de recuperação de Mídia de inicialização continuará sem exigir o gerenciamento de chaves.</block>
-  <block id="69c50e084d31ca90079f6b8b4409607b" category="paragraph">Continue a monitorar o processo de recuperação à medida que restaura a configuração de backup, arquivo env, mdb e rdb do nó do parceiro.</block>
   <block id="d450838e17f81a8b52e0177614d67ad7" category="paragraph">Quando o processo de recuperação estiver concluído, o nó será reiniciado. As seguintes mensagens indicam uma recuperação bem-sucedida:</block>
   <block id="a9849e92b148965a7bbb6c14d0afbcd0" category="open-title">Gerenciador de chaves integrado (OKM)</block>
-  <block id="9948202ce966f6258be65aa9b31169af" category="paragraph">Se o Gerenciador de chaves integrado (OKM) for detetado, o sistema exibirá o seguinte prompt.</block>
-  <block id="5fd01f063ea353b3d15d04ba686af926" category="list-text">No prompt de opção Bootmenu, digite<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block> para confirmar que deseja usar a opção de recuperação bootmedia.</block>
-  <block id="0af26afae73e3202f7c7aaab8c992b8c" category="list-text">Digite a senha do gerenciador de chaves integrado quando solicitado e digite a senha novamente para confirmar.</block>
   <block id="7d4bcf16d67094152377ca26832cc48a" category="example-title">Mostrar exemplo de prompts de frase-passe</block>
   <block id="08ac1a2fb254b60e9c511fe04b6536d0" category="open-title">Gerenciador de chaves externo (EKM)</block>
-  <block id="41913ae5c9ce168f601906b14a2d644b" category="paragraph">Se o EKM estiver configurado, o sistema exibirá o seguinte prompt.</block>
-  <block id="685640bd86353fa910cfbe3619c2e7b6" category="list-text">Introduza<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block> se EKM tiver sido configurado.</block>
-  <block id="af938ef69b688ad28c38e627ef2e2ba5" category="paragraph">Você será solicitado para as configurações de EKM que foram usadas inicialmente durante a configuração.</block>
-  <block id="12090a552988289480c2a6d3ebef573d" category="list-text">Insira cada configuração do EKM quando solicitado.</block>
-  <block id="03c5f957f0bce79f5fde4d008fa92a51" category="list-text">Verifique se os atributos do UUUID do cluster e UUUID do Keystore estão corretos.</block>
-  <block id="abfd93201d9b931fb8a842033c96915c" category="list-text">No nó do parceiro, recupere o UUID do cluster usando o seguinte comando.</block>
-  <block id="13be17a2458a5b6a4d7674bfcf31e6f9" category="paragraph"><block ref="73bad5beeda4a2a6bd01d97def1d4e67" prefix="" category="inline-code"></block></block>
-  <block id="055eeae93444c58000a552a49d5cde3f" category="list-text">No nó do parceiro, recupere o UUID do Keystore usando os seguintes comandos.</block>
-  <block id="fca054687afc6f162b9ade39c46a6116" category="paragraph"><block ref="f2892b1a90652446a2c8a2dce1d42eee" prefix="" category="inline-code"></block></block>
-  <block id="b85d1d8fb07ae788a6ed563b610b84d6" category="list-text">Se o nó do parceiro não estiver disponível, use a chave Mroot-AK para recuperar o UUID:</block>
-  <block id="b33990729d89c66fed95f9d4dd36da47" category="list-text">Para o UUUID do cluster, digite o seguinte comando:</block>
-  <block id="e1484c32938464e5549c6b76d764b054" category="paragraph"><block ref="b8bbecc4d00a5d5b7dc368313818ee3e" prefix="" category="inline-code"></block></block>
-  <block id="2d545dacd75df3daea75332f92adcae5" category="list-text">Para o Keystore UUID, digite o seguinte comando:</block>
-  <block id="e7262eed05fa7365b0a692742f81c0cb" category="paragraph"><block ref="d48b7412b88ab861789f4a831606e7fa" prefix="" category="inline-code"></block></block>
-  <block id="6d194eccb9cd88bfbcde1df65103cbb4" category="list-text">Insira os valores de UUUID de armazenamento de chaves e UUUID de cluster quando solicitado.</block>
   <block id="012ebe1b2edbad8e2badae49c3ce7300" category="list-text">Dependendo se a chave for restaurada com sucesso, execute uma das seguintes ações:</block>
-  <block id="6be21e297a64c0ca433ca37eb30b095a" category="list-text">Se a chave for restaurada com êxito, o processo de recuperação continua e reinicializa o nó. Avance para o passo 4.</block>
-  <block id="baef154cbd04341d2c81cd5f404ffa42" category="list-text">Se a chave não for restaurada com êxito, o sistema irá parar e apresentar mensagens de erro e aviso. Execute novamente o processo de recuperação.</block>
   <block id="1b3e0ac05a9037c92315146268065f35" category="example-title">Mostrar exemplo de mensagens de aviso e erro de recuperação de chave</block>
   <block id="1c46e0ff0264d9660c3f0213e88d21b7" category="list-text">Quando o nó for reiniciado, verifique se a recuperação da Mídia de inicialização foi bem-sucedida, confirmando que o sistema está novamente on-line e operacional.</block>
   <block id="c8eac505350cb0f1af11cd259653ff42" category="inline-link-macro">requisitos e práticas recomendadas de adição dinâmica</block>
@@ -5393,22 +5363,12 @@
   <block id="29ce4833094eb0992ba97ac3e0c71b3f" category="inline-link-macro">Secção de manutenção dos sistemas ASA R2</block>
   <block id="c8208be6c84d32af841a96445a7aa12a" category="paragraph">Os procedimentos de manutenção específicos para cada tipo de sistema ASA R2 encontram-se na <block ref="6106c9a1bd699a0a46425013e812fe67" category="inline-link-macro-rx"></block>.</block>
   <block id="cb1eb944e0468ffad560cfc4623a28dc" category="doc">Devolva a peça com falha ao NetApp - ASA A70 e ASA A90</block>
-  <block id="42f783263c0e805556cc105b89a33685" category="doc">Verifique o suporte e o status da chave de criptografia - ASA A70 e ASA A90</block>
-  <block id="50845bae5620d87f695c2dc8e2ba4b4e" category="doc">Restaurar encriptação - ASA A70 e ASA A90</block>
   <block id="7b8bb02fade9d4a58e3cfc42ecdcd970" category="summary">Saiba mais sobre o método automatizado para substituir a Mídia de inicialização.</block>
-  <block id="c0bc9e3dbe6e8f8b47642dae74af82f1" category="doc">Visão geral da recuperação automática de Mídia de inicialização - ASA A70 e ASA A90</block>
   <block id="f5179676ff804b88e5799857443be173" category="paragraph">Você pode substituir uma Mídia de inicialização com falha por meio da opção de recuperação de Mídia de inicialização automatizada (BMR).</block>
   <block id="b0fe901b833b66e26e925b635eccaed3" category="paragraph">A recuperação automatizada de Mídia de inicialização usa a imagem de inicialização do nó do parceiro e executa automaticamente a opção apropriada do menu de inicialização para instalar a imagem de inicialização na Mídia de inicialização de substituição.</block>
-  <block id="c0d5cf860156f25b1345db1cbffc797b" category="summary">Saiba mais sobre o método manual para substituir a Mídia de inicialização.</block>
-  <block id="05c869773156f3e182a24e4a395746ef" category="doc">Visão geral da recuperação manual de Mídia de inicialização - ASA A70 e ASA A90</block>
-  <block id="85f6c56f4368d94f36af2f8174800cdd" category="paragraph">Pode substituir manualmente um suporte de arranque com falha utilizando o módulo USB para a imagem de arranque.</block>
-  <block id="be50da4a0a4e7670cc5496e8959abd3e" category="paragraph">A substituição manual de suportes de arranque utiliza o método tradicional de transferir a imagem ONTAP a partir do site de suporte da NetApp, transferir a imagem para uma unidade USB, transferi-la para o suporte de arranque de substituição de destino e percorrer manualmente as opções do menu de arranque para instalar a imagem ONTAP no suporte de arranque de substituição.</block>
   <block id="4a64f3d63fd0e8b93b80ef48b4698a9a" category="summary">Você pode restaurar a imagem na Mídia de inicialização a partir do controlador do parceiro por meio do processo de recuperação de inicialização automatizada.</block>
-  <block id="41f43600bfb66f22a00e070720eb3684" category="doc">Recuperação automatizada de inicialização - ASA A70 e ASA A90</block>
-  <block id="7d7b39e1d38d18d4acc88e8ead4ecab1" category="doc">Inicie a imagem de recuperação - ASA A70 e ASA A90</block>
   <block id="56e7f21b9427a2441a89613fe1fcc2ff" category="summary">Você localiza o suporte de inicialização com falha removendo o módulo Gerenciamento do sistema antes de substituir o suporte de inicialização.</block>
   <block id="69326c1cf7a079cc03d300fe203efde6" category="doc">Substitua o suporte de arranque - ASA A70 e ASA A90</block>
-  <block id="f5f04350fe8cc121abba09eed8ef8194" category="doc">Requisitos e considerações - ASA A70 e ASA A90</block>
   <block id="740df8929ce5dd43cd4aae8d5504654d" category="doc">Requisitos de substituição do suporte de arranque - ASA A70 e ASA A90</block>
   <block id="2cf315583a350744f9ff0bd28ec89aef" category="doc">Fluxo de trabalho de substituição de Mídia de inicialização - ASA A70 e ASA A90</block>
   <block id="d49388da53cc4a7219dcbdd63d45342a" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block><block ref="d54ef5e1f82ac3261c20b17cf3d0d453" category="inline-link-macro-rx"></block></block>
@@ -5421,11 +5381,9 @@
   <block id="d09fb8e8be6d5c93fb8113549e3abfb0" category="paragraph">Restaure a imagem ONTAP a partir do controlador do parceiro.</block>
   <block id="295e63d74f4c0ccd864527db0492eb45" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block><block ref="743c3bfe574d2216cecf6275411cf3b1" category="inline-link-macro-rx"></block></block>
   <block id="b8a9f715dbb64fd5c56e7783c6820a61" category="inline-image-macro">dois</block>
-  <block id="834c7d9c8325f941289306697291736e" category="paragraph-title"><block ref="ccf9965eddaaff76b152812c8e0015f1" category="inline-image-macro-rx" type="image"></block><block ref="fbe5cfbeb25b00ec0a44d74f3b70c580" category="inline-link-macro-rx"></block></block>
   <block id="8ba62a96dab9549596c8edd46f3bd5cc" category="paragraph">Remova o suporte de arranque com falha do módulo de gestão do sistema e instale o suporte de arranque de substituição e, em seguida, transfira uma imagem ONTAP utilizando uma unidade flash USB para o suporte de arranque de substituição.</block>
   <block id="3075613c146b62cdb964218b1b25f33a" category="paragraph">Inicie a imagem ONTAP a partir da unidade USB, restaure o sistema de ficheiros e verifique as variáveis ambientais.</block>
   <block id="14c9871d29cebff6090d4220729c7ade" category="summary">Você precisa concluir o desligamento do controlador prejudicado.</block>
-  <block id="0049b2ae6634f29dc31a51b97c674ab3" category="doc">Desligue o controlador - ASA A70 e ASA A90</block>
   <block id="a79ec0bc86b66848b485542b40048cb6" category="paragraph">Você precisa concluir o desligamento do controlador prejudicado. Desligue ou assuma o controlador desativado.</block>
   <block id="95d86a07e48032c658d9a13faedb46d6" category="doc">Complete a substituição do chassi - ASA A70 e ASA A90</block>
   <block id="33af0abab8ca4fe70c730bb3d86abb73" category="doc">Mova e substitua as ferragens - ASA A70 e ASA A90</block>
@@ -5453,10 +5411,6 @@
   <block id="cce6a120b979d484a6c17c49a5db377f" category="paragraph">Talvez seja necessário executar procedimentos de manutenção no hardware. Os procedimentos específicos para manter os componentes do sistema ASA A70 e ASA A90 estão nesta seção.</block>
   <block id="441be728228d904c637ab4e11fc40c45" category="paragraph">Os procedimentos nesta seção pressupõem que os sistemas ASA A70 e ASA A90 já foram implantados como um nó de storage no ambiente ONTAP.</block>
   <block id="cde82c9b04790b90c2679aca48bf0641" category="paragraph">Para os sistemas de storage ASA A70 e ASA A90, você pode executar procedimentos de manutenção nos seguintes componentes.</block>
-  <block id="0353c4306baefb0104fdbd22f3a83fd7" category="inline-link-macro">Mídia de inicialização - recuperação manual</block>
-  <block id="868dd0de5ae92735ecf8b13f092b6e94" category="paragraph"><block ref="868dd0de5ae92735ecf8b13f092b6e94" category="inline-link-macro-rx"></block></block>
-  <block id="a4171598a9b6537fe8fa298ad497f7f6" category="inline-link-macro">Mídia de inicialização - recuperação automatizada</block>
-  <block id="939985bab6ffa95bb97b326eb3bb44bc" category="paragraph"><block ref="939985bab6ffa95bb97b326eb3bb44bc" category="inline-link-macro-rx"></block></block>
   <block id="cb6b9b62927bde4101155fb12ce4739b" category="paragraph">A substituição automática de Mídia de inicialização usa a imagem de inicialização do nó do parceiro e executa automaticamente a opção de menu de inicialização apropriada para instalar a imagem de inicialização na Mídia de inicialização de substituição.</block>
   <block id="5f402dad935ff3ab451b558b0df9b4f3" category="paragraph">Um controlador consiste em uma placa, firmware e software. Ele controla o storage, as placas de e/S e executa o software do sistema operacional ONTAP.</block>
   <block id="33a7e77eb8f382b670aecd2f25304362" category="doc">Substitua a bateria NV - ASA A70 e ASA A90</block>
@@ -5465,13 +5419,7 @@
   <block id="591fbd5c7a0e4469981c4bc0919fffdb" category="doc">Substitua a bateria do relógio em tempo real - ASA A70 e ASA A90</block>
   <block id="ab89852eb86e2c9aed275b5eab913eb1" category="doc">Substitua o módulo de gerenciamento do sistema - ASA A70 e ASA A90</block>
   <block id="77dbbb0add58d8d5b96d74c1b27689bb" category="doc">Devolva a peça com falha ao NetApp - ASA A1K</block>
-  <block id="a5cd6f074e972343dc08fbaaefb21435" category="doc">Verifique o suporte e o status da chave de criptografia - ASA A1K</block>
-  <block id="6a648d096ab46ad56d57cdcbd2f3fbe9" category="doc">Restaurar encriptação - ASA A1K</block>
-  <block id="ecd93ae2a78c5efb02bc3ec3e7df5c2c" category="doc">Visão geral da recuperação automática de Mídia de inicialização - ASA A1K</block>
-  <block id="5a7035550d11f967a7c1533fa8ef8ae3" category="paragraph">Pode substituir um suporte de arranque com falha através da opção de substituição automática do suporte de arranque (BMR).</block>
-  <block id="c3f29d977c51a91934fd0b3ac418f5ef" category="doc">Visão geral da recuperação manual de Mídia de inicialização - ASA A1K</block>
   <block id="8e22ce60290e8b393a0781c3d78c5f34" category="doc">Recuperação automatizada de inicialização - ASA A1K</block>
-  <block id="4815b5bdc49e0c84c1f8a77425bfdc4d" category="doc">Inicie a imagem de recuperação - ASA A1K</block>
   <block id="1c1be2f74300d879eb6d6d09021f9e6f" category="doc">Substitua o suporte de arranque - ASA A1K</block>
   <block id="28c83315b64c52bba9c9e7929909e6d8" category="doc">Requisitos de substituição do suporte de arranque - ASA A1K</block>
   <block id="c940611fb67d6f64a97efd7fcbadb1aa" category="doc">Fluxo de trabalho de substituição de Mídia de inicialização - ASA A1K</block>
@@ -9726,7 +9674,6 @@
   <block id="13e402a48516f3df0a4a2b09e3076481" category="doc">Restaurar encriptação - ASA C400</block>
   <block id="511796586d19d0b2cb5a4cd14581478a" category="doc">Verifique o suporte e o status da chave de criptografia - ASA C800</block>
   <block id="f477d17555442c3400a29898cd852b96" category="doc">Restaurar encriptação - ASA C800</block>
-  <block id="e4cee0c18f92a2719465d58340bc4ab5" category="paragraph">Pode substituir manualmente um suporte de arranque com falha utilizando um módulo USB para a imagem de arranque.</block>
   <block id="e4db105eaa26749e6726fe6644b77f2f" category="doc">Verifique o suporte e o status da chave de criptografia - ASA A150</block>
   <block id="f9c62bff8e46b0d2433f3609b7ecdb39" category="doc">Verifique o suporte e o status da chave de criptografia - ASA A250</block>
   <block id="0f791bd55bfa2fd01f0eba9b2a93ae03" category="doc">Restaurar encriptação - ASA A250</block>
@@ -9900,11 +9847,7 @@
   <block id="7dceff362ab7e3c2187d103ba7fce438" category="image-alt">Folha de cálculo de cabeamento de HA de três caminhos FAS2820 que mostra pares de portas para a stack 1</block>
   <block id="3a6e3da839d00ede01c4513f563899aa" category="image-alt">FAS2820 exemplo de cabeamento de HA de três caminhos para uma stack</block>
   <block id="2f9e622217b802d735475e6e1e79287d" category="admonition">Esta secção não se aplica a sistemas FAS2820 ou FAS25XX.</block>
-  <block id="0636959b49a1834e3ec5f35103cf8837" category="sidebar">Mídia de inicialização ASA A70 e ASA A90 automatizada</block>
-  <block id="da147f1227d896e3c10a7ccfe8a30bd6" category="sidebar">Manual do suporte de arranque ASA A70 e ASA A90</block>
   <block id="917655eaf5fd8c720cd773aba74bdaf8" category="sidebar">Módulo IO ASA A70 e ASA A90</block>
-  <block id="7b9a6fdb87cb1f6f211f41d044f49a11" category="sidebar">ASA A1K Mídia de inicialização automatizada</block>
-  <block id="995c40c124bddbeb82d387a9fcb6e262" category="sidebar">Manual do suporte de arranque do ASA A1K</block>
   <block id="3a537c99c5b869e844d774557fbcee80" category="sidebar">Módulo de e/S ASA A1K</block>
   <block id="3006210264711079652e75e697fdde7b" category="sidebar">Sistemas FAS2820</block>
   <block id="e9fb835c094e7078b3fdd1712ccae31c" category="sidebar">Instalação e configuração do FAS2820</block>
@@ -9948,7 +9891,6 @@
   <block id="cac74c301a508cf350f8f41a7de866a0" category="paragraph">Você pode adicionar um módulo de e/S ao seu sistema de armazenamento ASA A1K quando houver slots vazios disponíveis ou quando todos os slots estiverem totalmente preenchidos.</block>
   <block id="94aa992895c11cf963b2b749b84aa267" category="paragraph">Você pode adicionar um módulo de e/S ao seu sistema de armazenamento FAS70 e FAS90 quando houver slots vazios disponíveis ou quando todos os slots estiverem totalmente preenchidos.</block>
   <block id="bc049e4428d592b69605104cc85d56bc" category="section-title">Passo 2: Adicione os novos módulos de e/S.</block>
-  <block id="a6448c631c301c525a61c500fdf8e46a" category="list-text">Dependendo do método de criptografia, selecione a opção que corresponde à configuração do sistema:</block>
   <block id="92ba658b9a66d0825f0f084b7da309b7" category="list-text">Se o sistema não usar criptografia, selecione _opção 1 Inicialização normal._, caso contrário, vá para <block ref="d767082d20397ebb99e586749eda3a08" category="inline-link-macro-rx"></block>.</block>
   <block id="efd2f4952f00033a0e6fc35f4c287446" category="paragraph">Se o sistema de armazenamento tiver slots disponíveis, instale o novo módulo de e/S em um dos slots disponíveis. Se todos os slots estiverem ocupados, remova um módulo de e/S existente para criar espaço e, em seguida, instale o novo.</block>
   <block id="6d65586ee736e7deb557e0892d29cb10" category="open-title">Adicione o módulo de e/S a um slot disponível</block>
@@ -9994,7 +9936,6 @@
   <block id="e726d5f098bf18b53d3d464c11fbe033" category="list-text">Se o AutoSupport estiver ativado, restaure (dessuprimir) criação automática de casos: Nó do sistema AutoSupport invoke -node * -type all -message</block>
   <block id="975c4856a4750ba558520ec8a4820a30" category="list-text">Se você instalou um módulo NIC, especifique o modo de uso para cada porta como _network_:<block ref="2318bc4fadd0b94ffa92c4a515df2262" prefix=" " category="inline-code"></block></block>
   <block id="b6d91a8f20eef2bd8b5f445d19459cac" category="list-text">Repita estes passos para o outro controlador.</block>
-  <block id="cc7de6b757b2670e8de91257213f3e71" category="paragraph"><block ref="e3adc655d82fbb7ed4e775bf1f2a0a82" prefix="" category="inline-code"></block></block>
   <block id="fbff7da02a9769667db9e912fa36fc5e" category="paragraph">É possível adicionar sem desligamento até duas gavetas NS224 para um par de HA AFF A20, AFF A30, AFF C30, AFF A50 ou AFF C60 quando for necessário storage adicional (para o compartimento interno).</block>
   <block id="73a95c42a81e9be601403e3a9d4a84c9" category="list-text">Esse procedimento pressupõe que seu par de HA tenha apenas storage interno (sem compartimentos externos) e que você também:</block>
   <block id="c6e5816c4606aead75e5bf161bd98726" category="list-text">Adição de aquecimento até uma prateleira adicional para o AFF A20.</block>
@@ -10986,7 +10927,6 @@
   <block id="41d12fb2ee8b3c6f7046a51242a72a75" category="sidebar">C80 chassis</block>
   <block id="3e4165f9c6936da0daac33c7b7ca4957" category="sidebar">C80 módulo do controlador</block>
   <block id="8f31b4d50eb915a24104b3cb7a5cfcb5" category="sidebar">C80 MÓDULO DE E/S.</block>
-  <block id="325e928b605da8dd44aca29a94da895c" category="list-text">Monitore o processo de recuperação de Mídia de inicialização à medida que O Loader configura as portas locais e é executado<block ref="83a4445bcfef2bd179eaffaabe3b3c20" prefix=" " category="inline-code"></block> a partir do nó do parceiro.</block>
   <block id="a0828c6d7f89434e71860268e9d651b2" category="list-text">Depois que o nó do parceiro estiver totalmente ativo e fornecendo dados, sincronize as chaves OKM no cluster.</block>
   <block id="4230ba5bca3d60bf63b2c39aa992ed84" category="paragraph">Os sistemas AFF A-Series e AFF C-Series são compatíveis a partir das seguintes versões do ONTAP.</block>
   <block id="5fce742f9b06c803a2f04474b1d16eef" category="paragraph">Os sistemas ASA R2 são suportados a partir das seguintes versões do ONTAP.</block>
@@ -11190,4 +11130,105 @@
   <block id="98aab8017242eea1d6e23ba928b20ae5" category="list-text"><block ref="98aab8017242eea1d6e23ba928b20ae5" category="inline-link-macro-rx"></block></block>
   <block id="4e3c3284590d1aa1440e67b3bd65ba6e" category="list-text"><block ref="4e3c3284590d1aa1440e67b3bd65ba6e" category="inline-link-macro-rx"></block></block>
   <block id="370d2e6f20948d3881708f9706576691" category="sidebar">Prepare-se para substituir</block>
+  <block id="77f6d66d9d165cf71493f896e9fc7ed7" category="paragraph">Substitua o suporte de arranque removendo o módulo de gestão do sistema da parte de trás do sistema, removendo o suporte de arranque danificado, instalando o suporte de arranque de substituição no módulo de gestão do sistema e, em seguida, reinstalando o módulo de gestão do sistema.</block>
+  <block id="19d944a3a323213d80bcdd66ecd5c26f" category="list-text">Determine se o OKM (Onboard Key Manager) ou o EKM (Eternal Key Manager) estão configurados usando um dos seguintes métodos:</block>
+  <block id="b3387f173ebbff42e3160605c9db518a" category="list-text">Você pode perguntar ao cliente ou administrador do sistema se OKM ou EKM estão ativados.</block>
+  <block id="5dc17ba8443f8aafae4ca9de8cf9545b" category="list-text">Para verificar se o OKM está ativado, você pode usar o<block ref="3c690d79c23fa8c25994507c25377567" prefix=" " category="inline-code"></block>.</block>
+  <block id="4e447e93a3331607c74749775653cbfc" category="list-text">Para verificar se o EKM está ativado, pode utilizar o<block ref="001642cb897a8bebce3210207b7e81af" prefix=" " category="inline-code"></block>.</block>
+  <block id="161a8b7bf3b6a7aaa3bda387e5eab04b" category="list-text">Para OKM, você precisa do conteúdo do arquivo de senha OKM.</block>
+  <block id="7e8bda9aef5e8fb9e3018b4afe5250d1" category="list-text">Para EKM, você precisa de cópias dos seguintes arquivos do nó do parceiro:</block>
+  <block id="0408893d877d770be02b8327fb6a5e89" category="list-text">arquivo /cfcard/kmip/servers.cfg.</block>
+  <block id="7ca5023275c76ff686c3c960083e2882" category="list-text">arquivo /cfcard/kmip/certs/client.crt.</block>
+  <block id="eaa29e40b75c2b3c94d1b5d23f50bce1" category="list-text">arquivo /cfcard/kmip/certs/client.key.</block>
+  <block id="83e7484854530d83dd681b8cf742e93e" category="list-text">Arquivo /cfcard/kmip/certs/CA.pem.</block>
+  <block id="19de728db0f7de420107bca7f6c27e8f" category="list-text">Monitore o processo de recuperação de instalação de Mídia de inicialização.</block>
+  <block id="bcefe15d3d59604fe3881aa73ba19bec" category="paragraph">O processo é concluído e exibe a<block ref="a8a3d751ea5741e4ba21940296cd7183" prefix=" " category="inline-code"></block> mensagem.</block>
+  <block id="5e7f58f1d40d387e7b9ab18afe197fd7" category="list-text">O sistema verifica se há criptografia e tipo de criptografia e exibe uma de duas mensagens. Dependendo da mensagem exibida, execute uma das seguintes ações:</block>
+  <block id="e631253f1e5c17e7f830fc29fe6c672d" category="admonition">Ocasionalmente, o processo pode não ser capaz de identificar se o gerenciador de chaves está configurado no sistema. Ele exibirá uma mensagem de erro, perguntará se o gerenciador de chaves está configurado para o sistema e perguntará qual tipo de gerenciador de chaves está configurado. O processo será retomado depois de resolver o problema.</block>
+  <block id="a7b02f2200bbf6c786d8ba6859f87c74" category="example-title">Mostrar exemplo de prompts de localização de erros de configuração</block>
+  <block id="4c097bc2a08e8665ee6ce5be5b6d4816" category="cell">Se você vir esta mensagem...</block>
+  <block id="5e2ad6fd9deb412d871137094ee43ef0" category="cell">Faça isso...</block>
+  <block id="0f5d2d6afab72dc1cc43cad3fdc5b679" category="paragraph"><block ref="0bff6104e6ddee2836161e63d5b29d5b" prefix="" category="inline-code"></block></block>
+  <block id="ea9bbc9a1644ad81a9e641c7756cb904" category="paragraph">A criptografia não está instalada no sistema. Execute as seguintes etapas:</block>
+  <block id="2a81e23f2dbdb4931da1ca1941fdcaed" category="list-text">Faça login no nó quando o prompt de login for exibido e devolva o armazenamento:</block>
+  <block id="503facbcd54c8f4001c4d78ff3cd181d" category="list-text">Vá para o passo 5 para ativar o giveback automático se ele foi desativado.</block>
+  <block id="aba66c87293b779b339e88a54def4ece" category="paragraph"><block ref="fc8fae7f1985c187fcbe3dc568de6bab" prefix="" category="inline-code"></block></block>
+  <block id="0c9a8e05dae1edb79dee2ba0e0aa2e10" category="paragraph">Vá para a etapa 4 para restaurar o gerenciador de chaves apropriado.</block>
+  <block id="3a435296812d929677e01249fc3df97e" category="paragraph">O nó acessa o menu de inicialização e executa:</block>
+  <block id="c74f3fc8778415fe1908c3e70bdc5e1f" category="list-text">Opção 10 para sistemas com OKM (Onboard Key Manager).</block>
+  <block id="c5af7493bea6fdf0e6f855282fd978b1" category="list-text">Opção 11 para sistemas com o External Key Manager (EKM).</block>
+  <block id="5acefa45eaecf4ca5d5698a77ec26b5f" category="list-text">Selecione o processo de restauração apropriado do gerenciador de chaves.</block>
+  <block id="cec349ed8df71d2a36b9e8ae7d8becef" category="paragraph">Se OKM for detetado, o sistema exibirá a seguinte mensagem e começará a executar a opção BootMenu 10.</block>
+  <block id="90853290faee7028e876fdfdb8de437b" category="list-text">Digite<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block> no prompt para confirmar que deseja iniciar o processo de recuperação OKM.</block>
+  <block id="968cdeb239e05e7bf0dffdb96ea2f833" category="list-text">Digite a senha do gerenciador de chaves integrado quando solicitado e digite a senha novamente quando solicitado, para confirmar.</block>
+  <block id="24ffce97bd07e6f791875335c17cd10d" category="list-text">Continue a monitorar o processo de recuperação à medida que restaura os arquivos apropriados do nó do parceiro.</block>
+  <block id="3291f6521f975e1ead577845998bec95" category="paragraph">Se o EKM for detetado, o sistema exibirá a seguinte mensagem e começará a executar a opção BootMenu 11.</block>
+  <block id="a24d722ae51d75766fa9dc3854952898" category="list-text">A próxima etapa depende de qual versão do ONTAP seu sistema está sendo executado:</block>
+  <block id="08f30bb9433217bd66359e72cda7c5e8" category="list-text">Prima<block ref="f07c0cba208baef6e2b2fc812661812b" prefix=" " category="inline-code"></block> para sair da opção BootMenu 11.</block>
+  <block id="4a12d3871bbbec1a3e321415eaec24b4" category="list-text">Prima<block ref="f07c0cba208baef6e2b2fc812661812b" prefix=" " category="inline-code"></block> para sair do processo de configuração do EKM e regressar ao menu de arranque.</block>
+  <block id="be6ec1858f853da7b5c9f4a13665509f" category="list-text">Selecione a opção BootMenu 8.</block>
+  <block id="adda1434d5e5c63f23cc8ea5287107c9" category="paragraph">Se<block ref="70f26aeb9493e5657ecb82bfdf9a4e2f" prefix=" " category="inline-code"></block> estiver definido, o nó reinicializa e usa os arquivos de configuração do nó do parceiro.</block>
+  <block id="821fcd708c45adc084a7b5eb89088d9c" category="paragraph">Se<block ref="70f26aeb9493e5657ecb82bfdf9a4e2f" prefix=" " category="inline-code"></block> não estiver definido, insira o comando de inicialização apropriado. O nó reinicializa e usa os arquivos de configuração do nó do parceiro.</block>
+  <block id="f125fc1712ff91500cfaa02b887dfaf7" category="list-text">Reinicie o nó para que o EKM proteja a partição de Mídia de inicialização.</block>
+  <block id="96dfb3dab5877e28d5de27242828d412" category="list-text">Avance para o passo c..</block>
+  <block id="858cf7ac64fc02be0935ba5eba961888" category="list-text">Introduza a seguinte definição de configuração do EKM quando solicitado:</block>
+  <block id="004bf6c9a40003140292e97330236c53" category="cell">Ação</block>
+  <block id="0a52730597fb4ffa01fc117d9e71e3a9" category="cell">Exemplo</block>
+  <block id="42ffb07c8565a30a8e6e687d851c4dc9" category="paragraph">Introduza o conteúdo do certificado do cliente a partir do<block ref="d606236dedb6ed649b29651c1ec53a99" prefix=" " category="inline-code"></block> ficheiro.</block>
+  <block id="3dc91f7451a4bd0eb09f75bd2140b3a8" category="example-title">Mostrar exemplo de conteúdo do certificado do cliente</block>
+  <block id="f95e57c3ab55de100400925a1d599f91" category="paragraph">Introduza o conteúdo do ficheiro de chave do cliente a partir do<block ref="ccb442c2c2cc4367a087cfc7cd3b4876" prefix=" " category="inline-code"></block> ficheiro.</block>
+  <block id="04a71a38825e017a3b1cb1bec1346ae5" category="example-title">Mostrar exemplo de conteúdo do arquivo chave do cliente</block>
+  <block id="916c9dd7b85a7a3381b3bdde1910503a" category="paragraph">Insira o conteúdo do arquivo de CA(s) do servidor KMIP do<block ref="443acc94def30bc037fb2dacac4fb7d3" prefix=" " category="inline-code"></block> arquivo.</block>
+  <block id="e6188a9278a87ef417a8e2afcc22f93d" category="example-title">Mostrar exemplo de conteúdo do arquivo do servidor KMIP</block>
+  <block id="d4fa69cc2ed09bdca599cf7ca3b020cd" category="paragraph">Introduza o conteúdo do ficheiro de configuração do servidor a partir do<block ref="6b2948264272776ad38dbe7f59c7850f" prefix=" " category="inline-code"></block> ficheiro.</block>
+  <block id="acb2cdf0e044cb8e41dd9dbe163d56cb" category="example-title">Mostrar exemplo de conteúdo do arquivo de configuração do servidor</block>
+  <block id="1677b437db33146f4ef190a0e1965055" category="paragraph">Se solicitado, insira o UUUID do cluster do ONTAP do parceiro.</block>
+  <block id="6af9b04018c1d00113ea69c62ee2cfae" category="example-title">Mostrar exemplo de UUUID de cluster do ONTAP</block>
+  <block id="ea127e0cf13eef619bb275aeff09d41d" category="paragraph">Se solicitado, insira a interface de rede temporária e as configurações do nó.</block>
+  <block id="aab616abb54a154e4fcb6dc6edca0697" category="example-title">Mostrar exemplo de uma configuração de rede temporária</block>
+  <block id="948fd102470ac371888b6bd60cfc7fb4" category="list-text">Se a configuração do EKM tiver sido restaurada com sucesso, o processo tentará restaurar os arquivos apropriados do nó do parceiro e reiniciará o nó. Vá para o passo d..</block>
+  <block id="6fa02563a50cf5fcad70bcfed92fe219" category="example-title">Mostrar exemplo de mensagens de restauração 9.16.0 bem-sucedidas</block>
+  <block id="355423b7af5007bd545405d0221c3de6" category="example-title">Mostrar exemplo de mensagens de restauração 9.16.1 bem-sucedidas</block>
+  <block id="c1286238ac35049080a5d815a0742050" category="list-text">Se a chave não for restaurada com êxito, o sistema irá parar e indicar que não foi possível restaurar a chave. As mensagens de erro e aviso são apresentadas. Execute novamente o processo de recuperação inserindo<block ref="4d9c822f717329c7000654e8bae09ae4" prefix=" " category="inline-code"></block>.</block>
+  <block id="b06a9a7481d8f3ca792e2636ad34a5f6" category="list-text">Quando o nó for reiniciado, verifique se a recuperação da Mídia de inicialização foi bem-sucedida, confirmando que o sistema está novamente on-line e operacional.</block>
+  <block id="5f24aaf8b32f780fce1ea44bd659a2f1" category="list-text">Volte a colocar o controlador em funcionamento normal, devolvendo o respetivo armazenamento:</block>
+  <block id="e531efa1ffce94331d0abc4548448cac" category="list-text">No prompt DO Loader no controlador prejudicado, configure o endereço IP do módulo do controlador prejudicado:</block>
+  <block id="9674c99b013ac8cdab6eb0df64e77028" category="paragraph"><block ref="83ed86e403dd4a24d2825f48008e5af3" prefix="" category="inline-code"></block></block>
+  <block id="8c58ea9784c7fa6869b22626814be32c" category="list-text">No prompt Loader, netboot o nó prejudicado:</block>
+  <block id="c73c2dd2459e6650d5b71cc2059faf0e" category="paragraph"><block ref="a8ede5eb13f058392e245c0a8a92ae3d" prefix="" category="inline-code"></block></block>
+  <block id="682c67c386e9533bb90087e13557b0aa" category="list-text">No menu Boot (Inicialização), selecione Option(opção<block ref="8f14e45fceea167a5a36dedd4bea2543" prefix=" " category="inline-code"></block>).</block>
+  <block id="a0ea840e423d2247bf566acde2c201ab" category="list-text">Digite<block ref="7b8b965ad4bca0e41ab51de7b31363a1" prefix=" " category="inline-code"></block> quando solicitado a restaurar a configuração de backup.</block>
+  <block id="3115cf8c3646a9861bf194086219616c" category="list-text">Digite<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> quando solicitado a reinicializar o nó.</block>
+  <block id="f2922cd1bfa5d6f04d27f02d20080042" category="list-text">Prima<block ref="1b10a0464da1409d5026aa8b4f098be8" prefix=" " category="inline-code"></block> para regressar ao Menu de arranque.</block>
+  <block id="acd0b9b64f818fbc1776d56da41a8e95" category="paragraph">Se a encriptação estiver ativada, tem de a restaurar antes de continuar a restaurar a imagem de arranque. Vá para <block ref="d767082d20397ebb99e586749eda3a08" category="inline-link-macro-rx"></block>.</block>
+  <block id="c8d49d03a62a2aaa6d3002fec3a650ea" category="list-text">Selecione a opção<block ref="1679091c5a880faf6fb5e6087eb1b2dc" prefix=" " category="inline-code"></block>.</block>
+  <block id="fe5f4b926efaec8f9797da6b1b0b6c71" category="list-text">Pressione<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block> quando solicitado para restaurar a configuração de backup.</block>
+  <block id="c22df67eafdbaec72d1c041a4f36d374" category="list-text">Tem de substituir o suporte de arranque com falha por um suporte de arranque de substituição que recebeu do NetApp.</block>
+  <block id="0ff7731ee6e151edd45a22c7a84637f0" category="list-text">Você pode perguntar ao administrador do sistema se OKM ou EKM estão ativados.</block>
+  <block id="f6482a2d2722297ff58ea916af2984cb" category="doc">Visão geral da recuperação de Mídia de inicialização - ASA A70 e ASA A90</block>
+  <block id="c987ba69ee60ff652b96f087d2e6ae84" category="paragraph">A recuperação de Mídia de inicialização usa a imagem de inicialização do nó do parceiro e executa automaticamente a opção de menu de inicialização apropriada para instalar a imagem de inicialização na Mídia de inicialização de substituição.</block>
+  <block id="4c676d1a7c436f114a574bfe649622ee" category="paragraph">Quando você encontrar mensagens de erro de inicialização semelhantes às mostradas abaixo, você precisa substituir a Mídia de inicialização e restaurar a imagem ONTAP do nó do parceiro.</block>
+  <block id="f525eed3ae8e84be0d43c618f7f170bc" category="doc">Restaure a imagem ONTAP - ASA A70 e ASA A90</block>
+  <block id="b237862491f8ea6679a4cdd100ebfdfb" category="paragraph">Depois de substituir fisicamente a Mídia de inicialização prejudicada, restaure a imagem ONTAP do nó do parceiro.</block>
+  <block id="01e12de62fa77fda2815719aed8ff892" category="paragraph-title">O que vem a seguir</block>
+  <block id="f88cdb2cd014d9929aa478cc85d4b492" category="inline-link-macro">Devolva a peça com falha ao NetApp</block>
+  <block id="7853c5276d1f54917577b980848960c3" category="paragraph">Depois de restaurar a imagem ONTAP e o nó estiver ativo e fornecendo dados, <block ref="977d546e7889319c9a653d351be92c2b" category="inline-link-macro-rx"></block>você .</block>
+  <block id="bd2422b6c8a3faf4b78e2b890528df95" category="inline-link-macro">Restaure a imagem do ONTAP a partir do nó do parceiro</block>
+  <block id="e625bf74197df22a6e3ea556bf8bd717" category="paragraph">Depois de substituir fisicamente o suporte de arranque danificado<block ref="dcb4deaaa5f388ac9dd740fbe37648be" category="inline-link-macro-rx"></block>, .</block>
+  <block id="1517ca8b5771d8b16b9ea6a392d1c35c" category="inline-link-macro">desligue o controlador desativado</block>
+  <block id="0855cbbfbd39228942736f1dd60ef241" category="paragraph">Depois de analisar os requisitos do suporte de arranque, pode <block ref="f6f6eaac8bd3f857cf89c647db55229b" category="inline-link-macro-rx"></block>.</block>
+  <block id="5983f3a4eec630293636088c491a3fa1" category="paragraph">Reveja os requisitos para substituição do suporte de arranque.</block>
+  <block id="5c66e0e2e15a67ec82f9f3d579e21b89" category="inline-link-macro">Restaure a imagem no suporte de arranque</block>
+  <block id="2adbaa1720c6c394fbe2503b6da6fdb7" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block><block ref="ffddb9c4b10a61c1cf9d29a315266845" category="inline-link-macro-rx"></block></block>
+  <block id="d1e3cab457c34f7a58e0bd674c7d2487" category="paragraph">Desligue ou assuma o controlador afetado para que possa efetuar a manutenção no suporte de arranque.</block>
+  <block id="a9a4115c08aa47aeef8b44d2372274ad" category="inline-link-macro">substitua o suporte de arranque</block>
+  <block id="aa8efed5979835fe328570ee208b1884" category="paragraph">Depois de desligar o controlador desativado, você <block ref="52c48d39b9a1e431e1d04998ae5045f5" category="inline-link-macro-rx"></block>.</block>
+  <block id="e0bfc72b163c6540df4eb3869f1393ff" category="paragraph"><block ref="e0bfc72b163c6540df4eb3869f1393ff" category="inline-link-macro-rx"></block></block>
+  <block id="9d99224aaec79ef0b06c033956f14979" category="paragraph">Você pode substituir uma Mídia de inicialização com falha do nó do parceiro para a imagem de inicialização.</block>
+  <block id="5d9ac1643aa86c7bddb319af8c3e06e3" category="paragraph">A substituição de Mídia de inicialização usa a imagem de inicialização do nó do parceiro e executa automaticamente a opção de menu de inicialização apropriada para instalar a imagem de inicialização na Mídia de inicialização de substituição.</block>
+  <block id="d152ad943d3809714aa2acb56114839e" category="doc">Visão geral da recuperação de Mídia de inicialização - ASA A1K</block>
+  <block id="488cce5b2121242760d58a49c413507e" category="paragraph">Quando você encontrar mensagens de erro de inicialização, você precisa substituir a Mídia de inicialização e restaurar a imagem ONTAP do nó do parceiro.</block>
+  <block id="86e825ad6941bb31698d462a9bbb20e4" category="paragraph">Diretiva não resolvida no &lt;stdin&gt; - include:../_include/A70-90_bootmedia_replace_requirements_bmr.adoc[]</block>
+  <block id="a81626227e94d15884d465e1127d3af4" category="sidebar">Mídia de inicialização ASA A70 e ASA A90</block>
+  <block id="9482f3836d9bb6259f467a0685f5e3b4" category="sidebar">Mídia de inicialização do ASA A1K</block>
 </blocks>

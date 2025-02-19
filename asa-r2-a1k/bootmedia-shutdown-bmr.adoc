@@ -11,7 +11,7 @@ summary: Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desl
 
 
 [role="lead"]
-Você precisa concluir o desligamento do controlador prejudicado. Desligue ou assuma o controlador desativado.
+Desligue ou assuma o controlador afetado para que possa efetuar a manutenção no suporte de arranque.
 
 Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
 
@@ -63,3 +63,6 @@ Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctr
 
 |===
 
+
+.O que vem a seguir
+Depois de desligar o controlador desativado, você link:bootmedia-replace-bmr.html["substitua o suporte de arranque"].

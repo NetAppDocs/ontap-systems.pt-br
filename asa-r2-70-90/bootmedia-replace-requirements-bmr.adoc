@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa r2 a70, a90, replace the boot media 
 summary: Saiba mais sobre os requisitos para substituir a Mídia de inicialização. 
 ---
-= Requisitos e considerações - ASA A70 e ASA A90
+= Requisitos de substituição do suporte de arranque - ASA A70 e ASA A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,12 +13,25 @@ summary: Saiba mais sobre os requisitos para substituir a Mídia de inicializaç
 [role="lead"]
 Antes de substituir o suporte de arranque, certifique-se de que verifica os seguintes requisitos.
 
-* Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu da NetApp.
-* É importante que você aplique os comandos nestas etapas no controlador correto:
-+
-** O controlador _prejudicado_ é o controlador no qual você está realizando a manutenção.
-** O controlador _Healthy_ é o parceiro de HA do controlador prejudicado.
-
-
+* Tem de substituir o suporte de arranque com falha por um suporte de arranque de substituição que recebeu do NetApp.
 * Não deve haver portas do cluster defeituosas no controlador prejudicado.
+* Determine se o OKM (Onboard Key Manager) ou o EKM (Eternal Key Manager) estão configurados usando um dos seguintes métodos:
++
+** Você pode perguntar ao administrador do sistema se OKM ou EKM estão ativados.
+** Para verificar se o OKM está ativado, você pode usar o `security key-manager onboard show`.
+** Para verificar se o EKM está ativado, pode utilizar o `security key-manager external show`.
 
+
+* Para OKM, você precisa do conteúdo do arquivo de senha OKM.
+* Para EKM, você precisa de cópias dos seguintes arquivos do nó do parceiro:
++
+** arquivo /cfcard/kmip/servers.cfg.
+** arquivo /cfcard/kmip/certs/client.crt.
+** arquivo /cfcard/kmip/certs/client.key.
+** Arquivo /cfcard/kmip/certs/CA.pem.
+
+
+
+
+.O que vem a seguir
+Depois de analisar os requisitos do suporte de arranque, pode link:bootmedia-shutdown-bmr.html["desligue o controlador desativado"].

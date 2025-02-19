@@ -26,11 +26,9 @@ Para o sistema de armazenamento ASA A1K, pode executar procedimentos de manuten�
 
 
  a| 
-link:bootmedia-overview.html["Mídia de inicialização - recuperação manual"]
-
-link:bootmedia-overview-bmr.html["Mídia de inicialização - recuperação automatizada"]
+link:bootmedia-overview-bmr.html["Suporte de arranque"]
  a| 
-Pode substituir manualmente um suporte de arranque com falha utilizando o módulo USB para a imagem de arranque.
+Você pode substituir uma Mídia de inicialização com falha do nó do parceiro para a imagem de inicialização.
 
 A substituição automática de Mídia de inicialização usa a imagem de inicialização do nó do parceiro e executa automaticamente a opção de menu de inicialização apropriada para instalar a imagem de inicialização na Mídia de inicialização de substituição.
 

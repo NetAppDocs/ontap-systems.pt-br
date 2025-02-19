@@ -5,8 +5,8 @@ pdf-filename: ASA A1K manter
 entries:
 - title: Visão geral da manutenção
   url: "/asa-r2-a1k/maintain-overview.html"
-- title: Mídia de inicialização - recuperação automatizada
-  pdf-filename: ASA A1K Mídia de inicialização automatizada
+- title: Suporte de arranque
+  pdf-filename: Mídia de inicialização do ASA A1K
   entries:
   - title: Descrição geral do suporte de arranque
     url: "/asa-r2-a1k/bootmedia-overview-bmr.html"
@@ -22,27 +22,6 @@ entries:
     url: "/asa-r2-a1k/bootmedia-recovery-image-boot-bmr.html"
   - title: Devolver artigo com falha ao NetApp
     url: "/asa-r2-a1k/bootmedia-complete-rma-bmr.html"
-- title: Mídia de inicialização - recuperação manual
-  pdf-filename: Manual do suporte de arranque do ASA A1K
-  entries:
-  - title: Descrição geral do suporte de arranque
-    url: "/asa-r2-a1k/bootmedia-overview.html"
-  - title: Mídia de inicialização Substituir fluxo de trabalho
-    url: "/asa-r2-a1k/bootmedia-replace-workflow.html"
-  - title: Rever os requisitos
-    url: "/asa-r2-a1k/bootmedia-replace-requirements.html"
-  - title: Verifique as chaves de criptografia
-    url: "/asa-r2-a1k/bootmedia-encryption-preshutdown-checks.html"
-  - title: Desligue o controlador desativado
-    url: "/asa-r2-a1k/bootmedia-shutdown.html"
-  - title: Substitua o suporte de arranque
-    url: "/asa-r2-a1k/bootmedia-replace.html"
-  - title: Imagem de recuperação de inicialização
-    url: "/asa-r2-a1k/bootmedia-recovery-image-boot.html"
-  - title: Restaure a criptografia
-    url: "/asa-r2-a1k/bootmedia-encryption-restore.html"
-  - title: Devolver artigo com falha ao NetApp
-    url: "/asa-r2-a1k/bootmedia-complete-rma.html"
 - title: Controlador
   pdf-filename: Controlador ASA A1K
   entries:

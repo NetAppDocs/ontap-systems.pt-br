@@ -15,7 +15,7 @@ Siga estas etapas do fluxo de trabalho para substituir a Mídia de inicializaç�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"]link:bootmedia-replace-requirements-bmr.html["Reveja os requisitos do suporte de arranque"]
 [role="quick-margin-para"]
-Para substituir o suporte de arranque, tem de cumprir determinados requisitos.
+Reveja os requisitos para substituição do suporte de arranque.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"]link:bootmedia-shutdown-bmr.html["Desligue o controlador desativado"]
 [role="quick-margin-para"]
@@ -25,7 +25,7 @@ Encerre ou assuma o controlador afetado para que o controlador íntegro continue
 [role="quick-margin-para"]
 Remova o suporte de arranque com falha do módulo de gestão do sistema e instale o suporte de arranque de substituição.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"]link:bootmedia-recovery-image-boot-bmr.html["Restaurar a imagem na Mídia de inicialização (recuperação automática de inicialização)"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"]link:bootmedia-recovery-image-boot-bmr.html["Restaure a imagem no suporte de arranque"]
 [role="quick-margin-para"]
 Restaure a imagem ONTAP a partir do controlador do parceiro.
 

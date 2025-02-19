@@ -1,16 +1,7 @@
----
-permalink: asa-r2-a1k/bootmedia-replace-requirements-bmr.html 
-sidebar: sidebar 
-keywords: asa r2 a1k, replace the boot media 
-summary: Saiba mais sobre os requisitos para substituir a Mídia de inicialização. 
----
-= Requisitos de substituição do suporte de arranque - ASA A1K
+= 
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
 
-[role="lead"]
 Antes de substituir o suporte de arranque, certifique-se de que verifica os seguintes requisitos.
 
 * Tem de substituir o suporte de arranque com falha por um suporte de arranque de substituição que recebeu do NetApp.
@@ -32,6 +23,3 @@ Antes de substituir o suporte de arranque, certifique-se de que verifica os segu
 
 
 
-
-.O que vem a seguir
-Depois de analisar os requisitos do suporte de arranque, pode link:bootmedia-shutdown-bmr.html["desligue o controlador desativado"].
