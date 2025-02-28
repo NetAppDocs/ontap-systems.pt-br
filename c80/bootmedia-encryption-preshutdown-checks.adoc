@@ -2,7 +2,7 @@
 permalink: c80/bootmedia-encryption-preshutdown-checks.html 
 sidebar: sidebar 
 keywords: c80, pre-shutdown checks for onboard encryption keys 
-summary: Antes de desligar o controlador com deficiência e verificar o estado das chaves de encriptação integradas, tem de verificar o estado do controlador com deficiência, desativar a giveback automática e verificar a versão do ONTAP em execução. 
+summary: 'Para garantir a segurança dos dados no sistema de storage AFF C80, é necessário verificar o suporte e o status da chave de criptografia. Verifique se sua versão do ONTAP suporta criptografia de volume NetApp (NVE) e, antes de desligar a controladora, verifique se o gerenciador de chaves está ativo.' 
 ---
 = Verifique o suporte e o status da chave de criptografia - AFF C80
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: Antes de desligar o controlador com deficiência e verificar o estado d
 
 
 [role="lead"]
+Para garantir a segurança dos dados no sistema de storage AFF C80, é necessário verificar o suporte e o status da chave de criptografia. Verifique se sua versão do ONTAP suporta criptografia de volume NetApp (NVE) e, antes de desligar a controladora, verifique se o gerenciador de chaves está ativo.
+
 Antes de desligar o controlador desativado, verifique se a sua versão do ONTAP suporta encriptação de volume NetApp (NVE) e se o sistema de gestão de chaves está corretamente configurado.
 
 

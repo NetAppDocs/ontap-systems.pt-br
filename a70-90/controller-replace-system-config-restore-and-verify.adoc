@@ -2,7 +2,7 @@
 permalink: a70-90/controller-replace-system-config-restore-and-verify.html 
 sidebar: sidebar 
 keywords: aff a70, aff a90, restore and verify the system configuration, verify and set the ha state of the controller module 
-summary: Depois de concluir a substituição de hardware e a inicialização para o modo de manutenção, você verifica a configuração de sistema de baixo nível do controlador de substituição e reconfigura as configurações do sistema conforme necessário. 
+summary: Verifique se a configuração de HA do controlador está ativa e funcionando corretamente no sistema de storage AFF A70 ou AFF A90 e confirme se os adaptadores do sistema listam todos os caminhos para os discos. 
 ---
 = Restaure e verifique a configuração do sistema - AFF A70 e AFF A90
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Depois de concluir a substituição de hardware e a inicialização par
 
 
 [role="lead"]
-Verifique a configuração do sistema de baixo nível do controlador de substituição e reconfigure as definições do sistema conforme necessário.
+Verifique se a configuração de HA do controlador está ativa e funcionando corretamente no sistema de storage AFF A70 ou AFF A90 e confirme se os adaptadores do sistema listam todos os caminhos para os discos.
 
 
 

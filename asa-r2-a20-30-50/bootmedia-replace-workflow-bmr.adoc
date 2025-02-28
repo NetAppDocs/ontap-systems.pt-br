@@ -1,10 +1,10 @@
 ---
-permalink: c80/bootmedia-replace-workflow-bmr.html 
+permalink: asa-r2-a20-30-50/bootmedia-replace-workflow-bmr.html 
 sidebar: sidebar 
-keywords: c80, replace the boot media 
+keywords: aff a20, aff a30, aff a50, replace the boot media 
 summary: Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor. 
 ---
-= Fluxo de trabalho de substituição de Mídia de inicialização - AFF C80
+= Fluxo de trabalho de substituição de Mídia de inicialização - AFF A20, AFF A30 e AFF A50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,7 +15,7 @@ Siga estas etapas do fluxo de trabalho para substituir a Mídia de inicializaç�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"]link:bootmedia-replace-requirements-bmr.html["Reveja os requisitos do suporte de arranque"]
 [role="quick-margin-para"]
-Para substituir o suporte de arranque, tem de cumprir determinados requisitos.
+Reveja os requisitos para substituição do suporte de arranque.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"]link:bootmedia-shutdown-bmr.html["Desligue o controlador desativado"]
 [role="quick-margin-para"]
@@ -23,11 +23,11 @@ Encerre ou assuma o controlador afetado para que o controlador íntegro continue
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"]link:bootmedia-replace-bmr.html["Substitua o suporte de arranque"]
 [role="quick-margin-para"]
-Remova o suporte de arranque com falha do módulo de gestão do sistema e instale o suporte de arranque de substituição.
+Remova o suporte de arranque com falha do controlador afetado e instale o suporte de arranque de substituição.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"]link:bootmedia-recovery-image-boot-bmr.html["Restaurar a imagem na Mídia de inicialização (recuperação automática de inicialização)"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"]link:bootmedia-recovery-image-boot-bmr.html["Restaure a imagem no suporte de arranque"]
 [role="quick-margin-para"]
-Restaure a imagem ONTAP a partir do controlador do parceiro.
+Restaure a imagem ONTAP a partir do controlador saudável.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinco"]link:bootmedia-complete-rma-bmr.html["Devolva a peça com falha ao NetApp"]
 [role="quick-margin-para"]

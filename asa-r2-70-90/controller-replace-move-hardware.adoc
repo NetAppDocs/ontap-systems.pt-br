@@ -2,7 +2,7 @@
 permalink: asa-r2-70-90/controller-replace-move-hardware.html 
 sidebar: sidebar 
 keywords: asa r2 a70, asa r2 a90, move the controller module hardware 
-summary: Para substituir um módulo de controlador, é necessário remover o controlador prejudicado, mover os componentes FRU para o módulo de controlador de substituição, instalar o módulo de controlador de substituição no chassis e, em seguida, inicializar o sistema para o modo de manutenção. 
+summary: Substitua a controladora em seu sistema ASA A70 ou ASA A90 quando uma falha ou atualização de hardware exigir isso. Este processo envolve remover o controlador prejudicado, mover os componentes para o controlador de substituição, instalar o controlador de substituição e reiniciar o sistema. 
 ---
 = Substitua o hardware do módulo do controlador - ASA A70 e ASA A90
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Para substituir um módulo de controlador, é necessário remover o con
 
 
 [role="lead"]
-Para substituir o controlador, tem de remover o controlador afetado, mover os componentes FRU do módulo do controlador afetado para o módulo do controlador de substituição, instalar o módulo do controlador de substituição no chassis e, em seguida, arrancar o sistema para o modo de manutenção.
+Substitua a controladora em seu sistema ASA A70 ou ASA A90 quando uma falha ou atualização de hardware exigir isso. Este processo envolve remover o controlador prejudicado, mover os componentes para o controlador de substituição, instalar o controlador de substituição e reiniciar o sistema.
 
 
 

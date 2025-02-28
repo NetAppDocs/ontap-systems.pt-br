@@ -2,7 +2,7 @@
 permalink: c80/controller-replace-recable-reassign-disks.html 
 sidebar: sidebar 
 keywords: c80, how to recable the system, teboot the system 
-summary: É necessário reiniciar o armazenamento de dados do controlador. 
+summary: Retorne o controle dos recursos de armazenamento ao controlador de substituição para que seu sistema AFF C80 possa retomar a operação normal. 
 ---
 = Recable e devolver o controlador - AFF C80
 :allow-uri-read: 
@@ -11,18 +11,15 @@ summary: É necessário reiniciar o armazenamento de dados do controlador.
 
 
 [role="lead"]
-Verifique as conexões de armazenamento e rede e, em seguida, devolva o controlador.
-
-
-
-== Devolva o controlador
-
-Redefina a encriptação se ativada e volte a colocar o controlador em funcionamento normal.
+Retorne o controle dos recursos de armazenamento ao controlador de substituição para que seu sistema AFF C80 possa retomar a operação normal.
 
 [role="tabbed-block"]
 ====
 .Sem criptografia
 --
+Volte a colocar o controlador afetado em funcionamento normal, devolvendo o respetivo armazenamento
+
+.Passos
 . No prompt Loader, digite `boot_ontap`.
 . Pressione <enter> quando as mensagens do console pararem.
 +
@@ -30,15 +27,30 @@ Redefina a encriptação se ativada e volte a colocar o controlador em funcionam
 ** Se você vir _aguardando giveback_, pressione a tecla <enter>, faça login no nó do parceiro e vá para a próxima etapa no final desta seção.
 
 
-. Devolva o controlador afetado ao funcionamento normal, devolvendo o respetivo armazenamento: `storage failover giveback -ofnode _impaired_node_name_`.
-. Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true`.
-. Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos: `system node autosupport invoke -node * -type all -message MAINT=END`.
+. Volte a colocar o controlador afetado em funcionamento normal, devolvendo o respetivo armazenamento:
++
+`storage failover giveback -ofnode _impaired_node_name_`.
+
+. Se a giveback automática foi desativada, reative-a:
++
+`storage failover modify -node local -auto-giveback true`.
+
+. Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`.
+
 
 
 --
 .Criptografia integrada (OKM)
 --
-. No prompt Loader, digite `boot_ontap maint`.
+Redefina a criptografia integrada e retorne o controlador à operação normal.
+
+.Passos
+. No prompt Loader, digite:
++
+`boot_ontap maint`.
+
 . Inicie no menu ONTAP a partir do prompt Loader `boot_ontap menu` e selecione a opção 10.
 . Introduza a frase-passe OKM. Pode obter esta frase-passe do cliente ou https://support.netapp.com["Suporte à NetApp"] contactar .
 +
@@ -49,29 +61,52 @@ NOTE: Você será solicitado duas vezes para a senha.
 . No menu de inicialização, insira a opção `1` para inicialização normal.
 . Pressione <enter> quando _Waiting for giveback_ for exibido.
 . Mova o cabo do console para o nó do parceiro e faça login como `admin`.
-. Devolver apenas os agregados CFO (o agregado raiz): `storage failover giveback -fromnode local -only-cfo-aggregates true`
+. Devolver apenas os agregados CFO (o agregado raiz):
 +
-** Se encontrar erros, https://support.netapp.com["Suporte à NetApp"] contacte .
+`storage failover giveback -fromnode local -only-cfo-aggregates true`
 
++
+Se encontrar erros, https://support.netapp.com["Suporte à NetApp"] contacte .
 
-. Aguarde 5 minutos após a conclusão do relatório de giveback e verifique o status de failover e o status de giveback `storage failover show`: E `storage failover show-giveback`.
-. Mova o cabo do console para o nó de substituição e entre `security key-manager onboard sync`
+. Aguarde 5 minutos após a conclusão do relatório de giveback e verifique o status de failover e o status de giveback:
++
+`storage failover show` e `storage failover show-giveback`.
+
+. Mova o cabo do console para o nó de substituição e digite:
++
+`security key-manager onboard sync`
+
 +
 
 NOTE: Você será solicitado a fornecer a senha do OKM para o cluster.
 
-. Verificar o estado das chaves com o seguinte comando `security key-manager key query -key-type svm-KEK`: .
+. Verificar o estado das chaves com o seguinte comando:
++
+`security key-manager key query -key-type svm-KEK`.
+
 +
 Se a coluna _restored_ mostrar qualquer coisa, exceto _true_, entre em Contato https://support.netapp.com["Suporte à NetApp"]com .
 
-. Devolva o controlador afetado ao funcionamento normal, devolvendo o respetivo armazenamento: `storage failover giveback -ofnode _impaired_node_name_`.
-. Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true`.
-. Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos: `system node autosupport invoke -node * -type all -message MAINT=END`.
+. Volte a colocar o controlador afetado em funcionamento normal, devolvendo o respetivo armazenamento:
++
+`storage failover giveback -ofnode _impaired_node_name_`.
+
+. Se a giveback automática foi desativada, reative-a:
++
+`storage failover modify -node local -auto-giveback true`.
+
+. Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`.
+
 
 
 --
 .Gestor de chaves externo (EKM)
 --
+Redefina a encriptação e volte a colocar o controlador em funcionamento normal.
+
+.Passos
 . Se o volume raiz estiver criptografado com o Gerenciador de chaves Externo e o cabo do console estiver conetado ao nó de substituição, insira `boot_ontap menu` e selecione a opção `11`.
 . Responda `y` ou `n` às seguintes perguntas:
 +
@@ -109,11 +144,26 @@ NOTE: Contacte https://support.netapp.com["Suporte à NetApp"] se tiver problema
 
 
 . Uma vez que o sistema processa, você verá o Menu de inicialização. Selecione "1" para o arranque normal.
-. Verificar o estado da aquisição: `storage failover show`.
-. Certifique-se de que todos os despejos do núcleo no nó reparado sejam salvos indo para o modo avançado" `set -privilege advanced` e `run local partner savecore` depois .
-. Devolva o controlador afetado ao funcionamento normal, devolvendo o respetivo armazenamento: `storage failover giveback -ofnode _impaired_node_name_`.
-. Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true`.
-. Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos: `system node autosupport invoke -node * -type all -message MAINT=END`.
+. Verifique o estado da aquisição:
++
+`storage failover show`.
+
+. Certifique-se de que todos os despejos do núcleo no nó reparado são salvos indo para o modo avançado:
++
+`set -privilege advanced` e `run local partner savecore` então .
+
+. Volte a colocar o controlador afetado em funcionamento normal, devolvendo o respetivo armazenamento:
++
+`storage failover giveback -ofnode _impaired_node_name_`.
+
+. Se a giveback automática foi desativada, reative-a:
++
+`storage failover modify -node local -auto-giveback true`.
+
+. Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`.
+
 
 
 --

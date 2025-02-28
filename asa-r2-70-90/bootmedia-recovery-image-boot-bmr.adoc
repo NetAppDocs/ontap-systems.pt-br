@@ -2,7 +2,7 @@
 permalink: asa-r2-70-90/bootmedia-recovery-image-boot-bmr.html 
 sidebar: sidebar 
 keywords: asa r2 a70, asa r2 a90, boot the recovery image 
-summary: Você pode restaurar a imagem na Mídia de inicialização a partir do controlador do parceiro por meio do processo de recuperação de inicialização automatizada. 
+summary: Se a Mídia de inicialização no sistema ASA A70 ou ASA A90 estiver corrompida, você poderá inicializar a imagem de recuperação, restaurar a configuração do nó do parceiro e verificar as variáveis de ambiente. 
 ---
 = Restaure a imagem ONTAP - ASA A70 e ASA A90
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Você pode restaurar a imagem na Mídia de inicialização a partir do 
 
 
 [role="lead"]
-Depois de substituir fisicamente a Mídia de inicialização prejudicada, restaure a imagem ONTAP do nó do parceiro.
+Se a Mídia de inicialização no sistema ASA A70 ou ASA A90 estiver corrompida, você poderá inicializar a imagem de recuperação e restaurar a configuração do nó do parceiro.
 
 .Antes de começar
 * Determine se o OKM (Onboard Key Manager) ou o EKM (Eternal Key Manager) estão configurados usando um dos seguintes métodos:

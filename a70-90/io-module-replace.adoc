@@ -11,10 +11,13 @@ summary: Para substituir uma placa PCIe, você deve desconetar os cabos das plac
 
 
 [role="lead"]
-Use este procedimento para substituir um módulo de e/S com falha.
+Substitua um módulo de e/S no seu sistema AFF A70 ou AFF A90 quando o módulo falhar ou precisar de uma atualização para suportar desempenho superior ou recursos adicionais.
 
-* Você pode usar esse procedimento com todas as versões do ONTAP compatíveis com seu sistema de storage.
-* Todos os outros componentes do sistema de armazenamento devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+Você pode usar esse procedimento com todas as versões do ONTAP compatíveis com seu sistema de storage.
+
+.Antes de começar
+* Tem de ter a peça de substituição disponível.
+* Certifique-se de que todos os outros componentes do sistema de armazenamento estão a funcionar corretamente; caso contrário, contacte o suporte técnico.
 
 
 

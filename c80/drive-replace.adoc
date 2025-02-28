@@ -2,7 +2,7 @@
 permalink: c80/drive-replace.html 
 sidebar: sidebar 
 keywords: c80, replace the drives 
-summary: Você deve substituir uma unidade quando o sistema de armazenamento Registrar uma mensagem de aviso no console do sistema indicando que uma unidade falhou. Além disso, o LED de avaria no painel do visor do operador e o LED de avaria na unidade avariada acendem-se. 
+summary: Substitua uma unidade no sistema AFF C80 quando uma unidade falhar ou precisar de uma atualização. Esse processo envolve identificar a unidade com defeito, removê-la com segurança e instalar uma nova unidade para garantir o acesso contínuo aos dados e o desempenho do sistema. 
 ---
 = Substitua a unidade SSD - AFF C80
 :allow-uri-read: 
@@ -10,7 +10,10 @@ summary: Você deve substituir uma unidade quando o sistema de armazenamento Reg
 :imagesdir: ../media/
 
 
-[role="lead lead"]
+[role="lead"]
+Substitua uma unidade no sistema AFF C80 quando uma unidade falhar ou precisar de uma atualização. Esse processo envolve identificar a unidade com defeito, removê-la com segurança e instalar uma nova unidade para garantir o acesso contínuo aos dados e o desempenho do sistema.
+
+[role="lead"]
 Você pode substituir uma unidade SSD com falha sem interrupções enquanto a e/S estiver em andamento.
 
 Quando uma unidade falha, a plataforma Registra uma mensagem de aviso no console do sistema indicando qual unidade falhou. Além disso, o LED de avaria no painel do visor do operador e o LED de avaria na unidade avariada acendem-se.

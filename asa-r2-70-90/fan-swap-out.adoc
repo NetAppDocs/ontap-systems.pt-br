@@ -2,7 +2,7 @@
 permalink: asa-r2-70-90/fan-swap-out.html 
 sidebar: sidebar 
 keywords: asa r2 a70, asa r2 a90, asa r2, swap, out, fan, module, interrupt, service, sequence, task, hot-swap, hot-swap a fan module 
-summary: Para trocar um módulo de ventilador sem interromper o serviço, você deve executar uma sequência específica de tarefas. 
+summary: Substitua um módulo de ventilador no sistema ASA A70 ou ASA A90 quando um ventilador falhar ou não estiver funcionando de forma eficiente, o que pode afetar o resfriamento do sistema e o desempenho geral. 
 ---
 = Substitua um módulo da ventoinha - ASA A70 e ASA A90
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: Para trocar um módulo de ventilador sem interromper o serviço, você 
 
 
 [role="lead"]
+Substitua um módulo de ventilador no sistema ASA A70 ou ASA A90 quando um ventilador falhar ou não estiver funcionando de forma eficiente, o que pode afetar o resfriamento do sistema e o desempenho geral.
+
 Para substituir uma ventoinha, retire o módulo da ventoinha com avaria e substitua-o por um novo módulo da ventoinha.
 
 

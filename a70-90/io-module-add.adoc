@@ -2,7 +2,7 @@
 permalink: a70-90/io-module-add.html 
 sidebar: sidebar 
 keywords: aff a70, aff a90, add I/O module 
-summary: Para substituir um módulo de e/S, você deve desconetar os cabos do módulo, remover os módulos SFP e QSFP do módulo, remover o módulo, instalar o módulo de substituição, reinstalar os módulos SFP e QSFP e, em seguida, fazer o cabo do módulo de e/S. 
+summary: Você pode adicionar um módulo de e/S ao seu sistema de armazenamento AFF A70 e AFF A90 quando houver slots vazios disponíveis ou quando todos os slots estiverem totalmente preenchidos. 
 ---
 = Adicionar módulo de e/S - AFF A70 e AFF A90
 :allow-uri-read: 
@@ -17,7 +17,7 @@ Você pode adicionar um módulo de e/S ao seu sistema de armazenamento AFF A70 e
 
 == Passo 1: Desligue o módulo do controlador desativado
 
-Desligue ou assuma o controlo do módulo do controlador desativado.
+Encerre ou assuma o controlo do módulo do controlador afetado utilizando uma das seguintes opções.
 
 [role="tabbed-block"]
 ====

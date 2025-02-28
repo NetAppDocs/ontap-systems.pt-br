@@ -2323,7 +2323,6 @@
   <block id="43d656a7b2fb92dbbe5e13b8f00a00b8" category="list-text">Prima o botão do came de gestão do sistema. A alavanca do excêntrico afasta-se do chassis.</block>
   <block id="f0d27e50eb41ec006d18a96b5254063e" category="list-text">Rode a alavanca do excêntrico totalmente para baixo e retire o módulo de gestão do sistema do módulo do controlador.</block>
   <block id="fd0b5e2ec2a2cf25a20efb1e3056cd3e" category="list-text">Reinstale o módulo de gerenciamento do sistema:</block>
-  <block id="cb469b95641c1382be009038b04e5158" category="paragraph">Tem de ligar o módulo do controlador, remover o módulo de gestão do sistema da parte de trás do sistema, remover o suporte de arranque afetado e instalar o suporte de arranque de substituição no módulo de gestão do sistema.</block>
   <block id="54a53a09772d42f23357a9952d2d46a1" category="section-title">Passo 2: Transfira a imagem de arranque para o suporte de arranque</block>
   <block id="cad55b14298ba91aeb9818c5ded8ee54" category="list-text">Insira a unidade flash USB na porta USB-A no módulo de gerenciamento do sistema.</block>
   <block id="c81ac37e18f8d2fc1fa9a876a4ec31e6" category="list-text">Volte a ligar a alimentação ao módulo do controlador:</block>
@@ -2351,7 +2350,6 @@
   <block id="9b3a68cd89d10f3b0ccc10f24e3f6012" category="list-text">Pode utilizar o procedimento de substituição do chassis com todas as versões do ONTAP suportadas pelo seu sistema.</block>
   <block id="fd6ec360446d31e3ab9c3f69a39b148a" category="list-text">O procedimento de substituição do chassi é escrito partindo do pressuposto de que você está movendo o painel frontal, as unidades NVMe e os módulos do controlador para o novo chassi e de que o chassi de substituição é um novo componente do NetApp.</block>
   <block id="f39018b3c08ed8bfa54e407c9e13c6b4" category="list-text">*O procedimento de substituição do chassis é disruptivo.* Para um cluster de dois nós, você terá uma interrupção de serviço completa e uma interrupção parcial em um cluster de vários nós.</block>
-  <block id="7ae4c88c0c1f1ed7c8b6a312fdab75ab" category="paragraph">Para substituir o controlador, tem de remover o controlador afetado, mover os componentes FRU do módulo do controlador afetado para o módulo do controlador de substituição, instalar o módulo do controlador de substituição no chassis e, em seguida, arrancar o sistema para o modo de manutenção.</block>
   <block id="2fb967de668a2d809970dd0ee11a24ab" category="paragraph">Mova as fontes de alimentação para o controlador de substituição.</block>
   <block id="2a7480039bddad1197a5ab3ef2e9c642" category="image-alt">Remoção da PSU</block>
   <block id="d064a3d94819a3fa5dab2f305999e373" category="paragraph">Mova os módulos das ventoinhas para o módulo do controlador de substituição.</block>
@@ -2672,7 +2670,6 @@
   <block id="538f577c4284d097aef57681a2acf728" category="paragraph"><block ref="a0502e9e767995ecf84f499d84740634" prefix="" category="inline-code"></block></block>
   <block id="c779830d2c1a694320dcf49ae503c75a" category="list-text">Certifique-se de que a giveback automática está ativa:</block>
   <block id="3d2d5e9a2a8cef4225a4bd073c2aeefb" category="paragraph"><block ref="6f0c6616b99fea33a3020e0e0dcbe3c6" prefix="" category="inline-code"></block></block>
-  <block id="326dcf3a777a5d77ced1cd01fc928869" category="paragraph">Antes de devolver o nó _replacement_ ao serviço, você deve verificar se os LIFs estão em suas portas domésticas, verificar o estado do cluster e redefinir a giveback automática.</block>
   <block id="462ec873925d8409f9ead354ff424e1b" category="list-text">Verifique se as interfaces lógicas estão relatando para o servidor doméstico e as portas:<block ref="f8a58a872dbff91c3ae7076526ddf81a" prefix=" " category="inline-code"></block></block>
   <block id="71d4d064630d70cfb9adf86452b9de52" category="paragraph">Se algum LIFs estiver listado como false, reverta-os para suas portas iniciais:<block ref="985591930e85610706940dd82967bd61" prefix=" " category="inline-code"></block></block>
   <block id="d6f7de8608837079f0d0dd7fa668c457" category="list-text">Verifique a integridade do cluster. Consulte o<block ref="9f193d2818f839c9575e0a6969820fd9" category="inline-link-rx"></block> artigo da KB para obter mais informações.</block>
@@ -4557,15 +4554,12 @@
   <block id="e32530d54c0288f36793648830558717" category="doc">Restaurar criptografia - AFF A70 e AFF A90</block>
   <block id="a13516239a2a49e82fd12bff6cdd2f91" category="doc">Inicie a imagem de recuperação - AFF A70 e AFF A90</block>
   <block id="7c506ea0b7da853881a11acc736d97c7" category="doc">Requisitos de substituição do suporte de arranque - AFF A70 e AFF A90</block>
-  <block id="f03f5749cb3ab7b7e16074ecbba8e300" category="doc">Fluxo de trabalho de substituição de Mídia de inicialização - AFF A70 e AFF A90</block>
   <block id="08d73f01628a5943295e92f24c02e02b" category="doc">Substitua o suporte de arranque - AFF A70 e AFF A90</block>
   <block id="ecf04557e2cacfb271d9b67c7f2b3a72" category="doc">Desligar controlador desativado - AFF A70 e AFF A90</block>
-  <block id="32c1650c7fd910bcdea68420f25c9c98" category="summary">Mova as unidades de disco rígido e o módulo ou módulos do controlador do chassis danificado para o novo chassis e troque o chassis danificado do rack de equipamento ou do armário do sistema pelo novo chassis do mesmo modelo do chassis danificado.</block>
   <block id="a91e5640776c0744ff211f74a193dc57" category="doc">Substitua o chassis - AFF A70 e AFF A90</block>
   <block id="e2fecd58050f321afb4d9cc739d4187c" category="summary">Substituir um chassis com deficiência pelo novo chassis do mesmo modelo que o chassis com deficiência.</block>
   <block id="85d8564bfb7225b8979b99bf295a46f1" category="doc">Requisitos de substituição do chassis - AFF A70 e AFF A90</block>
   <block id="2f7658a94038d064a8c1d014e3362aa8" category="doc">Desligue os controladores - AFF A70 e AFF A90</block>
-  <block id="a3b6d0681b238842e8abbe17c93092bf" category="doc">Fluxo de trabalho de substituição do chassis - AFF A70 e AFF A90</block>
   <block id="64e923d27d8f20b1c39e996784b889e8" category="paragraph">Siga estas etapas do fluxo de trabalho para substituir seu chassi.</block>
   <block id="610624f1a6b2eadbbc362858bfa11e2f" category="inline-link-macro">Reveja os requisitos de substituição do chassis</block>
   <block id="15f73c32702be38a6c35694972953b59" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block><block ref="9e50dfd69463f0498a1a5a1d869a2b1e" category="inline-link-macro-rx"></block></block>
@@ -4585,7 +4579,6 @@
   <block id="7b78a43d2ef1cd56888972224b322cba" category="section-title">Etapa 1: Verificar LIFs e verificar a integridade do cluster</block>
   <block id="5e1c3f88c24c4db392d7d1d519b28aa4" category="doc">Desligue o controlador desativado - AFF A70 e AFF A90</block>
   <block id="50a2e3714f0440fca3d96537b2113368" category="doc">Restaure e verifique a configuração do sistema - AFF A70 e AFF A90</block>
-  <block id="05bf5962e43260a46857d5654c4d1eb4" category="doc">Fluxo de trabalho de substituição do controlador - AFF A70 e AFF A90</block>
   <block id="58d356c259fddd513288088c96915d44" category="inline-link-macro">Recable e devolver o controlador</block>
   <block id="ea0554b4bb91e270fbc2d78ea4e70d10" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block><block ref="e14fc53a2fbc5d3f87f2c572a1629eed" category="inline-link-macro-rx"></block></block>
   <block id="9a4829e743998d9894153667670dfd29" category="paragraph">Recable o controlador e transfira a propriedade dos recursos de armazenamento de volta para o controlador de substituição.</block>
@@ -4637,8 +4630,6 @@
   <block id="165e0559b98c0c22e37b61a08f8854d6" category="summary">Você deve substituir o componente com falha por um componente de unidade substituível de campo (FRU) de substituição que você recebeu de seu provedor.</block>
   <block id="904251477a4ab72deb06fb568e51e8e9" category="doc">Descrição geral do módulo de e/S adicional e/S - AFF A70 e AFF A90</block>
   <block id="23c290996bbddd9feb90c8208ce03776" category="doc">Substitua o módulo de e/S - AFF A70 e AFF A90</block>
-  <block id="137aeb15d685b764448324fcbbc40af6" category="paragraph">Talvez seja necessário executar procedimentos de manutenção no hardware. Os procedimentos específicos para a manutenção dos componentes do sistema AFF A70 e AFF A90 estão nesta seção.</block>
-  <block id="75775d88e26bd0ec1b5827bced4fb9dd" category="paragraph">Os procedimentos nesta seção pressupõem que os sistemas AFF A70 e AFF A90 já foram implantados como um nó de storage no ambiente ONTAP.</block>
   <block id="df0a5e7efca0ed693d07e3026e615c4a" category="paragraph">Para os sistemas de storage AFF A70 e AFF A90, você pode executar procedimentos de manutenção nos seguintes componentes.</block>
   <block id="dc5fb977cb8c88d079092e9c6ec6160e" category="paragraph"><block ref="dc5fb977cb8c88d079092e9c6ec6160e" category="inline-link-macro-rx"></block></block>
   <block id="5d7bf1cac3020aecc9e419835da60990" category="paragraph"><block ref="5d7bf1cac3020aecc9e419835da60990" category="inline-link-macro-rx"></block></block>
@@ -5364,8 +5355,6 @@
   <block id="c8208be6c84d32af841a96445a7aa12a" category="paragraph">Os procedimentos de manutenção específicos para cada tipo de sistema ASA R2 encontram-se na <block ref="6106c9a1bd699a0a46425013e812fe67" category="inline-link-macro-rx"></block>.</block>
   <block id="cb1eb944e0468ffad560cfc4623a28dc" category="doc">Devolva a peça com falha ao NetApp - ASA A70 e ASA A90</block>
   <block id="7b8bb02fade9d4a58e3cfc42ecdcd970" category="summary">Saiba mais sobre o método automatizado para substituir a Mídia de inicialização.</block>
-  <block id="f5179676ff804b88e5799857443be173" category="paragraph">Você pode substituir uma Mídia de inicialização com falha por meio da opção de recuperação de Mídia de inicialização automatizada (BMR).</block>
-  <block id="b0fe901b833b66e26e925b635eccaed3" category="paragraph">A recuperação automatizada de Mídia de inicialização usa a imagem de inicialização do nó do parceiro e executa automaticamente a opção apropriada do menu de inicialização para instalar a imagem de inicialização na Mídia de inicialização de substituição.</block>
   <block id="4a64f3d63fd0e8b93b80ef48b4698a9a" category="summary">Você pode restaurar a imagem na Mídia de inicialização a partir do controlador do parceiro por meio do processo de recuperação de inicialização automatizada.</block>
   <block id="56e7f21b9427a2441a89613fe1fcc2ff" category="summary">Você localiza o suporte de inicialização com falha removendo o módulo Gerenciamento do sistema antes de substituir o suporte de inicialização.</block>
   <block id="69326c1cf7a079cc03d300fe203efde6" category="doc">Substitua o suporte de arranque - ASA A70 e ASA A90</block>
@@ -5376,8 +5365,6 @@
   <block id="4dbdeeec8c8a1db8c3051377a336528c" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block><block ref="4756441374eb951a9eff4e8462cce863" category="inline-link-macro-rx"></block></block>
   <block id="e15dd4e77a0784cb0db73357420aff31" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block><block ref="16af84fbab48141f269a09d09712af68" category="inline-link-macro-rx"></block></block>
   <block id="bbe9dab8dbb04372040fcb892979257c" category="paragraph">Remova o suporte de arranque com falha do módulo de gestão do sistema e instale o suporte de arranque de substituição.</block>
-  <block id="fc470b262a8a9f527fb1ef08eff78628" category="inline-link-macro">Restaurar a imagem na Mídia de inicialização (recuperação automática de inicialização)</block>
-  <block id="c28ba0284e703cae6ab6dd5a8bf205b7" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block><block ref="675b0dafb39ecb851a6b35f633284961" category="inline-link-macro-rx"></block></block>
   <block id="d09fb8e8be6d5c93fb8113549e3abfb0" category="paragraph">Restaure a imagem ONTAP a partir do controlador do parceiro.</block>
   <block id="295e63d74f4c0ccd864527db0492eb45" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block><block ref="743c3bfe574d2216cecf6275411cf3b1" category="inline-link-macro-rx"></block></block>
   <block id="b8a9f715dbb64fd5c56e7783c6820a61" category="inline-image-macro">dois</block>
@@ -5894,7 +5881,6 @@
   <block id="555193cbb314d41872f483748d489825" category="doc">Substitua uma fonte de alimentação - AFF C800</block>
   <block id="c5a63894b2cca959254f190c438b2862" category="doc">Substitua a bateria do relógio em tempo real - AFF C800</block>
   <block id="2d5a4622cf1f60fa2062a6410204c938" category="summary">Saiba mais sobre o hardware legado que não é mais suportado.</block>
-  <block id="b55c2253dc1b30a508b603e707fc1e15" category="doc">Hardware herdado não é mais suportado</block>
   <block id="791c7d7e48c500e265e759e91a1190c4" category="paragraph">Os seguintes sistemas, compartimentos e switches não são mais compatíveis a partir da versão especificada do ONTAP.</block>
   <block id="e039aa1be61543fd84f1c4eb5d3e9f6b" category="section-title">Sistemas de hardware ONTAP</block>
   <block id="a45da96d0bf6575970f2d27af22be28a" category="cell">Sistema</block>
@@ -6907,7 +6893,6 @@
   <block id="2ad111e68a24a4da0cc9b332319a0ae8" category="inline-link-macro">FAS2700</block>
   <block id="16271069a214a6b555402afb04d69089" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> Ligue os cabos</block>
   <block id="c6b53c8091f0d8860c298f31862ebf8f" category="paragraph">Faça o cabeamento dos controladores à rede e, em seguida, faça o cabeamento dos controladores às gavetas. As instruções de instalação e configuração do modelo da sua plataforma incluem instruções para fazer o cabeamento das portas da controladora para a rede e para os switches.</block>
-  <block id="d512abd366eb57b9be4a31cb2c1bc065" category="paragraph-title"><block ref="ef78558f80439832e0f51cc22cee8b8c" category="inline-image-macro-rx" type="image"></block> Configure o cluster do ONTAP</block>
   <block id="690804f2b4dc1d3ad6cc6e584fbc071b" category="paragraph">Depois de instalar e configurar os controladores e switches, você deve concluir a configuração do storage no ONTAP. Acesse as instruções a seguir de acordo com a configuração de implantação.</block>
   <block id="549f827e07761bafef053e8ca7564a39" category="inline-link">Configurar o ONTAP</block>
   <block id="8849c41092b79554e9b7f3a213d25622" category="list-text">Para implantações do ONTAP,<block ref="a9c0083f0559526553eb5b29452926d5" category="inline-link-rx"></block> consulte .</block>
@@ -9162,7 +9147,6 @@
   <block id="668e2078ef1b1722c77cdb5c523a4463" category="sidebar">Base de dados de Conhecimento da NetApp</block>
   <block id="2bae42f280067110dfd52cc69a468364" category="sidebar">Active IQ (login necessário)</block>
   <block id="047a96ddf883d10b35434732a53c401d" category="sidebar">Os sistemas AFF A-Series são projetados para ajudar as organizações a transformar sua infraestrutura com mais rapidez e impulsionar estratégias orientadas pelos dados.</block>
-  <block id="1f3c0e8b8f10f9353f7963ffc57f55db" category="sidebar">Sistemas AFF A-Series</block>
   <block id="e7ac051b931486a46017746405bd99b0" category="sidebar">A documentação do sistema de storage permite instalar, configurar e manter seu sistema AFF Série A.</block>
   <block id="c56bcc6acd479e65bcbf0bcd79b1ac0d" category="sidebar">Datasheet do AFF A-Series</block>
   <block id="da5b80157b450494fd95006901e6fde1" category="sidebar">Visão geral da plataforma AFF A-Series</block>
@@ -9178,7 +9162,6 @@
   <block id="f7e891dd188ea1d7b94852cb50ec354e" category="sidebar">Atualização do software ONTAP</block>
   <block id="cede59a3d2d42bc422e2a59b7efe9552" category="sidebar">Substitua a unidade de disco interna (vídeo)</block>
   <block id="8add0b07b7a4e6031725675ffd7f3a40" category="sidebar">Os sistemas AFF C-Series são baseados na tecnologia flash de capacidade NVMe de alta densidade.</block>
-  <block id="88caadba05eccaaf5df5206e6c67f90b" category="sidebar">Sistemas AFF C-Series</block>
   <block id="17732d64911b83c1ef019e7ce301df3a" category="sidebar">A documentação do sistema de armazenamento permite instalar, configurar e manter o sistema ASA.</block>
   <block id="ca28f9f86b3aa8b741c753f063bb94dc" category="sidebar">Datasheet do AFF C-Series</block>
   <block id="0fb9735ecb54169951a85054b16d2868" category="sidebar">Visão geral da plataforma AFF C-Series</block>
@@ -9188,16 +9171,12 @@
   <block id="c91d48fe9284f4d299615b787ff7c882" category="sidebar">Instalar e configurar sistemas C-Series</block>
   <block id="d82b198ed12fecd580981b34c4959490" category="sidebar">Manter os sistemas A-Series</block>
   <block id="e32ee65ffedbf05873ffce177cee51b5" category="sidebar">Manter os sistemas C-Series</block>
-  <block id="a46d5e85a24eb7f41987dc2fc02df2c1" category="sidebar">O array all-flash SAN (ASA) da NetApp oferece uma experiência de SAN dedicada e simplificada que fornece disponibilidade contínua de dados para os bancos de dados essenciais da sua organização e outros workloads de SAN.</block>
-  <block id="b93d997895dde5ccf0b4ce2c7ea76b38" category="sidebar">Sistemas All-Flash SAN Array (ASA) A-Series</block>
   <block id="c706be8edc4286046dcf6813e8dd8b18" category="sidebar">A documentação do sistema de storage permite instalar, configurar e manter seu sistema ASA Série A.</block>
   <block id="27562113eba41d0820398afd585cb267" category="sidebar">Configuração do software ASA</block>
   <block id="ff529c4d04327f7d20ae4d7b457bcd18" category="sidebar">Datasheet do ASA</block>
   <block id="30975d9ae55d85636f78d9b3e459df73" category="sidebar">Resumo da solução da ASA</block>
   <block id="6c713e33f81bfdf294d75a585966fd05" category="sidebar">Relatório técnico da ASA</block>
-  <block id="d6db6f02fef14cb7ca1df4e0aecf3992" category="sidebar">Sistemas C-Series All-Flash SAN Array (ASA)</block>
   <block id="ca42e40f781122cb5a2d8f08cb50d450" category="sidebar">A documentação do sistema de storage permite instalar, configurar e manter seu sistema ASA Série C.</block>
-  <block id="7ff670d73112c0badc0ffbf90ef75168" category="sidebar">Os modelos ASA A-Series e C-Series oferecem uma ampla gama de performance e capacidade para atender às suas necessidades.</block>
   <block id="0ab1a7883d0399cbaf77a2e38633a6ea" category="sidebar">Os novos sistemas NetApp ASA R2 (ASA A1K, ASA A70 e ASA A90) fornecem uma solução unificada de hardware e software que cria uma experiência simplificada específica para as necessidades dos clientes somente de SAN.</block>
   <block id="9c2e760711833288658335a04261b16a" category="sidebar">A documentação do sistema de armazenamento ASA R2 permite instalar, configurar e manter o sistema ASA R2.</block>
   <block id="e995d56efd9e31d97825dd79be4d1383" category="sidebar">Saiba mais sobre os sistemas de armazenamento ASA R2</block>
@@ -9217,7 +9196,6 @@
   <block id="5a34816c99c709c3123cc893c23aa8de" category="sidebar">Bateria NV</block>
   <block id="8cf7baf96983d1c70a286576ddcd0ca1" category="sidebar">ASA A70 e ASA A90</block>
   <block id="5407ed45e4a9085a4f72a4611d202d7c" category="sidebar">As NS224 gavetas e SAS da NetApp ajudam a oferecer a performance, resiliência e flexibilidade necessárias para a transformação digital.</block>
-  <block id="432ba2d883505b11fa27f305c25abca9" category="sidebar">Compartimentos de unidades para sistemas de hardware ONTAP</block>
   <block id="9260991b91fdf449af1f97b5d09a9db6" category="sidebar">As gavetas NS224 e SAS foram projetadas especificamente para os sistemas NetApp AFF e FAS a fim de dar suporte às diversas demandas de negócios e aplicações.</block>
   <block id="741dcd232b9f8b276e847ebfc249c814" category="sidebar">Instale as NS224 gavetas</block>
   <block id="4ccd403eb19c48e7ebdaaeb982ef2481" category="sidebar">Gaveta para adicionar quente</block>
@@ -9235,7 +9213,6 @@
   <block id="0d15b077865ff751c51f5dab813a9ea6" category="sidebar">Ventilador na prateleira DS460C</block>
   <block id="3cf53d4c9bda935f2527cd9e3072ef82" category="sidebar">Módulo IOM12/IOM12B</block>
   <block id="eaede3cca67a867c9e94c14b2f787088" category="sidebar">Os sistemas de fim de disponibilidade não estão mais disponíveis para compra, mas ainda são compatíveis.</block>
-  <block id="494ed0f1fc773d73aa33a1ff738ddcfa" category="sidebar">Sistemas de término da disponibilidade</block>
   <block id="8fd3ca5f66dff5be16e79560dd28171e" category="sidebar">AFF A220</block>
   <block id="c78a423f3132ee2ac4f4f4c1fa5d4859" category="sidebar">AFF A300</block>
   <block id="7c3a0be0ea0353939d450cc4c7ccece6" category="sidebar">FAS2600</block>
@@ -9246,7 +9223,6 @@
   <block id="3cf138845a5f80e8602a3ce0e299aa0e" category="sidebar">Datasheet do FAS</block>
   <block id="03cf2233b6c9ced3f99020136bef3bfa" category="sidebar">Visão geral da plataforma FAS</block>
   <block id="e84adb514eb7cf544f0458fa9f233a94" category="sidebar">FAS8300 e FAS8700</block>
-  <block id="9f894ced283c3d04c9187a44baef85bc" category="sidebar">TR-4384 - SAP HANA em sistemas NetApp FAS com protocolo FC</block>
   <block id="cd5ec5f3586869573f3f0b3112426052" category="sidebar">TR-4290 - SAP HANA em sistemas NetApp FAS com NFS</block>
   <block id="b00c4b4112816929de0eb8a79af19e7f" category="sidebar">Documentos de sistemas de hardware ONTAP</block>
   <block id="d1f3a81423106ee57c19f4fc60f797ca" category="sidebar">Fim do suporte</block>
@@ -10633,29 +10609,21 @@
   <block id="4a1bc4a4142dd79ce30c5589f193f6db" category="doc">Devolva a peça com falha ao NetApp - AFF C80</block>
   <block id="edd56e332734eaba427ca0cce098aad0" category="doc">Verifique o suporte e o status da chave de criptografia - AFF C80</block>
   <block id="5c548b2d6ca8a7428b56ff3689ea220d" category="doc">Restaurar encriptação - AFF C80</block>
-  <block id="fb4005ed74ae7b9acf0807a7348002f7" category="doc">Visão geral da recuperação automática de Mídia de inicialização - AFF C80</block>
-  <block id="0cb27d4487bde80753cbc506c3f68aa1" category="doc">Recuperação automatizada de inicialização - C80</block>
   <block id="5aa86f6ad99e80b0c832d82d8e8382ca" category="doc">Inicie a imagem de recuperação - AFF C80</block>
   <block id="90a513766fed06a1c7ddad5bc9b658b0" category="doc">Substitua o suporte de arranque - AFF C80</block>
-  <block id="121251eb9ff4630c5b466c99239f8c1b" category="doc">Requisitos e considerações - AFF C80</block>
   <block id="67d1de6ed4a9952b527f92c6619491fc" category="doc">Requisitos de substituição do suporte de arranque - AFF C80</block>
-  <block id="6c5c01ff7b8e525f6605cbda4622627c" category="doc">Fluxo de trabalho de substituição de Mídia de inicialização - AFF C80</block>
-  <block id="618c07db4b70bd1483776ecb0e3d863c" category="doc">Desligue o controlador - AFF C80</block>
   <block id="ec8e3b5af2c84011f5d342df480c1fef" category="doc">Desligar controlador desativado - AFF C80</block>
   <block id="157ac321bdd43ec0c575181166c8b935" category="doc">Substituição completa do chassis - AFF C80</block>
   <block id="f7366f893dcc8238229a1e5377b17a3b" category="doc">Substitua o chassis - AFF C80</block>
   <block id="a3ccff921bca86a1914b80a3c240608e" category="doc">Requisitos de substituição do chassis - AFF C80</block>
   <block id="2b0003810533ca47cd6e4c3b3021fc1f" category="doc">Desligue os controladores - AFF C80</block>
-  <block id="db5327afa943a298348361326989741e" category="doc">Fluxo de trabalho de substituição do chassis - AFF C80</block>
   <block id="a2a352ccea6a709882b0380261a3e7c2" category="doc">Substitua o módulo do controlador - AFF C80</block>
   <block id="ab855d4ae0d2ee27daa0f6dffb2837b4" category="doc">Recable e devolver o controlador - AFF C80</block>
   <block id="99828fff33e2babe0a1360dc48065684" category="doc">Requisitos de substituição do controlador - AFF C80</block>
   <block id="8def3d76b77de6e3dbb32ae5e959e725" category="doc">Substituição completa do controlador - AFF C80</block>
   <block id="2fff840bbe3ee1ad4cc2f3efd810b44b" category="doc">Desligue o controlador desativado - AFF C80</block>
   <block id="5c26fa22febe5fde9e598be8ee312d12" category="doc">Restaure e verifique a configuração do sistema - AFF C80</block>
-  <block id="6dabc08d9a8267c9e5ef3fdc9b39a453" category="doc">Fluxo de trabalho de substituição do controlador - AFF C80</block>
   <block id="7e592c631c40e396aff15875550a8752" category="doc">Substitua um DIMM - AFF C80</block>
-  <block id="337ec56dac136b43b691bd87c4b4036e" category="summary">Você deve substituir uma unidade quando o sistema de armazenamento Registrar uma mensagem de aviso no console do sistema indicando que uma unidade falhou. Além disso, o LED de avaria no painel do visor do operador e o LED de avaria na unidade avariada acendem-se.</block>
   <block id="d0e572cba4fa35acf21a3ae7b2bec0cd" category="doc">Substitua a unidade SSD - AFF C80</block>
   <block id="b01f1552c8da2a67822dedf856e01ebb" category="doc">Substitua um módulo da ventoinha - AFF C80</block>
   <block id="926a326b82f251d07e456209e768a194" category="summary">Mantenha o AFF C80hardware</block>
@@ -10699,8 +10667,6 @@
   <block id="a5fb99858c57b188273ea5a1afedd002" category="doc">Adicionar módulo de e/S - AFF C80</block>
   <block id="26bd2254cb48a5abb2e4b7308097ab39" category="doc">Descrição geral do módulo de e/S adicional e de substituição - AFF C80</block>
   <block id="e06deef27268b787fb88be13c0cb4f5d" category="doc">Substitua o módulo de e/S - AFF C80</block>
-  <block id="e01836a57ae2ec552db18095afc9ac1f" category="paragraph">Talvez seja necessário executar procedimentos de manutenção no hardware. Os procedimentos específicos para a manutenção dos componentes do sistema AFF C80 estão nesta seção.</block>
-  <block id="2a1bb23e846eaa630791284730ded02a" category="paragraph">Os procedimentos nesta seção pressupõem que os sistemas AFF C80 já foram implantados como um nó de storage no ambiente ONTAP.</block>
   <block id="7b946d76bf41ad14153f91ca0fca3c4d" category="paragraph">Para os sistemas de armazenamento AFF C80, é possível executar procedimentos de manutenção nos seguintes componentes.</block>
   <block id="1360630a997a203a6f88f196808f7ad1" category="doc">Substitua a bateria NV - AFF C80</block>
   <block id="63f63f54ba4441329f0f4719e3a32b19" category="doc">Substitua o NVRAM - AFF C80</block>
@@ -11094,12 +11060,9 @@
   <block id="79138a6cb5003084e8165f13ec497dbc" category="paragraph">Conete cada controlador aos módulos NSM no compartimento NS224. Os gráficos mostram o cabeamento A do controlador em azul e o cabeamento B do controlador em amarelo.</block>
   <block id="a43aeceacebed9b091efbcca7240378d" category="paragraph">Conecte cada controladora aos módulos do NSM nas duas gavetas NS224. Os gráficos mostram o cabeamento A do controlador em azul e o cabeamento B do controlador em amarelo.</block>
   <block id="9a720e4e76be699dfb02bbc1262d3cb7" category="doc">Complete a substituição do chassi - AFF A70 e AFF A90</block>
-  <block id="b70879bd1721efa4787c4b23342efe9e" category="paragraph">Para concluir o processo de substituição do chassi, você precisa inicializar no ONTAP, devolver o storage, verificar a integridade do sistema de storage e retornar o chassi com falha ao NetApp.</block>
-  <block id="36d7c2ea7561a15acd27e07a5693d816" category="paragraph">Você precisa remover componentes específicos dos módulos do controlador antes de remover o chassi danificado, substituir o chassi, reinstalar os componentes nos módulos corretos do controlador e, em seguida, retornar os controladores à operação normal.</block>
   <block id="d15e3734e85341b27e4da1641e1f59e1" category="inline-link-macro">complete a substituição do chassis</block>
   <block id="8814a36d70b251b1442c439b51299ee4" category="paragraph">Depois de substituir o chassi AFF A70 ou AFF A90 com problemas e reinstalar os componentes nele, é necessário <block ref="e567761f3b9d650307e1ffbce9c62dc9" category="inline-link-macro-rx"></block>.</block>
   <block id="a1d3bcf20c089dbf9082bd95e68d717d" category="doc">Prepare-se para substituir o chassis - AFF A70 e AFF A90</block>
-  <block id="5e7a6f515db040f875580c780295035b" category="paragraph">Prepare-se para substituir o chassis com deficiência pelo novo chassis do mesmo modelo que o chassis com deficiência.</block>
   <block id="fb34a84a11047c5449582cfc3e832942" category="inline-link-macro">desligue os controladores</block>
   <block id="d3a08051606463fa6af8ba4af97a9c04" category="paragraph">Depois de se preparar para substituir o hardware do chassi do AFF A70 ou do AFF A90, é necessário <block ref="5ad1268d806d8db9e0e59370c95dfac1" category="inline-link-macro-rx"></block>.</block>
   <block id="11e980ab44ebd379750fafda5a247d2c" category="paragraph">Reveja os requisitos para a substituição de um chassis danificado.</block>
@@ -11228,7 +11191,181 @@
   <block id="5d9ac1643aa86c7bddb319af8c3e06e3" category="paragraph">A substituição de Mídia de inicialização usa a imagem de inicialização do nó do parceiro e executa automaticamente a opção de menu de inicialização apropriada para instalar a imagem de inicialização na Mídia de inicialização de substituição.</block>
   <block id="d152ad943d3809714aa2acb56114839e" category="doc">Visão geral da recuperação de Mídia de inicialização - ASA A1K</block>
   <block id="488cce5b2121242760d58a49c413507e" category="paragraph">Quando você encontrar mensagens de erro de inicialização, você precisa substituir a Mídia de inicialização e restaurar a imagem ONTAP do nó do parceiro.</block>
-  <block id="86e825ad6941bb31698d462a9bbb20e4" category="paragraph">Diretiva não resolvida no &lt;stdin&gt; - include:../_include/A70-90_bootmedia_replace_requirements_bmr.adoc[]</block>
   <block id="a81626227e94d15884d465e1127d3af4" category="sidebar">Mídia de inicialização ASA A70 e ASA A90</block>
   <block id="9482f3836d9bb6259f467a0685f5e3b4" category="sidebar">Mídia de inicialização do ASA A1K</block>
+  <block id="3636656d79b8f02465b883839da0c32b" category="paragraph">Reveja os seguintes requisitos.</block>
+  <block id="92f1ff7f532dd794f633da55b69f7c85" category="paragraph">Volte a colocar o controlador afetado em funcionamento normal, devolvendo o respetivo armazenamento</block>
+  <block id="6f6020a95b7d00c90f878194cd791491" category="list-text">Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos:</block>
+  <block id="2dc03ded03c37126b29eeb1dce677708" category="paragraph">Redefina a criptografia integrada e retorne o controlador à operação normal.</block>
+  <block id="334dc8a527ec5589fe66e9a5a8360575" category="list-text">No prompt Loader, digite:</block>
+  <block id="79a5dee23638f4d5e3607951ecac75c4" category="paragraph"><block ref="cce56b203b8705f3487342813b7117be" prefix="" category="inline-code"></block>.</block>
+  <block id="61d5125f4ea65c28c78898c7eb459ce2" category="list-text">Devolver apenas os agregados CFO (o agregado raiz):</block>
+  <block id="07f79b362b9ba5998ff0d2001a027c73" category="paragraph"><block ref="291b31306c2e0668f091d41edca7e97f" prefix="" category="inline-code"></block></block>
+  <block id="5bb45bbec6e74b011ff0ed7135d29f73" category="list-text">Aguarde 5 minutos após a conclusão do relatório de giveback e verifique o status de failover e o status de giveback:</block>
+  <block id="fe61fc0ee6a33e9a17f87d458c676777" category="paragraph"><block ref="ddf400f1cb6b8b9330ed6c79c508123c" prefix="" category="inline-code"></block> e<block ref="852ce55a153bc728405ba8a2c95bcdf1" prefix=" " category="inline-code"></block>.</block>
+  <block id="09fc8dbf3633ef1e2c829f67260e6d8b" category="list-text">Mova o cabo do console para o nó de substituição e digite:</block>
+  <block id="8b1d52c2747ed09344477eacb0129496" category="list-text">Verificar o estado das chaves com o seguinte comando:</block>
+  <block id="d3404f7bcb4f1b084f229068450eb46b" category="paragraph"><block ref="8d87a410a64e11591a338ede7162a6d2" prefix="" category="inline-code"></block>.</block>
+  <block id="527eb837f30ed81358ebded9ee118169" category="paragraph">Redefina a encriptação e volte a colocar o controlador em funcionamento normal.</block>
+  <block id="4969df85e38b1334145c46668de5d393" category="list-text">Verifique o estado da aquisição:</block>
+  <block id="ff06f9ac0caa721ed879f199881e0bf3" category="paragraph"><block ref="ddf400f1cb6b8b9330ed6c79c508123c" prefix="" category="inline-code"></block>.</block>
+  <block id="dbaf9b3984e2d85f4fed5065ef8777ee" category="list-text">Certifique-se de que todos os despejos do núcleo no nó reparado são salvos indo para o modo avançado:</block>
+  <block id="74d6510049f762b67fe103a2ea65ea1f" category="paragraph"><block ref="0581d0d071ad835f74bf419081ce5d75" prefix="" category="inline-code"></block> e<block ref="7f4756e08687048c35020c40f9c8567b" prefix=" " category="inline-code"></block> então .</block>
+  <block id="385e0461e78c6be76ddc4a5aac6f0998" category="paragraph">Reveja os requisitos para substituir o módulo do controlador.</block>
+  <block id="653521d025652d70e27438c926da2d94" category="list-text">Tem de ter a peça de substituição disponível.</block>
+  <block id="20277dcf478fd8c98c1e17e544b131b2" category="list-text">Certifique-se de que todos os outros componentes do sistema de armazenamento estão a funcionar corretamente; caso contrário, contacte o suporte técnico.</block>
+  <block id="58d81e9c6e1457424bb76d78c99c796f" category="paragraph">Antes de retornar o nó de substituição ao serviço, verifique se as interfaces lógicas estão em suas portas iniciais, verifique a integridade do cluster e redefina a giveback automática.</block>
+  <block id="d3d539cc7775eda9c0302343dfd5c7d2" category="paragraph">Se alguma interface lógica for listada como falsa, reverta-as para suas portas iniciais:<block ref="985591930e85610706940dd82967bd61" prefix=" " category="inline-code"></block></block>
+  <block id="6ee493ca0d3740da5c61873f8e9b5342" category="paragraph">Para substituir o suporte de arranque, tem de remover o controlador danificado, remover o suporte de arranque danificado e instalar o suporte de arranque de substituição no controlador afetado.</block>
+  <block id="05f30c2aa310b7f17481e49895e27d7c" category="list-text">Se o controlador inicializar no prompt Loader, reinicie o controlador:<block ref="ce54ef17bebf280339d340bd40dff593" prefix=" " category="inline-code"></block></block>
+  <block id="723cc8a28cac7b868e52f0c89e8c7d82" category="list-text">Reconecte o cabo de alimentação à PSU no controlador desativado.</block>
+  <block id="fdfe68741091c7c547341c8141aaafa9" category="list-text">Você deve substituir o componente com falha por um componente FRU de substituição da mesma capacidade que recebeu do NetApp.</block>
+  <block id="b890c151ce40763331ed953d70294e80" category="list-text">A porta e0S (chave de e0M mm) no controlador desativado não pode estar avariada.</block>
+  <block id="00d230f6bc1c533ff13d123ef4ab2174" category="paragraph">A porta e0S é usada para recuperação automática de inicialização.</block>
+  <block id="9604dc642186f64ed6e79665ee83d280" category="paragraph">Quando inserido corretamente, o DIMM entra facilmente, mas encaixa firmemente no slot. Reinsira o DIMM se você achar que ele não está inserido corretamente.</block>
+  <block id="892ecfa88ac2fc58f239974dc4b528a1" category="list-text">O sistema começa a arrancar. A inicialização inicial pode levar até oito minutos.</block>
+  <block id="3c609b480f1311eaec9774146ac50e79" category="list-text">ASA A20</block>
+  <block id="e21bdbd552261278be0a5ad02fbc6fa7" category="list-text">ASA A30</block>
+  <block id="3ee9bc9a210bd85fa921ca63bdeef612" category="list-text">ASA A50</block>
+  <block id="18b37022407b9886f4f4138833f49d5c" category="summary">Se um componente no seu sistema AFF A70 ou AFF A90 falhar, devolva a peça com falha ao NetApp. Consulte a<block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> página para obter mais informações.</block>
+  <block id="58075b4980e4db98db3e72c4d42ca97b" category="summary">Para garantir a segurança dos dados no sistema de storage AFF A70 e AFF A90, é necessário verificar o suporte e o status da chave de criptografia. Verifique se sua versão do ONTAP suporta criptografia de volume NetApp (NVE) e, antes de desligar a controladora, verifique se o gerenciador de chaves está ativo.</block>
+  <block id="00298fcd1cdb59855d04153fb372d5b1" category="summary">Restaure a criptografia na Mídia de inicialização de substituição em seu sistema AFF A70 ou AFF A90 para garantir a proteção contínua dos dados. Esse processo envolve verificar a disponibilidade das chaves, reaplicar as configurações de criptografia e confirmar o acesso seguro aos seus dados.</block>
+  <block id="3991198e40ba997176ba31a00113838e" category="paragraph">Restaure a criptografia na Mídia de inicialização de substituição em seu sistema AFF A70 ou AFF A90 para garantir a proteção contínua dos dados. Esse processo envolve verificar a disponibilidade das chaves, reaplicar as configurações de criptografia e confirmar o acesso seguro aos seus dados.</block>
+  <block id="a51e74eb0b262c93ab751f84ff5ad828" category="summary">Se a Mídia de inicialização no sistema AFF A70 ou AFF A90 estiver corrompida, você poderá inicializar a imagem de recuperação de uma unidade USB, restaurar a configuração do nó do parceiro e verificar as variáveis de ambiente.</block>
+  <block id="a25f6bec97e7646ff80d5c1552348d28" category="summary">Antes de substituir o suporte de arranque no sistema AFF A70 ou AFF A90, certifique-se de que tem o dispositivo de arranque de substituição correto, acesso ao firmware do sistema e ao software ONTAP e uma cópia de segurança dos dados de configuração essenciais.</block>
+  <block id="01dc782410b8bf757f56e6d2dd9ba8de" category="summary">Comece a substituir a Mídia de inicialização no sistema de armazenamento AFF A70 ou AFF A90 preparando a Mídia de substituição, instalando-a no sistema, restaurando a imagem de inicialização e verificando a funcionalidade do sistema.</block>
+  <block id="a39d40ffc6e883059dd303e4c5826bf2" category="doc">Início rápido para substituição do suporte de arranque - AFF A70 e AFF A90</block>
+  <block id="7254e311c159ba205a6bc5f38cfc3060" category="summary">A Mídia de inicialização no seu sistema AFF A70 ou AFF A90 armazena dados essenciais de firmware e configuração. Se o suporte de dados de arranque falhar, tem de desligar o módulo do controlador, remover o módulo de gestão do sistema, remover o suporte de arranque afetado e substituir o suporte de arranque no módulo de gestão do sistema.</block>
+  <block id="2de09d050e108c03bd290fc9b42a73f3" category="summary">Encerre o controlador no sistema de storage AFF A70 ou AFF A90 quando ele estiver desativado. Antes de realizar a manutenção ou a substituição de componentes, é fundamental desligar o controlador de forma segura para evitar a perda de dados e garantir a estabilidade do sistema.</block>
+  <block id="073ca97ff948f7b2fa9eb788aa349602" category="summary">Reinicie os controladores, verifique a integridade do sistema e devolva a peça com falha ao NetApp para concluir a etapa final no fluxo de trabalho de substituição do chassi do AFF A70 e do AFF A90.</block>
+  <block id="d0f18667169dd5cba8bd1abf930d8979" category="summary">Substitua o chassi do sistema AFF A70 ou AFF A90 quando uma falha ou atualização de hardware exigir isso. Esse processo envolve desligar o sistema, remover o chassi existente, instalar o novo e reconfigurar os componentes para garantir o funcionamento correto do sistema.</block>
+  <block id="14c9c3ca2e43bd07ece3df269a696d56" category="summary">Prepare-se para substituir o chassi com deficiência no sistema AFF A70 ou AFF A90 identificando o chassi com deficiência, verificando os componentes de substituição e rotulando os cabos e os módulos do controlador.</block>
+  <block id="cd38b993c6ad2e5704c0162f9d789f18" category="summary">Antes de substituir o chassi no sistema AFF A70 ou AFF A90, verifique se todos os outros componentes do sistema estão funcionando corretamente, verifique se você tem credenciais de administrador local para ONTAP, o chassi de substituição correto e as ferramentas necessárias.</block>
+  <block id="6c63d33eb7783335379b1c9d94af11b3" category="summary">Desligue os controladores do seu sistema de storage AFF A70 ou AFF A90 quando precisar substituir o chassi. Antes de realizar a manutenção ou a substituição de componentes, é fundamental desligar o controlador de forma segura para evitar a perda de dados e garantir a estabilidade do sistema.</block>
+  <block id="f3265cef339dbf3c5e74c4290cc2674d" category="summary">A substituição do chassi do AFF A70 e do AFF A90 inclui etapas para desligar o sistema, remover e substituir o chassi, reconfigurar componentes e verificar as operações do sistema.</block>
+  <block id="82d80770b27097a251d9548f43c9e382" category="doc">Início rápido para substituição do chassis - AFF A70 e AFF A90</block>
+  <block id="2bb5a266a17138195f24b92087b37ebb" category="summary">Substitua a controladora no sistema AFF A70 ou AFF A90 quando uma falha ou atualização de hardware exigir isso. Este processo envolve remover o controlador prejudicado, mover os componentes para o controlador de substituição, instalar o controlador de substituição e reinicializá-lo.</block>
+  <block id="f19d0ea02c5cb924d1bbd1b1393e656f" category="summary">Retorne o controle dos recursos de storage ao controlador de substituição para que seu sistema AFF A70 ou AFF A90 possa retomar a operação normal.</block>
+  <block id="946e9ff613b0698dff71f93c998421e6" category="summary">Antes de substituir o chassi em seu sistema AFF A70 ou AFF A90, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. Isso inclui ter o chassi de substituição correto, um backup da configuração do sistema e acesso a todas as ferramentas e firmware necessários.</block>
+  <block id="e39656e100387da3ec6b6a54806cef2f" category="paragraph">Antes de substituir o controlador no seu sistema AFF A70 ou AFF A90, certifique-se de que cumpre os requisitos necessários para uma substituição bem-sucedida. Isso inclui ter o controlador de substituição correto, um backup da configuração do sistema e acesso a todas as ferramentas e firmware necessários.</block>
+  <block id="13584ead3579381e47832c1fc5821f4a" category="summary">Verifique se as interfaces lógicas estão relatando para sua porta inicial, execute uma verificação de integridade do cluster e devolva a peça com falha ao NetApp para concluir a etapa final no fluxo de trabalho de substituição do controlador AFF A70 e AFF A90.</block>
+  <block id="a36efc11d87f3dc60d9f74397a3d68a6" category="paragraph">Desligue o módulo do controlador utilizando uma das seguintes opções.</block>
+  <block id="fc6315489b2675580df80b8ba798580a" category="summary">Verifique se a configuração de HA do controlador está ativa e funcionando corretamente no sistema de storage AFF A70 ou AFF A90 e confirme se os adaptadores do sistema listam todos os caminhos para os discos.</block>
+  <block id="5804af3501a907b164a7eade0771c13a" category="summary">A substituição do controlador AFF A70 e AFF A90 inclui etapas para desligar o controlador, remover e substituir o controlador, reconfigurar as definições do sistema e verificar as operações do sistema.</block>
+  <block id="d2005409b1b3df2f36eafbd1c707b35a" category="doc">Início rápido para substituição do controlador - AFF A70 e AFF A90</block>
+  <block id="693444ad7c3a519b57ea2f6a67afe3ee" category="summary">Substitua um DIMM no sistema AFF A70 ou AFF A90 quando forem detetados erros corrigíveis excessivos ou incorrigíveis. Esses problemas, muitas vezes causados por uma única falha de DIMM, podem impedir que o sistema de armazenamento inicialize o ONTAP.</block>
+  <block id="085e9f138bf88e992aba5f4bb28477e8" category="summary">Substitua uma unidade em seu sistema AFF A70 ou AFF A90 quando uma unidade falhar ou exigir uma atualização. Esse processo envolve identificar a unidade com defeito, removê-la com segurança e instalar uma nova unidade para garantir o acesso contínuo aos dados e o desempenho do sistema.</block>
+  <block id="0dccdedc6bfcf30123409a5daf909e3a" category="summary">Substitua um módulo de ventilador no sistema AFF A70 ou AFF A90 quando um ventilador falhar ou não estiver funcionando de forma eficiente, o que pode afetar o resfriamento do sistema e o desempenho geral.</block>
+  <block id="6f13230d5681e1c88b50f5ecbce62637" category="paragraph">Encerre ou assuma o controlo do módulo do controlador afetado utilizando uma das seguintes opções.</block>
+  <block id="9d942fe208df847ebbb52d3ac4973c12" category="summary">Você pode substituir um módulo de e/S com falha em seu sistema de storage AFF A70 ou AFF A90 pelo mesmo tipo de módulo de e/S ou por um tipo diferente de módulo de e/S. Você também pode adicionar um módulo de e/S a um sistema com slots vazios.</block>
+  <block id="1853543dc222d3a9f913dd023a08b255" category="paragraph">Substitua um módulo de e/S no seu sistema AFF A70 ou AFF A90 quando o módulo falhar ou precisar de uma atualização para suportar desempenho superior ou recursos adicionais.</block>
+  <block id="870bcf4039fdcff653f180566b1ae65d" category="summary">Mantenha o hardware dos seus sistemas de storage AFF A70 e AFF A90 para garantir confiabilidade a longo prazo e desempenho ideal. Execute tarefas de manutenção regulares, como a substituição de componentes defeituosos, pois isso ajuda a evitar tempo de inatividade e perda de dados.</block>
+  <block id="c7366a4e629f0430862d80db101f4a13" category="doc">Mantenha os sistemas de storage AFF A70 e AFF A90</block>
+  <block id="af1dd5bed2e7f895621a59db47f7a163" category="paragraph">Os procedimentos de manutenção pressupõem que os sistemas AFF A70 e AFF A90 já foram implantados como um nó de storage no ambiente ONTAP.</block>
+  <block id="d7cae672b9df48e3106485c6d34eeb2c" category="summary">Se a Mídia de inicialização no sistema ASA A70 ou ASA A90 estiver corrompida, você poderá inicializar a imagem de recuperação, restaurar a configuração do nó do parceiro e verificar as variáveis de ambiente.</block>
+  <block id="635808fcf7151910b4d230fdffc539b6" category="paragraph">Se a Mídia de inicialização no sistema ASA A70 ou ASA A90 estiver corrompida, você poderá inicializar a imagem de recuperação e restaurar a configuração do nó do parceiro.</block>
+  <block id="06056d6fd7dddea48ba45b6addef7373" category="summary">Reinicie os controladores, verifique a integridade do sistema e devolva a peça com falha ao NetApp para concluir a etapa final no fluxo de trabalho de substituição do chassi do ASA A70 e do ASA A90.</block>
+  <block id="0fcd5fb71e3025e1b617322bbdc4e07c" category="summary">Substitua o chassi do sistema ASA A70 ou ASA A90 quando uma falha ou atualização de hardware exigir isso. Esse processo envolve desligar o sistema, remover o chassi existente, instalar o novo e reconfigurar os componentes para garantir o funcionamento correto do sistema.</block>
+  <block id="34157b6b9a0050e9c335468f75f69762" category="paragraph">Depois de substituir o chassi ASA A70 ou ASA A90 com problemas e reinstalar os componentes nele, é necessário <block ref="e567761f3b9d650307e1ffbce9c62dc9" category="inline-link-macro-rx"></block>.</block>
+  <block id="c5a3b9039ee3d286f345090dc5bd7f24" category="summary">Prepare-se para substituir o chassi com deficiência no sistema ASA A70 ou ASA A90 identificando o chassi com deficiência, verificando os componentes de substituição e rotulando os cabos e os módulos do controlador.</block>
+  <block id="d26a010d0bb559be6b6dfc262441072e" category="summary">Substitua a controladora em seu sistema ASA A70 ou ASA A90 quando uma falha ou atualização de hardware exigir isso. Este processo envolve remover o controlador prejudicado, mover os componentes para o controlador de substituição, instalar o controlador de substituição e reiniciar o sistema.</block>
+  <block id="5cb5b467ffe15c96f5be4b190434f4d7" category="summary">Verifique se a configuração de HA do controlador está ativa e funcionando corretamente no sistema de storage ASA A70 ou ASA A90 e confirme se os adaptadores do sistema listam todos os caminhos para os discos.</block>
+  <block id="252f4a6ddd646c9d3f4e51507f00bed1" category="summary">Substitua um DIMM no sistema AFF C80 quando forem detetados erros corrigíveis ou incorrigíveis excessivos. Esses problemas, muitas vezes causados por uma única falha de DIMM, podem impedir que o sistema de armazenamento inicialize o ONTAP.</block>
+  <block id="9b16f0deb40e2ccd298a84213dfcb3c1" category="summary">Substitua uma unidade no sistema ASA A70 ou ASA A90 quando uma unidade falhar ou precisar de uma atualização. Esse processo envolve identificar a unidade com defeito, removê-la com segurança e instalar uma nova unidade para garantir o acesso contínuo aos dados e o desempenho do sistema.</block>
+  <block id="ca1ea54698fb1b04e8a653c5e8a8cd1d" category="summary">Substitua um módulo de ventilador no sistema ASA A70 ou ASA A90 quando um ventilador falhar ou não estiver funcionando de forma eficiente, o que pode afetar o resfriamento do sistema e o desempenho geral.</block>
+  <block id="8e10453b1538c94c1675905e948ad27f" category="doc">Reinstale o controlador - ASA A20, ASA A30 e ASA A50</block>
+  <block id="77b6dee74a408b2a89351dd1b7874a9d" category="doc">Remova o controlador - ASA A20, ASA A30 e ASA A50</block>
+  <block id="5ddec4b2381adfee74850662c85dc488" category="doc">Visão geral da recuperação de Mídia de inicialização - AFF A20, AFF A30 e AFF A50</block>
+  <block id="5970537d01572b9f6e38a2ab25283e3b" category="doc">Restaure a imagem ONTAP - AFF A20, AFF A30 e AFF A50</block>
+  <block id="f619e6bd6beb4969e83c23f025e658e4" category="doc">Requisitos - AFF A20, AFF A30 e AFF A50</block>
+  <block id="2cef65195db4ebbdb50708cb050fe7e4" category="paragraph">Depois de analisar os requisitos do suporte de arranque, <block ref="f6f6eaac8bd3f857cf89c647db55229b" category="inline-link-macro-rx"></block>.</block>
+  <block id="1bd4517f6602bce986a904d28bd0d138" category="paragraph">Remova o suporte de arranque com falha do controlador afetado e instale o suporte de arranque de substituição.</block>
+  <block id="52e36495272e13465007207307f8b233" category="paragraph">Restaure a imagem ONTAP a partir do controlador saudável.</block>
+  <block id="5c7ef5b78e5792ada5db15743ced08f7" category="doc">Desligue o controlador - AFF A20, AFF A30 e AFF A50</block>
+  <block id="b8a92f73f87b92a5dfcbd6224f8a5764" category="paragraph">Depois de desligar o controlador desativado, <block ref="52c48d39b9a1e431e1d04998ae5045f5" category="inline-link-macro-rx"></block>.</block>
+  <block id="8022fc0f0b4485cbb98cfd555c374305" category="doc">Substituição completa do chassis - ASA A20, ASA A30 e ASA A50</block>
+  <block id="317145ec6032de40e2246da65e85383f" category="doc">Substitua o chassi - ASA A20, ASA A30 e ASA A50</block>
+  <block id="d66c7bca225849c044a8c74130eb328a" category="doc">Requisitos de substituição do chassis - ASA A20, ASA A30 e ASA A50</block>
+  <block id="fb9ff3df94d4a3e8a31613ed74196c1e" category="doc">Encerre os controladores - ASA A20, ASA A30 e ASA A50</block>
+  <block id="e99fd46ee5ca1d1f6adbe069d089c6f8" category="doc">Fluxo de trabalho de substituição do chassi - ASA A20, ASA A30 e ASA A50</block>
+  <block id="86728669b8132851703291cff5e3474a" category="doc">Substitua o controlador - ASA A20, ASA A30 e ASA A50</block>
+  <block id="4123e1a1e278ad93acc75de8db9749b6" category="doc">Devolva o controlador - ASA A20, ASA A30 e ASA A50</block>
+  <block id="cf62373b85e8e95238ac132da915ebe5" category="doc">Requisitos de substituição do controlador - ASA A20, ASA A30 e ASA A50</block>
+  <block id="bee8c30fe078f6f79f9f8b78f233ea1c" category="doc">Substituição completa do controlador - ASA A20, ASA A30 e ASA A50</block>
+  <block id="091925f4a73076aea4e331274cf2c65f" category="doc">Desligue o controlador desativado - ASA A20, ASA A30 e ASA A50</block>
+  <block id="20af3453ccc3149c14a667c74c1904ca" category="doc">Restaure e verifique a configuração do sistema - ASA A20, ASA A30 e ASA A50</block>
+  <block id="627bf694535fd683fd8cd216706a4860" category="doc">Fluxo de trabalho de substituição do controlador - ASA A20, ASA A30 e ASA A50</block>
+  <block id="1553670e0fbff884512680468511c74c" category="doc">Substitua um DIMM - ASA A20, ASA A30 e ASA A50</block>
+  <block id="a14377b20762a9e1421ab81e83045da0" category="doc">Substitua a Unidade - ASA A20, ASA A30 e ASA A50</block>
+  <block id="2cbbffb29ba3674505e996373f6b9721" category="doc">Substitua um módulo da ventoinha - ASA A20, ASA A30 e ASA A50</block>
+  <block id="fea30c44903d9b686caf9f4ef1fef103" category="summary">Mantenha o hardware ASA A20, ASA A30 e ASA A50</block>
+  <block id="0560ae441e964fbd0ea21e048b96e0c1" category="doc">Mantenha o hardware ASA A20, ASA A30 e ASA A50</block>
+  <block id="5e1381a5e0cf586808d824d931af18f5" category="paragraph">Para os sistemas de storage ASA A20, ASA A30 ou ASA A50, é possível executar procedimentos de manutenção nos seguintes componentes.</block>
+  <block id="1421d492f608ddcd342eb9792ac10a51" category="doc">Adicionar módulo de e/S - ASA A20, ASA A30 e ASA A50</block>
+  <block id="d70d74fb3e61a0a9af3ef593945dca19" category="paragraph">Você pode adicionar um módulo de e/S aos sistemas de storage ASA A20, ASA A30 e ASA A50 quando houver slots disponíveis ou quando todos os slots estiverem totalmente preenchidos.</block>
+  <block id="151d3f9489dc71ef0bf598517f9387d5" category="paragraph">Se necessário, você pode ligar os LEDs de localização do sistema de armazenamento (azul) para ajudar a localizar fisicamente o sistema de armazenamento assetado. Faça login no BMC usando SSH e digite o<block ref="748a449bca03582c103ee6b7bcd4a969" prefix=" " category="inline-code"></block> comando.</block>
+  <block id="c8c6918e20d9ac417f64b26c6cd56285" category="doc">Visão geral do módulo de e/S adicional e de substituição - ASA A20, ASA A30 e ASA A50</block>
+  <block id="ae4ba37325c0152e8274be6a324a8a62" category="doc">Substitua o módulo de e/S - ASA A20, ASA A30 e ASA A50</block>
+  <block id="f7505dbf9cbf21226d33ed67b7c926e6" category="doc">Visão geral da manutenção de hardware - ASA A20, ASA A30 e ASA A50</block>
+  <block id="893dee16a25f237fb216bd6e34f2ce3f" category="paragraph">Talvez seja necessário executar procedimentos de manutenção no hardware. Procedimentos específicos para manter os componentes do sistema ASA A20, ASA A30 e ASA A50 estão nesta seção.</block>
+  <block id="c29d39f4363a3105c935a1b1ec2ed8eb" category="paragraph">Os procedimentos nesta seção pressupõem que os sistemas de storage ASA A20, ASA A30 ou ASA A50 já foram implantados como nós de storage no ambiente ONTAP.</block>
+  <block id="02cbc9c9b92f52062a793fbc039a7a5f" category="paragraph">Para os sistemas de storage ASA A20, ASA A30 e ASA A50, é possível executar procedimentos de manutenção nos seguintes componentes.</block>
+  <block id="bb955abc1ee1a042f477c6977d0bfc07" category="paragraph"><block ref="bb955abc1ee1a042f477c6977d0bfc07" category="inline-link-macro-rx"></block></block>
+  <block id="c62c530fe1e7e769964d1cac42c0c1ca" category="doc">Substitua a bateria NV - ASA A20, ASA A30 e ASA A50</block>
+  <block id="db9511faddf8c60d659417ec7880bb9b" category="doc">Substitua uma fonte de alimentação - ASA A20, ASA A30 e ASA A50</block>
+  <block id="69ddcdcae3c05843aa3be62f304e023b" category="doc">Substitua a bateria do relógio em tempo real - ASA A20, ASA A30 e ASA A50</block>
+  <block id="3d68bd292ff38f0f7a42e75bafb71ae7" category="summary">Se um componente no seu sistema AFF C80 falhar, devolva a peça com falha ao NetApp. Consulte a<block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> página para obter mais informações.</block>
+  <block id="f317160d8dfd97d4cc4253d62b67f3b9" category="summary">Para garantir a segurança dos dados no sistema de storage AFF C80, é necessário verificar o suporte e o status da chave de criptografia. Verifique se sua versão do ONTAP suporta criptografia de volume NetApp (NVE) e, antes de desligar a controladora, verifique se o gerenciador de chaves está ativo.</block>
+  <block id="25eebb4423da182d5cedc15ce1414b2b" category="summary">Restaure a criptografia na Mídia de inicialização de substituição em seu sistema AFF C80 para garantir a proteção contínua dos dados. Esse processo envolve verificar a disponibilidade das chaves, reaplicar as configurações de criptografia e confirmar o acesso seguro aos seus dados.</block>
+  <block id="ce8241d4f4c26d9b9170ae31a1e03a0c" category="summary">Se a Mídia de inicialização do sistema AFF C80 estiver corrompida, você poderá inicializar a imagem de recuperação de uma unidade USB, restaurar a configuração do nó do parceiro e verificar as variáveis de ambiente</block>
+  <block id="4cef7de61ebdce38512d3fc347d6e34c" category="paragraph">Se a Mídia de inicialização do sistema AFF C80 estiver corrompida, você poderá inicializar a imagem de recuperação de uma unidade USB, restaurar a configuração do nó do parceiro e verificar as variáveis de ambiente.</block>
+  <block id="2c83fcaa28b35ed74a90cff7429c8965" category="summary">Antes de substituir o suporte de arranque no sistema AFF C80, certifique-se de que tem o dispositivo de arranque de substituição correto, acesso ao firmware do sistema e ao software ONTAP e uma cópia de segurança dos dados de configuração essenciais.</block>
+  <block id="c537d320f31017756018bad768045a78" category="summary">Comece a substituir a Mídia de inicialização no sistema de armazenamento AFF C80 preparando a Mídia de substituição, instalando-a no sistema, restaurando a imagem de inicialização e verificando a funcionalidade do sistema.</block>
+  <block id="f1d2fc786cb6dcb7bce434481764f92a" category="doc">Início rápido para substituição do suporte de arranque - AFF C80</block>
+  <block id="a606799c098e2a189dd98622a95abdc9" category="summary">O suporte de arranque do seu sistema AFF C80 armazena dados essenciais de firmware e configuração. Se o suporte de dados de arranque falhar, tem de desligar o módulo do controlador, remover o módulo de gestão do sistema, remover o suporte de arranque afetado e substituir o suporte de arranque no módulo de gestão do sistema.</block>
+  <block id="2877d102e5080eaaa899652c3db8831c" category="summary">Desligue o controlador no sistema de storage AFF C80 quando estiver desativado. Antes de realizar a manutenção ou a substituição de componentes, é fundamental desligar o controlador de forma segura para evitar a perda de dados e garantir a estabilidade do sistema.</block>
+  <block id="2ed1c3dd70342df2a080582be1eb2a59" category="summary">Reinicie os controladores, verifique a integridade do sistema e devolva a peça com falha ao NetApp para concluir a etapa final do fluxo de trabalho de substituição do chassi do AFF C80.</block>
+  <block id="4bfe5f3327600d10085e511cbed4a477" category="summary">Substitua o chassi do sistema AFF C80 quando uma falha ou atualização de hardware exigir isso. Esse processo envolve desligar o sistema, remover o chassi existente, instalar o novo e reconfigurar os componentes para garantir o funcionamento correto do sistema.</block>
+  <block id="25740b71029eb78f5ff691cc2dbe0a0f" category="summary">Antes de substituir o chassi no sistema AFF C80, verifique se todos os outros componentes do sistema estão funcionando corretamente, verifique se você tem credenciais de administrador local para o ONTAP, o chassi de substituição correto e as ferramentas necessárias.</block>
+  <block id="ac1e09807f7c4c02fb18d5fb00528f71" category="summary">Desligue os controladores do sistema de storage AFF C80 quando precisar substituir o chassi. Antes de realizar a manutenção ou a substituição de componentes, é fundamental desligar o controlador de forma segura para evitar a perda de dados e garantir a estabilidade do sistema.</block>
+  <block id="a189d75b1b41e47a5b4ae492fff0148a" category="summary">A substituição do chassi do AFF C80 inclui etapas para desligar o sistema, remover e substituir o chassi, reconfigurar componentes e verificar as operações do sistema.</block>
+  <block id="725b88ce594215c3b6e1c82f98f2840a" category="doc">Início rápido para substituição do chassis - AFF C80</block>
+  <block id="f48200b4fe7f2f013c6d085467e08b85" category="summary">Substitua a controladora no sistema AFF C80 quando uma falha ou atualização de hardware exigir isso. Este processo envolve remover o controlador prejudicado, mover os componentes para o controlador de substituição, instalar o controlador de substituição e reiniciar o sistema.</block>
+  <block id="0dfddb9a8d92421aedc4b572cdcbfea9" category="summary">Retorne o controle dos recursos de armazenamento ao controlador de substituição para que seu sistema AFF C80 possa retomar a operação normal.</block>
+  <block id="0fc0c177409db8c5e0223f6627351fcc" category="summary">Antes de substituir o chassis no sistema AFF C80, certifique-se de que cumpre os requisitos necessários para uma substituição bem-sucedida. Isso inclui ter o chassi de substituição correto, um backup da configuração do sistema e acesso a todas as ferramentas e firmware necessários.</block>
+  <block id="c72353d21c07d0b1553f50afb35e85ea" category="summary">Verifique se as interfaces lógicas estão relatando para sua porta inicial, execute uma verificação de integridade do cluster e devolva a peça com falha ao NetApp para concluir a etapa final no fluxo de trabalho de substituição do controlador AFF C80.</block>
+  <block id="43d776718c1fd733b854e3b84bdffa63" category="summary">Verifique se a configuração de HA do controlador está ativa e funcionando corretamente no sistema de storage AFF C80 e confirme se os adaptadores do sistema listam todos os caminhos para os discos.</block>
+  <block id="e2f6c633868b82ce0f0f7ff0a95e32a0" category="summary">A substituição do controlador AFF C80 inclui etapas para desligar o controlador, remover e substituir o controlador, reconfigurar as configurações do sistema e verificar as operações do sistema.</block>
+  <block id="1a082657102e0d46558fa1a8080aeff0" category="doc">Início rápido para substituição do controlador - AFF C80</block>
+  <block id="28494b8071c5db3970085154386f4a39" category="summary">Substitua uma unidade no sistema AFF C80 quando uma unidade falhar ou precisar de uma atualização. Esse processo envolve identificar a unidade com defeito, removê-la com segurança e instalar uma nova unidade para garantir o acesso contínuo aos dados e o desempenho do sistema.</block>
+  <block id="e64efa39f80ef2fdaed60b7a7d41e45b" category="summary">Substitua um módulo de ventilador no sistema AFF C80 quando um ventilador falhar ou não estiver funcionando de forma eficiente, o que pode afetar o resfriamento do sistema e o desempenho geral.</block>
+  <block id="d00c6aa9f0c4ce10a1828603f11f3a21" category="paragraph">Você pode adicionar um módulo de e/S ao seu sistema de armazenamento AFF C80 quando houver slots vazios disponíveis ou quando todos os slots estiverem totalmente preenchidos.</block>
+  <block id="cd8d2c9f06c5661e2266f9927427382e" category="summary">Você pode substituir um módulo de e/S com falha em seu sistema de storage AFF C80 pelo mesmo tipo de módulo de e/S ou por um tipo diferente de módulo de e/S. Você também pode adicionar um módulo de e/S a um sistema com slots vazios.</block>
+  <block id="d395647cfc21ff6edde6803e55dea637" category="summary">Substitua um módulo de e/S no seu sistema AFF C80 quando o módulo falhar ou precisar de uma atualização para suportar desempenho superior ou recursos adicionais.</block>
+  <block id="c52f1e3ee9e9664930223aa9ebbd84dc" category="summary">Mantenha o hardware do seu sistema de storage AFF C80 para garantir confiabilidade a longo prazo e desempenho ideal. Execute tarefas de manutenção regulares, como a substituição de componentes defeituosos, pois isso ajuda a evitar tempo de inatividade e perda de dados.</block>
+  <block id="5f2717321f0f0bba8357248fa98a7330" category="doc">Manter os sistemas de storage AFF C80</block>
+  <block id="f2465de333e46411cd1a6fc3cb52f580" category="paragraph">Os procedimentos de manutenção presumem que os sistemas AFF C80 já foram implantados como um nó de storage no ambiente ONTAP.</block>
+  <block id="68cbf1b0b6ee68064dae0d1f74537f78" category="doc">O hardware não é mais suportado</block>
+  <block id="a70eaca09b18d4d2941af3eb0f7325cd" category="paragraph-title"><block ref="a65152a941ce25485720d5bcfae86492" category="inline-image-macro-rx" type="image"></block> Configure o cluster do ONTAP</block>
+  <block id="6cc5c9e930ea3d3b8bff4367c60ceea4" category="section-title">Fevereiro de 2025</block>
+  <block id="9836617ae3e38bf714267c53aac7a422" category="section-title">ASA A20, ASA A30 e ASA A50</block>
+  <block id="4033d90a7ea8ab4b3276a0c26f0cc860" category="paragraph">Os sistemas ASA A20 e ASA A30 e A50 midrange de nível básico disponibilizam storage de bloco para empresas de todos os tamanhos para aplicações essenciais, como bancos de dados e máquinas virtuais.</block>
+  <block id="242c23abc6f706eeabc035c9160b09f4" category="sidebar">Sistemas AFF A-Series</block>
+  <block id="ac6e4f5110aa7db5e1253a60d8d4f5a1" category="sidebar">Sistemas AFF C-Series</block>
+  <block id="25d419e9f6baca5006466a889f0e740f" category="sidebar">Os sistemas ASA A-Series são projetados para aplicações de missão crítica, oferecendo desempenho e eficiência excecionais. Eles fornecem milhões de IOPS, mantêm latência consistente inferior a milissegundos e oferecem uma taxa líder do setor de capacidade de storage bruta para efetiva.</block>
+  <block id="6d6d899023064067891b54808437adaa" category="sidebar">Sistemas ASA A-Series</block>
+  <block id="c1c2020b889a6e30c17c657c0d6b221e" category="sidebar">Os sistemas ASA C-Series oferecem soluções de storage flash econômicas e de alta densidade personalizadas para aplicações empresariais críticas nos data centers.</block>
+  <block id="be83f0f3d9e7cc4af05991e4976d2134" category="sidebar">Sistemas ASA C-Series</block>
+  <block id="26acc0751726d751aea63afa51fee965" category="sidebar">Os sistemas ASA A-Series e ASA C-Series oferecem uma experiência de SAN simplificada e dedicada que fornece disponibilidade de dados contínua para bancos de dados empresariais essenciais e outros workloads SAN que usam o protocolo FCP ou iSCSI.</block>
+  <block id="ba9006710c05e167cf4c54dd8913e747" category="sidebar">Compartimentos de unidades para sistemas de hardware ONTAP</block>
+  <block id="12f32ad5228092ba48607728f8bbaf60" category="sidebar">TR-4384 - SAP HANA em sistemas NetApp FAS com protocolo FC</block>
+  <block id="f0a2879cda43fdf081b757eb03fffbcf" category="sidebar">Início rápido para substituição do suporte de arranque</block>
+  <block id="13421904ebac650d2711e88bb08b22f0" category="sidebar">Início rápido para substituição do chassis</block>
+  <block id="c580ec71eaf8220c0ea467e76f79c6c9" category="sidebar">Início rápido para substituição do controlador</block>
+  <block id="6a003446ac5cfcc128a600e2f0f4d5f8" category="sidebar">Sistemas ASA A20, ASA A30 e ASA A50</block>
+  <block id="37b94bc9c3c3b884893142ecf71e0112" category="sidebar">ASA A20, ASA A30 e ASA A50 mantêm-se</block>
+  <block id="ac683c035e1392a45e654dfbcfc1be22" category="sidebar">Mídia de inicialização ASA A20, ASA A30 e ASA A50</block>
+  <block id="f29453fc9b172b87989c48fc7a5c5299" category="sidebar">Chassis ASA A20, ASA A30 e ASA A50</block>
+  <block id="d1c24e8a39fae2157a44e2cc90a3ef86" category="sidebar">Módulo do controlador ASA A20, ASA A30 e ASA A50</block>
+  <block id="c135c802a875bd87fd7ec037edbbefaa" category="sidebar">Módulo de e/S ASA A20, ASA A30 e ASA A50</block>
 </blocks>

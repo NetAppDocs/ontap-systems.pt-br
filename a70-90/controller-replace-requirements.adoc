@@ -2,7 +2,7 @@
 permalink: a70-90/controller-replace-requirements.html 
 sidebar: sidebar 
 keywords: aff a70, aff a90, prerequisite, replace the controller module 
-summary: Tem de rever os pré-requisitos para o procedimento de substituição e selecionar o correto para a sua versão do sistema operativo ONTAP. 
+summary: Antes de substituir o chassi em seu sistema AFF A70 ou AFF A90, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. Isso inclui ter o chassi de substituição correto, um backup da configuração do sistema e acesso a todas as ferramentas e firmware necessários. 
 ---
 = Requisitos de substituição do controlador - AFF A70 e AFF A90
 :allow-uri-read: 
@@ -11,7 +11,9 @@ summary: Tem de rever os pré-requisitos para o procedimento de substituição e
 
 
 [role="lead"]
-Você deve rever os requisitos para o procedimento de substituição do controlador e selecionar o correto para sua versão do sistema operacional ONTAP.
+Antes de substituir o controlador no seu sistema AFF A70 ou AFF A90, certifique-se de que cumpre os requisitos necessários para uma substituição bem-sucedida. Isso inclui ter o controlador de substituição correto, um backup da configuração do sistema e acesso a todas as ferramentas e firmware necessários.
+
+Reveja os requisitos para substituir o módulo do controlador.
 
 * Todas as gavetas de unidades devem estar funcionando corretamente.
 * O controlador saudável deve ser capaz de assumir o controlador que está a ser substituído (referido neste procedimento como ""controlador deficiente"").

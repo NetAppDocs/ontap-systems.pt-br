@@ -1,0 +1,132 @@
+---
+permalink: asa-r2-a20-30-50/bootmedia-controller-reinstall.html 
+sidebar: sidebar 
+keywords: asa a20, asa a30, asa a50, remove controller 
+summary: 'Você deve substituir o módulo do controlador quando o sistema Registrar um número crescente de códigos de correção de erros (ECC); a falha em fazê-lo causa um pânico no sistema.' 
+---
+= Reinstale o controlador - ASA A20, ASA A30 e ASA A50
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Reinstale o controlador no chassi e reinicialize-o.
+
+.Sobre esta tarefa
+A ilustração a seguir mostra a operação das alças do controlador (do lado esquerdo de um controlador) ao reinstalar o controlador e pode ser usada como referência para as demais etapas de reinstalação do controlador.
+
+image::../media/drw_g_and_t_handles_reinstall_ieops-1838.svg[operação da alavanca do controlador para instalar um controlador]
+
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Se tiver girado as pegas do controlador na vertical (junto às patilhas) para as afastar enquanto efetua a manutenção do controlador, rode-as para a posição horizontal.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+Empurre as alças para reinserir o controlador no chassi até meio e, quando instruído, empurre até que o controlador esteja totalmente assentado.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Legenda número 3]
+ a| 
+Rode as pegas para a posição vertical e bloqueie-as com as patilhas de bloqueio.
+
+|===
+.Passos
+. Feche a tampa do controlador e rode o parafuso de aperto manual no sentido dos ponteiros do relógio até ficar apertado.
+. Introduza o controlador a meio caminho no chassis.
++
+Alinhe a parte traseira do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o controlador utilizando as pegas.
+
++
+
+NOTE: Não introduza completamente o controlador no chassis até ser instruído a fazê-lo.
+
+. Conete o cabo do console à porta do console no controlador e ao laptop para que o laptop receba mensagens de console quando o controlador for reinicializado.
+. Coloque totalmente o controlador no chassis:
++
+.. Empurre firmemente as alças até que o controlador atenda ao plano médio e esteja totalmente assentado.
++
+
+NOTE: Não utilize força excessiva ao deslizar o controlador para dentro do chassis; pode danificar os conetores.
+
+.. Rode as pegas do controlador para cima e bloqueie-as com as patilhas.
++
+
+NOTE: O controlador começa a inicializar assim que estiver totalmente assentado no chassi.
+
+
+
+. Leve o controlador para o prompt Loader pressionando CTRL-C para abortar o AUTOBOOT.
+. Defina a hora e a data no controlador:
++
+Certifique-se de que está no prompt Loader do controlador.
+
++
+.. Apresentar a data e a hora no controlador:
++
+`show date`
+
++
+
+NOTE: O padrão de hora e data está em GMT. Tem a opção de apresentar na hora local e no modo 24hrD.
+
+.. Defina a hora atual em GMT:
++
+`set time hh:mm:ss`
+
++
+Você pode obter o GMT atual do nó saudável:
+
++
+`date -u`
+
+.. Defina a data atual em GMT:
++
+`set date mm/dd/yyyy`
+
++
+Você pode obter o GMT atual do nó saudável
+`date -u`
+
+
+
+. Recable o controlador conforme necessário.
+. Reconecte o cabo de alimentação à fonte de alimentação (PSU).
++
+Uma vez que a energia é restaurada para a PSU, o LED de status deve estar verde.
+
++
+[cols="1,2"]
+|===
+| Se você está reconetando um... | Então... 
+
+
+ a| 
+PSU CA
+ a| 
+.. Ligue o cabo de alimentação à PSU.
+.. Fixe o cabo de alimentação com o fixador do cabo de alimentação.
+
+
+
+
+ a| 
+FONTE DE ALIMENTAÇÃO CC
+ a| 
+.. Ligue o conetor do cabo de alimentação DC D-SUB à PSU.
+.. Aperte os dois parafusos de orelhas para fixar o conetor do cabo de alimentação D-SUB DC à PSU.
+
+
+|===
+

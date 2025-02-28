@@ -2,7 +2,7 @@
 permalink: a70-90/bootmedia-recovery-image-boot.html 
 sidebar: sidebar 
 keywords: aff a70, aff a90, boot the recovery image 
-summary: Você deve inicializar a imagem ONTAP a partir da unidade USB, restaurar o sistema de arquivos e verificar as variáveis ambientais. 
+summary: Se a Mídia de inicialização no sistema AFF A70 ou AFF A90 estiver corrompida, você poderá inicializar a imagem de recuperação de uma unidade USB, restaurar a configuração do nó do parceiro e verificar as variáveis de ambiente. 
 ---
 = Inicie a imagem de recuperação - AFF A70 e AFF A90
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: Você deve inicializar a imagem ONTAP a partir da unidade USB, restaura
 
 
 [role="lead"]
+Se a Mídia de inicialização no sistema AFF A70 ou AFF A90 estiver corrompida, você poderá inicializar a imagem de recuperação de uma unidade USB, restaurar a configuração do nó do parceiro e verificar as variáveis de ambiente.
+
 Você deve inicializar a imagem ONTAP a partir da unidade USB, restaurar o sistema de arquivos e verificar as variáveis ambientais.
 
 .Passos

@@ -1,0 +1,38 @@
+---
+permalink: asa-r2-a20-30-50/controller-replace-workflow.html 
+sidebar: sidebar 
+keywords: asa a20, asa a30, asa a50, replace the controller workflow 
+summary: Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor. 
+---
+= Fluxo de trabalho de substituição do controlador - ASA A20, ASA A30 e ASA A50
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Siga estas etapas do fluxo de trabalho para substituir o controlador.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"]link:controller-replace-requirements.html["Reveja os requisitos de substituição do controlador"]
+[role="quick-margin-para"]
+Para substituir o controlador, você deve atender a certos requisitos.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"]link:controller-replace-shutdown.html["Desligue o controlador desativado"]
+[role="quick-margin-para"]
+Encerre ou assuma o controlador afetado para que o controlador íntegro continue a fornecer dados do armazenamento do controlador desativado.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"]link:controller-replace-move-hardware.html["Substitua o controlador"]
+[role="quick-margin-para"]
+A substituição do controlador inclui a remoção do controlador afetado, a movimentação dos componentes FRU para o controlador de substituição, a instalação do controlador de substituição no chassis, a definição da hora e da data e, em seguida, a desativação.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"]link:controller-replace-system-config-restore-and-verify.html["Restaure e verifique a configuração do sistema"]
+[role="quick-margin-para"]
+Verifique a configuração do sistema de baixo nível do controlador de substituição e reconfigure as definições do sistema conforme necessário.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinco"]link:controller-replace-recable-reassign-disks.html["Devolva o controlador"]
+[role="quick-margin-para"]
+Transfira a propriedade dos recursos de armazenamento de volta para o controlador de substituição.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Seis"]link:controller-replace-restore-system-rma.html["Substituição completa do controlador"]
+[role="quick-margin-para"]
+Verifique as LIFs, verifique a integridade do cluster e devolva a peça com falha ao NetApp.
