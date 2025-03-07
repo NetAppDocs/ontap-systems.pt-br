@@ -263,7 +263,6 @@ Não introduza completamente o módulo do controlador no chassis até ser instru
 +
 Se você removeu os conversores de Mídia (QSFPs ou SFPs), lembre-se de reinstalá-los se você estiver usando cabos de fibra ótica.
 
-. Se as fontes de alimentação estiverem desconetadas, conete-as novamente e reinstale os retentores do cabo de alimentação.
 . Conclua a instalação do módulo do controlador:
 +
 .. Utilizando os trincos de bloqueio, empurre firmemente o módulo do controlador para dentro do chassis até que este se encontre com o plano médio e esteja totalmente assente.
@@ -274,10 +273,11 @@ Os trincos de bloqueio sobem quando o módulo do controlador está totalmente as
 
 NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
 
-+
-O módulo do controlador começa a arrancar assim que estiver totalmente assente no chassis. Esteja preparado para interromper o processo de inicialização.
-
 .. Assente totalmente o módulo do controlador no chassis, rodando os trincos de bloqueio para cima, inclinando-os para que estes limpem os pinos de bloqueio, empurre cuidadosamente o controlador totalmente para dentro e, em seguida, baixe os trincos de bloqueio para a posição de bloqueio.
+.. Conete os cabos de alimentação às fontes de alimentação, reinstale o colar de travamento do cabo de alimentação e, em seguida, conete as fontes de alimentação à fonte de alimentação.
++
+O módulo do controlador começa a inicializar assim que a energia é restaurada. Esteja preparado para interromper o processo de inicialização.
+
 .. Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos.
 .. Interrompa o processo normal de inicialização e inicialize no Loader pressionando `Ctrl-C`.
 +

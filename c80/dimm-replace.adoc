@@ -14,8 +14,8 @@ summary: Substitua um DIMM no sistema AFF C80 quando forem detetados erros corri
 Substitua um DIMM no sistema AFF C80 quando forem detetados erros corrigíveis ou incorrigíveis excessivos. Esses problemas, muitas vezes causados por uma única falha de DIMM, podem impedir que o sistema de armazenamento inicialize o ONTAP.
 
 .Antes de começar
-* Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
-* Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu da NetApp.
+* Certifique-se de que todos os outros componentes do sistema estão a funcionar corretamente; caso contrário, tem de contactar a assistência técnica.
+* Certifique-se de que substitui o componente com falha por um componente de substituição que recebeu da NetApp.
 
 
 
@@ -208,9 +208,9 @@ Certifique-se de que suporta a parte inferior do módulo do controlador enquanto
 
 
 
-== Etapa 3: Substitua um DIMM
+== Passo 3: Substitua o DIMM
 
-Para substituir os DIMMs, localize-os dentro do controlador e siga a sequência específica de passos.
+Para substituir o DIMM, localize-os dentro do controlador e siga a sequência específica de passos.
 
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Abra a conduta de ar do controlador na parte superior do controlador.

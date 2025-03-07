@@ -175,31 +175,6 @@ Se você perder essa mensagem, pressione Ctrl-C, selecione a opção para inicia
 .. Confirme as alterações usando o `printenv variable-name` comando.
 
 
-. Defina o tipo de conexão de rede no prompt DO Loader:
-+
-** Se estiver a configurar DHCP: `ifconfig e0a -auto`
-+
-
-NOTE: A porta de destino configurada é a porta de destino usada para se comunicar com o nó prejudicado do nó saudável durante a restauração do sistema de arquivos var com uma conexão de rede. Você também pode usar a porta e0M neste comando.
-
-** Se estiver a configurar ligações manuais: `ifconfig e0a -addr=filer_addr -mask=netmask -gw=gateway-dns=dns_addr-domain=dns_domain`
-+
-*** Filer_addr é o endereço IP do sistema de armazenamento.
-*** Netmask é a máscara de rede da rede de gerenciamento conetada ao parceiro HA.
-*** gateway é o gateway da rede.
-*** DNS_addr é o endereço IP de um servidor de nomes em sua rede.
-*** DNS_domain é o nome de domínio do sistema de nomes de domínio (DNS).
-+
-Se você usar esse parâmetro opcional, não precisará de um nome de domínio totalmente qualificado no URL do servidor netboot. Você só precisa do nome de host do servidor.
-
-
-
-
-
-+
-
-NOTE: Outros parâmetros podem ser necessários para sua interface. Você pode inserir a ajuda ifconfig no prompt do firmware para obter detalhes.
-
 . Se o controlador estiver em um MetroCluster elástico ou conetado à malha, será necessário restaurar a configuração do adaptador FC:
 +
 .. Arranque para o modo de manutenção: `boot_ontap maint`

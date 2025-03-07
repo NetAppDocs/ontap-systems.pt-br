@@ -114,7 +114,6 @@ Para pares de HA com dois módulos de controlador no mesmo chassi, a sequência 
 NOTE: Não introduza completamente o módulo do controlador no chassis até ser instruído a fazê-lo.
 
 . Recable o console para o módulo do controlador e, em seguida, reconete a porta de gerenciamento.
-. Ligue os cabos de alimentação às fontes de alimentação e volte a instalar os fixadores do cabo de alimentação.
 . Conclua a reinstalação do módulo do controlador:
 +
 .. Empurre firmemente o módulo do controlador para dentro do chassi até que ele atenda ao plano médio e esteja totalmente assentado.
@@ -125,10 +124,11 @@ Os trincos de bloqueio sobem quando o módulo do controlador está totalmente as
 
 NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
 
-+
-O módulo do controlador começa a arrancar assim que estiver totalmente assente no chassis. Esteja preparado para interromper o processo de inicialização.
-
 .. Rode os trincos de bloqueio para cima, inclinando-os de forma a que estes limpem os pinos de bloqueio e, em seguida, baixe-os para a posição de bloqueio.
+.. Conete os cabos de alimentação às fontes de alimentação, reinstale o colar de travamento do cabo de alimentação e, em seguida, conete as fontes de alimentação à fonte de alimentação.
++
+O módulo do controlador começa a inicializar assim que a energia é restaurada. Esteja preparado para interromper o processo de inicialização.
+
 .. Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos.
 .. Interrompa o processo de inicialização normal pressionando `Ctrl-C`.
 

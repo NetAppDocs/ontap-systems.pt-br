@@ -2,9 +2,9 @@
 :allow-uri-read: 
 
 
-O módulo NVRAM consiste no NVRAM10 e DIMMs e até dois módulos flash Cache SSD NVMe (módulos flash Cache ou cache) por módulo NVRAM. Você pode substituir um módulo NVRAM com falha ou os DIMMs dentro do módulo NVRAM.
+O módulo NVRAM consiste no NVRAM10 e DIMMs e até dois módulos de cache flash SSD NVMe (módulos de cache ou cache) por módulo NVRAM. Você pode substituir um módulo NVRAM com falha ou os DIMMs dentro do módulo NVRAM.
 
-Para substituir um módulo NVRAM com falha, você deve removê-lo do chassi, remover o módulo ou módulos FlashCache do módulo NVRAM, mover os DIMMs para o módulo de substituição, reinstalar o módulo ou módulos FlashCache e instalar o módulo NVRAM de substituição no chassi.
+Para substituir um módulo NVRAM com falha, você deve removê-lo do chassi, remover o módulo Flash Cache ou módulos do módulo NVRAM, mover os DIMMs para o módulo de substituição, reinstalar o módulo Flash Cache ou módulos e instalar o módulo NVRAM de substituição no chassi.
 
 Uma vez que a ID do sistema é derivada do módulo NVRAM, se substituir o módulo, os discos pertencentes ao sistema são reatribuídos à nova ID do sistema.
 
@@ -187,7 +187,7 @@ Para substituir o módulo NVRAM, localize-o na ranhura 6 no chassis e siga a seq
 
 .Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
-. Mova o módulo FlashCache do módulo NVRAM antigo para o novo módulo NVRAM:
+. Mova o módulo Flash Cache do módulo NVRAM antigo para o novo módulo NVRAM:
 +
 image::../media/drw_9000_remove_flashcache.png[Replacie o módulo de armazenamento em cache]
 
@@ -199,25 +199,25 @@ image::../media/drw_9000_remove_flashcache.png[Replacie o módulo de armazenamen
  a| 
 image:../media/icon_round_1.png["Legenda número 1"]
  a| 
-Botão de liberação laranja (cinza nos módulos FlashCache vazios)
+Botão de liberação laranja (cinza nos módulos Flash Cache vazios)
 
 
 
  a| 
 image:../media/icon_round_2.png["Legenda número 2"]
  a| 
-Pega de cam FlashCache
+Pega da câmara Flash Cache
 
 |===
 +
-.. Pressione o botão laranja na parte frontal do módulo FlashCache.
+.. Pressione o botão laranja na parte frontal do módulo Flash Cache.
 +
 
-NOTE: O botão de liberação nos módulos FlashCache vazios é cinza.
+NOTE: O botão de liberação nos módulos vazios do Flash Cache está cinza.
 
 .. Rode o manípulo do excêntrico para fora até que o módulo comece a deslizar para fora do módulo NVRAM antigo.
 .. Segure a pega do came do módulo e deslize-a para fora do módulo NVRAM e insira-a na parte frontal do novo módulo NVRAM.
-.. Empurre cuidadosamente o módulo FlashCache totalmente para dentro do módulo NVRAM e, em seguida, gire a alça do came para fechar até que ele bloqueie o módulo no lugar.
+.. Empurre cuidadosamente o módulo Flash Cache totalmente para dentro do módulo NVRAM e, em seguida, gire a alavanca do came para fechar até que ele bloqueie o módulo no lugar.
 
 
 . Retire o módulo NVRAM alvo do chassis:

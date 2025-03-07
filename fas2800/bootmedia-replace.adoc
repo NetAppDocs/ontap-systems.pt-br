@@ -164,29 +164,4 @@ Se você perder essa mensagem, pressione Ctrl-C, selecione a opção para inicia
 +
 O sistema começa a inicializar e pára no prompt DO Loader.
 
-. Defina o tipo de conexão de rede no prompt DO Loader:
-+
-** Se estiver a configurar DHCP: `ifconfig e0a -auto`
-+
-
-NOTE: A porta de destino configurada é a porta de destino utilizada para comunicar com o controlador afetado a partir do controlador saudável durante a restauração do sistema de ficheiros var com uma ligação de rede. Você também pode usar a porta e0M neste comando.
-
-** Se estiver a configurar ligações manuais: `ifconfig e0a -addr=filer_addr -mask=netmask -gw=gateway-dns=dns_addr-domain=dns_domain`
-+
-*** Filer_addr é o endereço IP do sistema de armazenamento.
-*** Netmask é a máscara de rede da rede de gerenciamento conetada ao parceiro HA.
-*** gateway é o gateway da rede.
-*** DNS_addr é o endereço IP de um servidor de nomes em sua rede.
-*** DNS_domain é o nome de domínio do sistema de nomes de domínio (DNS).
-+
-Se você usar esse parâmetro opcional, não precisará de um nome de domínio totalmente qualificado no URL do servidor netboot. Você só precisa do nome de host do servidor.
-
-
-
-
-
-+
-
-NOTE: Outros parâmetros podem ser necessários para sua interface. Você pode digitar `help ifconfig` no prompt do firmware para obter detalhes.
-
 

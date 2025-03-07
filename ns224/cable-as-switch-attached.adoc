@@ -13,16 +13,7 @@ summary: 'Se você tiver um sistema no qual os compartimentos de unidades NS224 
 [role="lead"]
 Se você tiver um sistema no qual os NS224 compartimentos de unidades precisem ser cabeados como storage conectado ao switch (não storage com conexão direta), use as informações fornecidas.
 
-* Cabos NS224 shelves de unidade através de switches de armazenamento:
-+
-https://library.netapp.com/ecm/ecm_download_file/ECMLP2876580["Guia de cabeamento de compartimento de unidade NVMe de NS224 GB"^]
-
-* Instale os switches de armazenamento:
-+
-https://docs.netapp.com/us-en/ontap-systems-switches/index.html["Documentação do comutador AFF e FAS"^]
-
-* Confirme o hardware suportado, como switches de armazenamento e cabos, para o modelo da sua plataforma:
-+
-https://hwu.netapp.com["NetApp Hardware Universe"^]
-
+* Para cable NS224 shelves de unidade através de switches de armazenamento, você pode consultar o https://hwu.netapp.com["NetApp Hardware Universe"^] para obter mais informações. Para modelos de hardware mais antigos, as informações de cabeamento de switch também podem ser encontradas no https://library.netapp.com/ecm/ecm_download_file/ECMLP2876580["Guia de cabeamento de compartimento de unidade NVMe de NS224 GB"^].
+* Para instalar os switches de armazenamento, consulte o https://docs.netapp.com/us-en/ontap-systems-switches/index.html["Documentação do comutador AFF e FAS"^].
+* Para confirmar o hardware suportado para o modelo da sua plataforma, como switches de armazenamento e cabos, consulte o https://hwu.netapp.com["NetApp Hardware Universe"^].
 

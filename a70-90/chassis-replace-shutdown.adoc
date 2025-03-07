@@ -2,7 +2,7 @@
 permalink: a70-90/chassis-replace-shutdown.html 
 sidebar: sidebar 
 keywords: aff a70, aff a90, shutdown the controllers 
-summary: Desligue os controladores do seu sistema de storage AFF A70 ou AFF A90 quando precisar substituir o chassi. Antes de realizar a manutenção ou a substituição de componentes, é fundamental desligar o controlador de forma segura para evitar a perda de dados e garantir a estabilidade do sistema. 
+summary: Desligue os controladores do seu sistema de storage AFF A70 ou AFF A90 quando precisar substituir o chassi. É fundamental desligar o controlador com segurança para evitar a perda de dados e garantir a estabilidade do sistema. 
 ---
 = Desligue os controladores - AFF A70 e AFF A90
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Desligue os controladores do seu sistema de storage AFF A70 ou AFF A90 
 
 
 [role="lead"]
-Desligue os controladores do seu sistema de storage AFF A70 ou AFF A90 quando precisar substituir o chassi. Antes de realizar a manutenção ou a substituição de componentes, é fundamental desligar o controlador de forma segura para evitar a perda de dados e garantir a estabilidade do sistema.
+Desligue os controladores do seu sistema de storage AFF A70 ou AFF A90 quando precisar substituir o chassi. É fundamental desligar os controladores com segurança para evitar a perda de dados e garantir a estabilidade do sistema.
 
 Este procedimento destina-se a sistemas com duas configurações de nós. Para obter mais informações sobre o desligamento normal ao fazer manutenção de um cluster, https://kb.netapp.com/on-prem/ontap/OHW/OHW-KBs/What_is_the_procedure_for_graceful_shutdown_and_power_up_of_a_storage_system_during_scheduled_power_outage["Desligue e ligue o seu sistema de armazenamento de dados - base de dados de Conhecimento da NetApp"] consulte .
 
@@ -68,4 +68,4 @@ NOTE: Para clusters que usam o SnapMirror síncrono operando no modo StrictSync:
 
 
 .O que se segue?
-Depois que os controladores são desligados, você precisa link:chassis-replace-move-hardware.html["substitua o chassis"].
+Depois de desligar os controladores, é necessário link:chassis-replace-move-hardware.html["substitua o chassis"].

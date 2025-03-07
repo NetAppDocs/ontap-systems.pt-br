@@ -41,18 +41,18 @@ Você pode executar  https://mysupport.netapp.com/site/tools/tool-eula/activeiq-
 
 Familiarize-se com as práticas recomendadas a seguir antes de adicionar uma prateleira NS224.
 
-* *Prática recomendada:* a melhor prática é ter a versão atual do https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["Pacote de Qualificação de disco"^] instalado antes de adicionar uma prateleira.
+* *Pacote de Qualificação de disco:* a melhor prática é ter a versão atual do https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["Pacote de Qualificação de disco"^] instalado antes de adicionar uma prateleira a quente.
 +
 Ter a versão atual do DQP instalada permite que seu sistema reconheça e use unidades recém-qualificadas. Isso evita mensagens de eventos do sistema sobre ter informações de unidade não atuais e prevenção do particionamento de unidade porque as unidades não são reconhecidas. O DQP também notifica você sobre o firmware da unidade não atual.
 
-* *Melhor prática:* a melhor prática é correr https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^] antes e depois de adicionar uma prateleira a quente.
+* *Active IQ Config Advisor:* a melhor prática é executar https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^] antes e depois de adicionar uma prateleira.
 +
 Executar o Active IQ Config Advisor antes de adicionar um shelf a quente fornece um snapshot da conectividade existente do shelf Ethernet (ENET), verifica as versões de firmware do módulo de gaveta NVMe (NSM) e permite verificar uma ID de gaveta que já está em uso no par de HA.
 
 +
 Executar o Active IQ Config Advisor após adicionar um compartimento a quente permite verificar se as gavetas estão cabeadas corretamente e se as IDs de gaveta são exclusivas do par de HA.
 
-* *Prática recomendada:* a melhor prática é ter versões atuais https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["Firmware do módulo de gaveta NVMe (NSM)"^] de e https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["firmware da unidade"^] em seu sistema de armazenamento antes de adicionar uma nova prateleira.
+* * Firmware NSM:* a melhor prática é ter versões atuais do https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["Firmware do módulo de gaveta NVMe (NSM)"^] e https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["firmware da unidade"^] no seu sistema de armazenamento antes de adicionar uma nova prateleira.
 +
 
 NOTE: Não reverta o firmware para uma versão que não suporte a gaveta e seus componentes.

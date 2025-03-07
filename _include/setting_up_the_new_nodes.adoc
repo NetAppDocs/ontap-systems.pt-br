@@ -5,7 +5,7 @@
 Durante o processo de atualização movendo o storage, você liga o node3 e o node4, inicializa a imagem de software e configura os nós. O layout físico da porta entre nós originais e novos pode ser diferente. O mapeamento de portas entre nós originais e de substituição deve ser feito para identificar o layout adequado das portas e conexões.
 
 .Sobre esta tarefa
-Se a versão do ONTAP em execução nos novos nós for diferente da versão nos nós originais, você deve ter baixado o arquivo correto [ONTAP_version>_image.tgz do site de suporte da NetApp para um diretório acessível à Web (consulte a Etapa 4). Você precisa do arquivo ONTAP_version>_image.tgz para executar um netboot do sistema.
+Se a versão do ONTAP em execução nos novos nós for diferente da versão nos nós originais, você deve ter baixado o arquivo <xxx_image.tgz> correto do site de suporte da NetApp para um diretório acessível à Web (consulte a Etapa 4). Você precisa do arquivo <xxx_image.tgz> para executar uma netboot do seu sistema.
 
 .Passos
 . Ligue a alimentação para node3 e pressione imediatamente Ctrl-C no terminal do console para acessar o prompt DO Loader.
@@ -63,11 +63,11 @@ DHCP
  a| 
 *Todos os outros sistemas*
  a| 
-`+netboot http://web_server_ip/path_to_web-accessible_directory/<ontap_version>_image.tgz+`
+`+netboot http://web_server_ip/path_to_web-accessible_directory/<xxx_image.tgz>+`
 
 |===
 +
-O path_to_the_web-accessible_Directory é a localização do arquivo baixado (ONTAP_version>_image.tgz).
+O path_to_the_web-accessible_Directory é o local do arquivo <xxx_image.tgz> baixado.
 
 +
 
@@ -77,7 +77,7 @@ NOTE: Se você não conseguir netboot dos novos controladores, entre em Contato 
 +
 Ignore a seguinte mensagem: "Este procedimento não é suportado para atualização sem interrupções em um par de HA". Isso se aplica a atualizações de software sem interrupções, e não a atualizações de controladores.
 
-. Se você for solicitado a continuar o procedimento, digite `y` e, quando solicitado a fornecer o pacote, digite o URL do arquivo de imagem: `+http://web_server_ip/path_to_web-accessible_directory/<ontap_version>_image.tgz+`.
+. Se você for solicitado a continuar o procedimento, digite `y` e, quando solicitado a fornecer o pacote, digite o URL do arquivo de imagem: `+http://web_server_ip/path_to_web-accessible_directory/<xxx_image.tgz>+`.
 +
 Introduza o nome de utilizador/palavra-passe, se aplicável, ou prima Enter para continuar.
 

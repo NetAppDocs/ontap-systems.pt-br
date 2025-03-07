@@ -210,22 +210,19 @@ Não introduza completamente o módulo do controlador no chassis até ser instru
 +
 Se você removeu os conversores de Mídia (QSFPs ou SFPs), lembre-se de reinstalá-los se você estiver usando cabos de fibra ótica.
 
-. Se as fontes de alimentação estiverem desconetadas, conete-as novamente e reinstale os retentores do cabo de alimentação.
 . Insira o módulo do controlador no chassis:
 +
 .. Certifique-se de que os braços do mecanismo de engate estão bloqueados na posição totalmente estendida.
 .. Utilizando ambas as mãos, alinhe e deslize suavemente o módulo do controlador para dentro dos braços do mecanismo de bloqueio até parar.
 .. Coloque os dedos indicadores através dos orifícios dos dedos a partir do interior do mecanismo de bloqueio.
 .. Pressione os polegares para baixo nas patilhas cor-de-laranja na parte superior do mecanismo de bloqueio e empurre suavemente o módulo do controlador sobre o batente.
-.. Solte os polegares da parte superior dos mecanismos de travamento e continue empurrando até que os mecanismos de travamento se encaixem no lugar.
+.. Solte os polegares da parte superior dos mecanismos de travamento e continue empurrando até que os mecanismos de travamento se encaixem no lugar. O módulo do controlador deve ser totalmente inserido e alinhado com as bordas do chassi.
+.. Conete os cabos de alimentação às fontes de alimentação, reinstale o colar de travamento do cabo de alimentação e, em seguida, conete as fontes de alimentação à fonte de alimentação.
 +
-O módulo do controlador começa a arrancar assim que estiver totalmente assente no chassis. Esteja preparado para interromper o processo de inicialização.
+O módulo do controlador começa a inicializar assim que a energia é restaurada. Esteja preparado para interromper o processo de inicialização.
 
 .. Interrompa o controlador no prompt DO Loader.
 
-
-+
-O módulo do controlador deve ser totalmente inserido e alinhado com as bordas do chassi.
 
 . Redefina a hora e a data no controlador:
 +

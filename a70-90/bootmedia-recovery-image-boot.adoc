@@ -2,7 +2,7 @@
 permalink: a70-90/bootmedia-recovery-image-boot.html 
 sidebar: sidebar 
 keywords: aff a70, aff a90, boot the recovery image 
-summary: Se a Mídia de inicialização no sistema AFF A70 ou AFF A90 estiver corrompida, você poderá inicializar a imagem de recuperação de uma unidade USB, restaurar a configuração do nó do parceiro e verificar as variáveis de ambiente. 
+summary: Se a Mídia de inicialização no sistema AFF A70 ou AFF A90 estiver corrompida, você poderá inicializar a imagem de recuperação de uma unidade USB e restaurar a configuração do nó do parceiro. 
 ---
 = Inicie a imagem de recuperação - AFF A70 e AFF A90
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Se a Mídia de inicialização no sistema AFF A70 ou AFF A90 estiver co
 
 
 [role="lead"]
-Se a Mídia de inicialização no sistema AFF A70 ou AFF A90 estiver corrompida, você poderá inicializar a imagem de recuperação de uma unidade USB, restaurar a configuração do nó do parceiro e verificar as variáveis de ambiente.
+Se a Mídia de inicialização no sistema AFF A70 ou AFF A90 estiver corrompida, você poderá inicializar a imagem de recuperação de uma unidade USB e restaurar a configuração do nó do parceiro.
 
 Você deve inicializar a imagem ONTAP a partir da unidade USB, restaurar o sistema de arquivos e verificar as variáveis ambientais.
 
@@ -67,3 +67,6 @@ Depois que o procedimento de restauração for bem-sucedido, essa mensagem será
 *NOTA:* se o processo falhar, entre em Contato https://support.netapp.com["Suporte à NetApp"]com .
 
 
+
+.O que se segue?
+Depois de inicializar a imagem de recuperação, você precisa link:bootmedia-encryption-restore.html["restaure a encriptação no suporte de arranque"].

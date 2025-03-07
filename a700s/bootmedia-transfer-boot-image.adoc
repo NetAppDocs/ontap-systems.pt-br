@@ -55,13 +55,10 @@ Risers
 +
 Ao reativar, lembre-se de reinstalar os conversores de Mídia (SFPs) se eles foram removidos.
 
-. Recable a fonte de alimentação e, em seguida, conete-a à fonte de alimentação.
-+
-Certifique-se de que volta a ligar o anel de bloqueio do cabo de alimentação no cabo de alimentação.
-
 . Empurre cuidadosamente o módulo do controlador até que os ganchos de bloqueio do módulo do controlador comecem a subir, empurre firmemente os ganchos de bloqueio para terminar de assentar o módulo do controlador e, em seguida, rode os ganchos de bloqueio para a posição de bloqueio sobre os pinos no módulo do controlador.
+. Conete os cabos de alimentação às fontes de alimentação, reinstale o colar de travamento do cabo de alimentação e, em seguida, conete as fontes de alimentação à fonte de alimentação.
 +
-O controlador começa a arrancar assim que é completamente instalado no chassis.
+O módulo do controlador começa a inicializar assim que a energia é restaurada. Esteja preparado para interromper o processo de inicialização.
 
 . Interrompa o processo de inicialização pressionando Ctrl-C para parar no prompt DO Loader.
 +
@@ -136,17 +133,14 @@ Risers
 +
 Ao reativar, lembre-se de reinstalar os conversores de Mídia (SFPs) se eles foram removidos.
 
-. Recable a fonte de alimentação e, em seguida, conete-a à fonte de alimentação.
-+
-Certifique-se de que volta a ligar o anel de bloqueio do cabo de alimentação no cabo de alimentação.
-
 . Introduza a unidade flash USB na ranhura USB do módulo do controlador.
 +
 Certifique-se de que instala a unidade flash USB na ranhura identificada para dispositivos USB e não na porta da consola USB.
 
 . Empurre cuidadosamente o módulo do controlador até que os ganchos de bloqueio do módulo do controlador comecem a subir, empurre firmemente os ganchos de bloqueio para terminar de assentar o módulo do controlador e, em seguida, rode os ganchos de bloqueio para a posição de bloqueio sobre os pinos no módulo do controlador.
+. Conete os cabos de alimentação às fontes de alimentação, reinstale o colar de travamento do cabo de alimentação e, em seguida, conete as fontes de alimentação à fonte de alimentação.
 +
-O controlador começa a arrancar assim que é completamente instalado no chassis.
+O módulo do controlador começa a inicializar assim que a energia é restaurada. Esteja preparado para interromper o processo de inicialização.
 
 . Interrompa o processo de inicialização pressionando Ctrl-C para parar no prompt DO Loader.
 +

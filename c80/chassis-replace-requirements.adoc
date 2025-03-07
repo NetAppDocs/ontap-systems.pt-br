@@ -22,5 +22,5 @@ Antes de substituir o chassi, verifique os seguintes requisitos.
 * Certifique-se de que tem as ferramentas e o equipamento necessários para a substituição.
 * Pode utilizar o procedimento de substituição do chassis com todas as versões do ONTAP suportadas pelo seu sistema.
 * O procedimento de substituição do chassi é escrito partindo do pressuposto de que você está movendo o painel frontal, as unidades NVMe e os módulos do controlador para o novo chassi e de que o chassi de substituição é um novo componente do NetApp.
-* *O procedimento de substituição do chassis é disruptivo.* Para um cluster de dois nós, você terá uma interrupção de serviço completa e uma interrupção parcial em um cluster de vários nós.
+* O procedimento de substituição do chassis é disruptivo. Para um cluster de dois nós, você terá uma interrupção de serviço completa e uma interrupção parcial em um cluster de vários nós.
 

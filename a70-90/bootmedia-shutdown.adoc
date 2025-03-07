@@ -2,16 +2,16 @@
 permalink: a70-90/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: aff a70, aff a90, shut down the controller 
-summary: Encerre o controlador no sistema de storage AFF A70 ou AFF A90 quando ele estiver desativado. Antes de realizar a manutenção ou a substituição de componentes, é fundamental desligar o controlador de forma segura para evitar a perda de dados e garantir a estabilidade do sistema. 
+summary: Desligue o controlador no sistema de storage AFF A70 ou AFF A90 quando precisar substituir a Mídia de inicialização. Antes de realizar a manutenção ou a substituição de componentes, é fundamental desligar o controlador de forma segura para evitar a perda de dados e garantir a estabilidade do sistema. 
 ---
-= Desligar controlador desativado - AFF A70 e AFF A90
+= Desligue o controlador para substituir o suporte de arranque - AFF A70 e AFF A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Encerre o controlador no sistema de storage AFF A70 ou AFF A90 quando ele estiver desativado. Antes de realizar a manutenção ou a substituição de componentes, é fundamental desligar o controlador de forma segura para evitar a perda de dados e garantir a estabilidade do sistema.
+Desligue o controlador no sistema de storage AFF A70 ou AFF A90 quando precisar substituir a Mídia de inicialização. Antes de realizar a manutenção ou a substituição de componentes, é fundamental desligar o controlador de forma segura para evitar a perda de dados e garantir a estabilidade do sistema.
 
 [role="tabbed-block"]
 ====
@@ -116,3 +116,5 @@ Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctr
 
 --
 ====
+.O que se segue?
+Depois de desligar o controlador, é necessário link:bootmedia-replace.html["substitua o suporte de arranque"].

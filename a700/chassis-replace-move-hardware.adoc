@@ -123,7 +123,7 @@ Certifique-se de que suporta a parte inferior do módulo do controlador enquanto
 == Passo 4: Remova os módulos de e/S.
 
 .Passos
-Para remover módulos de e/S do chassi antigo, incluindo os módulos NVRAM, siga a sequência específica de etapas. Você não precisa remover o módulo FlashCache do módulo NVRAM ao movê-lo para um novo chassi.
+Para remover módulos de e/S do chassi antigo, incluindo os módulos NVRAM, siga a sequência específica de etapas. Não é necessário remover o módulo Flash Cache do módulo NVRAM ao movê-lo para um novo chassi.
 
 . Desconete qualquer cabeamento associado ao módulo de e/S de destino.
 +
@@ -264,7 +264,7 @@ Quando inserido num sistema ativo, o LED âmbar de atenção pisca quatro vezes 
 == Passo 10: Instale módulos de e/S.
 
 .Passos
-Para instalar módulos de e/S, incluindo os módulos NVRAM/FlashCache do chassi antigo, siga a sequência específica de etapas.
+Para instalar módulos de e/S, incluindo os módulos NVRAM/Flash Cache do chassi antigo, siga a sequência específica de etapas.
 
 Você deve ter o chassi instalado para que você possa instalar os módulos de e/S nos slots correspondentes no novo chassi.
 

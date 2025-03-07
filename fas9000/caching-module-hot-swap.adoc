@@ -1,8 +1,8 @@
 ---
 permalink: fas9000/caching-module-hot-swap.html 
 sidebar: sidebar 
-keywords: fas9000, hot swap, replace, FlashCache 
-summary: 'Os módulos NVMe SSD FlashCache (módulos FlashCache ou cache) estão localizados na parte frontal do módulo NVRAM10 apenas no slot 6 de sistemas FAS9000. A partir do ONTAP 9.4, você pode trocar o módulo de armazenamento em cache com a mesma capacidade do mesmo ou de outro fornecedor suportado.' 
+keywords: fas9000, hot swap, replace, Flash Cache 
+summary: 'Os módulos Flash Cache SSD NVMe (Flash Cache ou módulos de cache) estão localizados na frente do módulo NVRAM10 apenas no slot 6 de sistemas FAS9000. A partir do ONTAP 9.4, você pode trocar o módulo de armazenamento em cache com a mesma capacidade do mesmo ou de outro fornecedor suportado.' 
 ---
 = Hot-swap um módulo de cache - FAS9000
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Os módulos NVMe SSD FlashCache (módulos FlashCache ou cache) estão 
 
 
 [role="lead"]
-Os módulos NVMe SSD FlashCache (módulos FlashCache ou cache) estão localizados na parte frontal do módulo NVRAM10 apenas no slot 6 de sistemas FAS9000. A partir do ONTAP 9.4, você pode trocar o módulo de armazenamento em cache com a mesma capacidade do mesmo ou de outro fornecedor suportado.
+Os módulos Flash Cache SSD NVMe (Flash Cache ou módulos de cache) estão localizados na frente do módulo NVRAM10 apenas no slot 6 de sistemas FAS9000. A partir do ONTAP 9.4, você pode trocar o módulo de armazenamento em cache com a mesma capacidade do mesmo ou de outro fornecedor suportado.
 
 .Antes de começar
 Dependendo da situação, seu sistema de storage precisa atender a certos critérios:

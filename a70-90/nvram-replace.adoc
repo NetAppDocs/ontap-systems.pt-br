@@ -1,8 +1,8 @@
 ---
 permalink: a70-90/nvram-replace.html 
 sidebar: sidebar 
-keywords: aff a70, aff a90, replace an nvdimm 
-summary: 'O módulo NVRAM consiste no NVRAM12 e DIMMs e até dois módulos flash Cache SSD NVMe (módulos flash Cache ou cache) por módulo NVRAM.' 
+keywords: aff a70, aff a90, replace an nvram 
+summary: Substitua o NVRAM em seu sistema AFF A70 ou AFF A90 quando a memória não volátil ficar com defeito ou precisar de uma atualização. 
 ---
 = Substitua o NVRAM - AFF A70 e o AFF A90
 :allow-uri-read: 
@@ -11,11 +11,14 @@ summary: 'O módulo NVRAM consiste no NVRAM12 e DIMMs e até dois módulos flash
 
 
 [role="lead"]
-O módulo NVRAM consiste no hardware NVRAM12 e DIMMs substituíveis em campo. Você pode substituir um módulo NVRAM com falha ou os DIMMs dentro do módulo NVRAM. Para substituir um módulo NVRAM com falha, você deve remover o módulo do chassi, mover os DIMMs para o módulo de substituição e instalar o módulo NVRAM de substituição no chassi.
+Substitua o NVRAM em seu sistema AFF A70 ou AFF A90 quando a memória não volátil ficar com defeito ou precisar de uma atualização. O processo de substituição envolve desligar o controlador prejudicado, substituir o módulo NVRAM ou o DIMM NVRAM, reatribuir os discos e devolver a peça com falha ao NetApp.
 
-Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em https://support.netapp.com["Suporte à NetApp"]Contato com .
+O módulo NVRAM consiste no hardware NVRAM12 e DIMMs substituíveis em campo. Você pode substituir um módulo NVRAM com falha ou os DIMMs dentro do módulo NVRAM.
 
-Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor.
+.Antes de começar
+* Certifique-se de que tem a peça de substituição disponível. Tem de substituir o componente com falha por um componente de substituição que recebeu do fornecedor.
+* Certifique-se de que todos os outros componentes do sistema de armazenamento estão a funcionar corretamente; caso contrário, https://support.netapp.com["Suporte à NetApp"]contacte o .
+
 
 
 
@@ -204,9 +207,9 @@ NOTE: O controlador reinicializa assim que estiver totalmente encaixado no chass
 
 
 
-== Etapa 3: Substitua um DIMM NVRAM
+== Etapa 3: Substitua os DIMMs do NVRAM
 
-Para substituir DIMMs NVRAM no módulo NVRAM, você deve remover o módulo NVRAM e, em seguida, substituir o DIMM de destino.
+Para substituir DIMMs NVRAM no módulo NVRAM, primeiro deve remover o módulo NVRAM e, em seguida, substituir o DIMM de destino.
 
 . Na parte frontal do chassis, utilize os polegares para empurrar firmemente cada unidade até sentir um batente positivo. Isso garante que as unidades estejam firmemente assentadas contra o plano médio do chassi.
 +

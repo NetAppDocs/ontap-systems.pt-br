@@ -13,7 +13,6 @@ summary: Substitua uma unidade no sistema ASA A70 ou ASA A90 quando uma unidade 
 [role="lead"]
 Substitua uma unidade no sistema ASA A70 ou ASA A90 quando uma unidade falhar ou precisar de uma atualização. Esse processo envolve identificar a unidade com defeito, removê-la com segurança e instalar uma nova unidade para garantir o acesso contínuo aos dados e o desempenho do sistema.
 
-[role="lead"]
 Você pode substituir uma unidade SSD com falha sem interrupções enquanto a e/S estiver em andamento.
 
 Quando uma unidade falha, a plataforma Registra uma mensagem de aviso no console do sistema indicando qual unidade falhou. Além disso, o LED de avaria no painel do visor do operador e o LED de avaria na unidade avariada acendem-se.

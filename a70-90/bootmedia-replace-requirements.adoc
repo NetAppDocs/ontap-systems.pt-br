@@ -2,16 +2,16 @@
 permalink: a70-90/bootmedia-replace-requirements.html 
 sidebar: sidebar 
 keywords: aff a70, a90, replace the boot media 
-summary: Antes de substituir o suporte de arranque no sistema AFF A70 ou AFF A90, certifique-se de que tem o dispositivo de arranque de substituição correto, acesso ao firmware do sistema e ao software ONTAP e uma cópia de segurança dos dados de configuração essenciais. 
+summary: Antes de substituir o suporte de arranque no sistema AFF A70 ou AFF A90, certifique-se de que cumpre os requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se você tem o dispositivo de inicialização de substituição correto, acesso ao firmware do sistema e ao software ONTAP e um backup dos dados essenciais de configuração. 
 ---
-= Requisitos de substituição do suporte de arranque - AFF A70 e AFF A90
+= Requisitos para substituir o suporte de arranque - AFF A70 e AFF A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Antes de substituir o suporte de arranque no sistema AFF A70 ou AFF A90, certifique-se de que tem o dispositivo de arranque de substituição correto, acesso ao firmware do sistema e ao software ONTAP e uma cópia de segurança dos dados de configuração essenciais.
+Antes de substituir o suporte de arranque no sistema AFF A70 ou AFF A90, certifique-se de que cumpre os requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se você tem o dispositivo de inicialização de substituição correto, acesso ao firmware do sistema e ao software ONTAP e um backup dos dados essenciais de configuração.
 
 Reveja os seguintes requisitos.
 
@@ -25,3 +25,6 @@ Reveja os seguintes requisitos.
 
 
 
+
+.O que se segue?
+Depois de rever os requisitos para substituir o suporte de arranque, tem de link:bootmedia-encryption-preshutdown-checks.html["verifique o suporte e o status da chave de criptografia na mídia de inicialização"].

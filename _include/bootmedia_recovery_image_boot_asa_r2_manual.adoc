@@ -39,7 +39,7 @@ A imagem é transferida da unidade flash USB.
 
 .. No prompt Loader, netboot o nó prejudicado:
 +
-`netboot \http://_web_server_ip/path_to_web-accessible_directory_/<ontap_version>_image.tgz`
+`netboot \http://_web_server_ip/path_to_web-accessible_directory_/<xxx_image.tgz>`
 
 .. No menu Boot (Inicialização), selecione Option(opção `7`).
 .. Digite `n` quando solicitado a restaurar a configuração de backup.

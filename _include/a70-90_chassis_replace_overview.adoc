@@ -7,6 +7,7 @@ Para substituir o chassi, você deve mover o painel frontal, os módulos do cont
 Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
 
 * Pode utilizar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema.
+* Não utilize este procedimento para atualizações do sistema; em vez disso, consulte o https://docs.netapp.com/us-en/ontap-systems-upgrade/choose_controller_upgrade_procedure.html["Escolha o procedimento de atualização do hardware do controlador"] para obter orientação.
 * Esse procedimento foi escrito com a suposição de que você está movendo o painel frontal, as unidades NVMe e os módulos da controladora para o novo chassi e que o chassi de substituição é um novo componente da NetApp.
 * *Este procedimento é disruptivo.* Para um cluster de dois nós, você terá uma interrupção de serviço completa e uma interrupção parcial em um cluster de vários nós.
 

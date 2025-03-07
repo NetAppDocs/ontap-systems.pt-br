@@ -2,16 +2,16 @@
 permalink: a70-90/chassis-replace-requirements.html 
 sidebar: sidebar 
 keywords: aff a70, aff a90, replace the chassis 
-summary: Antes de substituir o chassi no sistema AFF A70 ou AFF A90, verifique se todos os outros componentes do sistema estão funcionando corretamente, verifique se você tem credenciais de administrador local para ONTAP, o chassi de substituição correto e as ferramentas necessárias. 
+summary: Antes de substituir o chassi em seu sistema AFF A70 ou AFF A90, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, verificar se você tem credenciais de administrador local para o ONTAP, o chassi de substituição correto e as ferramentas necessárias. 
 ---
-= Requisitos de substituição do chassis - AFF A70 e AFF A90
+= Requisitos para substituir o chassis - AFF A70 e AFF A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Antes de substituir o chassi no sistema AFF A70 ou AFF A90, verifique se todos os outros componentes do sistema estão funcionando corretamente, verifique se você tem credenciais de administrador local para ONTAP, o chassi de substituição correto e as ferramentas necessárias.
+Antes de substituir o chassi em seu sistema AFF A70 ou AFF A90, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, verificar se você tem credenciais de administrador local para o ONTAP, o chassi de substituição correto e as ferramentas necessárias.
 
 O chassi é o gabinete físico que abriga todos os componentes do controlador, como a unidade controladora/CPU, fonte de alimentação e e/S.
 
@@ -22,8 +22,8 @@ Antes de substituir o chassi, verifique os seguintes requisitos.
 * Certifique-se de que tem as ferramentas e o equipamento necessários para a substituição.
 * Pode utilizar o procedimento de substituição do chassis com todas as versões do ONTAP suportadas pelo seu sistema.
 * O procedimento de substituição do chassi é escrito partindo do pressuposto de que você está movendo o painel frontal, as unidades NVMe e os módulos do controlador para o novo chassi e de que o chassi de substituição é um novo componente do NetApp.
-* *O procedimento de substituição do chassis é disruptivo.* Para um cluster de dois nós, você terá uma interrupção de serviço completa e uma interrupção parcial em um cluster de vários nós.
+* O procedimento de substituição do chassis é disruptivo. Para um cluster de dois nós, você terá uma interrupção de serviço completa e uma interrupção parcial em um cluster de vários nós.
 
 
 .O que se segue?
-Depois de analisar os requisitos de substituição do chassi, você precisa link:chassis-replace-prepare.html["prepare-se para a substituição do chassis"].
+Depois de analisar os requisitos para substituir o chassi, é link:chassis-replace-prepare.html["prepare-se para substituir o chassis"]necessário .

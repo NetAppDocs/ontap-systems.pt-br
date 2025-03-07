@@ -2,7 +2,7 @@
 permalink: a70-90/chassis-replace-move-hardware.html 
 sidebar: sidebar 
 keywords: aff a70, aff a90, move hardware components, replace the chassis 
-summary: Substitua o chassi do sistema AFF A70 ou AFF A90 quando uma falha ou atualização de hardware exigir isso. Esse processo envolve desligar o sistema, remover o chassi existente, instalar o novo e reconfigurar os componentes para garantir o funcionamento correto do sistema. 
+summary: 'Substitua o chassi do sistema AFF A70 ou AFF A90 quando uma falha ou atualização de hardware exigir isso. O processo de substituição envolve a remoção das unidades de fonte de alimentação (PSUs), a remoção do chassi existente, a instalação do novo e a reinstalação dos componentes do chassi.' 
 ---
 = Substitua o chassis - AFF A70 e AFF A90
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Substitua o chassi do sistema AFF A70 ou AFF A90 quando uma falha ou at
 
 
 [role="lead"]
-Substitua o chassi do sistema AFF A70 ou AFF A90 quando uma falha ou atualização de hardware exigir isso. Esse processo envolve desligar o sistema, remover o chassi existente, instalar o novo e reconfigurar os componentes para garantir o funcionamento correto do sistema.
+Substitua o chassi do sistema AFF A70 ou AFF A90 quando uma falha ou atualização de hardware exigir isso. O processo de substituição envolve a remoção das unidades de fonte de alimentação (PSUs), a remoção do chassi existente, a instalação do novo e a reinstalação dos componentes do chassi.
 
 
 
@@ -170,7 +170,7 @@ Retire o chassis danificado e instale o chassis de substituição.
 
 == Passo 4: Instale os componentes do chassis
 
-Uma vez que o chassi de substituição é instalado, você precisa instalar os módulos do controlador, reinstalá-los e, em seguida, reinstalar as unidades e PSUs.
+Depois que o chassi de substituição for instalado, você precisará instalar os módulos do controlador, reinstalá-los e reinstalar as unidades e PSUs.
 
 . Começando pelo módulo do controlador inferior, instale os módulos do controlador no chassis de substituição:
 +
@@ -186,7 +186,7 @@ Certifique-se de que os cabos estão ligados consultando as etiquetas dos cabos.
 
 
 . Reinstale as unidades em seus compartimentos de unidade correspondentes na parte frontal do chassi.
-. Instale todas as quatro fontes de alimentação:
+. Instale todas as quatro PSUs:
 +
 .. Utilizando ambas as mãos, apoie e alinhe as extremidades da PSU com a abertura no módulo do controlador.
 .. Empurre cuidadosamente a PSU para dentro do módulo do controlador até que a patilha de bloqueio encaixe no lugar.

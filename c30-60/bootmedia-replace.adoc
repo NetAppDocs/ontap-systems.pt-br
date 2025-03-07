@@ -281,32 +281,6 @@ NOTE: O controlador é inicializado quando totalmente assentado no chassi. Ele o
 +
 Se você perder essa mensagem, pressione Ctrl-C, selecione a opção para inicializar no modo Manutenção e, em seguida, interrompa o controlador para inicializar NO Loader.
 
-. Defina o tipo de conexão de rede no prompt DO Loader:
-+
-** Se estiver a configurar DHCP:
-+
-`ifconfig e0M -auto`
-
-+
-
-NOTE: A porta de destino configurada é a porta de destino utilizada para comunicar com o controlador afetado a partir do controlador saudável durante a restauração do sistema de ficheiros var com uma ligação de rede. Você também pode usar a porta e0M neste comando.
-
-** Se você estiver configurando conexões manuais
-+
-`ifconfig e0M -addr=filer_addr -mask=netmask -gw=gateway`
-
-+
-*** Filer_addr é o endereço IP do sistema de armazenamento.
-*** Netmask é a máscara de rede da rede de gerenciamento conetada ao parceiro HA.
-*** gateway é o gateway da rede.
-
-
-+
-
-NOTE: Outros parâmetros podem ser necessários para sua interface. Você pode digitar `help ifconfig` no prompt do firmware para obter detalhes.
-
-
-
 . Reconecte o cabo de alimentação à fonte de alimentação (PSU) no controlador desativado.
 +
 Uma vez que a energia é restaurada para a PSU, o LED de status deve estar verde.

@@ -35,7 +35,7 @@ Você pode querer apagar o conteúdo do seu módulo de cache antes de substituí
 .. Apagar os dados no módulo de armazenamento em cache: `system controller flash-cache secure-erase run -node _node name_ localhost -device-id _device_number_`
 +
 
-NOTE: Execute o `system controller flash-cache show` comando se você não souber a ID do dispositivo flashcache.
+NOTE: Execute o `system controller flash-cache show` comando se você não souber a ID do dispositivo Flash Cache.
 
 .. Verifique se os dados foram apagados do módulo de cache: `system controller flash-cache secure-erase show`
 +

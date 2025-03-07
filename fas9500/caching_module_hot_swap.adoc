@@ -1,8 +1,8 @@
 ---
 permalink: fas9500/caching_module_hot_swap.html 
 sidebar: sidebar 
-keywords: fas9500, hot swap, replace, FlashCache 
-summary: 'Os módulos NVMe SSD FlashCache (módulos FlashCache ou cache) estão localizados na parte frontal do módulo NVRAM11 apenas no slot 6 de sistemas FAS9500. Você pode trocar o módulo de armazenamento em cache com a mesma capacidade do mesmo ou de outro fornecedor compatível.' 
+keywords: fas9500, hot swap, replace, Flash Cache 
+summary: 'Os módulos Flash Cache SSD NVMe (Flash Cache ou módulos de cache) estão localizados na frente do módulo NVRAM11 apenas no slot 6 de sistemas FAS9500. Você pode trocar o módulo de armazenamento em cache com a mesma capacidade do mesmo ou de outro fornecedor compatível.' 
 ---
 = Hot-swap um módulo de cache - FAS9500
 :allow-uri-read: 
@@ -11,10 +11,10 @@ summary: 'Os módulos NVMe SSD FlashCache (módulos FlashCache ou cache) estão 
 
 
 [role="lead"]
-Os módulos NVMe SSD FlashCache (módulos FlashCache ou cache) estão localizados na parte frontal do módulo NVRAM11 no slot 6 dos sistemas FAS9500. Você pode trocar o módulo de armazenamento em cache com a mesma capacidade do mesmo ou de outro fornecedor compatível.
+Os módulos Flash Cache SSD NVMe (Flash Cache ou módulos de cache) estão localizados na frente do módulo NVRAM11 no slot 6 dos sistemas FAS9500. Você pode trocar o módulo de armazenamento em cache com a mesma capacidade do mesmo ou de outro fornecedor compatível.
 
 
-NOTE: Se você precisar ou quiser trocar o módulo FlashCache a frio, siga os procedimentos para substituir um módulo de e/S.
+NOTE: Se você precisar ou quiser trocar o módulo Flash Cache, siga os procedimentos para substituir um módulo de e/S.
 
 .Antes de começar
 Dependendo da situação, seu sistema de storage precisa atender a certos critérios:

@@ -203,14 +203,12 @@ A unidade flash USB deve ter a pasta efi e a mesma versão de imagem de serviço
 +
 Ao reativar, lembre-se de reinstalar os conversores de Mídia (SFPs ou QSFPs) se eles foram removidos.
 
-.. Ligue o cabo de alimentação à fonte de alimentação e volte a instalar o fixador do cabo de alimentação.
 .. Introduza a unidade flash USB na ranhura USB do módulo do controlador.
 +
 Certifique-se de que instala a unidade flash USB na ranhura identificada para dispositivos USB e não na porta da consola USB.
 
 .. Conclua a instalação do módulo do controlador:
 +
-... Ligue o cabo de alimentação à fonte de alimentação, volte a instalar o anel de bloqueio do cabo de alimentação e, em seguida, ligue a fonte de alimentação à fonte de alimentação.
 ... Empurre firmemente o módulo do controlador para dentro do chassi até que ele atenda ao plano médio e esteja totalmente assentado.
 +
 Os trincos de bloqueio sobem quando o módulo do controlador está totalmente assente.
@@ -219,10 +217,11 @@ Os trincos de bloqueio sobem quando o módulo do controlador está totalmente as
 
 NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
 
-+
-O módulo do controlador começa a arrancar assim que estiver totalmente assente no chassis. Esteja preparado para interromper o processo de inicialização.
-
 ... Rode os trincos de bloqueio para cima, inclinando-os de forma a que estes limpem os pinos de bloqueio e, em seguida, baixe-os para a posição de bloqueio.
+... Conete os cabos de alimentação às fontes de alimentação, reinstale o colar de travamento do cabo de alimentação e, em seguida, conete as fontes de alimentação à fonte de alimentação.
++
+O módulo do controlador começa a inicializar assim que a energia é restaurada. Esteja preparado para interromper o processo de inicialização.
+
 ... Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos.
 
 

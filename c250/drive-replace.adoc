@@ -10,7 +10,7 @@ summary: Você deve substituir uma unidade quando a plataforma Registrar uma men
 :imagesdir: ../media/
 
 
-[role="lead lead"]
+[role="lead"]
 Você pode substituir uma unidade SSD com falha sem interrupções enquanto a e/S estiver em andamento.
 
 Quando uma unidade falha, a plataforma Registra uma mensagem de aviso no console do sistema indicando qual unidade falhou. Além disso, o LED de avaria no painel do visor do operador e o LED de avaria na unidade avariada acendem-se.
