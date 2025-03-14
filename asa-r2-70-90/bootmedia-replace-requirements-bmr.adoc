@@ -2,16 +2,18 @@
 permalink: asa-r2-70-90/bootmedia-replace-requirements-bmr.html 
 sidebar: sidebar 
 keywords: asa r2 a70, a90, replace the boot media 
-summary: Saiba mais sobre os requisitos para substituir a Mídia de inicialização. 
+summary: Antes de substituir o suporte de arranque no sistema ASA A70 ou A90, certifique-se de que cumpre os requisitos necessários para uma substituição bem-sucedida. 
 ---
-= Requisitos de substituição do suporte de arranque - ASA A70 e ASA A90
+= Requisito para substituir o suporte de arranque - ASA A70 e ASA A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Antes de substituir o suporte de arranque, certifique-se de que verifica os seguintes requisitos.
+Antes de substituir o suporte de arranque no sistema ASA A70 ou ASA A90, certifique-se de que cumpre os requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se você tem a Mídia de inicialização de substituição correta, confirmar que não há portas de cluster com defeito no controlador e determinar se o Onboard Key Manager (OKM) ou o External Key Manager (EKM) está habilitado.
+
+Reveja os seguintes requisitos.
 
 * Tem de substituir o suporte de arranque com falha por um suporte de arranque de substituição que recebeu do NetApp.
 * Não deve haver portas do cluster defeituosas no controlador prejudicado.
@@ -34,4 +36,4 @@ Antes de substituir o suporte de arranque, certifique-se de que verifica os segu
 
 
 .O que vem a seguir
-Depois de analisar os requisitos do suporte de arranque, pode link:bootmedia-shutdown-bmr.html["desligue o controlador desativado"].
+Depois de analisar os requisitos do suporte de arranque, pode link:bootmedia-shutdown-bmr.html["desligue o controlador"].

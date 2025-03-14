@@ -1,19 +1,14 @@
-= Devolva o controlador
+= 
 :allow-uri-read: 
 
-
-Verifique as conexões de armazenamento e rede e, em seguida, devolva o controlador.
-
-
-
-== Devolva o controlador
-
-Redefina a encriptação se ativada e volte a colocar o controlador em funcionamento normal.
 
 [role="tabbed-block"]
 ====
 .Sem criptografia
 --
+Volte a colocar o controlador afetado em funcionamento normal, devolvendo o respetivo armazenamento.
+
+.Passos
 . No prompt Loader, digite `boot_ontap`.
 . Pressione <enter> quando as mensagens do console pararem.
 +
@@ -27,8 +22,11 @@ Redefina a encriptação se ativada e volte a colocar o controlador em funcionam
 
 
 --
-.Criptografia integrada (OKM)
+.Criptografia OKM
 --
+Redefina a criptografia integrada e retorne o controlador à operação normal.
+
+.Passos
 . No prompt Loader, digite:
 +
 `boot_ontap maint`
@@ -64,8 +62,11 @@ Se a coluna _restored_ mostrar qualquer coisa, exceto _true_, entre em Contato h
 
 
 --
-.Gestor de chaves externo (EKM)
+.Criptografia EKM
 --
+Redefina a encriptação e volte a colocar o controlador em funcionamento normal.
+
+.Passos
 . Se o volume raiz estiver criptografado com o Gerenciador de chaves Externo e o cabo do console estiver conetado ao nó de substituição, insira `boot_ontap menu` e selecione a opção `11`.
 . Responda `y` ou `n` às seguintes perguntas:
 +

@@ -11,10 +11,12 @@ summary: 'O módulo NVRAM consiste no NVRAM12 e DIMMs e até dois módulos de ca
 
 
 [role="lead"]
+Substitua o NVRAM no seu sistema AFF C80 quando a memória não volátil ficar com defeito ou necessitar de uma atualização. O processo de substituição envolve desligar o controlador prejudicado, substituir o módulo NVRAM ou o DIMM NVRAM, reatribuir os discos e devolver a peça com falha ao NetApp.
+
 O módulo NVRAM consiste no hardware NVRAM12 e DIMMs substituíveis em campo. Você pode substituir um módulo NVRAM com falha ou os DIMMs dentro do módulo NVRAM.
 
 .Antes de começar
-* Certifique-se de que tem a peça de substituição disponível. Tem de substituir o componente com falha por um componente de substituição que recebeu do fornecedor.
+* Certifique-se de que tem a peça de substituição disponível. Você deve substituir o componente com falha por um componente de substituição que você recebeu da NetApp.
 * Certifique-se de que todos os outros componentes do sistema de armazenamento estão a funcionar corretamente; caso contrário, https://support.netapp.com["Suporte à NetApp"]contacte o .
 
 
@@ -205,7 +207,7 @@ NOTE: O controlador reinicializa assim que estiver totalmente encaixado no chass
 
 
 
-== Etapa 3: Substitua os DIMMs do NVRAM
+== Etapa 3: Substitua o DIMM NVRAM
 
 Para substituir DIMMs NVRAM no módulo NVRAM, primeiro deve remover o módulo NVRAM e, em seguida, substituir o DIMM de destino.
 

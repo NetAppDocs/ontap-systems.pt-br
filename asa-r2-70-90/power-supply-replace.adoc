@@ -2,7 +2,7 @@
 permalink: asa-r2-70-90/power-supply-replace.html 
 sidebar: sidebar 
 keywords: asa r2 a70, asa r2 a90, replace a power supply 
-summary: A substituição de uma fonte de alimentação envolve desconetar a fonte de alimentação de destino da fonte de alimentação, desconetar o cabo de alimentação, remover a fonte de alimentação antiga e instalar a fonte de alimentação de substituição e conectá-la novamente à fonte de alimentação. 
+summary: 'Substitua uma fonte de alimentação CA ou CC (PSU) em seu sistema ASA A70 ou ASA A90 quando ele falhar ou se tornar defeituoso, garantindo que seu sistema continue recebendo a energia necessária para operação estável. O processo de substituição envolve desconetar a PSU de destino da fonte de alimentação, desconetar o cabo de alimentação, remover a PSU defeituosa e instalar a PSU de substituição e, em seguida, conectá-la novamente à fonte de alimentação.' 
 ---
 = Substitua uma fonte de alimentação - ASA A70 e ASA A90
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: A substituição de uma fonte de alimentação envolve desconetar a fon
 
 
 [role="lead"]
+Substitua uma fonte de alimentação CA ou CC (PSU) em seu sistema ASA A70 ou ASA A90 quando ele falhar ou se tornar defeituoso, garantindo que seu sistema continue recebendo a energia necessária para operação estável. O processo de substituição envolve desconetar a PSU de destino da fonte de alimentação, desconetar o cabo de alimentação, remover a PSU defeituosa e instalar a PSU de substituição e, em seguida, conectá-la novamente à fonte de alimentação.
+
 As fontes de alimentação são redundantes e hot-swap.
 
 .Sobre esta tarefa

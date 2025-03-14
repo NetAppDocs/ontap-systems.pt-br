@@ -2,7 +2,7 @@
 permalink: fas-70-90/controller-replace-system-config-restore-and-verify.html 
 sidebar: sidebar 
 keywords: fas70, fas90, restore and verify the system configuration, verify and set the ha state of the controller module 
-summary: Depois de concluir a substituição de hardware e a inicialização para o modo de manutenção, você verifica a configuração de sistema de baixo nível do controlador de substituição e reconfigura as configurações do sistema conforme necessário. 
+summary: Verifique se a configuração de HA do controlador está ativa e funcionando corretamente no sistema de storage FAS70 ou FAS90 e confirme se os adaptadores do sistema listam todos os caminhos para os discos. 
 ---
 = Restaure e verifique a configuração do sistema - FAS70 e FAS90
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Depois de concluir a substituição de hardware e a inicialização par
 
 
 [role="lead"]
-Depois de concluir a substituição de hardware, verifique a configuração de sistema de baixo nível do controlador de substituição e reconfigure as definições do sistema conforme necessário.
+Verifique se a configuração de HA do controlador está ativa e funcionando corretamente no sistema de storage FAS70 ou FAS90 e confirme se os adaptadores do sistema listam todos os caminhos para os discos.
 
 
 
@@ -61,3 +61,6 @@ Se você vir algum problema, verifique o cabeamento e recoloque os cabos.
 
 . Sair do modo de manutenção: `halt`.
 
+
+.O que se segue?
+Depois de restaurar e verificar a configuração do sistema para o seu sistema FAS70 ou FAS90, é necessário link:controller-replace-recable-reassign-disks.html["devolva o controlador"].

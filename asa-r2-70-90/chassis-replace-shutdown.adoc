@@ -2,7 +2,7 @@
 permalink: asa-r2-70-90/chassis-replace-shutdown.html 
 sidebar: sidebar 
 keywords: asa r2 a70, asa r2 a90, shutdown the controllers 
-summary: Para substituir o chassi, você deve desligar os controladores. 
+summary: Desligue os controladores do seu sistema de storage ASA A70 ou ASA A90 quando precisar substituir o chassi. É fundamental desligar os controladores com segurança para evitar a perda de dados e garantir a estabilidade do sistema. 
 ---
 = Desligue os controladores - ASA A70 e ASA A90
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Para substituir o chassi, você deve desligar os controladores.
 
 
 [role="lead"]
-Você deve desligar os controladores no chassi com deficiência antes de removê-los.
+Desligue os controladores do seu sistema de storage ASA A70 ou ASA A90 quando precisar substituir o chassi. É fundamental desligar os controladores com segurança para evitar a perda de dados e garantir a estabilidade do sistema.
 
 Este procedimento destina-se a sistemas com duas configurações de nós. Para obter mais informações sobre o desligamento normal ao fazer manutenção de um cluster, https://kb.netapp.com/on-prem/ontap/OHW/OHW-KBs/What_is_the_procedure_for_graceful_shutdown_and_power_up_of_a_storage_system_during_scheduled_power_outage["Desligue e ligue o seu sistema de armazenamento de dados - base de dados de Conhecimento da NetApp"] consulte .
 

@@ -10,8 +10,8 @@ summary: Você deve inicializar a imagem ONTAP a partir da unidade USB, restaura
 :imagesdir: ../media/
 
 
-[role="lead"]
-Você deve inicializar a imagem ONTAP a partir da unidade USB, restaurar o sistema de arquivos e verificar as variáveis ambientais.
+[role="lead lead"]
+Depois de instalar o novo dispositivo multimédia de arranque no sistema AFF A20, AFF A30 ou AFF A50, pode iniciar a imagem de recuperação a partir de uma unidade USB e restaurar a configuração a partir do nó de parceiro.
 
 .Passos
 . A partir do prompt Loader, inicialize a imagem de recuperação da unidade flash USB: `boot_recovery`

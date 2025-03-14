@@ -11,7 +11,7 @@ summary: Substitua um módulo de e/S no seu sistema AFF C80 quando o módulo fal
 
 
 [role="lead"]
-Substitua um módulo de e/S no seu sistema AFF C80 quando o módulo falhar ou precisar de uma atualização para suportar desempenho superior ou recursos adicionais.
+Substitua um módulo de e/S no seu sistema AFF C80 quando o módulo falhar ou precisar de uma atualização para suportar desempenho superior ou recursos adicionais. O processo de substituição envolve desligar o controlador, substituir o módulo de e/S com falha, reiniciar o controlador e devolver a peça com falha ao NetApp.
 
 Você pode usar esse procedimento com todas as versões do ONTAP compatíveis com seu sistema de storage.
 

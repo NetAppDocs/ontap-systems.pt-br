@@ -2,16 +2,16 @@
 permalink: fas-70-90/bootmedia-encryption-restore.html 
 sidebar: sidebar 
 keywords: fas70, fas90, post boot media replacement steps for okm, nse, and nve 
-summary: 'Uma vez que as variáveis de ambiente estejam marcadas, você deve concluir etapas específicas para sistemas que tenham o Gerenciador de chaves integrado (OKM), a criptografia de armazenamento NetApp (NSE) ou a criptografia de volume NetApp (NVE) ativada.' 
+summary: Restaure a criptografia na Mídia de inicialização de substituição em seu sistema FAS70 ou FAS90 para garantir a proteção contínua dos dados. O processo de substituição envolve verificar a disponibilidade das chaves, reaplicar as configurações de criptografia e confirmar o acesso seguro aos seus dados. 
 ---
-= Restaurar criptografia - FAS70 e FAS90
+= Restaure a encriptação no suporte de arranque - FAS70 e FAS90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Restaure a encriptação no suporte de arranque de substituição.
+Restaure a criptografia na Mídia de inicialização de substituição em seu sistema FAS70 ou FAS90 para garantir a proteção contínua dos dados. O processo de substituição envolve verificar a disponibilidade das chaves, reaplicar as configurações de criptografia e confirmar o acesso seguro aos seus dados.
 
 Você deve concluir etapas específicas para sistemas que tenham o Gerenciador de chaves integrado (OKM), a criptografia de armazenamento NetApp (NSE) ou a criptografia de volume NetApp (NVE) habilitados usando as configurações capturadas no início do procedimento de substituição de Mídia de inicialização.
 
@@ -429,3 +429,6 @@ Selection (1-11)? 1
 `system node autosupport invoke -node * -type all -message MAINT=END`
 
 
+
+.O que se segue?
+Depois de restaurar a encriptação no suporte de arranque, tem de link:bootmedia-complete-rma.html["Devolva a peça com falha ao NetApp"].

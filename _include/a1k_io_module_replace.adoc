@@ -2,10 +2,11 @@
 :allow-uri-read: 
 
 
-Use este procedimento para substituir um módulo de e/S com falha.
+Você pode usar esse procedimento com todas as versões do ONTAP compatíveis com seu sistema de storage.
 
-* Você pode usar esse procedimento com todas as versões do ONTAP compatíveis com seu sistema de storage.
-* Todos os outros componentes do sistema de armazenamento devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+.Antes de começar
+* Tem de ter a peça de substituição disponível.
+* Certifique-se de que todos os outros componentes do sistema de armazenamento estão a funcionar corretamente; caso contrário, contacte o suporte técnico.
 
 
 

@@ -2,7 +2,7 @@
 permalink: fas-70-90/fan-replace.html 
 sidebar: sidebar 
 keywords: fas70, fas90, replace a fan 
-summary: Tem de remover o módulo do controlador do chassis quando substituir um módulo da ventoinha avariado e substituí-lo por um novo módulo da ventoinha. 
+summary: Substitua um módulo de ventilador no sistema FAS70 ou FAS90 quando um ventilador falhar ou não estiver funcionando de forma eficiente, pois isso pode afetar o resfriamento do sistema e o desempenho geral. O processo de substituição envolve desligar o controlador, remover o controlador, substituir o ventilador, reinstalar o controlador e devolver a peça com falha ao NetApp. 
 ---
 = Substitua uma ventoinha - FAS70 e FAS90
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Tem de remover o módulo do controlador do chassis quando substituir um
 
 
 [role="lead"]
-Para substituir um módulo da ventoinha sem interromper o serviço, tem de executar uma sequência específica de tarefas.
+Substitua um módulo de ventilador no sistema FAS70 ou FAS90 quando um ventilador falhar ou não estiver funcionando de forma eficiente, pois isso pode afetar o resfriamento do sistema e o desempenho geral. O processo de substituição envolve desligar o controlador, remover o controlador, substituir o ventilador, reinstalar o controlador e devolver a peça com falha ao NetApp.
 
 .Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.

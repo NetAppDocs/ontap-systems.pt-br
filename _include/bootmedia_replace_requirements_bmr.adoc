@@ -2,7 +2,7 @@
 :allow-uri-read: 
 
 
-Antes de substituir o suporte de arranque, certifique-se de que verifica os seguintes requisitos.
+Reveja os seguintes requisitos.
 
 * Tem de substituir o suporte de arranque com falha por um suporte de arranque de substituição que recebeu do NetApp.
 * Não deve haver portas do cluster defeituosas no controlador prejudicado.

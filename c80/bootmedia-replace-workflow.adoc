@@ -2,7 +2,7 @@
 permalink: c80/bootmedia-replace-workflow.html 
 sidebar: sidebar 
 keywords: aff c80, replace the boot media 
-summary: Comece a substituir a Mídia de inicialização no sistema de armazenamento AFF C80 preparando a Mídia de substituição, instalando-a no sistema, restaurando a imagem de inicialização e verificando a funcionalidade do sistema. 
+summary: Comece a substituir a Mídia de inicialização em seu sistema de armazenamento AFF C80 revisando os requisitos de substituição, verificando o status da criptografia, desligando o controlador, substituindo a Mídia de inicialização, inicializando a imagem de recuperação, restaurando a criptografia e verificando a funcionalidade do sistema. 
 ---
 = Início rápido para substituição do suporte de arranque - AFF C80
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Comece a substituir a Mídia de inicialização no sistema de armazenam
 
 
 [role="lead"]
-Comece a substituir a Mídia de inicialização no sistema de armazenamento AFF C80 preparando a Mídia de substituição, instalando-a no sistema, restaurando a imagem de inicialização e verificando a funcionalidade do sistema.
+Comece a substituir a Mídia de inicialização em seu sistema de armazenamento AFF C80 revisando os requisitos de substituição, verificando o status da criptografia, desligando o controlador, substituindo a Mídia de inicialização, inicializando a imagem de recuperação, restaurando a criptografia e verificando a funcionalidade do sistema.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"]link:bootmedia-replace-requirements.html["Reveja os requisitos do suporte de arranque"]
 [role="quick-margin-para"]

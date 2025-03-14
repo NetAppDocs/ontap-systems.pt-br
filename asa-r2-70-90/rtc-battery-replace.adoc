@@ -11,11 +11,11 @@ summary: 'Você substitui a bateria do relógio em tempo real (RTC) no módulo d
 
 
 [role="lead"]
-Você substitui a bateria do relógio em tempo real (RTC) no módulo do controlador para que os serviços e aplicativos do sistema que dependem da sincronização precisa de tempo continuem funcionando.
+Substitua a bateria de relógio em tempo real (RTC), comumente conhecida como bateria de célula tipo moeda, em seu sistema ASA A70 ou ASA A90 para garantir que os serviços e aplicativos que dependem de sincronização precisa de tempo permaneçam operacionais.
 
-* Pode utilizar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema.
-* Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+Pode utilizar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema.
 
+Certifique-se de que todos os outros componentes do sistema estão a funcionar corretamente; caso contrário, tem de contactar a assistência técnica.
 
 
 

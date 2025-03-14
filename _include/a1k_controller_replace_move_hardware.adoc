@@ -2,8 +2,6 @@
 :allow-uri-read: 
 
 
-Para substituir o controlador, é necessário remover o controlador prejudicado, mover os componentes FRU para o módulo do controlador de substituição, instalar o módulo do controlador de substituição no compartimento e, em seguida, inicializar o sistema para o modo de manutenção.
-
 
 
 == Passo 1: Remova o módulo do controlador

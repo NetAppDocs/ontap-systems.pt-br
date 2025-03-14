@@ -11,7 +11,7 @@ summary: Verifique se as interfaces lógicas estão relatando à porta inicial, 
 
 
 [role="lead"]
-Verifique se as interfaces lógicas estão relatando à porta inicial, execute uma verificação de integridade do cluster e, em seguida, retorne a peça com falha ao NetApp para concluir a etapa final no procedimento de substituição do controlador AFF A70 e AFF A90.
+Verifique se as interfaces lógicas (LIFs) estão relatando para sua porta inicial, execute uma verificação de integridade do cluster e, em seguida, retorne a peça com falha ao NetApp para concluir a etapa final no procedimento de substituição do controlador AFF A70 e AFF A90.
 
 
 

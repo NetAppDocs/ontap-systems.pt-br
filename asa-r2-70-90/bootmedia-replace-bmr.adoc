@@ -2,7 +2,7 @@
 permalink: asa-r2-70-90/bootmedia-replace-bmr.html 
 sidebar: sidebar 
 keywords: asa r2 a70, asa r2 a90, replace the boot media 
-summary: Você localiza o suporte de inicialização com falha removendo o módulo Gerenciamento do sistema antes de substituir o suporte de inicialização. 
+summary: A Mídia de inicialização no seu sistema ASA A70 ou ASA A90 armazena dados essenciais de firmware e configuração. O processo de substituição envolve a remoção do módulo de gestão do sistema, remoção do suporte de arranque com problemas, instalação do suporte de arranque de substituição no módulo de gestão do sistema e, em seguida, reinstalação do módulo de gestão do sistema. 
 ---
 = Substitua o suporte de arranque - ASA A70 e ASA A90
 :allow-uri-read: 
@@ -11,11 +11,11 @@ summary: Você localiza o suporte de inicialização com falha removendo o módu
 
 
 [role="lead"]
-Substitua o suporte de arranque removendo o módulo de gestão do sistema da parte de trás do sistema, removendo o suporte de arranque danificado, instalando o suporte de arranque de substituição no módulo de gestão do sistema e, em seguida, reinstalando o módulo de gestão do sistema.
+A Mídia de inicialização no seu sistema ASA A70 ou ASA A90 armazena dados essenciais de firmware e configuração. O processo de substituição envolve a remoção do módulo de gestão do sistema, remoção do suporte de arranque com problemas, instalação do suporte de arranque de substituição no módulo de gestão do sistema e, em seguida, reinstalação do módulo de gestão do sistema.
 
-.Passos
 O suporte de arranque encontra-se no interior do módulo de gestão do sistema e é acedido removendo o módulo do sistema.
 
+.Passos
 . Na parte frontal do chassis, utilize os polegares para empurrar firmemente cada unidade até sentir um batente positivo. Isso garante que as unidades estejam firmemente assentadas contra o plano médio do chassi.
 +
 image::../media/drw_a800_drive_seated_IEOPS-960.svg[Unidade drw A800 com sede IEOPS 960]

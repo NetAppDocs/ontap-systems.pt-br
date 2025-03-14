@@ -2,7 +2,7 @@
 permalink: c80/rtc-battery-replace.html 
 sidebar: sidebar 
 keywords: c80, replace the real-time clock battery 
-summary: 'Você substitui a bateria do relógio em tempo real (RTC) no módulo do controlador para que os serviços e aplicativos do sistema que dependem da sincronização precisa de tempo continuem funcionando.' 
+summary: 'Substitua a bateria de relógio em tempo real (RTC), comumente conhecida como bateria de célula tipo moeda, em seu sistema AFF C80 para garantir que os serviços e aplicativos que dependem da sincronização precisa de tempo permaneçam operacionais.' 
 ---
 = Substitua a bateria do relógio em tempo real - AFF C80
 :allow-uri-read: 
@@ -10,8 +10,10 @@ summary: 'Você substitui a bateria do relógio em tempo real (RTC) no módulo d
 :imagesdir: ../media/
 
 
-.Antes de começar
 [role="lead"]
+Substitua a bateria de relógio em tempo real (RTC), comumente conhecida como bateria de célula tipo moeda, em seu sistema AFF C80 para garantir que os serviços e aplicativos que dependem da sincronização precisa de tempo permaneçam operacionais.
+
+.Antes de começar
 * Entenda que você pode usar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema.
 * Certifique-se de que todos os outros componentes do sistema estão a funcionar corretamente; caso contrário, tem de contactar a assistência técnica.
 

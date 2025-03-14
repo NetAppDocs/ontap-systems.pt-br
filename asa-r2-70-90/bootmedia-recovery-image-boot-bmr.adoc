@@ -2,23 +2,31 @@
 permalink: asa-r2-70-90/bootmedia-recovery-image-boot-bmr.html 
 sidebar: sidebar 
 keywords: asa r2 a70, asa r2 a90, boot the recovery image 
-summary: Se a Mídia de inicialização no sistema ASA A70 ou ASA A90 estiver corrompida, você poderá inicializar a imagem de recuperação, restaurar a configuração do nó do parceiro e verificar as variáveis de ambiente. 
+summary: Depois de instalar o novo dispositivo de Mídia de inicialização em seu sistema ASA A70 ou ASA A90, você pode iniciar o processo de recuperação de Mídia de inicialização automatizada para restaurar a configuração do nó do parceiro. 
 ---
-= Restaure a imagem ONTAP - ASA A70 e ASA A90
+= Restaure a imagem no suporte de arranque - ASA A70 e ASA A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Se a Mídia de inicialização no sistema ASA A70 ou ASA A90 estiver corrompida, você poderá inicializar a imagem de recuperação e restaurar a configuração do nó do parceiro.
+Depois de instalar o novo dispositivo de Mídia de inicialização em seu sistema ASA A70 ou ASA A90, você pode iniciar o processo de recuperação de Mídia de inicialização automatizada para restaurar a configuração do nó do parceiro.
+
+Durante o processo de recuperação, o sistema verifica se a criptografia está ativada e determina o tipo de criptografia de chave em uso. Se a criptografia de chave estiver ativada, o sistema o guiará pelas etapas apropriadas para restaurá-la.
 
 .Antes de começar
 * Determine se o OKM (Onboard Key Manager) ou o EKM (Eternal Key Manager) estão configurados usando um dos seguintes métodos:
 +
 ** Você pode perguntar ao cliente ou administrador do sistema se OKM ou EKM estão ativados.
-** Para verificar se o OKM está ativado, você pode usar o `security key-manager onboard show`.
-** Para verificar se o EKM está ativado, pode utilizar o `security key-manager external show`.
+** Para verificar se o OKM está ativado, use o seguinte comando:
++
+`security key-manager onboard show`
+
+** Para verificar se o EKM está ativado, use o seguinte comando:
++
+`security key-manager external show`
+
 
 
 * Para OKM, você precisa do conteúdo do arquivo de senha OKM.

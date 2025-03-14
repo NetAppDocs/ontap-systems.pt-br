@@ -4,16 +4,14 @@ sidebar: sidebar
 keywords: c80, pre-shutdown checks for onboard encryption keys 
 summary: 'Para garantir a segurança dos dados no sistema de storage AFF C80, é necessário verificar o suporte e o status da chave de criptografia. Verifique se sua versão do ONTAP suporta criptografia de volume NetApp (NVE) e, antes de desligar a controladora, verifique se o gerenciador de chaves está ativo.' 
 ---
-= Verifique o suporte e o status da chave de criptografia - AFF C80
+= Verifique o suporte e o status da chave de criptografia na Mídia de inicialização - AFF C80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Para garantir a segurança dos dados no sistema de storage AFF C80, é necessário verificar o suporte e o status da chave de criptografia. Verifique se sua versão do ONTAP suporta criptografia de volume NetApp (NVE) e, antes de desligar a controladora, verifique se o gerenciador de chaves está ativo.
-
-Antes de desligar o controlador desativado, verifique se a sua versão do ONTAP suporta encriptação de volume NetApp (NVE) e se o sistema de gestão de chaves está corretamente configurado.
+Para garantir a segurança dos dados no sistema de armazenamento AFF C80, é necessário verificar o suporte e o status da chave de criptografia na Mídia de inicialização. Verifique se sua versão do ONTAP suporta criptografia de volume NetApp (NVE) e, antes de desligar a controladora, verifique se o gerenciador de chaves está ativo.
 
 
 
@@ -194,3 +192,6 @@ Você vai precisar dele em cenários de desastre onde você pode precisar recupe
 --
 ====
 
+
+.O que se segue?
+Depois de verificar o suporte e o status da chave de criptografia na Mídia de inicialização, é necessário link:bootmedia-shutdown.html["desligue o controlador"].

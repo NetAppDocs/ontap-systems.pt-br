@@ -2,7 +2,7 @@
 permalink: asa-r2-a1k/bootmedia-overview-bmr.html 
 sidebar: sidebar 
 keywords: asa r2 a1k, overview, the boot media 
-summary: Saiba mais sobre o método automatizado para substituir a Mídia de inicialização. 
+summary: A recuperação de Mídia de inicialização usa a imagem de inicialização do nó do parceiro e executa automaticamente a opção de menu de inicialização apropriada para instalar a imagem de inicialização na Mídia de inicialização de substituição. 
 ---
 = Visão geral da recuperação de Mídia de inicialização - ASA A1K
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Saiba mais sobre o método automatizado para substituir a Mídia de ini
 
 
 [role="lead"]
-A recuperação de Mídia de inicialização usa a imagem de inicialização do nó do parceiro e executa automaticamente a opção de menu de inicialização apropriada para instalar a imagem de inicialização na Mídia de inicialização de substituição.
+A recuperação de Mídia de inicialização para o seu sistema de armazenamento ASA A1K usa a imagem de inicialização do nó do parceiro e executa automaticamente a opção de menu de inicialização apropriada para instalar a imagem de inicialização em sua Mídia de inicialização de substituição.
 
 Quando você encontrar mensagens de erro de inicialização, você precisa substituir a Mídia de inicialização e restaurar a imagem ONTAP do nó do parceiro.
 

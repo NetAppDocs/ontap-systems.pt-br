@@ -11,7 +11,7 @@ summary: Retorne o controle dos recursos de armazenamento ao controlador de subs
 
 
 [role="lead"]
-Retorne o controle dos recursos de armazenamento ao controlador de substituição para que seu sistema AFF C80 possa retomar a operação normal.
+Retorne o controle dos recursos de armazenamento ao controlador de substituição para que seu sistema AFF C80 possa retomar a operação normal. O procedimento de devolução varia de acordo com o tipo de encriptação utilizado pelo seu sistema: sem encriptação, encriptação OKM (Onboard Key Manager) ou encriptação EKM (External Key Manager).
 
 [role="tabbed-block"]
 ====
@@ -161,3 +161,5 @@ NOTE: Contacte https://support.netapp.com["Suporte à NetApp"] se tiver problema
 
 --
 ====
+.O que se segue?
+Depois de transferir a propriedade dos recursos de armazenamento de volta para o controlador de substituição, você precisa link:controller-replace-restore-system-rma.html["complete a substituição do controlador"]fazer o procedimento.

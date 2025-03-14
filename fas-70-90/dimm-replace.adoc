@@ -2,7 +2,7 @@
 permalink: fas-70-90/dimm-replace.html 
 sidebar: sidebar 
 keywords: fas70, fas90, replace a dimm 
-summary: 'É necessário substituir um DIMM no módulo do controlador quando o sistema registar um número crescente de códigos de correção de erros (ECC); se não o fizer, o sistema entra em pânico.' 
+summary: Substitua um DIMM no seu sistema FAS70 ou FAS90 se forem detetados erros de memória corrigíveis excessivos ou incorrigíveis. Tais erros podem impedir que o sistema de armazenamento inicialize o ONTAP. O processo de substituição envolve desligar o controlador prejudicado, removê-lo, substituir o DIMM, reinstalar o controlador e, em seguida, devolver a peça com falha ao NetApp. 
 ---
 = Substitua um DIMM - FAS70 e FAS90
 :allow-uri-read: 
@@ -11,12 +11,12 @@ summary: 'É necessário substituir um DIMM no módulo do controlador quando o s
 
 
 [role="lead"]
-Você deve substituir um DIMM no controlador quando seu sistema de armazenamento encontrar erros como erros CECC excessivos (códigos de correção de erros Correctable) que são baseados em alertas do Monitor de integridade ou erros ECC incorrigíveis, geralmente causados por uma única falha de DIMM que impede o sistema de armazenamento de inicializar o ONTAP.
+Substitua um DIMM no seu sistema FAS70 ou FAS90 se forem detetados erros de memória corrigíveis excessivos ou incorrigíveis. Tais erros podem impedir que o sistema de armazenamento inicialize o ONTAP. O processo de substituição envolve desligar o controlador prejudicado, removê-lo, substituir o DIMM, reinstalar o controlador e, em seguida, devolver a peça com falha ao NetApp.
 
 .Antes de começar
-Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+* Certifique-se de que todos os outros componentes do sistema estão a funcionar corretamente; caso contrário, tem de contactar a assistência técnica.
+* Certifique-se de que substitui o componente com falha por um componente de substituição que recebeu da NetApp.
 
-Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor.
 
 
 

@@ -11,7 +11,7 @@ summary: 'Para concluir o procedimento de substituição e restaurar o sistema p
 
 
 [role="lead"]
-Para concluir o procedimento de substituição e restaurar o sistema para o funcionamento total, tem de voltar a efetuar a recuperação do armazenamento, restaurar a configuração da encriptação de armazenamento NetApp (se necessário) e instalar licenças para o novo controlador. Você deve concluir uma série de tarefas antes de restaurar o sistema para a operação completa.
+Para concluir o procedimento de substituição e restaurar o sistema para o funcionamento completo, restaure a configuração de encriptação de armazenamento NetApp (se necessário) e instale licenças para o novo controlador.
 
 
 
@@ -62,6 +62,7 @@ Se algum LIFs estiver listado como false, reverta-os para suas portas iniciais: 
 ** Se o AutoSupport não estiver ativado, ligue https://mysupport.netapp.com["Suporte à NetApp"] para registar o número de série.
 
 
+. Verifique a integridade do cluster. Consulte o https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["Como realizar uma verificação de integridade do cluster com um script no ONTAP"^] artigo da KB para obter mais informações.
 . Se uma janela de manutenção do AutoSupport foi acionada, encerre-a usando o `system node autosupport invoke -node * -type all -message MAINT=END` comando.
 . Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true`
 

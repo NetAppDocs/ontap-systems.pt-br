@@ -2,7 +2,7 @@
 permalink: asa-r2-a1k/controller-replace-restore-system-rma.html 
 sidebar: sidebar 
 keywords: asa r2 a1k, how to restore NetApp Storage Encryption, how to complete the replacement process 
-summary: 'Para restaurar o sistema para a operação completa, você deve verificar os LIfs, verificar a integridade do cluster e retornar a peça com falha ao NetApp. Entre em Contato com o suporte técnico em https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"], 888-463-8277 (América do Norte), 00-800-44-638277 (Europa) ou 800-800-80-800 (Ásia/Pacífico) se precisar do número de RMA ou de ajuda adicional com o procedimento de substituição.' 
+summary: 'Verifique se as interfaces lógicas (LIFs) estão relatando para sua porta inicial, execute uma verificação de integridade do cluster e, em seguida, retorne a peça com falha ao NetApp para concluir a etapa final no procedimento de substituição do controlador ASA A1K.' 
 ---
 = Substituição completa do controlador - ASA A1K
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Para restaurar o sistema para a operação completa, você deve verifi
 
 
 [role="lead"]
-Para restaurar o sistema para a operação completa, você deve verificar os LIfs, verificar a integridade do cluster e retornar a peça com falha ao NetApp.
+Verifique se as interfaces lógicas (LIFs) estão relatando para sua porta inicial, execute uma verificação de integridade do cluster e, em seguida, retorne a peça com falha ao NetApp para concluir a etapa final no procedimento de substituição do controlador ASA A1K.
 
 
 

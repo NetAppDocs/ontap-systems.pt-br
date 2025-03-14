@@ -2,16 +2,16 @@
 permalink: fas-70-90/controller-replace-move-hardware.html 
 sidebar: sidebar 
 keywords: fas70, fas90, move the controller module hardware 
-summary: Para substituir um módulo de controlador, é necessário remover o controlador prejudicado, mover os componentes FRU para o módulo de controlador de substituição, instalar o módulo de controlador de substituição no chassis e, em seguida, inicializar o sistema para o modo de manutenção. 
+summary: Substitua o controlador no seu sistema FAS70 ou FAS90 quando uma falha de hardware o exigir. O processo de substituição envolve remover o controlador prejudicado, mover os componentes para o controlador de substituição, instalar o controlador de substituição e reinicializá-lo. 
 ---
-= Substitua o módulo do controlador - FAS70 e FAS90
+= Substitua o controlador - FAS70 e FAS90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Para substituir o controlador, é necessário remover o controlador prejudicado, mover os componentes FRU para o módulo do controlador de substituição, instalar o módulo do controlador de substituição no compartimento e, em seguida, inicializar o sistema para o modo de manutenção.
+Substitua o controlador no seu sistema FAS70 ou FAS90 quando uma falha de hardware o exigir. O processo de substituição envolve remover o controlador prejudicado, mover os componentes para o controlador de substituição, instalar o controlador de substituição e reinicializá-lo.
 
 
 
@@ -222,3 +222,6 @@ NOTE: A hora apresentada é hora local nem sempre GMT e é apresentada no modo 2
 Se você removeu os transcetores (QSFPs ou SFPs), lembre-se de reinstalá-los se estiver usando cabos de fibra ótica.
 
 
+
+.O que se segue?
+Depois de substituir o controlador FAS70 ou FAS90 com problemas, é link:controller-replace-system-config-restore-and-verify.html["restaure a configuração do sistema"]necessário .

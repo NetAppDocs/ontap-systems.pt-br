@@ -2,7 +2,7 @@
 permalink: asa-r2-a1k/bootmedia-replace-bmr.html 
 sidebar: sidebar 
 keywords: asa r2 a1k, replace the boot media 
-summary: Localize o suporte de arranque com falha no módulo do controlador removendo o Riser 3 no módulo do controlador antes de poder substituir o suporte de arranque. 
+summary: O suporte de arranque do seu sistema ASA A1K armazena dados essenciais de firmware e configuração. O processo de substituição envolve a remoção do módulo de gestão do sistema, remoção do suporte de arranque com problemas, instalação do suporte de arranque de substituição no módulo de gestão do sistema e, em seguida, reinstalação do módulo de gestão do sistema. 
 ---
 = Substitua o suporte de arranque - ASA A1K
 :allow-uri-read: 
@@ -11,11 +11,11 @@ summary: Localize o suporte de arranque com falha no módulo do controlador remo
 
 
 [role="lead"]
-Substitua o suporte de arranque removendo o módulo de gestão do sistema da parte de trás do sistema, removendo o suporte de arranque danificado, instalando o suporte de arranque de substituição no módulo de gestão do sistema e, em seguida, reinstalando o módulo de gestão do sistema.
+O suporte de arranque do seu sistema ASA A1K armazena dados essenciais de firmware e configuração. O processo de substituição envolve a remoção do módulo de gestão do sistema, remoção do suporte de arranque com problemas, instalação do suporte de arranque de substituição no módulo de gestão do sistema e, em seguida, reinstalação do módulo de gestão do sistema.
 
-.Passos
 O suporte de arranque encontra-se no interior do módulo de gestão do sistema e é acedido removendo o módulo do sistema.
 
+.Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Desconete os cabos da fonte de alimentação das PSUs do controlador.
 +

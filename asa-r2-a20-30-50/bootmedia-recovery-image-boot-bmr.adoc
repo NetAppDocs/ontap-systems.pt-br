@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a20, aff a30, aff a50, boot the recovery image 
 summary: Você pode restaurar a imagem na Mídia de inicialização a partir do controlador do parceiro por meio do processo de recuperação de inicialização automatizada. 
 ---
-= Restaure a imagem ONTAP - AFF A20, AFF A30 e AFF A50
+= Restaure a imagem ONTAP - ASA A20, ASA A30 e ASA A50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,8 +15,14 @@ summary: Você pode restaurar a imagem na Mídia de inicialização a partir do 
 * Determine se o OKM (Onboard Key Manager) ou o EKM (Eternal Key Manager) estão configurados usando um dos seguintes métodos:
 +
 ** Você pode perguntar ao cliente ou administrador do sistema se OKM ou EKM estão ativados.
-** Para verificar se o OKM está ativado, você pode usar o `security key-manager onboard show`.
-** Para verificar se o EKM está ativado, pode utilizar o `security key-manager external show`.
+** Para verificar se o OKM está ativado, use o seguinte comando:
++
+`security key-manager onboard show`
+
+** Para verificar se o EKM está ativado, use o seguinte comando:
++
+`security key-manager external show`
+
 
 
 * Para OKM, você precisa do conteúdo do arquivo de senha OKM.

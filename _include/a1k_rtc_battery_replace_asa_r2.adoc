@@ -2,10 +2,9 @@
 :allow-uri-read: 
 
 
-Você substitui a bateria do relógio em tempo real (RTC) no módulo do controlador para que os serviços e aplicativos do sistema que dependem da sincronização precisa de tempo continuem funcionando.
-
-* Pode utilizar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema.
-* Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+.Antes de começar
+* Entenda que você pode usar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema.
+* Certifique-se de que todos os outros componentes do sistema estão a funcionar corretamente; caso contrário, tem de contactar o https://support.netapp.com["Suporte à NetApp"].
 
 
 

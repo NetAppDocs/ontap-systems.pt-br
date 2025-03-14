@@ -27,13 +27,13 @@ entries:
   - title: Suporte de arranque
     pdf-filename: Mídia de inicialização do AFF A1K
     entries:
-    - title: Mídia de inicialização Substituir fluxo de trabalho
+    - title: Início rápido para substituição do suporte de arranque
       url: "/a1k/bootmedia-replace-workflow.html"
     - title: Rever os requisitos
       url: "/a1k/bootmedia-replace-requirements.html"
     - title: Verifique as chaves de criptografia
       url: "/a1k/bootmedia-encryption-preshutdown-checks.html"
-    - title: Desligue o controlador desativado
+    - title: Desligue o controlador
       url: "/a1k/bootmedia-shutdown.html"
     - title: Substitua o suporte de arranque
       url: "/a1k/bootmedia-replace.html"
@@ -46,7 +46,7 @@ entries:
   - title: Controlador
     pdf-filename: Módulo do controlador AFF A1K
     entries:
-    - title: Fluxo de trabalho de substituição do controlador
+    - title: Início rápido para substituição do controlador
       url: "/a1k/controller-replace-workflow.html"
     - title: Rever os requisitos
       url: "/a1k/controller-replace-requirements.html"

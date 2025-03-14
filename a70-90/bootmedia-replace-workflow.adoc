@@ -11,19 +11,19 @@ summary: Comece a substituir a Mídia de inicialização no sistema de armazenam
 
 
 [role="lead"]
-Comece a substituir a Mídia de inicialização no sistema de armazenamento AFF A70 ou AFF A90 preparando a Mídia de substituição, instalando-a no sistema, restaurando a imagem de inicialização e verificando a funcionalidade do sistema.
+Comece a substituir a Mídia de inicialização em seu sistema de armazenamento AFF A70 ou AFF A90, revisando os requisitos de substituição, verificando o status da criptografia, desligando o controlador, substituindo a Mídia de inicialização, inicializando a imagem de recuperação, restaurando a criptografia e verificando a funcionalidade do sistema.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"]link:bootmedia-replace-requirements.html["Reveja os requisitos do suporte de arranque"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"]link:bootmedia-replace-requirements.html["Reveja os requisitos para substituir o suporte de arranque"]
 [role="quick-margin-para"]
 Reveja os requisitos para substituir o suporte de arranque.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"]link:bootmedia-encryption-preshutdown-checks.html["Verifique o suporte e o status da chave de criptografia"]
 [role="quick-margin-para"]
-Verifique se o sistema tem o gerenciador de chaves de segurança ativado ou discos criptografados.
+Determine se o sistema tem o gerenciador de chaves de segurança ativado ou discos criptografados.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"]link:bootmedia-shutdown.html["Desligue o controlador desativado"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"]link:bootmedia-shutdown.html["Desligue o controlador"]
 [role="quick-margin-para"]
-Encerre ou assuma o controlador afetado para que o controlador saudável continue a fornecer dados do armazenamento do controlador afetado.
+Desligue o controlador no sistema de armazenamento quando precisar substituir a Mídia de inicialização.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"]link:bootmedia-replace.html["Substitua o suporte de arranque"]
 [role="quick-margin-para"]

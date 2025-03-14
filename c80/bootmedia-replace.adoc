@@ -2,7 +2,7 @@
 permalink: c80/bootmedia-replace.html 
 sidebar: sidebar 
 keywords: c80, replace the boot media 
-summary: O suporte de arranque do seu sistema AFF C80 armazena dados essenciais de firmware e configuração. Se o suporte de dados de arranque falhar, tem de desligar o módulo do controlador, remover o módulo de gestão do sistema, remover o suporte de arranque afetado e substituir o suporte de arranque no módulo de gestão do sistema. 
+summary: O suporte de arranque do seu sistema AFF C80 armazena dados essenciais de firmware e configuração. Se o suporte de dados de arranque falhar, tem de desligar o módulo do controlador, remover o módulo de gestão do sistema, remover o suporte de arranque afetado e instalar o suporte de arranque de substituição no módulo de gestão do sistema. 
 ---
 = Substitua o suporte de arranque - AFF C80
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: O suporte de arranque do seu sistema AFF C80 armazena dados essenciais 
 
 
 [role="lead"]
-O suporte de arranque do seu sistema AFF C80 armazena dados essenciais de firmware e configuração. Se o suporte de dados de arranque falhar, tem de desligar o módulo do controlador, remover o módulo de gestão do sistema, remover o suporte de arranque afetado e substituir o suporte de arranque no módulo de gestão do sistema.
+O suporte de arranque do seu sistema AFF C80 armazena dados essenciais de firmware e configuração. Se o suporte de dados de arranque falhar, tem de desligar o módulo do controlador, remover o módulo de gestão do sistema, remover o suporte de arranque afetado e instalar o suporte de arranque de substituição no módulo de gestão do sistema.
 
 
 
@@ -137,3 +137,6 @@ O controlador começa a inicializar assim que a energia é reconetada ao sistema
 Se você perder essa mensagem, pressione Ctrl-C, selecione a opção para inicializar no modo Manutenção e, em seguida, interrompa o controlador para inicializar NO Loader.
 
 
+
+.O que se segue?
+Depois de substituir a Mídia de inicialização, você precisa link:bootmedia-recovery-image-boot.html["inicie a imagem de recuperação"].

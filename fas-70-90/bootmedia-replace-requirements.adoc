@@ -2,20 +2,22 @@
 permalink: fas-70-90/bootmedia-replace-requirements.html 
 sidebar: sidebar 
 keywords: fas70, fas90, replace the boot media 
-summary: Saiba mais sobre os requisitos para substituir a Mídia de inicialização. 
+summary: Antes de substituir o suporte de arranque no seu sistema FAS70 ou FAS90, certifique-se de que cumpre os requisitos necessários para uma substituição bem-sucedida. Isso inclui garantir que você tenha uma unidade flash USB com a quantidade adequada de armazenamento e verificar se você tem o dispositivo de inicialização de substituição correto. 
 ---
-= Requisitos de substituição do suporte de arranque - FAS70 e FAS90
+= Requisitos para substituir o suporte de arranque - FAS70 e FAS90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Antes de substituir o suporte de arranque, certifique-se de que verifica os seguintes requisitos.
+Antes de substituir o suporte de arranque no seu sistema FAS70 ou FAS90, certifique-se de que cumpre os requisitos necessários para uma substituição bem-sucedida. Isso inclui garantir que você tenha uma unidade flash USB com a quantidade adequada de armazenamento e verificar se você tem o dispositivo de inicialização de substituição correto.
+
+Reveja os seguintes requisitos.
 
 * Tem de ter uma unidade flash USB, formatada para FAT32, com a quantidade de armazenamento adequada para guardar o `image_xxx.tgz` ficheiro.
 * Você deve copiar o `image_xxx.tgz` arquivo para a unidade flash USB para uso posterior neste procedimento.
-* Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu o NetApp.
+* Você deve substituir o componente com falha por um componente de substituição que recebeu o NetApp.
 * É importante que você aplique os comandos nestas etapas no controlador correto:
 +
 ** O controlador _prejudicado_ é o controlador no qual você está realizando a manutenção.
@@ -23,3 +25,6 @@ Antes de substituir o suporte de arranque, certifique-se de que verifica os segu
 
 
 
+
+.O que se segue?
+Depois de rever os requisitos para substituir o suporte de arranque, tem de link:bootmedia-encryption-preshutdown-checks.html["verifique o suporte e o status da chave de criptografia na mídia de inicialização"].

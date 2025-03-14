@@ -2,7 +2,7 @@
 permalink: asa-r2-70-90/controller-replace-workflow.html 
 sidebar: sidebar 
 keywords: asa r2 a70, a90, replace the controller workflow 
-summary: Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor. 
+summary: Comece a substituir o controlador no sistema de armazenamento ASA A70 ou ASA A90 desligando o controlador desativado, removendo e substituindo o controlador, restaurando a configuração do sistema e verificando as operações do sistema. 
 ---
 = Fluxo de trabalho de substituição do controlador - ASA A70 e ASA A90
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Você deve substituir o componente com falha por um componente FRU de s
 
 
 [role="lead"]
-Siga estas etapas do fluxo de trabalho para substituir o módulo do controlador.
+Comece a substituir o controlador no sistema de armazenamento ASA A70 ou ASA A90 desligando o controlador desativado, removendo e substituindo o controlador, restaurando a configuração do sistema e verificando as operações do sistema.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"]link:controller-replace-requirements.html["Reveja os requisitos de substituição do controlador"]
 [role="quick-margin-para"]

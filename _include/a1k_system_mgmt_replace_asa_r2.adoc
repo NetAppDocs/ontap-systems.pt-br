@@ -19,18 +19,17 @@ O módulo Gerenciamento do sistema também contém as seguintes portas para gere
 * Ethernet de e0M RJ45 GB
 
 
-Para substituir o módulo de gestão do sistema ou o suporte de arranque, tem de desligar o controlador afetado.
-
 .Antes de começar
-* Este procedimento utiliza a seguinte terminologia:
-+
-** O controlador prejudicado é o controlador no qual você está realizando a manutenção.
-** O controlador de integridade é o parceiro de HA do controlador com deficiência.
-
-
 * Todos os outros componentes do sistema devem estar funcionando corretamente.
 * O controlador do parceiro deve ser capaz de assumir o controlador afetado.
 * Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor.
+
+
+.Sobre esta tarefa
+Este procedimento utiliza a seguinte terminologia:
+
+* O controlador prejudicado é o controlador no qual você está realizando a manutenção.
+* O controlador de integridade é o parceiro de HA do controlador com deficiência.
 
 
 

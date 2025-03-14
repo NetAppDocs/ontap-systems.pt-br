@@ -2,11 +2,12 @@
 :allow-uri-read: 
 
 
-Reveja os requisitos para o procedimento de substituição do controlador e selecione o correto para a sua versão do sistema operativo ONTAP.
+Reveja os requisitos.
 
 * Todas as gavetas de unidades devem estar funcionando corretamente.
 * O controlador saudável deve ser capaz de assumir o controlador que está a ser substituído (referido neste procedimento como ""controlador deficiente"").
-* Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor.
+* Você deve substituir o componente com falha por um componente de substituição que você recebeu da NetApp.
+* Não utilize este procedimento para atualizações do controlador; em vez disso, consulte o https://docs.netapp.com/us-en/ontap-systems-upgrade/choose_controller_upgrade_procedure.html["Escolha o procedimento de atualização do hardware do controlador"] para obter orientação.
 * É necessário substituir um módulo controlador por um módulo controlador do mesmo tipo de modelo. Você não pode atualizar seu sistema apenas substituindo o módulo do controlador.
 * Não é possível alterar nenhuma unidade ou compartimentos de unidades como parte deste procedimento.
 * Como o dispositivo de inicialização está localizado no módulo Gerenciamento do sistema instalado na parte traseira do sistema, você não precisa mover o dispositivo de inicialização ao substituir um módulo controlador.

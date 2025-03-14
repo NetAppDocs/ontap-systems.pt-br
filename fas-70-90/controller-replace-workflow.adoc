@@ -2,16 +2,16 @@
 permalink: fas-70-90/controller-replace-workflow.html 
 sidebar: sidebar 
 keywords: fas70, fas90, replace the controller 
-summary: Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor. 
+summary: Comece a substituir o controlador no sistema de armazenamento FAS70 ou FAS90 desligando o controlador desativado, removendo e substituindo o controlador, reconfigurando as configurações do sistema e verificando as operações do sistema. 
 ---
-= Fluxo de trabalho de substituição do controlador - FAS70 e FAS90
+= Início rápido para substituição do controlador - FAS70 e FAS90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Siga estas etapas do fluxo de trabalho para substituir o módulo do controlador.
+Comece a substituir o controlador no sistema de armazenamento FAS70 ou FAS90 desligando o controlador desativado, removendo e substituindo o controlador, restaurando a configuração do sistema e verificando as operações do sistema.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"]link:controller-replace-requirements.html["Reveja os requisitos de substituição do controlador"]
 [role="quick-margin-para"]

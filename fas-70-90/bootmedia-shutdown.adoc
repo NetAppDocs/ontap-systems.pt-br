@@ -2,16 +2,16 @@
 permalink: fas-70-90/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: fas70, fas90, shut down the controller 
-summary: Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador desativado. 
+summary: Desligue o controlador no sistema de armazenamento FAS70 ou FAS90 quando precisar substituir a Mídia de inicialização. Antes de realizar a manutenção ou a substituição de componentes, é fundamental desligar o controlador de forma segura para evitar a perda de dados e garantir a estabilidade do sistema. 
 ---
-= Desligue o controlador desativado - FAS70 e FAS90
+= Desligue o controlador para substituir o suporte de arranque - FAS70 e FAS90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador desativado. Encerre ou assuma o controlador afetado utilizando o procedimento adequado para a sua configuração.
+Desligue o controlador no sistema de armazenamento FAS70 ou FAS90 quando precisar substituir a Mídia de inicialização. Antes de realizar a manutenção ou a substituição de componentes, é fundamental desligar o controlador de forma segura para evitar a perda de dados e garantir a estabilidade do sistema.
 
 [role="tabbed-block"]
 ====
@@ -116,3 +116,5 @@ Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctr
 
 --
 ====
+.O que se segue?
+Depois de desligar o controlador, é necessário link:bootmedia-replace.html["substitua o suporte de arranque"].

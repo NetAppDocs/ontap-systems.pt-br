@@ -1,16 +1,18 @@
 ---
 permalink: asa-r2-70-90/system-management-replace.html 
 sidebar: sidebar 
-keywords: AFF A70, AFF A90, replace the system management module 
-summary: Tem de substituir . 
+keywords: ASA A70,  ASA A90, replace the system management module 
+summary: Substitua o módulo de gerenciamento do sistema no sistema ASA A70 ou ASA A90 quando ele ficar com defeito ou o firmware estiver corrompido. O processo de substituição envolve desligar o controlador, substituir o módulo de gestão do sistema com falha, reiniciar o controlador, atualizar as chaves de licença e devolver a peça com falha ao NetApp. 
 ---
-= Substitua o módulo de gerenciamento do sistema - ASA A70 e ASA A90
+= Substitua o módulo de gestão do sistema - ASA A70 e ASA A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Substitua o módulo de gerenciamento do sistema no sistema ASA A70 ou ASA A90 quando ele ficar com defeito ou o firmware estiver corrompido. O processo de substituição envolve desligar o controlador, substituir o módulo de gestão do sistema com falha, reiniciar o controlador, atualizar as chaves de licença e devolver a peça com falha ao NetApp.
+
 O módulo de gerenciamento do sistema, localizado na parte traseira do controlador no slot 8, contém componentes integrados para gerenciamento do sistema, bem como portas para gerenciamento externo. O controlador de destino deve ser desligado para substituir um módulo de gestão do sistema afetado ou substituir o suporte de arranque.
 
 O módulo de gerenciamento do sistema tem os seguintes componentes integrados:
@@ -27,8 +29,6 @@ O módulo Gerenciamento do sistema também contém as seguintes portas para gere
 * USB Type-A (recuperação de arranque)
 * Ethernet de e0M RJ45 GB
 
-
-Para substituir o módulo de gestão do sistema ou o suporte de arranque, tem de desligar o controlador afetado.
 
 .Antes de começar
 * Este procedimento utiliza a seguinte terminologia:

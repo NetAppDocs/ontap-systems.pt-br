@@ -13,6 +13,8 @@ summary: Desligue o controlador no sistema de storage AFF C80 quando estiver des
 [role="lead"]
 Desligue o controlador no sistema de storage AFF C80 quando estiver desativado. Antes de realizar a manutenção ou a substituição de componentes, é fundamental desligar o controlador de forma segura para evitar a perda de dados e garantir a estabilidade do sistema.
 
+Desligue o módulo do controlador utilizando uma das seguintes opções.
+
 [role="tabbed-block"]
 ====
 .Opção 1: A maioria dos sistemas
@@ -116,3 +118,5 @@ Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctr
 
 --
 ====
+.O que se segue?
+Depois de desligar o controlador, é necessário link:controller-replace-move-hardware.html["substitua o controlador"].

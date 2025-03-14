@@ -2,7 +2,7 @@
 permalink: c80/chassis-replace-move-hardware.html 
 sidebar: sidebar 
 keywords: c80, move hardware components, replace the chassis 
-summary: Substitua o chassi do sistema AFF C80 quando uma falha ou atualização de hardware exigir isso. Esse processo envolve desligar o sistema, remover o chassi existente, instalar o novo e reconfigurar os componentes para garantir o funcionamento correto do sistema. 
+summary: 'Substitua o chassi do sistema AFF C80 quando uma falha de hardware o exigir. O processo de substituição envolve a remoção das unidades de fonte de alimentação (PSUs), a remoção do chassi existente, a instalação do novo e a reinstalação dos componentes do chassi.' 
 ---
 = Substitua o chassis - AFF C80
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Substitua o chassi do sistema AFF C80 quando uma falha ou atualização
 
 
 [role="lead"]
-Substitua o chassi do sistema AFF C80 quando uma falha ou atualização de hardware exigir isso. Esse processo envolve desligar o sistema, remover o chassi existente, instalar o novo e reconfigurar os componentes para garantir o funcionamento correto do sistema.
+Substitua o chassi do sistema AFF C80 quando uma falha de hardware o exigir. O processo de substituição envolve a remoção das unidades de fonte de alimentação (PSUs), a remoção do chassi existente, a instalação do novo e a reinstalação dos componentes do chassi.
 
 
 
@@ -211,3 +211,6 @@ Se você tiver fontes de alimentação CC, reconete o bloco de alimentação às
 Os módulos do controlador começam a inicializar assim que as PSUs são instaladas e a energia é restaurada.
 
 
+
+.O que se segue?
+Depois de substituir o chassi AFF C80 com problemas e reinstalar os componentes nele, você precisa link:chassis-replace-complete-system-restore-rma.html["complete a substituição do chassis"].

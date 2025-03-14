@@ -2,21 +2,24 @@
 permalink: fas-70-90/controller-replace-requirements.html 
 sidebar: sidebar 
 keywords: fas70, fas90, prerequisite, replace the controller module 
-summary: Tem de rever os pré-requisitos para o procedimento de substituição e selecionar o correto para a sua versão do sistema operativo ONTAP. 
+summary: Antes de substituir o controlador no seu sistema FAS70 ou FAS90, certifique-se de que cumpre os requisitos necessários para uma substituição bem-sucedida. Isso inclui ter o controlador de substituição correto, um backup da configuração do sistema e acesso a todas as ferramentas e firmware necessários. 
 ---
-= Requisitos de substituição do controlador - FAS70 e FAS90
+= Requisitos para substituir o controlador - FAS70 e FAS90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Reveja os requisitos para o procedimento de substituição do controlador e selecione o correto para a sua versão do sistema operativo ONTAP.
+Antes de substituir o controlador no seu sistema FAS70 ou FAS90, certifique-se de que cumpre os requisitos necessários para uma substituição bem-sucedida. Isso inclui ter o controlador de substituição correto, um backup da configuração do sistema e acesso a todas as ferramentas e firmware necessários.
+
+Reveja os requisitos para substituir o controlador.
 
 * Todas as gavetas de unidades devem estar funcionando corretamente.
 * O controlador saudável deve ser capaz de assumir o controlador que está a ser substituído (referido neste procedimento como ""controlador deficiente"").
+* Não utilize este procedimento para atualizações do controlador; em vez disso, consulte o https://docs.netapp.com/us-en/ontap-systems-upgrade/choose_controller_upgrade_procedure.html["Escolha o procedimento de atualização do hardware do controlador"] para obter orientação.
 * Se o sistema estiver em uma configuração do MetroCluster, você deverá revisar a seção https://docs.netapp.com/us-en/ontap-metrocluster/disaster-recovery/concept_choosing_the_correct_recovery_procedure_parent_concept.html["Escolher o procedimento de recuperação correto"] para determinar se deve usar esse procedimento de substituição do controlador.
-* Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor.
+* Você deve substituir o componente com falha pela unidade substituível em campo (FRU) que você recebeu da NetApp.
 * É necessário substituir um módulo controlador por um módulo controlador do mesmo tipo de modelo. Você não pode atualizar seu sistema apenas substituindo o módulo do controlador.
 * Não é possível alterar nenhuma unidade ou compartimentos de unidades como parte deste procedimento.
 * Como o dispositivo de inicialização está localizado no módulo Gerenciamento do sistema instalado na parte traseira do sistema, você não precisa mover o dispositivo de inicialização ao substituir um módulo controlador.
@@ -32,3 +35,6 @@ Reveja os requisitos para o procedimento de substituição do controlador e sele
 Isso fornece um Registro do procedimento para que você possa solucionar qualquer problema que possa encontrar durante o processo de substituição.
 
 
+
+.O que se segue?
+Depois de analisar os requisitos para substituir o controlador FAS70 ou FAS90, é necessário link:controller-replace-shutdown.html["desligue os controladores"].

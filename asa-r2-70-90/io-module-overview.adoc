@@ -1,8 +1,8 @@
 ---
 permalink: asa-r2-70-90/io-module-overview.html 
 sidebar: sidebar 
-keywords: AFF A90, AFF A70, replace io module 
-summary: 'Você deve substituir o componente com falha por um componente de unidade substituível de campo (FRU) de substituição que você recebeu de seu provedor.' 
+keywords: ASA A90,  ASA A70, replace io module 
+summary: Os sistemas ASA A70 e ASA A90 oferecem flexibilidade na expansão ou substituição de módulos de e/S para melhorar a conetividade e o desempenho da rede. Adicionar ou substituir um módulo de e/S é essencial ao atualizar recursos de rede ou endereçar um módulo com falha. 
 ---
 = Descrição geral do módulo de e/S adicional e/S - ASA A70 e ASA A90
 :allow-uri-read: 
@@ -11,7 +11,9 @@ summary: 'Você deve substituir o componente com falha por um componente de unid
 
 
 [role="lead"]
-Você pode substituir um módulo de e/S com falha em seu sistema de armazenamento pelo mesmo tipo de módulo de e/S ou por um tipo diferente de módulo de e/S. Você também pode adicionar um módulo de e/S a um sistema com slots vazios.
+Os sistemas ASA A70 e ASA A90 oferecem flexibilidade na expansão ou substituição de módulos de e/S para melhorar a conetividade e o desempenho da rede. Adicionar ou substituir um módulo de e/S é essencial ao atualizar recursos de rede ou endereçar um módulo com falha.
+
+Você pode substituir um módulo de e/S com falha em seu sistema de storage ASA A70 ou ASA A90 pelo mesmo tipo de módulo de e/S ou por um tipo diferente de módulo de e/S. Você também pode adicionar um módulo de e/S a um sistema com slots vazios.
 
 * link:io-module-add.html["Adicione um módulo de e/S."]
 +

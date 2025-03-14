@@ -2,7 +2,7 @@
 permalink: fas-70-90/io-module-overview.html 
 sidebar: sidebar 
 keywords: fas70, fas90, replace io module 
-summary: 'Você deve substituir o componente com falha por um componente de unidade substituível em campo (FRU) que você recebeu de seu provedor.' 
+summary: O sistema FAS70 ou FAS90 oferece flexibilidade na expansão ou substituição de módulos de e/S para melhorar a conetividade e o desempenho da rede. Adicionar ou substituir um módulo de e/S é essencial ao atualizar recursos de rede ou endereçar um módulo com falha. 
 ---
 = Descrição geral do módulo de e/S adicional e/S - FAS70 e FAS90
 :allow-uri-read: 
@@ -11,7 +11,9 @@ summary: 'Você deve substituir o componente com falha por um componente de unid
 
 
 [role="lead"]
-Você pode substituir um módulo de e/S com falha em seu sistema de armazenamento pelo mesmo tipo de módulo de e/S ou por um tipo diferente de módulo de e/S. Você também pode adicionar um módulo de e/S a um sistema com slots vazios.
+O sistema FAS70 ou FAS90 oferece flexibilidade na expansão ou substituição de módulos de e/S para melhorar a conetividade e o desempenho da rede. Adicionar ou substituir um módulo de e/S é essencial ao atualizar recursos de rede ou endereçar um módulo com falha.
+
+Você pode substituir um módulo de e/S com falha em seu sistema de armazenamento FAS70 ou FAS90 com o mesmo tipo de módulo de e/S ou com um tipo diferente de módulo de e/S. Você também pode adicionar um módulo de e/S a um sistema com slots vazios.
 
 * link:io-module-add.html["Adicione um módulo de e/S."]
 +

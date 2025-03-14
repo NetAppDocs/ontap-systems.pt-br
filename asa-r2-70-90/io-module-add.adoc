@@ -2,7 +2,7 @@
 permalink: asa-r2-70-90/io-module-add.html 
 sidebar: sidebar 
 keywords: asa r2 a70, asa r2 a90, add I/O module 
-summary: Para substituir um módulo de e/S, você deve desconetar os cabos do módulo, remover os módulos SFP e QSFP do módulo, remover o módulo, instalar o módulo de substituição, reinstalar os módulos SFP e QSFP e, em seguida, fazer o cabo do módulo de e/S. 
+summary: Adicione um módulo de e/S ao seu sistema ASA A70 ou ASA A90 para melhorar a conetividade de rede e expandir a capacidade do seu sistema de lidar com o tráfego de dados. 
 ---
 = Adicionar módulo de e/S - ASA A70 e ASA A90
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: Para substituir um módulo de e/S, você deve desconetar os cabos do m�
 
 
 [role="lead"]
+Adicione um módulo de e/S ao seu sistema ASA A70 ou ASA A90 para melhorar a conetividade de rede e expandir a capacidade do seu sistema de lidar com o tráfego de dados.
+
 Você pode adicionar um módulo de e/S ao seu sistema de armazenamento ASA A70 e ASA A90 quando houver slots vazios disponíveis ou quando todos os slots estiverem totalmente preenchidos.
 
 

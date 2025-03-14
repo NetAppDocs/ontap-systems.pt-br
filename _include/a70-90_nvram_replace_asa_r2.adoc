@@ -2,11 +2,11 @@
 :allow-uri-read: 
 
 
-O módulo NVRAM consiste no hardware NVRAM12 e DIMMs substituíveis em campo. Você pode substituir um módulo NVRAM com falha ou os DIMMs dentro do módulo NVRAM. Para substituir um módulo NVRAM com falha, você deve remover o módulo do chassi, mover os DIMMs para o módulo de substituição e instalar o módulo NVRAM de substituição no chassi.
+O módulo NVRAM consiste no hardware NVRAM12 e DIMMs substituíveis em campo. Você pode substituir um módulo NVRAM com falha ou os DIMMs dentro do módulo NVRAM.
 
 Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em https://support.netapp.com["Suporte à NetApp"]Contato com .
 
-Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor.
+Certifique-se de que substitui o componente com falha por um componente de substituição que recebeu da NetApp.
 
 
 

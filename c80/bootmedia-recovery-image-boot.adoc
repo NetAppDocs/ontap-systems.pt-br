@@ -11,9 +11,7 @@ summary: Se a Mídia de inicialização do sistema AFF C80 estiver corrompida, v
 
 
 [role="lead"]
-Se a Mídia de inicialização do sistema AFF C80 estiver corrompida, você poderá inicializar a imagem de recuperação de uma unidade USB, restaurar a configuração do nó do parceiro e verificar as variáveis de ambiente.
-
-Você deve inicializar a imagem ONTAP a partir da unidade USB, restaurar o sistema de arquivos e verificar as variáveis ambientais.
+Depois de instalar o novo dispositivo multimédia de arranque no seu sistema AFF C80, pode iniciar a imagem de recuperação a partir de uma unidade USB e restaurar a configuração a partir do nó do parceiro.
 
 .Passos
 . A partir do prompt Loader, inicialize a imagem de recuperação da unidade flash USB: `boot_recovery`
@@ -67,3 +65,6 @@ Depois que o procedimento de restauração for bem-sucedido, essa mensagem será
 *NOTA:* se o processo falhar, entre em Contato https://support.netapp.com["Suporte à NetApp"]com .
 
 
+
+.O que se segue?
+Depois de inicializar a imagem de recuperação, você precisa link:bootmedia-encryption-restore.html["restaure a encriptação no suporte de arranque"].

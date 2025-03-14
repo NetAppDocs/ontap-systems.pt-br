@@ -2,16 +2,16 @@
 permalink: asa-r2-a1k/bootmedia-shutdown-bmr.html 
 sidebar: sidebar 
 keywords: asa r2 a1k, shut down the controller 
-summary: Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador desativado. 
+summary: Desligue o controlador no sistema de storage ASA A1K quando precisar substituir a Mídia de inicialização. Antes de realizar a manutenção ou a substituição de componentes, é fundamental desligar o controlador de forma segura para evitar a perda de dados e garantir a estabilidade do sistema. 
 ---
-= Desligue o controlador desativado - ASA A1K
+= Desligue o controlador para substituir o suporte de arranque - ASA A1K
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Desligue ou assuma o controlador afetado para que possa efetuar a manutenção no suporte de arranque.
+Desligue o controlador no sistema de storage ASA A1K quando precisar substituir a Mídia de inicialização. Antes de realizar a manutenção ou a substituição de componentes, é fundamental desligar o controlador de forma segura para evitar a perda de dados e garantir a estabilidade do sistema.
 
 Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
 

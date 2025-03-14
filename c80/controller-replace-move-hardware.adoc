@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: c80, move the controller module hardware 
 summary: Substitua a controladora no sistema AFF C80 quando uma falha ou atualização de hardware exigir isso. Este processo envolve remover o controlador prejudicado, mover os componentes para o controlador de substituição, instalar o controlador de substituição e reiniciar o sistema. 
 ---
-= Substitua o módulo do controlador - AFF C80
+= Substitua o controlador - AFF C80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Substitua a controladora no sistema AFF C80 quando uma falha ou atualização de hardware exigir isso. Este processo envolve remover o controlador prejudicado, mover os componentes para o controlador de substituição, instalar o controlador de substituição e reiniciar o sistema.
+Substitua o controlador no sistema AFF C80 quando for necessária uma falha de hardware. Este processo envolve remover o controlador prejudicado, mover os componentes para o controlador de substituição, instalar o controlador de substituição e reiniciar o sistema.
 
 
 
@@ -437,3 +437,6 @@ Se você removeu os transcetores (QSFPs ou SFPs), lembre-se de reinstalá-los se
 NOTE: Se você tiver fontes de alimentação CC, reconete o bloco de alimentação às fontes de alimentação depois que o módulo do controlador estiver totalmente encaixado no chassi.
 
 
+
+.O que se segue?
+Depois de substituir o controlador AFF C80 com problemas, é necessário link:controller-replace-system-config-restore-and-verify.html["restaure a configuração do sistema"].
