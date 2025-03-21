@@ -18,6 +18,10 @@ Contacte o administrador da rede para obter informações sobre como ligar o sis
 
 .Sobre esta tarefa
 * Esses procedimentos mostram configurações comuns. O cabeamento específico depende dos componentes solicitados para o seu sistema de storage. Para obter detalhes abrangentes de configuração e prioridade de slot, link:https://hwu.netapp.com["NetApp Hardware Universe"^]consulte .
+* Os slots de e/S nos controladores FAS70 e FAS90 são numerados de 1 a 11.
++
+image::../media/drw_a1K_back_slots_labeled_ieops-2162.svg[Numeração de slots em controladores FAS70 e FAS90]
+
 * Os gráficos de cabeamento têm ícones de seta mostrando a orientação adequada (para cima ou para baixo) da aba de puxar do conetor do cabo ao inserir um conetor em uma porta.
 +
 Ao inserir o conetor, você deve sentir que ele clique no lugar; se você não sentir que ele clique, remova-o, vire-o e tente novamente.
@@ -135,6 +139,8 @@ IMPORTANT: Não conete os cabos de energia ainda.
 Os procedimentos de cabeamento a seguir mostram como conectar suas controladoras a um compartimento de storage. Escolha uma das seguintes opções de cabeamento que corresponda à sua configuração.
 
 Para obter o número máximo de gavetas compatíveis com o seu sistema de storage e para todas as opções de cabeamento, link:https://hwu.netapp.com["NetApp Hardware Universe"^]consulte .
+
+Para obter orientações adicionais sobre cabeamento de gaveta SAS, link:https://docs.netapp.com/us-en/ontap-systems/sas3/install-cabling-rules.html["Regras e conceitos de cabeamento SAS - compartimentos com módulos IOM12/IOM12B"]consulte .
 
 [role="tabbed-block"]
 ====

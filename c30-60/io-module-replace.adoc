@@ -2,7 +2,7 @@
 permalink: c30-60/io-module-replace.html 
 sidebar: sidebar 
 keywords: aff c30, aff c60, replace a pcie card 
-summary: Para substituir uma placa PCIe, você deve desconetar os cabos das placas, remover os módulos SFP e QSFP das placas antes de remover o riser, reinstalar o riser e reinstalar os módulos SFP e QSFP antes de fazer o cabeamento das placas. 
+summary: Substitua um módulo de e/S no seu sistema AFF C30 ou AFF C60 quando o módulo falhar ou precisar de uma atualização para suportar desempenho superior ou recursos adicionais. O processo de substituição envolve desligar o controlador, substituir o módulo de e/S com falha, reiniciar o controlador e devolver a peça com falha ao NetApp. 
 ---
 = Substitua o módulo de e/S - AFF C30 e AFF C60
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: Para substituir uma placa PCIe, você deve desconetar os cabos das plac
 
 
 [role="lead"]
+Substitua um módulo de e/S no seu sistema AFF C30 ou AFF C60 quando o módulo falhar ou precisar de uma atualização para suportar desempenho superior ou recursos adicionais. O processo de substituição envolve desligar o controlador, substituir o módulo de e/S com falha, reiniciar o controlador e devolver a peça com falha ao NetApp.
+
 Use este procedimento para substituir um módulo de e/S com falha.
 
 .Antes de começar

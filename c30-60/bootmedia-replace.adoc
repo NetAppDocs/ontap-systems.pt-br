@@ -11,6 +11,8 @@ summary: Localize o suporte de arranque com falha no módulo do controlador remo
 
 
 [role="lead"]
+A Mídia de inicialização no seu sistema AFF C30 ou AFF C60 armazena dados essenciais de firmware e configuração. O processo de substituição envolve a remoção do módulo do controlador, remoção do suporte de arranque danificado, instalação do suporte de arranque de substituição e, em seguida, transferência da imagem ONTAP para o suporte de arranque de substituição.
+
 Para substituir o suporte de arranque, tem de remover o controlador afetado, remover o suporte de arranque, instalar o suporte de arranque de substituição e transferir a imagem de arranque para uma unidade flash USB.
 
 
@@ -309,3 +311,6 @@ FONTE DE ALIMENTAÇÃO CC
 
 |===
 
+
+.O que se segue?
+Depois de substituir a Mídia de inicialização, você precisa link:bootmedia-recovery-image-boot.html["inicie a imagem de recuperação"].

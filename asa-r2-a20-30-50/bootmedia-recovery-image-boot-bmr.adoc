@@ -1,7 +1,7 @@
 ---
 permalink: asa-r2-a20-30-50/bootmedia-recovery-image-boot-bmr.html 
 sidebar: sidebar 
-keywords: aff a20, aff a30, aff a50, boot the recovery image 
+keywords: asa a20, asa a30, asa a50, boot the recovery image 
 summary: Você pode restaurar a imagem na Mídia de inicialização a partir do controlador do parceiro por meio do processo de recuperação de inicialização automatizada. 
 ---
 = Restaure a imagem ONTAP - ASA A20, ASA A30 e ASA A50
@@ -10,8 +10,12 @@ summary: Você pode restaurar a imagem na Mídia de inicialização a partir do 
 :imagesdir: ../media/
 
 
-.Antes de começar
 [role="lead"]
+Depois de instalar o novo dispositivo de Mídia de inicialização no sistema de storage ASA A20, ASA A30 ou ASA A50, você pode iniciar o processo de recuperação de Mídia de inicialização automatizada para restaurar a configuração do nó íntegro.
+
+Durante o processo de recuperação, o sistema verifica se a criptografia está ativada e determina o tipo de criptografia de chave em uso. Se a criptografia de chave estiver ativada, o sistema o guiará pelas etapas apropriadas para restaurá-la.
+
+.Antes de começar
 * Determine se o OKM (Onboard Key Manager) ou o EKM (Eternal Key Manager) estão configurados usando um dos seguintes métodos:
 +
 ** Você pode perguntar ao cliente ou administrador do sistema se OKM ou EKM estão ativados.
@@ -391,3 +395,6 @@ LOADER-B>
 `system node autosupport invoke -node * -type all -message MAINT=END`.
 
 
+
+.O que vem a seguir
+Depois de restaurar a imagem ONTAP e o nó estiver ativo e fornecendo dados, link:bootmedia-complete-rma-bmr.html["Devolva a peça com falha ao NetApp"]você .

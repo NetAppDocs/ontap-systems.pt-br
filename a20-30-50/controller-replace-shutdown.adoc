@@ -2,7 +2,7 @@
 permalink: a20-30-50/controller-replace-shutdown.html 
 sidebar: sidebar 
 keywords: aff a20, aff a30, aff a50, shut down the impaired controller 
-summary: Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência. 
+summary: Desligue o controlador desativado no sistema de armazenamento AFF A20, AFF A30 ou AFF A50 para evitar a perda de dados e garantir a estabilidade do sistema ao substituir o controlador. 
 ---
 = Desligue o controlador desativado - AFF A20, AFF A30 e AFF A50
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Para encerrar o controlador com deficiência, você deve determinar o s
 
 
 [role="lead"]
-Desligue ou assuma o controlador desativado.
+Desligue o controlador desativado no sistema de armazenamento AFF A20, AFF A30 ou AFF A50 para evitar a perda de dados e garantir a estabilidade do sistema ao substituir o controlador.
 
 Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
 
@@ -63,3 +63,6 @@ Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctr
 
 |===
 
+
+.O que se segue?
+Depois de desligar o controlador, é necessário link:controller-replace-move-hardware.html["substitua o controlador"].

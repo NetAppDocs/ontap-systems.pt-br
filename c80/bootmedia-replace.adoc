@@ -2,7 +2,7 @@
 permalink: c80/bootmedia-replace.html 
 sidebar: sidebar 
 keywords: c80, replace the boot media 
-summary: O suporte de arranque do seu sistema AFF C80 armazena dados essenciais de firmware e configuração. Se o suporte de dados de arranque falhar, tem de desligar o módulo do controlador, remover o módulo de gestão do sistema, remover o suporte de arranque afetado e instalar o suporte de arranque de substituição no módulo de gestão do sistema. 
+summary: O suporte de arranque do seu sistema AFF C80 armazena dados essenciais de firmware e configuração. O processo de substituição envolve a remoção do módulo de Gestão do sistema, remoção do suporte de arranque com problemas, instalação do suporte de arranque de substituição e, em seguida, transferência da imagem ONTAP para o suporte de arranque de substituição. 
 ---
 = Substitua o suporte de arranque - AFF C80
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: O suporte de arranque do seu sistema AFF C80 armazena dados essenciais 
 
 
 [role="lead"]
-O suporte de arranque do seu sistema AFF C80 armazena dados essenciais de firmware e configuração. Se o suporte de dados de arranque falhar, tem de desligar o módulo do controlador, remover o módulo de gestão do sistema, remover o suporte de arranque afetado e instalar o suporte de arranque de substituição no módulo de gestão do sistema.
+O suporte de arranque do seu sistema AFF C80 armazena dados essenciais de firmware e configuração. O processo de substituição envolve a remoção do módulo de Gestão do sistema, remoção do suporte de arranque com problemas, instalação do suporte de arranque de substituição e, em seguida, transferência da imagem ONTAP para o suporte de arranque de substituição.
 
 
 

@@ -1,7 +1,7 @@
 ---
 permalink: asa-r2-a20-30-50/bootmedia-shutdown-bmr.html 
 sidebar: sidebar 
-keywords: aff a20, aff a30, aff a50, shut down the controller 
+keywords: asa a20, asa a30, asa a50, shut down the controller 
 summary: Você precisa concluir o desligamento do controlador prejudicado. 
 ---
 = Desligue o controlador - ASA A20, ASA A30 e ASA A50
@@ -11,7 +11,7 @@ summary: Você precisa concluir o desligamento do controlador prejudicado.
 
 
 [role="lead"]
-Você precisa concluir o desligamento do controlador prejudicado. Desligue ou assuma o controlador desativado.
+Desligue o controlador no sistema de storage ASA A20, ASA A30 ou ASA A50 quando precisar substituir a Mídia de inicialização. Antes de realizar a manutenção ou a substituição de componentes, é fundamental desligar o controlador de forma segura para evitar a perda de dados e garantir a estabilidade do sistema.
 
 Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
 
@@ -65,4 +65,4 @@ Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctr
 
 
 .O que vem a seguir
-Depois de desligar o controlador desativado, link:bootmedia-replace-bmr.html["substitua o suporte de arranque"].
+Depois de desligar o controlador desativado, você link:bootmedia-replace-bmr.html["substitua o suporte de arranque"].

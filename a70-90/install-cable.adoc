@@ -18,6 +18,10 @@ Contacte o administrador da rede para obter informações sobre como ligar o sis
 
 .Sobre esta tarefa
 * Esses procedimentos mostram configurações comuns. O cabeamento específico depende dos componentes solicitados para o seu sistema de storage. Para obter detalhes abrangentes de configuração e prioridade de slot, link:https://hwu.netapp.com["NetApp Hardware Universe"^]consulte .
+* Os slots de e/S nos controladores AFF A70 e AFF A90 são numerados de 1 a 11.
++
+image::../media/drw_a1K_back_slots_labeled_ieops-2162.svg[Numeração de slots em controladores FAS70 e FAS90]
+
 * Os gráficos de cabeamento têm ícones de seta mostrando a orientação adequada (para cima ou para baixo) da aba de puxar do conetor do cabo ao inserir um conetor em uma porta.
 +
 Ao inserir o conetor, você deve sentir que ele clique no lugar; se você não sentir que ele clique, remova-o, vire-o e tente novamente.

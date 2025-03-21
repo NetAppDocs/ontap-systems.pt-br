@@ -27,7 +27,7 @@ entries:
   - title: Suporte de arranque
     pdf-filename: Mídia de inicialização do C80
     entries:
-    - title: Início rápido para substituição do suporte de arranque
+    - title: Fluxo de trabalho de substituição de Mídia de inicialização
       url: "/c80/bootmedia-replace-workflow.html"
     - title: Rever os requisitos
       url: "/c80/bootmedia-replace-requirements.html"
@@ -46,7 +46,7 @@ entries:
   - title: Chassis
     pdf-filename: C80 chassis
     entries:
-    - title: Início rápido para substituição do chassis
+    - title: Fluxo de trabalho de substituição do chassis
       url: "/c80/chassis-replace-workflow.html"
     - title: Rever os requisitos
       url: "/c80/chassis-replace-requirements.html"
@@ -59,7 +59,7 @@ entries:
   - title: Controlador
     pdf-filename: C80 módulo do controlador
     entries:
-    - title: Início rápido para substituição do controlador
+    - title: Fluxo de trabalho de substituição do controlador
       url: "/c80/controller-replace-workflow.html"
     - title: Rever os requisitos
       url: "/c80/controller-replace-requirements.html"

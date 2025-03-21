@@ -1,7 +1,7 @@
 ---
 permalink: asa-r2-a20-30-50/bootmedia-replace-bmr.html 
 sidebar: sidebar 
-keywords: aff a20, aff a30, aff a50, replace the boot media 
+keywords: asa a20, asa a30, asa a50, replace the boot media 
 summary: Você localiza o suporte de inicialização com falha removendo o módulo Gerenciamento do sistema antes de substituir o suporte de inicialização. 
 ---
 = Substitua o suporte de arranque - ASA A20, ASA A30 e ASA A50
@@ -11,7 +11,7 @@ summary: Você localiza o suporte de inicialização com falha removendo o módu
 
 
 [role="lead"]
-Para substituir o suporte de arranque, tem de remover o controlador danificado, remover o suporte de arranque danificado e instalar o suporte de arranque de substituição no controlador afetado.
+Para substituir o suporte de arranque, tem de remover o controlador danificado, remover o suporte de arranque danificado e, em seguida, instalar o suporte de arranque de substituição no controlador afetado.
 
 
 

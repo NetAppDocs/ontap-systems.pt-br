@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: fas70, fas90, replace the controller 
 summary: Comece a substituir o controlador no sistema de armazenamento FAS70 ou FAS90 desligando o controlador desativado, removendo e substituindo o controlador, reconfigurando as configurações do sistema e verificando as operações do sistema. 
 ---
-= Início rápido para substituição do controlador - FAS70 e FAS90
+= Fluxo de trabalho de substituição do controlador - FAS70 e FAS90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Comece a substituir o controlador no sistema de armazenamento FAS70 ou FAS90 desligando o controlador desativado, removendo e substituindo o controlador, restaurando a configuração do sistema e verificando as operações do sistema.
+Comece a substituir o controlador no sistema de armazenamento FAS70 ou FAS90 desligando o controlador desativado, removendo e substituindo o controlador, restaurando a configuração do sistema e retornando o controle dos recursos de armazenamento ao controlador de substituição.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"]link:controller-replace-requirements.html["Reveja os requisitos de substituição do controlador"]
 [role="quick-margin-para"]

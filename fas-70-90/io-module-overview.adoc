@@ -24,3 +24,8 @@ Adicionar módulos adicionais pode melhorar a redundância, ajudando a garantir 
 A substituição de um módulo de e/S com falha pode restaurar o sistema ao seu estado de funcionamento ideal.
 
 
+
+.Numeração de slots de e/S.
+Os slots de e/S nos controladores FAS70 e FAS90 são numerados de 1 a 11, como mostrado na ilustração a seguir.
+
+image::../media/drw_a1K_back_slots_labeled_ieops-2162.svg[Numeração de slots em controladores FAS70 e FAS90]

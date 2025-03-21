@@ -2,16 +2,16 @@
 permalink: a70-90/chassis-replace-shutdown.html 
 sidebar: sidebar 
 keywords: aff a70, aff a90, shutdown the controllers 
-summary: Desligue os controladores do seu sistema de storage AFF A70 ou AFF A90 quando precisar substituir o chassi. É fundamental desligar o controlador com segurança para evitar a perda de dados e garantir a estabilidade do sistema. 
+summary: Desligue os controladores do sistema de storage AFF A70 ou AFF A90 para evitar a perda de dados e garantir a estabilidade do sistema ao substituir o chassi. 
 ---
-= Desligue os controladores - AFF A70 e AFF A90
+= Desligue os controladores para substituir o chassis - AFF A70 e AFF A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Desligue os controladores do seu sistema de storage AFF A70 ou AFF A90 quando precisar substituir o chassi. É fundamental desligar os controladores com segurança para evitar a perda de dados e garantir a estabilidade do sistema.
+Desligue os controladores do sistema de storage AFF A70 ou AFF A90 para evitar a perda de dados e garantir a estabilidade do sistema ao substituir o chassi.
 
 Este procedimento destina-se a sistemas com duas configurações de nós. Para obter mais informações sobre o desligamento normal ao fazer manutenção de um cluster, https://kb.netapp.com/on-prem/ontap/OHW/OHW-KBs/What_is_the_procedure_for_graceful_shutdown_and_power_up_of_a_storage_system_during_scheduled_power_outage["Desligue e ligue o seu sistema de armazenamento de dados - base de dados de Conhecimento da NetApp"] consulte .
 

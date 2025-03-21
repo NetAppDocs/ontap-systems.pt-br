@@ -11,7 +11,7 @@ summary: Tem de rever os pré-requisitos para o procedimento de substituição e
 
 
 [role="lead"]
-Antes de substituir o controlador no seu sistema ASA A70 ou ASA A90, certifique-se de que cumpre os requisitos necessários para uma substituição bem-sucedida. Isso inclui ter o controlador de substituição correto, um backup da configuração do sistema e acesso a todas as ferramentas e firmware necessários.
+Antes de substituir o controlador no seu sistema ASA A70 ou ASA A90, certifique-se de que cumpre os requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, verificar se você tem o controlador de substituição correto e salvar a saída do console do controlador em um arquivo de log de texto.
 
 Reveja os requisitos para substituir o módulo do controlador.
 

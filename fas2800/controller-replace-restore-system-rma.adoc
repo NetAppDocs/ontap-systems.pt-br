@@ -20,7 +20,9 @@ Restaure o sistema para o funcionamento completo restaurando as configurações 
 Você deve instalar novas licenças para o nó _replacement_ se o nó prejudicado estiver usando recursos do ONTAP que exigem uma licença padrão (node-locked). Para recursos com licenças padrão, cada nó no cluster deve ter sua própria chave para o recurso.
 
 .Sobre esta tarefa
-Até instalar chaves de licença, os recursos que exigem licenças padrão continuam disponíveis para o nó _replacement_. No entanto, se o nó prejudicado for o único nó no cluster com uma licença para o recurso, nenhuma alteração de configuração será permitida. Além disso, o uso de recursos não licenciados no nó pode colocá-lo fora de conformidade com o seu contrato de licença, então você deve instalar a chave de licença de substituição ou chaves no nó _replacement_ o mais rápido possível.
+Até instalar chaves de licença, os recursos que exigem licenças padrão continuam disponíveis para o nó _replacement_. No entanto, se o nó prejudicado for o único nó no cluster com uma licença para o recurso, nenhuma alteração de configuração será permitida.
+
+Além disso, o uso de recursos não licenciados no nó pode colocá-lo fora de conformidade com o seu contrato de licença, então você deve instalar a chave de licença de substituição ou chaves no nó _replacement_ o mais rápido possível.
 
 .Antes de começar
 As chaves de licença devem estar no formato de 28 carateres.

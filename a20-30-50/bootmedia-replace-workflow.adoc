@@ -2,7 +2,7 @@
 permalink: a20-30-50/bootmedia-replace-workflow.html 
 sidebar: sidebar 
 keywords: aff a20, aff a30, aff a50, replace the boot media 
-summary: Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor. 
+summary: Comece a substituir a Mídia de inicialização em seu sistema de armazenamento AFF A20, AFF A30 ou AFF A50 revisando os requisitos de substituição, verificando o status da criptografia, desligando o controlador, substituindo a Mídia de inicialização, inicializando a imagem de recuperação, restaurando a criptografia e verificando a funcionalidade do sistema. 
 ---
 = Fluxo de trabalho de substituição de Mídia de inicialização - AFF A20, AFF A30 e AFF A50
 :allow-uri-read: 
@@ -11,17 +11,17 @@ summary: Você deve substituir o componente com falha por um componente FRU de s
 
 
 [role="lead"]
-Siga estas etapas do fluxo de trabalho para substituir a Mídia de inicialização.
+Comece a substituir a Mídia de inicialização em seu sistema de armazenamento AFF A20, AFF A30 ou AFF A50 revisando os requisitos de substituição, verificando o status da criptografia, desligando o controlador, substituindo a Mídia de inicialização, inicializando a imagem de recuperação, restaurando a criptografia e verificando a funcionalidade do sistema.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"]link:bootmedia-replace-requirements.html["Reveja os requisitos do suporte de arranque"]
 [role="quick-margin-para"]
-Para substituir o suporte de arranque, tem de cumprir determinados requisitos.
+Reveja os requisitos para substituir o suporte de arranque.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Um"]link:bootmedia-encryption-preshutdown-checks.html["Verifique as chaves de criptografia integradas"]
 [role="quick-margin-para"]
-Verifique se o seu sistema de armazenamento tem o gerenciador de chaves de segurança ativado ou discos criptografados.
+Determine se o sistema tem o gerenciador de chaves de segurança ativado ou discos criptografados.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Dois"]link:bootmedia-shutdown.html["Desligue o controlador desativado"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Dois"]link:bootmedia-shutdown.html["Desligue o controlador"]
 [role="quick-margin-para"]
 Encerre ou assuma o controlador afetado para que o controlador íntegro continue a fornecer dados do armazenamento do controlador desativado.
 

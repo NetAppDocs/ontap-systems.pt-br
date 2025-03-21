@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff c30, aff c60, replace the chassis 
 summary: Substituir um chassis com deficiência pelo novo chassis do mesmo modelo que o chassis com deficiência. 
 ---
-= Requisitos de substituição do chassis - AFF C30 e AFF C60
+= Requisitos para substituir o chassis - AFF C30 e AFF C60
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Antes de substituir o chassi em seu sistema AFF C30 ou AFF C60, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, verificar se você tem o chassi de substituição correto e as ferramentas necessárias.
+
 Antes de substituir o chassi, verifique os seguintes requisitos e considerações.
 
 
@@ -36,3 +38,6 @@ Um sistema de armazenamento tem três LEDs de localização: Um no painel de vis
 Você pode desativá-los digitando o `system location-led _off_` comando. Se não tiver a certeza se os LEDs estão ligados ou desligados, pode verificar o seu estado introduzindo o `system location-led show` comando.
 
 
+
+.O que se segue?
+Depois de analisar os requisitos para substituir o chassi, você precisa link:chassis-replace-shutdown.html["desligue os controladores"]

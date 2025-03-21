@@ -11,7 +11,7 @@ summary: Para restaurar o sistema para a operação completa, você deve verific
 
 
 [role="lead"]
-Restaure a configuração de criptografia de armazenamento NetApp (se necessário), instale licenças para o controlador de substituição, verifique se as interfaces lógicas (LIFs) estão relatando a porta inicial, execute uma verificação de integridade do cluster, Registre o número de série do controlador de substituição e, em seguida, devolva a peça com falha ao NetApp para concluir a etapa final no procedimento de substituição do controlador AFF C30 e C60.
+Para concluir a substituição do controlador para o seu sistema AFF C30 ou AFF C60, primeiro restaure a configuração de encriptação de armazenamento NetApp (se necessário) e instale as licenças necessárias no novo controlador. Em seguida, confirme se as interfaces lógicas (LIFs) estão relatando para suas portas domésticas e execute uma verificação de integridade do cluster. Por fim, registe o número de série do novo controlador e, em seguida, devolva a peça com falha ao NetApp.
 
 
 

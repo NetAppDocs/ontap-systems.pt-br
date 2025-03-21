@@ -2,7 +2,7 @@
 permalink: a1k/bootmedia-replace.html 
 sidebar: sidebar 
 keywords: aff a1k, replace the boot media 
-summary: O suporte de arranque do seu sistema AFF A1K armazena dados essenciais de firmware e configuração. Se o suporte de dados de arranque falhar, tem de desligar o módulo do controlador, remover o módulo de gestão do sistema, remover o suporte de arranque afetado e instalar o suporte de arranque de substituição no módulo de gestão do sistema. 
+summary: O suporte de arranque do seu sistema AFF A1K armazena dados essenciais de firmware e configuração. O processo de substituição envolve a remoção do módulo de Gestão do sistema, remoção do suporte de arranque com problemas, instalação do suporte de arranque de substituição e, em seguida, transferência da imagem ONTAP para o suporte de arranque de substituição. 
 ---
 = Substitua o suporte de arranque - AFF A1K
 :allow-uri-read: 
@@ -11,9 +11,9 @@ summary: O suporte de arranque do seu sistema AFF A1K armazena dados essenciais 
 
 
 [role="lead"]
-O suporte de arranque do seu sistema AFF A1K armazena dados essenciais de firmware e configuração. Se o suporte de dados de arranque falhar, tem de desligar o módulo do controlador, remover o módulo de gestão do sistema, remover o suporte de arranque afetado e instalar o suporte de arranque de substituição no módulo de gestão do sistema.
+O suporte de arranque do seu sistema AFF A1K armazena dados essenciais de firmware e configuração. O processo de substituição envolve a remoção do módulo de Gestão do sistema, remoção do suporte de arranque com problemas, instalação do suporte de arranque de substituição e, em seguida, transferência da imagem ONTAP para o suporte de arranque de substituição.
 
-Tem de desligar o módulo do controlador, remover o módulo de gestão do sistema da parte de trás do sistema, remover o suporte de arranque deficiente e instalar o suporte de arranque de substituição no módulo de gestão do sistema.
+.
 
 
 

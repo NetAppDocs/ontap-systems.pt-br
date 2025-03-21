@@ -2,7 +2,7 @@
 permalink: c30-60/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: aff c30, aff c60, shut down the controller 
-summary: Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador desativado. 
+summary: Desligue o controlador desativado no sistema de armazenamento AFF C30 ou AFF C60 para evitar a perda de dados e garantir a estabilidade do sistema ao substituir o suporte de arranque. 
 ---
 = Desligar controlador desativado - AFF C30 e AFF C60
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desl
 
 
 [role="lead"]
-Desligue ou assuma o controlador desativado.
+Desligue o controlador desativado no sistema de armazenamento AFF C30 ou AFF C60 para evitar a perda de dados e garantir a estabilidade do sistema ao substituir o suporte de arranque.
 
 Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
 
@@ -63,3 +63,6 @@ Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctr
 
 |===
 
+
+.O que se segue?
+Depois de desligar o controlador, é necessário link:bootmedia-replace.html["substitua o suporte de arranque"].

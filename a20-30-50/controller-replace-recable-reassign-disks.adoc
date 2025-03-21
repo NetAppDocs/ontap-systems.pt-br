@@ -2,7 +2,7 @@
 permalink: a20-30-50/controller-replace-recable-reassign-disks.html 
 sidebar: sidebar 
 keywords: aff a20, aff a30, aff a50, how to reboot the system 
-summary: Tem de reiniciar o controlador. 
+summary: Retorne o controle dos recursos de storage ao controlador de substituição para que o sistema AFF A20, AFF A30 ou AFF A50 possa retomar a operação normal. 
 ---
 = Devolva o controlador - AFF A20, AFF A30 e AFF A50
 :allow-uri-read: 
@@ -11,11 +11,7 @@ summary: Tem de reiniciar o controlador.
 
 
 [role="lead"]
-Devolva o controlador.
-
-
-
-== Devolva o controlador
+Retorne o controle dos recursos de storage ao controlador de substituição para que o sistema AFF A20, AFF A30 ou AFF A50 possa retomar a operação normal. O procedimento de devolução varia de acordo com o tipo de encriptação utilizado pelo seu sistema: sem encriptação, encriptação OKM (Onboard Key Manager) ou encriptação EKM (External Key Manager).
 
 Redefina a encriptação se ativada e volte a colocar o controlador em funcionamento normal.
 
@@ -23,6 +19,9 @@ Redefina a encriptação se ativada e volte a colocar o controlador em funcionam
 ====
 .Sem criptografia
 --
+Volte a colocar o controlador afetado em funcionamento normal, devolvendo o respetivo armazenamento.
+
+.Passos
 . No prompt Loader, digite `boot_ontap`.
 . Pressione <enter> quando as mensagens do console pararem.
 +
@@ -38,6 +37,9 @@ Redefina a encriptação se ativada e volte a colocar o controlador em funcionam
 --
 .Criptografia integrada (OKM)
 --
+Redefina a criptografia integrada e retorne o controlador à operação normal.
+
+.Passos
 . No prompt Loader, digite `boot_ontap maint`.
 . Inicie no menu ONTAP a partir do prompt Loader `boot_ontap menu` e selecione a opção 10.
 . Introduza a frase-passe OKM.
@@ -80,6 +82,9 @@ Se a saída apresentar resultados (as IDs das chaves que não estão presentes n
 --
 .Gestor de chaves externo (EKM)
 --
+Redefina a encriptação e volte a colocar o controlador em funcionamento normal.
+
+.Passos
 . Se o volume raiz estiver criptografado com o Gerenciador de chaves Externo e o cabo do console estiver conetado ao nó de substituição, insira `boot_ontap menu` e selecione a opção `11`.
 . Responda `y` ou `n` às seguintes perguntas:
 +
@@ -126,3 +131,5 @@ NOTE: Contacte https://support.netapp.com["Suporte à NetApp"] se tiver problema
 
 --
 ====
+.O que se segue?
+Depois de transferir a propriedade dos recursos de armazenamento de volta para o controlador de substituição, você precisa link:controller-replace-restore-system-rma.html["complete a substituição do controlador"]fazer o procedimento.

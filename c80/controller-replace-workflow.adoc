@@ -2,16 +2,16 @@
 permalink: c80/controller-replace-workflow.html 
 sidebar: sidebar 
 keywords: aff c80, replace the controller workflow 
-summary: Comece a substituir o controlador no sistema de storage AFF C80 desligando o controlador desativado, removendo e substituindo o controlador, restaurando a configuração do sistema e verificando as operações do sistema. 
+summary: Comece com a substituição do controlador no sistema de armazenamento AFF C80, desligando o controlador desativado, removendo e substituindo o controlador, restaurando a configuração do sistema e retornando o controle dos recursos de armazenamento ao controlador de substituição. 
 ---
-= Início rápido para substituição do controlador - AFF C80
+= Fluxo de trabalho de substituição do controlador - AFF C80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Comece a substituir o controlador no sistema de storage AFF C80 desligando o controlador desativado, removendo e substituindo o controlador, restaurando a configuração do sistema e verificando as operações do sistema.
+Comece com a substituição do controlador no sistema de armazenamento AFF C80, desligando o controlador desativado, removendo e substituindo o controlador, restaurando a configuração do sistema e retornando o controle dos recursos de armazenamento ao controlador de substituição.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"]link:controller-replace-requirements.html["Reveja os requisitos de substituição do controlador"]
 [role="quick-margin-para"]

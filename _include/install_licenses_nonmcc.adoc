@@ -14,9 +14,6 @@ As chaves de licença devem estar no formato de 28 carateres.
 
 Você tem um período de carência de 90 dias para instalar as chaves de licença. Após o período de carência, todas as licenças antigas são invalidadas. Depois que uma chave de licença válida é instalada, você tem 24 horas para instalar todas as chaves antes que o período de carência termine.
 
-
-NOTE: Se o sistema estava executando inicialmente o ONTAP 9.10,1 ou posterior, use o procedimento documentado em  https://kb.netapp.com/on-prem/ontap/OHW/OHW-KBs/Post_Motherboard_Replacement_Process_to_update_Licensing_on_a_AFF_FAS_system#Internal_Notes^["Pós-processo de substituição da placa-mãe para atualizar o licenciamento em um sistema AFF/FAS"]. Se não tiver certeza da versão inicial do ONTAP para o seu sistema, consulte link:https://hwu.netapp.com["NetApp Hardware Universe"^] para obter mais informações.
-
 .Passos
 . Se você precisar de novas chaves de licença, obtenha chaves de licença de substituição na https://mysupport.netapp.com/site/global/dashboard["Site de suporte da NetApp"] seção meu suporte em licenças de software.
 +

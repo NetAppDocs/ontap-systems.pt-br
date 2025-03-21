@@ -2,7 +2,7 @@
 permalink: asa-r2-70-90/controller-replace-shutdown.html 
 sidebar: sidebar 
 keywords: asa r2 a70, asa r2 a90, shut down the impaired controller 
-summary: Encerre o controlador no sistema de storage ASA A70 ou ASA A90 quando ele estiver desativado. Antes de realizar a manutenção ou a substituição de componentes, é fundamental desligar o controlador de forma segura para evitar a perda de dados e garantir a estabilidade do sistema. 
+summary: Desligue o controlador do sistema de armazenamento ASA A70 ou ASA A90 para evitar a perda de dados e garantir a estabilidade do sistema ao substituir o controlador. 
 ---
 = Desligue o controlador desativado - ASA A70 e ASA A90
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Encerre o controlador no sistema de storage ASA A70 ou ASA A90 quando e
 
 
 [role="lead"]
-Encerre o controlador no sistema de storage ASA A70 ou ASA A90 quando ele estiver desativado. Antes de realizar a manutenção ou a substituição de componentes, é fundamental desligar o controlador de forma segura para evitar a perda de dados e garantir a estabilidade do sistema.
+Desligue o controlador do sistema de armazenamento ASA A70 ou ASA A90 para evitar a perda de dados e garantir a estabilidade do sistema ao substituir o controlador.
 
 [role="tabbed-block"]
 ====

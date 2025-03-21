@@ -2,7 +2,7 @@
 permalink: asa-r2-a1k/controller-replace-requirements.html 
 sidebar: sidebar 
 keywords: asa r2 a1k, prerequisite, replace the controller module 
-summary: Antes de substituir o controlador no seu sistema ASA A1K, certifique-se de que cumpre os requisitos necessários para uma substituição bem-sucedida. Isso inclui ter o controlador de substituição correto, um backup da configuração do sistema e acesso a todas as ferramentas e firmware necessários. 
+summary: Antes de substituir o controlador no seu sistema ASA A1K, certifique-se de que cumpre os requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, verificar se você tem o controlador de substituição correto e salvar a saída do console do controlador em um arquivo de log de texto. 
 ---
 = Requisitos para substituir o controlador - ASA A1K
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Antes de substituir o controlador no seu sistema ASA A1K, certifique-se
 
 
 [role="lead"]
-Antes de substituir o controlador no seu sistema ASA A1K, certifique-se de que cumpre os requisitos necessários para uma substituição bem-sucedida. Isso inclui ter o controlador de substituição correto, um backup da configuração do sistema e acesso a todas as ferramentas e firmware necessários.
+Antes de substituir o controlador no seu sistema ASA A1K, certifique-se de que cumpre os requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, verificar se você tem o controlador de substituição correto e salvar a saída do console do controlador em um arquivo de log de texto.
 
 Reveja os requisitos.
 

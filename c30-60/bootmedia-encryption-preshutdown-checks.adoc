@@ -4,11 +4,14 @@ sidebar: sidebar
 keywords: aff c30, aff c60, pre-shutdown checks for onboard encryption keys 
 summary: Antes de desligar o controlador com deficiência e verificar o estado das chaves de encriptação integradas, tem de verificar o estado do controlador com deficiência, desativar a giveback automática e verificar a versão do ONTAP em execução. 
 ---
-= Verifique as chaves de criptografia integradas - AFF C30 e AFF C60
+= Verifique o suporte e o status da chave de criptografia na Mídia de inicialização - AFF C30 e AFF C60
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
+
+[role="lead"]
+Para garantir a segurança dos dados no sistema de armazenamento A20, AFF A30 ou AFF A50, é necessário verificar o suporte e o status da chave de criptografia na Mídia de inicialização. Verifique se sua versão do ONTAP suporta criptografia de volume NetApp (NVE) e, antes de desligar a controladora, verifique se o gerenciador de chaves está ativo.
 
 
 
@@ -189,3 +192,6 @@ Você vai precisar dele em cenários de desastre onde você pode precisar recupe
 --
 ====
 
+
+.O que se segue?
+Depois de verificar o suporte e o status da chave de criptografia na Mídia de inicialização, é necessário link:bootmedia-shutdown.html["desligue o controlador"].

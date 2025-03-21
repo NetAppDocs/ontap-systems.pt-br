@@ -2,7 +2,7 @@
 permalink: c30-60/nvdimm-battery-replace.html 
 sidebar: sidebar 
 keywords: aff c30, aff c60, replace the NV battery, NV battery 
-summary: Para substituir a bateria NV, tem de remover o módulo do controlador, remover a bateria, substituir a bateria e, em seguida, reinstalar o módulo do controlador. 
+summary: Substitua a bateria NV no sistema AFF C30 ou AFF C60 quando a bateria começar a perder carga ou falhar, pois é responsável por preservar dados críticos do sistema durante interrupções de energia. O processo de substituição envolve desligar o controlador desativado, remover o módulo do controlador, substituir a bateria NV, reinstalar o módulo do controlador e devolver a peça com falha ao NetApp. 
 ---
 = Substitua a bateria NV - AFF C30 e AFF C60
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: Para substituir a bateria NV, tem de remover o módulo do controlador, 
 
 
 [role="lead"]
+Substitua a bateria NV no sistema AFF C30 ou AFF C60 quando a bateria começar a perder carga ou falhar, pois é responsável por preservar dados críticos do sistema durante interrupções de energia. O processo de substituição envolve desligar o controlador desativado, remover o módulo do controlador, substituir a bateria NV, reinstalar o módulo do controlador e devolver a peça com falha ao NetApp.
+
 Para substituir a bateria NV, tem de remover o controlador, remover a bateria avariada, instalar a bateria de substituição e, em seguida, reinstalar o controlador.
 
 .Antes de começar

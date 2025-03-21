@@ -2,9 +2,9 @@
 permalink: a20-30-50/bootmedia-encryption-preshutdown-checks.html 
 sidebar: sidebar 
 keywords: aff a20, aff a30, aff a50, pre-shutdown checks for onboard encryption keys 
-summary: Antes de desligar o controlador com deficiência e verificar o estado das chaves de encriptação integradas, tem de verificar o estado do controlador com deficiência, desativar a giveback automática e verificar a versão do ONTAP em execução. 
+summary: Para garantir a segurança dos dados no sistema de armazenamento A20, AFF A30 ou AFF A50, é necessário verificar o suporte e o status da chave de criptografia na Mídia de inicialização. Verifique se a sua versão do ONTAP suporta encriptação de volume NetApp e, antes de desligar o controlador, verifique se o gestor de chaves está ativo. 
 ---
-= Verifique as chaves de criptografia integradas - AFF A20, AFF A30 e AFF A50
+= Verifique o suporte e o status da chave de criptografia na Mídia de inicialização - AFF A20, AFF A30 e AFF A50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -192,3 +192,6 @@ Você vai precisar dele em cenários de desastre onde você pode precisar recupe
 --
 ====
 
+
+.O que se segue?
+Depois de verificar o suporte e o status da chave de criptografia na Mídia de inicialização, é necessário link:bootmedia-shutdown.html["desligue o controlador"].
