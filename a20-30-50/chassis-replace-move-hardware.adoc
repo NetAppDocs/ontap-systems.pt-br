@@ -2,7 +2,7 @@
 permalink: a20-30-50/chassis-replace-move-hardware.html 
 sidebar: sidebar 
 keywords: aff a20, aff a30, aff a50, move hardware components, replace the chassis 
-summary: 'Substitua o chassi do sistema AFF A20, AFF A30 ou AFF A50 quando for necessária uma falha de hardware. O processo de substituição envolve a remoção do controlador e das unidades de fonte de alimentação (PSUs), a remoção das unidades do chassi prejudicado, a instalação do chassi de substituição e a reinstalação dos componentes do chassi.' 
+summary: 'Substitua o chassi do sistema AFF A20, AFF A30 ou AFF A50 quando uma falha de hardware exigir isso. O processo de substituição envolve a remoção dos controladores e das unidades de fonte de alimentação (PSUs), a remoção das unidades, a instalação do chassi de substituição e a reinstalação dos componentes do chassi.' 
 ---
 = Substitua o chassi - AFF A20, AFF A30 e AFF A50
 :allow-uri-read: 
@@ -11,9 +11,7 @@ summary: 'Substitua o chassi do sistema AFF A20, AFF A30 ou AFF A50 quando for n
 
 
 [role="lead"]
-Substitua o chassi do sistema AFF A20, AFF A30 ou AFF A50 quando for necessária uma falha de hardware. O processo de substituição envolve a remoção do controlador e das unidades de fonte de alimentação (PSUs), a remoção das unidades do chassi prejudicado, a instalação do chassi de substituição e a reinstalação dos componentes do chassi.
-
-Mova as unidades, quaisquer lacunas de unidade, controladores e moldura do chassi prejudicado para o chassi de substituição (do mesmo modelo) e, em seguida, substitua o chassi prejudicado dentro do rack de equipamentos ou gabinete do sistema.
+Substitua o chassi do sistema AFF A20, AFF A30 ou AFF A50 quando uma falha de hardware exigir isso. O processo de substituição envolve a remoção dos controladores e das unidades de fonte de alimentação (PSUs), a remoção das unidades, a instalação do chassi de substituição e a reinstalação dos componentes do chassi.
 
 
 

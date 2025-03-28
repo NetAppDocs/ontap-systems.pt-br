@@ -11,25 +11,64 @@ summary: 'Verifique se as interfaces lógicas (LIFs) estão relatando para sua p
 
 
 [role="lead"]
-Verifique se as interfaces lógicas (LIFs) estão relatando para sua porta inicial, execute uma verificação de integridade do cluster e, em seguida, retorne a peça com falha ao NetApp para concluir a etapa final no procedimento de substituição do controlador AFF A1K.
+Para concluir a substituição do controlador para o seu sistema AFF A1K, primeiro restaure a configuração de encriptação de armazenamento NetApp (se necessário) e instale as licenças necessárias no novo controlador. Em seguida, confirme se as interfaces lógicas (LIFs) estão relatando para suas portas domésticas e execute uma verificação de integridade do cluster. Por fim, registe o número de série do novo controlador e, em seguida, devolva a peça com falha ao NetApp.
 
 
 
-== Etapa 1: Verificar LIFs e verificar a integridade do cluster
+== Passo 1: Instale licenças para o controlador de substituição no ONTAP
 
-Antes de retornar o nó de substituição ao serviço, verifique se as interfaces lógicas estão em suas portas iniciais, verifique a integridade do cluster e redefina a giveback automática.
+Você deve instalar novas licenças para o nó _replacement_ se o nó prejudicado estiver usando recursos do ONTAP que exigem uma licença padrão (node-locked). Para recursos com licenças padrão, cada nó no cluster deve ter sua própria chave para o recurso.
+
+.Sobre esta tarefa
+Até instalar chaves de licença, os recursos que exigem licenças padrão continuam disponíveis para o nó _replacement_. No entanto, se o nó prejudicado for o único nó no cluster com uma licença para o recurso, nenhuma alteração de configuração será permitida.
+
+Além disso, o uso de recursos não licenciados no nó pode colocá-lo fora de conformidade com o seu contrato de licença, então você deve instalar a chave de licença de substituição ou chaves no nó _replacement_ o mais rápido possível.
+
+As chaves de licença devem estar no formato de 28 carateres.
+
+Você tem um período de carência de 90 dias para instalar as chaves de licença. Após o período de carência, todas as licenças antigas são invalidadas. Depois que uma chave de licença válida é instalada, você tem 24 horas para instalar todas as chaves antes que o período de carência termine.
+
+Se o nó estiver em uma configuração do MetroCluster e todos os nós de um local tiverem sido substituídos, as chaves de licença devem ser instaladas no nó ou nós _replacement_ antes do switchback.
+
+.Passos
+. Se você precisar de novas chaves de licença, obtenha chaves de licença de substituição na https://mysupport.netapp.com/site/global/dashboard["Site de suporte da NetApp"] seção meu suporte em licenças de software.
++
+
+NOTE: As novas chaves de licença que você precisa são geradas automaticamente e enviadas para o endereço de e-mail em arquivo. Se você não receber o e-mail com as chaves de licença no prazo de 30 dias, entre em Contato com o suporte técnico.
+
+. Instale cada chave de licença: `+system license add -license-code license-key, license-key...+`
+. Remova as licenças antigas, se desejar:
++
+.. Verifique se há licenças não utilizadas: `license clean-up -unused -simulate`
+.. Se a lista estiver correta, remova as licenças não utilizadas: `license clean-up -unused`
+
+
+
+
+
+
+== Etapa 2: Verificar LIFs, Registrar o número de série e verificar a integridade do cluster
+
+Antes de retornar o nó _replacement_ ao serviço, você deve verificar se os LIFs estão em suas portas iniciais e Registrar o número de série do nó _replacement_ se o AutoSupport estiver ativado e redefinir a giveback automática.
 
 .Passos
 . Verifique se as interfaces lógicas estão relatando para o servidor doméstico e as portas: `network interface show -is-home false`
 +
-Se alguma interface lógica for listada como falsa, reverta-as para suas portas iniciais: `network interface revert -vserver * -lif *`
+Se algum LIFs estiver listado como false, reverta-os para suas portas iniciais: `network interface revert -vserver * -lif *`
+
+. Registre o número de série do sistema com o suporte da NetApp.
++
+** Se o AutoSupport estiver ativado, envie uma mensagem AutoSupport para Registrar o número de série.
+** Se o AutoSupport não estiver ativado, ligue https://mysupport.netapp.com["Suporte à NetApp"] para registar o número de série.
+
 
 . Verifique a integridade do cluster. Consulte o https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["Como realizar uma verificação de integridade do cluster com um script no ONTAP"^] artigo da KB para obter mais informações.
+. Se uma janela de manutenção do AutoSupport foi acionada, encerre-a usando o `system node autosupport invoke -node * -type all -message MAINT=END` comando.
 . Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true`
 
 
 
 
-== Passo 2: Devolva a peça com falha ao NetApp
+== Passo 3: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

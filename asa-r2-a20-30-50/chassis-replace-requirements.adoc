@@ -2,16 +2,18 @@
 permalink: asa-r2-a20-30-50/chassis-replace-requirements.html 
 sidebar: sidebar 
 keywords: asa a20, asa a30, asa a50, replace the chassis 
-summary: Substituir um chassis com deficiência pelo novo chassis do mesmo modelo que o chassis com deficiência. 
+summary: Antes de substituir o chassi do sistema ASA A20, ASA A30 ou ASA A50, certifique-se de que atende aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, verificar se você tem o chassi de substituição correto e as ferramentas necessárias. 
 ---
-= Requisitos de substituição do chassis - ASA A20, ASA A30 e ASA A50
+= Requisitos para substituir o chassi - ASA A20, ASA A30 e ASA A50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Antes de substituir o chassi, verifique os seguintes requisitos e considerações.
+Antes de substituir o chassi do sistema ASA A20, ASA A30 ou ASA A50, certifique-se de que atende aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, verificar se você tem o chassi de substituição correto e as ferramentas necessárias.
+
+Reveja os seguintes requisitos e considerações.
 
 
 
@@ -36,3 +38,6 @@ Um sistema de armazenamento tem três LEDs de localização: Um no painel de vis
 Você pode desativá-los digitando o `system location-led _off_` comando. Se não tiver a certeza se os LEDs estão ligados ou desligados, pode verificar o seu estado introduzindo o `system location-led show` comando.
 
 
+
+.O que se segue?
+Depois de analisar os requisitos para substituir o chassi, é link:chassis-replace-shutdown.html["desligue os controladores"]necessário .

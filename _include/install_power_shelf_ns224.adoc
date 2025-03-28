@@ -1,12 +1,11 @@
-= Etapa 1: Ligue a prateleira e atribua o ID da prateleira
+= 
 :allow-uri-read: 
 
 
-
-
-== Etapa 1: Ligue a prateleira e atribua o ID da prateleira
-
 Cada prateleira é distinguida por um ID de prateleira exclusivo. Esse ID garante que o compartimento seja distinto na configuração do sistema de storage.
+
+.Antes de começar
+Certifique-se de que tem um clipe de papel ou uma caneta esferográfica de ponta estreita para definir NS224 IDs de prateleira de armazenamento.
 
 .Sobre esta tarefa
 * Um ID válido do compartimento é de 01 a 99.
@@ -110,33 +109,4 @@ Uma fonte de alimentação é ligada assim que o cabo de alimentação é ligado
 
 
 . Volte a colocar a tampa da extremidade esquerda.
-
-
-
-
-== Passo 2: Ligue os controladores
-
-Depois de ativar as gavetas e atribuir a elas IDs exclusivas, ligue os controladores de storage.
-
-.Passos
-. Ligue o computador portátil à porta da consola série. Isso permitirá que você monitore a sequência de inicialização quando os controladores estiverem ligados.
-+
-.. Defina a porta do console serial no laptop para 115.200 baud com N-8-1.
-+
-
-NOTE: Consulte a ajuda on-line do seu laptop para obter instruções sobre como configurar a porta do console serial.
-
-.. Usando o cabo do console fornecido com seu sistema de armazenamento, conete uma extremidade do cabo do console ao laptop e a outra extremidade à porta do console serial no controlador A..
-.. Conete o laptop ao switch na sub-rede de gerenciamento.
-
-
-. Atribua um endereço TCP/IP ao laptop, usando um que esteja na sub-rede de gerenciamento.
-. Conete os cabos de alimentação às fontes de alimentação do controlador e, em seguida, conete-os a fontes de alimentação em diferentes circuitos.
-+
-** O sistema começa a arrancar. A inicialização inicial pode levar até oito minutos.
-** Os LEDs piscam e os ventiladores começam, o que indica que os controladores estão ligados.
-** Os fãs podem ser muito barulhentos quando eles começam. O ruído da ventoinha durante o arranque é normal.
-
-
-. Fixe os cabos de alimentação usando o dispositivo de fixação em cada fonte de alimentação.
 

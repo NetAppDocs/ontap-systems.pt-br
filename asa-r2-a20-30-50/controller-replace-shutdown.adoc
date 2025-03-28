@@ -2,7 +2,7 @@
 permalink: asa-r2-a20-30-50/controller-replace-shutdown.html 
 sidebar: sidebar 
 keywords: asa a20, asa a30, asa a50, shut down the impaired controller 
-summary: Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência. 
+summary: Desligue o controlador desativado no sistema de armazenamento ASA A20, ASA A30 ou ASA A50 para evitar a perda de dados e garantir a estabilidade do sistema ao substituir o controlador. 
 ---
 = Desligue o controlador desativado - ASA A20, ASA A30 e ASA A50
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Para encerrar o controlador com deficiência, você deve determinar o s
 
 
 [role="lead"]
-Desligue ou assuma o controlador desativado.
+Desligue o controlador desativado no sistema de armazenamento ASA A20, ASA A30 ou ASA A50 para evitar a perda de dados e garantir a estabilidade do sistema ao substituir o controlador.
 
 Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
 
@@ -63,3 +63,6 @@ Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctr
 
 |===
 
+
+.O que se segue?
+Depois de desligar o controlador, é necessário link:controller-replace-move-hardware.html["substitua o controlador"].

@@ -2,8 +2,6 @@
 :allow-uri-read: 
 
 
-Para substituir um ventilador, você deve remover o controlador, remover o ventilador defeituoso, instalar o ventilador de substituição e reinstalar o controlador.
-
 .Sobre esta tarefa
 Se necessário, você pode ligar os LEDs de localização do sistema de armazenamento (azul) para ajudar a localizar fisicamente o sistema de armazenamento afetado. Faça login no BMC usando SSH e digite o `system location-led _on_` comando.
 

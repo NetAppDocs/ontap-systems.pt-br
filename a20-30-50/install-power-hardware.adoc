@@ -19,6 +19,9 @@ Depois de vincular os controladores à rede e às gavetas do sistema de storage 
 
 Cada prateleira é distinguida por um ID de prateleira exclusivo. Esse ID garante que o compartimento seja distinto na configuração do sistema de storage.
 
+.Antes de começar
+Certifique-se de que tem um clipe de papel ou uma caneta esferográfica de ponta estreita para definir NS224 IDs de prateleira de armazenamento.
+
 .Sobre esta tarefa
 * Um ID válido do compartimento é de 01 a 99.
 +
@@ -153,9 +156,10 @@ image::../media/drw_psu_layout_1_ieops-1886.svg[Diagrama de ligação de aliment
 ** O sistema começa a arrancar. A inicialização inicial pode levar até oito minutos.
 ** Os LEDs piscam e os ventiladores começam, o que indica que os controladores estão ligados.
 ** Os fãs podem ser muito barulhentos quando eles começam. O ruído da ventoinha durante o arranque é normal.
+** O visor da ID da prateleira na parte frontal do chassis do sistema não se acende. O ID interno do compartimento do sistema é fixado em 00.
 
 
-. Fixe os cabos de alimentação usando o dispositivo de fixação em cada fonte de alimentação.
+. Fixe os cabos de alimentação usando o dispositivo de fixação em cada fonte de alimentação. :a20-30-50!:
 
 
 .O que se segue?

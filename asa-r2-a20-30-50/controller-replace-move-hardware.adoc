@@ -2,7 +2,7 @@
 permalink: asa-r2-a20-30-50/controller-replace-move-hardware.html 
 sidebar: sidebar 
 keywords: asa a20, asa a30, asa a50, move the controller module hardware 
-summary: Para substituir um módulo de controlador, é necessário remover o controlador prejudicado, mover os componentes FRU para o módulo de controlador de substituição, instalar o módulo de controlador de substituição no chassis e, em seguida, inicializar o sistema para o modo de manutenção. 
+summary: Substitua o controlador no sistema ASA A20, ASA A30 ou ASA A50 quando for necessária uma falha de hardware. O processo de substituição envolve remover o controlador prejudicado, mover os componentes para o controlador de substituição, instalar o controlador de substituição e reinicializá-lo. 
 ---
 = Substitua o controlador - ASA A20, ASA A30 e ASA A50
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Para substituir um módulo de controlador, é necessário remover o con
 
 
 [role="lead"]
-Para substituir o controlador, é necessário remover o controlador prejudicado, mover os componentes FRU do controlador prejudicado para o controlador de substituição, instalar o controlador de substituição no chassis, definir a hora e a data e, em seguida, reabilitar o controlador de substituição.
+Substitua o controlador no sistema ASA A20, ASA A30 ou ASA A50 quando for necessária uma falha de hardware. O processo de substituição envolve remover o controlador prejudicado, mover os componentes para o controlador de substituição, instalar o controlador de substituição e reinicializá-lo.
 
 
 
@@ -627,3 +627,6 @@ FONTE DE ALIMENTAÇÃO CC
 
 |===
 
+
+.O que se segue?
+Depois de substituir o controlador ASA A20, ASA A30 ou ASA A50 com problemas, é necessário link:controller-replace-system-config-restore-and-verify.html["restaure a configuração do sistema"].

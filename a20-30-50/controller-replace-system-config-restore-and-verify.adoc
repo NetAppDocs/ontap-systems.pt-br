@@ -13,8 +13,6 @@ summary: Verifique se a configuração de HA da controladora está ativa e funci
 [role="lead"]
 Verifique se a configuração de HA da controladora está ativa e funcionando corretamente no sistema de storage AFF A20, AFF A30 ou AFF A50 e confirme se os adaptadores do sistema listam todos os caminhos para os discos.
 
-Verifique a configuração do sistema de baixo nível do controlador de substituição e reconfigure as definições do sistema conforme necessário.
-
 
 
 == Passo 1: Verifique as configurações de configuração do HA

@@ -2,7 +2,7 @@
 permalink: c80/chassis-replace-requirements.html 
 sidebar: sidebar 
 keywords: c80, replace the chassis 
-summary: Antes de substituir o chassi no sistema AFF C80, verifique se todos os outros componentes do sistema estão funcionando corretamente, verifique se você tem credenciais de administrador local para o ONTAP, o chassi de substituição correto e as ferramentas necessárias. 
+summary: Antes de substituir o chassi do sistema AFF C80, verifique se todos os outros componentes do sistema estão funcionando corretamente, verifique se você tem credenciais de administrador local para o ONTAP, o chassi de substituição correto e as ferramentas necessárias. 
 ---
 = Requisitos para substituir o chassis - AFF C80
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Antes de substituir o chassi no sistema AFF C80, verifique se todos os 
 
 
 [role="lead"]
-Antes de substituir o chassi no sistema AFF C80, verifique se todos os outros componentes do sistema estão funcionando corretamente, verifique se você tem credenciais de administrador local para o ONTAP, o chassi de substituição correto e as ferramentas necessárias.
+Antes de substituir o chassi do sistema AFF C80, verifique se todos os outros componentes do sistema estão funcionando corretamente, verifique se você tem credenciais de administrador local para o ONTAP, o chassi de substituição correto e as ferramentas necessárias.
 
 O chassi é o gabinete físico que abriga todos os componentes do controlador, como a unidade controladora/CPU, fonte de alimentação e e/S.
 

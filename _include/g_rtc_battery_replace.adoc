@@ -2,8 +2,6 @@
 :allow-uri-read: 
 
 
-Você substitui a bateria do relógio em tempo real (RTC) no controlador para que os serviços e aplicativos do sistema de armazenamento que dependem da sincronização precisa de tempo continuem funcionando.
-
 .Antes de começar
 Todos os outros componentes do sistema de armazenamento têm de estar a funcionar corretamente; caso contrário, tem de contactar https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de prosseguir com este procedimento.
 

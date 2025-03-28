@@ -2,7 +2,7 @@
 permalink: asa-r2-a20-30-50/chassis-replace-move-hardware.html 
 sidebar: sidebar 
 keywords: asa a20, asa a30, asa a50, move hardware components, replace the chassis 
-summary: Mova o painel frontal, as unidades e os módulos do controlador do chassi com deficiência para o novo chassi e troque o chassi com deficiência do rack de equipamentos ou do gabinete do sistema pelo novo chassi do mesmo modelo que o chassi com deficiência. 
+summary: 'Substitua o chassi do sistema ASA A20, ASA A30 ou ASA A50 quando uma falha de hardware exigir isso. O processo de substituição envolve a remoção dos controladores e das unidades de fonte de alimentação (PSUs), a remoção das unidades, a instalação do chassi de substituição e a reinstalação dos componentes do chassi.' 
 ---
 = Substitua o chassi - ASA A20, ASA A30 e ASA A50
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Mova o painel frontal, as unidades e os módulos do controlador do chas
 
 
 [role="lead"]
-Mova as unidades, quaisquer lacunas de unidade, controladores e moldura do chassi prejudicado para o chassi de substituição (do mesmo modelo) e, em seguida, substitua o chassi prejudicado dentro do rack de equipamentos ou gabinete do sistema.
+Substitua o chassi do sistema ASA A20, ASA A30 ou ASA A50 quando uma falha de hardware exigir isso. O processo de substituição envolve a remoção dos controladores e das unidades de fonte de alimentação (PSUs), a remoção das unidades, a instalação do chassi de substituição e a reinstalação dos componentes do chassi.
 
 
 

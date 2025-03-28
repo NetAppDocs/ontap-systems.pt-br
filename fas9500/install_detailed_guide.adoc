@@ -123,7 +123,7 @@ X66032A (112-00437), 2m
 
 X66033A (112-00438), 3m
  a| 
-image::../media/oie_cable_fiber_lc_connector.png[conetor lc de fibra de cabo oie]
+image::../media/oie_cable_fiber_lc_connector.png[Conetor ótico LC]
  a| 
 Rede ótica FC
 
@@ -151,7 +151,7 @@ X66032A (112-00437), 2m
 
 X66033A (112-00438), 3m
  a| 
-image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[cabo oie mini sas hd para mini sas hd]
+image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[Conetor mini SAS]
  a| 
 Armazenamento
 
@@ -162,7 +162,7 @@ Cabo micro-USB da consola
  a| 
 Não aplicável
  a| 
-Imagem::../media/oie_cable_micro_USB.pngMicro conetor USB]
+image::../media/oie_cable_micro_usb.png[Conetor micro USB]
  a| 
 Conexão de console durante a configuração de software em laptop/console não Windows ou Mac
 
@@ -242,7 +242,7 @@ image::../media/drw_9500_tnsc_network_cabling.svg[cabeamento de rede tnsc drw 95
 
 
  a| 
-imagem::../media/icon_square_1_green.png
+image::../media/icon_square_1_green.png[Ícone de legenda 1]
  a| 
 Portas de interconexão do cluster de cabos:
 
@@ -255,11 +255,11 @@ image::../media/oie_cable100_gbe_qsfp28.png[Conetor QSFP de 100 GbE]
 
 
  a| 
-image::../media/icon_square_2_yellow.png[Ícone de legenda 2]
+image::../media/icon_square_2_purple.png[Ícone de legenda 2]
  a| 
 Portas de gerenciamento do controlador de cabo (chave inglesa).
 
-imagem::../media/oie_cable_rj45.png
+image::../media/oie_cable_rj45.png[Conetor RJ-45]
 
 
 
@@ -281,7 +281,7 @@ image::../media/oie_cable100_gbe_qsfp28.png[Conetor QSFP de 100 GbE]
 
 
  a| 
-imagem::../media/icon_square_4_red.png
+image::../media/icon_square_4_red.png[Ícone de legenda 4]
  a| 
 Conexões do cabo de 25 GbE:
 
@@ -292,10 +292,12 @@ image::../media/oie_cable_sfp_gbe_copper.png[Conetor de cobre GbE SFP]
 
 
  a| 
+image::../media/icon_square_5_grey.png[Ícone de legenda 4]
+ a| 
 ** Prenda os cabos aos braços de gestão do cabo (não ilustrado).
 ** Ligue os cabos de alimentação às PSUs e ligue-os a diferentes fontes de alimentação (não apresentadas). A PSU 1 e 3 fornecem energia para todos os componentes do lado A, enquanto PSU2 e PSU4 fornecem energia para todos os componentes do lado B.
 
- a| 
+
 image::../media/oie_cable_power.png[Cabos de alimentação]
 
 image::../media/drw_a900fas9500_power_icon_IEOPS-1142.svg[Fontes de alimentação]
@@ -345,7 +347,7 @@ image::../media/oie_cable100_gbe_qsfp28.png[Conetor QSFP de 100 GbE]
 
 
  a| 
-image::../media/icon_square_2_yellow.png[Ícone de legenda 2]
+image::../media/icon_square_2_purple.png[Ícone de legenda 2]
  a| 
 Portas de gerenciamento do controlador de cabo (chave inglesa).
 
@@ -377,15 +379,17 @@ Conexões do cabo de 25 GbE:
 
 Portas de cabos nos slots A5 e B5 (5a, 5b, 5c e 5D) e nos slots A7 e B7 (7a, 7b, 7c e 7D) para os switches de rede de 25 GbE.
 
-imagem::../media/oie_cable_sfp_gbe_copper.png
+image::../media/oie_cable_sfp_gbe_copper.png[Conetor de cobre de 100 GbE]
 
 
 
+ a| 
+image::../media/icon_square_4_red.png[Ícone de legenda 4]
  a| 
 ** Prenda os cabos aos braços de gestão do cabo (não ilustrado).
 ** Ligue os cabos de alimentação às PSUs e ligue-os a diferentes fontes de alimentação (não apresentadas). A PSU 1 e 3 fornecem energia para todos os componentes do lado A, enquanto PSU2 e PSU4 fornecem energia para todos os componentes do lado B.
 
- a| 
+
 image::../media/oie_cable_power.png[Cabos de alimentação]
 
 image::../media/drw_a900fas9500_power_icon_IEOPS-1142.svg[Fontes de alimentação]
@@ -434,20 +438,31 @@ image::../media/icon_square_1_blue.png[ícone quadrado 1 azul]
  a| 
 Conecte a pilha um do compartimento de unidades às controladoras, usando o gráfico para referência.
 
-image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[cabo oie mini sas hd para mini sas hd]
+*Cabo Mini-SAS*
 
-Cabo mini-SAS
+image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[cabo oie mini sas hd para mini sas hd]
 
 
 
  a| 
 image::../media/icon_square_2_yellow.png[Ícone de legenda 2]
  a| 
-Conecte a pilha dois do compartimento de unidades às controladoras, usando o gráfico para referência.
+Conecte os compartimentos de unidades na pilha dois uns aos outros, usando o gráfico para referência.
+
+*Cabo Mini-SAS*
 
 image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[cabo oie mini sas hd para mini sas hd]
 
-Cabo mini-SAS
+
+
+ a| 
+image::../media/icon_square_3_tourquoise.png[Ícone de legenda 3]
+ a| 
+Conecte a pilha dois do compartimento de unidades às controladoras, usando o gráfico para referência.
+
+*Cabo Mini-SAS*
+
+image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[cabo oie mini sas hd para mini sas hd]
 
 |===
 
@@ -540,12 +555,11 @@ image::../media/dwr_laptop_to_switch_only.svg[computador portátil dwr apenas pa
 
 . Selecione um ícone ONTAP listado para descobrir:
 +
-image::../media/drw_autodiscovery_controler_select.svg[seleção do controlador de deteção automática drw]
+image::../media/drw_autodiscovery_controler_select_ieops-1849.svg[controlador de descoberta automática drw selecione ieops 1849]
 
 +
 .. Abra o Explorador de ficheiros.
-.. Clique em rede no painel esquerdo.
-.. Clique com o botão direito do rato e selecione Atualizar.
+.. Clique em rede no painel esquerdo e clique com o botão direito do rato e selecione Atualizar.
 .. Clique duas vezes no ícone ONTAP e aceite quaisquer certificados exibidos na tela.
 +
 

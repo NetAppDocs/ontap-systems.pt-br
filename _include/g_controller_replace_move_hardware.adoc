@@ -2,8 +2,6 @@
 :allow-uri-read: 
 
 
-Para substituir o controlador, é necessário remover o controlador prejudicado, mover os componentes FRU do controlador prejudicado para o controlador de substituição, instalar o controlador de substituição no chassis, definir a hora e a data e, em seguida, reabilitar o controlador de substituição.
-
 
 
 == Passo 1: Remova o controlador

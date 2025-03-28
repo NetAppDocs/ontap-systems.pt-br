@@ -2,7 +2,7 @@
 permalink: asa-r2-70-90/chassis-replace-move-hardware.html 
 sidebar: sidebar 
 keywords: asa r2 a70, asa r2 a90, move hardware components, replace the chassis 
-summary: Substitua o chassi do sistema ASA A70 ou ASA A90 quando uma falha de hardware o exigir. Esse processo envolve desligar o sistema, remover o chassi existente, instalar o novo e reconfigurar os componentes para garantir o funcionamento correto do sistema. 
+summary: 'Substitua o chassi do seu sistema ASA A70 ou ASA A90 quando uma falha de hardware o exigir. O processo de substituição envolve a remoção dos controladores e das unidades de fonte de alimentação (PSUs), a remoção das unidades, a instalação do chassi de substituição e a reinstalação dos componentes do chassi.' 
 ---
 = Mova e substitua as ferragens - ASA A70 e ASA A90
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Substitua o chassi do sistema ASA A70 ou ASA A90 quando uma falha de ha
 
 
 [role="lead"]
-Substitua o chassi do sistema ASA A70 ou ASA A90 quando uma falha de hardware o exigir. Esse processo envolve desligar o sistema, remover o chassi existente, instalar o novo e reconfigurar os componentes para garantir o funcionamento correto do sistema.
+Substitua o chassi do seu sistema ASA A70 ou ASA A90 quando uma falha de hardware o exigir. O processo de substituição envolve a remoção dos controladores e das unidades de fonte de alimentação (PSUs), a remoção das unidades, a instalação do chassi de substituição e a reinstalação dos componentes do chassi.
 
 
 

@@ -2,7 +2,7 @@
 permalink: asa-r2-a20-30-50/controller-replace-restore-system-rma.html 
 sidebar: sidebar 
 keywords: asa a20, asa a30, asa a50, how to restore NetApp Storage Encryption, how to complete the replacement process 
-summary: 'Restaure a configuração de criptografia de armazenamento NetApp (se necessário), instale licenças para o controlador de substituição, verifique se as interfaces lógicas (LIFs) estão relatando a porta inicial, execute uma verificação de integridade do cluster, Registre o número de série do controlador de substituição e, em seguida, devolva a peça com falha ao NetApp para concluir a etapa final no procedimento de substituição do controlador ASA A20, ASA A30 ou ASA A50.' 
+summary: 'Para concluir a substituição do controlador para o seu sistema ASA A20, ASA A30 ou ASA A50, primeiro restaure a configuração de encriptação de armazenamento NetApp (se necessário) e instale as licenças necessárias no novo controlador. Em seguida, confirme se as interfaces lógicas (LIFs) estão relatando para suas portas domésticas e execute uma verificação de integridade do cluster. Finalmente, Registre o número de série do novo controlador e, em seguida, devolva a peça com falha ao NetApp.' 
 ---
 = Substituição completa do controlador - ASA A20, ASA A30 e ASA A50
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Restaure a configuração de criptografia de armazenamento NetApp (se 
 
 
 [role="lead"]
-Restaure a configuração de criptografia de armazenamento NetApp (se necessário), instale licenças para o controlador de substituição, verifique se as interfaces lógicas (LIFs) estão relatando a porta inicial, execute uma verificação de integridade do cluster, Registre o número de série do controlador de substituição e, em seguida, devolva a peça com falha ao NetApp para concluir a etapa final no procedimento de substituição do controlador ASA A20, ASA A30 ou ASA A50.
+Para concluir a substituição do controlador para o seu sistema ASA A20, ASA A30 ou ASA A50, primeiro restaure a configuração de encriptação de armazenamento NetApp (se necessário) e instale as licenças necessárias no novo controlador. Em seguida, confirme se as interfaces lógicas (LIFs) estão relatando para suas portas domésticas e execute uma verificação de integridade do cluster. Finalmente, Registre o número de série do novo controlador e, em seguida, devolva a peça com falha ao NetApp.
 
 
 

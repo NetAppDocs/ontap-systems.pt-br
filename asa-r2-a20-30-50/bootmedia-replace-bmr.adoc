@@ -11,7 +11,7 @@ summary: Você localiza o suporte de inicialização com falha removendo o módu
 
 
 [role="lead"]
-Para substituir o suporte de arranque, tem de remover o controlador danificado, remover o suporte de arranque danificado e, em seguida, instalar o suporte de arranque de substituição no controlador afetado.
+A Mídia de inicialização no sistema ASA A20, ASA A30 ou ASA A50 armazena dados essenciais de firmware e configuração. O processo de substituição envolve a remoção do módulo do controlador, remoção do suporte de arranque danificado, instalação do suporte de arranque de substituição e, em seguida, transferência da imagem ONTAP para o suporte de arranque de substituição.
 
 
 

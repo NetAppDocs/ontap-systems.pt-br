@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: asa a20, asa a30, asa a50, add I/O module 
 summary: Para substituir um módulo de e/S, você deve desconetar os cabos do módulo, remover os módulos SFP e QSFP do módulo, remover o módulo, instalar o módulo de substituição, reinstalar os módulos SFP e QSFP e, em seguida, fazer o cabo do módulo de e/S. 
 ---
-= Adicionar módulo de e/S - ASA A20, ASA A30 e ASA A50
+= Adicione um módulo de e/S - ASA A20, ASA A30 e ASA A50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Adicione um módulo de e/S ao seu sistema ASA A20, ASA A30 ou ASA A50 para melhorar a conetividade de rede e expandir a capacidade do seu sistema de lidar com o tráfego de dados.
+
 Você pode adicionar um módulo de e/S aos sistemas de storage ASA A20, ASA A30 e ASA A50 quando houver slots disponíveis ou quando todos os slots estiverem totalmente preenchidos.
 
 .Sobre esta tarefa

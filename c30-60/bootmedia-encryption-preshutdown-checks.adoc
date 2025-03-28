@@ -11,7 +11,7 @@ summary: Antes de desligar o controlador com deficiência e verificar o estado d
 
 
 [role="lead"]
-Para garantir a segurança dos dados no sistema de armazenamento A20, AFF A30 ou AFF A50, é necessário verificar o suporte e o status da chave de criptografia na Mídia de inicialização. Verifique se sua versão do ONTAP suporta criptografia de volume NetApp (NVE) e, antes de desligar a controladora, verifique se o gerenciador de chaves está ativo.
+Para garantir a segurança dos dados no sistema de armazenamento AFF C30 ou AFF C60, é necessário verificar o suporte e o status da chave de criptografia na Mídia de inicialização. Verifique se sua versão do ONTAP suporta criptografia de volume NetApp (NVE) e, antes de desligar a controladora, verifique se o gerenciador de chaves está ativo.
 
 
 

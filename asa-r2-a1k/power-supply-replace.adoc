@@ -2,7 +2,7 @@
 permalink: asa-r2-a1k/power-supply-replace.html 
 sidebar: sidebar 
 keywords: asa r2 a1k, replace a power supply 
-summary: 'Substitua uma fonte de alimentação CA ou CC (PSU) no seu sistema ASA A1K quando falhar ou ficar com defeito, garantindo que o seu sistema continua a receber a energia necessária para uma operação estável. O processo de substituição envolve desconetar a PSU de destino da fonte de alimentação, desconetar o cabo de alimentação, remover a PSU defeituosa e instalar a PSU de substituição e, em seguida, conectá-la novamente à fonte de alimentação.' 
+summary: 'Substitua uma fonte de alimentação CA ou CC (PSU) no seu sistema ASA A1K quando falhar ou ficar com defeito, garantindo que o seu sistema continua a receber a energia necessária para uma operação estável. O processo de substituição envolve desconetar a PSU defeituosa da fonte de alimentação, desconetar o cabo de alimentação, substituir a PSU defeituosa e reconectá-la à fonte de alimentação.' 
 ---
 = Substitua uma fonte de alimentação - ASA A1K
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Substitua uma fonte de alimentação CA ou CC (PSU) no seu sistema ASA
 
 
 [role="lead"]
-Substitua uma fonte de alimentação CA ou CC (PSU) no seu sistema ASA A1K quando falhar ou ficar com defeito, garantindo que o seu sistema continua a receber a energia necessária para uma operação estável. O processo de substituição envolve desconetar a PSU de destino da fonte de alimentação, desconetar o cabo de alimentação, remover a PSU defeituosa e instalar a PSU de substituição e, em seguida, conectá-la novamente à fonte de alimentação.
+Substitua uma fonte de alimentação CA ou CC (PSU) no seu sistema ASA A1K quando falhar ou ficar com defeito, garantindo que o seu sistema continua a receber a energia necessária para uma operação estável. O processo de substituição envolve desconetar a PSU defeituosa da fonte de alimentação, desconetar o cabo de alimentação, substituir a PSU defeituosa e reconectá-la à fonte de alimentação.
 
 As fontes de alimentação são redundantes e hot-swap.
 

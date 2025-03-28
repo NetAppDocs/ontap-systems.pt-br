@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa r2 a70, asa r2 a90, replace the drives 
 summary: Substitua uma unidade no sistema ASA A70 ou ASA A90 quando uma unidade falhar ou precisar de uma atualização. Esse processo envolve identificar a unidade com defeito, removê-la com segurança e instalar uma nova unidade para garantir o acesso contínuo aos dados e o desempenho do sistema. 
 ---
-= Substitua a unidade SSD -ASA A70 e ASA A90
+= Substitua uma unidade SSD - ASA A70 e ASA A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -44,7 +44,7 @@ Ao substituir várias unidades de disco, você deve esperar 70 segundos entre a 
 . Aterre-se corretamente.
 . Identifique fisicamente a unidade com falha.
 +
-Quando uma unidade falha, o sistema Registra uma mensagem de aviso no console do sistema indicando qual unidade falhou. Além disso, o LED atenção (âmbar) no painel de visualização do operador da prateleira de acionamento e a unidade com falha acendem-se.
+Quando uma unidade falha, o sistema Registra uma mensagem de aviso no console do sistema indicando qual unidade falhou. Além disso, o LED atenção (âmbar) no painel de visualização do operador da prateleira e a unidade com falha acendem-se.
 
 +
 
@@ -52,10 +52,38 @@ NOTE: O LED de atividade (verde) em uma unidade com falha pode ser iluminado (s�
 
 . Remova a unidade com falha:
 +
-.. Prima o botão de libertação na superfície da unidade para abrir a pega do excêntrico.
-.. Deslize a unidade para fora da prateleira usando a alça do came e apoiando a unidade com a outra mão.
+image::../media/drw_nvme_drive_replace_ieops-1904.svg[Remova a unidade NVMe]
+
++
+[cols="1,4"]
+|===
 
 
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Prima o botão de libertação na superfície da unidade para abrir a pega do excêntrico.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+Rode o manípulo do excêntrico para baixo para desengatar a unidade do plano médio.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Legenda número 3]
+ a| 
+Deslize a unidade para fora do compartimento de unidade usando a alça do came e apoiando a unidade com a outra mão.
+
+Ao remover uma unidade, utilize sempre duas mãos para suportar o seu peso.
+
+
+NOTE: Como as unidades são frágeis, minimize o manuseio para evitar danificá-las.
+
+|===
 . Aguarde, no mínimo, 70 segundos antes de inserir a unidade de substituição.
 +
 Isso permite que o sistema reconheça que uma unidade foi removida.
@@ -63,7 +91,7 @@ Isso permite que o sistema reconheça que uma unidade foi removida.
 . Insira a unidade de substituição:
 +
 .. Com o manípulo do excêntrico na posição aberta, utilize as duas mãos para introduzir a transmissão de substituição.
-.. Prima até a unidade parar.
+.. Empurre suavemente até a unidade parar.
 .. Feche a pega do came de forma a que a unidade fique totalmente assente no plano médio e a pega encaixe no devido lugar.
 +
 Certifique-se de que fecha lentamente a pega do excêntrico de forma a que fique corretamente alinhada com a face da unidade.

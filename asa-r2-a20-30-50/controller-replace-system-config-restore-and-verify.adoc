@@ -11,7 +11,7 @@ summary: Depois de concluir a substituição de hardware e a inicialização par
 
 
 [role="lead"]
-Verifique a configuração do sistema de baixo nível do controlador de substituição e reconfigure as definições do sistema conforme necessário.
+Verifique se a configuração de HA da controladora está ativa e funcionando corretamente no sistema de storage ASA A20, ASA A30 ou ASA A50 e confirme se os adaptadores do sistema listam todos os caminhos para os discos.
 
 
 
@@ -77,3 +77,6 @@ Se você vir algum problema, verifique o cabeamento e recoloque os cabos.
 `halt`
 
 
+
+.O que se segue?
+Depois de restaurar e verificar a configuração do sistema para o sistema ASA A20, ASA A30 ou ASA A50, é necessário link:controller-replace-recable-reassign-disks.html["devolva o controlador"].

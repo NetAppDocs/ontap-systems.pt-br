@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: ASA A90, ASA A70, replace io module 
 summary: 'Você deve substituir o componente com falha por um componente de unidade substituível de campo (FRU) de substituição que você recebeu de seu provedor.' 
 ---
-= Visão geral do módulo de e/S adicional e de substituição - ASA A20, ASA A30 e ASA A50
+= Descrição geral de adicionar e substituir um módulo de e/S - ASA A20, ASA A30 e ASA A50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Os sistemas ASA A20, ASA A30 e ASA A50 oferecem flexibilidade na expansão ou substituição de módulos de e/S para aprimorar a conetividade e o desempenho da rede. Adicionar ou substituir um módulo de e/S é essencial ao atualizar recursos de rede ou endereçar um módulo com falha.
+
 Você pode substituir um módulo de e/S com falha em seu sistema de storage pelo mesmo tipo de módulo de e/S ou por um tipo diferente de módulo de e/S. Você também pode adicionar um módulo de e/S a um sistema de armazenamento com slots disponíveis.
 
 * link:io-module-add.html["Adicione um módulo de e/S."]

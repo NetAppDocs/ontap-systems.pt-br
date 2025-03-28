@@ -2,7 +2,7 @@
 permalink: asa-r2-a20-30-50/rtc-battery-replace.html 
 sidebar: sidebar 
 keywords: asa a20, asa a30, asa a50, replace the real-time clock battery 
-summary: 'Você substitui a bateria do relógio em tempo real (RTC) no módulo do controlador para que os serviços e aplicativos do sistema que dependem da sincronização precisa de tempo continuem funcionando.' 
+summary: 'Substitua a bateria de relógio em tempo real (RTC), comumente conhecida como bateria de célula tipo moeda, em seu sistema ASA A20, ASA A30 ou ASA A50 para garantir que os serviços e aplicativos que dependem de sincronização precisa de tempo permaneçam operacionais.' 
 ---
 = Substitua a bateria do relógio em tempo real - ASA A20, ASA A30 e ASA A50
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Você substitui a bateria do relógio em tempo real (RTC) no módulo d
 
 
 [role="lead"]
-Você substitui a bateria do relógio em tempo real (RTC) no controlador para que os serviços e aplicativos do sistema de armazenamento que dependem da sincronização precisa de tempo continuem funcionando.
+Substitua a bateria de relógio em tempo real (RTC), comumente conhecida como bateria de célula tipo moeda, em seu sistema ASA A20, ASA A30 ou ASA A50 para garantir que os serviços e aplicativos que dependem de sincronização precisa de tempo permaneçam operacionais.
 
 .Antes de começar
 Todos os outros componentes do sistema de armazenamento têm de estar a funcionar corretamente; caso contrário, tem de contactar https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de prosseguir com este procedimento.
