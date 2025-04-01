@@ -3,7 +3,7 @@
 
 
 .Antes de começar
-Todos os outros componentes do sistema de armazenamento têm de estar a funcionar corretamente; caso contrário, tem de contactar https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de prosseguir com este procedimento.
+Todos os outros componentes do sistema de armazenamento devem estar a funcionar corretamente; caso contrário, contacte https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de continuar com este procedimento.
 
 .Sobre esta tarefa
 Se necessário, você pode ligar os LEDs de localização do sistema de armazenamento (azul) para ajudar a localizar fisicamente o sistema de armazenamento afetado. Faça login no BMC usando SSH e digite o `system location-led _on_` comando.
@@ -16,8 +16,12 @@ Você pode desativá-los digitando o `system location-led _off_` comando. Se nã
 
 == Passo 1: Desligue o controlador desativado
 
-Desligue ou assuma o controlador desativado.
+Encerre ou assuma o controlador afetado utilizando uma das seguintes opções.
 
+[role="tabbed-block"]
+====
+.Opção 1: A maioria dos sistemas
+--
 Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
 
 .Sobre esta tarefa
@@ -69,6 +73,54 @@ Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctr
 |===
 
 
+--
+.Opção 2: O controlador está em um MetroCluster
+--
+Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
+
+* Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
+* Você deve ter confirmado que o estado de configuração do MetroCluster está configurado e que os nós estão em um estado ativado e normal (`metrocluster node show`).
+
+
+.Passos
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Desative a giveback automática a partir da consola do controlador saudável: `storage failover modify –node local -auto-giveback false`
+. Leve o controlador prejudicado para o prompt Loader:
++
+[cols="1,2"]
+|===
+| Se o controlador afetado estiver a apresentar... | Então... 
+
+
+ a| 
+O prompt Loader
+ a| 
+Vá para a próxima seção.
+
+
+
+ a| 
+A aguardar pela giveback...
+ a| 
+Pressione Ctrl-C e responda `y` quando solicitado.
+
+
+
+ a| 
+Prompt do sistema ou prompt de senha (digite a senha do sistema)
+ a| 
+Assuma ou interrompa o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode _impaired_node_name_`
+
+Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
+
+|===
+
+
+--
+====
 
 
 == Passo 2: Remova o controlador
@@ -76,7 +128,7 @@ Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctr
 Você deve remover o controlador do chassi quando substituir o controlador ou substituir um componente dentro do controlador.
 
 .Antes de começar
-Todos os outros componentes do sistema de armazenamento têm de estar a funcionar corretamente; caso contrário, tem de contactar https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de prosseguir com este procedimento.
+Certifique-se de que todos os outros componentes do sistema de armazenamento estão a funcionar corretamente; caso contrário, tem de contactar https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de continuar com este procedimento.
 
 .Passos
 . No controlador desativado, certifique-se de que o LED NV está desligado.

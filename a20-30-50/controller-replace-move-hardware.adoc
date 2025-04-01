@@ -20,7 +20,7 @@ Substitua o controlador no sistema AFF A20, AFF A30 ou AFF A50 quando for necess
 Você deve remover o controlador do chassi quando substituir o controlador ou substituir um componente dentro do controlador.
 
 .Antes de começar
-Todos os outros componentes do sistema de armazenamento têm de estar a funcionar corretamente; caso contrário, tem de contactar https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de prosseguir com este procedimento.
+Certifique-se de que todos os outros componentes do sistema de armazenamento estão a funcionar corretamente; caso contrário, tem de contactar https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de continuar com este procedimento.
 
 .Passos
 . No controlador desativado, certifique-se de que o LED NV está desligado.

@@ -27,7 +27,7 @@ As instruções na documentação do ONTAP descrevem as etapas adicionais que vo
 +
 https://docs.netapp.com/us-en/ontap/encryption-at-rest/index.html["Visão geral da criptografia NetApp com a CLI"^]
 
-* Todos os outros componentes do sistema de armazenamento têm de estar a funcionar corretamente; caso contrário, tem de contactar https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de continuar com este procedimento.
+* Todos os outros componentes do sistema de armazenamento devem estar a funcionar corretamente; caso contrário, contacte https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de continuar com este procedimento.
 * Verifique se a unidade que você está removendo está com falha.
 +
 Você pode verificar se a unidade está com falha executando o `storage disk show -broken` comando. A unidade com falha aparece na lista de unidades com falha. Se isso não acontecer, você deve esperar, e então executar o comando novamente.

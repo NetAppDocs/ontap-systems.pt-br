@@ -9,7 +9,7 @@
 Você deve remover o controlador do chassi quando substituir o controlador ou substituir um componente dentro do controlador.
 
 .Antes de começar
-Todos os outros componentes do sistema de armazenamento têm de estar a funcionar corretamente; caso contrário, tem de contactar https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de prosseguir com este procedimento.
+Certifique-se de que todos os outros componentes do sistema de armazenamento estão a funcionar corretamente; caso contrário, tem de contactar https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de continuar com este procedimento.
 
 .Passos
 . No controlador desativado, certifique-se de que o LED NV está desligado.
@@ -113,50 +113,47 @@ Se necessário, rode as pegas para a posição vertical (junto às patilhas) par
 
 
 
-== Passo 2: Remova as unidades do chassis com deficiência
+== Passo 2: Remova os módulos de cache do chassis danificado
 
-Você precisa remover todas as unidades e quaisquer lacunas de unidade do chassi prejudicado para que, mais tarde, no procedimento, você possa instalá-las no chassi de substituição.
+Você precisa remover quaisquer módulos de cache e espaços em branco de unidade do chassi prejudicado para que, mais tarde, no procedimento, você possa instalá-los no chassi de substituição.
 
 . Retire cuidadosamente a moldura da parte frontal do sistema de armazenamento.
-. Remova as unidades e quaisquer espaços em branco da unidade:
+. Remova os módulos de armazenamento em cache e os espaços em branco da unidade:
 +
 
-NOTE: Mantenha o controle de qual compartimento de unidade cada unidade e unidade em branco foram removidas, porque eles devem ser instalados nos mesmos compartimentos de unidade no chassi de substituição.
+NOTE: Mantenha o controle de qual compartimento de unidade cada módulo de armazenamento em cache e unidade em branco foram removidos porque eles devem ser instalados nos mesmos compartimentos de unidade no chassi de substituição.
 
 +
-image::../media/drw_nvme_drive_replace_ieops-1904.svg[Remova a unidade NVMe]
+image::../media/drw_fas50_flash_cache_module_replace_ieops-2173.svg[gráfico de etapas de substituição do módulo de armazenamento em cache fas50]
 
 +
-[cols="1,4"]
+[cols="20%,80%"]
 |===
 
 
  a| 
 image::../media/icon_round_1.png[Legenda número 1]
  a| 
-Prima o botão de libertação na superfície da unidade para abrir a pega do excêntrico.
+Prima o botão de libertação na face do módulo para abrir o manípulo do excêntrico.
 
 
 
  a| 
 image::../media/icon_round_2.png[Legenda número 2]
  a| 
-Rode o manípulo do excêntrico para baixo para desengatar a unidade do plano médio.
+Rode o manípulo do excêntrico para baixo para desengatar o módulo do plano médio.
 
 
 
  a| 
 image::../media/icon_round_3.png[Legenda número 3]
  a| 
-Deslize a unidade para fora do compartimento de unidade usando a alça do came e apoiando a unidade com a outra mão.
+Deslize o módulo para fora do compartimento de unidade usando a alça do came e apoiando o módulo com a outra mão.
 
-Ao remover uma unidade, utilize sempre duas mãos para suportar o seu peso.
-
-
-NOTE: Como as unidades são frágeis, minimize o manuseio para evitar danificá-las.
+Ao remover um módulo, utilize sempre duas mãos para suportar o seu peso.
 
 |===
-. Coloque as unidades de lado em um carrinho ou mesa sem estática.
+. Coloque os módulos de cache de lado em um carrinho ou tabela livre de estática.
 
 
 
@@ -226,23 +223,23 @@ NOTE: Não utilize força excessiva ao deslizar o controlador para dentro do cha
 
 . Recable a controladora, conforme necessário, exceto os cabos de energia.
 . Repita estes passos para instalar o segundo controlador no chassis.
-. Instale as unidades e quaisquer lacunas de unidade removidas do chassis afetado no chassis de substituição:
+. Instale os módulos de armazenamento em cache e as placas de unidade removidas do chassis afetado no chassis de substituição:
 +
 
-NOTE: As unidades e as placas de unidade devem ser instaladas nos mesmos compartimentos de unidade no chassi de substituição.
+NOTE: Os módulos de armazenamento em cache e as placas de unidade devem ser instalados nos mesmos compartimentos de unidade no chassi de substituição.
 
-+
-.. Com o manípulo do excêntrico na posição aberta, utilize as duas mãos para inserir a unidade.
-.. Empurre suavemente até a unidade parar.
-.. Feche a pega do came de forma a que a unidade fique totalmente assente no plano médio e a pega encaixe no devido lugar.
+
+
+. Com o manípulo do excêntrico na posição aberta, utilize as duas mãos para inserir a unidade.
+. Empurre suavemente até a unidade parar.
+. Feche a pega do came de forma a que a unidade fique totalmente assente no plano médio e a pega encaixe no devido lugar.
 +
 Certifique-se de que fecha lentamente a pega do excêntrico de forma a que fique corretamente alinhada com a face da unidade.
 
-.. Repita o processo para as unidades restantes.
-
-
-. Instale a moldura.
-. Reconecte os cabos de alimentação às fontes de alimentação (PSU) nas controladoras.
+. Repita o processo para as unidades restantes.
++
+.. Instale a moldura.
+.. Reconecte os cabos de alimentação às fontes de alimentação (PSU) nas controladoras.
 +
 Uma vez que a energia é restaurada para uma PSU, o LED de status deve estar verde.
 
@@ -259,8 +256,8 @@ NOTE: Os controladores começam a inicializar assim que a energia é restaurada.
  a| 
 PSU CA
  a| 
-.. Ligue o cabo de alimentação à PSU.
-.. Fixe o cabo de alimentação com o fixador do cabo de alimentação.
+... Ligue o cabo de alimentação à PSU.
+... Fixe o cabo de alimentação com o fixador do cabo de alimentação.
 
 
 
@@ -268,17 +265,19 @@ PSU CA
  a| 
 FONTE DE ALIMENTAÇÃO CC
  a| 
-.. Ligue o conetor do cabo de alimentação DC D-SUB à PSU.
-.. Aperte os dois parafusos de orelhas para fixar o conetor do cabo de alimentação D-SUB DC à PSU.
+... Ligue o conetor do cabo de alimentação DC D-SUB à PSU.
+... Aperte os dois parafusos de orelhas para fixar o conetor do cabo de alimentação D-SUB DC à PSU.
 
 
 |===
-. Se os controladores iniciarem no prompt Loader, reinicie os controladores:
+.. Se os controladores iniciarem no prompt Loader, reinicie os controladores:
 +
 `boot_ontap`
 
-. Ative novamente o AutoSupport:
+.. Ative novamente o AutoSupport:
 +
 `system node autosupport invoke -node * -type all -message MAINT=END`
+
+
 
 

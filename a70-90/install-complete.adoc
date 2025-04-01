@@ -60,7 +60,7 @@ O System Manager é aberto.
 Se a deteção de rede não estiver ativada no computador portátil, conclua a configuração e a configuração utilizando o assistente de configuração de cluster da interface de linha de comando (CLI) do ONTAP.
 
 .Antes de começar
-Verifique se o laptop está conetado à porta do console serial e se os controladores estão ligados. link:install-power-hardware.html#step-2-power-on-the-controllers["ligue o sistema de armazenamento"]Consulte para obter instruções.
+Verifique se o laptop está conetado à porta do console serial e se os controladores estão ligados.
 
 .Passos
 Atribua um endereço IP de gerenciamento de nó inicial a um dos nós.

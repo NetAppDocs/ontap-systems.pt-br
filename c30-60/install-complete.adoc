@@ -2,7 +2,7 @@
 permalink: c30-60/install-complete.html 
 sidebar: sidebar 
 keywords: aff c30, aff c60, prepare installation 
-summary: Conclua a configuração e configuração da plataforma usando a descoberta de cluster apenas com uma conexão com o switch e laptop, ou conetando-se diretamente a um controlador no sistema de armazenamento e, em seguida, conetando-se ao switch de gerenciamento. 
+summary: Depois de ativar o sistema de armazenamento AFF C30 ou AFF C60, você estará pronto para descobrir a rede de cluster e configurar um cluster ONTAP. 
 ---
 = Configuração e configuração completas do sistema de storage - AFF C30 e AFF C60
 :allow-uri-read: 
@@ -60,7 +60,7 @@ O System Manager é aberto.
 Se a deteção de rede não estiver ativada no computador portátil, conclua a configuração e a configuração utilizando o assistente de configuração de cluster da interface de linha de comando (CLI) do ONTAP.
 
 .Antes de começar
-Verifique se o laptop está conetado à porta do console serial e se os controladores estão ligados. link:install-power-hardware.html#step-2-power-on-the-controllers["ligue o sistema de armazenamento"]Consulte para obter instruções.
+Verifique se o laptop está conetado à porta do console serial e se os controladores estão ligados.
 
 .Passos
 Atribua um endereço IP de gerenciamento de nó inicial a um dos nós.

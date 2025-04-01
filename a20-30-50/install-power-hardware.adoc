@@ -142,21 +142,14 @@ NOTE: Consulte a ajuda on-line do seu laptop para obter instruções sobre como 
 
 .. Usando o cabo do console fornecido com seu sistema de armazenamento, conete uma extremidade do cabo do console ao laptop e a outra extremidade à porta do console serial no controlador A..
 .. Conete o laptop ao switch na sub-rede de gerenciamento.
-+
-image::../media/drw_g_isi_console_serial_port_cabling_ieops-1882.svg[Ligações da consola]
-
 
 
 . Atribua um endereço TCP/IP ao laptop, usando um que esteja na sub-rede de gerenciamento.
 . Conete os cabos de alimentação às fontes de alimentação do controlador e, em seguida, conete-os a fontes de alimentação em diferentes circuitos.
 +
-image::../media/drw_psu_layout_1_ieops-1886.svg[Diagrama de ligação de alimentação do sistema de armazenamento A20 ou A30 ou A50]
-
-+
 ** O sistema começa a arrancar. A inicialização inicial pode levar até oito minutos.
 ** Os LEDs piscam e os ventiladores começam, o que indica que os controladores estão ligados.
 ** Os fãs podem ser muito barulhentos quando eles começam. O ruído da ventoinha durante o arranque é normal.
-** O visor da ID da prateleira na parte frontal do chassis do sistema não se acende. O ID interno do compartimento do sistema é fixado em 00.
 
 
 . Fixe os cabos de alimentação usando o dispositivo de fixação em cada fonte de alimentação. :a20-30-50!:

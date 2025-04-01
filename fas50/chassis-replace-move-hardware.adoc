@@ -1,0 +1,297 @@
+---
+permalink: fas50/chassis-replace-move-hardware.html 
+sidebar: sidebar 
+keywords: fas50, move hardware components, replace the chassis 
+summary: 'Substitua o chassi do seu sistema FAS50 quando uma falha de hardware o exigir. O processo de substituição envolve a remoção dos controladores e das unidades de fonte de alimentação (PSUs), a remoção de quaisquer módulos de cache, a instalação do chassi de substituição e a reinstalação dos componentes do chassi.' 
+---
+= Substitua o chassis - FAS50
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Substitua o chassi do seu sistema FAS50 quando uma falha de hardware o exigir. O processo de substituição envolve a remoção dos controladores e das unidades de fonte de alimentação (PSUs), a remoção de quaisquer módulos de cache, a instalação do chassi de substituição e a reinstalação dos componentes do chassi.
+
+
+
+== Passo 1: Remova o controlador
+
+Você deve remover o controlador do chassi quando substituir o controlador ou substituir um componente dentro do controlador.
+
+.Antes de começar
+Certifique-se de que todos os outros componentes do sistema de armazenamento estão a funcionar corretamente; caso contrário, tem de contactar https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de continuar com este procedimento.
+
+.Passos
+. No controlador desativado, certifique-se de que o LED NV está desligado.
++
+Quando o LED NV está desligado, o desaquecimento está completo e é seguro remover o controlador afetado.
+
++
+
+NOTE: Se o LED NV estiver intermitente (verde), as destage estão em curso. Tem de aguardar que o LED NV se desligue. No entanto, se a intermitência continuar durante mais de cinco minutos, contacte https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de continuar com este procedimento.
+
++
+O LED NV está localizado junto ao ícone NV no controlador.
+
++
+image::../media/drw_g_nvmem_led_ieops-1839.svg[Localização do LED de estado NV]
+
+
+
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Ícone NV e LED no controlador
+
+|===
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Desligue a alimentação do controlador desativado:
++
+
+NOTE: As fontes de alimentação (PSUs) não têm um interrutor de alimentação.
+
++
+[cols="1,2"]
+|===
+| Se você está desligando um... | Então... 
+
+
+ a| 
+PSU CA
+ a| 
+.. Abra o retentor do cabo de alimentação.
+.. Desconete o cabo de alimentação da PSU e coloque-o de lado.
+
+
+
+
+ a| 
+FONTE DE ALIMENTAÇÃO CC
+ a| 
+.. Desaperte os dois parafusos de orelhas no conetor do cabo de alimentação DC D-SUB.
+.. Desconete o cabo de alimentação da PSU e coloque-o de lado.
+
+
+|===
+. Desconete todos os cabos do controlador desativado.
++
+Mantenha o controle de onde os cabos foram conetados.
+
+. Retire o controlador desativado:
++
+A ilustração a seguir mostra a operação das alças do controlador (do lado esquerdo do controlador) ao remover um controlador:
+
++
+image::../media/drw_g_and_t_handles_remove_ieops-1837.svg[operação da alavanca do controlador para remover um controlador]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Em ambas as extremidades do controlador, empurre as patilhas de bloqueio verticais para fora para soltar as pegas.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+** Puxe as pegas na sua direção para retirar o comando do plano médio.
++
+À medida que você puxa, as alças se estendem para fora do controlador e, em seguida, você sente alguma resistência, continue puxando.
+
+** Deslize o controlador para fora do chassi enquanto suporta a parte inferior do controlador e coloque-o em uma superfície plana e estável.
+
+
+
+
+ a| 
+image::../media/icon_round_3.png[Legenda número 3]
+ a| 
+Se necessário, rode as pegas para a posição vertical (junto às patilhas) para as retirar do caminho.
+
+|===
+. Repita estes passos para o outro controlador no chassis.
+
+
+
+
+== Passo 2: Remova os módulos de cache do chassis danificado
+
+Você precisa remover quaisquer módulos de cache e espaços em branco de unidade do chassi prejudicado para que, mais tarde, no procedimento, você possa instalá-los no chassi de substituição.
+
+. Retire cuidadosamente a moldura da parte frontal do sistema de armazenamento.
+. Remova os módulos de armazenamento em cache e os espaços em branco da unidade:
++
+
+NOTE: Mantenha o controle de qual compartimento de unidade cada módulo de armazenamento em cache e unidade em branco foram removidos porque eles devem ser instalados nos mesmos compartimentos de unidade no chassi de substituição.
+
++
+image::../media/drw_fas50_flash_cache_module_replace_ieops-2173.svg[gráfico de etapas de substituição do módulo de armazenamento em cache fas50]
+
++
+[cols="20%,80%"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Prima o botão de libertação na face do módulo para abrir o manípulo do excêntrico.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+Rode o manípulo do excêntrico para baixo para desengatar o módulo do plano médio.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Legenda número 3]
+ a| 
+Deslize o módulo para fora do compartimento de unidade usando a alça do came e apoiando o módulo com a outra mão.
+
+Ao remover um módulo, utilize sempre duas mãos para suportar o seu peso.
+
+|===
+. Coloque os módulos de cache de lado em um carrinho ou tabela livre de estática.
+
+
+
+
+== Etapa 3: Substitua o chassi de dentro do rack de equipamentos ou do gabinete do sistema
+
+Você remove o chassi prejudicado do rack de equipamentos ou do gabinete do sistema, instala o chassi de substituição, instala as unidades, quaisquer espaços em branco da unidade e, em seguida, instala o painel frontal.
+
+. Retire os parafusos dos pontos de montagem do chassis danificados.
++
+Coloque os parafusos de lado para usar posteriormente neste procedimento.
+
++
+
+NOTE: Se o sistema de armazenamento for fornecido em um gabinete do sistema NetApp, você deverá remover parafusos adicionais na parte traseira do chassi antes que o chassi possa ser removido.
+
+. Usando duas pessoas ou um elevador, remova o chassi prejudicado do rack de equipamentos ou do gabinete do sistema, deslizando-o para fora dos trilhos e, em seguida, coloque-o de lado.
+. Usando duas pessoas, instale o chassi de substituição no rack de equipamentos ou no gabinete do sistema, deslizando-o sobre os trilhos.
+. Fixe a parte frontal do chassi de substituição ao rack de equipamentos ou ao gabinete do sistema usando os parafusos removidos do chassi danificado.
+
+
+
+
+== Passo 4: Instale os controladores
+
+Instale os controladores no chassi de substituição e reinicialize-os.
+
+.Sobre esta tarefa
+A ilustração a seguir mostra a operação das alças do controlador (do lado esquerdo de um controlador) ao instalar um controlador e pode ser usada como referência para o restante dos passos de instalação do controlador.
+
+image::../media/drw_g_and_t_handles_reinstall_ieops-1838.svg[operação da alavanca do controlador para instalar um controlador]
+
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Se você girou as alças do controlador na vertical (ao lado das abas) para removê-las do caminho, gire-as para baixo até a posição horizontal.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+Empurre as alças para reinserir o controlador no chassi e empurre até que o controlador esteja totalmente assentado.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Legenda número 3]
+ a| 
+Rode as pegas para a posição vertical e bloqueie-as com as patilhas de bloqueio.
+
+|===
+. Insira um dos controladores no chassi:
++
+.. Alinhe a parte traseira do controlador com a abertura no chassis.
+.. Empurre firmemente as alças até que o controlador atenda ao plano médio e esteja totalmente assentado no chassi.
++
+
+NOTE: Não utilize força excessiva ao deslizar o controlador para dentro do chassis; pode danificar os conetores.
+
+.. Rode as pegas do controlador para cima e bloqueie-as com as patilhas.
+
+
+. Recable a controladora, conforme necessário, exceto os cabos de energia.
+. Repita estes passos para instalar o segundo controlador no chassis.
+. Instale os módulos de armazenamento em cache e as placas de unidade removidas do chassis afetado no chassis de substituição:
++
+
+NOTE: Os módulos de armazenamento em cache e as placas de unidade devem ser instalados nos mesmos compartimentos de unidade no chassi de substituição.
+
+
+
+. Com o manípulo do excêntrico na posição aberta, utilize as duas mãos para inserir a unidade.
+. Empurre suavemente até a unidade parar.
+. Feche a pega do came de forma a que a unidade fique totalmente assente no plano médio e a pega encaixe no devido lugar.
++
+Certifique-se de que fecha lentamente a pega do excêntrico de forma a que fique corretamente alinhada com a face da unidade.
+
+. Repita o processo para as unidades restantes.
++
+.. Instale a moldura.
+.. Reconecte os cabos de alimentação às fontes de alimentação (PSU) nas controladoras.
++
+Uma vez que a energia é restaurada para uma PSU, o LED de status deve estar verde.
+
++
+
+NOTE: Os controladores começam a inicializar assim que a energia é restaurada.
+
++
+[cols="1,2"]
+|===
+| Se você está reconetando um... | Então... 
+
+
+ a| 
+PSU CA
+ a| 
+... Ligue o cabo de alimentação à PSU.
+... Fixe o cabo de alimentação com o fixador do cabo de alimentação.
+
+
+
+
+ a| 
+FONTE DE ALIMENTAÇÃO CC
+ a| 
+... Ligue o conetor do cabo de alimentação DC D-SUB à PSU.
+... Aperte os dois parafusos de orelhas para fixar o conetor do cabo de alimentação D-SUB DC à PSU.
+
+
+|===
+.. Se os controladores iniciarem no prompt Loader, reinicie os controladores:
++
+`boot_ontap`
+
+.. Ative novamente o AutoSupport:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
+
+
+
+
+.O que se segue?
+Depois de ter substituído o chassi FAS50 com problemas e reinstalado os componentes nele, você precisa link:chassis-replace-complete-system-restore-rma.html["complete a substituição do chassis"].

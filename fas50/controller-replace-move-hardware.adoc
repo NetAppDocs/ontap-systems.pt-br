@@ -1,0 +1,632 @@
+---
+permalink: fas50/controller-replace-move-hardware.html 
+sidebar: sidebar 
+keywords: fas50, move the controller module hardware 
+summary: Substitua o controlador no seu sistema FAS50 quando uma falha de hardware o exigir. O processo de substituição envolve remover o controlador prejudicado, mover os componentes para o controlador de substituição, instalar o controlador de substituição e reinicializá-lo. 
+---
+= Substitua o controlador - FAS50
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Substitua o controlador no seu sistema FAS50 quando uma falha de hardware o exigir. O processo de substituição envolve remover o controlador prejudicado, mover os componentes para o controlador de substituição, instalar o controlador de substituição e reinicializá-lo.
+
+
+
+== Passo 1: Remova o controlador
+
+Você deve remover o controlador do chassi quando substituir o controlador ou substituir um componente dentro do controlador.
+
+.Antes de começar
+Certifique-se de que todos os outros componentes do sistema de armazenamento estão a funcionar corretamente; caso contrário, tem de contactar https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de continuar com este procedimento.
+
+.Passos
+. No controlador desativado, certifique-se de que o LED NV está desligado.
++
+Quando o LED NV está desligado, o desaquecimento está completo e é seguro remover o controlador afetado.
+
++
+
+NOTE: Se o LED NV estiver intermitente (verde), as destage estão em curso. Tem de aguardar que o LED NV se desligue. No entanto, se a intermitência continuar durante mais de cinco minutos, contacte https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de continuar com este procedimento.
+
++
+O LED NV está localizado junto ao ícone NV no controlador.
+
++
+image::../media/drw_g_nvmem_led_ieops-1839.svg[Localização do LED de estado NV]
+
+
+
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Ícone NV e LED no controlador
+
+|===
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Desligue a alimentação do controlador desativado:
++
+
+NOTE: As fontes de alimentação (PSUs) não têm um interrutor de alimentação.
+
++
+[cols="1,2"]
+|===
+| Se você está desligando um... | Então... 
+
+
+ a| 
+PSU CA
+ a| 
+.. Abra o retentor do cabo de alimentação.
+.. Desconete o cabo de alimentação da PSU e coloque-o de lado.
+
+
+
+
+ a| 
+FONTE DE ALIMENTAÇÃO CC
+ a| 
+.. Desaperte os dois parafusos de orelhas no conetor do cabo de alimentação DC D-SUB.
+.. Desconete o cabo de alimentação da PSU e coloque-o de lado.
+
+
+|===
+. Desconete todos os cabos do controlador desativado.
++
+Mantenha o controle de onde os cabos foram conetados.
+
+. Retire o controlador desativado:
++
+A ilustração a seguir mostra a operação das alças do controlador (do lado esquerdo do controlador) ao remover um controlador:
+
++
+image::../media/drw_g_and_t_handles_remove_ieops-1837.svg[operação da alavanca do controlador para remover um controlador]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Em ambas as extremidades do controlador, empurre as patilhas de bloqueio verticais para fora para soltar as pegas.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+** Puxe as pegas na sua direção para retirar o comando do plano médio.
++
+À medida que você puxa, as alças se estendem para fora do controlador e, em seguida, você sente alguma resistência, continue puxando.
+
+** Deslize o controlador para fora do chassi enquanto suporta a parte inferior do controlador e coloque-o em uma superfície plana e estável.
+
+
+
+
+ a| 
+image::../media/icon_round_3.png[Legenda número 3]
+ a| 
+Se necessário, rode as pegas para a posição vertical (junto às patilhas) para as retirar do caminho.
+
+|===
+. Abra a tampa do controlador rodando o parafuso de aperto manual no sentido contrário ao dos ponteiros do relógio para soltar e, em seguida, abra a tampa.
+
+
+
+
+== Passo 2: Mova a fonte de alimentação
+
+Mova a fonte de alimentação (PSU) para o controlador de substituição.
+
+. Mova a PSU do controlador desativado:
++
+Certifique-se de que a pega do controlador do lado esquerdo está na posição vertical para permitir o acesso à PSU.
+
+
+
+[role="tabbed-block"]
+====
+.Opção 1: Mover uma PSU CA
+--
+Para mover uma PSU CA, execute as etapas a seguir.
+
+.Passos
+. Remova a PSU CA do controlador desativado:
++
+image::../media/drw_g_t_psu_replace_ieops-1899.svg[Substitua a PSU CA]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Rode a pega da PSU para cima, para a sua posição horizontal e, em seguida, segure-a.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+Com o polegar, pressione a aba azul para liberar a PSU do controlador.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Legenda número 3]
+ a| 
+Retire a PSU do controlador enquanto utiliza a outra mão para suportar o peso.
+
+
+CAUTION: A PSU é curta. Sempre use duas mãos para apoiá-lo ao removê-lo do controlador de modo que ele não oscile repentinamente livre do controlador e o machuque.
+
+|===
+. Insira a PSU no controlador de substituição:
++
+.. Utilizando ambas as mãos, apoie e alinhe as extremidades da PSU com a abertura no controlador.
+.. Empurre cuidadosamente a PSU para dentro do controlador até que a patilha de bloqueio encaixe no lugar.
++
+Uma PSU só engata adequadamente com o conetor interno e trava no lugar de uma forma.
+
++
+
+NOTE: Para evitar danificar o conetor interno, não use força excessiva ao deslizar a PSU para dentro do controlador.
+
+.. Gire a alça para baixo, de modo que esteja fora do caminho das operações normais.
+
+
+
+
+--
+.Opção 2: Mover uma PSU CC
+--
+Para mover uma PSU CC, execute as etapas a seguir.
+
+.Passos
+. Retire a PSU CC do controlador desativado:
++
+.. Rode o manípulo para cima, para a sua posição horizontal e, em seguida, segure-o.
+.. Com o polegar, prima a patilha de terracota para soltar o mecanismo de bloqueio.
+.. Retire a PSU do controlador enquanto utiliza a outra mão para suportar o peso.
++
+
+NOTE: A PSU é curta. Utilize sempre duas mãos para apoiá-lo ao removê-lo do controlador, de modo a que não se liberte do controlador e o machuque.
+
++
+image::../media/drw_dcpsu_remove-replace-generic_IEOPS-788.svg[Remova uma PSU CC]
+
+
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Parafusos de orelhas
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+Conetor do cabo de alimentação da fonte de alimentação DC D-SUB
+
+
+
+ a| 
+image::../media/icon_round_3.png[Legenda número 3]
+ a| 
+Pega da fonte de alimentação
+
+
+
+ a| 
+image::../media/icon_round_4.png[Legenda número 4]
+ a| 
+Patilha de bloqueio da PSU de terracota
+
+|===
+. Insira a PSU no controlador de substituição:
++
+.. Utilizando ambas as mãos, apoie e alinhe as extremidades da PSU com a abertura no controlador.
+.. Deslize cuidadosamente a PSU para dentro do controlador até que a patilha de bloqueio encaixe no lugar.
++
+Uma PSU deve engatar adequadamente com o conetor interno e o mecanismo de travamento. Repita este passo se sentir que a PSU não está corretamente encaixada.
+
++
+
+NOTE: Para evitar danificar o conetor interno, não use força excessiva ao deslizar a PSU para dentro do controlador.
+
+.. Gire a alça para baixo, de modo que esteja fora do caminho das operações normais.
+
+
+
+
+--
+====
+
+
+== Passo 3: Mova os fãs
+
+Mova as ventoinhas para o controlador de substituição.
+
+. Retire uma das ventoinhas do controlador desativado:
++
+image::../media/drw_g_fan_replace_ieops-1903.svg[Substituição da ventoinha]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+| Segure ambos os lados da ventoinha nos pontos de toque azuis. 
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+| Puxe a ventoinha para cima e para fora da respetiva tomada. 
+|===
+. Insira o ventilador no controlador de substituição alinhando-o dentro das guias e, em seguida, empurre para baixo até que o conetor do ventilador esteja totalmente encaixado no soquete.
+. Repita estes passos para os restantes ventiladores.
+
+
+
+
+== Passo 4: Mova a bateria NV
+
+Mova a bateria NV para o controlador de substituição.
+
+. Retire a bateria NV do controlador desativado:
++
+image::../media/drw_g_nv_battery_replace_ieops-1864.svg[Substitua a bateria NV]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Levante a bateria NV e retire-a do respetivo compartimento.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+Retire a cablagem do respetivo retentor.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Legenda número 3]
+ a| 
+.. Empurre e segure a patilha no conetor.
+.. Puxe o conetor para cima e para fora da tomada.
++
+Ao puxar para cima, agite suavemente o conetor de ponta a ponta (longitudinalmente) para o soltar.
+
+
+
+|===
+. Instale a bateria NV no controlador de substituição:
++
+.. Ligue o conetor da cablagem à respetiva tomada.
+.. Encaminhe a cablagem ao longo da parte lateral da fonte de alimentação, para o respetivo retentor e, em seguida, através do canal em frente do compartimento da bateria NV.
+.. Coloque a bateria NV no compartimento.
++
+A bateria NV deve ficar nivelada no respetivo compartimento.
+
+
+
+
+
+
+
+== Passo 5: Mova os DIMMs do sistema
+
+Mova os DIMMs para o controlador de substituição.
+
+Se você tiver espaços em branco DIMM, não será necessário movê-los, o controlador de substituição deve vir com eles instalados.
+
+. Remova um dos DIMMs do controlador prejudicado:
++
+image::../media/drw_g_dimm_ieops-1873.svg[DIMM Substituir]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Numeração e posições dos slots DIMM.
+
+
+NOTE: Dependendo do modelo do seu sistema de armazenamento, você terá dois ou quatro DIMMs.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 1]
+ a| 
+** Observe a orientação do DIMM no soquete para que você possa inserir o DIMM no controlador de substituição na orientação adequada.
+** Ejete o DIMM empurrando lentamente as duas abas do ejetor do DIMM em ambas as extremidades do slot do DIMM.
+
+
+
+IMPORTANT: Segure cuidadosamente o DIMM pelos cantos ou bordas para evitar a pressão nos componentes da placa de circuito DIMM.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Legenda número 3]
+ a| 
+Levante o DIMM para cima e para fora do slot.
+
+As patilhas do ejetor permanecem na posição aberta.
+
+|===
+. Instale o DIMM no controlador de substituição:
++
+.. Certifique-se de que as abas do ejetor DIMM no conetor estão na posição aberta.
+.. Segure o DIMM pelos cantos e insira o DIMM diretamente no slot.
++
+O entalhe na parte inferior do DIMM, entre os pinos, deve estar alinhado com a guia no slot.
+
++
+Quando inserido corretamente, o DIMM entra facilmente, mas encaixa firmemente no slot. Caso contrário, insira novamente o DIMM.
+
+.. Verifique visualmente o DIMM para se certificar de que ele está alinhado uniformemente e totalmente inserido no slot.
+.. Empurre com cuidado, mas firmemente, para baixo na borda superior do DIMM até que as abas do ejetor se encaixem no lugar sobre os entalhes em ambas as extremidades do DIMM.
+
+
+. Repita estas etapas para os DIMMs restantes.
+
+
+
+
+== Passo 6: Mova a Mídia de inicialização
+
+Mova o suporte de arranque para o controlador de substituição.
+
+. Retire o suporte de arranque do controlador afetado:
++
+image::../media/drw_g_boot_media_replace_ieops-1872.svg[Mídia de inicialização Substituir gráfico]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Localização do suporte de arranque
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+Prima a patilha azul para soltar a extremidade direita do suporte de arranque.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Legenda número 3]
+ a| 
+Levante a extremidade direita do suporte de arranque a um ligeiro ângulo para obter uma boa aderência ao longo dos lados do suporte de arranque.
+
+
+
+ a| 
+image::../media/icon_round_4.png[Legenda número 4]
+ a| 
+Puxe cuidadosamente a extremidade esquerda do suporte de arranque para fora do respetivo encaixe.
+
+|===
+. Instale o suporte de arranque no controlador de substituição:
++
+.. Faça deslizar a extremidade da tomada do suporte de arranque para o respetivo encaixe.
+.. Na extremidade oposta do suporte de arranque, prima e mantenha premida a patilha azul (na posição aberta), empurre suavemente a extremidade do suporte de arranque até parar e, em seguida, solte a patilha para bloquear o suporte de arranque.
+
+
+
+
+
+
+== Passo 7: Mova os módulos de e/S.
+
+Mova os módulos de e/S e quaisquer módulos de supressão de e/S para o controlador de substituição.
+
+. Desconete o cabeamento de um dos módulos de e/S.
++
+Certifique-se de etiquetar os cabos para que você saiba de onde eles vieram.
+
+. Retire o módulo de e/S do controlador desativado:
++
+Certifique-se de manter o controle de qual slot o módulo de e/S estava.
+
++
+Se estiver a remover o módulo de e/S na ranhura 4, certifique-se de que a pega do controlador do lado direito está na posição vertical para permitir o acesso ao módulo de e/S.
+
++
+image::../media/drw_g_io_module_replace_ieops-1900.svg[Remova o módulo de e/S.]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Rode o parafuso de aperto manual do módulo de e/S no sentido contrário ao dos ponteiros do relógio para soltar.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+Puxe o módulo de e/S para fora do controlador usando a aba da etiqueta da porta à esquerda e o parafuso de aperto manual.
+
+|===
+. Instale o módulo de e/S no controlador de substituição:
++
+.. Alinhe o módulo de e/S com as extremidades da ranhura.
+.. Empurre cuidadosamente o módulo de e/S totalmente para dentro da ranhura, certificando-se de que assenta corretamente o módulo no conetor.
++
+Você pode usar a aba à esquerda e o parafuso de aperto manual para empurrar o módulo de e/S.
+
+.. Rode o parafuso de aperto manual no sentido dos ponteiros do relógio para apertar.
+
+
+. Repita estas etapas para mover os módulos de e/S restantes e quaisquer módulos de supressão de e/S para o controlador de substituição.
+
+
+
+
+== Passo 8: Instale o controlador
+
+Reinstale o controlador no chassi e reinicialize-o.
+
+.Sobre esta tarefa
+A ilustração a seguir mostra a operação das alças do controlador (do lado esquerdo de um controlador) ao reinstalar o controlador e pode ser usada como referência para as demais etapas de reinstalação do controlador.
+
+image::../media/drw_g_and_t_handles_reinstall_ieops-1838.svg[operação da alavanca do controlador para instalar um controlador]
+
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Se tiver girado as pegas do controlador na vertical (junto às patilhas) para as afastar enquanto efetua a manutenção do controlador, rode-as para a posição horizontal.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+Empurre as alças para reinserir o controlador no chassi até meio e, quando instruído, empurre até que o controlador esteja totalmente assentado.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Legenda número 3]
+ a| 
+Rode as pegas para a posição vertical e bloqueie-as com as patilhas de bloqueio.
+
+|===
+.Passos
+. Feche a tampa do controlador e rode o parafuso de aperto manual no sentido dos ponteiros do relógio até ficar apertado.
+. Introduza o controlador a meio caminho no chassis.
++
+Alinhe a parte traseira do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o controlador utilizando as pegas.
+
++
+
+NOTE: Não introduza completamente o controlador no chassis até ser instruído a fazê-lo.
+
+. Conete o cabo do console à porta do console no controlador e ao laptop para que o laptop receba mensagens de console quando o controlador for reinicializado.
+. Coloque totalmente o controlador no chassis:
++
+.. Empurre firmemente as alças até que o controlador atenda ao plano médio e esteja totalmente assentado.
++
+
+NOTE: Não utilize força excessiva ao deslizar o controlador para dentro do chassis; pode danificar os conetores.
+
+.. Rode as pegas do controlador para cima e bloqueie-as com as patilhas.
++
+
+NOTE: O controlador começa a inicializar assim que estiver totalmente assentado no chassi.
+
+
+
+. Leve o controlador para o prompt Loader pressionando CTRL-C para abortar o AUTOBOOT.
+. Defina a hora e a data no controlador:
++
+Certifique-se de que está no prompt Loader do controlador.
+
++
+.. Apresentar a data e a hora no controlador:
++
+`show date`
+
++
+
+NOTE: O padrão de hora e data está em GMT. Tem a opção de apresentar na hora local e no modo 24hrD.
+
+.. Defina a hora atual em GMT:
++
+`set time hh:mm:ss`
+
++
+Você pode obter o GMT atual do nó saudável:
+
++
+`date -u`
+
+.. Defina a data atual em GMT:
++
+`set date mm/dd/yyyy`
+
++
+Você pode obter o GMT atual do nó saudável
+`date -u`
+
+
+
+. Recable o controlador conforme necessário.
+. Reconecte o cabo de alimentação à fonte de alimentação (PSU).
++
+Uma vez que a energia é restaurada para a PSU, o LED de status deve estar verde.
+
++
+[cols="1,2"]
+|===
+| Se você está reconetando um... | Então... 
+
+
+ a| 
+PSU CA
+ a| 
+.. Ligue o cabo de alimentação à PSU.
+.. Fixe o cabo de alimentação com o fixador do cabo de alimentação.
+
+
+
+
+ a| 
+FONTE DE ALIMENTAÇÃO CC
+ a| 
+.. Ligue o conetor do cabo de alimentação DC D-SUB à PSU.
+.. Aperte os dois parafusos de orelhas para fixar o conetor do cabo de alimentação D-SUB DC à PSU.
+
+
+|===
+
+
+.O que se segue?
+Depois de substituir o controlador FAS50 com problemas, você precisa link:controller-replace-system-config-restore-and-verify.html["restaure a configuração do sistema"].

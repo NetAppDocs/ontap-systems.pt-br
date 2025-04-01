@@ -41,6 +41,8 @@ O valor para HA-State pode ser um dos seguintes:
 
 +
 ** `ha`
+** `mcc` (não suportado)
+** `mccip` (Não suportado em sistemas ASA)
 ** `non-ha` (não suportado)
 
 

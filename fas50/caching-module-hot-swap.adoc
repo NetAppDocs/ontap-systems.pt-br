@@ -1,0 +1,74 @@
+---
+permalink: fas50/caching-module-hot-swap.html 
+sidebar: sidebar 
+keywords: fas50, hot swap, replace, Flash Cache 
+summary: 'Você pode trocar a quente um módulo NVMe SSD Flash Cache (módulo de armazenamento em cache) da mesma capacidade do mesmo ou de outro fornecedor compatível.' 
+---
+= Hot-swap um módulo de cache - FAS50
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode trocar a quente um módulo de armazenamento em cache SSD NVMe (módulo Flash Cache) da mesma capacidade do mesmo ou de outro fornecedor compatível.
+
+.Antes de começar
+Dependendo da situação, seu sistema de storage precisa atender a certos critérios:
+
+* Seu sistema de armazenamento deve ter o sistema operacional apropriado para o módulo de armazenamento em cache que você está instalando.
+* O módulo de armazenamento em cache de substituição deve ter a mesma capacidade que o módulo de armazenamento em cache com falha, mas pode ser de um fornecedor compatível diferente.
+* Todos os outros componentes do sistema de armazenamento devem estar a funcionar corretamente; caso contrário, contacte https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de continuar.
+
+
+.Passos
+. Aterre-se corretamente.
+. Localize o módulo de armazenamento em cache com falha pelo LED âmbar de atenção aceso na parte frontal do módulo de armazenamento em cache.
++
+Um módulo de armazenamento em cache pode estar no compartimento de unidade 0 ou 23.
+
+. Remova o módulo de armazenamento em cache:
++
+image::../media/drw_fas50_flash_cache_module_replace_ieops-2173.svg[gráfico de etapas de substituição do módulo de armazenamento em cache fas50]
+
++
+[cols="20%,80%"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Prima o botão de libertação na face do módulo para abrir o manípulo do excêntrico.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+Rode o manípulo do excêntrico para baixo para desengatar o módulo do plano médio.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Legenda número 3]
+ a| 
+Deslize o módulo para fora do compartimento de unidade usando a alça do came e apoiando o módulo com a outra mão.
+
+Ao remover um módulo, utilize sempre duas mãos para suportar o seu peso.
+
+|===
+. Aguarde, no mínimo, 70 segundos antes de inserir o módulo de armazenamento em cache de substituição.
+. Instale o módulo de armazenamento em cache de substituição:
++
+.. Com o manípulo do excêntrico na posição aberta, utilize as duas mãos para inserir o módulo.
+.. Empurre suavemente até o módulo parar.
+.. Feche a pega do came de forma a que o módulo fique totalmente assente no plano médio e a pega encaixe no lugar.
++
+Certifique-se de que fecha lentamente a pega do excêntrico de forma a que fique corretamente alinhada com a face do módulo.
+
+
+
+. Verifique se o LED de atividade (verde) do módulo está aceso.
+. Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"^] página para obter mais informações.
+

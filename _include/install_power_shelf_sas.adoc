@@ -9,7 +9,7 @@ Cada prateleira é distinguida por um ID de prateleira exclusivo. Esse ID garant
 +
 Se você tiver compartimentos internos (storage), que estão integrados às controladoras, receberá um ID de compartimento fixo de 00 GB a elas.
 
-* É necessário desligar o ciclo de energia de uma prateleira (desligue o interrutor de alimentação na parte traseira da prateleira SAS, aguarde o período de tempo adequado e, em seguida, ligue novamente a alimentação) para que a ID da prateleira entre em vigor.
+* É necessário desligar o ciclo de alimentação de uma gaveta (desligue o interrutor de alimentação em cada uma das fontes de alimentação da gaveta SAS, aguarde o período de tempo adequado e, em seguida, ligue novamente a alimentação) para que a ID da gaveta entre em vigor.
 
 
 .Passos
