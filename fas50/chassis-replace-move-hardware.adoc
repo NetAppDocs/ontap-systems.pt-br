@@ -2,7 +2,7 @@
 permalink: fas50/chassis-replace-move-hardware.html 
 sidebar: sidebar 
 keywords: fas50, move hardware components, replace the chassis 
-summary: 'Substitua o chassi do seu sistema FAS50 quando uma falha de hardware o exigir. O processo de substituição envolve a remoção dos controladores e das unidades de fonte de alimentação (PSUs), a remoção de quaisquer módulos de cache, a instalação do chassi de substituição e a reinstalação dos componentes do chassi.' 
+summary: 'Substitua o chassi do sistema de storage FAS50 quando uma falha de hardware exigir isso. O processo de substituição envolve a remoção dos controladores e das unidades de fonte de alimentação (PSUs), a remoção de quaisquer módulos de cache, a instalação do chassi de substituição e a reinstalação dos componentes do chassi.' 
 ---
 = Substitua o chassis - FAS50
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Substitua o chassi do seu sistema FAS50 quando uma falha de hardware o
 
 
 [role="lead"]
-Substitua o chassi do seu sistema FAS50 quando uma falha de hardware o exigir. O processo de substituição envolve a remoção dos controladores e das unidades de fonte de alimentação (PSUs), a remoção de quaisquer módulos de cache, a instalação do chassi de substituição e a reinstalação dos componentes do chassi.
+Substitua o chassi do sistema de storage FAS50 quando uma falha de hardware exigir isso. O processo de substituição envolve a remoção dos controladores, remoção de quaisquer módulos de cache e espaços em branco da unidade, instalação do chassi de substituição e reinstalação dos componentes do chassi.
 
 
 
@@ -132,7 +132,7 @@ Você precisa remover quaisquer módulos de cache e espaços em branco de unidad
 . Remova os módulos de armazenamento em cache e os espaços em branco da unidade:
 +
 
-NOTE: Mantenha o controle de qual compartimento de unidade cada módulo de armazenamento em cache e unidade em branco foram removidos porque eles devem ser instalados nos mesmos compartimentos de unidade no chassi de substituição.
+NOTE: Mantenha o controle de qual compartimento de unidade cada módulo de armazenamento em cache foi removido porque eles devem ser instalados nos mesmos compartimentos de unidade no chassi de substituição.
 
 +
 image::../media/drw_fas50_flash_cache_module_replace_ieops-2173.svg[gráfico de etapas de substituição do módulo de armazenamento em cache fas50]

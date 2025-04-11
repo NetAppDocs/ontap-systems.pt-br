@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff c30, aff c60, prerequisite, replace the controller module 
 summary: Antes de substituir o controlador no seu sistema AFF C30 ou AFF C60, certifique-se de que cumpre os requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, verificar se você tem o controlador de substituição correto e salvar a saída do console do controlador em um arquivo de log de texto. 
 ---
-= Requisito para substituir o controlador - AFF C30 e AFF C60
+= Requisitos para substituir o controlador - AFF C30 e AFF C60
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -51,4 +51,4 @@ Você pode desativá-los digitando o `system location-led _off_` comando. Se nã
 
 
 .O que se segue?
-Depois de analisar os requisitos para substituir o controlador AFF C30 ou AFF C60, é necessário link:controller-replace-shutdown.html["desligue o controlador desativado"].
+Depois de analisar os requisitos para substituir o controlador afetado, é link:controller-replace-shutdown.html["desligue o controlador desativado"]necessário .

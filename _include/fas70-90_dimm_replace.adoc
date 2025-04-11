@@ -1,17 +1,11 @@
----
-permalink: a70-90/fan-swap-out.html 
-sidebar: sidebar 
-keywords: aff a70, aff a90, aff, swap, out, fan, module, interrupt, service, sequence, task, hot-swap, hot-swap a fan module 
-summary: Substitua um módulo de ventilador no sistema AFF A70 ou AFF A90 quando um ventilador falhar ou não estiver funcionando de forma eficiente, o que pode afetar o resfriamento do sistema e o desempenho geral. O processo de substituição envolve desligar o controlador prejudicado, remover o controlador, substituir o ventilador, reinstalar o controlador e devolver a peça com falha ao NetApp. 
----
-= Substitua um módulo da ventoinha - AFF A70 e AFF A90
+= Passo 1: Desligue o controlador desativado
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
 
-[role="lead"]
-Substitua um módulo de ventilador no sistema AFF A70 ou AFF A90 quando um ventilador falhar ou não estiver funcionando de forma eficiente, pois isso pode afetar o resfriamento do sistema e o desempenho geral. O processo de substituição envolve desligar o controlador, remover o controlador, substituir o ventilador, reinstalar o controlador e devolver a peça com falha ao NetApp.
+.Antes de começar
+* Certifique-se de que todos os outros componentes do sistema estão a funcionar corretamente; caso contrário, tem de contactar a assistência técnica.
+* Certifique-se de que substitui o componente com falha por um componente de substituição que recebeu da NetApp.
+
 
 
 
@@ -151,13 +145,9 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 
 == Passo 2: Remova o módulo do controlador
 
-Deve remover o módulo do controlador do chassis quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
+Você deve remover o módulo do controlador do gabinete quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
 
-. Certifique-se de que todas as unidades no chassis estão firmemente assentadas contra o plano médio, utilizando os polegares para empurrar cada unidade até sentir um batente positivo.
-+
-image::../media/drw_a800_drive_seated_IEOPS-960.svg[Acionamentos do disco do assento]
-
-. Verifique o NVRAM âmbar se o LED de status localizado no slot 4/5 na parte traseira do módulo do controlador desativado está desligado. Procure o ícone NV.
+. Verifique o LED de status do NVRAM localizado no slot 4/5 do sistema. Há também um LED NVRAM no painel frontal do módulo do controlador. Procure o ícone NV:
 +
 image::../media/drw_a1K-70-90_nvram-led_ieops-1463.svg[Gráfico de localização do LED de estado e atenção do NVRAM]
 
@@ -185,22 +175,71 @@ LED de atenção NVRAM
 
 
 . Se você ainda não está aterrado, aterre-se adequadamente.
-. Desconete os cabos da fonte de alimentação do módulo do controlador das fontes de alimentação (PSU) do módulo do controlador.
+. Na parte da frente da unidade, prenda os dedos nos orifícios dos cames de bloqueio, aperte as patilhas nas alavancas do excêntrico e, com cuidado, mas rode firmemente ambas as travas na sua direção ao mesmo tempo.
 +
-
-NOTE: Se o sistema tiver alimentação CC, desligue o bloco de alimentação das PSUs.
-
-. Desconete os cabos do sistema e os módulos SFP e QSFP (se necessário) do módulo do controlador, mantendo o controle de onde os cabos estavam conetados.
-+
-Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar o dispositivo de gerenciamento de cabos, os cabos sejam organizados.
-
-. Remova o dispositivo de gerenciamento de cabos do módulo do controlador.
-. Prima ambos os trincos de bloqueio para baixo e, em seguida, rode ambos os trincos para baixo ao mesmo tempo.
-+
-O módulo do controlador desloca-se ligeiramente para fora do chassis.
+O módulo do controlador move-se ligeiramente para fora do compartimento.
 
 +
-image::../media/drw_a70-90_pcm_remove_replace_ieops-1365.svg[Controlador remover gráfico]
+image::../media/drw_a1k_pcm_remove_replace_ieops-1375.svg[Controlador remover gráfico]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+| Travas do came de travamento 
+|===
+. Deslize o módulo do controlador para fora do compartimento e coloque-o em uma superfície plana e estável.
++
+Certifique-se de que suporta a parte inferior do módulo do controlador enquanto o desliza para fora do compartimento.
+
+
+
+
+
+== Etapa 3: Substitua um DIMM
+
+Você deve substituir um DIMM quando o sistema relatar uma condição de falha permanente para esse DIMM.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Abra a conduta de ar do controlador na parte superior do controlador.
++
+.. Insira os dedos nas reentrâncias nas extremidades distantes da conduta de ar.
+.. Levante a conduta de ar e rode-a para cima o mais longe possível.
+
+
+. Localize os DIMMs no módulo do controlador e identifique o DIMM para substituição.
++
+As localizações dos DIMMs dependem do modelo do sistema:
+
++
+[cols="1,4"]
+|===
+
+
+| Modelo | Localização do slot DIMM 
+
+
+| FAS70  a| 
+Slots 3, 10, 19, 26
+
+
+
+ a| 
+FAS90
+ a| 
+Slots 3, 7, 10, 14, 19, 23, 26, 30
+
+|===
+. Ejete o DIMM de seu slot, empurrando lentamente as duas abas do ejetor do DIMM em ambos os lados do DIMM e, em seguida, deslize o DIMM para fora do slot.
++
+
+IMPORTANT: Segure cuidadosamente o DIMM pelas bordas para evitar a pressão nos componentes da placa de circuito DIMM.
+
++
+image::../media/drw_a1k_dimms_ieops-1512.svg[DIMM Substituir]
 
 +
 [cols="1,4"]
@@ -210,94 +249,43 @@ image::../media/drw_a70-90_pcm_remove_replace_ieops-1365.svg[Controlador remover
  a| 
 image:../media/icon_round_1.png["Legenda número 1"]
  a| 
-Trinco de bloqueio
-
-
-
- a| 
-image:../media/icon_round_2.png["Legenda número 2"]
- a| 
-Pino de bloqueio
+Guias de ejetor DIMM e DIMM
 
 |===
-. Deslize o módulo do controlador para fora do chassis e coloque-o numa superfície plana e estável.
+. Remova o DIMM de substituição do saco de transporte antiestático, segure o DIMM pelos cantos e alinhe-o com o slot.
 +
-Certifique-se de que suporta a parte inferior do módulo do controlador enquanto o desliza para fora do chassis.
+O entalhe entre os pinos no DIMM deve estar alinhado com a guia no soquete.
 
-
-
-
-
-== Etapa 3: Substitua o ventilador
-
-Para substituir uma ventoinha, retire o módulo da ventoinha com avaria e substitua-o por um novo módulo da ventoinha.
-
-. Identifique o módulo do ventilador que você deve substituir verificando as mensagens de erro do console.
-. Retire o módulo da ventoinha apertando as patilhas de bloqueio na parte lateral do módulo da ventoinha e, em seguida, levantando o módulo da ventoinha diretamente para fora do módulo do controlador.
+. Certifique-se de que as abas do ejetor DIMM no conetor estão na posição aberta e insira o DIMM diretamente no slot.
 +
-image::../media/drw_a70-90_fan_remove_replace_ieops-1366.svg[Substituição da ventoinha]
+O DIMM encaixa firmemente no slot, mas deve entrar facilmente. Caso contrário, realinhar o DIMM com o slot e reinseri-lo.
 
 +
-[cols="1,4"]
-|===
 
+IMPORTANT: Inspecione visualmente o DIMM para verificar se ele está alinhado uniformemente e totalmente inserido no slot.
 
- a| 
-image:../media/icon_round_1.png["Legenda número 1"]
-| Patilhas de bloqueio da ventoinha 
-
-
- a| 
-image:../media/icon_round_2.png["Legenda número 2"]
-| Módulo da ventoinha 
-|===
-. Alinhe as extremidades do módulo da ventoinha de substituição com a abertura no módulo do controlador e, em seguida, deslize o módulo da ventoinha de substituição para o módulo do controlador até que os trincos de bloqueio encaixem no lugar.
+. Empurre com cuidado, mas firmemente, na borda superior do DIMM até que as abas do ejetor se encaixem no lugar sobre os entalhes nas extremidades do DIMM.
+. Feche a conduta de ar do controlador.
 
 
 
 
-== Etapa 4: Reinstale o módulo do controlador
+== Passo 4: Instale o controlador
 
-Reinstale o módulo do controlador e reinicie-o.
+Reinstale o módulo do controlador e inicialize-o.
 
 . Certifique-se de que a conduta de ar está completamente fechada, rodando-a até onde for.
 +
 Ele deve estar alinhado com a chapa metálica do módulo do controlador.
 
-. Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
+. Alinhe a extremidade do módulo do controlador com a abertura no compartimento e deslize o módulo do controlador para dentro do chassi com as alavancas giradas para longe da frente do sistema.
+. Assim que o módulo do controlador o impedir de deslizar para mais longe, rode as pegas do excêntrico para dentro até que fiquem presas por baixo das ventoinhas
 +
 
-NOTE: Não introduza completamente o módulo do controlador no chassis até ser instruído a fazê-lo.
-
-. Recable o sistema de armazenamento, conforme necessário.
-+
-Se você removeu os transcetores (QSFPs ou SFPs), lembre-se de reinstalá-los se estiver usando cabos de fibra ótica.
+NOTE: Não use força excessiva ao deslizar o módulo do controlador para dentro do compartimento para evitar danificar os conetores.
 
 +
-
-NOTE: Certifique-se de que o cabo da consola está ligado ao módulo do controlador reparado de forma a receber mensagens da consola quando for reiniciado. O controlador reparado recebe energia do controlador em estado de funcionamento e começa a reiniciar assim que estiver completamente encaixado no chassis.
-
-. Conclua a reinstalação do módulo do controlador:
-+
-.. Empurre firmemente o módulo do controlador para dentro do chassi até que ele atenda ao plano médio e esteja totalmente assentado.
-+
-Os trincos de bloqueio sobem quando o módulo do controlador está totalmente assente.
-
-+
-
-NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
-
-.. Rode os trincos de bloqueio para cima, para a posição de bloqueio.
-
-
-+
-
-NOTE: Se o controlador inicializar no prompt Loader, reinicialize-o com o `boot_ontap` comando.
-
-. Conete os cabos de alimentação às fontes de alimentação.
-+
-
-NOTE: Se você tiver fontes de alimentação CC, reconete o bloco de alimentação às fontes de alimentação depois que o módulo do controlador estiver totalmente encaixado no chassi.
+O módulo do controlador começa a inicializar assim que estiver totalmente encaixado no compartimento.
 
 . Devolva o controlador afetado ao funcionamento normal, devolvendo o respetivo armazenamento: `storage failover giveback -ofnode _impaired_node_name_`.
 . Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true`.

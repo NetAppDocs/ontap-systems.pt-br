@@ -37,11 +37,20 @@ Cada processo SCSI-blade deve estar em quórum com os outros nós no cluster. Qu
 
 
 .Passos
-. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport:
 +
-A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas: `cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+`system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
 
-. Desative a giveback automática a partir da consola do controlador saudável: `storage failover modify -node local -auto-giveback false`
++
+A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas:
+
++
+`cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Desative a giveback automática a partir da consola do controlador saudável:
++
+`storage failover modify -node local -auto-giveback false`
+
 +
 
 NOTE: Quando vir _do pretende desativar a auto-giveback?_, introduza `y`.
@@ -70,17 +79,25 @@ Pressione Ctrl-C e responda `y` quando solicitado.
  a| 
 Prompt do sistema ou prompt de senha
  a| 
-Assuma ou interrompa o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode _impaired_node_name_`
+Assuma ou interrompa o controlador prejudicado do controlador saudável:
 
-Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
+`storage failover takeover -ofnode _impaired_node_name_ -halt _true_`
+
+O parâmetro _-halt True_ traz para o prompt Loader.
 
 |===
 
 
 
 
-== Passo 2: Substitua o módulo NVRAM
+== Etapa 2: Substitua o módulo NVRAM ou o DIMM NVRAM
 
+Substitua o módulo NVRAM ou DIMMs NVRAM usando a opção a seguir apropriada.
+
+[role="tabbed-block"]
+====
+.Opção 1: Substitua o módulo NVRAM
+--
 Para substituir o módulo NVRAM, localize-o no slot 4/5 no gabinete e siga a sequência específica de etapas.
 
 . Se você ainda não está aterrado, aterre-se adequadamente.
@@ -124,10 +141,9 @@ Patilhas de bloqueio do DIMM
 . Rode o tabuleiro de gestão de cabos para cima até à posição fechada.
 
 
-
-
-== Etapa 3: Substitua um DIMM NVRAM
-
+--
+.Opção 2: Substitua o DIMM NVRAM
+--
 Para substituir DIMMs NVRAM no módulo NVRAM, você deve remover o módulo NVRAM e, em seguida, substituir o DIMM de destino.
 
 . Se você ainda não está aterrado, aterre-se adequadamente.
@@ -170,9 +186,11 @@ NOTE: Consulte a etiqueta do mapa da FRU na lateral do módulo NVRAM para determ
 . Rode o tabuleiro de gestão de cabos para cima até à posição fechada.
 
 
+--
+====
 
 
-== Passo 4: Reinicie o controlador
+== Passo 3: Reinicie o controlador
 
 Depois de substituir a FRU, você deve reiniciar o módulo do controlador.
 
@@ -181,7 +199,7 @@ Depois de substituir a FRU, você deve reiniciar o módulo do controlador.
 
 
 
-== Etapa 5: Verifique o estado do controlador
+== Etapa 4: Verifique o estado do controlador
 
 Você deve confirmar o estado do controlador dos controladores conetados ao pool de discos ao inicializar o controlador.
 

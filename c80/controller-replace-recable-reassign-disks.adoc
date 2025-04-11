@@ -108,7 +108,7 @@ Redefina a encriptação e volte a colocar o controlador em funcionamento normal
 
 .Passos
 . Se o volume raiz estiver criptografado com o Gerenciador de chaves Externo e o cabo do console estiver conetado ao nó de substituição, insira `boot_ontap menu` e selecione a opção `11`.
-. Responda `y` ou `n` às seguintes perguntas:
+. Se essas perguntas aparecerem, responda `y` ou `n` conforme apropriado:
 +
 Você tem uma cópia do arquivo /cfcard/kmip/certs/client.crt? não é possível aceder a este site
 
@@ -117,9 +117,6 @@ Você tem uma cópia do arquivo /cfcard/kmip/certs/client.key? não é possível
 
 +
 Você tem uma cópia do arquivo /cfcard/kmip/certs/CA.pem? não é possível aceder a este site
-
-+
-OU
 
 +
 Você tem uma cópia do arquivo /cfcard/kmip/servers.cfg? não é possível aceder a este site

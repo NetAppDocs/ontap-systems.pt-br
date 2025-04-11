@@ -17,6 +17,122 @@ Depois de instalar o hardware de rack para seu sistema de storage FAS70 0r FAS90
 
 == Etapa 1: Ligue a prateleira e atribua o ID da prateleira
 
+[role="tabbed-block"]
+====
+.Opção 1: NS224 prateleiras
+--
+Cada prateleira é distinguida por um ID de prateleira exclusivo. Esse ID garante que o compartimento seja distinto na configuração do sistema de storage.
+
+.Antes de começar
+Certifique-se de que tem um clipe de papel ou uma caneta esferográfica de ponta estreita para definir NS224 IDs de prateleira de armazenamento.
+
+.Sobre esta tarefa
+* Um ID válido do compartimento é de 01 a 99.
++
+Se você tiver compartimentos internos (storage), que estão integrados às controladoras, receberá um ID de compartimento fixo de 00 GB a elas.
+
+* É necessário desligar um compartimento (Desconete os dois cabos de energia, aguarde o tempo apropriado e, em seguida, conectá-los novamente) para que a ID do compartimento entre em vigor.
+
+
+.Passos
+. Ligue a gaveta conetando os cabos de alimentação primeiro à gaveta, prendendo-os no lugar com o retentor do cabo de alimentação e, em seguida, conetando os cabos de alimentação a fontes de alimentação em circuitos diferentes.
++
+A prateleira liga-se e arranca automaticamente quando ligada à fonte de alimentação.
+
+. Remova a tampa da extremidade esquerda para acessar o botão ID da prateleira atrás da placa frontal.
++
+image::../media/drw_a900_oie_change_ns224_shelf_ID_ieops-836.svg[Altere o ID do compartimento NS224]
+
++
+[cols="20%,80%"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Tampa da extremidade da prateleira
+
+
+
+ a| 
+image::../media/icon_round_2.png[[Legenda número 2]
+ a| 
+Placa frontal da prateleira
+
+
+
+ a| 
+image::../media/icon_round_3.png[[Legenda número 3]
+ a| 
+Número de ID do compartimento
+
+
+
+ a| 
+image::../media/icon_round_4.png[[Legenda número 4]
+ a| 
+Botão ID do compartimento
+
+|===
+. Altere o primeiro número do ID do compartimento:
++
+.. Insira a extremidade reta de um clipe de papel ou caneta esferográfica com ponta fina no pequeno orifício para pressionar o botão ID da prateleira.
+.. Pressione e segure o botão ID do compartimento até que o primeiro número no visor digital pisque e solte o botão.
++
+Pode demorar até 15 segundos para o número piscar. Isto ativa o modo de programação da ID da prateleira.
+
++
+
+NOTE: Se a ID demorar mais de 15 segundos a piscar, prima e mantenha premido o botão ID da prateleira novamente, certificando-se de que o pressiona completamente.
+
+.. Pressione e solte o botão ID do compartimento para avançar o número até atingir o número desejado de 0 a 9.
++
+A duração de cada imprensa e liberação pode ser tão curta quanto um segundo.
+
++
+O primeiro número continua a piscar.
+
+
+
+. Altere o segundo número do ID do compartimento:
++
+.. Prima e mantenha premido o botão até o segundo número no visor digital piscar.
++
+Pode demorar até três segundos para o número piscar.
+
++
+O primeiro número no visor digital pára de piscar.
+
+.. Pressione e solte o botão ID do compartimento para avançar o número até atingir o número desejado de 0 a 9.
++
+O segundo número continua a piscar.
+
+
+
+. Bloqueie o número pretendido e saia do modo de programação premindo e mantendo premido o botão ID da prateleira até que o segundo número pare de piscar.
++
+Pode demorar até três segundos para o número parar de piscar.
+
++
+Ambos os números no visor digital começam a piscar e o LED âmbar acende-se após cerca de cinco segundos, alertando-o de que a ID pendente do compartimento ainda não entrou em vigor.
+
+. Ligue o compartimento por pelo menos 10 segundos para fazer com que o ID do compartimento entre em vigor.
++
+.. Desconete o cabo de alimentação de ambas as fontes de alimentação da prateleira.
+.. Aguarde 10 segundos.
+.. Conete os cabos de alimentação de volta às fontes de alimentação do compartimento para concluir o ciclo de energia.
++
+Uma fonte de alimentação é ligada assim que o cabo de alimentação é ligado. O LED bicolor deve acender-se a verde.
+
+
+
+. Volte a colocar a tampa da extremidade esquerda.
+
+
+--
+.Opção 2: Compartimentos SAS
+--
 Cada prateleira é distinguida por um ID de prateleira exclusivo. Esse ID garante que o compartimento seja distinto na configuração do sistema de storage.
 
 .Sobre esta tarefa
@@ -122,6 +238,8 @@ Quando uma fonte de alimentação é ligada, o LED bicolor deve acender-se a ver
 . Volte a colocar a tampa da extremidade esquerda.
 
 
+--
+====
 
 
 == Passo 2: Ligue os controladores

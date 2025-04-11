@@ -45,10 +45,10 @@ O estado HA deve ser o mesmo para todos os componentes.
 
 . Se o estado do sistema exibido do controlador não corresponder à configuração do sistema de armazenamento, defina o `HA` estado do controlador:
 +
-`ha-config modify controller ha-state`
+`ha-config modify controller ha`
 
 +
-O valor para HA-State pode ser um dos seguintes:
+O valor para o estado HA pode ser um dos seguintes:
 
 +
 ** `ha`
@@ -81,4 +81,4 @@ Se você vir algum problema, verifique o cabeamento e recoloque os cabos.
 
 
 .O que se segue?
-Depois de restaurar e verificar a configuração do sistema para o seu sistema AFF C30 ou AFF C60, é necessário link:controller-replace-recable-reassign-disks.html["devolva o controlador"].
+Depois de restaurar e verificar a configuração do sistema, você precisa link:controller-replace-recable-reassign-disks.html["devolva o controlador"].

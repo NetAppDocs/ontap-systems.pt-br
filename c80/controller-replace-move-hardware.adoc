@@ -219,7 +219,27 @@ Mova os DIMMs para o módulo do controlador de substituição.
 .. Levante a conduta de ar e rode-a para cima o mais longe possível.
 
 
-. Localize os DIMMs do sistema na placa-mãe.
+. Localize os DIMMs do sistema na placa-mãe, usando o mapa DIMM na parte superior da conduta de ar.
++
+Os locais de DIMM, por modelo, estão listados na seguinte tabela:
+
++
+[cols="1,4"]
+|===
+
+
+| Modelo | Localização do slot DIMM 
+
+
+ a| 
+FAS70
+| 3, 10, 19, 26 
+
+
+ a| 
+FAS90
+| 3, 7, 10, 14, 19, 23, 26, 30 
+|===
 +
 image::../media/drw_a70_90_dimm_ieops-1513.svg[Mapa de DIMM]
 

@@ -34,10 +34,10 @@ O estado HA deve ser o mesmo para todos os componentes.
 
 . Se o estado do sistema exibido do controlador não corresponder à configuração do sistema de armazenamento, defina o `HA` estado do controlador:
 +
-`ha-config modify controller ha-state`
+`ha-config modify controller ha`
 
 +
-O valor para HA-State pode ser um dos seguintes:
+O valor para o estado HA pode ser um dos seguintes:
 
 +
 ** `ha`

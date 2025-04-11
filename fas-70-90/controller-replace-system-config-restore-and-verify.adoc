@@ -37,9 +37,9 @@ NOTE: Se você vir _INCOMPATIBILIDADE DE PERSONALIDADE_, entre em Contato com o 
 +
 O estado HA deve ser o mesmo para todos os componentes.
 
-. Se o estado do sistema apresentado do módulo do controlador não corresponder à configuração do sistema, defina o `HA` estado para o módulo do controlador: `ha-config modify controller ha-state`
+. Se o estado do sistema apresentado do módulo do controlador não corresponder à configuração do sistema, defina o `HA` estado para o módulo do controlador: `ha-config modify controller ha`
 +
-O valor para HA-State pode ser um dos seguintes:
+O valor para o estado HA pode ser um dos seguintes:
 
 +
 ** `ha`

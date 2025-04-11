@@ -39,11 +39,20 @@ Cada processo SCSI-blade deve estar em quórum com os outros nós no cluster. Qu
 
 
 .Passos
-. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport:
 +
-A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas: `cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+`system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
 
-. Desative a giveback automática a partir da consola do controlador saudável: `storage failover modify -node local -auto-giveback false`
++
+A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas:
+
++
+`cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Desative a giveback automática a partir da consola do controlador saudável:
++
+`storage failover modify -node local -auto-giveback false`
+
 +
 
 NOTE: Quando vir _do pretende desativar a auto-giveback?_, introduza `y`.
@@ -72,9 +81,11 @@ Pressione Ctrl-C e responda `y` quando solicitado.
  a| 
 Prompt do sistema ou prompt de senha
  a| 
-Assuma ou interrompa o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode _impaired_node_name_`
+Assuma ou interrompa o controlador prejudicado do controlador saudável:
 
-Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
+`storage failover takeover -ofnode _impaired_node_name_ -halt _true_`
+
+O parâmetro _-halt True_ traz para o prompt Loader.
 
 |===
 
@@ -85,15 +96,27 @@ Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctr
 Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
 
 * Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
-* Você deve ter confirmado que o estado de configuração do MetroCluster está configurado e que os nós estão em um estado ativado e normal (`metrocluster node show`).
+* Você deve ter confirmado que o estado de configuração do MetroCluster está configurado e que os nós estão em um estado ativado e normal:
++
+`metrocluster node show`
+
 
 
 .Passos
-. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport:
 +
-A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
+`system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
 
-. Desative a giveback automática a partir da consola do controlador saudável: `storage failover modify –node local -auto-giveback false`
++
+A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas:
+
++
+`cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Desative a giveback automática a partir da consola do controlador saudável:
++
+`storage failover modify –node local -auto-giveback false`
+
 . Leve o controlador prejudicado para o prompt Loader:
 +
 [cols="1,2"]
@@ -118,9 +141,11 @@ Pressione Ctrl-C e responda `y` quando solicitado.
  a| 
 Prompt do sistema ou prompt de senha (digite a senha do sistema)
  a| 
-Assuma ou interrompa o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode _impaired_node_name_`
+Assuma ou interrompa o controlador prejudicado do controlador saudável:
 
-Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
+`storage failover takeover -ofnode _impaired_node_name_ -halt _true_`
+
+O parâmetro _-halt True_ traz para o prompt Loader.
 
 |===
 
@@ -197,6 +222,9 @@ Você deve substituir um DIMM quando o sistema relatar uma condição de falha p
 
 
 . Localize os DIMMs no módulo do controlador e identifique o DIMM para substituição.
++
+Use o mapa FRU no duto de ar do controlador para localizar o slot DIMM.
+
 . Ejete o DIMM de seu slot, empurrando lentamente as duas abas do ejetor do DIMM em ambos os lados do DIMM e, em seguida, deslize o DIMM para fora do slot.
 +
 

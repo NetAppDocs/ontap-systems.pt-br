@@ -21,11 +21,20 @@ Cada processo SCSI-blade deve estar em quórum com os outros nós no cluster. Qu
 
 
 .Passos
-. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport: `system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport:
 +
-A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas: `cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+`system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
 
-. Desative a giveback automática a partir da consola do controlador saudável: `storage failover modify -node local -auto-giveback false`
++
+A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas:
+
++
+`cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Desative a giveback automática a partir da consola do controlador saudável:
++
+`storage failover modify -node local -auto-giveback false`
+
 +
 
 NOTE: Quando vir _do pretende desativar a auto-giveback?_, introduza `y`.
@@ -54,9 +63,11 @@ Pressione Ctrl-C e responda `y` quando solicitado.
  a| 
 Prompt do sistema ou prompt de senha
  a| 
-Assuma ou interrompa o controlador prejudicado do controlador saudável: `storage failover takeover -ofnode _impaired_node_name_`
+Assuma ou interrompa o controlador prejudicado do controlador saudável:
 
-Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctrl-C e responda `y`.
+`storage failover takeover -ofnode _impaired_node_name_ -halt _true_`
+
+O parâmetro _-halt True_ traz para o prompt Loader.
 
 |===
 

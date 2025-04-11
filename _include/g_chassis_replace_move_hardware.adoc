@@ -121,7 +121,7 @@ Você precisa remover quaisquer módulos de cache e espaços em branco de unidad
 . Remova os módulos de armazenamento em cache e os espaços em branco da unidade:
 +
 
-NOTE: Mantenha o controle de qual compartimento de unidade cada módulo de armazenamento em cache e unidade em branco foram removidos porque eles devem ser instalados nos mesmos compartimentos de unidade no chassi de substituição.
+NOTE: Mantenha o controle de qual compartimento de unidade cada módulo de armazenamento em cache foi removido porque eles devem ser instalados nos mesmos compartimentos de unidade no chassi de substituição.
 
 +
 image::../media/drw_fas50_flash_cache_module_replace_ieops-2173.svg[gráfico de etapas de substituição do módulo de armazenamento em cache fas50]

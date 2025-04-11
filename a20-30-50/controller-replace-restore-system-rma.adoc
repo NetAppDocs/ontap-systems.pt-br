@@ -19,16 +19,18 @@ Para concluir a substituição do controlador para o seu sistema AFF A20, AFF A3
 
 Você deve instalar novas licenças para o nó _replacement_ se o nó prejudicado estiver usando recursos do ONTAP que exigem uma licença padrão (node-locked). Para recursos com licenças padrão, cada nó no cluster deve ter sua própria chave para o recurso.
 
-.Sobre esta tarefa
-Até instalar chaves de licença, os recursos que exigem licenças padrão continuam disponíveis para o nó _replacement_. No entanto, se o nó prejudicado for o único nó no cluster com uma licença para o recurso, nenhuma alteração de configuração será permitida.
+.Antes de começar
+Se o sistema estava executando inicialmente o ONTAP 9.10,1 ou posterior, use o procedimento documentado em  https://kb.netapp.com/on-prem/ontap/OHW/OHW-KBs/Post_Motherboard_Replacement_Process_to_update_Licensing_on_a_AFF_FAS_system#Internal_Notes^["Pós processo de substituição da placa-mãe para atualizar o licenciamento em plataformas ONTAP"]. Se não tiver certeza da versão inicial do ONTAP para o seu sistema, consulte link:https://hwu.netapp.com["NetApp Hardware Universe"^] para obter mais informações.
 
+.Sobre esta tarefa
+* Até instalar chaves de licença, os recursos que exigem licenças padrão continuam disponíveis para o nó _replacement_. No entanto, se o nó prejudicado for o único nó no cluster com uma licença para o recurso, nenhuma alteração de configuração será permitida.
++
 Além disso, o uso de recursos não licenciados no nó pode colocá-lo fora de conformidade com o seu contrato de licença, então você deve instalar a chave de licença de substituição ou chaves no nó _replacement_ o mais rápido possível.
 
-As chaves de licença devem estar no formato de 28 carateres.
+* As chaves de licença devem estar no formato de 28 carateres.
+* Você tem um período de carência de 90 dias para instalar as chaves de licença. Após o período de carência, todas as licenças antigas são invalidadas. Depois que uma chave de licença válida é instalada, você tem 24 horas para instalar todas as chaves antes que o período de carência termine.
+* Se o nó estiver em uma configuração do MetroCluster e todos os nós de um local tiverem sido substituídos, as chaves de licença devem ser instaladas no nó ou nós _replacement_ antes do switchback.
 
-Você tem um período de carência de 90 dias para instalar as chaves de licença. Após o período de carência, todas as licenças antigas são invalidadas. Depois que uma chave de licença válida é instalada, você tem 24 horas para instalar todas as chaves antes que o período de carência termine.
-
-Se o nó estiver em uma configuração do MetroCluster e todos os nós de um local tiverem sido substituídos, as chaves de licença devem ser instaladas no nó ou nós _replacement_ antes do switchback.
 
 .Passos
 . Se você precisar de novas chaves de licença, obtenha chaves de licença de substituição na https://mysupport.netapp.com/site/global/dashboard["Site de suporte da NetApp"] seção meu suporte em licenças de software.

@@ -145,7 +145,7 @@ Você pode adicionar um novo módulo de e/S a um sistema de armazenamento com sl
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . No controlador desativado, retire o módulo de supressão de e/S da ranhura de destino.
 +
-Os slots de e/S não utilizados devem ter o módulo de supressão instalado para evitar possíveis problemas térmicos.
+Slots de e/S não utilizados devem ter módulo de supressão instalado para evitar possíveis problemas térmicos e para conformidade com EMC.
 
 +
 image::../media/drw_g_io_blanking_module_replace_ieops-1901.svg[Retire um módulo de supressão de e/S.]
@@ -186,7 +186,7 @@ Se você instalou um módulo de e/S de storage, instale e faça o cabeamento das
 +
 Reiniciar o controlador prejudicado também reinicializa os módulos de e/S e outros componentes.
 
-. Devolver o controlador afetado do controlador parceiro: `storage failover giveback -ofnode _impaired_node_name_`
+. Devolver o controlador deficiente do controlador saudável: `storage failover giveback -ofnode _impaired_node_name_`
 . Repita estas etapas para adicionar um módulo de e/S ao outro controlador.
 . Restaure a giveback automática a partir da consola do controlador saudável: `storage failover modify -node local -auto-giveback _true_`
 . Se o AutoSupport estiver ativado, restaure (dessuprimir) a criação automática de casos: `system node autosupport invoke -node * -type all -message MAINT=END`
@@ -269,10 +269,10 @@ Se você instalou um módulo de e/S de storage, instale e faça o cabeamento das
 +
 Reiniciar o controlador prejudicado também reinicializa os módulos de e/S e outros componentes.
 
-. Devolver o controlador afetado do controlador parceiro: `storage failover giveback -ofnode _impaired_node_name_`
+. Devolver o controlador deficiente do controlador saudável: `storage failover giveback -ofnode _impaired_node_name_`
 . Restaure a giveback automática a partir da consola do controlador saudável: `storage failover modify -node local -auto-giveback _true_`
-. Se o AutoSupport estiver ativado, restaure (dessuprimir) criação automática de casos: Nó do sistema AutoSupport invoke -node * -type all -message
-. Se você instalou um módulo NIC, especifique o modo de uso para cada porta como _network_: `storage port modify -node *_<node name>_ -port *_<port name>_ -mode network`
+. Se o AutoSupport estiver ativado, restaure (dessuprimir) a criação automática de casos: `system node autosupport invoke -node * -type all -message MAINT=END`
+. Se você instalou um módulo NIC, especifique o modo de uso para cada porta como _network_: `storage port modify -node _node_name_ -port _port_name_ -mode _network_`
 . Repita estes passos para o outro controlador.
 
 

@@ -53,7 +53,7 @@ O ecrã apresenta a seguinte mensagem:
 
 . Monitore o processo de recuperação de instalação de Mídia de inicialização.
 +
-O processo é concluído e exibe a `Installation complete.` mensagem.
+O processo é concluído e exibe a `Installation complete` mensagem.
 
 . O sistema verifica se há criptografia e tipo de criptografia e exibe uma de duas mensagens. Dependendo da mensagem exibida, execute uma das seguintes ações:
 +
@@ -348,7 +348,10 @@ kmip2_client: Successfully imported the keys from external key server: xxx.xxx.x
 Successfully recovered keymanager secrets.
 ....
 =====
-*** Se a chave não for restaurada com êxito, o sistema irá parar e indicar que não foi possível restaurar a chave. As mensagens de erro e aviso são apresentadas. Execute novamente o processo de recuperação inserindo `boot_recovery -partner`.
+*** Se a chave não for restaurada com êxito, o sistema irá parar e indicar que não foi possível restaurar a chave. As mensagens de erro e aviso são apresentadas. Execute novamente o processo de recuperação:
++
+`boot_recovery -partner`
+
 +
 .Mostrar exemplo de mensagens de aviso e erro de recuperação de chave
 [%collapsible]
@@ -378,7 +381,7 @@ LOADER-B>
 .. Quando o nó for reiniciado, verifique se a recuperação da Mídia de inicialização foi bem-sucedida, confirmando que o sistema está novamente on-line e operacional.
 .. Volte a colocar o controlador em funcionamento normal, devolvendo o respetivo armazenamento:
 +
-`storage failover giveback -ofnode _impaired_node_name_`.
+`storage failover giveback -ofnode _impaired_node_name_`
 
 
 
@@ -388,11 +391,11 @@ LOADER-B>
 
 . Se a giveback automática foi desativada, reative-a:
 +
-`storage failover modify -node local -auto-giveback true`.
+`storage failover modify -node local -auto-giveback true`
 
 . Se o AutoSupport estiver ativado, restaure a criação automática de casos:
 +
-`system node autosupport invoke -node * -type all -message MAINT=END`.
+`system node autosupport invoke -node * -type all -message MAINT=END`
 
 
 
