@@ -2,22 +2,22 @@
 :allow-uri-read: 
 
 
-Depois de substituir um módulo de e/S, tem de reiniciar o módulo do controlador.
+Depois de substituir um módulo de e/S, tem de reiniciar o controlador.
 
 .Passos
-. No prompt Loader, reinicie o nó:
+. Reinicie o controlador a partir do prompt Loader:
 +
 `bye`
 
 +
 
-NOTE: Isso reinicializa o módulo de e/S e outros componentes e reinicializa o nó.
+NOTE: Reiniciar o controlador prejudicado também reinicializa os módulos de e/S e outros componentes.
 
-. Devolver o controlador do controlador parceiro:
+. Retorne o nó à operação normal:
 +
 `storage failover giveback -ofnode _impaired_node_name_`
 
-. A partir do nó saudável, restaure a giveback automática se você o tiver desativado:
+. Restaure a giveback automática a partir da consola do controlador saudável:
 +
 `storage failover modify -node local -auto-giveback _true_`
 

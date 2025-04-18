@@ -260,6 +260,10 @@ Alinhe a parte traseira do controlador com a abertura no chassis e, em seguida, 
 NOTE: Não introduza completamente o controlador no chassis até ser instruído a fazê-lo.
 
 . Conete o cabo do console à porta do console no controlador e ao laptop para que o laptop receba mensagens de console quando o controlador for reinicializado.
++
+
+NOTE: Não conete nenhum outro cabo ou cabo de alimentação neste momento.
+
 . Coloque totalmente o controlador no chassis:
 +
 .. Empurre firmemente as alças até que o controlador atenda ao plano médio e esteja totalmente assentado.
@@ -270,41 +274,7 @@ NOTE: Não utilize força excessiva ao deslizar o controlador para dentro do cha
 .. Rode as pegas do controlador para cima e bloqueie-as com as patilhas.
 +
 
-NOTE: O controlador começa a inicializar assim que estiver totalmente assentado no chassi.
-
-
-
-. Leve o controlador para o prompt Loader pressionando CTRL-C para abortar o AUTOBOOT.
-. Defina a hora e a data no controlador:
-+
-Certifique-se de que está no prompt Loader do controlador.
-
-+
-.. Apresentar a data e a hora no controlador:
-+
-`show date`
-
-+
-
-NOTE: O padrão de hora e data está em GMT. Tem a opção de apresentar na hora local e no modo 24hrD.
-
-.. Defina a hora atual em GMT:
-+
-`set time hh:mm:ss`
-
-+
-Você pode obter o GMT atual do nó saudável:
-
-+
-`date -u`
-
-.. Defina a data atual em GMT:
-+
-`set date mm/dd/yyyy`
-
-+
-Você pode obter o GMT atual do nó saudável
-`date -u`
+NOTE: O controlador de substituição recebe energia do controlador em estado de funcionamento e começa a arrancar assim que estiver totalmente assente no chassis.
 
 
 

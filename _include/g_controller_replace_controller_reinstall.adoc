@@ -60,6 +60,40 @@ NOTE: O controlador de substituição recebe energia do controlador em estado de
 
 
 
+. Leve o controlador para o prompt Loader pressionando CTRL-C para abortar o AUTOBOOT.
+. Defina a hora e a data no controlador:
++
+Certifique-se de que está no prompt Loader do controlador.
+
++
+.. Apresentar a data e a hora no controlador:
++
+`show date`
+
++
+
+NOTE: O padrão de hora e data está em GMT. Tem a opção de apresentar na hora local e no modo 24hrD.
+
+.. Defina a hora atual em GMT:
++
+`set time hh:mm:ss`
+
++
+Você pode obter o GMT atual do nó saudável:
+
++
+`date -u`
+
+.. Defina a data atual em GMT:
++
+`set date mm/dd/yyyy`
+
++
+Você pode obter o GMT atual do nó saudável
+`date -u`
+
+
+
 . Recable o controlador conforme necessário.
 . Reconecte o cabo de alimentação à fonte de alimentação (PSU).
 +

@@ -407,10 +407,8 @@
   <block id="741c2196cc7abcf971992d4e656da7ea" category="paragraph">Neste exemplo, o Node_B_1 é o nó antigo, com o ID do sistema antigo de 118073209:</block>
   <block id="2aa94dd7242f16ec9126f4d25ad06195" category="list-text">Veja a nova ID do sistema no prompt do modo de manutenção no nó prejudicado:<block ref="63328c72194085e2f8ff497b866f6d24" prefix=" " category="inline-code"></block></block>
   <block id="761dab2a2eaf4e205d39d0acc4925d17" category="paragraph">Neste exemplo, o novo ID do sistema é 118065481:</block>
-  <block id="73a7440753d817323876d5857eb4a3f7" category="list-text">Reatribua a propriedade do disco (para sistemas FAS) ou a propriedade de LUN (para sistemas FlexArray), utilizando as informações de ID do sistema obtidas a partir do comando disk show:<block ref="c59d47aa9e91bfb7b5c45feb4846c496" prefix=" " category="inline-code"></block></block>
   <block id="aab7ee705a771085da41cf3f32f1aebe" category="paragraph">No caso do exemplo anterior, o comando é:<block ref="655dddb3fabb311af9cfc11782afaecd" prefix=" " category="inline-code"></block></block>
   <block id="1d1227c1811174bd93682bbcc9fdce3c" category="paragraph">Você pode responder<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block> quando solicitado a continuar.</block>
-  <block id="a3437746fcb93fe85bd0d8ade510007d" category="list-text">Verifique se os discos (ou LUNs FlexArray) foram atribuídos corretamente:<block ref="bdf99381eed86756b3f0c3a159c50f5c" prefix=" " category="inline-code"></block></block>
   <block id="21d6dd74cdb7e164685f5da4f2e76256" category="paragraph">Verifique se os discos pertencentes ao nó _replacement_ mostram o novo ID do sistema para o nó _replacement_. No exemplo a seguir, os discos pertencentes ao System-1 agora mostram a nova ID do sistema, 118065481:</block>
   <block id="23b40d7aca05dd545bc77221d79f3fbe" category="list-text">A partir do nó saudável, verifique se todos os coredumps são salvos:</block>
   <block id="b06003538a02608d68f5e58756344017" category="list-text">Verifique se os coredumps estão salvos:<block ref="99a27805d60e05546da1e515902b0e95" prefix=" " category="inline-code"></block></block>
@@ -1257,7 +1255,6 @@
   <block id="55b0e11d7fc34ae2b7fbd2be3acb1424" category="list-text">Com a alavanca do came na posição aberta, deslize o módulo do controlador para dentro do chassi e empurre firmemente o módulo do controlador para dentro até que ele atenda ao plano médio e esteja totalmente assentado e, em seguida, feche a alça do came até que ele encaixe na posição travada.</block>
   <block id="45c20771cb1532f5746ddda7446e7140" category="list-text">Inicialize cada nó no modo de manutenção:</block>
   <block id="b3dd491c5d322d28567e04f0d5b0ee6f" category="list-text">À medida que cada nó inicia o arranque, prima<block ref="76be6883bcf9e8a6aed3a347ac20e41f" prefix=" " category="inline-code"></block> para interromper o processo de arranque quando vir a mensagem<block ref="c7edd01af4c95bd0ec0f7072d8035155" prefix=" " category="inline-code"></block>.</block>
-  <block id="2cbabd3028fd0cb6f4a57144ace2ee33" category="list-text">Se o seu sistema for um sistema FlexArray ou tiver uma licença V_StorageAttach, você deve consultar as etapas adicionais necessárias antes de executar este procedimento.</block>
   <block id="0012bcaadb56ca5543ace124a6a404f9" category="list-text">Se o seu sistema estiver em um par de HA, o nó saudável deve ser capaz de assumir o nó que está sendo substituído (referido neste procedimento como o "'nó prejudicado'").</block>
   <block id="3a23955ad584199d013caf86411a3e19" category="paragraph">Se este for o procedimento que você deve usar, observe que o procedimento de substituição da controladora de um nó em uma configuração de MetroCluster de quatro ou oito nós é o mesmo que em um par de HA. Nenhuma etapa específica do MetroCluster é necessária porque a falha é restrita a um par de HA e os comandos de failover de storage podem ser usados para fornecer operações sem interrupções durante a substituição.</block>
   <block id="236eb787084e6be2d6cb06c10cc2becf" category="list-text">Neste procedimento, o dispositivo de inicialização é movido do nó prejudicado para o nó _replacement_ de modo que o nó _replacement_ inicialize na mesma versão do ONTAP que o módulo de controladora antigo.</block>
@@ -3751,7 +3748,6 @@
   <block id="e4e83a2c82324a2a6d5448b03909ecfa" category="paragraph">Pode utilizar o <block ref="b22470d24dd615c99a09a118a80f7353" category="inline-link-macro-rx"></block> cartaz para instalar e configurar o seu novo sistema. O cartaz PDF fornece instruções passo a passo com links em direto para conteúdo adicional.</block>
   <block id="27e824f8d84211dc662b81aa3d2c5296" category="paragraph">Você pode escolher entre diferentes formatos de conteúdo para guiá-lo através da instalação e configuração do seu novo sistema de armazenamento.</block>
   <block id="1c91d351b95f21de02a1d9bc700d73d0" category="list-text"><block ref="1c91d351b95f21de02a1d9bc700d73d0" category="inline-link-macro-rx"></block></block>
-  <block id="ddd1a9511bc4cec117e8b939fbe7f2cc" category="list-text"><block ref="ddd1a9511bc4cec117e8b939fbe7f2cc" category="inline-link-macro-rx"></block></block>
   <block id="f03c92168a16d01cf92fdfdfc719b6b5" category="summary">Você pode usar a Planilha para coletar e Registrar seus endereços IP específicos do site e outras informações necessárias ao configurar um cluster do ONTAP.</block>
   <block id="677d8bcfde6bff1a436a7a5e69b4dd4b" category="doc">Planilha de configuração de cluster - AFF A200</block>
   <block id="f80cea0e802a372818458562fc5d9f43" category="inline-link-macro">Folha de trabalho de configuração do cluster</block>
@@ -4116,7 +4112,6 @@
   <block id="26fa42b1e179247a86e500fd0bdc576c" category="inline-link-macro">Instruções de instalação e configuração do AFF A300</block>
   <block id="3968cc9d2fa7f59d81661adbaf12cfac" category="paragraph"><block ref="3968cc9d2fa7f59d81661adbaf12cfac" category="inline-link-macro-rx"></block></block>
   <block id="3f98fa9dd0068de7a3158d3cefe04024" category="list-text"><block ref="3f98fa9dd0068de7a3158d3cefe04024" category="inline-link-macro-rx"></block></block>
-  <block id="604b91e7007f6b52b608d188580ff582" category="list-text"><block ref="604b91e7007f6b52b608d188580ff582" category="inline-link-macro-rx"></block></block>
   <block id="cfe676549c53e52dc611f1610a8ef495" category="paragraph">Para configurações do MetroCluster, consulte:</block>
   <block id="b232e9ef89b4f98b36e1c295adeb4a63" category="inline-link">Instale a configuração IP do MetroCluster</block>
   <block id="d495410a7f7a2c72ad8aa73f5cdb0372" category="list-text"><block ref="d495410a7f7a2c72ad8aa73f5cdb0372" category="inline-link-rx"></block></block>
@@ -4820,7 +4815,6 @@
   <block id="c6f502d8dd8eb8b387d8da2e59e48c95" category="summary">O vídeo a seguir mostra a configuração de software de ponta a ponta para sistemas que executam o ONTAP 9.2.</block>
   <block id="1ab25fd464770ca38598dbf7e3aa872c" category="doc">Vídeo de instalação e configuração - AFF A700s</block>
   <block id="0e77f42d7c64a07ce718d60dd8e6bd46" category="inline-link-macro">Vídeo de configuração do AFF A700s</block>
-  <block id="ad95e5b69f87474809f8228af5e2fbe2" category="paragraph"><block ref="ad95e5b69f87474809f8228af5e2fbe2" category="inline-link-macro-rx"></block></block>
   <block id="1790a5691629705d1dfd90934b6c5f4d" category="doc">Planilha de configuração de cluster - AFF A700s</block>
   <block id="145ef1ac525baa70aa5c03030fa49d7b" category="summary">Mantenha o hardware AFF A700s</block>
   <block id="43e7b3e2f939e82c0be1bb207c3f6b82" category="paragraph">Uma bateria é incluída com o controlador e fornece a energia de reserva se a energia CA falhar.</block>
@@ -4988,7 +4982,6 @@
   <block id="0b56204171e041e1a9328dbc4c64073c" category="doc">Manter o hardware do AFF A900</block>
   <block id="e6116e8dfa475c652d411a0fbaf5ce6a" category="paragraph">Para o sistema de armazenamento AFF A900, pode executar procedimentos de manutenção nos seguintes componentes.</block>
   <block id="3bc737994532b61e4fad9c84d6dccfc0" category="summary">Este a fornece instruções detalhadas passo a passo para a instalação de um sistema NetApp típico.</block>
-  <block id="b37eeea92bef8e254a5c7650e7002788" category="doc">Etapas detalhadas - AFF 900</block>
   <block id="fa3056f29df183b75e177c2b6ee65b45" category="paragraph">este artigo fornece instruções detalhadas passo a passo para instalar um sistema NetApp típico. Use este artigo se você quiser instruções de instalação mais detalhadas.</block>
   <block id="8666406295c84e68942a4f6fc1b2cb4e" category="paragraph">Você precisa ter acesso ao<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> para obter informações sobre os requisitos do site, bem como informações adicionais sobre o sistema configurado.</block>
   <block id="efe451bd1c5b374a05e7d5178bb06987" category="inline-link">ONTAP 9 Notas de versão</block>
@@ -5885,7 +5878,6 @@
   <block id="c3a9fb901b6e82e19cf5d6be414a5461" category="doc">Desligue o controlador desativado - FAS2600</block>
   <block id="a618373732a54299b15020c4fdcc9ff7" category="doc">Substitua o módulo de armazenamento em cache - FAS2600</block>
   <block id="f6f6b5bb4c3c117ebfdad565e3beb0c3" category="inline-link-macro">Vídeo de substituição do módulo de armazenamento em cache AFF FAS2600</block>
-  <block id="083781fc87756a032121b806b4d18a92" category="paragraph"><block ref="083781fc87756a032121b806b4d18a92" category="inline-link-macro-rx"></block></block>
   <block id="1ab6b8fc7d00d8cf418a98c2a06619a5" category="doc">Restaure e verifique a configuração - FAS2600</block>
   <block id="d12db64c0cb5cb862afbde49d98d6f25" category="inline-link-macro">Concluir o processo de substituição</block>
   <block id="e739fb18db4795dd1e2cea8f3c5244c3" category="list-text">Vá para <block ref="56c57196a2457d200e49164377b65ba5" category="inline-link-macro-rx"></block>.</block>
@@ -5895,7 +5887,6 @@
   <block id="a102b530af65288511339cf8117713a3" category="doc">Desligue os controladores - FAS2600</block>
   <block id="017630cf9ee2c9c60d9112bb45f305ca" category="doc">Substitua o hardware do módulo do controlador - FAS2600</block>
   <block id="5b9bf9643d348558871bac7550eb6bf2" category="inline-link-macro">Vídeo de substituição do controlador AFF FAS2600</block>
-  <block id="bfc5f4fff0a27940b1f4676800d974c4" category="paragraph"><block ref="bfc5f4fff0a27940b1f4676800d974c4" category="inline-link-macro-rx"></block></block>
   <block id="86b067a1faa816ad3c0a245cc1e409ad" category="section-title">Passo 5: Mova o módulo de cache</block>
   <block id="f5f4db4cbf741ec589cd881a641a1a02" category="paragraph">Para mover um módulo de armazenamento em cache chamado de placa PCIe M,2 na etiqueta do controlador, localize-o e mova-o do controlador antigo para o controlador de substituição e siga a sequência específica de passos.</block>
   <block id="32ab532730861844c01e0b025a4708f5" category="doc">Descrição geral da substituição do módulo do controlador - FAS2600</block>
@@ -5907,7 +5898,6 @@
   <block id="cdb877e559bf1542dd2ee0540807d4a8" category="doc">Restaure e verifique a configuração do sistema - FAS2600</block>
   <block id="9d74ba2bcb476d63733debafcde443ea" category="doc">Substitua um DIMM - FAS2600</block>
   <block id="c217f888de7cccc4e5f27065cb754354" category="inline-link-macro">Vídeo de substituição do DIMM AFF FAS2600</block>
-  <block id="e3d9e54e0daad2e60e36e8b370fec883" category="paragraph"><block ref="e3d9e54e0daad2e60e36e8b370fec883" category="inline-link-macro-rx"></block></block>
   <block id="cc0229491324372575d8e9833b910f02" category="list-text">Volte a verificar o LED do NVMEM.</block>
   <block id="586b0b2395e2a0e300f3fa9bf559633c" category="doc">Substitua a unidade SSD ou a unidade HDD - FAS2600</block>
   <block id="f8775be935fb9d9effeb8c290b2531ef" category="doc">Cartaz PDF de instalação e configuração - FAS2600</block>
@@ -5916,18 +5906,15 @@
   <block id="49ba302fbc53429009e579494e0457be" category="list-text"><block ref="49ba302fbc53429009e579494e0457be" category="inline-link-macro-rx"></block></block>
   <block id="c66eef3fd6b2a7fdd9b6e9fbe927aa2f" category="doc">Vídeo de instalação e configuração - FAS2600</block>
   <block id="7d529e0ab83dded43342f45ed2a098bd" category="inline-link-macro">Vídeo de configuração do AFF FAS2600</block>
-  <block id="5f3f6cd3a4d5edc50129f46b603aa9c2" category="paragraph"><block ref="5f3f6cd3a4d5edc50129f46b603aa9c2" category="inline-link-macro-rx"></block></block>
   <block id="e91a3b78a16fbd7eb7d01342d1c07d69" category="doc">Planilha de configuração de cluster - FAS2600</block>
   <block id="07d72595c4184814138928fe23ee37b5" category="summary">Mantenha o hardware fas2600</block>
   <block id="70b15df9648199f3a3caf12d2b5df6fe" category="doc">Mantenha o hardware FAS2600</block>
   <block id="c1da90a1e2143d4b9de576a8125a369a" category="paragraph">Para o sistema de armazenamento FAS2600, pode executar procedimentos de manutenção nos seguintes componentes.</block>
   <block id="478fc4fb96b68e7639f1b8b60636da7c" category="doc">Substitua a bateria do NVMEM - FAS2600</block>
   <block id="c8ce5afe6808111cafcf57c11a22b941" category="inline-link-macro">Vídeo de substituição da bateria do AFF FAS2600 NVMEM</block>
-  <block id="42eb4da4054bc83a79fd36f832504d55" category="paragraph"><block ref="42eb4da4054bc83a79fd36f832504d55" category="inline-link-macro-rx"></block></block>
   <block id="85b170bab39eb57fab62b2cb616a456c" category="list-text">Reconecte os cabos de alimentação às fontes de alimentação e às fontes de alimentação e ligue a alimentação para iniciar o processo de inicialização.</block>
   <block id="04a9405b6945cd62aebba48163e7663f" category="doc">Troque uma fonte de alimentação - FAS2600</block>
   <block id="7030094db64cfe33a24436a2528348b6" category="inline-link-macro">Vídeo de substituição da fonte de alimentação AFF FAS2600</block>
-  <block id="e85e66f99bf70a0cd52615d346aa4f9f" category="paragraph"><block ref="e85e66f99bf70a0cd52615d346aa4f9f" category="inline-link-macro-rx"></block></block>
   <block id="10c7f296fbe86b208c1b89ca81a28947" category="doc">Devolva a peça com falha ao NetApp - AFF A220 e FAS2700</block>
   <block id="16a3fde330c06892c7676575d0819f6e" category="doc">Inicie a imagem de recuperação - FAS2700</block>
   <block id="c6eb316cc94904301a8765db5aa1680f" category="doc">Descrição geral da substituição do suporte de arranque - AFF A220 e FAS2700</block>
@@ -9886,7 +9873,6 @@
   <block id="07e9b2c4f45f1b16bcc15da0757a3cab" category="admonition">Não introduza completamente o controlador no chassis até ser instruído a fazê-lo.</block>
   <block id="ef25353e4e6a2996c8c58db66688c4b4" category="list-text">Conete o cabo do console à porta do console no controlador e ao laptop para que o laptop receba mensagens de console quando o controlador for reinicializado.</block>
   <block id="b5286ddd59d2d1bedeafbeaffb7de288" category="list-text">Coloque totalmente o controlador no chassis:</block>
-  <block id="28b7fea1449f9a616376a90e478d67b0" category="admonition">O controlador começa a inicializar assim que estiver totalmente assentado no chassi.</block>
   <block id="f34b6cfc50a1739d51d949fcdd369dad" category="list-text">Leve o controlador para o prompt Loader pressionando CTRL-C para abortar o AUTOBOOT.</block>
   <block id="316bb85cd1ab9a7f0cc40325c5827a6d" category="list-text">Defina a hora e a data no controlador:</block>
   <block id="1e5698196a8490bf6290a21eeb883524" category="paragraph">Certifique-se de que está no prompt Loader do controlador.</block>
@@ -11896,4 +11882,19 @@
   <block id="3034b89fc8e6fc3ae99585d8f1eab80e" category="doc">Requisitos para substituir o controlador - FAS50</block>
   <block id="5c15054b184102da84361b1cd1e81384" category="paragraph">Adicione um módulo de e/S ao seu sistema de storage FAS50 para melhorar a conetividade de rede e expandir a capacidade do seu sistema de lidar com o tráfego de dados.</block>
   <block id="9bb6ca48b5f448262155e3c3811e7d6e" category="paragraph">Você pode adicionar um módulo de e/S ao seu sistema de armazenamento FAS50 quando houver slots disponíveis ou quando todos os slots estiverem totalmente preenchidos (removendo um módulo de e/S existente e instalando um novo em seu lugar).</block>
+  <block id="b9aaf4b8305c7a34a4b30da6df50ebc5" category="list-text">Reatribua a propriedade do disco (para sistemas FAS), usando as informações de ID do sistema obtidas do comando disk show:<block ref="c59d47aa9e91bfb7b5c45feb4846c496" prefix=" " category="inline-code"></block></block>
+  <block id="2dcdf3018c4d483d8c38e450dbdf5944" category="list-text">Se o seu sistema tiver uma licença V_StorageAttach, você deve consultar as etapas adicionais necessárias antes de executar este procedimento.</block>
+  <block id="1253bf6221482d606a7719ba415d9176" category="admonition">Não conete nenhum outro cabo ou cabo de alimentação neste momento.</block>
+  <block id="c69071436bdfe1b2f2edc29969a29980" category="admonition">O controlador de substituição recebe energia do controlador em estado de funcionamento e começa a arrancar assim que estiver totalmente assente no chassis.</block>
+  <block id="5cb4dbca31ce772b17987c15a725b52e" category="list-text">Retorne o nó à operação normal:</block>
+  <block id="257315f653a5868c10e8897449aa264f" category="list-text">Restaure a giveback automática a partir da consola do controlador saudável:</block>
+  <block id="b9adb77861a7f27800ce914be076df5d" category="list-text"><block ref="b9adb77861a7f27800ce914be076df5d" category="inline-link-macro-rx"></block></block>
+  <block id="ec3558cc556230de3472d8f669055445" category="paragraph"><block ref="ec3558cc556230de3472d8f669055445" category="inline-link-macro-rx"></block></block>
+  <block id="2b1f12b6c48af6da013ad7ca0b3e507d" category="doc">Passos detalhados - AFF A900</block>
+  <block id="b8a400661d0d8f4681160e3984f8fe0e" category="paragraph"><block ref="b8a400661d0d8f4681160e3984f8fe0e" category="inline-link-macro-rx"></block></block>
+  <block id="c17ceb181c73449b45e8ac62b23f0788" category="paragraph"><block ref="c17ceb181c73449b45e8ac62b23f0788" category="inline-link-macro-rx"></block></block>
+  <block id="7d3ad47a619f98568e42b3c81d3fc66e" category="paragraph"><block ref="7d3ad47a619f98568e42b3c81d3fc66e" category="inline-link-macro-rx"></block></block>
+  <block id="3f6b8f5ed334d33d55220057f3840983" category="paragraph"><block ref="3f6b8f5ed334d33d55220057f3840983" category="inline-link-macro-rx"></block></block>
+  <block id="13ac941ecf968dc28151bce5851fd7a9" category="paragraph"><block ref="13ac941ecf968dc28151bce5851fd7a9" category="inline-link-macro-rx"></block></block>
+  <block id="f9314d663ff89799d6d255ab7e3ca079" category="paragraph"><block ref="f9314d663ff89799d6d255ab7e3ca079" category="inline-link-macro-rx"></block></block>
 </blocks>

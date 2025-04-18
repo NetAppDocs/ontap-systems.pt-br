@@ -14,7 +14,7 @@ summary: Tem de rever os pré-requisitos para o procedimento de substituição e
 Tem de rever os pré-requisitos para o procedimento de substituição e selecionar o correto para a sua versão do sistema operativo ONTAP.
 
 * Todas as gavetas de unidades devem estar funcionando corretamente.
-* Se o seu sistema for um sistema FlexArray ou tiver uma licença V_StorageAttach, você deve consultar as etapas adicionais necessárias antes de executar este procedimento.
+* Se o seu sistema tiver uma licença V_StorageAttach, você deve consultar as etapas adicionais necessárias antes de executar este procedimento.
 * Se o seu sistema estiver em um par de HA, o nó saudável deve ser capaz de assumir o nó que está sendo substituído (referido neste procedimento como o "'nó prejudicado'").
 * Se o sistema estiver em uma configuração do MetroCluster, você deverá revisar a seção https://docs.netapp.com/us-en/ontap-metrocluster/disaster-recovery/concept_choosing_the_correct_recovery_procedure_parent_concept.html["Escolher o procedimento de recuperação correto"] para determinar se deve usar esse procedimento.
 +
