@@ -50,7 +50,7 @@ image::../media/drw_ssn_label.png[Exemplo de número de série do sistema]
 A tabela a seguir identifica os tipos de cabos que você pode receber. Se receber um cabo não listado na tabela, consulte link:https://hwu.netapp.com["NetApp Hardware Universe"^] para localizar o cabo e identificar a respetiva utilização.
 
 +
-[cols="1,2,1,2"]
+[cols="1,2,2,2"]
 |===
 | Tipo de conetor | Número de peça e comprimento | Tipo de cabo... | Para... 
 
@@ -59,28 +59,19 @@ A tabela a seguir identifica os tipos de cabos que você pode receber. Se recebe
 Cabo de 100 GbE
  a| 
 X66211A-05 (112-00595), 0,5m
- a| 
-image:../media/oie_cable100_gbe_qsfp28.png["Conetor 100 GbE QSFP28"]
- a| 
-INTERCONEXÃO HA
-
-
-
- a| 
-X66211A-05 (112-00595), 0,5m;
 
 X66211-1 (112-00573), 1m
- a| 
-Rede de interconexão de cluster
 
-
-
- a| 
-X66211-2 (112-00574), 2m;
+X66211-2 (112-00574), 2m
 
 X66211-5 (112-00576), 5m
  a| 
-Armazenamento, dados
+image:../media/oie_cable100_gbe_qsfp28.png["Conetor 100 GbE QSFP28"]
+ a| 
+** INTERCONEXÃO HA
+** Rede de interconexão de cluster
+** Armazenamento, dados
+
 
 
 
@@ -91,7 +82,10 @@ X6566B-3-R6 (112-00300), 3m;
 
 X6566B-5-R6 (112-00301), 5m
  a| 
-Dados
+image:../media/oie_cable100_gbe_qsfp28.png["Conetor 10 GbE QSFP28"]
+ a| 
+** Dados
+
 
 
 
@@ -102,7 +96,10 @@ X66240A-2 (112-00598), 2m;
 
 X66240A-5 (112-00600), 5m
  a| 
-Dados
+image:../media/oie_cable100_gbe_qsfp28.png["Conetor 25 GbE QSFP28"]
+ a| 
+** Dados
+
 
 
 
@@ -113,7 +110,8 @@ Não aplicável
  a| 
 image:../media/oie_cable_rj45.png["Conetor do cabo RJ-45"]
  a| 
-Gerenciamento
+** Gerenciamento
+
 
 
 
@@ -130,6 +128,8 @@ X66250-30 (112-00347) 30m
  a| 
 image:../media/oie_cable_fc_optical.png["Cabo ótico OIE Fibre Channel"]
  a| 
+** Rede
+
 
 
 
@@ -140,7 +140,8 @@ Não aplicável
  a| 
 image:../media/oie_cable_micro_usb.png["Conetor micro USB"]
  a| 
-Ligação da consola durante a configuração do software
+** Ligação da consola durante a configuração do software
+
 
 
 
@@ -151,7 +152,7 @@ Não aplicável
  a| 
 image:../media/oie_cable_power.png["Cabos de alimentação"]
  a| 
-Ligar o sistema
+Ligar as PSUs à fonte de alimentação
 
 |===
 . Faça o download e complete o link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2839002["Folha de trabalho de configuração do cluster"^].
@@ -223,29 +224,33 @@ video::edc42447-f721-4cbe-b080-ab0c0123a139[panopto]
 
 
  a| 
-image:../media/icon_square_1_blue.png["Legenda número 1"]
+image:../media/icon_square_1_dark_purple.png["Legenda número 1"]
  a| 
 Cable as portas de interconexão HA:
 
 ** e0b a e0b
-** e1b a e1b image:../media/drw_affa800_ha_pair_cabling.png["Cabeamento de par HA"]
+** e1b a e1b
 
+
+image:../media/drw_affa800_ha_pair_cabling.png["Cabeamento de par HA"]
 
 
 
  a| 
-image:../media/icon_square_2_yellow.png["Legenda número 2"]
+image:../media/icon_square_2_green.png["Legenda número 2"]
  a| 
 Cable as portas de interconexão de cluster:
 
 ** e0a a e0a
-** e1a a e1a image:../media/drw_affa800_tnsc_clust_cabling.png["Cabeamento de interconexão de cluster em um cluster sem switch de dois nós"]
+** e1a a e1a
 
+
+image:../media/drw_affa800_tnsc_clust_cabling.png["Cabeamento de interconexão de cluster em um cluster sem switch de dois nós"]
 
 
 
  a| 
-image:../media/icon_square_3_orange.png["Passo 3"]
+image:../media/icon_square_3_purple.png["Passo 3"]
  a| 
 Faça o cabeamento das portas de gerenciamento aos switches de rede de gerenciamento image:../media/drw_affa800_mgmt_cabling.png["Ilustração mostrando a localização das portas de gerenciamento na parte traseira do sistema"]
 
@@ -296,25 +301,33 @@ video::49e48140-4c5a-4395-a7d7-ab0c0123a10e[panopto]
 
 
  a| 
-image:../media/icon_square_1_blue.png["Legenda número 1"]
+image:../media/icon_square_1_dark_purple.png["Legenda número 1"]
  a| 
 Cable as portas de interconexão HA:
 
 ** e0b a e0b
-** e1b a e1b image:../media/drw_affa800_ha_pair_cabling.png["Cabeamento de par HA"]
+** e1b a e1b
 
 
-
-
- a| 
-image:../media/icon_square_2_yellow.png["Legenda número 2"]
- a| 
-Cable as portas de interconexão de cluster aos switches de interconexão de cluster de 100 GbE. ** e0a ** e1a image:../media/drw_affa800_switched_clust_cabling.png["Cabeamento de interconexão de cluster"]
+image:../media/drw_affa800_ha_pair_cabling.png["Cabeamento de par HA"]
 
 
 
  a| 
-image:../media/icon_square_3_orange.png["Passo 3"]
+image:../media/icon_square_2_green.png["Legenda número 2"]
+ a| 
+Cable as portas de interconexão de cluster aos switches de interconexão de cluster de 100 GbE.
+
+** e0a
+** e1a
+
+
+image:../media/drw_affa800_switched_clust_cabling.png["Cabeamento de interconexão de cluster"]
+
+
+
+ a| 
+image:../media/icon_square_3_purple.png["Passo 3"]
  a| 
 Faça o cabeamento das portas de gerenciamento aos switches de rede de gerenciamento image:../media/drw_affa800_mgmt_cabling.png["Ilustração mostrando a localização das portas de gerenciamento na parte traseira do sistema"]
 
@@ -536,12 +549,11 @@ Consulte a ajuda online do seu computador portátil para obter mais informaçõe
 video::d61f983e-f911-4b76-8b3a-ab1b0066909b[panopto]
 . Selecione um ícone ONTAP listado para descobrir:
 +
-image::../media/drw_autodiscovery_controler_select.png[Selecione um ícone ONTAP]
+image::../media/drw_autodiscovery_controler_select_ieops-1849.svg[Selecione um ícone ONTAP]
 
 +
 .. Abra o Explorador de ficheiros.
-.. Clique em *rede* no painel esquerdo.
-.. Clique com o botão direito do rato e selecione *Refresh*.
+.. Clique em *rede* no painel esquerdo e clique com o botão direito do rato e selecione *atualizar*.
 .. Clique duas vezes no ícone ONTAP e aceite quaisquer certificados exibidos na tela.
 +
 

@@ -17,7 +17,10 @@ Depois de instalar o hardware do sistema de storage AFF C30 ou AFF C60, faça o 
 Contacte o administrador da rede para obter informações sobre como ligar o sistema de armazenamento aos comutadores de rede.
 
 .Sobre esta tarefa
-* Os procedimentos de cabeamento de rede de cluster/HA e host mostram configurações comuns. Tenha em mente que o cabeamento específico depende dos componentes solicitados para o seu sistema de armazenamento. Para obter detalhes abrangentes de configuração e prioridade de slot, link:https://hwu.netapp.com["NetApp Hardware Universe"^]consulte .
+* Os procedimentos de cabeamento de rede de cluster/HA e host mostram configurações comuns.
++
+Se você não vir sua configuração aqui, link:https://hwu.netapp.com["NetApp Hardware Universe"^]acesse para obter informações abrangentes de configuração e prioridade de slot para fazer o cabeamento do seu sistema de armazenamento.
+
 * Os gráficos de cabeamento têm ícones de seta mostrando a orientação adequada (para cima ou para baixo) da aba de puxar do conetor do cabo ao inserir um conetor em uma porta.
 +
 Ao inserir o conetor, você deve sentir que ele clique no lugar; se você não sentir que ele clique, remova-o, vire-o e tente novamente.
@@ -61,7 +64,7 @@ NOTE: As portas E2B e e4b do módulo de e/S não são utilizadas e estão dispon
 image::../media/oie_cable100_gbe_qsfp28.png[Cabo de cluster HA de 100 GbE]
 
 +
-image::../media/drw_isi_a30-50_switchless_2p_100gbe_2card_cabling_ieops-2011.svg[diagrama de cabeamento de cluster sem switch de a30 gbe e a50 gbe usando dois módulos de e/s de 100gbe gbe]
+image::../media/drw_isi_a30-50_switchless_2p_100gbe_2card_cabling_ieops-2011.svg[diagrama de cabeamento de cluster sem switch de a30 gbe e a60 gbe usando dois módulos de e/s de 100gbe gbe]
 
 
 
@@ -87,7 +90,7 @@ NOTE: O tráfego de interconexão de cluster e o tráfego de HA compartilham as 
 image::../media/oie_cable100_gbe_qsfp28.png[Cabo de cluster HA de 100 GbE]
 
 +
-image::../media/drw_isi_a30-50_switchless_2p_100gbe_1card_cabling_ieops-1925.svg[diagrama de cabeamento de cluster sem switch de a30 gbe e a50 gbe usando um módulo de e/s de 100gbe gbe]
+image::../media/drw_isi_a30-50_switchless_2p_100gbe_1card_cabling_ieops-1925.svg[diagrama de cabeamento de cluster sem switch de a30 gbe e a60 gbe usando um módulo de e/s de 100gbe gbe]
 
 
 
@@ -122,7 +125,7 @@ NOTE: As portas E2B e e4b do módulo de e/S não são utilizadas e estão dispon
 image::../media/oie_cable100_gbe_qsfp28.png[Cabo de cluster HA de 40/100 GbE]
 
 +
-image::../media/drw_isi_a30-50_switched_2p_100gbe_2card_cabling_ieops-2013.svg[diagrama de cabeamento de cluster comutado a30 e a50 usando dois módulos de e/s 100gbe]
+image::../media/drw_isi_a30-50_switched_2p_100gbe_2card_cabling_ieops-2013.svg[diagrama de cabeamento de cluster comutado a30 e a60 usando dois módulos de e/s 100gbe]
 
 
 
@@ -199,7 +202,7 @@ image::../media/drw_isi_a30-50_host_2p_40-100gbe_2card_cabling_ieops-2014.svg[Ca
 *Cabos de 10/25 GbE*
 
 +
-image:../media/oie_cable_sfp_gbe_copper.png["Conetor de cobre GbE SFP, largura de 100px mm"]
+image:../media/oie_cable_sfp_gbe_copper.png["Conetor de cobre GbE SFP"]
 
 +
 image::../media/drw_isi_a30-50_host_2p_40-100gbe_1card_cabling_ieops-1923.svg[Cabo para switches de rede host ethernet 40/100gbe]

@@ -478,13 +478,10 @@ NÃO conete os cabos de energia neste momento.
 
 Você precisa vincular os controladores às gavetas usando as portas de storage integradas. A NetApp recomenda cabeamento MP-HA para sistemas com storage externo. Se você tiver uma unidade de fita SAS, poderá usar cabeamento de caminho único. Se você não tiver gavetas externas, o cabeamento MP-HA para unidades internas será opcional (não exibido) se os cabos SAS forem solicitados com o sistema.
 
+.Antes de começar
+* É necessário fazer o cabeamento das conexões de gaveta a gaveta e, em seguida, fazer o cabeamento das duas controladoras às gavetas de unidades.
+* Certifique-se de que verifica a seta da ilustração para a orientação adequada da presilha de puxar do conetor do cabo.
 
-
-=== Opção 1: Storage de cabos em um par de HA com compartimentos de unidade externos
-
-É necessário fazer o cabeamento das conexões de gaveta a gaveta e, em seguida, fazer o cabeamento das duas controladoras às gavetas de unidades.
-
-Certifique-se de que verifica a seta da ilustração para a orientação adequada da presilha de puxar do conetor do cabo.
 
 image::../media/oie_cable_pull_tab_down.png[Conetor de cabo com patilha de puxar na parte inferior]
 
@@ -537,12 +534,16 @@ image:../media/icon_square_3_tourquoise.png["Passo 3"]
 Conectar cada nó à IOM B na stack
 
 ** Controladora 1 porta 0a a porta IOM B 1 na primeira gaveta de unidades na stack.
-** Controladora 2 porta 0b a porta IOM B 3 na última gaveta de unidades na stack. image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png["Conetor mini-SAS para mini-SAS"] Cabos HD mini-SAS HD para mini-SAS HD
+** Controladora 2 porta 0b a porta IOM B 3 na última gaveta de unidades na stack.
 
+
+image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png["Conetor mini-SAS para mini-SAS"] Cabos HD mini-SAS HD para mini-SAS HD
 
 |===
-+
-Se você tiver mais de uma pilha de gaveta de unidades, consulte o _Installation and Cabling Guide_ para o tipo de compartimento de unidades.
+
+
+
+NOTE: Para obter mais informações sobre cabeamento SAS e planilhas, consulte link:../sas3/overview-cabling-rules-examples.html["Visão geral das regras de cabeamento SAS, planilhas e exemplos - prateleiras com IOM12 módulos"]
 
 . Para concluir a configuração do sistema, consulte <<Passo 5: Conclua a configuração e configuração do sistema>>
 
@@ -583,12 +584,11 @@ Consulte a ajuda online do seu computador portátil para obter mais informaçõe
 video::d61f983e-f911-4b76-8b3a-ab1b0066909b[panopto]
 . Selecione um ícone ONTAP listado para descobrir:
 +
-image::../media/drw_autodiscovery_controler_select.png[Selecione um ícone ONTAP]
+ficheiro:drw_autoDiscovery_controler_Select_ieops-1849.svg[Selecionar um ícone ONTAP]
 
 +
 .. Abra o Explorador de ficheiros.
-.. Clique em rede no painel esquerdo.
-.. Clique com o botão direito do rato e selecione Atualizar.
+.. Clique em *rede* no painel esquerdo e clique com o botão direito do rato e selecione *atualizar*.
 .. Clique duas vezes no ícone ONTAP e aceite quaisquer certificados exibidos na tela.
 +
 

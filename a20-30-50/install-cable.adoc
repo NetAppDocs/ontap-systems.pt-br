@@ -17,7 +17,10 @@ Depois de instalar o hardware do sistema de storage AFF A20, AFF A30 ou AFF A50,
 Contacte o administrador da rede para obter informações sobre como ligar o sistema de armazenamento aos comutadores de rede.
 
 .Sobre esta tarefa
-* Os procedimentos de cabeamento de rede de cluster/HA e host mostram configurações comuns. Tenha em mente que o cabeamento específico depende dos componentes solicitados para o seu sistema de armazenamento. Para obter detalhes abrangentes de configuração e prioridade de slot, link:https://hwu.netapp.com["NetApp Hardware Universe"^]consulte .
+* Os procedimentos de cabeamento de rede de cluster/HA e host mostram configurações comuns.
++
+Se você não vir sua configuração aqui, link:https://hwu.netapp.com["NetApp Hardware Universe"^]acesse para obter informações abrangentes de configuração e prioridade de slot para fazer o cabeamento do seu sistema de armazenamento.
+
 * Os gráficos de cabeamento têm ícones de seta mostrando a orientação adequada (para cima ou para baixo) da aba de puxar do conetor do cabo ao inserir um conetor em uma porta.
 +
 Ao inserir o conetor, você deve sentir que ele clique no lugar; se você não sentir que ele clique, remova-o, vire-o e tente novamente.
@@ -110,7 +113,7 @@ NOTE: O tráfego de interconexão de cluster e o tráfego de HA compartilham as 
 *Cabos de interconexão de cluster/HA de 25 GbE*
 
 +
-image:../media/oie_cable_sfp_gbe_copper.png["Conetor de cobre GbE SFP, largura de 100px mm"]
+image:../media/oie_cable_sfp_gbe_copper.png["Conetor de cobre GbE SFP"]
 
 +
 image::../media/drw_isi_a20_switchless_2p_25gbe_cabling_ieops-2018.svg[diagrama de cabeamento de cluster sem switch de a20 gbe usando um módulo de e/s de 25 gbe]
@@ -200,7 +203,7 @@ NOTE: O tráfego de interconexão de cluster e o tráfego de HA compartilham as 
 *Cabos de interconexão de cluster/HA de 10/25 GbE*
 
 +
-image:../media/oie_cable_sfp_gbe_copper.png["Conetor de cobre GbE SFP, largura de 100px mm"]
+image:../media/oie_cable_sfp_gbe_copper.png["Conetor de cobre GbE SFP"]
 
 +
 image:../media/drw_isi_a20_switched_2p_25gbe_cabling_ieops-2019.svg["diagrama de cabeamento de cluster comutado a20 usando um módulo de e/s 25gbe"]
@@ -252,7 +255,7 @@ image::../media/drw_isi_a30-50_host_2p_40-100gbe_2card_cabling_ieops-2014.svg[Ca
 *Cabos de 10/25 GbE*
 
 +
-image:../media/oie_cable_sfp_gbe_copper.png["Conetor de cobre GbE SFP, largura de 100px mm"]
+image:../media/oie_cable_sfp_gbe_copper.png["Conetor de cobre GbE SFP"]
 
 +
 image::../media/drw_isi_a30-50_host_2p_40-100gbe_1card_cabling_ieops-1923.svg[Cabo para switches de rede host ethernet 40/100gbe]
@@ -272,7 +275,7 @@ image::../media/drw_isi_a30-50_host_2p_40-100gbe_1card_cabling_ieops-1923.svg[Ca
 *Cabos FC de 64 GB/s*
 
 +
-image:../media/oie_cable_sfp_gbe_copper.png["Cabo fc de 64 GB, largura de 100px mm"]
+image:../media/oie_cable_sfp_gbe_copper.png["Cabo fc de 64 GB"]
 
 +
 image::../media/drw_isi_a30-50_4p_64gb_fc_1card_cabling_ieops-1924.svg[Cabo para switches de rede host 64GB fc]

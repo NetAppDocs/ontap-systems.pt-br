@@ -23,16 +23,16 @@ Para aceder aos componentes no interior do controlador, tem de remover primeiro 
 . Solte o gancho e a alça de loop que prendem os cabos ao dispositivo de gerenciamento de cabos e, em seguida, desconete os cabos do sistema e os SFPs (se necessário) do módulo do controlador, mantendo o controle de onde os cabos estavam conetados.
 . Aperte o trinco na pega do excêntrico até que este se solte, abra totalmente o manípulo do excêntrico para libertar o módulo do controlador do plano médio e, em seguida, utilizando duas mãos, puxe o módulo do controlador para fora do chassis.
 +
-image::../media/drw_2850_pcm_remove_install_IEOPS-694.svg[drw 2850 pcm remover instalação IEOPS 694]
+image::../media/drw_2850_pcm_remove_install_IEOPS-694.svg[Retire o controlador]
 
 . Vire o módulo do controlador ao contrário e coloque-o numa superfície plana e estável.
 . Abra a tampa pressionando os botões azuis nas laterais do módulo do controlador para soltar a tampa e, em seguida, gire a tampa para cima e para fora do módulo do controlador.
 +
-image::../media/drw_2850_open_controller_module_cover_IEOPS-695.svg[Tampa do módulo de controlador aberto drw 2850 IEOPS 695]
+image::../media/drw_2850_open_controller_module_cover_IEOPS-695.svg[Abra o controlador]
 
 
 
-[cols="1,3"]
+[cols="1,2"]
 |===
 
 
@@ -50,9 +50,9 @@ Localize a Mídia de inicialização no módulo do controlador, localizado sob a
 
 .Animação - substitua o suporte de arranque
 video::10a29a01-a86e-451c-b05a-af4701726f57[panopto]
-image:../media/drw_2850_replace_boot_media_IEOPS-696.svg["largura: 500 mm"]
+image:../media/drw_2850_replace_boot_media_IEOPS-696.svg["Substitua o suporte de arranque"]
 
-[cols="1,3"]
+[cols="1,2"]
 |===
 
 

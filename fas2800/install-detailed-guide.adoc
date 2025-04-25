@@ -83,7 +83,7 @@ X66240-2, 2m
 
 X66240A-5, 5m
  a| 
-image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[Cabo oie 25GB Ethernet SFP28 IEOPS 1069]
+image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[Cabo de rede 25GB]
  a| 
 Cabo de rede
 
@@ -126,7 +126,7 @@ X66031A, 1m
 
 X66032A, 2m
  a| 
-image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[cabo oie mini sas hd para mini sas hd]
+image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[Cabo mini-SAS para mini-SAS]
  a| 
 Armazenamento
 
@@ -148,7 +148,7 @@ Cabos de alimentação
  a| 
 Nenhuma etiqueta de número de peça
  a| 
-image::../media/oie_cable_power.png[alimentação do cabo oie]
+image::../media/oie_cable_power.png[Cabo de alimentação]
  a| 
 Ligar o sistema de armazenamento
 
@@ -178,11 +178,11 @@ Instale o sistema de armazenamento em um rack de telecomunicações ou gabinete 
 NOTE: Você precisa estar ciente das preocupações de segurança associadas ao peso do sistema de armazenamento.
 
 +
-image::../media/oie_fas2800_weight_caution_IEOPS-1070.svg[oie fas2800 cuidado de peso IEOPS 1070]
+image::../media/oie_fas2800_weight_caution_IEOPS-1070.svg[Etiqueta de aviso de elevação]
 
 . Conete os dispositivos de gerenciamento de cabos (como mostrado).
 +
-image::../media/drw_cable_management_arm_install.svg[instalação do ARM de gerenciamento de cabos drw]
+image::../media/drw_cable_management_arm_install.svg[Instale o ARM de gerenciamento de cabos]
 
 . Coloque a moldura na parte frontal do sistema de armazenamento.
 
@@ -246,13 +246,13 @@ video::90577508-fa79-46cf-b18a-afe8016325af[panopto]
 .Passos
 . Cable as portas de interconexão de cluster e0a a e0a e e0b a e0b com o cabo de interconexão de cluster:
 +
-image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[Cabo oie 25GB Ethernet SFP28 IEOPS 1069]
+image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[Cabo de rede 25GB]
 
 +
 *Cabos de interconexão de cluster*
 
 +
-image::../media/drw_2800_tnsc_cluster_cabling_IEOPS-892.svg[Cabeamento de cluster drw 2800 tnsc IEOPS 892]
+image::../media/drw_2800_tnsc_cluster_cabling_IEOPS-892.svg[Cabeamento de cluster de dois nós]
 
 . Faça o cabeamento das e0M portas aos switches de rede de gerenciamento com os cabos RJ45:
 +
@@ -262,11 +262,11 @@ image::../media/oie_cable_rj45.png[Cabos RJ-45]
 *RJ45 cabos*
 
 +
-image::../media/drw_2800_management_connection_IEOPS-1077.svg[Conexão de gerenciamento drw 2800 IEOPS 1077]
+image::../media/drw_2800_management_connection_IEOPS-1077.svg[Conexão de gerenciamento]
 
 . Faça o cabeamento das portas da placa mezzanine à rede host.
 +
-image::../media/drw_2800_network_cabling_IEOPS-894.svg[Cabeamento de rede drw 2800 IEOPS 894]
+image::../media/drw_2800_network_cabling_IEOPS-894.svg[Conexões de rede]
 
 +
 .. Se você tiver uma rede de dados Ethernet de 4 portas, as portas de cabo de e1a a e1d para sua rede de dados Ethernet.
@@ -276,7 +276,7 @@ image::../media/drw_2800_network_cabling_IEOPS-894.svg[Cabeamento de rede drw 28
 image::../media/oie_cable_sfp_gbe_copper.png[Conetor de cobre GbE SFP]
 
 +
-image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[Cabo oie 25GB Ethernet SFP28 IEOPS 1069]
+image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[25GB cabo Ethernet]
 
 *** 4 PORTAS, 10GBASEBASE-T, RJ45
 +
@@ -327,21 +327,21 @@ video::6553a3db-57dd-4247-b34a-afe8016315d4[panopto]
 .Passos
 . Cable as portas de interconexão de cluster e0a a e0a e e0b a e0b com o cabo de interconexão de cluster:
 +
-image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[Cabo oie 25GB Ethernet SFP28 IEOPS 1069]
+image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[Conetor Ethernet 25GB]
 
 +
-image::../media/drw_2800_switched_cluster_cabling_IEOPS-893.svg[Cabeamento de cluster comutado drw 2800 IEOPS 893]
+image::../media/drw_2800_switched_cluster_cabling_IEOPS-893.svg[Conexões comutadas do cluster]
 
 . Faça o cabeamento das e0M portas aos switches de rede de gerenciamento com os cabos RJ45:
 +
 image::../media/oie_cable_rj45.png[Cabos RJ-45]
 
 +
-image::../media/drw_2800_management_connection_IEOPS-1077.svg[Conexão de gerenciamento drw 2800 IEOPS 1077]
+image::../media/drw_2800_management_connection_IEOPS-1077.svg[Ligação de rede de gestão]
 
 . Faça o cabeamento das portas da placa mezzanine à rede host.
 +
-image::../media/drw_2800_network_cabling_IEOPS-894.svg[Cabeamento de rede drw 2800 IEOPS 894]
+image::../media/drw_2800_network_cabling_IEOPS-894.svg[Conexões de rede]
 
 +
 .. Se você tiver uma rede de dados Ethernet de 4 portas, as portas de cabo de e1a a e1d para sua rede de dados Ethernet.
@@ -351,7 +351,7 @@ image::../media/drw_2800_network_cabling_IEOPS-894.svg[Cabeamento de rede drw 28
 image::../media/oie_cable_sfp_gbe_copper.png[Conetor de cobre GbE SFP]
 
 +
-image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[Cabo oie 25GB Ethernet SFP28 IEOPS 1069]
+image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[Conetor Ethernet 25GB]
 
 *** 4 PORTAS, 10GBASEBASE-T, RJ45
 +
@@ -445,47 +445,31 @@ video::b2a7549d-8141-47dc-9e20-afe8016f4386[panopto]
 .. A porta 1 da IOM a à porta 3 da IOM A na gaveta diretamente abaixo.
 .. Porta 1 na IOM B para a porta 3 na IOM B na gaveta diretamente abaixo.
 +
-image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[cabo oie mini sas hd para mini sas hd]
+image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[Conetor mini SAS para mini SAS]
 
-+
+
+
+
+
 *Cabos HD mini-SAS HD para mini-SAS HD*
 
-+
-image::../media/drw_2800_shelf-to-shelf_cabling_IEOPS-895.svg[Cabeamento de gaveta para gaveta drw 2800 IEOPS 895]
+Imagem::../media/drw_2800_shelf-to-shelf_Cabling_IEOPS-895.svg[cabeamento de prateleira para prateleira]
 
+E . Controlador de cabos A às gavetas de unidades. .. Controladora A porta 0a a IOM B porta 1 na primeira gaveta de unidades na stack. .. Controladora A porta 0b1 para IOM A porta 3 na última gaveta de unidades na stack.
 
+Imagem::../media/oie_cable_mini_sas_HD_to_mini_sas_HD.svg[Mini SAS to mini SAS Connector]
 
-. Controlador de cabos A às gavetas de unidades.
-+
-.. Controladora A porta 0a a IOM B porta 1 na primeira gaveta de unidades na stack.
-.. Controladora A porta 0b1 para IOM A porta 3 na última gaveta de unidades na stack.
-+
-image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[cabo oie mini sas hd para mini sas hd]
-
-+
 *Cabos HD mini-SAS HD para mini-SAS HD*
 
-+
-image::../media/dwr-2800_controller1-to shelves_IEOPS-896.svg[dwr 2800 controller1 para compartimentos IEOPS 896]
+Imagem::../media/dwr-2800_controller1-to shelves_IEOPS-896.svg[Controller A to shelf Connection]
 
+E . Conecte o controlador B às gavetas de unidades. .. Controladora B porta 0a a IOM A porta 1 na primeira gaveta de unidades na stack. .. Porta 0B1 da controladora B para porta IOM B 3 na última gaveta de unidades na stack.
 
+Imagem::../media/oie_cable_mini_sas_HD_to_mini_sas_HD.svg[Mini SAS to mini SAS Connector]
 
-. Conecte o controlador B às gavetas de unidades.
-+
-.. Controladora B porta 0a a IOM A porta 1 na primeira gaveta de unidades na stack.
-.. Porta 0B1 da controladora B para porta IOM B 3 na última gaveta de unidades na stack.
-+
-image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[cabo oie mini sas hd para mini sas hd]
-
-+
 *Cabos HD mini-SAS HD para mini-SAS HD*
 
-+
-image::../media/dwr-2800_controller2-to shelves_IEOPS-897.svg[dwr 2800 controller2 para compartimentos IEOPS 897]
-
-
-
-
+Imagem::../media/dwr-2800_controller2-to shelves_IEOPS-897.svg[Controller B to shelf Connection]
 
 
 
@@ -513,7 +497,7 @@ video::c600f366-4d30-481a-89d9-ab1b0066589b[panopto]
 NOTE: A inicialização inicial pode levar até oito minutos.
 
 +
-image::../media/dwr_2800_turn_on_power_IEOPS-898.svg[dwr 2800 Ligue a alimentação IEOPS 898]
+image::../media/dwr_2800_turn_on_power_IEOPS-898.svg[Ligue a alimentação]
 
 
 
@@ -524,12 +508,11 @@ Consulte a ajuda online do seu computador portátil para obter mais informaçõe
 . Ligue o seu computador portátil ao interrutor de gestão.
 . Use o gráfico ou as etapas para descobrir o nó do sistema de armazenamento a ser configurado:
 +
-image::../media/drw_autodiscovery_controler_select.svg[seleção do controlador de deteção automática drw]
+image::../media/drw_autodiscovery_controler_select_ieops-1849.svg[Sistema de deteção automática]
 
 +
 .. Abra o Explorador de ficheiros.
-.. Clique em rede no painel esquerdo.
-.. Clique com o botão direito do rato e selecione Atualizar.
+.. Clique em *rede* no painel esquerdo e clique com o botão direito do rato e selecione *atualizar*.
 .. Clique duas vezes no ícone ONTAP e aceite quaisquer certificados exibidos na tela.
 +
 
@@ -569,9 +552,9 @@ Se a deteção de rede não estiver ativada no computador portátil, conclua man
 
 NOTE: Consulte a ajuda on-line do seu laptop ou console para saber como configurar a porta do console.
 
-.. Conete o cabo do console ao laptop ou console e conete a porta do console no controlador usando o cabo do console fornecido com o sistema de armazenamento e, em seguida, cConete o laptop ou o console ao switch na sub-rede de gerenciamento.
+.. Conete o cabo do console ao laptop ou console e conete a porta do console no controlador usando o cabo do console fornecido com o sistema de armazenamento e, em seguida, conete o laptop ou o console ao switch na sub-rede de gerenciamento.
 +
-image::../media/drw_2800_laptop_to_switch_to_controller_IEOPS-1084.svg[Computador portátil drw 2800 para mudar para controlador IEOPS 1084]
+image::../media/drw_2800_laptop_to_switch_to_controller_IEOPS-1084.svg[Computador portátil para mudar de ligação]
 
 .. Atribua um endereço TCP/IP ao laptop ou console, usando um que esteja na sub-rede de gerenciamento.
 
@@ -583,7 +566,7 @@ video::c600f366-4d30-481a-89d9-ab1b0066589b[panopto]
 . Conete os cabos de alimentação às fontes de alimentação do controlador e, em seguida, conete-os a fontes de alimentação em diferentes circuitos.
 . Ligue os interruptores de energia para ambos os nós.
 +
-image::../media/dwr_2800_turn_on_power_IEOPS-898.svg[dwr 2800 Ligue a alimentação IEOPS 898]
+image::../media/dwr_2800_turn_on_power_IEOPS-898.svg[Ligue a alimentação]
 
 +
 

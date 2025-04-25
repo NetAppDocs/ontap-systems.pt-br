@@ -13,8 +13,6 @@ summary: Retorne o controle dos recursos de storage ao controlador de substitui�
 [role="lead"]
 Retorne o controle dos recursos de storage ao controlador de substituição para que o sistema AFF A20, AFF A30 ou AFF A50 possa retomar a operação normal. O procedimento de devolução varia de acordo com o tipo de encriptação utilizado pelo seu sistema: sem encriptação, encriptação OKM (Onboard Key Manager) ou encriptação EKM (External Key Manager).
 
-Redefina a encriptação se ativada e volte a colocar o controlador em funcionamento normal.
-
 [role="tabbed-block"]
 ====
 .Sem criptografia

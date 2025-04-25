@@ -17,7 +17,10 @@ Depois de instalar o hardware do sistema de storage FAS50, faça o cabeamento da
 Contacte o administrador da rede para obter informações sobre como ligar o sistema de armazenamento aos comutadores de rede.
 
 .Sobre esta tarefa
-* Os procedimentos de cabeamento de rede de cluster/HA e host mostram configurações comuns. Tenha em mente que o cabeamento específico depende dos componentes solicitados para o seu sistema de armazenamento. Para obter detalhes abrangentes de configuração e prioridade de slot, link:https://hwu.netapp.com["NetApp Hardware Universe"^]consulte .
+* Os procedimentos de cabeamento de rede de cluster/HA e host mostram configurações comuns.
++
+Se você não vir sua configuração aqui, link:https://hwu.netapp.com["NetApp Hardware Universe"^]acesse para obter informações abrangentes de configuração e prioridade de slot para fazer o cabeamento do seu sistema de armazenamento.
+
 * Os gráficos de cabeamento têm ícones de seta mostrando a orientação adequada (para cima ou para baixo) da aba de puxar do conetor do cabo ao inserir um conetor em uma porta.
 +
 Ao inserir o conetor, você deve sentir que ele clique no lugar; se você não sentir que ele clique, remova-o, vire-o e tente novamente.

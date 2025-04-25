@@ -54,7 +54,7 @@ Use o cabo de interconexão cluster/HA para conetar as portas e1a a e1a e as por
 *Cabos de interconexão de cluster/HA*
 
 +
-image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[Cabo de HA de cluster]
+image::../media/oie_cable_25Gb_Ethernet_SFP28_ieops-1069.png[Cabo de HA de cluster]
 
 +
 image::../media/drw_70-90_tnsc_cluster_cabling_ieops-1653.svg[Diagrama de cabeamento de cluster sem switch de dois nós]
@@ -100,7 +100,7 @@ NOTE: Para obter o máximo desempenho do sistema para tráfego de cluster e HA, 
 *Cabo de 100 GbE*
 
 +
-image::../media/oie_cable_sfp_gbe_copper.svg[100GB cabo Ethernet]
+image::../media/oie_cable_sfp_gbe_copper.png[100GB cabo Ethernet]
 
 +
 image::../media/drw_70-90_network_cabling1_ieops-1654.svg[Cabo para rede Ethernet de 100 GB]
@@ -110,7 +110,7 @@ image::../media/drw_70-90_network_cabling1_ieops-1654.svg[Cabo para rede Etherne
 *Host de 4 portas e 10/25 GbE*
 
 +
-image::../media/oie_cable_sfp_gbe_copper.svg[Cabo de 10/25 GB]
+image::../media/oie_cable_sfp_gbe_copper.png[Cabo de 10/25 GB]
 
 +
 image::../media/drw_70-90_network_cabling2_ieops-1655.svg[Cabo para rede Ethernet 100GB]
@@ -123,9 +123,9 @@ image::../media/drw_70-90_network_cabling2_ieops-1655.svg[Cabo para rede Etherne
 
 Use os cabos RJ-45 de 1000BASEBASE-T para conetar as portas de gerenciamento (chave inglesa) em cada controlador aos switches de rede de gerenciamento.
 
-image::../media/oie_cable_rj45.svg[RJ45 cabos]
-
 *CABOS RJ-45 DE 1000BASEBASE-T*
+
+image::../media/oie_cable_rj45.png[RJ45 cabos]
 
 image::../media/drw_70-90_management_connection_ieops-1656.svg[Conete-se à sua rede de gerenciamento]
 

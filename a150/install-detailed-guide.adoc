@@ -202,7 +202,7 @@ Interconexão de cluster
 
 
  a| 
-image::../media/icon_square_2_yellow.png[Legenda número 2]
+image::../media/icon_square_2_orange.png[Legenda número 2]
  a| 
 Controladores para switches de rede de dados de host
 
@@ -360,7 +360,7 @@ image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png["Conetor mini-SAS para m
 . Conectar cada nó à IOM B na stack
 +
 ** Controladora 1 porta 0a a porta IOM B 1 na primeira gaveta de unidades na stack.
-** Controladora 2 porta 0b a porta IOM B 3 na última gaveta de unidades na stack. image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png["Conetor mini-SAS para mini-SAS"] Cabos HD mini-SAS HD para mini-SAS HD
+** Controladora 2 porta 0b a porta IOM B 3 na última gaveta de unidades na stack. image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png["Conetor mini-SAS para mini-SAS"]Cabos mini-SAS HD para mini-SAS HD
 
 
 
@@ -403,12 +403,11 @@ image::../media/dwr_laptop_to_switch_only.svg[computador portátil dwr apenas pa
 
 . Selecione um ícone ONTAP listado para descobrir:
 +
-image::../media/drw_autodiscovery_controler_select.png[Selecione um ícone ONTAP]
+image::../media/drw_autodiscovery_controler_select_ieops-1849.svg[Selecione um ícone ONTAP]
 
 +
 .. Abra o Explorador de ficheiros.
-.. Clique em rede no painel esquerdo.
-.. Clique com o botão direito do rato e selecione Atualizar.
+.. Clique em *rede* no painel esquerdo e clique com o botão direito do rato e selecione *atualizar*.
 .. Clique duas vezes no ícone ONTAP e aceite quaisquer certificados exibidos na tela.
 +
 
