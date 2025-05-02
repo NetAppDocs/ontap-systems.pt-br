@@ -132,6 +132,8 @@ NOTE: Mover um cabo não requer nenhum tempo de espera entre desconetar o cabo d
 . Recable as conexões do compartimento existente em dois conjuntos de portas compatíveis com RoCE em diferentes slots, conforme aplicável ao modelo da sua plataforma.
 
 
+* Para sistemas AFF:
++
 [role="tabbed-block"]
 ====
 .AFF A1K
@@ -141,22 +143,22 @@ Siga um destes procedimentos se você estiver adicionando uma segunda prateleira
 
 NOTE: Se você tiver um par de HA do AFF A1K e adicionar um terceiro compartimento e instalar um terceiro ou quarto módulo de e/S compatível com RoCE em cada controladora, a terceira gaveta será cabeada apenas para o terceiro ou terceiro e quarto módulos de e/S. Não é necessário reinstalar nenhuma gaveta existente.
 
-* Se você estiver adicionando uma segunda prateleira, reconetável a primeira prateleira através dos módulos de e/S compatíveis com RoCE no slot 11 e slot 10 em cada controladora.
+** Se você estiver adicionando uma segunda prateleira, reconetável a primeira prateleira através dos módulos de e/S compatíveis com RoCE no slot 11 e slot 10 em cada controladora.
 +
 As subetapas assumem que a gaveta existente é cabeada para um módulo de e/S compatível com RoCE no slot 11 em cada controladora.
 
 +
-.. No controlador A, mova o cabo do slot 11 porta b (e11b) para o slot 10 porta b (e10b).
-.. Repita o mesmo movimento do cabo no controlador B.
+... No controlador A, mova o cabo do slot 11 porta b (e11b) para o slot 10 porta b (e10b).
+... Repita o mesmo movimento do cabo no controlador B.
 
 
-* Se você estiver adicionando uma quarta prateleira, reconetável a terceira prateleira através dos módulos de e/S compatíveis com RoCE no slot 9 e slot 8 em cada controladora.
+** Se você estiver adicionando uma quarta prateleira, reconetável a terceira prateleira através dos módulos de e/S compatíveis com RoCE no slot 9 e slot 8 em cada controladora.
 +
 As subetapas assumem que a terceira gaveta é cabeada para um módulo de e/S compatível com RoCE no slot 9 em cada controladora.
 
 +
-.. No controlador A, mova o cabo do slot 9 porta b (e9b) para o slot 8 porta b (e8b).
-.. Repita o mesmo movimento do cabo no controlador B.
+... No controlador A, mova o cabo do slot 9 porta b (e9b) para o slot 8 porta b (e8b).
+... Repita o mesmo movimento do cabo no controlador B.
 
 
 
@@ -168,8 +170,8 @@ Se você estiver adicionando uma segunda prateleira, reconetável a primeira pra
 
 As subetapas assumem que a gaveta existente é cabeada para um módulo de e/S compatível com RoCE no slot 11 em cada controladora.
 
-. No controlador A, mova o cabo do slot 11 porta b (e11b) para o slot 8 porta b (e8b).
-. Repita o mesmo movimento do cabo no controlador B.
+.. No controlador A, mova o cabo do slot 11 porta b (e11b) para o slot 8 porta b (e8b).
+.. Repita o mesmo movimento do cabo no controlador B.
 
 
 --
@@ -179,8 +181,8 @@ Se você estiver adicionando uma segunda gaveta, reconetável a primeira pratele
 
 As subetapas assumem que a gaveta existente é cabeada para placas PCIe compatíveis com RoCE no slot 5 em cada controladora.
 
-. No controlador A, mova o cabo do slot 5 porta b (e5b) para o slot 3 porta b (e3b).
-. Repita o mesmo movimento do cabo no controlador B.
+.. No controlador A, mova o cabo do slot 5 porta b (e5b) para o slot 3 porta b (e3b).
+.. Repita o mesmo movimento do cabo no controlador B.
 
 
 --
@@ -190,8 +192,8 @@ Se você estiver adicionando uma segunda gaveta, reconetável a primeira pratele
 
 As subetapas assumem que a gaveta existente é cabeada para módulos de e/S compatíveis com RoCE no slot 3 em cada controladora.
 
-. No controlador A, mova o cabo do slot 3 porta b (e3b) para o slot 7 porta b (E7B).
-. Repita o mesmo movimento do cabo no controlador B.
+.. No controlador A, mova o cabo do slot 3 porta b (e3b) para o slot 7 porta b (E7B).
+.. Repita o mesmo movimento do cabo no controlador B.
 
 
 --
@@ -199,7 +201,7 @@ As subetapas assumem que a gaveta existente é cabeada para módulos de e/S comp
 --
 Se você estiver adicionando uma segunda prateleira, dependendo do modelo da sua plataforma, faça um dos seguintes procedimentos:
 
-* No AFF A400:
+** No AFF A400:
 +
 Recable a primeira gaveta através dos dois conjuntos de portas compatíveis com RoCE, integradas e0c/e0d e no slot 5, em cada controladora.
 
@@ -207,11 +209,11 @@ Recable a primeira gaveta através dos dois conjuntos de portas compatíveis com
 As subetapas assumem que o compartimento existente é cabeado para as portas integradas compatíveis com RoCE e0c/e0d em cada controladora.
 
 +
-.. No controlador A, mova o cabo da porta e0d para a porta b (e5b) do slot 5.
-.. Repita o mesmo movimento do cabo no controlador B.
+... No controlador A, mova o cabo da porta e0d para a porta b (e5b) do slot 5.
+... Repita o mesmo movimento do cabo no controlador B.
 
 
-* No AFF C400:
+** No AFF C400:
 +
 Recable a primeira prateleira através dos dois conjuntos de portas compatíveis com RoCE no slot 4 e slot 5, em cada controlador.
 
@@ -219,8 +221,8 @@ Recable a primeira prateleira através dos dois conjuntos de portas compatíveis
 As subetapas assumem que o compartimento existente é cabeado para portas compatíveis com RoCE no slot 4 em cada controladora.
 
 +
-.. No controlador A, mova o cabo do slot 4 porta a (e4a) para o slot 5 porta b (e5b).
-.. Repita o mesmo movimento do cabo no controlador B.
+... No controlador A, mova o cabo do slot 4 porta a (e4a) para o slot 5 porta b (e5b).
+... Repita o mesmo movimento do cabo no controlador B.
 
 
 
@@ -230,22 +232,22 @@ As subetapas assumem que o compartimento existente é cabeado para portas compat
 --
 Siga um destes procedimentos se você estiver adicionando uma segunda prateleira ou uma quarta prateleira a quente.
 
-* Se você estiver adicionando uma segunda prateleira, reconetável a primeira prateleira através dos módulos de e/S compatíveis com RoCE no slot 2 e slot 10 em cada controladora.
+** Se você estiver adicionando uma segunda prateleira, reconetável a primeira prateleira através dos módulos de e/S compatíveis com RoCE no slot 2 e slot 10 em cada controladora.
 +
 As subetapas assumem que a gaveta existente é cabeada para um módulo de e/S compatível com RoCE no slot 2 em cada controladora.
 
 +
-.. No controlador A, mova o cabo do slot 2 porta b (e2b) para o slot 10 porta b (e10b).
-.. Repita o mesmo movimento do cabo no controlador B.
+... No controlador A, mova o cabo do slot 2 porta b (e2b) para o slot 10 porta b (e10b).
+... Repita o mesmo movimento do cabo no controlador B.
 
 
-* Se você estiver adicionando uma quarta prateleira, reconetável a terceira prateleira através dos módulos de e/S compatíveis com RoCE no slot 1 e slot 11 em cada controladora.
+** Se você estiver adicionando uma quarta prateleira, reconetável a terceira prateleira através dos módulos de e/S compatíveis com RoCE no slot 1 e slot 11 em cada controladora.
 +
 As subetapas assumem que a terceira gaveta é cabeada para um módulo de e/S compatível com RoCE no slot 1 em cada controladora.
 
 +
-.. No controlador A, mova o cabo do slot 1 porta b (e1b) para o slot 11 porta b (e11b).
-.. Repita o mesmo movimento do cabo no controlador B.
+... No controlador A, mova o cabo do slot 1 porta b (e1b) para o slot 11 porta b (e11b).
+... Repita o mesmo movimento do cabo no controlador B.
 
 
 
@@ -257,12 +259,138 @@ Se você estiver adicionando uma segunda prateleira, reconetável a primeira pra
 
 As subetapas assumem que a gaveta existente é cabeada para um módulo de e/S compatível com RoCE no slot 3 em cada controladora.
 
-. No controlador A, mova o cabo do slot 3 porta b (e3b) para o slot 1 porta b (e1b).
-. Repita o mesmo movimento do cabo no controlador B.
+.. No controlador A, mova o cabo do slot 3 porta b (e3b) para o slot 1 porta b (e1b).
+.. Repita o mesmo movimento do cabo no controlador B.
 
 
 --
 ====
+
+
+* Para sistemas ASA:
++
+[role="tabbed-block"]
+====
+.ASA A1K
+--
+Siga um destes procedimentos se você estiver adicionando uma segunda prateleira ou uma quarta prateleira a quente.
+
+
+NOTE: Se você tiver um par de HA do ASA A1K e adicionar um terceiro compartimento e instalar um terceiro ou quarto módulo de e/S compatível com RoCE em cada controladora, a terceira gaveta será cabeada apenas para o terceiro ou terceiro e quarto módulos de e/S. Não é necessário reinstalar nenhuma gaveta existente.
+
+** Se você estiver adicionando uma segunda prateleira, reconetável a primeira prateleira através dos módulos de e/S compatíveis com RoCE no slot 11 e slot 10 em cada controladora.
++
+As subetapas assumem que a gaveta existente é cabeada para um módulo de e/S compatível com RoCE no slot 11 em cada controladora.
+
++
+... No controlador A, mova o cabo do slot 11 porta b (e11b) para o slot 10 porta b (e10b).
+... Repita o mesmo movimento do cabo no controlador B.
+
+
+** Se você estiver adicionando uma quarta prateleira, reconetável a terceira prateleira através dos módulos de e/S compatíveis com RoCE no slot 9 e slot 8 em cada controladora.
++
+As subetapas assumem que a terceira gaveta é cabeada para um módulo de e/S compatível com RoCE no slot 9 em cada controladora.
+
++
+... No controlador A, mova o cabo do slot 9 porta b (e9b) para o slot 8 porta b (e8b).
+... Repita o mesmo movimento do cabo no controlador B.
+
+
+
+
+--
+.ASA A70 ou ASA A90
+--
+Se você estiver adicionando uma segunda prateleira, reconetável a primeira prateleira através dos módulos de e/S compatíveis com RoCE no slot 11 e slot 8 em cada controladora.
+
+As subetapas assumem que a gaveta existente é cabeada para um módulo de e/S compatível com RoCE no slot 11 em cada controladora.
+
+.. No controlador A, mova o cabo do slot 11 porta b (e11b) para o slot 8 porta b (e8b).
+.. Repita o mesmo movimento do cabo no controlador B.
+
+
+--
+.ASA A800 ou ASA C800
+--
+Se você estiver adicionando uma segunda gaveta, reconetável a primeira prateleira através dos dois conjuntos de portas compatíveis com RoCE no slot 5 e slot 3 em cada controladora.
+
+As subetapas assumem que a gaveta existente é cabeada para placas PCIe compatíveis com RoCE no slot 5 em cada controladora.
+
+.. No controlador A, mova o cabo do slot 5 porta b (e5b) para o slot 3 porta b (e3b).
+.. Repita o mesmo movimento do cabo no controlador B.
+
+
+--
+.ASA A400 ou ASA C400
+--
+Se você estiver adicionando uma segunda prateleira, dependendo do modelo da sua plataforma, faça um dos seguintes procedimentos:
+
+** No ASA A400:
++
+Recable a primeira gaveta através dos dois conjuntos de portas compatíveis com RoCE, integradas e0c/e0d e no slot 5, em cada controladora.
+
++
+As subetapas assumem que o compartimento existente é cabeado para as portas integradas compatíveis com RoCE e0c/e0d em cada controladora.
+
++
+... No controlador A, mova o cabo da porta e0d para a porta b (e5b) do slot 5.
+... Repita o mesmo movimento do cabo no controlador B.
+
+
+** No ASA C400:
++
+Recable a primeira prateleira através dos dois conjuntos de portas compatíveis com RoCE no slot 4 e slot 5, em cada controlador.
+
++
+As subetapas assumem que o compartimento existente é cabeado para portas compatíveis com RoCE no slot 4 em cada controladora.
+
++
+... No controlador A, mova o cabo do slot 4 porta a (e4a) para o slot 5 porta b (e5b).
+... Repita o mesmo movimento do cabo no controlador B.
+
+
+
+
+--
+.ASA A900
+--
+Siga um destes procedimentos se você estiver adicionando uma segunda prateleira ou uma quarta prateleira a quente.
+
+** Se você estiver adicionando uma segunda prateleira, reconetável a primeira prateleira através dos módulos de e/S compatíveis com RoCE no slot 2 e slot 10 em cada controladora.
++
+As subetapas assumem que a gaveta existente é cabeada para um módulo de e/S compatível com RoCE no slot 2 em cada controladora.
+
++
+... No controlador A, mova o cabo do slot 2 porta b (e2b) para o slot 10 porta b (e10b).
+... Repita o mesmo movimento do cabo no controlador B.
+
+
+** Se você estiver adicionando uma quarta prateleira, reconetável a terceira prateleira através dos módulos de e/S compatíveis com RoCE no slot 1 e slot 11 em cada controladora.
++
+As subetapas assumem que a terceira gaveta é cabeada para um módulo de e/S compatível com RoCE no slot 1 em cada controladora.
+
++
+... No controlador A, mova o cabo do slot 1 porta b (e1b) para o slot 11 porta b (e11b).
+... Repita o mesmo movimento do cabo no controlador B.
+
+
+
+
+--
+.ASA A30 ou ASA A50
+--
+Se você estiver adicionando uma segunda prateleira, reconetável a primeira prateleira através dos módulos de e/S compatíveis com RoCE no slot 3 e slot 1 em cada controladora.
+
+As subetapas assumem que a gaveta existente é cabeada para um módulo de e/S compatível com RoCE no slot 3 em cada controladora.
+
+.. No controlador A, mova o cabo do slot 3 porta b (e3b) para o slot 1 porta b (e1b).
+.. Repita o mesmo movimento do cabo no controlador B.
+
+
+--
+====
+
+
 . Verifique se a gaveta cabeada está cabeada corretamente usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]o .
 +
 Se forem gerados erros de cabeamento, siga as ações corretivas fornecidas.

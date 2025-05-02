@@ -2,8 +2,6 @@
 :allow-uri-read: 
 
 
-Quando for necessário storage adicional, é possível adicionar mais três gavetas de unidade de NS224 TB adicionais (para um total de quatro gavetas) a um par de HA da AFF A900.
-
 .Antes de começar
 * Tem de ter revisto a link:requirements-hot-add-shelf.html["requisitos e práticas recomendadas de adição dinâmica"].
 * Você deve ter concluído os procedimentos aplicáveis no link:prepare-hot-add-shelf.html["Prepare-se para adicionar uma prateleira a quente"].
@@ -29,7 +27,7 @@ Caso contrário, vá para a próxima etapa.
 A ilustração a seguir mostra o cabeamento da segunda gaveta (e a primeira gaveta).
 
 +
-image::../media/drw_ns224_a900_2shelves.png[Cabeamento de um AFF A900 com duas gavetas NS224 e dois módulos de e/S]
+image::../media/drw_ns224_a900_2shelves.png[Cabeamento para AFF/ASA A900 com duas gavetas NS224 e dois módulos de e/S]
 
 
 
@@ -46,7 +44,7 @@ Caso contrário, vá para a próxima etapa.
 A ilustração a seguir mostra o cabeamento da terceira prateleira.
 
 +
-image::../media/drw_ns224_a900_3shelves.png[Cabeamento de um AFF A900 com três gavetas NS224 e quatro módulos de e/S]
+image::../media/drw_ns224_a900_3shelves.png[Cabeamento para AFF/ASA A900 com três gavetas NS224 e quatro módulos de e/S]
 
 
 
@@ -63,7 +61,7 @@ Caso contrário, vá para a próxima etapa.
 A ilustração a seguir mostra o cabeamento da quarta prateleira.
 
 +
-image::../media/drw_ns224_a900_4shelves.png[Cabeamento de um AFF A900 com quatro gavetas NS224 e quatro módulos de e/S]
+image::../media/drw_ns224_a900_4shelves.png[Cabeamento para AFF/ASA A900 com quatro gavetas NS224 e quatro módulos de e/S]
 
 
 

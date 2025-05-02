@@ -2,8 +2,6 @@
 :allow-uri-read: 
 
 
-A forma como você utiliza uma gaveta de NS224 TB para adicionar hot-add depende de você ter um par de HA AFF A400 ou AFF C400.
-
 .Antes de começar
 * Tem de ter revisto a link:requirements-hot-add-shelf.html["requisitos e práticas recomendadas de adição dinâmica"].
 * Você deve ter concluído os procedimentos aplicáveis no link:prepare-hot-add-shelf.html["Prepare-se para adicionar uma prateleira a quente"].
@@ -28,7 +26,7 @@ Caso contrário, vá para a próxima etapa.
 A ilustração a seguir mostra o cabeamento de uma gaveta hot-added usando um conjunto de portas compatíveis com RoCE em cada controladora:
 
 +
-image::../media/drw_ns224_a400_1shelf.png[Cabeamento de um AFF A400 com uma gaveta de NS224 U e um conjunto de portas integradas]
+image::../media/drw_ns224_a400_1shelf.png[Cabeamento de AFF/ASA A400 com uma gaveta de NS224 e um conjunto de portas integradas]
 
 
 
@@ -66,7 +64,7 @@ Gaveta 2
 A ilustração a seguir mostra o cabeamento de duas prateleiras adicionadas a quente:
 
 +
-image::../media/drw_ns224_a400_2shelves_IEOPS-983.svg[Cabeamento para um AFF A400 com duas gavetas NS224 e um conjunto de portas integradas e um conjunto de portas em placas PCIe]
+image::../media/drw_ns224_a400_2shelves_IEOPS-983.svg[Cabeamento para um /ASA A400 com duas gavetas NS224 e um conjunto de portas integradas e um conjunto de portas em placas PCIe]
 
 . Verifique se o compartimento hot-added está cabeado corretamente usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]o .
 +
@@ -96,7 +94,7 @@ Caso contrário, vá para a próxima etapa.
 A ilustração a seguir mostra o cabeamento de uma gaveta hot-added usando um conjunto de portas compatíveis com RoCE em cada controladora:
 
 +
-image::../media/drw_ns224_c400_1shelf_IEOPS-985.svg[Cabeamento para um AFF C400 com uma gaveta NS224 e um conjunto de portas de placa PCIe]
+image::../media/drw_ns224_c400_1shelf_IEOPS-985.svg[Cabeamento para um AFF/ASA C400 com uma gaveta NS224 e um conjunto de portas de placa PCIe]
 
 
 
@@ -134,7 +132,7 @@ Gaveta 2
 A ilustração a seguir mostra o cabeamento de duas prateleiras adicionadas a quente:
 
 +
-image::../media/drw_ns224_c400_2shelves_IEOPS-984.svg[Cabeamento para um AFF C400 com duas gavetas NS224 e dois conjuntos de portas de placa PCIe]
+image::../media/drw_ns224_c400_2shelves_IEOPS-984.svg[Cabeamento para um AFF/ASA C400 com duas gavetas NS224 e dois conjuntos de portas de placa PCIe]
 
 . Verifique se o compartimento hot-added está cabeado corretamente usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]o .
 +

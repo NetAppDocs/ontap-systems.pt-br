@@ -2,8 +2,6 @@
 :allow-uri-read: 
 
 
-Quando for necessário storage adicional, é possível adicionar um compartimento máximo de NS224 TB a um par de HA AFF A250 ou AFF C250.
-
 .Antes de começar
 * Tem de ter revisto a link:requirements-hot-add-shelf.html["requisitos e práticas recomendadas de adição dinâmica"].
 * Você deve ter concluído os procedimentos aplicáveis no link:prepare-hot-add-shelf.html["Prepare-se para adicionar uma prateleira a quente"].
@@ -21,7 +19,7 @@ Quando vista da parte traseira do chassi da plataforma, a porta da placa compat�
 .. Compartimento de cabos NSM B porta e0a para a porta a (e1a) do slot B do controlador B slot 1.
 .. Compartimento de cabos NSM B porta e0b para a porta b (e1b) do slot 1 do controlador A. A ilustração a seguir mostra o cabeamento da prateleira quando concluída.
 +
-image::../media/drw_ns224_a250_c250_f500f_1shelf_ieops-1824.svg[Cabeamento para um AFF A250 C250 ou FAS500f com uma gaveta NS224 e um conjunto de portas de placa PCIe]
+image::../media/drw_ns224_a250_c250_f500f_1shelf_ieops-1824.svg[Cabeamento para AFF/ASA A250 C250 ou FAS500f com uma gaveta de NS224 TB e um conjunto de portas de placa PCIe]
 
 
 

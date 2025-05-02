@@ -53,7 +53,7 @@ Caso contrário, vá para a próxima etapa.
 A ilustração a seguir destaca o cabeamento para a segunda gaveta do par de HA com dois módulos de e/S compatíveis com RoCE em cada controladora:
 
 +
-image::../media/drw_ns224_vino_m_2shelves_2cards_ieops-1642.svg[Cabeamento para AFF A1K com duas gavetas e dois módulos de e/S]
+image::../media/drw_ns224_vino_m_2shelves_2cards_ieops-1642.svg[Cabeamento para AFF/ASA A1K com duas gavetas e dois módulos de e/S]
 
 
 
@@ -67,7 +67,7 @@ image::../media/drw_ns224_vino_m_2shelves_2cards_ieops-1642.svg[Cabeamento para 
 A ilustração a seguir destaca o cabeamento da terceira gaveta do par de HA com três módulos de e/S compatíveis com RoCE em cada controladora:
 
 +
-image::../media/drw_ns224_vino_m_3shelves_3cards_ieops-1643.svg[Cabeamento para AFF A1K com três gavetas e três módulos de e/S]
+image::../media/drw_ns224_vino_m_3shelves_3cards_ieops-1643.svg[Cabeamento para AFF/ASA A1K com três gavetas e três módulos de e/S]
 
 
 
@@ -81,7 +81,7 @@ image::../media/drw_ns224_vino_m_3shelves_3cards_ieops-1643.svg[Cabeamento para 
 A ilustração a seguir destaca o cabeamento da terceira gaveta do par de HA com quatro módulos de e/S compatíveis com RoCE em cada controladora:
 
 +
-image::../media/drw_ns224_vino_m_3shelves_4cards_ieops-1644.svg[Cabeamento para AFF A1K com três gavetas e quatro módulos de e/S]
+image::../media/drw_ns224_vino_m_3shelves_4cards_ieops-1644.svg[Cabeamento para AFF/ASA A1K com três gavetas e quatro módulos de e/S]
 
 
 
@@ -95,7 +95,7 @@ image::../media/drw_ns224_vino_m_3shelves_4cards_ieops-1644.svg[Cabeamento para 
 A ilustração a seguir destaca o cabeamento da quarta gaveta no par de HA com quatro módulos de e/S compatíveis com RoCE em cada controladora:
 
 +
-image::../media/drw_ns224_vino_m_4shelves_4cards_ieops-1645.svg[Cabeamento para AFF A1K com quatro gavetas e quatro módulos de e/S]
+image::../media/drw_ns224_vino_m_4shelves_4cards_ieops-1645.svg[Cabeamento para AFF/ASA A1K com quatro gavetas e quatro módulos de e/S]
 
 
 
@@ -111,10 +111,10 @@ Se você desativou a atribuição automática de unidade como parte da preparaç
 Caso contrário, você é feito com o procedimento de hot-add prateleira.
 
 ====
-.Compartimento de cabos para AFF A20, AFF A30, AFF A50, AFF C30 ou AFF C60
+.Prateleira de cabos para AFF A20
 [%collapsible]
 ====
-É possível adicionar sem desligamento até duas gavetas NS224 para um par de HA AFF A20, AFF A30, AFF C30, AFF A50 ou AFF C60 quando for necessário storage adicional (para o compartimento interno).
+É possível adicionar uma gaveta de NS224 TB a um par de HA AFF A20 quando for necessário storage adicional (para o compartimento interno).
 
 .Antes de começar
 * Tem de ter revisto a link:requirements-hot-add-shelf.html["requisitos e práticas recomendadas de adição dinâmica"].
@@ -123,12 +123,100 @@ Caso contrário, você é feito com o procedimento de hot-add prateleira.
 
 
 .Sobre esta tarefa
-* Esse procedimento pressupõe que seu par de HA tenha apenas storage interno (sem compartimentos externos) e que você também:
+* Esse procedimento pressupõe que seu par de HA tenha apenas storage interno (sem gavetas externas) e que você esteja adicionando mais uma gaveta adicional.
+* Este procedimento aborda os seguintes cenários de adição dinâmica:
 +
-** Adição de aquecimento até uma prateleira adicional para o AFF A20.
-** Adição automática de até duas gavetas adicionais e dois módulos de e/S compatíveis com RoCE em cada controladora para o AFF A30, AFF C30, AFF A50 ou AFF C60.
+** Adição automática da primeira gaveta a um par de HA com um módulo de e/S compatível com RoCE em cada controladora.
+** Adição automática da primeira gaveta a um par de HA com dois módulos de e/S compatíveis com RoCE em cada controladora.
 
 
+* Esses sistemas são compatíveis com as duas gavetas NS224 com NSM100 módulos e NS224 gavetas com NSM100B módulos. Para garantir que você faça o cabeamento de seus controladores às portas corretas, substitua o "X" em cada diagrama pelo número de porta correto para seu módulo:
++
+[cols="1,4"]
+|===
+| Tipo de módulo | Rotulagem do porto 
+
+
+ a| 
+NSM100
+ a| 
+"0"
+
+ex. e0a
+
+
+
+ a| 
+NSM100B
+ a| 
+"1"
+
+ex. e1a
+
+|===
+
+
+.Passos
+. Se você estiver adicionando um compartimento usando um conjunto de portas compatíveis com RoCE (um módulo de e/S compatível com RoCE) em cada módulo de controladora e esse for o único compartimento de NS224 TB do seu par de HA, execute as seguintes etapas.
++
+Caso contrário, vá para a próxima etapa.
+
++
+
+NOTE: Esta etapa pressupõe que você instalou o módulo de e/S compatível com RoCE no slot 3.
+
++
+.. Compartimento de cabos NSM A porta Exa para controlador A slot 3 porta a (E3A).
+.. Porta eXb do compartimento de cabos NSM A para a porta b (e3b) do slot 3 do controlador B.
+.. Porta Exa do NSM B da gaveta de cabos para a porta a (E3A) do slot 3 do controlador B.
+.. Porta eXb da gaveta de cabos NSM B para porta b (e3b) da ranhura 3 do controlador A.
++
+A ilustração a seguir mostra o cabeamento de uma gaveta hot-added usando um módulo de e/S compatível com RoCE em cada módulo de controladora:
+
++
+image::../media/drw_ns224_g_1shelf_1card_ieops-2002.svg[Cabeamento para AFF/ASA A20 com uma gaveta e um módulo de e/S]
+
+
+
+. Se você estiver adicionando um compartimento usando dois conjuntos de portas compatíveis com RoCE (dois módulos de e/S compatíveis com RoCE) em cada módulo de controladora, execute as seguintes etapas.
++
+.. Cabo NSM A porta Exa para controlador A slot 3 porta a (E3A).
+.. Cabo NSM A porta eXb para o slot B do controlador 1 porta b (e1b).
+.. Cabo NSM B porta Exa para o slot B do controlador 3 porta a (E3A).
+.. Cabo NSM B porta eXb para controlador A slot 1 porta b (e1b).
+
+
+
+
+A ilustração a seguir mostra o cabeamento de uma gaveta hot-added usando dois módulos de e/S compatíveis com RoCE em cada módulo de controladora:
+
+image::../media/drw_ns224_g_1shelf_2card_ieops-2005.svg[Cabeamento para AFF/ASA A20 com uma gaveta e dois módulos de e/S]
+
+. Verifique se o compartimento hot-added está cabeado corretamente usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]o .
++
+Se forem gerados erros de cabeamento, siga as ações corretivas fornecidas.
+
+
+
+.O que se segue?
+Se você desativou a atribuição automática de unidade como parte da preparação para este procedimento, será necessário atribuir manualmente a propriedade da unidade e, em seguida, reativar a atribuição automática de unidade, se necessário. Vá para link:complete-hot-add-shelf.html["Complete o hot-add"].
+
+Caso contrário, você é feito com o procedimento de hot-add prateleira.
+
+====
+.Compartimento de cabos para AFF A30, AFF A50, AFF C30 ou AFF C60
+[%collapsible]
+====
+É possível adicionar sem desligamento até duas gavetas NS224 a um par de HA AFF A30, AFF C30, AFF A50 ou AFF C60 quando for necessário storage adicional (para a gaveta interna).
+
+.Antes de começar
+* Tem de ter revisto a link:requirements-hot-add-shelf.html["requisitos e práticas recomendadas de adição dinâmica"].
+* Você deve ter concluído os procedimentos aplicáveis no link:prepare-hot-add-shelf.html["Prepare-se para adicionar uma prateleira a quente"].
+* Você precisa ter instalado as gavetas, ligado e definido as IDs de gaveta como descrito em link:prepare-hot-add-shelf.html["Instale uma prateleira para adicionar um hot-add"].
+
+
+.Sobre esta tarefa
+* Esse procedimento pressupõe que seu par de HA tenha apenas storage interno (sem compartimentos externos) e que você esteja adicionando "Hot-Adding" a duas gavetas adicionais e dois módulos de e/S com capacidade para RoCE em cada controladora.
 * Este procedimento aborda os seguintes cenários de adição dinâmica:
 +
 ** Adição automática da primeira gaveta a um par de HA com um módulo de e/S compatível com RoCE em cada controladora.
@@ -180,7 +268,7 @@ NOTE: Esta etapa pressupõe que você instalou o módulo de e/S compatível com 
 A ilustração a seguir mostra o cabeamento de uma gaveta hot-added usando um módulo de e/S compatível com RoCE em cada módulo de controladora:
 
 +
-image::../media/drw_ns224_g_1shelf_1card_ieops-2002.svg[Cabeamento para AFF A20,452px,AFF C30]
+image::../media/drw_ns224_g_1shelf_1card_ieops-2002.svg[Cabeamento para AFF/ASA A30,452px,AFF/ASA A50]
 
 
 
@@ -207,7 +295,7 @@ Gaveta 1
 
 A ilustração a seguir mostra o cabeamento de uma gaveta hot-added usando dois módulos de e/S compatíveis com RoCE em cada módulo de controladora:
 
-image::../media/drw_ns224_g_1shelf_2card_ieops-2005.svg[Cabeamento para AFF A20,452px,AFF C30]
+image::../media/drw_ns224_g_1shelf_2card_ieops-2005.svg[Cabeamento para AFF/ASA A30,452px,AFF/ASA A50]
 
 
 
@@ -223,7 +311,7 @@ Gaveta 2
 
 A ilustração a seguir mostra o cabeamento de duas prateleiras hot-added usando dois módulos de e/S compatíveis com RoCE em cada módulo de controladora:
 
-image::../media/drw_ns224_g_2shelf_2card_ieops-2003.svg[Cabeamento para AFF A20,452px,AFF C30]
+image::../media/drw_ns224_g_2shelf_2card_ieops-2003.svg[Cabeamento para AFF A30/ASA,452px,AFF/ASA A50]
 
 |===
 . Verifique se o compartimento hot-added está cabeado corretamente usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]o .
@@ -278,7 +366,7 @@ NOTE: Esta etapa pressupõe que você instalou o módulo de e/S compatível com 
 A ilustração a seguir mostra o cabeamento de uma gaveta hot-added usando um módulo de e/S compatível com RoCE em cada módulo de controladora:
 
 +
-image::../media/drw_ns224_vino_i_1shelf_1card_ieops-1639.svg[Cabeamento para AFF A70 ou A90 com uma gaveta e um módulo de e/S]
+image::../media/drw_ns224_vino_i_1shelf_1card_ieops-1639.svg[Cabeamento para AFF/ASA A70 ou A90 com uma gaveta e um módulo de e/S]
 
 
 
@@ -305,7 +393,7 @@ Gaveta 1
 
 A ilustração a seguir mostra o cabeamento de uma gaveta hot-added usando dois módulos de e/S compatíveis com RoCE em cada módulo de controladora:
 
-image::../media/drw_ns224_vino_i_1shelf_2cards_ieops-1640.svg[Cabeamento para AFF A70 ou A90 com uma gaveta e dois módulos de e/S]
+image::../media/drw_ns224_vino_i_1shelf_2cards_ieops-1640.svg[Cabeamento para AFF/ASA A70 ou A90 com uma gaveta e dois módulos de e/S]
 
 
 
@@ -321,7 +409,7 @@ Gaveta 2
 
 A ilustração a seguir mostra o cabeamento de duas prateleiras hot-added usando dois módulos de e/S compatíveis com RoCE em cada módulo de controladora:
 
-image::../media/drw_ns224_vino_i_2shelves_2cards_ieops-1641.svg[Cabeamento para AFF A70 ou A90 com duas gavetas e dois módulos de e/S]
+image::../media/drw_ns224_vino_i_2shelves_2cards_ieops-1641.svg[Cabeamento para AFF/ASA A70 ou A90 com duas gavetas e dois módulos de e/S]
 
 |===
 . Verifique se o compartimento hot-added está cabeado corretamente usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]o .
@@ -358,7 +446,7 @@ Quando vista da parte traseira do chassi da plataforma, a porta da placa compat�
 .. Compartimento de cabos NSM B porta e0a para a porta a (e1a) do slot B do controlador B slot 1.
 .. Compartimento de cabos NSM B porta e0b para a porta b (e1b) do slot 1 do controlador A. A ilustração a seguir mostra o cabeamento da prateleira quando concluída.
 +
-image::../media/drw_ns224_a250_c250_f500f_1shelf_ieops-1824.svg[Cabeamento para um AFF A250 C250 ou FAS500f com uma gaveta NS224 e um conjunto de portas de placa PCIe]
+image::../media/drw_ns224_a250_c250_f500f_1shelf_ieops-1824.svg[Cabeamento para AFF/ASA A250 C250 ou FAS500f com uma gaveta de NS224 TB e um conjunto de portas de placa PCIe]
 
 
 
@@ -403,7 +491,7 @@ Caso contrário, vá para a próxima etapa.
 A ilustração a seguir mostra o cabeamento de uma gaveta hot-added usando um conjunto de portas compatíveis com RoCE em cada controladora:
 
 +
-image::../media/drw_ns224_a400_1shelf.png[Cabeamento de um AFF A400 com uma gaveta de NS224 U e um conjunto de portas integradas]
+image::../media/drw_ns224_a400_1shelf.png[Cabeamento de AFF/ASA A400 com uma gaveta de NS224 e um conjunto de portas integradas]
 
 
 
@@ -441,7 +529,7 @@ Gaveta 2
 A ilustração a seguir mostra o cabeamento de duas prateleiras adicionadas a quente:
 
 +
-image::../media/drw_ns224_a400_2shelves_IEOPS-983.svg[Cabeamento para um AFF A400 com duas gavetas NS224 e um conjunto de portas integradas e um conjunto de portas em placas PCIe]
+image::../media/drw_ns224_a400_2shelves_IEOPS-983.svg[Cabeamento para um /ASA A400 com duas gavetas NS224 e um conjunto de portas integradas e um conjunto de portas em placas PCIe]
 
 . Verifique se o compartimento hot-added está cabeado corretamente usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]o .
 +
@@ -471,7 +559,7 @@ Caso contrário, vá para a próxima etapa.
 A ilustração a seguir mostra o cabeamento de uma gaveta hot-added usando um conjunto de portas compatíveis com RoCE em cada controladora:
 
 +
-image::../media/drw_ns224_c400_1shelf_IEOPS-985.svg[Cabeamento para um AFF C400 com uma gaveta NS224 e um conjunto de portas de placa PCIe]
+image::../media/drw_ns224_c400_1shelf_IEOPS-985.svg[Cabeamento para um AFF/ASA C400 com uma gaveta NS224 e um conjunto de portas de placa PCIe]
 
 
 
@@ -509,7 +597,7 @@ Gaveta 2
 A ilustração a seguir mostra o cabeamento de duas prateleiras adicionadas a quente:
 
 +
-image::../media/drw_ns224_c400_2shelves_IEOPS-984.svg[Cabeamento para um AFF C400 com duas gavetas NS224 e dois conjuntos de portas de placa PCIe]
+image::../media/drw_ns224_c400_2shelves_IEOPS-984.svg[Cabeamento para um AFF/ASA C400 com duas gavetas NS224 e dois conjuntos de portas de placa PCIe]
 
 . Verifique se o compartimento hot-added está cabeado corretamente usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]o .
 +
@@ -552,7 +640,7 @@ NOTE: Esta etapa pressupõe que você instalou a placa PCIe compatível com RoCE
 A ilustração a seguir mostra o cabeamento de uma gaveta hot-added usando uma placa PCIe compatível com RoCE em cada controladora:
 
 +
-image::../media/drw_ns224_a800_c800_1shelf_IEOPS-964.svg[Cabeamento para um AFF A800 ou AFF C800 com uma gaveta NS224 e uma placa PCIe]
+image::../media/drw_ns224_a800_c800_1shelf_IEOPS-964.svg[Cabeamento para AFF/ASA A800 ou AFF/ASA C800 com uma gaveta NS224 e uma placa PCIe]
 
 
 
@@ -644,7 +732,7 @@ Caso contrário, vá para a próxima etapa.
 A ilustração a seguir mostra o cabeamento da segunda gaveta (e a primeira gaveta).
 
 +
-image::../media/drw_ns224_a900_2shelves.png[Cabeamento de um AFF A900 com duas gavetas NS224 e dois módulos de e/S]
+image::../media/drw_ns224_a900_2shelves.png[Cabeamento para AFF/ASA A900 com duas gavetas NS224 e dois módulos de e/S]
 
 
 
@@ -661,7 +749,7 @@ Caso contrário, vá para a próxima etapa.
 A ilustração a seguir mostra o cabeamento da terceira prateleira.
 
 +
-image::../media/drw_ns224_a900_3shelves.png[Cabeamento de um AFF A900 com três gavetas NS224 e quatro módulos de e/S]
+image::../media/drw_ns224_a900_3shelves.png[Cabeamento para AFF/ASA A900 com três gavetas NS224 e quatro módulos de e/S]
 
 
 
@@ -678,7 +766,7 @@ Caso contrário, vá para a próxima etapa.
 A ilustração a seguir mostra o cabeamento da quarta prateleira.
 
 +
-image::../media/drw_ns224_a900_4shelves.png[Cabeamento de um AFF A900 com quatro gavetas NS224 e quatro módulos de e/S]
+image::../media/drw_ns224_a900_4shelves.png[Cabeamento para AFF/ASA A900 com quatro gavetas NS224 e quatro módulos de e/S]
 
 
 

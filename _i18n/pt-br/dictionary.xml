@@ -2415,7 +2415,6 @@
   <block id="ee0a734e2f0193a65c1da9b82e1749c4" category="list-text">Compartimento de cabos NSM B porta e0a para a porta a (e11a) do slot B do controlador B slot 11.</block>
   <block id="3eb8ce414e6e8d5e19024a3779a87e42" category="list-text">Compartimento de cabos NSM B porta e0b para a porta b (e11b) do slot 11 do controlador A.</block>
   <block id="6e06431b37da6d52783c06ed54eb0e42" category="paragraph">A ilustração a seguir mostra o cabeamento de uma gaveta hot-added usando um módulo de e/S compatível com RoCE em cada módulo de controladora:</block>
-  <block id="f9ba636c0d9fc6353c91cac13fe6290c" category="image-alt">Cabeamento para AFF A70 ou A90 com uma gaveta e um módulo de e/S</block>
   <block id="387fb751376fe75512f4de0a3be8f22e" category="list-text">Se você estiver adicionando uma ou duas gavetas usando dois conjuntos de portas compatíveis com RoCE (dois módulos de e/S compatíveis com RoCE) em cada módulo de controladora, execute as subetapas aplicáveis.</block>
   <block id="1d99994321fcf88aba221cbb6612805a" category="admonition">Esta etapa pressupõe que você instalou os módulos de e/S compatíveis com RoCE nos slots 11 e 8.</block>
   <block id="bb53c62475a4f28295dfd71302a53a3d" category="cell">Compartimentos</block>
@@ -2427,7 +2426,6 @@
   <block id="fed38315c77f3f617a7a61ed019eb467" category="list-text">Cabo NSM B porta e0b para o slot 8 do controlador A porta b (e8b).</block>
   <block id="3992e90365cd83d200a23714fd7144bd" category="list-text">Se você estiver adicionando uma segunda prateleira a quente, conclua as subetapas "'prateleira 2"; caso contrário, vá para a etapa 3.</block>
   <block id="8b2cc73a271f9ec9f419e138f66cb109" category="paragraph">A ilustração a seguir mostra o cabeamento de uma gaveta hot-added usando dois módulos de e/S compatíveis com RoCE em cada módulo de controladora:</block>
-  <block id="0fd5a3b540c1af5ae188f141b2f40c24" category="image-alt">Cabeamento para AFF A70 ou A90 com uma gaveta e dois módulos de e/S</block>
   <block id="a740221e4a860e8ea31ec9d725dfdeec" category="paragraph">Gaveta 2</block>
   <block id="efd179e747ea06abffaa97721b0cc372" category="list-text">Cabo NSM A porta e0a para controlador A slot 8 porta a (e8a).</block>
   <block id="9db08de14bb838886cf8eaaee8575093" category="list-text">Cabo NSM A porta e0b para a porta b (e11b) do slot 11 do controlador B.</block>
@@ -2435,7 +2433,6 @@
   <block id="6d4a579eaf72f5aec95723d499d76fe9" category="list-text">Cabo NSM B porta e0b para o slot 11 do controlador A porta b (e11b).</block>
   <block id="0dcadfb972a7b539c769d330f7ccc286" category="list-text">Avance para o passo 3.</block>
   <block id="ae14ce538d268aca5ec54fbb093b2156" category="paragraph">A ilustração a seguir mostra o cabeamento de duas prateleiras hot-added usando dois módulos de e/S compatíveis com RoCE em cada módulo de controladora:</block>
-  <block id="25862846eedff523b089999508c204b1" category="image-alt">Cabeamento para AFF A70 ou A90 com duas gavetas e dois módulos de e/S</block>
   <block id="14ac662b33a52d48f6573c07b50e5b8f" category="list-text">Verifique se o compartimento hot-added está cabeado corretamente usando<block ref="7064c89577900622f24a070c24ebbaa7" category="inline-link-rx"></block>o .</block>
   <block id="be18329abc2d39cf668517f7b74c32c6" category="paragraph">Se forem gerados erros de cabeamento, siga as ações corretivas fornecidas.</block>
   <block id="58eaebf972358f1cf03d386a4ade1a0f" category="paragraph-title">O que se segue?</block>
@@ -2454,24 +2451,20 @@
   <block id="19d712485bae914b4efa24b39f6eba7a" category="list-text">Compartimento de cabos NSM A porta e0a para controlador A slot 10 porta a (e10a).</block>
   <block id="d9547d2852203d7c517230eb1c874611" category="list-text">Compartimento de cabos NSM B porta e0a para a porta a (e10a) do slot B do controlador B slot 10.</block>
   <block id="b5fb112065a7304ad93afe5e3c7fa849" category="paragraph">A ilustração a seguir destaca o cabeamento para a segunda gaveta do par de HA com dois módulos de e/S compatíveis com RoCE em cada controladora:</block>
-  <block id="ea0cc2be4039f5636ca9de5e2c7a3940" category="image-alt">Cabeamento para AFF A1K com duas gavetas e dois módulos de e/S</block>
   <block id="7190ee5c0c8079e24da44f24c6b7abbc" category="list-text">Se o compartimento de NS224 TB que você estiver adicionando a quente for o terceiro compartimento de NS224 TB no par de HA com três módulos de e/S compatíveis com RoCE em cada controladora, execute as seguintes etapas. Caso contrário, vá para a próxima etapa.</block>
   <block id="67a32de8a36abcac3887051fb422a5f5" category="list-text">Compartimento de cabos NSM A porta e0a para controlador A slot 9 porta a (e9a).</block>
   <block id="b94b22c566c53666c9eb824858482f94" category="list-text">Compartimento de cabos NSM A porta e0b para a porta b (e9b) do slot 9 do controlador B.</block>
   <block id="daa2e224b274ef312de5853c6cbffaf6" category="list-text">Compartimento de cabos NSM B porta e0a para a porta a (e9a) do slot B do controlador B slot 9.</block>
   <block id="3a8f2e391b6044dec7d6ef6c3e9dda69" category="list-text">Compartimento de cabos NSM B porta e0b para a porta b (e9b) do slot 9 do controlador A.</block>
   <block id="6c6e97e4c29594c5856e13f4b1a8be0c" category="paragraph">A ilustração a seguir destaca o cabeamento da terceira gaveta do par de HA com três módulos de e/S compatíveis com RoCE em cada controladora:</block>
-  <block id="94213ae2609c82c94807004beab91de1" category="image-alt">Cabeamento para AFF A1K com três gavetas e três módulos de e/S</block>
   <block id="46e04d93b6d495a5235036857998eae9" category="list-text">Se o compartimento de NS224 TB que você estiver adicionando a quente for o terceiro compartimento de NS224 TB no par de HA com quatro módulos de e/S compatíveis com RoCE em cada controladora, execute as seguintes etapas. Caso contrário, vá para a próxima etapa.</block>
   <block id="abb0dbc2abeae0d456ed2095b4c9ed12" category="list-text">Compartimento de cabos NSM A porta e0b para a porta b (e8b) do slot 8 do controlador B.</block>
   <block id="8ff8aa3f78832bf6ceceeea539763fec" category="list-text">Compartimento de cabos NSM B porta e0b para a porta b (e8b) do slot 8 do controlador A.</block>
   <block id="863764690b094c2d6a28b8edc2afba72" category="paragraph">A ilustração a seguir destaca o cabeamento da terceira gaveta do par de HA com quatro módulos de e/S compatíveis com RoCE em cada controladora:</block>
-  <block id="f9d0d9976d1ff7ee0097da8e1b7fb3c2" category="image-alt">Cabeamento para AFF A1K com três gavetas e quatro módulos de e/S</block>
   <block id="3bd0afb8978e34368879d152c8aec251" category="list-text">Se o compartimento NS224 que você está adicionando a quente for o quarto compartimento NS224 no par de HA com quatro módulos de e/S compatíveis com RoCE em cada controladora, execute as seguintes etapas.</block>
   <block id="d10794f4d3cca7a2993e8d2d6a12cd28" category="list-text">Compartimento de cabos NSM A porta e0a para controlador A slot 8 porta a (e8a).</block>
   <block id="ed24faf41d7d53c3a668df6e070aca6d" category="list-text">Compartimento de cabos NSM B porta e0a para a porta a (e8a) do slot B do controlador B slot 8.</block>
   <block id="551d2fc9e8e1159b84b9c23da6d27984" category="paragraph">A ilustração a seguir destaca o cabeamento da quarta gaveta no par de HA com quatro módulos de e/S compatíveis com RoCE em cada controladora:</block>
-  <block id="40d57aad6b502bb35f6aa64821041f6a" category="image-alt">Cabeamento para AFF A1K com quatro gavetas e quatro módulos de e/S</block>
   <block id="8f5d4ff45922bd2a0a4b4ca26b784653" category="paragraph">Quando for necessário storage adicional, é possível adicionar um compartimento máximo de NS224 TB a um par de HA AFF A250 ou AFF C250.</block>
   <block id="fa9763a154ca61da241ba542f9d894f7" category="paragraph">Quando vista da parte traseira do chassi da plataforma, a porta da placa compatível com RoCE à esquerda é a porta "a" (e1a) e a porta à direita é a porta "b" (e1b).</block>
   <block id="6636323e0aff4f454f3b81527e703c2b" category="list-text">Faça o cabeamento das conexões da prateleira:</block>
@@ -2479,7 +2472,6 @@
   <block id="dd76ecf50f41da091f6d857178f31123" category="list-text">Compartimento de cabos NSM A porta e0b para a porta b (e1b) do slot 1 do controlador B.</block>
   <block id="175a349725f8b3af6b3ec0d82c0e2318" category="list-text">Compartimento de cabos NSM B porta e0a para a porta a (e1a) do slot B do controlador B slot 1.</block>
   <block id="838163abcc84ed9f0cfee1181f77a021" category="list-text">Compartimento de cabos NSM B porta e0b para a porta b (e1b) do slot 1 do controlador A. A ilustração a seguir mostra o cabeamento da prateleira quando concluída.</block>
-  <block id="4c32ebd39f3a998e8ed434a92fb2337e" category="image-alt">Cabeamento para um AFF A250 C250 ou FAS500f com uma gaveta NS224 e um conjunto de portas de placa PCIe</block>
   <block id="3c8f15ce2288517ffd28cbab07b4cd4f" category="paragraph">A forma como você utiliza uma gaveta de NS224 TB para adicionar hot-add depende de você ter um par de HA AFF A400 ou AFF C400.</block>
   <block id="95e9c90f47d7134271c5de6f5d8d41f5" category="paragraph">* Prateleira de cabos para um par AFF A400 HA*</block>
   <block id="e47d066c3638efab14a13923e89b312a" category="paragraph">Para um par de HA AFF A400, é possível adicionar mais quente a duas gavetas e usar portas integradas e0c/e0d e portas no slot 5 conforme necessário.</block>
@@ -2489,7 +2481,6 @@
   <block id="1338474ed1400f2decaa8fd4832a842d" category="list-text">Compartimento de cabos NSM B porta e0a para a porta e0c do controlador B.</block>
   <block id="0e756c90485de908977a44f0d58d0222" category="list-text">Compartimento de cabos NSM B porta e0b para a porta e0d do controlador A.</block>
   <block id="4df6de3fb6b5eece4bd1d42f75e5ae3d" category="paragraph">A ilustração a seguir mostra o cabeamento de uma gaveta hot-added usando um conjunto de portas compatíveis com RoCE em cada controladora:</block>
-  <block id="672cc22dbbc7622be2f56d3dce98ffcd" category="image-alt">Cabeamento de um AFF A400 com uma gaveta de NS224 U e um conjunto de portas integradas</block>
   <block id="306fa6b2ff7e9909c6a2a302a380875a" category="list-text">Se você estiver adicionando uma ou duas prateleiras usando dois conjuntos de portas compatíveis com RoCE (portas compatíveis com RoCE e placa PCIe) em cada controladora, execute as seguintes etapas.</block>
   <block id="c30f945bbdd11d29e0f5cde326554182" category="list-text">Cabo NSM A porta e0a para controlador A porta e0c.</block>
   <block id="c8714c0d9fd482c82a6eb9a1f88a6c6a" category="list-text">Cabo NSM A porta e0b para o slot B do controlador 5 porta 2 (e5b).</block>
@@ -2500,7 +2491,6 @@
   <block id="2fe8fb2268f4a14629b04075d5feb39b" category="list-text">Cabo NSM B porta e0a para o slot B do controlador 5 porta 1 (E5A).</block>
   <block id="f192386ba82b03da6277a09d4a2c63ac" category="list-text">Cabo NSM B porta e0b para a porta e0d do controlador A.</block>
   <block id="75a57e4a236226bc25c09e120aeab4c5" category="paragraph">A ilustração a seguir mostra o cabeamento de duas prateleiras adicionadas a quente:</block>
-  <block id="303de4b6b1481e40bb1b8e2368a123b6" category="image-alt">Cabeamento para um AFF A400 com duas gavetas NS224 e um conjunto de portas integradas e um conjunto de portas em placas PCIe</block>
   <block id="41132f8bc7d00935b8687c18c2c9e35d" category="list-text">Se tiver desativado a atribuição automática de condução como parte da preparação para este procedimento, terá de atribuir manualmente a propriedade da unidade e, em seguida, voltar a ativar a atribuição automática de condução, se necessário. <block ref="27f0c709ab4d9ea809b0da6fd9c1c251" category="inline-link-macro-rx"></block>Consulte .</block>
   <block id="9f828d34e3b637190e1077658926821a" category="paragraph">Caso contrário, você é feito com este procedimento.</block>
   <block id="406a6a05dc05bb651919c02b9570c743" category="paragraph">* Prateleira de cabos para um par AFF C400 HA*</block>
@@ -2510,13 +2500,11 @@
   <block id="f74b21e9e00a4f232af4a83d6e91ea56" category="list-text">Compartimento de cabos NSM A porta e0b para a porta 2 (e4b) do slot B do controlador 4.</block>
   <block id="dea9986ba87dcbe7e1e56edd0971ea75" category="list-text">Compartimento de cabos NSM B porta e0a para a porta 1 (e4a) do slot B do controlador B slot 4.</block>
   <block id="f0f25c87c1779ef06057bd2f760dd44a" category="list-text">Compartimento de cabos NSM B porta e0b para o slot 4 do controlador A porta 2 (e4b).</block>
-  <block id="a3c44bf0089bcb64a39869e3500ee7be" category="image-alt">Cabeamento para um AFF C400 com uma gaveta NS224 e um conjunto de portas de placa PCIe</block>
   <block id="c4dcb8322178395823ac67e2ea704340" category="list-text">Se você estiver adicionando uma ou duas gavetas usando dois conjuntos de portas compatíveis com RoCE em cada controladora, execute as seguintes etapas.</block>
   <block id="a3a2d87cd45ac90b1a64a157d596387a" category="list-text">Cabo NSM A porta e0a para controlador A slot 4 porta 1 (e4a).</block>
   <block id="ec21ec9fcd2f64561315df3e90210f4e" category="list-text">Cabo NSM B porta e0a para o slot 4 da porta do controlador B porta 1 (e4a).</block>
   <block id="271862bfe83769232e835a8b7bc18b91" category="list-text">Cabo NSM A porta e0b para o slot B do controlador 4 porta 2 (e4b).</block>
   <block id="15c080954c797a5f48e731fe0b0c039f" category="list-text">Cabo NSM B porta e0b para o slot 4 do controlador A porta 2 (e4b).</block>
-  <block id="8e60b7b6a9c9e9483da2fb013ea4987b" category="image-alt">Cabeamento para um AFF C400 com duas gavetas NS224 e dois conjuntos de portas de placa PCIe</block>
   <block id="8b27019cea28c7866ff81a933ac7c02c" category="paragraph">A forma como você faz a cabeamento de uma gaveta de NS224 U em um par de HA AFF A800 ou AFF C800 depende do número de gavetas que você está adicionando ao quente e do número de conjuntos de portas com capacidade para RoCE (um ou dois) que você está usando nas controladoras.</block>
   <block id="e6960ae3a6a92d53555f3471da322c41" category="list-text">Se você estiver adicionando um compartimento usando um conjunto de portas compatíveis com RoCE (uma placa PCIe compatível com RoCE) em cada controladora e esse for o único compartimento de NS224 TB do seu par de HA, execute as seguintes etapas.</block>
   <block id="7f52c439783621a5d09c0e1eb50d4319" category="admonition">Esta etapa pressupõe que você instalou a placa PCIe compatível com RoCE no slot 5.</block>
@@ -2525,7 +2513,6 @@
   <block id="0b2da11bd8c712291a7f895f49e9e5e9" category="list-text">Compartimento de cabos NSM B porta e0a para a porta a (E5A) do slot B do controlador B slot 5.</block>
   <block id="7d87c1e0b37af31cc86321a5d5f8fad9" category="list-text">Compartimento de cabos NSM B porta e0b para a porta b (e5b) do slot 5 do controlador A.</block>
   <block id="c55555ebd43bc616a6c859bbbad79ac8" category="paragraph">A ilustração a seguir mostra o cabeamento de uma gaveta hot-added usando uma placa PCIe compatível com RoCE em cada controladora:</block>
-  <block id="e21205a57cd96b3d3b2ad37564df9874" category="image-alt">Cabeamento para um AFF A800 ou AFF C800 com uma gaveta NS224 e uma placa PCIe</block>
   <block id="6f313b51958d9ef2aa65c80a9b64de6b" category="list-text">Se você estiver adicionando uma ou duas prateleiras usando dois conjuntos de portas compatíveis com RoCE (duas placas PCIe compatíveis com RoCE) em cada controladora, execute as subetapas aplicáveis.</block>
   <block id="47f5ff4e183a793933d1f47d1d5d5b04" category="admonition">Esta etapa pressupõe que você instalou as placas PCIe compatíveis com RoCE no slot 5 e slot 3.</block>
   <block id="928e9f3198873a99cc05c02ab5403b7b" category="admonition">Essas subetapas supõem que você está começando o cabeamento pela porta da gaveta de cabeamento e0a para a placa PCIe compatível com RoCE no slot 5, em vez do slot 3.</block>
@@ -2545,14 +2532,11 @@
   <block id="ec7d41675ec0ec1148aff27f4e766941" category="list-text">Compartimento de cabos NSM A porta e0b para a porta b (E2B) do slot 2 do controlador B.</block>
   <block id="58848607da5220d46a743527d7c9fb0b" category="list-text">Compartimento de cabos NSM B porta e0b para a porta b (E2B) do slot 2 do controlador A.</block>
   <block id="3be444e253b66e84c2a7ac44cc632d2f" category="paragraph">A ilustração a seguir mostra o cabeamento da segunda gaveta (e a primeira gaveta).</block>
-  <block id="b44d424c15322ecb36a077b677527005" category="image-alt">Cabeamento de um AFF A900 com duas gavetas NS224 e dois módulos de e/S</block>
   <block id="63a52597f01feafa7bac4f564671ef46" category="list-text">Se a gaveta de NS224 TB que você está adicionando quente for a terceira gaveta de NS224 TB no par de HA, execute as seguintes etapas.</block>
   <block id="e3c4294c5b88b3a64211de084bc7bd2b" category="paragraph">A ilustração a seguir mostra o cabeamento da terceira prateleira.</block>
-  <block id="e896f649bc7a69947f85c288e5cb0b96" category="image-alt">Cabeamento de um AFF A900 com três gavetas NS224 e quatro módulos de e/S</block>
   <block id="ab4ee3b5165983371f54b55e9efd77af" category="list-text">Se a gaveta NS224 que você está adicionando quente for a quarta gaveta NS224 no par de HA, execute as seguintes etapas.</block>
   <block id="d49e45adf2352258d2679cda6d7594c5" category="list-text">Compartimento de cabos NSM B porta e0b para a porta b (e1b) do slot 1 do controlador A.</block>
   <block id="b434465fa52d0f783c7fd0f8d4ce72b7" category="paragraph">A ilustração a seguir mostra o cabeamento da quarta prateleira.</block>
-  <block id="325058948df9e92ff2c1577aeb745fc0" category="image-alt">Cabeamento de um AFF A900 com quatro gavetas NS224 e quatro módulos de e/S</block>
   <block id="34fa8e9482e8a9c2d457e4f6dc75fb62" category="list-text">Retire a tampa da extremidade esquerda para localizar o pequeno orifício à direita dos LEDs.</block>
   <block id="cf999199f9d4c3e90d15399860476f13" category="inline-image-macro">Alterar ID do compartimento</block>
   <block id="54425f945644281ccaf6201b998f169f" category="paragraph"><block ref="54425f945644281ccaf6201b998f169f" category="inline-image-macro-rx" type="image"></block></block>
@@ -6705,15 +6689,8 @@
   <block id="101e83bd64f471fa9ab9ec831ae79bf5" category="doc">Compartimento de cabos para sistemas ASA - NS224 gavetas</block>
   <block id="3ab6aa369c3f9b8276a331929da6f82c" category="example-title">Compartimento de cabos para ASA A1K</block>
   <block id="5085ff6c350861af4448d82a2c958fe8" category="paragraph">É possível adicionar mais três gavetas NS224 adicionais (para um total de quatro gavetas) a um par de HA ASA A1K.</block>
-  <block id="b96506939d3be5ee82870422bae11f18" category="image-alt">Cabeamento para ASA A1K com duas gavetas e dois módulos de e/S</block>
-  <block id="7c5aa1be4042527c8f9979e790cb45ad" category="image-alt">Cabeamento para ASA A1K com três compartimentos e três módulos de e/S</block>
-  <block id="09bb2c93b169f0c519beed078ec84db3" category="image-alt">Cabeamento para ASA A1K com três gavetas e quatro módulos de e/S</block>
-  <block id="568d158739474681892c0a2e2456188d" category="image-alt">Cabeamento para ASA A1K com quatro gavetas e quatro módulos de e/S</block>
   <block id="ae9e439bbd5c00f8b8a1bc7a935729c7" category="example-title">Compartimento de cabos para ASA A70 ou ASA A90</block>
   <block id="9e4b32259f721cc54024969657de5534" category="paragraph">É possível adicionar sem desligamento até duas gavetas NS224 a um par de HA ASA A70 ou ASA A90 quando for necessário storage adicional (para a gaveta interna).</block>
-  <block id="087914c8dfa7abbb50d9c6d8ec5daab1" category="image-alt">Cabeamento para ASA A70 ou A90 com uma gaveta e um módulo de e/S</block>
-  <block id="1bc9489d5803221329c048bb065c42ec" category="image-alt">Cabeamento para ASA A70 ou A90 com uma gaveta e dois módulos de e/S</block>
-  <block id="cdd4188b076dc68d9ffe52ac80b230c6" category="image-alt">Cabeamento para ASA A70 ou A90 com duas gavetas e dois módulos de e/S</block>
   <block id="14e93bfe999bd26d30efe27bc42d4e33" category="example-title">Compartimento de cabos para ASA A250 ou ASA C250</block>
   <block id="8249cdd39950bcc8dcd2742ed885f569" category="example-title">Compartimento de cabos para ASA A400 ou ASA C400</block>
   <block id="7702b4b78c879b561068c08066c8216e" category="example-title">Compartimento de cabos para ASA A800 ou ASA C800</block>
@@ -9659,10 +9636,6 @@
   <block id="e726d5f098bf18b53d3d464c11fbe033" category="list-text">Se o AutoSupport estiver ativado, restaure (dessuprimir) criação automática de casos: Nó do sistema AutoSupport invoke -node * -type all -message</block>
   <block id="975c4856a4750ba558520ec8a4820a30" category="list-text">Se você instalou um módulo NIC, especifique o modo de uso para cada porta como _network_:<block ref="2318bc4fadd0b94ffa92c4a515df2262" prefix=" " category="inline-code"></block></block>
   <block id="b6d91a8f20eef2bd8b5f445d19459cac" category="list-text">Repita estes passos para o outro controlador.</block>
-  <block id="fbff7da02a9769667db9e912fa36fc5e" category="paragraph">É possível adicionar sem desligamento até duas gavetas NS224 para um par de HA AFF A20, AFF A30, AFF C30, AFF A50 ou AFF C60 quando for necessário storage adicional (para o compartimento interno).</block>
-  <block id="73a95c42a81e9be601403e3a9d4a84c9" category="list-text">Esse procedimento pressupõe que seu par de HA tenha apenas storage interno (sem compartimentos externos) e que você também:</block>
-  <block id="c6e5816c4606aead75e5bf161bd98726" category="list-text">Adição de aquecimento até uma prateleira adicional para o AFF A20.</block>
-  <block id="11e9efba28ae2ed6dc6e8d713d0a9d85" category="list-text">Adição automática de até duas gavetas adicionais e dois módulos de e/S compatíveis com RoCE em cada controladora para o AFF A30, AFF C30, AFF A50 ou AFF C60.</block>
   <block id="4a09af6ecaf81ef3c2832bb75c6a0661" category="list-text">Esses sistemas são compatíveis com as duas gavetas NS224 com NSM100 módulos e NS224 gavetas com NSM100B módulos. Para garantir que você faça o cabeamento de seus controladores às portas corretas, substitua o "X" em cada diagrama pelo número de porta correto para seu módulo:</block>
   <block id="d6df784a5f01190c34ccccae7152455a" category="cell">Tipo de módulo</block>
   <block id="0ef8def66b79f6a75efa2dde40c34190" category="cell">Rotulagem do porto</block>
@@ -9677,7 +9650,6 @@
   <block id="4719f083a14108e1749d33a162c3f72e" category="list-text">Porta eXb do compartimento de cabos NSM A para a porta b (e3b) do slot 3 do controlador B.</block>
   <block id="e12dd7341a7320b1bfee16cf7817ae73" category="list-text">Porta Exa do NSM B da gaveta de cabos para a porta a (E3A) do slot 3 do controlador B.</block>
   <block id="36eb4fa8319a2d5789a89ff95d28ecb4" category="list-text">Porta eXb da gaveta de cabos NSM B para porta b (e3b) da ranhura 3 do controlador A.</block>
-  <block id="4d6aa4e10ec4c72ec3a386b483422bc8" category="image-alt">Cabeamento para AFF A20</block>
   <block id="d6dc171c9f98fe17e814fd05d2ee1489" category="admonition">Esta etapa pressupõe que você instalou os módulos de e/S compatíveis com RoCE nos slots 3 e 1.</block>
   <block id="e8becaef69668c291a5f960c6cd5f04e" category="list-text">Cabo NSM A porta Exa para controlador A slot 3 porta a (E3A).</block>
   <block id="5d0425db587b395e698ec97c99c625fc" category="list-text">Cabo NSM A porta eXb para o slot B do controlador 1 porta b (e1b).</block>
@@ -10363,7 +10335,6 @@
   <block id="dafdc51bcfddfb75cdc104244fa42b60" category="doc">Substitua a bateria do relógio em tempo real - AFF C80</block>
   <block id="0c760c78e9d0c008701a3538ed8f1c85" category="doc">Substitua o módulo de gestão do sistema - AFF C80</block>
   <block id="0e0493531094a28281ba5f32c328ac63" category="paragraph">Seu sistema de hardware pode ser compatível com ambas as prateleiras NS224 com NSM100 módulos e NS224 prateleiras com NSM100B módulos. Para verificar a compatibilidade e os nomes das portas do hardware e das prateleiras, consulte o<block ref="ed4326c3351d8ac0e334b8b4d9b37c82" category="inline-link-rx"></block>.</block>
-  <block id="c97d3a72e7c1692c1c5f56d517b82c8c" category="example-title">Compartimento de cabos para AFF A20, AFF A30, AFF A50, AFF C30 ou AFF C60</block>
   <block id="494fa596205dff234fa0bdbd9d667c60" category="example-title">Compartimento de cabos para AFF A70, AFF A90 ou AFF C80</block>
   <block id="cfa4ea65df4b282eb8322ca03dbd679d" category="inline-link-macro">guia de cabeamento conetado ao switch</block>
   <block id="d8ddb474e138beeebfa487dca0fe0955" category="list-text">Este procedimento aplica-se apenas à armazenagem direta. Para ver as instruções para armazenamento conetado ao switch, veja <block ref="655fd8ce12b9f1cd7287415659488f07" category="inline-link-macro-rx"></block>nosso .</block>
@@ -10604,7 +10575,6 @@
   <block id="dbc74f369dbf214b25d0f839fd4cd2b0" category="list-text">Restaure a giveback automática se você a tiver desativado:</block>
   <block id="37e73c8cf9d7d3b4aeaa58f23b2fcb81" category="paragraph">Depois de ativar o sistema de armazenamento AFF A1K, você estará pronto para descobrir a rede de cluster e configurar um cluster ONTAP.</block>
   <block id="f2cde5cb8aa49228f5cb392e473dff51" category="paragraph">Depois que o cluster for inicializado, baixe e execute<block ref="48865c7c1d8013246e4e5f705a9105de" category="inline-link-rx"></block> para confirmar a configuração.</block>
-  <block id="5d181ca91be1af691d1f01654691cc7b" category="image-alt">Sistema de armazenamento A1K e diagrama de ligação de alimentação A70 ou A90</block>
   <block id="e826d5b26017ec374bf63b94b8a425d9" category="list-text">Fixe os cabos de alimentação usando o dispositivo de fixação em cada fonte de alimentação. :a1k-a70-90!:</block>
   <block id="0bf1ff1f561d2a96752b8ee596c65068" category="list-text">4U em uma configuração de HA</block>
   <block id="3ac4d4a9f6b930345bd4ccdb8435d0fb" category="list-text">No módulo de Gestão do sistema de cada controlador</block>
@@ -10767,7 +10737,6 @@
   <block id="4e3c3284590d1aa1440e67b3bd65ba6e" category="list-text"><block ref="4e3c3284590d1aa1440e67b3bd65ba6e" category="inline-link-macro-rx"></block></block>
   <block id="370d2e6f20948d3881708f9706576691" category="sidebar">Prepare-se para substituir</block>
   <block id="19d944a3a323213d80bcdd66ecd5c26f" category="list-text">Determine se o OKM (Onboard Key Manager) ou o EKM (Eternal Key Manager) estão configurados usando um dos seguintes métodos:</block>
-  <block id="b3387f173ebbff42e3160605c9db518a" category="list-text">Você pode perguntar ao cliente ou administrador do sistema se OKM ou EKM estão ativados.</block>
   <block id="5dc17ba8443f8aafae4ca9de8cf9545b" category="list-text">Para verificar se o OKM está ativado, você pode usar o<block ref="3c690d79c23fa8c25994507c25377567" prefix=" " category="inline-code"></block>.</block>
   <block id="4e447e93a3331607c74749775653cbfc" category="list-text">Para verificar se o EKM está ativado, pode utilizar o<block ref="001642cb897a8bebce3210207b7e81af" prefix=" " category="inline-code"></block>.</block>
   <block id="161a8b7bf3b6a7aaa3bda387e5eab04b" category="list-text">Para OKM, você precisa do conteúdo do arquivo de senha OKM.</block>
@@ -11109,10 +11078,6 @@
   <block id="3b0feb5303f3eeec93eba65f8eb967ae" category="list-text">Certifique-se de que todos os outros componentes do sistema estão a funcionar corretamente.</block>
   <block id="d5607198701fa39cc481498d62a52e7b" category="list-text">Certifique-se de que todos os outros componentes do sistema estão a funcionar corretamente; caso contrário, contacte<block ref="468ae937a554dfd3baf209aa53f9f7a6" category="inline-link-rx"></block> para obter assistência.</block>
   <block id="1b55fb3af000d448310e77a6de6c5161" category="paragraph">O módulo NVRAM consiste no hardware NVRAM12 e DIMMs substituíveis em campo. Você pode substituir um módulo NVRAM com falha ou os DIMMs dentro do módulo NVRAM.</block>
-  <block id="566c293315d81d047304e5fade9a967d" category="list-text">Para verificar se o OKM está ativado, use o seguinte comando:</block>
-  <block id="248c44cfee0de883f1e8e602cd90cfbb" category="paragraph"><block ref="3c690d79c23fa8c25994507c25377567" prefix="" category="inline-code"></block></block>
-  <block id="a0e65297bb80c27972e34aa4810ab81b" category="list-text">Para verificar se o EKM está ativado, use o seguinte comando:</block>
-  <block id="49bfbad696a2529ef03d859ad9b3f40a" category="paragraph"><block ref="001642cb897a8bebce3210207b7e81af" prefix="" category="inline-code"></block></block>
   <block id="c174421f5b8f9ca697d7784c901fd0e7" category="paragraph">Para garantir a segurança dos dados no sistema de armazenamento, é necessário verificar o suporte e o status da chave de criptografia na Mídia de inicialização. Verifique se sua versão do ONTAP suporta criptografia de volume NetApp (NVE) e, antes de desligar a controladora, verifique se o gerenciador de chaves está ativo.</block>
   <block id="6e9d75b7e6d83f0d47bf1ca8b289ab30" category="summary">Se um componente no seu sistema AFF A1K falhar, devolva a peça com falha ao NetApp. Consulte a<block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> página para obter mais informações.</block>
   <block id="e7202980adb67469897852b1c95d1aa0" category="summary">Para garantir a segurança dos dados no sistema de armazenamento AFF A1K, é necessário verificar o suporte e o status da chave de criptografia na Mídia de inicialização. Verifique se a sua versão do ONTAP suporta encriptação de volume NetApp e, antes de desligar o controlador, verifique se o gestor de chaves está ativo.</block>
@@ -11913,4 +11878,50 @@
   <block id="40bde7f2324ee2876dd8a09846b14ff4" category="image-alt">Ligue a alimentação</block>
   <block id="512bdc85c8065a0397ce7025381aaf66" category="image-alt">Sistema de deteção automática</block>
   <block id="397249170dcc18ae00c3a7885f97fdc1" category="list-text">Conete o cabo do console ao laptop ou console e conete a porta do console no controlador usando o cabo do console fornecido com o sistema de armazenamento e, em seguida, conete o laptop ou o console ao switch na sub-rede de gerenciamento.</block>
+  <block id="caf5b8ffb4d79dceb1fb647290798a01" category="list-text">Esse procedimento pressupõe que seu par de HA tenha apenas storage interno (sem gavetas externas) e que você esteja adicionando mais uma gaveta adicional.</block>
+  <block id="93594816ce3f17fed74d263c83a0dbf3" category="image-alt">Cabeamento para AFF/ASA A20 com uma gaveta e um módulo de e/S</block>
+  <block id="1e105a621d0adba625aea7a6ae6a26c4" category="list-text">Se você estiver adicionando um compartimento usando dois conjuntos de portas compatíveis com RoCE (dois módulos de e/S compatíveis com RoCE) em cada módulo de controladora, execute as seguintes etapas.</block>
+  <block id="ce8013dd06f3fee752bb7a7d4b9238d2" category="image-alt">Cabeamento para AFF/ASA A20 com uma gaveta e dois módulos de e/S</block>
+  <block id="aa7a979a65afd227664ca4bcf07916aa" category="list-text">Esse procedimento pressupõe que seu par de HA tenha apenas storage interno (sem compartimentos externos) e que você esteja adicionando "Hot-Adding" a duas gavetas adicionais e dois módulos de e/S com capacidade para RoCE em cada controladora.</block>
+  <block id="f2a9ba351ff729d0ca9404bb3db069f6" category="image-alt">Cabeamento para AFF/ASA A30</block>
+  <block id="22069d1c29859ffdad9469c1e6747cf1" category="image-alt">Cabeamento para AFF A30/ASA</block>
+  <block id="612bdab395b71e87cee7fad47c71f93d" category="image-alt">Cabeamento para AFF/ASA A70 ou A90 com uma gaveta e um módulo de e/S</block>
+  <block id="e3292c7d546f92fd0a5ab680be388d1f" category="image-alt">Cabeamento para AFF/ASA A70 ou A90 com uma gaveta e dois módulos de e/S</block>
+  <block id="6aa91cf36fd9acfb2a369c09c6c070ca" category="image-alt">Cabeamento para AFF/ASA A70 ou A90 com duas gavetas e dois módulos de e/S</block>
+  <block id="9bb029ef1a9ff9e816e879a364d3c7b6" category="image-alt">Cabeamento para AFF/ASA A1K com duas gavetas e dois módulos de e/S</block>
+  <block id="7376879927d2b84ec553cfa3f1bfd0f4" category="image-alt">Cabeamento para AFF/ASA A1K com três gavetas e três módulos de e/S</block>
+  <block id="de5bea2fd617f7327f73c1c44e37b9a6" category="image-alt">Cabeamento para AFF/ASA A1K com três gavetas e quatro módulos de e/S</block>
+  <block id="db0e24742d4fd4f6f2a732aeac2ca6a3" category="image-alt">Cabeamento para AFF/ASA A1K com quatro gavetas e quatro módulos de e/S</block>
+  <block id="ac2f75fe6673cb1f5f103f2229eb9ca0" category="image-alt">Cabeamento para AFF/ASA A250 C250 ou FAS500f com uma gaveta de NS224 TB e um conjunto de portas de placa PCIe</block>
+  <block id="eaa19193ad1b64f0162e8f312a6ddc47" category="image-alt">Cabeamento de AFF/ASA A400 com uma gaveta de NS224 e um conjunto de portas integradas</block>
+  <block id="bba30f16a0c3755741b0f3e2032fe595" category="image-alt">Cabeamento para um /ASA A400 com duas gavetas NS224 e um conjunto de portas integradas e um conjunto de portas em placas PCIe</block>
+  <block id="062f2d0d7124d747b94b599ceb1f29ed" category="image-alt">Cabeamento para um AFF/ASA C400 com uma gaveta NS224 e um conjunto de portas de placa PCIe</block>
+  <block id="ea4ee6dbdfefd4ed125fc31c39deee4c" category="image-alt">Cabeamento para um AFF/ASA C400 com duas gavetas NS224 e dois conjuntos de portas de placa PCIe</block>
+  <block id="baa82981e40f9200b81a359d31653dd6" category="image-alt">Cabeamento para AFF/ASA A800 ou AFF/ASA C800 com uma gaveta NS224 e uma placa PCIe</block>
+  <block id="c398a3b33f9866994ec7dd506a0affe1" category="image-alt">Cabeamento para AFF/ASA A900 com duas gavetas NS224 e dois módulos de e/S</block>
+  <block id="0e9ff50f94b0a9a55c9b9c4773ddccbe" category="image-alt">Cabeamento para AFF/ASA A900 com três gavetas NS224 e quatro módulos de e/S</block>
+  <block id="97f00e66a1cda314ebb07a43f08fca5b" category="image-alt">Cabeamento para AFF/ASA A900 com quatro gavetas NS224 e quatro módulos de e/S</block>
+  <block id="10236a63db20e6dd5b0c0b8f3cbc1c18" category="list-text">Conete os dois cabos de alimentação às fontes de alimentação do controlador e, em seguida, conete-os a fontes de alimentação em circuitos diferentes.</block>
+  <block id="dba5caf7b75bcd8724abd1b1ca8827fd" category="image-alt">Diagrama de ligação de alimentação AFF A1K AFF A70 ou AFF A90 ou FAS70 ou FAS90</block>
+  <block id="638f4a62fea5cc77db53abd671ddb8ef" category="example-title">Prateleira de cabos para AFF A20</block>
+  <block id="9eec124f47af3a03039f640091e3ed69" category="paragraph">É possível adicionar uma gaveta de NS224 TB a um par de HA AFF A20 quando for necessário storage adicional (para o compartimento interno).</block>
+  <block id="e76cf9924a9de1dd17f1b48f3a38d0cd" category="example-title">Compartimento de cabos para AFF A30, AFF A50, AFF C30 ou AFF C60</block>
+  <block id="5820f31f30f8fc695d25c9cec1305cdb" category="paragraph">É possível adicionar sem desligamento até duas gavetas NS224 a um par de HA AFF A30, AFF C30, AFF A50 ou AFF C60 quando for necessário storage adicional (para a gaveta interna).</block>
+  <block id="2b5ec68149482145f38e8592a2e4b794" category="example-title">Compartimento de cabos para ASA A20</block>
+  <block id="c84fe478157d5a5e8c65815d80aa16a6" category="paragraph">É possível adicionar um máximo de NS224 gaveta a um par de HA ASA A20 quando for necessário storage adicional (para a gaveta interna).</block>
+  <block id="bb5cf394b2e920ea8a139221d234cd8f" category="example-title">Compartimento de cabos para ASA A30 ou ASA A50</block>
+  <block id="541e9b9bea8f992a6c173f0c44b17452" category="paragraph">É possível adicionar mais de duas gavetas NS224 a um par de HA ASA A30 ou A50 quando for necessário storage adicional (para a gaveta interna).</block>
+  <block id="46aa3bf0a87f8519f8e9314ed7186c68" category="paragraph">Quando for necessário storage adicional, é possível adicionar um compartimento máximo de NS224 TB a um par de HA ASA A250 ou ASA C250.</block>
+  <block id="74259516da197cf641342dca62af2c0b" category="paragraph">A forma como você utiliza uma gaveta de NS224 TB para adicionar hot-add depende de você ter um par de HA ASA A400 ou ASA C400.</block>
+  <block id="5a9c7ba8fea538e8bddca7cfd05765f9" category="paragraph">A forma como você faz a cabeamento de uma gaveta de NS224 U em um par de HA ASA A800 ou ASA C800 depende do número de gavetas que você está adicionando ao quente e do número de conjuntos de portas com capacidade para RoCE (um ou dois) que você está usando nas controladoras.</block>
+  <block id="6bb205a0be0fdef8b8935f61e328f79d" category="paragraph">Quando for necessário storage adicional, é possível adicionar mais três gavetas de unidade de NS224 TB adicionais (para um total de quatro gavetas) a um par de HA da ASA A900.</block>
+  <block id="74375be821a0ccfdaa2aae68f1a39391" category="list-text">Para sistemas AFF:</block>
+  <block id="f7e7abd6131f4502c1bda794831656d2" category="list-text">Para sistemas ASA:</block>
+  <block id="c1ec0f43de6728212fc94985d5f83feb" category="admonition">Se você tiver um par de HA do ASA A1K e adicionar um terceiro compartimento e instalar um terceiro ou quarto módulo de e/S compatível com RoCE em cada controladora, a terceira gaveta será cabeada apenas para o terceiro ou terceiro e quarto módulos de e/S. Não é necessário reinstalar nenhuma gaveta existente.</block>
+  <block id="80e4582b9d6f2e4fef63bc13dc0ddad1" category="open-title">ASA A70 ou ASA A90</block>
+  <block id="ba8d903e745090016b0afab400d33f7c" category="open-title">ASA A800 ou ASA C800</block>
+  <block id="ade2052b1dc75cccb7fc7b0760456566" category="open-title">ASA A400 ou ASA C400</block>
+  <block id="18b75697f84707c97e051581b495caae" category="list-text">No ASA A400:</block>
+  <block id="f08c247bf18a7d50e52f66010faca66f" category="list-text">No ASA C400:</block>
+  <block id="2aba7ab5e3f8f696965da4208fe4dd23" category="open-title">ASA A30 ou ASA A50</block>
 </blocks>

@@ -2,8 +2,6 @@
 :allow-uri-read: 
 
 
-É possível adicionar mais três gavetas NS224 adicionais (para um total de quatro gavetas) a um par de HA da AFF A1K.
-
 .Antes de começar
 * Tem de ter revisto a link:requirements-hot-add-shelf.html["requisitos e práticas recomendadas de adição dinâmica"].
 * Você deve ter concluído os procedimentos aplicáveis no link:prepare-hot-add-shelf.html["Prepare-se para adicionar uma prateleira a quente"].
@@ -36,7 +34,7 @@ Caso contrário, vá para a próxima etapa.
 A ilustração a seguir destaca o cabeamento para a segunda gaveta do par de HA com dois módulos de e/S compatíveis com RoCE em cada controladora:
 
 +
-image::../media/drw_ns224_vino_m_2shelves_2cards_ieops-1642.svg[Cabeamento para AFF A1K com duas gavetas e dois módulos de e/S]
+image::../media/drw_ns224_vino_m_2shelves_2cards_ieops-1642.svg[Cabeamento para AFF/ASA A1K com duas gavetas e dois módulos de e/S]
 
 
 
@@ -50,7 +48,7 @@ image::../media/drw_ns224_vino_m_2shelves_2cards_ieops-1642.svg[Cabeamento para 
 A ilustração a seguir destaca o cabeamento da terceira gaveta do par de HA com três módulos de e/S compatíveis com RoCE em cada controladora:
 
 +
-image::../media/drw_ns224_vino_m_3shelves_3cards_ieops-1643.svg[Cabeamento para AFF A1K com três gavetas e três módulos de e/S]
+image::../media/drw_ns224_vino_m_3shelves_3cards_ieops-1643.svg[Cabeamento para AFF/ASA A1K com três gavetas e três módulos de e/S]
 
 
 
@@ -64,7 +62,7 @@ image::../media/drw_ns224_vino_m_3shelves_3cards_ieops-1643.svg[Cabeamento para 
 A ilustração a seguir destaca o cabeamento da terceira gaveta do par de HA com quatro módulos de e/S compatíveis com RoCE em cada controladora:
 
 +
-image::../media/drw_ns224_vino_m_3shelves_4cards_ieops-1644.svg[Cabeamento para AFF A1K com três gavetas e quatro módulos de e/S]
+image::../media/drw_ns224_vino_m_3shelves_4cards_ieops-1644.svg[Cabeamento para AFF/ASA A1K com três gavetas e quatro módulos de e/S]
 
 
 
@@ -78,7 +76,7 @@ image::../media/drw_ns224_vino_m_3shelves_4cards_ieops-1644.svg[Cabeamento para 
 A ilustração a seguir destaca o cabeamento da quarta gaveta no par de HA com quatro módulos de e/S compatíveis com RoCE em cada controladora:
 
 +
-image::../media/drw_ns224_vino_m_4shelves_4cards_ieops-1645.svg[Cabeamento para AFF A1K com quatro gavetas e quatro módulos de e/S]
+image::../media/drw_ns224_vino_m_4shelves_4cards_ieops-1645.svg[Cabeamento para AFF/ASA A1K com quatro gavetas e quatro módulos de e/S]
 
 
 

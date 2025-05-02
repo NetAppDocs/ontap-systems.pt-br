@@ -2,8 +2,6 @@
 :allow-uri-read: 
 
 
-A forma como você faz a cabeamento de uma gaveta de NS224 U em um par de HA AFF A800 ou AFF C800 depende do número de gavetas que você está adicionando ao quente e do número de conjuntos de portas com capacidade para RoCE (um ou dois) que você está usando nas controladoras.
-
 .Antes de começar
 * Tem de ter revisto a link:requirements-hot-add-shelf.html["requisitos e práticas recomendadas de adição dinâmica"].
 * Você deve ter concluído os procedimentos aplicáveis no link:prepare-hot-add-shelf.html["Prepare-se para adicionar uma prateleira a quente"].
@@ -28,7 +26,7 @@ NOTE: Esta etapa pressupõe que você instalou a placa PCIe compatível com RoCE
 A ilustração a seguir mostra o cabeamento de uma gaveta hot-added usando uma placa PCIe compatível com RoCE em cada controladora:
 
 +
-image::../media/drw_ns224_a800_c800_1shelf_IEOPS-964.svg[Cabeamento para um AFF A800 ou AFF C800 com uma gaveta NS224 e uma placa PCIe]
+image::../media/drw_ns224_a800_c800_1shelf_IEOPS-964.svg[Cabeamento para AFF/ASA A800 ou AFF/ASA C800 com uma gaveta NS224 e uma placa PCIe]
 
 
 
