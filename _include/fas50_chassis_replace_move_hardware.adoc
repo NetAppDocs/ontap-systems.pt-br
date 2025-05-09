@@ -1,17 +1,6 @@
----
-permalink: c30-60/chassis-replace-move-hardware.html 
-sidebar: sidebar 
-keywords: aff c30, aff c60, move hardware components, replace the chassis 
-summary: 'Substitua o chassi do seu sistema AFF C30 ou AFF C60 quando uma falha de hardware o exigir. O processo de substituição envolve a remoção dos controladores e das unidades de fonte de alimentação (PSUs), a remoção das unidades, a instalação do chassi de substituição e a reinstalação dos componentes do chassi.' 
----
-= Substitua o chassis - AFF C30 e AFF C60
+= Passo 1: Remova o controlador
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
-
-[role="lead"]
-Substitua o chassi do seu sistema AFF C30 ou AFF C60 quando uma falha de hardware o exigir. O processo de substituição envolve a remoção dos controladores e das unidades de fonte de alimentação (PSUs), a remoção das unidades, a instalação do chassi de substituição e a reinstalação dos componentes do chassi.
 
 
 
@@ -124,57 +113,54 @@ Se necessário, rode as pegas para a posição vertical (junto às patilhas) par
 
 
 
-== Passo 2: Remova as unidades do chassis com deficiência
+== Passo 2: Remova os módulos de cache do chassis danificado
 
-Você precisa remover todas as unidades e quaisquer lacunas de unidade do chassi prejudicado para que, mais tarde, no procedimento, você possa instalá-las no chassi de substituição.
+Você precisa remover quaisquer módulos de cache e espaços em branco de unidade do chassi prejudicado para que, mais tarde, no procedimento, você possa instalá-los no chassi de substituição.
 
 . Retire cuidadosamente a moldura da parte frontal do sistema de armazenamento.
-. Remova as unidades e quaisquer espaços em branco da unidade:
+. Remova os módulos de armazenamento em cache e os espaços em branco da unidade:
 +
 
-NOTE: Mantenha o controle de qual compartimento de unidade cada unidade e unidade em branco foram removidas, porque eles devem ser instalados nos mesmos compartimentos de unidade no chassi de substituição.
+NOTE: Mantenha o controle de qual compartimento de unidade cada módulo de armazenamento em cache foi removido porque eles devem ser instalados nos mesmos compartimentos de unidade no chassi de substituição.
 
 +
-image::../media/drw_nvme_drive_replace_ieops-1904.svg[Remova a unidade NVMe]
+image::../media/drw_fas50_flash_cache_module_replace_ieops-2173.svg[gráfico de etapas de substituição do módulo de armazenamento em cache fas50]
 
 +
-[cols="1,4"]
+[cols="20%,80%"]
 |===
 
 
  a| 
 image::../media/icon_round_1.png[Legenda número 1]
  a| 
-Prima o botão de libertação na superfície da unidade para abrir a pega do excêntrico.
+Prima o botão de libertação na face do módulo de armazenamento em cache para abrir a pega do excêntrico.
 
 
 
  a| 
 image::../media/icon_round_2.png[Legenda número 2]
  a| 
-Rode o manípulo do excêntrico para baixo para desengatar a unidade do plano médio.
+Rode o manípulo do excêntrico para baixo para desengatar o módulo de armazenamento em cache do plano médio.
 
 
 
  a| 
 image::../media/icon_round_3.png[Legenda número 3]
  a| 
-Deslize a unidade para fora do compartimento de unidade usando a alça do came e apoiando a unidade com a outra mão.
+Faça deslizar o módulo de armazenamento em cache para fora do compartimento de unidade utilizando a pega da câmara e apoiando o módulo de armazenamento em cache com a outra mão.
 
-Ao remover uma unidade, utilize sempre duas mãos para suportar o seu peso.
-
-
-NOTE: Como as unidades são frágeis, minimize o manuseio para evitar danificá-las.
+Ao remover um módulo de cache, use sempre duas mãos para suportar seu peso.
 
 |===
-. Coloque as unidades de lado em um carrinho ou mesa sem estática.
+. Coloque os módulos de cache de lado em um carrinho ou tabela livre de estática.
 
 
 
 
-== Etapa 2: Substitua o chassi de dentro do rack de equipamentos ou do gabinete do sistema
+== Etapa 3: Substitua o chassi de dentro do rack de equipamentos ou do gabinete do sistema
 
-Você remove o chassi prejudicado do rack de equipamentos ou do gabinete do sistema, instala o chassi de substituição, instala as unidades, quaisquer lacunas de unidade e, em seguida, instala o painel frontal.
+Você remove o chassi prejudicado do rack de equipamentos ou do gabinete do sistema, instala o chassi de substituição, instala os controladores, instala os módulos de cache e as placas de unidade e, em seguida, instala o painel frontal.
 
 . Retire os parafusos dos pontos de montagem do chassis danificados.
 +
@@ -237,19 +223,19 @@ NOTE: Não utilize força excessiva ao deslizar o controlador para dentro do cha
 
 . Recable a controladora, conforme necessário, exceto os cabos de energia.
 . Repita estes passos para instalar o segundo controlador no chassis.
-. Instale as unidades e quaisquer lacunas de unidade removidas do chassis afetado no chassis de substituição:
+. Instale os módulos de armazenamento em cache e as placas de unidade removidas do chassis afetado no chassis de substituição:
 +
 
-NOTE: As unidades e as placas de unidade devem ser instaladas nos mesmos compartimentos de unidade no chassi de substituição.
+NOTE: Os módulos de armazenamento em cache e as placas de unidade devem ser instalados nos mesmos compartimentos de unidade no chassi de substituição.
 
 +
-.. Com o manípulo do excêntrico na posição aberta, utilize as duas mãos para inserir a unidade.
-.. Empurre suavemente até a unidade parar.
-.. Feche a pega do came de forma a que a unidade fique totalmente assente no plano médio e a pega encaixe no devido lugar.
+.. Com a pega do excêntrico na posição aberta, utilize as duas mãos para inserir o módulo de armazenamento em cache.
+.. Empurre suavemente até o módulo de armazenamento em cache parar.
+.. Feche a pega do came de forma a que o módulo de armazenamento em cache fique totalmente assente no plano médio e a pega encaixe no lugar.
 +
-Certifique-se de que fecha lentamente a pega do excêntrico de forma a que fique corretamente alinhada com a face da unidade.
+Certifique-se de que fecha lentamente a pega do came de forma a que fique corretamente alinhada com a face do módulo de cache.
 
-.. Repita o processo para as unidades restantes.
+.. Repita o processo para o módulo de cache restante, se necessário.
 
 
 . Instale a moldura.
@@ -293,6 +279,3 @@ FONTE DE ALIMENTAÇÃO CC
 `system node autosupport invoke -node * -type all -message MAINT=END`
 
 
-
-.O que se segue?
-Depois de substituir o chassi com deficiência e reinstalar os componentes nele, você precisa link:chassis-replace-complete-system-restore-rma.html["complete a substituição do chassis"].

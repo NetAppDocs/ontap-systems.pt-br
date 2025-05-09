@@ -9777,7 +9777,6 @@
   <block id="72b54ea7be3a13b4755dc4521c8d0af6" category="paragraph">Deslize a unidade para fora do compartimento de unidade usando a alça do came e apoiando a unidade com a outra mão.</block>
   <block id="0093c88dee6ce91e0bd8ccb1cfbc03ff" category="admonition">Como as unidades são frágeis, minimize o manuseio para evitar danificá-las.</block>
   <block id="0649d37403624118b801efa8956dc716" category="section-title">Etapa 3: Substitua o chassi de dentro do rack de equipamentos ou do gabinete do sistema</block>
-  <block id="e5a4b20c56ed46e589289f6e1a9368dd" category="paragraph">Você remove o chassi prejudicado do rack de equipamentos ou do gabinete do sistema, instala o chassi de substituição, instala as unidades, quaisquer espaços em branco da unidade e, em seguida, instala o painel frontal.</block>
   <block id="eb8def779f4d3e61a371ec65c0cc0128" category="list-text">Retire os parafusos dos pontos de montagem do chassis danificados.</block>
   <block id="16e252393218a73fc25b829675a86fce" category="paragraph">Coloque os parafusos de lado para usar posteriormente neste procedimento.</block>
   <block id="433916ec8110bbee1005399f55ede944" category="admonition">Se o sistema de armazenamento for fornecido em um gabinete do sistema NetApp, você deverá remover parafusos adicionais na parte traseira do chassi antes que o chassi possa ser removido.</block>
@@ -11798,7 +11797,6 @@
   <block id="64013ec345bda7b07597c5bf34eac5fe" category="open-title">Opção 1: NS224 prateleiras</block>
   <block id="8a978cde5ab4fac3e67487580bc3a51a" category="open-title">Opção 2: Compartimentos SAS</block>
   <block id="2cc2225989c416fa40923a89f7f8d99c" category="doc">Verifique o suporte e o status da chave de criptografia no suporte de inicialização - FAS50</block>
-  <block id="e65767537c6f00cc3bec96359db6404a" category="summary">Substitua o chassi do sistema de storage FAS50 quando uma falha de hardware exigir isso. O processo de substituição envolve a remoção dos controladores e das unidades de fonte de alimentação (PSUs), a remoção de quaisquer módulos de cache, a instalação do chassi de substituição e a reinstalação dos componentes do chassi.</block>
   <block id="aa7129f47a0b0a00e74ba4024fe7ba35" category="paragraph">Substitua o chassi do sistema de storage FAS50 quando uma falha de hardware exigir isso. O processo de substituição envolve a remoção dos controladores, remoção de quaisquer módulos de cache e espaços em branco da unidade, instalação do chassi de substituição e reinstalação dos componentes do chassi.</block>
   <block id="d3f6a519d78eb3e642c0549ced5f8f2f" category="summary">Antes de substituir o controlador no seu sistema de armazenamento FAS50, certifique-se de que cumpre os requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, verificar se você tem o controlador de substituição correto e salvar a saída do console do controlador em um arquivo de log de texto.</block>
   <block id="3034b89fc8e6fc3ae99585d8f1eab80e" category="doc">Requisitos para substituir o controlador - FAS50</block>
@@ -11924,4 +11922,23 @@
   <block id="18b75697f84707c97e051581b495caae" category="list-text">No ASA A400:</block>
   <block id="f08c247bf18a7d50e52f66010faca66f" category="list-text">No ASA C400:</block>
   <block id="2aba7ab5e3f8f696965da4208fe4dd23" category="open-title">ASA A30 ou ASA A50</block>
+  <block id="e3fb1d8bd564bfe9f807ba42e5cd7b33" category="paragraph">Prima o botão de libertação na face do módulo de armazenamento em cache para abrir a pega do excêntrico.</block>
+  <block id="06269d1797937a16e290698098cc8abd" category="paragraph">Rode o manípulo do excêntrico para baixo para desengatar o módulo de armazenamento em cache do plano médio.</block>
+  <block id="469c355b09315b0a1d1690c1923180a4" category="paragraph">Faça deslizar o módulo de armazenamento em cache para fora do compartimento de unidade utilizando a pega da câmara e apoiando o módulo de armazenamento em cache com a outra mão.</block>
+  <block id="e84b84ef6157f4a35245509c8a7fa353" category="paragraph">Ao remover um módulo de cache, use sempre duas mãos para suportar seu peso.</block>
+  <block id="feec4c6e74f9f529edb4ef65e2cc4efc" category="paragraph">Você remove o chassi prejudicado do rack de equipamentos ou do gabinete do sistema, instala o chassi de substituição, instala os controladores, instala os módulos de cache e as placas de unidade e, em seguida, instala o painel frontal.</block>
+  <block id="19b2479c4fb73cb4e1e7a5cd66cd9fa9" category="list-text">Com a pega do excêntrico na posição aberta, utilize as duas mãos para inserir o módulo de armazenamento em cache.</block>
+  <block id="5b42dc5254df979588b011980c1a8adc" category="list-text">Empurre suavemente até o módulo de armazenamento em cache parar.</block>
+  <block id="73e8bab771e1e37a562d7cdbeb444153" category="list-text">Feche a pega do came de forma a que o módulo de armazenamento em cache fique totalmente assente no plano médio e a pega encaixe no lugar.</block>
+  <block id="82a8073ecc9994385ee15cd53ba7d96a" category="paragraph">Certifique-se de que fecha lentamente a pega do came de forma a que fique corretamente alinhada com a face do módulo de cache.</block>
+  <block id="0c1eef5d5ee997a38d2bb1303bcee89d" category="list-text">Repita o processo para o módulo de cache restante, se necessário.</block>
+  <block id="45d69e7bdfec0647cf3523f57e30a808" category="section-title">Passo 2: Remova as unidades do chassis com deficiência</block>
+  <block id="c0055725498ec7c6a2d459f6d18aef46" category="paragraph">Você precisa remover todas as unidades e quaisquer lacunas de unidade do chassi prejudicado para que, mais tarde, no procedimento, você possa instalá-las no chassi de substituição.</block>
+  <block id="3e56a6d3defe800cc97429c918a7c4fb" category="list-text">Remova as unidades e quaisquer espaços em branco da unidade:</block>
+  <block id="ba52981b53ce10a301f84e2da386c778" category="admonition">Mantenha o controle de qual compartimento de unidade cada unidade e unidade em branco foram removidas, porque eles devem ser instalados nos mesmos compartimentos de unidade no chassi de substituição.</block>
+  <block id="ab32ae446e6fa5de50a5d631bbe01daf" category="list-text">Coloque as unidades de lado em um carrinho ou mesa sem estática.</block>
+  <block id="17df5870a90dff11dc4f027f001751a7" category="section-title">Etapa 2: Substitua o chassi de dentro do rack de equipamentos ou do gabinete do sistema</block>
+  <block id="277a5698809db74260fd2ddda1e6acd9" category="paragraph">Você remove o chassi prejudicado do rack de equipamentos ou do gabinete do sistema, instala o chassi de substituição, instala as unidades, quaisquer lacunas de unidade e, em seguida, instala o painel frontal.</block>
+  <block id="a6d6e73e138675b6ffbbb0e4663b2d5d" category="list-text">Instale as unidades e quaisquer lacunas de unidade removidas do chassis afetado no chassis de substituição:</block>
+  <block id="4a7738e24d9329241e05c40def3be102" category="admonition">As unidades e as placas de unidade devem ser instaladas nos mesmos compartimentos de unidade no chassi de substituição.</block>
 </blocks>
