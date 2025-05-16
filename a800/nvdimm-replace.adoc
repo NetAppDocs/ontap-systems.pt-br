@@ -90,6 +90,10 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 Deve remover o módulo do controlador do chassis quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
 
 . Se você ainda não está aterrado, aterre-se adequadamente.
+. Certifique-se de que todas as unidades no chassis estão firmemente assentadas contra o plano médio, utilizando os polegares para empurrar cada unidade até sentir um batente positivo.
++
+image::../media/drw_a800_drive_seated_IEOPS-960.svg[Acionamentos do disco do assento]
+
 . Desconete as fontes de alimentação do módulo do controlador da fonte.
 . Solte os fixadores do cabo de alimentação e, em seguida, desconete os cabos das fontes de alimentação.
 . Solte o gancho e a alça de loop que prendem os cabos ao dispositivo de gerenciamento de cabos e, em seguida, desconete os cabos do sistema e os módulos SFP e QSFP (se necessário) do módulo do controlador, mantendo o controle de onde os cabos foram conetados.

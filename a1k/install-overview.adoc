@@ -31,7 +31,7 @@ Para fazer o cabeamento do hardware, primeiro conete os controladores de storage
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinco"]link:install-power-hardware.html["Ligue o sistema de armazenamento AFF A1K"]
 [role="quick-margin-para"]
-Antes de ligar os controladores, ligue cada gaveta NS224 e atribua um ID exclusivo do compartimento para garantir que cada gaveta seja identificada exclusivamente na configuração.
+Antes de ligar os controladores, ligue cada gaveta NS224 e atribua um ID de gaveta exclusivo para garantir que cada gaveta seja identificada exclusivamente na configuração, conete o laptop ou o console ao controlador e, em seguida, conete os controladores às fontes de alimentação.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Seis"]link:install-complete.html["Configuração completa do sistema de armazenamento"]
 [role="quick-margin-para"]
