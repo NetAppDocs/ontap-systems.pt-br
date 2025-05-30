@@ -1,0 +1,53 @@
+---
+permalink: asa-r2-c30/controller-replace-requirements.html 
+sidebar: sidebar 
+keywords: asa c30, prerequisite, replace the controller module 
+summary: Antes de substituir o controlador no seu sistema de armazenamento ASA C30, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, verificar se você tem o controlador de substituição correto e salvar a saída do console do controlador em um arquivo de log de texto. 
+---
+= Requisitos para substituir o controlador - ASA C30
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de substituir o controlador no seu sistema de armazenamento ASA C30, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, verificar se você tem o controlador de substituição correto e salvar a saída do console do controlador em um arquivo de log de texto.
+
+Você deve rever os requisitos e considerações para o procedimento de substituição do controlador.
+
+
+
+== Requisitos
+
+* Todas as prateleiras devem estar funcionando corretamente.
+* O controlador saudável deve ser capaz de assumir o controlador que está a ser substituído (referido neste procedimento como ""controlador deficiente"").
+* Você deve substituir um controlador por um controlador do mesmo tipo de modelo. Você não pode atualizar seu sistema apenas substituindo o controlador.
+* Não é possível alterar nenhuma unidade ou compartimentos como parte deste procedimento.
+* Você deve sempre capturar a saída do console do controlador para um arquivo de log de texto.
++
+A saída do console fornece um Registro do procedimento que você pode usar para solucionar problemas que você pode encontrar durante o processo de substituição.
+
+
+
+
+
+== Considerações
+
+* É importante aplicar os comandos neste procedimento ao controlador correto:
++
+** O controlador _prejudicado_ é o controlador que está sendo substituído.
+** O controlador _replacement_ é o novo controlador que está substituindo o controlador prejudicado.
+** O controlador _Healthy_ é o controlador sobrevivente.
+
+
+* Se necessário, você pode ligar os LEDs de localização do sistema de armazenamento (azul) para ajudar a localizar fisicamente o sistema de armazenamento afetado. Faça login no BMC usando SSH e digite o `system location-led _on_` comando.
++
+Um sistema de armazenamento tem três LEDs de localização: Um no painel de visualização do operador e um em cada controlador. Os LEDs de localização permanecem acesos durante 30 minutos.
+
++
+Você pode desativá-los digitando o `system location-led _off_` comando. Se não tiver a certeza se os LEDs estão ligados ou desligados, pode verificar o seu estado introduzindo o `system location-led show` comando.
+
+
+
+.O que se segue?
+Depois de analisar os requisitos para substituir o controlador afetado, é link:controller-replace-shutdown.html["desligue o controlador desativado"]necessário .

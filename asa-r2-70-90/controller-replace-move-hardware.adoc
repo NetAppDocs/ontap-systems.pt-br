@@ -409,23 +409,23 @@ Ele deve estar alinhado com a chapa metálica do módulo do controlador.
 NOTE: Não introduza completamente o módulo do controlador no chassis até ser instruído a fazê-lo.
 
 . Reinstale o ARM de gerenciamento de cabos, se removido, mas não reconete nenhum cabo ao controlador de substituição.
-. Conete o cabo do console à porta do console do módulo do controlador de substituição e reconete-o ao laptop para que ele receba mensagens do console quando ele for reinicializado. O controlador de substituição recebe energia do controlador em estado de funcionamento e começa a reiniciar assim que estiver completamente encaixado no chassis.
+. Conete o cabo do console à porta do console do módulo do controlador de substituição e reconete-o ao laptop para que ele receba mensagens do console quando ele for reinicializado.
 . Conclua a reinstalação do módulo do controlador:
 +
 .. Empurre firmemente o módulo do controlador para dentro do chassi até que ele atenda ao plano médio e esteja totalmente assentado.
 +
 Os trincos de bloqueio sobem quando o módulo do controlador está totalmente assente.
 
+
+
 +
 
 NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
 
-.. Rode os trincos de bloqueio para cima, para a posição de bloqueio.
-
-
 +
+.. Rode os trincos de bloqueio para cima, para a posição de bloqueio.
+.. Conecte as fontes de alimentação. O controlador inicializa no prompt do LOADER assim que a energia é restaurada.
 
-NOTE: O controlador inicializa no prompt Loader assim que ele estiver totalmente assentado.
 
 . No prompt Loader, digite `show date` para exibir a data e a hora no controlador de substituição. A data e a hora estão em GMT.
 +

@@ -1,0 +1,84 @@
+---
+permalink: asa-r2-c30/controller-replace-system-config-restore-and-verify.html 
+sidebar: sidebar 
+keywords: asa c30, restore and verify the system configuration, verify and set the ha state of the controller module 
+summary: Verifique se a configuração de HA do controlador está ativa e funcionando corretamente no sistema de storage ASA C30 e confirme se os adaptadores do sistema listam todos os caminhos para os discos. 
+---
+= Restaure e verifique a configuração do sistema - ASA C30
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Verifique se a configuração de HA do controlador está ativa e funcionando corretamente no sistema de storage ASA C30 e confirme se os adaptadores do sistema listam todos os caminhos para os discos.
+
+
+
+== Passo 1: Verifique as configurações de configuração do HA
+
+Você deve verificar o `HA` estado do controlador e, se necessário, atualizar o estado para corresponder à configuração do sistema de armazenamento.
+
+. Arranque para o modo de manutenção:
++
+`boot_ontap maint`
+
++
+.. Digite `y` quando você vir _continuar com boot?_.
++
+Se você vir a mensagem de aviso _incompatibilidade de ID do sistema_, digite `y`.
+
+
+
+. Introduza `sysconfig -v` e capture o conteúdo do visor.
++
+
+NOTE: Se você vir _INCOMPATIBILIDADE DE PERSONALIDADE_, entre em Contato com o suporte ao cliente.
+
+. Na `sysconfig -v` saída, compare as informações da placa adaptadora com as placas e localizações no controlador de substituição.
+. Verifique se todos os componentes apresentam o `HA` mesmo estado:
++
+`ha-config show`
+
++
+O estado HA deve ser o mesmo para todos os componentes.
+
+. Se o estado do sistema exibido do controlador não corresponder à configuração do sistema de armazenamento, defina o `HA` estado do controlador:
++
+`ha-config modify controller ha`
+
++
+O valor para o estado HA pode ser um dos seguintes:
+
++
+** `ha`
+** `mcc` (não suportado)
+** `mccip` (Não suportado em sistemas ASA)
+** `non-ha` (não suportado)
+
+
+. Confirme se a definição foi alterada:
++
+`ha-config show`
+
+
+
+
+
+== Passo 2: Verifique a lista de discos
+
+. Verifique se o adaptador lista os caminhos para todos os discos:
++
+`storage show disk -p`
+
++
+Se você vir algum problema, verifique o cabeamento e recoloque os cabos.
+
+. Sair do modo de manutenção:
++
+`halt`
+
+
+
+.O que se segue?
+Depois de restaurar e verificar a configuração do sistema, você precisa link:controller-replace-recable-reassign-disks.html["devolva o controlador"].

@@ -140,6 +140,15 @@ Os procedimentos de cabeamento a seguir mostram como conectar suas controladoras
 
 Para obter o número máximo de gavetas compatíveis com o seu sistema de storage e para todas as opções de cabeamento, link:https://hwu.netapp.com["NetApp Hardware Universe"^]consulte .
 
+.Sobre esta tarefa
+Os sistemas de armazenamento AFF A1K suportam prateleiras NS224 com o módulo NSM100 ou NSM100B. As principais diferenças entre os módulos são:
+
+* Os módulos de prateleira NSM100 usam portas e0a e e0b integradas.
+* Os módulos de prateleira NSM100B usam as portas e1a e e1b no slot 1.
+
+
+O exemplo de cabeamento a seguir mostra módulos NSM100 nas prateleiras NS224 ao se referir às portas do módulo de prateleira.
+
 [role="tabbed-block"]
 ====
 .Opção 1: Conetar a uma gaveta de armazenamento de NS224 GB

@@ -1,0 +1,30 @@
+---
+permalink: asa-r2-c30/chassis-replace-workflow.html 
+sidebar: sidebar 
+keywords: asa c30, replace the chassis workflow 
+summary: A substituição do chassi no seu sistema de armazenamento ASA C30 consiste em revisar os requisitos de substituição, desligar os controladores, substituir o chassi e verificar as operações do sistema. 
+---
+= Fluxo de trabalho de substituição do chassis - ASA C30
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A substituição do chassi no seu sistema de armazenamento ASA C30 consiste em revisar os requisitos de substituição, desligar os controladores, substituir o chassi e verificar as operações do sistema.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"]link:chassis-replace-requirements.html["Reveja os requisitos de substituição do chassis"]
+[role="quick-margin-para"]
+Revise os requisitos para substituir o chassi.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"]link:chassis-replace-shutdown.html["Desligue os controladores"]
+[role="quick-margin-para"]
+Desligue os controladores para que possa efetuar a manutenção no chassis.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"]link:chassis-replace-move-hardware.html["Substitua o chassis"]
+[role="quick-margin-para"]
+Substitua o chassi movendo as unidades e quaisquer placas de unidade, controladores (com as fontes de alimentação) e painel do chassi danificado para o novo chassi e trocando o chassi danificado pelo novo chassi do mesmo modelo do chassi danificado.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"]link:chassis-replace-complete-system-restore-rma.html["Substituição completa do chassis"]
+[role="quick-margin-para"]
+Verifique o estado de HA do chassi e devolva a peça com falha ao NetApp.

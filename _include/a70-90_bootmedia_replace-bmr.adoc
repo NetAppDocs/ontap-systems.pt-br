@@ -10,10 +10,12 @@ O suporte de arranque encontra-se no interior do módulo de gestão do sistema e
 image::../media/drw_a800_drive_seated_IEOPS-960.svg[Unidade drw A800 com sede IEOPS 960]
 
 . Vá para a parte traseira do chassis. Se você ainda não está aterrado, aterre-se adequadamente.
-. Desligue a alimentação do módulo do controlador puxando o módulo do controlador para fora cerca de três polegadas:
+. Desconecte as PSUs do controlador.
 +
-.. Prima ambos os trincos de bloqueio do módulo do controlador e, em seguida, rode ambos os trincos para baixo ao mesmo tempo.
-.. Puxe o módulo do controlador a cerca de 3 polegadas do chassis para desengatar a alimentação.
+
+NOTE: Se o sistema tiver alimentação CC, desligue o bloco de alimentação das PSUs.
+
++
 .. Retire todos os cabos ligados ao módulo de gestão do sistema. Certifique-se de identificar onde os cabos foram conetados, para que você possa conectá-los às portas corretas quando reinstalar o módulo.
 .. Gire a bandeja de gerenciamento de cabos para baixo puxando os botões de ambos os lados no interior da bandeja de gerenciamento de cabos e, em seguida, gire a bandeja para baixo.
 .. Prima o botão do came de gestão do sistema. A alavanca do excêntrico afasta-se do chassis.
@@ -68,17 +70,10 @@ Suporte de arranque
 .. Recable o módulo de Gestão do sistema.
 
 
-. Volte a instalar o controlador e volte a ligar a alimentação ao módulo do controlador:
+. Conete os cabos de alimentação às fontes de alimentação. O controlador reinicia assim que a energia é restaurada.
 +
-.. Empurre firmemente o módulo do controlador para dentro do chassi até que ele atenda ao plano médio e esteja totalmente assentado.
-+
-Os trincos de bloqueio sobem quando o módulo do controlador está totalmente assente.
 
-.. Rode os trincos de bloqueio para cima, para a posição de bloqueio.
-+
-O controlador começa a inicializar assim que estiver sentado e a energia for restaurada.
-
-
+NOTE: Se você tiver fontes de alimentação CC, reconecte o bloco de energia às fontes de alimentação.
 
 . Interrompa o processo de inicialização pressionando Ctrl-C para parar no prompt DO Loader.
 

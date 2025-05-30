@@ -125,11 +125,10 @@ NOTE: Certifique-se de que o NVRAM foi concluído antes de prosseguir. Quando o 
 image::../media/drw_a800_drive_seated_IEOPS-960.svg[Acionamentos do disco do assento]
 
 . Vá para a parte traseira do chassis. Se você ainda não está aterrado, aterre-se adequadamente.
-. Desligue a alimentação do módulo do controlador puxando o módulo do controlador para fora cerca de três polegadas:
+. Desconecte as PSUs do controlador.
 +
-.. Prima ambos os trincos de bloqueio do módulo do controlador e, em seguida, rode ambos os trincos para baixo ao mesmo tempo.
-.. Puxe o módulo do controlador a cerca de 3 polegadas do chassis para desengatar a alimentação.
 
+NOTE: Se o sistema tiver alimentação CC, desligue o bloco de alimentação das PSUs.
 
 . Gire a bandeja de gerenciamento de cabos para baixo puxando os botões de ambos os lados no interior da bandeja de gerenciamento de cabos e, em seguida, gire a bandeja para baixo.
 . Retire o módulo de gestão do sistema:
@@ -206,14 +205,10 @@ Suporte de arranque
 
 
 . Recable o módulo de Gestão do sistema.
-. Volte a ligar a alimentação ao módulo do controlador:
+. Conete os cabos de alimentação às fontes de alimentação. O controlador reinicia assim que a energia é restaurada.
 +
-.. Empurre firmemente o módulo do controlador para dentro do chassi até que ele atenda ao plano médio e esteja totalmente assentado.
-+
-Os trincos de bloqueio sobem quando o módulo do controlador está totalmente assente.
 
-.. Rode os trincos de bloqueio para cima, para a posição de bloqueio.
-
+NOTE: Se você tiver fontes de alimentação CC, reconecte o bloco de energia às fontes de alimentação.
 
 . Rode o tabuleiro de gestão de cabos para cima até à posição fechada.
 

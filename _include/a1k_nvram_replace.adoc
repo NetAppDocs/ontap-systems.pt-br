@@ -156,7 +156,7 @@ Substitua o módulo NVRAM ou DIMMs NVRAM usando a opção a seguir apropriada.
 Para substituir o módulo NVRAM, localize-o no slot 4/5 no gabinete e siga a sequência específica de etapas.
 
 . Se você ainda não está aterrado, aterre-se adequadamente.
-. Desconete o cabo de alimentação de ambas as PSUs.
+. Desconecte os cabos de alimentação das PSUs do controlador e puxe o módulo do controlador, na parte frontal do sistema, alguns centímetros para fora.
 . Gire a bandeja de gerenciamento de cabos para baixo puxando cuidadosamente os pinos nas extremidades da bandeja e girando-a para baixo.
 . Remova o módulo NVRAM desativado do compartimento:
 +
@@ -195,7 +195,7 @@ Patilhas de bloqueio do DIMM
 .. Deslize cuidadosamente o módulo para dentro da ranhura e, em seguida, rode o trinco do excêntrico até ao fim para bloquear o módulo no lugar.
 
 
-. Recable as PSUs.
+. Reconecte o controlador.
 . Rode o tabuleiro de gestão de cabos para cima até à posição fechada.
 
 
@@ -205,7 +205,7 @@ Patilhas de bloqueio do DIMM
 Para substituir DIMMs NVRAM no módulo NVRAM, você deve remover o módulo NVRAM e, em seguida, substituir o DIMM de destino.
 
 . Se você ainda não está aterrado, aterre-se adequadamente.
-. Desconete o cabo de alimentação de ambas as PSUs.
+. Desconecte os cabos de alimentação das PSUs e puxe o módulo controlador alguns centímetros para fora da parte frontal do sistema.
 . Gire a bandeja de gerenciamento de cabos para baixo puxando cuidadosamente os pinos nas extremidades da bandeja e girando-a para baixo.
 . Remova o módulo NVRAM de destino do compartimento.
 +
@@ -240,7 +240,7 @@ NOTE: Consulte a etiqueta do mapa da FRU na lateral do módulo NVRAM para determ
 .. Deslize cuidadosamente o módulo para dentro da ranhura até que o trinco do excêntrico comece a engatar com o pino do excêntrico de e/S e, em seguida, rode o trinco do excêntrico totalmente para cima para bloquear o módulo no devido lugar.
 
 
-. Recable as PSUs.
+. Reconecte o controlador.
 . Rode o tabuleiro de gestão de cabos para cima até à posição fechada.
 
 
@@ -252,7 +252,11 @@ NOTE: Consulte a etiqueta do mapa da FRU na lateral do módulo NVRAM para determ
 
 Depois de substituir a FRU, você deve reiniciar o módulo do controlador.
 
-. Para inicializar o ONTAP a partir do prompt Loader, digite _bye_.
+. Reconecte os cabos de alimentação à PSU e recoloque e trave com cuidado o módulo do controlador na parte frontal do sistema.
++
+O sistema começará a reiniciar, normalmente para o prompt Loader.
+
+. Digite _bye_ no prompt DO Loader.
 . Devolva o controlador afetado ao funcionamento normal, devolvendo o respetivo armazenamento: `_storage failover giveback -ofnode _impaired_node_name_`.
 . Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true` .
 . Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos: `system node autosupport invoke -node * -type all -message MAINT=END`.

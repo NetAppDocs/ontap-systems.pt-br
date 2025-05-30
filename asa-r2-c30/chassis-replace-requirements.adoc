@@ -1,0 +1,43 @@
+---
+permalink: asa-r2-c30/chassis-replace-requirements.html 
+sidebar: sidebar 
+keywords: asa c30, replace the chassis 
+summary: Antes de substituir o chassi do seu sistema de armazenamento ASA C30, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, verificar se você tem o chassi de substituição correto e as ferramentas necessárias. 
+---
+= Requisitos para substituir o chassis - ASA C30
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de substituir o chassi do seu sistema de armazenamento ASA C30, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, verificar se você tem o chassi de substituição correto e as ferramentas necessárias.
+
+Reveja os seguintes requisitos e considerações.
+
+
+
+== Requisitos
+
+* O chassis de substituição tem de ser o mesmo modelo que o chassis com deficiência. Este procedimento é para uma substituição similar, não para uma atualização.
+* Todos os outros componentes do sistema de armazenamento devem estar a funcionar corretamente; caso contrário, contacte https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de continuar com este procedimento.
+
+
+
+
+== Considerações
+
+* *O procedimento de substituição do chassis é disruptivo.* Para um cluster de dois nós, você terá uma interrupção de serviço completa e uma interrupção parcial em um cluster de vários nós.
+* Você pode usar o procedimento de substituição de chassi com todas as versões do ONTAP suportadas pelo sistema de storage.
+* O procedimento de substituição do chassi é escrito com a suposição de que você está movendo o painel frontal, as unidades, quaisquer lacunas de unidade e os controladores para o novo chassi.
+* Se necessário, você pode ligar os LEDs de localização do sistema de armazenamento (azul) para ajudar a localizar fisicamente o sistema de armazenamento afetado. Faça login no BMC usando SSH e digite o `system location-led _on_` comando.
++
+Um sistema de armazenamento tem três LEDs de localização: Um no painel de visualização do operador e um em cada controlador. Os LEDs de localização permanecem acesos durante 30 minutos.
+
++
+Você pode desativá-los digitando o `system location-led _off_` comando. Se não tiver a certeza se os LEDs estão ligados ou desligados, pode verificar o seu estado introduzindo o `system location-led show` comando.
+
+
+
+.O que se segue?
+Depois de analisar os requisitos para substituir o chassi, você precisa link:chassis-replace-shutdown.html["desligue os controladores"]

@@ -261,7 +261,13 @@ Este procedimento mostra como enviar os controladores para uma gaveta de NS224 U
 
 .Sobre esta tarefa
 * Para obter o número máximo de gavetas compatíveis com o seu sistema de storage e para todas as opções de cabeamento, como ótico e conectado a switch, link:https://hwu.netapp.com["NetApp Hardware Universe"^]consulte .
-* Você faz o cabeamento de cada controlador para cada módulo NSM100B na prateleira NS224 usando os cabos de armazenamento fornecidos com o sistema de armazenamento, que pode ser o seguinte tipo de cabo:
+* O procedimento de cabeamento de prateleira NS224 mostra módulos NSM100B em vez de módulos NSM100. O cabeamento é o mesmo, independentemente do tipo de módulo NSM utilizado, apenas os nomes das portas são diferentes:
++
+** Os módulos NSM100B usam as portas e1a e e1b em um módulo de E/S no slot 1.
+** Os módulos NSM100 usam portas integradas (onboard) e0a e e0b.
+
+
+* Você conecta cada controlador a cada módulo NSM na prateleira NS224 usando os cabos de armazenamento fornecidos com seu sistema de armazenamento, que podem ser do seguinte tipo de cabo:
 +
 *Cabos de cobre 100 GbE QSFP28*
 

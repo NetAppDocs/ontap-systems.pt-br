@@ -1,7 +1,7 @@
 ---
 permalink: asa-r2-a20-30-50/index.html 
 sidebar: sidebar 
-keywords: asa a70 asa a90 maintenance, maintenance, repairing a70 asa a90,  replace a70 asa a90 components 
+keywords: asa a20, asa a30, asa a50 maintenance, maintenance, repairing a70 asa a90,  replace a70 asa a90 components 
 summary: Mantenha o hardware ASA A20, ASA A30 e ASA A50 
 ---
 = Mantenha o hardware ASA A20, ASA A30 e ASA A50
@@ -78,9 +78,3 @@ Uma fonte de alimentação fornece uma fonte de alimentação redundante em um c
 == Bateria de relógio em tempo real
 
 Uma bateria de relógio em tempo real preserva as informações de data e hora do sistema se a energia estiver desligada.
-
-
-
-== Módulo de gestão do sistema
-
-O módulo Gerenciamento do sistema fornece a interface entre o controlador e um console ou laptop para fins de manutenção do controlador ou do sistema. O módulo de gestão do sistema contém o suporte de arranque e guarda o número de série do sistema (SSN).

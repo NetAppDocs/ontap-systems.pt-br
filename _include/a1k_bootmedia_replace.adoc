@@ -37,7 +37,7 @@ Suporte de arranque
 
 |===
 . Se você ainda não está aterrado, aterre-se adequadamente.
-. Desconete os cabos da fonte de alimentação das PSUs do controlador.
+. Desconecte os cabos de alimentação das PSUs do controlador e puxe o módulo do controlador, na parte frontal do sistema, alguns centímetros para fora.
 +
 
 NOTE: Se o sistema de armazenamento tiver fontes de alimentação CC, desconete o bloco de cabos de alimentação das unidades de fonte de alimentação (PSUs).
@@ -113,9 +113,9 @@ A unidade flash USB deve ter a imagem ONTAP apropriada do que o controlador afet
 +
 Certifique-se de que instala a unidade flash USB na ranhura identificada para dispositivos USB e não na porta da consola USB.
 
-. Ligue os cabos de alimentação às fontes de alimentação e volte a instalar o retentor do cabo de alimentação.
+. Reconecte os cabos de alimentação à PSU e recoloque e trave com cuidado o módulo do controlador na parte frontal do sistema.
 +
-O controlador começa a inicializar assim que a energia é reconetada ao sistema.
+O sistema começará a reiniciar, normalmente para o prompt Loader.
 
 . Interrompa o processo de inicialização pressionando Ctrl-C para parar no prompt DO Loader.
 +

@@ -104,11 +104,11 @@ Para substituir o módulo NVRAM, localize-o na ranhura 4/5 no chassis e siga a s
 image::../media/drw_a800_drive_seated_IEOPS-960.svg[Acionamentos do disco do assento]
 
 . Vá para a parte traseira do chassis. Se você ainda não está aterrado, aterre-se adequadamente.
-. Desligue a alimentação do módulo do controlador puxando o módulo do controlador para fora cerca de três polegadas:
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Desconecte as PSUs do controlador.
 +
-.. Prima ambos os trincos de bloqueio do módulo do controlador e, em seguida, rode ambos os trincos para baixo ao mesmo tempo.
-.. Puxe o módulo do controlador a cerca de 3 polegadas do chassis para desengatar a alimentação.
 
+NOTE: Se o sistema tiver alimentação CC, desligue o bloco de alimentação das PSUs.
 
 . Gire a bandeja de gerenciamento de cabos para baixo puxando os botões no interior da bandeja de gerenciamento de cabos e girando-a para baixo.
 . Retire o módulo NVRAM alvo do chassis:
@@ -150,18 +150,10 @@ Patilhas de bloqueio do DIMM
 .. Deslize cuidadosamente o módulo para dentro da ranhura e, em seguida, empurre o trinco do came totalmente para cima para bloquear o módulo no lugar.
 
 
-. Volte a ligar a alimentação ao módulo do controlador:
-+
-.. Empurre firmemente o módulo do controlador para dentro do chassi até que ele atenda ao plano médio e esteja totalmente assentado.
-+
-Os trincos de bloqueio sobem quando o módulo do controlador está totalmente assente.
-
-.. Rode os trincos de bloqueio para cima, para a posição de bloqueio.
-
-
+. Conete os cabos de alimentação às fontes de alimentação. O controlador reinicia assim que a energia é restaurada.
 +
 
-NOTE: O controlador reinicializa assim que estiver totalmente encaixado no chassis.
+NOTE: Se você tiver fontes de alimentação CC, reconecte o bloco de energia às fontes de alimentação.
 
 . Rode o tabuleiro de gestão de cabos para cima até à posição fechada.
 
@@ -176,11 +168,10 @@ Para substituir DIMMs NVRAM no módulo NVRAM, você deve remover o módulo NVRAM
 image::../media/drw_a800_drive_seated_IEOPS-960.svg[Acionamentos do disco do assento]
 
 . Vá para a parte traseira do chassis. Se você ainda não está aterrado, aterre-se adequadamente.
-. Desligue a alimentação do módulo do controlador puxando o módulo do controlador para fora cerca de três polegadas:
+. Desconecte as PSUs do controlador.
 +
-.. Prima ambos os trincos de bloqueio do módulo do controlador e, em seguida, rode ambos os trincos para baixo ao mesmo tempo.
-.. Puxe o módulo do controlador a cerca de 3 polegadas do chassis para desengatar a alimentação.
 
+NOTE: Se o sistema tiver alimentação CC, desligue o bloco de alimentação das PSUs.
 
 . Gire a bandeja de gerenciamento de cabos para baixo puxando cuidadosamente os pinos nas extremidades da bandeja e girando-a para baixo.
 . Retire o módulo NVRAM alvo do chassis:
@@ -225,18 +216,10 @@ NOTE: Consulte a etiqueta do mapa da FRU na lateral do módulo NVRAM para determ
 .. Deslize cuidadosamente o módulo para dentro da ranhura até que o trinco do excêntrico comece a engatar com o pino do excêntrico de e/S e, em seguida, rode o trinco do excêntrico totalmente para cima para bloquear o módulo no devido lugar.
 
 
-. Volte a ligar a alimentação ao módulo do controlador:
-+
-.. Empurre firmemente o módulo do controlador para dentro do chassi até que ele atenda ao plano médio e esteja totalmente assentado.
-+
-Os trincos de bloqueio sobem quando o módulo do controlador está totalmente assente.
-
-.. Rode os trincos de bloqueio para cima, para a posição de bloqueio.
-
-
+. Conete os cabos de alimentação às fontes de alimentação. O controlador reinicia assim que a energia é restaurada.
 +
 
-NOTE: O controlador reinicializa assim que estiver totalmente encaixado no chassis.
+NOTE: Se você tiver fontes de alimentação CC, reconecte o bloco de energia às fontes de alimentação.
 
 . Rode o tabuleiro de gestão de cabos para cima até à posição fechada.
 

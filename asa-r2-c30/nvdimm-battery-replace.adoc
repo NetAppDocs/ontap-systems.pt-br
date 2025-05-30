@@ -1,0 +1,356 @@
+---
+permalink: asa-r2-c30/nvdimm-battery-replace.html 
+sidebar: sidebar 
+keywords: asa c30, replace the NV battery, NV battery 
+summary: Substitua a bateria NV no seu sistema de armazenamento ASA C30 quando a bateria começar a perder carga ou falhar, pois ela é responsável por preservar dados críticos do sistema durante quedas de energia. O processo de substituição envolve desligar o controlador desativado, remover o módulo do controlador, substituir a bateria NV, reinstalar o módulo do controlador e devolver a peça com falha ao NetApp. 
+---
+= Substitua a bateria NV - ASA C30
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Substitua a bateria NV no seu sistema de armazenamento ASA C30 quando a bateria começar a perder carga ou falhar, pois ela é responsável por preservar dados críticos do sistema durante quedas de energia. O processo de substituição envolve desligar o controlador desativado, remover o módulo do controlador, substituir a bateria NV, reinstalar o módulo do controlador e devolver a peça com falha ao NetApp.
+
+Para substituir a bateria NV, tem de remover o controlador, remover a bateria avariada, instalar a bateria de substituição e, em seguida, reinstalar o controlador.
+
+.Antes de começar
+Todos os outros componentes do sistema de armazenamento têm de estar a funcionar corretamente; caso contrário, tem de contactar https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de prosseguir com este procedimento.
+
+.Sobre esta tarefa
+Se necessário, você pode ligar os LEDs de localização do sistema de armazenamento (azul) para ajudar a localizar fisicamente o sistema de armazenamento afetado. Faça login no BMC usando SSH e digite o `system location-led _on_` comando.
+
+Um sistema de armazenamento tem três LEDs de localização: Um no painel de visualização do operador e um em cada controlador. Os LEDs de localização permanecem acesos durante 30 minutos.
+
+Você pode desativá-los digitando o `system location-led _off_` comando. Se não tiver a certeza se os LEDs estão ligados ou desligados, pode verificar o seu estado introduzindo o `system location-led show` comando.
+
+
+
+== Passo 1: Desligue o controlador desativado
+
+Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
+
+.Sobre esta tarefa
+* Se você tiver um sistema SAN, você deve ter verificado mensagens de  `cluster kernel-service show`evento ) para o blade SCSI do controlador afetado. O `cluster kernel-service show` comando (do modo avançado priv) exibe o nome do nó, link:https://docs.netapp.com/us-en/ontap/system-admin/display-nodes-cluster-task.html["status do quorum"]desse nó, o status de disponibilidade desse nó e o status operacional desse nó.
++
+Cada processo SCSI-blade deve estar em quórum com os outros nós no cluster. Qualquer problema deve ser resolvido antes de prosseguir com a substituição.
+
+* Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
+
+
+.Passos
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport:
++
+`system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
+
++
+A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas:
+
++
+`cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Desative a giveback automática a partir da consola do controlador saudável:
++
+`storage failover modify -node local -auto-giveback false`
+
++
+
+NOTE: Quando vir _do pretende desativar a auto-giveback?_, introduza `y`.
+
+. Leve o controlador prejudicado para o prompt Loader:
++
+[cols="1,2"]
+|===
+| Se o controlador afetado estiver a apresentar... | Então... 
+
+
+ a| 
+O prompt Loader
+ a| 
+Vá para a próxima etapa.
+
+
+
+ a| 
+A aguardar pela giveback...
+ a| 
+Pressione Ctrl-C e responda `y` quando solicitado.
+
+
+
+ a| 
+Prompt do sistema ou prompt de senha
+ a| 
+Assuma ou interrompa o controlador prejudicado do controlador saudável:
+
+`storage failover takeover -ofnode _impaired_node_name_ -halt _true_`
+
+O parâmetro _-halt True_ traz para o prompt Loader.
+
+|===
+
+
+
+
+== Passo 2: Remova o controlador
+
+Você deve remover o controlador do chassi quando substituir o controlador ou substituir um componente dentro do controlador.
+
+.Antes de começar
+Certifique-se de que todos os outros componentes do sistema de armazenamento estão a funcionar corretamente; caso contrário, tem de contactar https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de continuar com este procedimento.
+
+.Passos
+. No controlador desativado, certifique-se de que o LED NV está desligado.
++
+Quando o LED NV está desligado, o desaquecimento está completo e é seguro remover o controlador afetado.
+
++
+
+NOTE: Se o LED NV estiver intermitente (verde), as destage estão em curso. Tem de aguardar que o LED NV se desligue. No entanto, se a intermitência continuar durante mais de cinco minutos, contacte https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de continuar com este procedimento.
+
++
+O LED NV está localizado junto ao ícone NV no controlador.
+
++
+image::../media/drw_g_nvmem_led_ieops-1839.svg[Localização do LED de estado NV]
+
+
+
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Ícone NV e LED no controlador
+
+|===
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Desligue a alimentação do controlador desativado:
++
+
+NOTE: As fontes de alimentação (PSUs) não têm um interrutor de alimentação.
+
++
+[cols="1,2"]
+|===
+| Se você está desligando um... | Então... 
+
+
+ a| 
+PSU CA
+ a| 
+.. Abra o retentor do cabo de alimentação.
+.. Desconete o cabo de alimentação da PSU e coloque-o de lado.
+
+
+
+
+ a| 
+FONTE DE ALIMENTAÇÃO CC
+ a| 
+.. Desaperte os dois parafusos de orelhas no conetor do cabo de alimentação DC D-SUB.
+.. Desconete o cabo de alimentação da PSU e coloque-o de lado.
+
+
+|===
+. Desconete todos os cabos do controlador desativado.
++
+Mantenha o controle de onde os cabos foram conetados.
+
+. Retire o controlador desativado:
++
+A ilustração a seguir mostra a operação das alças do controlador (do lado esquerdo do controlador) ao remover um controlador:
+
++
+image::../media/drw_g_and_t_handles_remove_ieops-1837.svg[operação da alavanca do controlador para remover um controlador]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Em ambas as extremidades do controlador, empurre as patilhas de bloqueio verticais para fora para soltar as pegas.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+** Puxe as pegas na sua direção para retirar o comando do plano médio.
++
+À medida que você puxa, as alças se estendem para fora do controlador e, em seguida, você sente alguma resistência, continue puxando.
+
+** Deslize o controlador para fora do chassi enquanto suporta a parte inferior do controlador e coloque-o em uma superfície plana e estável.
+
+
+
+
+ a| 
+image::../media/icon_round_3.png[Legenda número 3]
+ a| 
+Se necessário, rode as pegas para a posição vertical (junto às patilhas) para as retirar do caminho.
+
+|===
+. Abra a tampa do controlador rodando o parafuso de aperto manual no sentido contrário ao dos ponteiros do relógio para soltar e, em seguida, abra a tampa.
+
+
+
+
+== Passo 3: Substitua a bateria NV
+
+Retire a bateria NV avariada do controlador e instale a bateria NV de substituição.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Localize a bateria do NV.
+. Retire a bateria NV:
++
+image::../media/drw_g_nv_battery_replace_ieops-1864.svg[Substitua a bateria NV]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Levante a bateria NV e retire-a do respetivo compartimento.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+Retire a cablagem do respetivo retentor.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Legenda número 3]
+ a| 
+.. Empurre e segure a patilha no conetor.
+.. Puxe o conetor para cima e para fora da tomada.
++
+Ao puxar para cima, agite suavemente o conetor de ponta a ponta (longitudinalmente) para o soltar.
+
+
+
+|===
+. Instale a bateria NV de substituição:
++
+.. Retire a bateria de substituição da respetiva embalagem.
+.. Ligue o conetor da cablagem à respetiva tomada.
+.. Encaminhe a cablagem ao longo da parte lateral da fonte de alimentação, para o respetivo retentor e, em seguida, através do canal em frente do compartimento da bateria NV.
+.. Coloque a bateria NV no respetivo compartimento.
++
+A bateria NV deve ficar nivelada no respetivo compartimento.
+
+
+
+
+
+
+
+== Etapa 4: Reinstale o controlador
+
+Reinstale o controlador no chassi e reinicialize-o.
+
+.Sobre esta tarefa
+A ilustração a seguir mostra a operação das alças do controlador (do lado esquerdo de um controlador) ao reinstalar o controlador e pode ser usada como referência para as demais etapas de reinstalação do controlador.
+
+image::../media/drw_g_and_t_handles_reinstall_ieops-1838.svg[operação da alavanca do controlador para instalar um controlador]
+
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Se tiver girado as pegas do controlador na vertical (junto às patilhas) para as afastar enquanto efetua a manutenção do controlador, rode-as para a posição horizontal.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+Empurre as alças para reinserir o controlador no chassi até meio e, quando instruído, empurre até que o controlador esteja totalmente assentado.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Legenda número 3]
+ a| 
+Rode as pegas para a posição vertical e bloqueie-as com as patilhas de bloqueio.
+
+|===
+.Passos
+. Feche a tampa do controlador e rode o parafuso de aperto manual no sentido dos ponteiros do relógio até ficar apertado.
+. Introduza o controlador a meio caminho no chassis.
++
+Alinhe a parte traseira do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o controlador utilizando as pegas.
+
++
+
+NOTE: Não introduza completamente o controlador no chassis até ser instruído a fazê-lo.
+
+. Conete o cabo do console à porta do console no controlador e ao laptop para que o laptop receba mensagens de console quando o controlador for reinicializado.
++
+
+NOTE: Não conete nenhum outro cabo ou cabo de alimentação neste momento.
+
+. Coloque totalmente o controlador no chassis:
++
+.. Empurre firmemente as alças até que o controlador atenda ao plano médio e esteja totalmente assentado.
++
+
+NOTE: Não utilize força excessiva ao deslizar o controlador para dentro do chassis; pode danificar os conetores.
+
+.. Rode as pegas do controlador para cima e bloqueie-as com as patilhas.
++
+
+NOTE: O controlador de substituição recebe energia do controlador em estado de funcionamento e começa a arrancar assim que estiver totalmente assente no chassis.
+
+
+
+. Recable o controlador conforme necessário.
+. Reconecte o cabo de alimentação à fonte de alimentação (PSU).
++
+Uma vez que a energia é restaurada para a PSU, o LED de status deve estar verde.
+
++
+[cols="1,2"]
+|===
+| Se você está reconetando um... | Então... 
+
+
+ a| 
+PSU CA
+ a| 
+.. Ligue o cabo de alimentação à PSU.
+.. Fixe o cabo de alimentação com o fixador do cabo de alimentação.
+
+
+
+
+ a| 
+FONTE DE ALIMENTAÇÃO CC
+ a| 
+.. Ligue o conetor do cabo de alimentação DC D-SUB à PSU.
+.. Aperte os dois parafusos de orelhas para fixar o conetor do cabo de alimentação D-SUB DC à PSU.
+
+
+|===
+
+
+
+
+== Passo 5: Devolva a peça com falha ao NetApp
+
+Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

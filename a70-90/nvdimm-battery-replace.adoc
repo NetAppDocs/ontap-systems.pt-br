@@ -299,18 +299,17 @@ NOTE: Certifique-se de que o cabo da consola está ligado ao módulo do controla
 +
 Os trincos de bloqueio sobem quando o módulo do controlador está totalmente assente.
 
+
+
 +
 
 NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
 
++
 .. Rode os trincos de bloqueio para cima, para a posição de bloqueio.
 
 
-+
-
-NOTE: Se o controlador inicializar no prompt Loader, reinicialize-o com o `boot_ontap` comando.
-
-. Conete os cabos de alimentação às fontes de alimentação.
+. Conete os cabos de alimentação às fontes de alimentação. O controlador reinicia assim que a energia é restaurada.
 +
 
 NOTE: Se você tiver fontes de alimentação CC, reconete o bloco de alimentação às fontes de alimentação depois que o módulo do controlador estiver totalmente encaixado no chassi.

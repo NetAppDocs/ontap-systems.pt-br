@@ -13,7 +13,7 @@ summary: Para substituir um módulo de e/S, você deve desconetar os cabos do m�
 [role="lead"]
 Adicione um módulo de e/S ao seu sistema ASA A20, ASA A30 ou ASA A50 para melhorar a conetividade de rede e expandir a capacidade do seu sistema de lidar com o tráfego de dados.
 
-Você pode adicionar um módulo de e/S aos sistemas de storage ASA A20, ASA A30 e ASA A50 quando houver slots disponíveis ou quando todos os slots estiverem totalmente preenchidos.
+Você pode adicionar um módulo de E/S ao seu sistema de armazenamento ASA C30 se houver slots disponíveis. Se todos os slots estiverem totalmente preenchidos, você pode substituir um módulo existente para adicionar um novo.
 
 .Sobre esta tarefa
 Se necessário, você pode ligar os LEDs de localização do sistema de armazenamento (azul) para ajudar a localizar fisicamente o sistema de armazenamento assetado. Faça login no BMC usando SSH e digite o `system location-led _on_` comando.
@@ -24,7 +24,7 @@ Você pode desativá-los digitando o `system location-led _off_` comando. Se nã
 
 
 
-== Passo 1: Desligue o módulo do controlador desativado
+== Passo 1: Desligue o controlador desativado
 
 Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
 

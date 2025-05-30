@@ -10,7 +10,7 @@ indexpage:
   - title: ASA A1K
     links:
     - title: Suporte de arranque
-      url: "../asa-r2-a1k/bootmedia-overview-bmr.html"
+      url: "../asa-r2-a1k/bootmedia-replace-workflow-bmr.html"
     - title: Controlador
       url: "../asa-r2-a1k/controller-replace-workflow.html"
     - title: DIMM
@@ -32,7 +32,7 @@ indexpage:
   - title: ASA A70 e ASA A90
     links:
     - title: Suporte de arranque
-      url: "../asa-r2-70-90/bootmedia-overview-bmr.html"
+      url: "../asa-r2-70-90/bootmedia-replace-workflow-bmr.html"
     - title: Chassis
       url: "../asa-r2-70-90/chassis-replace-workflow.html"
     - title: Controlador
@@ -77,3 +77,25 @@ indexpage:
       url: "../asa-r2-a20-30-50/power-supply-replace.html"
     - title: Bateria de relógio em tempo real
       url: "../asa-r2-a20-30-50/rtc-battery-replace.html"
+  - title: ASA C30
+    links:
+    - title: Suporte de arranque
+      url: "../asa-r2-c30/bootmedia-replace-workflow-bmr.html"
+    - title: Chassis
+      url: "../asa-r2-c30/chassis-replace-workflow.html"
+    - title: Controlador
+      url: "../asa-r2-c30/controller-replace-workflow.html"
+    - title: DIMM
+      url: "../asa-r2-c30/dimm-replace.html"
+    - title: Condução
+      url: "../asa-r2-c30/drive-replace.html"
+    - title: Ventoinha
+      url: "../asa-r2-c30/fan-replace.html"
+    - title: Módulo de e/S.
+      url: "../asa-r2-c30/io-module-overview.html"
+    - title: Bateria NV
+      url: "../asa-r2-c30/nvdimm-battery-replace.html"
+    - title: Fonte de alimentação
+      url: "../asa-r2-c30/power-supply-replace.html"
+    - title: Bateria de relógio em tempo real
+      url: "../asa-r2-c30/rtc-battery-replace.html"
