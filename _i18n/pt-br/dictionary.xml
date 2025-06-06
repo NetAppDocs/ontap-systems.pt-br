@@ -5741,8 +5741,6 @@
   <block id="789b5a8a8cbbdce99d0cd8864ee0122a" category="doc">Desligue o controlador desativado - FAS70 e FAS90</block>
   <block id="2902ee20441450339d3c624a2432953d" category="list-text"><block ref="402920e7db99056d01d15836c97d7e6e" category="inline-xref-macro-rx"></block></block>
   <block id="0ead7a2e2db558cfd790c55a9c76462e" category="list-text">Confirme se todos os outros componentes estão funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.</block>
-  <block id="fd39955a756e9aaa81ca55b2791f9b72" category="example-title">Opção 1 da maioria dos sistemas</block>
-  <block id="d4373786f422d4c41e16fcb4a1e26b83" category="example-title">Opção 2 Configuração do MetroCluster</block>
   <block id="1cc5afe23260cb08d578b3171ed8bb0d" category="paragraph">Números de slot do módulo de armazenamento em cache</block>
   <block id="9c7e22c30b9aa93d97efb0ef5d7ccaa8" category="list-text">Rode a patilha para longe do módulo.</block>
   <block id="21c6d5df7d87902fb54560352086c7e1" category="list-text">Aperte a aba Terra Cotta na parte superior do módulo de armazenamento em cache e gire a alça da came para longe do módulo de armazenamento em cache.</block>
@@ -11239,7 +11237,6 @@
   <block id="35ac4e474d14cd3235380c2e767e83a3" category="paragraph">Substitua o NVRAM no seu sistema FAS70 ou FAS90 quando a memória não volátil ficar com defeito ou necessitar de uma atualização. O processo de substituição envolve desligar o controlador prejudicado, substituir o módulo NVRAM ou o DIMM NVRAM, reatribuir os discos e devolver a peça com falha ao NetApp.</block>
   <block id="a7188c3f4745ef552e2d05d7b35f5f28" category="summary">Substitua a bateria de relógio em tempo real (RTC), comumente conhecida como bateria de célula tipo moeda, em seu sistema FAS70 ou FAS90 para garantir que os serviços e aplicativos que dependem de sincronização precisa de tempo permaneçam operacionais.</block>
   <block id="2ffef1288a7f6acf62a54035268660b1" category="summary">Substitua o módulo de gerenciamento do sistema no sistema FAS70 ou FAS90 quando ele ficar com defeito ou o firmware estiver corrompido. O processo de substituição envolve desligar o controlador, substituir o módulo de gestão do sistema com falha, reiniciar o controlador, atualizar as chaves de licença e devolver a peça com falha ao NetApp.</block>
-  <block id="5058f1af8388633f609cadb75a75dc9d" category="paragraph">.</block>
   <block id="83755d1a8b686dba4bc8143c0cb7f397" category="doc">Fluxo de trabalho de substituição de Mídia de inicialização - AFF A1K</block>
   <block id="25602a3f0e04b149a4c958bcec65c371" category="summary">O suporte de arranque do seu sistema AFF A1K armazena dados essenciais de firmware e configuração. O processo de substituição envolve a remoção do módulo de Gestão do sistema, remoção do suporte de arranque com problemas, instalação do suporte de arranque de substituição e, em seguida, transferência da imagem ONTAP para o suporte de arranque de substituição.</block>
   <block id="b33207f5d0f2655fdef88d9bbf915f24" category="summary">Desligue o controlador desativado no sistema de armazenamento AFF A1K para evitar a perda de dados e garantir a estabilidade do sistema ao substituir a Mídia de inicialização.</block>
@@ -11903,9 +11900,6 @@
   <block id="e772ad168b6f97f132982a96392cd046" category="example-title">Substitua a fonte de alimentação CA por NS224</block>
   <block id="0dcc8efe101bb5e6350d650ce519cbfa" category="video-title">Troca a quente de uma fonte de alimentação CA em uma prateleira de NS224</block>
   <block id="40f990da8c57e47c36081d4d612c9817" category="list-text">Desconecte os cabos de alimentação das PSUs e puxe o módulo controlador alguns centímetros para fora da parte frontal do sistema.</block>
-  <block id="5330c5fb5d366be53452014b9ecf03a7" category="paragraph">+ .. Retire todos os cabos ligados ao módulo de gestão do sistema. Certifique-se de que identifica onde os cabos foram ligados, para que possa ligá-los às portas corretas quando reinstalar o módulo. .. Gire a bandeja de gerenciamento de cabos para baixo puxando os botões de ambos os lados no interior da bandeja de gerenciamento de cabos e, em seguida, gire a bandeja para baixo. .. Prima o botão do came de gestão do sistema. .. Rode o trinco do excêntrico para baixo o mais longe possível. .. Retire o módulo de gestão do sistema do compartimento, prendendo o dedo na abertura da alavanca do came e puxando o módulo para fora do compartimento. .. Coloque o módulo de gestão do sistema num tapete anti-estático, de forma a que o suporte de arranque fique acessível. . Retire o suporte de arranque do módulo de gestão:</block>
-  <block id="42daa41b8c19102ddb14e0889d7abbb4" category="paragraph">+ image::../media/drw_a1k_boot_media_remove_replace_ieops-1377.svg[Gráfico de substituição de mídia de inicialização]</block>
-  <block id="26b17225b626fb9238849fd60eabdf60" category="paragraph">E</block>
   <block id="193d35b8a9ac476b4099d10d04a128a6" category="list-text">Recoloque e trave cuidadosamente o módulo do controlador na parte frontal do sistema.</block>
   <block id="c65e5ab2ccd40a14e7dbaad19aa0c504" category="list-text">Desconecte os cabos de alimentação das PSUs do controlador e puxe o módulo do controlador, na parte frontal do sistema, alguns centímetros para fora.</block>
   <block id="2a111f85cafe27d96d705414a1545f34" category="list-text">Reconecte os cabos de alimentação à PSU e recoloque e trave com cuidado o módulo do controlador na parte frontal do sistema.</block>
@@ -11916,7 +11910,6 @@
   <block id="b4f9b4ed219fb6f91477aff5ebef3453" category="admonition">Se você tiver fontes de alimentação CC, reconecte o bloco de energia às fontes de alimentação.</block>
   <block id="4efb9ea6af03bf03e0cdc2a4164ea43c" category="list-text">Conete o cabo do console à porta do console do módulo do controlador de substituição e reconete-o ao laptop para que ele receba mensagens do console quando ele for reinicializado.</block>
   <block id="fde22c7ade0121628e0502770ed5326e" category="list-text">Conecte as fontes de alimentação. O controlador inicializa no prompt do LOADER assim que a energia é restaurada.</block>
-  <block id="ea1ad38d91c2e87ef2e9571bd55654fd" category="list-text">ONTAP 9.17,1</block>
   <block id="14a1b02d9ac34f22a362671d392a3852" category="list-text">ASA C30</block>
   <block id="ed57089257c5bf0e9855c2abce5e2f2c" category="paragraph">Os sistemas de armazenamento AFF A1K suportam prateleiras NS224 com o módulo NSM100 ou NSM100B. As principais diferenças entre os módulos são:</block>
   <block id="bee9bdef55e93399a97d85b3925cfca2" category="list-text">Os módulos de prateleira NSM100 usam portas e0a e e0b integradas.</block>
@@ -12009,4 +12002,9 @@
   <block id="b4a3b44dc7350cb88f59a4a2eb7dda1d" category="sidebar">Chassis ASA C30</block>
   <block id="cb330090f109eb2fa5d8e0cb697b8627" category="sidebar">Módulo do controlador ASA C30</block>
   <block id="d6cf13e3e73df787bea3a13aaa745efd" category="sidebar">Módulo de e/S ASA C30</block>
+  <block id="8acf9575f7f79494b7321c6428846a4b" category="paragraph">Substitua a mídia de inicialização.</block>
+  <block id="8fdc5ec3ff56b023a707d257557cb7c1" category="paragraph">Os sistemas de armazenamento FAS70 e FAS90 suportam prateleiras DS212C, DS224C, DS460C e NS224 com o módulo NSM100 ou NSM100B.</block>
+  <block id="cb1d7f2de7963108d3fe1b590a415523" category="paragraph">As principais diferenças entre os módulos NS224 são:</block>
+  <block id="a1c52b2edb23bc93318c0b82dc9baead" category="paragraph">O exemplo de cabeamento NS224 a seguir mostra módulos NSM100 nas prateleiras NS224 ao se referir às portas do módulo de prateleira.</block>
+  <block id="29cc4b807f94b06bddae2e11c6a56c1e" category="paragraph">A unidade flash USB deve ter a mesma versão da imagem de serviço (BIOS) que o controlador danificado está executando.</block>
 </blocks>

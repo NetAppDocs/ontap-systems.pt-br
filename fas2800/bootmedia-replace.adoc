@@ -16,7 +16,7 @@ Para substituir o suporte de arranque, tem de remover o módulo do controlador a
 
 == Passo 1: Remova o módulo do controlador
 
-[role="lead"]
+.Passos
 Para aceder aos componentes no interior do controlador, tem de remover primeiro o módulo do controlador do sistema e, em seguida, remover a tampa do módulo do controlador.
 
 . Se você ainda não está aterrado, aterre-se adequadamente.
@@ -48,8 +48,6 @@ Botão de liberação da tampa do módulo do controlador
 
 Localize a Mídia de inicialização no módulo do controlador, localizado sob a placa mezzanine e siga as instruções para substituí-la.
 
-.Animação - substitua o suporte de arranque
-video::10a29a01-a86e-451c-b05a-af4701726f57[panopto]
 image:../media/drw_2850_replace_boot_media_IEOPS-696.svg["Substitua o suporte de arranque"]
 
 [cols="1,2"]
@@ -124,19 +122,10 @@ Instale a imagem do sistema no suporte de arranque de substituição utilizando 
 NOTE: Se você estiver extraindo o conteúdo usando o Windows, não use o WinZip para extrair a imagem netboot. Use outra ferramenta de extração, como 7-Zip ou WinRAR.
 
 +
-Há duas pastas no arquivo de imagem de serviço descompactado:
+A unidade flash USB deve ter a mesma versão da imagem de serviço (BIOS) que o controlador danificado está executando.
 
 +
-** `boot`
-** `efi`
-+
-... Copie a `efi` pasta para o diretório superior da unidade flash USB.
-+
-A unidade flash USB deve ter a pasta efi e a mesma versão de imagem de serviço (BIOS) do que o controlador deficiente está executando.
-
-... Retire a unidade flash USB do seu computador portátil.
-
-
+.. Retire a unidade flash USB do seu computador portátil.
 
 
 . Instale o módulo do controlador:
