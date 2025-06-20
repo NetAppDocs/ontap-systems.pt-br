@@ -5902,9 +5902,7 @@
   <block id="de599e8ee2b792a05ff2446e93b3a7e5" category="doc">Troque uma fonte de alimentação - FAS2700</block>
   <block id="4091c5e7156fea8e74fb2f6ff3fe34fd" category="doc">Substitua a bateria do relógio em tempo real - FAS2700</block>
   <block id="1396dacdf561903f32c605f06d2cf5d8" category="list-text">Pressione<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> quando solicitado para confirmar se o backup de restauração foi bem-sucedido.</block>
-  <block id="1a829a672d8f4a1ab6936c766164f3fe" category="image-alt">drw 2850 pcm remover instalação IEOPS 694</block>
   <block id="5d9c656065fa74e7cb14500497b33617" category="list-text">Abra a tampa pressionando os botões azuis nas laterais do módulo do controlador para soltar a tampa e, em seguida, gire a tampa para cima e para fora do módulo do controlador.</block>
-  <block id="206f40d3d3a553b715b00b4ada962595" category="image-alt">Tampa do módulo de controlador aberto drw 2850 IEOPS 695</block>
   <block id="ac250ab529052385767cc5abd9d02efe" category="paragraph">Botão de liberação da tampa do módulo do controlador</block>
   <block id="02196554e362859bf13fdb8c354bd53c" category="paragraph">Localize a Mídia de inicialização no módulo do controlador, localizado sob a placa mezzanine e siga as instruções para substituí-la.</block>
   <block id="fa8b2d8b91c1c89065d3652288dbddc1" category="list-text">Remova a placa mezzanine usando a ilustração a seguir ou o mapa da FRU no módulo do controlador:</block>
@@ -5930,18 +5928,15 @@
   <block id="c5dfa5f01cf1c0d03284861e71d31370" category="list-text">Se o NVE for suportado no cluster, transfira a imagem com encriptação de volume NetApp.</block>
   <block id="a3dc3f912569e20eb3139702fd4a6206" category="inline-link">Qual imagem do ONTAP devo baixar? Com ou sem criptografia de volume?</block>
   <block id="1532b93706d24d095538566641303954" category="list-text">Se a NVE não for suportada no cluster, transfira a imagem sem encriptação de volume NetApp. <block ref="087e4d006962c8ba6c4d8fdb71ff8e38" category="inline-link-rx"></block>Consulte para obter mais detalhes.</block>
-  <block id="b455521e9b63749ce3c5c792316849ca" category="list-text">Descompacte a imagem transferida.</block>
   <block id="0f844d6324319ebe9b4aabd24f1b88dd" category="list-text">Instale o módulo do controlador:</block>
   <block id="6bfde1459ef866428e3532004887b3b8" category="list-text">Recable o módulo do controlador.</block>
   <block id="dec0306e681fc720cf31bc4851ebcee4" category="inline-link">Referência de administração do sistema ONTAP 9</block>
   <block id="b95a2b769ddc69403557ab79e1942007" category="paragraph"><block ref="b95a2b769ddc69403557ab79e1942007" category="inline-link-rx"></block></block>
   <block id="a0ff1a6d16d908c33e10409aed0ac623" category="paragraph">Retire o módulo do controlador do sistema e, em seguida, retire a tampa do módulo do controlador.</block>
-  <block id="d6daae29261c119313124d1d21a1c267" category="image-alt">drw 2240 x trinco do came de abertura</block>
   <block id="a9c8e259606b559907dfb2f00a204be4" category="paragraph">Localize o módulo de armazenamento em cache dentro do controlador, remova o módulo de armazenamento em cache com falha e substitua-o.</block>
   <block id="ee92b073f59fe189ba6ba0d749a2475e" category="video-title">Animação - substitua o módulo de armazenamento em cache</block>
   <block id="310b3fddb492900dc2073bfed3ad2e76" category="list-text">Localize o módulo de armazenamento em cache com falha perto da parte traseira do módulo do controlador e remova-o.</block>
   <block id="7c54a0f1ea1ead89a0c9b6aeef198946" category="list-text">Prima o botão azul de libertação e rode o módulo de armazenamento em cache para cima.</block>
-  <block id="60f4158622c1b93ba749ee47777762b7" category="image-alt">drw 2850 substitua o módulo de cache IEOPS 697</block>
   <block id="1861e494e4e49e7521421f1074d1c277" category="paragraph">Botão de liberação do módulo de armazenamento em cache</block>
   <block id="8154cefebd8252a7cccd4805ef747b70" category="list-text">Alinhe as extremidades do módulo de armazenamento em cache de substituição com o encaixe no alojamento e, em seguida, empurre-o cuidadosamente para dentro do encaixe.</block>
   <block id="2688650848e4f3835aba141aab8abd77" category="list-text">Pressione o botão de bloqueio azul, gire o módulo de cache totalmente para baixo e solte o botão de bloqueio para bloquear o módulo de armazenamento em cache no lugar.</block>
@@ -5975,7 +5970,6 @@
   <block id="27d23c72f7120f51677aa7a5c4e3c7fb" category="list-text">Se você deixou os módulos SFP no sistema depois de remover os cabos, mova-os para o módulo controlador de substituição.</block>
   <block id="1702b5ed07427fec23228fc597ce204d" category="paragraph">Retire a bateria do NVMEM do módulo do controlador desativado e instale-a no módulo do controlador de substituição.</block>
   <block id="f0c32c78b60207518b286f8da455dc65" category="admonition">Não ligue a bateria do NVMEM até ser direcionado para o fazer.</block>
-  <block id="cf7e5cd262adf1cc20a08505755f07a3" category="image-alt">drw 2850 substitua o nvbattery IEOPS 715</block>
   <block id="26a1f7d3ba4c51ef22c4cfdbdfda1d8c" category="paragraph">Botão de libertação da bateria do NVMEM</block>
   <block id="68bb8073b782fccb191b6577e7b6daed" category="paragraph">Ficha da bateria NVMEM</block>
   <block id="d18072dacf447878404b5ad0bae39da2" category="list-text">Retire a bateria do módulo do controlador:</block>
@@ -5988,7 +5982,6 @@
   <block id="350a3cd01c92197375fa1dd80773199d" category="admonition">Não ligue ainda a bateria. Você o conetará assim que o restante dos componentes for movido para o módulo de substituição do controlador.</block>
   <block id="ba9da6f2122b24c495dd034a4a5ec818" category="section-title">Passo 3: Remova a placa mezzanine</block>
   <block id="ed991b7c3c7e4af5c89a603772f54dd1" category="paragraph">Remova a placa de e/S e a placa de mezanino PCIe do módulo do controlador afetado.</block>
-  <block id="808ce573561d6717a3c0cc395df3a504" category="image-alt">drw 2850 Substituir HIC IEOPS 700</block>
   <block id="eeb8f13cb25825752e216fedcd65a6b1" category="paragraph">Placa de e/S</block>
   <block id="83b54898f0ac014b1e217ee413643205" category="paragraph">Placa mezanino PCIe</block>
   <block id="c746ae924024283281476c33315a4598" category="list-text">Remova a placa de e/S deslizando-a diretamente para fora do módulo do controlador.</block>
@@ -5996,7 +5989,6 @@
   <block id="099cf7f6040f65b3c9d7fb3f7393d4c3" category="list-text">Levante a placa do mezanino e coloque-a de lado em uma superfície antiestática.</block>
   <block id="3356d87e196ed94acd2635f8d405e53f" category="paragraph">Retire o suporte de arranque do módulo do controlador avariado e instale-o no módulo do controlador de substituição.</block>
   <block id="fed0c92cdbae5ea9c1adbf11ed80e55a" category="list-text">Depois de remover a placa mezzanine, localize a Mídia de inicialização usando a ilustração a seguir ou o mapa FRU no módulo do controlador:</block>
-  <block id="45602b20a419ba91959f6389b3e025a3" category="image-alt">drw 2850 substitua o suporte de arranque IEOPS 696</block>
   <block id="a9ddd021b293dcac2e98382851f85f92" category="paragraph">Botão de libertação do suporte de arranque</block>
   <block id="f77adf36adb0721ff6a3bdb4c40ae967" category="list-text">Remova o suporte de arranque:</block>
   <block id="7716b5b822ee00aa2c3fbd58b6ff2117" category="list-text">Prima o botão azul no alojamento do material de arranque para soltar o material de arranque do respetivo alojamento.</block>
@@ -6008,7 +6000,6 @@
   <block id="507e7243ab4a1d0bdbfa4edd5c9733d3" category="list-text">Alinhe a placa mezzanine com o soquete na placa-mãe.</block>
   <block id="fc7fc35188ad3f7c32f3328839f4dff2" category="list-text">Empurre cuidadosamente o cartão para baixo para colocar o cartão na tomada.</block>
   <block id="ec782fd2b49f0e4d6edd263c0d30d7f7" category="paragraph">Remova os DIMMs do módulo do controlador prejudicado e instale-os no módulo do controlador de substituição.</block>
-  <block id="64b66263e264f63be40a6135bb7e5f04" category="image-alt">drw 2850 substitua dimms IEOPS 699</block>
   <block id="2a7c25f4f62d559672aaa2da18086b65" category="paragraph">Travas de travamento do DIMM</block>
   <block id="97d11e594531d9157ff1f8acb63fd22c" category="list-text">Localize os DIMMs no módulo do controlador</block>
   <block id="dab2480c00fbe3b34d9af825595e97ae" category="admonition">Observe a localização do DIMM nos soquetes para que você possa inserir o DIMM no mesmo local no módulo do controlador de substituição e na orientação adequada.</block>
@@ -6046,7 +6037,6 @@
   <block id="041e48089a1444bcdc82526d41790e40" category="paragraph">Retire o módulo do controlador do sistema e, em seguida, retire a tampa do módulo do controlador.</block>
   <block id="8caaa86fafbf22c9627e97fb31c1eea5" category="paragraph">Localize o DIMM dentro do controlador, remova-o e substitua-o.</block>
   <block id="95da017c37970d073ec39c2d3a5f57a0" category="admonition">Antes de substituir um DIMM, você precisa desconetar a bateria do NVMEM do módulo do controlador.</block>
-  <block id="8d2c918ab807c3bf6748afd3be858588" category="image-alt">ícone NVRAM hw drw</block>
   <block id="fa59f7fdc751f040e98449eb5f9bab77" category="list-text">Retire a bateria do módulo do controlador premindo o botão azul na parte lateral do módulo do controlador.</block>
   <block id="e460f960683865692d03871b47a39fd8" category="list-text">Localize o cabo da bateria, prima o grampo na ficha da bateria para soltar o grampo de bloqueio da tomada e, em seguida, desligue o cabo da bateria da tomada.</block>
   <block id="5f2a29b0970aac5a4425f7cf26343e24" category="list-text">Volte a ligar o conetor da bateria e volte a verificar o LED na parte posterior do controlador.</block>
@@ -6093,7 +6083,6 @@
   <block id="a49ba2f6b0c90ba38b8dcd0a94db081d" category="paragraph">X66030A, 0,5m</block>
   <block id="d3b3da5c1301d8d6a324ad66c58950cb" category="paragraph">X66031A, 1m</block>
   <block id="d5e936a50b968238745495b8619c3de2" category="paragraph">X66032A, 2m</block>
-  <block id="9a7819d4ddc611b1438c0a7f4633f619" category="image-alt">cabo oie mini sas hd para mini sas hd</block>
   <block id="7176bca53e61f926de4367eb107ce7c8" category="paragraph">Cabo da consola USB-C.</block>
   <block id="0d6cee59f00c392fcb698e283937aa19" category="paragraph">Nenhuma etiqueta de número de peça</block>
   <block id="521655e96e994a693d54321af1548de6" category="paragraph">Ligar o sistema de armazenamento</block>
@@ -6110,7 +6099,6 @@
   <block id="e80abcbf02cd3bed5561a16253c1dea0" category="paragraph">Switches de rede de host</block>
   <block id="089568b0e72f52eda465bac3d797022f" category="list-text">Verifique a seta da ilustração para a orientação adequada da presilha do conetor do cabo.</block>
   <block id="3b9d43c8f889d04a7e7e50ecc887f626" category="paragraph">Faça o cabeamento das conexões de rede e das portas de interconexão de cluster para um cluster sem switch de dois nós.</block>
-  <block id="cef25943b26eeebcaa1241ede0442fb2" category="paragraph">Use a animação ou as instruções passo a passo para concluir o cabeamento entre os controladores e os switches.</block>
   <block id="43f3f164715da7f3368f26b28f4ef36f" category="video-title">Animação - cabeamento de um cabeamento de cluster sem switch de dois nós</block>
   <block id="00cdc1c050c54120647c95f8ac43e946" category="list-text">Cable as portas de interconexão de cluster e0a a e0a e e0b a e0b com o cabo de interconexão de cluster:</block>
   <block id="64d64c32d62f821e30eb2ef5d4583099" category="paragraph">*Cabos de interconexão de cluster*</block>
@@ -6139,11 +6127,9 @@
   <block id="3fc162aa6870cf22cf3e0a947b89615a" category="video-title">Animação - cabeamento do compartimento de unidade</block>
   <block id="6ac0c621e44f0d6d3cfb9a6035ba969b" category="list-text">A porta 1 da IOM a à porta 3 da IOM A na gaveta diretamente abaixo.</block>
   <block id="a2a4a3ef1017cf43a3cf109d61286633" category="list-text">Porta 1 na IOM B para a porta 3 na IOM B na gaveta diretamente abaixo.</block>
-  <block id="9f8e1f093714df2b4e4cea2483986e1f" category="paragraph">*Cabos HD mini-SAS HD para mini-SAS HD*</block>
   <block id="9aca62ddbd88e63be7ec9f9c2469acab" category="section-title">Passo 5: Conclua a configuração e configuração do sistema de armazenamento</block>
   <block id="b3308aded4f838607d118fa8281f0f4e" category="paragraph">Conclua a configuração e a configuração do sistema de armazenamento usando a opção 1: Se a deteção de rede estiver ativada ou a opção 2: Se a deteção de rede não estiver ativada.</block>
   <block id="cc76013bd2ca10d4b55bab3a0f8d5331" category="paragraph">Se a deteção de rede estiver ativada no seu computador portátil, conclua a configuração e configuração do sistema de armazenamento utilizando a deteção automática de cluster.</block>
-  <block id="89fb7289455abb973e1e1d1887a8172d" category="list-text">Use a animação a seguir para ativar a energia do compartimento e definir IDs de gaveta.</block>
   <block id="9be08f77b7ab4837ae1dadad63405dc2" category="list-text">Ligue os controladores</block>
   <block id="4a8d781d6ae79557515be034fcf4bd6e" category="list-text">Use o gráfico ou as etapas para descobrir o nó do sistema de armazenamento a ser configurado:</block>
   <block id="9d2c2c7e4ecf1a64105e37b923e42295" category="list-text">Use a configuração guiada do System Manager para configurar o sistema de armazenamento usando os dados coletados <block ref="d0fb50e606c7cb2fa74e99fa5a3520a8" category="inline-xref-macro-rx"></block>no .</block>
@@ -6187,9 +6173,7 @@
   <block id="f2972968e044e6666c42c0182107b4f6" category="paragraph">Reinstale o módulo do controlador.</block>
   <block id="f13ddfa8c0e2762d2f399acfc6f0806b" category="summary">A troca de uma fonte de alimentação envolve desligar, desligar e remover a fonte de alimentação prejudicada e instalar, ligar e ligar a fonte de alimentação de substituição.</block>
   <block id="9b0f331e43ad447dbbb78d71a44b1734" category="video-title">Animação - substitua a fonte de alimentação</block>
-  <block id="ad74e1b8d39de33b6e8b9df71820c85f" category="image-alt">drw 2850 substitua a PSU IEOPS 702</block>
   <block id="103256b354864966fcc74d6466bc1cc4" category="paragraph">Substitua a bateria do RTC localizando-a no interior do controlador e siga a sequência específica de passos.</block>
-  <block id="51f7be1d2b3585b769547e04e7036ed9" category="image-alt">drw 2850 substitua a bateria rtc IEOPS 701</block>
   <block id="9f463a2feadd622498da11734b7d3548" category="paragraph">Reinstale o módulo do controlador e inicialize-o no prompt DO Loader.</block>
   <block id="8133c5bbfd79c61b3d28f53fd52d6b77" category="section-title">Passo 5: Defina a hora/data após a substituição da bateria RTC</block>
   <block id="5bafa27d304da6702fac02a0b481992c" category="doc">Devolva a peça com falha ao NetApp - FAS500f</block>
@@ -6467,7 +6451,6 @@
   <block id="6f8193ca6bfb281db32afbcc9e285f79" category="inline-link-macro">Adição automática de uma gaveta SAS</block>
   <block id="c865faf8e136bd4fb16b864c71a1a831" category="list-text">Se você instalou um módulo de e/S de storage, instale e faça o cabeamento das gavetas SAS, conforme descrito em <block ref="4a30b7191a311b85a3f2f50c86b1c925" category="inline-link-macro-rx"></block>.</block>
   <block id="3312f9cce5a2b0b4ea67ddcce0850bf9" category="video-title">Animação - substitua um módulo de e/S.</block>
-  <block id="5ef805c7229de31e948db97478049a11" category="image-alt">drw 9500 remova o módulo PCIe</block>
   <block id="1668821fbbc6ef249109c235ace901e6" category="paragraph">Módulo NIC nos slots 3 ou 7</block>
   <block id="482ef01703219125ccae426ff4615b76" category="paragraph">Instale e faça o cabeamento das gavetas SAS, conforme descrito em <block ref="4a30b7191a311b85a3f2f50c86b1c925" category="inline-link-macro-rx"></block>.</block>
   <block id="f3ca7c7565b074fbf5e12ffb59930d2f" category="doc">Devolva a peça com falha ao NetApp - FAS9500</block>
@@ -6478,7 +6461,6 @@
   <block id="29d4dec218aeaffabfed6dcc8fd1ad45" category="list-text">Se o sistema tiver o gerenciador de chaves integrado, NSE ou NVE configurado, vá para <block ref="39910b5f3ea1ee39d8059faae857cc98" category="inline-xref-macro-rx"></block></block>
   <block id="bc8cb8c20c19791f56e4ce60f7a2aad0" category="doc">Remova o controlador, substitua o suporte de arranque e transfira a imagem de arranque - FAS9500</block>
   <block id="abc219c929a34cf7b62e36c2503b63ac" category="video-title">Animação - Remover módulo do controlador</block>
-  <block id="0b3bd9d9290b20b7deabeee68dbd8982" category="image-alt">drw 9500 retire a fonte do PCM</block>
   <block id="defa99ee750d2ca6a8f52cf79e8eb713" category="list-text">bootarg.init.boot_clustered</block>
   <block id="d18fd3db938a26ebbd3f74de41f0b73f" category="list-text">sistema de parceiro</block>
   <block id="bac349cdf99ddd20206c9b20eb9e6d22" category="list-text">bootarg.init.flash_optimized para AFF</block>
@@ -6496,7 +6478,6 @@
   <block id="fb796745f1b93e7c27af0a928be9d5ae" category="doc">Hot-swap um módulo de cache - FAS9500</block>
   <block id="fa807167a57a5e7782f90326093319e4" category="list-text">O módulo de cache deve estar funcionando bem o suficiente para ser visto pelo sistema. Se o módulo de cache não estiver funcionando desde a última inicialização, você não poderá usar este procedimento e deve usar o procedimento de troca a frio.</block>
   <block id="bdd8c99ec41c2de3e99ba0a36e04bfbf" category="list-text">No nível de privilégio de administrador, prepare o slot NVMe de destino para remoção, respondendo<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> quando solicitado se deseja continuar:<block ref="0277bb5cae56876e81c890026e236b8d" prefix=" " category="inline-code"></block> O seguinte comando prepara o slot 6-1 em node1 para remoção e exibe uma mensagem de que é seguro remover:</block>
-  <block id="68607949342d7df39c7770d809d0a5f2" category="image-alt">drw 9500 remove flashcache</block>
   <block id="5e8d2460689245ee00f6d51f5db543dc" category="paragraph">Botão de liberação terra cotta.</block>
   <block id="783e93aa36e1cf0b0fe9d46618c3f4da" category="admonition">Não utilize o trinco de came de e/S numerado e com letras para ejetar o módulo de cache. A trava de came de e/S numerada e com letras ejeta todo o módulo NVRAM11 e não o módulo de cache.</block>
   <block id="4a73e216feb4277e4b9ed4b0d06e52b6" category="list-text">Rode a pega do came até que o módulo de cache comece a deslizar para fora do módulo NVRAM11.</block>
@@ -6505,12 +6486,7 @@
   <block id="5eafc6b946f42f85611a7020c8963ef8" category="list-text">Alinhe as extremidades do módulo de cache com a abertura no módulo NVRAM11.</block>
   <block id="68828ed4b0036df85ace8abb1ad7c137" category="doc">Restaure e verifique a configuração - FAS9500</block>
   <block id="f2c155633ff38e4e2d070e9d244a9074" category="doc">Mova e substitua o hardware - FAS9500</block>
-  <block id="9494be0e4fc0cc7bf5a561ba23cc37dd" category="image-alt">drw 9500, remova o módulo PSU</block>
-  <block id="2966eb224d8489f097a42690752e472a" category="image-alt">drw 9500 remova a ventoinha de instalação</block>
-  <block id="2c2b9a83665e5336275a4320efcb9a16" category="image-alt">drw 9500, retire o PCM</block>
-  <block id="450c055f11dd33524e41f3c84160e631" category="image-alt">drw 9500 retire a bateria NV</block>
   <block id="cae2fd913220da36fb401366df2ed0b8" category="video-title">Animação - Remover/instalar o módulo USB</block>
-  <block id="0161d43ee09fff69cc35ae43ed1f07f5" category="image-alt">drw 9500 remover Substituir LED mod</block>
   <block id="4b4ddff45477c23b33a8313eeba376e8" category="list-text">Localize o módulo de LED USB na parte frontal do chassi com deficiência, diretamente sob os compartimentos de fonte de alimentação.</block>
   <block id="bacfa9c94d1c1eae1fb55199be616b3d" category="section-title">Etapa 7: Substitua um chassi de dentro do rack de equipamentos ou do gabinete do sistema</block>
   <block id="88c1c1e7e0b97d9299ec57ba96dda64f" category="section-title">Passo 12 instale os módulos LED USB</block>
@@ -6519,9 +6495,6 @@
   <block id="96454e2f4cce6f7ff26336656ad504c5" category="doc">Desligue o controlador desativado - FAS9500</block>
   <block id="737b04c7e695216162d794c71001099a" category="doc">Substitua o hardware do módulo do controlador - FAS9500</block>
   <block id="58f1a63de110893e27e2b9974273d710" category="video-title">Animação - substitua o módulo do controlador, processo completo</block>
-  <block id="31006bbd619d2a77e6fe8ac85bee0cc0" category="image-alt">drw 9500 PCM aberto</block>
-  <block id="eee0b061ed19ecc08e6c30167f3b0ca9" category="image-alt">drw 9500 remove boot dev</block>
-  <block id="3c882fe343465f148bf8900ab7dde11b" category="image-alt">drw 9500 substitua os dimms PCM</block>
   <block id="abe0e9d012f3bb2e25626cbd54f69e36" category="video-title">Animação - Instalação do módulo do controlador</block>
   <block id="3b56ab083e8d5c37dcc957efc509182f" category="doc">Restauração completa do sistema - FAS9500</block>
   <block id="70ebba1c8f978f26a3ed9799176dd8a9" category="doc">Substitua o módulo do controlador - FAS9500</block>
@@ -6542,32 +6515,24 @@
   <block id="821b1e6be57f410ab68ac2071fc04df4" category="doc">Substitua o módulo de alimentação de controlo de destino que contém a bateria de NVRAM11 V - FAS9500</block>
   <block id="6acd2520bad86e2719b0a66d04f59f28" category="list-text">Prima o botão de bloqueio de terra cotta na pega do módulo e, em seguida, deslize o módulo DCPM para fora do chassis.</block>
   <block id="3e5fda4bdb63c28cc3aa53cadbde1129" category="doc">Substitua um DIMM - FAS9500</block>
-  <block id="3b0d2698116982bc6cc48e12fb31e0d2" category="image-alt">Mapa de DIMM drw 9500</block>
   <block id="a0ab299f7b0b0e1628580e5c326625a7" category="video-title">Animação - Substituir DIMMs</block>
   <block id="6e2a8281a18f34ebf7b28cf7584e58ea" category="doc">Troque um ventilador - FAS9500</block>
   <block id="c704a060606b2944e3c331124aaaa743" category="doc">Passos detalhados - FAS9500</block>
   <block id="23e72fffbab87e81876009d38ba5865d" category="image-alt">Conetor de cobre GbE SFP</block>
   <block id="0b8e5c2b0c93dcff136db8befa68944c" category="image-alt">Conetor RJ-45</block>
-  <block id="b78339b4bcd807d0cb07b09d3b379c86" category="image-alt">cabeamento de rede tnsc drw 9500</block>
   <block id="9f6754a88107405b79961d111f064f72" category="paragraph">Cabo de switches de rede FC de 32 GB:</block>
   <block id="393993c9f7562f1a53d4d13744facd0e" category="paragraph">Portas no slot A3 e B3 (E3A e e3c) e no slot A9 e B9 (e9a e e9c) para os switches de rede FC de 32 GB.</block>
   <block id="7b49110d5bcbc4998964949bf1d4d386" category="paragraph">Conexões do cabo de 25 GbE:</block>
   <block id="823c1d0595274590edabd782a377efc4" category="paragraph">Portas de cabos nos slots A5 e B5 (5a, 5b, 5c e 5D) e nos slots A7 e B7 (7a, 7b, 7c e 7D) para os switches de rede de 25 GbE.</block>
   <block id="0efe74a0894d83f88156519939a5c6c8" category="image-alt">Fontes de alimentação</block>
-  <block id="ab4ba237fa2abf24783610d2c0f56a3a" category="image-alt">cabeamento de rede comutada drw 9500</block>
   <block id="6f1c9e49e85b9240d07364dd186d0229" category="image-alt">Ícone de legenda 4</block>
   <block id="1c34ed72998ddf83d183b82b4a5a4938" category="paragraph">Cable gavetas de unidades de DS212C TB ou DS224C TB aos seus controladores.</block>
   <block id="d882321e2eb0b3930cc4d89826524491" category="inline-link-macro">Visão geral das regras de cabeamento SAS, planilhas e exemplos - prateleiras com IOM12 módulos</block>
   <block id="b50fb23aa9dcb8c4fb1207d42be2b9ef" category="admonition">Para obter mais informações sobre cabeamento SAS e planilhas, consulte <block ref="7a9ea3663e1b04ab8d8799fec120c13c" category="inline-link-macro-rx"></block></block>
   <block id="59a6e33abad0374c68f887cd3fe3416f" category="list-text">Conclua a Planilha de cabeamento SAS do seu sistema. <block ref="7a9ea3663e1b04ab8d8799fec120c13c" category="inline-link-macro-rx"></block>Consulte .</block>
   <block id="3e86e158b18295e17a62b9c2ae164933" category="list-text">Use a animação a seguir ou os desenhos para cabeamento das controladoras para três (stack de 1 PB de um compartimento de unidades e uma stack de dois compartimentos de unidades) gavetas de DS224C unidades.</block>
-  <block id="b198e959073372c8a4e521b4b4a94fb3" category="video-title">Animação - Cable suas prateleiras de unidade</block>
-  <block id="dd012e2b911cefcb3afb5c18a9eea983" category="image-alt">cabeamento de gaveta sas drw 9500</block>
-  <block id="b88e980e78bfd532f1f6322cf703cb25" category="image-alt">ícone quadrado 1 azul</block>
   <block id="b216213c8469f70fd4cd72ba7795f4aa" category="paragraph">Conecte a pilha um do compartimento de unidades às controladoras, usando o gráfico para referência.</block>
   <block id="ff080081ab0602360a6573f88141ada1" category="paragraph">Conecte a pilha dois do compartimento de unidades às controladoras, usando o gráfico para referência.</block>
-  <block id="219d4ec85f928925cadb5590292cbb49" category="video-title">Animação - defina a ID do seu compartimento e n.o 8217;s.</block>
-  <block id="6b39390f8836ac9ddcaf033f6ec9d535" category="image-alt">Conjunto de ID da prateleira de conjuntos de alimentação drw</block>
   <block id="543ab7831f0589c951278e6073647eb0" category="paragraph">Retire a tampa da extremidade.</block>
   <block id="77b9275f6fd711644f4214aa9c1fd216" category="paragraph">Pressione e segure o botão ID do compartimento até que o primeiro dígito pisque e pressione para avançar para 0-9.</block>
   <block id="6029e94957ee34ca18227d08b799c166" category="admonition">O primeiro dígito continua a piscar</block>
@@ -6575,9 +6540,7 @@
   <block id="28764a4bf139e725956a33d36127da72" category="admonition">O primeiro dígito pára de piscar e o segundo dígito continua a piscar.</block>
   <block id="72e911c52ba51e970a39b1b30b1c8424" category="paragraph">Volte a colocar a tampa da extremidade.</block>
   <block id="241b3d2acad120dfd8decf92e173cd23" category="paragraph">Aguarde 10 segundos até que o LED âmbar (!) apareça e, em seguida, ligue o compartimento de unidades para definir a ID do compartimento.</block>
-  <block id="92ffcfe5fdb4d48f02fe79bb44448ab3" category="image-alt">alimentação drw 9500 ligada</block>
   <block id="89b878b89413c1b8d2254e6380e13c0d" category="list-text">Conete o cabo do console ao laptop ou console usando o cabo do console fornecido com o sistema e conete o laptop ao switch na sub-rede de gerenciamento.</block>
-  <block id="27daaf3028854170e8321e8ffc573b7a" category="image-alt">controlador do interrutor da consola do cabo drw 9500</block>
   <block id="c1ba9dd5eac89f4e8a8e84e18e1785d1" category="list-text">Configure o sistema utilizando os dados recolhidos no<block ref="31fb422f2cdfc1b2e916b587bec00136" category="inline-link-rx"></block> .</block>
   <block id="a7ed9ff4da75adb740c610eda185e598" category="doc">Passos rápidos - FAS9500</block>
   <block id="86b058636c934f73a262e3a5469f088e" category="paragraph">Este tópico fornece instruções gráficas para uma instalação típica do seu sistema, desde o empilhamento em rack e cabeamento, até o lançamento inicial do sistema. Use este conteúdo se você estiver familiarizado com a instalação de sistemas NetApp.</block>
@@ -6594,14 +6557,11 @@
   <block id="9e209d7a48bf7b8bd414632f31a6d032" category="paragraph">Para o sistema de armazenamento FAS9500, pode executar procedimentos de manutenção nos seguintes componentes.</block>
   <block id="3f679ad9b20cbb8994ff36e9ce18d58f" category="doc">Substitua o módulo NVRAM e/ou DIMMs NVRAM - FAS9500</block>
   <block id="8c2c8bc4e47d0ed180d7a321a6f45a30" category="paragraph">Para substituir o módulo NVRAM, coloque-o na ranhura 6 no chassis e siga a sequência específica de passos.</block>
-  <block id="9b191eaf82da57faf3acb37f96f84ca6" category="image-alt">drw 9500 Move remove módulo NVRAM</block>
-  <block id="1b75d6028af1363f62eb9a45010f31c4" category="image-alt">drw 9500 remover o conteúdo do módulo NVRAM</block>
   <block id="58e30dc94cdf372b64dac305fbb57bc0" category="section-title">Etapa 5: Reatribuir discos</block>
   <block id="eb0c0a024c4f0aa6cfdd5767de1f16f1" category="doc">Substitua um módulo de e/S - FAS9500</block>
   <block id="8ae73aa056882e7b560f3b52b5764957" category="list-text">Se o sistema estiver configurado para suportar interconexão de cluster de 10 GbE e conexões de dados em NICs de 40 GbE, converta essas portas em conexões de 10 GbE usando o<block ref="5ec041cdb2bbdf01cd4ea2c400b17495" prefix=" " category="inline-code"></block> comando do modo Manutenção. Consulte<block ref="2d808a662d9493bde97b50913a25a294" category="inline-link-rx"></block> para obter mais informações.</block>
   <block id="1aa73ef56da88752323de5876f9b3750" category="doc">Troque uma fonte de alimentação - FAS9500</block>
   <block id="46dd13a6814ed7f56a6b685a892da660" category="doc">Substitua a bateria do relógio em tempo real - FAS9500</block>
-  <block id="53eb8664ee63f8ed2095fd3f5e8eb8f1" category="image-alt">drw 9500 retire a bateria RTC</block>
   <block id="e0ec09ab8cb93f04e1ddb90be314a159" category="paragraph">Rode a bateria para cima</block>
   <block id="0c724ad091d5fbe112bba9f946140f9b" category="paragraph">Deslize a bateria para fora do alojamento</block>
   <block id="4714e8423619d9cc43be300b5a406117" category="list-text">Retorne o nó à operação normal, devolvendo seu armazenamento:<block ref="0bba834c69f94d8942b922666e06c777" prefix=" " category="inline-code"></block></block>
@@ -10954,7 +10914,6 @@
   <block id="045e51ef9fd14e92bed7263f56f60f6a" category="doc">Substitua o controlador - AFF A70 e AFF A90</block>
   <block id="7802e205f19ce9b3c1e4b5875798ebef" category="inline-link-macro">restaure a configuração do sistema</block>
   <block id="44505b1d85314cbb257a6a2a6bf388ab" category="paragraph">Depois de substituir o controlador AFF A70 ou AFF A90 com problemas, é necessário <block ref="ba0281d4e0b6e4cebf5e13fd7e583c92" category="inline-link-macro-rx"></block>.</block>
-  <block id="13b0f53aec80ac13170530410c42bc46" category="paragraph">Retorne o controle dos recursos de storage ao controlador de substituição para que seu sistema AFF A70 ou AFF A90 possa retomar a operação normal. O procedimento de devolução varia de acordo com o tipo de encriptação utilizado pelo seu sistema: sem encriptação, encriptação OKM (Onboard Key Manager) ou encriptação EKM (External Key Manager).</block>
   <block id="a61002aab76d792f612bedb7d53fdd4f" category="inline-link-macro">complete a substituição do controlador</block>
   <block id="8e4a77cdcca9305c0b2b2aaff9ccf95f" category="paragraph">Depois de transferir a propriedade dos recursos de armazenamento de volta para o controlador de substituição, você precisa <block ref="d6f5f08e0612b966d919b4ea0b494c53" category="inline-link-macro-rx"></block>fazer o procedimento.</block>
   <block id="09d0394dd9f4460ac15da27cea6fffaf" category="summary">Verifique se as interfaces lógicas estão relatando à porta inicial, execute uma verificação de integridade do cluster e, em seguida, retorne a peça com falha ao NetApp para concluir a etapa final no procedimento de substituição do controlador AFF A70 e AFF A90.</block>
@@ -11052,7 +11011,6 @@
   <block id="12f231246c1957ecc017d5e14e8fa5ce" category="doc">Substitua o controlador - AFF A1K</block>
   <block id="a7a4c58bcecc6da48011ed379f160841" category="paragraph">Depois de substituir o controlador AFF A1K com problemas, é necessário <block ref="ba0281d4e0b6e4cebf5e13fd7e583c92" category="inline-link-macro-rx"></block>.</block>
   <block id="65cfd4efc075696b5b4fa182bd8310b6" category="summary">Retorne o controle dos recursos de armazenamento ao controlador de substituição para que seu sistema AFF A1K possa retomar a operação normal.</block>
-  <block id="18ffded833a06eab340a3512c997924e" category="paragraph">Retorne o controle dos recursos de armazenamento ao controlador de substituição para que seu sistema AFF A1K possa retomar a operação normal. O procedimento de devolução varia de acordo com o tipo de encriptação utilizado pelo seu sistema: sem encriptação, encriptação OKM (Onboard Key Manager) ou encriptação EKM (External Key Manager).</block>
   <block id="c0fde7c58eda00a5144709bacf24bfe9" category="doc">Requisitos para substituir o controlador - AFF A1K</block>
   <block id="6911c42baf5226ca6d00478ac1b258b9" category="summary">Verifique se as interfaces lógicas (LIFs) estão relatando para sua porta inicial, execute uma verificação de integridade do cluster e, em seguida, retorne a peça com falha ao NetApp para concluir a etapa final no procedimento de substituição do controlador AFF A1K.</block>
   <block id="3559feca6c2a12a75b7a78f13f084dc8" category="summary">Verifique se a configuração de HA do controlador está ativa e funcionando corretamente no sistema de storage AFF A1K e confirme se os adaptadores do sistema listam todos os caminhos para os discos.</block>
@@ -11111,7 +11069,6 @@
   <block id="f27d9a5f7d5680dbe736e6836d3c1a9f" category="summary">Substitua o controlador no seu sistema ASA A70 ou ASA A90 quando uma falha de hardware o exigir. Este processo envolve remover o controlador prejudicado, mover os componentes para o controlador de substituição, instalar o controlador de substituição e reiniciar o sistema.</block>
   <block id="2c72ab76cb7a954eb5f3546d4abad687" category="doc">Substitua o controlador - ASA A70 e ASA A90</block>
   <block id="1a68c286a29e94a07ffe7e1a8e288e40" category="summary">Retorne o controle dos recursos de storage ao controlador de substituição para que seu sistema ASA A70 ou ASA A90 possa retomar a operação normal.</block>
-  <block id="33973baa5847fa5dcb8ee97041c826ae" category="paragraph">Retorne o controle dos recursos de storage ao controlador de substituição para que seu sistema ASA A70 ou ASA A90 possa retomar a operação normal. O procedimento de devolução varia de acordo com o tipo de encriptação utilizado pelo seu sistema: sem encriptação, encriptação OKM (Onboard Key Manager) ou encriptação EKM (External Key Manager).</block>
   <block id="b25f0fb243bad5e39db497ca9643ee35" category="doc">Requisitos para substituir o controlador - ASA A70 e ASA A90</block>
   <block id="1e60488a65d744862b8f6292544da3f0" category="doc">Substituição completa do controlador - ASA A70 e ASA A90</block>
   <block id="bb9f8e902211727b75f62da6100f446a" category="summary">Substitua um DIMM no sistema ASA A70 ou ASA A90 se forem detetados erros de memória corrigíveis ou incorrigíveis excessivos. Tais erros podem impedir que o sistema de armazenamento inicialize o ONTAP. O processo de substituição envolve desligar o controlador prejudicado, removê-lo, substituir o DIMM, reinstalar o controlador e, em seguida, devolver a peça com falha ao NetApp.</block>
@@ -11142,7 +11099,6 @@
   <block id="f36c76518c1338c3f03a21b9d4c06d87" category="paragraph">Substitua o controlador no sistema ASA A1K quando for necessária uma falha de hardware. O processo de substituição envolve remover o controlador prejudicado, mover os componentes para o controlador de substituição, instalar o controlador de substituição e reinicializá-lo.</block>
   <block id="f501a4282c0407a5377e73a38c2fe79c" category="paragraph">Depois de substituir o controlador ASA A1K com problemas, é necessário <block ref="ba0281d4e0b6e4cebf5e13fd7e583c92" category="inline-link-macro-rx"></block>.</block>
   <block id="0b7aa62fd5de84b2f6b9168c29cd9699" category="summary">Retorne o controle dos recursos de armazenamento ao controlador de substituição para que seu sistema ASA A1K possa retomar a operação normal.</block>
-  <block id="650cd8dda24c1d628d2370fc896e2898" category="paragraph">Retorne o controle dos recursos de armazenamento ao controlador de substituição para que seu sistema ASA A1K possa retomar a operação normal. O procedimento de devolução varia de acordo com o tipo de encriptação utilizado pelo seu sistema: sem encriptação, encriptação OKM (Onboard Key Manager) ou encriptação EKM (External Key Manager).</block>
   <block id="6a41dab46dde5ea92e32bfe9162ff999" category="doc">Requisitos para substituir o controlador - ASA A1K</block>
   <block id="1a197d6edeae9c94e0721ab454a5fb33" category="summary">Verifique se as interfaces lógicas (LIFs) estão relatando para sua porta inicial, execute uma verificação de integridade do cluster e, em seguida, retorne a peça com falha ao NetApp para concluir a etapa final no procedimento de substituição do controlador ASA A1K.</block>
   <block id="95155c153887de18d244e072071f2b3a" category="summary">Verifique se a configuração de HA do controlador está ativa e funcionando corretamente no sistema de storage ASA A1K e confirme se os adaptadores do sistema listam todos os caminhos para os discos.</block>
@@ -11183,7 +11139,6 @@
   <block id="d13e978f047aec74606199ffff94e6ba" category="doc">Substitua o controlador - AFF C80</block>
   <block id="02a9e9984c956e264ae67617477e3c81" category="paragraph">Substitua o controlador no sistema AFF C80 quando for necessária uma falha de hardware. Este processo envolve remover o controlador prejudicado, mover os componentes para o controlador de substituição, instalar o controlador de substituição e reiniciar o sistema.</block>
   <block id="7fe746cff776821811860f80a8a2766b" category="paragraph">Depois de substituir o controlador AFF C80 com problemas, é necessário <block ref="ba0281d4e0b6e4cebf5e13fd7e583c92" category="inline-link-macro-rx"></block>.</block>
-  <block id="70ca6ca8fd81886c4dcc82d957e79ee9" category="paragraph">Retorne o controle dos recursos de armazenamento ao controlador de substituição para que seu sistema AFF C80 possa retomar a operação normal. O procedimento de devolução varia de acordo com o tipo de encriptação utilizado pelo seu sistema: sem encriptação, encriptação OKM (Onboard Key Manager) ou encriptação EKM (External Key Manager).</block>
   <block id="c59af556b2a6209df2da47002b6b6559" category="doc">Requisitos para substituir o controlador - AFF C80</block>
   <block id="993406729b186cdaf4296a5964b58d0c" category="summary">Verifique se as interfaces lógicas estão relatando a porta inicial, execute uma verificação de integridade do cluster e devolva a peça com falha ao NetApp para concluir a etapa final no procedimento de substituição do controlador AFF C80.</block>
   <block id="179b17b78c730160d70c7ea7bf15c4b0" category="paragraph">Depois de restaurar e verificar a configuração do sistema para o seu sistema AFF C80, é necessário <block ref="f96992113d4cc080f9d372523b7a919c" category="inline-link-macro-rx"></block>.</block>
@@ -11216,7 +11171,6 @@
   <block id="2e49773a386b54a9cb9b9ac6679c6e79" category="doc">Substitua o controlador - FAS70 e FAS90</block>
   <block id="a09bde82e257a9efc5c840b3d64e8e4f" category="paragraph">Depois de substituir o controlador FAS70 ou FAS90 com problemas, é <block ref="ba0281d4e0b6e4cebf5e13fd7e583c92" category="inline-link-macro-rx"></block>necessário .</block>
   <block id="1e70422005019f4903b79a5a577df1a1" category="summary">Retorne o controle dos recursos de armazenamento ao controlador de substituição para que o sistema FAS70 ou FAS90 possa retomar a operação normal.</block>
-  <block id="493e5e25ac20d8aedaf3aae396a4ec29" category="paragraph">Retorne o controle dos recursos de armazenamento ao controlador de substituição para que o sistema FAS70 ou FAS90 possa retomar a operação normal. O procedimento de devolução varia de acordo com o tipo de encriptação utilizado pelo seu sistema: sem encriptação, encriptação OKM (Onboard Key Manager) ou encriptação EKM (External Key Manager).</block>
   <block id="819d0a4d339e34d2e8daf63b772aae13" category="doc">Requisitos para substituir o controlador - FAS70 e FAS90</block>
   <block id="6dd3fde43a5f29446a4c49fb87879b65" category="summary">Verifique se as interfaces lógicas (LIFs) estão relatando para sua porta inicial, execute uma verificação de integridade do cluster e, em seguida, retorne a peça com falha ao NetApp para concluir a etapa final no procedimento de substituição do controlador FAS70 ou FAS90.</block>
   <block id="dcac0d4d44ce3609f70b9f6817380eb7" category="summary">Verifique se a configuração de HA do controlador está ativa e funcionando corretamente no sistema de storage FAS70 ou FAS90 e confirme se os adaptadores do sistema listam todos os caminhos para os discos.</block>
@@ -11402,7 +11356,6 @@
   <block id="85ff23f588feef29eb74730158d32ac1" category="list-text">Desligue o interrutor de alimentação em cada uma das fontes de alimentação.</block>
   <block id="8d2d400bb8fd6bedd576a4f6ecb3b00e" category="list-text">Ligue o interrutor de alimentação em cada uma das fontes de alimentação para concluir o ciclo de alimentação.</block>
   <block id="8e07696a8d5e9a7e9c31668e6a3d49b7" category="paragraph">Quando uma fonte de alimentação é ligada, o LED bicolor deve acender-se a verde.</block>
-  <block id="efd27c031d08beb4f219a6bb74784e23" category="paragraph">Para concluir a substituição do controlador para o seu sistema AFF A1K, primeiro restaure a configuração de encriptação de armazenamento NetApp (se necessário) e instale as licenças necessárias no novo controlador. Em seguida, confirme se as interfaces lógicas (LIFs) estão relatando para suas portas domésticas e execute uma verificação de integridade do cluster. Por fim, registe o número de série do novo controlador e, em seguida, devolva a peça com falha ao NetApp.</block>
   <block id="6c7364d4c1c4b5063efec0f8c273bf0e" category="doc">Adicionar um módulo de e/S - AFF A1K</block>
   <block id="a9c0987fd2b31f999e6738087d128cfb" category="doc">Descrição geral de adicionar e substituir um módulo de e/S - AFF A1K</block>
   <block id="5bd705ad3d1ea061d9af69ede4ff4f69" category="doc">Substitua um módulo de e/S - AFF A1K</block>
@@ -11419,7 +11372,6 @@
   <block id="dc5c74d1abe195182477161220f736cb" category="summary">Substitua o chassi do seu sistema AFF A70 ou AFF A90 quando uma falha de hardware o exigir. O processo de substituição envolve a remoção dos controladores e das unidades de fonte de alimentação (PSUs), a remoção das unidades, a instalação do chassi de substituição e a reinstalação dos componentes do chassi.</block>
   <block id="d40f146aa7a5b4915ec82bbac5b1b200" category="summary">Comece a substituir o chassi do sistema de storage AFF A70 ou AFF A90, revisando os requisitos de substituição, desligando os controladores, substituindo o chassi e verificando as operações do sistema.</block>
   <block id="cdab9753bdddb0aefefab44fd8865fbb" category="summary">Antes de substituir o controlador do seu sistema AFF A70 ou AFF A90, certifique-se de que cumpre os requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, verificar se você tem o controlador de substituição correto e salvar a saída do console do controlador em um arquivo de log de texto.</block>
-  <block id="da2e83722a9d109b38820bde87ddb7a8" category="paragraph">Para concluir a substituição do controlador para o seu sistema AFF A70 e AFF A90, primeiro restaure a configuração de encriptação de armazenamento NetApp (se necessário) e instale as licenças necessárias no novo controlador. Em seguida, confirme se as interfaces lógicas (LIFs) estão relatando para suas portas domésticas e execute uma verificação de integridade do cluster. Por fim, registe o número de série do novo controlador e, em seguida, devolva a peça com falha ao NetApp.</block>
   <block id="caea42c273f28398fdc8ee7ee846cba1" category="image-alt">Ícone de aviso de peso AFF A90 AFF A70 e C80</block>
   <block id="d33e53b401671bb9e3a6e4281b9c3735" category="doc">Adicionar um módulo de e/S - AFF A70 e AFF A90</block>
   <block id="52f502f025ccffe3d4cc228d684b7404" category="doc">Descrição geral de adicionar e substituir um módulo de e/S - AFF A70 e AFF A90</block>
@@ -11428,13 +11380,11 @@
   <block id="634fb6b2414a0adde8fe288c6e3a4d20" category="summary">Substitua o chassi do seu sistema ASA A70 ou ASA A90 quando uma falha de hardware o exigir. O processo de substituição envolve a remoção dos controladores e das unidades de fonte de alimentação (PSUs), a remoção das unidades, a instalação do chassi de substituição e a reinstalação dos componentes do chassi.</block>
   <block id="626e429540858707bd287f5035fff3d8" category="summary">Antes de substituir o chassi do sistema ASA A70 ou ASA A90, certifique-se de que atende aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, verificar se você tem credenciais de administrador local para o ONTAP, o chassi de substituição correto e as ferramentas necessárias.</block>
   <block id="5fcac3b7d3646c7d8da4eed2bc7243ed" category="summary">Comece a substituir o chassi do sistema de storage ASA A70 ou ASA A90, desligando os controladores, substituindo o chassi e verificando as operações do sistema.</block>
-  <block id="eb60074f3f47ce499f250468ad5726d5" category="paragraph">Para concluir a substituição do controlador para o seu sistema ASA A70 e ASA A90, primeiro restaure a configuração de encriptação de armazenamento NetApp (se necessário) e instale as licenças necessárias no novo controlador. Em seguida, confirme se as interfaces lógicas (LIFs) estão relatando para suas portas domésticas e execute uma verificação de integridade do cluster. Finalmente, Registre o número de série do novo controlador e, em seguida, devolva a peça com falha ao NetApp.</block>
   <block id="7123adf741599afcbf244e4e98d663f5" category="doc">Substitua uma unidade SSD - ASA A70 e ASA A90</block>
   <block id="9b6a53cb25d5ad933496e9c5e800035c" category="doc">Adicione um módulo de e/S - ASA A70 e ASA A90</block>
   <block id="69d316c0d65bb5a04b4bf5e833d3782c" category="doc">Descrição geral de adicionar e substituir um módulo de e/S - ASA A70 e ASA A90</block>
   <block id="be95fdb39b28a4328a79fd4d94cbeb8a" category="doc">Substitua um módulo de e/S - ASA A70 e ASA A90</block>
   <block id="77847efd1cd22c7d12c880345c3d2cbd" category="summary">Substitua uma fonte de alimentação CA ou CC (PSU) em seu sistema ASA A70 ou ASA A90 quando ele falhar ou se tornar defeituoso, garantindo que seu sistema continue recebendo a energia necessária para operação estável. O processo de substituição envolve desconetar a PSU defeituosa da fonte de alimentação, desconetar o cabo de alimentação, substituir a PSU defeituosa e reconectá-la à fonte de alimentação.</block>
-  <block id="114a1e34144ca96c18dd9f4b501897b1" category="paragraph">Para concluir a substituição do controlador para o seu sistema ASA A1K, primeiro restaure a configuração de encriptação de armazenamento NetApp (se necessário) e instale as licenças necessárias no novo controlador. Em seguida, confirme se as interfaces lógicas (LIFs) estão relatando para suas portas domésticas e execute uma verificação de integridade do cluster. Finalmente, Registre o número de série do novo controlador e, em seguida, devolva a peça com falha ao NetApp.</block>
   <block id="ced875171f078cb35825b28e1856dd9d" category="doc">Adicionar um módulo de e/S - ASA A1K</block>
   <block id="8c1b02887a2e6fb34ad3351d42ea690b" category="doc">Descrição geral de adicionar e substituir um módulo de e/S - ASA A1K</block>
   <block id="b69d7ce462751c8d58c3cff284a4f258" category="doc">Substitua um módulo de e/S - ASA A1K</block>
@@ -11489,12 +11439,10 @@
   <block id="148c37b997fbf92672f09bf3d72bdde2" category="summary">Substitua o chassi do seu sistema AFF C80 quando uma falha de hardware o exigir. O processo de substituição envolve a remoção dos controladores e das unidades de fonte de alimentação (PSUs), a remoção das unidades, a instalação do chassi de substituição e a reinstalação dos componentes do chassi.</block>
   <block id="5e4f388782b23b352ea8d9214c80bfd5" category="summary">Antes de substituir o chassi do sistema AFF C80, verifique se todos os outros componentes do sistema estão funcionando corretamente, verifique se você tem credenciais de administrador local para o ONTAP, o chassi de substituição correto e as ferramentas necessárias.</block>
   <block id="149d9cc9170faac13c9c0680a914233c" category="summary">Comece a substituir o chassi do seu sistema AFF C80 revisando os requisitos de substituição, desligando os controladores, substituindo o chassi e verificando as operações do sistema.</block>
-  <block id="69da385d0b4ed938e7f5432f78900f88" category="paragraph">Para concluir a substituição do controlador para o seu sistema AFF C80, primeiro restaure a configuração de encriptação de armazenamento NetApp (se necessário) e instale as licenças necessárias no novo controlador. Em seguida, confirme se as interfaces lógicas (LIFs) estão relatando para suas portas domésticas e execute uma verificação de integridade do cluster. Por fim, registe o número de série do novo controlador e, em seguida, devolva a peça com falha ao NetApp.</block>
   <block id="2084cec6febad8ab72f79daa8b23a355" category="doc">Adicionar um módulo de e/S - AFF C80</block>
   <block id="79787f56fde4cb3ddec3ad369a61f158" category="doc">Descrição geral de adicionar e substituir um módulo de e/S - AFF C80</block>
   <block id="41528475327a8cca2a4718c8cf712b2d" category="doc">Substitua um módulo de e/S - AFF C80</block>
   <block id="52c303d0882103b7a06ffa380685a14d" category="summary">Substitua uma fonte de alimentação CA ou CC (PSU) no seu sistema AFF C80 quando falhar ou ficar com defeito, garantindo que o seu sistema continua a receber a energia necessária para uma operação estável. O processo de substituição envolve desconetar a PSU defeituosa da fonte de alimentação, desconetar o cabo de alimentação, substituir a PSU defeituosa e reconectá-la à fonte de alimentação.</block>
-  <block id="4050cf454bfa73771654e36df1daa1f3" category="paragraph">Para concluir a substituição do controlador para o seu sistema FAS70 e FAS90, primeiro restaure a configuração de encriptação de armazenamento NetApp (se necessário) e instale as licenças necessárias no novo controlador. Em seguida, confirme se as interfaces lógicas (LIFs) estão relatando para suas portas domésticas e execute uma verificação de integridade do cluster. Por fim, registe o número de série do novo controlador e, em seguida, devolva a peça com falha ao NetApp.</block>
   <block id="049a0642927141e1d119692b5063c175" category="doc">Adicione um módulo de e/S - FAS70 e FAS90</block>
   <block id="a4612f2df8f0746881d188cca57452da" category="doc">Descrição geral de adicionar e substituir um módulo de e/S - FAS70 e FAS90</block>
   <block id="c10739f7f976ccb066c6001d422a250a" category="doc">Substitua um módulo de e/S - FAS70 e FAS90</block>
@@ -11815,13 +11763,6 @@
   <block id="d3a1b9f7d22d4b09db0b92c5183f1170" category="image-alt">Conetor Ethernet 25GB</block>
   <block id="ee151691d95fa34033bab458f921f308" category="image-alt">Conexões comutadas do cluster</block>
   <block id="422b19e9df415d67d88bd9b0fb3451d2" category="image-alt">Ligação de rede de gestão</block>
-  <block id="fb8d77e1874a8ce16ad0e1d15408d8cd" category="image-alt">Conetor mini SAS para mini SAS</block>
-  <block id="ead5f0e9b0fc157a5b141be2ccd44dbd" category="paragraph">Imagem::../media/drw_2800_shelf-to-shelf_Cabling_IEOPS-895.svg[cabeamento de prateleira para prateleira]</block>
-  <block id="b672b75ae62195a280bf8f67f6923701" category="paragraph">E . Controlador de cabos A às gavetas de unidades. .. Controladora A porta 0a a IOM B porta 1 na primeira gaveta de unidades na stack. .. Controladora A porta 0b1 para IOM A porta 3 na última gaveta de unidades na stack.</block>
-  <block id="331c92c74ae2411dbfdce0b34bc0251f" category="paragraph">Imagem::../media/oie_cable_mini_sas_HD_to_mini_sas_HD.svg[Mini SAS to mini SAS Connector]</block>
-  <block id="2525bc76b22ae63a5087b660ed944490" category="paragraph">Imagem::../media/dwr-2800_controller1-to shelves_IEOPS-896.svg[Controller A to shelf Connection]</block>
-  <block id="d93bc8a87f3c34f95017b69aa2590230" category="paragraph">E . Conecte o controlador B às gavetas de unidades. .. Controladora B porta 0a a IOM A porta 1 na primeira gaveta de unidades na stack. .. Porta 0B1 da controladora B para porta IOM B 3 na última gaveta de unidades na stack.</block>
-  <block id="05a6bd9e18c93cca4d9b550746dfd5d1" category="paragraph">Imagem::../media/dwr-2800_controller2-to shelves_IEOPS-897.svg[Controller B to shelf Connection]</block>
   <block id="40bde7f2324ee2876dd8a09846b14ff4" category="image-alt">Ligue a alimentação</block>
   <block id="512bdc85c8065a0397ce7025381aaf66" category="image-alt">Sistema de deteção automática</block>
   <block id="397249170dcc18ae00c3a7885f97fdc1" category="list-text">Conete o cabo do console ao laptop ou console e conete a porta do console no controlador usando o cabo do console fornecido com o sistema de armazenamento e, em seguida, conete o laptop ou o console ao switch na sub-rede de gerenciamento.</block>
@@ -12006,5 +11947,68 @@
   <block id="8fdc5ec3ff56b023a707d257557cb7c1" category="paragraph">Os sistemas de armazenamento FAS70 e FAS90 suportam prateleiras DS212C, DS224C, DS460C e NS224 com o módulo NSM100 ou NSM100B.</block>
   <block id="cb1d7f2de7963108d3fe1b590a415523" category="paragraph">As principais diferenças entre os módulos NS224 são:</block>
   <block id="a1c52b2edb23bc93318c0b82dc9baead" category="paragraph">O exemplo de cabeamento NS224 a seguir mostra módulos NSM100 nas prateleiras NS224 ao se referir às portas do módulo de prateleira.</block>
-  <block id="29cc4b807f94b06bddae2e11c6a56c1e" category="paragraph">A unidade flash USB deve ter a mesma versão da imagem de serviço (BIOS) que o controlador danificado está executando.</block>
+  <block id="e275ee75ac16491873bfc9c9d1565329" category="paragraph">Retorne o controle dos recursos de armazenamento ao controlador de substituição para que seu sistema AFF A1K possa retomar a operação normal. O procedimento de devolução varia de acordo com o tipo de criptografia usado pelo seu sistema: sem criptografia ou criptografia Onboard Key Manager (OKM).</block>
+  <block id="7c43eb5994700149a54fedd4ee1d8391" category="paragraph">Para concluir a substituição do controlador do seu sistema AFF A1K, primeiro restaure a configuração do NetApp Storage Encryption (se necessário). Em seguida, confirme se as interfaces lógicas (LIFs) estão relatando para suas portas domésticas e execute uma verificação de integridade do cluster. Por fim, devolva a peça com defeito à NetApp.</block>
+  <block id="7b78a43d2ef1cd56888972224b322cba" category="section-title">Etapa 1: Verificar LIFs e verificar a integridade do cluster</block>
+  <block id="8cd41611fab4233f826795a5cff7057f" category="paragraph">Retorne o controle dos recursos de storage ao controlador de substituição para que seu sistema AFF A70 ou AFF A90 possa retomar a operação normal. O procedimento de devolução varia de acordo com o tipo de criptografia usado pelo seu sistema: sem criptografia ou criptografia Onboard Key Manager (OKM).</block>
+  <block id="2097fe5d6db2ee8034ca3ec430540bd7" category="paragraph">Para concluir a substituição do controlador do seu sistema AFF A70 ou AFF A90, primeiro restaure a configuração do NetApp Storage Encryption (se necessário). Em seguida, confirme se as interfaces lógicas (LIFs) estão relatando para suas portas domésticas e execute uma verificação de integridade do cluster. Por fim, devolva a peça com defeito à NetApp.</block>
+  <block id="26625a50fa6e85a829f4ae9e66e4eeaf" category="paragraph">Retorne o controle dos recursos de storage ao controlador de substituição para que seu sistema ASA A70 ou ASA A90 possa retomar a operação normal. O procedimento de devolução varia de acordo com o tipo de criptografia usado pelo seu sistema: sem criptografia ou criptografia Onboard Key Manager (OKM).</block>
+  <block id="7c549e4c601c8fdf656eed56c26fc0b1" category="paragraph">Para concluir a substituição do controlador do seu sistema ASA A70 ou ASA A90, primeiro restaure a configuração do NetApp Storage Encryption (se necessário). Em seguida, confirme se as interfaces lógicas (LIFs) estão relatando para suas portas domésticas e execute uma verificação de integridade do cluster. Por fim, devolva a peça com defeito à NetApp.</block>
+  <block id="313b22307115c166dbbc63f27c50f3d7" category="paragraph">Retorne o controle dos recursos de armazenamento ao controlador de substituição para que seu sistema ASA A1K possa retomar a operação normal. O procedimento de devolução varia de acordo com o tipo de criptografia usado pelo seu sistema: sem criptografia ou criptografia Onboard Key Manager (OKM).</block>
+  <block id="641052e443b693ce41e21f05c5994e69" category="paragraph">Para concluir a substituição do controlador do seu sistema ASA A1K, primeiro restaure a configuração do NetApp Storage Encryption (se necessário). Em seguida, confirme se as interfaces lógicas (LIFs) estão relatando para suas portas domésticas e execute uma verificação de integridade do cluster. Por fim, devolva a peça com defeito à NetApp.</block>
+  <block id="9004880577dcf1d74c99d6bebf00183c" category="paragraph">Retorne o controle dos recursos de armazenamento ao controlador de substituição para que seu sistema AFF C80 possa retomar a operação normal. O procedimento de devolução varia de acordo com o tipo de criptografia usado pelo seu sistema: sem criptografia ou criptografia Onboard Key Manager (OKM).</block>
+  <block id="d87e0bc356d5924fdcb4486c339c3ed6" category="paragraph">Para concluir a substituição do controlador do seu sistema AFF C80, primeiro restaure a configuração do NetApp Storage Encryption (se necessário). Em seguida, confirme se as interfaces lógicas (LIFs) estão relatando para suas portas domésticas e execute uma verificação de integridade do cluster. Por fim, devolva a peça com defeito à NetApp.</block>
+  <block id="f99fbeb85893ef928614af3af04b57f9" category="paragraph">Retorne o controle dos recursos de armazenamento ao controlador de substituição para que o sistema FAS70 ou FAS90 possa retomar a operação normal. O procedimento de devolução varia de acordo com o tipo de criptografia usado pelo seu sistema: sem criptografia ou criptografia Onboard Key Manager (OKM).</block>
+  <block id="e72336b4018af60c67f4cbf23f269180" category="paragraph">Você deve remover e abrir o módulo do controlador danificado, localizar e recolocar a mídia de inicialização no controlador, transferir a imagem de inicialização para uma unidade USB, inserir a unidade USB no controlador e, em seguida, inicializar o controlador.</block>
+  <block id="058a58abf3e6b9d728a2756ffe61127f" category="paragraph">O controlador começa a inicializar assim que é completamente instalado no chassi e para no prompt LOADER.</block>
+  <block id="21c4edb5ca29e24e278c8cc8630ccac2" category="image-alt">Abra o módulo do controlador</block>
+  <block id="a665ff03cf3a259d8b99ade952697613" category="image-alt">Substituir o cache</block>
+  <block id="d3ec6e2694028a650f125d7451009961" category="image-alt">Remova a tampa</block>
+  <block id="9379754ed9f3ab421dc04083411d001d" category="image-alt">Mova o cartão mezanino</block>
+  <block id="191a2899fb1c6d81badd1d85126edeb4" category="image-alt">Mover o módulo de cache</block>
+  <block id="408690a10a3a39e404462d2e1558a022" category="image-alt">Ícone NV</block>
+  <block id="df44d7e45332b82ddd2a2cb6eb3f7a38" category="image-alt">Substitua os DIMMs</block>
+  <block id="5ec55e0a37fd9e86ae241589ac05d8d2" category="paragraph">Você pode usar a animação aplicável ou as etapas detalhadas na tabela para conectar seus controladores à sua rede.</block>
+  <block id="0b13de20fe6ea39ec286743f12673e9b" category="image-alt">Cabeamento de prateleira a prateleira</block>
+  <block id="b1905c91f00e1e7ad75a290938d0c0ae" category="list-text">Controlador de cabos A às gavetas de unidades.</block>
+  <block id="7414b28752291f5ed73122cbbe85acd3" category="list-text">Controladora A porta 0a a IOM B porta 1 na primeira gaveta de unidades na stack.</block>
+  <block id="d490aaf97e1fdf82eb244edca242e5f7" category="list-text">Controladora A porta 0b1 para IOM A porta 3 na última gaveta de unidades na stack.</block>
+  <block id="0b2a648dd1d045b83d1fa5142e7649da" category="image-alt">Conexão do controlador A à prateleira</block>
+  <block id="575f5a968bfa57f9d0a99b09b5f73ff2" category="list-text">Conecte o controlador B às gavetas de unidades.</block>
+  <block id="49fefb8508936cb5a0f672b0146c0013" category="list-text">Controladora B porta 0a a IOM A porta 1 na primeira gaveta de unidades na stack.</block>
+  <block id="0cbd55a3e4a33973ae5e025f7565fe75" category="list-text">Porta 0B1 da controladora B para porta IOM B 3 na última gaveta de unidades na stack.</block>
+  <block id="b6843b9add1e2cb558dffaed47319e3d" category="image-alt">Conexão do controlador B à prateleira</block>
+  <block id="b1b862857f003aefeb508f3763b1caad" category="paragraph">Use a animação a seguir em qualquer opção onde seja necessário definir o ID da prateleira:</block>
+  <block id="56632d1795a7d32b89a455a3b633b7f5" category="list-text">Ligue a prateleira e defina os IDs das prateleiras usando a animação no início desta etapa.</block>
+  <block id="6a3ffb8f58252e034e90b5eb7a9cc233" category="list-text">Ligue a prateleira e defina as IDs das prateleiras usando a animação no início desta etapa.</block>
+  <block id="cb102c5c1eccde9b442d1de001f76cc3" category="image-alt">Remova a tampa do controlador</block>
+  <block id="8fca7d700183532fd08f68b674a86c60" category="image-alt">Abra o controlador</block>
+  <block id="6abebf9335209d6b986ad1d41e48f43b" category="image-alt">Substituir um cartão mezanino</block>
+  <block id="9f8a96e46f0e86179108737100c29b9d" category="list-text">Reinstale a tampa do controlador.</block>
+  <block id="627450f7182bd50247300c6db6f17129" category="image-alt">Remover um módulo PCI</block>
+  <block id="ec6f3c3168126d55e199d31103c5eff8" category="image-alt">Remova um PSU</block>
+  <block id="f2382f3ee3a7ff64d7ec97d77b5ab15c" category="image-alt">Remover um ventilador</block>
+  <block id="4bfdd5a73e3720ad79c2b5323672c823" category="image-alt">Retire o módulo LED</block>
+  <block id="c23afc0489b14bba326028378555b9c1" category="image-alt">Reinstale o controlador</block>
+  <block id="e16243c0ca21c7afdd6fc0990b04c048" category="image-alt">Substituir a bateria NV (DCPM)</block>
+  <block id="5052644d2a37d1cfee946a38ee7221f2" category="image-alt">Mapa DIMM do sistema</block>
+  <block id="376b1cae869bbe8ab1cce68fdb30b696" category="image-alt">Substituir os DIMMs</block>
+  <block id="b8de587b448eba855f302087e9db5abe" category="image-alt">Feche o controlador</block>
+  <block id="cae1523af1f42548daf31beb55c076e0" category="image-alt">Remova ou instale o controlador</block>
+  <block id="8d0301aa96154a1dd899f6aadef9857e" category="image-alt">Substituir o ventilador</block>
+  <block id="fe50dc87275089b9495d8023e008b820" category="video-title">Animação Cabeamento de cluster sem comutação de dois nós</block>
+  <block id="7008a581ef7d44f47c027e3b2e9746e8" category="image-alt">Diagrama de cabeamento de rede TNSC</block>
+  <block id="f22ce3022c33416700b0499a02c630a6" category="video-title">Animação Cabeamento de cluster comutado</block>
+  <block id="2f208beb3bb9a5b6070bc5ce129978b3" category="video-title">Animação Conecte seus cabos às prateleiras da unidade</block>
+  <block id="813131c928daa8bd0b445b14f11fdefd" category="image-alt">Cabeamento de prateleira SAS</block>
+  <block id="131cc8f642319d66d2eee46367e4254b" category="image-alt">Cabo Mini-SAS HD</block>
+  <block id="41c5dae76a3f9314369f86b5e52c3453" category="video-title">Animação Defina seus IDs de prateleira</block>
+  <block id="ce8dd9fe7cfc645c2eaac3f8f1775ee7" category="image-alt">Ligue e defina o ID da prateleira</block>
+  <block id="05e7f3a9aff7390f8890fd6714b7fc4a" category="video-title">Animação Ligue a energia dos controladores</block>
+  <block id="921b8127a66db9c0d2ddd74b4aef6f67" category="video-title">Animação Conecte seu laptop ao switch de gerenciamento</block>
+  <block id="7b7f09122e68189a8cc5eade0ea74852" category="image-alt">Cabeamento de laptop para switch</block>
+  <block id="c19c878358034620e42421b1d0e88979" category="image-alt">Console para conexão do switch</block>
+  <block id="bcbe9ce5b2d50ad0b254f40cda6fc7e1" category="image-alt">Ligue e defina o ID da prateleira</block>
+  <block id="43f978a7787080590a53cc2abdd637c9" category="image-alt">Substituir o módulo de LED</block>
+  <block id="a54c219a955221bc0586ab22f8a07401" category="image-alt">Substitua a bateria RTC</block>
 </blocks>

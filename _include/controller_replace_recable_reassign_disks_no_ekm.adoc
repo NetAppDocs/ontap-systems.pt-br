@@ -1,17 +1,6 @@
----
-permalink: fas-70-90/controller-replace-recable-reassign-disks.html 
-sidebar: sidebar 
-keywords: fas70, fas90, how to recable the system, how to reassign disks 
-summary: Retorne o controle dos recursos de armazenamento ao controlador de substituição para que o sistema FAS70 ou FAS90 possa retomar a operação normal. 
----
-= Devolva o controlador - FAS70 e FAS90
+= 
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
-
-[role="lead"]
-Retorne o controle dos recursos de armazenamento ao controlador de substituição para que o sistema FAS70 ou FAS90 possa retomar a operação normal. O procedimento de devolução varia de acordo com o tipo de criptografia usado pelo seu sistema: sem criptografia ou criptografia Onboard Key Manager (OKM).
 
 [role="tabbed-block"]
 ====
@@ -79,5 +68,3 @@ Se a saída apresentar resultados (as IDs das chaves que não estão presentes n
 
 --
 ====
-.O que se segue?
-Depois de transferir a propriedade dos recursos de armazenamento de volta para o controlador de substituição, você precisa link:controller-replace-restore-system-rma.html["complete a substituição do controlador"]fazer o procedimento.

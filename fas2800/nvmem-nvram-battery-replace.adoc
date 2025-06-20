@@ -75,11 +75,11 @@ Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar 
 . Retire e reserve os dispositivos de gerenciamento de cabos dos lados esquerdo e direito do módulo do controlador.
 . Aperte o trinco na pega do excêntrico até que este se solte, abra totalmente o manípulo do excêntrico para libertar o módulo do controlador do plano médio e, em seguida, utilizando duas mãos, puxe o módulo do controlador até meio do chassis.
 +
-image::../media/drw_2850_pcm_remove_install_IEOPS-694.svg[drw 2850 pcm remover instalação IEOPS 694]
+image::../media/drw_2850_pcm_remove_install_IEOPS-694.svg[Retire o controlador]
 
 . Verifique o LED NVMEM localizado na parte traseira do módulo do controlador. Procure o ícone NV:
 +
-image::../media/drw_hw_nvram_icon.svg[ícone NVRAM hw drw]
+image::../media/drw_hw_nvram_icon.svg[Ícone NV]
 
 +
 
@@ -108,14 +108,14 @@ Retire a bateria NVMEM avariada do sistema e substitua-a por uma nova bateria NV
 . Vire o módulo do controlador ao contrário e coloque-o numa superfície plana e estável.
 . Abra a tampa pressionando os botões azuis nas laterais do módulo do controlador para soltar a tampa e, em seguida, gire a tampa para cima e para fora do módulo do controlador.
 +
-image::../media/drw_2850_open_controller_module_cover_IEOPS-695.svg[Tampa do módulo de controlador aberto drw 2850 IEOPS 695]
+image::../media/drw_2850_open_controller_module_cover_IEOPS-695.svg[Remova a tampa do controlador]
 
 . Localize a bateria do NVMEM no módulo do controlador.
 +
 .Animação - substitua a bateria NV
 video::592217fb-4868-4294-a559-af4701725598[panopto]
 +
-image::../media/drw_2850_replace_nvbattery_IEOPS-715.svg[drw 2850 substitua o nvbattery IEOPS 715]
+image::../media/drw_2850_replace_nvbattery_IEOPS-715.svg[Substitua a bateria NV]
 
 +
 [cols="1,3"]

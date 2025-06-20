@@ -429,3 +429,6 @@ Selection (1-11)? 1
 `system node autosupport invoke -node * -type all -message MAINT=END`
 
 
+
+.O que se segue?
+Depois de restaurar a encriptação no suporte de arranque, tem de link:bootmedia-complete-rma.html["Devolva a peça com falha ao NetApp"].

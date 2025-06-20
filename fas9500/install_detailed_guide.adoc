@@ -230,10 +230,10 @@ NOTE: Ao inserir o conetor, você deve sentir que ele clique no lugar; se você 
 
 . Use a animação ou ilustração para concluir o cabeamento entre os controladores e os switches:
 +
-.Animação - cabeamento de cluster sem switch de dois nós
+.Animação Cabeamento de cluster sem comutação de dois nós
 video::da08295f-ba8c-4de7-88c3-ae7c0170408d[panopto]
 +
-image::../media/drw_9500_tnsc_network_cabling.svg[cabeamento de rede tnsc drw 9500]
+image::../media/drw_9500_tnsc_network_cabling.svg[Diagrama de cabeamento de rede TNSC]
 
 +
 [cols="20%,80%"]
@@ -322,10 +322,10 @@ NOTE: Ao inserir o conetor, você deve sentir que ele clique no lugar; se você 
 
 . Use a animação ou ilustração para concluir o cabeamento entre os controladores e os switches:
 +
-.Animação - cabeamento de cluster comutado
+.Animação Cabeamento de cluster comutado
 video::3ad3f118-8339-4683-865f-ae7c0170400c[panopto]
 +
-image::../media/drw_9500_switched_network_cabling.svg[cabeamento de rede comutada drw 9500]
+image::../media/drw_9500_switched_network_cabling.svg[Cabeamento de rede comutada de cluster]
 
 +
 [cols="20%,80%"]
@@ -422,10 +422,10 @@ NOTE: Ao inserir o conetor, você deve sentir que ele clique no lugar; se você 
 
 . Use a animação a seguir ou os desenhos para cabeamento das controladoras para três (stack de 1 PB de um compartimento de unidades e uma stack de dois compartimentos de unidades) gavetas de DS224C unidades.
 +
-.Animação - Cable suas prateleiras de unidade
+.Animação Conecte seus cabos às prateleiras da unidade
 video::c958aae6-9d08-4d3d-a213-ae7c017040cd[panopto]
 +
-image::../media/drw_9500_sas_shelf_cabling.svg[cabeamento de gaveta sas drw 9500]
+image::../media/drw_9500_sas_shelf_cabling.svg[Cabeamento de prateleira SAS]
 
 +
 [cols="20%,80%"]
@@ -434,13 +434,13 @@ image::../media/drw_9500_sas_shelf_cabling.svg[cabeamento de gaveta sas drw 9500
 
 
  a| 
-image::../media/icon_square_1_blue.png[ícone quadrado 1 azul]
+image::../media/icon_square_1_blue.png[Ícone de legenda 1]
  a| 
 Conecte a pilha um do compartimento de unidades às controladoras, usando o gráfico para referência.
 
 *Cabo Mini-SAS*
 
-image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[cabo oie mini sas hd para mini sas hd]
+image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[Cabo Mini-SAS HD]
 
 
 
@@ -451,7 +451,7 @@ Conecte os compartimentos de unidades na pilha dois uns aos outros, usando o gr�
 
 *Cabo Mini-SAS*
 
-image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[cabo oie mini sas hd para mini sas hd]
+image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[Cabo Mini-SAS HD]
 
 
 
@@ -462,7 +462,7 @@ Conecte a pilha dois do compartimento de unidades às controladoras, usando o gr
 
 *Cabo Mini-SAS*
 
-image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[cabo oie mini sas hd para mini sas hd]
+image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[Cabo Mini-SAS HD]
 
 |===
 
@@ -481,10 +481,10 @@ Se tiver a deteção de rede ativada no seu computador portátil, pode concluir 
 
 . Use a animação ou o desenho a seguir para definir uma ou mais IDs de gaveta de unidade:
 +
-.Animação - defina a ID do seu compartimento e n.o 8217;s.
+.Animação Defina seus IDs de prateleira
 video::95a29da1-faa3-4ceb-8a0b-ac7600675aa6[panopto]
 +
-image::../media/drw_power-on_set_shelf_ID_set.svg[Conjunto de ID da prateleira de conjuntos de alimentação drw]
+image::../media/drw_power-on_set_shelf_ID_set.svg[Ligue e defina o ID da prateleira]
 
 +
 [cols="20%,80%"]
@@ -533,10 +533,10 @@ Aguarde 10 segundos até que o LED âmbar (!) apareça e, em seguida, ligue o co
 |===
 . Ligue os interruptores de energia das fontes de alimentação para ambos os nós.
 +
-.Animação - ligue a alimentação dos controladores
+.Animação Ligue a energia dos controladores
 video::a905e56e-c995-4704-9673-adfa0005a891[panopto]
 +
-image::../media/drw_9500_power-on.svg[alimentação drw 9500 ligada]
+image::../media/drw_9500_power-on.svg[Ligar o sistema]
 
 +
 
@@ -548,10 +548,10 @@ Consulte a ajuda online do seu computador portátil para obter mais informaçõe
 
 . Use a animação a seguir para conetar seu laptop ao switch de gerenciamento.
 +
-.Animação - Conete seu laptop ao interrutor de gerenciamento
+.Animação Conecte seu laptop ao switch de gerenciamento
 video::d61f983e-f911-4b76-8b3a-ab1b0066909b[panopto]
 +
-image::../media/dwr_laptop_to_switch_only.svg[computador portátil dwr apenas para mudar]
+image::../media/dwr_laptop_to_switch_only.svg[Cabeamento de laptop para switch]
 
 . Selecione um ícone ONTAP listado para descobrir:
 +
@@ -605,17 +605,17 @@ NOTE: Consulte a ajuda on-line do seu laptop ou console para saber como configur
 
 .. Conete o cabo do console ao laptop ou console usando o cabo do console fornecido com o sistema e conete o laptop ao switch na sub-rede de gerenciamento.
 +
-image::../media/drw_9500_cable_console_switch_controller.svg[controlador do interrutor da consola do cabo drw 9500]
+image::../media/drw_9500_cable_console_switch_controller.svg[Console para conexão do switch]
 
 .. Atribua um endereço TCP/IP ao laptop ou console, usando um que esteja na sub-rede de gerenciamento.
 
 
 . Use a animação a seguir para definir uma ou mais IDs de gaveta de unidade:
 +
-.Animação - defina a ID do seu compartimento e n.o 8217;s.
+.Animação Defina seus IDs de prateleira
 video::95a29da1-faa3-4ceb-8a0b-ac7600675aa6[panopto]
 +
-image::../media/drw_power-on_set_shelf_ID_set.svg[Conjunto de ID da prateleira de conjuntos de alimentação drw]
+image::../media/drw_power-on_set_shelf_ID_set.svg[Ligue e defina o ID da prateleira]
 
 +
 [cols="20%,80%"]
@@ -664,10 +664,10 @@ Aguarde 10 segundos até que o LED âmbar (!) apareça e, em seguida, ligue o co
 |===
 . Ligue os interruptores de energia das fontes de alimentação para ambos os nós.
 +
-.Animação - ligue a alimentação dos controladores
+.Animação Ligue a energia dos controladores
 video::a905e56e-c995-4704-9673-adfa0005a891[panopto]
 +
-image::../media/drw_9500_power-on.svg[alimentação drw 9500 ligada]
+image::../media/drw_9500_power-on.svg[Ligar o sistema]
 
 +
 

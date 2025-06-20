@@ -10,7 +10,8 @@ summary: Você deve localizar o suporte de inicialização no controlador e segu
 :imagesdir: ../media/
 
 
-Para substituir o suporte de arranque, tem de remover o módulo do controlador afetado, instalar o suporte de arranque de substituição e transferir a imagem de arranque para uma unidade flash USB.
+[role="lead"]
+Você deve remover e abrir o módulo do controlador danificado, localizar e recolocar a mídia de inicialização no controlador, transferir a imagem de inicialização para uma unidade USB, inserir a unidade USB no controlador e, em seguida, inicializar o controlador.
 
 
 
@@ -116,18 +117,7 @@ Instale a imagem do sistema no suporte de arranque de substituição utilizando 
 
 
 
-. Descompacte a imagem transferida.
-+
-
-NOTE: Se você estiver extraindo o conteúdo usando o Windows, não use o WinZip para extrair a imagem netboot. Use outra ferramenta de extração, como 7-Zip ou WinRAR.
-
-+
-A unidade flash USB deve ter a mesma versão da imagem de serviço (BIOS) que o controlador danificado está executando.
-
-+
-.. Retire a unidade flash USB do seu computador portátil.
-
-
+. Retire a unidade flash USB do seu computador portátil.
 . Instale o módulo do controlador:
 +
 .. Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
@@ -143,14 +133,9 @@ Certifique-se de que instala a unidade flash USB na ranhura identificada para di
 
 . Empurre o módulo do controlador totalmente para dentro do sistema, certificando-se de que a alça da came limpa a unidade flash USB, empurre firmemente a alça da came para terminar de assentar o módulo do controlador, empurre a alça da came para a posição fechada e, em seguida, aperte o parafuso de aperto manual.
 +
-O controlador começa a arrancar assim que é completamente instalado no chassis.
-
-. Interrompa o processo de inicialização para parar no prompt DO Loader pressionando Ctrl-C quando você vir iniciando o AUTOBOOT pressione Ctrl-C para abortar....
-+
-Se você perder essa mensagem, pressione Ctrl-C, selecione a opção para inicializar no modo Manutenção e, em seguida, interrompa o controlador para inicializar NO Loader.
-
-. Para sistemas com um controlador no chassi, reconete a alimentação e ligue as fontes de alimentação.
-+
-O sistema começa a inicializar e pára no prompt DO Loader.
+O controlador começa a inicializar assim que é completamente instalado no chassi e para no prompt LOADER.
 
 
+
+.O que se segue?
+Depois de substituir a Mídia de inicialização, você precisa link:bootmedia-recovery-image-boot.html["inicie a imagem de recuperação"].

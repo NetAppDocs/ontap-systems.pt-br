@@ -79,12 +79,12 @@ Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar 
 . Retire e reserve os dispositivos de gerenciamento de cabos dos lados esquerdo e direito do módulo do controlador.
 . Aperte o trinco na pega do excêntrico até que este se solte, abra totalmente o manípulo do excêntrico para libertar o módulo do controlador do plano médio e, em seguida, utilizando duas mãos, puxe o módulo do controlador para fora do chassis.
 +
-image::../media/drw_2240_x_opening_cam_latch.svg[drw 2240 x trinco do came de abertura]
+image::../media/drw_2850_pcm_remove_install_IEOPS-694.svg[Retire o controlador]
 
 . Vire o módulo do controlador ao contrário e coloque-o numa superfície plana e estável.
 . Abra a tampa pressionando os botões azuis nas laterais do módulo do controlador para soltar a tampa e, em seguida, gire a tampa para cima e para fora do módulo do controlador.
 +
-image::../media/drw_2850_open_controller_module_cover_IEOPS-695.svg[Tampa do módulo de controlador aberto drw 2850 IEOPS 695]
+image::../media/drw_2850_open_controller_module_cover_IEOPS-695.svg[Abra o controlador]
 
 
 
@@ -113,7 +113,7 @@ NOTE: Antes de substituir um DIMM, você precisa desconetar a bateria do NVMEM d
 Você deve executar um desligamento normal do sistema antes de substituir os componentes do sistema para evitar a perda de dados não gravados na memória não volátil (NVMEM). O LED está localizado na parte de trás do módulo do controlador. Procure o seguinte ícone:
 
 +
-image::../media/drw_hw_nvram_icon.svg[ícone NVRAM hw drw]
+image::../media/drw_hw_nvram_icon.svg[Ícone NV]
 
 . Se o LED NVMEM não estiver piscando, não há conteúdo no NVMEM; você pode pular as etapas a seguir e prosseguir para a próxima tarefa neste procedimento.
 . Se o LED NVMEM estiver intermitente, existem dados no NVMEM e tem de desligar a bateria para limpar a memória:
@@ -138,7 +138,7 @@ O DIMM girará um pouco para cima.
 NOTE: Segure cuidadosamente o DIMM pelas bordas para evitar a pressão nos componentes da placa de circuito DIMM.
 
 +
-image::../media/drw_2850_replace_dimms_IEOPS-699.svg[drw 2850 substitua dimms IEOPS 699]
+image::../media/drw_2850_replace_dimms_IEOPS-699.svg[Substitua os DIMMs]
 
 +
 [cols="1,3"]

@@ -11,7 +11,7 @@ summary: Retorne o controle dos recursos de storage ao controlador de substitui�
 
 
 [role="lead"]
-Retorne o controle dos recursos de storage ao controlador de substituição para que seu sistema ASA A70 ou ASA A90 possa retomar a operação normal. O procedimento de devolução varia de acordo com o tipo de encriptação utilizado pelo seu sistema: sem encriptação, encriptação OKM (Onboard Key Manager) ou encriptação EKM (External Key Manager).
+Retorne o controle dos recursos de storage ao controlador de substituição para que seu sistema ASA A70 ou ASA A90 possa retomar a operação normal. O procedimento de devolução varia de acordo com o tipo de criptografia usado pelo seu sistema: sem criptografia ou criptografia Onboard Key Manager (OKM).
 
 [role="tabbed-block"]
 ====
@@ -72,53 +72,6 @@ Se a saída apresentar resultados (as IDs das chaves que não estão presentes n
 
 
 
-. Volte a colocar o controlador afetado em funcionamento normal, devolvendo o respetivo armazenamento: `storage failover giveback -ofnode _impaired_node_name_`
-. Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback _true_`
-. Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos: `system node autosupport invoke -node * -type all -message MAINT=END`
-
-
---
-.Gestor de chaves externo (EKM)
---
-Redefina a encriptação e volte a colocar o controlador em funcionamento normal.
-
-.Passos
-. Se o volume raiz estiver criptografado com o Gerenciador de chaves Externo e o cabo do console estiver conetado ao nó de substituição, insira `boot_ontap menu` e selecione a opção `11`.
-. Se essas perguntas aparecerem, responda `y` ou `n` conforme apropriado:
-+
-Você tem uma cópia do arquivo /cfcard/kmip/certs/client.crt? não é possível aceder a este site
-
-+
-Você tem uma cópia do arquivo /cfcard/kmip/certs/client.key? não é possível aceder a este site
-
-+
-Você tem uma cópia do arquivo /cfcard/kmip/certs/CA.pem? não é possível aceder a este site
-
-+
-Você tem uma cópia do arquivo /cfcard/kmip/servers.cfg? não é possível aceder a este site
-
-+
-Você conhece o endereço do servidor KMIP? não é possível aceder a este site
-
-+
-Você conhece a porta KMIP? não é possível aceder a este site
-
-+
-
-NOTE: Contacte https://support.netapp.com["Suporte à NetApp"] se tiver problemas.
-
-. Fornecer as informações para:
-+
-** O conteúdo do arquivo do certificado do cliente (client.crt)
-** O conteúdo do arquivo de chave do cliente (client.key)
-** O conteúdo do arquivo de CA(s) do servidor KMIP (CA.pem)
-** O endereço IP do servidor KMIP
-** A porta para o servidor KMIP
-
-
-. Quando o sistema processar, você verá o Menu de inicialização. Selecione "1" para o arranque normal.
-. Verifique o estado da aquisição: `storage failover show`
-. Certifique-se de que todos os despejos do núcleo no nó reparado sejam salvos indo para o modo avançado `set -privilege advanced` e, em seguida `run local partner nosavecore`, .
 . Volte a colocar o controlador afetado em funcionamento normal, devolvendo o respetivo armazenamento: `storage failover giveback -ofnode _impaired_node_name_`
 . Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback _true_`
 . Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos: `system node autosupport invoke -node * -type all -message MAINT=END`

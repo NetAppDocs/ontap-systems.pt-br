@@ -232,17 +232,18 @@ Switches de rede de host
 
 image::../media/oie_cable_pull_tab_down.png[Puxe a direção da patilha]
 
+Você pode usar a animação aplicável ou as etapas detalhadas na tabela para conectar seus controladores à sua rede.
+
+.Animação - cabeamento de um cabeamento de cluster sem switch de dois nós
+video::90577508-fa79-46cf-b18a-afe8016325af[panopto]
+.Animação - cabeamento de cluster comutado
+video::6553a3db-57dd-4247-b34a-afe8016315d4[panopto]
 [role="tabbed-block"]
 ====
 .Opção 1: Cabo de um cluster sem switch de dois nós
 --
 Faça o cabeamento das conexões de rede e das portas de interconexão de cluster para um cluster sem switch de dois nós.
 
-.Sobre esta tarefa
-Use a animação ou as instruções passo a passo para concluir o cabeamento entre os controladores e os switches.
-
-.Animação - cabeamento de um cabeamento de cluster sem switch de dois nós
-video::90577508-fa79-46cf-b18a-afe8016325af[panopto]
 .Passos
 . Cable as portas de interconexão de cluster e0a a e0a e e0b a e0b com o cabo de interconexão de cluster:
 +
@@ -319,11 +320,6 @@ IMPORTANT: Não ligue os cabos de alimentação.
 --
 Faça o cabeamento das suas conexões de rede e das portas de interconexão de cluster para um cluster comutado.
 
-.Sobre esta tarefa
-Use a animação ou as instruções passo a passo para concluir o cabeamento entre os controladores e os switches.
-
-.Animação - cabeamento de cluster comutado
-video::6553a3db-57dd-4247-b34a-afe8016315d4[panopto]
 .Passos
 . Cable as portas de interconexão de cluster e0a a e0a e e0b a e0b com o cabo de interconexão de cluster:
 +
@@ -445,31 +441,29 @@ video::b2a7549d-8141-47dc-9e20-afe8016f4386[panopto]
 .. A porta 1 da IOM a à porta 3 da IOM A na gaveta diretamente abaixo.
 .. Porta 1 na IOM B para a porta 3 na IOM B na gaveta diretamente abaixo.
 +
-image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[Conetor mini SAS para mini SAS]
+image::../media/drw_2800_shelf-to-shelf_cabling_IEOPS-895.svg[Cabeamento de prateleira a prateleira]
 
 
 
+. Controlador de cabos A às gavetas de unidades.
++
+.. Controladora A porta 0a a IOM B porta 1 na primeira gaveta de unidades na stack.
+.. Controladora A porta 0b1 para IOM A porta 3 na última gaveta de unidades na stack.
++
+image::../media/dwr-2800_controller1-to shelves_IEOPS-896.svg[Conexão do controlador A à prateleira]
 
 
-*Cabos HD mini-SAS HD para mini-SAS HD*
 
-Imagem::../media/drw_2800_shelf-to-shelf_Cabling_IEOPS-895.svg[cabeamento de prateleira para prateleira]
+. Conecte o controlador B às gavetas de unidades.
++
+.. Controladora B porta 0a a IOM A porta 1 na primeira gaveta de unidades na stack.
+.. Porta 0B1 da controladora B para porta IOM B 3 na última gaveta de unidades na stack.
 
-E . Controlador de cabos A às gavetas de unidades. .. Controladora A porta 0a a IOM B porta 1 na primeira gaveta de unidades na stack. .. Controladora A porta 0b1 para IOM A porta 3 na última gaveta de unidades na stack.
 
-Imagem::../media/oie_cable_mini_sas_HD_to_mini_sas_HD.svg[Mini SAS to mini SAS Connector]
++
+image::../media/dwr-2800_controller2-to shelves_IEOPS-897.svg[Conexão do controlador B à prateleira]
 
-*Cabos HD mini-SAS HD para mini-SAS HD*
 
-Imagem::../media/dwr-2800_controller1-to shelves_IEOPS-896.svg[Controller A to shelf Connection]
-
-E . Conecte o controlador B às gavetas de unidades. .. Controladora B porta 0a a IOM A porta 1 na primeira gaveta de unidades na stack. .. Porta 0B1 da controladora B para porta IOM B 3 na última gaveta de unidades na stack.
-
-Imagem::../media/oie_cable_mini_sas_HD_to_mini_sas_HD.svg[Mini SAS to mini SAS Connector]
-
-*Cabos HD mini-SAS HD para mini-SAS HD*
-
-Imagem::../media/dwr-2800_controller2-to shelves_IEOPS-897.svg[Controller B to shelf Connection]
 
 
 
@@ -477,6 +471,10 @@ Imagem::../media/dwr-2800_controller2-to shelves_IEOPS-897.svg[Controller B to s
 
 Conclua a configuração e a configuração do sistema de armazenamento usando a opção 1: Se a deteção de rede estiver ativada ou a opção 2: Se a deteção de rede não estiver ativada.
 
+Use a animação a seguir em qualquer opção onde seja necessário definir o ID da prateleira:
+
+.Animação - Definir IDs do compartimento da unidade
+video::c600f366-4d30-481a-89d9-ab1b0066589b[panopto]
 [role="tabbed-block"]
 ====
 .Opção 1: Se a deteção de rede estiver ativada
@@ -484,10 +482,7 @@ Conclua a configuração e a configuração do sistema de armazenamento usando a
 Se a deteção de rede estiver ativada no seu computador portátil, conclua a configuração e configuração do sistema de armazenamento utilizando a deteção automática de cluster.
 
 .Passos
-. Use a animação a seguir para ativar a energia do compartimento e definir IDs de gaveta.
-+
-.Animação - Definir IDs do compartimento da unidade
-video::c600f366-4d30-481a-89d9-ab1b0066589b[panopto]
+. Ligue a prateleira e defina os IDs das prateleiras usando a animação no início desta etapa.
 . Ligue os controladores
 +
 .. Conete os cabos de alimentação às fontes de alimentação do controlador e, em seguida, conete-os a fontes de alimentação em diferentes circuitos.
@@ -559,10 +554,7 @@ image::../media/drw_2800_laptop_to_switch_to_controller_IEOPS-1084.svg[Computado
 .. Atribua um endereço TCP/IP ao laptop ou console, usando um que esteja na sub-rede de gerenciamento.
 
 
-. Use a animação a seguir para definir uma ou mais IDs de gaveta de unidade:
-+
-.Animação - Definir IDs do compartimento da unidade
-video::c600f366-4d30-481a-89d9-ab1b0066589b[panopto]
+. Ligue a prateleira e defina as IDs das prateleiras usando a animação no início desta etapa.
 . Conete os cabos de alimentação às fontes de alimentação do controlador e, em seguida, conete-os a fontes de alimentação em diferentes circuitos.
 . Ligue os interruptores de energia para ambos os nós.
 +

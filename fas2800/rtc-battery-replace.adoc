@@ -97,12 +97,12 @@ Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar 
 . Retire e reserve os dispositivos de gerenciamento de cabos dos lados esquerdo e direito do módulo do controlador.
 . Aperte o trinco na pega do excêntrico até que este se solte, abra totalmente o manípulo do excêntrico para libertar o módulo do controlador do plano médio e, em seguida, utilizando duas mãos, puxe o módulo do controlador para fora do chassis.
 +
-image::../media/drw_2850_pcm_remove_install_IEOPS-694.svg[drw 2850 pcm remover instalação IEOPS 694]
+image::../media/drw_2850_pcm_remove_install_IEOPS-694.svg[Retire o controlador]
 
 . Vire o módulo do controlador ao contrário e coloque-o numa superfície plana e estável.
 . Abra a tampa pressionando os botões azuis nas laterais do módulo do controlador para soltar a tampa e, em seguida, gire a tampa para cima e para fora do módulo do controlador.
 +
-image::../media/drw_2850_open_controller_module_cover_IEOPS-695.svg[Tampa do módulo de controlador aberto drw 2850 IEOPS 695]
+image::../media/drw_2850_open_controller_module_cover_IEOPS-695.svg[Remova a tampa do controlador]
 
 
 
@@ -114,7 +114,7 @@ Substitua a bateria do RTC localizando-a no interior do controlador e siga a seq
 
 .Animação - substitua a bateria do RTC
 video::7420d100-23b1-4213-a8da-af4701725622[panopto]
-image::../media/drw_2850_replace_rtc_battery_IEOPS-701.svg[drw 2850 substitua a bateria rtc IEOPS 701]
+image::../media/drw_2850_replace_rtc_battery_IEOPS-701.svg[Substitua a bateria do RTC]
 
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Localize a bateria do RTC.
@@ -127,6 +127,7 @@ NOTE: Observe a polaridade da bateria ao removê-la do suporte. A bateria está 
 . Localize o suporte da bateria vazio no módulo do controlador.
 . Observe a polaridade da bateria RTC e, em seguida, insira-a no suporte inclinando a bateria em ângulo e empurrando-a para baixo.
 . Inspecione visualmente a bateria para se certificar de que está completamente instalada no suporte e de que a polaridade está correta.
+. Reinstale a tampa do controlador.
 
 
 
@@ -148,7 +149,7 @@ Se você removeu os conversores de Mídia (QSFPs ou SFPs), lembre-se de reinstal
 . Conclua a reinstalação do módulo do controlador:
 
 
-image::../media/drw_2850_pcm_remove_install_IEOPS-694.svg[drw 2850 pcm remover instalação IEOPS 694]
+image::../media/drw_2850_pcm_remove_install_IEOPS-694.svg[Retire o controlador]
 
 . Com a alavanca do came na posição aberta, empurre firmemente o módulo do controlador até que ele atenda ao plano médio e esteja totalmente assentado e, em seguida, feche a alavanca do came para a posição travada.
 +
