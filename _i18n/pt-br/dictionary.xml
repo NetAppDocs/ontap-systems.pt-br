@@ -8636,7 +8636,6 @@
   <block id="a7bc52c2f69dce5843599681d279dd65" category="image-alt">Vista dianteira do compartimento de unidades de DCM2 U.</block>
   <block id="d5240bafd6bf54bcb59e9a9f899b324e" category="section-title">Prepare-se para substituir uma gaveta de unidade</block>
   <block id="38cd7f0eca6a82b183b0f9dc3599583a" category="paragraph">Antes de substituir um gaveta de unidade, você deve atualizar o IOM12 FW, se necessário, e interromper o par de HA, que permite manter os agregados de dados na gaveta, ou você tem a opção de manter o par de HA ativo e em execução, o que exige que você mova todos os dados dos agregados de dados que residem nas unidades de disco e off-line e excluir os agregados de dados. No entanto, se o compartimento contiver um agregado de raiz, será necessário interromper o par de HA. Por último, você deve desligar a prateleira.</block>
-  <block id="fca3ffea6534176432f58b5a22ed22e1" category="list-title">passos</block>
   <block id="f1d6fcc8467c66247fc38fc5bb1e448c" category="list-text">Determine se quando você substitui a gaveta de unidade com falha, isso resulta em que a gaveta tenha uma combinação de IOM12 módulos e qualquer número de gavetas de unidade DCM2.</block>
   <block id="bb92ef0e860f1f3c67a9c3a453b2781c" category="list-text">Se a prateleira tiver uma combinação de IOM12 módulos e qualquer número de DCM2 gavetas de unidade, você deve atualizar o IOM12 FW para a versão 0300 ou posterior; caso contrário, vá para a próxima etapa.</block>
   <block id="62f67af3803932031f11d177b5600361" category="list-text">Se o compartimento contiver o agregado raiz de qualquer controlador no par de HA ou se você optar por interromper o par de HA (em vez de manter o par de HA ativo e em execução), execute as seguintes etapas; caso contrário, vá para a próxima etapa.</block>
@@ -8647,7 +8646,6 @@
   <block id="4bd0b0c2b519de54df41bc77088d8182" category="list-text">Vá para a secção, <block ref="f9b764c55080d7cf77ed91e890c43565" category="inline-xref-macro-rx"></block>.</block>
   <block id="eb1a8e53bca0fcb026633a23b562bfff" category="list-text">Se você optar por manter o par de HA ativo e em execução, execute as seguintes etapas:</block>
   <block id="1aea84d8e76217145d77f4dd7efe6f8f" category="admonition">Se você tentar substituir uma gaveta por agregados no compartimento de disco, poderá causar uma interrupção do sistema com um pânico multidisco.</block>
-  <block id="ea0b163daac6d7d1dbcf0110733b7a5c" category="list-text">Mover todos os dados dos agregados de dados que residem nas unidades de disco.</block>
   <block id="a3285b442e65f70add01ba5f44551d15" category="paragraph">Os dados incluem, entre outros, volumes e LUNs.</block>
   <block id="cf798cab97b54ad5fe43c91a959754ca" category="list-text">Offine e exclua os agregados para permitir que as unidades de disco se tornem sobressalentes:</block>
   <block id="19613506a0ea4d74ae9e654ba0e170e6" category="paragraph">Os comandos podem ser inseridos a partir do clustershell de qualquer controlador.</block>
@@ -10063,7 +10061,6 @@
   <block id="d16a227aab66041a81c6f88b290eb486" category="section-title">Etapa 1: Faça o cabeamento das conexões cluster/HA</block>
   <block id="134e0586a0879fa097abfb47d5e64dbe" category="open-title">Cabeamento de cluster sem switch</block>
   <block id="ee68cf12a16ca46d58bedd8cf9051f32" category="example-title">AFF A30 ou AFF A50 com dois módulos de e/S de 40/100 GbE de 2 portas</block>
-  <block id="1de8dab1beab3d5ee0495c66a3c814b7" category="paragraph">Ligue os controladores uns aos outros para criar as ligações do cluster do ONTAP.</block>
   <block id="a8d16746fb80901317600cba36862a10" category="list-text">Cable as conexões de interconexão cluster/HA:</block>
   <block id="6780657f10ef4bbe5e784f3b1e7777e3" category="admonition">O tráfego de interconexão de cluster e o tráfego de HA compartilham as mesmas portas físicas (nos módulos de e/S nos slots 2 e 4). As portas são de 40/100 GbE.</block>
   <block id="efe3bfda2c730f42fd2741bc4722e6f0" category="list-text">Controlador de cabo A porta E2A para a porta E2A do controlador B.</block>
@@ -10534,7 +10531,6 @@
   <block id="b3fb7cc55fec6d7df9078e2ee7739718" category="paragraph">Quando inserido corretamente, o DIMM entra facilmente, mas encaixa firmemente no slot. Caso contrário, insira novamente o DIMM.</block>
   <block id="7e08ee4b466dc677d31c40c8b0488339" category="list-text">Verifique visualmente o DIMM para se certificar de que ele está alinhado uniformemente e totalmente inserido no slot.</block>
   <block id="34f650ca44fabe66ff7e4095a137da22" category="list-text">Certifique-se de que todos os outros componentes do sistema de armazenamento estão a funcionar corretamente; caso contrário, contacte<block ref="eb2c61027d5e6c8b35692c1e74187026" category="inline-link-rx"></block> antes de continuar."</block>
-  <block id="54d890bf92693607c99bccb67f9933f5" category="paragraph">Faça o cabeamento dos controladores para criar as conexões do cluster ONTAP.</block>
   <block id="d48b3cfe096b47bcb7f13e683c934beb" category="paragraph">Faça o cabeamento das controladoras à rede de host Ethernet ou FC.</block>
   <block id="bb8661c49545cac68358046e25b8f950" category="open-title">Cabeamento de host Ethernet</block>
   <block id="3c90cea8d34e6c024dcfcf7fbe2bc396" category="example-title">AFF A20, A30 ou AFF A50 com um módulo de e/S de 10/25 GbE de 4 portas</block>
@@ -11719,7 +11715,6 @@
   <block id="db424e93139f05b40145c02ca1496dab" category="image-alt">Substitua a bateria NVDIMM</block>
   <block id="f01c12d2b181f3fa692e46f31483240d" category="list-text">Certifique-se de que os pinos-guia do gabinete ou rack de telecomunicações estejam seguros nos slots da guia do chassi.</block>
   <block id="0ce45b8799d32fa93b50aed5301e827b" category="list-text">Controladora 2 porta 0b a porta IOM B 3 na última gaveta de unidades na stack. <block ref="065babb6c425d208f17452adf684f6f8" category="inline-image-macro-rx" type="image"></block>Cabos mini-SAS HD para mini-SAS HD</block>
-  <block id="ce48b5f9c255c35e0431b311322885fc" category="list-text">Os procedimentos de cabeamento de rede de cluster/HA e host mostram configurações comuns.</block>
   <block id="11695514a878032b3fb5ecdf5e659b5b" category="paragraph">Se você não vir sua configuração aqui, <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>acesse para obter informações abrangentes de configuração e prioridade de slot para fazer o cabeamento do seu sistema de armazenamento.</block>
   <block id="2e169c8e6f4cc1f6315545b46d7284a2" category="inline-image-macro">Cabo fc de 64 GB</block>
   <block id="0bf370304560205688213d22ba637c07" category="paragraph"><block ref="0bf370304560205688213d22ba637c07" category="inline-image-macro-rx" type="image"></block></block>
@@ -12011,4 +12006,15 @@
   <block id="bcbe9ce5b2d50ad0b254f40cda6fc7e1" category="image-alt">Ligue e defina o ID da prateleira</block>
   <block id="43f978a7787080590a53cc2abdd637c9" category="image-alt">Substituir o módulo de LED</block>
   <block id="a54c219a955221bc0586ab22f8a07401" category="image-alt">Substitua a bateria RTC</block>
+  <block id="14d4a75ecbe13082ebd840dc7d091f2c" category="section-title">Etapa 4: Instalar os controladores e unidades</block>
+  <block id="7aa6db479f57ead7ac39225f410bdf2d" category="paragraph">Instale os controladores e unidades no chassi de substituição e reinicie os controladores.</block>
+  <block id="3dbc14ba753f9b6deb52fc17f8c85cec" category="paragraph">Substitua o chassi do sistema AFF A20, AFF A30 ou AFF A50 quando uma falha de hardware exigir isso. O processo de substituição envolve a remoção dos controladores, a remoção das unidades, a instalação do chassi de substituição e a reinstalação dos componentes do chassi.</block>
+  <block id="fde22ae5f3a1cc39c61853ffe9a68675" category="paragraph">Crie as conexões do cluster do ONTAP. Para clusters sem switch, conecte as controladoras umas às outras. Para clusters comutados, conete os controladores aos switches de rede do cluster.</block>
+  <block id="4a1975a1a386f2f3f28c4859f5ea4976" category="paragraph">Os exemplos de cabeamento de cluster/HA mostram configurações comuns.</block>
+  <block id="8c3a29fca49d6a772e0a2f8ab6ab7280" category="paragraph">Os exemplos de cabeamento de rede do host mostram configurações comuns.</block>
+  <block id="6ce95ae69a1e0ed801b4369491228162" category="paragraph">Substitua o chassi do sistema ASA A20, ASA A30 ou ASA A50 quando uma falha de hardware exigir isso. O processo de substituição envolve a remoção dos controladores, a remoção das unidades, a instalação do chassi de substituição e a reinstalação dos componentes do chassi.</block>
+  <block id="d756679882bcf80d5a80fd42020d0f25" category="paragraph">Substitua o chassi do seu sistema de armazenamento ASA C30 quando uma falha de hardware exigir isso. O processo de substituição envolve a remoção dos controladores, a remoção das unidades, a instalação do chassi de substituição e a reinstalação dos componentes do chassi.</block>
+  <block id="72dc238e73081e826d88e29df24b4c58" category="paragraph">Substitua o chassi do seu sistema AFF C30 ou AFF C60 quando uma falha de hardware o exigir. O processo de substituição envolve a remoção dos controladores, a remoção das unidades, a instalação do chassi de substituição e a reinstalação dos componentes do chassi.</block>
+  <block id="149eed3e03e259c4e52b1de45a4fe3e9" category="paragraph">Para substituir uma gaveta de unidade em uma prateleira, você pode interromper todo o sistema de armazenamento (par de alta disponibilidade), o que permite manter os agregados de dados na prateleira. Como alternativa, você pode manter o par de alta disponibilidade ativo e em execução, o que exige que você mova todos os dados dos agregados de dados nas unidades de disco da prateleira e, em seguida, coloque-os offline e exclua esses agregados de dados. Se a prateleira contiver um agregado raiz, você deverá interromper o par de alta disponibilidade.</block>
+  <block id="12e16a41f9ae5c97288e4e9e78b0bbf6" category="list-text">Mova todos os dados dos agregados de dados localizados em todas as unidades de disco na prateleira.</block>
 </blocks>

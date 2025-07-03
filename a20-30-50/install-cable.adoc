@@ -17,10 +17,6 @@ Depois de instalar o hardware do sistema de storage AFF A20, AFF A30 ou AFF A50,
 Contacte o administrador da rede para obter informações sobre como ligar o sistema de armazenamento aos comutadores de rede.
 
 .Sobre esta tarefa
-* Os procedimentos de cabeamento de rede de cluster/HA e host mostram configurações comuns.
-+
-Se você não vir sua configuração aqui, link:https://hwu.netapp.com["NetApp Hardware Universe"^]acesse para obter informações abrangentes de configuração e prioridade de slot para fazer o cabeamento do seu sistema de armazenamento.
-
 * Os gráficos de cabeamento têm ícones de seta mostrando a orientação adequada (para cima ou para baixo) da aba de puxar do conetor do cabo ao inserir um conetor em uma porta.
 +
 Ao inserir o conetor, você deve sentir que ele clique no lugar; se você não sentir que ele clique, remova-o, vire-o e tente novamente.
@@ -35,8 +31,15 @@ image:../media/drw_cable_pull_tab_direction_ieops-1699.svg["Direção da patilha
 
 == Etapa 1: Faça o cabeamento das conexões cluster/HA
 
-Faça o cabeamento dos controladores para criar as conexões do cluster ONTAP.
+Crie as conexões do cluster do ONTAP. Para clusters sem switch, conecte as controladoras umas às outras. Para clusters comutados, conete os controladores aos switches de rede do cluster.
 
+[NOTE]
+====
+Os exemplos de cabeamento de cluster/HA mostram configurações comuns.
+
+Se você não vir sua configuração aqui, link:https://hwu.netapp.com["NetApp Hardware Universe"^]acesse para obter informações abrangentes de configuração e prioridade de slot para fazer o cabeamento do seu sistema de armazenamento.
+
+====
 [role="tabbed-block"]
 ====
 .Cabeamento de cluster sem switch
@@ -221,6 +224,13 @@ image:../media/drw_isi_a20_switched_2p_25gbe_cabling_ieops-2019.svg["diagrama de
 
 Faça o cabeamento das controladoras à rede de host Ethernet ou FC.
 
+[NOTE]
+====
+Os exemplos de cabeamento de rede do host mostram configurações comuns.
+
+Se você não vir sua configuração aqui, link:https://hwu.netapp.com["NetApp Hardware Universe"^]acesse para obter informações abrangentes de configuração e prioridade de slot para fazer o cabeamento do seu sistema de armazenamento.
+
+====
 [role="tabbed-block"]
 ====
 .Cabeamento de host Ethernet

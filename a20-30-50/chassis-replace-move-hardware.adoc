@@ -11,7 +11,7 @@ summary: 'Substitua o chassi do sistema AFF A20, AFF A30 ou AFF A50 quando uma f
 
 
 [role="lead"]
-Substitua o chassi do sistema AFF A20, AFF A30 ou AFF A50 quando uma falha de hardware exigir isso. O processo de substituição envolve a remoção dos controladores e das unidades de fonte de alimentação (PSUs), a remoção das unidades, a instalação do chassi de substituição e a reinstalação dos componentes do chassi.
+Substitua o chassi do sistema AFF A20, AFF A30 ou AFF A50 quando uma falha de hardware exigir isso. O processo de substituição envolve a remoção dos controladores, a remoção das unidades, a instalação do chassi de substituição e a reinstalação dos componentes do chassi.
 
 
 
@@ -191,9 +191,9 @@ NOTE: Se o sistema de armazenamento for fornecido em um gabinete do sistema NetA
 
 
 
-== Passo 4: Instale os controladores
+== Etapa 4: Instalar os controladores e unidades
 
-Instale os controladores no chassi de substituição e reinicialize-os.
+Instale os controladores e unidades no chassi de substituição e reinicie os controladores.
 
 .Sobre esta tarefa
 A ilustração a seguir mostra a operação das alças do controlador (do lado esquerdo de um controlador) ao instalar um controlador e pode ser usada como referência para o restante dos passos de instalação do controlador.

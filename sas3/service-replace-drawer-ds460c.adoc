@@ -11,7 +11,7 @@ summary: 'Substituir um gaveta de unidade em uma gaveta requer que você interro
 
 
 [role="lead"]
-Substituir um gaveta de unidade em uma gaveta requer que você interrompa todo o sistema de storage (par de HA), o que permite manter os agregados de dados na gaveta ou que você tenha a opção de manter o par de HA em funcionamento, o que requer que você mova todos os dados dos agregados de dados nas unidades de disco e offline e exclua os agregados de dados. No entanto, se o compartimento contiver um agregado de raiz, será necessário interromper o par de HA.
+Para substituir uma gaveta de unidade em uma prateleira, você pode interromper todo o sistema de armazenamento (par de alta disponibilidade), o que permite manter os agregados de dados na prateleira. Como alternativa, você pode manter o par de alta disponibilidade ativo e em execução, o que exige que você mova todos os dados dos agregados de dados nas unidades de disco da prateleira e, em seguida, coloque-os offline e exclua esses agregados de dados. Se a prateleira contiver um agregado raiz, você deverá interromper o par de alta disponibilidade.
 
 .Antes de começar
 Você precisa destes itens para este procedimento:
@@ -61,7 +61,7 @@ image::../media/dcm2.png[Vista dianteira do compartimento de unidades de DCM2 U.
 
 Antes de substituir um gaveta de unidade, você deve atualizar o IOM12 FW, se necessário, e interromper o par de HA, que permite manter os agregados de dados na gaveta, ou você tem a opção de manter o par de HA ativo e em execução, o que exige que você mova todos os dados dos agregados de dados que residem nas unidades de disco e off-line e excluir os agregados de dados. No entanto, se o compartimento contiver um agregado de raiz, será necessário interromper o par de HA. Por último, você deve desligar a prateleira.
 
-.passos
+.Passos
 . Determine se quando você substitui a gaveta de unidade com falha, isso resulta em que a gaveta tenha uma combinação de IOM12 módulos e qualquer número de gavetas de unidade DCM2.
 . Se a prateleira tiver uma combinação de IOM12 módulos e qualquer número de DCM2 gavetas de unidade, você deve atualizar o IOM12 FW para a versão 0300 ou posterior; caso contrário, vá para a próxima etapa.
 +
@@ -88,7 +88,7 @@ NOTE: Agregados de dados podem permanecer na gaveta ao parar o par de HA.
 NOTE: Se você tentar substituir uma gaveta por agregados no compartimento de disco, poderá causar uma interrupção do sistema com um pânico multidisco.
 
 +
-.. Mover todos os dados dos agregados de dados que residem nas unidades de disco.
+.. Mova todos os dados dos agregados de dados localizados em todas as unidades de disco na prateleira.
 +
 Os dados incluem, entre outros, volumes e LUNs.
 
