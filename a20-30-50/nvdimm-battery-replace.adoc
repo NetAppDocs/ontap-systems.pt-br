@@ -413,6 +413,18 @@ FONTE DE ALIMENTAÇÃO CC
 
 
 |===
+. Volte a colocar o controlador afetado em funcionamento normal, devolvendo o respetivo armazenamento:
++
+`storage failover giveback -ofnode _impaired_node_name_`
+
+. Restaure a giveback automática a partir da consola do controlador saudável:
++
+`storage failover modify -node local -auto-giveback true`
+
+. Se o AutoSupport estiver habilitado, restaure (reative) a criação automática de casos:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
 
 
 

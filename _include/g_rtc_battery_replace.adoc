@@ -390,6 +390,18 @@ FONTE DE ALIMENTAÇÃO CC
 
 
 |===
+. Volte a colocar o controlador afetado em funcionamento normal, devolvendo o respetivo armazenamento:
++
+`storage failover giveback -ofnode _impaired_node_name_`
+
+. Restaure a giveback automática a partir da consola do controlador saudável:
++
+`storage failover modify -node local -auto-giveback true`
+
+. Se o AutoSupport estiver habilitado, restaure (reative) a criação automática de casos:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
 
 
 
@@ -401,21 +413,31 @@ NOTE: Depois de substituir a bateria RTC, inserir o controlador e ligar a primei
 `RTC date/time error. Reset date/time to default`
 `RTC power failure error` Essas mensagens são esperadas e você pode continuar com este procedimento.
 
-. No controlador saudável, verifique a data e a hora com o `cluster date show` comando.
+. No controlador saudável, verifique a data e a hora:
++
+`cluster date show`
+
 +
 
 NOTE: Se o seu sistema de armazenamento parar no menu de inicialização, selecione a opção  `Reboot node`e responda _y_ quando solicitado e, em seguida, inicialize no Loader pressionando _Ctrl-C_.
 
-. No controlador prejudicado, no prompt DO Loader, verifique a hora e a data: `cluster date show`
+. No controlador com defeito, no prompt LOADER, verifique a hora e a data:
 +
-.. Se necessário, modifique a data: `set date _mm/dd/yyyy_`
-.. Se necessário, defina a hora, em GMT: `set time hh:mm:ss`
+`cluster date show`
+
++
+.. Se necessário, modifique a data:
++
+`set date _mm/dd/yyyy_`
+
+.. Se necessário, defina a hora, em GMT:
++
+`set time hh:mm:ss`
+
 .. Confirme a data e a hora.
 
 
 . No prompt Loader, digite `bye` para reinicializar os módulos de e/S, outros componentes e deixe o controlador reinicializar.
-. Volte a colocar o controlador em funcionamento normal, devolvendo o respetivo armazenamento: `storage failover giveback -ofnode _impaired_node_name_`
-. Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback _true_`
 
 
 

@@ -61,10 +61,19 @@ Se você instalou um módulo de e/S de storage, instale e faça o cabeamento das
 +
 Reiniciar o controlador prejudicado também reinicializa os módulos de e/S e outros componentes.
 
-. Devolver o controlador deficiente do controlador saudável: `storage failover giveback -ofnode _impaired_node_name_`
+. Volte a colocar o controlador afetado em funcionamento normal, devolvendo o respetivo armazenamento:
++
+`storage failover giveback -ofnode _impaired_node_name_`.
+
 . Repita estas etapas para adicionar um módulo de e/S ao outro controlador.
-. Restaure a giveback automática a partir da consola do controlador saudável: `storage failover modify -node local -auto-giveback _true_`
-. Se o AutoSupport estiver ativado, restaure (dessuprimir) a criação automática de casos: `system node autosupport invoke -node * -type all -message MAINT=END`
+. Restaure a giveback automática a partir da consola do controlador saudável:
++
+`storage failover modify -node local -auto-giveback true`
+
+. Se o AutoSupport estiver habilitado, restaure (reative) a criação automática de casos: +
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
 
 
 --
@@ -140,14 +149,29 @@ Você pode usar a aba à esquerda e o parafuso de aperto manual para empurrar o 
 Se você instalou um módulo de e/S de storage, instale e faça o cabeamento das NS224 gavetas, conforme descrito em https://docs.netapp.com/us-en/ontap-systems/ns224/hot-add-shelf-overview.html["Fluxo de trabalho de adição automática"^].
 
 . Repita as etapas de remoção e instalação do módulo de e/S para adicionar quaisquer módulos de e/S adicionais no controlador.
-. Reinicie o controlador prejudicado a partir do prompt Loader: `bye`
+. Reinicie o controlador danificado a partir do prompt do LOADER:
++
+`bye`
+
 +
 Reiniciar o controlador prejudicado também reinicializa os módulos de e/S e outros componentes.
 
-. Devolver o controlador deficiente do controlador saudável: `storage failover giveback -ofnode _impaired_node_name_`
-. Restaure a giveback automática a partir da consola do controlador saudável: `storage failover modify -node local -auto-giveback _true_`
-. Se o AutoSupport estiver ativado, restaure (dessuprimir) a criação automática de casos: `system node autosupport invoke -node * -type all -message MAINT=END`
-. Se você instalou um módulo NIC, especifique o modo de uso para cada porta como _network_: `storage port modify -node _node_name_ -port _port_name_ -mode _network_`
+. Volte a colocar o controlador afetado em funcionamento normal, devolvendo o respetivo armazenamento:
++
+`storage failover giveback -ofnode _impaired_node_name_`
+
+. Restaure a giveback automática a partir da consola do controlador saudável:
++
+`storage failover modify -node local -auto-giveback true`
+
+. Se o AutoSupport estiver habilitado, restaure (reative) a criação automática de casos:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
+. Se você instalou um módulo NIC, especifique o modo de uso para cada porta como _network_:
++
+`storage port modify -node _node_name_ -port _port_name_ -mode _network_`
+
 . Repita estes passos para o outro controlador.
 
 

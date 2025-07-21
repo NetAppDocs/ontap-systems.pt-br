@@ -9955,8 +9955,6 @@
   <block id="5914cbd8747a44dda8282e3747061adf" category="section-title">Peso do sistema de armazenamento</block>
   <block id="bb7471e13b2ece22767cb35368ded2a7" category="section-title">Peso da prateleira</block>
   <block id="fe464b77547b113c26b6c4a663f8d99c" category="paragraph">Tome as precauções necessárias ao mover ou levantar a prateleira.</block>
-  <block id="55a163291cdcad8ab6af6a932720e193" category="inline-link-macro">Saiba mais sobre os sistemas AFF</block>
-  <block id="67bacc9d73c9b4789f2c3cde9ab59ad8" category="paragraph">Os sistemas AFF A-Series e AFF C-Series oferecem uma plataforma robusta, com escalabilidade horizontal, adaptada para ambientes virtualizados. Eles podem ser implantados como sistemas autônomos ou como camadas de alta performance nas configurações do NetApp ONTAP. <block ref="587107815f5f912e7d3b8f989c8db7df" category="inline-link-macro-rx"></block>.</block>
   <block id="9d9de1698f7e401c78687204de906ee5" category="list-text">AFF A20</block>
   <block id="f8f6ba2d572ef729148f2d89d8ff810a" category="list-text">AFF A30</block>
   <block id="cc6089132b9a5e4af29a76834480cc1a" category="list-text">AFF A50</block>
@@ -9966,7 +9964,6 @@
   <block id="8c20e9c3f526d526af74c044baf7da64" category="inline-link-macro">Saiba mais sobre os sistemas ASA R2</block>
   <block id="77f5d8fa3689e046b946bfbacf61536e" category="paragraph">Os sistemas ASA R2 fornecem uma solução unificada de hardware e software que cria uma experiência simplificada específica para as necessidades dos clientes somente de SAN. <block ref="2f9305bd6f8a2949646123561cb92ab4" category="inline-link-macro-rx"></block>.</block>
   <block id="e2ead389bfa8a65f29bc4e57fdaf4a7b" category="inline-link-macro">Saiba mais sobre os sistemas ASA</block>
-  <block id="0f14ce10f8ff3a34f46c25bba942372c" category="paragraph">Os sistemas ASA A-Series e ASA C-Series oferecem uma experiência de SAN simplificada e dedicada que fornece disponibilidade de dados contínua para bancos de dados empresariais essenciais e outros workloads SAN que usam o protocolo FCP ou iSCSI. <block ref="9c36b794130c589d6d71e1c2ef02ceef" category="inline-link-macro-rx"></block>.</block>
   <block id="2ce90a39656cd7489bede7894c2a9943" category="list-text">ASA AFF A250</block>
   <block id="7ddb32a2b45e07e265f9e454f57d2eb0" category="list-text">ASA AFF A800</block>
   <block id="b5efaabac2b0776c5f0ca29587d418e4" category="list-text">ASA AFF A400</block>
@@ -10441,7 +10438,6 @@
   <block id="7e5d96420c04db907e37ffc0f25670b5" category="doc">Compatibilidade de hardware e software ONTAP</block>
   <block id="66a2f01bbe5e27a2d0a21ef15725c491" category="paragraph">O suporte completo à configuração e as limitações para sistemas de hardware ONTAP estão disponíveis no <block ref="ed4326c3351d8ac0e334b8b4d9b37c82" category="inline-link-rx"></block>. Detalhes sobre problemas conhecidos, limitações e avisos de atualização no software ONTAP 9 estão disponíveis no<block ref="84fe5db170ffeba3db16dd5c6d7a58db" category="inline-link-rx"></block>.</block>
   <block id="c43fddbfefcc8dab0b365319ffc7ad2f" category="summary">Saiba mais sobre as novas plataformas para sistemas de hardware ONTAP.</block>
-  <block id="b1243a1d02acf9453220663ea4294abf" category="paragraph">Saiba o que há de novo para os sistemas de hardware ONTAP.</block>
   <block id="73b3856e20fbea83dc1573f8203ad6a4" category="section-title">Dezembro de 2024</block>
   <block id="909cc883ddbed6fc06a25647ba1f212b" category="paragraph">Os sistemas oferecem detecção de ransomware baseada EM ML em tempo real, integração otimizada com a nuvem e performance incomparável para workloads essenciais, incluindo IA, VMware, bancos de dados e análises, com suporte para storage de bloco, arquivo e objetos.</block>
   <block id="3c8e670cb2f634a0b68672d5f01ec686" category="inline-link-macro">Saiba mais sobre os sistemas AFF A-Series</block>
@@ -11656,8 +11652,6 @@
   <block id="1a22b1d20df6f5e65b8bb7003b91c005" category="section-title">Etapa 3: Reatribuir discos</block>
   <block id="e7c2a2aadaeb3f0bbd622bc6dfdbba35" category="section-title">Etapa 3: Verifique o estado do controlador</block>
   <block id="97e9b99ec4fb1f882057ec866b408907" category="paragraph">Slots de e/S não utilizados devem ter módulo de supressão instalado para evitar possíveis problemas térmicos e para conformidade com EMC.</block>
-  <block id="569db66c718b1f6397ae27568f2b6360" category="list-text">Devolver o controlador deficiente do controlador saudável:<block ref="30edaf7c9fa43c78aeaf4b8fabb7af1a" prefix=" " category="inline-code"></block></block>
-  <block id="8036f04f3126628e1157f62c82a46ac6" category="list-text">Se você instalou um módulo NIC, especifique o modo de uso para cada porta como _network_:<block ref="b5ce1b43695dab734898874661154238" prefix=" " category="inline-code"></block></block>
   <block id="bc8cd0b25c4f8f5afe020026e3d82314" category="paragraph">O processo é concluído e exibe a<block ref="fd27264bf07cac36017c79d5bc35af81" prefix=" " category="inline-code"></block> mensagem.</block>
   <block id="59b113844b84da51f785fb0828d66ba7" category="list-text">Se a chave não for restaurada com êxito, o sistema irá parar e indicar que não foi possível restaurar a chave. As mensagens de erro e aviso são apresentadas. Execute novamente o processo de recuperação:</block>
   <block id="f3b6228c1cbd418b703785112e6450cf" category="list-text">Se solicitado no controlador prejudicado, pressione<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block> para substituir _/etc/ssh/ssh_host_ecdsa_key_.</block>
@@ -11699,7 +11693,6 @@
   <block id="2dcdf3018c4d483d8c38e450dbdf5944" category="list-text">Se o seu sistema tiver uma licença V_StorageAttach, você deve consultar as etapas adicionais necessárias antes de executar este procedimento.</block>
   <block id="1253bf6221482d606a7719ba415d9176" category="admonition">Não conete nenhum outro cabo ou cabo de alimentação neste momento.</block>
   <block id="c69071436bdfe1b2f2edc29969a29980" category="admonition">O controlador de substituição recebe energia do controlador em estado de funcionamento e começa a arrancar assim que estiver totalmente assente no chassis.</block>
-  <block id="5cb4dbca31ce772b17987c15a725b52e" category="list-text">Retorne o nó à operação normal:</block>
   <block id="257315f653a5868c10e8897449aa264f" category="list-text">Restaure a giveback automática a partir da consola do controlador saudável:</block>
   <block id="b9adb77861a7f27800ce914be076df5d" category="list-text"><block ref="b9adb77861a7f27800ce914be076df5d" category="inline-link-macro-rx"></block></block>
   <block id="ec3558cc556230de3472d8f669055445" category="paragraph"><block ref="ec3558cc556230de3472d8f669055445" category="inline-link-macro-rx"></block></block>
@@ -12017,4 +12010,19 @@
   <block id="72dc238e73081e826d88e29df24b4c58" category="paragraph">Substitua o chassi do seu sistema AFF C30 ou AFF C60 quando uma falha de hardware o exigir. O processo de substituição envolve a remoção dos controladores, a remoção das unidades, a instalação do chassi de substituição e a reinstalação dos componentes do chassi.</block>
   <block id="149eed3e03e259c4e52b1de45a4fe3e9" category="paragraph">Para substituir uma gaveta de unidade em uma prateleira, você pode interromper todo o sistema de armazenamento (par de alta disponibilidade), o que permite manter os agregados de dados na prateleira. Como alternativa, você pode manter o par de alta disponibilidade ativo e em execução, o que exige que você mova todos os dados dos agregados de dados nas unidades de disco da prateleira e, em seguida, coloque-os offline e exclua esses agregados de dados. Se a prateleira contiver um agregado raiz, você deverá interromper o par de alta disponibilidade.</block>
   <block id="12e16a41f9ae5c97288e4e9e78b0bbf6" category="list-text">Mova todos os dados dos agregados de dados localizados em todas as unidades de disco na prateleira.</block>
+  <block id="18de2c69e2059bfb4397c266ca003000" category="list-text">Se o AutoSupport estiver habilitado, restaure (reative) a criação automática de casos: +</block>
+  <block id="2aa2517148232c12ae58df0e0682f437" category="list-text">Reinicie o controlador danificado a partir do prompt do LOADER:</block>
+  <block id="9607981dab4fa77906d0065cb84e707f" category="list-text">Se o AutoSupport estiver habilitado, restaure (reative) a criação automática de casos:</block>
+  <block id="6752a0d2cd717c7824d154f27bacd610" category="list-text">Se você instalou um módulo NIC, especifique o modo de uso para cada porta como _network_:</block>
+  <block id="249c68a3d34c9d4fc7fa8e3d5b116625" category="paragraph"><block ref="b5ce1b43695dab734898874661154238" prefix="" category="inline-code"></block></block>
+  <block id="b29e463b3ffa2246f6ca9731ac640d4f" category="list-text">No controlador saudável, verifique a data e a hora:</block>
+  <block id="540405fb4a2a991ec2b5bd0ec4a08d48" category="paragraph"><block ref="1cac34e5e8442fb80d6ade838d969fc0" prefix="" category="inline-code"></block></block>
+  <block id="526f0f6f4025118277a35fffe0e34747" category="list-text">No controlador com defeito, no prompt LOADER, verifique a hora e a data:</block>
+  <block id="32544c893b7f5f19e7a5f77a5c3e83d8" category="list-text">Se necessário, modifique a data:</block>
+  <block id="b44d7cf4a1e6c8202283ae7adf14c206" category="paragraph"><block ref="7e61842d1d9bb6d13127efea49e14c96" prefix="" category="inline-code"></block></block>
+  <block id="be701243d86021173bd71c46c1236c57" category="list-text">Se necessário, defina a hora, em GMT:</block>
+  <block id="a85af06f0bd401f4adf6e2aa1bb77ee7" category="paragraph">Os sistemas AFF A-Series e AFF C-Series oferecem uma plataforma robusta, com escalabilidade horizontal, adaptada para ambientes virtualizados. Eles podem ser implantados como sistemas autônomos ou como camadas de alta performance nas configurações do NetApp ONTAP. Saiba mais sobre <block ref="e32d7f43a965b20b68ffaecd5419d04d" category="inline-link-macro-rx"></block> e <block ref="bab42395a66f3eaff2c39fe532427141" category="inline-link-macro-rx"></block>.</block>
+  <block id="d28d6e92f4637a29005ec41e1e153608" category="paragraph">Os sistemas ASA A-Series e ASA C-Series oferecem uma experiência de SAN simplificada e dedicada que fornece disponibilidade de dados contínua para bancos de dados empresariais essenciais e outros workloads SAN que usam o protocolo FCP ou iSCSI. <block ref="81e0314610971d584490a2155e03ad8e" category="inline-link-macro-rx"></block>.</block>
+  <block id="f43d5eca9a113ac2db5fd46e7f859dc2" category="inline-link-macro">hardware não é mais suportado</block>
+  <block id="0fabeaca13110e9bf6952a432c728512" category="paragraph">Saiba o que há de novo para os sistemas de hardware ONTAP. Para obter informações adicionais de suporte, consulte <block ref="957a5393ecc937ae8cfffe4d00549121" category="inline-link-macro-rx"></block> e <block ref="54b6b6b0b8b3660c20a40919b7a145c9" category="inline-link-macro-rx"></block> .</block>
 </blocks>

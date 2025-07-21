@@ -51,8 +51,8 @@ NOTE: Você é solicitado duas vezes para a senha.
 . Mova o cabo do console para o nó do parceiro e faça login como `admin`.
 . Devolver apenas os agregados CFO (o agregado raiz): `storage failover giveback -fromnode local -only-cfo-aggregates _true_`
 +
-** Se encontrar erros, https://support.netapp.com["Suporte à NetApp"] contacte .
 
+NOTE: Se encontrar erros, https://support.netapp.com["Suporte à NetApp"] contacte .
 
 . Aguarde 5 minutos após a conclusão do relatório de giveback e verifique o status de failover e o status de giveback `storage failover show`: E `storage failover show-giveback`.
 . Sincronize e verifique o status das chaves:
