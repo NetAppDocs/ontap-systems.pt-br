@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: hot-swap, fail, power, supply, ds460c, ds224c, ds212c, disk, shelf-nondisruptively, shelf, nondisruptive, system, power, i/o, progress, hot-swap a power supply 
 summary: Você pode trocar a quente uma fonte de alimentação com falha em um compartimento de disco DS460C, DS224C ou DS212C. 
 ---
-= Fonte de alimentação a hot-swap - prateleiras com módulos IOM12/IOM12B
+= Troca a quente de uma fonte de alimentação - DS212C, DS224C ou DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,28 +13,19 @@ summary: Você pode trocar a quente uma fonte de alimentação com falha em um c
 [role="lead"]
 Você pode trocar a quente uma fonte de alimentação com falha em um compartimento de disco DS460C, DS224C ou DS212C.
 
-.Antes de começar
-Todos os outros componentes do sistema - incluindo a outra fonte de alimentação - devem estar funcionando corretamente.
+Este procedimento se aplica a prateleiras com módulos IOM12 ou IOM12B.
 
-.Sobre esta tarefa
+.Antes de começar
+* Todos os outros componentes do sistema - incluindo a outra fonte de alimentação - devem estar funcionando corretamente.
 * Se você estiver substituindo mais de uma fonte de alimentação, deve fazê-lo uma de cada vez para que o compartimento de disco mantenha a energia.
 * Você deve substituir uma fonte de alimentação dentro de dois minutos após a remoção para minimizar a interrupção do fluxo de ar do compartimento de disco.
 * Utilize sempre duas mãos ao remover, instalar ou transportar uma fonte de alimentação para suportar o seu peso.
-* A prática recomendada é ter as versões atuais do firmware da gaveta de disco (IOM) e das unidades de disco em seu sistema antes de adicionar novas gavetas de disco, componentes de FRU de gaveta ou cabos SAS.
-+
-As versões atuais do firmware podem ser encontradas no site de suporte da NetApp.
-
-+
-https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["Downloads do NetApp: Firmware da gaveta de disco"]
-
-+
-https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["Downloads do NetApp: Firmware da unidade de disco"]
-
+* *Prática recomendada*: Certifique-se de que seu sistema tenha as versões atuais do firmware da prateleira de disco (IOM) e do firmware da unidade de disco antes de adicionar novas prateleiras de disco, componentes de FRU de prateleira ou cabos SAS. Você pode visitar o site de suporte da NetApp para  https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["baixar firmware da prateleira de disco"] e  https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["baixar firmware da unidade de disco"] .
 * Se necessário, você pode ligar os LEDs de localização (azul) do compartimento de disco para ajudar a localizar fisicamente o compartimento de disco afetado: `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
 +
 Uma gaveta de disco tem três LEDs de localização: Um no painel de exibição do operador e um em cada gaveta IOM. Os LEDs de localização permanecem acesos durante 30 minutos. Você pode desativá-los digitando o mesmo comando, mas usando a opção Off.
 
-* Se necessário, você pode consultar a seção LEDs do compartimento de disco de monitoramento para obter informações sobre o significado e a localização dos LEDs do compartimento de disco no painel de exibição do operador e nos componentes FRU.
+* Se necessário, você pode consultar o link:/sas3/service-monitor-leds.html#operator-display-panel-leds["Monitoramento de LEDs da prateleira de disco"] guia para obter informações sobre o significado e a localização dos LEDs da prateleira de disco no painel de exibição do operador e nos componentes da FRU.
 
 
 .Passos
@@ -60,17 +51,17 @@ image::../media/drw_2600_psu.gif[Abrir o manípulo do excêntrico da fonte de al
 
 . Utilize a pega do came para fazer deslizar a fonte de alimentação para fora da prateleira do disco.
 +
-Se você tiver uma gaveta de disco de DS224C ou DS212C, ao remover a fonte de alimentação, uma aba se move para o lugar para bloquear o compartimento vazio, ajudando a manter o fluxo de ar e o resfriamento.
+Se você tiver uma prateleira de disco DS224C ou DS212C, ao remover a fonte de alimentação, uma aba se abre para bloquear o compartimento vazio. Isso ajuda a manter o fluxo de ar e o resfriamento.
 
 +
 
 NOTE: Ao manusear uma fonte de alimentação, utilize sempre duas mãos para suportar o seu peso.
 
 . Certifique-se de que o interrutor ligar/desligar da nova fonte de alimentação está na posição desligada.
-. Usando duas mãos, com a alça da came da nova fonte de alimentação na posição aberta, apoie e alinhe as bordas da nova fonte de alimentação com a abertura na prateleira de disco e, em seguida, empurre firmemente a nova fonte de alimentação até que ela atenda ao plano médio.
+. Com a alça da nova fonte de alimentação aberta, use as duas mãos para apoiar e alinhar as bordas da nova fonte com a abertura na prateleira do disco. Em seguida, empurre a nova fonte de alimentação firmemente até que ela atinja o plano central.
 +
 
-NOTE: Não utilize força excessiva ao deslizar a fonte de alimentação para a prateleira de discos; poderá danificar os conetores.
+CAUTION: Não utilize força excessiva ao deslizar a fonte de alimentação para a prateleira de discos; poderá danificar os conetores.
 
 . Feche a pega do excêntrico de forma a que o trinco encaixe na posição de bloqueio e a fonte de alimentação fique totalmente assente.
 . Volte a ligar o cabo da fonte de alimentação e ligue a nova fonte de alimentação:
@@ -79,7 +70,7 @@ NOTE: Não utilize força excessiva ao deslizar a fonte de alimentação para a 
 .. Volte a ligar o cabo de alimentação à fonte de alimentação e fixe o cabo de alimentação com o fixador do cabo de alimentação.
 .. Ligue o interrutor de alimentação.
 +
-O LED de alimentação (verde) e o LED de atenção (âmbar) da fonte de alimentação acendem-se e, em seguida, no espaço de 40 segundos, o LED atenção (âmbar) apaga-se.
+O LED de energia (verde) e o LED de atenção (âmbar) da fonte de alimentação acendem. Em 40 segundos, o LED de atenção (âmbar) apaga.
 
 
 

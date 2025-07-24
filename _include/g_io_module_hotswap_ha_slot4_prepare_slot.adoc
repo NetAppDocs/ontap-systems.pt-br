@@ -1,0 +1,59 @@
+= 
+:allow-uri-read: 
+
+
+Prepare o sistema de armazenamento e o slot 4 do módulo de E/S para que seja seguro remover o cluster com falha e o módulo de E/S HA:
+
+. Aterre-se corretamente.
+. Desconecte o cabeamento do cluster com falha e do módulo de E/S HA.
++
+Não se esqueça de etiquetar os cabos para que mais tarde neste procedimento você possa reconectá-los às mesmas portas.
+
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport:
++
+`system node autosupport invoke -node * -type all -message MAINT=<number of hours down>h`
+
++
+Por exemplo, a seguinte mensagem do AutoSupport suprime a criação automática de casos por duas horas:
+
++
+`node2::> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Desabilitar o retorno automático do console do controlador prejudicado:
++
+`storage failover modify -node local -auto-giveback false`
+
++
+
+NOTE: Quando vir _do pretende desativar a auto-giveback?_, introduza `y`.
+
+. Prepare o cluster com falha e o módulo HA no slot 4 para remoção, retirando-os de serviço e desligando-os:
++
+`system controller slot module remove -node _impaired_node_name_ -slot _slot_number_`
+
++
+
+NOTE: Quando você vir _Deseja continuar?_, digite  `y` .
+
++
+Por exemplo, o comando a seguir prepara o módulo no slot 4 no nó 2 (o controlador danificado) para remoção e exibe uma mensagem informando que é seguro removê-lo:
+
++
+[listing]
+----
+node2::> system controller slot module remove -node node2 -slot 4
+
+Warning: IO_2X_100GBE_NVDA_NIC module in slot 4 of node node2 will be powered off for removal.
+
+Do you want to continue? {y|n}: y
+
+The module has been successfully removed from service and powered off. It can now be safely removed.
+----
+. Verifique se o cluster com falha e o módulo HA no slot 4 estão desligados:
++
+`system controller slot module show`
+
++
+A saída deve mostrar  `_powered-off_` na coluna de status do módulo com falha no slot 4.
+
+

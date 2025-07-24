@@ -4,16 +4,36 @@ sidebar: sidebar
 keywords: hot-remove, disk, shelf, iom12, module, nondisruptive, module-nondisruptively, system, power, serving, data, i/o, progress, hot-remove, stack, shelves, hot-remove a disk shelf with iom12 modules, DS460C, transport DS460C, move DS460C, remove drives from DS460C, DS460C drive handling, iom12b 
 summary: 'Você pode remover sem interrupção um compartimento de disco com IOM12 módulos (remover sem interrupções um compartimento de disco de um sistema ligado e e/S em andamento) quando precisar mover ou substituir o compartimento de disco. É possível remover um ou mais compartimentos de disco de qualquer lugar dentro de uma stack de gavetas de disco ou remover uma stack de gavetas de disco.' 
 ---
-= Hot-remover uma prateleira - prateleiras com módulos IOM12/IOM12B
+= Remover uma prateleira a quente - DS212C, DS224C e DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Você pode remover sem interrupção um compartimento de disco com módulos IOM12/IOM12B (remover sem interrupções um compartimento de disco de um sistema ligado e e/S em andamento) quando precisar mover ou substituir um compartimento de disco. É possível remover um ou mais compartimentos de disco de qualquer lugar dentro de uma stack de gavetas de disco ou remover uma stack de gavetas de disco.
+Você pode remover a quente uma prateleira de disco com módulos IOM12 ou IOM12B (remover sem interrupções uma prateleira de disco de um sistema ligado e com E/S em andamento) quando precisar mover ou substituir uma prateleira de disco. Você pode remover a quente uma ou mais prateleiras de disco de qualquer lugar dentro de uma pilha de prateleiras de disco ou remover uma pilha de prateleiras de disco.
+
+.Sobre esta tarefa
+* Se você estiver removendo um compartimento de disco de uma stack (mas mantendo a stack), poderá verificar um caminho de cada vez (caminho A e, depois, caminho B) para ignorar o compartimento de disco que você está removendo para manter sempre a conectividade de caminho único das controladoras para a stack.
++
+
+NOTE: Se você não manter a conectividade de caminho único das controladoras para a stack ao reativar a stack para ignorar o compartimento de disco que você está removendo, poderá falhar o sistema com um pânico multidisco.
+
+* *Possíveis danos na prateleira:* se você estiver removendo uma prateleira DS460C e estiver movendo-a para uma parte diferente do data center ou transportando-a para um local diferente, consulte a seção "mover ou transportar DS460C prateleiras" no final deste procedimento.
+
 
 .Antes de começar
+* *Prática recomendada*: remova a propriedade da unidade de disco depois de remover os agregados das unidades de disco nas prateleiras de disco que você está removendo.
++
+A remoção das informações de propriedade de uma unidade de disco sobressalente permite que a unidade de disco seja adequadamente integrada em outro nó (conforme necessário).
+
+
+
+[NOTE]
+====
+Você deve desabilitar a atribuição automática de propriedade de disco antes de remover a propriedade das unidades de disco. Reative esse recurso ao final deste procedimento. Para saber mais sobre agregados de disco, consulte  https://docs.netapp.com/us-en/ontap/disks-aggregates/index.html["Visão geral de discos e agregados"^] .
+
+====
 * Seu sistema precisa ser uma configuração de HA, HA de três caminhos, multipath, HA de quatro caminhos ou de quatro caminhos.
 +
 Para plataformas com storage interno, o storage externo precisa ser cabeado como HA multipath, HA de três caminhos ou multipath.
@@ -24,38 +44,19 @@ NOTE: Para um sistema de controladora única da série FAS2600 que tem o storage
 
 * O sistema não pode ter mensagens de erro de cabeamento SAS.
 +
-Você pode baixar e executar o Active IQ Config Advisor para visualizar quaisquer mensagens de erro de cabeamento SAS e as ações corretivas que você deve tomar.
-
-+
-https://mysupport.netapp.com/site/tools["NetApp Downloads: Config Advisor"^]
+Para visualizar quaisquer mensagens de erro de cabeamento SAS e as ações corretivas que você deve tomar, baixe e execute o  https://mysupport.netapp.com/site/tools["Active IQ Config Advisor"^] .
 
 * As configurações de par HA não podem estar em um estado de aquisição.
 * Você precisa ter removido todos os agregados das unidades de disco (as unidades de disco devem ser sobressalentes) nos compartimentos de disco que você está removendo.
 +
 
-NOTE: Se você tentar este procedimento com agregados no compartimento de disco que você está removendo, poderá falhar o sistema com um pânico multidisco.
+CAUTION: Se você tentar este procedimento com agregados no compartimento de disco que você está removendo, poderá falhar o sistema com um pânico multidisco.
 
 +
 Você pode usar o `storage aggregate offline -aggregate _aggregate_name_` comando e, em seguida, o `storage aggregate delete -aggregate _aggregate_name_` comando.
 
 * Se você estiver removendo uma ou mais gavetas de disco de dentro de uma stack, terá que ter fatorado a distância para ignorar as gavetas de disco que você está removendo. Portanto, se os cabos atuais não forem longos o suficiente, você precisará ter cabos mais longos disponíveis.
-
-
-.Sobre esta tarefa
-* *Prática recomendada:* a prática recomendada é remover a propriedade da unidade de disco depois de remover os agregados das unidades de disco nas prateleiras de disco que você está removendo.
-+
-A remoção das informações de propriedade de uma unidade de disco sobressalente permite que a unidade de disco seja adequadamente integrada em outro nó (conforme necessário).
-
-
-
-[NOTE]
-====
-O procedimento para remover a propriedade de unidades de disco requer que você desative a atribuição automática de propriedade de disco. Reative a atribuição automática de propriedade de disco no final deste procedimento.
-
-https://docs.netapp.com/us-en/ontap/disks-aggregates/index.html["Visão geral de discos e agregados"^]
-
-====
-* Para um sistema ONTAP em cluster que é maior que dois nós, a prática recomendada é reatribuir o epsilon a um par de HA diferente daquele que está sendo submetido à manutenção planejada.
+* *Melhor prática*: para um sistema ONTAP em cluster com mais de dois nós, reatribua o epsilon a um par de HA diferente daquele que está passando por manutenção planejada.
 +
 A reatribuição do epsilon minimiza o risco de erros imprevistos que afetam todos os nós em um sistema ONTAP em cluster. Você pode usar as etapas a seguir para determinar o nó segurando o epsilon e reatribuir o epsilon, se necessário:
 
@@ -70,12 +71,6 @@ O nó que contém epsilon é exibido `true` na `Epsilon` coluna. (Os nós que n�
 .. Voltar ao nível de privilégio de administrador: `set -privilege admin`
 
 
-* Se você estiver removendo um compartimento de disco de uma stack (mas mantendo a stack), poderá verificar um caminho de cada vez (caminho A e, depois, caminho B) para ignorar o compartimento de disco que você está removendo para manter sempre a conectividade de caminho único das controladoras para a stack.
-+
-
-NOTE: Se você não manter a conectividade de caminho único das controladoras para a stack ao reativar a stack para ignorar o compartimento de disco que você está removendo, poderá falhar o sistema com um pânico multidisco.
-
-* *Possíveis danos na prateleira:* se você estiver removendo uma prateleira DS460C e estiver movendo-a para uma parte diferente do data center ou transportando-a para um local diferente, consulte a seção "mover ou transportar DS460C prateleiras" no final deste procedimento.
 
 
 .Passos

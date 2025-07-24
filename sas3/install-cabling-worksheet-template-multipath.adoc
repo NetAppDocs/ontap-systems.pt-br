@@ -1,10 +1,10 @@
 ---
 permalink: sas3/install-cabling-worksheet-template-multipath.html 
 sidebar: sidebar 
-keywords: complete, completing, worksheet, template, controller, sas, port, pair, cable, controller, disk, shelves, iom12, module, achieve, multipathed, connectivity, ha, pair, single-controller, configuration, worksheet, connection, controller-to-stack cabling worksheet template for multipathed connectivity 
+keywords: complete, completing, worksheet, template, controller, sas, port, pair, cable, controller, disk, shelves, iom12, module, achieve, multipathed, connectivity, ha, pair, single-controller, configuration, worksheet, connection, controller-to-stack cabling worksheet template for multipathed connectivity, iom12b 
 summary: Ao concluir o modelo de Planilha, você pode definir os pares de portas SAS do controlador que você pode usar para vincular controladores a pilhas de compartimentos de disco com módulos IOM12/IOM12B para obter conectividade multipathed em um par de HA ou configuração de controladora única. Você também pode usar a Planilha completa para percorrer o cabeamento das conexões multipathed para sua configuração. 
 ---
-= Modelo de Planilha de cabeamento de controladora a stack para conectividade multipathed - compartimentos com módulos IOM12/IOM12B
+= Planilha de cabeamento para conectividade multipath - DS212C, DS224C ou DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

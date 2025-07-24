@@ -2,18 +2,26 @@
 permalink: c30-60/bootmedia-replace.html 
 sidebar: sidebar 
 keywords: aff c30, aff c60, replace the boot media 
-summary: A Mídia de inicialização no seu sistema AFF C30 ou AFF C60 armazena dados essenciais de firmware e configuração. O processo de substituição envolve a remoção do módulo do controlador, remoção do suporte de arranque danificado, instalação do suporte de arranque de substituição e, em seguida, transferência da imagem ONTAP para o suporte de arranque de substituição. 
+summary: A mídia de inicialização do seu sistema AFF C30 ou AFF C60 armazena dados essenciais de firmware e configuração. O processo de substituição envolve a remoção do módulo controlador, a remoção da mídia de inicialização danificada, a instalação da mídia de inicialização de substituição e a transferência manual da imagem ONTAP para a mídia de inicialização de substituição usando um pen drive USB. 
 ---
-= Substitua o suporte de arranque - AFF C30 e AFF C60
+= Substitua a mídia de inicialização e prepare-se para recuperação de inicialização manual - AFF C30 e AFF C60
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-A Mídia de inicialização no seu sistema AFF C30 ou AFF C60 armazena dados essenciais de firmware e configuração. O processo de substituição envolve a remoção do módulo do controlador, remoção do suporte de arranque danificado, instalação do suporte de arranque de substituição e, em seguida, transferência da imagem ONTAP para o suporte de arranque de substituição.
+A mídia de inicialização do seu sistema AFF C30 ou AFF C60 armazena dados essenciais de firmware e configuração. O processo de substituição envolve a remoção do módulo controlador, a remoção da mídia de inicialização danificada, a instalação da mídia de inicialização de substituição e a transferência manual da imagem ONTAP para a mídia de inicialização de substituição usando um pen drive USB.
 
-Para substituir o suporte de arranque, tem de remover o controlador afetado, remover o suporte de arranque, instalar o suporte de arranque de substituição e transferir a imagem de arranque para uma unidade flash USB.
+
+
+== Sobre esta tarefa
+
+Se necessário, você pode ligar os LEDs de localização do chassi da plataforma (azul) para ajudar a localizar fisicamente a plataforma afetada. Faça login no BMC usando SSH e digite o `system location-led _on_` comando.
+
+Um chassi de plataforma tem três LEDs de localização: Um no painel de exibição do operador e um em cada controlador. Os LEDs de localização permanecem acesos durante 30 minutos.
+
+Você pode desativá-los digitando o `system location-led _off_` comando. Se não tiver a certeza se os LEDs estão ligados ou desligados, pode verificar o seu estado introduzindo o `system location-led show` comando.
 
 
 

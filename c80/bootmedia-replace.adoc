@@ -2,16 +2,16 @@
 permalink: c80/bootmedia-replace.html 
 sidebar: sidebar 
 keywords: c80, replace the boot media 
-summary: O suporte de arranque do seu sistema AFF C80 armazena dados essenciais de firmware e configuração. O processo de substituição envolve a remoção do módulo de Gestão do sistema, remoção do suporte de arranque com problemas, instalação do suporte de arranque de substituição e, em seguida, transferência da imagem ONTAP para o suporte de arranque de substituição. 
+summary: A mídia de inicialização do seu sistema AFF C80 armazena dados essenciais de firmware e configuração. O processo de substituição envolve a remoção do módulo de Gerenciamento do Sistema, a remoção da mídia de inicialização danificada, a instalação da mídia de inicialização de substituição e a transferência manual da imagem ONTAP para a mídia de inicialização de substituição usando um pen drive USB. 
 ---
-= Substitua o suporte de arranque - AFF C80
+= Substitua a mídia de inicialização e prepare-se para recuperação de inicialização manual - AFF C80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-O suporte de arranque do seu sistema AFF C80 armazena dados essenciais de firmware e configuração. O processo de substituição envolve a remoção do módulo de Gestão do sistema, remoção do suporte de arranque com problemas, instalação do suporte de arranque de substituição e, em seguida, transferência da imagem ONTAP para o suporte de arranque de substituição.
+A mídia de inicialização do seu sistema AFF C80 armazena dados essenciais de firmware e configuração. O processo de substituição envolve a remoção do módulo de Gerenciamento do Sistema, a remoção da mídia de inicialização danificada, a instalação da mídia de inicialização de substituição e a transferência manual da imagem ONTAP para a mídia de inicialização de substituição usando um pen drive USB.
 
 
 

@@ -2,9 +2,9 @@
 permalink: a70-90/bootmedia-replace-requirements.html 
 sidebar: sidebar 
 keywords: aff a70, a90, replace the boot media 
-summary: Antes de substituir o suporte de arranque no sistema AFF AA70 ou AFF A90, certifique-se de que cumpre os requisitos necessários para uma substituição bem-sucedida. Isso inclui garantir que você tenha uma unidade flash USB com a quantidade adequada de armazenamento e verificar se você tem o dispositivo de inicialização de substituição correto. 
+summary: Antes de substituir o suporte de arranque no sistema AFF A70 ou AFF A90, certifique-se de que cumpre os requisitos necessários para uma substituição bem-sucedida. Isso inclui garantir que você tenha uma unidade flash USB com a quantidade adequada de armazenamento e verificar se você tem o dispositivo de inicialização de substituição correto. 
 ---
-= Requisitos para substituir o suporte de arranque - AFF A70 e AFF A90
+= Requisitos para recuperação manual de mídia de inicialização - AFF A70 e AFF A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,17 +13,22 @@ summary: Antes de substituir o suporte de arranque no sistema AFF AA70 ou AFF A9
 [role="lead"]
 Antes de substituir o suporte de arranque no sistema AFF A70 ou AFF A90, certifique-se de que cumpre os requisitos necessários para uma substituição bem-sucedida. Isso inclui garantir que você tenha uma unidade flash USB com a quantidade adequada de armazenamento e verificar se você tem o dispositivo de inicialização de substituição correto.
 
-Reveja os seguintes requisitos.
-
-* Tem de ter uma unidade flash USB, formatada para FAT32, com a quantidade de armazenamento adequada para guardar o `image_xxx.tgz` ficheiro.
-* Você deve copiar o `image_xxx.tgz` arquivo para a unidade flash USB para uso posterior neste procedimento.
-* Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor.
-* É importante que você aplique os comandos nestas etapas no controlador correto:
-+
-** O controlador _prejudicado_ é o controlador no qual você está realizando a manutenção.
-** O controlador _Healthy_ é o parceiro de HA do controlador prejudicado.
+.Pen drive USB
+* Certifique-se de ter uma unidade flash USB formatada para FAT32.
+* O USB deve ter capacidade de armazenamento suficiente para armazenar o  `image_xxx.tgz` arquivo.
 
 
+.Preparação do arquivo
+Copie o  `image_xxx.tgz` arquivo para o pen drive USB. Este arquivo será usado quando você transferir a imagem ONTAP usando o pen drive USB.
+
+.Substituição de componentes
+Substitua o componente com falha pelo componente de substituição fornecido pela NetApp.
+
+.Identificação do controlador
+É fundamental aplicar os comandos ao controlador correto ao substituir a mídia de inicialização danificada:
+
+* O _controlador danificado_ é o controlador no qual você está executando a manutenção.
+* O _controlador saudável_ é o parceiro HA do controlador prejudicado.
 
 
 .O que se segue?

@@ -2,16 +2,16 @@
 permalink: a20-30-50/bootmedia-encryption-restore.html 
 sidebar: sidebar 
 keywords: aff a20, aff a30, aff a50, post boot media replacement steps for okm, nse, and nve 
-summary: Restaure a criptografia na Mídia de inicialização de substituição no sistema AFF A20, AFF A30 ou AFF A50 para garantir a proteção contínua dos dados. O processo de substituição envolve verificar a disponibilidade das chaves, reaplicar as configurações de criptografia e confirmar o acesso seguro aos seus dados. 
+summary: Restaure a criptografia na mídia de inicialização de substituição do seu sistema de armazenamento AFF A20, AFF A30 ou AFF A50 para garantir a proteção contínua dos dados. O processo de substituição envolve a verificação da disponibilidade da chave, a reaplicação das configurações de criptografia e a confirmação do acesso seguro aos seus dados. 
 ---
-= Restaure a criptografia na Mídia de inicialização - AFF A20, AFF A30 e AFF A50
+= Restaurar chaves de criptografia após recuperação de inicialização manual - AFF A20, AFF A30 e AFF A50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Restaure a criptografia na Mídia de inicialização de substituição no sistema AFF A20, AFF A30 ou AFF A50 para garantir a proteção contínua dos dados. O processo de substituição envolve verificar a disponibilidade das chaves, reaplicar as configurações de criptografia e confirmar o acesso seguro aos seus dados.
+Restaure a criptografia na mídia de inicialização de substituição do seu sistema de armazenamento AFF A20, AFF A30 ou AFF A50 para garantir a proteção contínua dos dados. O processo de substituição envolve a verificação da disponibilidade da chave, a reaplicação das configurações de criptografia e a confirmação do acesso seguro aos seus dados.
 
 Você deve concluir etapas específicas para sistemas que tenham o Gerenciador de chaves integrado (OKM), a criptografia de armazenamento NetApp (NSE) ou a criptografia de volume NetApp (NVE) habilitados usando as configurações capturadas no início do procedimento de substituição de Mídia de inicialização.
 

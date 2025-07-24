@@ -24,7 +24,22 @@ entries:
   entries:
   - title: Visão geral da manutenção
     url: "/a70-90/maintain-overview.html"
-  - title: Suporte de arranque
+  - title: Mídia de inicialização - recuperação automatizada
+    pdf-filename: AFF A70, suporte de arranque AFF A90
+    entries:
+    - title: Fluxo de trabalho de substituição de Mídia de inicialização
+      url: "/a70-90/bootmedia-replace-workflow-bmr.html"
+    - title: Rever os requisitos
+      url: "/a70-90/bootmedia-replace-requirements-bmr.html"
+    - title: Desligue o controlador
+      url: "/a70-90/bootmedia-shutdown-bmr.html"
+    - title: Substitua o suporte de arranque
+      url: "/a70-90/bootmedia-replace-bmr.html"
+    - title: Imagem de recuperação de inicialização
+      url: "/a70-90/bootmedia-recovery-image-boot-bmr.html"
+    - title: Devolver artigo com falha ao NetApp
+      url: "/a70-90/bootmedia-complete-rma-bmr.html"
+  - title: Mídia de inicialização - recuperação manual
     pdf-filename: AFF A70, suporte de arranque AFF A90
     entries:
     - title: Fluxo de trabalho de substituição de Mídia de inicialização

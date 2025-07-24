@@ -27,16 +27,9 @@ Reveja os seguintes requisitos e considerações.
 
 == Considerações
 
-* *O procedimento de substituição do chassis é disruptivo.* Para um cluster de dois nós, você terá uma interrupção de serviço completa e uma interrupção parcial em um cluster de vários nós.
+* O procedimento de substituição do chassis é disruptivo. Para um cluster de dois nós, você terá uma interrupção de serviço completa e uma interrupção parcial em um cluster de vários nós.
 * Você pode usar o procedimento de substituição de chassi com todas as versões do ONTAP suportadas pelo sistema de storage.
 * O procedimento de substituição do chassi é escrito com a suposição de que você está movendo o painel frontal, as unidades, quaisquer lacunas de unidade e os controladores para o novo chassi.
-* Se necessário, você pode ligar os LEDs de localização do sistema de armazenamento (azul) para ajudar a localizar fisicamente o sistema de armazenamento afetado. Faça login no BMC usando SSH e digite o `system location-led _on_` comando.
-+
-Um sistema de armazenamento tem três LEDs de localização: Um no painel de visualização do operador e um em cada controlador. Os LEDs de localização permanecem acesos durante 30 minutos.
-
-+
-Você pode desativá-los digitando o `system location-led _off_` comando. Se não tiver a certeza se os LEDs estão ligados ou desligados, pode verificar o seu estado introduzindo o `system location-led show` comando.
-
 
 
 .O que se segue?

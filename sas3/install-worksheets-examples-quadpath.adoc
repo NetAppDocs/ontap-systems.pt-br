@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: complete, controller-to-stack, cabling, cable, worksheet, quad-path, ha, configuration, ha, configuration, sas, hba, controller-to-stack cabling worksheet and cabling example for a quad-path ha configuration with two quad-port sas hbas 
 summary: Você pode usar a Planilha de cabeamento e o exemplo de cabeamento completo de controladora para stack para realizar uma configuração de HA de quatro caminhos que tenha dois HBAs SAS de quatro portas. 
 ---
-= Exemplo de cabeamento e Planilha de cabeamento de controladora a stack para uma configuração HA de quatro caminhos com dois HBAs SAS de quatro portas - compartimentos com módulos IOM12/IOM12B
+= Planilha de cabeamento para uma configuração de HA de quatro caminhos com dois HBAs SAS de quatro portas - DS212C, DS224C ou DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Você pode usar a Planilha de cabeamento e o exemplo de cabeamento completo de controladora para stack para realizar uma configuração de HA de quatro caminhos que tenha dois HBAs SAS de quatro portas.
+Você pode usar a planilha de cabeamento de controlador para pilha e o exemplo de cabeamento preenchidos para cabear uma configuração de HA de quatro caminhos com dois HBAs SAS de quatro portas. Isso se aplica a prateleiras com módulos IOM12/IOM12B.
 
 * Se necessário, consulte a link:install-cabling-rules.html["Regras de cabeamento de SAS"] para obter informações sobre configurações compatíveis, a convenção de numeração de slots do controlador, conectividade de prateleira a prateleira e conectividade de controlador para compartimento (incluindo o uso de pares de portas).
 * Se necessário, você pode link:install-cabling-worksheets-how-to-read-quadpath.html["Como ler uma Planilha para conexões de controlador para pilha de cabo para conetividade quad-pathed"]consultar .

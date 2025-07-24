@@ -1,0 +1,22 @@
+= 
+:allow-uri-read: 
+
+
+* Você deve substituir o componente com falha por um componente FRU de substituição da mesma capacidade que recebeu do NetApp.
+* A porta e0S (chave inglesa e0M) é usada para comunicação entre os dois controladores durante o processo de recuperação de inicialização automatizada. Certifique-se de que a porta e0S do controlador com defeito esteja funcionando corretamente.
+* Para OKM, você precisa do conteúdo do arquivo de senha OKM.
+* Para EKM, você precisa de cópias dos seguintes arquivos do nó do parceiro:
++
+** arquivo /cfcard/kmip/servers.cfg.
+** arquivo /cfcard/kmip/certs/client.crt.
+** arquivo /cfcard/kmip/certs/client.key.
+** Arquivo /cfcard/kmip/certs/CA.pem.
+
+
+* É fundamental aplicar os comandos ao controlador correto ao substituir a mídia de inicialização danificada:
++
+** O _controlador danificado_ é o controlador no qual você está executando a manutenção.
+** O _controlador saudável_ é o parceiro HA do controlador prejudicado.
+
+
+

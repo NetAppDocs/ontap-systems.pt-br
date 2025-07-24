@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: i/o activity, power, off, shelf, replacing, replace, drive, drawer, disk, replace a drive drawer in a ds460c disk shelf, dcm2, dcm 
 summary: 'Substituir um gaveta de unidade em uma gaveta requer que você interrompa todo o sistema de storage (par de HA), o que permite manter os agregados de dados na gaveta ou que você tenha a opção de manter o par de HA em funcionamento, o que requer que você mova todos os dados dos agregados de dados nas unidades de disco e offline e exclua os agregados de dados. No entanto, se o compartimento contiver um agregado de raiz, será necessário interromper o par de HA.' 
 ---
-= Substitua uma gaveta de unidades em um compartimento de disco DS460C - gavetas com módulos IOM12/IOM12B
+= Substituir uma gaveta de unidade - DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,6 +12,8 @@ summary: 'Substituir um gaveta de unidade em uma gaveta requer que você interro
 
 [role="lead"]
 Para substituir uma gaveta de unidade em uma prateleira, você pode interromper todo o sistema de armazenamento (par de alta disponibilidade), o que permite manter os agregados de dados na prateleira. Como alternativa, você pode manter o par de alta disponibilidade ativo e em execução, o que exige que você mova todos os dados dos agregados de dados nas unidades de disco da prateleira e, em seguida, coloque-os offline e exclua esses agregados de dados. Se a prateleira contiver um agregado raiz, você deverá interromper o par de alta disponibilidade.
+
+Este procedimento se aplica a prateleiras com módulos IOM12 ou IOM12B.
 
 .Antes de começar
 Você precisa destes itens para este procedimento:
@@ -27,20 +29,20 @@ NOTE: *Possíveis danos ao hardware:* para evitar danos de descarga eletrostáti
 
 
 .Sobre esta tarefa
-* Este procedimento se aplica a prateleiras com gavetas de unidade DCM e/ou gavetas de unidade DCM2. (As prateleiras também terão dois módulos IOM12 ou dois módulos IOM12B.)
+* Este procedimento se aplica a prateleiras com gavetas de unidade DCM e/ou gavetas de unidade DCM2 ou DCM3. (As prateleiras também terão dois módulos IOM12 ou dois módulos IOM12B.)
 +
-Quando uma gaveta de unidade DCM ou DCM2 falha, você recebe uma gaveta de unidade DCM ou DCM2 para substituí-la.
+Quando uma gaveta de unidade DCM, DCM2 ou DCM3 falha, você recebe uma gaveta de unidade DCM, DCM2 ou DCM3 para substituí-la.
 
 
 
 [NOTE]
 ====
-Se, ao substituir uma gaveta de unidade com falha, ela resultar na combinação de IOM12 módulos e qualquer número de DCM2 gavetas de unidade, você deve atualizar o IOM12 FW para a versão 0300 ou posterior porque os módulos IOM12 exigem uma versão do FW que suporta DCM2 gavetas de unidade.
+Ao substituir uma gaveta de unidade com falha por uma gaveta de unidade DCM2 ou DCM3 mais nova, certifique-se de que o software ONTAP e o firmware do módulo IOM12 ou IOM12B estejam executando as versões mínimas necessárias para oferecer suporte às gavetas DCM2 ou DCM3.
 
 A atualização IOM12 FW pode ser feita antes ou depois de substituir uma gaveta de unidade. Este procedimento permite atualizar o FW como parte do procedimento de preparação para a substituição da gaveta.
 
 ====
-* As gavetas de acionamento DCM e as DCM2 gavetas de acionamento podem ser distinguidas pela sua aparência:
+* As gavetas de unidade DCM, DCM2 e DCM3 podem ser diferenciadas por sua aparência:
 +
 As gavetas da unidade DCM têm a seguinte aparência:
 
@@ -53,22 +55,41 @@ As DCM2 gavetas de acionamento distinguem-se por uma faixa azul e etiqueta "DCM2
 +
 image::../media/dcm2.png[Vista dianteira do compartimento de unidades de DCM2 U.]
 
++
+As gavetas da unidade DCM3 são diferenciadas por uma faixa azul e cinza e pelo rótulo "DCM3":
+
++
+image::../media/drw_dcm3_ieops-2176.svg[Vista frontal de uma prateleira de unidade DCM3]
 
 
 
 
-== Prepare-se para substituir uma gaveta de unidade
 
-Antes de substituir um gaveta de unidade, você deve atualizar o IOM12 FW, se necessário, e interromper o par de HA, que permite manter os agregados de dados na gaveta, ou você tem a opção de manter o par de HA ativo e em execução, o que exige que você mova todos os dados dos agregados de dados que residem nas unidades de disco e off-line e excluir os agregados de dados. No entanto, se o compartimento contiver um agregado de raiz, será necessário interromper o par de HA. Por último, você deve desligar a prateleira.
+== Etapa 1: Prepare-se para substituir uma gaveta de unidade
+
+Antes de substituir uma gaveta de unidade, certifique-se de atualizar o firmware do IOM e o ONTAP , se necessário, e interromper o par de alta disponibilidade, o que permite manter os agregados de dados na prateleira, ou manter o par de alta disponibilidade ativo e em execução, o que exige a movimentação de todos os dados dos agregados de dados residentes nas unidades de disco. Em seguida, você deve desconectar e excluir os agregados de dados. No entanto, se a prateleira contiver um agregado raiz, você deve interromper o par de alta disponibilidade. Por fim, você deve desligar a prateleira.
 
 .Passos
 . Determine se quando você substitui a gaveta de unidade com falha, isso resulta em que a gaveta tenha uma combinação de IOM12 módulos e qualquer número de gavetas de unidade DCM2.
-. Se a prateleira tiver uma combinação de IOM12 módulos e qualquer número de DCM2 gavetas de unidade, você deve atualizar o IOM12 FW para a versão 0300 ou posterior; caso contrário, vá para a próxima etapa.
+. Determine se você precisará atualizar o firmware do IOM:
 +
-As versões atuais do firmware podem ser encontradas no site de suporte da NetApp.
+** Se a prateleira tiver uma combinação de IOM12 módulos e qualquer número de DCM2 gavetas de unidade, você deve atualizar o IOM12 FW para a versão 0300 ou posterior; caso contrário, vá para a próxima etapa.
+** Se a prateleira tiver uma combinação de módulos IOM12 e qualquer número de gavetas de unidade DCM3, você deverá atualizar o FW do IOM12 para a versão 0401 ou posterior.
+** Se a prateleira tiver uma combinação de módulos IOM12B e qualquer número de gavetas de unidade DCM3, você deverá atualizar o FW IOM12B para a versão 0202 ou posterior.
+
 
 +
-https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["Downloads do NetApp: Firmware da gaveta de disco"]
+Se necessário, você pode acessar o site de suporte da NetApp para  https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["baixar versões atuais do firmware da prateleira de disco"] . Caso contrário, vá para a próxima etapa.
+
+. Se sua prateleira tiver uma combinação de módulos IOM12 ou IOM12B com qualquer número de gavetas de unidade DCM3, seu sistema deverá estar executando as seguintes versões mínimas do ONTAP:
++
+** ONTAP 9.17.1RC1
+** ONTAP 9.16.1P3
+** ONTAP 9.15.1P11
+** ONTAP 9.14.1P13
+** ONTAP 9.13.1P16
+** ONTAP 9.12.1P18
+
 
 . Se o compartimento contiver o agregado raiz de qualquer controlador no par de HA ou se você optar por interromper o par de HA (em vez de manter o par de HA ativo e em execução), execute as seguintes etapas; caso contrário, vá para a próxima etapa.
 +
@@ -79,7 +100,7 @@ NOTE: Agregados de dados podem permanecer na gaveta ao parar o par de HA.
 .. Parar ambas as controladoras no par de HA.
 .. Verifique se o par de HA foi interrompido verificando o console do sistema de storage.
 .. Desligue a prateleira.
-.. Vá para a secção, <<Retire as correntes dos cabos>>.
+.. Vá para a seção, <<remove_cable_chains,Retire as correntes dos cabos>> .
 
 
 . Se você optar por manter o par de HA ativo e em execução, execute as seguintes etapas:
@@ -122,12 +143,19 @@ NOTE: Se você tiver unidades de disco com falha no compartimento, `broken` ser�
 
 
 
-== Retire as correntes dos cabos
+== Etapa 2: Remova as correntes dos cabos
 
 As correntes de cabo esquerda e direita para cada gaveta de unidade na prateleira de unidade DS460C permitem que as gavetas deslizem para dentro e para fora. Antes de remover uma gaveta de unidade, você deve remover ambas as correntes de cabo.
 
+.Sobre esta tarefa
+Cada gaveta de unidade tem correntes de cabo esquerda e direita. As extremidades metálicas nas correntes de cabos deslizam para os suportes verticais e horizontais correspondentes dentro do compartimento, da seguinte forma:
+
+* Os suportes verticais esquerdo e direito conetam a corrente do cabo ao plano médio do gabinete.
+* Os suportes horizontais esquerdo e direito ligam a corrente do cabo à gaveta individual.
+
+
 .Antes de começar
-* Você concluiu as <<Prepare-se para substituir uma gaveta de unidade>> etapas para que seu par de HA seja interrompido ou mova todos os dados dos agregados de dados que residem nas unidades de disco e desalinhou e excluiu os agregados de dados para permitir que as unidades de disco se tornem sobressalentes.
+* Você concluiu o <<prepare_to_replace_drive_drawer,Prepare-se para substituir uma gaveta de unidade>> etapas para que seu par de HA seja interrompido ou você tenha movido todos os dados dos agregados de dados que residem nas unidades de disco e desconectado e excluído os agregados de dados para permitir que as unidades de disco se tornem reservas.
 * Você desligou a prateleira.
 * Você obteve os seguintes itens:
 +
@@ -139,13 +167,6 @@ NOTE: *Possíveis danos ao hardware:* para evitar danos por descarga eletrostát
 ** Lanterna
 
 
-
-
-.Sobre esta tarefa
-Cada gaveta de unidade tem correntes de cabo esquerda e direita. As extremidades metálicas nas correntes de cabos deslizam para os suportes verticais e horizontais correspondentes dentro do compartimento, da seguinte forma:
-
-* Os suportes verticais esquerdo e direito conetam a corrente do cabo ao plano médio do gabinete.
-* Os suportes horizontais esquerdo e direito ligam a corrente do cabo à gaveta individual.
 
 
 .Passos
@@ -270,7 +291,7 @@ A figura mostra o anel laranja no suporte horizontal que está sendo empurrado p
 
 
 
-== Remova uma gaveta de unidades
+== Etapa 3: remover uma gaveta de unidade
 
 Depois de remover as correntes de cabos direita e esquerda, você pode remover a gaveta da unidade da prateleira da unidade. Remover uma gaveta de unidade implica deslizar a parte da gaveta da saída, remover as unidades e remover a gaveta da unidade.
 
@@ -325,7 +346,7 @@ image:../media/icon_round_1.png["Legenda número 1"]
 
 
 
-== Instale uma gaveta de unidades
+== Etapa 4: instalar uma gaveta de unidade
 
 Instalar uma gaveta de unidade em uma prateleira de unidade implica deslizar a gaveta para dentro do slot vazio, instalar as unidades e substituir a moldura frontal.
 
@@ -421,7 +442,7 @@ NOTE: *Risco de mau funcionamento do equipamento:* Certifique-se de fechar compl
 
 
 
-== Fixe as correntes dos cabos
+== Etapa 5: Prenda as correntes dos cabos
 
 A etapa final na instalação de uma gaveta de acionamento é conetar as correntes de cabo esquerda e direita de substituição à prateleira de acionamento. Ao fixar uma corrente de cabo, inverta a ordem que utilizou ao desligar a corrente de cabo. É necessário inserir o conetor horizontal da corrente no suporte horizontal do compartimento antes de inserir o conetor vertical da corrente no suporte vertical do compartimento.
 
@@ -549,11 +570,5 @@ image:../media/icon_round_1.png["Legenda número 1"]
 
 
 . Se você tiver interrompido o par de HA, inicialize o ONTAP em ambas as controladoras; caso contrário, vá para a próxima etapa.
-. Se você tiver movido os dados da gaveta e excluído os agregados de dados, agora poderá usar os discos sobressalentes na gaveta para criação ou expansão de agregados.
-+
-https://docs.netapp.com/us-en/ontap/disks-aggregates/aggregate-creation-workflow-concept.html["Fluxo de trabalho de criação agregada"]
-
-+
-https://docs.netapp.com/us-en/ontap/disks-aggregates/aggregate-expansion-workflow-concept.html["Fluxo de trabalho de expansão agregado"]
-
+. Se você moveu os dados da prateleira e excluiu os agregados de dados, agora pode usar os discos sobressalentes na prateleira para criação ou expansão de agregados. Para saber mais sobre esses procedimentos, consulte o  https://docs.netapp.com/us-en/ontap/disks-aggregates/aggregate-creation-workflow-concept.html["Fluxo de trabalho de criação agregada"] e  https://docs.netapp.com/us-en/ontap/disks-aggregates/aggregate-expansion-workflow-concept.html["Fluxo de trabalho de expansão agregado"] .
 

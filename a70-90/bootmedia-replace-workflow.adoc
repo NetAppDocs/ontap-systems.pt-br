@@ -2,16 +2,20 @@
 permalink: a70-90/bootmedia-replace-workflow.html 
 sidebar: sidebar 
 keywords: aff a70, a90, replace the boot media 
-summary: Comece a substituir a Mídia de inicialização no sistema de armazenamento AFF A70 ou AFF A90 preparando a Mídia de substituição, instalando-a no sistema, restaurando a imagem de inicialização e verificando a funcionalidade do sistema. 
+summary: A recuperação manual da imagem de inicialização envolve o uso de uma unidade USB para reinstalar o ONTAP na mídia de inicialização de substituição do sistema AFF A70 ou AFF A90 . Você deve baixar a imagem de recuperação do ONTAP apropriada no site de suporte da NetApp e copiá-la para uma unidade USB. Essa unidade USB preparada é então usada para executar a recuperação e restaurar o sistema ao status operacional. 
 ---
-= Fluxo de trabalho de substituição de Mídia de inicialização - AFF A70 e AFF A90
+= Fluxo de trabalho de recuperação manual de mídia de inicialização - AFF A70 e AFF A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Comece a substituir a Mídia de inicialização em seu sistema de armazenamento AFF A70 ou AFF A90, revisando os requisitos de substituição, verificando o status da criptografia, desligando o controlador, substituindo a Mídia de inicialização, inicializando a imagem de recuperação, restaurando a criptografia e verificando a funcionalidade do sistema.
+A recuperação manual da imagem de inicialização envolve o uso de uma unidade USB para reinstalar o ONTAP na mídia de inicialização de substituição do sistema AFF A70 ou AFF A90 . Você deve baixar a imagem de recuperação do ONTAP apropriada no site de suporte da NetApp e copiá-la para uma unidade USB. Essa unidade USB preparada é então usada para executar a recuperação e restaurar o sistema ao status operacional.
+
+Se o seu sistema estiver executando o ONTAP 9.17.1 e posterior, use o link:bootmedia-replace-workflow-bmr.html["procedimento de recuperação de inicialização automática"] .
+
+Para começar, revise os requisitos de recuperação, desligue o controlador, substitua a mídia de inicialização, use a unidade USB para restaurar a imagem e reaplique as configurações de criptografia, se necessário.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"]link:bootmedia-replace-requirements.html["Reveja os requisitos para substituir o suporte de arranque"]
 [role="quick-margin-para"]
@@ -23,7 +27,7 @@ Determine se o sistema tem o gerenciador de chaves de segurança ativado ou disc
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"]link:bootmedia-shutdown.html["Desligue o controlador"]
 [role="quick-margin-para"]
-Desligue o controlador no sistema de armazenamento quando precisar substituir a Mídia de inicialização.
+Desligue o controlador quando precisar de substituir o suporte de arranque.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"]link:bootmedia-replace.html["Substitua o suporte de arranque"]
 [role="quick-margin-para"]
@@ -35,7 +39,7 @@ Inicie a imagem ONTAP a partir da unidade USB, restaure o sistema de ficheiros e
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Seis"]link:bootmedia-encryption-restore.html["Restaure a criptografia"]
 [role="quick-margin-para"]
-Restaure a configuração do gerenciador de chaves integrado ou o gerenciador de chaves externo no menu de inicialização do ONATP.
+Restaure a configuração do gerenciador de chaves integrado ou do gerenciador de chaves externo no menu de inicialização do ONTAP .
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png["Sete"]link:bootmedia-complete-rma.html["Devolva a peça com falha ao NetApp"]
 [role="quick-margin-para"]

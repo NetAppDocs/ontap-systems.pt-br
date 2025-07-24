@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: disk, shelves, shelf, iom12, module, single-controller, configuration, support, platform, sas, cabling, cable, rule, controller, shelf-to-shelf, connection, rule, controller-to-stack, mini-sas, hd, optical, cable, rule, sas cabling rules, iom12b, concepts 
 summary: 'Os compartimentos de disco com módulos IOM12/IOM12B podem ser cabeados em configurações de par de HA e controlador único (para plataformas compatíveis).' 
 ---
-= Regras e conceitos de cabeamento SAS - compartimentos com módulos IOM12/IOM12B
+= Regras e conceitos de cabeamento SAS - DS212C, DS224C ou DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,7 +14,7 @@ summary: 'Os compartimentos de disco com módulos IOM12/IOM12B podem ser cabeado
 Os compartimentos de disco com módulos IOM12/IOM12B podem ser cabeados em configurações de par de HA e controlador único (para plataformas compatíveis) aplicando as regras de cabeamento SAS: Regras de configuração, regras de numeração de slots de controladora, regras de conexão de gaveta a gaveta, regras de conexão de controladora a pilha e, se aplicável, regras de cabos óticos SAS HD mini-SAS.
 
 
-NOTE: As regras de cabeamento SAS relativas às regras de numeração de slots da controladora, regras de conexão de prateleira a prateleira e regras de conexão de controladora a pilha descritas neste guia são as mesmas regras que se aplicam a todas as gavetas de disco SAS, quer tenham módulos de IOM12/IOM12B, IOM6 ou IOM3. No entanto, as informações deste guia são específicas para as caraterísticas exclusivas das prateleiras de disco com módulos IOM12/IOM12B e seu uso em configurações compatíveis.
+NOTE: As regras de cabeamento SAS referentes às regras de numeração de slots de controlador, regras de conexão entre prateleiras e regras de conexão entre controladores e pilha descritas neste guia são as mesmas que se aplicam a todas as prateleiras de discos SAS, independentemente de terem módulos IOM12 ou IOM12B. No entanto, as informações neste guia são específicas para as características exclusivas das prateleiras de discos com módulos IOM12/IOM12B e seu uso em configurações compatíveis.
 
 As regras de cabeamento SAS relativas às regras de configuração e às regras de cabo ótico SAS HD mini-SAS descritas neste guia são específicas para as prateleiras de disco com módulos IOM12/IOM12B.
 
@@ -33,9 +33,6 @@ Você deve evitar desviar-se das regras; desvios podem reduzir a confiabilidade,
 == Regras de configuração
 
 Os compartimentos de disco com módulos IOM12/IOM12B são compatíveis com tipos específicos de par de HA e configurações de controlador único.
-
-
-NOTE: As plataformas FAS25XX não são abordadas neste conteúdo.
 
 [NOTE]
 ====

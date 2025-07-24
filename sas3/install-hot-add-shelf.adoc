@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: hot-add, disk, shelves, shelf, iom12, exist, stack, module, sas, hba, onboard, sas, port, controller, DS460C, transport DS460C, move DS460C, remove drives from DS460C, DS460C drive handling, iom12b 
 summary: Você pode adicionar sem desligamento uma ou mais gavetas de disco com módulos IOM12/IOM12B a uma stack existente de gavetas de disco com módulos IOM12/IOM12B ou adicionar uma stack de um ou mais compartimentos de disco com módulos IOM12/IOM12B diretamente a um HBA SAS ou a uma porta SAS integrada na controladora. 
 ---
-= Hot-adicione uma prateleira - prateleiras com módulos IOM12/IOM12B
+= Prateleiras de adição a quente - DS212C, DS224C ou DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,31 +13,17 @@ summary: Você pode adicionar sem desligamento uma ou mais gavetas de disco com 
 [role="lead"]
 Você pode adicionar sem desligamento uma ou mais gavetas de disco com módulos IOM12/IOM12B a uma stack existente de gavetas de disco com módulos IOM12/IOM12B ou adicionar uma stack de um ou mais compartimentos de disco com módulos IOM12/IOM12B diretamente a um HBA SAS ou a uma porta SAS integrada na controladora.
 
-.Sobre esta tarefa
-Você não pode usar este procedimento para misturar uma pilha: Adicionar uma gaveta com módulos IOM12/IOM12B a uma pilha de prateleiras que tem IOM6 módulos. Se você precisar misturar uma pilha, link:iom12-hot-add-mix.html["Adicione IOM12 gavetas quentes a uma stack de IOM6 gavetas"]use .
+.Antes de começar
+Você deve atender a determinados requisitos e se familiarizar com as melhores práticas e considerações para esse procedimento antes de adicionar prateleiras de disco a quente.
 
-
-
-== Requisitos para gavetas de disco hot-adding com módulos IOM12/IOM12B
-
-O sistema precisa atender a certos requisitos antes de adicionar gavetas de disco com módulos IOM12/IOM12B.
-
-
-
-=== Estado do seu sistema
-
-* Seu sistema e sua versão do ONTAP devem dar suporte às gavetas de disco que você está adicionando hot-adding, incluindo IOMs, unidades de disco e cabos SAS.
+* Certifique-se de que seu sistema atenda a determinados requisitos antes de adicionar prateleiras de disco com módulos IOM12/IOM12B:
 +
-https://hwu.netapp.com["NetApp Hardware Universe"^]
-
-* Seu sistema precisa ter menos do que o número máximo de unidades de disco suportadas, pelo menos o número de compartimentos de disco que você pretende adicionar a quente.
+** Seu sistema e a versão do ONTAP devem ser compatíveis com os compartimentos de disco que você está adicionando a quente, incluindo IOMs, unidades de disco e cabos SAS. Você pode ver qual versão do ONTAP precisa para seus compartimentos na seção  https://hwu.netapp.com["NetApp Hardware Universe"^] .
+** Seu sistema precisa ter menos do que o número máximo de unidades de disco suportadas, pelo menos o número de compartimentos de disco que você pretende adicionar a quente.
 +
-Você não pode ter excedido o número máximo de unidades de disco suportadas para o seu sistema após a adição de compartimentos de disco.
+Você não pode ter excedido o número máximo de unidades de disco suportadas pelo seu sistema após adicionar prateleiras de disco a quente. Você pode ver quantas prateleiras o seu sistema suporta na  https://hwu.netapp.com["NetApp Hardware Universe"^]
 
-+
-https://hwu.netapp.com["NetApp Hardware Universe"^]
-
-* Se você estiver adicionando uma stack de um ou mais compartimentos de disco (diretamente às controladoras da plataforma), seu sistema precisará ter portas SAS HBA PCI ou SAS integradas suficientes disponíveis ou uma combinação de ambos.
+** Se você estiver adicionando uma stack de um ou mais compartimentos de disco (diretamente às controladoras da plataforma), seu sistema precisará ter portas SAS HBA PCI ou SAS integradas suficientes disponíveis ou uma combinação de ambos.
 +
 [NOTE]
 ====
@@ -46,117 +32,76 @@ Se você precisar instalar um HBA SAS PCI adicional, a prática recomendada é u
 O uso de HBAs SAS de 6Gb GB ou uma combinação de HBAs SAS de 6Gb GB e HBAs SAS de 12GB GB é suportado; no entanto, conexões de módulo IOM12 com HBAs SAS de 6Gb GB são negociadas até 6Gbs GB, resultando em menor desempenho.
 
 ====
-* O sistema não pode ter mensagens de erro de cabeamento SAS.
+** O sistema não pode ter mensagens de erro de cabeamento SAS.
 +
-Faça o download e execute o Config Advisor para verificar se suas conexões SAS estão cabeadas corretamente.
+Verifique se suas conexões SAS estão cabeadas corretamente  https://mysupport.netapp.com/site/tools["baixando e executando o Config Advisor"^] .
 
 +
 Você deve corrigir quaisquer erros de cabeamento usando as ações corretivas fornecidas pelas mensagens de erro.
 
+
+
+* Familiarize-se com os requisitos e considerações para o uso de cabos ópticos mini-SAS HD SAS:
 +
-https://mysupport.netapp.com/site/tools["NetApp Downloads: Config Advisor"^]
-
-
-
-
-
-=== Usando cabos óticos mini-SAS HD SAS
-
-* Se você estiver usando cabos óticos mini-SAS HD SAS ou uma combinação de cabos óticos mini-SAS HD SAS e cabos de cobre SAS na pilha de gavetas de disco, você deve ter cumprido as regras em link:install-cabling-rules.html#mini-sas-hd-sas-optical-cable-rules["Regras de cabo ótico mini-SAS HD SAS"].
-* Se você estiver adicionando um compartimento de disco com cabos óticos SAS HD mini-SAS a uma stack de gavetas de disco que esteja conetada a cabos de cobre SAS, você poderá ter temporariamente os dois tipos de cabos na stack.
+** Se você estiver usando cabos óticos mini-SAS HD SAS ou uma combinação de cabos óticos mini-SAS HD SAS e cabos de cobre SAS na pilha de gavetas de disco, você deve ter cumprido as regras em link:install-cabling-rules.html#mini-sas-hd-sas-optical-cable-rules["Regras de cabo ótico mini-SAS HD SAS"].
+** Se você estiver adicionando um compartimento de disco com cabos óticos SAS HD mini-SAS a uma stack de gavetas de disco que esteja conetada a cabos de cobre SAS, você poderá ter temporariamente os dois tipos de cabos na stack.
 +
 Depois de adicionar o compartimento de disco a quente, você deve substituir os cabos de cobre SAS para o resto das conexões de prateleira a prateleira na stack e as conexões de controladora a stack de modo que a stack atenda às regras em link:install-cabling-rules.html#mini-sas-hd-sas-optical-cable-rules["Regras de cabo ótico mini-SAS HD SAS"]. Isso significa que você deve ter encomendado o número apropriado de cabos óticos mini-SAS HD SAS.
 
 
 
-
-
-== Considerações para gavetas de disco hot-adding com módulos IOM12/IOM12B
-
-Você deve se familiarizar com os aspetos e as práticas recomendadas sobre este procedimento antes de adicionar prateleiras de disco a quente.
-
-
-
-=== Considerações gerais
-
-* Se você estiver adicionando um compartimento de disco com módulos IOM12/IOM12B a uma pilha existente (de compartimentos de disco com módulos IOM12/IOM12B), você poderá adicionar o compartimento de disco à extremidade - o primeiro ou o último compartimento de disco lógico - da pilha.
+* Familiarize-se com as considerações gerais para concluir este procedimento:
++
+** Se você estiver adicionando um compartimento de disco com módulos IOM12/IOM12B a uma pilha existente (de compartimentos de disco com módulos IOM12/IOM12B), você poderá adicionar o compartimento de disco à extremidade - o primeiro ou o último compartimento de disco lógico - da pilha.
 +
 Para configurações de caminho único de HA e caminho único, conforme aplicável aos sistemas AFF A200, AFF A220, séries FAS2600 e FAS2700, você adiciona gavetas de disco hot-add ao fim da stack que não tem conexões de controladora.
 
-* Os compartimentos de disco com módulos IOM12/IOM12B devem estar em sua própria stack exclusiva. Eles não podem ser adicionados a uma stack que tenha compartimentos com IOM6 módulos ou IOM3 módulos.
-* Este procedimento pressupõe que sua configuração esteja usando o ACP na banda.
+** Prateleiras de disco com módulos IOM12/IOM12B devem estar em sua própria pilha exclusiva.
+** Este procedimento pressupõe que sua configuração esteja usando o ACP na banda.
 +
 Para configurações com o ACP na banda habilitado, o ACP na banda é ativado automaticamente em compartimentos de disco hot-Added. Para configurações em que o ACP na banda não está habilitado, os compartimentos de disco hot-Added operam sem qualquer funcionalidade ACP.
 
-* A consolidação de pilha sem interrupções não é suportada.
+** A consolidação de pilha sem interrupções não é suportada.
 +
 Você não pode usar este procedimento para adicionar gavetas de disco hot-removed de outra stack no mesmo sistema quando o sistema está ligado e fornecendo dados (e/S está em andamento).
 
 
 
-
-
-=== Considerações de práticas recomendadas
-
-* A prática recomendada é ter a versão atual do Pacote de Qualificação de disco (DQP) instalada antes de adicionar um compartimento de disco a quente.
+* *Melhor prática*: Certifique-se de que seu sistema pode reconhecer e utilizar unidades de disco recém-qualificadas  https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["baixando a versão atual do Pacote de Qualificação de Disco (DQP)"^] .
 +
-Ter a versão atual do DQP instalada permite que seu sistema reconheça e utilize unidades de disco recém-qualificadas; portanto, evitando mensagens de eventos do sistema sobre ter informações de unidades de disco não atuais. Você também evita a possível prevenção do particionamento de disco porque as unidades de disco não são reconhecidas. O DQP também notifica você sobre firmware de unidade de disco não atual.
+Isso permite evitar mensagens de eventos do sistema sobre informações de unidade de disco desatualizadas. Você também evita a possível interrupção do particionamento do disco devido ao não reconhecimento das unidades de disco. O DQP notifica você sobre firmware de unidade de disco desatualizado.
 
-+
-https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["NetApp Downloads: Pacote de Qualificação de disco"^]
-
-* A prática recomendada é executar o Config Advisor antes e depois de adicionar um compartimento de disco a quente.
-+
-Executar o Config Advisor antes de adicionar um compartimento de disco a quente fornece um snapshot da conectividade SAS, verifica versões de firmware da gaveta de disco (IOM) e permite verificar as IDs de gaveta que já estão em uso no sistema. Executar o Config Advisor após adicionar um compartimento de disco a quente permite verificar se as conexões SAS são cabeadas corretamente e se as IDs de gaveta são exclusivas no par de HA ou na configuração de controladora única.
-
+* *Melhor prática*: Verifique as versões de firmware do rack de disco (IOM), as IDs de rack já em uso pelo seu sistema e obtenha um instantâneo da conectividade SAS por  https://mysupport.netapp.com/site/tools["baixando e executando o Config Advisor"^] antes de adicionar uma prateleira de disco a quente. Você também deve verificar se as conexões SAS estão cabeadas corretamente e se os IDs de prateleira são exclusivos dentro do par HA ou da configuração de controlador único, executando o Config Advisor após adicionar uma prateleira de disco a quente.
 +
 Se forem gerados erros de cabeamento SAS ou ID de gaveta duplicados, siga as ações corretivas fornecidas.
 
 +
 Você precisa de acesso à rede para baixar o Config Advisor.
 
+* *Prática recomendada*: Certifique-se de que seu sistema tenha as versões atuais do firmware da prateleira de disco (IOM) e do firmware da unidade de disco antes de adicionar novas prateleiras de disco, componentes de FRU de prateleira ou cabos SAS. Você pode visitar o site de suporte da NetApp para  https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["baixar firmware da prateleira de disco"] e  https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["baixar firmware da unidade de disco"] .
+* Familiarize-se com as considerações para o manuseio adequado de cabos SAS:
 +
-https://mysupport.netapp.com/site/tools["NetApp Downloads: Config Advisor"^]
-
-* A prática recomendada é ter as versões atuais do firmware da gaveta de disco (IOM) e das unidades de disco em seu sistema antes de adicionar novas gavetas de disco, componentes de FRU de gaveta ou cabos SAS.
-+
-As versões atuais do firmware podem ser encontradas no site de suporte da NetApp.
-
-+
-https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["Downloads do NetApp: Firmware da gaveta de disco"^]
-
-+
-https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["Downloads do NetApp: Firmware da unidade de disco"^]
-
-
-
-
-
-=== Considerações sobre manuseio de cabos SAS
-
-* Inspecione visualmente a porta SAS para verificar a orientação adequada do conetor antes de conectá-lo.
+** Inspecione visualmente a porta SAS para verificar a orientação adequada do conetor antes de conectá-lo.
 +
 Os conetores do cabo SAS são chaveados. Quando orientado corretamente para uma porta SAS, o conetor clica no lugar e, se a energia do compartimento de disco estiver ligada na altura, o LED LNK da porta SAS do compartimento de disco acende-se a verde. Para compartimentos de disco, você insere um conetor de cabo SAS com a aba de puxar orientada para baixo (na parte inferior do conetor).
 
 +
 Para controladores, a orientação das portas SAS pode variar dependendo do modelo da plataforma; portanto, a orientação correta do conetor do cabo SAS varia.
 
-* Para evitar um desempenho degradado, não torça, dobre, aperte ou pise nos cabos.
+** Para evitar um desempenho degradado, não torça, dobre, aperte ou pise nos cabos.
 +
 Os cabos têm um raio de curvatura mínimo. As especificações do fabricante do cabo definem o raio mínimo da curvatura; contudo, uma diretriz geral para o raio mínimo da curvatura é 10 vezes o diâmetro do cabo.
 
-* O uso de envoltórios de velcro em vez de amarras para agrupar e fixar os cabos do sistema permite ajustes mais fáceis dos cabos.
+** O uso de envoltórios de velcro em vez de amarras para agrupar e fixar os cabos do sistema permite ajustes mais fáceis dos cabos.
 
 
-
-
-=== Considerações sobre o manuseio da unidade DS460C
-
-* As unidades são empacotadas separadamente do chassi da gaveta.
+* Familiarize-se com as considerações para o manuseio adequado das unidades DS460C:
++
+** As unidades são empacotadas separadamente do chassi da gaveta.
 +
 Você deve fazer o inventário das unidades.
 
-* Depois de descompactar as unidades, você deve salvar os materiais de embalagem para uso futuro.
+** Depois de descompactar as unidades, você deve salvar os materiais de embalagem para uso futuro.
 +
 
 CAUTION: *Possível perda de acesso aos dados:* se, no futuro, você mover a prateleira para uma parte diferente do data center ou transportar a prateleira para um local diferente, você precisa remover as unidades das gavetas da unidade para evitar possíveis danos às gavetas e unidades da unidade.
@@ -165,7 +110,7 @@ CAUTION: *Possível perda de acesso aos dados:* se, no futuro, você mover a pra
 
 NOTE: Mantenha as unidades de disco em seu saco ESD até que você esteja pronto para instalá-las.
 
-* Ao manusear as unidades, utilize sempre uma pulseira antiestática ligada à terra a uma superfície não pintada no chassis do compartimento de armazenamento para evitar descargas estáticas.
+** Ao manusear as unidades, utilize sempre uma pulseira antiestática ligada à terra a uma superfície não pintada no chassis do compartimento de armazenamento para evitar descargas estáticas.
 +
 Se uma pulseira não estiver disponível, toque numa superfície não pintada no chassis do compartimento de armazenamento antes de manusear a unidade de disco.
 
@@ -173,7 +118,9 @@ Se uma pulseira não estiver disponível, toque numa superfície não pintada no
 
 
 
-== Instale as gavetas de disco com módulos IOM12/IOM12B para adicionar rapidamente
+
+
+== Etapa 1: instalar prateleiras de disco para uma adição a quente
 
 Para cada compartimento de disco adicionado a quente, instale o compartimento de disco em um rack, conete os cabos de energia, ligue o compartimento de disco e defina o ID do compartimento de disco antes de fazer o cabeamento das conexões SAS.
 
@@ -192,20 +139,17 @@ NOTE: Não coloque a prateleira de disco em um rack de telecomunicações; o pes
 Para tornar um compartimento de disco mais leve e fácil de manobrar, remova as fontes de alimentação e os módulos de e/S (IOMs).
 
 +
-Para gavetas de disco de DS460C TB, embora as unidades sejam embaladas separadamente, o que torna a prateleira mais leve, uma prateleira vazia de DS460C kg ainda pesa aproximadamente 132 lb (60kg lb); portanto, tenha o seguinte cuidado ao mover uma prateleira.
+
+CAUTION: Embora as unidades nas prateleiras do DS460C sejam embaladas separadamente, o que torna a prateleira mais leve, uma prateleira vazia ainda pesa aproximadamente 60 kg. Recomenda-se o uso de um elevador mecânico ou quatro pessoas usando as alças do elevador para mover com segurança uma prateleira vazia do DS460C.
 
 +
-
-CAUTION: Recomenda-se que utilize um elevador mecanizado ou quatro pessoas utilizando as pegas de elevação para mover com segurança uma prateleira DS460C vazia.
-
-+
-A sua remessa DS460C foi embalada com quatro alças de elevação destacáveis (duas para cada lado). Para utilizar as pegas de elevação, instale-as inserindo as patilhas das pegas nas ranhuras laterais da prateleira e empurrando-as para cima até encaixarem no lugar. Em seguida, ao deslizar a prateleira do disco para os trilhos, você descola um conjunto de alças de cada vez usando o trinco do polegar. A ilustração a seguir mostra como conetar uma alça de elevação.
+A sua remessa do DS460C inclui quatro alças de elevação removíveis (duas para cada lado). Para usar as alças de elevação, instale-as inserindo as abas das alças nas ranhuras laterais da prateleira e empurrando para cima até que se encaixem no lugar. Em seguida, ao deslizar a prateleira de discos sobre os trilhos, solte um conjunto de alças de cada vez usando a trava de polegar. A ilustração a seguir mostra como prender uma alça de elevação.
 
 +
 image::../media/drw_ds460c_handles.gif[Instalar as pegas de elevação]
 
 . Reinstale todas as fontes de alimentação e IOMs removidas antes de instalar o compartimento de disco no rack.
-. Se você estiver instalando um compartimento de disco DS460C, instale as unidades nas gavetas da unidade; caso contrário, vá para a próxima etapa.
+. Se estiver instalando uma prateleira de discos DS460C, instale as unidades nas gavetas. Caso contrário, prossiga para a próxima etapa.
 +
 [NOTE]
 ====
@@ -215,7 +159,7 @@ Se uma pulseira não estiver disponível, toque numa superfície não pintada no
 
 ====
 +
-Se você adquiriu um compartimento parcialmente preenchido, o que significa que o compartimento tem menos de 60 unidades compatíveis, para cada gaveta, instale as unidades da seguinte forma:
+Se você comprou uma prateleira parcialmente preenchida, ou seja, a prateleira tem menos de 60 unidades que ela suporta, instale as unidades da seguinte maneira em cada gaveta:
 
 +
 ** Instale as primeiras quatro unidades nos slots dianteiros (0, 3, 6 e 9).
@@ -254,21 +198,11 @@ Botão levantado no lado direito do suporte da transmissão
 +
 Você deve ter certeza de que os slots 0, 3, 6 e 9 em cada gaveta contêm unidades.
 
-... Empurre cuidadosamente a gaveta da unidade de volta para dentro do compartimento.
+... Empurre cuidadosamente a gaveta da unidade de volta para o gabinete. +s image:../media/2860_dwg_e2860_de460c_gentle_close.gif["Fechar cuidadosamente a gaveta"]
 +
-|===
-
-
- a| 
-image:../media/2860_dwg_e2860_de460c_gentle_close.gif["Fechar cuidadosamente a gaveta"]
-
-
-
- a| 
 
 CAUTION: *Possível perda de acesso aos dados:* nunca bata a gaveta fechada. Empurre a gaveta lentamente para dentro para evitar estressar a gaveta e causar danos à matriz de armazenamento.
 
-|===
 ... Feche a gaveta da unidade empurrando ambas as alavancas em direção ao centro.
 ... Repita estas etapas para cada gaveta na gaveta de disco.
 ... Fixe a moldura frontal.
@@ -288,7 +222,7 @@ CAUTION: *Possível perda de acesso aos dados:* nunca bata a gaveta fechada. Emp
 Se você tiver um modelo de plataforma com um compartimento de disco interno, as IDs de gaveta deverão ser exclusivas em todo o compartimento de disco interno e nas gavetas de disco com conexão externa.
 
 +
-Você pode usar as seguintes subetapas para alterar IDs de gaveta ou para obter instruções mais detalhadas, use link:install-change-shelf-id.html["Alterar o ID de um compartimento"^]o .
+Você pode usar as seguintes subetapas para alterar os IDs das prateleiras. Para obter instruções mais detalhadas, use link:install-change-shelf-id.html["Alterar o ID de um compartimento"^] .
 
 +
 .. Se necessário, verifique as IDs de gaveta que já estão em uso executando o Config Advisor.
@@ -311,12 +245,9 @@ O ID do compartimento pisca e o LED âmbar do painel do operador pisca até liga
 
 
 
-== Prateleiras de disco de cabo com módulos IOM12/IOM12B para adicionar quente
+== Etapa 2: Prateleiras de disco de cabos para uma adição a quente
 
 Você faz o cabeamento das conexões SAS (de gaveta a gaveta e de controladora a stack), conforme aplicável às gavetas de disco hot-Added, de modo que elas tenham conectividade com o sistema.
-
-.Antes de começar
-Você precisa atender aos requisitos link:install-hot-add-shelf.html#requirements-for-hot-adding-disk-shelves-with-iom12iom12b-modules["Requisitos para gavetas de disco hot-adding com IOM12 módulos"]e instalar, ativar e definir as IDs de gaveta para cada compartimento de disco, conforme as instruções link:install-hot-add-shelf.html#install-disk-shelves-with-iom12iom12b-modules-for-a-hot-add["Instale as gavetas de disco com IOM12 módulos para adicionar rapidamente"]na .
 
 .Sobre esta tarefa
 * Para obter uma explicação e exemplos de cabeamento "padrão" de prateleira a prateleira e cabeamento "amplo" de prateleira a prateleira, link:install-cabling-rules.html#shelf-to-shelf-connection-rules["Regras de conexão SAS de prateleira a prateleira"]consulte .
@@ -326,6 +257,10 @@ Você precisa atender aos requisitos link:install-hot-add-shelf.html#requirement
 
 NOTE: As atualizações de firmware podem levar até 30 minutos.
 
+
+
+.Antes de começar
+* Você deve ter cumprido os requisitos para concluir este procedimento no <<before_you_begin,Antes de começar>> seção e instalou, ligou e definiu IDs de prateleira para cada prateleira de disco conforme as instruções em <<install_disk_shelves_for_a_hot_add,Instale as gavetas de disco com IOM12 módulos para adicionar rapidamente>> .
 
 
 .Passos
@@ -441,15 +376,12 @@ Essas instruções são para adição automática ao final da pilha que não tem
 |===
 . Se você adicionou uma gaveta de disco com cabos óticos SAS HD mini-SAS a uma stack de gavetas de disco conetadas a cabos de cobre SAS, substitua os cabos de cobre SAS; caso contrário, vá para a próxima etapa.
 +
-A pilha deve cumprir os requisitos indicados na <<Requisitos para gavetas de disco hot-adding com módulos IOM12/IOM12B>> secção deste procedimento.
+A pilha deve atender aos requisitos estabelecidos no <<before_you_begin,Antes de começar>> seção deste procedimento.
 
 +
 Substitua os cabos um de cada vez e certifique-se de que espera pelo menos 70 segundos entre desligar um cabo e ligar um novo.
 
-. Faça o download e execute o Config Advisor para verificar se suas conexões SAS estão cabeadas corretamente.
-+
-https://mysupport.netapp.com/site/tools["NetApp Downloads: Config Advisor"^]
-
+. Verifique se suas conexões SAS estão cabeadas corretamente  https://mysupport.netapp.com/site/tools["baixando e executando o Config Advisor"^] .
 +
 Se algum erro de cabeamento SAS for gerado, siga as ações corretivas fornecidas.
 
@@ -512,11 +444,11 @@ Na saída, "in-band" é listado como "ativo" para cada nó.
 
 
 
-== Mova ou transporte DS460C prateleiras
+== (Opcional) Etapa 3: mover ou transportar as prateleiras do DS460C
 
-Se, no futuro, você mover DS460C gavetas para uma parte diferente do data center ou transportar as gavetas para um local diferente, precisará remover as unidades das gavetas da unidade para evitar possíveis danos às gavetas e unidades da unidade.
+Se no futuro você mover as prateleiras do DS460C para uma parte diferente do data center ou transportar as prateleiras para um local diferente, será necessário remover as unidades das gavetas para evitar possíveis danos às gavetas e unidades.
 
-* Se, ao instalar DS460C gavetas como parte do hot-add de gaveta, você salvou os materiais de embalagem da unidade, use-os para reempacotar as unidades antes de movê-las.
+* Se você guardou os materiais de embalagem da unidade quando instalou as prateleiras DS460C como parte da instalação a quente da prateleira, use-os para reembalar as unidades antes de movê-las.
 +
 Se você não salvou os materiais de embalagem, você deve colocar drives em superfícies almofadadas ou usar embalagens almofadadas alternativas. Nunca empilhar unidades umas sobre as outras.
 

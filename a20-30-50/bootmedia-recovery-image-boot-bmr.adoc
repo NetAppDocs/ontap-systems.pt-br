@@ -1,0 +1,390 @@
+---
+permalink: a20-30-50/bootmedia-recovery-image-boot-bmr.html 
+sidebar: sidebar 
+keywords: aff a20, aff a30, aff a50, boot the recovery image 
+summary: Depois de instalar o novo dispositivo de mídia de inicialização no seu sistema de armazenamento AFF A20, AFF A30 ou AFF A50, você pode iniciar o processo automatizado de recuperação de mídia de inicialização para restaurar a configuração do nó parceiro. 
+---
+= Recuperação automatizada de mídia de inicialização do nó parceiro - AFF A20, AFF A30 e AFF A50
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Após instalar o novo dispositivo de mídia de inicialização no seu sistema de armazenamento AFF A20, AFF A30 ou AFF A50, você pode iniciar o processo automatizado de recuperação de mídia de inicialização para restaurar a configuração do nó parceiro. Durante o processo de recuperação, o sistema verifica se a criptografia está habilitada e determina o tipo de criptografia de chave em uso. Se a criptografia de chave estiver habilitada, o sistema o guiará pelas etapas apropriadas para restaurá-la.
+
+O processo automatizado de recuperação de mídia de inicialização é compatível apenas com o ONTAP 9.17.1 e versões posteriores. Se o seu sistema de armazenamento estiver executando uma versão anterior do ONTAP, use o link:bootmedia-replace-workflow.html["procedimento de recuperação de inicialização manual"] .
+
+.Antes de começar
+* Para OKM, você precisa do conteúdo do arquivo de senha OKM.
+* Para EKM, você precisa de cópias dos seguintes arquivos do nó do parceiro:
++
+** arquivo /cfcard/kmip/servers.cfg.
+** arquivo /cfcard/kmip/certs/client.crt.
+** arquivo /cfcard/kmip/certs/client.key.
+** Arquivo /cfcard/kmip/certs/CA.pem.
+
+
+
+
+.Passos
+. No prompt Loader, digite o comando:
++
+`boot_recovery -partner`
+
++
+O ecrã apresenta a seguinte mensagem:
+
++
+`Starting boot media recovery (BMR) process. Press Ctrl-C to abort…`
+
+. Monitore o processo de recuperação de instalação de Mídia de inicialização.
++
+O processo é concluído e exibe a `Installation complete` mensagem.
+
+. O sistema verifica se há criptografia e tipo de criptografia e exibe uma de duas mensagens. Dependendo da mensagem exibida, execute uma das seguintes ações:
++
+
+IMPORTANT: Ocasionalmente, o processo pode não ser capaz de identificar se o gerenciador de chaves está configurado no sistema. Ele exibirá uma mensagem de erro, perguntará se o gerenciador de chaves está configurado para o sistema e perguntará qual tipo de gerenciador de chaves está configurado. O processo será retomado depois de resolver o problema.
+
++
+.Mostrar exemplo de prompts de localização de erros de configuração
+[%collapsible]
+====
+....
+Error when fetching key manager config from partner ${partner_ip}: ${status}
+
+Has key manager been configured on this system
+
+Is the key manager onboard
+
+....
+====
++
+[cols="1,2"]
+|===
+| Se você vir esta mensagem... | Faça isso... 
+
+
+ a| 
+`key manager is not configured. Exiting.`
+ a| 
+A criptografia não está instalada no sistema. Execute as seguintes etapas:
+
+.. Faça login no nó quando o prompt de login for exibido e devolva o armazenamento:
++
+`storage failover giveback -ofnode _impaired_node_name_`
+
+.. Vá para o passo 5 para ativar o giveback automático se ele foi desativado.
+
+
+
+
+ a| 
+`key manager is configured.`
+ a| 
+Vá para a etapa 4 para restaurar o gerenciador de chaves apropriado.
+
+O nó acessa o menu de inicialização e executa:
+
+** Opção 10 para sistemas com OKM (Onboard Key Manager).
+** Opção 11 para sistemas com o External Key Manager (EKM).
+
+
+|===
+. Selecione o processo de restauração apropriado do gerenciador de chaves.
++
+[role="tabbed-block"]
+====
+.Gerenciador de chaves integrado (OKM)
+--
+Se OKM for detetado, o sistema exibirá a seguinte mensagem e começará a executar a opção BootMenu 10.
+
+....
+key manager is configured.
+Entering Bootmenu Option 10...
+
+This option must be used only in disaster recovery procedures. Are you sure? (y or n):
+....
+.. Digite `Y` no prompt para confirmar que deseja iniciar o processo de recuperação OKM.
+.. Digite a senha do gerenciador de chaves integrado quando solicitado e digite a senha novamente quando solicitado, para confirmar.
++
+.Mostrar exemplo de prompts de frase-passe
+[%collapsible]
+=====
+....
+Enter the passphrase for onboard key management:
+Enter the passphrase again to confirm:
+Enter the backup data:
+-----BEGIN PASSPHRASE-----
+<passphrase_value>
+-----END PASSPHRASE-----
+....
+=====
+.. Continue a monitorar o processo de recuperação à medida que restaura os arquivos apropriados do nó do parceiro.
++
+Quando o processo de recuperação estiver concluído, o nó será reiniciado. As seguintes mensagens indicam uma recuperação bem-sucedida:
+
++
+....
+Trying to recover keymanager secrets....
+Setting recovery material for the onboard key manager
+Recovery secrets set successfully
+Trying to delete any existing km_onboard.keydb file.
+
+Successfully recovered keymanager secrets.
+....
+.. Quando o nó for reiniciado, verifique se a recuperação da Mídia de inicialização foi bem-sucedida, confirmando que o sistema está novamente on-line e operacional.
+.. Volte a colocar o controlador afetado em funcionamento normal, devolvendo o respetivo armazenamento:
++
+`storage failover giveback -ofnode _impaired_node_name_`
+
+.. Depois que o nó do parceiro estiver totalmente ativo e fornecendo dados, sincronize as chaves OKM no cluster.
++
+`security key-manager onboard sync`
+
+
+
+--
+.Gerenciador de chaves externo (EKM)
+--
+Se o EKM for detetado, o sistema exibirá a seguinte mensagem e começará a executar a opção BootMenu 11.
+
+....
+key manager is configured.
+Entering Bootmenu Option 11...
+....
+.. A próxima etapa depende de qual versão do ONTAP seu sistema está sendo executado:
++
+[cols="1,2"]
+|===
+| Se o seu sistema estiver em execução... | Faça isso... 
+
+
+ a| 
+ONTAP 9.16,0
+ a| 
+... Prima `Ctlr-C` para sair da opção BootMenu 11.
+... Prima `Ctlr-C` para sair do processo de configuração do EKM e regressar ao menu de arranque.
+... Selecione a opção BootMenu 8.
+... Reinicie o nó.
++
+Se `AUTOBOOT` estiver definido, o nó reinicializa e usa os arquivos de configuração do nó do parceiro.
+
++
+Se `AUTOBOOT` não estiver definido, insira o comando de inicialização apropriado. O nó reinicializa e usa os arquivos de configuração do nó do parceiro.
+
+... Reinicie o nó para que o EKM proteja a partição de Mídia de inicialização.
+... Avance para o passo c..
+
+
+
+
+ a| 
+ONTAP 9.16,1
+ a| 
+Avance para o passo seguinte.
+
+|===
+.. Introduza a seguinte definição de configuração do EKM quando solicitado:
++
+[cols="2"]
+|===
+| Ação | Exemplo 
+
+
+ a| 
+Introduza o conteúdo do certificado do cliente a partir do `/cfcard/kmip/certs/client.crt` ficheiro.
+ a| 
+.Mostrar exemplo de conteúdo do certificado do cliente
+[%collapsible]
+=====
+....
+-----BEGIN CERTIFICATE-----
+<certificate_value>
+-----END CERTIFICATE-----
+....
+=====
+
+
+ a| 
+Introduza o conteúdo do ficheiro de chave do cliente a partir do `/cfcard/kmip/certs/client.key` ficheiro.
+ a| 
+.Mostrar exemplo de conteúdo do arquivo chave do cliente
+[%collapsible]
+=====
+....
+-----BEGIN RSA PRIVATE KEY-----
+<key_value>
+-----END RSA PRIVATE KEY-----
+....
+=====
+
+
+ a| 
+Insira o conteúdo do arquivo de CA(s) do servidor KMIP do `/cfcard/kmip/certs/CA.pem` arquivo.
+ a| 
+.Mostrar exemplo de conteúdo do arquivo do servidor KMIP
+[%collapsible]
+=====
+....
+-----BEGIN CERTIFICATE-----
+<KMIP_certificate_CA_value>
+-----END CERTIFICATE-----
+....
+=====
+
+
+ a| 
+Introduza o conteúdo do ficheiro de configuração do servidor a partir do `/cfcard/kmip/servers.cfg` ficheiro.
+ a| 
+.Mostrar exemplo de conteúdo do arquivo de configuração do servidor
+[%collapsible]
+=====
+....
+xxx.xxx.xxx.xxx:5696.host=xxx.xxx.xxx.xxx
+xxx.xxx.xxx.xxx:5696.port=5696
+xxx.xxx.xxx.xxx:5696.trusted_file=/cfcard/kmip/certs/CA.pem
+xxx.xxx.xxx.xxx:5696.protocol=KMIP1_4
+1xxx.xxx.xxx.xxx:5696.timeout=25
+xxx.xxx.xxx.xxx:5696.nbio=1
+xxx.xxx.xxx.xxx:5696.cert_file=/cfcard/kmip/certs/client.crt
+xxx.xxx.xxx.xxx:5696.key_file=/cfcard/kmip/certs/client.key
+xxx.xxx.xxx.xxx:5696.ciphers="TLSv1.2:kRSA:!CAMELLIA:!IDEA:!RC2:!RC4:!SEED:!eNULL:!aNULL"
+xxx.xxx.xxx.xxx:5696.verify=true
+xxx.xxx.xxx.xxx:5696.netapp_keystore_uuid=<id_value>
+....
+=====
+
+
+ a| 
+Se solicitado, insira o UUUID do cluster do ONTAP do parceiro.
+ a| 
+.Mostrar exemplo de UUUID de cluster do ONTAP
+[%collapsible]
+=====
+....
+Notice: bootarg.mgwd.cluster_uuid is not set or is empty.
+Do you know the ONTAP Cluster UUID? {y/n} y
+Enter the ONTAP Cluster UUID: <cluster_uuid_value>
+
+
+System is ready to utilize external key manager(s).
+....
+=====
+
+
+ a| 
+Se solicitado, insira a interface de rede temporária e as configurações do nó.
+ a| 
+.Mostrar exemplo de uma configuração de rede temporária
+[%collapsible]
+=====
+....
+In order to recover key information, a temporary network interface needs to be
+configured.
+
+Select the network port you want to use (for example, 'e0a')
+e0M
+
+Enter the IP address for port : xxx.xxx.xxx.xxx
+Enter the netmask for port : xxx.xxx.xxx.xxx
+Enter IP address of default gateway: xxx.xxx.xxx.xxx
+Trying to recover keys from key servers....
+[discover_versions]
+[status=SUCCESS reason= message=]
+....
+=====
+|===
+.. Dependendo se a chave for restaurada com sucesso, execute uma das seguintes ações:
++
+*** Se a configuração do EKM tiver sido restaurada com sucesso, o processo tentará restaurar os arquivos apropriados do nó do parceiro e reiniciará o nó. Vá para o passo d..
++
+.Mostrar exemplo de mensagens de restauração 9.16.0 bem-sucedidas
+[%collapsible]
+=====
+....
+
+kmip2_client: Importing keys from external key server: xxx.xxx.xxx.xxx:5696
+[Feb  6 04:57:43]: 0x80cc09000: 0: DEBUG: kmip2::kmipCmds::KmipLocateCmdUtils: [locateMrootAkUuids]:420: Locating local cluster MROOT-AK with keystore UUID: <uuid>
+[Feb  6 04:57:43]: 0x80cc09000: 0: DEBUG: kmip2::kmipCmds::KmipLocateCmdBase: [doCmdImp]:79: Calling KMIP Locate for the following attributes: [<x-NETAPP-ClusterId, <uuid>>, <x-NETAPP-KeyUsage, MROOT-AK>, <x-NETAPP-KeystoreUuid, <uuid>>, <x-NETAPP-Product, Data ONTAP>]
+[Feb  6 04:57:44]: 0x80cc09000: 0: DEBUG: kmip2::kmipCmds::KmipLocateCmdBase: [doCmdImp]:84: KMIP Locate executed successfully!
+[Feb  6 04:57:44]: 0x80cc09000: 0: DEBUG: kmip2::kmipCmds::KmipLocateCmdBase: [setUuidList]:50: UUID returned: <uuid>
+...
+kmip2_client: Successfully imported the keys from external key server: xxx.xxx.xxx.xxx:5696
+
+GEOM_ELI: Device nvd0s4.eli created.
+GEOM_ELI: Encryption: AES-XTS 256
+GEOM_ELI:     Crypto: software
+Feb 06 05:02:37 [_server-name_]: crypto_get_mroot_ak:140 MROOT-AK is requested.
+Feb 06 05:02:37 [_server-name_]: crypto_get_mroot_ak:162 Returning MROOT-AK.
+....
+=====
++
+.Mostrar exemplo de mensagens de restauração 9.16.1 bem-sucedidas
+[%collapsible]
+=====
+....
+
+System is ready to utilize external key manager(s).
+Trying to recover keys from key servers....
+[discover_versions]
+[status=SUCCESS reason= message=]
+...
+kmip2_client: Successfully imported the keys from external key server: xxx.xxx.xxx.xxx:xxxx
+Successfully recovered keymanager secrets.
+....
+=====
+*** Se a chave não for restaurada com êxito, o sistema irá parar e indicar que não foi possível restaurar a chave. As mensagens de erro e aviso são apresentadas. Execute novamente o processo de recuperação:
++
+`boot_recovery -partner`
+
++
+.Mostrar exemplo de mensagens de aviso e erro de recuperação de chave
+[%collapsible]
+=====
+....
+
+ERROR: kmip_init: halting this system with encrypted mroot...
+WARNING: kmip_init: authentication keys might not be available.
+********************************************************
+*                 A T T E N T I O N                    *
+*                                                      *
+*       System cannot connect to key managers.         *
+*                                                      *
+********************************************************
+ERROR: kmip_init: halting this system with encrypted mroot...
+.
+Terminated
+
+Uptime: 11m32s
+System halting...
+
+LOADER-B>
+....
+=====
+
+
+.. Quando o nó for reiniciado, verifique se a recuperação da Mídia de inicialização foi bem-sucedida, confirmando que o sistema está novamente on-line e operacional.
+.. Volte a colocar o controlador em funcionamento normal, devolvendo o respetivo armazenamento:
++
+`storage failover giveback -ofnode _impaired_node_name_`
+
+
+
+--
+====
+
+
+. Se a giveback automática foi desativada, reative-a:
++
+`storage failover modify -node local -auto-giveback true`
+
+. Se o AutoSupport estiver ativado, restaure a criação automática de casos:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
+
+
+.O que vem a seguir
+Depois de restaurar a imagem ONTAP e o nó estiver ativo e fornecendo dados, link:bootmedia-complete-rma-bmr.html["Devolva a peça com falha ao NetApp"]você .

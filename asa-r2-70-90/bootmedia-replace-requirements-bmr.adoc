@@ -11,19 +11,25 @@ summary: Antes de substituir o suporte de arranque no sistema ASA A70 ou A90, ce
 
 
 [role="lead"]
-Antes de substituir o suporte de arranque no sistema ASA A70 ou ASA A90, certifique-se de que cumpre os requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se você tem a Mídia de inicialização de substituição correta, confirmar que não há portas de cluster com defeito no controlador e determinar se o Onboard Key Manager (OKM) ou o External Key Manager (EKM) está habilitado.
+Antes de substituir a mídia de inicialização no seu sistema ASA A70 ou ASA A90, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se você possui a mídia de inicialização de substituição correta, confirmar se as portas do cluster no controlador danificado estão funcionando corretamente e determinar se o Gerenciador de Chaves Onboard (OKM) ou o Gerenciador de Chaves Externas (EKM) está habilitado.
 
 Reveja os seguintes requisitos.
 
 * Tem de substituir o suporte de arranque com falha por um suporte de arranque de substituição que recebeu do NetApp.
-* Não deve haver portas do cluster defeituosas no controlador prejudicado.
+* As portas do cluster são usadas para comunicação entre os dois controladores durante o processo de recuperação de inicialização automatizada. Certifique-se de que as portas do cluster no controlador afetado estejam funcionando corretamente.
 * Para OKM, você precisa do conteúdo do arquivo de senha OKM.
 * Para EKM, você precisa de cópias dos seguintes arquivos do nó do parceiro:
 +
-** arquivo /cfcard/kmip/servers.cfg.
-** arquivo /cfcard/kmip/certs/client.crt.
-** arquivo /cfcard/kmip/certs/client.key.
-** Arquivo /cfcard/kmip/certs/CA.pem.
+** /cfcard/kmip/servers.cfg
+** /cfcard/kmip/certs/client.crt
+** /cfcard/kmip/certs/client.key
+** /cfcard/kmip/certs/CA.pem
+
+
+* É fundamental aplicar os comandos ao controlador correto ao substituir a mídia de inicialização danificada:
++
+** O _controlador danificado_ é o controlador no qual você está executando a manutenção.
+** O _controlador saudável_ é o parceiro HA do controlador prejudicado.
 
 
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a1k, replace the boot media 
 summary: Antes de substituir o suporte de arranque no sistema AFF A1K, certifique-se de que cumpre os requisitos necessários para uma substituição bem-sucedida. Isso inclui garantir que você tenha uma unidade flash USB com a quantidade adequada de armazenamento e verificar se você tem o dispositivo de inicialização de substituição correto. 
 ---
-= Requisitos para substituir o suporte de arranque - AFF A1K
+= Requisitos para recuperação manual de mídia de inicialização - AFF A1K
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,17 +13,22 @@ summary: Antes de substituir o suporte de arranque no sistema AFF A1K, certifiqu
 [role="lead"]
 Antes de substituir o suporte de arranque no sistema AFF A1K, certifique-se de que cumpre os requisitos necessários para uma substituição bem-sucedida. Isso inclui garantir que você tenha uma unidade flash USB com a quantidade adequada de armazenamento e verificar se você tem o dispositivo de inicialização de substituição correto.
 
-Reveja os seguintes requisitos.
-
-* Tem de ter uma unidade flash USB, formatada para FAT32, com a quantidade de armazenamento adequada para guardar o `image_xxx.tgz` ficheiro.
-* Você deve copiar o `image_xxx.tgz` arquivo para a unidade flash USB para uso posterior neste procedimento.
-* Você deve substituir o componente com falha por um componente de substituição que recebeu o NetApp.
-* É importante que você aplique os comandos nestas etapas no controlador correto:
-+
-** O controlador _prejudicado_ é o controlador no qual você está realizando a manutenção.
-** O controlador _Healthy_ é o parceiro de HA do controlador prejudicado.
+.Pen drive USB
+* Certifique-se de ter uma unidade flash USB formatada para FAT32.
+* O USB deve ter capacidade de armazenamento suficiente para armazenar o  `image_xxx.tgz` arquivo.
 
 
+.Preparação do arquivo
+Copie o  `image_xxx.tgz` arquivo para o pen drive USB. Este arquivo será usado quando você transferir a imagem ONTAP usando o pen drive USB.
+
+.Substituição de componentes
+Substitua o componente com falha pelo componente de substituição fornecido pela NetApp.
+
+.Identificação do controlador
+É fundamental aplicar os comandos ao controlador correto ao substituir a mídia de inicialização danificada:
+
+* O _controlador danificado_ é o controlador no qual você está executando a manutenção.
+* O _controlador saudável_ é o parceiro HA do controlador prejudicado.
 
 
 .O que se segue?

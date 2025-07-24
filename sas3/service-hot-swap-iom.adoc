@@ -4,25 +4,22 @@ sidebar: sidebar
 keywords: system, configuration, whether, perform, nondisruptive, iom12, module, hot-swap, disruptive, replacement, hot-swap or replace an iom12/iom12b module, iom12b 
 summary: A configuração do sistema determina se você pode executar uma troca a quente sem interrupções de módulos IOM12/IOM12B ou uma substituição disruptiva de módulos IOM12/IOM12B quando um módulo IOM12/IOM12B falha. 
 ---
-= Troque a quente ou substitua um módulo IOM12/IOM12B - prateleiras por módulos IOM12/IOM12B
+= Troca a quente ou substituição de um módulo IOM - DS212C, DS224C ou DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-A configuração do sistema determina se você pode executar uma troca a quente IOM de gaveta sem interrupções ou uma substituição de IOM de gaveta disruptiva quando uma IOM de gaveta falha.
-
-.Antes de começar
-Todos os outros componentes do sistema - incluindo o outro módulo IOM12/IOM12B - devem estar funcionando corretamente.
+A configuração do seu sistema determina se você pode executar uma troca a quente de IOM de prateleira não disruptiva ou uma substituição de IOM de prateleira disruptiva quando um IOM de prateleira IOM12 ou IOM12B falha.
 
 .Sobre esta tarefa
-* Este procedimento se aplica a prateleiras com IOM12 módulos e prateleiras com IOM12B módulos.
+* Este procedimento se aplica a prateleiras com módulos IOM12 ou IOM12B.
 +
 
-NOTE: Esse procedimento é para hot-swaps ou substituições de IOM de gaveta semelhantes. Isto significa que só pode substituir um módulo IOM12 por outro módulo IOM12 ou substituir um módulo IOM12B por outro módulo IOM12B. (Sua prateleira pode ter dois módulos IOM12 ou ter dois módulos IOM12B.)
+NOTE: Este procedimento se aplica a trocas a quente ou substituições de IOMs de prateleira equivalentes. Isso significa que você só pode substituir um módulo IOM12 por outro módulo IOM12 ou um módulo IOM12B por outro módulo IOM12B.
 
-* Os módulos IOM12 e os módulos IOM12B podem ser distinguidos pela sua aparência:
+* Os módulos IOM12 ou IOM12B podem ser diferenciados por sua aparência:
 +
 Os IOM12 módulos distinguem-se por uma etiqueta "IOM12":
 
@@ -40,17 +37,7 @@ image::../media/iom12b.png[Frente do IOM12B]
 * Para configurações de caminho único da série FAS2600, você precisa parar o sistema para substituir uma IOM de gaveta.
 +
 
-NOTE: Se você tentar trocar uma gaveta IOM em um compartimento de disco por uma conexão de caminho único, perderá todo o acesso às unidades de disco na gaveta de disco, bem como às gavetas de disco abaixo. Você também pode derrubar todo o seu sistema.
-
-* A prática recomendada é ter as versões atuais do firmware da gaveta de disco (IOM) e das unidades de disco em seu sistema antes de adicionar novas gavetas de disco, componentes de FRU de gaveta ou cabos SAS.
-+
-As versões atuais do firmware podem ser encontradas no site de suporte da NetApp.
-
-+
-https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["Downloads do NetApp: Firmware da gaveta de disco"^]
-
-+
-https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["Downloads do NetApp: Firmware da unidade de disco"^]
+CAUTION: Se você tentar trocar uma gaveta IOM em um compartimento de disco por uma conexão de caminho único, perderá todo o acesso às unidades de disco na gaveta de disco, bem como às gavetas de disco abaixo. Você também pode derrubar todo o seu sistema.
 
 * O firmware da gaveta de disco (IOM) é atualizado automaticamente (sem interrupções) em uma nova IOM de gaveta com uma versão de firmware não atual.
 +
@@ -60,7 +47,12 @@ As verificações de firmware da OIM da gaveta ocorrem a cada dez minutos. Uma a
 +
 Uma gaveta de disco tem três LEDs de localização: Um no painel de exibição do operador e um em cada gaveta IOM. Os LEDs de localização permanecem acesos durante 30 minutos. Você pode desativá-los digitando o mesmo comando, mas usando a opção Off.
 
-* Se necessário, você pode consultar a seção LEDs do compartimento de disco de monitoramento para obter informações sobre o significado e a localização dos LEDs do compartimento de disco no painel de exibição do operador e nos componentes FRU.
+* Se necessário, você pode consultar o link:/sas3/service-monitor-leds.html#operator-display-panel-leds["Monitoramento de LEDs da prateleira de disco"] guia para obter informações sobre o significado e a localização dos LEDs da prateleira de disco no painel de exibição do operador e nos componentes da FRU.
+
+
+.Antes de começar
+* Todos os outros componentes do sistema - incluindo o outro módulo IOM12/IOM12B - devem estar funcionando corretamente.
+* *Prática recomendada*: Certifique-se de que seu sistema tenha as versões atuais do firmware da prateleira de disco (IOM) e do firmware da unidade de disco antes de adicionar novas prateleiras de disco, componentes de FRU de prateleira ou cabos SAS. Você pode visitar o site de suporte da NetApp para  https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["baixar firmware da prateleira de disco"] e  https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["baixar firmware da unidade de disco"] .
 
 
 .Passos

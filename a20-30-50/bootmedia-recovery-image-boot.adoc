@@ -2,16 +2,16 @@
 permalink: a20-30-50/bootmedia-recovery-image-boot.html 
 sidebar: sidebar 
 keywords: aff a20, aff a30, aff a50, boot the recovery image 
-summary: Você deve inicializar a imagem ONTAP a partir da unidade USB, restaurar o sistema de arquivos e verificar as variáveis ambientais. 
+summary: Depois de instalar o novo dispositivo de mídia de inicialização no seu sistema AFF A20, AFF A30 ou AFF A50, você pode inicializar a imagem de recuperação manualmente a partir de uma unidade USB para restaurar a configuração do nó parceiro. 
 ---
-= Inicie a imagem de recuperação - AFF A20, AFF A30 e AFF A50
+= Recuperação manual de mídia de inicialização de uma unidade USB - AFF A20, AFF A30 e AFF A50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Depois de instalar o novo dispositivo multimédia de arranque no sistema AFF A20, AFF A30 ou AFF A50, pode iniciar a imagem de recuperação a partir de uma unidade USB e restaurar a configuração a partir do nó de parceiro.
+Depois de instalar o novo dispositivo de mídia de inicialização no seu sistema de armazenamento AFF A20, AFF A30 ou AFF A50, você pode inicializar a imagem de recuperação manualmente a partir de uma unidade USB para restaurar a configuração do nó parceiro.
 
 .Passos
 . A partir do prompt Loader, inicialize a imagem de recuperação da unidade flash USB: `boot_recovery`
@@ -28,7 +28,7 @@ A imagem é transferida da unidade flash USB.
 .. No controlador para deficientes, prima `Y` quando vir `Do you want to restore the backup configuration now?`
 .. Se solicitado no controlador prejudicado, pressione `Y` para substituir _/etc/ssh/ssh_host_ecdsa_key_.
 .. No controlador de parceiro saudável, defina o controlador prejudicado para nível de privilégio avançado: `set -privilege advanced`.
-.. No controlador do parceiro saudável, execute o comando Restore backup: `system node restore-backup -node local -target-address impaired_node_IP_address` .
+.. No controlador do parceiro saudável, execute o comando Restore backup: `system node restore-backup -node local -target-address impaired_node_IP_address`.
 +
 *NOTA:* se você vir qualquer mensagem que não seja uma restauração bem-sucedida, entre em Contato https://support.netapp.com["Suporte à NetApp"]com .
 

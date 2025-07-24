@@ -34,20 +34,11 @@ A saída do console fornece um Registro do procedimento que você pode usar para
 
 == Considerações
 
-* É importante aplicar os comandos neste procedimento ao controlador correto:
-+
-** O controlador _prejudicado_ é o controlador que está sendo substituído.
-** O controlador _replacement_ é o novo controlador que está substituindo o controlador prejudicado.
-** O controlador _Healthy_ é o controlador sobrevivente.
+É importante aplicar os comandos neste procedimento ao controlador correto:
 
-
-* Se necessário, você pode ligar os LEDs de localização do sistema de armazenamento (azul) para ajudar a localizar fisicamente o sistema de armazenamento afetado. Faça login no BMC usando SSH e digite o `system location-led _on_` comando.
-+
-Um sistema de armazenamento tem três LEDs de localização: Um no painel de visualização do operador e um em cada controlador. Os LEDs de localização permanecem acesos durante 30 minutos.
-
-+
-Você pode desativá-los digitando o `system location-led _off_` comando. Se não tiver a certeza se os LEDs estão ligados ou desligados, pode verificar o seu estado introduzindo o `system location-led show` comando.
-
+* O controlador _prejudicado_ é o controlador que está sendo substituído.
+* O controlador _replacement_ é o novo controlador que está substituindo o controlador prejudicado.
+* O controlador _Healthy_ é o controlador sobrevivente.
 
 
 .O que se segue?

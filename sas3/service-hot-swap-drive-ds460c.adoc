@@ -4,20 +4,17 @@ sidebar: sidebar
 keywords: hot-swap, fail, disk, drive, ds460c, nondisruptive, replace, system, power, serving, data, i/o, hot-swap a disk drive in a ds460c disk shelf 
 summary: Você pode trocar a quente uma unidade de disco com falha em um compartimento de disco de DS460C TB. 
 ---
-= Troque a quente uma unidade de disco em um compartimento de disco de DS460C TB - compartimentos com módulos de IOM12 TB/IOM12B TB
+= Troca a quente de uma unidade de disco - DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Você pode trocar a quente uma unidade de disco com falha em um compartimento de disco de DS460C TB.
+Você pode fazer a troca a quente de uma unidade de disco com falha em uma prateleira de disco DS460C com módulos IOM12 ou IOM12B.
 
 .Antes de começar
-* A unidade de disco de substituição deve ser suportada pelo compartimento de disco DS460C.
-+
-https://hwu.netapp.com["NetApp Hardware Universe"]
-
+* A unidade de disco de substituição deve ser compatível com a prateleira de disco DS460C. Você pode visualizar as unidades de disco compatíveis com sua configuração no  https://hwu.netapp.com["NetApp Hardware Universe"] .
 * Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, entre em Contato com o suporte técnico.
 * A unidade de disco que está a remover tem de estar avariada.
 +
@@ -29,10 +26,7 @@ NOTE: Dependendo do tipo e da capacidade da unidade de disco, pode levar até v�
 
 * Se você estiver substituindo um disco de criptografia automática (SED), siga as instruções para substituir um SED na documentação do ONTAP para sua versão do ONTAP.
 +
-As instruções na documentação do ONTAP descrevem as etapas adicionais que você deve executar antes e depois de substituir uma SED.
-
-+
-https://docs.netapp.com/us-en/ontap/encryption-at-rest/index.html["Visão geral da criptografia NetApp com a CLI"]
+Instruções no  https://docs.netapp.com/us-en/ontap/encryption-at-rest/index.html["Visão geral da criptografia NetApp com a CLI"] a documentação descreve etapas adicionais que você deve executar antes e depois de substituir um SED.
 
 
 
@@ -67,23 +61,11 @@ NOTE: Não coloque as mãos nas placas de unidade de disco expostas na parte inf
 
 NOTE: Os campos magnéticos podem destruir todos os dados na unidade de disco e causar danos irreparáveis aos circuitos da unidade de disco.
 
-* A prática recomendada é ter a versão atual do Pacote de Qualificação de disco (DQP) instalada antes de trocar uma unidade de disco a quente.
+* *Melhor prática*: Certifique-se de que seu sistema pode reconhecer e utilizar unidades de disco recém-qualificadas  https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["baixando a versão atual do Pacote de Qualificação de Disco (DQP)"^] antes de fazer a troca a quente de uma unidade de disco.
 +
-Ter a versão atual do DQP instalada permite que seu sistema reconheça e utilize unidades de disco recém-qualificadas; portanto, evitando mensagens de eventos do sistema sobre ter informações de unidades de disco não atuais. Você também evita a possível prevenção do particionamento de disco porque as unidades de disco não são reconhecidas. O DQP também notifica você sobre firmware de unidade de disco não atual.
+Ter a versão atual do DQP instalada permite que seu sistema reconheça e utilize unidades de disco recém-qualificadas, evitando, assim, mensagens de eventos do sistema sobre informações de unidades de disco desatualizadas. Você também evita a possível interrupção do particionamento de disco devido ao não reconhecimento de unidades de disco. O DQP notifica você sobre firmware de unidade de disco desatualizado.
 
-+
-https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["NetApp Downloads: Pacote de Qualificação de disco"^]
-
-* A prática recomendada é ter as versões atuais do firmware da gaveta de disco (IOM) e das unidades de disco em seu sistema antes de adicionar novas gavetas de disco, componentes de FRU de gaveta ou cabos SAS.
-+
-As versões atuais do firmware podem ser encontradas no site de suporte da NetApp.
-
-+
-https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["Downloads do NetApp: Firmware da gaveta de disco"]
-
-+
-https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["Downloads do NetApp: Firmware da unidade de disco"]
-
+* *Prática recomendada*: Certifique-se de que seu sistema tenha as versões atuais do firmware da prateleira de disco (IOM) e do firmware da unidade de disco antes de adicionar novas prateleiras de disco, componentes FRU da prateleira ou cabos SAS. Você pode visitar o site de suporte da NetApp para  https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["baixar firmware da prateleira de disco"^] e  https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["baixar firmware da unidade de disco"^] .
 * O firmware da unidade de disco é atualizado automaticamente (sem interrupções) em novas unidades de disco com versões de firmware não atuais.
 +
 

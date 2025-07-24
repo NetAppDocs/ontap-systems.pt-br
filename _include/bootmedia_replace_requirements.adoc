@@ -1,0 +1,21 @@
+= 
+:allow-uri-read: 
+
+
+.Pen drive USB
+* Certifique-se de ter uma unidade flash USB formatada para FAT32.
+* O USB deve ter capacidade de armazenamento suficiente para armazenar o  `image_xxx.tgz` arquivo.
+
+
+.Preparação do arquivo
+Copie o  `image_xxx.tgz` arquivo para o pen drive USB. Este arquivo será usado quando você transferir a imagem ONTAP usando o pen drive USB.
+
+.Substituição de componentes
+Substitua o componente com falha pelo componente de substituição fornecido pela NetApp.
+
+.Identificação do controlador
+É fundamental aplicar os comandos ao controlador correto ao substituir a mídia de inicialização danificada:
+
+* O _controlador danificado_ é o controlador no qual você está executando a manutenção.
+* O _controlador saudável_ é o parceiro HA do controlador prejudicado.
+

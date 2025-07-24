@@ -1,23 +1,30 @@
 ---
 permalink: asa-r2-a20-30-50/io-module-overview.html 
 sidebar: sidebar 
-keywords: ASA A90, ASA A70, replace io module 
-summary: 'Você deve substituir o componente com falha por um componente de unidade substituível de campo (FRU) de substituição que você recebeu de seu provedor.' 
+keywords: ASA A90, ASA A70, replace io module, io module add, io module hotswap 
+summary: Os sistemas ASA A20, ASA A30 e ASA A50 oferecem flexibilidade na expansão ou substituição de módulos de E/S para aprimorar a conectividade e o desempenho da rede. Adicionar, fazer hot swap ou substituir um módulo de E/S é essencial ao atualizar os recursos da rede ou solucionar um módulo com falha. 
 ---
-= Descrição geral de adicionar e substituir um módulo de e/S - ASA A20, ASA A30 e ASA A50
+= Visão geral de como adicionar, trocar a quente e substituir um módulo de E/S - ASA A20, ASA A30 e ASA A50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Os sistemas ASA A20, ASA A30 e ASA A50 oferecem flexibilidade na expansão ou substituição de módulos de e/S para aprimorar a conetividade e o desempenho da rede. Adicionar ou substituir um módulo de e/S é essencial ao atualizar recursos de rede ou endereçar um módulo com falha.
+Os sistemas ASA A20, ASA A30 e ASA A50 oferecem flexibilidade na expansão ou substituição de módulos de E/S para aprimorar a conectividade e o desempenho da rede. Adicionar, fazer hot swap ou substituir um módulo de E/S é essencial ao atualizar os recursos da rede ou solucionar um módulo com falha.
 
-Você pode substituir um módulo de e/S com falha em seu sistema de storage pelo mesmo tipo de módulo de e/S ou por um tipo diferente de módulo de e/S. Você também pode adicionar um módulo de e/S a um sistema de armazenamento com slots disponíveis.
+Você pode substituir um módulo de E/S com defeito no seu sistema de armazenamento pelo mesmo tipo de módulo de E/S ou por um tipo diferente. Você pode fazer hot-swap de um cluster e de um módulo de E/S de alta disponibilidade quando o seu sistema de armazenamento atender a requisitos específicos. Você também pode adicionar um módulo de E/S a um sistema de armazenamento com slots disponíveis.
 
 * link:io-module-add.html["Adicione um módulo de e/S."]
 +
 A adição de módulos de e/S adicionais pode melhorar a redundância, ajudando a garantir que o sistema de storage permaneça operacional mesmo que um módulo de e/S falhe.
+
+* link:io-module-hotswap-ha-slot4.html["Troca a quente de um cluster e um módulo de E/S HA"]
++
+A troca a quente de um cluster com falha e de um módulo de E/S de alta disponibilidade pode restaurar o sistema de armazenamento ao seu estado operacional ideal. A troca a quente é realizada sem a necessidade de assumir manualmente o controlador com defeito.
+
++
+Para usar este procedimento, seu sistema de armazenamento deve estar executando o ONTAP 9.17.1 ou posterior e atender a requisitos específicos do sistema.
 
 * link:io-module-replace.html["Substitua um módulo de e/S."]
 +

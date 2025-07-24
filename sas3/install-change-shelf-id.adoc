@@ -4,25 +4,14 @@ sidebar: sidebar
 keywords: change, shelf, id, system, ontap, run, hot-add, ontap, controller, module, available, serve, data, unown, spare, offline, aggregate 
 summary: 'Você pode alterar o ID de um shelf em um sistema quando o ONTAP ainda não estiver em execução ou quando adicionar um shelf antes de ser cabeado ao sistema. Você também pode alterar um ID de gaveta quando o ONTAP está ativo e em execução (os módulos de controladora estão disponíveis para fornecer dados) e todas as unidades na gaveta são não possuídas, sobressalentes ou parte de agregados desalinhados.' 
 ---
-= Alterar a ID de um compartimento - prateleiras com módulos IOM12/IOM12B
+= Alterar uma ID de prateleira - DS212C, DS224C ou DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Você pode alterar o ID de um shelf em um sistema quando o ONTAP ainda não estiver em execução ou quando adicionar um shelf antes de ser cabeado ao sistema. Você também pode alterar o ID de um compartimento quando o ONTAP estiver ativo e em execução (os módulos da controladora estão disponíveis para fornecer dados) e todas as unidades da gaveta forem de propriedade não pertencentes, sobressalentes ou parte de agregado(s) desconetado(s).
-
-.Antes de começar
-* Se o ONTAP estiver ativo e em execução (os módulos do controlador estão disponíveis para fornecer dados), você precisará ter verificado que todas as unidades na gaveta são não pertencentes, sobressalentes ou parte de agregado(s) desconetado(s).
-+
-Você pode verificar o estado das unidades usando o `storage disk show -shelf _shelf_number_` comando. A saída na coluna tipo de contentor deve exibir sobressalente ou quebrado se for uma unidade com falha. Além disso, as colunas Nome do contentor e proprietário devem ter um traço.
-
-* Você pode verificar IDs de gaveta já em uso no sistema executando o Active IQ Config Advisor ou usando o `storage shelf show -fields shelf-id` comando.
-+
-https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp Downloads: Config Advisor"]
-
-
+Você pode alterar o ID de uma prateleira em um sistema com módulos IOM12/IOM12B quando o ONTAP ainda não estiver em execução ou ao adicionar uma prateleira a quente antes de ela ser conectada ao sistema. Você também pode alterar o ID de uma prateleira quando o ONTAP estiver em execução (os módulos controladores estão disponíveis para servir dados) e todas as unidades na prateleira estiverem sem proprietário, forem sobressalentes ou fizerem parte de agregados offline.
 
 .Sobre esta tarefa
 * Um ID válido do compartimento é de 00 a 99.
@@ -34,6 +23,14 @@ Se você tiver uma plataforma com storage interno, as IDs de gaveta deverão ser
 +
 O período de tempo que espera antes de voltar a ligar a alimentação depende do estado do ONTAP, conforme descrito mais adiante neste procedimento.
 
+
+
+.Antes de começar
+* Se o ONTAP estiver ativo e em execução (os módulos do controlador estão disponíveis para fornecer dados), você precisará ter verificado que todas as unidades na gaveta são não pertencentes, sobressalentes ou parte de agregado(s) desconetado(s).
++
+Você pode verificar o estado das unidades usando o `storage disk show -shelf _shelf_number_` comando. A saída na coluna tipo de contentor deve exibir sobressalente ou quebrado se for uma unidade com falha. Além disso, as colunas Nome do contentor e proprietário devem ter um traço.
+
+* Você pode verificar os IDs de prateleira já em uso no seu sistema executando o Active IQ Config Advisor ou usando o  `storage shelf show -fields shelf-id` comando. Você pode  https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["baixe e acesse o Active IQ Config Advisor"] no site de suporte da NetApp .
 
 
 .Passos

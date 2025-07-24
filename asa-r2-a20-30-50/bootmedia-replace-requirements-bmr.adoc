@@ -2,7 +2,7 @@
 permalink: asa-r2-a20-30-50/bootmedia-replace-requirements-bmr.html 
 sidebar: sidebar 
 keywords: asa a20, asa a30, asa a50, replace the boot media 
-summary: 'Antes de substituir a Mídia de inicialização em seu sistema de storage ASA A20, ASA A30 ou ASA A50, certifique-se de atender aos requisitos e considerações necessários para uma substituição bem-sucedida. Isso inclui verificar se você tem o suporte de inicialização de substituição correto, confirmar que a porta e0S (chave e0M) no controlador com deficiência não está defeituosa e determinar se o Gerenciador de chaves integrado (OKM) ou o Gerenciador de chaves Externo (EKM) estão ativados.' 
+summary: 'Antes de substituir a mídia de inicialização no seu sistema de armazenamento ASA A20, ASA A30 ou ASA A50, certifique-se de atender aos requisitos e considerações necessários para uma substituição bem-sucedida. Isso inclui verificar se você possui a mídia de inicialização de substituição correta, confirmar se a porta e0S (chave e0M) no controlador danificado está funcionando corretamente e determinar se o Gerenciador de Chaves Onboard (OKM) ou o Gerenciador de Chaves Externo (EKM) está habilitado.' 
 ---
 = Requisitos para substituir o suporte de arranque - ASA A20, ASA A30 e ASA A50
 :allow-uri-read: 
@@ -11,17 +11,12 @@ summary: 'Antes de substituir a Mídia de inicialização em seu sistema de stor
 
 
 [role="lead"]
-Antes de substituir a Mídia de inicialização em seu sistema de storage ASA A20, ASA A30 ou ASA A50, certifique-se de atender aos requisitos e considerações necessários para uma substituição bem-sucedida. Isso inclui verificar se você tem o suporte de inicialização de substituição correto, confirmar que a porta e0S (chave e0M) no controlador com deficiência não está defeituosa e determinar se o Gerenciador de chaves integrado (OKM) ou o Gerenciador de chaves Externo (EKM) estão ativados.
+Antes de substituir a mídia de inicialização no seu sistema de armazenamento ASA A20, ASA A30 ou ASA A50, certifique-se de atender aos requisitos e considerações necessários para uma substituição bem-sucedida. Isso inclui verificar se você possui a mídia de inicialização de substituição correta, confirmar se a porta e0S (chave e0M) no controlador danificado está funcionando corretamente e determinar se o Gerenciador de Chaves Onboard (OKM) ou o Gerenciador de Chaves Externo (EKM) está habilitado.
 
-
-
-== Requisitos
+Reveja os seguintes requisitos.
 
 * Você deve substituir o componente com falha por um componente FRU de substituição da mesma capacidade que recebeu do NetApp.
-* A porta e0S (chave de e0M mm) no controlador desativado não pode estar avariada.
-+
-A porta e0S é usada para recuperação automática de inicialização.
-
+* A porta e0S (chave inglesa e0M) é usada para comunicação entre os dois controladores durante o processo de recuperação de inicialização automatizada. Certifique-se de que a porta e0S do controlador com defeito esteja funcionando corretamente.
 * Para OKM, você precisa do conteúdo do arquivo de senha OKM.
 * Para EKM, você precisa de cópias dos seguintes arquivos do nó do parceiro:
 +
@@ -31,24 +26,11 @@ A porta e0S é usada para recuperação automática de inicialização.
 ** Arquivo /cfcard/kmip/certs/CA.pem.
 
 
-
-
-
-
-== Considerações
-
-* É importante que você aplique os comandos nestas etapas no controlador correto:
+* É fundamental aplicar os comandos ao controlador correto ao substituir a mídia de inicialização danificada:
 +
-** O controlador _prejudicado_ é o controlador no qual você está realizando a manutenção.
-** O controlador _Healthy_ é o parceiro de HA do controlador prejudicado.
+** O _controlador danificado_ é o controlador no qual você está executando a manutenção.
+** O _controlador saudável_ é o parceiro HA do controlador prejudicado.
 
-
-* Se necessário, você pode ligar os LEDs de localização do chassi da plataforma (azul) para ajudar a localizar fisicamente a plataforma afetada. Faça login no BMC usando SSH e digite o `system location-led _on_` comando.
-+
-Um chassi de plataforma tem três LEDs de localização: Um no painel de exibição do operador e um em cada controlador. Os LEDs de localização permanecem acesos durante 30 minutos.
-
-+
-Você pode desativá-los digitando o `system location-led _off_` comando. Se não tiver a certeza se os LEDs estão ligados ou desligados, pode verificar o seu estado introduzindo o `system location-led show` comando.
 
 
 

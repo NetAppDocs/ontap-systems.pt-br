@@ -24,10 +24,25 @@ entries:
   entries:
   - title: Visão geral da manutenção
     url: "/c30-60/maintain-overview.html"
-  - title: Suporte de arranque
+  - title: Mídia de inicialização - recuperação automatizada
     pdf-filename: Mídia de inicialização AFF C30 e AFF C60
     entries:
-    - title: Mídia de inicialização Substituir fluxo de trabalho
+    - title: Fluxo de trabalho de substituição de Mídia de inicialização
+      url: "/c30-60/bootmedia-replace-workflow-bmr.html"
+    - title: Rever os requisitos
+      url: "/c30-60/bootmedia-replace-requirements-bmr.html"
+    - title: Desligue o controlador desativado
+      url: "/c30-60/bootmedia-shutdown-bmr.html"
+    - title: Substitua o suporte de arranque
+      url: "/c30-60/bootmedia-replace-bmr.html"
+    - title: Imagem de recuperação de inicialização
+      url: "/c30-60/bootmedia-recovery-image-boot-bmr.html"
+    - title: Devolver artigo com falha ao NetApp
+      url: "/c30-60/bootmedia-complete-rma-bmr.html"
+  - title: Mídia de inicialização - recuperação manual
+    pdf-filename: Mídia de inicialização AFF C30 e AFF C60
+    entries:
+    - title: Fluxo de trabalho de substituição de Mídia de inicialização
       url: "/c30-60/bootmedia-replace-workflow.html"
     - title: Rever os requisitos
       url: "/c30-60/bootmedia-replace-requirements.html"
@@ -86,6 +101,8 @@ entries:
       url: "/c30-60/io-module-overview.html"
     - title: Adicionar módulo de e/S.
       url: "/c30-60/io-module-add.html"
+    - title: Módulo de cluster/HA de troca a quente
+      url: "/c30-60/io-module-hotswap-ha-slot4.html"
     - title: Substitua o módulo de e/S.
       url: "/c30-60/io-module-replace.html"
   - title: Bateria NV

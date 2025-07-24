@@ -1,8 +1,16 @@
-= Passo 1: Remova o controlador
+= Sobre esta tarefa
 :allow-uri-read: 
 
 
-Para substituir o suporte de arranque, tem de remover o controlador afetado, remover o suporte de arranque, instalar o suporte de arranque de substituição e transferir a imagem de arranque para uma unidade flash USB.
+
+
+== Sobre esta tarefa
+
+Se necessário, você pode ligar os LEDs de localização do chassi da plataforma (azul) para ajudar a localizar fisicamente a plataforma afetada. Faça login no BMC usando SSH e digite o `system location-led _on_` comando.
+
+Um chassi de plataforma tem três LEDs de localização: Um no painel de exibição do operador e um em cada controlador. Os LEDs de localização permanecem acesos durante 30 minutos.
+
+Você pode desativá-los digitando o `system location-led _off_` comando. Se não tiver a certeza se os LEDs estão ligados ou desligados, pode verificar o seu estado introduzindo o `system location-led show` comando.
 
 
 

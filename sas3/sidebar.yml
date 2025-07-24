@@ -3,14 +3,12 @@ section: sas3
 title: Gavetas SAS
 entries:
 - title: Instale e faça o cabo
-  pdf-filename: Prateleiras com instalação de módulos IOM12/IOM2B e cabo
+  pdf-filename: Instalação e cabeamento de prateleiras DS212C, DS224C ou DS460C
   entries:
   - title: Instale e as gavetas de cabos do novo sistema
     url: "/sas3/install-new-system.html"
   - title: Gaveta para adicionar quente
     url: "/sas3/install-hot-add-shelf.html"
-  - title: Adicione gavetas IOM12/IOM12BU de forma automática para stack de IOM6 gavetas
-    url: "/sas3/iom12-hot-add-mix.html"
   - title: Alterar ID do compartimento
     url: "/sas3/install-change-shelf-id.html"
   - title: Regras de cabeamento SAS, planilhas e exemplos
@@ -19,22 +17,22 @@ entries:
       url: "/sas3/overview-cabling-rules-examples.html"
     - title: Regras e conceitos de cabeamento de SAS
       url: "/sas3/install-cabling-rules.html"
-    - title: Fichas de trabalho de cabeamento e exemplos para multipath HA
+    - title: Multipath HA
       url: "/sas3/install-cabling-worksheets-examples-multipath.html"
-    - title: Folhas de trabalho de cabeamento para plataformas com armazenamento interno
+    - title: Plataformas com storage interno
       url: "/sas3/install-cabling-worksheets-examples-fas2600.html"
-    - title: Planilha de cabeamento e exemplo para um HA de quatro caminhos
+    - title: HA de quatro vias
       url: "/sas3/install-worksheets-examples-quadpath.html"
-    - title: Folha de cálculo de cabeamento para conetividade multipathed
+    - title: Conetividade multipathed
       url: "/sas3/install-cabling-worksheet-template-multipath.html"
-    - title: Folha de cálculo de cabeamento para conetividade quad-pathed
+    - title: Conetividade de quatro vias
       url: "/sas3/install-cabling-worksheet-template-quadpath.html"
-    - title: Como ler a folha de cálculo para conetividade multipathed
+    - title: Conetividade multipathed
       url: "/sas3/install-cabling-worksheets-how-to-read-multipath.html"
     - title: Como ler a folha de cálculo para conetividade quad-pathed
       url: "/sas3/install-cabling-worksheets-how-to-read-quadpath.html"
 - title: Manutenção
-  pdf-filename: Prateleiras com módulos IOM12/IOM12B mantêm
+  pdf-filename: As prateleiras DS212C, DS224C ou DS460C mantêm
   entries:
   - title: Unidade de disco no compartimento de DS224C TB ou DS212C TB
     url: "/sas3/service-hot-swap-drive-ds224c-ds212c.html"

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a20, aff a30, aff a50, pre-shutdown checks for onboard encryption keys 
 summary: Para garantir a segurança dos dados no sistema de armazenamento A20, AFF A30 ou AFF A50, é necessário verificar o suporte e o status da chave de criptografia na Mídia de inicialização. Verifique se a sua versão do ONTAP suporta encriptação de volume NetApp e, antes de desligar o controlador, verifique se o gestor de chaves está ativo. 
 ---
-= Verifique o suporte e o status da chave de criptografia na Mídia de inicialização - AFF A20, AFF A30 e AFF A50
+= Verifique o suporte de criptografia para recuperação manual de mídia de inicialização - AFF A20, AFF A30 e AFF A50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -19,16 +19,23 @@ Os procedimentos de manutenção presumem que o sistema AFF C80 já foi implanta
 
 == Componentes do sistema
 
-Para os sistemas de armazenamento AFF C80, é possível executar procedimentos de manutenção nos seguintes componentes.
+Para o sistema de armazenamento AFF C80, você pode executar procedimentos de manutenção nos seguintes componentes.
 
 [cols="25,65"]
 |===
 
 
  a| 
-link:bootmedia-replace-workflow.html["Suporte de arranque"]
+link:bootmedia-replace-workflow-bmr.html["Mídia de inicialização - recuperação automatizada"]
  a| 
-A Mídia de inicialização armazena um conjunto primário e secundário de arquivos de imagem ONTAP que o sistema usa quando ele é inicializado.
+A mídia de inicialização armazena um conjunto primário e secundário de arquivos de imagem ONTAP que o sistema de armazenamento usa para inicializar a imagem a partir do nó parceiro e executar automaticamente a opção de menu de inicialização apropriada para instalar a imagem de inicialização na sua mídia de inicialização de substituição. O processo automatizado de recuperação da mídia de inicialização é compatível apenas com o ONTAP 9.17.1 e versões posteriores. Se o seu sistema de armazenamento estiver executando uma versão anterior do ONTAP, use o link:bootmedia-replace-workflow.html["procedimento de recuperação de inicialização manual"] .
+
+
+
+ a| 
+link:bootmedia-replace-workflow.html["Mídia de inicialização - recuperação manual"]
+ a| 
+A mídia de inicialização armazena um conjunto primário e secundário de arquivos de imagem ONTAP que o sistema de armazenamento usa para inicializar a imagem de uma unidade USB e restaurar a configuração do nó parceiro.
 
 
 

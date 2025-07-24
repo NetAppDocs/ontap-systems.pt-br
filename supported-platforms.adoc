@@ -210,7 +210,14 @@ Os compartimentos de unidades são projetados especificamente para sistemas NetA
 
 Os compartimentos de unidades estão disponíveis a partir dos seguintes lançamentos da ONTAP.
 
-ONTAP 9.16,1:: NS224 com NSM100B módulos
+ONTAP 9.16,1::
++
+--
+* DCM3 para prateleiras SAS-3
+* NS224 com NSM100B módulos
+
+
+--
 ONTAP 9,6:: NS224 gaveta com NSM100 módulos
 
 

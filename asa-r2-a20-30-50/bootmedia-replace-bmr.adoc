@@ -2,7 +2,7 @@
 permalink: asa-r2-a20-30-50/bootmedia-replace-bmr.html 
 sidebar: sidebar 
 keywords: asa a20, asa a30, asa a50, replace the boot media 
-summary: Você localiza o suporte de inicialização com falha removendo o módulo Gerenciamento do sistema antes de substituir o suporte de inicialização. 
+summary: A mídia de inicialização do seu sistema ASA A20, ASA A30 ou ASA A50 armazena dados essenciais de firmware e configuração. O processo de substituição envolve a remoção do módulo controlador, a remoção da mídia de inicialização danificada, a instalação da mídia de inicialização de substituição e a reinstalação do módulo controlador. 
 ---
 = Substitua o suporte de arranque - ASA A20, ASA A30 e ASA A50
 :allow-uri-read: 
@@ -11,7 +11,17 @@ summary: Você localiza o suporte de inicialização com falha removendo o módu
 
 
 [role="lead"]
-A Mídia de inicialização no sistema ASA A20, ASA A30 ou ASA A50 armazena dados essenciais de firmware e configuração. O processo de substituição envolve a remoção do módulo do controlador, remoção do suporte de arranque danificado, instalação do suporte de arranque de substituição e, em seguida, transferência da imagem ONTAP para o suporte de arranque de substituição.
+A mídia de inicialização do seu sistema ASA A20, ASA A30 ou ASA A50 armazena dados essenciais de firmware e configuração. O processo de substituição envolve a remoção do módulo controlador, a remoção da mídia de inicialização danificada, a instalação da mídia de inicialização de substituição e a reinstalação do módulo controlador.
+
+
+
+== Sobre esta tarefa
+
+Se necessário, você pode ligar os LEDs de localização do chassi da plataforma (azul) para ajudar a localizar fisicamente a plataforma afetada. Faça login no BMC usando SSH e digite o `system location-led _on_` comando.
+
+Um chassi de plataforma tem três LEDs de localização: Um no painel de exibição do operador e um em cada controlador. Os LEDs de localização permanecem acesos durante 30 minutos.
+
+Você pode desativá-los digitando o `system location-led _off_` comando. Se não tiver a certeza se os LEDs estão ligados ou desligados, pode verificar o seu estado introduzindo o `system location-led show` comando.
 
 
 
