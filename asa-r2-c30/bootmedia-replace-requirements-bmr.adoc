@@ -14,7 +14,10 @@ summary: 'Antes de substituir a mídia de inicialização no seu sistema de arma
 Antes de substituir a mídia de inicialização no seu sistema de armazenamento ASA C30, certifique-se de atender aos requisitos e considerações necessários para uma substituição bem-sucedida. Isso inclui verificar se você possui a mídia de inicialização de substituição correta, confirmar se a porta e0S (chave e0M) no controlador danificado está funcionando corretamente e determinar se o Gerenciador de Chaves Onboard (OKM) ou o Gerenciador de Chaves Externo (EKM) está habilitado.
 
 * Você deve substituir o componente com falha por um componente FRU de substituição da mesma capacidade que recebeu do NetApp.
-* A porta e0S (chave inglesa e0M) é usada para comunicação entre os dois controladores durante o processo de recuperação de inicialização automatizada. Certifique-se de que a porta e0S do controlador com defeito esteja funcionando corretamente.
+* Verifique se a porta e0M (chave inglesa) no controlador danificado está conectada e não está com defeito.
++
+A porta e0M é usada para comunicação entre os dois controladores durante o processo de recuperação de inicialização automatizada.
+
 * Para OKM, você precisa do conteúdo do arquivo de senha OKM.
 * Para EKM, você precisa de cópias dos seguintes arquivos do nó do parceiro:
 +

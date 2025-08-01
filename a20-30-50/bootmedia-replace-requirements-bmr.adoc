@@ -18,7 +18,10 @@ O processo automatizado de recuperação de mídia de inicialização é compat�
 Reveja os seguintes requisitos.
 
 * Você deve substituir o componente com falha por um componente FRU de substituição da mesma capacidade que recebeu do NetApp.
-* A porta e0S (chave inglesa e0M) é usada para comunicação entre os dois controladores durante o processo de recuperação de inicialização automatizada. Certifique-se de que a porta e0S do controlador com defeito esteja funcionando corretamente.
+* Verifique se a porta e0M (chave inglesa) no controlador danificado está conectada e não está com defeito.
++
+A porta e0M é usada para comunicação entre os dois controladores durante o processo de recuperação de inicialização automatizada.
+
 * Para OKM, você precisa do conteúdo do arquivo de senha OKM.
 * Para EKM, você precisa de cópias dos seguintes arquivos do nó do parceiro:
 +

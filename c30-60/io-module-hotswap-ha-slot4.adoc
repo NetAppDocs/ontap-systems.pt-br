@@ -13,20 +13,23 @@ summary: O cluster e o módulo de E/S de alta disponibilidade oferecem suporte a
 [role="lead"]
 O cluster e o módulo de E/S de alta disponibilidade oferecem suporte a interconexões para clustering e alta disponibilidade. Você pode fazer a troca a quente do módulo no seu sistema de armazenamento AFF C30 ou AFF C60 quando o módulo falhar e se o seu sistema de armazenamento atender a requisitos específicos.
 
-O processo de troca a quente envolve preparar o sistema de armazenamento e o slot 4 do módulo de E/S para que seja seguro remover o módulo com falha, fazer a troca a quente do módulo com falha por um equivalente, colocar o módulo de substituição on-line, restaurar o sistema de armazenamento para a operação normal e retornar o módulo com falha para a NetApp.
+Para fazer a troca a quente de um módulo, certifique-se de que seu sistema de armazenamento atenda aos requisitos do procedimento, prepare o sistema de armazenamento e o módulo de E/S no slot 4, faça a troca a quente do módulo com falha por um equivalente, coloque o módulo de substituição on-line, restaure o sistema de armazenamento para a operação normal e devolva o módulo com falha para a NetApp.
 
-.Antes de começar
-* Seu sistema de armazenamento deve atender a todos os requisitos a seguir para usar este procedimento.
-+
 
-NOTE: Se o seu sistema de armazenamento não atender a todos os requisitos a seguir, você deverá usar o link:io-module-replace.html["procedimento de substituição de um módulo de E/S"] .
 
-+
-** Seu sistema de armazenamento deve estar executando o ONTAP 9.17.1 ou posterior.
-** O módulo de E/S com falha deve ser um módulo de E/S de cluster e HA no slot 4, e você deve substituí-lo por outro módulo de E/S de cluster e HA. Não é possível alterar o tipo de módulo de E/S.
-** A configuração do seu sistema de armazenamento deve ter apenas um cluster e um módulo de E/S HA localizados no slot 4, não dois clusters e módulos de E/S HA.
-** Seu sistema de armazenamento deve ser uma configuração de cluster de dois nós (sem comutação ou comutado).
-** O controlador com o cluster com falha e o módulo de E/S de HA (o controlador com defeito) já deve ter assumido o controle do controlador parceiro saudável. A assunção deveria ter ocorrido automaticamente se o módulo de E/S falhasse.
+== Etapa 1: Certifique-se de que o sistema de armazenamento atenda aos requisitos do procedimento
+
+Para usar este procedimento, seu sistema de armazenamento deve atender a todos os requisitos.  Leia as considerações para obter contexto adicional deste procedimento.
+
+
+NOTE: Se o seu sistema de armazenamento não atender a todos os requisitos, você deverá usar olink:io-module-replace.html["procedimento de substituição de um módulo de E/S"] .
+
+.Requisitos
+* Seu sistema de armazenamento deve estar executando o ONTAP 9.17.1 ou posterior.
+* O módulo de E/S que falhou deve ser um cluster e um módulo de E/S HA no slot 4 e você deve substituí-lo por um cluster e um módulo de E/S HA equivalentes. Não é possível alterar o tipo de módulo de E/S.
+* A configuração do seu sistema de armazenamento deve ter apenas um cluster e um módulo de E/S HA localizados no slot 4, não dois clusters e módulos de E/S HA.
+* Seu sistema de armazenamento deve ser uma configuração de cluster de dois nós (sem comutação ou comutado).
+* O controlador com o cluster com falha e o módulo de E/S de HA (o controlador com defeito) já deve ter assumido o controle do controlador parceiro saudável. A assunção deveria ter ocorrido automaticamente se o módulo de E/S falhasse.
 +
 Para clusters de dois nós, o sistema de armazenamento não consegue discernir qual controlador possui o módulo de E/S com falha, portanto, qualquer um dos controladores pode iniciar a aquisição. O procedimento de troca a quente do cluster e do módulo de E/S de alta disponibilidade só é suportado quando o controlador com o módulo de E/S com falha (o controlador com defeito) assumiu o controlador íntegro.
 
@@ -36,12 +39,10 @@ Você pode verificar se o controlador prejudicado assumiu com sucesso o controla
 +
 Se você não tiver certeza de qual controlador possui o módulo de E/S com falha, entre em contato  https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] .
 
-
-
 * Todos os outros componentes do sistema de armazenamento devem estar a funcionar corretamente; caso contrário, contacte https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de continuar com este procedimento.
 
 
-.Sobre esta tarefa
+.Considerações
 * A troca a quente do cluster e do módulo HA I/O significa que você não precisa executar uma aquisição manual; o controlador danificado (o controlador com o cluster e o módulo HA I/O com falha) assumiu automaticamente o controlador íntegro.
 +
 Quando o controlador danificado assume o controle do controlador saudável, a única maneira de se recuperar sem uma interrupção é fazer a troca a quente do módulo.
@@ -63,7 +64,7 @@ Você pode desativá-los digitando o `system location-led _off_` comando. Se nã
 
 
 
-== Etapa 1: preparar o sistema de armazenamento e o slot 4 do módulo de E/S
+== Etapa 2: preparar o sistema de armazenamento e o slot 4 do módulo de E/S
 
 Prepare o sistema de armazenamento e o slot 4 do módulo de E/S para que seja seguro remover o cluster com falha e o módulo de E/S HA:
 
@@ -82,22 +83,22 @@ Por exemplo, a seguinte mensagem do AutoSupport suprime a criação automática 
 +
 `node2::> system node autosupport invoke -node * -type all -message MAINT=2h`
 
-. Desabilitar o retorno automático do console do controlador prejudicado:
+. Desabilitar devolução automática:
++
+.. Digite o seguinte comando no console do controlador com defeito:
 +
 `storage failover modify -node local -auto-giveback false`
 
-+
+.. Digitar `y` quando você vê o prompt _Você quer desabilitar o retorno automático?_
 
-NOTE: Quando vir _do pretende desativar a auto-giveback?_, introduza `y`.
 
 . Prepare o cluster com falha e o módulo HA no slot 4 para remoção, retirando-os de serviço e desligando-os:
 +
+.. Digite o seguinte comando:
++
 `system controller slot module remove -node _impaired_node_name_ -slot _slot_number_`
 
-+
-
-NOTE: Quando você vir _Deseja continuar?_, digite  `y` .
-
+.. Digitar `y` quando você vê o prompt _Você quer continuar?_
 +
 Por exemplo, o comando a seguir prepara o módulo no slot 4 no nó 2 (o controlador danificado) para remoção e exibe uma mensagem informando que é seguro removê-lo:
 
@@ -112,6 +113,8 @@ Do you want to continue? {y|n}: y
 
 The module has been successfully removed from service and powered off. It can now be safely removed.
 ----
+
+
 . Verifique se o cluster com falha e o módulo HA no slot 4 estão desligados:
 +
 `system controller slot module show`
@@ -123,7 +126,7 @@ A saída deve mostrar  `_powered-off_` na coluna de status do módulo com falha 
 
 
 
-== Etapa 2: substituir o cluster com falha e o módulo de E/S HA
+== Etapa 3: substituir o cluster com falha e o módulo de E/S HA
 
 Substitua o cluster com falha e o módulo de E/S HA no slot 4 por um módulo de E/S equivalente:
 
@@ -166,18 +169,17 @@ Você pode usar a aba à esquerda e o parafuso de aperto manual à direita para 
 
 
 
-== Etapa 3: coloque o cluster de substituição e o módulo de E/S HA on-line
+== Etapa 4: coloque o cluster de substituição e o módulo de E/S HA on-line
 
 Coloque o cluster de substituição e o módulo HA I/O no slot 4 on-line, verifique se as portas do módulo foram inicializadas com sucesso, verifique se o slot 4 está ligado e, em seguida, verifique se o módulo está on-line e é reconhecido.
 
 . Coloque o cluster de substituição e o módulo de E/S HA on-line:
 +
-`system controller slot module insert -node impaired_node_name_ -slot _slot_name_`
-
+.. Digite o seguinte comando:
 +
+`system controller slot module insert -node _impaired_node_name_ -slot _slot_name_`
 
-NOTE: Quando você vir _Deseja continuar?_, digite  `y` .
-
+.. Digitar `y` quando você vê o prompt, _Você quer continuar?_
 +
 A saída deve confirmar que o cluster e o módulo HA I/O foram colocados on-line com sucesso (ligados, inicializados e colocados em serviço).
 
@@ -195,6 +197,8 @@ Do you want to continue? {y|n}: `y`
 
 The module has been successfully powered on, initialized and placed into service.
 ----
+
+
 . Verifique se cada porta no cluster e o módulo de E/S HA foram inicializados com sucesso:
 +
 `event log show -event \*hotplug.init*`
@@ -272,7 +276,7 @@ Slot slot Information
 
 
 
-== Etapa 4: restaurar o sistema de armazenamento para operação normal
+== Etapa 5: restaurar o sistema de armazenamento para operação normal
 
 Restaure seu sistema de armazenamento para a operação normal devolvendo o armazenamento ao controlador íntegro, restaurando o retorno automático e reativando a criação automática de casos do AutoSupport .
 
@@ -293,6 +297,6 @@ Restaure seu sistema de armazenamento para a operação normal devolvendo o arma
 
 
 
-== Passo 5: Devolva a peça com falha ao NetApp
+== Passo 6: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

@@ -21,12 +21,6 @@ A Mídia de inicialização armazena um conjunto primário e secundário de arqu
 
 
 
-== Módulo de armazenamento em cache
-
-Você deve substituir o módulo de cache do controlador quando o sistema Registrar uma única mensagem AutoSupport (ASUP) informando que o módulo ficou offline.
-
-
-
 == Chassis
 
 O chassi é o gabinete físico que abriga todos os componentes do controlador, como a unidade controladora/CPU, fonte de alimentação e e/S.

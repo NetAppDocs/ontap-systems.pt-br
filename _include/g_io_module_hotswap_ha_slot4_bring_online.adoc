@@ -6,12 +6,11 @@ Coloque o cluster de substituição e o módulo HA I/O no slot 4 on-line, verifi
 
 . Coloque o cluster de substituição e o módulo de E/S HA on-line:
 +
-`system controller slot module insert -node impaired_node_name_ -slot _slot_name_`
-
+.. Digite o seguinte comando:
 +
+`system controller slot module insert -node _impaired_node_name_ -slot _slot_name_`
 
-NOTE: Quando você vir _Deseja continuar?_, digite  `y` .
-
+.. Digitar `y` quando você vê o prompt, _Você quer continuar?_
 +
 A saída deve confirmar que o cluster e o módulo HA I/O foram colocados on-line com sucesso (ligados, inicializados e colocados em serviço).
 
@@ -29,6 +28,8 @@ Do you want to continue? {y|n}: `y`
 
 The module has been successfully powered on, initialized and placed into service.
 ----
+
+
 . Verifique se cada porta no cluster e o módulo de E/S HA foram inicializados com sucesso:
 +
 `event log show -event \*hotplug.init*`
