@@ -158,6 +158,7 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 
 Deve remover o módulo do controlador do chassis quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
 
+.Passos
 . Certifique-se de que todas as unidades no chassis estão firmemente assentadas contra o plano médio, utilizando os polegares para empurrar cada unidade até sentir um batente positivo.
 +
 image::../media/drw_a800_drive_seated_IEOPS-960.svg[Acionamentos do disco do assento]
@@ -235,8 +236,9 @@ Certifique-se de que suporta a parte inferior do módulo do controlador enquanto
 
 == Passo 3: Substitua a bateria RTC
 
-Remova a bateria RTC com falha e instale a bateria RTC de substituição.
+Retire a bateria RTC avariada e instale a bateria RTC de substituição.
 
+.Passos
 . Abra a conduta de ar do controlador na parte superior do controlador.
 +
 .. Insira os dedos nas reentrâncias nas extremidades distantes da conduta de ar.
@@ -274,6 +276,7 @@ NOTE: Observe a polaridade da bateria ao removê-la do suporte. A bateria está 
 
 Reinstale o módulo do controlador e reinicie-o.
 
+.Passos
 . Certifique-se de que a conduta de ar está completamente fechada, rodando-a até onde for.
 +
 Ele deve estar alinhado com a chapa metálica do módulo do controlador.
@@ -288,8 +291,7 @@ NOTE: Não introduza completamente o módulo do controlador no chassis até ser 
 Se você removeu os transcetores (QSFPs ou SFPs), lembre-se de reinstalá-los se estiver usando cabos de fibra ótica.
 
 +
-
-NOTE: Certifique-se de que o cabo da consola está ligado ao módulo do controlador reparado de forma a receber mensagens da consola quando for reiniciado. O controlador reparado recebe energia do controlador em estado de funcionamento e começa a reiniciar assim que estiver completamente encaixado no chassis.
+Certifique-se de que o cabo da consola está ligado ao módulo do controlador reparado de forma a receber mensagens da consola quando for reiniciado. O controlador reparado recebe energia do controlador em estado de funcionamento e começa a reiniciar assim que estiver completamente encaixado no chassis.
 
 . Conclua a reinstalação do módulo do controlador:
 +
@@ -297,49 +299,52 @@ NOTE: Certifique-se de que o cabo da consola está ligado ao módulo do controla
 +
 Os trincos de bloqueio sobem quando o módulo do controlador está totalmente assente.
 
-
-
 +
+Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
 
-NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
-
-+
 .. Rode os trincos de bloqueio para cima, para a posição de bloqueio.
 
 
 . Conete os cabos de alimentação às fontes de alimentação. O controlador reinicia assim que a energia é restaurada.
 +
+Se você tiver fontes de alimentação CC, reconete o bloco de alimentação às fontes de alimentação depois que o módulo do controlador estiver totalmente encaixado no chassi.
 
-NOTE: Se você tiver fontes de alimentação CC, reconete o bloco de alimentação às fontes de alimentação depois que o módulo do controlador estiver totalmente encaixado no chassi.
+. Volte a colocar o controlador afetado em funcionamento normal, devolvendo o respetivo armazenamento:
++
+`storage failover giveback -ofnode _impaired_node_name_`.
 
-. Devolva o controlador afetado ao funcionamento normal, devolvendo o respetivo armazenamento: `storage failover giveback -ofnode _impaired_node_name_`.
-. Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true`.
-. Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos: `system node autosupport invoke -node * -type all -message MAINT=END`.
+. Se a giveback automática foi desativada, reative-a:
++
+`storage failover modify -node local -auto-giveback true`.
+
+. Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`.
+
 
 
 
 
 == Passo 5: Redefina a hora e a data no controlador
 
+Após substituir a bateria do RTC, inserir o controlador e ligar para a primeira reinicialização do BIOS, você verá as seguintes mensagens de erro:
 
-NOTE: Depois de substituir a bateria RTC, inserir o controlador e ligar a primeira reinicialização do BIOS, você verá as seguintes mensagens de erro:
 `RTC date/time error. Reset date/time to default`
-`RTC power failure error` Essas mensagens são esperadas e você pode continuar com este procedimento.
 
-. Verifique a data e a hora no controlador saudável com o `cluster date show` comando.
+`RTC power failure error`
 
+Essas mensagens são esperadas e você pode continuar com este procedimento.
 
-
-NOTE: Se o sistema parar no menu de inicialização, selecione a opção  `Reboot node`e responda _y_ quando solicitado e, em seguida, inicialize no Loader pressionando _Ctrl-C_
-
-. No prompt Loader no controlador de destino, verifique a hora e a data com o `cluster date show` comando.
-. Se necessário, modifique a data com o `set date mm/dd/yyyy` comando.
-. Se necessário, defina a hora, em GMT, usando o `set time hh:mm:ss` comando.
+.Passos
+. Verifique a data e a hora no controlador saudável com o `cluster date show` comando.  + Se o seu sistema parar no menu de inicialização, selecione a opção para `Reboot node` e responda _y_ quando solicitado, então inicialize no LOADER pressionando _Ctrl-C_
 +
-.. Confirme a data e a hora no controlador de destino.
-.. No prompt Loader, digite _bye_ para reinicializar as placas PCIe e outros componentes e deixar a controladora reiniciar.
+.. No prompt Loader no controlador de destino, verifique a hora e a data com o `cluster date show` comando.
+.. Se necessário, modifique a data com o `set date mm/dd/yyyy` comando.
+.. Se necessário, defina a hora, em GMT, usando o `set time hh:mm:ss` comando.
 
 
+. Confirme a data e a hora no controlador de destino.
+. No prompt Loader, digite _bye_ para reinicializar as placas PCIe e outros componentes e deixar a controladora reiniciar.
 
 
 

@@ -2,12 +2,11 @@
 :allow-uri-read: 
 
 
-Para usar este procedimento, seu sistema de armazenamento deve atender a todos os requisitos.  Leia as considerações para obter contexto adicional deste procedimento.
+Para usar este procedimento, certifique-se de que seu sistema de armazenamento atenda a todos os requisitos.
 
 
 NOTE: Se o seu sistema de armazenamento não atender a todos os requisitos, você deverá usar olink:io-module-replace.html["procedimento de substituição de um módulo de E/S"] .
 
-.Requisitos
 * Seu sistema de armazenamento deve estar executando o ONTAP 9.17.1 ou posterior.
 * O módulo de E/S que falhou deve ser um cluster e um módulo de E/S HA no slot 4 e você deve substituí-lo por um cluster e um módulo de E/S HA equivalentes. Não é possível alterar o tipo de módulo de E/S.
 * A configuração do seu sistema de armazenamento deve ter apenas um cluster e um módulo de E/S HA localizados no slot 4, não dois clusters e módulos de E/S HA.
@@ -23,24 +22,4 @@ Você pode verificar se o controlador prejudicado assumiu com sucesso o controla
 Se você não tiver certeza de qual controlador possui o módulo de E/S com falha, entre em contato  https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] .
 
 * Todos os outros componentes do sistema de armazenamento devem estar a funcionar corretamente; caso contrário, contacte https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de continuar com este procedimento.
-
-
-.Considerações
-* A troca a quente do cluster e do módulo HA I/O significa que você não precisa executar uma aquisição manual; o controlador danificado (o controlador com o cluster e o módulo HA I/O com falha) assumiu automaticamente o controlador íntegro.
-+
-Quando o controlador danificado assume o controle do controlador saudável, a única maneira de se recuperar sem uma interrupção é fazer a troca a quente do módulo.
-
-* É essencial aplicar os comandos ao controlador correto ao fazer a troca a quente do cluster e do módulo de E/S HA:
-+
-** O _controlador danificado_ é o controlador no qual você está fazendo o hot-swap do cluster e do módulo HA I/O e é o controlador que assumiu o controle do controlador íntegro.
-** O _controlador saudável_ é o parceiro HA do controlador prejudicado e é o controlador que foi assumido pelo controlador prejudicado.
-
-
-* Se necessário, você pode ligar os LEDs de localização do sistema de armazenamento (azul) para ajudar a localizar fisicamente o sistema de armazenamento afetado. Faça login no BMC usando SSH e digite o `system location-led _on_` comando.
-+
-Um sistema de armazenamento tem três LEDs de localização: Um no painel de visualização do operador e um em cada controlador. Os LEDs de localização permanecem acesos durante 30 minutos.
-
-+
-Você pode desativá-los digitando o `system location-led _off_` comando. Se não tiver a certeza se os LEDs estão ligados ou desligados, pode verificar o seu estado introduzindo o `system location-led show` comando.
-
 

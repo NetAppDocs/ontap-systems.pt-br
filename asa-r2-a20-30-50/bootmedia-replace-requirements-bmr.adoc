@@ -2,7 +2,7 @@
 permalink: asa-r2-a20-30-50/bootmedia-replace-requirements-bmr.html 
 sidebar: sidebar 
 keywords: asa a20, asa a30, asa a50, replace the boot media 
-summary: 'Antes de substituir a mídia de inicialização no seu sistema de armazenamento ASA A20, ASA A30 ou ASA A50, certifique-se de atender aos requisitos e considerações necessários para uma substituição bem-sucedida. Isso inclui verificar se você possui a mídia de inicialização de substituição correta, confirmar se a porta e0S (chave e0M) no controlador danificado está funcionando corretamente e determinar se o Gerenciador de Chaves Onboard (OKM) ou o Gerenciador de Chaves Externo (EKM) está habilitado.' 
+summary: 'Antes de substituir a mídia de inicialização no seu sistema de armazenamento ASA A20, ASA A30 ou ASA A50, certifique-se de atender aos requisitos e considerações necessários para uma substituição bem-sucedida. Isso inclui verificar se você tem a mídia de inicialização de substituição correta, confirmar se a porta e0M (chave inglesa) no controlador danificado está funcionando corretamente e determinar se o Onboard Key Manager (OKM) ou o External Key Manager (EKM) está habilitado.' 
 ---
 = Requisitos para substituir o suporte de arranque - ASA A20, ASA A30 e ASA A50
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Antes de substituir a mídia de inicialização no seu sistema de arma
 
 
 [role="lead"]
-Antes de substituir a mídia de inicialização no seu sistema de armazenamento ASA A20, ASA A30 ou ASA A50, certifique-se de atender aos requisitos e considerações necessários para uma substituição bem-sucedida. Isso inclui verificar se você possui a mídia de inicialização de substituição correta, confirmar se a porta e0S (chave e0M) no controlador danificado está funcionando corretamente e determinar se o Gerenciador de Chaves Onboard (OKM) ou o Gerenciador de Chaves Externo (EKM) está habilitado.
+Antes de substituir a mídia de inicialização no seu sistema de armazenamento ASA A20, ASA A30 ou ASA A50, certifique-se de atender aos requisitos e considerações necessários para uma substituição bem-sucedida. Isso inclui verificar se você tem a mídia de inicialização de substituição correta, confirmar se a porta e0M (chave inglesa) no controlador danificado está funcionando corretamente e determinar se o Onboard Key Manager (OKM) ou o External Key Manager (EKM) está habilitado.
 
 Reveja os seguintes requisitos.
 
@@ -20,7 +20,7 @@ Reveja os seguintes requisitos.
 +
 A porta e0M é usada para comunicação entre os dois controladores durante o processo de recuperação de inicialização automatizada.
 
-* Para OKM, você precisa do conteúdo do arquivo de senha OKM.
+* Para o OKM, você precisa da senha de todo o cluster e também dos dados de backup.
 * Para EKM, você precisa de cópias dos seguintes arquivos do nó do parceiro:
 +
 ** arquivo /cfcard/kmip/servers.cfg.

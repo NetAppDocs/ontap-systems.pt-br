@@ -1,164 +1,10 @@
-= Passo 1: Desligue o controlador desativado
+= Etapa 4: Reinstale o módulo do controlador
 :allow-uri-read: 
 
 
-Pode utilizar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema.
-
-Certifique-se de que todos os outros componentes do sistema estão a funcionar corretamente; caso contrário, tem de contactar a assistência técnica.
-
-
-
-== Passo 1: Desligue o controlador desativado
-
-Desligue ou assuma o controlador desativado.
-
-Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
-
-.Sobre esta tarefa
-* Se você tiver um sistema SAN, você deve ter verificado mensagens de  `cluster kernel-service show`evento ) para o blade SCSI do controlador afetado. O `cluster kernel-service show` comando (do modo avançado priv) exibe o nome do nó, link:https://docs.netapp.com/us-en/ontap/system-admin/display-nodes-cluster-task.html["status do quorum"]desse nó, o status de disponibilidade desse nó e o status operacional desse nó.
-+
-Cada processo SCSI-blade deve estar em quórum com os outros nós no cluster. Qualquer problema deve ser resolvido antes de prosseguir com a substituição.
-
-* Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
-
-
-.Passos
-. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport:
-+
-`system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
-
-+
-A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas:
-
-+
-`cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
-
-. Desative a giveback automática a partir da consola do controlador saudável:
-+
-`storage failover modify -node local -auto-giveback false`
-
-+
-
-NOTE: Quando vir _do pretende desativar a auto-giveback?_, introduza `y`.
-
-. Leve o controlador prejudicado para o prompt Loader:
-+
-[cols="1,2"]
-|===
-| Se o controlador afetado estiver a apresentar... | Então... 
-
-
- a| 
-O prompt Loader
- a| 
-Vá para a próxima etapa.
-
-
-
- a| 
-A aguardar pela giveback...
- a| 
-Pressione Ctrl-C e responda `y` quando solicitado.
-
-
-
- a| 
-Prompt do sistema ou prompt de senha
- a| 
-Assuma ou interrompa o controlador prejudicado do controlador saudável:
-
-`storage failover takeover -ofnode _impaired_node_name_ -halt _true_`
-
-O parâmetro _-halt True_ traz para o prompt Loader.
-
-|===
-
-
-
-
-== Passo 2: Remova o módulo do controlador
-
-Deve remover o módulo do controlador do chassis quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
-
-. Certifique-se de que todas as unidades no chassis estão firmemente assentadas contra o plano médio, utilizando os polegares para empurrar cada unidade até sentir um batente positivo.
-+
-image::../media/drw_a800_drive_seated_IEOPS-960.svg[Acionamentos do disco do assento]
-
-. Verifique o NVRAM âmbar se o LED de status localizado no slot 4/5 na parte traseira do módulo do controlador desativado está desligado. Procure o ícone NV.
-+
-image::../media/drw_a1K-70-90_nvram-led_ieops-1463.svg[Gráfico de localização do LED de estado e atenção do NVRAM]
-
-+
-[cols="1,4"]
-|===
-
-
- a| 
-image:../media/icon_round_1.png["Legenda número 1"]
- a| 
-LED de estado do NVRAM
-
-
-
- a| 
-image:../media/icon_round_2.png["Legenda número 2"]
- a| 
-LED de atenção NVRAM
-
-|===
-+
-** Se o LED NV estiver desligado, passe à próxima etapa.
-** Se o LED NV estiver intermitente, aguarde que o intermitente pare. Se a intermitência continuar durante mais de 5 minutos, contacte o suporte técnico para obter assistência.
-
-
-. Se você ainda não está aterrado, aterre-se adequadamente.
-. Desconete os cabos da fonte de alimentação do módulo do controlador das fontes de alimentação (PSU) do módulo do controlador.
-+
-
-NOTE: Se o sistema tiver alimentação CC, desligue o bloco de alimentação das PSUs.
-
-. Desconete os cabos do sistema e os módulos SFP e QSFP (se necessário) do módulo do controlador, mantendo o controle de onde os cabos estavam conetados.
-+
-Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar o dispositivo de gerenciamento de cabos, os cabos sejam organizados.
-
-. Remova o dispositivo de gerenciamento de cabos do módulo do controlador.
-. Prima ambos os trincos de bloqueio para baixo e, em seguida, rode ambos os trincos para baixo ao mesmo tempo.
-+
-O módulo do controlador desloca-se ligeiramente para fora do chassis.
-
-+
-image::../media/drw_a70-90_pcm_remove_replace_ieops-1365.svg[Controlador remover gráfico]
-
-+
-[cols="1,4"]
-|===
-
-
- a| 
-image:../media/icon_round_1.png["Legenda número 1"]
- a| 
-Trinco de bloqueio
-
-
-
- a| 
-image:../media/icon_round_2.png["Legenda número 2"]
- a| 
-Pino de bloqueio
-
-|===
-. Deslize o módulo do controlador para fora do chassis e coloque-o numa superfície plana e estável.
-+
-Certifique-se de que suporta a parte inferior do módulo do controlador enquanto o desliza para fora do chassis.
-
-
-
-
-
-== Passo 3: Substitua a bateria RTC
-
 Remova a bateria RTC com falha e instale a bateria RTC de substituição.
 
+.Passos
 . Abra a conduta de ar do controlador na parte superior do controlador.
 +
 .. Insira os dedos nas reentrâncias nas extremidades distantes da conduta de ar.
@@ -180,8 +26,7 @@ image:../media/icon_round_1.png["Legenda número 1"]
 |===
 . Empurre cuidadosamente a bateria para fora do suporte, rode-a para fora do suporte e, em seguida, levante-a para fora do suporte.
 +
-
-NOTE: Observe a polaridade da bateria ao removê-la do suporte. A bateria está marcada com um sinal de mais e deve ser posicionada corretamente no suporte. Um sinal de mais perto do suporte indica-lhe como a bateria deve ser posicionada.
+Observe a polaridade da bateria ao removê-la do suporte. A bateria está marcada com um sinal de mais e deve ser posicionada corretamente no suporte. Um sinal de mais perto do suporte indica-lhe como a bateria deve ser posicionada.
 
 . Retire a bateria de substituição do saco de transporte antiestático.
 . Observe a polaridade da bateria RTC e, em seguida, insira-a no suporte inclinando a bateria em ângulo e empurrando-a para baixo.
@@ -194,6 +39,7 @@ NOTE: Observe a polaridade da bateria ao removê-la do suporte. A bateria está 
 
 Reinstale o módulo do controlador e reinicie-o.
 
+.Passos
 . Certifique-se de que a conduta de ar está completamente fechada, rodando-a até onde for.
 +
 Ele deve estar alinhado com a chapa metálica do módulo do controlador.
@@ -208,8 +54,7 @@ NOTE: Não introduza completamente o módulo do controlador no chassis até ser 
 Se você removeu os transcetores (QSFPs ou SFPs), lembre-se de reinstalá-los se estiver usando cabos de fibra ótica.
 
 +
-
-NOTE: Certifique-se de que o cabo da consola está ligado ao módulo do controlador reparado de forma a receber mensagens da consola quando for reiniciado. O controlador reparado recebe energia do controlador em estado de funcionamento e começa a reiniciar assim que estiver completamente encaixado no chassis.
+Certifique-se de que o cabo da consola está ligado ao módulo do controlador reparado de forma a receber mensagens da consola quando for reiniciado. O controlador reparado recebe energia do controlador em estado de funcionamento e começa a reiniciar assim que estiver completamente encaixado no chassis.
 
 . Conclua a reinstalação do módulo do controlador:
 +
@@ -217,53 +62,26 @@ NOTE: Certifique-se de que o cabo da consola está ligado ao módulo do controla
 +
 Os trincos de bloqueio sobem quando o módulo do controlador está totalmente assente.
 
-
-
 +
+Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
 
-NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
-
-+
 .. Rode os trincos de bloqueio para cima, para a posição de bloqueio.
 
 
 . Conete os cabos de alimentação às fontes de alimentação. O controlador reinicia assim que a energia é restaurada.
 +
+Se você tiver fontes de alimentação CC, reconete o bloco de alimentação às fontes de alimentação depois que o módulo do controlador estiver totalmente encaixado no chassi.
 
-NOTE: Se você tiver fontes de alimentação CC, reconete o bloco de alimentação às fontes de alimentação depois que o módulo do controlador estiver totalmente encaixado no chassi.
-
-. Devolva o controlador afetado ao funcionamento normal, devolvendo o respetivo armazenamento: `storage failover giveback -ofnode _impaired_node_name_`.
-. Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true`.
-. Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos: `system node autosupport invoke -node * -type all -message MAINT=END`.
-
-
-
-
-== Passo 5: Redefina a hora e a data no controlador
-
-
-NOTE: Depois de substituir a bateria RTC, inserir o controlador e ligar a primeira reinicialização do BIOS, você verá as seguintes mensagens de erro:
-`RTC date/time error. Reset date/time to default`
-`RTC power failure error` Essas mensagens são excluídas e você pode continuar com este procedimento.
-
-. Verifique a data e a hora no controlador saudável com o `cluster date show` comando.
-
-
-
-NOTE: Se o sistema parar no menu de inicialização, selecione a opção  `Reboot node`e responda _y_ quando solicitado e, em seguida, inicialize no Loader pressionando _Ctrl-C_
-
-. No prompt Loader no controlador de destino, verifique a hora e a data com o `cluster date show` comando.
-. Se necessário, modifique a data com o `set date mm/dd/yyyy` comando.
-. Se necessário, defina a hora, em GMT, usando o `set time hh:mm:ss` comando.
+. Volte a colocar o controlador afetado em funcionamento normal, devolvendo o respetivo armazenamento:
 +
-.. Confirme a data e a hora no controlador de destino.
-.. No prompt Loader, digite _bye_ para reinicializar as placas PCIe e outros componentes e deixar a controladora reiniciar.
+`storage failover giveback -ofnode _impaired_node_name_`.
+
+. Se a giveback automática foi desativada, reative-a:
++
+`storage failover modify -node local -auto-giveback true`.
+
+. Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`.
 
 
-
-
-
-
-== Passo 6: Devolva a peça com falha ao NetApp
-
-Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

@@ -16,6 +16,7 @@ summary: Antes de desligar o nó prejudicado e verificar o status das chaves de 
 
 Verifique se sua versão do ONTAP suporta criptografia de volume NetApp (NVE). Esta informação é crucial para transferir a imagem ONTAP correta.
 
+.Passos
 . Determine se sua versão do ONTAP suporta criptografia executando o seguinte comando:
 +
 `version -v`
@@ -37,6 +38,7 @@ Se a saída incluir `1Ono-DARE`, o NVE não é suportado na versão do cluster.
 
 Para desligar um controlador com segurança, primeiro identifique se o External Key Manager (EKM) ou o Onboard Key Manager (OKM) está ativo. Em seguida, verifique o gerenciador de chaves em uso, exiba as informações de chave apropriadas e tome medidas com base no status das chaves de autenticação.
 
+.Passos
 . Determine qual gerenciador de chaves está habilitado em seu sistema:
 +
 [cols="1a,2a"]

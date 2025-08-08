@@ -2,7 +2,7 @@
 permalink: asa-r2-a20-30-50/maintain-overview.html 
 sidebar: sidebar 
 keywords: asa a20 asa a30 asa a50 maintenance, maintenance, repairing a20 asa a30 asa a50, replace a20 asa a30 asa a50 components 
-summary: Mantenha o hardware ASA A20, ASA A30 e ASA A50 
+summary: Faça a manutenção do hardware do seu sistema de armazenamento ASA A20, ASA A30 ou ASA A50 para garantir confiabilidade a longo prazo e desempenho ideal. Realize tarefas de manutenção regulares, como a substituição de componentes defeituosos, pois isso ajuda a evitar tempo de inatividade e perda de dados. 
 ---
 = Visão geral da manutenção de hardware - ASA A20, ASA A30 e ASA A50
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Mantenha o hardware ASA A20, ASA A30 e ASA A50
 
 
 [role="lead"]
-Mantenha o hardware dos sistemas de storage ASA A20, ASA A30 ou ASA A50 para garantir confiabilidade a longo prazo e desempenho ideal. Execute tarefas de manutenção regulares, como a substituição de componentes defeituosos, pois isso ajuda a evitar tempo de inatividade e perda de dados.
+Faça a manutenção do hardware do seu sistema de armazenamento ASA A20, ASA A30 ou ASA A50 para garantir confiabilidade a longo prazo e desempenho ideal. Realize tarefas de manutenção regulares, como a substituição de componentes defeituosos, pois isso ajuda a evitar tempo de inatividade e perda de dados.
 
 Os procedimentos de manutenção presumem que os sistemas ASA A20, ASA A30 e ASA A50 já foram implantados como nós de storage no ambiente ONTAP.
 
@@ -26,9 +26,18 @@ Para os sistemas de storage ASA A20, ASA A30 e ASA A50, é possível executar pr
 
 
  a| 
-link:bootmedia-replace-workflow-bmr.html["Suporte de arranque"]
+link:bootmedia-replace-workflow-bmr.html["Mídia de inicialização - recuperação automatizada"]
  a| 
-A Mídia de inicialização armazena um conjunto primário e secundário de arquivos de imagem ONTAP, bem como informações de configuração do sistema que o sistema usa quando ele é inicializado.
+A mídia de inicialização armazena um conjunto primário e secundário de arquivos de imagem ONTAP que o sistema de armazenamento usa para inicializar.  Durante a recuperação automatizada, o sistema recupera a imagem de inicialização do nó parceiro e executa automaticamente a opção de menu de inicialização apropriada para instalar a imagem na mídia de inicialização de substituição.
+
+O processo automatizado de recuperação de mídia de inicialização é compatível apenas com o ONTAP 9.17.1 e versões posteriores. Se o seu sistema de armazenamento estiver executando uma versão anterior do ONTAP, use o link:bootmedia-replace-workflow.html["procedimento de recuperação de inicialização manual"] .
+
+
+
+ a| 
+link:bootmedia-replace-workflow.html["Mídia de inicialização - recuperação manual"]
+ a| 
+A mídia de inicialização armazena um conjunto primário e secundário de arquivos de imagem ONTAP que o sistema de armazenamento usa para inicializar a imagem de uma unidade USB e restaurar a configuração do nó parceiro
 
 
 

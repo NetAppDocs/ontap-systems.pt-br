@@ -2,7 +2,7 @@
 permalink: fas50/install-overview.html 
 sidebar: sidebar 
 keywords: fas50, Installation, deployment, Install, deploy, Installing, deploying 
-summary: Siga estas etapas de alto nível para instalar e configurar o sistema de storage AFF A70 ou A90 e implantá-lo como um par de HA no sistema ONTAP. 
+summary: Para instalar e configurar o sistema de storage FAS50, você deve revisar os requisitos de instalação, preparar o local, instalar e fazer o cabo dos componentes de hardware, ligar o sistema de storage e configurar o cluster ONTAP. 
 ---
 = Fluxo de trabalho de instalação e configuração - FAS50
 :allow-uri-read: 

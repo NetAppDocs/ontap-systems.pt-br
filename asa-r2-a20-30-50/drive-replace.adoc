@@ -2,7 +2,7 @@
 permalink: asa-r2-a20-30-50/drive-replace.html 
 sidebar: sidebar 
 keywords: asa a20, asa a30, asa a50, replace the drives 
-summary: Substitua uma unidade no sistema ASA A20, ASA A30 ou ASA A50 quando uma unidade falhar ou precisar de uma atualização. O processo de substituição envolve identificar a unidade com defeito, removê-la com segurança e instalar uma nova unidade para garantir o acesso contínuo aos dados e o desempenho do sistema. 
+summary: Substitua uma unidade no seu sistema de armazenamento ASA A20, ASA A30 ou ASA A50 quando uma unidade falhar ou precisar de uma atualização.  O processo de substituição envolve identificar a unidade defeituosa, removê-la com segurança e instalar uma nova unidade para garantir o acesso contínuo aos dados e o desempenho do sistema. 
 ---
 = Substitua uma unidade - ASA A20, ASA A30 e ASA A50
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Substitua uma unidade no sistema ASA A20, ASA A30 ou ASA A50 quando uma
 
 
 [role="lead"]
-Substitua uma unidade no sistema ASA A20, ASA A30 ou ASA A50 quando uma unidade falhar ou precisar de uma atualização. O processo de substituição envolve identificar a unidade com defeito, removê-la com segurança e instalar uma nova unidade para garantir o acesso contínuo aos dados e o desempenho do sistema.
+Substitua uma unidade no seu sistema de armazenamento ASA A20, ASA A30 ou ASA A50 quando uma unidade falhar ou precisar de uma atualização.  O processo de substituição envolve identificar a unidade defeituosa, removê-la com segurança e instalar uma nova unidade para garantir o acesso contínuo aos dados e o desempenho do sistema.
 
 Você pode substituir uma unidade com falha sem interrupções enquanto a e/S estiver em andamento.
 
@@ -79,11 +79,9 @@ Você pode desativá-los digitando o `system location-led _off_` comando. Se nã
 . Retire a moldura da parte frontal do sistema de armazenamento.
 . Identifique fisicamente a unidade com falha.
 +
-Quando uma unidade falha, o sistema Registra uma mensagem de aviso no console do sistema indicando qual unidade falhou. Além disso, o LED atenção (âmbar) no painel de visualização do operador da prateleira e a unidade com falha acendem-se.
+** Quando uma unidade falha, o sistema Registra uma mensagem de aviso no console do sistema indicando qual unidade falhou. Além disso, o LED atenção (âmbar) no painel de visualização do operador da prateleira e a unidade com falha acendem-se.
+** O LED de atividade (verde) em uma unidade com falha pode ser iluminado (sólido), o que indica que a unidade tem energia, mas não deve estar piscando, o que indica atividade de e/S. Uma unidade com falha não tem atividade de e/S.
 
-+
-
-NOTE: O LED de atividade (verde) em uma unidade com falha pode ser iluminado (sólido), o que indica que a unidade tem energia, mas não deve estar piscando, o que indica atividade de e/S. Uma unidade com falha não tem atividade de e/S.
 
 . Remova a unidade com falha:
 +
@@ -115,8 +113,7 @@ Deslize a unidade para fora do compartimento de unidade usando a alça do came e
 
 Ao remover uma unidade, utilize sempre duas mãos para suportar o seu peso.
 
-
-NOTE: Como as unidades são frágeis, minimize o manuseio para evitar danificá-las.
+Como as unidades são frágeis, minimize o manuseio para evitar danificá-las.
 
 |===
 . Aguarde, no mínimo, 70 segundos antes de inserir a unidade de substituição.
@@ -141,6 +138,6 @@ Quando o LED de atividade da unidade está sólido, significa que a unidade tem 
 . Volte a instalar a moldura na parte frontal do sistema de armazenamento.
 . Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit.
 +
-Entre em Contato com o suporte técnico em https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"], 888-463-8277 (América do Norte), 00-800-44-638277 (Europa) ou 800-800-80-800 (Ásia/Pacífico) se precisar do número de RMA ou de ajuda adicional com o procedimento de substituição.
+Entre em contato com o suporte técnico https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] se você precisar do número RMA ou de ajuda adicional com o procedimento de substituição.
 
 

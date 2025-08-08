@@ -2,7 +2,7 @@
 permalink: asa-r2-a20-30-50/fan-replace.html 
 sidebar: sidebar 
 keywords: asa a20, asa a30, asa a50, asa, swap, out, fan, module, interrupt, service, sequence, task, hot-swap, hot-swap a fan module 
-summary: Substitua um módulo de ventilador no sistema ASA A20, ASA A30 ou ASA A50 quando um ventilador falhar ou não estiver operando de forma eficiente, pois isso pode afetar o resfriamento do sistema e o desempenho geral. O processo de substituição envolve desligar o controlador, remover o controlador, substituir o ventilador, reinstalar o controlador e devolver a peça com falha ao NetApp. 
+summary: Substitua um módulo de ventilador no seu sistema de armazenamento ASA A20, ASA A30 ou ASA A50 quando um ventilador falhar ou não estiver operando de forma eficiente, pois isso pode afetar o resfriamento do sistema e o desempenho geral.  O processo de substituição envolve desligar o controlador, removê-lo, substituir o ventilador, reinstalar o controlador e devolver a peça com defeito à NetApp. 
 ---
 = Substitua um módulo da ventoinha - ASA A20, ASA A30 e ASA A50
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Substitua um módulo de ventilador no sistema ASA A20, ASA A30 ou ASA A
 
 
 [role="lead"]
-Substitua um módulo de ventilador no sistema ASA A20, ASA A30 ou ASA A50 quando um ventilador falhar ou não estiver operando de forma eficiente, pois isso pode afetar o resfriamento do sistema e o desempenho geral. O processo de substituição envolve desligar o controlador, remover o controlador, substituir o ventilador, reinstalar o controlador e devolver a peça com falha ao NetApp.
+Substitua um módulo de ventilador no seu sistema de armazenamento ASA A20, ASA A30 ou ASA A50 quando um ventilador falhar ou não estiver operando de forma eficiente, pois isso pode afetar o resfriamento do sistema e o desempenho geral.  O processo de substituição envolve desligar o controlador, removê-lo, substituir o ventilador, reinstalar o controlador e devolver a peça com defeito à NetApp.
 
 .Sobre esta tarefa
 Se necessário, você pode ligar os LEDs de localização do sistema de armazenamento (azul) para ajudar a localizar fisicamente o sistema de armazenamento afetado. Faça login no BMC usando SSH e digite o `system location-led _on_` comando.

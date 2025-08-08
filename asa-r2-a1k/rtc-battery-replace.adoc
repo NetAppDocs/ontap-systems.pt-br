@@ -92,6 +92,7 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 
 Você deve remover o módulo do controlador do gabinete quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
 
+.Passos
 . Verifique o LED de status do NVRAM localizado no slot 4/5 do sistema. Há também um LED NVRAM no painel frontal do módulo do controlador. Procure o ícone NV:
 +
 image::../media/drw_a1K-70-90_nvram-led_ieops-1463.svg[Gráfico de localização do LED de estado e atenção do NVRAM]
@@ -148,6 +149,7 @@ Certifique-se de que suporta a parte inferior do módulo do controlador enquanto
 
 Remova a bateria RTC com falha e instale a bateria RTC de substituição.
 
+.Passos
 . Abra a conduta de ar do controlador na parte superior do controlador.
 +
 .. Insira os dedos nas reentrâncias nas extremidades distantes da conduta de ar.
@@ -183,6 +185,7 @@ NOTE: Observe a polaridade da bateria ao removê-la do suporte. A bateria está 
 
 Reinstale o módulo do controlador e inicialize-o.
 
+.Passos
 . Certifique-se de que a conduta de ar está completamente fechada, rodando-a até onde for.
 +
 Ele deve estar alinhado com a chapa metálica do módulo do controlador.
@@ -210,6 +213,7 @@ NOTE: Depois de substituir a bateria RTC, inserir o controlador e ligar a primei
 `RTC date/time error. Reset date/time to default`
 `RTC power failure error` Essas mensagens são excluídas e você pode continuar com este procedimento.
 
+.Passos
 . Verifique a data e a hora no controlador saudável com o comando _cluster date show_.
 
 

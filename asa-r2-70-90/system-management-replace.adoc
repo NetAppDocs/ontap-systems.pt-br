@@ -13,23 +13,6 @@ summary: Substitua o módulo de gerenciamento do sistema no sistema ASA A70 ou A
 [role="lead"]
 Substitua o módulo de gerenciamento do sistema no sistema ASA A70 ou ASA A90 quando ele ficar com defeito ou o firmware estiver corrompido. O processo de substituição envolve desligar o controlador, substituir o módulo de gestão do sistema com falha, reiniciar o controlador, atualizar as chaves de licença e devolver a peça com falha ao NetApp.
 
-O módulo de gerenciamento do sistema, localizado na parte traseira do controlador no slot 8, contém componentes integrados para gerenciamento do sistema, bem como portas para gerenciamento externo. O controlador de destino deve ser desligado para substituir um módulo de gestão do sistema afetado ou substituir o suporte de arranque.
-
-O módulo de gerenciamento do sistema tem os seguintes componentes integrados:
-
-* Suporte de arranque, permitindo a substituição do suporte de arranque sem remover o módulo do controlador.
-* BMC
-* Switch de gerenciamento
-
-
-O módulo Gerenciamento do sistema também contém as seguintes portas para gerenciamento externo:
-
-* RJ45 Série
-* Série USB (tipo C)
-* USB Type-A (recuperação de arranque)
-* Ethernet de e0M RJ45 GB
-
-
 .Antes de começar
 * Este procedimento utiliza a seguinte terminologia:
 +
@@ -41,6 +24,9 @@ O módulo Gerenciamento do sistema também contém as seguintes portas para gere
 * O controlador do parceiro deve ser capaz de assumir o controlador afetado.
 * Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor.
 
+
+.Sobre esta tarefa
+O módulo de gerenciamento do sistema, localizado na parte traseira do controlador no slot 8, contém componentes integrados para gerenciamento do sistema, bem como portas para gerenciamento externo. O controlador de destino deve ser desligado para substituir um módulo de gestão do sistema afetado ou substituir o suporte de arranque.
 
 
 
@@ -112,15 +98,13 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 
 
 
-== Passo 2: Substitua o módulo de gestão do sistema afetado
+== Etapa 2: substituir o módulo de gerenciamento do sistema
 
 Substitua o módulo de gestão do sistema afetado.
 
+.Passos
 . Certifique-se de que todas as unidades no chassis estão firmemente assentadas contra o plano médio, utilizando os polegares para empurrar cada unidade até sentir um batente positivo.
-+
-
-NOTE: Certifique-se de que o NVRAM foi concluído antes de prosseguir. Quando o LED no módulo NV está desligado, o NVRAM é desativado. Se o LED estiver piscando, aguarde até que o piscando pare. Se a intermitência continuar durante mais de 5 minutos, contacte o suporte técnico para obter assistência.
-
+. Certifique-se de que o NVRAM foi concluído antes de prosseguir. Quando o LED no módulo NV está desligado, o NVRAM é desativado. Se o LED estiver piscando, aguarde até que o piscando pare. Se a intermitência continuar durante mais de 5 minutos, contacte o suporte técnico para obter assistência.
 +
 image::../media/drw_a800_drive_seated_IEOPS-960.svg[Acionamentos do disco do assento]
 
@@ -131,9 +115,7 @@ image::../media/drw_a800_drive_seated_IEOPS-960.svg[Acionamentos do disco do ass
 NOTE: Se o sistema tiver alimentação CC, desligue o bloco de alimentação das PSUs.
 
 . Gire a bandeja de gerenciamento de cabos para baixo puxando os botões de ambos os lados no interior da bandeja de gerenciamento de cabos e, em seguida, gire a bandeja para baixo.
-. Retire o módulo de gestão do sistema:
-+
-.. Retire todos os cabos ligados ao módulo de gestão do sistema. Certifique-se de que a etiqueta onde os cabos foram conetados, para que você possa conectá-los às portas corretas quando reinstalar o módulo.
+. Retire todos os cabos ligados ao módulo de gestão do sistema. Certifique-se de que a etiqueta onde os cabos foram conetados, para que você possa conectá-los às portas corretas quando reinstalar o módulo.
 +
 image::../media/drw_70-90_sys-mgmt_remove_ieops-1817.svg[Substitua o módulo de gestão do sistema]
 
@@ -148,8 +130,6 @@ image::../media/icon_round_1.png[Legenda número 1]
 Trinco do excêntrico do módulo de gestão do sistema
 
 |===
-
-
 . Retire o módulo de gestão do sistema:
 +
 .. Prima o botão do came de gestão do sistema. A alavanca do excêntrico afasta-se do chassis.
@@ -215,14 +195,46 @@ NOTE: Se você tiver fontes de alimentação CC, reconecte o bloco de energia à
 
 
 
-== Passo 3: Reinicie o módulo do controlador
+== Passo 3: Reinicie o controlador
 
 Reinicie o módulo do controlador.
 
+.Passos
 . Digite _bye_ no prompt DO Loader.
-. Retorne o controlador à operação normal, devolvendo seu armazenamento: _Storage failover giveback -ofnode _imideed_node_name__
-. Restaure a giveback automática usando o `storage failover modify -node local -auto-giveback true` comando.
-. Se uma janela de manutenção do AutoSupport foi acionada, encerre-a usando o `system node autosupport invoke -node * -type all -message MAINT=END` comando.
+. Volte a colocar o controlador em funcionamento normal, devolvendo o respetivo armazenamento:
++
+`storage failover giveback -ofnode _impaired_node_name_`
+
+. Restaurar devolução automática:
++
+`storage failover modify -node local -auto-giveback true`
+
+. Se uma janela de manutenção do AutoSupport foi acionada, encerre-a:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
+
+
+
+
+== Passo 3: Reinicie o controlador
+
+Reinicie o módulo do controlador.
+
+.Passos
+. Digite _bye_ no prompt DO Loader.
+. Volte a colocar o controlador em funcionamento normal, devolvendo o respetivo armazenamento:
++
+`storage failover giveback -ofnode _impaired_node_name_`
+
+. Restaurar devolução automática:
++
+`storage failover modify -node local -auto-giveback true`
+
+. Se uma janela de manutenção do AutoSupport foi acionada, encerre-a:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
 
 
 

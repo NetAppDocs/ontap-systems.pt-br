@@ -166,8 +166,9 @@ Substitua o módulo NVRAM ou DIMMs NVRAM usando a opção a seguir apropriada.
 --
 Para substituir o módulo NVRAM, localize-o no slot 4/5 no gabinete e siga a sequência específica de etapas.
 
+.Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
-. Desconecte os cabos de alimentação das PSUs do controlador e puxe o módulo do controlador, na parte frontal do sistema, alguns centímetros para fora.
+. Desconecte os cabos de alimentação das PSUs.
 . Gire a bandeja de gerenciamento de cabos para baixo puxando cuidadosamente os pinos nas extremidades da bandeja e girando-a para baixo.
 . Remova o módulo NVRAM desativado do compartimento:
 +
@@ -215,8 +216,9 @@ Patilhas de bloqueio do DIMM
 --
 Para substituir DIMMs NVRAM no módulo NVRAM, você deve remover o módulo NVRAM e, em seguida, substituir o DIMM de destino.
 
+.Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
-. Desconecte os cabos de alimentação das PSUs e puxe o módulo controlador alguns centímetros para fora da parte frontal do sistema.
+. Desconecte os cabos de alimentação das PSUs.
 . Gire a bandeja de gerenciamento de cabos para baixo puxando cuidadosamente os pinos nas extremidades da bandeja e girando-a para baixo.
 . Remova o módulo NVRAM de destino do compartimento.
 +
@@ -261,9 +263,10 @@ NOTE: Consulte a etiqueta do mapa da FRU na lateral do módulo NVRAM para determ
 
 == Passo 3: Reinicie o controlador
 
-Depois de substituir a FRU, você deve reiniciar o módulo do controlador.
+Depois de substituir a FRU, você deve reinicializar o módulo controlador conectando os cabos de alimentação novamente à PSU.
 
-. Reconecte os cabos de alimentação à PSU e recoloque e trave com cuidado o módulo do controlador na parte frontal do sistema.
+.Passos
+. Conecte os cabos de alimentação novamente na PSU.
 +
 O sistema começará a reiniciar, normalmente para o prompt Loader.
 

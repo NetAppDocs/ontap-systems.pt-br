@@ -19,6 +19,7 @@ Substitua o controlador no sistema ASA A1K quando for necessária uma falha de h
 
 Você deve remover o módulo do controlador do gabinete quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
 
+.Passos
 . Verifique o LED de status do NVRAM localizado no slot 4/5 do sistema. Há também um LED NVRAM no painel frontal do módulo do controlador. Procure o ícone NV:
 +
 image::../media/drw_a1K-70-90_nvram-led_ieops-1463.svg[Gráfico de localização do LED de estado e atenção do NVRAM]
@@ -75,6 +76,7 @@ Certifique-se de que suporta a parte inferior do módulo do controlador enquanto
 
 Tem de remover os cinco módulos da ventoinha do módulo do controlador desativado para o módulo do controlador de substituição.
 
+.Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Retire a moldura (se necessário) com duas mãos, segurando as aberturas de cada lado da moldura e puxando-a na sua direção até que a moldura se solte dos pernos esféricos na estrutura do chassis.
 . Prima o botão de bloqueio cinzento no módulo da ventoinha e puxe o módulo da ventoinha para fora do chassis, certificando-se de que o apoia com a mão livre.
@@ -111,6 +113,7 @@ Botão de bloqueio preto
 
 Mova a bateria NV para o controlador de substituição.
 
+.Passos
 . Abra a tampa da conduta de ar da bateria NV e localize a bateria NV.
 +
 image::../media/drw_a1k_remove_replace_nvmembat_ieops-1379.svg[Bateria NV, retire o AFF A1K]
@@ -157,6 +160,7 @@ Bateria NV
 
 Mova os DIMMs para o módulo do controlador de substituição.
 
+.Passos
 . Abra o duto de ar da placa-mãe e localize os DIMMs.
 +
 image::../media/drw_a1k_dimms_ieops-1512.svg[DIMM remova AFF A1K]

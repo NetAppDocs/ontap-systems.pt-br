@@ -7,7 +7,7 @@
 +
 A porta e0M é usada para comunicação entre os dois controladores durante o processo de recuperação de inicialização automatizada.
 
-* Para OKM, você precisa do conteúdo do arquivo de senha OKM.
+* Para o OKM, você precisa da senha de todo o cluster e também dos dados de backup.
 * Para EKM, você precisa de cópias dos seguintes arquivos do nó do parceiro:
 +
 ** arquivo /cfcard/kmip/servers.cfg.

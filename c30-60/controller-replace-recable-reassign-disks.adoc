@@ -2,7 +2,7 @@
 permalink: c30-60/controller-replace-recable-reassign-disks.html 
 sidebar: sidebar 
 keywords: aff c30, aff c60, how to recable the system, reboot the system 
-summary: Retorne o controle dos recursos de storage ao controlador de substituição para que seu sistema AFF C30 ou AFF C60 possa retomar a operação normal. 
+summary: 'Retorne o controle dos recursos de armazenamento ao controlador de substituição para que seu sistema de armazenamento AFF C30 ou AFF C60 possa retomar a operação normal.  O procedimento de devolução varia de acordo com o tipo de criptografia usado pelo seu sistema: sem criptografia, criptografia OKM do Onboard Key Manager ou criptografia EKM do External Key Manager.' 
 ---
 = Devolva o controlador - AFF C30 e AFF C60
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Retorne o controle dos recursos de storage ao controlador de substitui�
 
 
 [role="lead"]
-Retorne o controle dos recursos de storage ao controlador de substituição para que seu sistema AFF C30 ou AFF C60 possa retomar a operação normal. O procedimento de devolução varia de acordo com o tipo de encriptação utilizado pelo seu sistema: sem encriptação, encriptação OKM (Onboard Key Manager) ou encriptação EKM (External Key Manager).
+Retorne o controle dos recursos de armazenamento ao controlador de substituição para que seu sistema de armazenamento AFF C30 ou AFF C60 possa retomar a operação normal.  O procedimento de devolução varia de acordo com o tipo de criptografia usado pelo seu sistema: sem criptografia, criptografia Onboard Key Manager (OKM) ou criptografia External Key Manager (EKM).
 
 [role="tabbed-block"]
 ====

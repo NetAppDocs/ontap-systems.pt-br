@@ -2,7 +2,7 @@
 permalink: fas50/dimm-replace.html 
 sidebar: sidebar 
 keywords: fas50, replace a dimm 
-summary: Substitua um DIMM no seu sistema FAS50 se forem detetados erros de memória corrigíveis excessivos ou incorrigíveis. Tais erros podem impedir que o sistema de armazenamento inicialize o ONTAP. O processo de substituição envolve desligar o controlador prejudicado, removê-lo, substituir o DIMM, reinstalar o controlador e, em seguida, devolver a peça com falha ao NetApp. 
+summary: Substitua um DIMM no seu sistema de armazenamento FAS50 se forem detectados erros excessivos de memória corrigíveis ou incorrigíveis.  Esses erros podem impedir que o sistema de armazenamento inicialize o ONTAP.  O processo de substituição envolve desligar o controlador danificado, removê-lo, substituir o DIMM, reinstalar o controlador e, em seguida, devolver a peça com defeito à NetApp. 
 ---
 = Substitua um DIMM - FAS50
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Substitua um DIMM no seu sistema FAS50 se forem detetados erros de mem�
 
 
 [role="lead"]
-Substitua um DIMM no seu sistema FAS50 se forem detetados erros de memória corrigíveis excessivos ou incorrigíveis. Tais erros podem impedir que o sistema de armazenamento inicialize o ONTAP. O processo de substituição envolve desligar o controlador prejudicado, removê-lo, substituir o DIMM, reinstalar o controlador e, em seguida, devolver a peça com falha ao NetApp.
+Substitua um DIMM no seu sistema de armazenamento FAS50 se forem detectados erros excessivos de memória corrigíveis ou incorrigíveis.  Esses erros podem impedir que o sistema de armazenamento inicialize o ONTAP.  O processo de substituição envolve desligar o controlador danificado, removê-lo, substituir o DIMM, reinstalar o controlador e, em seguida, devolver a peça com defeito à NetApp.
 
 .Antes de começar
 * Todos os outros componentes do sistema de armazenamento devem estar a funcionar corretamente; caso contrário, contacte https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de continuar.

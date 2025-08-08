@@ -19,6 +19,7 @@ Substitua o chassi do seu sistema ASA A70 ou ASA A90 quando uma falha de hardwar
 
 Você precisa remover todas as quatro unidades de fonte de alimentação (PSUs), duas por controlador, antes de remover o controlador. Removê-los alivia o peso total de cada controlador.
 
+.Passos
 . Remova as quatro PSUs:
 +
 .. Se você ainda não está aterrado, aterre-se adequadamente.
@@ -66,6 +67,7 @@ NOTE: Os cabos devem ter sido identificados no início deste procedimento.
 
 Remova os controladores do chassi e remova as unidades do chassi.
 
+.Passos
 . Verifique se o LED âmbar de status do NVRAM localizado no slot 4/5 na parte traseira de cada módulo do controlador está desligado. Procure o ícone NV.
 +
 image::../media/drw_a1K-70-90_nvram-led_ieops-1463.svg[Gráfico de localização do LED de estado e atenção do NVRAM]
@@ -151,6 +153,7 @@ NOTE: Os acionamentos são frágeis. Utilize sempre as duas mãos para suportar 
 
 Retire o chassis danificado e instale o chassis de substituição.
 
+.Passos
 . Retire o chassis danificado:
 +
 .. Retire os parafusos dos pontos de montagem do chassis.
@@ -172,6 +175,7 @@ Retire o chassis danificado e instale o chassis de substituição.
 
 Depois que o chassi de substituição for instalado, você precisará instalar os módulos do controlador, reinstalá-los e reinstalar as unidades e PSUs.
 
+.Passos
 . Começando pelo módulo do controlador inferior, instale os módulos do controlador no chassis de substituição:
 +
 .. Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o controlador até ao chassis.

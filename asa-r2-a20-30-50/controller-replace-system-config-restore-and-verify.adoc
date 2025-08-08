@@ -2,7 +2,7 @@
 permalink: asa-r2-a20-30-50/controller-replace-system-config-restore-and-verify.html 
 sidebar: sidebar 
 keywords: asa a20, asa a30, asa a50, restore and verify the system configuration, verify and set the ha state of the controller module 
-summary: Depois de concluir a substituição de hardware e a inicialização para o modo de manutenção, você verifica a configuração de sistema de baixo nível do controlador de substituição e reconfigura as configurações do sistema conforme necessário. 
+summary: Verifique se a configuração de HA da controladora está ativa e funcionando corretamente no sistema de storage ASA A20, ASA A30 ou ASA A50 e confirme se os adaptadores do sistema listam todos os caminhos para os discos. 
 ---
 = Restaure e verifique a configuração do sistema - ASA A20, ASA A30 e ASA A50
 :allow-uri-read: 

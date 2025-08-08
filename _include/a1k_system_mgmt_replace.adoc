@@ -172,6 +172,7 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 
 Substitua o módulo de gestão do sistema afetado.
 
+.Passos
 . Retire o módulo de gestão do sistema:
 +
 
@@ -193,7 +194,11 @@ Trinco do excêntrico do módulo de gestão do sistema
 |===
 +
 .. Se você ainda não está aterrado, aterre-se adequadamente.
-.. Desconecte os cabos de alimentação das PSUs e puxe o módulo controlador alguns centímetros para fora da parte frontal do sistema.
+.. Desconecte os cabos de alimentação das PSUs.
+
+
+. Remover o módulo Gerenciamento do Sistema
++
 .. Retire todos os cabos ligados ao módulo de gestão do sistema. Certifique-se de que a etiqueta onde os cabos foram conetados, para que você possa conectá-los às portas corretas quando reinstalar o módulo.
 .. Desconete os cabos de alimentação da PSU para o controlador desativado.
 .. Gire a bandeja de gerenciamento de cabos para baixo puxando os botões de ambos os lados no interior da bandeja de gerenciamento de cabos e, em seguida, gire a bandeja para baixo.
@@ -260,7 +265,8 @@ Suporte de arranque
 
 Reinicie o módulo do controlador.
 
-. Reconecte os cabos de alimentação à PSU e recoloque e trave com cuidado o módulo do controlador na parte frontal do sistema.
+.Passos
+. Conecte os cabos de alimentação novamente na PSU.
 +
 O sistema começará a reiniciar, normalmente para o prompt Loader.
 

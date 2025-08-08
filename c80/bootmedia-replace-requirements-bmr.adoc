@@ -19,7 +19,7 @@ Reveja os seguintes requisitos.
 
 * Tem de substituir o suporte de arranque com falha por um suporte de arranque de substituição que recebeu do NetApp.
 * As portas do cluster são usadas para comunicação entre os dois controladores durante o processo de recuperação de inicialização automatizada. Certifique-se de que as portas do cluster no controlador afetado estejam funcionando corretamente.
-* Para OKM, você precisa do conteúdo do arquivo de senha OKM.
+* Para o OKM, você precisa da senha de todo o cluster e também dos dados de backup.
 * Para EKM, você precisa de cópias dos seguintes arquivos do nó do parceiro:
 +
 ** /cfcard/kmip/servers.cfg

@@ -1,8 +1,8 @@
 ---
 permalink: asa-r2-a20-30-50/io-module-overview.html 
 sidebar: sidebar 
-keywords: ASA A90, ASA A70, replace io module, io module add, io module hotswap 
-summary: Os sistemas ASA A20, ASA A30 e ASA A50 oferecem flexibilidade na expansão ou substituição de módulos de E/S para aprimorar a conectividade e o desempenho da rede. Adicionar, fazer hot swap ou substituir um módulo de E/S é essencial ao atualizar os recursos da rede ou solucionar um módulo com falha. 
+keywords: asa a20, asa a30, asa a50, replace io module, io module add, io module hotswap 
+summary: Os sistemas de armazenamento ASA A20, ASA A30 e ASA A50 oferecem flexibilidade na expansão ou substituição de módulos de E/S para aprimorar a conectividade e o desempenho da rede. Adicionar, fazer hot swap ou substituir um módulo de E/S é essencial ao atualizar os recursos da rede ou solucionar um módulo com falha. 
 ---
 = Visão geral da manutenção do módulo de E/S - ASA A20, ASA A30 e ASA A50
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Os sistemas ASA A20, ASA A30 e ASA A50 oferecem flexibilidade na expans
 
 
 [role="lead"]
-Os sistemas ASA A20, ASA A30 e ASA A50 oferecem flexibilidade na expansão ou substituição de módulos de E/S para aprimorar a conectividade e o desempenho da rede. Adicionar, fazer hot swap ou substituir um módulo de E/S é essencial ao atualizar os recursos da rede ou solucionar um módulo com falha.
+Os sistemas de armazenamento ASA A20, ASA A30 e ASA A50 oferecem flexibilidade na expansão ou substituição de módulos de E/S para aprimorar a conectividade e o desempenho da rede. Adicionar, fazer hot swap ou substituir um módulo de E/S é essencial ao atualizar os recursos da rede ou solucionar um módulo com falha.
 
 Você pode substituir um módulo de E/S com defeito no seu sistema de armazenamento pelo mesmo tipo de módulo de E/S ou por um tipo diferente. Você pode fazer hot-swap de um cluster e de um módulo de E/S de alta disponibilidade quando o seu sistema de armazenamento atender a requisitos específicos. Você também pode adicionar um módulo de E/S a um sistema de armazenamento com slots disponíveis.
 

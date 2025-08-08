@@ -153,6 +153,7 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 
 Deve remover o módulo do controlador do chassis quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
 
+.Passos
 . Certifique-se de que todas as unidades no chassis estão firmemente assentadas contra o plano médio, utilizando os polegares para empurrar cada unidade até sentir um batente positivo.
 +
 image::../media/drw_a800_drive_seated_IEOPS-960.svg[Acionamentos do disco do assento]
@@ -232,6 +233,7 @@ Certifique-se de que suporta a parte inferior do módulo do controlador enquanto
 
 Para substituir uma ventoinha, retire o módulo da ventoinha com avaria e substitua-o por um novo módulo da ventoinha.
 
+.Passos
 . Identifique o módulo do ventilador que você deve substituir verificando as mensagens de erro do console.
 . Retire o módulo da ventoinha apertando as patilhas de bloqueio na parte lateral do módulo da ventoinha e, em seguida, levantando o módulo da ventoinha diretamente para fora do módulo do controlador.
 +
@@ -260,6 +262,7 @@ image:../media/icon_round_2.png["Legenda número 2"]
 
 Reinstale o módulo do controlador e reinicie-o.
 
+.Passos
 . Certifique-se de que a conduta de ar está completamente fechada, rodando-a até onde for.
 +
 Ele deve estar alinhado com a chapa metálica do módulo do controlador.
@@ -274,8 +277,7 @@ NOTE: Não introduza completamente o módulo do controlador no chassis até ser 
 Se você removeu os transcetores (QSFPs ou SFPs), lembre-se de reinstalá-los se estiver usando cabos de fibra ótica.
 
 +
-
-NOTE: Certifique-se de que o cabo da consola está ligado ao módulo do controlador reparado de forma a receber mensagens da consola quando for reiniciado. O controlador reparado recebe energia do controlador em estado de funcionamento e começa a reiniciar assim que estiver completamente encaixado no chassis.
+Certifique-se de que o cabo da consola está ligado ao módulo do controlador reparado de forma a receber mensagens da consola quando for reiniciado. O controlador reparado recebe energia do controlador em estado de funcionamento e começa a reiniciar assim que estiver completamente encaixado no chassis.
 
 . Conclua a reinstalação do módulo do controlador:
 +
@@ -283,24 +285,28 @@ NOTE: Certifique-se de que o cabo da consola está ligado ao módulo do controla
 +
 Os trincos de bloqueio sobem quando o módulo do controlador está totalmente assente.
 
-
-
 +
+Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
 
-NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
-
-+
 .. Rode os trincos de bloqueio para cima, para a posição de bloqueio.
 
 
 . Conete os cabos de alimentação às fontes de alimentação. O controlador reinicia assim que a energia é restaurada.
 +
+Se você tiver fontes de alimentação CC, reconete o bloco de alimentação às fontes de alimentação depois que o módulo do controlador estiver totalmente encaixado no chassi.
 
-NOTE: Se você tiver fontes de alimentação CC, reconete o bloco de alimentação às fontes de alimentação depois que o módulo do controlador estiver totalmente encaixado no chassi.
+. Volte a colocar o controlador afetado em funcionamento normal, devolvendo o respetivo armazenamento:
++
+`storage failover giveback -ofnode _impaired_node_name_`.
 
-. Devolva o controlador afetado ao funcionamento normal, devolvendo o respetivo armazenamento: `storage failover giveback -ofnode _impaired_node_name_`.
-. Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true`.
-. Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos: `system node autosupport invoke -node * -type all -message MAINT=END`.
+. Se a giveback automática foi desativada, reative-a:
++
+`storage failover modify -node local -auto-giveback true`.
+
+. Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`.
+
 
 
 

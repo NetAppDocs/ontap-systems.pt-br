@@ -13,14 +13,13 @@ Quando uma unidade falha, a plataforma Registra uma mensagem de aviso no console
 A unidade com falha aparece na lista de unidades com falha. Se isso não acontecer, você deve esperar, e então executar o comando novamente.
 
 +
-
-NOTE: Pode levar até várias horas para a unidade aparecer na lista de unidades com falha.
+Pode levar até várias horas para a unidade aparecer na lista de unidades com falha.
 
 * Determine se a autenticação SED está ativada.
 +
-A forma como você substitui o disco depende de como a unidade de disco está sendo usada. Se a autenticação SED estiver ativada, você deverá usar as instruções de substituição SED no https://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-nve/home.html["Guia de alimentação de encriptação ONTAP 9 NetApp"]. Estas instruções descrevem etapas adicionais que você deve executar antes e depois de substituir um SED.
+A maneira como você substitui o disco depende de como a unidade de disco está sendo usada.  Se a autenticação SED estiver habilitada, você deverá usar as instruções de substituição do SED no https://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-nve/home.html["Guia de alimentação de encriptação ONTAP 9 NetApp"] .  Estas instruções descrevem etapas adicionais que você deve executar antes e depois de substituir um SED.
 
-* Certifique-se de que a unidade de substituição é suportada pela sua plataforma. Consulte https://hwu.netapp.com["NetApp Hardware Universe"] .
+* Certifique-se de que a unidade de substituição seja suportada pela sua plataforma. Ver https://hwu.netapp.com["NetApp Hardware Universe"] .
 * Certifique-se de que todos os outros componentes do sistema estão a funcionar corretamente; caso contrário, tem de contactar a assistência técnica.
 
 
@@ -28,3 +27,5 @@ A forma como você substitui o disco depende de como a unidade de disco está se
 O firmware da unidade é atualizado automaticamente (sem interrupções) em novas unidades com versões de firmware não atuais.
 
 Ao substituir várias unidades de disco, você deve esperar 70 segundos entre a remoção de cada unidade de disco com falha e a inserção da unidade de disco de substituição para permitir que o sistema de armazenamento reconheça a existência de cada novo disco.
+
+Atribua manualmente a propriedade da unidade e, em seguida, reative a atribuição automática da unidade mais adiante neste procedimento.

@@ -19,6 +19,7 @@ Reinicie os controladores, verifique a integridade do sistema e devolva a peça 
 
 Após a reinicialização dos controladores, inicialize o ONTAP e devolva os controladores.
 
+.Passos
 . Verifique a saída da consola:
 +
 .. Se o controlador inicializar no prompt Loader, reinicie o controlador com o `boot_ontap` comando.
@@ -39,6 +40,7 @@ Após a reinicialização dos controladores, inicialize o ONTAP e devolva os con
 
 Depois que o controlador devolver o armazenamento, você deve verificar a integridade geral com https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"].
 
+.Passos
 . Após a conclusão do giveback, execute o Active IQ Config Advisor para verificar a integridade do sistema de storage.
 . Corrija quaisquer problemas que você encontrar.
 

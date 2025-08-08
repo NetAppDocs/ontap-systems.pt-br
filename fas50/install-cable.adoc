@@ -2,7 +2,7 @@
 permalink: fas50/install-cable.html 
 sidebar: sidebar 
 keywords: fas50, cabling, cluster cabling, host network cabling, management network cabling, shelf cabling 
-summary: As portas de rede de gerenciamento nos controladores são conetadas aos switches. As portas de interconexão de HA e interconexão de cluster são cabeadas em ambas as controladoras. Os módulos do controlador estão ligados ao armazenamento externo, se tiverem sido encomendados. 
+summary: Depois de instalar o hardware do sistema de storage FAS50, faça o cabeamento das controladoras à rede e às gavetas. 
 ---
 = Cable the hardware - FAS50
 :allow-uri-read: 

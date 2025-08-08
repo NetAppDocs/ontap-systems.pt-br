@@ -3,7 +3,7 @@
 
 
 .Antes de começar
-* Para OKM, você precisa do conteúdo do arquivo de senha OKM.
+* Para o OKM, você precisa da senha de todo o cluster e também dos dados de backup.
 * Para EKM, você precisa de cópias dos seguintes arquivos do nó do parceiro:
 +
 ** arquivo /cfcard/kmip/servers.cfg.
@@ -94,20 +94,32 @@ Entering Bootmenu Option 10...
 This option must be used only in disaster recovery procedures. Are you sure? (y or n):
 ....
 .. Digite `Y` no prompt para confirmar que deseja iniciar o processo de recuperação OKM.
-.. Digite a senha do gerenciador de chaves integrado quando solicitado e digite a senha novamente quando solicitado, para confirmar.
+.. Digite o seguinte quando solicitado:
 +
-.Mostrar exemplo de prompts de frase-passe
+... A frase-senha
+... A frase-senha novamente quando solicitado a confirmar
+... Dados de backup para o gerenciador de chaves de bordo
++
+.Mostrar exemplo de prompts de senha e dados de backup
 [%collapsible]
 =====
 ....
 Enter the passphrase for onboard key management:
-Enter the passphrase again to confirm:
-Enter the backup data:
 -----BEGIN PASSPHRASE-----
 <passphrase_value>
 -----END PASSPHRASE-----
+Enter the passphrase again to confirm:
+-----BEGIN PASSPHRASE-----
+<passphrase_value>
+-----END PASSPHRASE-----
+Enter the backup data:
+-----BEGIN BACKUP-----
+<passphrase_value>
+-----END ACKUP-----
 ....
 =====
+
+
 .. Continue a monitorar o processo de recuperação à medida que restaura os arquivos apropriados do nó do parceiro.
 +
 Quando o processo de recuperação estiver concluído, o nó será reiniciado. As seguintes mensagens indicam uma recuperação bem-sucedida:
@@ -168,7 +180,7 @@ Se `AUTOBOOT` não estiver definido, insira o comando de inicialização apropri
 
 
  a| 
-ONTAP 9.16,1
+ONTAP 9.16.1 e posterior
  a| 
 Avance para o passo seguinte.
 
@@ -246,6 +258,8 @@ xxx.xxx.xxx.xxx:5696.netapp_keystore_uuid=<id_value>
 
  a| 
 Se solicitado, insira o UUUID do cluster do ONTAP do parceiro.
+
+Você pode verificar o UUID do cluster do nó parceiro usando o `cluster identify show` comando.
  a| 
 .Mostrar exemplo de UUUID de cluster do ONTAP
 [%collapsible]
@@ -263,6 +277,13 @@ System is ready to utilize external key manager(s).
 
  a| 
 Se solicitado, insira a interface de rede temporária e as configurações do nó.
+
+Você precisa inserir:
+
+... O endereço IP da porta
+... A máscara de rede para a porta
+... O endereço IP do gateway padrão
+
  a| 
 .Mostrar exemplo de uma configuração de rede temporária
 [%collapsible]
@@ -285,44 +306,11 @@ Trying to recover keys from key servers....
 |===
 .. Dependendo se a chave for restaurada com sucesso, execute uma das seguintes ações:
 +
-*** Se a configuração do EKM tiver sido restaurada com sucesso, o processo tentará restaurar os arquivos apropriados do nó do parceiro e reiniciará o nó. Vá para o passo d..
+*** Se você ver `kmip2_client: Successfully imported the keys from external key server: xxx.xxx.xxx.xxx:5696` na saída, a configuração do EKM foi restaurada com sucesso.
 +
-.Mostrar exemplo de mensagens de restauração 9.16.0 bem-sucedidas
-[%collapsible]
-=====
-....
+O processo tenta restaurar os arquivos apropriados do nó parceiro e reinicia o nó.  Vá para a etapa d.
 
-kmip2_client: Importing keys from external key server: xxx.xxx.xxx.xxx:5696
-[Feb  6 04:57:43]: 0x80cc09000: 0: DEBUG: kmip2::kmipCmds::KmipLocateCmdUtils: [locateMrootAkUuids]:420: Locating local cluster MROOT-AK with keystore UUID: <uuid>
-[Feb  6 04:57:43]: 0x80cc09000: 0: DEBUG: kmip2::kmipCmds::KmipLocateCmdBase: [doCmdImp]:79: Calling KMIP Locate for the following attributes: [<x-NETAPP-ClusterId, <uuid>>, <x-NETAPP-KeyUsage, MROOT-AK>, <x-NETAPP-KeystoreUuid, <uuid>>, <x-NETAPP-Product, Data ONTAP>]
-[Feb  6 04:57:44]: 0x80cc09000: 0: DEBUG: kmip2::kmipCmds::KmipLocateCmdBase: [doCmdImp]:84: KMIP Locate executed successfully!
-[Feb  6 04:57:44]: 0x80cc09000: 0: DEBUG: kmip2::kmipCmds::KmipLocateCmdBase: [setUuidList]:50: UUID returned: <uuid>
-...
-kmip2_client: Successfully imported the keys from external key server: xxx.xxx.xxx.xxx:5696
-
-GEOM_ELI: Device nvd0s4.eli created.
-GEOM_ELI: Encryption: AES-XTS 256
-GEOM_ELI:     Crypto: software
-Feb 06 05:02:37 [_server-name_]: crypto_get_mroot_ak:140 MROOT-AK is requested.
-Feb 06 05:02:37 [_server-name_]: crypto_get_mroot_ak:162 Returning MROOT-AK.
-....
-=====
-+
-.Mostrar exemplo de mensagens de restauração 9.16.1 bem-sucedidas
-[%collapsible]
-=====
-....
-
-System is ready to utilize external key manager(s).
-Trying to recover keys from key servers....
-[discover_versions]
-[status=SUCCESS reason= message=]
-...
-kmip2_client: Successfully imported the keys from external key server: xxx.xxx.xxx.xxx:xxxx
-Successfully recovered keymanager secrets.
-....
-=====
-*** Se a chave não for restaurada com êxito, o sistema irá parar e indicar que não foi possível restaurar a chave. As mensagens de erro e aviso são apresentadas. Execute novamente o processo de recuperação:
+*** Se a chave não for restaurada com sucesso, o sistema irá parar e indicar que não conseguiu restaurar a chave.  As mensagens de erro e aviso são exibidas.  Você deve executar novamente o processo de recuperação:
 +
 `boot_recovery -partner`
 

@@ -15,9 +15,10 @@ Substitua o NVRAM em seu sistema ASA A70 ou ASA A90 quando a memória não volá
 
 O módulo NVRAM consiste no hardware NVRAM12 e DIMMs substituíveis em campo. Você pode substituir um módulo NVRAM com falha ou os DIMMs dentro do módulo NVRAM.
 
-Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em https://support.netapp.com["Suporte à NetApp"]Contato com .
+.Antes de começar
+* Certifique-se de que tem a peça de substituição disponível. Você deve substituir o componente com falha por um componente de substituição que você recebeu da NetApp.
+* Certifique-se de que todos os outros componentes do sistema de armazenamento estão a funcionar corretamente; caso contrário, https://support.netapp.com["Suporte à NetApp"]contacte o .
 
-Certifique-se de que substitui o componente com falha por um componente de substituição que recebeu da NetApp.
 
 
 
@@ -91,7 +92,7 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 
 == Etapa 2: Substitua o módulo NVRAM ou o DIMM NVRAM
 
-Substitua o módulo NVRAM ou DIMMs NVRAM usando a opção a seguir apropriada.
+Substitua o módulo NVRAM ou os DIMMs NVRAM usando a opção apropriada.
 
 [role="tabbed-block"]
 ====
@@ -99,6 +100,7 @@ Substitua o módulo NVRAM ou DIMMs NVRAM usando a opção a seguir apropriada.
 --
 Para substituir o módulo NVRAM, localize-o na ranhura 4/5 no chassis e siga a sequência específica de passos.
 
+.Passos
 . Certifique-se de que todas as unidades no chassis estão firmemente assentadas contra o plano médio, utilizando os polegares para empurrar cada unidade até sentir um batente positivo.
 +
 image::../media/drw_a800_drive_seated_IEOPS-960.svg[Acionamentos do disco do assento]
@@ -163,6 +165,7 @@ NOTE: Se você tiver fontes de alimentação CC, reconecte o bloco de energia à
 --
 Para substituir DIMMs NVRAM no módulo NVRAM, você deve remover o módulo NVRAM e, em seguida, substituir o DIMM de destino.
 
+.Passos
 . Certifique-se de que todas as unidades no chassis estão firmemente assentadas contra o plano médio, utilizando os polegares para empurrar cada unidade até sentir um batente positivo.
 +
 image::../media/drw_a800_drive_seated_IEOPS-960.svg[Acionamentos do disco do assento]

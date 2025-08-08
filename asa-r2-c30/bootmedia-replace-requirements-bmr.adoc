@@ -2,7 +2,7 @@
 permalink: asa-r2-c30/bootmedia-replace-requirements-bmr.html 
 sidebar: sidebar 
 keywords: asa c30, replace the boot media 
-summary: 'Antes de substituir a mídia de inicialização no seu sistema de armazenamento ASA C30, certifique-se de atender aos requisitos e considerações necessários para uma substituição bem-sucedida. Isso inclui verificar se você possui a mídia de inicialização de substituição correta, confirmar se a porta e0S (chave e0M) no controlador danificado está funcionando corretamente e determinar se o Gerenciador de Chaves Onboard (OKM) ou o Gerenciador de Chaves Externo (EKM) está habilitado.' 
+summary: 'Antes de substituir a mídia de inicialização no seu sistema de armazenamento ASA C30, certifique-se de atender aos requisitos e considerações necessários para uma substituição bem-sucedida.  Isso inclui verificar se você tem a mídia de inicialização de substituição correta, confirmar se a porta e0M (chave inglesa) no controlador danificado está funcionando corretamente e determinar se o Onboard Key Manager (OKM) ou o External Key Manager (EKM) está habilitado.' 
 ---
 = Requisitos para substituir o suporte de arranque - ASA C30
 :allow-uri-read: 
@@ -11,14 +11,14 @@ summary: 'Antes de substituir a mídia de inicialização no seu sistema de arma
 
 
 [role="lead"]
-Antes de substituir a mídia de inicialização no seu sistema de armazenamento ASA C30, certifique-se de atender aos requisitos e considerações necessários para uma substituição bem-sucedida. Isso inclui verificar se você possui a mídia de inicialização de substituição correta, confirmar se a porta e0S (chave e0M) no controlador danificado está funcionando corretamente e determinar se o Gerenciador de Chaves Onboard (OKM) ou o Gerenciador de Chaves Externo (EKM) está habilitado.
+Antes de substituir a mídia de inicialização no seu sistema de armazenamento ASA C30, certifique-se de atender aos requisitos e considerações necessários para uma substituição bem-sucedida.  Isso inclui verificar se você tem a mídia de inicialização de substituição correta, confirmar se a porta e0M (chave inglesa) no controlador danificado está funcionando corretamente e determinar se o Onboard Key Manager (OKM) ou o External Key Manager (EKM) está habilitado.
 
 * Você deve substituir o componente com falha por um componente FRU de substituição da mesma capacidade que recebeu do NetApp.
 * Verifique se a porta e0M (chave inglesa) no controlador danificado está conectada e não está com defeito.
 +
 A porta e0M é usada para comunicação entre os dois controladores durante o processo de recuperação de inicialização automatizada.
 
-* Para OKM, você precisa do conteúdo do arquivo de senha OKM.
+* Para o OKM, você precisa da senha de todo o cluster e também dos dados de backup.
 * Para EKM, você precisa de cópias dos seguintes arquivos do nó do parceiro:
 +
 ** arquivo /cfcard/kmip/servers.cfg.

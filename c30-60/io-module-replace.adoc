@@ -2,7 +2,7 @@
 permalink: c30-60/io-module-replace.html 
 sidebar: sidebar 
 keywords: aff c30, aff c60, replace a pcie card 
-summary: Substitua um módulo de e/S no seu sistema AFF C30 ou AFF C60 quando o módulo falhar ou precisar de uma atualização para suportar desempenho superior ou recursos adicionais. O processo de substituição envolve desligar o controlador, substituir o módulo de e/S com falha, reiniciar o controlador e devolver a peça com falha ao NetApp. 
+summary: Substitua um módulo de E/S no seu sistema de armazenamento AFF C30 ou AFF C60 quando o módulo falhar ou precisar de uma atualização para oferecer suporte a maior desempenho ou recursos adicionais. O processo de substituição envolve desligar o controlador, substituir o módulo de E/S com falha, reinicializar o controlador e devolver a peça com falha à NetApp. 
 ---
 = Substitua um módulo de e/S - AFF C30 e AFF C60
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Substitua um módulo de e/S no seu sistema AFF C30 ou AFF C60 quando o 
 
 
 [role="lead"]
-Substitua um módulo de e/S no seu sistema AFF C30 ou AFF C60 quando o módulo falhar ou precisar de uma atualização para suportar desempenho superior ou recursos adicionais. O processo de substituição envolve desligar o controlador, substituir o módulo de e/S com falha, reiniciar o controlador e devolver a peça com falha ao NetApp.
+Substitua um módulo de E/S no seu sistema de armazenamento AFF C30 ou AFF C60 quando o módulo falhar ou precisar de uma atualização para oferecer suporte a maior desempenho ou recursos adicionais. O processo de substituição envolve desligar o controlador, substituir o módulo de E/S com falha, reinicializar o controlador e devolver a peça com falha à NetApp.
 
 .Antes de começar
 Todos os outros componentes do sistema de armazenamento devem estar a funcionar corretamente; caso contrário, contacte https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de continuar com este procedimento.

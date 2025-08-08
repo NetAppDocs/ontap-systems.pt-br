@@ -8,6 +8,7 @@
 
 Você deve verificar o `HA` estado do módulo do controlador e, se necessário, atualizar o estado para corresponder à configuração do sistema.
 
+.Passos
 . Arranque para o modo de manutenção: `boot_ontap maint`
 +
 .. Digite `y` quando você vir _continuar com boot?_.
@@ -44,6 +45,7 @@ O valor para o estado HA pode ser um dos seguintes:
 
 == Passo 2: Verifique a lista de discos
 
+.Passos
 . Verifique se o adaptador lista os caminhos para todos os discos com o `storage show disk -p`.
 +
 Se você vir algum problema, verifique o cabeamento e recoloque os cabos.

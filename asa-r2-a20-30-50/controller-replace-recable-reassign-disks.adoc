@@ -2,7 +2,7 @@
 permalink: asa-r2-a20-30-50/controller-replace-recable-reassign-disks.html 
 sidebar: sidebar 
 keywords: asa a20, asa a30, asa a50, how to reboot the system 
-summary: Tem de reiniciar o controlador. 
+summary: 'Retorne o controle dos recursos de armazenamento ao controlador de substituição para que seu sistema de armazenamento ASA A20, ASA A30 ou ASA A50 possa retomar a operação normal.  O procedimento de devolução varia de acordo com o tipo de criptografia usado pelo seu sistema: sem criptografia, criptografia do Onboard Key Manager (OKM) ou criptografia do External Key Manager (EKM).' 
 ---
 = Devolva o controlador - ASA A20, ASA A30 e ASA A50
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Tem de reiniciar o controlador.
 
 
 [role="lead"]
-Retorne o controle dos recursos de storage ao controlador de substituição para que o sistema ASA A20, ASA A30 ou ASA A50 possa retomar a operação normal. O procedimento de devolução varia de acordo com o tipo de encriptação utilizado pelo seu sistema: sem encriptação, encriptação OKM (Onboard Key Manager) ou encriptação EKM (External Key Manager).
+Retorne o controle dos recursos de armazenamento ao controlador de substituição para que seu sistema de armazenamento ASA A20, ASA A30 ou ASA A50 possa retomar a operação normal.  O procedimento de devolução varia de acordo com o tipo de criptografia usado pelo seu sistema: sem criptografia, criptografia Onboard Key Manager (OKM) ou criptografia External Key Manager (EKM).
 
 [role="tabbed-block"]
 ====

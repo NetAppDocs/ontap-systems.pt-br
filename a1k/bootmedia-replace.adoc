@@ -45,12 +45,14 @@ image::../media/icon_round_3.png[Legenda número 3]
 Suporte de arranque
 
 |===
+.Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
-. Desconecte os cabos de alimentação das PSUs do controlador e puxe o módulo do controlador, na parte frontal do sistema, alguns centímetros para fora.
+. Desconecte os cabos de alimentação das PSUs.
 +
 
 NOTE: Se o sistema de armazenamento tiver fontes de alimentação CC, desconete o bloco de cabos de alimentação das unidades de fonte de alimentação (PSUs).
 
+. Retire o módulo de gestão do sistema:
 +
 .. Retire todos os cabos ligados ao módulo de gestão do sistema. Certifique-se de que identifica onde os cabos foram ligados, para que possa ligá-los às portas corretas quando reinstalar o módulo.
 .. Gire a bandeja de gerenciamento de cabos para baixo puxando os botões de ambos os lados no interior da bandeja de gerenciamento de cabos e, em seguida, gire a bandeja para baixo.
@@ -122,7 +124,7 @@ A unidade flash USB deve ter a imagem ONTAP apropriada do que o controlador afet
 +
 Certifique-se de que instala a unidade flash USB na ranhura identificada para dispositivos USB e não na porta da consola USB.
 
-. Reconecte os cabos de alimentação à PSU e recoloque e trave com cuidado o módulo do controlador na parte frontal do sistema.
+. Conecte os cabos de alimentação novamente na PSU.
 +
 O sistema começará a reiniciar, normalmente para o prompt Loader.
 
