@@ -33,6 +33,6 @@ Para fazer o cabeamento do hardware, primeiro conete os controladores de storage
 [role="quick-margin-para"]
 Antes de ligar os controladores, ligue cada gaveta NS224 e atribua um ID de gaveta exclusivo para garantir que cada gaveta seja identificada exclusivamente na configuração, conete o laptop ou o console ao controlador e, em seguida, conete os controladores às fontes de alimentação.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Seis"]link:install-complete.html["Configuração completa do sistema de armazenamento"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Seis"]/
 [role="quick-margin-para"]
-Para concluir a configuração do sistema, acesse o Gerenciador de sistema do ONTAP apontando um navegador para o endereço IP do controlador. Um assistente de configuração ajuda a concluir a configuração de cluster para o seu sistema de storage AFF A70 ou AFF A90.
+Depois de ligar seu sistema de armazenamento, você https://docs.netapp.com/us-en/ontap/software_setup/workflow-summary.html["configure seu cluster"] .

@@ -13,6 +13,9 @@ summary: 'Você pode remover a quente um compartimento de unidade de NS224 TB qu
 [role="lead"]
 É possível remover a quente um compartimento de unidade de NS224 TB que teve os agregados removidos das unidades, em um par de HA ativo e fornecendo dados (e/S em andamento).
 
+
+NOTE: Este procedimento não se aplica aos sistemas ASA r2.
+
 .Antes de começar
 * Seu par de HA não pode estar no estado de takeover.
 * Você precisa ter removido todos os agregados das unidades (as unidades devem ser sobressalentes) na gaveta que você está removendo.

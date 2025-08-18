@@ -260,7 +260,7 @@ NOTE: As atualizações de firmware podem levar até 30 minutos.
 
 
 .Antes de começar
-* Você deve ter cumprido os requisitos para concluir este procedimento no <<before_you_begin,Antes de começar>> seção e instalou, ligou e definiu IDs de prateleira para cada prateleira de disco conforme as instruções em <<install_disk_shelves_for_a_hot_add,Instale as gavetas de disco com IOM12 módulos para adicionar rapidamente>> .
+* Você deve ter atendido aos requisitos para concluir este procedimento e instalado, ligado e definido IDs de prateleira para cada prateleira de disco conforme as instruções em<<install_disk_shelves_for_a_hot_add,Instale as gavetas de disco com IOM12 módulos para adicionar rapidamente>> .
 
 
 .Passos
@@ -375,9 +375,6 @@ Essas instruções são para adição automática ao final da pilha que não tem
 
 |===
 . Se você adicionou uma gaveta de disco com cabos óticos SAS HD mini-SAS a uma stack de gavetas de disco conetadas a cabos de cobre SAS, substitua os cabos de cobre SAS; caso contrário, vá para a próxima etapa.
-+
-A pilha deve atender aos requisitos estabelecidos no <<before_you_begin,Antes de começar>> seção deste procedimento.
-
 +
 Substitua os cabos um de cada vez e certifique-se de que espera pelo menos 70 segundos entre desligar um cabo e ligar um novo.
 

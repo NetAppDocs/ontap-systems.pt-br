@@ -26,18 +26,9 @@ Para os sistemas de storage ASA A70 e ASA A90, você pode executar procedimentos
 
 
  a| 
-link:bootmedia-replace-workflow-bmr.html["Mídia de inicialização - recuperação automatizada"]
+link:bootmedia-replace-workflow-bmr.html["Suporte de arranque"]
  a| 
 A mídia de inicialização armazena um conjunto primário e secundário de arquivos de imagem ONTAP que o sistema de armazenamento usa para inicializar.  Durante a recuperação automatizada, o sistema recupera a imagem de inicialização do nó parceiro e executa automaticamente a opção de menu de inicialização apropriada para instalar a imagem na mídia de inicialização de substituição.
-
-O processo automatizado de recuperação de mídia de inicialização é compatível apenas com o ONTAP 9.17.1 e versões posteriores. Se o seu sistema de armazenamento estiver executando uma versão anterior do ONTAP, use o link:bootmedia-replace-workflow.html["procedimento de recuperação de inicialização manual"] .
-
-
-
- a| 
-link:bootmedia-replace-workflow.html["Mídia de inicialização - recuperação manual"]
- a| 
-A mídia de inicialização armazena um conjunto primário e secundário de arquivos de imagem ONTAP que o sistema de armazenamento usa para inicializar a imagem de uma unidade USB e restaurar a configuração do nó parceiro
 
 
 

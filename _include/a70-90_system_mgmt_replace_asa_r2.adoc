@@ -1,4 +1,4 @@
-= Passo 3: Reinicie o controlador
+= 
 :allow-uri-read: 
 
 
@@ -93,26 +93,4 @@ Suporte de arranque
 NOTE: Se você tiver fontes de alimentação CC, reconecte o bloco de energia às fontes de alimentação.
 
 . Rode o tabuleiro de gestão de cabos para cima até à posição fechada.
-
-
-
-
-== Passo 3: Reinicie o controlador
-
-Reinicie o módulo do controlador.
-
-.Passos
-. Digite _bye_ no prompt DO Loader.
-. Volte a colocar o controlador em funcionamento normal, devolvendo o respetivo armazenamento:
-+
-`storage failover giveback -ofnode _impaired_node_name_`
-
-. Restaurar devolução automática:
-+
-`storage failover modify -node local -auto-giveback true`
-
-. Se uma janela de manutenção do AutoSupport foi acionada, encerre-a:
-+
-`system node autosupport invoke -node * -type all -message MAINT=END`
-
 

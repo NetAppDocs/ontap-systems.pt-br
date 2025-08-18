@@ -217,28 +217,6 @@ Reinicie o módulo do controlador.
 
 
 
-== Passo 3: Reinicie o controlador
-
-Reinicie o módulo do controlador.
-
-.Passos
-. Digite _bye_ no prompt DO Loader.
-. Volte a colocar o controlador em funcionamento normal, devolvendo o respetivo armazenamento:
-+
-`storage failover giveback -ofnode _impaired_node_name_`
-
-. Restaurar devolução automática:
-+
-`storage failover modify -node local -auto-giveback true`
-
-. Se uma janela de manutenção do AutoSupport foi acionada, encerre-a:
-+
-`system node autosupport invoke -node * -type all -message MAINT=END`
-
-
-
-
-
 == Passo 4: Instale licenças e Registre o número de série
 
 Você deve instalar novas licenças para o nó se o nó afetado estiver usando recursos do ONTAP que exigem uma licença padrão (node-locked). Para recursos com licenças padrão, cada nó no cluster deve ter sua própria chave para o recurso.
