@@ -17,22 +17,22 @@ Para instalar e configurar o sistema de storage AFF A20, AFF A30 ou AFF A50, lei
 [role="quick-margin-para"]
 Antes de instalar seu sistema de storage, ele deve atender aos requisitos de instalação.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Um"]link:install-prepare.html["Prepare-se para a instalação"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"]link:install-prepare.html["Prepare-se para a instalação"]
 [role="quick-margin-para"]
 Para se preparar para a instalação, prepare o local, verifique os requisitos ambientais e elétricos e certifique-se de que há espaço suficiente no rack. Em seguida, desembale o equipamento, compare o conteúdo com o slip de embalagem e Registre o hardware para acessar os benefícios de suporte.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Dois"]link:install-hardware.html["Instale o hardware"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"]link:install-hardware.html["Instale o hardware"]
 [role="quick-margin-para"]
 Para instalar o hardware, instale os kits de trilho para o seu sistema de armazenamento e prateleiras e, em seguida, instale e proteja o seu sistema de armazenamento e prateleiras no gabinete ou rack de telecomunicações.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Três"]link:install-cable.html["Faça o cabo do material de fixação"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"]link:install-cable.html["Faça o cabo do material de fixação"]
 [role="quick-margin-para"]
 Para fazer o cabeamento do hardware, conete os controladores à rede e, em seguida, às gavetas.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Quatro"]link:install-power-hardware.html["Ligue o sistema de armazenamento"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinco"]link:install-power-hardware.html["Ligue o sistema de armazenamento"]
 [role="quick-margin-para"]
 Para ligar o sistema de storage, ligue cada gaveta, atribua um ID exclusivo da gaveta conforme necessário e, em seguida, ligue os controladores.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Cinco"]/
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Seis"]/
 [role="quick-margin-para"]
 Depois de ligar seu sistema de armazenamento, você https://docs.netapp.com/us-en/ontap/software_setup/workflow-summary.html["configure seu cluster"] .

@@ -63,13 +63,14 @@ A seguinte mensagem AutoSupport suprime a criação automática de casos por dua
 +
 `cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
 
-. Desative a giveback automática a partir da consola do controlador saudável:
+. Desabilitar devolução automática:
++
+.. Digite o seguinte comando no console do controlador íntegro:
 +
 `storage failover modify -node local -auto-giveback false`
 
-+
+.. Digitar `y` quando você vê o prompt _Você quer desabilitar o retorno automático?_
 
-NOTE: Quando vir _do pretende desativar a auto-giveback?_, introduza `y`.
 
 . Leve o controlador prejudicado para o prompt Loader:
 +
