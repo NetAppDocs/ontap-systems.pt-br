@@ -5,9 +5,32 @@
 O suporte de arranque encontra-se no interior do módulo de gestão do sistema e é acedido removendo o módulo do sistema.
 
 .Passos
-. Certifique-se de que todas as unidades no chassis estão firmemente assentadas contra o plano médio, utilizando os polegares para empurrar cada unidade até sentir um batente positivo.
+. Certifique-se de que o NVRAM foi concluído antes de prosseguir. Quando o LED no módulo NV está desligado, o NVRAM é desativado. Se o LED estiver piscando, aguarde até que o piscando pare. Se a intermitência continuar durante mais de 5 minutos, contacte o suporte técnico para obter assistência.
 +
-image::../media/drw_a800_drive_seated_IEOPS-960.svg[Unidade drw A800 com sede IEOPS 960]
+image::../media/drw_a1K-70-90_nvram-led_ieops-1463.svg[Gráfico de localização do LED de estado e atenção do NVRAM]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+LED de estado do NVRAM
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+LED de atenção NVRAM
+
+|===
++
+** Se o LED NV estiver desligado, passe à próxima etapa.
+** Se o LED NV estiver intermitente, aguarde que o intermitente pare. Se a intermitência continuar durante mais de 5 minutos, contacte o suporte técnico para obter assistência.
+
 
 . Vá para a parte traseira do chassis. Se você ainda não está aterrado, aterre-se adequadamente.
 . Desconecte as PSUs do controlador.

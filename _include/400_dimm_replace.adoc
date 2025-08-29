@@ -373,8 +373,6 @@ Se você removeu os conversores de Mídia (QSFPs ou SFPs), lembre-se de reinstal
 
 == Etapa 6: Alterne agregados de volta em uma configuração de MetroCluster de dois nós
 
-Depois de concluir a substituição da FRU em uma configuração de MetroCluster de dois nós, você pode executar a operação de switchback do MetroCluster. Isso retorna a configuração ao seu estado operacional normal, com as máquinas virtuais de armazenamento de origem sincronizada (SVMs) no site anteriormente prejudicado agora ativo e fornecendo dados dos pools de discos locais.
-
 Esta tarefa só se aplica a configurações de MetroCluster de dois nós.
 
 .Passos

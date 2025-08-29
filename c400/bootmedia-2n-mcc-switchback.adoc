@@ -13,6 +13,8 @@ summary: 'Depois de concluir a substituição da FRU em uma configuração de Me
 [role="lead"]
 Depois de concluir a substituição da FRU em uma configuração de MetroCluster de dois nós, você pode executar a operação de switchback do MetroCluster. Isso retorna a configuração ao seu estado operacional normal, com as máquinas virtuais de armazenamento de origem sincronizada (SVMs) no site anteriormente prejudicado agora ativo e fornecendo dados dos pools de discos locais.
 
+Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use olink:bootmedia-replace-workflow.html["procedimento de recuperação de inicialização manual"]
+
 Esta tarefa só se aplica a configurações de MetroCluster de dois nós.
 
 .Passos

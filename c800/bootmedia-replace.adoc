@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff c800, replace the boot media 
 summary: Localize o suporte de arranque com falha no módulo do controlador removendo o Riser 3 no módulo do controlador antes de poder substituir o suporte de arranque. 
 ---
-= Substitua o suporte de arranque - AFF C800
+= Substitua a mídia de inicialização e prepare-se para recuperação de inicialização manual - AFF C800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,6 +12,8 @@ summary: Localize o suporte de arranque com falha no módulo do controlador remo
 
 [role="lead"]
 Para substituir o suporte de arranque, tem de remover o módulo do controlador afetado, instalar o suporte de arranque de substituição e transferir a imagem de arranque para uma unidade flash USB.
+
+Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use olink:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"] .  Se o seu sistema estiver executando uma versão anterior do ONTAP, você deverá usar o procedimento de recuperação de inicialização manual.
 
 
 

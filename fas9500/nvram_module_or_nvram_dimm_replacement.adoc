@@ -84,6 +84,7 @@ Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctr
 
 Para substituir o módulo NVRAM, coloque-o na ranhura 6 no chassis e siga a sequência específica de passos.
 
+.Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Retire o módulo NVRAM alvo do chassis:
 +
@@ -160,6 +161,7 @@ Guias de ejetor DIMM e DIMM
 
 Para substituir DIMMs NVRAM no módulo NVRAM, você deve remover o módulo NVRAM, abrir o módulo e, em seguida, substituir o DIMM de destino.
 
+.Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Retire o módulo NVRAM alvo do chassis:
 +
@@ -237,8 +239,7 @@ Guias de ejetor DIMM e DIMM
 
 Depois de substituir a FRU, você deve reiniciar o módulo do controlador.
 
-. Para inicializar o ONTAP a partir do prompt Loader, digite `bye`.
-
+Para inicializar o ONTAP a partir do prompt Loader, digite `bye`.
 
 
 

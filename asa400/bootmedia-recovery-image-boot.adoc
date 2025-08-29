@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa a400, asa, a400, procedure, boot, impair, controller, recovery, image, system, two-node, metrocluster, configuration, boot the recovery image 
 summary: O procedimento para inicializar o controlador prejudicado a partir da imagem de recuperação depende se o sistema está em uma configuração de MetroCluster de dois nós. 
 ---
-= Inicie a imagem de recuperação - ASA A400
+= Recuperação manual de mídia de inicialização de uma unidade USB - ASA A400
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,6 +12,8 @@ summary: O procedimento para inicializar o controlador prejudicado a partir da i
 
 [role="lead"]
 Depois de instalar o novo dispositivo multimédia de arranque no seu sistema, pode arrancar a imagem de recuperação a partir de uma unidade USB e restaurar a configuração a partir do nó do parceiro.
+
+Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use olink:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"] .  Se o seu sistema estiver executando uma versão anterior do ONTAP, você deverá usar o procedimento de recuperação de inicialização manual.
 
 .Passos
 . A partir do prompt Loader, inicialize a imagem de recuperação da unidade flash USB: `boot_recovery`

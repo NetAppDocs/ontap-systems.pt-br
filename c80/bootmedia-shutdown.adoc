@@ -11,7 +11,9 @@ summary: Desligue o controlador danificado no seu sistema de armazenamento AFF C
 
 
 [role="lead"]
-Desligue o controlador danificado no seu sistema de armazenamento AFF C80 para evitar perda de dados e manter a estabilidade do sistema durante o processo de recuperação de mídia de inicialização manual.
+Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador desativado. Encerre ou assuma o controlador afetado utilizando o procedimento adequado para a sua configuração.
+
+Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use olink:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"] .  Se o seu sistema estiver executando uma versão anterior do ONTAP, você deverá usar o procedimento de recuperação de inicialização manual.
 
 [role="tabbed-block"]
 ====

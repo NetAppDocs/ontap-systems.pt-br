@@ -1,0 +1,172 @@
+---
+permalink: a800/bootmedia-replace-bmr.html 
+sidebar: sidebar 
+keywords: a800, replace the boot media 
+summary: A mídia de inicialização do seu sistema AFF A800 armazena dados essenciais de firmware e configuração. O processo de substituição envolve a remoção do módulo do controlador, a remoção da mídia de inicialização danificada, a instalação da mídia de inicialização de substituição no módulo do controlador e, em seguida, a reinstalação do módulo do controlador. 
+---
+= Substituir a mídia de inicialização para recuperação de inicialização automatizada - AFF A800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A mídia de inicialização do seu sistema AFF A800 armazena dados essenciais de firmware e configuração. O processo de substituição envolve a remoção e abertura do módulo do controlador, a remoção da mídia de inicialização danificada, a instalação da mídia de inicialização de substituição no módulo do controlador e, em seguida, a reinstalação do módulo do controlador.
+
+O processo automatizado de recuperação de mídia de inicialização é compatível apenas com o ONTAP 9.17.1 e versões posteriores. Se o seu sistema de armazenamento estiver executando uma versão anterior do ONTAP, use o link:bootmedia-replace-workflow.html["procedimento de recuperação de inicialização manual"] .
+
+A mídia de inicialização está localizada dentro do módulo do controlador, sob o duto de ar, e é acessada removendo o módulo do controlador do sistema.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Certifique-se de que todas as unidades no chassis estão firmemente assentadas contra o plano médio, utilizando os polegares para empurrar cada unidade até sentir um batente positivo.
++
+image::../media/drw_a800_drive_seated_IEOPS-960.svg[Acionamentos do disco do assento]
+
+. Desconete as fontes de alimentação do módulo do controlador da fonte.
+. Solte os fixadores do cabo de alimentação e, em seguida, desconete os cabos das fontes de alimentação.
+. Solte o gancho e a alça de loop que prendem os cabos ao dispositivo de gerenciamento de cabos e, em seguida, desconete os cabos do sistema e os módulos SFP e QSFP (se necessário) do módulo do controlador, mantendo o controle de onde os cabos foram conetados.
++
+Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar o dispositivo de gerenciamento de cabos, os cabos sejam organizados.
+
+. Retire o dispositivo de gestão de cabos do módulo do controlador e coloque-o de lado.
+. Prima ambos os trincos de bloqueio para baixo e, em seguida, rode ambos os trincos para baixo ao mesmo tempo.
++
+O módulo do controlador desloca-se ligeiramente para fora do chassis.
+
++
+image::../media/drw_a800_pcm_remove.png[Soltar o módulo do controlador]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Trinco de bloqueio
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Pino de bloqueio
+
+|===
+. Faça deslizar o módulo do controlador para fora do chassis.
++
+Certifique-se de que suporta a parte inferior do módulo do controlador enquanto o desliza para fora do chassis.
+
+. Coloque o módulo do controlador numa superfície estável e plana e, em seguida, abra a conduta de ar:
++
+.. Pressione as patilhas de bloqueio nas laterais da conduta de ar em direção ao centro do módulo do controlador.
+.. Deslize a conduta de ar em direção aos módulos da ventoinha e, em seguida, rode-a para cima até à posição completamente aberta.
++
+image::../media/drw_a800_open_air_duct.png[Abrir a conduta de ar]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Patilhas de bloqueio da conduta de ar
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Deslize a conduta de ar em direção aos módulos do ventilador
+
+
+
+ a| 
+image:../media/icon_round_3.png["Legenda número 3"]
+ a| 
+Gire a conduta de ar em direção aos módulos do ventilador
+
+|===
+
+
+. Localize a mídia de inicialização no módulo controlador e substitua-a:
++
+image::../media/drw_a800_boot_media_replace.png[Substitua o suporte de arranque]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Conduta de ar
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Riser 3
+
+
+
+ a| 
+image:../media/icon_round_3.png["Legenda número 3"]
+ a| 
+Chave de fendas Phillips nº 1
+
+
+
+ a| 
+image:../media/icon_round_4.png["Legenda número 4"]
+ a| 
+Parafuso do suporte de arranque
+
+
+
+ a| 
+image:../media/icon_round_5.png["Legenda número 5"]
+ a| 
+Suporte de arranque
+
+|===
++
+.. Utilizando uma chave de fendas Phillips nº 1, retire o parafuso que segura o suporte de arranque e coloque o parafuso de lado num local seguro.
+.. Agarrando os lados do suporte de arranque, rode suavemente o suporte de arranque para cima e, em seguida, puxe o suporte de arranque para fora do encaixe e coloque-o de lado.
+
+
+. Instale o suporte de arranque de substituição no módulo do controlador:
++
+.. Alinhe as extremidades do suporte de arranque com o alojamento do encaixe e, em seguida, empurre-o suavemente no encaixe.
+.. Rode o suporte de arranque para baixo em direção à placa-mãe.
+.. Fixe o suporte de arranque à placa-mãe utilizando o parafuso do suporte de arranque.
++
+Não aperte demasiado o parafuso ou poderá danificar o suporte de arranque.
+
+
+
+. Reinstale a riser no módulo do controlador.
+. Fechar a conduta de ar:
++
+.. Rode a conduta de ar para baixo.
+.. Faça deslizar a conduta de ar na direção dos tirantes até encaixar.
+
+
+. Instale o módulo do controlador:
++
+.. Alinhe a extremidade do módulo do controlador com a abertura no chassi e, em seguida, empurre cuidadosamente o módulo do controlador até a metade do caminho para dentro do sistema.
+.. Reconecte o módulo do controlador, empurre firmemente a alça do came para terminar de encaixar o módulo do controlador, empurre a alça do came para a posição fechada e então aperte o parafuso de aperto manual.
++
+O módulo controlador começa a inicializar e para no prompt LOADER.
+
+
+
+
+
+.O que vem a seguir
+Depois de substituir fisicamente o suporte de arranque danificadolink:bootmedia-recovery-image-boot-bmr.html["Restaure a imagem do ONTAP a partir do nó do parceiro"], .

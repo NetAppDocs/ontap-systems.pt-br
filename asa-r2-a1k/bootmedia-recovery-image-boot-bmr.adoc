@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa r2 a1k, boot the recovery image 
 summary: Restaure a imagem ONTAP no suporte de arranque de substituição no sistema ASA A1K. O processo envolve iniciar o processo de recuperação de inicialização a partir do prompt DO Loader e monitorar o processo de recuperação até que ele seja concluído e o nó seja reiniciado. 
 ---
-= Restaure a imagem no suporte de arranque - ASA A1K
+= Restaurar a imagem ONTAP na mídia de inicialização - ASA A1K
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -128,7 +128,7 @@ Enter the passphrase again to confirm:
 Enter the backup data:
 -----BEGIN BACKUP-----
 <passphrase_value>
------END ACKUP-----
+-----END BACKUP-----
 ....
 =====
 

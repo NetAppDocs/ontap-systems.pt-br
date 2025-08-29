@@ -14,15 +14,32 @@ entries:
   - title: Passos detalhados
     url: "/fas2800/install-detailed-guide.html"
 - title: Manutenção
-  pdf-filename: Manutenção da FAS2820
+  pdf-filename: Manutenção AFF FAS2800
   entries:
-  - title: Visão geral
+  - title: Visão geral da manutenção
     url: "/fas2800/maintain-overview.html"
-  - title: Suporte de arranque
-    pdf-filename: Mídia de inicialização do FAS2820
+  - title: Mídia de inicialização - recuperação automatizada
+    pdf-filename: Mídia de inicialização FAS2820 automatizada
     entries:
-    - title: Visão geral
-      url: "/fas2800/bootmedia-replace-overview.html"
+    - title: Fluxo de trabalho de substituição de Mídia de inicialização
+      url: "/fas2800/bootmedia-replace-workflow-bmr.html"
+    - title: Rever os requisitos
+      url: "/fas2800/bootmedia-replace-requirements-bmr.html"
+    - title: Desligue o controlador
+      url: "/fas2800/bootmedia-shutdown-bmr.html"
+    - title: Substitua o suporte de arranque
+      url: "/fas2800/bootmedia-replace-bmr.html"
+    - title: Imagem de recuperação de inicialização
+      url: "/fas2800/bootmedia-recovery-image-boot-bmr.html"
+    - title: Devolver artigo com falha ao NetApp
+      url: "/fas2800/bootmedia-complete-rma-bmr.html"
+  - title: Mídia de inicialização - recuperação manual
+    pdf-filename: Manual de mídia de inicialização FAS2820
+    entries:
+    - title: Fluxo de trabalho de substituição de Mídia de inicialização
+      url: "/fas2800/bootmedia-replace-workflow.html"
+    - title: Rever os requisitos
+      url: "/a800/bootmedia-replace-requirements.html"
     - title: Verifique as chaves de criptografia
       url: "/fas2800/bootmedia-encryption-preshutdown-checks.html"
     - title: Desligue o controlador desativado

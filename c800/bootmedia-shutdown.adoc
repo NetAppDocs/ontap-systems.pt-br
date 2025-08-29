@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff c800, shut down the controller 
 summary: Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador desativado. 
 ---
-= Desligue o controlador - AFF C800
+= Desligue o controlador para recuperação manual da mídia de inicialização - AFF C800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,6 +12,8 @@ summary: Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desl
 
 [role="lead"]
 Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador desativado. Encerre ou assuma o controlador afetado utilizando o procedimento adequado para a sua configuração.
+
+Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use olink:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"] .  Se o seu sistema estiver executando uma versão anterior do ONTAP, você deverá usar o procedimento de recuperação de inicialização manual.
 
 
 

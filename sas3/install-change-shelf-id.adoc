@@ -67,7 +67,7 @@ Tem de desligar ambos os interrutores de alimentação, aguardar o período de t
 
 +
 ** Se o ONTAP ainda não estiver em execução ou se você estiver adicionando um compartimento (que ainda não tenha sido habilitado para o sistema), aguarde pelo menos 10 segundos.
-** Se o ONTAP estiver em execução (controladores disponíveis para fornecimento de dados) e todas as unidades de disco na gaveta não forem de propriedade, sobressalentes ou parte de agregado(s) desagregado(s), aguarde pelo menos 70 segundos.
+** Se o ONTAP estiver em execução (os controladores estiverem disponíveis para fornecer dados) e todas as unidades de disco no compartimento forem sem proprietário, sobressalentes ou parte de agregados offline, aguarde pelo menos 120 segundos.
 +
 Esse tempo permite que o ONTAP exclua adequadamente o endereço do compartimento antigo e atualize a cópia do novo endereço do compartimento.
 

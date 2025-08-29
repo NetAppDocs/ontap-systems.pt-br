@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa a800, boot the recovery image 
 summary: Você deve inicializar a imagem ONTAP a partir da unidade USB, restaurar o sistema de arquivos e verificar as variáveis ambientais. 
 ---
-= Inicie a imagem de recuperação - ASA A800
+= Recuperação manual de mídia de inicialização de uma unidade USB - ASA A800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,6 +12,8 @@ summary: Você deve inicializar a imagem ONTAP a partir da unidade USB, restaura
 
 [role="lead"]
 Depois de instalar o novo dispositivo multimédia de arranque no seu sistema, pode arrancar a imagem de recuperação a partir de uma unidade USB e restaurar a configuração a partir do nó do parceiro.
+
+Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use olink:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"] .  Se o seu sistema estiver executando uma versão anterior do ONTAP, você deverá usar o procedimento de recuperação de inicialização manual.
 
 .Passos
 . A partir do prompt Loader, inicialize a imagem de recuperação da unidade flash USB: `boot_recovery`

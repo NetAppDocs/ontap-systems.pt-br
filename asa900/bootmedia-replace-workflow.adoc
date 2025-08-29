@@ -1,0 +1,44 @@
+---
+permalink: asa900/bootmedia-replace-workflow.html 
+sidebar: sidebar 
+keywords: asa a900, replace the boot media 
+summary: Comece a substituir a mídia de inicialização no seu sistema de armazenamento AFF A900 revisando os requisitos de substituição, verificando o status da criptografia, desligando o controlador, substituindo a mídia de inicialização, inicializando a imagem de recuperação, restaurando a criptografia e verificando a funcionalidade do sistema. 
+---
+= Fluxo de trabalho de recuperação manual de mídia de inicialização - ASA A900
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Comece a substituir a mídia de inicialização no seu sistema de armazenamento ASA A900 revisando os requisitos de substituição, verificando o status da criptografia, desligando o controlador, substituindo a mídia de inicialização, inicializando a imagem de recuperação, restaurando a criptografia e verificando a funcionalidade do sistema.
+
+Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use olink:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"] .  Se o seu sistema estiver executando uma versão anterior do ONTAP, você deverá usar o procedimento de recuperação de inicialização manual.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"]link:bootmedia-replace-requirements.html["Reveja os requisitos do suporte de arranque"]
+[role="quick-margin-para"]
+Reveja os requisitos para substituir o suporte de arranque.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"]link:bootmedia_encryption_preshutdown_checks.html["Verifique o suporte e o status da chave de criptografia"]
+[role="quick-margin-para"]
+Determine se o sistema tem o gerenciador de chaves de segurança ativado ou discos criptografados.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"]link:bootmedia-shutdown.html["Desligue o controlador"]
+[role="quick-margin-para"]
+Desligue o controlador quando precisar de substituir o suporte de arranque.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"]link:bootmedia_replace.html["Substitua o suporte de arranque"]
+[role="quick-margin-para"]
+Remova o suporte de arranque com falha do módulo de gestão do sistema e instale o suporte de arranque de substituição e, em seguida, transfira uma imagem ONTAP utilizando uma unidade flash USB.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinco"]link:bootmedia_recovery_image.html["Inicie a imagem de recuperação"]
+[role="quick-margin-para"]
+Inicie a imagem ONTAP a partir da unidade USB, restaure o sistema de ficheiros e verifique as variáveis ambientais.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Seis"]link:bootmedia-encryption-restore.html["Restaure a criptografia"]
+[role="quick-margin-para"]
+Restaure a configuração do gerenciador de chaves integrado ou do gerenciador de chaves externo no menu de inicialização do ONATP .
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png["Sete"]link:bootmedia_complete_rma.html["Devolva a peça com falha ao NetApp"]
+[role="quick-margin-para"]
+Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit.

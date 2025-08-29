@@ -187,6 +187,7 @@ Ligar o sistema
 
 Você precisa instalar seu sistema em um rack de 4 colunas ou gabinete do sistema NetApp, conforme aplicável.
 
+.Passos
 . Instale os kits de calhas, conforme necessário.
 . Instale e fixe o seu sistema utilizando as instruções incluídas no kit de calhas.
 +
@@ -228,6 +229,7 @@ image::../media/oie_cable_pull_tab_up.png[Direção da patilha de puxar do cabo]
 
 NOTE: Ao inserir o conetor, você deve sentir que ele clique no lugar; se você não sentir que ele clique, remova-o, vire-o e tente novamente.
 
+.Passos
 . Use a animação ou ilustração para concluir o cabeamento entre os controladores e os switches:
 +
 .Animação Cabeamento de cluster sem comutação de dois nós
@@ -320,6 +322,7 @@ image::../media/oie_cable_pull_tab_up.png[Direção da patilha de puxar do cabo]
 
 NOTE: Ao inserir o conetor, você deve sentir que ele clique no lugar; se você não sentir que ele clique, remova-o, vire-o e tente novamente.
 
+.Passos
 . Use a animação ou ilustração para concluir o cabeamento entre os controladores e os switches:
 +
 .Animação Cabeamento de cluster comutado
@@ -420,6 +423,7 @@ image::../media/oie_cable_pull_tab_down.png[Direção da patilha de puxar do cab
 
 NOTE: Ao inserir o conetor, você deve sentir que ele clique no lugar; se você não sentir que ele clique, remova-o, vire-o e tente novamente.
 
+.Passos
 . Use a animação a seguir ou os desenhos para cabeamento das controladoras para três (stack de 1 PB de um compartimento de unidades e uma stack de dois compartimentos de unidades) gavetas de DS224C unidades.
 +
 .Animação Conecte seus cabos às prateleiras da unidade
@@ -479,6 +483,7 @@ Você pode concluir a configuração e configuração do sistema usando a descob
 --
 Se tiver a deteção de rede ativada no seu computador portátil, pode concluir a configuração e configuração do sistema utilizando a deteção automática de cluster.
 
+.Passos
 . Use a animação ou o desenho a seguir para definir uma ou mais IDs de gaveta de unidade:
 +
 .Animação Defina seus IDs de prateleira
@@ -596,6 +601,7 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 --
 Se não estiver a utilizar um computador portátil ou uma consola Windows ou Mac ou se a deteção automática não estiver ativada, tem de concluir a configuração e a configuração utilizando esta tarefa.
 
+.Passos
 . Faça o cabo e configure o seu laptop ou console:
 +
 .. Defina a porta de console no laptop ou console para 115.200 baud com N-8-1.

@@ -11,65 +11,93 @@ summary: Mantenha o hardware ASA C400
 
 
 [role="lead"]
+Faça a manutenção do hardware do seu sistema de armazenamento ASA C400 para garantir confiabilidade a longo prazo e desempenho ideal. Realize tarefas de manutenção regulares, como a substituição de componentes defeituosos, pois isso ajuda a evitar tempo de inatividade e perda de dados.
+
+Os procedimentos de manutenção pressupõem que o sistema de armazenamento ASA C400 já tenha sido implantado como um nó de armazenamento no ambiente ONTAP .
+
+
+
+== Componentes do sistema
+
 Para o sistema de armazenamento ASA C400, pode executar procedimentos de manutenção nos seguintes componentes.
 
+[cols="25,65"]
+|===
 
 
-== Suporte de arranque
+ a| 
+link:bootmedia-replace-workflow-bmr.html["Mídia de inicialização - recuperação automatizada"]
+ a| 
+A mídia de inicialização armazena um conjunto primário e secundário de arquivos de imagem ONTAP que o sistema de armazenamento usa para inicializar.  Durante a recuperação automatizada, o sistema recupera a imagem de inicialização do nó parceiro e executa automaticamente a opção de menu de inicialização apropriada para instalar a imagem na mídia de inicialização de substituição. O processo automatizado de recuperação da mídia de inicialização é compatível apenas com o ONTAP 9.17.1 e versões posteriores. Se o seu sistema de armazenamento estiver executando uma versão anterior do ONTAP, use o link:bootmedia-replace-workflow.html["procedimento de recuperação de inicialização manual"] .
 
-A Mídia de inicialização armazena um conjunto primário e secundário de arquivos de imagem de inicialização que o sistema usa quando ele é inicializado.
+
+
+ a| 
+link:bootmedia-replace-workflow.html["Mídia de inicialização - recuperação manual"]
+ a| 
+A mídia de inicialização armazena um conjunto primário e secundário de arquivos de imagem ONTAP que o sistema de armazenamento usa para inicializar. Durante a recuperação manual, você inicializa o sistema de armazenamento a partir de uma unidade USB e restaura manualmente a imagem e a configuração do sistema de arquivos.  Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 e posterior, use olink:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"] .
 
 
 
-== Chassis
-
+ a| 
+link:chassis-replace-overview.html["Chassis"]
+ a| 
 O chassi é o gabinete físico que abriga todos os componentes do controlador, como a unidade controladora/CPU, fonte de alimentação e e/S.
 
 
 
-== Controlador
-
+ a| 
+link:controller-replace-overview.html["Controlador"]
+ a| 
 Um controlador consiste em uma placa, firmware e software. Controla as unidades e implementa as funções do ONTAP.
 
 
 
-== DIMM
-
+ a| 
+link:dimm-replace.html["DIMM"]
+ a| 
 Você deve substituir um DIMM (módulo de memória dual in-line) quando houver uma incompatibilidade de memória ou se tiver um DIMM com falha.
 
 
 
-== Ventoinha
-
+ a| 
+link:fan-swap-out.html["Ventoinha"]
+ a| 
 A ventoinha arrefece o controlador.
 
 
 
-== Bateria NVDIMM
+ a| 
+link:nvdimm-replace.html["NVDIMM"]
+ a| 
+O NVDIMM (módulo de memória em linha dupla não volátil) gerencia a transferência de dados da memória volátil para o armazenamento não volátil e mantém a integridade dos dados em caso de perda de energia ou desligamento do sistema.
 
+
+
+ a| 
+link:nvdimm-battery-replace.html["Bateria NVDIMM"]
+ a| 
 Uma bateria NVDIMM é responsável por manter a energia do módulo NVDIMM.
 
 
 
-== NVDIMM
-
- The NVDIMM (non-volatile dual in-line memory module) manages the data transfer from the volatile memory to the non-volatile storage, and maintains data integrity in the event of a power loss or system shutdown.
-
-
-== Placa PCIe ou Mezzanine
-
-Uma placa PCIe (Peripheral Component Interconnect Express) é uma placa de expansão que se coneta ao slot PCIe da placa-mãe.
-
-Uma placa Mezzanine é uma placa de expansão projetada para ser inserida em um slot especializado na placa-mãe.
+ a| 
+link:pci-cards-and-risers-replace.html["Placa PCIe e risers"]
+ a| 
+Uma placa PCIe (Peripheral Component Interconnect Express) é uma placa de expansão que se conecta ao slot PCIe na placa-mãe ou em risers conectados à placa-mãe.
 
 
 
-== Fonte de alimentação
-
+ a| 
+link:power-supply-replace.html["Fonte de alimentação"]
+ a| 
 Uma fonte de alimentação fornece uma fonte de alimentação redundante em um compartimento de controladora.
 
 
 
-== Bateria do relógio em tempo real
-
+ a| 
+link:rtc-battery-replace.html["Bateria de relógio em tempo real"]
+ a| 
 Uma bateria de relógio em tempo real preserva as informações de data e hora do sistema se a energia estiver desligada.
+
+|===

@@ -1,0 +1,19 @@
+---
+permalink: asa-c400/bootmedia-replace-requirements.html 
+sidebar: sidebar 
+keywords: asa-c400, replace the boot media 
+summary: Antes de substituir a mídia de inicialização no seu sistema ASA C400, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. Isso inclui certificar-se de que você possui um pen drive USB com a capacidade de armazenamento adequada e verificar se você possui o dispositivo de inicialização de substituição correto. 
+---
+= Requisitos para recuperação manual de mídia de inicialização - ASA C400
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de substituir a mídia de inicialização no seu sistema ASA C400, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. Isso inclui certificar-se de que você possui um pen drive USB com a capacidade de armazenamento adequada e verificar se você possui o dispositivo de inicialização de substituição correto.
+
+Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use olink:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"] .  Se o seu sistema estiver executando uma versão anterior do ONTAP, você deverá usar o processo de recuperação de inicialização manual.
+
+.O que se segue?
+Depois de rever os requisitos para substituir o suporte de arranque, tem de link:bootmedia-encryption-preshutdown-checks.html["verifique o suporte e o status da chave de criptografia na mídia de inicialização"].

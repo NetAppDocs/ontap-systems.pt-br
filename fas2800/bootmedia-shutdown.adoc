@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas2800, shut, down, impaired, controller, take, over 
 summary: Você pode desligar ou assumir o controlador prejudicado usando procedimentos diferentes, dependendo da configuração do hardware do sistema de armazenamento. 
 ---
-= Desligue o controlador desativado - FAS2820
+= Desligue o controlador para recuperação manual da mídia de inicialização - FAS2820
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,6 +12,8 @@ summary: Você pode desligar ou assumir o controlador prejudicado usando procedi
 
 [role="lead"]
 Desligue ou assuma o controlador desativado.
+
+Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use olink:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"] .  Se o seu sistema estiver executando uma versão anterior do ONTAP, você deverá usar o procedimento de recuperação de inicialização manual.
 
 Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador desativado.
 

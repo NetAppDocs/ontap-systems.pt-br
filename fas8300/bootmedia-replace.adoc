@@ -1,16 +1,18 @@
 ---
 permalink: fas8300/bootmedia-replace.html 
 sidebar: sidebar 
-keywords: fas8300, fas8300, locate, boot, media, controller, module, fre, map, direction, replace, replace the boot media 
+keywords: fas8300, fas8700, locate, boot, media, controller, module, fre, map, direction, replace, replace the boot media 
 summary: 'Deve localizar o suporte de arranque no módulo do controlador (consulte o mapa da FRU no módulo do controlador) e, em seguida, siga as instruções para o substituir.' 
 ---
-= Substitua o suporte de arranque - FAS8300 e FAS8700
+= Substitua a mídia de inicialização e prepare-se para recuperação de inicialização manual - FAS8300 e FAS8700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 Para substituir o suporte de arranque, tem de remover o módulo do controlador afetado, instalar o suporte de arranque de substituição e transferir a imagem de arranque para uma unidade flash USB.
+
+Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use olink:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"] .  Se o seu sistema estiver executando uma versão anterior do ONTAP, você deverá usar o procedimento de recuperação de inicialização manual.
 
 
 

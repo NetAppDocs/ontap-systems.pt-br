@@ -1,0 +1,37 @@
+---
+permalink: a400/bootmedia-replace-requirements.html 
+sidebar: sidebar 
+keywords: a400, replace the boot media 
+summary: Antes de substituir a mídia de inicialização no seu sistema AFF A400, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. Isso inclui certificar-se de que você possui um pen drive USB com a capacidade de armazenamento adequada e verificar se você possui o dispositivo de inicialização de substituição correto. 
+---
+= Requisitos para recuperação manual de mídia de inicialização - AFF A400
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de substituir a mídia de inicialização no seu sistema AFF A400, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. Isso inclui certificar-se de que você possui um pen drive USB com a capacidade de armazenamento adequada e verificar se você possui o dispositivo de inicialização de substituição correto.
+
+Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use olink:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"] .  Se o seu sistema estiver executando uma versão anterior do ONTAP, você deverá usar o processo de recuperação de inicialização manual.
+
+.Pen drive USB
+* Certifique-se de ter uma unidade flash USB formatada para FAT32.
+* O USB deve ter capacidade de armazenamento suficiente para armazenar o  `image_xxx.tgz` arquivo.
+
+
+.Preparação do arquivo
+Copie o  `image_xxx.tgz` arquivo para o pen drive USB. Este arquivo será usado quando você transferir a imagem ONTAP usando o pen drive USB.
+
+.Substituição de componentes
+Substitua o componente com falha pelo componente de substituição fornecido pela NetApp.
+
+.Identificação do controlador
+É fundamental aplicar os comandos ao controlador correto ao substituir a mídia de inicialização danificada:
+
+* O _controlador danificado_ é o controlador no qual você está executando a manutenção.
+* O _controlador saudável_ é o parceiro HA do controlador prejudicado.
+
+
+.O que se segue?
+Depois de rever os requisitos para substituir o suporte de arranque, tem de link:bootmedia-encryption-preshutdown-checks.html["verifique o suporte e o status da chave de criptografia na mídia de inicialização"].

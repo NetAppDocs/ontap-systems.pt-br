@@ -1,0 +1,100 @@
+---
+permalink: fas2800/bootmedia-replace-bmr.html 
+sidebar: sidebar 
+keywords: fas2800, replace the boot media 
+summary: A mídia de inicialização do seu sistema FAS2800 armazena dados essenciais de firmware e configuração. O processo de substituição envolve a remoção do módulo do controlador, a remoção da mídia de inicialização danificada, a instalação da mídia de inicialização de substituição no módulo do controlador e, em seguida, a reinstalação do módulo do controlador. 
+---
+= Substituir a mídia de inicialização para recuperação de inicialização automatizada - FAS2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A mídia de inicialização do seu sistema FAS2800 armazena dados essenciais de firmware e configuração. O processo de substituição envolve a remoção e abertura do módulo do controlador, a remoção da mídia de inicialização danificada, a instalação da mídia de inicialização de substituição no módulo do controlador e, em seguida, a reinstalação do módulo do controlador.
+
+O processo automatizado de recuperação de mídia de inicialização é compatível apenas com o ONTAP 9.17.1 e versões posteriores. Se o seu sistema de armazenamento estiver executando uma versão anterior do ONTAP, use o link:bootmedia-replace-workflow.html["procedimento de recuperação de inicialização manual"] .
+
+A mídia de inicialização está localizada dentro do módulo do controlador e pode ser acessada removendo o módulo do controlador do chassi e removendo a tampa do módulo do controlador do sistema.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Solte o gancho e a alça de loop que prendem os cabos ao dispositivo de gerenciamento de cabos e, em seguida, desconete os cabos do sistema e os SFPs (se necessário) do módulo do controlador, mantendo o controle de onde os cabos estavam conetados.
+. Aperte o trinco na pega do excêntrico até que este se solte, abra totalmente o manípulo do excêntrico para libertar o módulo do controlador do plano médio e, em seguida, utilizando duas mãos, puxe o módulo do controlador para fora do chassis.
++
+image::../media/drw_2850_pcm_remove_install_IEOPS-694.svg[Retire o controlador]
+
+. Vire o módulo do controlador ao contrário e coloque-o numa superfície plana e estável.
+. Abra a tampa pressionando os botões azuis nas laterais do módulo do controlador para soltar a tampa e, em seguida, gire a tampa para cima e para fora do módulo do controlador.
++
+image::../media/drw_2850_open_controller_module_cover_IEOPS-695.svg[Abra o controlador]
+
++
+[cols="1,2"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Botão de liberação da tampa do módulo do controlador
+
+|===
+. Localize a Mídia de inicialização no módulo do controlador, localizado sob a placa mezzanine e siga as instruções para substituí-la.
++
+image:../media/drw_2850_replace_boot_media_IEOPS-696.svg["Substitua o suporte de arranque"]
+
++
+[cols="1,2"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Patilha de bloqueio do suporte de arranque
+
+|===
+. Remova a placa mezzanine usando a ilustração a seguir ou o mapa da FRU no módulo do controlador:
++
+.. Remova a placa de e/S deslizando-a diretamente para fora do módulo do controlador.
+.. Desaperte os parafusos de aperto manual na placa do mezanino.
++
+
+NOTE: Você pode soltar os parafusos com os dedos ou uma chave de fenda. Se utilizar os dedos, poderá ter de rodar a bateria NV para cima para obter uma melhor compra com o dedo no parafuso de aperto manual ao lado.
+
+.. Levante a placa do mezanino para cima.
+
+
+. Substitua o suporte de arranque:
++
+.. Prima o botão azul no alojamento do suporte do suporte de arranque para soltar o suporte de arranque do respetivo alojamento, rode o suporte de arranque para cima e, em seguida, puxe-o suavemente para fora do suporte de arranque.
++
+
+NOTE: Não torça nem puxe o suporte de arranque diretamente para cima, pois isto pode danificar o suporte ou o suporte de arranque.
+
+.. Alinhe as extremidades do suporte de arranque de substituição com a tomada de suporte de arranque e, em seguida, empurre-o cuidadosamente para dentro do encaixe. Verifique a Mídia de inicialização para se certificar de que ela está encaixada corretamente e completamente no soquete e, se necessário, remova a Mídia de inicialização e recoloque-a no soquete.
+.. Prima o botão de bloqueio azul, rode o suporte de arranque até ao fim e, em seguida, solte o botão de bloqueio para bloquear o suporte de arranque no lugar.
+
+
+. Reinstale a placa mezzanine:
++
+.. Alinhe o soquete na placa-mãe com o soquete na placa mezzanine e, em seguida, encaixe a placa com cuidado no soquete.
+.. Aperte os três parafusos de aperto manual na placa do mezanino.
+.. Volte a instalar a placa de e/S.
+
+
+. Volte a instalar a tampa do módulo do controlador e bloqueie-a no lugar.
+. Instale o módulo do controlador:
++
+.. Alinhe a extremidade do módulo do controlador com a abertura no chassi e, em seguida, empurre cuidadosamente o módulo do controlador até a metade do caminho para dentro do sistema.
+.. Reconecte o controlador, empurre firmemente a alça do came para terminar de encaixar o módulo do controlador, empurre a alça do came para a posição fechada e então aperte o parafuso de aperto manual.
++
+O controlador começa a inicializar e para no prompt LOADER.
+
+
+
+
+
+.O que vem a seguir
+Depois de substituir fisicamente o suporte de arranque danificadolink:bootmedia-recovery-image-boot-bmr.html["Restaure a imagem do ONTAP a partir do nó do parceiro"], .

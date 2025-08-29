@@ -23,6 +23,7 @@ video::dc8d4acb-e061-45dd-8a0e-ae78004b6974[panopto]
 
 Para aceder aos componentes no interior do controlador, tem de remover primeiro o módulo do controlador do sistema e, em seguida, remover a tampa do módulo do controlador.
 
+.Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Desconete os cabos do módulo do controlador desativado e mantenha o controle de onde os cabos foram conetados.
 . Deslize o botão terra cotta na pega do came para baixo até que este se destranque.
@@ -76,6 +77,7 @@ Botão de bloqueio da tampa do módulo do controlador
 
 Você deve localizar o suporte de inicialização e seguir as instruções para removê-lo do controlador antigo e inseri-lo no novo controlador.
 
+.Passos
 . Localize a Mídia de inicialização usando a ilustração a seguir ou o mapa da FRU no módulo do controlador:
 +
 image::../media/drw_9500_remove_boot_dev.svg[Remova o dispositivo de inicialização]
@@ -120,6 +122,7 @@ Para mover os DIMMs, localize-os e mova-os do controlador antigo para o controla
 
 NOTE: O CONTROLADOR Ver2 tem menos soquetes DIMM. Não há redução no número de DIMMs suportados ou alteração na numeração do soquete DIMM. Ao mover os DIMMs para o novo módulo do controlador, instale os DIMMs no mesmo número/local do soquete que o módulo do controlador prejudicado. Consulte o diagrama do mapa da FRU no módulo do controlador Ver2 para ver as localizações dos soquetes DIMM.
 
+.Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Localize os DIMMs no módulo do controlador.
 . Observe a orientação do DIMM no soquete para que você possa inserir o DIMM no módulo do controlador de substituição na orientação adequada.
@@ -181,6 +184,7 @@ Para pares de HA com dois módulos de controlador no mesmo chassi, a sequência 
 
 NOTE: O sistema pode atualizar o firmware do sistema quando ele é inicializado. Não aborte este processo. O procedimento requer que você interrompa o processo de inicialização, o que você normalmente pode fazer a qualquer momento depois de solicitado a fazê-lo. No entanto, se o sistema atualizar o firmware do sistema quando ele é inicializado, você deve esperar até que a atualização seja concluída antes de interromper o processo de inicialização.
 
+.Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Se ainda não o tiver feito, substitua a tampa no módulo do controlador.
 . Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.

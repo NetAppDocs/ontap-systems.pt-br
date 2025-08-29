@@ -11,7 +11,7 @@ summary: A recuperação automatizada da imagem de inicialização envolve a ide
 
 
 [role="lead"]
-A recuperação automatizada da imagem de inicialização envolve a identificação e seleção automáticas pelo sistema da opção de menu de inicialização apropriada. Ela utiliza a imagem de inicialização no nó parceiro para reinstalar o ONTAP na mídia de inicialização de substituição no seu sistema AFF A1K .
+A recuperação automatizada da imagem de inicialização envolve a identificação e seleção automáticas pelo sistema da opção de menu de inicialização apropriada. Ele utiliza a imagem de inicialização no nó parceiro para reinstalar o ONTAP na mídia de inicialização de substituição no seu sistema de armazenamento AFF A1K.
 
 O processo automatizado de recuperação de mídia de inicialização é compatível apenas com o ONTAP 9.17.1 e versões posteriores. Se o seu sistema de armazenamento estiver executando uma versão anterior do ONTAP, use o link:bootmedia-replace-workflow.html["procedimento de recuperação de inicialização manual"] .
 

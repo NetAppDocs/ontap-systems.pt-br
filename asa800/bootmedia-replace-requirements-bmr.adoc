@@ -1,0 +1,41 @@
+---
+permalink: asa800/bootmedia-replace-requirements-bmr.html 
+sidebar: sidebar 
+keywords: asa800, replace the boot media 
+summary: Antes de substituir a mídia de inicialização no seu sistema ASA A800, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. 
+---
+= Requisitos para recuperação automatizada de mídia de inicialização - ASA A800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de substituir a mídia de inicialização no seu ASA A800, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida.  Isso inclui verificar se você tem a mídia de inicialização de substituição correta, confirmar se a porta e0S (chave e0M) no controlador danificado não está com defeito e determinar se o Onboard Key Manager (OKM) ou o External Key Manager (EKM) está habilitado.
+
+O processo automatizado de recuperação de mídia de inicialização é compatível apenas com o ONTAP 9.17.1 e versões posteriores. Se o seu sistema de armazenamento estiver executando uma versão anterior do ONTAP, use o link:bootmedia-replace-workflow.html["procedimento de recuperação de inicialização manual"] .
+
+* Você deve substituir o componente com falha por um componente FRU de substituição da mesma capacidade que recebeu do NetApp.
+* Verifique se a porta e0M (chave inglesa) no controlador danificado está conectada e não está com defeito.
++
+A porta e0M é usada para comunicação entre os dois controladores durante o processo de recuperação de inicialização automatizada.
+
+* Para o OKM, você precisa da senha de todo o cluster e também dos dados de backup.
+* Para EKM, você precisa de cópias dos seguintes arquivos do nó do parceiro:
++
+** arquivo /cfcard/kmip/servers.cfg.
+** arquivo /cfcard/kmip/certs/client.crt.
+** arquivo /cfcard/kmip/certs/client.key.
+** Arquivo /cfcard/kmip/certs/CA.pem.
+
+
+* É fundamental aplicar os comandos ao controlador correto ao substituir a mídia de inicialização danificada:
++
+** O _controlador danificado_ é o controlador no qual você está executando a manutenção.
+** O _controlador saudável_ é o parceiro HA do controlador prejudicado.
+
+
+
+
+.O que vem a seguir
+Depois de analisar os requisitos do suporte de arranque, pode link:bootmedia-shutdown-bmr.html["desligue o controlador"].

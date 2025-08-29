@@ -1,0 +1,135 @@
+---
+permalink: asa400/bootmedia-replace-bmr.html 
+sidebar: sidebar 
+keywords: asa400, replace the boot media 
+summary: A mídia de inicialização do seu sistema ASA A400 armazena dados essenciais de firmware e configuração. O processo de substituição envolve a remoção do módulo do controlador, a remoção da mídia de inicialização danificada, a instalação da mídia de inicialização de substituição no módulo do controlador e, em seguida, a reinstalação do módulo do controlador. 
+---
+= Substituir a mídia de inicialização para recuperação de inicialização automatizada - ASA A400
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A mídia de inicialização do seu sistema ASA A400 armazena dados essenciais de firmware e configuração. O processo de substituição envolve a remoção e abertura do módulo do controlador, a remoção da mídia de inicialização danificada, a instalação da mídia de inicialização de substituição no módulo do controlador e, em seguida, a reinstalação do módulo do controlador.
+
+O processo automatizado de recuperação de mídia de inicialização é compatível apenas com o ONTAP 9.17.1 e versões posteriores. Se o seu sistema de armazenamento estiver executando uma versão anterior do ONTAP, use o link:bootmedia-replace-workflow.html["procedimento de recuperação de inicialização manual"] .
+
+A mídia de inicialização está localizada dentro do módulo do controlador, sob o duto de ar, e é acessada removendo o módulo do controlador do sistema.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Solte os fixadores do cabo de alimentação e, em seguida, desconete os cabos das fontes de alimentação.
+. Solte o gancho e a alça de loop que prendem os cabos ao dispositivo de gerenciamento de cabos e, em seguida, desconete os cabos do sistema e os SFPs (se necessário) do módulo do controlador, mantendo o controle de onde os cabos estavam conetados.
++
+Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar o dispositivo de gerenciamento de cabos, os cabos sejam organizados.
+
+. Retire o dispositivo de gestão de cabos do módulo do controlador e coloque-o de lado.
+. Prima ambos os trincos de bloqueio para baixo e, em seguida, rode ambos os trincos para baixo ao mesmo tempo.
++
+O módulo do controlador desloca-se ligeiramente para fora do chassis.
+
++
+image::../media/drw_c400_remove_controller_IEOPS-1216.svg[Remova o controlador]
+
++
+[cols="10,90"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Trincos de bloqueio
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+O controlador se move ligeiramente para fora do chassi
+
+|===
+. Faça deslizar o módulo do controlador para fora do chassis.
++
+Certifique-se de que suporta a parte inferior do módulo do controlador enquanto o desliza para fora do chassis.
+
+. Coloque o módulo do controlador numa superfície estável e plana.
+. Abrir a conduta de ar:
++
+image::../media/drw_c400_open_air_duct_IEOPS-1215.svg[Abra a conduta de ar]
+
++
+[cols="10,90"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Patilhas de bloqueio
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Deslize o duto de ar em direção à parte traseira do controlador
+
+
+
+ a| 
+image::../media/icon_round_3.png[Legenda número 3]
+ a| 
+Rode a conduta de ar para cima
+
+|===
++
+.. Pressione as patilhas de bloqueio nas laterais da conduta de ar para dentro, em direção ao centro do módulo do controlador.
+.. Faça deslizar a conduta de ar em direção à parte de trás do módulo do controlador e, em seguida, rode-a para cima até à posição completamente aberta.
+
+
+. Localize e remova o suporte de arranque do módulo do controlador:
++
+image::../media/drw_c400_replace_boot_media_IEOPS-1217.svg[Retire o suporte de arranque]
+
++
+[cols="10,90"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Prima o botão azul
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Rode o suporte de arranque para cima e retire-o da tomada
+
+|===
++
+.. Pressione o botão azul na extremidade do suporte de inicialização até que o lábio do suporte de inicialização apague o botão azul.
+.. Rode o suporte de arranque para cima e puxe cuidadosamente o suporte de arranque para fora do encaixe.
+
+
+. Alinhe as extremidades do suporte de arranque de substituição com a tomada de suporte de arranque e, em seguida, empurre-o cuidadosamente para dentro do encaixe.
+. Verifique o suporte de arranque para se certificar de que está encaixado corretamente e completamente no encaixe.
++
+Se necessário, retire o suporte de arranque e volte a colocá-lo no socket.
+
+. Bloqueie o suporte de arranque no devido lugar:
++
+.. Rode o suporte de arranque para baixo em direção à placa-mãe.
+.. Colocando um dedo na extremidade do suporte de arranque com o botão azul, prima a extremidade do suporte de arranque para engatar o botão de bloqueio azul.
+.. Enquanto pressiona o suporte de arranque, levante o botão azul de bloqueio para bloquear o suporte de arranque no lugar.
+
+
+. Feche a conduta de ar.
+
+
+.O que vem a seguir
+Depois de substituir fisicamente o suporte de arranque danificadolink:bootmedia-recovery-image-boot-bmr.html["Restaure a imagem do ONTAP a partir do nó do parceiro"], .

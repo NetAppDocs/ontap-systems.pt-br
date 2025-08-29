@@ -90,6 +90,7 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 
 Para aceder aos componentes no interior do controlador, tem de remover primeiro o módulo do controlador do sistema e, em seguida, remover a tampa do módulo do controlador.
 
+.Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Desconete os cabos do módulo do controlador desativado e mantenha o controle de onde os cabos foram conetados.
 . Deslize o botão terra cotta na pega do came para baixo até que este se destranque.
@@ -142,13 +143,14 @@ Botão de bloqueio da tampa do módulo do controlador
 
 Para substituir a bateria RTC, tem de localizar a bateria avariada no módulo do controlador, removê-la do suporte e, em seguida, instalar a bateria de substituição no suporte.
 
+.Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Localize a bateria do RTC.
 +
 .Animação - Substituir a bateria RTC
 video::3b977f96-3ebb-4b11-9703-ae78004b4add[panopto]
 +
-image::../media/drw_9500_remove_RTC_battery.svg[Substitua a bateria RTC]
+image::../media/drw_9500_remove_RTC_battery.svg[Substitua a bateria do RTC]
 
 +
 [cols="20%,80%"]
@@ -168,6 +170,9 @@ image::../media/icon_round_2.png[Legenda número 2]
 Deslize a bateria para fora do alojamento
 
 |===
+
+
+.Passos
 . Empurre cuidadosamente a bateria para fora do suporte, rode-a para fora do suporte e, em seguida, levante-a para fora do suporte.
 +
 
@@ -186,6 +191,7 @@ NOTE: Observe a polaridade da bateria ao removê-la do suporte. A bateria está 
 
 Depois de substituir a bateria do RTC, tem de reinstalar o módulo do controlador. Se a bateria do RTC tiver sido deixada fora do módulo do controlador durante mais de 10 minutos, poderá ter de repor a hora e a data.
 
+.Passos
 . Se ainda não o tiver feito, feche a tampa da conduta de ar ou do módulo do controlador.
 . Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
 +

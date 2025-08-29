@@ -11,7 +11,9 @@ summary: Desligue o controlador danificado no seu sistema de armazenamento AFF A
 
 
 [role="lead"]
-Desligue o controlador danificado no seu sistema de armazenamento AFF A70 ou AFF A90 para evitar perda de dados e manter a estabilidade do sistema durante o processo de recuperação manual da mídia de inicialização.
+Desligue o controlador danificado no seu sistema de armazenamento AFF A70 ou AFF A90 para evitar perda de dados e manter a estabilidade do sistema durante o processo automatizado de recuperação da mídia de inicialização.
+
+Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use olink:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"] .  Se o seu sistema estiver executando uma versão anterior do ONTAP, você deverá usar o procedimento de recuperação de inicialização manual.
 
 [role="tabbed-block"]
 ====

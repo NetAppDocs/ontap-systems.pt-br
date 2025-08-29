@@ -6,35 +6,52 @@ entries:
   pdf-filename: Instalação e configuração do AFF A900
   entries:
   - title: Escolha a experiência de instalação e configuração
-    url: "/a900/install_setup.html"
+    url: "/a900/install-setup.html"
   - title: Passos rápidos
-    url: "/a900/install_quick_guide.html"
+    url: "/a900/install-quick-guide.html"
   - title: Passos de vídeo
-    url: "/a900/install_videos.html"
+    url: "/a900/install-videos.html"
   - title: Passos detalhados
-    url: "/a900/install_detailed_guide.html"
+    url: "/a900/install-detailed-guide.html"
 - title: Manutenção
   pdf-filename: Manutenção da AFF A900
   entries:
-  - title: Visão geral
+  - title: Visão geral da manutenção
     url: "/a900/maintain-overview.html"
-  - title: Suporte de arranque
-    pdf-filename: Mídia de inicialização do AFF A900
+  - title: Mídia de inicialização - recuperação automatizada
+    pdf-filename: Mídia de inicialização AFF A900 automatizada
     entries:
-    - title: Visão geral
-      url: "/a900/bootmedia_replace_overview.html"
+    - title: Fluxo de trabalho de substituição de Mídia de inicialização
+      url: "/a900/bootmedia-replace-workflow-bmr.html"
+    - title: Rever os requisitos
+      url: "/a900/bootmedia-replace-requirements-bmr.html"
+    - title: Desligue o controlador
+      url: "/a900/bootmedia-shutdown-bmr.html"
+    - title: Substitua o suporte de arranque
+      url: "/a900/bootmedia-replace-bmr.html"
+    - title: Restaure a imagem no suporte de arranque
+      url: "/a900/bootmedia-recovery-image-boot-bmr.html"
+    - title: Devolver artigo com falha ao NetApp
+      url: "/a900/bootmedia-complete-rma-bmr.html"
+  - title: Mídia de inicialização - recuperação manual
+    pdf-filename: Manual de mídia de inicialização AFF A900
+    entries:
+    - title: Fluxo de trabalho de substituição de Mídia de inicialização
+      url: "/a900/bootmedia-replace-workflow.html"
+    - title: Rever os requisitos
+      url: "/a900/bootmedia-replace-requirements.html"
     - title: Verifique as chaves de criptografia
-      url: "/a900/bootmedia_encryption_preshutdown_checks.html"
+      url: "/a900/bootmedia-encryption-preshutdown-checks.html"
     - title: Desligue o controlador desativado
       url: "/a900/bootmedia-shutdown.html"
-    - title: Substitua a imagem de inicialização
-      url: "/a900/bootmedia_replace.html"
+    - title: Substitua o suporte de arranque
+      url: "/a900/bootmedia-replace.html"
     - title: Imagem de recuperação de inicialização
       url: "/a900/bootmedia_recovery_image.html"
     - title: Restaure a criptografia
       url: "/a900/bootmedia-encryption-restore.html"
     - title: Devolver artigo com falha ao NetApp
-      url: "/a900/bootmedia_complete_rma.html"
+      url: "/a900/bootmedia-complete-rma.html"
   - title: Chassis
     pdf-filename: Chassis AFF A900
     entries:

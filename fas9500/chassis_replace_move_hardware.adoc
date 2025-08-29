@@ -19,6 +19,7 @@ Para substituir o chassis, tem de remover os componentes do chassis danificado e
 
 Remover as fontes de alimentação ao substituir um chassi envolve desligar, desconetar e remover as quatro fontes de alimentação da parte traseira do chassi com deficiência.
 
+.Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Desligue a fonte de alimentação e desligue os cabos de alimentação:
 +
@@ -58,6 +59,7 @@ Botão de bloqueio terra cotta
 
 Ao substituir o chassis, é necessário remover os seis módulos da ventoinha, localizados na parte dianteira do chassis.
 
+.Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Retire a moldura (se necessário) com duas mãos, segurando as aberturas de cada lado da moldura e puxando-a na sua direção até que a moldura se solte dos pernos esféricos na estrutura do chassis.
 . Prima o botão de bloqueio de terra cotta no módulo da ventoinha e puxe o módulo da ventoinha para fora do chassis, certificando-se de que o apoia com a mão livre.
@@ -99,6 +101,7 @@ Deslize o ventilador para dentro/fora do chassi
 
 Para substituir o chassis, tem de remover o ou os módulos do controlador do chassis afetado.
 
+.Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Desconete os cabos do módulo do controlador desativado e mantenha o controle de onde os cabos foram conetados.
 . Deslize o botão de bloqueio de terra cotta na pega do excêntrico para baixo até que este se destranque.
@@ -140,6 +143,7 @@ Certifique-se de que suporta a parte inferior do módulo do controlador enquanto
 
 Para remover os módulos de e/S do chassis afetado, incluindo os módulos NVRAM, siga a sequência específica dos passos. Não é necessário remover o módulo Flash Cache, se presente, do módulo NVRAM ao movê-lo para um chassi de substituição.
 
+.Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Desconete qualquer cabeamento associado ao módulo de e/S de destino.
 +
@@ -195,6 +199,7 @@ Trinco da came de e/S completamente desbloqueado
 
 Retire os dois módulos de alimentação do controlador de desativação da parte dianteira do chassis danificado.
 
+.Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Prima o botão de bloqueio de terra cotta na pega do módulo e, em seguida, deslize o DCPM para fora do chassis.
 +
@@ -244,6 +249,7 @@ image:../media/icon_round_2.png["Legenda número 2"]
 Deslize para fora do chassi.
 
 |===
+.Passos
 . Localize o módulo de LED USB na parte frontal do chassi com deficiência, diretamente sob os compartimentos de fonte de alimentação.
 . Prima o botão de bloqueio preto no lado direito do módulo para soltar o módulo do chassis e, em seguida, deslize-o para fora do chassis com deficiência.
 . Coloque o módulo de lado num local seguro.
@@ -255,6 +261,7 @@ Deslize para fora do chassi.
 
 Você deve remover o chassi existente do rack de equipamentos ou do gabinete do sistema antes de instalar o chassi de substituição.
 
+.Passos
 . Retire os parafusos dos pontos de montagem do chassis.
 +
 
@@ -275,6 +282,7 @@ NOTE: Se o sistema estiver em um gabinete do sistema, talvez seja necessário re
 
 Uma vez que o chassi de substituição é instalado no rack ou no gabinete do sistema, você deve reinstalar os módulos de alimentação do controlador de estágio nele.
 
+.Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Alinhe a extremidade do DCPM com a abertura do chassis e, em seguida, deslize-a suavemente para dentro do chassis até encaixar no lugar.
 +
@@ -290,6 +298,7 @@ NOTE: O módulo e o slot são chaveados. Não force o módulo para dentro da abe
 
 Para instalar os módulos do ventilador ao substituir o chassi, você deve executar uma sequência específica de tarefas.
 
+.Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Alinhe as extremidades do módulo do ventilador de substituição com a abertura no chassi e, em seguida, deslize-o para dentro do chassi até que ele se encaixe no lugar.
 +
@@ -307,6 +316,7 @@ Para instalar módulos de e/S, incluindo os módulos NVRAM/Flash Cache do chassi
 
 Você deve ter o chassi instalado para que você possa instalar os módulos de e/S nos slots correspondentes no chassi de substituição.
 
+.Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Depois que o chassi de substituição for instalado no rack ou gabinete, instale os módulos de e/S em seus slots correspondentes no chassi de substituição, deslizando suavemente o módulo de e/S para o slot até que o trinco do came de e/S com letras e numerado comece a engatar e, em seguida, empurre o trinco do came de e/S totalmente para cima para bloquear o módulo no lugar.
 . Recable o módulo I/o, conforme necessário.
@@ -323,6 +333,7 @@ NOTE: Se o chassi com deficiência tiver painéis de e/S vazios, mova-os para o 
 
 A instalação das fontes de alimentação ao substituir um chassi envolve a instalação das fontes de alimentação no chassi de substituição e a conexão à fonte de alimentação.
 
+.Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Certifique-se de que os balanceiros das fontes de alimentação estão na posição desligada.
 . Utilizando ambas as mãos, apoie e alinhe as extremidades da fonte de alimentação com a abertura no chassis do sistema e, em seguida, empurre cuidadosamente a fonte de alimentação para o chassis até encaixar no devido lugar.
@@ -347,6 +358,7 @@ IMPORTANT: Ligue apenas o cabo de alimentação à fonte de alimentação. Não 
 
 Instale os módulos LED USB no chassis de substituição.
 
+.Passos
 . Localize a ranhura do módulo LED USB na parte frontal do chassis de substituição, diretamente sob os compartimentos DCPM.
 . Alinhe as extremidades do módulo com o compartimento de LED USB e empurre cuidadosamente o módulo até encaixar.
 
@@ -357,6 +369,7 @@ Instale os módulos LED USB no chassis de substituição.
 
 Depois de instalar o módulo do controlador e quaisquer outros componentes no chassis de substituição, inicie o sistema.
 
+.Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Ligue as fontes de alimentação a diferentes fontes de alimentação e, em seguida, ligue-as.
 . Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.

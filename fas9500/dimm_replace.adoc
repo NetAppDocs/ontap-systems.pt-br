@@ -91,6 +91,7 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 
 Para aceder aos componentes no interior do controlador, tem de remover primeiro o módulo do controlador do sistema e, em seguida, remover a tampa do módulo do controlador.
 
+.Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Desconete os cabos do módulo do controlador desativado e mantenha o controle de onde os cabos foram conetados.
 . Deslize o botão terra cotta na pega do came para baixo até que este se destranque.
@@ -148,6 +149,7 @@ Para substituir os DIMMs, localize-os dentro do controlador e siga a sequência 
 
 NOTE: O CONTROLADOR Ver2 tem menos soquetes DIMM. Não há redução no número de DIMMs suportados ou alteração na numeração do soquete DIMM. Ao mover os DIMMs para o novo módulo do controlador, instale os DIMMs no mesmo número/local do soquete que o módulo do controlador prejudicado. Consulte o diagrama do mapa da FRU no módulo do controlador Ver2 para ver as localizações dos soquetes DIMM.
 
+.Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Localize os DIMMs no módulo do controlador.
 +
@@ -206,6 +208,7 @@ Depois de instalar os componentes no módulo do controlador, tem de instalar o m
 
 Para pares de HA com dois módulos de controlador no mesmo chassi, a sequência em que você instala o módulo de controlador é especialmente importante porque ele tenta reiniciar assim que você o senta completamente no chassi.
 
+.Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Se ainda não o tiver feito, substitua a tampa no módulo do controlador.
 +

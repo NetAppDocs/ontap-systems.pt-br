@@ -1,0 +1,38 @@
+---
+permalink: fas2800/bootmedia-replace-workflow-bmr.html 
+sidebar: sidebar 
+keywords: fas2800, replace the boot media 
+summary: Comece a substituir a mídia de inicialização no seu sistema de armazenamento FAS2800 revisando os requisitos de substituição, desligando os controladores, substituindo a mídia de inicialização, restaurando a imagem na mídia de inicialização e verificando a funcionalidade do sistema. 
+---
+= Fluxo de trabalho de recuperação automatizada de mídia de inicialização - FAS2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A recuperação automatizada da imagem de inicialização envolve a identificação e seleção automáticas pelo sistema da opção de menu de inicialização apropriada. Ele utiliza a imagem de inicialização no nó parceiro para reinstalar o ONTAP na mídia de inicialização de substituição no seu sistema de armazenamento FAS2800.
+
+O processo automatizado de recuperação de mídia de inicialização é compatível apenas com o ONTAP 9.17.1 e versões posteriores. Se o seu sistema de armazenamento estiver executando uma versão anterior do ONTAP, use o link:bootmedia-replace-workflow.html["procedimento de recuperação de inicialização manual"] .
+
+Para começar, revise os requisitos de substituição, desligue o controlador, substitua a mídia de inicialização, permita que o sistema restaure a imagem e verifique a funcionalidade do sistema.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"]link:bootmedia-replace-requirements-bmr.html["Reveja os requisitos do suporte de arranque"]
+[role="quick-margin-para"]
+Reveja os requisitos para substituição do suporte de arranque.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"]link:bootmedia-shutdown-bmr.html["Desligue o controlador"]
+[role="quick-margin-para"]
+Desligue o controlador no sistema de armazenamento quando precisar substituir a Mídia de inicialização.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"]link:bootmedia-replace-bmr.html["Substitua o suporte de arranque"]
+[role="quick-margin-para"]
+Remova o suporte de arranque com falha do módulo de gestão do sistema e instale o suporte de arranque de substituição.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"]link:bootmedia-recovery-image-boot-bmr.html["Restaure a imagem no suporte de arranque"]
+[role="quick-margin-para"]
+Restaure a imagem ONTAP a partir do controlador do parceiro.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinco"]link:bootmedia-complete-rma-bmr.html["Devolva a peça com falha ao NetApp"]
+[role="quick-margin-para"]
+Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit.

@@ -35,7 +35,7 @@ A mídia de inicialização armazena um conjunto primário e secundário de arqu
  a| 
 link:bootmedia-replace-workflow.html["Mídia de inicialização - recuperação manual"]
  a| 
-A mídia de inicialização armazena um conjunto primário e secundário de arquivos de imagem ONTAP que o sistema de armazenamento usa para inicializar a imagem de uma unidade USB e restaurar a configuração do nó parceiro
+A mídia de inicialização armazena um conjunto primário e secundário de arquivos de imagem ONTAP que o sistema de armazenamento usa para inicializar. Durante a recuperação manual, você inicializa o sistema de armazenamento a partir de uma unidade USB e restaura manualmente a imagem e a configuração do sistema de arquivos.  Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 e posterior, use olink:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"] .
 
 
 
@@ -112,6 +112,6 @@ Uma bateria de relógio em tempo real preserva as informações de data e hora d
  a| 
 link:system-management-replace.html["Módulo de gestão do sistema"]
  a| 
-O módulo Gerenciamento do sistema fornece a interface entre o controlador e um console ou laptop para fins de manutenção do controlador ou do sistema. O módulo de gestão do sistema contém o suporte de arranque e guarda o número de série do sistema (SSN).
+O módulo de Gerenciamento do Sistema fornece a interface entre o controlador e um console ou laptop para fins de manutenção do controlador ou do sistema.  O módulo Gerenciamento do Sistema contém a mídia de inicialização e armazena o número de série do sistema (SSN).
 
 |===

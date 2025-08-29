@@ -1,10 +1,10 @@
 ---
 permalink: fas8300/bootmedia-encryption-preshutdown-checks.html 
 sidebar: sidebar 
-keywords: fas8300, fas8300, shut, down, impair, controller, check, status, onboard, encryption, keys, status, disable, automatic, giveback, version, ontap, system, run, pre-shutdown, check, pre-shutdown checks for onboard encryption keys 
+keywords: fas8300, fas8700, shut, down, impair, controller, check, status, onboard, encryption, keys, status, disable, automatic, giveback, version, ontap, system, run, pre-shutdown, check, pre-shutdown checks for onboard encryption keys 
 summary: Antes de desligar o controlador com deficiência e verificar o estado das chaves de encriptação integradas, tem de verificar o estado do controlador com deficiência, desativar a giveback automática e verificar a versão do ONTAP em execução. 
 ---
-= Verifique o suporte e o status da chave de criptografia - AFF FAS8300 e FAS8700
+= Verifique o suporte e o status da chave de criptografia - FAS8300 e FAS8700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,6 +12,8 @@ summary: Antes de desligar o controlador com deficiência e verificar o estado d
 
 [role="lead"]
 Para garantir a segurança dos dados no sistema de armazenamento, é necessário verificar o suporte e o status da chave de criptografia na Mídia de inicialização. Verifique se sua versão do ONTAP suporta criptografia de volume NetApp (NVE) e, antes de desligar a controladora, verifique se o gerenciador de chaves está ativo.
+
+Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use olink:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"] .  Se o seu sistema estiver executando uma versão anterior do ONTAP, você deverá usar o procedimento de recuperação de inicialização manual.
 
 
 

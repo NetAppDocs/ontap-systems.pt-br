@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff c400, aff, c400, locate, boot, media, controller, module, fre, map, direction, replace, replace the boot media 
 summary: 'Deve localizar o suporte de arranque no módulo do controlador (consulte o mapa da FRU no módulo do controlador) e, em seguida, siga as instruções para o substituir.' 
 ---
-= Substitua o suporte de arranque - AFF C400
+= Substitua a mídia de inicialização e prepare-se para recuperação de inicialização manual - AFF C400
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,6 +12,8 @@ summary: 'Deve localizar o suporte de arranque no módulo do controlador (consul
 
 [role="lead"]
 Para substituir o suporte de arranque, tem de remover o módulo do controlador afetado, instalar o suporte de arranque de substituição e transferir a imagem de arranque para uma unidade flash USB.
+
+Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use olink:bootmedia-replace-workflow.html["procedimento de recuperação de inicialização manual"]
 
 
 

@@ -13,6 +13,9 @@ summary: O procedimento para inicializar o nó prejudicado a partir da imagem de
 [role="lead"]
 Você deve inicializar a imagem ONTAP a partir da unidade USB, restaurar o sistema de arquivos e verificar as variáveis ambientais.
 
+Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use olink:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"] .  Se o seu sistema estiver executando uma versão anterior do ONTAP, você deverá usar o procedimento de recuperação de inicialização manual.
+
+.Passos
 . A partir do prompt Loader, inicialize a imagem de recuperação da unidade flash USB: `boot_recovery`
 +
 A imagem é transferida da unidade flash USB.
@@ -88,7 +91,7 @@ Se for solicitado que você continue com a atualização, `y` pressione .
 
 . O próximo depende da configuração do sistema:
 +
-** Se o sistema tiver o gerenciador de chaves integrado, NSE ou NVE configurado, vá para xref:bootmedia_encryption_restore.adoc[Etapas de substituição de Mídia de pós-inicialização para OKM, NSE e NVE]
+** Se o sistema tiver o gerenciador de chaves integrado, NSE ou NVE configurado, vá para xref:bootmedia-encryption-restore.adoc[Etapas de substituição de Mídia de pós-inicialização para OKM, NSE e NVE]
 ** Se o sistema não tiver o gerenciador de chaves integrado, NSE ou NVE configurado, execute as etapas nesta seção.
 
 

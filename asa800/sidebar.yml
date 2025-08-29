@@ -16,13 +16,30 @@ entries:
 - title: Manutenção
   pdf-filename: Manutenção da ASA A800
   entries:
-  - title: Visão geral
+  - title: Visão geral da manutenção
     url: "/asa800/maintain-overview.html"
-  - title: Suporte de arranque
-    pdf-filename: Mídia de inicialização do ASA A800
+  - title: Mídia de inicialização - recuperação automatizada
+    pdf-filename: Mídia de inicialização ASA A800 automatizada
     entries:
-    - title: Visão geral
-      url: "/asa800/bootmedia-replace-overview.html"
+    - title: Fluxo de trabalho de substituição de Mídia de inicialização
+      url: "/asa800/bootmedia-replace-workflow-bmr.html"
+    - title: Rever os requisitos
+      url: "/asa800/bootmedia-replace-requirements-bmr.html"
+    - title: Desligue o controlador
+      url: "/asa800/bootmedia-shutdown-bmr.html"
+    - title: Substitua o suporte de arranque
+      url: "/asa800/bootmedia-replace-bmr.html"
+    - title: Restaure a imagem no suporte de arranque
+      url: "/asa800/bootmedia-recovery-image-boot-bmr.html"
+    - title: Devolver artigo com falha ao NetApp
+      url: "/asa800/bootmedia-complete-rma-bmr.html"
+  - title: Mídia de inicialização - recuperação manual
+    pdf-filename: Manual de mídia de inicialização ASA A800
+    entries:
+    - title: Fluxo de trabalho de substituição de Mídia de inicialização
+      url: "/asa800/bootmedia-replace-workflow.html"
+    - title: Rever os requisitos
+      url: "/asa800/bootmedia-replace-requirements.html"
     - title: Verifique as chaves de criptografia
       url: "/asa800/bootmedia-encryption-preshutdown-checks.html"
     - title: Desligue o controlador desativado

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa r2 a70, asa r2 a90, boot the recovery image 
 summary: Depois de instalar o novo dispositivo de Mídia de inicialização em seu sistema ASA A70 ou ASA A90, você pode iniciar o processo de recuperação de Mídia de inicialização automatizada para restaurar a configuração do nó do parceiro. 
 ---
-= Restaure a imagem no suporte de arranque - ASA A70 e ASA A90
+= Restaurar a imagem ONTAP na mídia de inicialização - ASA A70 e ASA A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -128,7 +128,7 @@ Enter the passphrase again to confirm:
 Enter the backup data:
 -----BEGIN BACKUP-----
 <passphrase_value>
------END ACKUP-----
+-----END BACKUP-----
 ....
 =====
 

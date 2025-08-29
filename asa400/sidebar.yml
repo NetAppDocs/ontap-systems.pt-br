@@ -16,13 +16,30 @@ entries:
 - title: Manutenção
   pdf-filename: Manutenção da ASA A400
   entries:
-  - title: Visão geral
+  - title: Visão geral da manutenção
     url: "/asa400/maintain-overview.html"
-  - title: Suporte de arranque
-    pdf-filename: Mídia de inicialização do ASA A400
+  - title: Mídia de inicialização - recuperação automatizada
+    pdf-filename: Mídia de inicialização ASA A400 automatizada
     entries:
-    - title: Visão geral
-      url: "/asa400/bootmedia-replace-overview.html"
+    - title: Fluxo de trabalho de substituição de Mídia de inicialização
+      url: "/asa400/bootmedia-replace-workflow-bmr.html"
+    - title: Rever os requisitos
+      url: "/asa400/bootmedia-replace-requirements-bmr.html"
+    - title: Desligue o controlador
+      url: "/asa400/bootmedia-shutdown-bmr.html"
+    - title: Substitua o suporte de arranque
+      url: "/asa400/bootmedia-replace-bmr.html"
+    - title: Restaure a imagem no suporte de arranque
+      url: "/asa400/bootmedia-recovery-image-boot-bmr.html"
+    - title: Devolver artigo com falha ao NetApp
+      url: "/asa400/bootmedia-complete-rma-bmr.html"
+  - title: Mídia de inicialização - recuperação manual
+    pdf-filename: Manual de mídia de inicialização ASA A400
+    entries:
+    - title: Fluxo de trabalho de substituição de Mídia de inicialização
+      url: "/asa400/bootmedia-replace-workflow.html"
+    - title: Rever os requisitos
+      url: "/asa400/bootmedia-replace-requirements.html"
     - title: Verifique as chaves de criptografia
       url: "/asa400/bootmedia-encryption-preshutdown-checks.html"
     - title: Desligue o controlador desativado
@@ -31,8 +48,6 @@ entries:
       url: "/asa400/bootmedia-replace.html"
     - title: Imagem de recuperação de inicialização
       url: "/asa400/bootmedia-recovery-image-boot.html"
-    - title: Volte a configurar o MetroCluster
-      url: "/asa400/bootmedia-2n-mcc-switchback.html"
     - title: Restaure a criptografia
       url: "/asa400/bootmedia-encryption-restore.html"
     - title: Devolver artigo com falha ao NetApp

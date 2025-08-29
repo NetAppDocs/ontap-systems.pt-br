@@ -2,8 +2,6 @@
 :allow-uri-read: 
 
 
-Para substituir o suporte de arranque, tem de remover o módulo do controlador afetado, instalar o suporte de arranque de substituição e transferir a imagem de arranque para uma unidade flash USB.
-
 
 
 == Passo 1: Remova o módulo do controlador
