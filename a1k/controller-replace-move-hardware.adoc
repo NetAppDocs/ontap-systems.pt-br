@@ -2,7 +2,7 @@
 permalink: a1k/controller-replace-move-hardware.html 
 sidebar: sidebar 
 keywords: aff a1k, move the controller module hardware 
-summary: Substitua o controlador no sistema AFF A1K quando uma falha de hardware o exigir. O processo de substituição envolve remover o controlador prejudicado, mover os componentes para o controlador de substituição, instalar o controlador de substituição e reinicializá-lo. 
+summary: 'Substitua o controlador no seu sistema AFF A1K quando uma falha de hardware exigir isso. O processo de substituição envolve a remoção do controlador da parte frontal do chassi, a remoção das unidades de fonte de alimentação (PSUs), NVRAM12, módulos de E/S e placas de proteção, e o módulo de gerenciamento do sistema, e então a instalação do chassi de substituição e a reinstalação dos componentes do chassi.' 
 ---
 = Substitua o controlador - AFF A1K
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Substitua o controlador no sistema AFF A1K quando uma falha de hardware
 
 
 [role="lead"]
-Substitua o controlador no sistema AFF A1K quando uma falha de hardware o exigir. O processo de substituição envolve remover o controlador prejudicado, mover os componentes para o controlador de substituição, instalar o controlador de substituição e reinicializá-lo.
+Substitua o controlador do seu sistema AFF A1K quando uma falha de hardware exigir isso. O processo de substituição envolve remover o controlador danificado, mover os componentes para o controlador de substituição, instalar o controlador de substituição e reiniciá-lo.
 
 
 

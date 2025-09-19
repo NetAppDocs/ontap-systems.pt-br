@@ -40,6 +40,13 @@ A mídia de inicialização armazena um conjunto primário e secundário de arqu
 
 
  a| 
+link:chassis-replace-workflow.html["Chassis"]
+ a| 
+O chassi abriga os ventiladores, o controlador, as fontes de alimentação e as PSUs, NVRAM12, o módulo de gerenciamento do sistema, as placas de E/S e os módulos de apagamento.
+
+
+
+ a| 
 link:controller-replace-workflow.html["Controlador"]
  a| 
 Um controlador consiste em uma placa, firmware e software. Ele controla as unidades e executa o software do sistema operacional ONTAP.

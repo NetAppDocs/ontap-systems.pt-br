@@ -56,6 +56,21 @@ entries:
       url: "/a1k/bootmedia-encryption-restore.html"
     - title: Devolver artigo com falha ao NetApp
       url: "/a1k/bootmedia-complete-rma.html"
+  - title: Chassis
+    pdf-filename: Chassi AFF A1K
+    entries:
+    - title: Fluxo de trabalho de substituição do chassis
+      url: "/a1k/chassis-replace-workflow.html"
+    - title: Rever os requisitos
+      url: "/a1k/chassis-replace-requirements.html"
+    - title: Prepare-se para substituir
+      url: "/a1k/chassis-replace-prepare.html"
+    - title: Desligue o controlador
+      url: "/a1k/chassis-replace-shutdown.html"
+    - title: Substitua o chassi
+      url: "/a1k/chassis-replace-move-hardware.html"
+    - title: Substituição completa do chassis
+      url: "/a1k/chassis-replace-complete-system-restore-rma.html"
   - title: Controlador
     pdf-filename: Módulo do controlador AFF A1K
     entries:

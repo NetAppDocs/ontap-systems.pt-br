@@ -1,0 +1,14 @@
+= 
+:allow-uri-read: 
+
+
+O chassi é o chassi físico que abriga todos os componentes do sistema, como ventiladores, unidade controladora/CPU, NVRAM12, módulo de gerenciamento do sistema, placas de E/S e módulos de bloqueio e PSUs.
+
+Reveja os seguintes requisitos.
+
+* Certifique-se de que todos os outros componentes do sistema estão a funcionar corretamente; caso contrário, contacte http://mysupport.netapp.com/["Suporte à NetApp"^] para obter assistência.
+* Obtenha credenciais de administrador local para o ONTAP se você não as tiver.
+* Certifique-se de que tem as ferramentas e o equipamento necessários para a substituição.
+* Pode utilizar o procedimento de substituição do chassis com todas as versões do ONTAP suportadas pelo seu sistema.
+* O procedimento de substituição do chassi foi escrito partindo do pressuposto de que você está movendo o painel, os ventiladores, o módulo do controlador, a NVRAM12, o módulo de gerenciamento do sistema, as placas de E/S e os módulos de obturação e as PSUs para o novo chassi, e que o chassi de substituição é um novo componente da NetApp.
+

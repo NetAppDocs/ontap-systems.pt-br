@@ -63,7 +63,7 @@ A seguinte mensagem AutoSupport suprime a criação automática de casos por dua
 +
 .. Digite o seguinte comando no console do controlador íntegro:
 +
-`storage failover modify -node local -auto-giveback false`
+`storage failover modify -node _impaired_node_name_ -auto-giveback false`
 
 .. Digitar `y` quando você vê o prompt _Você quer desabilitar o retorno automático?_
 

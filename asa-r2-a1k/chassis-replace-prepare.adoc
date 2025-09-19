@@ -1,0 +1,67 @@
+---
+permalink: asa-r2-a1k/chassis-replace-prepare.html 
+sidebar: sidebar 
+keywords: asa a1k, replace the chassis 
+summary: Prepare-se para substituir o chassi danificado no seu sistema ASA A1K identificando o chassi danificado, verificando os componentes de substituição e etiquetando os cabos e módulos do controlador. 
+---
+= Preparar para substituir o chassi - ASA A1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prepare-se para substituir o chassi danificado no seu sistema ASA A1K identificando o chassi danificado, verificando os componentes de substituição e etiquetando os cabos e o módulo do controlador.
+
+
+
+== Passo 1: Localize e monitore seu sistema
+
+Você deve abrir uma sessão de console e salvar Registros de sessões para referência futura e também ativar o LED de localização do sistema para encontrar o chassi com deficiência.
+
+.Passos
+. Conete-se à porta do console serial à interface e monitore o sistema.
+. Localize e ligue o LED de localização do controlador:
++
+.. Use o `system controller location-led show` comando para mostrar o estado atual do LED de localização.
+.. Altere o estado do LED de localização para "On" (ligado):
++
+`system controller location-led modify -node _node1_ -state on`
+
++
+O LED de localização permanece aceso durante 30 minutos.
+
+
+
+
+
+
+
+== Passo 2: Verifique os componentes de substituição
+
+Você deve verificar se recebeu os componentes necessários, removê-los da embalagem e salvar a embalagem.
+
+.Passos
+. Antes de abrir a embalagem, você deve olhar para a etiqueta da embalagem e verificar:
++
+** Número de peça do componente.
+** Descrição da peça.
+** Quantidade na caixa.
+
+
+. Remova o conteúdo da embalagem e use a embalagem para retornar o componente com falha ao NetApp.
+
+
+
+
+== Etapa 3: rotule os cabos
+
+Você deve etiquetar os cabos antes de removê-los dos módulos de E/S na parte traseira do sistema.
+
+.Passos
+. Identifique todos os cabos associados ao sistema de armazenamento. Isso ajuda a desativar mais tarde neste procedimento.
+. Se você ainda não está devidamente aterrado, aterre-se.
+
+
+.O que se segue?
+Depois de se preparar para substituir o hardware do chassi ASA A1K, você precisalink:chassis-replace-shutdown.html["desligue o controlador"] .

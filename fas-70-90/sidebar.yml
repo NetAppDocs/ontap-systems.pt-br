@@ -56,6 +56,21 @@ entries:
       url: "/fas-70-90/bootmedia-encryption-restore.html"
     - title: Devolver artigo com falha ao NetApp
       url: "/fas-70-90/bootmedia-complete-rma.html"
+  - title: Chassis
+    pdf-filename: Chassi FAS70 e FAS90
+    entries:
+    - title: Fluxo de trabalho de substituição do chassis
+      url: "/fas-70-90/chassis-replace-workflow.html"
+    - title: Rever os requisitos
+      url: "/fas-70-90/chassis-replace-requirements.html"
+    - title: Prepare-se para substituir
+      url: "/fas-70-90/chassis-replace-prepare.html"
+    - title: Desligue o controlador
+      url: "/fas-70-90/chassis-replace-shutdown.html"
+    - title: Substitua o chassi
+      url: "/fas-70-90/chassis-replace-move-hardware.html"
+    - title: Substituição completa do chassis
+      url: "/fas-70-90/chassis-replace-complete-system-restore-rma.html"
   - title: Controlador
     pdf-filename: Módulo do controlador FAS70 e FAS90
     entries:
