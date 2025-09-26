@@ -1,0 +1,101 @@
+---
+permalink: asa-c800/overview.html 
+sidebar: sidebar 
+summary: Especificações principais para o grupo de plataformas ASA-C800 
+---
+= Especificações principais do ASA C800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A seguir estão especificações selecionadas para o sistema de armazenamento ASA C800 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.
+
+
+
+== Especificações principais do ASA C800
+
+* Configuração da plataforma: Par de HA de chassi único ASA C800
+* Capacidade bruta máxima: 7,3680 PB
+* Memória: 1280.0000 GB
+* Fator de forma: chassi 4U com 2 controladores HA e 48 slots de unidade
+* Versão ONTAP : ONTAP: 9.16.1P2
+* Slots de expansão PCIe: 10
+* Versão mínima do ONTAP : ONTAP 9.13.1P1 == Máximos de escalonamento
+* Tipo: NAS
+* Tipo: SAN; Pares HA: 6; Capacidade bruta: 44,2 PB / 39,3 PiB; Memória máxima: 7680 GB
+* Tipo: Par HA; Capacidade bruta: 7,4 PB / 6,5 PiB; Memória máxima: 1280.0000
+
+
+
+
+== E/S
+
+
+
+=== E/S integradas
+
+* Protocolo: Ethernet 100 Gbps; Portas: 4
+
+
+
+
+=== Total de E/S
+
+* Protocolo: Ethernet 100 Gbps; Portas: 20
+* Protocolo: Ethernet 25 Gbps; Portas: 16
+* Protocolo: Ethernet 10 Gbps; Portas: 32
+* Protocolo: FC 32 Gbps; Portas: 32
+* Protocolo: NVMe/FC 32 Gbps; Portas: 32
+* Portas: 0
+* Portas: 0
+
+
+
+
+=== Portas de gerenciamento
+
+* Protocolo: Ethernet 1 Gbps; Portas: 4
+* Protocolo: RS-232 115 Kbps; Portas: 4
+* Protocolo: USB 12 Mbps; Portas: 4
+
+
+
+
+== Rede de armazenamento suportada
+
+* FC
+* iSCSI
+* NVMe/FC == Especificações do ambiente do sistema
+* Potência típica: 6626 BTU/h
+* Pior cenário de potência: 8417 BTU/h
+* Peso: 132,5 lb 60,1 kg
+* Altura: 4U
+* Largura: 19” compatível com rack IEC (17,6” 44,7 cm)
+* Profundidade: 34,5” (36,6” com suporte para gerenciamento de cabos)
+* Temperatura/Altitude/Umidade de operação: 5°C a 40°C (41°F a 104°F) a 3048 m (10000 pés) de altitude; 8% a 90% de umidade relativa, sem condensação
+* Temperatura/Umidade fora de operação: -40°C a 70°C (-40°F a 158°F) até 12192m (40000 pés) 10% a 95% de umidade relativa, sem condensação, no recipiente original
+* Ruído acústico: Potência sonora declarada (LwAd): 8,0 Pressão sonora (LpAm) (posições de observação): 62,8 dB
+
+
+
+
+== Conformidade
+
+* Certificações EMC/EMI: AMCA, FCC, ICES, KC, Marrocos, VCCI
+* Certificações de segurança: BIS, CB, CSA, G_K_U-SoR, IRAM, NOM, NRCS, SONCAP, TBS
+* Certificações Segurança/EMC/EMI: EAC, UKRSEPRO
+* Certificações Segurança/EMC/EMI/RoHS: BSMI, CE DoC, UKCA DoC
+* Normas EMC/EMI: BS-EN-55024, BS-EN55035, CISPR 32, EN55022, EN55024, EN55032, EN55035, EN61000-3-2, EN61000-3-3, FCC Parte 15 Classe A, ICES-003, KS C 9832, KS C 9835
+* Normas de segurança: ANSI/UL60950-1, ANSI/UL62368-1, BS-EN62368-1, CAN/CSA C22.2 No. 60950-1, CAN/CSA C22.2 No. 62368-1, CNS 14336, EN60825-1, EN62368-1, IEC 62368-1, IEC60950-1, IS 13252 (parte 1)
+
+
+
+
+== Alta disponibilidade
+
+* Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP
+* Controladores redundantes hot-swappable
+* Fontes de alimentação redundantes com troca a quente
+

@@ -1,0 +1,115 @@
+---
+permalink: fas2800/overview.html 
+sidebar: sidebar 
+summary: Especificações principais para o grupo de plataformas FAS2800 
+---
+= Especificações principais para FAS2820
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A seguir estão especificações selecionadas para o sistema de armazenamento FAS2820 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.
+
+
+
+== Especificações principais para FAS2820
+
+* Configuração da plataforma: Par de HA de chassi único FAS2820
+* Capacidade máxima de matéria-prima: 3,1680 PB
+* Memória: 128.0000 GB
+* Fator de forma: chassi 2U com 2 controladores HA e 12 slots de unidade
+* Versão ONTAP : ONTAP: 9.16.1P2
+* Slots de expansão PCIe: 4
+* Versão mínima do ONTAP : ONTAP 9.13.1RC1 == Máximos de escalonamento
+* Tipo: NAS; Pares HA: 12; Capacidade bruta: 38,0 PB / 33,8 PiB; Memória máxima: 1536 GB
+* Tipo: SAN; Pares HA: 6; Capacidade bruta: 19,0 PB / 16,9 PiB; Memória máxima: 768 GB
+* Tipo: Par HA; Capacidade bruta: 3,2 PB / 2,8 PiB; Memória máxima: 128.0000
+
+
+
+
+== E/S
+
+
+
+=== E/S integradas
+
+* Protocolo: Ethernet 25 Gbps; Portas: 4
+* Protocolo: SAS 12 Gbps; Portas: 4
+
+
+
+
+=== Total de E/S
+
+* Protocolo: Ethernet 25 Gbps; Portas: 12
+* Protocolo: Ethernet 10 Gbps; Portas: 8
+* Protocolo: FC 32 Gbps; Portas: 8
+* Protocolo: NVMe/FC 32 Gbps; Portas: 8
+* Portas: 0
+* Protocolo: SAS 12 Gbps; Portas: 4
+
+
+
+
+=== Portas de gerenciamento
+
+* Protocolo: Ethernet 1 Gbps; Portas: 2
+* Protocolo: RS-232 115 Kbps; Portas: 4
+* Protocolo: USB 600 Mbps; Portas: 2
+
+
+
+
+== Rede de armazenamento suportada
+
+* CIFS
+* FC
+* FCoE
+* iSCSI
+* NFS v3
+* NFS v4.0
+* NFS v4.1
+* NVMe/TCP
+* S3
+* S3 com NAS
+* SMB 2.0
+* SMB 2.1
+* SMB 2.x
+* SMB 3.0
+* SMB 3.1
+* SMB 3.1.1 == Especificações do ambiente do sistema
+* Potência típica: 1815 BTU/h
+* Pior cenário de potência: 2339 BTU/h
+* Peso: 57,2 lb 25,9 kg
+* Altura: 2U
+* Largura: 19” compatível com rack IEC (17,6” 44,7 cm)
+* Profundidade: 20,0” (25,1” com suporte para gerenciamento de cabos)
+* Temperatura/Altitude/Umidade de operação: 10°C a 35°C (50°F a 95°F) a 3048 m (10000 pés) de altitude; 8% a 80% de umidade relativa, sem condensação
+* Temperatura/Umidade fora de operação: -40°C a 70°C (-40°F a 158°F) até 12192m (40000 pés) 10% a 95% de umidade relativa, sem condensação, no recipiente original
+* Ruído acústico: Potência sonora declarada (LwAd): 7,8 Pressão sonora (LpAm) (posições de observação): 68,4 dB
+
+
+
+
+== Conformidade
+
+* Certificações EMC/EMI: AMCA, FCC, ICES, KC, Marrocos, VCCI
+* Certificações de segurança: BIS, CB, CSA, G_K_U-SoR, IRAM, NOM, NRCS, SONCAP, TBS
+* Certificações Segurança/EMC/EMI: EAC, UKRSEPRO
+* Certificações Segurança/EMC/EMI/RoHS: BSMI, CE DoC, UKCA DoC
+* Normas EMC/EMI: BS-EN-55024, BS-EN55035, CISPR 32, EN55022, EN55024, EN55032, EN55035, EN61000-3-2, EN61000-3-3, FCC Parte 15 Classe A, ICES-003, KS C 9832, KS C 9835
+* Normas de segurança: ANSI/UL60950-1, ANSI/UL62368-1, BS-EN62368-1, CAN/CSA C22.2 No. 60950-1, CAN/CSA C22.2 No. 62368-1, CNS 14336, EN60825-1, EN62368-1, IEC 62368-1, IEC60950-1, IS 13252 (parte 1)
+
+
+
+
+== Alta disponibilidade
+
+* Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP
+* Controladores redundantes hot-swappable
+* Fontes de alimentação redundantes com troca a quente
+* Gerenciamento de banda SAS por meio de conexões SAS para prateleiras externas
+

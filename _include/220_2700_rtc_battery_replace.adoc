@@ -2,6 +2,8 @@
 :allow-uri-read: 
 
 
+Você deve usar uma bateria RTC aprovada.
+
 Você substitui a bateria do relógio em tempo real (RTC) no módulo do controlador para que os serviços e aplicativos do sistema que dependem da sincronização precisa de tempo continuem funcionando.
 
 * Pode utilizar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema

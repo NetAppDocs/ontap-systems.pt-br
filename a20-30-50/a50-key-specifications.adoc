@@ -1,0 +1,115 @@
+---
+permalink: a50-key-specifications.html 
+sidebar: sidebar 
+summary: Especificações principais do AFF A50 
+---
+= Especificações principais do AFF A50
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A seguir estão especificações selecionadas para o sistema de armazenamento AFF A50 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.
+
+
+
+== Especificações do AFF A50 em resumo
+
+* Configuração da plataforma: Par de chassis único AFF A50 HA
+* Capacidade Máxima de Bruto: 4.0392 PB
+* Memória: 256.0000 GB
+* Fator de forma: chassi 2U com 2 controladores HA e 24 slots de unidade
+* Versão ONTAP : ONTAP: 9.16.1P2
+* Slots de expansão PCIe: 8
+* Versão mínima do ONTAP : ONTAP 9.16.1RC1 == Máximos de escalonamento
+* Tipo: NAS; Pares HA: 12; Capacidade bruta: 48,5 PB / 43,0 PiB; Memória máxima: 3072 GB
+* Tipo: SAN; Pares HA: 6; Capacidade bruta: 24,2 PB / 21,5 PiB; Memória máxima: 1536 GB
+* Tipo: Par HA; Capacidade bruta: 4,0 PB / 3,6 PiB; Memória máxima: 256.0000
+
+
+
+
+== E/S
+
+
+
+=== E/S integradas
+
+Não há dados de E/S integrados.
+
+
+
+=== Total de E/S
+
+* Protocolo: Ethernet 100 Gbps; Portas: 16
+* Protocolo: Ethernet 25 Gbps; Portas: 24
+* Protocolo: Ethernet 10 Gbps; Portas: 24
+* Protocolo: FC 64 Gbps; Portas: 24
+* Protocolo: NVMe/FC 64 Gbps; Portas: 24
+* Portas: 0
+* Protocolo: SAS 12 Gbps; Portas: 16
+
+
+
+
+=== Portas de gerenciamento
+
+* Protocolo: Ethernet 1 Gbps; Portas: 2
+* Protocolo: RS-232 115 Kbps; Portas: 4
+* Protocolo: USB 600 Mbps; Portas: 2
+
+
+
+
+== Rede de armazenamento suportada
+
+* CIFS
+* FC
+* iSCSI
+* NFS v3
+* NFS v4.0
+* NFS v4.1
+* NFS v4.2
+* NVMe/FC
+* NVMe/TCP
+* S3
+* S3 com NAS
+* SMB 2.0
+* SMB 2.1
+* SMB 2.x
+* SMB 3.0
+* SMB 3.1
+* SMB 3.1.1 == Especificações do ambiente do sistema
+* Potência típica: 3076 BTU/h
+* Pior cenário de potência: 4860 BTU/h
+* Peso: 60,7 lb 27,5 kg
+* Altura: 2U
+* Largura: 19” compatível com rack IEC (17,6” 44,7 cm)
+* Profundidade:
+* Temperatura/Altitude/Umidade de operação: 10°C a 35°C (50°F a 95°F) a 3048 m (10000 pés) de altitude; 8% a 80% de umidade relativa, sem condensação
+* Temperatura/Umidade fora de operação: -40°C a 70°C (-40°F a 158°F) até 12192m (40000 pés) 10% a 95% de umidade relativa, sem condensação, no recipiente original
+* Ruído acústico: Potência sonora declarada (LwAd): 8,0 Pressão sonora (LpAm) (posições de observação): 70,5 dB
+
+
+
+
+== Conformidade
+
+* Certificações EMC/EMI: AMCA, FCC, ICES, KC, Marrocos, VCCI
+* Certificações de segurança: BIS, CB, CSA, G_K_U-SoR, IRAM, NOM, NRCS, SONCAP, TBS
+* Certificações Segurança/EMC/EMI: EAC, UKRSEPRO
+* Certificações Segurança/EMC/EMI/RoHS: BSMI, CE DoC, UKCA DoC
+* Normas EMC/EMI: BS-EN-55032, BS-EN55035, CISPR 32, EN55022, EN55024, EN55032, EN55035, EN61000-3-2, EN61000-3-3, FCC Parte 15 Classe A, ICES-003, KS C 9832, KS C 9835
+* Normas de segurança: ANSI/UL60950-1, ANSI/UL62368-1, BS-EN62368-1, CAN/CSA C22.2 No. 60950-1, CAN/CSA C22.2 No. 62368-1, CNS 15598-1, EN60825-1, EN62368-1, IEC 62368-1, IEC60950-1, IS 13252 (parte 1)
+
+
+
+
+== Alta disponibilidade
+
+* Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP
+* Controladores redundantes hot-swappable
+* Fontes de alimentação redundantes com troca a quente
+* Gerenciamento de banda SAS por meio de conexões SAS para prateleiras externas
+

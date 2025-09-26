@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: fru-reference/nvdimm-fru-links.html 
+keywords: NVDIMM, field replaceable units, FRU, NVDIMM replacement 
+summary: Esta página fornece links para procedimentos de substituição de NVDIMM por sistema. 
+---
+= Links FRU NVDIMM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Esta página fornece links para procedimentos de substituição de NVDIMM organizados por modelo de plataforma.
+
+[role="tabbed-block"]
+====
+.Sistemas AFF
+--
+* link:../a320/nvdimm-replace.html["AFF A320"^]
+* link:../a400/nvdimm-replace.html["AFF A400"^]
+* link:../a800/nvdimm-replace.html["AFF A800"^]
+* link:../c400/nvdimm-replace.html["AFF C400"^]
+* link:../c800/nvdimm-replace.html["AFF C800"^]
+
+
+--
+.Sistemas ASA
+--
+* link:../asa400/nvdimm-replace.html["ASA A400"^]
+* link:../asa800/nvdimm-replace.html["ASA A800"^]
+* link:../asa-c400/nvdimm-replace.html["ASA C400"^]
+* link:../asa-c800/nvdimm-replace.html["ASA C800"^]
+
+
+--
+.Sistemas FAS
+--
+* link:../fas8300/nvdimm-replace.html["FAS8300"^]
+
+
+--
+====

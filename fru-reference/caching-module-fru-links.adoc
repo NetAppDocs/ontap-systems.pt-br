@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: fru-reference/caching-module-fru-links.html 
+keywords: caching module, field replaceable units, FRU, caching module replacement 
+summary: Esta página fornece links para procedimentos de substituição de módulos de cache por sistema. 
+---
+= Links FRU do módulo de cache
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Esta página fornece links para procedimentos de substituição de módulos de cache organizados por sistema.
+
+[role="tabbed-block"]
+====
+.Sistemas AFF
+--
+* link:../a700/caching-module-and-core-dump-module-replace.html["AFF A700"^]
+
+
+--
+.Sistemas FAS
+--
+* link:../fas50/caching-module-hot-swap.html["FAS50"^]
+* link:../fas-70-90/caching-module-hot-swap.html["FAS70/90"^]
+* link:../fas2600/caching-module-replace.html["FAS2600"^]
+* link:../fas2700/caching-module-replace.html["FAS2700"^]
+* link:../fas2800/caching-module-replace.html["FAS2800"^]
+* link:../fas8200/caching-module-replace.html["FAS8200"^]
+* link:../fas8300/caching-module-replace.html["FAS8300"^]
+* link:../fas9000/caching-module-hot-swap.html["FAS9000"^]
+
+
+--
+====

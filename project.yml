@@ -73,6 +73,7 @@ sidebar:
       - section: asa-r2-a70-90-maintain
       - section: asa-r2-a20-30-50-maintain
       - section: asa-r2-c30-maintain
+    - section: asa-r2-key-specifications
   - title: Sistemas FAS
     url: "/fas/index.html"
     entries:
@@ -153,6 +154,46 @@ sidebar:
           url: "/platform-supplemental/42u-1280mm-reverse-hinge-and-lock.html"
         - title: Reinstale a porta e o emblema iluminado
           url: "/platform-supplemental/42u-1280mm-reinstall-door-and-badge.html"
+  - title: Referência da plataforma FRU
+    entries:
+    - title: Visão geral
+      url: "/fru-reference/fru-overview.html"
+    - title: Suporte de arranque
+      url: "/fru-reference/bootmedia-fru-links.html"
+    - title: Módulo de armazenamento em cache
+      url: "/fru-reference/caching-module-fru-links.html"
+    - title: Chassis
+      url: "/fru-reference/chassis-fru-links.html"
+    - title: Controlador
+      url: "/fru-reference/controller-fru-links.html"
+    - title: Módulo de potência DCPM
+      url: "/fru-reference/dcpm-power-fru-links.html"
+    - title: DIMM
+      url: "/fru-reference/dimm-fru-links.html"
+    - title: Condução
+      url: "/fru-reference/drive-fru-links.html"
+    - title: Ventoinha
+      url: "/fru-reference/fan-fru-links.html"
+    - title: Módulo de e/S.
+      url: "/fru-reference/io-module-fru-links.html"
+    - title: Módulo LED
+      url: "/fru-reference/led-module-fru-links.html"
+    - title: Mezanino
+      url: "/fru-reference/mezzanine-fru-links.html"
+    - title: NVDIMM
+      url: "/fru-reference/nvdimm-fru-links.html"
+    - title: Bateria NVMEM/ NVRAM
+      url: "/fru-reference/nvmem-battery-fru-links.html"
+    - title: Módulo NVRAM
+      url: "/fru-reference/nvram-module-fru-links.html"
+    - title: Placas PCI e risers
+      url: "/fru-reference/pci-cards-fru-links.html"
+    - title: Fonte de alimentação
+      url: "/fru-reference/power-supply-fru-links.html"
+    - title: Bateria RTC
+      url: "/fru-reference/rtc-battery-fru-links.html"
+    - title: Módulo de gestão do sistema
+      url: "/fru-reference/system-management-fru-links.html"
   - title: Avisos legais
     url: "/legal-notices.html"
 product-family:

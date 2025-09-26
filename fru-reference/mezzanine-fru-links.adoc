@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: fru-reference/mezzanine-fru-links.html 
+keywords: mezzanine, field replaceable units, FRU, mezzanine replacement 
+summary: Esta página fornece links para procedimentos de substituição de mezanino por sistema. 
+---
+= Links FRU do mezanino
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Esta página fornece links para procedimentos de substituição de mezanino organizados por modelo de plataforma.
+
+[role="tabbed-block"]
+====
+.Sistemas AFF
+--
+* link:../a250/mezzanine-replace.html["AFF A250"^]
+* link:../c250/mezzanine-replace.html["AFF C250"^]
+
+
+--
+.Sistemas ASA
+--
+* link:../asa250/mezzanine-replace.html["ASA A250"^]
+* link:../asa-c250/mezzanine-replace.html["ASA C250"^]
+
+
+--
+.Sistemas FAS
+--
+* link:../fas500f/mezzanine-replace.html["FAS500f"^]
+
+
+--
+====

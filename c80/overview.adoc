@@ -1,0 +1,107 @@
+---
+permalink: c80/overview.html 
+sidebar: sidebar 
+summary: Especificações principais para o grupo de plataforma C80 
+---
+= Especificações principais do AFF C80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A seguir estão especificações selecionadas para o sistema de armazenamento AFF C80 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.
+
+
+
+== Especificações principais do AFF C80
+
+* Configuração da plataforma: Par de HA de chassi único AFF C80
+* Capacidade Máxima de Bruto: 14.7360 PB
+* Memória: 512.0000 GB
+* Fator de forma: chassi 4U com 2 controladores HA e 48 slots de unidade
+* Versão ONTAP : ONTAP: 9.16.1P2
+* Slots de expansão PCIe: 18
+* Versão mínima do ONTAP : ONTAP 9.16.1RC1 == Máximos de escalonamento
+* Tipo: NAS; Pares HA: 12; Capacidade bruta: 176,8 PB / 157,0 PiB; Memória máxima: 6144 GB
+* Tipo: SAN; Pares HA: 6; Capacidade bruta: 88,4 PB / 78,5 PiB; Memória máxima: 3072 GB
+* Tipo: Par HA; Capacidade bruta: 14,7 PB / 13,1 PiB; Memória máxima: 512.0000
+
+
+
+
+== E/S
+
+
+
+=== E/S integradas
+
+Não há dados de E/S integrados.
+
+
+
+=== Total de E/S
+
+* Protocolo: Ethernet 200 Gbps; Portas: 24
+* Protocolo: Ethernet 100 Gbps; Portas: 36
+* Protocolo: Ethernet 25 Gbps; Portas: 56
+* Protocolo: Ethernet 10 Gbps; Portas: 56
+* Protocolo: FC 64 Gbps; Portas: 56
+* Protocolo: NVMe/FC 64 Gbps; Portas: 56
+* Portas: 0
+
+
+
+
+=== Portas de gerenciamento
+
+* Protocolo: Ethernet 1 Gbps; Portas: 2
+* Protocolo: RS-232 115 Kbps; Portas: 4
+* Protocolo: USB 600 Mbps; Portas: 2
+
+
+
+
+== Rede de armazenamento suportada
+
+* CIFS
+* FC
+* iSCSI
+* NFS v3
+* NFS v4.0
+* NFS v4.1
+* NFS v4.2
+* NFSv3/RDMA
+* NFSv4/RDMA
+* NVMe/FC
+* NVMe/TCP
+* S3
+* S3 com NAS
+* SMB 2.0
+* SMB 2.1
+* SMB 2.x
+* SMB 3.0
+* SMB 3.1
+* SMB 3.1.1 == Especificações do ambiente do sistema Nenhum dado de ambiente disponível.
+
+
+
+
+== Conformidade
+
+* Certificações EMC/EMI: AMCA, FCC, ICES, KC, Marrocos, VCCI
+* Certificações de segurança: BIS, CB, CSA, G_K_U-SoR, IRAM, NOM, NRCS, SONCAP, TBS
+* Certificações Segurança/EMC/EMI: EAC, UKRSEPRO
+* Certificações Segurança/EMC/EMI/RoHS: BSMI, CE DoC, UKCA DoC
+* Normas EMC/EMI: BS-EN-55032, BS-EN55035, CISPR 32, EN55022, EN55024, EN55032, EN55035, EN61000-3-2, EN61000-3-3, FCC Parte 15 Classe A, ICES-003, KS C 9832, KS C 9835
+* Normas de segurança: ANSI/UL60950-1, ANSI/UL62368-1, BS-EN62368-1, CAN/CSA C22.2 No. 60950-1, CAN/CSA C22.2 No. 62368-1, CNS 15598-1, EN60825-1, EN62368-1, IEC 62368-1, IEC60950-1, IS 13252 (parte 1)
+
+
+
+
+== Alta disponibilidade
+
+* Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP
+* Controladores redundantes hot-swappable
+* Fontes de alimentação redundantes com troca a quente
+
