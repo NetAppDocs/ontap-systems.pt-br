@@ -2,56 +2,56 @@
 sidebar: sidebar 
 permalink: fru-reference/drive-fru-links.html 
 keywords: drive, field replaceable units, FRU, drive replacement 
-summary: Esta página fornece links para procedimentos de substituição de unidades por sistema. 
+summary: Encontre procedimentos de substituição de unidades para seu sistema de armazenamento NetApp organizados por família de plataformas.  Esta referência fornece links diretos para fluxos de trabalho de substituição de unidade passo a passo para sistemas AFF, ASA e FAS para ajudar você a localizar rapidamente o procedimento correto para seu modelo específico. 
 ---
-= Conduza links FRU
+= Procedimentos de substituição de acionamento por família de plataforma
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Esta página fornece links para procedimentos de substituição de unidades organizados por modelo de plataforma.
+Encontre procedimentos de substituição de unidades para seu sistema de armazenamento NetApp organizados por família de plataformas.  Esta referência fornece links diretos para fluxos de trabalho de substituição de unidade passo a passo para sistemas AFF, ASA e FAS para ajudar você a localizar rapidamente o procedimento correto para seu modelo específico.
 
 [role="tabbed-block"]
 ====
 .Sistemas AFF
 --
-* link:../a20-30-50/drive-replace.html["AFF A20/30/50"^]
-* link:../a150/drive-replace.html["AFF A150"^]
-* link:../a200/drive-replace.html["AFF A200"^]
-* link:../a220/drive-replace.html["AFF A220"^]
-* link:../a250/drive-replace.html["AFF A250"^]
-* link:../a70-90/drive-replace.html["AFF A70/90"^]
-* link:../a700s/drive-replace.html["AFF A700s"^]
-* link:../a800/drive-replace.html["AFF A800"^]
-* link:../c30-60/drive-replace.html["AFF C30/60"^]
-* link:../c80/drive-replace.html["AFF C80"^]
-* link:../c190/drive-replace.html["AFF C190"^]
-* link:../c250/drive-replace.html["AFF C250"^]
-* link:../c800/drive-replace.html["AFF C800"^]
+* link:../a20-30-50/drive-replace.html["AFF A20/30/50"]
+* link:../a150/drive-replace.html["AFF A150"]
+* link:../a200/drive-replace.html["AFF A200"]
+* link:../a220/drive-replace.html["AFF A220"]
+* link:../a250/drive-replace.html["AFF A250"]
+* link:../a70-90/drive-replace.html["AFF A70/90"]
+* link:../a700s/drive-replace.html["AFF A700s"]
+* link:../a800/drive-replace.html["AFF A800"]
+* link:../c30-60/drive-replace.html["AFF C30/60"]
+* link:../c80/drive-replace.html["AFF C80"]
+* link:../c190/drive-replace.html["AFF C190"]
+* link:../c250/drive-replace.html["AFF C250"]
+* link:../c800/drive-replace.html["AFF C800"]
 
 
 --
 .Sistemas ASA
 --
-* link:../asa150/drive-replace.html["ASA A150"^]
-* link:../asa250/drive-replace.html["ASA A250"^]
-* link:../asa800/drive-replace.html["ASA A800"^]
-* link:../asa-c250/drive-replace.html["ASA C250"^]
-* link:../asa-c800/drive-replace.html["ASA C800"^]
-* link:../asa-r2-a20-30-50/drive-replace.html["ASA A20/30/50"^]
-* link:../asa-r2-70-90/drive-replace.html["ASA A70/90"^]
-* link:../asa-r2-c30/drive-replace.html["ASA C30"^]
+* link:../asa150/drive-replace.html["ASA A150"]
+* link:../asa250/drive-replace.html["ASA A250"]
+* link:../asa800/drive-replace.html["ASA A800"]
+* link:../asa-c250/drive-replace.html["ASA C250"]
+* link:../asa-c800/drive-replace.html["ASA C800"]
+* link:../asa-r2-a20-30-50/drive-replace.html["ASA A20/30/50"]
+* link:../asa-r2-70-90/drive-replace.html["ASA A70/90"]
+* link:../asa-r2-c30/drive-replace.html["ASA C30"]
 
 
 --
 .Sistemas FAS
 --
-* link:../fas500f/drive-replace.html["FAS500f"^]
-* link:../fas2600/drive-replace.html["FAS2600"^]
-* link:../fas2700/drive-replace.html["FAS2700"^]
-* link:../fas2800/drive-replace.html["FAS2800"^]
+* link:../fas500f/drive-replace.html["FAS500f"]
+* link:../fas2600/drive-replace.html["FAS2600"]
+* link:../fas2700/drive-replace.html["FAS2700"]
+* link:../fas2800/drive-replace.html["FAS2800"]
 
 
 --

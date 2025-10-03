@@ -2,36 +2,36 @@
 sidebar: sidebar 
 permalink: fru-reference/mezzanine-fru-links.html 
 keywords: mezzanine, field replaceable units, FRU, mezzanine replacement 
-summary: Esta página fornece links para procedimentos de substituição de mezanino por sistema. 
+summary: Encontre procedimentos de substituição de mezanino para seu sistema de armazenamento NetApp organizados por família de plataforma.  Esta referência fornece links diretos para fluxos de trabalho de substituição de mezanino passo a passo para sistemas AFF, ASA e FAS para ajudar você a localizar rapidamente o procedimento correto para seu modelo específico. 
 ---
-= Links FRU do mezanino
+= Procedimentos de substituição de mezanino por família de plataforma
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Esta página fornece links para procedimentos de substituição de mezanino organizados por modelo de plataforma.
+Encontre procedimentos de substituição de mezanino para seu sistema de armazenamento NetApp organizados por família de plataforma.  Esta referência fornece links diretos para fluxos de trabalho de substituição de mezanino passo a passo para sistemas AFF, ASA e FAS para ajudar você a localizar rapidamente o procedimento correto para seu modelo específico.
 
 [role="tabbed-block"]
 ====
 .Sistemas AFF
 --
-* link:../a250/mezzanine-replace.html["AFF A250"^]
-* link:../c250/mezzanine-replace.html["AFF C250"^]
+* link:../a250/mezzanine-replace.html["AFF A250"]
+* link:../c250/mezzanine-replace.html["AFF C250"]
 
 
 --
 .Sistemas ASA
 --
-* link:../asa250/mezzanine-replace.html["ASA A250"^]
-* link:../asa-c250/mezzanine-replace.html["ASA C250"^]
+* link:../asa250/mezzanine-replace.html["ASA A250"]
+* link:../asa-c250/mezzanine-replace.html["ASA C250"]
 
 
 --
 .Sistemas FAS
 --
-* link:../fas500f/mezzanine-replace.html["FAS500f"^]
+* link:../fas500f/mezzanine-replace.html["FAS500f"]
 
 
 --

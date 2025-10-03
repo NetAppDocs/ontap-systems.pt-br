@@ -2,89 +2,89 @@
 sidebar: sidebar 
 permalink: fru-reference/bootmedia-fru-links.html 
 keywords: bootmedia, field replaceable units, FRU, boot media replacement 
-summary: Esta página fornece links para procedimentos de substituição de mídia de inicialização por modelo de plataforma. 
+summary: Encontre procedimentos de substituição de mídia de inicialização para seu sistema de armazenamento NetApp organizados por família de plataforma.  Esta referência fornece links diretos para fluxos de trabalho de substituição de mídia de inicialização passo a passo para sistemas AFF, ASA e FAS para ajudar você a localizar rapidamente o procedimento correto para seu modelo específico. 
 ---
-= Links FRU da Boot Media
+= Procedimentos de substituição de mídia de inicialização por família de plataforma
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Esta página fornece links para procedimentos de substituição de mídia de inicialização organizados por sistema.
+Encontre procedimentos de substituição de mídia de inicialização para seu sistema de armazenamento NetApp organizados por família de plataforma.  Esta referência fornece links diretos para fluxos de trabalho de substituição de mídia de inicialização passo a passo para sistemas AFF, ASA e FAS para ajudar você a localizar rapidamente o procedimento correto para seu modelo específico.
 
 [role="tabbed-block"]
 ====
 .Sistemas AFF
 --
-* link:../a1k/bootmedia-replace-workflow-bmr.html["AFF A1K (Recuperação automatizada)"^]
-* link:../a1k/bootmedia-replace-workflow.html["AFF A1K (Recuperação manual)"^]
-* link:../a20-30-50/bootmedia-replace-workflow-bmr.html["AFF A20/30/50 (Recuperação automatizada)"^]
-* link:../a20-30-50/bootmedia-replace-workflow.html["AFF A20/30/50 (Recuperação manual)"^]
-* link:../a70-90/bootmedia-replace-workflow-bmr.html["AFF A70/90 (Recuperação automatizada)"^]
-* link:../a70-90/bootmedia-replace-workflow.html["AFF A70/90 (Recuperação manual)"^]
-* link:../a150/bootmedia-replace-overview.html["AFF A150"^]
-* link:../a200/bootmedia-replace-overview.html["AFF A200"^]
-* link:../a220/bootmedia-replace-overview.html["AFF A220"^]
-* link:../a250/bootmedia-replace-overview.html["AFF A250"^]
-* link:../a300/bootmedia-replace-overview.html["AFF A300"^]
-* link:../a320/bootmedia-replace-overview.html["AFF A320"^]
-* link:../a400/bootmedia-replace-workflow-bmr.html["AFF A400 (Recuperação automatizada)"^]
-* link:../a400/bootmedia-replace-workflow.html["AFF A400 (Recuperação manual)"^]
-* link:../a700/bootmedia-replace-overview.html["AFF A700 (Recuperação manual)"^]
-* link:../a700s/bootmedia-replace-overview.html["AFF A700s (Recuperação manual)"^]
-* link:../a800/bootmedia-replace-workflow-bmr.html["AFF A800 (Recuperação automatizada)"^]
-* link:../a800/bootmedia-replace-workflow.html["AFF A800 (Recuperação manual)"^]
-* link:../c190/bootmedia-replace-overview.html["AFF C190 (Recuperação manual)"^]
-* link:../c250/bootmedia-replace-overview.html["AFF C250 (Recuperação manual)"^]
-* link:../c30-60/bootmedia-replace-workflow-bmr.html["AFF C30/60 (Recuperação automatizada)"^]
-* link:../c30-60/bootmedia-replace-workflow.html["AFF C30/60 (Recuperação manual)"^]
-* link:../c80/bootmedia-replace-workflow-bmr.html["AFF C80 (Recuperação automatizada)"^]
-* link:../c80/bootmedia-replace-workflow.html["AFF C80 (Recuperação manual)"^]
-* link:../c400/bootmedia-replace-workflow-bmr.html["AFF C400 (Recuperação automatizada)"^]
-* link:../c400/bootmedia-replace-workflow.html["AFF C400 (Recuperação manual)"^]
-* link:../c800/bootmedia-replace-workflow-bmr.html["AFF C800 (Recuperação automatizada)"^]
-* link:../c800/bootmedia-replace-workflow.html["AFF C800 (Recuperação manual)"^]
+* link:../a1k/bootmedia-replace-workflow-bmr.html["AFF A1K (Recuperação automatizada)"]
+* link:../a1k/bootmedia-replace-workflow.html["AFF A1K (Recuperação manual)"]
+* link:../a20-30-50/bootmedia-replace-workflow-bmr.html["AFF A20/30/50 (Recuperação automatizada)"]
+* link:../a20-30-50/bootmedia-replace-workflow.html["AFF A20/30/50 (Recuperação manual)"]
+* link:../a70-90/bootmedia-replace-workflow-bmr.html["AFF A70/90 (Recuperação automatizada)"]
+* link:../a70-90/bootmedia-replace-workflow.html["AFF A70/90 (Recuperação manual)"]
+* link:../a150/bootmedia-replace-overview.html["AFF A150"]
+* link:../a200/bootmedia-replace-overview.html["AFF A200"]
+* link:../a220/bootmedia-replace-overview.html["AFF A220"]
+* link:../a250/bootmedia-replace-overview.html["AFF A250"]
+* link:../a300/bootmedia-replace-overview.html["AFF A300"]
+* link:../a320/bootmedia-replace-overview.html["AFF A320"]
+* link:../a400/bootmedia-replace-workflow-bmr.html["AFF A400 (Recuperação automatizada)"]
+* link:../a400/bootmedia-replace-workflow.html["AFF A400 (Recuperação manual)"]
+* link:../a700/bootmedia-replace-overview.html["AFF A700 (Recuperação manual)"]
+* link:../a700s/bootmedia-replace-overview.html["AFF A700s (Recuperação manual)"]
+* link:../a800/bootmedia-replace-workflow-bmr.html["AFF A800 (Recuperação automatizada)"]
+* link:../a800/bootmedia-replace-workflow.html["AFF A800 (Recuperação manual)"]
+* link:../c190/bootmedia-replace-overview.html["AFF C190 (Recuperação manual)"]
+* link:../c250/bootmedia-replace-overview.html["AFF C250 (Recuperação manual)"]
+* link:../c30-60/bootmedia-replace-workflow-bmr.html["AFF C30/60 (Recuperação automatizada)"]
+* link:../c30-60/bootmedia-replace-workflow.html["AFF C30/60 (Recuperação manual)"]
+* link:../c80/bootmedia-replace-workflow-bmr.html["AFF C80 (Recuperação automatizada)"]
+* link:../c80/bootmedia-replace-workflow.html["AFF C80 (Recuperação manual)"]
+* link:../c400/bootmedia-replace-workflow-bmr.html["AFF C400 (Recuperação automatizada)"]
+* link:../c400/bootmedia-replace-workflow.html["AFF C400 (Recuperação manual)"]
+* link:../c800/bootmedia-replace-workflow-bmr.html["AFF C800 (Recuperação automatizada)"]
+* link:../c800/bootmedia-replace-workflow.html["AFF C800 (Recuperação manual)"]
 
 
 --
 .Sistemas ASA
 --
-* link:../asa150/bootmedia-replace-overview.html["ASA A150 (Recuperação manual)"^]
-* link:../asa400/bootmedia-replace-workflow-bmr.html["ASA A400 (Recuperação automatizada)"^]
-* link:../asa400/bootmedia-replace-workflow.html["ASA A400 (Recuperação manual)"^]
-* link:../asa800/bootmedia-replace-workflow-bmr.html["ASA A800 (Recuperação automatizada)"^]
-* link:../asa800/bootmedia-replace-workflow.html["ASA A800 (Recuperação manual)"^]
-* link:../asa900/bootmedia_replace_overview.html["ASA A900"^]
-* link:../asa-c250/bootmedia-replace-overview.html["ASA C250 (Recuperação manual)"^]
-* link:../asa-c400/bootmedia-replace-workflow-bmr.html["ASA C400 (Recuperação automatizada)"^]
-* link:../asa-c400/bootmedia-replace-workflow.html["ASA C400 (Recuperação manual)"^]
-* link:../asa-c800/bootmedia-replace-workflow-bmr.html["ASA C800 (Recuperação automatizada)"^]
-* link:../asa-c800/bootmedia-replace-workflow.html["ASA C800 (Recuperação manual)"^]
-* link:../asa-r2-a1k/bootmedia-replace-workflow-bmr.html["ASA A1K (Recuperação automatizada)"^]
-* link:../asa-r2-a20-30-50/bootmedia-replace-workflow-bmr.html["ASA A20/30/50 (Recuperação automatizada)"^]
-* link:../asa-r2-70-90/bootmedia-replace-workflow-bmr.html["ASA 70/90 (Recuperação automatizada)"^]
-* link:../asa-r2-c30/bootmedia-replace-workflow-bmr.html["ASA C30 (Recuperação automatizada)"^]
+* link:../asa150/bootmedia-replace-overview.html["ASA A150 (Recuperação manual)"]
+* link:../asa400/bootmedia-replace-workflow-bmr.html["ASA A400 (Recuperação automatizada)"]
+* link:../asa400/bootmedia-replace-workflow.html["ASA A400 (Recuperação manual)"]
+* link:../asa800/bootmedia-replace-workflow-bmr.html["ASA A800 (Recuperação automatizada)"]
+* link:../asa800/bootmedia-replace-workflow.html["ASA A800 (Recuperação manual)"]
+* link:../asa900/bootmedia_replace_overview.html["ASA A900"]
+* link:../asa-c250/bootmedia-replace-overview.html["ASA C250 (Recuperação manual)"]
+* link:../asa-c400/bootmedia-replace-workflow-bmr.html["ASA C400 (Recuperação automatizada)"]
+* link:../asa-c400/bootmedia-replace-workflow.html["ASA C400 (Recuperação manual)"]
+* link:../asa-c800/bootmedia-replace-workflow-bmr.html["ASA C800 (Recuperação automatizada)"]
+* link:../asa-c800/bootmedia-replace-workflow.html["ASA C800 (Recuperação manual)"]
+* link:../asa-r2-a1k/bootmedia-replace-workflow-bmr.html["ASA A1K (Recuperação automatizada)"]
+* link:../asa-r2-a20-30-50/bootmedia-replace-workflow-bmr.html["ASA A20/30/50 (Recuperação automatizada)"]
+* link:../asa-r2-70-90/bootmedia-replace-workflow-bmr.html["ASA 70/90 (Recuperação automatizada)"]
+* link:../asa-r2-c30/bootmedia-replace-workflow-bmr.html["ASA C30 (Recuperação automatizada)"]
 
 
 --
 .Sistemas FAS
 --
-* link:../fas50/bootmedia-replace-workflow-bmr.html["FAS50 (Recuperação automatizada)"^]
-* link:../fas50/bootmedia-replace-workflow.html["FAS50 (Recuperação manual)"^]
-* link:../fas-70-90/bootmedia-replace-workflow-bmr.html["FAS70/90 (Recuperação automatizada)"^]
-* link:../fas-70-90/bootmedia-replace-workflow.html["FAS70/90 (Recuperação manual)"^]
-* link:../fas500f/bootmedia-replace-overview.html["FAS500f (Recuperação manual)"^]
-* link:../fas2600/bootmedia-replace-overview.html["FAS2600 (Recuperação manual)"^]
-* link:../fas2700/bootmedia-replace-overview.html["FAS2700 (Recuperação manual)"^]
-* link:../fas2800/bootmedia-replace-workflow-bmr.html["FAS2800 (Recuperação automatizada)"^]
-* link:../fas2800/bootmedia-replace-workflow.html["FAS2800 (Recuperação manual)"^]
-* link:../fas8200/bootmedia-replace-overview.html["FAS8200 (Recuperação manual)"^]
-* link:../fas8300/bootmedia-replace-workflow-bmr.html["FAS8300 (Recuperação automatizada)"^]
-* link:../fas8300/bootmedia-replace-workflow.html["FAS8300 (Recuperação manual)"^]
-* link:../fas9000/bootmedia-replace-overview.html["FAS9000 (Recuperação manual)"^]
-* link:../fas9500/bootmedia-replace-workflow-bmr.html["FAS9500 (Recuperação automatizada)"^]
-* link:../fas9500/bootmedia-replace-workflow.html["FAS9500 (Recuperação manual)"^]
+* link:../fas50/bootmedia-replace-workflow-bmr.html["FAS50 (Recuperação automatizada)"]
+* link:../fas50/bootmedia-replace-workflow.html["FAS50 (Recuperação manual)"]
+* link:../fas-70-90/bootmedia-replace-workflow-bmr.html["FAS70/90 (Recuperação automatizada)"]
+* link:../fas-70-90/bootmedia-replace-workflow.html["FAS70/90 (Recuperação manual)"]
+* link:../fas500f/bootmedia-replace-overview.html["FAS500f (Recuperação manual)"]
+* link:../fas2600/bootmedia-replace-overview.html["FAS2600 (Recuperação manual)"]
+* link:../fas2700/bootmedia-replace-overview.html["FAS2700 (Recuperação manual)"]
+* link:../fas2800/bootmedia-replace-workflow-bmr.html["FAS2800 (Recuperação automatizada)"]
+* link:../fas2800/bootmedia-replace-workflow.html["FAS2800 (Recuperação manual)"]
+* link:../fas8200/bootmedia-replace-overview.html["FAS8200 (Recuperação manual)"]
+* link:../fas8300/bootmedia-replace-workflow-bmr.html["FAS8300 (Recuperação automatizada)"]
+* link:../fas8300/bootmedia-replace-workflow.html["FAS8300 (Recuperação manual)"]
+* link:../fas9000/bootmedia-replace-overview.html["FAS9000 (Recuperação manual)"]
+* link:../fas9500/bootmedia-replace-workflow-bmr.html["FAS9500 (Recuperação automatizada)"]
+* link:../fas9500/bootmedia-replace-workflow.html["FAS9500 (Recuperação manual)"]
 
 
 --

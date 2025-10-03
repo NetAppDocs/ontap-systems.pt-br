@@ -1,0 +1,65 @@
+---
+indexpage:
+  title: Referência de substituição de componentes do sistema para sistemas de armazenamento
+    NetApp
+  summary: Encontre procedimentos de substituição para as unidades substituíveis em
+    campo (FRUs) do seu sistema de armazenamento.  Esta referência fornece links diretos
+    para fluxos de trabalho de substituição passo a passo para sistemas AFF, ASA e
+    FAS para ajudar você a localizar rapidamente o procedimento correto para suas
+    necessidades específicas de manutenção de hardware.
+  keywords: FRU reference, field replaceable units, platform FRUs, hardware components,
+    replacement procedures, AFF, ASA, FAS
+  lead: Encontre procedimentos de substituição para as unidades substituíveis em campo
+    (FRUs) do seu sistema de armazenamento.  Esta referência fornece links diretos
+    para fluxos de trabalho de substituição passo a passo para sistemas AFF, ASA e
+    FAS para ajudar você a localizar rapidamente o procedimento correto para suas
+    necessidades específicas de manutenção de hardware.
+  tiles:
+  - title: Componentes principais do sistema
+    links:
+    - title: Procedimentos de substituição do controlador
+      url: "/controller-fru-links.html"
+    - title: Procedimentos de substituição do chassi
+      url: "/chassis-fru-links.html"
+    - title: Procedimentos de substituição de mídia de inicialização
+      url: "/bootmedia-fru-links.html"
+    - title: Procedimentos de substituição do módulo de gerenciamento do sistema
+      url: "/system-management-fru-links.html"
+  - title: Módulos de memória e armazenamento
+    links:
+    - title: Procedimentos de substituição de DIMM
+      url: "/dimm-fru-links.html"
+    - title: Procedimentos de substituição de NVDIMM
+      url: "/nvdimm-fru-links.html"
+    - title: Procedimentos de substituição do módulo NVRAM
+      url: "/nvram-module-fru-links.html"
+  - title: Energia e refrigeração
+    links:
+    - title: Procedimentos de substituição da fonte de alimentação
+      url: "/power-supply-fru-links.html"
+    - title: Procedimentos de substituição do ventilador
+      url: "/fan-fru-links.html"
+    - title: Procedimentos de substituição do módulo de energia DCPM
+      url: "/dcpm-power-fru-links.html"
+  - title: Placas de E/S e expansão
+    links:
+    - title: Procedimentos de substituição do módulo de E/S
+      url: "/io-module-fru-links.html"
+    - title: Procedimentos de substituição de placas PCI e risers
+      url: "/pci-cards-fru-links.html"
+    - title: Procedimentos de substituição do mezanino
+      url: "/mezzanine-fru-links.html"
+  - title: Armazenamento e unidades
+    links:
+    - title: Procedimentos de substituição de unidade
+      url: "/drive-fru-links.html"
+    - title: Procedimentos de substituição do módulo de cache
+      url: "/caching-module-fru-links.html"
+  - title: Baterias e indicadores do sistema
+    links:
+    - title: Procedimentos de substituição de bateria NVMEM/ NVRAM
+      url: "/nvmem-battery-fru-links.html"
+    - title: Procedimentos de substituição de bateria RTC
+      url: "/rtc-battery-fru-links.html"
+    - title: Procedimentos de substituição do módulo LED
+      url: "/led-module-fru-links.html"

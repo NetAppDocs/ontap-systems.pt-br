@@ -2,37 +2,37 @@
 sidebar: sidebar 
 permalink: fru-reference/system-management-fru-links.html 
 keywords: system management module, field replaceable units, FRU, system management replacement 
-summary: Esta página fornece links para procedimentos de substituição de módulos de gerenciamento de sistema por plataforma. 
+summary: Encontre procedimentos de substituição do módulo de gerenciamento do sistema para seu sistema de armazenamento NetApp organizados por família de plataforma.  Esta referência fornece links diretos para fluxos de trabalho de substituição de módulos de gerenciamento de sistema passo a passo para sistemas AFF, ASA e FAS para ajudar você a localizar rapidamente o procedimento correto para seu modelo específico. 
 ---
-= Links FRU do Módulo de Gerenciamento do Sistema
+= Procedimentos de substituição do módulo de gerenciamento do sistema por família de plataforma
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Esta página fornece links para procedimentos de substituição de módulos de gerenciamento de sistemas organizados por modelo de plataforma.
+Encontre procedimentos de substituição do módulo de gerenciamento do sistema para seu sistema de armazenamento NetApp organizados por família de plataforma.  Esta referência fornece links diretos para fluxos de trabalho de substituição de módulos de gerenciamento de sistema passo a passo para sistemas AFF, ASA e FAS para ajudar você a localizar rapidamente o procedimento correto para seu modelo específico.
 
 [role="tabbed-block"]
 ====
 .Sistemas AFF
 --
-* link:../a1k/system-management-replace.html["AFF A1K"^]
-* link:../a70-90/system-management-replace.html["AFF A70/90"^]
-* link:../c80/system-management-replace.html["AFF C80"^]
+* link:../a1k/system-management-replace.html["AFF A1K"]
+* link:../a70-90/system-management-replace.html["AFF A70/90"]
+* link:../c80/system-management-replace.html["AFF C80"]
 
 
 --
 .Sistemas ASA
 --
-* link:../asa-r2-a1k/system-management-replace.html["ASA A1K"^]
-* link:../asa-r2-70-90/system-management-replace.html["ASA 70/90"^]
+* link:../asa-r2-a1k/system-management-replace.html["ASA A1K"]
+* link:../asa-r2-70-90/system-management-replace.html["ASA 70/90"]
 
 
 --
 .Sistemas FAS
 --
-* link:../fas-70-90/system-management-replace.html["FAS70/90"^]
+* link:../fas-70-90/system-management-replace.html["FAS70/90"]
 
 
 --

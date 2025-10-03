@@ -2,17 +2,17 @@
 sidebar: sidebar 
 permalink: fru-reference/led-module-fru-links.html 
 keywords: LED module, field replaceable units, FRU, LED module replacement 
-summary: Esta página fornece links para procedimentos de substituição de módulos de LED por plataforma. 
+summary: Encontre procedimentos de substituição de módulos de LED para seu sistema de armazenamento NetApp organizados por família de plataformas.  Esta referência fornece links diretos para fluxos de trabalho de substituição de módulos de LED passo a passo para sistemas AFF, ASA e FAS para ajudar você a localizar rapidamente o procedimento correto para seu modelo específico. 
 ---
-= Links FRU do módulo LED
+= Procedimentos de substituição de módulos de LED por família de plataforma
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Esta página fornece links para procedimentos de substituição de módulos de LED organizados por modelo de plataforma.
+Encontre procedimentos de substituição de módulos de LED para seu sistema de armazenamento NetApp organizados por família de plataformas.  Esta referência fornece links diretos para fluxos de trabalho de substituição de módulos de LED passo a passo para sistemas AFF e FAS para ajudar você a localizar rapidamente o procedimento correto para seu modelo específico.
 
-* link:../a700/led-module-replace.html["AFF A700"^]
-* link:../fas9000/led-module-replace.html["FAS9000"^]
+* link:../a700/led-module-replace.html["AFF A700"]
+* link:../fas9000/led-module-replace.html["FAS9000"]
 

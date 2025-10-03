@@ -2,41 +2,41 @@
 sidebar: sidebar 
 permalink: fru-reference/nvdimm-fru-links.html 
 keywords: NVDIMM, field replaceable units, FRU, NVDIMM replacement 
-summary: Esta página fornece links para procedimentos de substituição de NVDIMM por sistema. 
+summary: Encontre procedimentos de substituição de NVDIMM para seu sistema de armazenamento NetApp organizados por família de plataforma.  Esta referência fornece links diretos para fluxos de trabalho de substituição de NVDIMM passo a passo para sistemas AFF, ASA e FAS para ajudar você a localizar rapidamente o procedimento correto para seu modelo específico. 
 ---
-= Links FRU NVDIMM
+= Procedimentos de substituição de NVDIMM por família de plataforma
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Esta página fornece links para procedimentos de substituição de NVDIMM organizados por modelo de plataforma.
+Encontre procedimentos de substituição de NVDIMM para seu sistema de armazenamento NetApp organizados por família de plataforma.  Esta referência fornece links diretos para fluxos de trabalho de substituição de NVDIMM passo a passo para sistemas AFF, ASA e FAS para ajudar você a localizar rapidamente o procedimento correto para seu modelo específico.
 
 [role="tabbed-block"]
 ====
 .Sistemas AFF
 --
-* link:../a320/nvdimm-replace.html["AFF A320"^]
-* link:../a400/nvdimm-replace.html["AFF A400"^]
-* link:../a800/nvdimm-replace.html["AFF A800"^]
-* link:../c400/nvdimm-replace.html["AFF C400"^]
-* link:../c800/nvdimm-replace.html["AFF C800"^]
+* link:../a320/nvdimm-replace.html["AFF A320"]
+* link:../a400/nvdimm-replace.html["AFF A400"]
+* link:../a800/nvdimm-replace.html["AFF A800"]
+* link:../c400/nvdimm-replace.html["AFF C400"]
+* link:../c800/nvdimm-replace.html["AFF C800"]
 
 
 --
 .Sistemas ASA
 --
-* link:../asa400/nvdimm-replace.html["ASA A400"^]
-* link:../asa800/nvdimm-replace.html["ASA A800"^]
-* link:../asa-c400/nvdimm-replace.html["ASA C400"^]
-* link:../asa-c800/nvdimm-replace.html["ASA C800"^]
+* link:../asa400/nvdimm-replace.html["ASA A400"]
+* link:../asa800/nvdimm-replace.html["ASA A800"]
+* link:../asa-c400/nvdimm-replace.html["ASA C400"]
+* link:../asa-c800/nvdimm-replace.html["ASA C800"]
 
 
 --
 .Sistemas FAS
 --
-* link:../fas8300/nvdimm-replace.html["FAS8300"^]
+* link:../fas8300/nvdimm-replace.html["FAS8300"]
 
 
 --
