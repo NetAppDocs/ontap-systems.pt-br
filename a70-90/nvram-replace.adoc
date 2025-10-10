@@ -11,7 +11,7 @@ summary: Substitua o NVRAM em seu sistema AFF A70 ou AFF A90 quando a memória n
 
 
 [role="lead"]
-Substitua o NVRAM em seu sistema AFF A70 ou AFF A90 quando a memória não volátil ficar com defeito ou precisar de uma atualização. O processo de substituição envolve desligar o controlador prejudicado, substituir o módulo NVRAM ou o DIMM NVRAM, reatribuir os discos e devolver a peça com falha ao NetApp.
+Substitua a NVRAM no seu sistema AFF A70 ou AFF A90 quando a memória não volátil estiver com defeito ou precisar de uma atualização.  O processo de substituição envolve desligar o controlador danificado, remover completamente a energia puxando o controlador alguns centímetros, substituir o módulo NVRAM ou o DIMM NVRAM , reatribuir os discos e devolver a peça com defeito à NetApp.
 
 O módulo NVRAM consiste no hardware NVRAM12 e DIMMs substituíveis em campo. Você pode substituir um módulo NVRAM com falha ou os DIMMs dentro do módulo NVRAM.
 
@@ -183,6 +183,7 @@ image::../media/drw_a800_drive_seated_IEOPS-960.svg[Acionamentos do disco do ass
 
 NOTE: Se o sistema tiver alimentação CC, desligue o bloco de alimentação das PSUs.
 
+. Pressione ambas as travas de travamento do controle, gire ambas as travas para baixo ao mesmo tempo e puxe o controle para fora cerca de 3 ou 4 polegadas.
 . Gire a bandeja de gerenciamento de cabos para baixo puxando os botões no interior da bandeja de gerenciamento de cabos e girando-a para baixo.
 . Retire o módulo NVRAM alvo do chassis:
 +
@@ -223,7 +224,20 @@ Patilhas de bloqueio do DIMM
 .. Deslize cuidadosamente o módulo para dentro da ranhura e, em seguida, empurre o trinco do came totalmente para cima para bloquear o módulo no lugar.
 
 
-. Conete os cabos de alimentação às fontes de alimentação. O controlador reinicia assim que a energia é restaurada.
+. Reinstale o módulo do controlador.  O controlador reinicia assim que é totalmente inserido.
++
+.. Empurre firmemente o módulo do controlador para dentro do chassi até que ele atenda ao plano médio e esteja totalmente assentado.
++
+Os trincos de bloqueio sobem quando o módulo do controlador está totalmente assente.
+
++
+
+NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
+
+.. Rode os trincos de bloqueio para cima, para a posição de bloqueio.
+
+
+. Conete os cabos de alimentação às fontes de alimentação.
 +
 
 NOTE: Se você tiver fontes de alimentação CC, reconecte o bloco de energia às fontes de alimentação.
@@ -249,6 +263,7 @@ image::../media/drw_a800_drive_seated_IEOPS-960.svg[Acionamentos do disco do ass
 
 NOTE: Se o sistema tiver alimentação CC, desligue o bloco de alimentação das PSUs.
 
+. Pressione ambas as travas de travamento do controle, gire ambas as travas para baixo ao mesmo tempo e puxe o controle para fora cerca de 3 ou 4 polegadas.
 . Gire a bandeja de gerenciamento de cabos para baixo puxando cuidadosamente os pinos nas extremidades da bandeja e girando-a para baixo.
 . Retire o módulo NVRAM alvo do chassis:
 +
@@ -292,7 +307,20 @@ NOTE: Consulte a etiqueta do mapa da FRU na lateral do módulo NVRAM para determ
 .. Deslize cuidadosamente o módulo para dentro da ranhura até que o trinco do excêntrico comece a engatar com o pino do excêntrico de e/S e, em seguida, rode o trinco do excêntrico totalmente para cima para bloquear o módulo no devido lugar.
 
 
-. Conete os cabos de alimentação às fontes de alimentação. O controlador reinicia assim que a energia é restaurada.
+. Reinstale o módulo do controlador.  O controlador reinicia assim que é totalmente inserido.
++
+.. Empurre firmemente o módulo do controlador para dentro do chassi até que ele atenda ao plano médio e esteja totalmente assentado.
++
+Os trincos de bloqueio sobem quando o módulo do controlador está totalmente assente.
+
++
+
+NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
+
+.. Rode os trincos de bloqueio para cima, para a posição de bloqueio.
+
+
+. Conete os cabos de alimentação às fontes de alimentação.
 +
 
 NOTE: Se você tiver fontes de alimentação CC, reconecte o bloco de energia às fontes de alimentação.

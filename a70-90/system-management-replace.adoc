@@ -212,6 +212,7 @@ LED de atenção NVRAM
 
 NOTE: Se o sistema tiver alimentação CC, desligue o bloco de alimentação das PSUs.
 
+. Pressione ambas as travas de travamento do controle, gire ambas as travas para baixo ao mesmo tempo e puxe o controle para fora cerca de 3 ou 4 polegadas.
 . Gire a bandeja de gerenciamento de cabos para baixo puxando os botões de ambos os lados no interior da bandeja de gerenciamento de cabos e, em seguida, gire a bandeja para baixo.
 . Retire todos os cabos ligados ao módulo de gestão do sistema. Certifique-se de que a etiqueta onde os cabos foram conetados, para que você possa conectá-los às portas corretas quando reinstalar o módulo.
 +
@@ -283,7 +284,20 @@ Suporte de arranque
 
 
 . Recable o módulo de Gestão do sistema.
-. Conete os cabos de alimentação às fontes de alimentação. O controlador reinicia assim que a energia é restaurada.
+. Reinstale o módulo do controlador.  O controlador reinicia assim que é totalmente inserido.
++
+.. Empurre firmemente o módulo do controlador para dentro do chassi até que ele atenda ao plano médio e esteja totalmente assentado.
++
+Os trincos de bloqueio sobem quando o módulo do controlador está totalmente assente.
+
++
+
+NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
+
+.. Rode os trincos de bloqueio para cima, para a posição de bloqueio.
+
+
+. Conete os cabos de alimentação às fontes de alimentação.
 +
 
 NOTE: Se você tiver fontes de alimentação CC, reconecte o bloco de energia às fontes de alimentação.

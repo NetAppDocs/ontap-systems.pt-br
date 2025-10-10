@@ -5009,9 +5009,6 @@
   <block id="93d4151426ee3e46d52580ae98128972" category="list-text">Configure o sistema utilizando os dados recolhidos no<block ref="31fb422f2cdfc1b2e916b587bec00136" category="inline-link-rx"></block></block>
   <block id="2a1253e1eb3f5fea69107948ef4c203d" category="summary">Este tópico fornece instruções gráficas para uma instalação típica do seu sistema, desde o empilhamento em rack e cabeamento, até o lançamento inicial do sistema.</block>
   <block id="cb0bd9965128fe9d9c7dc5fe35ba00fa" category="doc">Passos rápidos - AFF A900</block>
-  <block id="3d583022c2a0e3f44141400e25a3113d" category="list-text"><block ref="3d583022c2a0e3f44141400e25a3113d" category="inline-link-macro-rx"></block></block>
-  <block id="e95c782f97493fda4a0794b55f88c5be" category="list-text"><block ref="e95c782f97493fda4a0794b55f88c5be" category="inline-link-macro-rx"></block></block>
-  <block id="280316afc56c30d6861e875ee64f9d8b" category="list-text"><block ref="280316afc56c30d6861e875ee64f9d8b" category="inline-link-macro-rx"></block></block>
   <block id="8f73eb9fb7acfd413cf2778aacee51b6" category="doc">Passos de vídeo - AFF A900</block>
   <block id="6d7841c213a127c5b39ed3e64b1501d2" category="video-title">Animação - instruções de instalação e configuração do AFF A900</block>
   <block id="6012de004f4bd50d98163ac921889523" category="doc">Substitua um módulo USB LED - AFF A900</block>
@@ -6437,9 +6434,6 @@
   <block id="86b058636c934f73a262e3a5469f088e" category="paragraph">Este tópico fornece instruções gráficas para uma instalação típica do seu sistema, desde o empilhamento em rack e cabeamento, até o lançamento inicial do sistema. Use este conteúdo se você estiver familiarizado com a instalação de sistemas NetApp.</block>
   <block id="6c77c0963cc43d89befd25aeab2f805c" category="inline-link-macro">Instruções de instalação e configuração do FAS9500</block>
   <block id="99ddf4d694dac695dfe3508f22a2764a" category="paragraph"><block ref="99ddf4d694dac695dfe3508f22a2764a" category="inline-link-macro-rx"></block></block>
-  <block id="ca44994b81cf73317bcdf6088f5dae8f" category="list-text"><block ref="ca44994b81cf73317bcdf6088f5dae8f" category="inline-link-macro-rx"></block></block>
-  <block id="bfd64d4015631c5c2c0c4db3a0badb51" category="list-text"><block ref="bfd64d4015631c5c2c0c4db3a0badb51" category="inline-link-macro-rx"></block></block>
-  <block id="f15e9fe5ff90a0ec8840f664bb40c138" category="list-text"><block ref="f15e9fe5ff90a0ec8840f664bb40c138" category="inline-link-macro-rx"></block></block>
   <block id="b139dc4b4943474860d7b90b369c2b27" category="doc">Passos de vídeo - FAS9500</block>
   <block id="1b251c10d7185e8e92bbc89e18a05085" category="video-title">Animação - instruções de instalação e configuração do FAS9500 (ISI)</block>
   <block id="2fcf4c33596849c180828b304c73609a" category="doc">Substitua um módulo USB LED - FAS9500</block>
@@ -9420,7 +9414,6 @@
   <block id="3ba33b604021069649467ecdf257be05" category="list-text">A porta para o servidor KMIP</block>
   <block id="2d554fdba3f08dbae96d767011163c64" category="list-text">Quando o sistema processar, você verá o Menu de inicialização. Selecione "1" para o arranque normal.</block>
   <block id="5724bf734a1f497a07f249f0b315ffe6" category="list-text">Verifique o estado da aquisição:<block ref="ddf400f1cb6b8b9330ed6c79c508123c" prefix=" " category="inline-code"></block></block>
-  <block id="fb06fb0bfbf591aaabffe9c4be97a3fe" category="list-text">Certifique-se de que todos os despejos do núcleo no nó reparado sejam salvos indo para o modo avançado<block ref="0581d0d071ad835f74bf419081ce5d75" prefix=" " category="inline-code"></block> e, em seguida<block ref="18e262a813b10ff8e5a5c7387605eb8c" prefix=" " category="inline-code"></block>, .</block>
   <block id="0f4c05d658aace7b29b5ea53d3fa4cf2" category="list-text">Todas as prateleiras devem estar funcionando corretamente.</block>
   <block id="34f0c52d74ac2c621ab6284425793c19" category="list-text">Você deve substituir um controlador por um controlador do mesmo tipo de modelo. Você não pode atualizar seu sistema apenas substituindo o controlador.</block>
   <block id="f66467941a18b4f0a908d26d19b031ae" category="list-text">Não é possível alterar nenhuma unidade ou compartimentos como parte deste procedimento.</block>
@@ -10437,7 +10430,6 @@
   <block id="9a14eb4201f018a934225cd84a42221c" category="summary">Substitua a bateria NV no sistema AFF A70 ou AFF A90 quando a bateria começar a perder carga ou falhar, pois é responsável por preservar dados críticos do sistema durante interrupções de energia. O processo de substituição envolve desligar o controlador desativado, remover o módulo do controlador, substituir a bateria NV, reinstalar o módulo do controlador e devolver a peça com falha ao NetApp.</block>
   <block id="b85925ab6af84e80af54ee558d7cdd7b" category="summary">Substitua o NVRAM em seu sistema AFF A70 ou AFF A90 quando a memória não volátil ficar com defeito ou precisar de uma atualização.</block>
   <block id="aaf0a6c95c867df69992eef6a692ca4b" category="doc">Substitua o NVRAM - AFF A70 e o AFF A90</block>
-  <block id="6ce37dbe2a72695de938ca0373d07a48" category="paragraph">Substitua o NVRAM em seu sistema AFF A70 ou AFF A90 quando a memória não volátil ficar com defeito ou precisar de uma atualização. O processo de substituição envolve desligar o controlador prejudicado, substituir o módulo NVRAM ou o DIMM NVRAM, reatribuir os discos e devolver a peça com falha ao NetApp.</block>
   <block id="2529fd3c33c553ca2e8d9592843f4207" category="summary">Substitua a bateria de relógio em tempo real (RTC), comumente conhecida como bateria de célula tipo moeda, em seu sistema AFF A70 ou AFF A90 para garantir que os serviços e aplicativos que dependem de sincronização precisa de tempo permaneçam operacionais.</block>
   <block id="074741912fd3881b9c0c739cd18929e2" category="summary">Substitua o módulo de gerenciamento do sistema no sistema AFF A70 ou AFF A90 quando ele ficar com defeito ou o firmware estiver corrompido. O processo de substituição envolve desligar o controlador prejudicado, substituir o módulo de gestão do sistema com falha, reiniciar o controlador, atualizar as chaves de licença e devolver a peça com falha ao NetApp.</block>
   <block id="20b1449f6216ab28919605292500b402" category="doc">Substitua o módulo de gestão do sistema - AFF A70 e AFF A90</block>
@@ -10573,7 +10565,6 @@
   <block id="9820e4314a3e441bfece800b6e086ee5" category="paragraph">Mantenha o hardware dos seus sistemas de storage ASA A70 e ASA A90 para garantir confiabilidade a longo prazo e desempenho ideal. Execute tarefas de manutenção regulares, como a substituição de componentes defeituosos, pois isso ajuda a evitar tempo de inatividade e perda de dados.</block>
   <block id="156e54fb574402ca9f26edcfaeff46e1" category="paragraph">Os procedimentos de manutenção pressupõem que os sistemas ASA A70 e ASA A90 já foram implantados como um nó de storage no ambiente ONTAP.</block>
   <block id="99b88f32607667ac31ffc4d65b240425" category="summary">Substitua a bateria NV no sistema ASA A70 ou ASA A90 quando a bateria começar a perder carga ou falhar, pois é responsável por preservar dados críticos do sistema durante interrupções de energia. O processo de substituição envolve desligar o controlador desativado, remover o módulo do controlador, substituir a bateria NV, reinstalar o módulo do controlador e devolver a peça com falha ao NetApp.</block>
-  <block id="2c183cd7821c2303d65c52bc4eccc960" category="paragraph">Substitua o NVRAM em seu sistema ASA A70 ou ASA A90 quando a memória não volátil ficar com defeito ou precisar de uma atualização. O processo de substituição envolve desligar o controlador prejudicado, substituir o módulo NVRAM ou o DIMM NVRAM, reatribuir os discos e devolver a peça com falha ao NetApp.</block>
   <block id="41e2f285e686b8f2a3edb4bab2e58d51" category="paragraph">Substitua a bateria de relógio em tempo real (RTC), comumente conhecida como bateria de célula tipo moeda, em seu sistema ASA A70 ou ASA A90 para garantir que os serviços e aplicativos que dependem de sincronização precisa de tempo permaneçam operacionais.</block>
   <block id="bcde75f7bddc9226b30c2cb1712cb52b" category="summary">Substitua o módulo de gerenciamento do sistema no sistema ASA A70 ou ASA A90 quando ele ficar com defeito ou o firmware estiver corrompido. O processo de substituição envolve desligar o controlador, substituir o módulo de gestão do sistema com falha, reiniciar o controlador, atualizar as chaves de licença e devolver a peça com falha ao NetApp.</block>
   <block id="603c758839f418606126a3dd634c68d9" category="doc">Substitua o módulo de gestão do sistema - ASA A70 e ASA A90</block>
@@ -10634,7 +10625,6 @@
   <block id="dd70af6ac86c3004056a10922bf1e4a7" category="paragraph">Os procedimentos de manutenção presumem que o sistema AFF C80 já foi implantado como um nó de storage no ambiente ONTAP.</block>
   <block id="5d542a4393896b1649a9f71a10d0053c" category="summary">Substitua a bateria NV no sistema AFF C80 quando a bateria começar a perder carga ou falhar, pois é responsável por preservar dados críticos do sistema durante interrupções de energia.</block>
   <block id="6c723933775e16b84e349b93a65294be" category="paragraph">Substitua a bateria NV no sistema AFF C80 quando a bateria começar a perder carga ou falhar, pois é responsável por preservar dados críticos do sistema durante interrupções de energia. O processo de substituição envolve desligar o controlador desativado, remover o módulo do controlador, substituir a bateria NV, reinstalar o módulo do controlador e devolver a peça com falha ao NetApp.</block>
-  <block id="4a39a7154d94aaf673b103d62c88527f" category="paragraph">Substitua o NVRAM no seu sistema AFF C80 quando a memória não volátil ficar com defeito ou necessitar de uma atualização. O processo de substituição envolve desligar o controlador prejudicado, substituir o módulo NVRAM ou o DIMM NVRAM, reatribuir os discos e devolver a peça com falha ao NetApp.</block>
   <block id="faed8c38f21fc080afa13d15d554d7cd" category="summary">Substitua a bateria de relógio em tempo real (RTC), comumente conhecida como bateria de célula tipo moeda, em seu sistema AFF C80 para garantir que os serviços e aplicativos que dependem da sincronização precisa de tempo permaneçam operacionais.</block>
   <block id="6bb54b1dd4c1b6fa5564137fda344533" category="summary">Substitua o módulo de gerenciamento do sistema no sistema AFF C80 quando ele ficar com defeito ou o firmware estiver corrompido. O processo de substituição envolve desligar o controlador, substituir o módulo de gestão do sistema com falha, reiniciar o controlador, atualizar as chaves de licença e devolver a peça com falha ao NetApp.</block>
   <block id="a119fd4e8fa2ab8606dde519437910b4" category="summary">Se um componente no seu sistema FAS70 ou FAS90 falhar, devolva a peça com falha ao NetApp. Consulte a<block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> página para obter mais informações.</block>
@@ -13171,7 +13161,6 @@
   <block id="6ec20c5ffb71fc8e6407815aba709ebe" category="cell">15,0 PB / 13,3 PiB</block>
   <block id="e71a112fcba059348a330658e07fff85" category="list-text">Temperatura/Altitude/Umidade de operação: 10°C a 35°Cbr/50°F a br/95°F) atbr/= 3048mbr/= 10000 pés) de elevação; 8% a 90%br/umidade relativa, sem condensação</block>
   <block id="fd64ba1b0614f4ffd66207f445196c93" category="summary">Especificações principais para o grupo de plataformas FAS9500</block>
-  <block id="e3a28d350d8771729547475ef2d67149" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento FAS9500 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
   <block id="8d8c60ca9b0b29f222ed76c52c6cf55b" category="list-text">Versão mínima do ONTAP : ONTAP 9.10.1P3 == Máximos de escalonamento</block>
   <block id="014f2208129cdc831cee84fc30f9247f" category="list-text">Tipo: NAS; Pares HA: 12; Capacidade bruta: 180,0 PB / 159,9 PiB; Memória máxima: 24576 GB</block>
   <block id="42af051dd0fff696f5ce895c1bb97de4" category="list-text">Tipo: SAN; Pares HA: 6; Capacidade bruta: 90,0 PB / 79,9 PiB; Memória máxima: 12288 GB</block>
@@ -13794,4 +13783,23 @@
   <block id="496c7adc63a126d0eb4ab5118d782f86" category="sidebar">Armazenamento e unidades</block>
   <block id="f529a7aaf3d6572add4d618d8be7d377" category="sidebar">Baterias e indicadores do sistema</block>
   <block id="58c13d8b084f626609d7f7546283abc8" category="sidebar">Procedimentos de substituição por componente</block>
+  <block id="bf8cf727ae3139f3e7fe3e65453bcea8" category="paragraph">O procedimento usado depende da configuração de redundância do seu controlador.</block>
+  <block id="c78ea1575d6ed5311ae16f57e7080f55" category="open-title">Opção 1: par HA</block>
+  <block id="cddabae5c0c8b3e2d64da933c9d3a116" category="paragraph">=== Verifique a alteração do ID do sistema em um sistema HA</block>
+  <block id="237578e36bc0b82ac635199432b9561a" category="open-title">Opção 2: MetroCluster de dois nós</block>
+  <block id="a50442518571cefc0118bd7662d857e6" category="paragraph">=== Reatribuir manualmente o ID do sistema em sistemas em uma configuração MetroCluster de dois nós</block>
+  <block id="d11707ec467f1cc151a3fc2bff916c27" category="list-text">Pressione ambas as travas de travamento do controle, gire ambas as travas para baixo ao mesmo tempo e puxe o controle para fora cerca de 3 ou 4 polegadas.</block>
+  <block id="3212e1d7238176b184891f4e58ec4874" category="list-text">Reinstale o módulo do controlador.  O controlador reinicia assim que é totalmente inserido.</block>
+  <block id="d44afbf1e0eec290d1d18fef6bc57aad" category="paragraph">Substitua a NVRAM no seu sistema AFF A70 ou AFF A90 quando a memória não volátil estiver com defeito ou precisar de uma atualização.  O processo de substituição envolve desligar o controlador danificado, remover completamente a energia puxando o controlador alguns centímetros, substituir o módulo NVRAM ou o DIMM NVRAM , reatribuir os discos e devolver a peça com defeito à NetApp.</block>
+  <block id="824e41b098dc2aeee8956dcc4079298b" category="list-text"><block ref="824e41b098dc2aeee8956dcc4079298b" category="inline-link-macro-rx"></block></block>
+  <block id="aa34fced84bfbcbb78619eb4193930e4" category="list-text"><block ref="aa34fced84bfbcbb78619eb4193930e4" category="inline-link-macro-rx"></block></block>
+  <block id="9c9e03a4da33702773b54fa36d9407bc" category="list-text"><block ref="9c9e03a4da33702773b54fa36d9407bc" category="inline-link-macro-rx"></block></block>
+  <block id="7e7450c37920b1792b62c14f49c6591b" category="paragraph">Substitua a NVRAM no seu sistema ASA A70 ou ASA A90 quando a memória não volátil estiver com defeito ou precisar de uma atualização.  O processo de substituição envolve desligar o controlador danificado, remover completamente a energia puxando o controlador alguns centímetros, substituir o módulo NVRAM ou o DIMM NVRAM , reatribuir os discos e devolver a peça com defeito à NetApp.</block>
+  <block id="985cd84f00f61cfd350f06f034996dbc" category="list-text"><block ref="985cd84f00f61cfd350f06f034996dbc" category="inline-link-macro-rx"></block></block>
+  <block id="31ac19365e9e82afbf1c92c80f8f5345" category="list-text"><block ref="31ac19365e9e82afbf1c92c80f8f5345" category="inline-link-macro-rx"></block></block>
+  <block id="b749fa61154e5014f90db363c596629d" category="list-text"><block ref="b749fa61154e5014f90db363c596629d" category="inline-link-macro-rx"></block></block>
+  <block id="a3e8d54603612818524bd33249aa8a23" category="paragraph">Substitua a NVRAM no seu sistema AFF c80 quando a memória não volátil estiver com defeito ou precisar de uma atualização.  O processo de substituição envolve desligar o controlador danificado, remover completamente a energia puxando o controlador alguns centímetros, substituir o módulo NVRAM ou o DIMM NVRAM , reatribuir os discos e devolver a peça com defeito à NetApp.</block>
+  <block id="e0afc6f17acc32734a97d12897107976" category="list-text"><block ref="e0afc6f17acc32734a97d12897107976" category="inline-link-macro-rx"></block></block>
+  <block id="de12502ea1f5b1e834a82b554781952a" category="list-text"><block ref="de12502ea1f5b1e834a82b554781952a" category="inline-link-macro-rx"></block></block>
+  <block id="18b2d9b4b9271130118b3fa4d34741ca" category="list-text"><block ref="18b2d9b4b9271130118b3fa4d34741ca" category="inline-link-macro-rx"></block></block>
 </blocks>

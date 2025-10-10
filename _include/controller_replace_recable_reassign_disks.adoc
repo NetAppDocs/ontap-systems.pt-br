@@ -107,7 +107,6 @@ NOTE: Contacte https://support.netapp.com["Suporte à NetApp"] se tiver problema
 
 . Quando o sistema processar, você verá o Menu de inicialização. Selecione "1" para o arranque normal.
 . Verifique o estado da aquisição: `storage failover show`
-. Certifique-se de que todos os despejos do núcleo no nó reparado sejam salvos indo para o modo avançado `set -privilege advanced` e, em seguida `run local partner nosavecore`, .
 . Volte a colocar o controlador afetado em funcionamento normal, devolvendo o respetivo armazenamento: `storage failover giveback -ofnode _impaired_node_name_`
 . Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback _true_`
 . Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos: `system node autosupport invoke -node * -type all -message MAINT=END`
