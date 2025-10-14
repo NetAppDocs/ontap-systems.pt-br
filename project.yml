@@ -56,11 +56,52 @@ sidebar:
       - title: Visão geral da manutenção
         url: "/afx-1k/maintain-overview.html"
       - title: Suporte de arranque
-        url: "/afx-1k/bootmedia-replace-workflow.html"
+        pdf-filename: Mídia de inicialização AFX 1K
+        entries:
+        - title: Fluxo de trabalho de substituição de Mídia de inicialização
+          url: "/afx-1k/bootmedia-replace-workflow.html"
+        - title: Rever os requisitos
+          url: "/afx-1k/bootmedia-replace-requirements.html"
+        - title: Desligue o controlador
+          url: "/afx-1k/bootmedia-shutdown.html"
+        - title: Substitua o suporte de arranque
+          url: "/afx-1k/bootmedia-replace.html"
+        - title: Restaurar mídia de inicialização
+          url: "/afx-1k/bootmedia-recovery-image-boot.html"
+        - title: Devolver artigo com falha ao NetApp
+          url: "/afx-1k/bootmedia-complete-rma.html"
       - title: Chassis
-        url: "/afx-1k/chassis-replace-workflow.html"
+        pdf-filename: Chassi AFX A1K
+        entries:
+        - title: Fluxo de trabalho de substituição do chassis
+          url: "/afx-1k/chassis-replace-workflow.html"
+        - title: Rever os requisitos
+          url: "/afx-1k/chassis-replace-requirements.html"
+        - title: Prepare-se para substituir
+          url: "/afx-1k/chassis-replace-prepare.html"
+        - title: Desligue o controlador
+          url: "/afx-1k/chassis-replace-shutdown.html"
+        - title: Substitua o chassi
+          url: "/afx-1k/chassis-replace-move-hardware.html"
+        - title: Substituição completa do chassis
+          url: "/afx-1k/chassis-replace-complete-system-restore-rma.html"
       - title: Controlador
-        url: "/afx-1k/controller-replace-workflow.html"
+        pdf-filename: Controlador AFX 1K
+        entries:
+        - title: Fluxo de trabalho de substituição do controlador
+          url: "/afx-1k/controller-replace-workflow.html"
+        - title: Rever os requisitos
+          url: "/afx-1k/controller-replace-requirements.html"
+        - title: Desligue o controlador desativado
+          url: "/afx-1k/controller-replace-shutdown.html"
+        - title: Substitua o controlador
+          url: "/afx-1k/controller-replace-move-hardware.html"
+        - title: Restaure a configuração do sistema
+          url: "/afx-1k/controller-replace-system-config-restore-and-verify.html"
+        - title: Devolver o controlador
+          url: "/afx-1k/controller-replace-recable-reassign-disks.html"
+        - title: Substituição completa do controlador
+          url: "/afx-1k/controller-replace-restore-system-rma.html"
       - title: DIMM
         url: "/afx-1k/dimm-replace.html"
       - title: Ventoinha
@@ -70,7 +111,14 @@ sidebar:
       - title: Bateria NV
         url: "/afx-1k/nvdimm-battery-replace.html"
       - title: Módulo de e/S.
-        url: "/afx-1k/io-module-overview.html"
+        pdf-filename: Módulo AFX 1K IO
+        entries:
+        - title: Descrição geral do módulo I/O.
+          url: "/afx-1k/io-module-overview.html"
+        - title: Adicionar módulo de e/S.
+          url: "/afx-1k/io-module-add.html"
+        - title: Substitua o módulo de e/S.
+          url: "/afx-1k/io-module-replace.html"
       - title: Fonte de alimentação
         url: "/afx-1k/power-supply-replace.html"
       - title: Bateria de relógio em tempo real

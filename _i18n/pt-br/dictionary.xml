@@ -13869,9 +13869,7 @@
   <block id="d256a527bf5d931f1d622c72ddf1dded" category="list-text">No controlador íntegro, verifique se o novo ID do sistema parceiro foi atribuído automaticamente:<block ref="1d9c4708f7f65a8fab50047c3df2e664" prefix=" " category="inline-code"></block></block>
   <block id="cfcb90feb85f8859e220b212215b63b0" category="paragraph">Na saída do comando, você deverá ver uma mensagem exibindo o estado atual da substituição do armazenamento.  No exemplo a seguir, o node2 passou por uma substituição e exibe o estado atual como "Em aquisição".</block>
   <block id="8011afadee4323a554fac9e6cc29e58d" category="list-text">Do controlador íntegro, devolva o armazenamento do controlador substituído: `_storage failover giveback -ofnode replacement_node_name_`</block>
-  <block id="17d9dcc7db89f6a4682cb542cf2044fc" category="open-title">Substituir uma fonte de alimentação CA</block>
   <block id="88a2125e60807865335c8747496af95b" category="admonition">A PSU é compacta.  Use as duas mãos para apoiá-lo durante a remoção para evitar que ele se solte do módulo controlador e cause ferimentos.</block>
-  <block id="26b17225b626fb9238849fd60eabdf60" category="paragraph">+</block>
   <block id="1ff94e598108905bef8834018bba5d86" category="paragraph">Remova a bateria RTC com defeito e instale a substituição.</block>
   <block id="344f921d0ec02fd1e7780b61a619a100" category="admonition">Após substituir a bateria do RTC, inserir o controlador e ligar o primeiro BIOS, você verá as seguintes mensagens de erro:<block ref="049ec00df3ddcbe28d63cf4fa733682c" prefix=" " category="inline-code"></block><block ref="6c8ad83004cc8bc224a596f5f1682744" prefix=" " category="inline-code"></block> Essas mensagens são esperadas e você pode continuar com este procedimento.</block>
   <block id="5862e3059693b0ae5802e65d68b3df4c" category="list-text">Verifique a data e a hora no controlador saudável com o<block ref="1cac34e5e8442fb80d6ade838d969fc0" prefix=" " category="inline-code"></block> comando.</block>
@@ -14189,4 +14187,9 @@
   <block id="a43cc36cba3c97642118a8f1e1411d2a" category="sidebar">Prateleiras NX224</block>
   <block id="44897f292c79e694fcea494af35f40cc" category="sidebar">Manutenção de prateleira NX224</block>
   <block id="9356bad064253adcb17a19cef3f04d34" category="sidebar">Substituir prateleira da unidade NX224</block>
+  <block id="5198087ddb6461cb35b786132461261c" category="sidebar">Mídia de inicialização AFX 1K</block>
+  <block id="5a94cb746c52c38beb8e02711e643cd9" category="sidebar">Restaurar mídia de inicialização</block>
+  <block id="d3bca45bb48d04c6d999281b772fa015" category="sidebar">Chassi AFX A1K</block>
+  <block id="9a4e2ca13bc5368ad30e628996c8e94e" category="sidebar">Controlador AFX 1K</block>
+  <block id="4c052a07dcf923d8d73e0be9a32b97a7" category="sidebar">Módulo AFX 1K IO</block>
 </blocks>
