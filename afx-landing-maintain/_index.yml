@@ -1,0 +1,45 @@
+---
+indexpage:
+  title: Mantenha seu sistema de armazenamento AFX
+  summary: Faça a manutenção do hardware do seu sistema de armazenamento AFX para
+    garantir confiabilidade a longo prazo e desempenho ideal.
+  keywords: maintain afx 1k
+  lead: Faça a manutenção do hardware do seu sistema de armazenamento AFX para garantir
+    confiabilidade a longo prazo e desempenho ideal. Realize tarefas de manutenção
+    regulares, como a substituição de componentes defeituosos, pois isso ajuda a evitar
+    tempo de inatividade e perda de dados.
+  tiles:
+  - title: Componentes principais do sistema
+    links:
+    - title: Controlador
+      url: "../afx-1k/controller-replace-workflow.html"
+    - title: Chassis
+      url: "../afx-1k/chassis-replace-workflow.html"
+    - title: Módulo de gestão do sistema
+      url: "../afx-1k/system-management-replace.html"
+  - title: Memória e armazenamento
+    links:
+    - title: Suporte de arranque
+      url: "../afx-1k/bootmedia-replace-workflow.html"
+    - title: DIMM
+      url: "../afx-1k/dimm-replace.html"
+    - title: NVRAM
+      url: "../afx-1k/nvram-replace.html"
+    - title: Bateria NV
+      url: "../afx-1k/nvdimm-battery-replace.html"
+  - title: Energia e refrigeração
+    links:
+    - title: Fonte de alimentação
+      url: "../afx-1k/power-supply-replace.html"
+    - title: Ventoinha
+      url: "../afx-1k/fan-replace.html"
+    - title: Bateria de relógio em tempo real
+      url: "../afx-1k/rtc-battery-replace.html"
+  - title: E/S e expansão
+    links:
+    - title: Descrição geral do módulo I/O.
+      url: "../afx-1k/io-module-overview.html"
+    - title: Adicionar módulo de e/S.
+      url: "../afx-1k/io-module-add.html"
+    - title: Substitua o módulo de e/S.
+      url: "../afx-1k/io-module-replace.html"

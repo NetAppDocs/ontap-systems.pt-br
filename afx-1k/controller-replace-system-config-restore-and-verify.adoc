@@ -1,0 +1,56 @@
+---
+permalink: afx-1k/controller-replace-system-config-restore-and-verify.html 
+sidebar: sidebar 
+keywords: afx 1k, restore and verify the system configuration, verify and set the ha state of the controller module 
+summary: Verifique se a configuração de HA do controlador está ativa e funcionando corretamente no seu sistema de armazenamento AFX 1K e confirme se os adaptadores do sistema listam todos os caminhos para os discos. 
+---
+= Restaurar e verificar a configuração do sistema - AFX 1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Verifique se a configuração de HA do controlador está ativa e funcionando corretamente no seu sistema de armazenamento AFX 1K e confirme se os adaptadores do sistema listam todos os caminhos para os discos.
+
+
+
+== Passo 1: Verifique as configurações de configuração do HA
+
+Você deve verificar o `HA` estado do módulo do controlador e, se necessário, atualizar o estado para corresponder à configuração do sistema.
+
+. Arranque para o modo de manutenção: `boot_ontap maint`
++
+.. Digite `y` quando você vir _continuar com boot?_.
++
+Se você vir a mensagem de aviso _incompatibilidade de ID do sistema_, digite `y`.
+
+
+
+. Introduza `sysconfig -v` e capture o conteúdo do visor.
++
+
+NOTE: Se você vir _INCOMPATIBILIDADE DE PERSONALIDADE_, entre em Contato com o suporte ao cliente.
+
+. Na `sysconfig -v` saída, compare as informações da placa adaptadora com as placas e localizações no controlador de substituição.
+
+
+
+
+== Passo 2: Verifique a lista de discos
+
+. Verifique se o adaptador lista os caminhos para todos os discos:
++
+`storage show disk -p`
+
++
+Se você vir algum problema, verifique o cabeamento e recoloque os cabos.
+
+. Sair do modo de manutenção:
++
+`halt`
+
+
+
+.O que se segue?
+Após restaurar e verificar a configuração do sistema de armazenamento AFX 1K,link:controller-replace-recable-reassign-disks.html["devolva o controlador"] .

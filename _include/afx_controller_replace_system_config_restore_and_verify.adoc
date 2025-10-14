@@ -1,0 +1,42 @@
+= Passo 1: Verifique as configurações de configuração do HA
+:allow-uri-read: 
+
+
+
+
+== Passo 1: Verifique as configurações de configuração do HA
+
+Você deve verificar o `HA` estado do módulo do controlador e, se necessário, atualizar o estado para corresponder à configuração do sistema.
+
+. Arranque para o modo de manutenção: `boot_ontap maint`
++
+.. Digite `y` quando você vir _continuar com boot?_.
++
+Se você vir a mensagem de aviso _incompatibilidade de ID do sistema_, digite `y`.
+
+
+
+. Introduza `sysconfig -v` e capture o conteúdo do visor.
++
+
+NOTE: Se você vir _INCOMPATIBILIDADE DE PERSONALIDADE_, entre em Contato com o suporte ao cliente.
+
+. Na `sysconfig -v` saída, compare as informações da placa adaptadora com as placas e localizações no controlador de substituição.
+
+
+
+
+== Passo 2: Verifique a lista de discos
+
+. Verifique se o adaptador lista os caminhos para todos os discos:
++
+`storage show disk -p`
+
++
+Se você vir algum problema, verifique o cabeamento e recoloque os cabos.
+
+. Sair do modo de manutenção:
++
+`halt`
+
+

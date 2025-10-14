@@ -156,6 +156,7 @@ Se o sistema de armazenamento tiver slots disponíveis, instale o novo módulo d
 * Verifique o https://hwu.netapp.com/["NetApp Hardware Universe"^] para se certificar de que o novo módulo de e/S é compatível com o sistema de armazenamento e a versão do ONTAP que você está executando.
 * Se houver vários slots disponíveis, verifique as prioridades do slot https://hwu.netapp.com/["NetApp Hardware Universe"^] e use a melhor disponível para seu módulo de e/S.
 * Certifique-se de que todos os outros componentes estão a funcionar corretamente.
+* Certifique-se de ter o componente de substituição que você recebeu da NetApp.
 
 
 [role="tabbed-block"]

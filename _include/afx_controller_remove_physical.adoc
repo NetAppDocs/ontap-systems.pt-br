@@ -1,0 +1,56 @@
+= 
+:allow-uri-read: 
+
+
+Você deve remover o módulo do controlador do gabinete quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
+
+. Verifique o LED de status do NVRAM localizado no slot 4/5 do sistema. Há também um LED NVRAM no painel frontal do módulo do controlador. Procure o ícone NV:
++
+image::../media/drw_a1K-70-90_nvram-led_ieops-1463.svg[Gráfico de localização do LED de estado e atenção do NVRAM]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+LED de estado do NVRAM
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+LED de atenção NVRAM
+
+|===
++
+** Se o LED NV estiver desligado, passe à próxima etapa.
+** Se o LED NV estiver intermitente, aguarde que o intermitente pare. Se a intermitência continuar durante mais de 5 minutos, contacte o suporte técnico para obter assistência.
+
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Remova o painel (se necessário) com as duas mãos, segurando as aberturas em cada lado do painel e puxando em sua direção até que o painel se solte dos pinos esféricos na estrutura do chassi.
+. Na parte da frente da unidade, prenda os dedos nos orifícios dos cames de bloqueio, aperte as patilhas nas alavancas do excêntrico e, com cuidado, mas rode firmemente ambas as travas na sua direção ao mesmo tempo.
++
+O módulo do controlador move-se ligeiramente para fora do compartimento.
+
++
+image::../media/drw_a1k_pcm_remove_replace_ieops-1375.svg[Controlador remover gráfico]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+| Travas do came de travamento 
+|===
+. Deslize o módulo do controlador para fora do compartimento e coloque-o em uma superfície plana e estável.
++
+Certifique-se de que suporta a parte inferior do módulo do controlador enquanto o desliza para fora do compartimento.
+
+

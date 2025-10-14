@@ -66,9 +66,25 @@ ONTAP 9,7::
 
 
 --
+.Sistemas AFX
+--
+Os sistemas AFX fornecem uma solução desagregada projetada para atender aos rigorosos requisitos de cargas de trabalho NAS e S3 de alto desempenho, incluindo aplicativos de IA/ML. link:https://docs.netapp.com/us-en/ontap-afx/get-started/ontap-afx-storage.html["Saiba mais sobre o sistema AFX"^] .
+
+Os sistemas AFX serão suportados a partir da seguinte versão do ONTAP .
+
+ONTAP 9.17.1::
++
+--
+* AFX 1K
+
+
+--
+
+
+--
 .Sistemas ASA R2
 --
-Os sistemas ASA R2 fornecem uma solução unificada de hardware e software que cria uma experiência simplificada específica para as necessidades dos clientes somente de SAN. link:https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["Saiba mais sobre os sistemas ASA R2"].
+Os sistemas ASA r2 oferecem uma solução unificada de hardware e software que cria uma experiência simplificada específica para as necessidades dos clientes somente SAN. link:https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["Saiba mais sobre os sistemas ASA R2"^] .
 
 Os sistemas ASA R2 são suportados a partir das seguintes versões do ONTAP.
 
@@ -193,10 +209,17 @@ ONTAP 9,7::
 --
 .Compartimentos de unidades
 --
-Os compartimentos de unidades são projetados especificamente para sistemas NetApp AFF, ASA e FAS e ajudam a fornecer a performance, resiliência e flexibilidade necessárias para a transformação digital.
+As prateleiras de unidades são projetadas especificamente para sistemas NetApp AFF, AFX, ASA e FAS e ajudam a fornecer o desempenho, a resiliência e a flexibilidade que sua transformação digital precisa.
 
 Os compartimentos de unidades estão disponíveis a partir dos seguintes lançamentos da ONTAP.
 
+ONTAP 9.17.1::
++
+--
+* Prateleira NSX224 para sistemas AFX
+
+
+--
 ONTAP 9.16,1::
 +
 --

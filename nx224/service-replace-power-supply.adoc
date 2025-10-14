@@ -1,0 +1,94 @@
+---
+permalink: nx224/service-replace-power-supply.html 
+sidebar: sidebar 
+keywords: nx224, shelves, shelf, nx224 shelves, replace, fail, power, supply, nondisruptive, drive, i/o, progress, hot-swap, hot-swap a power supply 
+summary: Você pode substituir uma fonte de alimentação com falha sem interrupções em um rack NX224 que esteja ligado e enquanto a E/S estiver em andamento. 
+---
+= Troca a quente de uma fonte de alimentação - prateleiras NX224
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode substituir uma fonte de alimentação com falha sem interrupções em um rack NX224 que esteja ligado e enquanto a E/S estiver em andamento.
+
+.Sobre esta tarefa
+* Não misture fontes de alimentação com diferentes classificações de eficiência ou com diferentes tipos de entrada.
++
+Sempre substitua como por like.
+
+* Se você estiver substituindo mais de uma fonte de alimentação, deve fazê-lo uma de cada vez para que a prateleira mantenha a energia.
+* *Prática recomendada:* a melhor prática é substituir a fonte de alimentação dentro de dois minutos após a remoção do NSM.
++
+Se você exceder os dois minutos, o compartimento continuará funcionando, mas o ONTAP enviará mensagens ao console sobre a fonte de alimentação degradada até que a fonte de alimentação seja substituída.
+
+* Não reverta o firmware para uma versão que não suporte a gaveta e seus componentes.
+* Se necessário, você pode ligar os LEDs de localização da prateleira (azul) para ajudar a localizar fisicamente a prateleira afetada: `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
++
+Se você não souber `shelf_name` o do compartimento afetado, execute o `storage shelf show` comando.
+
++
+Uma prateleira tem três LEDs de localização: Um no painel de visualização do operador e um em cada NSM. Os LEDs de localização permanecem acesos durante 30 minutos. Você pode desativá-los digitando o mesmo comando, mas usando a opção Off.
+
+* Quando desembalar a fonte de alimentação de substituição, guarde todos os materiais de embalagem para utilização quando devolver a fonte de alimentação com falha.
++
+Se você precisar do número RMA ou de ajuda adicional com o procedimento de substituição, entre em Contato com o suporte técnico em https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"^], 888-463-8277 (América do Norte), 00-800-44-638277 (Europa) ou 800-800-80-800 (Ásia/Pacífico).
+
+
+
+.Passos
+. Aterre-se corretamente.
+. Identifique fisicamente a fonte de alimentação com falha.
++
+O sistema regista uma mensagem de aviso na consola do sistema, indicando qual a fonte de alimentação falhou. Além disso, o LED de atenção (âmbar) no painel de visualização do operador da prateleira acende-se e o LED bicolor na fonte de alimentação com falha acende-se a vermelho.
+
+. Desconete o cabo de alimentação da fonte de alimentação abrindo o retentor do cabo de alimentação e, em seguida, desconete o cabo de alimentação da fonte de alimentação.
++
+As fontes de alimentação não têm um interrutor de alimentação.
+
+. Retire a fonte de alimentação:
++
+image::../media/drw_tp_psu_ac_replace_ieops-2343.svg[Remova uma PSU CA]
+
++
+[cols="1,3"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Rode o manípulo para cima, para a sua posição horizontal e, em seguida, segure-o.
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Com o polegar, prima a patilha de terra-cotta para soltar o mecanismo de bloqueio.
+
+
+
+ a| 
+image:../media/icon_round_3.png["Legenda número 3"]
+ a| 
+Retire a fonte de alimentação do NSM enquanto utiliza a outra mão para suportar o peso.
+
+|===
+. Insira a fonte de alimentação de substituição:
++
+.. Utilizando ambas as mãos, apoie e alinhe as extremidades da fonte de alimentação com a abertura no NSM.
+.. Empurre cuidadosamente a fonte de alimentação para o NSM até que o mecanismo de bloqueio encaixe no lugar.
++
+
+NOTE: Não utilize força excessiva ou poderá danificar o conetor interno.
+
+.. Gire a alça para baixo, de modo que esteja fora do caminho das operações normais.
+
+
+. Ligue o cabo de alimentação à fonte de alimentação e fixe o cabo de alimentação com o fixador do cabo de alimentação.
++
+Quando estiver a funcionar corretamente, o LED bicolor de uma fonte de alimentação acende-se a verde.
+
+

@@ -48,7 +48,24 @@ Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. S
 +
 O seguinte comando AutoSupport suprime a criação automática de casos por duas horas: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
 
-. Desative a giveback automática a partir da consola do controlador saudável: `storage failover modify –node local -auto-giveback false`
+. Desabilitar o retorno automático do console do controlador prejudicado:
++
+`storage failover modify -node impaired-node -auto-giveback-of false`
+
++
+
+NOTE: Quando você vir _Deseja desabilitar o retorno automático?_, digite `y` .
+
++
+.. Se o controlador com defeito não puder ser ativado ou já tiver sido assumido, você deverá desativar o link de interconexão HA do controlador íntegro antes de inicializar o controlador com defeito.  Isso evitará que o controlador prejudicado execute o retorno automático.
++
+`system ha interconnect link off -node healthy-node -link 0`
+
++
+`system ha interconnect link off -node healthy-node -link 1`
+
+
+
 . Leve o controlador prejudicado para o prompt Loader:
 +
 [cols="1,2"]
@@ -60,13 +77,6 @@ O seguinte comando AutoSupport suprime a criação automática de casos por duas
 O prompt Loader
  a| 
 Vá para a próxima etapa.
-
-
-
- a| 
-`Waiting for giveback...`
- a| 
-Pressione Ctrl-C e responda `y` quando solicitado.
 
 
 
@@ -240,7 +250,24 @@ Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. S
 +
 O seguinte comando AutoSupport suprime a criação automática de casos por duas horas: `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
 
-. Desative a giveback automática a partir da consola do controlador saudável: `storage failover modify –node local -auto-giveback false`
+. Desabilitar o retorno automático do console do controlador prejudicado:
++
+`storage failover modify -node impaired-node -auto-giveback-of false`
+
++
+
+NOTE: Quando você vir _Deseja desabilitar o retorno automático?_, digite `y` .
+
++
+.. Se o controlador com defeito não puder ser ativado ou já tiver sido assumido, você deverá desativar o link de interconexão HA do controlador íntegro antes de inicializar o controlador com defeito.  Isso evitará que o controlador prejudicado execute o retorno automático.
++
+`system ha interconnect link off -node healthy-node -link 0`
+
++
+`system ha interconnect link off -node healthy-node -link 1`
+
+
+
 . Leve o controlador prejudicado para o prompt Loader:
 +
 [cols="1,2"]
@@ -252,13 +279,6 @@ O seguinte comando AutoSupport suprime a criação automática de casos por duas
 O prompt Loader
  a| 
 Vá para a próxima etapa.
-
-
-
- a| 
-`Waiting for giveback...`
- a| 
-Pressione Ctrl-C e responda `y` quando solicitado.
 
 
 

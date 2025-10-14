@@ -1,0 +1,36 @@
+---
+section: nx224
+title: Prateleiras NX224
+entries:
+- title: Gaveta para adicionar quente
+  url: "/nx224/hot-add-shelf.html"
+- title: Alterar ID do compartimento
+  url: "/nx224/change-shelf-id.html"
+- title: Manutenção
+  pdf-filename: Manutenção de prateleira NX224
+  entries:
+  - title: Suporte de arranque
+    url: "/nx224/service-replace-boot-media.html"
+  - title: DIMM
+    url: "/nx224/service-replace-dimm.html"
+  - title: Condução
+    url: "/nx224/service-replace-drive.html"
+  - title: Compartimento de unidades
+    pdf-filename: Substituir prateleira da unidade NX224
+    entries:
+    - title: Visão geral da manutenção da prateleira
+      url: "/nx224/nx224-shelf-overview.html"
+    - title: Unidade de adição a quente
+      url: "/nx224/hot-add-drive.html"
+    - title: LEDs da prateleira do monitor
+      url: "/nx224/service-monitor-leds.html"
+  - title: Ventoinha
+    url: "/nx224/service-replace-fan.html"
+  - title: Módulo de e/S.
+    url: "/nx224/service-replace-io-module.html"
+  - title: NSM
+    url: "/nx224/service-replace-nsm140.html"
+  - title: Fonte de alimentação
+    url: "/nx224/service-replace-power-supply.html"
+  - title: Bateria de relógio em tempo real
+    url: "/nx224/service-replace-rtc-battery.html"

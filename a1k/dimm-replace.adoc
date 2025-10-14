@@ -14,7 +14,7 @@ summary: Substitua um DIMM no sistema AFF A1K se forem detetados erros de memór
 Substitua um DIMM no sistema AFF A1K se forem detetados erros de memória corrigíveis excessivos ou incorrigíveis. Tais erros podem impedir que o sistema de armazenamento inicialize o ONTAP. O processo de substituição envolve desligar o controlador prejudicado, removê-lo, substituir o DIMM, reinstalar o controlador e, em seguida, devolver a peça com falha ao NetApp.
 
 .Antes de começar
-* Certifique-se de que todos os outros componentes do sistema estão a funcionar corretamente; caso contrário, tem de contactar a assistência técnica.
+* Certifique-se de ter o componente de substituição que você recebeu da NetApp.
 * Certifique-se de que substitui o componente com falha por um componente de substituição que recebeu da NetApp.
 
 

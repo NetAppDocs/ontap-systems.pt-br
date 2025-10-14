@@ -1,0 +1,40 @@
+= 
+:allow-uri-read: 
+
+
+Quando você substitui o módulo de gerenciamento do sistema, o número de série do sistema (SSN) do controlador muda.  Você deve instalar novas licenças para o nó se o nó danificado estiver usando recursos do ONTAP que exigem uma licença padrão (bloqueada por nó).  Para recursos com licenças padrão, cada nó no cluster deve ter sua própria chave para o recurso.
+
+.Sobre esta tarefa
+Até instalar chaves de licença, os recursos que exigem licenças padrão continuam disponíveis para o nó. No entanto, se o nó fosse o único nó no cluster com uma licença para o recurso, nenhuma alteração de configuração será permitida. Além disso, o uso de recursos não licenciados no nó pode deixá-lo fora de conformidade com o contrato de licença, portanto, você deve instalar a chave de licença de substituição ou as chaves no para o nó o mais rápido possível.
+
+.Antes de começar
+É necessário um arquivo de licença NetApp (NLF) para o novo número de série do sistema.  Para obter mais informações sobre os arquivos de licença do NetApp , consultelink:https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/ONTAP_9.10.1_and_later_licensing_overview["Visão geral do licenciamento do ONTAP 9.10.1 e posterior"^] .
+
+Você tem 90 dias para instalar as chaves de licença, após os quais todas as licenças antigas se tornarão inválidas.  Depois de instalar uma chave de licença válida, você tem 24 horas para instalar todas as chaves antes que o período de carência termine.
+
+
+NOTE: Se o seu sistema estava inicialmente executando o ONTAP 9.15.1 ou posterior, use o procedimento documentado emlink:https://kb.netapp.com/on-prem/ontap/OHW/OHW-KBs/Post_Motherboard_Replacement_Process_to_update_Licensing_on_a_AFF_FAS_system["Pós-processo de substituição da placa-mãe para atualizar o licenciamento em um sistema AFF/FAS"^] .  Se você não tiver certeza da versão inicial do ONTAP para seu sistema, consultelink:https://hwu.netapp.com["NetApp Hardware Universe"^] para mais informações.
+
+.Passos
+. Se você precisar de novas chaves de licença, obtenha chaves de licença de substituição na https://mysupport.netapp.com/site/global/dashboard["Site de suporte da NetApp"] seção meu suporte em licenças de software.
++
+
+NOTE: As novas chaves de licença que você precisa são geradas automaticamente e enviadas para o endereço de e-mail em arquivo. Se você não receber o e-mail com as chaves de licença no prazo de 30 dias, entre em Contato com o suporte técnico.
+
+. Instale cada chave de licença através do ONTAP System Manager.
++
+Para obter mais informações, consulte link:https://docs.netapp.com/us-en/ontap/task_admin_enable_new_features.html["Habilite novos recursos adicionando chaves de licença com o ONTAP System Manager"^] .
+
+. Remova as licenças antigas, se desejar:
++
+.. Verifique se há licenças não utilizadas: `license clean-up -unused -simulate`
+.. Se a lista estiver correta, remova as licenças não utilizadas: `license clean-up -unused`
+
+
+. Registre o número de série do sistema com o suporte da NetApp.
++
+** Se o AutoSupport estiver ativado, envie uma mensagem AutoSupport para Registrar o número de série.
+** Se o AutoSupport não estiver ativado, ligue https://mysupport.netapp.com["Suporte à NetApp"] para registar o número de série.
+
+
+

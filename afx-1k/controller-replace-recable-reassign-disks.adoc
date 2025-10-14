@@ -1,0 +1,156 @@
+---
+permalink: afx-1k/controller-replace-recable-reassign-disks.html 
+sidebar: sidebar 
+keywords: afx 1k, how to recable the system, how to reassign disks 
+summary: Retorne o controle dos recursos de armazenamento ao controlador de substituição para que seu sistema de armazenamento AFX 1K possa retomar a operação normal. 
+---
+= Devolva o controle - AFX 1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Retorne o controle dos recursos de armazenamento ao controlador de substituição para que seu sistema de armazenamento AFX 1K possa retomar a operação normal.  O procedimento de devolução varia de acordo com o tipo de criptografia usado pelo seu sistema: sem criptografia ou criptografia Onboard Key Manager (OKM).
+
+[role="tabbed-block"]
+====
+.Sem criptografia
+--
+Volte a colocar o controlador afetado em funcionamento normal, devolvendo o respetivo armazenamento.
+
+.Passos
+. No prompt LOADER, digite
++
+`boot_ontap`
+
+. Pressione <enter> quando as mensagens do console pararem.
++
+** Se você vir o prompt _login_, vá para a próxima etapa no final desta seção.
+** Se você não vir o prompt de login, pressione a tecla <enter>. Se ainda não vir o prompt, faça login no nó parceiro.
+
+
+. Devolva apenas a raiz com a opção override-destination-checks:
++
+`storage failover giveback -ofnode impaired-node -only-root true -override -destination-checks true`
+
++
+
+NOTE: O comando a seguir só está disponível no nível de privilégio Modo de diagnóstico.  Para obter mais informações sobre níveis de privilégio, consultelink:https://docs.netapp.com/us-en/ontap/system-admin/administrative-privilege-levels-concept.html["Entenda os níveis de privilégio para comandos ONTAP CLI"^] .
+
++
+Se encontrar erros, https://support.netapp.com["Suporte à NetApp"] contacte .
+
+. Aguarde 5 minutos após a conclusão do relatório de devolução e verifique o status de failover e devolução:
++
+`storage failover show`e `storage failover show-giveback`
+
++
+
+NOTE: O comando a seguir só está disponível no nível de privilégio Modo de diagnóstico.
+
+. Se os links de interconexão HA foram desativados, reative-os:
++
+`system ha interconnect link on -node healthy-node -link 0`
+
++
+`system ha interconnect link on -node healthy-node -link 1`
+
+. Volte a colocar o controlador afetado em funcionamento normal, devolvendo o respetivo armazenamento:
++
+`storage failover giveback -ofnode _impaired_node_name_`
+
+. Se a giveback automática foi desativada, reative-a:
++
+`storage failover modify -node local -auto-giveback-of true`
+
+. Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
+
+
+--
+.Criptografia OKM
+--
+Redefina a criptografia integrada e retorne o controlador à operação normal.
+
+.Passos
+. No prompt Loader, digite:
++
+`boot_ontap maint`
+
+. Inicie no menu ONTAP a partir do prompt Loader `boot_ontap menu` e selecione a opção 10.
+. Introduza a frase-passe OKM. Pode obter esta frase-passe do cliente ou https://support.netapp.com["Suporte à NetApp"] contactar .
++
+
+NOTE: Você será solicitado duas vezes para a senha.
+
+. Insira os dados da chave de backup quando solicitado.
+. No menu de inicialização, insira a opção `1` para inicialização normal.
+. Mova o cabo do console para o nó parceiro e insira o seguinte login:
++
+`admin`
+
+. Devolva apenas a raiz com a opção override-destination-checks:
++
+`storage  failover giveback -ofnode impaired-node -only-root true -override-destination-checks true`
+
++
+
+NOTE: O comando a seguir só está disponível no nível de privilégio Modo de diagnóstico.  Para obter mais informações sobre níveis de privilégio, consultelink:https://docs.netapp.com/us-en/ontap/system-admin/administrative-privilege-levels-concept.html["Entenda os níveis de privilégio para comandos ONTAP CLI"^] .
+
++
+Se encontrar erros, https://support.netapp.com["Suporte à NetApp"] contacte .
+
+. Aguarde 5 minutos após a conclusão do relatório de devolução e verifique o status de failover e devolução:
++
+`storage failover show`e `storage failover show-giveback`
+
++
+
+NOTE: O comando a seguir só está disponível no nível de privilégio Modo de diagnóstico.
+
+. Mova o cabo do console para o nó de substituição e insira o seguinte:
++
+`security key-manager onboard sync`
+
++
+
+NOTE: Você será solicitado a fornecer a senha do OKM para o cluster.
+
+. Verificar o estado das chaves com o seguinte comando:
++
+`security key-manager key query -key-type svm-KEK`
+
++
+Se a coluna _restored_ mostrar qualquer coisa, exceto _true_, entre em Contato https://support.netapp.com["Suporte à NetApp"]com .
+
+. Volte a colocar o controlador afetado em funcionamento normal, devolvendo o respetivo armazenamento:
++
+`storage failover giveback -ofnode _impaired_node_name_`
+
++
+.. Se os links de interconexão HA foram desativados, reative-os para retomar o retorno automático:
++
+`system ha interconnect link on -node healthy-node -link 0`
+
++
+`system ha interconnect link on -node healthy-node -link 1`
+
+
+
+. Se a giveback automática foi desativada, reative-a:
++
+`storage failover modify -node local -auto-giveback-of true`
+
+. Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
+
+
+--
+====
+.O que se segue?
+Após transferir a propriedade do recurso de armazenamento para o controlador de substituição,link:controller-replace-restore-system-rma.html["terminar de substituir o controlador"] .

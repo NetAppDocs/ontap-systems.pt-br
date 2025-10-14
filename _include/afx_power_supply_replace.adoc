@@ -1,0 +1,72 @@
+= 
+:allow-uri-read: 
+
+
+.Sobre esta tarefa
+* Este procedimento é escrito para substituir uma PSU de cada vez.
++
+
+IMPORTANT: Não misture PSUs com diferentes classificações de eficiência. Sempre substitua como por like.
+
+* As fontes de alimentação são redundantes e intercambiáveis a quente; você não precisa assumir o controle do controlador para executar essa tarefa.
+
+
+.Substituir uma fonte de alimentação CA
+--
+Para substituir uma PSU CA, execute as etapas a seguir.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Identifique a PSU que você deseja substituir, com base em mensagens de erro do console ou através do LED vermelho de falha na PSU.
+. Desligar a PSU:
++
+.. Abra o retentor do cabo de alimentação e, em seguida, desconete o cabo de alimentação da PSU.
+
+
+. Remova a PSU girando a alça para cima, pressione a aba de travamento e puxe a PSU para fora do módulo do controlador.
++
+
+CAUTION: A PSU é compacta.  Use as duas mãos para apoiá-lo durante a remoção para evitar que ele se solte do módulo controlador e cause ferimentos.
+
+
+
+image::../media/drw_a1k_psu_remove_replace_ieops-1378.svg[Substitua a PSU]
+
++
+
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Patilha de bloqueio da PSU de terracota
+
+|===
+. Instale a PSU de substituição no módulo do controlador:
++
+.. Utilizando ambas as mãos, apoie e alinhe as extremidades da PSU de substituição com a abertura no módulo do controlador.
+.. Empurre cuidadosamente a PSU para dentro do módulo do controlador até que a patilha de bloqueio encaixe no lugar.
++
+As fontes de alimentação apenas engatarão adequadamente com o conetor interno e trancam no lugar de uma forma.
+
++
+
+NOTE: Para evitar danificar o conetor interno, não utilize força excessiva ao deslizar a PSU para o sistema.
+
+
+
+. Reconecte o cabeamento da PSU:
++
+.. Volte a ligar o cabo de alimentação à PSU.
+.. Fixe o cabo de alimentação à PSU utilizando o retentor do cabo de alimentação.
+
+
++
+Uma vez que a energia é restaurada para a PSU, o LED de status deve estar verde.
+
+. Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"^] página para obter mais informações.
+
+
+--

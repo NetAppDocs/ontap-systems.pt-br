@@ -1,0 +1,215 @@
+= Passo 1: Remova o módulo do controlador
+:allow-uri-read: 
+
+
+
+
+== Passo 1: Remova o módulo do controlador
+
+Você deve remover o módulo do controlador do gabinete quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
+
+. Verifique o LED de status do NVRAM localizado no slot 4/5 do sistema. Há também um LED NVRAM no painel frontal do módulo do controlador. Procure o ícone NV:
++
+image::../media/drw_a1K-70-90_nvram-led_ieops-1463.svg[Gráfico de localização do LED de estado e atenção do NVRAM]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+LED de estado do NVRAM
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+LED de atenção NVRAM
+
+|===
++
+** Se o LED NV estiver desligado, passe à próxima etapa.
+** Se o LED NV estiver intermitente, aguarde que o intermitente pare. Se a intermitência continuar durante mais de 5 minutos, contacte o suporte técnico para obter assistência.
+
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Remova o painel (se necessário) com as duas mãos, segurando as aberturas em cada lado do painel e puxando em sua direção até que o painel se solte dos pinos esféricos na estrutura do chassi.
+. Na parte da frente da unidade, prenda os dedos nos orifícios dos cames de bloqueio, aperte as patilhas nas alavancas do excêntrico e, com cuidado, mas rode firmemente ambas as travas na sua direção ao mesmo tempo.
++
+O módulo do controlador move-se ligeiramente para fora do compartimento.
+
++
+image::../media/drw_a1k_pcm_remove_replace_ieops-1375.svg[Controlador remover gráfico]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+| Travas do came de travamento 
+|===
+. Deslize o módulo do controlador para fora do compartimento e coloque-o em uma superfície plana e estável.
++
+Certifique-se de que suporta a parte inferior do módulo do controlador enquanto o desliza para fora do compartimento.
+
+
+
+
+
+== Passo 2: Mova os fãs
+
+Tem de remover os cinco módulos da ventoinha do módulo do controlador desativado para o módulo do controlador de substituição.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Retire a moldura (se necessário) com duas mãos, segurando as aberturas de cada lado da moldura e puxando-a na sua direção até que a moldura se solte dos pernos esféricos na estrutura do chassis.
+. Prima o botão de bloqueio cinzento no módulo da ventoinha e puxe o módulo da ventoinha para fora do chassis, certificando-se de que o apoia com a mão livre.
++
+
+NOTE: Os módulos da ventoinha são curtos. Apoie sempre a parte inferior do módulo da ventoinha com a mão livre para que não caia subitamente do chassis e o machuque.
+
++
+image::../media/drw_a1k_fan_remove_replace_ieops-1376.svg[Ventilador remova o AFF A1K]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Botão de bloqueio preto
+
+|===
+. Instale a ventoinha no módulo do controlador de substituição:
++
+.. Alinhe as extremidades do alojamento da ventoinha com a abertura na parte dianteira do módulo do controlador de substituição.
+.. Deslize cuidadosamente o módulo da ventoinha até encaixar no módulo do controlador de substituição até que este fique bloqueado.
+
+
+. Repita os passos anteriores para os restantes módulos do ventilador.
+
+
+
+
+== Passo 3: Mova a bateria NV
+
+Mova a bateria NV para o controlador de substituição.
+
+. Abra a tampa da conduta de ar da bateria NV e localize a bateria NV.
++
+image::../media/drw_a1k_remove_replace_nvmembat_ieops-1379.svg[Bateria NV, retire o AFF A1K]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+| Tampa da conduta de ar da bateria NV 
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+Ficha da bateria NV
+
+
+
+ a| 
+image::../media/icon_round_3.png[Legenda número 3]
+ a| 
+Bateria NV
+
+|===
+. Levante a bateria para aceder à ficha da bateria.
+. Aperte o clipe na face da ficha da bateria para soltar a ficha da tomada e, em seguida, desligue o cabo da bateria da tomada.
+. Levante a bateria para fora da conduta de ar e do módulo do controlador.
+. Desloque a bateria para o módulo do controlador de substituição e, em seguida, instale-a na conduta de ar da bateria NV:
++
+.. Abra a conduta de ar da bateria NV no módulo do controlador de substituição.
+.. Ligue a ficha da bateria à tomada e certifique-se de que a ficha fica fixa.
+.. Insira a bateria na ranhura e pressione firmemente a bateria para baixo para se certificar de que está bloqueada no lugar.
+.. Feche a tampa da conduta de ar.
+
+
+
+
+
+
+== Passo 4: Mova os DIMMs do sistema
+
+Mova os DIMMs para o módulo do controlador de substituição.
+
+. Abra o duto de ar da placa-mãe e localize os DIMMs.
++
+image::../media/drw_a1k_dimms_ieops-1512.svg[DIMM remova AFF A1K]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+DIMM do sistema
+
+|===
+. Observe a orientação do DIMM no soquete para que você possa inserir o DIMM no módulo do controlador de substituição na orientação adequada.
+. Ejete o DIMM de seu slot, empurrando lentamente as duas abas do ejetor do DIMM em ambos os lados do DIMM e, em seguida, deslize o DIMM para fora do slot.
++
+
+NOTE: Segure cuidadosamente o DIMM pelas bordas para evitar a pressão nos componentes da placa de circuito DIMM.
+
+. Localize o slot onde você está instalando o DIMM no módulo do controlador de substituição.
+. Insira o DIMM diretamente no slot.
++
+O DIMM se encaixa firmemente no slot, mas você deve conseguir inseri-lo facilmente.  Caso contrário, realinhe o DIMM com o slot e reinsira-o.
+
++
+
+NOTE: Inspecione visualmente o DIMM para verificar se ele está alinhado uniformemente e totalmente inserido no slot.
+
+. Empurre com cuidado, mas firmemente, na borda superior do DIMM até que as abas do ejetor se encaixem no lugar sobre os entalhes nas extremidades do DIMM.
+. Repita estas etapas para os DIMMs restantes. Feche a conduta de ar da placa-mãe.
+
+
+
+
+== Passo 5: Instale o módulo do controlador
+
+Reinstale o módulo do controlador e inicialize-o.
+
+. Certifique-se de que a conduta de ar está completamente fechada, rodando-a até onde for.
++
+Ele deve estar alinhado com a chapa metálica do módulo do controlador.
+
+. Alinhe a extremidade do módulo do controlador com a abertura no compartimento e deslize o módulo do controlador para dentro do chassi com as alavancas giradas para longe da frente do sistema.
+. Assim que o módulo do controlador o impedir de deslizar para mais longe, rode as pegas do excêntrico para dentro até que fiquem presas por baixo das ventoinhas
++
+
+NOTE: Não use força excessiva ao deslizar o módulo do controlador para dentro do compartimento para evitar danificar os conetores.
+
++
+
+NOTE: O controlador inicializa no prompt Loader assim que ele estiver totalmente assentado.
+
+. No prompt Loader, digite `show date` para exibir a data e a hora no controlador de substituição. A data e a hora estão em GMT.
++
+
+NOTE: A hora é exibida no horário local e no formato de 24 horas.
+
+. Se necessário, defina a data atual com o `set date mm/dd/yyyy` comando.
+. Se necessário, defina a hora, em GMT, usando o `set time hh:mm:ss` comando.
++
+.. Você pode obter o GMT atual do nó parceiro com o `date -u` comando.
+
+
+

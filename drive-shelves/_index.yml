@@ -7,6 +7,12 @@ indexpage:
   lead: As NS224 gavetas e SAS da NetApp ajudam a oferecer a performance, resiliência
     e flexibilidade necessárias para a transformação digital.
   tiles:
+  - title: Instalar prateleiras NX224
+    links:
+    - title: Gaveta para adicionar quente
+      url: "../nx224/hot-add-shelf.html"
+    - title: Alterar ID do compartimento
+      url: "../nx224/change-shelf-id.html"
   - title: Instale as NS224 gavetas
     links:
     - title: Gaveta para adicionar quente
@@ -25,6 +31,26 @@ indexpage:
       url: "../sas3/install-change-shelf-id.html"
     - title: Regras de cabeamento SAS, planilhas e exemplos
       url: "../sas3/overview-cabling-rules-examples.html"
+  - title: Manutenção de prateleiras NX224
+    links:
+    - title: Suporte de arranque
+      url: "../nx224/service-replace-boot-media.html"
+    - title: DIMM
+      url: "../nx224/service-replace-dimm.html"
+    - title: Condução
+      url: "../nx224/service-replace-drive.html"
+    - title: Compartimento de unidades
+      url: "../nx224/nx224-shelf-overview.html"
+    - title: Ventoinha
+      url: "../nx224/service-replace-fan.html"
+    - title: Módulo de e/S.
+      url: "../nx224/service-replace-io-module.html"
+    - title: NSM
+      url: "../nx224/service-replace-nsm140.html"
+    - title: Fonte de alimentação
+      url: "../nx224/service-replace-power-supply.html"
+    - title: Bateria RTC
+      url: "../nx224/service-replace-rtc-battery.html"
   - title: Manter NS224 gavetas
     links:
     - title: Suporte de arranque

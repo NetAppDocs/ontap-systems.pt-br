@@ -1,0 +1,210 @@
+= 
+:allow-uri-read: 
+
+
+Se o sistema de armazenamento tiver slots disponíveis, instale o novo módulo de e/S em um dos slots disponíveis. Se todos os slots estiverem ocupados, remova um módulo de e/S existente para criar espaço e, em seguida, instale o novo.
+
+.Antes de começar
+* Verifique o https://hwu.netapp.com/["NetApp Hardware Universe"^] para garantir que o novo módulo de E/S seja compatível com seu sistema de armazenamento e versão do ONTAP .
+* Se houver vários slots disponíveis, verifique as prioridades do slot https://hwu.netapp.com/["NetApp Hardware Universe"^] e use a melhor disponível para seu módulo de e/S.
+* Certifique-se de que todos os outros componentes estão a funcionar corretamente.
+* Certifique-se de ter o componente de substituição que você recebeu da NetApp.
+
+
+[role="tabbed-block"]
+====
+.Adicione o módulo de e/S a um slot disponível
+--
+Você pode adicionar um novo módulo de e/S a um sistema de armazenamento com slots disponíveis.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Gire a bandeja de gerenciamento de cabos para baixo puxando os botões no interior da bandeja de gerenciamento de cabos e girando-a para baixo.
+. Retire o módulo de obturação da ranhura alvo do suporte:
++
+.. Prima o trinco do excêntrico no módulo obturador na ranhura alvo.
+.. Rode o trinco do excêntrico para longe do módulo o mais longe possível.
+.. Remova o módulo do compartimento prendendo o dedo na abertura da alavanca do came e puxando o módulo para fora do compartimento.
+
+
+. Instale o módulo de e/S:
++
+.. Alinhe o módulo de e/S com as extremidades da abertura da ranhura do compartimento.
+.. Deslize cuidadosamente o módulo para dentro da ranhura até ao compartimento e, em seguida, rode o trinco da came até ao fim para bloquear o módulo no lugar.
+
+
+. Ligue o módulo de e/S ao dispositivo designado.
++
+
+NOTE: Certifique-se de que quaisquer slots de e/S não utilizados tenham espaços em branco instalados para evitar possíveis problemas térmicos.
+
+. Rode o tabuleiro de gestão de cabos para cima até à posição fechada.
+. No prompt Loader, reinicie o nó:
++
+`bye`
+
++
+
+NOTE: Isso reinicializa o módulo de e/S e outros componentes e reinicializa o nó.
+
+. Pressione <enter> quando as mensagens do console pararem.
++
+** Se você vir o prompt _login_, vá para a próxima etapa.
+** Se você não vir o prompt de login, faça login no nó parceiro.
+
+
+. Devolva apenas a raiz com a opção override-destination-checks:
++
+`storage failover giveback -ofnode impaired-node -only-root true -override -destination-checks true`
+
++
+
+NOTE: O comando a seguir só está disponível no nível de privilégio Modo de diagnóstico.  Para obter mais informações sobre níveis de privilégio, consultelink:https://docs.netapp.com/us-en/ontap/system-admin/administrative-privilege-levels-concept.html["Entenda os níveis de privilégio para comandos ONTAP CLI"^] .
+
++
+Se encontrar erros, https://support.netapp.com["Suporte à NetApp"] contacte .
+
+. Aguarde 5 minutos após a conclusão do relatório de giveback e verifique o status de failover e o status de giveback:
++
+`storage failover show`e `storage failover show-giveback`
+
++
+
+NOTE: O comando a seguir só está disponível no nível de privilégio Modo de diagnóstico.
+
+. Se os links de interconexão HA foram desativados, reative-os:
++
+`system ha interconnect link on -node healthy-node -link 0`
+
++
+`system ha interconnect link on -node healthy-node -link 1`
+
+. Volte a colocar o controlador afetado em funcionamento normal, devolvendo o respetivo armazenamento:
++
+`storage failover giveback -ofnode _impaired_node_name_`
+
+. Repita estes passos para o controlador B.
+. A partir do nó saudável, restaure a giveback automática se você o tiver desativado:
++
+`storage failover modify -node local -auto-giveback-of _true_`
+
+. Se o AutoSupport estiver ativado, restaure a criação automática de casos:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
+
+
+--
+.Adicionar módulo de e/S a um sistema totalmente preenchido
+--
+Você pode adicionar um módulo de e/S a um sistema totalmente preenchido removendo um módulo de e/S existente e instalando um novo em seu lugar.
+
+.Sobre esta tarefa
+Certifique-se de que compreende os seguintes cenários para adicionar um novo módulo de e/S a um sistema totalmente preenchido:
+
+[cols="1,2"]
+|===
+| Cenário | Ação necessária 
+
+
+ a| 
+NIC para NIC (mesmo número de portas)
+ a| 
+Os LIFs migrarão automaticamente quando seu módulo de controlador for desligado.
+
+
+
+ a| 
+NIC para NIC (número diferente de portas)
+ a| 
+Reatribua permanentemente os LIFs selecionados para uma porta inicial diferente. Consulte https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["Migração de um LIF"^] para obter mais informações.
+
+
+
+ a| 
+NIC para módulo de e/S de armazenamento
+ a| 
+Use o System Manager para migrar permanentemente os LIFs para diferentes portas residenciais, conforme descrito em https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["Migração de um LIF"^].
+
+|===
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Desconete qualquer cabeamento do módulo de e/S de destino.
+. Gire a bandeja de gerenciamento de cabos para baixo puxando os botões no interior da bandeja de gerenciamento de cabos e girando-a para baixo.
+. Retire o módulo de e/S alvo do chassis:
++
+.. Prima o botão do trinco do excêntrico.
+.. Rode o trinco do excêntrico para longe do módulo o mais longe possível.
+.. Remova o módulo do compartimento prendendo o dedo na abertura da alavanca do came e puxando o módulo para fora do compartimento.
++
+Certifique-se de manter o controle de qual slot o módulo de e/S estava.
+
+
+
+. Instale o módulo de e/S no slot de destino no compartimento:
++
+.. Alinhe o módulo com as extremidades da abertura da ranhura do compartimento.
+.. Deslize cuidadosamente o módulo para dentro da ranhura até ao compartimento e, em seguida, rode o trinco da came até ao fim para bloquear o módulo no lugar.
+
+
+. Ligue o módulo de e/S ao dispositivo designado.
+. Repita as etapas de remoção e instalação para substituir módulos adicionais para o controlador.
+. Rode o tabuleiro de gestão de cabos para cima até à posição fechada.
+. Reinicie o controlador a partir do prompt Loader:_bye_
++
+Isso reinicializa as placas PCIe e outros componentes e reinicializa o nó.
+
+. Pressione <enter> quando as mensagens do console pararem.
++
+** Se você vir o prompt _login_, vá para a próxima etapa.
+** Se você não vir o prompt de login, faça login no nó parceiro.
+
+
+. Devolva apenas a raiz com a opção override-destination-checks:
++
+`storage failover giveback -ofnode impaired-node -only-root true -override -destination-checks true`
+
++
+
+NOTE: O comando a seguir só está disponível no nível de privilégio Modo de diagnóstico.  Para obter mais informações sobre níveis de privilégio, consultelink:https://docs.netapp.com/us-en/ontap/system-admin/administrative-privilege-levels-concept.html["Entenda os níveis de privilégio para comandos ONTAP CLI"^] .
+
++
+Se encontrar erros, https://support.netapp.com["Suporte à NetApp"] contacte .
+
+. Aguarde 5 minutos após a conclusão do relatório de giveback e verifique o status de failover e o status de giveback:
++
+`storage failover show`e `storage failover show-giveback`
+
++
+
+NOTE: O comando a seguir só está disponível no nível de privilégio Modo de diagnóstico.
+
+. Se os links de interconexão HA foram desativados, reative-os:
++
+`system ha interconnect link on -node healthy-node -link 0`
+
++
+`system ha interconnect link on -node healthy-node -link 1`
+
+. Volte a colocar o controlador afetado em funcionamento normal, devolvendo o respetivo armazenamento:
++
+`storage failover giveback -ofnode impaired_node_name`
+
+. Ative o giveback automático se ele foi desativado:
++
+`storage failover modify -node local -auto-giveback-of true`
+
+. Execute um dos seguintes procedimentos:
++
+** Se você removeu um módulo de E/S de armazenamento e instalou um novo módulo de E/S de NIC, use o seguinte comando de rede para cada porta:
++
+`storage port modify -node <node name>__ -port <port name>__ -mode network`
+
+** Se você removeu um módulo de E/S NIC e instalou um módulo de E/S de armazenamento, instale e conecte os cabos das prateleiras NX224, conforme descrito emlink:../nx224/hot-add-shelf.html["Prateleira NX224 de adição a quente"] .
+
+
+. Repita estes passos para o controlador B.
+
+
+--
+====

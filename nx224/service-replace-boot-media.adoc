@@ -1,0 +1,195 @@
+---
+permalink: nx224/service-replace-boot-media.html 
+sidebar: sidebar 
+keywords: nx224, shelves, shelf, nx224 shelves, boot, media, run, ontap, nvme, module, nsm, firmware, version, nondisruptive, i/o 
+summary: Você pode substituir uma mídia de inicialização com falha em um compartimento NX224.  A substituição da mídia de inicialização pode ser feita sem interrupções, enquanto a prateleira estiver ligada e a E/S estiver em andamento. 
+---
+= Substituir a mídia de inicialização - prateleiras NX224
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode substituir uma mídia de inicialização com falha em um compartimento NX224.  A substituição da mídia de inicialização pode ser feita sem interrupções, enquanto a prateleira estiver ligada e a E/S estiver em andamento.
+
+.Sobre esta tarefa
+* Após a substituição do suporte de arranque, a imagem de arranque do NSM parceiro da prateleira é automaticamente copiada para o suporte de arranque de substituição.
++
+Isso pode levar até cinco minutos.
+
+* Aguarde pelo menos 70 segundos entre a remoção e a instalação do módulo de gaveta NVMe (NSM).
++
+Isso permite tempo suficiente para que o ONTAP processe o evento de remoção de NSM.
+
+* Se necessário, você pode ligar os LEDs de localização da prateleira (azul) para ajudar a localizar fisicamente a prateleira afetada: `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
++
+Se você não souber `_shelf_name_` o do compartimento afetado, execute o `storage shelf show` comando.
+
++
+Uma prateleira tem três LEDs de localização: Um no painel de visualização do operador e um em cada NSM. Os LEDs de localização permanecem acesos durante 30 minutos. Você pode desativá-los digitando o mesmo comando, mas usando a `off` opção.
+
+* Depois de substituir o suporte de arranque, pode devolver a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit.
++
+Se você precisar do número RMA ou de ajuda adicional com o procedimento de substituição, entre em Contato com o suporte técnico em https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"^], 888-463-8277 (América do Norte), 00-800-44-638277 (Europa) ou 800-800-80-800 (Ásia/Pacífico).
+
+
+
+.Antes de começar
+* O NSM parceiro da prateleira deve estar instalado, funcionando e cabeado corretamente para que sua prateleira mantenha a conectividade quando você remover o NSM com a FRU com falha (NSM de destino).  Você pode verificar o status do parceiro NSM por https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["baixando e executando o Config Advisor"^] .
+* Todos os outros componentes do sistema devem estar a funcionar corretamente.
+
+
+.Passos
+. Aterre-se corretamente.
+. Desconete o cabeamento do NSM que contém a FRU que você está substituindo:
++
+.. Desconecte o cabo de alimentação da fonte de alimentação abrindo o retentor do cabo de alimentação e, em seguida, desconectando o cabo de alimentação da fonte de alimentação.
++
+As fontes de alimentação não têm um interrutor de alimentação.
+
+.. Desconete o cabeamento de armazenamento das portas NSM.
++
+Anote as portas NSM às quais cada cabo está conetado. Reconete os cabos às mesmas portas quando você reinserir o NSM, mais adiante neste procedimento.
+
+
+
+. Retire o NSM:
++
+image::../media/drw_g_and_t_handles_remove_ieops-1837.svg[Retire o NSM.]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Em ambas as extremidades do NSM, empurre as patilhas de bloqueio verticais para fora para soltar as pegas.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+** Puxe as pegas na sua direção para retirar o NSM do plano médio.
++
+Ao puxar, as alças se estendem para fora da prateleira. Quando sentir alguma resistência, continue puxando.
+
+** Deslize o NSM para fora da prateleira e coloque-o sobre uma superfície plana e estável.
++
+Certifique-se de que apoia a parte inferior do NSM enquanto o desliza para fora da prateleira.
+
+
+
+
+
+ a| 
+image::../media/icon_round_3.png[Legenda número 3]
+ a| 
+Rode as pegas para a posição vertical (junto às patilhas) para as afastar.
+
+|===
+. Abra a tampa do NSM rodando o parafuso de aperto manual no sentido contrário ao dos ponteiros do relógio para o desapertar e, em seguida, abra a tampa.
+. Localize fisicamente a Mídia de inicialização com falha.
+. Remova o suporte de arranque:
++
+image::../media/drw_tp_boot_media_replace_ieops-2201.svg[Remova o suporte de arranque.]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Localização do suporte de arranque
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+Prima a patilha azul para soltar a extremidade direita do suporte de arranque.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Legenda número 3]
+ a| 
+Levante a extremidade direita do suporte de arranque a um ligeiro ângulo para obter uma boa aderência ao longo dos lados do suporte de arranque.
+
+
+
+ a| 
+image::../media/icon_round_4.png[Legenda número 4]
+ a| 
+Puxe cuidadosamente a extremidade esquerda do suporte de arranque para fora do respetivo encaixe.
+
+|===
+. Instale o suporte de arranque de substituição:
++
+.. Alinhe as extremidades do suporte de arranque com o alojamento do encaixe e, em seguida, empurre-o suavemente no encaixe.
+.. Rode o suporte de arranque para baixo em direção ao botão de bloqueio.
+.. Prima o botão de bloqueio, rode o suporte de arranque totalmente para baixo e, em seguida, solte o botão de bloqueio.
+
+
+. Feche a tampa do NSM e, em seguida, aperte o parafuso de orelhas.
+. Insira o NSM na prateleira:
++
+image::../media/drw_g_and_t_handles_reinstall_ieops-1838.svg[Substitua o NSM.]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Se tiver girado os manípulos de NSM na vertical (junto às patilhas) para os retirar do caminho enquanto efetua a manutenção do NSM, rode-os para baixo para a posição horizontal.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+Alinhe a parte de trás do NSM com a abertura na prateleira e, em seguida, empurre cuidadosamente o NSM utilizando as pegas até estar completamente assente.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Legenda número 3]
+ a| 
+Rode as pegas para a posição vertical e bloqueie-as com as patilhas.
+
+|===
+. Reconecte o cabeamento ao NSM:
++
+.. Reconecte o cabeamento de armazenamento às mesmas oito portas NSM.
++
+Os cabos são inseridos com a presilha do conetor voltada para cima. Quando um cabo é inserido corretamente, ele clica no lugar.
+
+.. Reconecte o cabo de alimentação à fonte de alimentação e prenda-o com o retentor do cabo de alimentação.
++
+Quando estiver a funcionar corretamente, o LED bicolor de uma fonte de alimentação acende-se a verde.
+
++
+Além disso, ambos os LEDs LNK da porta NSM (verde) acendem-se. Se um LED LNK não acender, recoloque o cabo.
+
+
+
+. Verifique se os LEDs atenção (âmbar) no NSM que contêm o suporte de arranque com falha e o painel de visualização do operador da prateleira já não estão acesos.
++
+Pode demorar entre 5 a 10 minutos para que os LEDs de atenção se desliguem. Esta é a quantidade de tempo que leva o NSM para reiniciar e a cópia de imagem de Mídia de inicialização para ser concluída.
+
++
+Se os LEDs de avaria permanecerem ligados, o suporte de arranque poderá não estar corretamente instalado ou poderá haver outro problema e deverá contactar o suporte técnico para obter assistência.
+
+. Verifique se o NSM está conectado corretamente, por https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["executando o Active IQ Config Advisor"^] .
++
+Se forem gerados erros de cabeamento, siga as ações corretivas fornecidas.
+
+

@@ -1,0 +1,220 @@
+---
+permalink: nx224/hot-add-shelf.html 
+sidebar: sidebar 
+keywords: nx224, shelves, shelf, nx224 shelves, hot-add, ha, pair, install, hot-add an nx224 drive shelf 
+summary: Você pode adicionar um rack de unidade NX224 a quente depois que seu cluster AFX atender a determinados requisitos e depois que as tarefas de preparação aplicáveis ao seu cluster AFX forem concluídas. 
+---
+= Adicionar uma prateleira a quente - prateleiras NX224
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode expandir seus recursos de armazenamento adicionando um rack NX224 à sua configuração de cluster AFX existente.
+
+.Sobre esta tarefa
+* Depois de conectar uma prateleira adicionada a quente, o ONTAP reconhece a prateleira.  O firmware da prateleira NSM e o firmware da unidade devem ser atualizados automaticamente, se necessário.
++
+
+NOTE: As atualizações de firmware podem levar até 30 minutos.
+
+
+
+.Antes de começar
+* Antes de adicionar uma prateleira a quente, certifique-se de ter:
++
+** Um clipe de papel com um lado esticado ou uma caneta esferográfica de ponta fina.
++
+Para alterar a ID da prateleira, use o clipe de papel ou a caneta esferográfica para acessar o botão ID da prateleira atrás do Painel do Mostrador do Operador (ODP) para a etapa alterar ID da prateleira.
+
+** O número e o tipo corretos de cabos para conectar a prateleira. Ver https://hwu.netapp.com["NetApp Hardware Universe"^] .
+
+
+* Entenda que uma prateleira NX224 totalmente carregada pode pesar em média 25,8 kg (56,8 lbs) e requer duas pessoas para levantá-la ou usar um elevador hidráulico.  Evite remover componentes da prateleira (da parte frontal ou traseira) para reduzir o peso da prateleira, pois o peso ficará desequilibrado.
+* Uma prateleira NX224 contém dois módulos NSM140.  O módulo superior vai no slot A (NSM A) e o módulo inferior vai no slot B (NSM B).
+* O modelo da sua plataforma e a versão do ONTAP devem ser compatíveis com o compartimento NX224 e as unidades que você está adicionando a quente. Ver https://hwu.netapp.com["NetApp Hardware Universe"^]
+* Seu cluster AFX deve ter menos que o número máximo de prateleiras suportadas, pelo menos o número de prateleiras que você planeja adicionar a quente.
++
+Você não pode ter excedido o número máximo de prateleiras suportadas pelo seu cluster AFX após adicionar prateleiras a quente. Ver https://hwu.netapp.com["NetApp Hardware Universe"^] .
+
+* *Melhores práticas:* Certifique-se de ter a versão atual do https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["Pacote de Qualificação de disco"^] instalado antes de adicionar uma prateleira a quente.
++
+Ter a versão atual do DQP instalada permite que seu sistema reconheça e use unidades recém-qualificadas. Isso evita mensagens de eventos do sistema sobre ter informações de unidade não atuais e prevenção do particionamento de unidade porque as unidades não são reconhecidas. O DQP também notifica você sobre o firmware da unidade não atual.
+
+* *Melhor prática*: Executar https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^] antes e depois de adicionar uma prateleira a quente para visualizar quaisquer mensagens de erro de cabeamento de armazenamento e as ações corretivas que você deve tomar.
++
+Executar o Active IQ Config Advisor antes de adicionar um shelf a quente fornece um instantâneo da conectividade Ethernet (ENET) do shelf existente, verifica as versões de firmware do módulo de shelf NVMe (NSM) e permite que você verifique uma ID de shelf já em uso no cluster AFX.
+
++
+Executar o Active IQ Config Advisor após adicionar uma prateleira permite que você verifique se as prateleiras estão cabeadas corretamente e se os IDs das prateleiras são exclusivos dentro do cluster AFX.
+
+* *Melhores práticas:* Certifique-se de ter versões atuais de https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["Firmware do módulo de gaveta NVMe (NSM)"^] e https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["firmware da unidade"^] no seu sistema de armazenamento antes de adicionar uma nova prateleira.
++
+
+NOTE: Não reverta o firmware para uma versão que não suporte a gaveta e seus componentes.
+
+
+
+
+
+== Etapa 1: Instale uma prateleira para adição a quente
+
+Você precisa instalar uma prateleira NX224 em um gabinete ou rack de telecomunicações, conectar os cabos de alimentação (que ligam automaticamente a prateleira) e definir a ID da prateleira.
+
+.Passos
+. Instale o kit de trilho para a prateleira, conforme necessário, usando as instruções incluídas no kit.
++
+
+NOTE: Use sempre o kit de trilho apropriado para sua prateleira para instalar a prateleira em um rack ou gabinete.
+
+. Instale a prateleira:
++
+.. Posicione a parte de trás da prateleira sobre os trilhos e, em seguida, apoie a prateleira a partir da parte inferior e deslize-a para o gabinete ou rack de telecomunicações.
++
+É recomendável instalar todas as prateleiras próximas aos interruptores no mesmo rack.
+
+.. Prenda a prateleira ao gabinete ou rack de telecomunicações usando os parafusos de montagem incluídos no kit.
+
+
+. Ligue a alimentação:
++
+.. Conecte os cabos de alimentação à prateleira e prenda-os no lugar com os retentores de cabos de alimentação.
+.. Conecte os cabos de energia a diferentes fontes de energia para resiliência.
++
+Uma prateleira liga-se quando ligada a uma fonte de alimentação; não tem interrutores de alimentação. Quando estiver a funcionar corretamente, o LED bicolor de uma fonte de alimentação acende-se a verde.
+
+
+
+. Defina o ID da prateleira como um número exclusivo dentro do cluster AFX:
++
+Para obter instruções mais detalhadas, consultelink:change-shelf-id.html["Alterar ID de prateleira - prateleiras NX224"^] .
+
++
+image::../media/drw_tp_change_shelf_id_ieops-2381.svg[Alterar ID da prateleira NX224]
+
++
+[cols="20%,80%"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Tampa da extremidade da prateleira
+
+
+
+ a| 
+image::../media/icon_round_2.png[[Legenda número 2]
+ a| 
+Placa frontal da prateleira
+
+
+
+ a| 
+image::../media/icon_round_3.png[[Legenda número 3]
+ a| 
+Número de ID do compartimento
+
+
+
+ a| 
+image::../media/icon_round_4.png[[Legenda número 4]
+ a| 
+Botão de acesso ao ID da prateleira
+
+|===
++
+.. Retire a tampa da extremidade esquerda e localize o pequeno orifício à direita dos LEDs.
+.. Insira a extremidade de um clipe de papel ou ferramenta semelhante no pequeno orifício para alcançar o botão ID da prateleira.
+.. Prima e mantenha premido o botão (durante até 15 segundos) até o primeiro número no visor digital piscar e, em seguida, solte o botão.
++
+Se a ID demorar mais de 15 segundos a piscar, prima e mantenha premido o botão novamente, certificando-se de que o prime completamente.
+
+.. Pressione e solte o botão para avançar o número até atingir o número desejado de 0 a 9.
+.. Repita as subetapas 4c e 4D para definir o segundo número do ID do compartimento.
++
+Pode demorar até três segundos (em vez de 15 segundos) para o número piscar.
+
+.. Prima e mantenha premido o botão até o segundo número deixar de piscar.
++
+Após cerca de cinco segundos, ambos os números começam a piscar e o LED âmbar no ODP acende-se.
+
+.. Ligue o compartimento para fazer com que o ID do compartimento entre em vigor.
++
+Você deve desconetar os dois cabos de energia da gaveta, esperar 10 segundos e conectá-los novamente.
+
++
+Quando a energia é restaurada para as fontes de alimentação, seus LEDs bicolored acendem-se a verde.
+
+
+
+
+
+
+
+== Etapa 2: Prateleira de cabos para adição a quente
+
+Você conecta cada prateleira NX224 que estiver adicionando a quente de modo que cada prateleira tenha oito conexões para cada switch.
+
+.Antes de começar
+* Familiarize-se com a orientação correta do conector do cabo e com a localização e a rotulagem das portas nos módulos de prateleira NX224 NSM140.
++
+** Os cabos são inseridos com a presilha do conetor voltada para cima.
++
+Quando um cabo é inserido corretamente, ele clica no lugar.
+
++
+Depois de conetar ambas as extremidades do cabo, os LEDs LNK (verde) da prateleira e da porta do controlador acendem-se. Se um LED LNK de porta não acender, recoloque o cabo.
+
++
+image::../media/oie_cable_pull_tab_up.png[Os cabos são inseridos com a presilha de puxar do conetor voltada para cima]
+
+** Cada módulo NSM140 inclui 4 portas 100GbE CX7 Path_A (e1a, e2a, e3a e e4a) e 4 portas 100GbE CX7 Path_B (e1b, e2b, e3b e e4b).
++
+
+NOTE: Cabos de breakout separados são necessários para as portas Path_A e Path_B em cada módulo NSM140, para um total de quatro cabos de breakout por prateleira.
+
++
+A ilustração a seguir destaca as portas Path_A e Path_B nos módulos NSM140:
+
++
+image::../media/drw_tp_nsm_ports_ieops-2301.svg[Localização das portas Path_A e Path_B do NX224 NSM140.]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Portas Path_A (portas azuis)
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+Portas Path_B (portas vermelhas)
+
+|===
+
+
+
+
+.Passos
+. Prateleira de cabos NSM A e NSM B Path_A portas e1a, e2a, e3a e e4a para qualquer porta no switch A.
+. Prateleira de cabos NSM A e NSM B Path_B portas e1b, e2b, e3b e e4b para qualquer porta no switch B.
++
+A ilustração a seguir destaca o cabeamento para adicionar uma prateleira adicional a uma configuração de switch.  Para adicionar prateleiras adicionais, siga a mesma metodologia de cabeamento baseada em switch.
+
++
+image::../media/drw_nx224_afx_a1k_ieops-2344.svg[Cabeamento do switch NX224 para AFX A1K]
+
+. Verifique se o compartimento hot-added está cabeado corretamente usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]o .
++
+Se forem gerados erros de cabeamento, siga as ações corretivas fornecidas.
+
+

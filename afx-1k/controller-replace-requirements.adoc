@@ -1,0 +1,37 @@
+---
+permalink: afx-1k/controller-replace-requirements.html 
+sidebar: sidebar 
+keywords: afx 1k, prerequisite, replace the controller module 
+summary: Antes de substituir o controlador no seu sistema de armazenamento AFX 1K, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida.  Isso inclui ter o controlador de substituição correto, um backup da configuração do sistema e acesso a quaisquer ferramentas e firmware necessários. 
+---
+= Requisitos para substituir o controlador - AFX 1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de substituir o controlador no seu sistema de armazenamento AFX 1K, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, verificar se você tem o controlador de substituição correto e salvar a saída do console do controlador em um arquivo de log de texto.
+
+Reveja os requisitos para substituir o controlador.
+
+* É importante que você aplique os comandos nessas etapas nos sistemas corretos:
++
+** O controlador _prejudicado_ é o controlador que está sendo substituído.
+** O controlador _replacement_ é o novo controlador que está substituindo o controlador prejudicado.
+** O controlador _Healthy_ é o controlador sobrevivente.
+
+
+* Todas as gavetas de unidades devem estar funcionando corretamente.
+* O controlador saudável deve ser capaz de assumir o controlador que está a ser substituído (referido neste procedimento como ""controlador deficiente"").
+* Você deve substituir o componente com falha pela unidade substituível em campo (FRU) que você recebeu da NetApp.
+* É necessário substituir um módulo controlador por um módulo controlador do mesmo tipo de modelo. Você não pode atualizar seu sistema apenas substituindo o módulo do controlador.
+* Não é possível alterar nenhuma unidade ou compartimentos de unidades como parte deste procedimento.
+* Você deve sempre capturar a saída do console do controlador para um arquivo de log de texto.
++
+Isso fornece um Registro do procedimento para que você possa solucionar qualquer problema que possa encontrar durante o processo de substituição.
+
+
+
+.O que se segue?
+Após revisar os requisitos para substituir seu controlador AFX 1K,link:controller-replace-shutdown.html["desligue os controladores"] .

@@ -2,15 +2,15 @@
 :allow-uri-read: 
 
 
-As fontes de alimentação são redundantes e hot-swap.
-
 .Sobre esta tarefa
-Este procedimento é escrito para substituir uma PSU de cada vez.
-
+* Este procedimento é escrito para substituir uma PSU de cada vez.
++
 
 IMPORTANT: Não misture PSUs com diferentes classificações de eficiência. Sempre substitua como por like.
 
-Use o procedimento apropriado para o seu tipo de PSU: AC ou DC.
+* Use o procedimento apropriado para o seu tipo de PSU: AC ou DC.
+* As fontes de alimentação são redundantes e intercambiáveis a quente; você não precisa assumir o controle do controlador para executar essa tarefa.
+
 
 [role="tabbed-block"]
 ====

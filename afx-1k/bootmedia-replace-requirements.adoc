@@ -1,0 +1,29 @@
+---
+permalink: afx-1k/bootmedia-replace-requirements.html 
+sidebar: sidebar 
+keywords: afx 1k, replace the boot media 
+summary: 'Antes de substituir a mídia de inicialização no seu sistema de armazenamento AFX 1K, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida.  Isso inclui verificar se você tem a mídia de inicialização de substituição correta, confirmar se não há portas de cluster com defeito no controlador e determinar se o Onboard Key Manager (OKM) ou o External Key Manager (EKM) está habilitado.' 
+---
+= Requisitos para substituir a mídia de inicialização - AFX 1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de substituir a mídia de inicialização no seu sistema de armazenamento AFX 1K, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida.  Isso inclui verificar se você tem a mídia de inicialização de substituição correta, confirmar se não há portas de cluster com defeito no controlador e determinar se o Onboard Key Manager (OKM) ou o External Key Manager (EKM) está habilitado.
+
+Antes de substituir o suporte de arranque, certifique-se de que verifica os seguintes requisitos.
+
+* Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor.
+* É importante que você aplique os comandos nestas etapas no controlador correto:
++
+** O controlador _prejudicado_ é o controlador no qual você está realizando a manutenção.
+** O controlador _Healthy_ é o parceiro de HA do controlador prejudicado.
+
+
+* Não deve haver portas do cluster defeituosas no controlador prejudicado.
+
+
+.O que se segue?
+Depois de revisar os requisitos para substituir a mídia de inicialização, você precisalink:bootmedia-shutdown.html["desligue o controlador"] .

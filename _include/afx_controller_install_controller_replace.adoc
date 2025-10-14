@@ -1,0 +1,32 @@
+= 
+:allow-uri-read: 
+
+
+Reinstale o módulo do controlador e inicialize-o.
+
+. Certifique-se de que a conduta de ar está completamente fechada, rodando-a até onde for.
++
+Ele deve estar alinhado com a chapa metálica do módulo do controlador.
+
+. Alinhe a extremidade do módulo do controlador com a abertura no compartimento e deslize o módulo do controlador para dentro do chassi com as alavancas giradas para longe da frente do sistema.
+. Assim que o módulo do controlador o impedir de deslizar para mais longe, rode as pegas do excêntrico para dentro até que fiquem presas por baixo das ventoinhas
++
+
+NOTE: Não use força excessiva ao deslizar o módulo do controlador para dentro do compartimento para evitar danificar os conetores.
+
++
+
+NOTE: O controlador inicializa no prompt Loader assim que ele estiver totalmente assentado.
+
+. No prompt Loader, digite `show date` para exibir a data e a hora no controlador de substituição. A data e a hora estão em GMT.
++
+
+NOTE: A hora é exibida no horário local e no formato de 24 horas.
+
+. Se necessário, defina a data atual com o `set date mm/dd/yyyy` comando.
+. Se necessário, defina a hora, em GMT, usando o `set time hh:mm:ss` comando.
++
+.. Você pode obter o GMT atual do nó parceiro com o `date -u` comando.
+
+
+

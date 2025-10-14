@@ -1,0 +1,40 @@
+---
+permalink: afx-1k/controller-replace-restore-system-rma.html 
+sidebar: sidebar 
+keywords: afx 1k, how to restore NetApp Storage Encryption, how to complete the replacement process 
+summary: 'Verifique se as interfaces lógicas (LIFs) estão reportando à porta inicial, execute uma verificação de integridade do cluster e, em seguida, devolva a peça com falha à NetApp para concluir a etapa final do procedimento de substituição do controlador AFX 1K.' 
+---
+= Substituição completa do controlador - AFX 1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Verifique se as interfaces lógicas (LIFs) estão reportando à porta inicial, execute uma verificação de integridade do cluster e, em seguida, devolva a peça com falha à NetApp para concluir a etapa final do procedimento de substituição do controlador AFX 1K.
+
+
+
+== Etapa 1: Verificar LIFs e verificar a integridade do cluster
+
+Antes de retornar o nó de substituição ao serviço, certifique-se de que as interfaces lógicas estejam em suas portas iniciais, verifique a integridade do cluster e redefina o retorno automático.
+
+.Passos
+. Verifique se as interfaces lógicas estão reportando ao servidor doméstico e às portas:
++
+`network interface show -is-home false`
+
++
+Se alguma interface lógica for listada como falsa, retorne-a para suas portas iniciais:
+
++
+`network interface revert -vserver * -lif *`
+
+. Verifique a integridade do cluster. Consulte o https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["Como realizar uma verificação de integridade do cluster com um script no ONTAP"^] artigo da KB para obter mais informações.
+
+
+
+
+== Passo 2: Devolva a peça com falha ao NetApp
+
+Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

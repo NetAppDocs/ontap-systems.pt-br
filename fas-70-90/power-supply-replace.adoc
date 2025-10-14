@@ -13,15 +13,15 @@ summary: 'Substitua uma fonte de alimentação CA ou CC (PSU) no seu sistema FAS
 [role="lead"]
 Substitua uma fonte de alimentação CA ou CC (PSU) no seu sistema FAS70 ou FAS90 quando falhar ou ficar com defeito, garantindo que o sistema continua a receber a energia necessária para uma operação estável. O processo de substituição envolve desconetar a PSU defeituosa da fonte de alimentação, desconetar o cabo de alimentação, substituir a PSU defeituosa e reconectá-la à fonte de alimentação.
 
-As fontes de alimentação são redundantes e hot-swap.
-
 .Sobre esta tarefa
-Este procedimento é escrito para substituir uma PSU de cada vez.
-
+* Este procedimento é escrito para substituir uma PSU de cada vez.
++
 
 IMPORTANT: Não misture PSUs com diferentes classificações de eficiência. Sempre substitua como por like.
 
-Use o procedimento apropriado para o seu tipo de PSU: AC ou DC.
+* Use o procedimento apropriado para o seu tipo de PSU: AC ou DC.
+* As fontes de alimentação são redundantes e intercambiáveis a quente; você não precisa assumir o controle do controlador para executar essa tarefa.
+
 
 [role="tabbed-block"]
 ====

@@ -1,0 +1,142 @@
+---
+permalink: nx224/change-shelf-id.html 
+sidebar: sidebar 
+keywords: nx224, shelves, shelf, nx224 shelves, change, shelf, id, system, ontap, unown, spare, offline, aggregate, change an nx224 drive shelf id 
+summary: 'Você pode alterar uma ID de prateleira em um sistema quando o ONTAP ainda não estiver em execução ou ao adicionar uma prateleira antes de ela ser conectada ao sistema.  Você também pode alterar uma ID de prateleira quando o ONTAP estiver ativo e em execução (os módulos do controlador estão disponíveis para fornecer dados) e todas as unidades na prateleira não forem proprietárias, forem sobressalentes ou fizerem parte de agregados offline.' 
+---
+= Alterar ID de prateleira - prateleiras NX224
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode alterar uma ID de prateleira NX224 em um sistema quando o ONTAP ainda não estiver em execução ou ao adicionar uma prateleira antes de ela ser cabeada ao sistema.  Você também pode alterar uma ID de prateleira quando o ONTAP estiver ativo e em execução (os módulos do controlador estão disponíveis para fornecer dados) e todas as unidades na prateleira não forem proprietárias ou forem sobressalentes.
+
+.Antes de começar
+* Se o ONTAP estiver ativo e em execução (os módulos do controlador estão disponíveis para fornecer dados), você precisará ter verificado que todas as unidades na gaveta são não pertencentes, sobressalentes ou parte de agregado(s) desconetado(s).
++
+Você pode verificar o estado das unidades usando o `storage disk show -shelf _shelf_number_` comando. A saída na `Container Type` coluna deve ser exibida `spare` ou `broken` se for uma unidade com falha. Além disso, as `Container Name` colunas e `Owner` devem ter um traço.
+
+* Você precisa de um clipe de papel com um lado endireitado ou uma caneta esferográfica de ponta estreita.
++
+Utilize o clipe de papel ou a caneta esferográfica para aceder ao botão ID da prateleira através do pequeno orifício, à direita dos LEDs, no painel do visor do operador (ODP).
+
+
+
+.Sobre esta tarefa
+* Um ID válido do compartimento é de 00 a 99.
+* Os IDs de prateleira devem ser exclusivos dentro de um cluster AFX.
+* É necessário desligar um compartimento (Desconete os dois cabos de energia, aguarde o tempo apropriado e, em seguida, conectá-los novamente) para que o ID do compartimento entre em vigor.
++
+O tempo que você espera antes de conetar os cabos de energia novamente depende do estado do ONTAP, conforme descrito posteriormente neste procedimento.
+
++
+
+NOTE: As prateleiras NX224 não têm interruptores de energia nas fontes de alimentação.
+
+
+
+.Passos
+. Ligue a prateleira, se ainda não estiver ligada.
++
+Primeiro, conete os cabos de alimentação à gaveta, fixando-os no lugar com o retentor do cabo de alimentação e, em seguida, conete os cabos de alimentação a diferentes fontes de alimentação para obter resiliência.
+
++
+Uma fonte de alimentação é ligada assim que o cabo de alimentação é conectado. Seu LED bicolor deve acender em verde.  Aguarde até que o ID da prateleira seja exibido antes de prosseguir para a próxima etapa.
+
+. Retire a tampa da extremidade esquerda para localizar o pequeno orifício à direita dos LEDs.
++
+image::../media/drw_tp_change_shelf_id_ieops-2381.svg[Alterar ID da prateleira NX224]
+
++
+[cols="20%,80%"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Tampa da extremidade da prateleira
+
+
+
+ a| 
+image::../media/icon_round_2.png[[Legenda número 2]
+ a| 
+Placa frontal da prateleira
+
+
+
+ a| 
+image::../media/icon_round_3.png[[Legenda número 3]
+ a| 
+Número de ID do compartimento
+
+
+
+ a| 
+image::../media/icon_round_4.png[[Legenda número 4]
+ a| 
+Botão de acesso ao ID da prateleira
+
+|===
+. Altere o primeiro número do ID do compartimento:
++
+.. Insira o clipe de papel ou a caneta esferográfica no pequeno orifício.
+.. Mantenha premido o botão até o primeiro número no visor digital piscar e, em seguida, solte o botão.
++
+Pode demorar até 15 segundos para o número piscar. Isto ativa o modo de programação da ID da prateleira.
+
++
+
+NOTE: Se a ID demorar mais de 15 segundos a piscar, prima e mantenha premido o botão novamente, certificando-se de que o prime completamente.
+
+.. Pressione e solte o botão para avançar o número até atingir o número desejado de 0 a 9.
++
+A duração de cada imprensa e liberação pode ser tão curta quanto um segundo.
+
++
+O primeiro número continua a piscar.
+
+
+
+. Altere o segundo número do ID do compartimento:
++
+.. Prima e mantenha premido o botão até o segundo número no visor digital piscar.
++
+Pode demorar até três segundos para o número piscar.
+
++
+O primeiro número no visor digital pára de piscar.
+
+.. Pressione e solte o botão para avançar o número até atingir o número desejado de 0 a 9.
++
+O segundo número continua a piscar.
+
+
+
+. Bloqueie o número pretendido e saia do modo de programação premindo e mantendo premido o botão até que o segundo número pare de piscar.
++
+Pode demorar até três segundos para o número parar de piscar.
+
++
+Ambos os números no visor digital começam a piscar e o LED âmbar no ODP acende-se após cerca de cinco segundos, alertando-o de que a ID pendente do compartimento ainda não entrou em vigor.
+
+. Ligue o compartimento para fazer com que o ID do compartimento entre em vigor.
++
+Você deve desconetar o cabo de alimentação de ambas as fontes de alimentação na prateleira, esperar o tempo apropriado e conectá-los novamente às fontes de alimentação da prateleira para concluir o ciclo de alimentação.
+
++
+Uma fonte de alimentação é ligada assim que o cabo de alimentação é ligado. O LED bicolor deve acender-se a verde.
+
++
+** Se o ONTAP ainda não estiver em execução ou se você estiver adicionando um compartimento (que ainda não tenha sido habilitado para o sistema), aguarde pelo menos 10 segundos.
+** Se o ONTAP estiver em execução (os controladores estiverem disponíveis para fornecer dados) e todas as unidades no compartimento forem sobressalentes e sem proprietário, aguarde pelo menos 180 segundos.
++
+Esse tempo permite que o ONTAP exclua adequadamente o endereço do compartimento antigo e atualize a cópia do novo endereço do compartimento.
+
+
+
+. Volte a colocar a tampa da extremidade esquerda.
+

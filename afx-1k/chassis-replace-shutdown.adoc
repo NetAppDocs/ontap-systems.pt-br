@@ -1,0 +1,82 @@
+---
+permalink: afx-1k/chassis-replace-shutdown.html 
+sidebar: sidebar 
+keywords: afx 1k, shutdown the controller 
+summary: Desligue o controlador no seu sistema de armazenamento AFX 1K para evitar perda de dados e garantir a estabilidade do sistema ao substituir o chassi. 
+---
+= Desligue o controlador para substituir o chassi - AFX 1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Desligue o controlador no seu sistema de armazenamento AFX 1K para evitar perda de dados e garantir a estabilidade do sistema ao substituir o chassi.
+
+Para desligar o controlador com defeito, você deve determinar o status do controlador e, se necessário, executar uma aquisição de failover de armazenamento do controlador para que o controlador íntegro continue a fornecer dados do armazenamento do controlador com defeito.
+
+.Sobre esta tarefa
+* Se você tiver um cluster com mais de quatro nós, ele deverá estar no quorum.  Para visualizar informações de cluster sobre seus nós, use o `cluster show` comando.  Para mais informações sobre o `cluster show` comando, vejalink:https://docs.netapp.com/us-en/ontap/system-admin/display-nodes-cluster-task.html["Exibir detalhes no nível do nó em um cluster ONTAP"^] .
+* Se o cluster não estiver em quorum ou se a integridade ou elegibilidade de qualquer controlador (exceto o controlador com defeito) for mostrada como falsa, você deverá corrigir o problema antes de desligar o controlador com defeito. Ver link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^] .
+
+
+.Passos
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport:
++
+`system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
+
++
+A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas:
+
++
+`cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Desabilitar o retorno automático do console do controlador prejudicado:
++
+`storage failover modify -node impaired-node -auto-giveback-of false`
+
++
+
+NOTE: Quando você vir _Deseja desabilitar o retorno automático?_, digite `y` .
+
++
+.. Se você estiver executando o ONTAP versão 9.17.1 e o controlador com problemas não puder ser ativado ou já tiver sido assumido, será necessário desativar o link de interconexão HA do controlador íntegro antes de inicializar o controlador com problemas.  Isso impede que o controlador prejudicado execute o retorno automático.
++
+`system ha interconnect link off -node healthy-node -link 0`
+
++
+`system ha interconnect link off -node healthy-node -link 1`
+
++
+
+NOTE: Se você não estiver executando o ONTAP versão 9.17.1, pule a etapa acima e vá para a etapa 3.
+
+
+
+. Leve o controlador prejudicado para o prompt Loader:
++
+[cols="1,2"]
+|===
+| Se o controlador afetado estiver a apresentar... | Então... 
+
+
+ a| 
+O prompt Loader
+ a| 
+Vá para a próxima etapa.
+
+
+
+ a| 
+Prompt do sistema ou prompt de senha
+ a| 
+Assuma ou interrompa o controlador prejudicado do controlador saudável:
+`storage failover takeover -ofnode _impaired_node_name_ -halt _true_`
+
+O parâmetro _-halt true_ leva o nó prejudicado ao prompt do LOADER.
+
+|===
+
+
+.O que se segue?
+Depois de desligar o controlador, é necessário link:chassis-replace-move-hardware.html["substitua o chassis"].

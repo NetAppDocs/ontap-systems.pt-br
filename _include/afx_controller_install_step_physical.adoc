@@ -1,0 +1,65 @@
+= 
+:allow-uri-read: 
+
+
+Reinstale o módulo do controlador e inicialize-o.
+
+. Certifique-se de que a conduta de ar está completamente fechada, rodando-a até onde for.
++
+Ele deve estar alinhado com a chapa metálica do módulo do controlador.
+
+. Alinhe a extremidade do módulo do controlador com a abertura no compartimento e deslize o módulo do controlador para dentro do chassi com as alavancas giradas para longe da frente do sistema.
+. Assim que o módulo do controlador o impedir de deslizar para mais longe, rode as pegas do excêntrico para dentro até que fiquem presas por baixo das ventoinhas
++
+
+NOTE: Não use força excessiva ao deslizar o módulo do controlador para dentro do compartimento para evitar danificar os conetores.
+
++
+O módulo do controlador começa a inicializar assim que estiver totalmente encaixado no compartimento.
+
+. Alinhe a moldura com os pinos esféricos e empurre-a delicadamente para o lugar.
+. Pressione <enter> quando as mensagens do console pararem.
++
+** Se você vir o prompt de login, vá para a próxima etapa.
+** Se você não vir um prompt de login, faça login no nó do parceiro.
+
+
+. Devolva apenas a raiz com a opção override-destination-checks:
++
+`storage failover giveback -ofnode impaired-node -only-root true -override -destination-checks true`
+
++
+
+NOTE: O comando a seguir só está disponível no nível de privilégio Modo de diagnóstico.  Para obter mais informações sobre níveis de privilégio, consultelink:https://docs.netapp.com/us-en/ontap/system-admin/administrative-privilege-levels-concept.html["Entenda os níveis de privilégio para comandos ONTAP CLI"^] .
+
++
+Se encontrar erros, https://support.netapp.com["Suporte à NetApp"] contacte .
+
+. Aguarde 5 minutos após a conclusão do relatório de devolução e verifique o status de failover e devolução:
++
+`storage failover show`e `storage failover show-giveback`
+
++
+
+NOTE: O comando a seguir só está disponível no nível de privilégio Modo de diagnóstico.
+
+. Se os links de interconexão HA foram desativados, reative-os:
++
+`system ha interconnect link on -node healthy-node -link 0`
+
++
+`system ha interconnect link on -node healthy-node -link 1`
+
+. Se a giveback automática foi desativada, reative-a:
++
+`storage failover modify -node local -auto-giveback-of true`
+
+. Volte a colocar o controlador afetado em funcionamento normal, devolvendo o respetivo armazenamento:
++
+`storage failover giveback -ofnode _impaired_node_name_`
+
+. Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
+

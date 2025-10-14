@@ -1,0 +1,121 @@
+---
+permalink: nx224/service-replace-drive.html 
+sidebar: sidebar 
+keywords: nx224, shelves, shelf, nx224 shelves, fail, replace, drive, nondisruptive, i/o, hot-swap, hot-swap a drive 
+summary: Você pode substituir uma unidade com falha sem interrupções em uma prateleira NX224 que esteja ligada e enquanto a E/S estiver em andamento. 
+---
+= Troca a quente de uma unidade - prateleiras NX224
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode substituir uma unidade com falha sem interrupções em uma prateleira NX224 que esteja ligada e enquanto a E/S estiver em andamento.
+
+.Antes de começar
+* A unidade que você está instalando deve ser suportada pela prateleira NX224.  Você pode verificar as unidades compatíveis da sua prateleira no https://hwu.netapp.com["NetApp Hardware Universe"^] .
+* Se a autenticação SED estiver ativada, você deverá usar as instruções de substituição do SED na documentação do ONTAP.
++
+Você pode visualizar as etapas adicionais que devem ser concluídas antes e depois de substituir um SED no https://docs.netapp.com/us-en/ontap/encryption-at-rest/index.html["Visão geral da criptografia NetApp com a documentação da CLI"^] .
+
+* Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, entre em Contato com o suporte técnico.
+* Verifique se a unidade que você está removendo está com falha.
++
+Você pode verificar se a unidade está com falha executando o `storage disk show -broken` comando. A unidade com falha aparece na lista de unidades com falha. Se isso não acontecer, você deve esperar, e então executar o comando novamente.
+
++
+
+NOTE: Dependendo do tipo e da capacidade da unidade, pode levar até várias horas para a unidade aparecer na lista de unidades com falha.
+
+
+
+.Sobre esta tarefa
+* *Melhores práticas:* Certifique-se de que seu sistema pode reconhecer e usar unidades recém-qualificadas https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["baixando a versão atual do Pacote de Qualificação de Disco"^] .
++
+Isso evita mensagens de eventos do sistema sobre informações de unidade não atuais e a prevenção do particionamento da unidade porque as unidades não são reconhecidas.  O DQP também notifica você sobre firmware de unidade desatualizado.
+
+* *Melhores práticas:* A melhor prática é ter versões atuais do firmware do módulo de prateleira NVMe (NSM) e do firmware da unidade no seu sistema antes de substituir os componentes da FRU. Você pode visitar o site de suporte da NetApp para  https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["baixar firmware da prateleira de disco"^] e  https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["baixar firmware da unidade de disco"^] .
++
+[NOTE]
+====
+Não reverta o firmware para uma versão que não suporte a gaveta e seus componentes.
+
+====
+* O firmware da unidade é atualizado automaticamente (sem interrupções) em novas unidades com versões de firmware não atuais.
++
+
+NOTE: As verificações de firmware da unidade ocorrem a cada dois minutos.
+
+* Se necessário, você pode ligar os LEDs de localização da prateleira (azul) para ajudar a localizar fisicamente a prateleira afetada: `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
++
+Se você não souber `_shelf_name_` o do compartimento afetado, execute o `storage shelf show` comando.
+
++
+Uma prateleira tem três LEDs de localização: Um no painel de visualização do operador e um em cada NSM. Os LEDs de localização permanecem acesos durante 30 minutos. Você pode desativá-los digitando o mesmo comando, mas usando a `off` opção.
+
+* Quando você desembalar a unidade de substituição, salve todos os materiais de embalagem para uso quando retornar a unidade com falha.
++
+Se você precisar do número RMA ou de ajuda adicional com o procedimento de substituição, entre em Contato com o suporte técnico em https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"^], 888-463-8277 (América do Norte), 00-800-44-638277 (Europa) ou 800-800-80-800 (Ásia/Pacífico).
+
+
+
+.Passos
+. Aterre-se corretamente.
+. Identifique fisicamente a unidade com falha.
++
+Quando uma unidade falha, o sistema Registra uma mensagem de aviso no console do sistema indicando qual unidade falhou. Além disso, o LED atenção (âmbar) no painel de visualização do operador da prateleira e a unidade com falha acendem-se.
+
++
+
+NOTE: O LED de atividade (verde) em uma unidade com falha pode ser iluminado (sólido), o que indica que a unidade tem energia, mas não deve estar piscando, o que indica atividade de e/S. Uma unidade com falha não tem atividade de e/S.
+
+. Remova a unidade com falha:
++
+image::../media/drw_nvme_drive_replace_ieops-1904.svg[Remova a transmissão.]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Prima o botão de libertação na superfície da unidade para abrir a pega do excêntrico.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+Rode o manípulo do excêntrico para baixo para desengatar a unidade do plano médio.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Legenda número 3]
+ a| 
+Deslize a unidade para fora da prateleira usando a alça do came e apoiando a unidade com a outra mão.
+
+|===
+. Aguarde, no mínimo, 70 segundos antes de inserir a unidade de substituição.
++
+Isso permite que o sistema reconheça que uma unidade foi removida.
+
+. Insira a unidade de substituição:
++
+.. Com o manípulo do excêntrico na posição aberta, utilize as duas mãos para inserir a unidade.
+.. Empurre suavemente até a unidade parar.
+.. Feche a pega do came de forma a que a unidade fique totalmente assente no plano intermédio e a pega encaixe no devido lugar.
++
+Certifique-se de que fecha lentamente a pega do excêntrico de forma a que fique corretamente alinhada com a face da unidade.
+
+
+
+. Verifique se o LED de atividade (verde) da unidade está aceso.
++
+Quando o LED de atividade da unidade está sólido, significa que a unidade tem energia. Quando o LED de atividade da unidade está intermitente, significa que a unidade tem alimentação e e/S está em curso. Se o firmware da unidade estiver sendo atualizado automaticamente, o LED pisca.
+
+. Se estiver substituindo outra unidade, repita as etapas 3 a 7.
+

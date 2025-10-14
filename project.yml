@@ -44,6 +44,39 @@ sidebar:
       - section: c250
       - section: c400
       - section: c800
+  - title: Sistemas AFX
+    url: "/afx/index.html"
+    entries:
+    - title: Instalar e configurar
+      url: "/afx/afx-install-setup.html"
+    - title: Manutenção
+      pdf-filename: Manutenção AFX
+      url: "/afx-landing-maintain/index.html"
+      entries:
+      - title: Visão geral da manutenção
+        url: "/afx-1k/maintain-overview.html"
+      - title: Suporte de arranque
+        url: "/afx-1k/bootmedia-replace-workflow.html"
+      - title: Chassis
+        url: "/afx-1k/chassis-replace-workflow.html"
+      - title: Controlador
+        url: "/afx-1k/controller-replace-workflow.html"
+      - title: DIMM
+        url: "/afx-1k/dimm-replace.html"
+      - title: Ventoinha
+        url: "/afx-1k/fan-replace.html"
+      - title: NVRAM
+        url: "/afx-1k/nvram-replace.html"
+      - title: Bateria NV
+        url: "/afx-1k/nvdimm-battery-replace.html"
+      - title: Módulo de e/S.
+        url: "/afx-1k/io-module-overview.html"
+      - title: Fonte de alimentação
+        url: "/afx-1k/power-supply-replace.html"
+      - title: Bateria de relógio em tempo real
+        url: "/afx-1k/rtc-battery-replace.html"
+      - title: Módulo de gestão do sistema
+        url: "/afx-1k/system-management-replace.html"
   - title: Sistemas ASA
     url: "/allsan-landing/index.html"
     entries:
@@ -103,6 +136,7 @@ sidebar:
     url: "/drive-shelves/index.html"
     entries:
     - section: ns224
+    - section: nx224
     - section: sas3
   - title: Kits de gabinete e trilho
     entries:

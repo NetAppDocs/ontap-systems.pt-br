@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: whats-new.html 
-keywords: new, features, asa r2, aff, asa, fas 
+keywords: new, features, afx, asa r2, aff, asa, fas 
 summary: Saiba mais sobre as novas plataformas para sistemas de hardware ONTAP. 
 ---
 = Novidades para os sistemas de hardware ONTAP
@@ -15,6 +15,30 @@ Saiba o que há de novo para os sistemas de hardware ONTAP. Para obter informaç
 
 
 
+== Outubro de 2025
+
+
+
+=== Sistema de armazenamento AFX
+
+O novo sistema de armazenamento NetApp AFX oferece uma solução desagregada projetada para atender aos rigorosos requisitos de cargas de trabalho NAS e S3 de alto desempenho, incluindo aplicativos de IA/ML. Os sistemas AFX oferecem recursos especializados para clientes que exigem armazenamento de arquivos e objetos escalável e de alto rendimento.
+
+link:https://docs.netapp.com/us-en/ontap-afx/get-started/ontap-afx-storage.html["Saiba mais sobre o sistema AFX"] .
+
+
+
+=== Novas prateleiras de unidade para AFX
+
+As novas prateleiras de armazenamento NXS224 para AFX usam memória não volátil expressa sobre tecidos (NVMe-oF) para conectar SSDs de alta densidade. Os discos se comunicam por meio de uma estrutura de latência ultrabaixa usando RDMA sobre Ethernet convergente (RoCE). As prateleiras de armazenamento, incluindo os módulos de E/S, NICs, ventiladores e fontes de alimentação, são totalmente redundantes, sem nenhum ponto único de falha. A tecnologia autogerenciada é usada para administrar e controlar todos os aspectos da configuração RAID e do layout do disco.
+
+
+
+=== Novos interruptores para AFX
+
+Os switches Cisco 9364D-GX2A e Cisco 9332D-GX2B conectam os nós do controlador AFX às prateleiras de armazenamento.  Esses novos switches permitem que você crie clusters ONTAP com mais de dois nós. Protocolos avançados são usados para otimizar o desempenho. O design é baseado na marcação de VLAN com vários caminhos de rede, bem como configurações de atualização de tecnologia, para garantir operação contínua e facilidade de atualização.
+
+
+
 == Setembro de 2025
 
 
@@ -25,11 +49,11 @@ A documentação dos sistemas de hardware ONTAP agora inclui especificações ta
 
 
 
-=== Referência de procedimento da plataforma FRU
+=== Referência de substituição por família de plataforma
 
-A documentação dos sistemas de hardware ONTAP agora inclui links para procedimentos de FRU organizados por tipo de FRU.
+A documentação dos sistemas de hardware ONTAP agora fornece procedimentos de substituição para seu sistema de armazenamento NetApp organizados por família de plataforma.
 
-link:fru-reference/fru-overview.html["Referência da plataforma FRU"]
+link:fru-reference/index.html["Encontre procedimentos de substituição"]para as unidades substituíveis em campo (FRUs) do seu sistema de armazenamento.
 
 
 
@@ -41,7 +65,7 @@ link:fru-reference/fru-overview.html["Referência da plataforma FRU"]
 
 O novo sistema ASA C30 estende recursos de gerenciamento de dados abrangentes, inteligentes e de alto desempenho para mais clientes e cargas de trabalho.
 
-link:https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["Saiba mais sobre os sistemas ASA R2"].
+link:https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["Saiba mais sobre os sistemas ASA R2"^] .
 
 
 
@@ -51,9 +75,9 @@ link:https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["Saiba ma
 
 === FAS50
 
-O sistema FAS50 oferece o menor custo por Gigabyte para storage secundário e link:https://docs.netapp.com/us-en/netapp-solutions/cyber-vault/ontap-cyber-vault-overview.html["cofre cibernético seguro"], além de maior desempenho para workloads secundários com backups mais rápidos, IOPS mais alto e baixa latência de 5 a 10ms.
+O sistema FAS50 oferece o menor custo por Gigabyte para armazenamento secundário e cofre cibernético seguro, além de maior desempenho para cargas de trabalho secundárias com backups mais rápidos, IOPS mais altos e baixa latência de 5 a 10 ms.
 
-link:https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["Saiba mais sobre os sistemas FAS"].
+link:https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["Saiba mais sobre os sistemas FAS"^] .
 
 
 
@@ -65,54 +89,44 @@ link:https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["Saiba mais so
 
 Os sistemas ASA A20 e ASA A30 e A50 midrange de nível básico disponibilizam storage de bloco para empresas de todos os tamanhos para aplicações essenciais, como bancos de dados e máquinas virtuais.
 
-link:https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["Saiba mais sobre os sistemas ASA R2"].
+link:https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["Saiba mais sobre os sistemas ASA R2"^] .
 
 
 
-== Dezembro de 2024
+== Lançamentos de 2024
 
-
-
-=== AFF A20, AFF A30 e AFF A50
-
+.Dezembro de 2024
+[%collapsible]
+====
+.AFF A20, AFF A30 e AFF A50
 Os novos sistemas de hardware AFF A20, A30 e A50 estendem recursos de gerenciamento de dados abrangentes, inteligentes e de alto desempenho para mais clientes e workloads.
 
 Os sistemas oferecem detecção de ransomware baseada EM ML em tempo real, integração otimizada com a nuvem e performance incomparável para workloads essenciais, incluindo IA, VMware, bancos de dados e análises, com suporte para storage de bloco, arquivo e objetos.
 
-link:https://www.netapp.com/data-storage/aff-a-series/["Saiba mais sobre os sistemas AFF A-Series"].
+link:https://www.netapp.com/data-storage/aff-a-series/["Saiba mais sobre os sistemas AFF A-Series"^] .
 
-
-
-=== AFF C30, AFF C60 e AFF C80
-
+.AFF C30, AFF C60 e AFF C80
 Os novos sistemas de hardware AFF C30, AFF C60 e AFF C80 tornam os ganhos de performance e eficiência de flash mais acessíveis às empresas, fornecendo um 1,5PB TB de capacidade de storage líder do setor em implantações de dois rack.
 
 A solução oferece densidade excepcional com unidades de 60TB TB, maior desempenho e maior flexibilidade de e/S.
 
-link:https://www.netapp.com/data-storage/aff-c-series/["Saiba mais sobre os sistemas AFF série C."].
+link:https://www.netapp.com/data-storage/aff-c-series/["Saiba mais sobre os sistemas AFF série C."^] .
 
-
-
-=== Compartimento de unidades de NS224 TB com módulos de compartimento de NSM100B U.
-
+.Compartimento de unidades de NS224 TB com módulos de compartimento de NSM100B U.
 Aprimore as funcionalidades do data center com o NS224 e o novo módulo de expansão de storage NVMe de NSM100B GB. Projetado como um substituto direto para o módulo NSM100, o novo módulo de prateleira NSM100B se integra perfeitamente à sua configuração existente. Ele dá suporte a configurações de conexão direta e conexão a switch de NS224 gavetas, oferecendo flexibilidade excepcional para otimizar a eficiência e a escalabilidade do seu sistema de storage.
 
-
-
-== Setembro de 2024
-
-
-
-=== Sistemas ASA R2
-
+====
+.Setembro de 2024
+[%collapsible]
+====
+.Sistemas ASA R2
 Os novos sistemas de hardware ASA R2 (ASA A1K, ASA A70 e ASA A90) fornecem uma solução unificada de hardware e software que cria uma experiência simplificada específica para as necessidades dos clientes somente de SAN.
 
-link:https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["Saiba mais sobre os sistemas ASA R2"].
+link:https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["Saiba mais sobre os sistemas ASA R2"^] .
 
-
-
-=== FAS70 e FAS90
-
+.FAS70 e FAS90
 Os novos sistemas de hardware FAS70 e FAS90 oferecem storage de backup econômico, mas de alta performance, permitindo um cofre cibernético seguro para recuperação de ataques de ransomware.
 
-link:https://www.netapp.com/data-storage/fas/["Saiba mais sobre os sistemas FAS"].
+link:https://www.netapp.com/data-storage/fas/["Saiba mais sobre os sistemas FAS"^] .
+
+====
