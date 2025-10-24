@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a250, replace a power supply 
 summary: 'A substituição de uma fonte de alimentação envolve desconetar a fonte de alimentação de destino (PSU) da fonte de alimentação, desconetar o cabo de alimentação, remover a fonte de alimentação antiga e instalar a fonte de alimentação de substituição e reconectá-la à fonte de alimentação.' 
 ---
-= Substitua uma fonte de alimentação - AFF A250
+= Troca a quente de uma fonte de alimentação - AFF A250
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,7 +13,7 @@ summary: 'A substituição de uma fonte de alimentação envolve desconetar a fo
 [role="lead"]
 A substituição de uma fonte de alimentação (PSU) envolve desconetar a fonte de alimentação de destino, desconetar o cabo de alimentação, remover a fonte de alimentação antiga e instalar a fonte de alimentação de substituição e, em seguida, reconectá-la à fonte de alimentação.
 
-* As fontes de alimentação são redundantes e hot-swap.
+* As fontes de alimentação são redundantes e intercambiáveis a quente. Não é necessário desligar o controlador para substituir uma PSU.
 * Este procedimento é escrito para substituir uma PSU de cada vez.
 +
 
@@ -30,7 +30,7 @@ Use o procedimento apropriado para o seu tipo de PSU; AC ou DC.
 
 [role="tabbed-block"]
 ====
-.Opção 1: Substituir uma PSU CA
+.Opção 1: Troca a quente de uma fonte de alimentação CA
 --
 Use o vídeo a seguir ou as etapas tabuladas para substituir a PSU:
 
@@ -95,7 +95,7 @@ Uma vez que a energia é restaurada para a PSU, o LED de status deve estar verde
 
 
 --
-.Opção 2: Substituir uma PSU CC
+.Opção 2: Troca a quente de uma fonte de alimentação CC
 --
 Para substituir uma PSU CC, execute as etapas a seguir.
 

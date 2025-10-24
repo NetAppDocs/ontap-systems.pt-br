@@ -1,6 +1,7 @@
 ---
-permalink: a70-key-specifications.html 
+permalink: a70-90/a70-key-specifications.html 
 sidebar: sidebar 
+keywords: AFF A70 specifications, AFF A70 specs, AFF A70 capacity, AFF A70 memory, AFF A70 I/O, AFF A70 compliance 
 summary: Especificações principais do AFF A70 
 ---
 = Especificações principais do AFF A70
@@ -114,5 +115,5 @@ Não há dados de E/S integrados.
 * Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP
 * Controladores redundantes hot-swappable
 * Fontes de alimentação redundantes com troca a quente
-* Gerenciamento de banda SAS por meio de conexões SAS para prateleiras externas
+* Gerenciamento de banda SAS em conexões SAS para prateleiras externas [//] 2025-10-15 ontap-systems-internal/issues/1357
 

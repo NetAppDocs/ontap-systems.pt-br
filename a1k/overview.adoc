@@ -1,6 +1,7 @@
 ---
 permalink: a1k/overview.html 
 sidebar: sidebar 
+keywords: AFF A1K specifications, AFF A1K specs, AFF A1K capacity, AFF A1K memory, AFF A1K I/O, AFF A1K compliance 
 summary: Especificações principais para o grupo de plataforma A1K 
 ---
 = Especificações principais para AFF A1K
@@ -114,5 +115,5 @@ Não há dados de E/S integrados.
 * Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP
 * Controladores redundantes hot-swappable
 * Fontes de alimentação redundantes com troca a quente
-* Gerenciamento de banda SAS por meio de conexões SAS para prateleiras externas
+* Gerenciamento de banda SAS em conexões SAS para prateleiras externas [//] 2025-10-15 ontap-systems-internal/issues/1357
 

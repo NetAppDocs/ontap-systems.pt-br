@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a20, aff a30, aff a50, replace a power supply 
 summary: 'Substitua uma fonte de alimentação CA ou CC (PSU) no seu sistema de armazenamento AFF A20, AFF A30 ou AFF A50 quando ela falhar ou apresentar defeito, garantindo que seu sistema continue recebendo a energia necessária para uma operação estável.  O processo de substituição envolve desconectar a PSU defeituosa da fonte de alimentação, desconectar o cabo de alimentação, substituir a PSU defeituosa e reconectá-la à fonte de alimentação.' 
 ---
-= Substitua uma fonte de alimentação - AFF A20, AFF A30 e AFF A50
+= Troca a quente de uma fonte de alimentação - AFF A20, AFF A30 e AFF A50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -16,7 +16,7 @@ Substitua uma fonte de alimentação CA ou CC (PSU) no seu sistema de armazename
 .Sobre esta tarefa
 * Este procedimento é escrito para substituir uma PSU de cada vez.
 +
-As PSUs são redundantes e hot-swap.
+As PSUs são redundantes e intercambiáveis a quente. Não é necessário desligar o controlador para substituir uma PSU.
 
 * IMPORTANTE: Não misture PSUs com diferentes classificações de eficiência ou diferentes tipos de entrada. Sempre substitua como por like.
 * Use o procedimento apropriado para o seu tipo de PSU: AC ou DC.
@@ -31,7 +31,7 @@ Você pode desativá-los digitando o `system location-led _off_` comando. Se nã
 
 [role="tabbed-block"]
 ====
-.Opção 1: Substituir uma PSU CA
+.Opção 1: Troca a quente de uma fonte de alimentação CA
 --
 Para substituir uma PSU CA, execute as etapas a seguir.
 
@@ -97,7 +97,7 @@ Uma vez que a energia é restaurada para a PSU, o LED de status deve estar verde
 
 
 --
-.Opção 2: Substituir uma PSU CC
+.Opção 2: Troca a quente de uma fonte de alimentação CC
 --
 Para substituir uma PSU CC, execute as etapas a seguir.
 

@@ -2,6 +2,8 @@
 :allow-uri-read: 
 
 
+As fontes de alimentação são redundantes e intercambiáveis a quente. Não é necessário desligar o controlador para substituir uma PSU.
+
 .Sobre esta tarefa
 * Este procedimento é escrito para substituir uma PSU de cada vez.
 +
@@ -9,12 +11,11 @@
 IMPORTANT: Não misture PSUs com diferentes classificações de eficiência. Sempre substitua como por like.
 
 * Use o procedimento apropriado para o seu tipo de PSU: AC ou DC.
-* As fontes de alimentação são redundantes e intercambiáveis a quente; você não precisa assumir o controle do controlador para executar essa tarefa.
 
 
 [role="tabbed-block"]
 ====
-.Opção 1: Substituir uma PSU CA
+.Opção 1: Troca a quente de uma fonte de alimentação CA
 --
 Para substituir uma PSU CA, execute as etapas a seguir.
 
@@ -71,7 +72,7 @@ Uma vez que a energia é restaurada para a PSU, o LED de status deve estar verde
 
 
 --
-.Opção 2: Substituir uma PSU CC
+.Opção 2: Troca a quente de uma fonte de alimentação CC
 --
 Para substituir uma PSU CC, execute as etapas a seguir.
 

@@ -1,6 +1,7 @@
 ---
 permalink: asa-c250/overview.html 
 sidebar: sidebar 
+keywords: ASA C250 specifications, ASA C250 specs, NetApp ASA C250, ASA C250 hardware 
 summary: Especificações principais para o grupo de plataformas ASA-C250 
 ---
 = Especificações principais do ASA C250
@@ -97,5 +98,5 @@ A seguir estão especificações selecionadas para o sistema de armazenamento AS
 
 * Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP
 * Controladores redundantes hot-swappable
-* Fontes de alimentação redundantes com troca a quente
+* Fontes de alimentação redundantes hot-swappable [//] 2025-10-15 ontap-systems-internal/issues/1357
 

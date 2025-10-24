@@ -1,5 +1,5 @@
 ---
-permalink: a70-key-specifications.html 
+permalink: a70-90/aff-a-series-affa70-overview.html 
 sidebar: sidebar 
 keywords: AFF A70 specifications, AFF A70 specs, NetApp AFF A70, AFF A70 hardware 
 summary: Especificações principais para o sistema de armazenamento AFF A70 
@@ -109,4 +109,4 @@ CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NFSv3/RDMA; NFSv4/RDMA; N
 
 === Alta disponibilidade
 
-Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP ; Controladores redundantes de troca a quente; Fontes de alimentação redundantes de troca a quente; Gerenciamento SAS em banda por meio de conexões SAS para prateleiras externas;
+Controlador de gerenciamento de placa de base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP ; Controladores redundantes de troca a quente; Fontes de alimentação redundantes de troca a quente; Gerenciamento SAS em banda por meio de conexões SAS para prateleiras externas; [//] 2025-10-15 ontap-systems-internal/issues/1357

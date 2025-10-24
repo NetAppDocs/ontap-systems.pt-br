@@ -64,15 +64,9 @@ image::../media/drw_a1k_tnsc_cluster_cabling_ieops-1648.svg[Diagrama de cabeamen
 --
 .Cabeamento de cluster comutado
 --
-Use o cabo de 100 GbE para conetar as portas e1a a e1a e as portas e7a a e7a.
+Use o cabo 100 GbE para conectar as portas e1a e e7a dos controladores A e B aos switches de rede do cluster A e B. Etapas. Conecte a porta e1a no Controlador A e a porta e1a no Controlador B ao switch de rede do cluster A. . Conecte a porta e7a no Controlador A e a porta e7a no Controlador B ao switch de rede do cluster B.
 
-.Passos
-. Conete a porta e1a no controlador A e a porta e1a no controlador B ao switch de rede do cluster A..
-. Conete a porta e7a no controlador A e a porta e7a no controlador B ao switch de rede do cluster B.
-+
-*Cabo de 100 GbE*
-
-
++ *Cabo 100 GbE*
 
 image::../media/oie_cable100_gbe_qsfp28.png[Cabo de 100 GB]
 
@@ -92,7 +86,7 @@ A seguir estão alguns exemplos típicos de cabeamento de rede de host. Consulte
 . Conete as portas e9a e e9b ao switch de rede de dados Ethernet.
 +
 
-NOTE: Para obter o máximo desempenho do sistema para tráfego de cluster e HA, não use as portas e1b e E7B para conexões de rede de host. Use uma placa de host separada para maximizar o desempenho.
+NOTE: Não use as portas e1b e e7b para conexões de rede do host. Use um cartão host separado.
 
 +
 *Cabo de 100 GbE*

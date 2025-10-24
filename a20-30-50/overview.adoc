@@ -1,6 +1,7 @@
 ---
 permalink: a20-30-50/overview.html 
 sidebar: sidebar 
+keywords: AFF A20 A30 A50 specifications, AFF A20 A30 A50 specs, AFF A20 A30 A50 capacity, AFF A20 A30 A50 memory, AFF A20 A30 A50 I/O, AFF A20 A30 A50 compliance 
 summary: Especificações principais para o grupo de plataformas A20-30-50 
 ---
 = Especificações principais para o grupo de plataformas A20-30-50
@@ -286,6 +287,7 @@ CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NVMe/FC; NVMe/TCP; S3; S3
 
 Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP ; Controladores redundantes de troca a quente; Fontes de alimentação redundantes de troca a quente; Gerenciamento SAS em banda por meio de conexões SAS para prateleiras externas;
 
+ [//] 2025-10-15 ontap-systems-internal/issues/1357
 
 
 == AFF A30

@@ -1,7 +1,8 @@
 ---
 permalink: asa250/overview.html 
 sidebar: sidebar 
-summary: Especificações principais para o grupo de plataformas ASA250 
+keywords: ASA A250 specifications, ASA A250 specs, NetApp ASA A250, ASA A250 hardware 
+summary: Especificações principais para o sistema de armazenamento ASA A250 
 ---
 = Especificações principais para ASA A250
 :allow-uri-read: 
@@ -10,70 +11,123 @@ summary: Especificações principais para o grupo de plataformas ASA250
 
 
 [role="lead"]
-A seguir estão especificações selecionadas para o sistema de armazenamento ASA A250 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.
+A seguir estão algumas especificações selecionadas para o ASA A250.  Visita https://hwu.netapp.com["NetApp Hardware Universe"^] (HWU) para uma lista completa das especificações ASA A250 .  Esta página reflete um único par de alta disponibilidade.
 
 
 
-== Especificações principais para ASA A250
+=== Especificações principais para ASA A250
 
-* Configuração da plataforma: ASA A250 100V Chassis único HA Pair
-* Capacidade máxima de matéria-prima: 0,7344 PB
-* Memória: 128.0000 GB
-* Fator de forma: chassi 2U com 2 controladores HA e 24 slots de unidade
-* Versão ONTAP : ONTAP: 9.16.1P2
-* Slots de expansão PCIe: 4
-* Versão mínima do ONTAP : ONTAP 9.13.1 == Máximos de escalonamento
-* Tipo: NAS
-* Tipo: SAN; Pares HA: 6; Capacidade bruta: 4,4 PB / 3,9 PiB; Memória máxima: 768 GB
-* Tipo: Par HA; Capacidade bruta: 0,7 PB / 0,7 PiB; Memória máxima: 128.0000
+Configuração da plataforma: ASA A250 100V Chassis único HA Pair
 
+Capacidade máxima de matéria-prima: 0,7344 PB
 
+Memória: 128.0000 GB
 
+Fator de forma: chassi 2U com 2 controladores HA e 24 slots de unidade
 
-== E/S
+Versão ONTAP : b_startONTAP: 9.16.1P2b_end
+
+Slots de expansão PCIe: 4
+
+Versão mínima do ONTAP : ONTAP 9.13.1
 
 
 
-=== E/S integradas
+=== Máximos de Escalabilidade
 
-* Protocolo: Ethernet 25 Gbps; Portas: 4
-* Protocolo: Ethernet 10 Gbps; Portas: 4
-
+|===
 
 
-
-=== Total de E/S
-
-* Protocolo: Ethernet 100 Gbps; Portas: 4
-* Protocolo: Ethernet 25 Gbps; Portas: 12
-* Protocolo: Ethernet 10 Gbps; Portas: 4
-* Protocolo: FC 32 Gbps; Portas: 8
-* Protocolo: NVMe/FC 32 Gbps; Portas: 8
-* Portas: 0
+| Tipo | Pares HA | Capacidade bruta | Memória Máxima 
 
 
+| NAS |  |  |  
 
 
-=== Portas de gerenciamento
+| SAN | 6 | 4,4 PB / 3,9 PiB | 768 GB 
 
-* Protocolo: Ethernet 1 Gbps; Portas: 2
-* Protocolo: RS-232 115 Kbps; Portas: 4
-* Protocolo: USB 12 Mbps; Portas: 4
+
+| Par HA |  | 0,7 PB / 0,7 PiB | 128,0000 
+|===
+
+
+=== IO
 
 
 
+==== IO integrado
 
-== Rede de armazenamento suportada
-
-* FC
-* iSCSI
-* NVMe/FC
-* NVMe/TCP == Especificações do ambiente do sistema Nenhum dado de ambiente disponível.
+|===
 
 
+| Protocolo | Portos 
 
 
-== Conformidade
+| Ethernet 25 Gbps | 4 
+
+
+| Ethernet 10 Gbps | 4 
+|===
+
+
+==== Total de IO
+
+|===
+
+
+| Protocolo | Portos 
+
+
+| Ethernet 100 Gbps | 4 
+
+
+| Ethernet 25 Gbps | 12 
+
+
+| Ethernet 10 Gbps | 4 
+
+
+| FC 32 Gbps | 8 
+
+
+| NVMe/FC 32 Gbps | 8 
+
+
+|  | 0 
+|===
+
+
+==== Portas de Gestão
+
+|===
+
+
+| Protocolo | Portos 
+
+
+| Ethernet 1 Gbps | 2 
+
+
+| RS-232 115 Kbps | 4 
+
+
+| USB 12 Mbps | 4 
+|===
+
+
+=== Rede de armazenamento suportada
+
+FC; iSCSI; NVMe/FC; NVMe/TCP;
+
+
+
+=== Especificações do ambiente do sistema
+
+Não há dados ambientais disponíveis.
+
+
+
+=== Conformidade
 
 * Certificações EMC/EMI: AMCA, FCC, ICES, KC, Marrocos, VCCI
 * Certificações de segurança: BIS, CB, CSA, G_K_U-SoR, IRAM, NOM, NRCS, SONCAP, TBS
@@ -85,10 +139,6 @@ A seguir estão especificações selecionadas para o sistema de armazenamento AS
 
 
 
-== Alta disponibilidade
+=== Alta disponibilidade
 
-* Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP
-* Controladores redundantes hot-swappable
-* Fontes de alimentação redundantes com troca a quente
-* Gerenciamento de banda SAS por meio de conexões SAS para prateleiras externas
-
+Controlador de gerenciamento de placa de base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP ; Controladores redundantes de troca a quente; Fontes de alimentação redundantes de troca a quente; Gerenciamento SAS em banda por meio de conexões SAS para prateleiras externas; [//] 2025-10-15 ontap-systems-internal/issues/1357

@@ -1,6 +1,7 @@
 ---
-permalink: a30-key-specifications.html 
+permalink: a20-30-50/a30-key-specifications.html 
 sidebar: sidebar 
+keywords: AFF A30 specifications, AFF A30 specs, AFF A30 capacity, AFF A30 memory, AFF A30 I/O, AFF A30 compliance 
 summary: Especificações principais do AFF A30 
 ---
 = Especificações principais do AFF A30
@@ -111,5 +112,5 @@ Não há dados de E/S integrados.
 * Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP
 * Controladores redundantes hot-swappable
 * Fontes de alimentação redundantes com troca a quente
-* Gerenciamento de banda SAS por meio de conexões SAS para prateleiras externas
+* Gerenciamento de banda SAS em conexões SAS para prateleiras externas [//] 2025-10-15 ontap-systems-internal/issues/1357
 

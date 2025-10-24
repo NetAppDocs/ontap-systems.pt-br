@@ -94,7 +94,7 @@ A seguir estão alguns exemplos típicos de cabeamento de rede de host. Consulte
 . Conete as portas e9a e e9b ao switch de rede de dados Ethernet.
 +
 
-NOTE: Para obter o máximo desempenho do sistema para tráfego de cluster e HA, não use as portas e1b e E7B para conexões de rede de host. Use uma placa de host separada para maximizar o desempenho.
+NOTE: Não utilize as portas e1b e e7b para conexões de rede do host. Use um cartão host separado.
 
 +
 *Cabo de 100 GbE*

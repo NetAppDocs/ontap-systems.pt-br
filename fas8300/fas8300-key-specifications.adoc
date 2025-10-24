@@ -1,6 +1,7 @@
 ---
-permalink: /fas8300/fas8300-key-specifications.html 
+permalink: fas8300/fas8300-key-specifications.html 
 sidebar: sidebar 
+keywords: FAS8300 specifications, FAS8300 specs, FAS8300 capacity, FAS8300 memory, FAS8300 I/O, FAS8300 compliance 
 summary: Especificações principais do FAS8300 
 ---
 = Especificações principais do FAS8300
@@ -114,5 +115,5 @@ A seguir estão especificações selecionadas para o sistema de armazenamento FA
 * Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP
 * Controladores redundantes hot-swappable
 * Fontes de alimentação redundantes com troca a quente
-* Gerenciamento de banda SAS por meio de conexões SAS para prateleiras externas
+* Gerenciamento de banda SAS em conexões SAS para prateleiras externas [//] 2025-10-15 ontap-systems-internal/issues/1357
 

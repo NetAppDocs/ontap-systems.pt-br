@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a1k, replace a power supply 
 summary: 'Substitua uma fonte de alimentação CA ou CC (PSU) no seu sistema AFF A1K quando falhar ou ficar com defeito, garantindo que o seu sistema continua a receber a energia necessária para uma operação estável. O processo de substituição envolve desconetar a PSU defeituosa da fonte de alimentação, desconetar o cabo de alimentação, substituir a PSU defeituosa e reconectá-la à fonte de alimentação.' 
 ---
-= Substitua uma fonte de alimentação - AFF A1K
+= Troca a quente de uma fonte de alimentação - AFF A1K
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,6 +13,8 @@ summary: 'Substitua uma fonte de alimentação CA ou CC (PSU) no seu sistema AFF
 [role="lead"]
 Substitua uma fonte de alimentação CA ou CC (PSU) no seu sistema AFF A1K quando falhar ou ficar com defeito, garantindo que o seu sistema continua a receber a energia necessária para uma operação estável. O processo de substituição envolve desconetar a PSU defeituosa da fonte de alimentação, desconetar o cabo de alimentação, substituir a PSU defeituosa e reconectá-la à fonte de alimentação.
 
+As fontes de alimentação são redundantes e intercambiáveis a quente. Não é necessário desligar o controlador para substituir uma PSU.
+
 .Sobre esta tarefa
 * Este procedimento é escrito para substituir uma PSU de cada vez.
 +
@@ -20,12 +22,11 @@ Substitua uma fonte de alimentação CA ou CC (PSU) no seu sistema AFF A1K quand
 IMPORTANT: Não misture PSUs com diferentes classificações de eficiência. Sempre substitua como por like.
 
 * Use o procedimento apropriado para o seu tipo de PSU: AC ou DC.
-* As fontes de alimentação são redundantes e intercambiáveis a quente; você não precisa assumir o controle do controlador para executar essa tarefa.
 
 
 [role="tabbed-block"]
 ====
-.Opção 1: Substituir uma PSU CA
+.Opção 1: Troca a quente de uma fonte de alimentação CA
 --
 Para substituir uma PSU CA, execute as etapas a seguir.
 
@@ -82,7 +83,7 @@ Uma vez que a energia é restaurada para a PSU, o LED de status deve estar verde
 
 
 --
-.Opção 2: Substituir uma PSU CC
+.Opção 2: Troca a quente de uma fonte de alimentação CC
 --
 Para substituir uma PSU CC, execute as etapas a seguir.
 

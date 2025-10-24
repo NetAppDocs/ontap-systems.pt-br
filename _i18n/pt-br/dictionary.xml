@@ -780,7 +780,6 @@
   <block id="be0020622e775d64818f3acc7c2d856d" category="admonition">É uma prática recomendada substituir a PSU dentro de dois minutos após removê-la do chassi. O sistema continua funcionando, mas o ONTAP envia mensagens para o console sobre a PSU degradada até que a PSU seja substituída.</block>
   <block id="6c35991313f21e9038f629e9e809488a" category="admonition">Não misture PSUs com diferentes classificações de eficiência. Sempre substitua como por like.</block>
   <block id="e5b2987f321084b00bed28fd97c58226" category="paragraph">Use o procedimento apropriado para o seu tipo de PSU; AC ou DC.</block>
-  <block id="f93bc8f892972bb47d2b0ca4cd480fad" category="open-title">Opção 1: Substituir uma PSU CA</block>
   <block id="19a7bfc2c20931ac9f3593ce3f8c7632" category="paragraph">Use o vídeo a seguir ou as etapas tabuladas para substituir a PSU:</block>
   <block id="a2528ca750816c5cbcc2ab1df78a8eb6" category="video-title">Animação - substitua a PSU CA</block>
   <block id="ba076df359148e35b1b589b37e5d2faa" category="list-text">Identifique a PSU que você deseja substituir, com base em mensagens de erro do console ou através do LED vermelho de falha na PSU.</block>
@@ -797,7 +796,6 @@
   <block id="965cc3fcca40fe72903f2bf567787bd9" category="list-text">Volte a ligar o cabo de alimentação à PSU.</block>
   <block id="774e50999ed71aed779cdb839371a69d" category="list-text">Fixe o cabo de alimentação à PSU utilizando o retentor do cabo de alimentação.</block>
   <block id="eb3ac9b9efdc3a8db20ea72534f74755" category="paragraph">Uma vez que a energia é restaurada para a PSU, o LED de status deve estar verde.</block>
-  <block id="88ff7f55200d397b9c241c6c03ccd6ab" category="open-title">Opção 2: Substituir uma PSU CC</block>
   <block id="6a5cc777b5cea5516ed3c04946243c15" category="paragraph">Para substituir uma PSU CC, execute as etapas a seguir.</block>
   <block id="81118bbf4dc8e737a15cb33e309d5928" category="list-text">Desaperte o conetor do cabo de alimentação D-SUB DC utilizando os parafusos de orelhas na ficha.</block>
   <block id="a11fffebed2ec4e6399a05866d830825" category="list-text">Desconete o cabo de alimentação da PSU e coloque-o de lado.</block>
@@ -3492,7 +3490,6 @@
   <block id="c4c07270ebbe6cd1bc5aa6f45be76f02" category="video-title">Animação - Instalação e configuração de um AFF A150</block>
   <block id="313d8bd68f210e5ae6aa95086215c170" category="doc">Manter o hardware do AFF A150</block>
   <block id="35db388e4e99e4a7488ab682126d7fa6" category="doc">Substitua a bateria do NVMEM - AFF A150</block>
-  <block id="15bdfa06733933ff3285c6dd92cad9c7" category="doc">Troque uma fonte de alimentação - AFF A150</block>
   <block id="3529feb1f15a906788e97c962f5f18b5" category="doc">Substitua a bateria do relógio em tempo real - AFF A150</block>
   <block id="fd440756b4a0ce8acdb949b641576347" category="summary">Depois de substituir a peça, você pode devolver a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Entre em Contato com o suporte técnico em<block ref="eb2c61027d5e6c8b35692c1e74187026" category="inline-link-rx"></block>, 888-463-8277 (América do Norte), 00-800-44-638277 (Europa) ou 800-800-80-800 (Ásia/Pacífico) se precisar do número de RMA ou de ajuda adicional com o procedimento de substituição.</block>
   <block id="e1a213d0031a49d9c017602a71d510b0" category="paragraph">Restaure a encriptação no suporte de arranque de substituição.</block>
@@ -3559,7 +3556,6 @@
   <block id="a353ad5d28eb41a61c5aaf6e3cdd653a" category="paragraph">Depois de instalar o hardware de rack para seu sistema de storage AFF A1K, instale os cabos de rede das controladoras e conete os cabos entre as controladoras e as gavetas de storage.</block>
   <block id="c4cbbd77402de8c27a0e7a305bcd7a83" category="list-text">Conete a porta e1a no controlador A à porta e1a no controlador B.</block>
   <block id="e2e054e25b28fb3d74a683482ef337a6" category="list-text">Conete a porta e7a no controlador A à porta e7a no controlador B.</block>
-  <block id="b1a78b15892ed366f203ff3009cb08d9" category="admonition">Para obter o máximo desempenho do sistema para tráfego de cluster e HA, não use as portas e1b e E7B para conexões de rede de host. Use uma placa de host separada para maximizar o desempenho.</block>
   <block id="bf419afe8104f0626b8c6f35d7546f54" category="list-text">Conete a porta e1a no controlador A e a porta e1a no controlador B ao switch de rede do cluster A..</block>
   <block id="cf5e5d4912cff0cbaa590fc1ae9ce6d7" category="list-text">Conete a porta e7a no controlador A e a porta e7a no controlador B ao switch de rede do cluster B.</block>
   <block id="b222cca23840b6a495e76b8c300b08f2" category="image-alt">Cabo de 100 GB</block>
@@ -3635,7 +3631,6 @@
   <block id="d7158a40e6d62c91f568a937bb75f8ad" category="paragraph">O módulo de gerenciamento do sistema fornece a interface entre o controlador e um console ou laptop para fins de manutenção do controlador ou do sistema. O módulo de gestão do sistema contém o suporte de arranque e guarda o número de série do sistema (SSN).</block>
   <block id="f133a8ed8a0b7a76b6c1b28bc00b0fb1" category="doc">Substitua o NVRAM - AFF A1K</block>
   <block id="9fc6e6ebb195a8b268f686a0f8256e7b" category="summary">A substituição de uma fonte de alimentação envolve desconetar a fonte de alimentação de destino da fonte de alimentação, desconetar o cabo de alimentação, remover a fonte de alimentação antiga e instalar a fonte de alimentação de substituição e conectá-la novamente à fonte de alimentação.</block>
-  <block id="6794ac4e17218aaa4a21099cb6c428a5" category="doc">Substitua uma fonte de alimentação - AFF A1K</block>
   <block id="5dae7574a50de0a82f041d98e2b363d4" category="doc">Substitua a bateria do relógio em tempo real - AFF A1K</block>
   <block id="ec98690855a2ac4306447ccfbffa94ef" category="doc">Devolva a peça com falha ao NetApp - AFF A200</block>
   <block id="873f086f28dc246032bb35219d36ee95" category="doc">Verifique o suporte e o status da chave de criptografia - AFF A200</block>
@@ -3953,7 +3948,6 @@
   <block id="378800f87f8ce5df58c49fa6bb4199e0" category="doc">Substitua ou instale uma placa mezzanine - AFF A250</block>
   <block id="6b2635d59c8fd6836326288e507b4512" category="doc">Substitua a bateria do NVMEM - AFF A250</block>
   <block id="dd33af940cfd986282d97dc9269783a9" category="summary">A substituição de uma fonte de alimentação envolve desconetar a fonte de alimentação de destino (PSU) da fonte de alimentação, desconetar o cabo de alimentação, remover a fonte de alimentação antiga e instalar a fonte de alimentação de substituição e reconectá-la à fonte de alimentação.</block>
-  <block id="b122a7303b98280f8acc1bef20b1890d" category="doc">Substitua uma fonte de alimentação - AFF A250</block>
   <block id="89df533077d1f80c319c0c00d4c58ed1" category="doc">Substitua a bateria do relógio em tempo real - AFF A250</block>
   <block id="085d4c339245e025ba9f6a2524c69c57" category="summary">Depois de concluir a substituição da FRU em uma configuração de MetroCluster de dois nós, você pode executar a operação de switchback do MetroCluster. Isso retorna a configuração para seu estado operacional normal, com as máquinas virtuais de armazenamento de fonte sincronizada (SVMs) no site anteriormente prejudicado agora ativo e fornecendo dados dos pools de discos locais.</block>
   <block id="534553d5e6c1df40c70ac7eb17fa2bee" category="doc">Alterne agregados em uma configuração de MetroCluster de dois nós - AFF A300</block>
@@ -4318,7 +4312,6 @@
   <block id="9ca4b670d4633f7250c5d0254500dd7b" category="list-text">Reinstale a tampa da riser PCIe no módulo da controladora.</block>
   <block id="7bf65a3b0b2623ee81c0deee6045bfbb" category="section-title">Set 4: Instale o módulo do controlador</block>
   <block id="d6cd25c7a2ec0fe6ad8621d4562ce0ae" category="summary">A substituição de uma fonte de alimentação envolve desconetar a fonte de alimentação de destino da fonte de alimentação, desconetar o cabo de alimentação, remover a fonte de alimentação antiga e instalar a fonte de alimentação de substituição e, em seguida, reconetar a fonte de alimentação de substituição à fonte de alimentação.</block>
-  <block id="e944774dbb716679ef719542153680f0" category="doc">Substitua uma fonte de alimentação - AFF A320</block>
   <block id="ca80c728e158c474fa562e4e6fe53868" category="image-alt">Substitua uma PSU</block>
   <block id="bff69c64ca9124fefc1120a9526e1c86" category="doc">Substitua a bateria do relógio em tempo real - AFF A320</block>
   <block id="99028e2ad3b8cc332ccf01555ed73338" category="section-title">Passo 2: Substitua a bateria RTC</block>
@@ -4410,7 +4403,6 @@
   <block id="376ecb7742395c276940c386f403f622" category="doc">Substitua a bateria NVDIMM - AFF A400</block>
   <block id="6873688fd24ce06352b0f67301567306" category="doc">Substitua um NVDIMM - AFF A400</block>
   <block id="dd473272c4d6050e610191be8ab18137" category="doc">Substitua uma placa PCIe ou mezzanine - AFF A400</block>
-  <block id="897fb2e62dec5276f207c3447d27e6c4" category="doc">Substituição de uma fonte de alimentação - AFF A400</block>
   <block id="a6c279177bd30a0d3ee3363a3679bffa" category="doc">Substitua a bateria do relógio em tempo real - AFF A400</block>
   <block id="e736c3581e7cc7eb9804edd4215c31b3" category="doc">Devolva a peça com falha ao NetApp - AFF A70 e AFF A90</block>
   <block id="a91e5640776c0744ff211f74a193dc57" category="doc">Substitua o chassis - AFF A70 e AFF A90</block>
@@ -4472,7 +4464,6 @@
   <block id="3a18b3bb3b5d96ad964da98cfdd729b8" category="paragraph"><block ref="3a18b3bb3b5d96ad964da98cfdd729b8" category="inline-link-macro-rx"></block></block>
   <block id="68957a8f3d38a433e42aad8e6127ef63" category="paragraph"><block ref="68957a8f3d38a433e42aad8e6127ef63" category="inline-link-macro-rx"></block></block>
   <block id="45246f3dd0a53426b7b68a7138275eae" category="doc">Substitua a bateria NV - AFF A70 e AFF A90</block>
-  <block id="142aed9b4219bef04d9ce41b26e16e98" category="doc">Substitua uma fonte de alimentação - AFF A70 e AFF A90</block>
   <block id="09667d54b485aed2ff058a0b9116b943" category="doc">Substitua a bateria do relógio em tempo real - AFF A70 e AFF A90</block>
   <block id="30c36d0c10aef968ba45a8742ec6c704" category="doc">Alterne agregados em uma configuração de MetroCluster de dois nós - AFF A700 e FAS9000</block>
   <block id="4ef2119efbb49942a200e3b516caf558" category="doc">Devolva a peça com falha ao NetApp - AFF A700 e FAS9000</block>
@@ -4593,7 +4584,6 @@
   <block id="6022a0597e430fab381c221734d82e62" category="paragraph">O módulo X91148A é um módulo de e/S que atua como intermediário entre o controlador e vários dispositivos ou sistemas que precisam trocar dados com o controlador.</block>
   <block id="140d684ef1769656ce93863b342912ff" category="doc">Substitua o módulo NVRAM ou DIMMs NVRAM - AFF A700</block>
   <block id="67217a13f69bc00335677c551451bc10" category="doc">Substitua um módulo de e/S - AFF A700 e FAS9000</block>
-  <block id="53cf1eb17a3e9045dac329b1022412e7" category="doc">Troque uma fonte de alimentação - AFF A700</block>
   <block id="cd95d50059d41eb34778df0d836e3773" category="doc">Substitua a bateria do relógio em tempo real - AFF 700</block>
   <block id="b8df7e09ad1121a4f05257027c0a5735" category="doc">Visão geral da adição de um módulo X91148A - AFF A700</block>
   <block id="ec3ff203f5d79b791c68957799b25408" category="doc">Adicione um módulo de armazenamento X91148A em um sistema sem slots abertos - A700</block>
@@ -4766,7 +4756,6 @@
   <block id="ab0f1b74bde528a6c04a7682a94cb284" category="paragraph">Para substituir uma placa PCIe, você deve remover o cabeamento e quaisquer SFPs das portas nas placas PCIe no riser de destino, remover o riser do módulo da controladora, remover e substituir a placa PCIe, reinstalar o riser e reinstalá-lo.</block>
   <block id="a8d388baf53b90495c7c71be1ec89798" category="list-text">Instale a placa PCIe no mesmo slot no riser PCIe:</block>
   <block id="f99e3c0be135f8d468eda1703b7345f9" category="summary">A troca de uma fonte de alimentação envolveu a desconexão da fonte de alimentação de destino (PSU) da fonte de alimentação, a desconexão do cabo de alimentação, a remoção da fonte de alimentação antiga e a instalação da fonte de alimentação de substituição e, em seguida, a reconexão à fonte de alimentação.</block>
-  <block id="e603d2510eeff2fb744840a8b8277f7c" category="doc">Troque uma fonte de alimentação - AFF A700s</block>
   <block id="25b17a241b7878627647c78d24614092" category="paragraph">A troca de uma fonte de alimentação envolveu a desconexão da fonte de alimentação de destino (PSU) da fonte de alimentação, a desconexão do cabo de alimentação, a remoção da fonte de alimentação antiga e a instalação da fonte de alimentação de substituição e, em seguida, a nova conexão à fonte de alimentação.</block>
   <block id="667ec5d2e7ff49916ac90c31eb178520" category="list-text">Feche a pega da came, balançando-a até onde for.</block>
   <block id="28746dbce7c4fc8053d035e3b2295bde" category="doc">Substitua a bateria do relógio em tempo real - AFF A700s</block>
@@ -4867,7 +4856,6 @@
   <block id="2ee0c03cb33be156e12b5b33dbf8e422" category="doc">Substitua a bateria NVDIMM - AFF A800</block>
   <block id="161d11f75b68457ea33ac52c79b01c05" category="doc">Substitua um NVDIMM - AFF A800</block>
   <block id="b847555d08409368f0fef45554d04bc5" category="doc">Substitua uma placa PCIe - AFF A800</block>
-  <block id="80185b76790082a23c34d9ebf9a01f7e" category="doc">Substitua uma fonte de alimentação - AFF A800</block>
   <block id="2bb6eb6e274e403747742b20b6b76f1a" category="doc">Substitua a bateria do relógio em tempo real - AFF A800</block>
   <block id="4e4fca0318eac6dc1315f4bad56eb1c6" category="summary">Você pode adicionar um módulo de e/S ao seu sistema, substituindo um módulo de e/S existente por um novo módulo de e/S em um sistema totalmente preenchido ou adicionando um novo módulo de e/S em um slot vazio no chassi.</block>
   <block id="a164244a6913c60772e9b9fbbbc17a4a" category="doc">Adicionar um módulo de e/S - AFF A900</block>
@@ -5014,7 +5002,6 @@
   <block id="6012de004f4bd50d98163ac921889523" category="doc">Substitua um módulo USB LED - AFF A900</block>
   <block id="b422a6f4d3945c00efbef5a1554df972" category="doc">Substitua o módulo NVRAM e/ou DIMMs NVRAM - AFF A900</block>
   <block id="2aba05ee9a4093e5315b48903c27d988" category="doc">Substitua um módulo de e/S - AFF A900</block>
-  <block id="d35fd8965949830b92555b33686beb19" category="doc">Troque uma fonte de alimentação - AFF A900</block>
   <block id="b9f8bf80fa7fab32aca8c28430b0b999" category="doc">Substituição da bateria do relógio em tempo real - AFF A900</block>
   <block id="ac153f0a41690d0111bba47080ad4deb" category="summary">Existem dois kits de trilho de suporte de dois postes que podem ser usados com os sistemas FAS9000 e AFF A700. Um kit permite-lhe montar o seu sistema de montagem embutida no rack de dois pilares, e o outro kit permite-lhe montar o seu sistema no rack de dois pilares.</block>
   <block id="3d621fa2786c28a29e81425001413c0e" category="doc">Instruções de instalação do kit de trilho de suporte de dois pilares - AFF A700 e FAS9000</block>
@@ -5053,7 +5040,6 @@
   <block id="cfa5d83bbf18bd39f133033e09af4872" category="admonition">O ASA C250 utiliza o mesmo procedimento de instalação que o sistema AFF A250.</block>
   <block id="706f40f792c3dab367a62e0d94e461ee" category="doc">Substitua ou instale uma placa mezzanine - ASA C250</block>
   <block id="e6d96f81a26c1a2a35065ae9c3793837" category="doc">Substitua a bateria do NVMEM - ASA C250</block>
-  <block id="5a3293bed167a0eb16f492a5ce0b1ed5" category="doc">Substitua uma fonte de alimentação - ASA C250</block>
   <block id="7382bde7f210f74c2e89d6849d2c853c" category="doc">Substitua a bateria do relógio em tempo real - ASA C250</block>
   <block id="ec587342818437cd0c6a0daf4be599a1" category="doc">Alterne agregados em uma configuração de MetroCluster de dois nós - ASA C400</block>
   <block id="b4247ab28006e796109bb9e6443b612f" category="doc">Descrição geral da substituição do suporte de arranque - ASA C400</block>
@@ -5103,7 +5089,6 @@
   <block id="9187e0a8947f2ca2039bb2793202300f" category="doc">Substitua a bateria NVDIMM - ASA C400</block>
   <block id="2097e20950ae1f46d998ba486146b369" category="doc">Substitua um NVDIMM - ASA C400</block>
   <block id="b31b0c352e7abb4634524d9d53f5fcce" category="doc">Substitua uma placa PCIe ou mezzanine - ASA C400</block>
-  <block id="6b6916e7dab19d8ffcd0bc0fa006d0c2" category="doc">Substituição de uma fonte de alimentação - ASA C400</block>
   <block id="d8548c2140dedaa5fc883590a1f7009a" category="doc">Substitua a bateria do relógio em tempo real - ASA C400</block>
   <block id="dee67159310079d1b0fb667da81d6e9e" category="doc">Descrição geral da substituição do suporte de arranque - ASA C800</block>
   <block id="cbc21197c1871348bbf882e4a113a8cf" category="doc">Conclua o processo de restauração e substituição - ASA C800</block>
@@ -5142,7 +5127,6 @@
   <block id="16c54e4c9f50a83bb13eddc18729c9e7" category="doc">Substitua a bateria NVDIMM - ASA C800</block>
   <block id="3f9ba83126a2d0a1b4562908efe4870c" category="doc">Substitua um NVDIMM - ASA C800</block>
   <block id="2f7ac9575acad766cc32c4e3e9719d24" category="doc">Substitua uma placa PCIe - ASA C800</block>
-  <block id="5bb05bb37b0f50f78a66bcb870b4f799" category="doc">Substitua uma fonte de alimentação - ASA C800</block>
   <block id="bf0c9d599368cd33e5930b660050f4e0" category="doc">Substitua a bateria do relógio em tempo real - ASA C800</block>
   <block id="1d04f5bb7d7b81fc8fded3b79cc0c8d3" category="doc">Instale e configure seus sistemas ASA R2</block>
   <block id="22d05c38a6e8032e35e9ff8d6b826ee0" category="inline-link">Documentação dos sistemas ASA R2</block>
@@ -5180,7 +5164,6 @@
   <block id="5f402dad935ff3ab451b558b0df9b4f3" category="paragraph">Um controlador consiste em uma placa, firmware e software. Ele controla o storage, as placas de e/S e executa o software do sistema operacional ONTAP.</block>
   <block id="33a7e77eb8f382b670aecd2f25304362" category="doc">Substitua a bateria NV - ASA A70 e ASA A90</block>
   <block id="124b0b12b52d6ff2b5c211d8ab2b86c6" category="doc">Substitua o NVRAM - ASA A70 e o ASA A90</block>
-  <block id="778b3919afeff8e8a35cc6a213bb7784" category="doc">Substitua uma fonte de alimentação - ASA A70 e ASA A90</block>
   <block id="591fbd5c7a0e4469981c4bc0919fffdb" category="doc">Substitua a bateria do relógio em tempo real - ASA A70 e ASA A90</block>
   <block id="77dbbb0add58d8d5b96d74c1b27689bb" category="doc">Devolva a peça com falha ao NetApp - ASA A1K</block>
   <block id="1c1be2f74300d879eb6d6d09021f9e6f" category="doc">Substitua o suporte de arranque - ASA A1K</block>
@@ -5197,7 +5180,6 @@
   <block id="3f3cad89dab9930e656089557bd4ab26" category="doc">Mantenha o hardware do ASA A1K</block>
   <block id="c0948273a639518682bdf15da7ef7782" category="paragraph">Para o sistema de armazenamento ASA A1K, pode executar procedimentos de manutenção nos seguintes componentes.</block>
   <block id="d40d4bbeff22abe0ae50f578804e3f1d" category="doc">Substitua o NVRAM - ASA A1K</block>
-  <block id="8280bf46cc1987c5763fa466b06ce943" category="doc">Substitua uma fonte de alimentação - ASA A1K</block>
   <block id="53211074b0edd2a1e49952ae0a99c70e" category="doc">Substitua a bateria do relógio em tempo real - ASA A1K</block>
   <block id="f391cb900d45daed2a3ef828c09a1546" category="doc">Devolva a peça com falha ao NetApp - ASA A150</block>
   <block id="15f3dc209220fcd5ed53507c602a5619" category="doc">Restaure OKM, NSE e NVE - ASA A150</block>
@@ -5238,7 +5220,6 @@
   <block id="1d4ac53db25f608efca8dafa3f3d6b43" category="paragraph">Use os vídeos a seguir para saber como montar e fazer o cabeamento do sistema e executar a configuração inicial do sistema.</block>
   <block id="95a15694e7d6d23376f741970900ef8e" category="list-text">Instalação de hardware e cabeamento</block>
   <block id="972b05beb868fb1b84256a9cba2e1e29" category="doc">Substitua a bateria do NVMEM - ASA A150</block>
-  <block id="044e314ccb891749cf1ff6ab7bb779e9" category="doc">Troque uma fonte de alimentação - ASA A150</block>
   <block id="25e4ca3cea9556bf60cfd34a863bcc83" category="doc">Substitua a bateria do relógio em tempo real - ASA A150</block>
   <block id="b02afbe9444685afbe9c40a3fc3c120a" category="doc">Devolva a peça com falha ao NetApp - ASA A250</block>
   <block id="e0510602c19834e8bc265ba7efeba84d" category="doc">Inicie a imagem de recuperação - ASA A250</block>
@@ -5273,7 +5254,6 @@
   <block id="e6f6041e49a048399457259bb308d074" category="admonition">O ASA A250 utiliza o mesmo procedimento de instalação que o sistema AFF A250.</block>
   <block id="465964d20433e41566b91166a85bfb9b" category="doc">Substitua ou instale uma placa mezzanine - ASA A250</block>
   <block id="fa26ab686e2bca1aebda5034632821e5" category="doc">Substitua a bateria do NVMEM - ASA A250</block>
-  <block id="689f5d1d68f65bf1f76cf70ed891009d" category="doc">Substitua uma fonte de alimentação - ASA A250</block>
   <block id="2fe8ccbf6f953c42d3accff471020e04" category="doc">Substitua a bateria do relógio em tempo real - ASA A250</block>
   <block id="f52c387171f2e8c70a6f184572b951e7" category="doc">Alterne agregados em uma configuração de MetroCluster de dois nós - ASA A400</block>
   <block id="54f46852719e04c3aed26f73ee04f70b" category="doc">Restaure OKM, NSE e NVE - ASA A400</block>
@@ -5306,7 +5286,6 @@
   <block id="65392e86ad2fc6fcf5916c34207de30e" category="doc">Substitua a bateria NVDIMM - ASA A400</block>
   <block id="07e5680a62c7fba171b750d884e2c8b8" category="doc">Substitua NVDIMM - ASA A400</block>
   <block id="d1672ccf268fd495f4d802c2624aafae" category="doc">Substitua uma placa PCIe ou mezzanine - ASA A400</block>
-  <block id="b26cf0fc163ec7e9ea966514eed60da1" category="doc">Substituição de uma fonte de alimentação - ASA A400</block>
   <block id="032572a24efb136cda9bfc98b8b86aca" category="doc">Substitua a bateria do relógio em tempo real - ASA A400</block>
   <block id="8eeb34b2abc09270a61b91c0fea86350" category="doc">Restaure OKM, NSE e NVE - ASA A800</block>
   <block id="0b61404420e238ba6738c723b617ba4f" category="doc">Descrição geral da substituição do suporte de arranque - ASA A800</block>
@@ -5333,7 +5312,6 @@
   <block id="370845993b41687570ddfd991106c84f" category="doc">Substitua a bateria NVDIMM - ASA A800</block>
   <block id="d5ebc86a83d59dde394b71343ed8cc34" category="doc">Substitua um NVDIMM - ASA A800</block>
   <block id="95fcff8e2589b768473a2156b6782181" category="doc">Substitua a placa PCIe - ASA A800</block>
-  <block id="8efb05cbcb76a25c9260967bb6da74ea" category="doc">Substitua a fonte de alimentação - ASA A800</block>
   <block id="d374640195a360abfae0102d10acd97b" category="doc">Substitua a bateria do relógio em tempo real - ASA A800</block>
   <block id="61cb2661b290495563ba9c588ff896ca" category="doc">Adicionar um módulo de e/S - ASA A900</block>
   <block id="ffb724b559859524ecc5b0044250179e" category="doc">Devolva a peça com falha ao NetApp - ASA A900</block>
@@ -5392,7 +5370,6 @@
   <block id="4f755217264f549ed8e3ff6bb489f8ae" category="doc">Substitua um módulo USB LED - ASA A900</block>
   <block id="0793e1a216dd4c3846c49cbc01994776" category="doc">Substitua o módulo NVRAM e os DIMMs NVRAM - ASA A900</block>
   <block id="f5c82e54dca2d2d76c6d77abbfa2b2ba" category="doc">Substitua o módulo de e/S - ASA A900</block>
-  <block id="028f92edd9500c0efb168e412294a861" category="doc">Troque uma fonte de alimentação - ASA A900</block>
   <block id="1cf6ac8a974aa424dc7fbb078c513f07" category="doc">Substitua a bateria do relógio em tempo real - ASA A900</block>
   <block id="d5d1d7f0ba452ea37dcd299489e09eff" category="doc">Devolva a peça com falha ao NetApp - AFF C190</block>
   <block id="df09058d5b404eb00ac7ce864045c556" category="doc">Inicie a imagem de recuperação - AFF C190</block>
@@ -5556,7 +5533,6 @@
   <block id="ab253cf54adf6fdbb65cbb0ed70cb2cf" category="paragraph">Para o sistema de armazenamento AFF C250, pode executar procedimentos de manutenção nos seguintes componentes.</block>
   <block id="e2f649ac2d970925993f9e5fb7967c22" category="doc">Substitua ou instale uma placa mezzanine - AFF C250</block>
   <block id="4b244bbe02217e1cc95dfefa194113e0" category="doc">Substitua a bateria do NVMEM - AFF C250</block>
-  <block id="9c0f44d79b852189eca9e0c3c970c0ff" category="doc">Substitua uma fonte de alimentação - AFF C250</block>
   <block id="9787dc0906e96e78e67df0b3f9dad9a0" category="doc">Substitua a bateria do relógio em tempo real - AFF C250</block>
   <block id="bb2c0218cb7e6195837599cbb3d03ac1" category="doc">Alterne agregados em uma configuração de MetroCluster de dois nós - AFF C400</block>
   <block id="4d8adba62be8512e84ae7825848692e9" category="doc">Devolva a peça com falha ao NetApp - AFF C400</block>
@@ -5590,7 +5566,6 @@
   <block id="b1c4aeeae550bfbe7c6574898398d781" category="doc">Substitua a bateria NVDIMM - AFF C400</block>
   <block id="eca713323e6fa9782ebae60357fc0453" category="doc">Substitua um NVDIMM - AFF C400</block>
   <block id="7fc305adae8e903c0dc8bff5a49862c9" category="doc">Substitua uma placa PCIe ou mezzanine - AFF C400</block>
-  <block id="327f4c7d5141a205c506afea880dfdef" category="doc">Substituição de uma fonte de alimentação - AFF C400</block>
   <block id="d01bad26d559eb16c91d450cefe02539" category="doc">Substitua a bateria do relógio em tempo real - AFF C400</block>
   <block id="c73861201327e5c06b062143f039e8bc" category="doc">Descrição geral da substituição do suporte de arranque - AFF C800</block>
   <block id="7084b904bc2fba91a6a3acb82001365c" category="doc">Conclua o processo de restauração e substituição - AFF C800</block>
@@ -5624,7 +5599,6 @@
   <block id="7bb5b3f1026a3e755afd3077cd503481" category="doc">Substitua a bateria NVDIMM - AFF C800</block>
   <block id="7040351b0fc4c5a538e3b99ec1ec804a" category="doc">Substitua um NVDIMM - AFF C800</block>
   <block id="1085be18597d7d6c96ecba68a211bd73" category="doc">Substitua uma placa PCIe - AFF C800</block>
-  <block id="555193cbb314d41872f483748d489825" category="doc">Substitua uma fonte de alimentação - AFF C800</block>
   <block id="c5a63894b2cca959254f190c438b2862" category="doc">Substitua a bateria do relógio em tempo real - AFF C800</block>
   <block id="2d5a4622cf1f60fa2062a6410204c938" category="summary">Saiba mais sobre o hardware legado que não é mais suportado.</block>
   <block id="791c7d7e48c500e265e759e91a1190c4" category="paragraph">Os seguintes sistemas, compartimentos e switches não são mais compatíveis a partir da versão especificada do ONTAP.</block>
@@ -5739,7 +5713,6 @@
   <block id="5060dc7c2f8e62d845323bb56c316f67" category="paragraph">Depois de analisar os requisitos de hardware, você <block ref="f9fa58ae9ecc3e85b1db488d30bad78e" category="inline-link-macro-rx"></block>.</block>
   <block id="3a36e6b466e0265c25d241c486f64e02" category="paragraph">O Flash Cache acelera o acesso aos dados por meio do armazenamento em cache inteligente em tempo real dos dados do usuário lidos recentemente e dos metadados do NetApp. Ele é eficaz para cargas de trabalho com uso intenso de leitura aleatória, incluindo bancos de dados, e-mail e serviços de arquivos.</block>
   <block id="c4ed6403201dfa217ff707bb31f7629c" category="doc">Substitua o NVRAM - FAS70 e FAS90</block>
-  <block id="031f9f009940597777a75796e5b17818" category="doc">Substitua uma fonte de alimentação - FAS70 e FAS90</block>
   <block id="6edcaa0f49095aafb0fa011d3fa4d4c5" category="doc">Substitua a bateria do relógio em tempo real - FAS70 e FAS90</block>
   <block id="a47803b6b6d01b67efcc88a157378c39" category="doc">Devolver a peça com falha ao NetApp - FAS2600</block>
   <block id="d2efa0c31f219abbc043377bfd4ffa3b" category="doc">Inicie a imagem de recuperação - FAS2600</block>
@@ -5811,7 +5784,6 @@
   <block id="03368b35432c9c05a536c51bc76c1ad2" category="doc">Mantenha o hardware FAS2700</block>
   <block id="185d6bc662c8cd2db9d58c8a722d974e" category="paragraph">Para o sistema de armazenamento FAS2700, pode executar procedimentos de manutenção nos seguintes componentes.</block>
   <block id="b1bae0b20bbdf563e7e4d9f0fff14ef3" category="doc">Substitua a bateria do NVMEM - FAS2700</block>
-  <block id="de599e8ee2b792a05ff2446e93b3a7e5" category="doc">Troque uma fonte de alimentação - FAS2700</block>
   <block id="4091c5e7156fea8e74fb2f6ff3fe34fd" category="doc">Substitua a bateria do relógio em tempo real - FAS2700</block>
   <block id="1396dacdf561903f32c605f06d2cf5d8" category="list-text">Pressione<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> quando solicitado para confirmar se o backup de restauração foi bem-sucedido.</block>
   <block id="5d9c656065fa74e7cb14500497b33617" category="list-text">Abra a tampa pressionando os botões azuis nas laterais do módulo do controlador para soltar a tampa e, em seguida, gire a tampa para cima e para fora do módulo do controlador.</block>
@@ -6147,7 +6119,6 @@
   <block id="5d43aadf0265bbe861cd90a52514a118" category="list-text">Insira o módulo do controlador no chassis</block>
   <block id="9cba1bd90da040950cfda65ba6af50aa" category="doc">Substitua a bateria do NVMEM - FAS500f</block>
   <block id="74384aef792e0e84d445bfde0eab13c6" category="paragraph">Você pode usar o vídeo a seguir ou as etapas tabuladas para substituir a bateria do NVMEM:</block>
-  <block id="b94c622729a1c3b9f221ed4f8376e65b" category="doc">Substitua uma fonte de alimentação - FAS500f</block>
   <block id="af9d8ec1fd1a942d04dce1dd9b6787b7" category="paragraph">A substituição de uma fonte de alimentação envolve desconetar a fonte de alimentação de destino (PSU) da fonte de alimentação, desconetar o cabo de alimentação, remover a fonte de alimentação antiga e instalar a fonte de alimentação de substituição e conectá-la novamente à fonte de alimentação.</block>
   <block id="1661dbd7e15cf50b73ab10b3561b2d66" category="paragraph">Você pode usar o vídeo a seguir ou as etapas tabuladas para substituir a fonte de alimentação:</block>
   <block id="1419ac825716a209020b33adb96907c3" category="video-title">Animação - substitua a fonte de alimentação</block>
@@ -6301,7 +6272,6 @@
   <block id="bf333756fca94003818a0db8ced6f7d9" category="list-text">Volte a colocar o controlador em funcionamento normal, devolvendo o respetivo armazenamento:<block ref="a2a0d2a805a6a7b779572d78313420fd" prefix=" " category="inline-code"></block></block>
   <block id="f060498e4a9c2e920e619ab0da23740a" category="doc">Substitua uma placa PCIe ou mezzanine - FAS8300 e FAS8700</block>
   <block id="e31f48aed610f4dfc632dee37773ef46" category="section-title">Passo 7: Restaure o módulo do controlador para a operação</block>
-  <block id="3a08488c499949ce994ce7beebe666ee" category="doc">Substitua uma fonte de alimentação - FAS8300 e FAS8700</block>
   <block id="54f4c70c653781a776673e986d65e502" category="paragraph">Você pode usar a animação, ilustração ou as etapas escritas a seguir para substituir a fonte de alimentação.</block>
   <block id="e7391aa0081cf0bb76d099d43b77df97" category="video-title">Animação - substitua uma fonte de alimentação</block>
   <block id="c0925c06c8c424f377718df251d2ae9f" category="doc">Substitua a bateria do relógio em tempo real - FAS8300 e FAS8700</block>
@@ -6345,7 +6315,6 @@
   <block id="aa0762e09f38fc7b2312bde868ded5f1" category="paragraph">Para o sistema de armazenamento FAS9000, pode executar procedimentos de manutenção nos seguintes componentes.</block>
   <block id="591d8b3ff5b1c583a955a94d3201dec1" category="doc">Substitua o módulo NVRAM ou DIMMs NVRAM - FAS9000</block>
   <block id="85b27335aa3e806168179c1cbecc6e76" category="doc">Substitua um módulo de e/S - FAS9000</block>
-  <block id="6a2bdbf29fe66b28017ff3dc4e7ce2b1" category="doc">Troque uma fonte de alimentação - FAS9000</block>
   <block id="5493921a84399dcd802cc5626256ffb8" category="doc">Substitua a bateria do relógio em tempo real - AFF 9000</block>
   <block id="68f1a7b941dc9e6a48709297bda51c0f" category="doc">Visão geral da adição de um módulo X91148A - AFF A9000</block>
   <block id="bc031d960da3ea88b1bcda318664af96" category="doc">Adicione um módulo de armazenamento X91148A em um sistema sem slots abertos - FAS9000</block>
@@ -6444,7 +6413,6 @@
   <block id="58e30dc94cdf372b64dac305fbb57bc0" category="section-title">Etapa 5: Reatribuir discos</block>
   <block id="eb0c0a024c4f0aa6cfdd5767de1f16f1" category="doc">Substitua um módulo de e/S - FAS9500</block>
   <block id="8ae73aa056882e7b560f3b52b5764957" category="list-text">Se o sistema estiver configurado para suportar interconexão de cluster de 10 GbE e conexões de dados em NICs de 40 GbE, converta essas portas em conexões de 10 GbE usando o<block ref="5ec041cdb2bbdf01cd4ea2c400b17495" prefix=" " category="inline-code"></block> comando do modo Manutenção. Consulte<block ref="2d808a662d9493bde97b50913a25a294" category="inline-link-rx"></block> para obter mais informações.</block>
-  <block id="1aa73ef56da88752323de5876f9b3750" category="doc">Troque uma fonte de alimentação - FAS9500</block>
   <block id="46dd13a6814ed7f56a6b685a892da660" category="doc">Substitua a bateria do relógio em tempo real - FAS9500</block>
   <block id="e0ec09ab8cb93f04e1ddb90be314a159" category="paragraph">Rode a bateria para cima</block>
   <block id="0c724ad091d5fbe112bba9f946140f9b" category="paragraph">Deslize a bateria para fora do alojamento</block>
@@ -9439,7 +9407,6 @@
   <block id="87e83e1392e33b9e82110521a139bad8" category="list-text">Retire a bateria NV:</block>
   <block id="d61cc7e5822a30588ead2cb9b0e8c0d8" category="list-text">Instale a bateria NV de substituição:</block>
   <block id="216cd6b3556908b9bf9092308aacc2f2" category="list-text">Coloque a bateria NV no respetivo compartimento.</block>
-  <block id="29e74344b0f8f3bb2a741f7b4a504193" category="paragraph">As PSUs são redundantes e hot-swap.</block>
   <block id="a9f9d19ee0352e6fe7d4ace8f91528b4" category="list-text">IMPORTANTE: Não misture PSUs com diferentes classificações de eficiência ou diferentes tipos de entrada. Sempre substitua como por like.</block>
   <block id="f6454949377394cc2236360f10f7e56e" category="list-text">Identifique a PSU avariada com base em mensagens de erro da consola ou através do LED de atenção vermelho na PSU.</block>
   <block id="6f48d98c2df2386d39c71bc10860a818" category="list-text">Desconete o cabo de alimentação da PSU abrindo o retentor do cabo de alimentação e, em seguida, desconete o cabo de alimentação da PSU.</block>
@@ -9499,7 +9466,6 @@
   <block id="7638bec0a959f7fd0b1433ed8d2deca8" category="list-text">Prateleira de armazenamento (se você pediu armazenamento adicional)</block>
   <block id="4aaf4b6268f5873187a9eb7110d1ec2e" category="list-text">Cabo USB-C da consola série</block>
   <block id="8f6507883f353b8fbeb448f5d296b420" category="paragraph">Depois de garantir que o seu local cumpre os requisitos das especificações do seu sistema de armazenamento e ter verificado que tem todas as peças que encomendou, deve registar o seu sistema de armazenamento.</block>
-  <block id="2ab82a0b93ec71d9918e64fb9b828444" category="list-text">Localize os números de série do sistema (SSN) para cada controlador que está sendo instalado. Você pode encontrar os números de série nos seguintes locais:</block>
   <block id="3db53907b5ca9a298d8e8517cdd30a44" category="list-text">Você pode encontrar os números de série nos seguintes locais:</block>
   <block id="3fc885acbf9f3f66cb5fefc99c0d76c6" category="list-text">Sobre o deslizamento da embalagem</block>
   <block id="cf163ceac39b37fd1108b3cf9ff2b719" category="list-text">No seu e-mail de confirmação</block>
@@ -9697,7 +9663,6 @@
   <block id="90173eb1ed454afdf58b9269bb20c2b9" category="paragraph">Uma ventoinha arrefece o controlador e as unidades.</block>
   <block id="05a221444243ea0ca6f4dad99fe28c6c" category="paragraph">A bateria de memória não volátil (NV) é responsável por fornecer energia aos componentes do NVMEM enquanto os dados em trânsito estão sendo destinados à memória flash após uma perda de energia.</block>
   <block id="93cffbd214791f6c73bd02d80e0804ab" category="doc">Substitua a bateria NV - AFF A20, AFF A30 e AFF A50</block>
-  <block id="c21a1648c7655abd0241b02472ce577b" category="doc">Substitua uma fonte de alimentação - AFF A20, AFF A30 e AFF A50</block>
   <block id="d04789e64aa71c747fa327e4d399534e" category="doc">Substitua a bateria do relógio em tempo real - AFF A20, AFF A30 e AFF A50</block>
   <block id="4bc0f3e72d6123d7efdfe5948cc79a4c" category="doc">Devolva a peça com falha ao NetApp - AFF C30 e AFF C60</block>
   <block id="5c067d0c56a9b99bc0f72610745316f6" category="doc">Substituição completa do chassis - AFF C30 e AFF C60</block>
@@ -10293,7 +10258,6 @@
   <block id="f7505dbf9cbf21226d33ed67b7c926e6" category="doc">Visão geral da manutenção de hardware - ASA A20, ASA A30 e ASA A50</block>
   <block id="02cbc9c9b92f52062a793fbc039a7a5f" category="paragraph">Para os sistemas de storage ASA A20, ASA A30 e ASA A50, é possível executar procedimentos de manutenção nos seguintes componentes.</block>
   <block id="c62c530fe1e7e769964d1cac42c0c1ca" category="doc">Substitua a bateria NV - ASA A20, ASA A30 e ASA A50</block>
-  <block id="db9511faddf8c60d659417ec7880bb9b" category="doc">Substitua uma fonte de alimentação - ASA A20, ASA A30 e ASA A50</block>
   <block id="69ddcdcae3c05843aa3be62f304e023b" category="doc">Substitua a bateria do relógio em tempo real - ASA A20, ASA A30 e ASA A50</block>
   <block id="3d68bd292ff38f0f7a42e75bafb71ae7" category="summary">Se um componente no seu sistema AFF C80 falhar, devolva a peça com falha ao NetApp. Consulte a<block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> página para obter mais informações.</block>
   <block id="f48200b4fe7f2f013c6d085467e08b85" category="summary">Substitua a controladora no sistema AFF C80 quando uma falha ou atualização de hardware exigir isso. Este processo envolve remover o controlador prejudicado, mover os componentes para o controlador de substituição, instalar o controlador de substituição e reiniciar o sistema.</block>
@@ -12537,14 +12501,7 @@
   <block id="810944644ddbd9a71f9a53ebcd73f51d" category="list-text">Normas EMC/EMI: BS-EN-55024, BS-EN55035, CISPR 32, EN55022, EN55024, EN55032, EN55035, EN61000-3-2, EN61000-3-3, FCC Parte 15 Classe A, ICES-003, KS C 9832, KS C 9835</block>
   <block id="9b3b75c67a53d54bba73c70cd1786aed" category="list-text">Normas de segurança: ANSI/UL60950-1, ANSI/UL62368-1, BS-EN62368-1, CAN/CSA C22.2 No. 60950-1, CAN/CSA C22.2 No. 62368-1, CNS 14336, EN60825-1, EN62368-1, IEC 62368-1, IEC60950-1, IS 13252 (parte 1)</block>
   <block id="520b661a272c9e6f55f469cc9c24193d" category="section-title">Alta disponibilidade</block>
-  <block id="e447884015fc6cccd73419a58f4a2dc9" category="paragraph">Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP ; Controladores redundantes de troca a quente; Fontes de alimentação redundantes de troca a quente; Gerenciamento SAS em banda por meio de conexões SAS;</block>
-  <block id="953484270d99ac98b7edea761c8accc5" category="summary">Especificações principais para o grupo de plataforma A150</block>
-  <block id="98cf7c8810f9cbc80da978f12dfd11de" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento AFF A150 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
   <block id="f5046e4779952c40dda2055325e842f6" category="list-text">Versão ONTAP : ONTAP: 9.16.1P2</block>
-  <block id="f31908f038c51788c271c5c4f452a2f9" category="list-text">Versão mínima do ONTAP : ONTAP 9.10.1P12 == Máximos de escalonamento</block>
-  <block id="b88ea7120b8d94ca7802d027ea4ae35d" category="list-text">Tipo: NAS; Pares HA: 12; Capacidade bruta: 6,6 PB / 5,8 PiB; Memória máxima: 768 GB</block>
-  <block id="a4e92d69d00158d7ae606a77ce4fd213" category="list-text">Tipo: SAN; Pares HA: 6; Capacidade bruta: 3,3 PB / 2,9 PiB; Memória máxima: 384 GB</block>
-  <block id="c00cb3237fcdb94d446acf8665539403" category="list-text">Tipo: Par HA; Capacidade bruta: 0,5 PB / 0,5 PiB; Memória máxima: 64.0000</block>
   <block id="014e996a6a164aaf40b8b3e72704fc2e" category="section-title">E/S</block>
   <block id="c9517cd5cbe4fac6d0c526d61f3fcc39" category="section-title">E/S integradas</block>
   <block id="81754037ddc5b97d9b806acad96f8815" category="list-text">Protocolo: Ethernet 10 Gbps; Portas: 12</block>
@@ -12706,11 +12663,6 @@
   <block id="caee1a6bd998eef961868a45bd4dbc8b" category="list-text">Pior cenário de potência: 3476 BTU/h</block>
   <block id="7d5423ead4cc9c9c7523162c96b9a70a" category="list-text">Peso: 54,3 lbbr/24,6 kg</block>
   <block id="bfb224eca9d5778fa9096edb45c6e0a6" category="list-text">Ruído acústico: Potência sonora declarada (LwAd): 7,2;br/Pressão sonora (LpAm) (posições de observação): 69,1 dB</block>
-  <block id="72c1a142348c9ef5cd0bfa8785831482" category="summary">Especificações principais para o grupo de plataforma A250</block>
-  <block id="d4ece2dd07e2b088387c9e6101f7374b" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento AFF A250 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
-  <block id="141231dc194fb8130baba1dedc3a1437" category="list-text">Versão mínima do ONTAP : ONTAP 9.8RC1 == Máximos de escalonamento</block>
-  <block id="e09d173ed5c31e4dd78ba88f30e765c1" category="list-text">Tipo: NAS; Pares HA: 12; Capacidade bruta: 13,2 PB / 11,7 PiB; Memória máxima: 1536 GB</block>
-  <block id="883fa3568cecac0f4750af6ef669d774" category="list-text">Tipo: SAN; Pares HA: 6; Capacidade bruta: 6,6 PB / 5,9 PiB; Memória máxima: 768 GB</block>
   <block id="8620fd4a54bd59df48445495cc60d6a1" category="list-text">Tipo: Par HA; Capacidade bruta: 1,1 PB / 1,0 PiB; Memória máxima: 128.0000</block>
   <block id="f350094c762b190b03da78050fac38f6" category="list-text">Protocolo: Ethernet 25 Gbps; Portas: 4</block>
   <block id="ae6233ad0fe7d541d74b7fcbd8e20ee1" category="list-text">Protocolo: Ethernet 10 Gbps; Portas: 4</block>
@@ -12739,17 +12691,10 @@
   <block id="99190bf361f23d7f60b0311ed65db52c" category="list-text">Altura: 4U</block>
   <block id="fd82bddbad5203300e57904c991cb840" category="list-text">Profundidade: 32,6”br/(34,7” com suporte de gerenciamento de cabos)</block>
   <block id="9725247c68aace7973804f231cbdd26b" category="list-text">Ruído acústico: Potência sonora declarada (LwAd): 8,5;br/Pressão sonora (LpAm) (posições de observação): 67,2 dB</block>
-  <block id="2ecaf45e6d941aa8787c5207d6e14cbf" category="summary">Especificações principais para o grupo de plataforma A400</block>
-  <block id="f0e9d60af7684125f1b3ec54132594db" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento AFF A400 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
   <block id="8d6f1126e03ba70819901e3191bf6358" category="list-text">Versão mínima do ONTAP : ONTAP 9.7RC1 == Máximos de escalonamento</block>
-  <block id="af08be515a9d4c3e3b541572ab14ca83" category="list-text">Tipo: NAS; Pares HA: 12; Capacidade bruta: 176,3 PB / 156,5 PiB; Memória máxima: 3072 GB</block>
-  <block id="93b63827e9f32e325a3be96e3d1d0d01" category="list-text">Tipo: SAN; Pares HA: 6; Capacidade bruta: 88,1 PB / 78,3 PiB; Memória máxima: 1536 GB</block>
-  <block id="d9dd3b93e031a157b272db3164ac9cef" category="list-text">Tipo: Par HA; Capacidade bruta: 14,7 PB / 13,0 PiB; Memória máxima: 256.0000</block>
   <block id="603170cd5591c91144ede853fb7004e9" category="list-text">Protocolo: Ethernet 25 Gbps; Portas: 12</block>
   <block id="c3346d55fb4bcd313308cf344c3c9956" category="list-text">Protocolo: Ethernet 100 Gbps; Portas: 20</block>
   <block id="1f9a9c48fecfca4a044d529a9d033783" category="list-text">Protocolo: Ethernet 10 Gbps; Portas: 32</block>
-  <block id="637b290f820eaaf5033dfa8ab5a60528" category="list-text">Protocolo: FC 32 Gbps; Portas: 24</block>
-  <block id="53650a5ecd2e7e6bd89acc186768c407" category="list-text">Protocolo: NVMe/FC 32 Gbps; Portas: 24</block>
   <block id="4930a203d4d9fe648c8369b3361ea867" category="list-text">Protocolo: SAS 12 Gbps; Portas: 32</block>
   <block id="24679701c4662127aa11de2c774f57f7" category="list-text">Peso: 110,0 lb 49,9 kg</block>
   <block id="f8c2b681f9f457cefef2b7a4d0a49b52" category="list-text">Profundidade: 32,6” (34,7” com suporte de gerenciamento de cabos)</block>
@@ -12912,10 +12857,6 @@
   <block id="8d316cb0dd32e6a29db7a99bc113d716" category="paragraph">Versão mínima do ONTAP : ONTAP 9.13.1</block>
   <block id="f0ed92d1c0fd3e909c924094a93243f1" category="paragraph">FC; iSCSI; NVMe/TCP;</block>
   <block id="fd49e13a7e97bd8bb1e4c38997b7c545" category="paragraph">Não há dados ambientais disponíveis.</block>
-  <block id="0e1c2f19527964f6e08154d6482b5e30" category="summary">Especificações principais para o grupo de plataforma ASA150</block>
-  <block id="4dbc96329d5818883df31ecb13a05ebd" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento ASA A150 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
-  <block id="541cac174e166b24f88392f26d40f404" category="list-text">Versão mínima do ONTAP : ONTAP 9.13.1 == Máximos de escalonamento</block>
-  <block id="18f87be5c5603f09112f8af3908b1280" category="list-text">NVMe/TCP == Especificações do ambiente do sistema Nenhum dado de ambiente disponível.</block>
   <block id="680d950d544b60547a8bacca951d6718" category="summary">Especificações principais para o sistema de armazenamento ASA A250</block>
   <block id="a97c7cd2a22344db01c67b788d791334" category="doc">Especificações principais para ASA A250</block>
   <block id="20955af66ca82e86dac8266497f64dec" category="paragraph">A seguir estão algumas especificações selecionadas para o ASA A250.  Visita<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> (HWU) para uma lista completa das especificações ASA A250 .  Esta página reflete um único par de alta disponibilidade.</block>
@@ -12923,9 +12864,6 @@
   <block id="8a7a6a6e68946412c0d94b0a69520833" category="cell">4,4 PB / 3,9 PiB</block>
   <block id="adb1577c933e08c5e605d6b3e683d150" category="cell">0,7 PB / 0,7 PiB</block>
   <block id="1978f393885cf00f05ab1be479828e8f" category="paragraph">FC; iSCSI; NVMe/FC; NVMe/TCP;</block>
-  <block id="65f5bdc4ea585a25db7e798fe434a135" category="summary">Especificações principais para o grupo de plataformas ASA250</block>
-  <block id="81dee4edf751df8f6f2a9351c3c1054e" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento ASA A250 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
-  <block id="a87f27eafdf3369f35e9efc3c479e4f7" category="list-text">Tipo: SAN; Pares HA: 6; Capacidade bruta: 4,4 PB / 3,9 PiB; Memória máxima: 768 GB</block>
   <block id="8635c55a722f7078767bf23390e4512b" category="list-text">Protocolo: FC 32 Gbps; Portas: 8</block>
   <block id="836d5b409933ca37fd9abb594f9ffa51" category="list-text">Protocolo: NVMe/FC 32 Gbps; Portas: 8</block>
   <block id="1e9ab1ef21b71ca54d8fb332aba59c57" category="summary">Especificações principais para o sistema de armazenamento ASA A400</block>
@@ -12933,8 +12871,6 @@
   <block id="50c7467b088c1359dd4f78f13eee0b4a" category="paragraph">A seguir estão algumas especificações selecionadas para o ASA A400.  Visita<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> (HWU) para uma lista completa das especificações ASA A400 .  Esta página reflete um único par de alta disponibilidade.</block>
   <block id="c34e8a3f11aa9b5bf96f8f039946f5ac" category="paragraph">Configuração da plataforma: par HA de chassi único ASA A400 , pacote Ethernet</block>
   <block id="171ad46774f32c56db17e5cc8a1c27ca" category="list-text">Pior cenário de potência: 5212 BTU/h</block>
-  <block id="36fb5b627c2dfb6e53810cdd3e6be3f3" category="summary">Especificações principais para o grupo de plataformas ASA400</block>
-  <block id="1976618cf00c0b6aea89a517e457a8c1" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento ASA A400 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
   <block id="65d0afe8c0786bff1dd86021fdc07256" category="summary">Especificações principais para o sistema de armazenamento ASA A800</block>
   <block id="59a59c8ca4ad93f3a28d68343d4dc062" category="doc">Especificações principais do ASA A800</block>
   <block id="263fbe530f95144e2f9fc1764572e731" category="paragraph">A seguir estão algumas especificações selecionadas para o ASA A800.  Visita<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> (HWU) para uma lista completa das especificações ASA A800 .  Esta página reflete um único par de alta disponibilidade.</block>
@@ -12942,8 +12878,6 @@
   <block id="9aa49a71aa0866fdf22c763b884cf447" category="cell">39,7 PB / 35,2 PiB</block>
   <block id="857fbb927f9301cb274cfbbe50576f34" category="cell">7680 GB</block>
   <block id="0a74815927318643e615dd9f6d9ef36c" category="cell">1280,0000</block>
-  <block id="580e58da3f4c8c0e004338e2d5463568" category="summary">Especificações principais para o grupo de plataformas ASA800</block>
-  <block id="06eb93fc791c5a505c106b277c7d4f76" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento ASA A800 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
   <block id="1cb06846bf340ec24f77328a4840931c" category="summary">Especificações principais para o sistema de armazenamento ASA A900</block>
   <block id="cdca003ab9116f8c6df61f92c170e74f" category="doc">Especificações principais do ASA A900</block>
   <block id="b9cb6f539efb85bd3dbecb8f63b109da" category="paragraph">A seguir estão algumas especificações selecionadas para o ASA A900.  Visita<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> (HWU) para uma lista completa das especificações ASA A900 .  Esta página reflete um único par de alta disponibilidade.</block>
@@ -12954,8 +12888,6 @@
   <block id="d5badd98590f7c8475031c722bee9f13" category="list-text">Peso: 220,5 lbbr/100,0 kg</block>
   <block id="d7dbfe33d50154da8ce85d1c1065e7be" category="list-text">Profundidade: 28,8”br/(36,8” com suporte de gerenciamento de cabos)</block>
   <block id="a57159585077204011cc6d81536a227c" category="list-text">Ruído acústico: Potência sonora declarada (LwAd): 7,4;br/Pressão sonora (LpAm) (posições de observação): 65,0 dB</block>
-  <block id="fa224ab2852d40c3701e238592589a35" category="summary">Especificações principais para o grupo de plataformas ASA900</block>
-  <block id="dae772a251ba6ae7609ce9eb445c4ca7" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento ASA A900 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
   <block id="18dc17338011190ae60489762b18bbba" category="summary">Especificações principais para o sistema de armazenamento AFF C250</block>
   <block id="06b4db325464ed97a14422979b4d8924" category="doc">Especificações principais do AFF C250</block>
   <block id="12dc95d0bc892a4d68c08990a2e0e93f" category="paragraph">A seguir estão algumas especificações selecionadas para o AFF C250.  Visita<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> (HWU) para uma lista completa das especificações do AFF C250 .  Esta página reflete um único par de alta disponibilidade.</block>
@@ -12965,10 +12897,6 @@
   <block id="ca0c9966bf6d8b13874c9a33d9b103fa" category="cell">8,8 PB / 7,9 PiB</block>
   <block id="4dfae59c5327b0ed3524f4482c118eaa" category="cell">1,5 PB / 1,3 PiB</block>
   <block id="acd481bb21a2d48c85590f748324f123" category="paragraph">Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP ; Controladores redundantes de troca a quente; Fontes de alimentação redundantes de troca a quente;</block>
-  <block id="4f598ad0067992538a9b25a635fd7ebe" category="summary">Especificações principais para o grupo de plataforma C250</block>
-  <block id="c77413b9effec9f5e6d3543e5e5b357a" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento AFF C250 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
-  <block id="f15eebaf1ae51e81f921eaf53eb1297d" category="list-text">Versão mínima do ONTAP : ONTAP 9.10.1P15 == Máximos de escalonamento</block>
-  <block id="bdf24340dd03a1e6485e317e7694b9b2" category="list-text">Tipo: NAS; Pares HA: 12; Capacidade bruta: 17,7 PB / 15,7 PiB; Memória máxima: 1536 GB</block>
   <block id="121ccbb25c187ccfd21ddfb63cddb37b" category="summary">Especificações principais do AFF C30</block>
   <block id="ac83142a3cf60457afcf64302dc699f8" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento AFF C30 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
   <block id="bdb291fe6613a36b2df9dcf579e18d44" category="section-title">Especificações do AFF C30 em resumo</block>
@@ -12998,9 +12926,6 @@
   <block id="73378505345b16bafe8e8e0adc36335b" category="cell">2,9 PB / 2,6 PiB</block>
   <block id="33e75ff09dd601bbe69f351039152189" category="cell">28</block>
   <block id="d645920e395fedad7bbbed0eca3fe2e0" category="cell">40</block>
-  <block id="cc2197d8b97e0d4876bce9bda259529b" category="summary">Especificações principais para o grupo de plataforma C400</block>
-  <block id="14bd00edae2bf24d6d6bb1e970380fcd" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento AFF C400 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
-  <block id="e2904e96770de9235975509793655256" category="list-text">Tipo: NAS; Pares HA: 12; Capacidade bruta: 35,4 PB / 31,4 PiB; Memória máxima: 3072 GB</block>
   <block id="08bd3bd31dd4639c8d1ce08094a5c7ef" category="summary">Especificações principais para o sistema de armazenamento AFF C80</block>
   <block id="2d33040a8a66f0c30e2c415a9eec7d8d" category="doc">Especificações principais do AFF C80</block>
   <block id="67e389a0ebc658619776b9d5ac7e49d5" category="paragraph">A seguir estão algumas especificações selecionadas para o AFF C80.  Visita<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> (HWU) para uma lista completa das especificações do AFF C80.  Esta página reflete um único par de alta disponibilidade.</block>
@@ -13015,12 +12940,6 @@
   <block id="4e635c54d834641513e2b2c8e225a127" category="cell">Ethernet 200 Gbps</block>
   <block id="19ca14e7ea6328a42e0eb13d585e4c22" category="cell">36</block>
   <block id="9f61408e3afb633e50cdf1b20de6f466" category="cell">56</block>
-  <block id="866524d146caf6d5d5ca58414133dfcb" category="summary">Especificações principais para o grupo de plataforma C80</block>
-  <block id="fc53799482b5c72e371c896c296eeaca" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento AFF C80 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
-  <block id="790f2f7025a49405ecf494550abd2025" category="list-text">Tipo: NAS; Pares HA: 12; Capacidade bruta: 176,8 PB / 157,0 PiB; Memória máxima: 6144 GB</block>
-  <block id="4668001b533dcb01a288e13e438ef996" category="list-text">Tipo: SAN; Pares HA: 6; Capacidade bruta: 88,4 PB / 78,5 PiB; Memória máxima: 3072 GB</block>
-  <block id="88fef25d7d076a46933eb5cfece64d7d" category="list-text">Tipo: Par HA; Capacidade bruta: 14,7 PB / 13,1 PiB; Memória máxima: 512.0000</block>
-  <block id="48f850c93d74da66ee33ca24f09bc3d1" category="list-text">SMB 3.1.1 == Especificações do ambiente do sistema Nenhum dado de ambiente disponível.</block>
   <block id="c16047b0b69bcd197b44430d6882aab1" category="summary">Especificações principais para o sistema de armazenamento AFF C800</block>
   <block id="198b715fa6258cbda0053099c7bc668e" category="doc">Especificações principais do AFF C800</block>
   <block id="f7695e44bea62e5b28836a193e3bda64" category="paragraph">A seguir estão algumas especificações selecionadas para o AFF C800.  Visita<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> (HWU) para uma lista completa das especificações do AFF C800 .  Esta página reflete um único par de alta disponibilidade.</block>
@@ -13030,9 +12949,6 @@
   <block id="439e4902245729253229992fd0a361ae" category="list-text">Peso: 132,5 lbbr/60,1 kg</block>
   <block id="f60520e90b3a6d873ecb44d71d75b734" category="list-text">Temperatura/Altitude/Umidade de operação: 5°C a 40°Cbr/41°F a br/104°F) atbr/= 3048mbr/= 10000 pés) de elevação; 8% a 90%br/umidade relativa, sem condensação</block>
   <block id="d5cacbff7b82ab3d26541de685b1a32b" category="list-text">Ruído acústico: Potência sonora declarada (LwAd): 8,0;br/Pressão sonora (LpAm) (posições de observação): 62,8 dB</block>
-  <block id="de73ab042d31fbcaea0758773ba2aed7" category="summary">Especificações principais para o grupo de plataformas C800</block>
-  <block id="fc95a14b356ccae993f1c5a596003764" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento AFF C800 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
-  <block id="3a02dddbfe8af1c44ece16bc861685bb" category="list-text">Tipo: NAS; Pares HA: 12; Capacidade bruta: 88,4 PB / 78,5 PiB; Memória máxima: 15360 GB</block>
   <block id="8403c0175395ff495c9af55099b8fef4" category="summary">Especificações principais do FAS70</block>
   <block id="c96eb561070b12daad5027ae91335418" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento FAS70 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
   <block id="c692e4fa105561892a2a9228b34bffae" category="section-title">Especificações do FAS70 em resumo</block>
@@ -13098,12 +13014,6 @@
   <block id="5914ff703c6686a6800588a76dacab74" category="list-text">Potência típica: 2319 BTU/h</block>
   <block id="1c28248d81d6ff87ee55b4eb47056a8c" category="list-text">Pior cenário de potência: 3872 BTU/h</block>
   <block id="b95d880eb71d3f28802d99353d93f6f0" category="list-text">Peso: 52,2 lbbr/23,7 kg</block>
-  <block id="1c52b559c1f437da01a94de79dc7f45c" category="summary">Especificações principais para o grupo de plataforma FAS50</block>
-  <block id="18f027e2b7707b7ff7767f76d5927af2" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento FAS50 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
-  <block id="f0a067ccea8b26d0b2f17d9fbdb931ad" category="list-text">Tipo: NAS; Pares HA: 4; Capacidade bruta: 42,2 PB / 37,5 PiB; Memória máxima: 512 GB</block>
-  <block id="3a0f42ee3e73e3f8370b07da4111f5b5" category="list-text">Tipo: SAN; Pares HA: 4; Capacidade bruta: 42,2 PB / 37,5 PiB; Memória máxima: 512 GB</block>
-  <block id="2283cd8fe9d3e6788a5f1e28f24f55a4" category="list-text">Tipo: Par HA; Capacidade bruta: 10,6 PB / 9,4 PiB; Memória máxima: 128.0000</block>
-  <block id="656b17c351d41c4973d279414ea79cc9" category="list-text">Peso: 52,2 lb 23,7 kg</block>
   <block id="c0abf347ba9cbc3892abfa80eb2e4397" category="summary">Especificações principais do FAS8300</block>
   <block id="e0fa95a49988723bdb3a71e39da9c698" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento FAS8300 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
   <block id="39d93cb8cb49b1e34ce4682195baa972" category="section-title">Especificações do FAS8300 em resumo</block>
@@ -13123,7 +13033,6 @@
   <block id="0d53ee5ca699c3621f3c0a505c890b66" category="list-text">Potência típica: 5430 BTU/h</block>
   <block id="36a13f3d826d9f6cf7fc56d6627d7528" category="list-text">Pior cenário de potência: 5796 BTU/h</block>
   <block id="d61c7e37be329d2ba5a7e809fb08d9c5" category="list-text">Peso: 108,9 lb 49,4 kg</block>
-  <block id="e495c9f38a737b6da2117ebaa52ba7ac" category="doc">Visão geral do FAS9500</block>
   <block id="40d3675d7a1ade404a4fdd374833eb73" category="paragraph">Configuração da plataforma: Par de HA de chassi único FAS9500</block>
   <block id="ce98aac2c839cd0ed245c16a1a40165a" category="summary">Especificações principais para o sistema de armazenamento FAS9500</block>
   <block id="1ea1a140190bf37eb933a90c35b37442" category="doc">Especificações principais para FAS9500</block>
@@ -13134,12 +13043,6 @@
   <block id="5d1cd462bd74ff5016c71d1735d844d0" category="cell">90,0 PB / 79,9 PiB</block>
   <block id="6ec20c5ffb71fc8e6407815aba709ebe" category="cell">15,0 PB / 13,3 PiB</block>
   <block id="e71a112fcba059348a330658e07fff85" category="list-text">Temperatura/Altitude/Umidade de operação: 10°C a 35°Cbr/50°F a br/95°F) atbr/= 3048mbr/= 10000 pés) de elevação; 8% a 90%br/umidade relativa, sem condensação</block>
-  <block id="fd64ba1b0614f4ffd66207f445196c93" category="summary">Especificações principais para o grupo de plataformas FAS9500</block>
-  <block id="8d8c60ca9b0b29f222ed76c52c6cf55b" category="list-text">Versão mínima do ONTAP : ONTAP 9.10.1P3 == Máximos de escalonamento</block>
-  <block id="014f2208129cdc831cee84fc30f9247f" category="list-text">Tipo: NAS; Pares HA: 12; Capacidade bruta: 180,0 PB / 159,9 PiB; Memória máxima: 24576 GB</block>
-  <block id="42af051dd0fff696f5ce895c1bb97de4" category="list-text">Tipo: SAN; Pares HA: 6; Capacidade bruta: 90,0 PB / 79,9 PiB; Memória máxima: 12288 GB</block>
-  <block id="8f449cf0254f2ad40d59dd095542b714" category="list-text">Tipo: Par HA; Capacidade bruta: 15,0 PB / 13,3 PiB; Memória máxima: 2048.0000</block>
-  <block id="f931f7d58dafa987aed167fe956586d0" category="list-text">Temperatura/Altitude/Umidade de operação: 10°C a 35°C (50°F a 95°F) a 3048 m (10000 pés) de altitude; 8% a 90% de umidade relativa, sem condensação</block>
   <block id="65a4d6fcc372057dd61e6cc7abb8c696" category="inline-link-macro">AFF A1K (Recuperação automatizada)</block>
   <block id="94bd55fe0571dbfa433cb6e80d3e228b" category="inline-link-macro">AFF A1K (Recuperação manual)</block>
   <block id="3c9419b0744beccd4fd6272e84be9db0" category="inline-link-macro">AFF A20/30/50 (Recuperação automatizada)</block>
@@ -14160,7 +14063,6 @@
   <block id="4bf81e37c38393eea22b0e46d9f43158" category="paragraph">O sistema FAS50 oferece o menor custo por Gigabyte para armazenamento secundário e cofre cibernético seguro, além de maior desempenho para cargas de trabalho secundárias com backups mais rápidos, IOPS mais altos e baixa latência de 5 a 10 ms.</block>
   <block id="beb7924c631bd72f6f5181a6a1773865" category="paragraph"><block ref="6fb9af7bf62d637bf3890d9d97180d06" category="inline-link-macro-rx"></block> .</block>
   <block id="7b619a398942b2af52ce099821518739" category="section-title">Lançamentos de 2024</block>
-  <block id="e17f7565f95df58a416490dff287f6c1" category="paragraph"><block ref="b5bce7716321adf42716e3b598ed224d" category="inline-link-macro-rx"></block> .</block>
   <block id="7b2fa3ce2f1cc4527c7d0a4e0f774ce1" category="paragraph"><block ref="9086cf3a37365194865877acb82e7669" category="inline-link-macro-rx"></block> .</block>
   <block id="e3dd50b258bede9c23ca84687d397bed" category="paragraph"><block ref="028bf0170285d2584dcfed56c7103ca0" category="inline-link-macro-rx"></block> .</block>
   <block id="728d7df870ee1451558451c200b714aa" category="sidebar">O sistema de armazenamento NetApp AFX é uma solução desagregada de hardware e software focada nas necessidades exclusivas de clientes NAS e S3 de alto desempenho. O desempenho e a escalabilidade são projetados especificamente para atender aos requisitos de cargas de trabalho de IA e ML.</block>
@@ -14192,4 +14094,88 @@
   <block id="d3bca45bb48d04c6d999281b772fa015" category="sidebar">Chassi AFX A1K</block>
   <block id="9a4e2ca13bc5368ad30e628996c8e94e" category="sidebar">Controlador AFX 1K</block>
   <block id="4c052a07dcf923d8d73e0be9a32b97a7" category="sidebar">Módulo AFX 1K IO</block>
+  <block id="35be92b1079dd4d454c4f763e5723f8a" category="list-text">As fontes de alimentação são redundantes e intercambiáveis a quente. Não é necessário desligar o controlador para substituir uma PSU.</block>
+  <block id="1053cf7d108791c08478ce9591984516" category="open-title">Opção 1: Troca a quente de uma fonte de alimentação CA</block>
+  <block id="3d70b6b1c750645a1540b9185ec5dbfc" category="open-title">Opção 2: Troca a quente de uma fonte de alimentação CC</block>
+  <block id="27b8025bf920b2fdec95f4719d7e3772" category="paragraph">As PSUs são redundantes e intercambiáveis a quente. Não é necessário desligar o controlador para substituir uma PSU.</block>
+  <block id="41221ad2b8f379d044b6e4c034575270" category="list-text">Localize os números de série do sistema (SSN) para cada controlador que está sendo instalado.</block>
+  <block id="639a764bd23851da6594721b4ee0a7d1" category="paragraph">Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP ; Controladores redundantes de troca a quente; Fontes de alimentação redundantes de troca a quente; Gerenciamento SAS em banda por meio de conexões SAS; [//] 2025-10-15 ontap-systems-internal/issues/1357</block>
+  <block id="67bfe38eadb8acf6e70be93f4020561b" category="doc">Troca a quente de uma fonte de alimentação - AFF A150</block>
+  <block id="5ea0f09670f21c71300695e92b2cd256" category="admonition">Não utilize as portas e1b e e7b para conexões de rede do host. Use um cartão host separado.</block>
+  <block id="e0c35bf779836a3b5e187a211457a2b9" category="list-text">Gerenciamento de banda SAS em conexões SAS para prateleiras externas [//] 2025-10-15 ontap-systems-internal/issues/1357</block>
+  <block id="25b7a8eef02360c09d8cb7847663af3e" category="doc">Troca a quente de uma fonte de alimentação - AFF A1K</block>
+  <block id="db8171f7944e9dc66fab5b089698d3fc" category="doc">Troca a quente de uma fonte de alimentação - AFF A20, AFF A30 e AFF A50</block>
+  <block id="6d20796c812619e842f3483504be63f4" category="doc">Troca a quente de uma fonte de alimentação - AFF A250</block>
+  <block id="057cab5a212fb0cce841ca14b2cfeda3" category="doc">Troca a quente de uma fonte de alimentação - AFF A320</block>
+  <block id="3bebfde8a4d27ae5e27f0cd50cf9a5de" category="doc">Troca a quente de uma fonte de alimentação - AFF A400</block>
+  <block id="30432b9617d110e91bb55e0ee6592cdb" category="paragraph">Controlador de gerenciamento de placa de base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP ; Controladores redundantes de troca a quente; Fontes de alimentação redundantes de troca a quente; Gerenciamento SAS em banda por meio de conexões SAS para prateleiras externas; [//] 2025-10-15 ontap-systems-internal/issues/1357</block>
+  <block id="3076b9da82c66ef1cac1e7179b746828" category="paragraph">Use o cabo 100 GbE para conectar as portas e1a e e7a dos controladores A e B aos switches de rede do cluster A e B.</block>
+  <block id="92998a9e2d395c7927371ced81dc9182" category="admonition">Não use as portas e1b e e7b para conexões de rede do host. Use um cartão host separado.</block>
+  <block id="ec3eca6cbff6c81c2c7efdc9ca0afcf4" category="doc">Troca a quente de uma fonte de alimentação - AFF A70 e AFF A90</block>
+  <block id="b61c2071102a270d16023e40ee5b949e" category="doc">Troca a quente de uma fonte de alimentação - AFF A700</block>
+  <block id="9fdca944f84d0d7c1dd5bec5b33c4dad" category="doc">Troca a quente de uma fonte de alimentação - AFF A700s</block>
+  <block id="c88ebc5327d1036601d0eda773d3a9b3" category="doc">Troca a quente de uma fonte de alimentação - AFF A800</block>
+  <block id="000e33b346cf40ffbe68a52c2d14f2ea" category="list-text">Gerenciamento de banda SAS em conexões SAS [//] 2025-10-15 ontap-systems-internal/issues/1357</block>
+  <block id="8548a56c519034463f28eadc644360ab" category="doc">Troca a quente de uma fonte de alimentação - AFF A900</block>
+  <block id="20c8ebc12d960783bc610a9a7c628624" category="list-text">Fontes de alimentação redundantes hot-swappable [//] 2025-10-15 ontap-systems-internal/issues/1357</block>
+  <block id="98c78afbee9a38af4c14116fcea041ee" category="doc">Troca a quente de uma fonte de alimentação - ASA C250</block>
+  <block id="a93641a4525fdc7b24b1b838539eaefd" category="doc">Troca a quente de uma fonte de alimentação - ASA C400</block>
+  <block id="c5fdd34e2ef42364012a118012d79fb4" category="doc">Troca a quente de uma fonte de alimentação - ASA C800</block>
+  <block id="55db671ae8020eca8e8aeb4349a2b054" category="doc">Troca a quente de uma fonte de alimentação - ASA A70 e ASA A90</block>
+  <block id="c9a369c5554de29ccc1c26e1a891a293" category="doc">Troca a quente de uma fonte de alimentação - ASA A1K</block>
+  <block id="9bb2e7ff1d23ef0e1b53976314308a35" category="doc">Troca a quente de uma fonte de alimentação - ASA A20, ASA A30 e ASA A50</block>
+  <block id="06d8fe566407f64414a820ada76ed8c0" category="doc">Troca a quente de uma fonte de alimentação - ASA A150</block>
+  <block id="b63c7571644d5ccca1e3715abbae44ca" category="doc">Troca a quente de uma fonte de alimentação - ASA A250</block>
+  <block id="2c050786a43c0ea0115e636878783956" category="doc">Troca a quente de uma fonte de alimentação - ASA A400</block>
+  <block id="a2ada69f15b8dc349c947f1966fadfab" category="doc">Troca a quente de uma fonte de alimentação - ASA A800</block>
+  <block id="afa34f783768c8c33178d16016fc5fc4" category="doc">Troca a quente de uma fonte de alimentação - ASA A900</block>
+  <block id="a09a90cc8fcac9f4d3e4b984533b8cad" category="paragraph">[//] 2025-10-15 ontap-systems-internal/issues/1357</block>
+  <block id="5e227aeb2fcad7eaeead32f5302682f3" category="doc">Troca a quente de uma fonte de alimentação - AFF C250</block>
+  <block id="41002485b29502010a8644065a0c7d58" category="doc">Troca a quente de uma fonte de alimentação - AFF C400</block>
+  <block id="7b4a1a3080b004d0b85c18311475acc2" category="paragraph">Use o cabo 100 GbE para conectar as portas e1a e e7a dos controladores A e B aos switches de rede do cluster A e B. Etapas. Conecte a porta e1a no Controlador A e a porta e1a no Controlador B ao switch de rede do cluster A. . Conecte a porta e7a no Controlador A e a porta e7a no Controlador B ao switch de rede do cluster B.</block>
+  <block id="a6b43aa69cfefff427f0aa588edab24d" category="paragraph">+ *Cabo 100 GbE*</block>
+  <block id="e8b86e4a9e550f2cd1adce1d2f24708b" category="paragraph">Controlador de gerenciamento de placa de base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP ; Controladores redundantes de troca a quente; Fontes de alimentação redundantes de troca a quente; [//] 2025-10-15 ontap-systems-internal/issues/1357</block>
+  <block id="e742e13f0573253743538a54686b965c" category="doc">Troca a quente de uma fonte de alimentação - AFF C800</block>
+  <block id="bb9a46a830b86006c64c8c357fbcb73c" category="doc">Troca a quente de uma fonte de alimentação - FAS70 e FAS90</block>
+  <block id="c0fb977424a2b5bca01ac503e2f1b009" category="doc">Troca a quente de uma fonte de alimentação - FAS2700</block>
+  <block id="58c298876292ce3ccb07434a6eb98ee8" category="doc">Troca a quente de uma fonte de alimentação - FAS500f</block>
+  <block id="265e5afbc76b65a563c8e31441a1e485" category="doc">Troca a quente de uma fonte de alimentação - FAS8300 e FAS8700</block>
+  <block id="653496b123c4243a527d8a9ea55d4f8f" category="doc">Troca a quente de uma fonte de alimentação - FAS9000</block>
+  <block id="048c525dc48e40a1d09bef0038c82ef7" category="doc">Troca a quente de uma fonte de alimentação - FAS9500</block>
+  <block id="80f1b598bcc25f7ec82fc65712322c5f" category="inline-link-macro">AFX A1K</block>
+  <block id="456595a68c845460a0bce72ae205008b" category="list-text"><block ref="456595a68c845460a0bce72ae205008b" category="inline-link-macro-rx"></block></block>
+  <block id="bc43101d4663f6af1088f44fa1f4971c" category="open-title">Sistemas de prateleiras</block>
+  <block id="4118c4e0c27fbed6f04b04d3aa72ac24" category="list-text"><block ref="4118c4e0c27fbed6f04b04d3aa72ac24" category="inline-link-macro-rx"></block></block>
+  <block id="ce10d24d102f61248a1ca7225202165a" category="inline-link-macro">NX224</block>
+  <block id="125f10a9ef50430953cfa201c04d3fc7" category="list-text"><block ref="125f10a9ef50430953cfa201c04d3fc7" category="inline-link-macro-rx"></block></block>
+  <block id="a15565e937e16d1f4615ffae54386c32" category="list-text"><block ref="a15565e937e16d1f4615ffae54386c32" category="inline-link-macro-rx"></block></block>
+  <block id="3c91bcd5af8e3e8a07bca4d6122e6b3e" category="list-text"><block ref="3c91bcd5af8e3e8a07bca4d6122e6b3e" category="inline-link-macro-rx"></block></block>
+  <block id="2eea8cfe67bfbaf554197cde256262be" category="list-text"><block ref="2eea8cfe67bfbaf554197cde256262be" category="inline-link-macro-rx"></block></block>
+  <block id="ed07672fb572f93f885feb990d0a637f" category="list-text"><block ref="ed07672fb572f93f885feb990d0a637f" category="inline-link-macro-rx"></block></block>
+  <block id="7a51e753de7bf2934296fac2cdc9d593" category="list-text"><block ref="7a51e753de7bf2934296fac2cdc9d593" category="inline-link-macro-rx"></block></block>
+  <block id="1397e21113f4acf414d8754488a466fc" category="list-text"><block ref="1397e21113f4acf414d8754488a466fc" category="inline-link-macro-rx"></block></block>
+  <block id="66fcce69e4503a0a9c8c46637435aa8c" category="list-text"><block ref="66fcce69e4503a0a9c8c46637435aa8c" category="inline-link-macro-rx"></block></block>
+  <block id="badea07b223f33f206dbb3f59038b884" category="list-text"><block ref="badea07b223f33f206dbb3f59038b884" category="inline-link-macro-rx"></block></block>
+  <block id="54d8c26f8a704f2ae1cd358913de64ac" category="list-text"><block ref="54d8c26f8a704f2ae1cd358913de64ac" category="inline-link-macro-rx"></block></block>
+  <block id="4b4484c2e067a790a8b029f0e7157ba8" category="list-text"><block ref="4b4484c2e067a790a8b029f0e7157ba8" category="inline-link-macro-rx"></block></block>
+  <block id="d4ec2b21b63964207f65fe842cdcf1d9" category="list-text"><block ref="d4ec2b21b63964207f65fe842cdcf1d9" category="inline-link-macro-rx"></block></block>
+  <block id="f9eb62938eec55221ed8ab27033b19b9" category="list-text"><block ref="f9eb62938eec55221ed8ab27033b19b9" category="inline-link-macro-rx"></block></block>
+  <block id="7ca1678229ac5064dbd99a27e4886773" category="list-text"><block ref="7ca1678229ac5064dbd99a27e4886773" category="inline-link-macro-rx"></block></block>
+  <block id="bd57b67f8598879d2601631d0c721137" category="summary">Encontre procedimentos de substituição do módulo de prateleira NVMe (NSM) para sua prateleira de armazenamento NetApp organizados por modelo de prateleira. Esta referência fornece links diretos para fluxos de trabalho de substituição NSM passo a passo para prateleiras NS224 e NX224 para ajudar você a localizar rapidamente o procedimento correto para seu modelo de prateleira específico.</block>
+  <block id="09836515455d31781ff12c48f8614517" category="doc">Procedimentos de substituição de NSM por modelo de prateleira</block>
+  <block id="1a82a6fe55e3f2f61872867b5fd0dceb" category="list-text"><block ref="1a82a6fe55e3f2f61872867b5fd0dceb" category="inline-link-macro-rx"></block></block>
+  <block id="f39104a2d7ac4b866439486ba176811c" category="list-text"><block ref="f39104a2d7ac4b866439486ba176811c" category="inline-link-macro-rx"></block></block>
+  <block id="8f5f4bdbc294c6f2651fcd2e526c8a78" category="list-text"><block ref="8f5f4bdbc294c6f2651fcd2e526c8a78" category="inline-link-macro-rx"></block></block>
+  <block id="211bc6ebaac1ad5d04c5e33045e9bf83" category="list-text"><block ref="211bc6ebaac1ad5d04c5e33045e9bf83" category="inline-link-macro-rx"></block></block>
+  <block id="09fad4d466bf3d1fedb9b890171a4ef4" category="list-text"><block ref="09fad4d466bf3d1fedb9b890171a4ef4" category="inline-link-macro-rx"></block></block>
+  <block id="fb22f4b778e12fb8fce97075a2c2e7cc" category="list-text"><block ref="fb22f4b778e12fb8fce97075a2c2e7cc" category="inline-link-macro-rx"></block></block>
+  <block id="7e67c0810c8ad6d0694164958ee67278" category="list-text"><block ref="7e67c0810c8ad6d0694164958ee67278" category="inline-link-macro-rx"></block></block>
+  <block id="5b2fbd0784647c22ca81799fe3de9d4b" category="list-text"><block ref="5b2fbd0784647c22ca81799fe3de9d4b" category="inline-link-macro-rx"></block></block>
+  <block id="9dfce2bdad58de88bbfaf4eb1ffec4c6" category="list-text"><block ref="9dfce2bdad58de88bbfaf4eb1ffec4c6" category="inline-link-macro-rx"></block></block>
+  <block id="9942cbccf0648199db8728c675a51861" category="list-text"><block ref="9942cbccf0648199db8728c675a51861" category="inline-link-macro-rx"></block></block>
+  <block id="53293de4445d9809b5beb36bf8b2bdd2" category="list-text"><block ref="53293de4445d9809b5beb36bf8b2bdd2" category="inline-link-macro-rx"></block></block>
+  <block id="b1a10fdec821bde7511fcf1b956e5382" category="paragraph"><block ref="b6b8a8462966204b648f1ae9c887611d" category="inline-link-macro-rx"></block>.</block>
+  <block id="8a484401787078890bc1e7fd9beb44fb" category="sidebar">Procedimentos de substituição do NSM</block>
+  <block id="9dd7ce2f864cf38177fc70779cbe6635" category="sidebar">Visão geral do AFF A70</block>
+  <block id="045d04f83b324cbd691c0a2eef106f65" category="sidebar">Visão geral do AFF A90</block>
 </blocks>

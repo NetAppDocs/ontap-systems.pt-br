@@ -1,6 +1,7 @@
 ---
 permalink: a800/overview.html 
 sidebar: sidebar 
+keywords: AFF A800 specifications, AFF A800 specs, NetApp AFF A800, AFF A800 hardware 
 summary: Especificações principais para o grupo de plataformas A800 
 ---
 = Especificações principais do AFF A800
@@ -115,5 +116,5 @@ A seguir estão especificações selecionadas para o sistema de armazenamento AF
 * Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP
 * Controladores redundantes hot-swappable
 * Fontes de alimentação redundantes com troca a quente
-* Gerenciamento de banda SAS por meio de conexões SAS para prateleiras externas
+* Gerenciamento de banda SAS em conexões SAS para prateleiras externas [//] 2025-10-15 ontap-systems-internal/issues/1357
 

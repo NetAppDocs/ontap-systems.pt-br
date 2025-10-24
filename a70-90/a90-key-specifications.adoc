@@ -1,6 +1,7 @@
 ---
-permalink: a90-key-specifications.html 
+permalink: a70-90/a90-key-specifications.html 
 sidebar: sidebar 
+keywords: AFF A90 specifications, AFF A90 specs, AFF A90 capacity, AFF A90 memory, AFF A90 I/O, AFF A90 compliance 
 summary: Especificações principais do AFF A90 
 ---
 = Especificações principais do AFF A90
@@ -114,5 +115,5 @@ Não há dados de E/S integrados.
 * Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP
 * Controladores redundantes hot-swappable
 * Fontes de alimentação redundantes com troca a quente
-* Gerenciamento de banda SAS por meio de conexões SAS para prateleiras externas
+* Gerenciamento de banda SAS em conexões SAS para prateleiras externas [//] 2025-10-15 ontap-systems-internal/issues/1357
 

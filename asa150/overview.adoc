@@ -1,7 +1,8 @@
 ---
 permalink: asa150/overview.html 
 sidebar: sidebar 
-summary: Especificações principais para o grupo de plataforma ASA150 
+keywords: ASA A150 specifications, ASA A150 specs, NetApp ASA A150, ASA A150 hardware 
+summary: Especificações principais para o sistema de armazenamento ASA A150 
 ---
 = Especificações principais para ASA A150
 :allow-uri-read: 
@@ -10,66 +11,117 @@ summary: Especificações principais para o grupo de plataforma ASA150
 
 
 [role="lead"]
-A seguir estão especificações selecionadas para o sistema de armazenamento ASA A150 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.
+A seguir estão algumas especificações selecionadas para o ASA A150.  Visita https://hwu.netapp.com["NetApp Hardware Universe"^] (HWU) para uma lista completa das especificações ASA A150 .  Esta página reflete um único par de alta disponibilidade.
 
 
 
-== Especificações principais para ASA A150
+=== Especificações principais para ASA A150
 
-* Configuração da plataforma: Par de HA de chassi único ASA A150 UTA2
-* Capacidade máxima de matéria-prima: 0,5472 PB
-* Memória: 64.0000 GB
-* Fator de forma: chassi 2U com 2 controladores HA e 24 slots de unidade
-* Versão ONTAP : ONTAP: 9.16.1P2
-* Versão mínima do ONTAP : ONTAP 9.13.1 == Máximos de escalonamento
-* Tipo: NAS
-* Tipo: SAN; Pares HA: 6; Capacidade bruta: 3,3 PB / 2,9 PiB; Memória máxima: 384 GB
-* Tipo: Par HA; Capacidade bruta: 0,5 PB / 0,5 PiB; Memória máxima: 64.0000
+Configuração da plataforma: Par de HA de chassi único ASA A150 UTA2
 
+Capacidade máxima de matéria-prima: 0,5472 PB
 
+Memória: 64.0000 GB
 
+Fator de forma: chassi 2U com 2 controladores HA e 24 slots de unidade
 
-== E/S
+Versão ONTAP : b_startONTAP: 9.16.1P2b_end
 
+Slots de expansão PCIe:
 
-
-=== E/S integradas
-
-* Protocolo: Ethernet 10 Gbps; Portas: 12
-* Protocolo: FC 16 Gbps; Portas: 8
-* Protocolo: SAS 12 Gbps; Portas: 4
+Versão mínima do ONTAP : ONTAP 9.13.1
 
 
 
+=== Máximos de Escalabilidade
 
-=== Total de E/S
-
-* Protocolo: Ethernet 10 Gbps; Portas: 12
-* Protocolo: FC 16 Gbps; Portas: 8
-* Protocolo: SAS 12 Gbps; Portas: 4
+|===
 
 
+| Tipo | Pares HA | Capacidade bruta | Memória Máxima 
 
 
-=== Portas de gerenciamento
-
-* Protocolo: Ethernet 1 Gbps; Portas: 2
-* Protocolo: RS-232 115 Kbps; Portas: 4
-* Protocolo: USB 12 Mbps; Portas: 2
+| NAS |  |  |  
 
 
+| SAN | 6 | 3,3 PB / 2,9 PiB | 384 GB 
 
 
-== Rede de armazenamento suportada
+| Par HA |  | 0,5 PB / 0,5 PiB | 64,0000 
+|===
 
-* FC
-* iSCSI
-* NVMe/TCP == Especificações do ambiente do sistema Nenhum dado de ambiente disponível.
+
+=== IO
 
 
 
+==== IO integrado
 
-== Conformidade
+|===
+
+
+| Protocolo | Portos 
+
+
+| Ethernet 10 Gbps | 12 
+
+
+| FC 16 Gbps | 8 
+
+
+| SAS 12 Gbps | 4 
+|===
+
+
+==== Total de IO
+
+|===
+
+
+| Protocolo | Portos 
+
+
+| Ethernet 10 Gbps | 12 
+
+
+| FC 16 Gbps | 8 
+
+
+| SAS 12 Gbps | 4 
+|===
+
+
+==== Portas de Gestão
+
+|===
+
+
+| Protocolo | Portos 
+
+
+| Ethernet 1 Gbps | 2 
+
+
+| RS-232 115 Kbps | 4 
+
+
+| USB 12 Mbps | 2 
+|===
+
+
+=== Rede de armazenamento suportada
+
+FC; iSCSI; NVMe/TCP;
+
+
+
+=== Especificações do ambiente do sistema
+
+Não há dados ambientais disponíveis.
+
+
+
+=== Conformidade
 
 * Certificações EMC/EMI: AMCA, FCC, ICES, KC, Marrocos, VCCI
 * Certificações de segurança: BIS, CB, CSA, G_K_U-SoR, IRAM, NOM, NRCS, SONCAP, TBS
@@ -81,10 +133,6 @@ A seguir estão especificações selecionadas para o sistema de armazenamento AS
 
 
 
-== Alta disponibilidade
+=== Alta disponibilidade
 
-* Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP
-* Controladores redundantes hot-swappable
-* Fontes de alimentação redundantes com troca a quente
-* Gerenciamento de banda SAS em conexões SAS
-
+Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP ; Controladores redundantes de troca a quente; Fontes de alimentação redundantes de troca a quente; Gerenciamento SAS em banda por meio de conexões SAS; [//] 2025-10-15 ontap-systems-internal/issues/1357

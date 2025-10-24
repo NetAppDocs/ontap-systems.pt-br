@@ -1,7 +1,8 @@
 ---
 permalink: c80/overview.html 
 sidebar: sidebar 
-summary: Especificações principais para o grupo de plataforma C80 
+keywords: AFF C80 specifications, AFF C80 specs, NetApp AFF C80, AFF C80 hardware 
+summary: Especificações principais para o sistema de armazenamento AFF C80 
 ---
 = Especificações principais do AFF C80
 :allow-uri-read: 
@@ -10,84 +11,117 @@ summary: Especificações principais para o grupo de plataforma C80
 
 
 [role="lead"]
-A seguir estão especificações selecionadas para o sistema de armazenamento AFF C80 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.
+A seguir estão algumas especificações selecionadas para o AFF C80.  Visita https://hwu.netapp.com["NetApp Hardware Universe"^] (HWU) para uma lista completa das especificações do AFF C80.  Esta página reflete um único par de alta disponibilidade.
 
 
 
-== Especificações principais do AFF C80
+=== Especificações principais do AFF C80
 
-* Configuração da plataforma: Par de HA de chassi único AFF C80
-* Capacidade Máxima de Bruto: 14.7360 PB
-* Memória: 512.0000 GB
-* Fator de forma: chassi 4U com 2 controladores HA e 48 slots de unidade
-* Versão ONTAP : ONTAP: 9.16.1P2
-* Slots de expansão PCIe: 18
-* Versão mínima do ONTAP : ONTAP 9.16.1RC1 == Máximos de escalonamento
-* Tipo: NAS; Pares HA: 12; Capacidade bruta: 176,8 PB / 157,0 PiB; Memória máxima: 6144 GB
-* Tipo: SAN; Pares HA: 6; Capacidade bruta: 88,4 PB / 78,5 PiB; Memória máxima: 3072 GB
-* Tipo: Par HA; Capacidade bruta: 14,7 PB / 13,1 PiB; Memória máxima: 512.0000
+Configuração da plataforma: Par de HA de chassi único AFF C80
 
+Capacidade Máxima de Bruto: 14.7360 PB
 
+Memória: 512.0000 GB
 
+Fator de forma: chassi 4U com 2 controladores HA e 48 slots de unidade
 
-== E/S
+Versão ONTAP : b_startONTAP: 9.16.1P2b_end
+
+Slots de expansão PCIe: 18
+
+Versão mínima do ONTAP : ONTAP 9.16.1RC1
 
 
 
-=== E/S integradas
+=== Máximos de Escalabilidade
 
-Não há dados de E/S integrados.
-
-
-
-=== Total de E/S
-
-* Protocolo: Ethernet 200 Gbps; Portas: 24
-* Protocolo: Ethernet 100 Gbps; Portas: 36
-* Protocolo: Ethernet 25 Gbps; Portas: 56
-* Protocolo: Ethernet 10 Gbps; Portas: 56
-* Protocolo: FC 64 Gbps; Portas: 56
-* Protocolo: NVMe/FC 64 Gbps; Portas: 56
-* Portas: 0
+|===
 
 
+| Tipo | Pares HA | Capacidade bruta | Memória Máxima 
 
 
-=== Portas de gerenciamento
+| NAS | 12 | 176,8 PB / 157,0 PiB | 6144 GB 
 
-* Protocolo: Ethernet 1 Gbps; Portas: 2
-* Protocolo: RS-232 115 Kbps; Portas: 4
-* Protocolo: USB 600 Mbps; Portas: 2
+
+| SAN | 6 | 88,4 PB / 78,5 PiB | 3072 GB 
+
+
+| Par HA |  | 14,7 PB / 13,1 PiB | 512,0000 
+|===
+
+
+=== IO
 
 
 
+==== IO integrado
 
-== Rede de armazenamento suportada
-
-* CIFS
-* FC
-* iSCSI
-* NFS v3
-* NFS v4.0
-* NFS v4.1
-* NFS v4.2
-* NFSv3/RDMA
-* NFSv4/RDMA
-* NVMe/FC
-* NVMe/TCP
-* S3
-* S3 com NAS
-* SMB 2.0
-* SMB 2.1
-* SMB 2.x
-* SMB 3.0
-* SMB 3.1
-* SMB 3.1.1 == Especificações do ambiente do sistema Nenhum dado de ambiente disponível.
+Não há dados de E/S a bordo.
 
 
 
+==== Total de IO
 
-== Conformidade
+|===
+
+
+| Protocolo | Portos 
+
+
+| Ethernet 200 Gbps | 24 
+
+
+| Ethernet 100 Gbps | 36 
+
+
+| Ethernet 25 Gbps | 56 
+
+
+| Ethernet 10 Gbps | 56 
+
+
+| FC 64 Gbps | 56 
+
+
+| NVMe/FC 64 Gbps | 56 
+
+
+|  | 0 
+|===
+
+
+==== Portas de Gestão
+
+|===
+
+
+| Protocolo | Portos 
+
+
+| Ethernet 1 Gbps | 2 
+
+
+| RS-232 115 Kbps | 4 
+
+
+| USB 600 Mbps | 2 
+|===
+
+
+=== Rede de armazenamento suportada
+
+CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NFSv3/RDMA; NFSv4/RDMA; NVMe/FC; NVMe/TCP; S3; S3 com NAS; SMB 2.0; SMB 2.1; SMB 2.x; SMB 3.0; SMB 3.1; SMB 3.1.1;
+
+
+
+=== Especificações do ambiente do sistema
+
+Não há dados ambientais disponíveis.
+
+
+
+=== Conformidade
 
 * Certificações EMC/EMI: AMCA, FCC, ICES, KC, Marrocos, VCCI
 * Certificações de segurança: BIS, CB, CSA, G_K_U-SoR, IRAM, NOM, NRCS, SONCAP, TBS
@@ -99,9 +133,6 @@ Não há dados de E/S integrados.
 
 
 
-== Alta disponibilidade
+=== Alta disponibilidade
 
-* Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP
-* Controladores redundantes hot-swappable
-* Fontes de alimentação redundantes com troca a quente
-
+Controlador de gerenciamento de placa de base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP ; Controladores redundantes de troca a quente; Fontes de alimentação redundantes de troca a quente; [//] 2025-10-15 ontap-systems-internal/issues/1357

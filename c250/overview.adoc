@@ -1,7 +1,8 @@
 ---
 permalink: c250/overview.html 
 sidebar: sidebar 
-summary: Especificações principais para o grupo de plataforma C250 
+keywords: AFF C250 specifications, AFF C250 specs, NetApp AFF C250, AFF C250 hardware 
+summary: Especificações principais para o sistema de armazenamento AFF C250 
 ---
 = Especificações principais do AFF C250
 :allow-uri-read: 
@@ -10,87 +11,127 @@ summary: Especificações principais para o grupo de plataforma C250
 
 
 [role="lead"]
-A seguir estão especificações selecionadas para o sistema de armazenamento AFF C250 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.
+A seguir estão algumas especificações selecionadas para o AFF C250.  Visita https://hwu.netapp.com["NetApp Hardware Universe"^] (HWU) para uma lista completa das especificações do AFF C250 .  Esta página reflete um único par de alta disponibilidade.
 
 
 
 == Especificações principais do AFF C250
 
-* Configuração da plataforma: Par de HA de chassi único AFF C250
-* Capacidade máxima de matéria-prima: 1,4736 PB
-* Memória: 128.0000 GB
-* Fator de forma: chassi 2U com 2 controladores HA e 24 slots de unidade
-* Versão ONTAP : ONTAP: 9.16.1P2
-* Slots de expansão PCIe: 4
-* Versão mínima do ONTAP : ONTAP 9.10.1P15 == Máximos de escalonamento
-* Tipo: NAS; Pares HA: 12; Capacidade bruta: 17,7 PB / 15,7 PiB; Memória máxima: 1536 GB
-* Tipo: SAN; Pares HA: 6; Capacidade bruta: 8,8 PB / 7,9 PiB; Memória máxima: 768 GB
-* Tipo: Par HA; Capacidade bruta: 1,5 PB / 1,3 PiB; Memória máxima: 128.0000
+Configuração da plataforma: Par de HA de chassi único AFF C250
+
+Capacidade máxima de matéria-prima: 1,4736 PB
+
+Memória: 128.0000 GB
+
+Fator de forma: chassi 2U com 2 controladores HA e 24 slots de unidade
+
+Versão ONTAP : b_startONTAP: 9.16.1P2b_end
+
+Slots de expansão PCIe: 4
+
+Versão mínima do ONTAP : ONTAP 9.10.1P15
 
 
+
+== Máximos de Escalabilidade
+
+|===
+
+
+| Tipo | Pares HA | Capacidade bruta | Memória Máxima 
+
+
+| NAS | 12 | 17,7 PB / 15,7 PiB | 1536 GB 
+
+
+| SAN | 6 | 8,8 PB / 7,9 PiB | 768 GB 
+
+
+| Par HA |  | 1,5 PB / 1,3 PiB | 128,0000 
+|===
 
 
 == E/S
 
 
 
-=== E/S integradas
+=== IO integrado
 
-* Protocolo: Ethernet 25 Gbps; Portas: 4
-* Protocolo: Ethernet 10 Gbps; Portas: 4
-
+|===
 
 
-
-=== Total de E/S
-
-* Protocolo: Ethernet 100 Gbps; Portas: 4
-* Protocolo: Ethernet 25 Gbps; Portas: 20
-* Protocolo: Ethernet 10 Gbps; Portas: 4
-* Protocolo: FC 32 Gbps; Portas: 16
-* Protocolo: NVMe/FC 32 Gbps; Portas: 16
-* Portas: 0
+| Protocolo | Portos 
 
 
+| Ethernet 25 Gbps | 4 
 
 
-=== Portas de gerenciamento
-
-* Protocolo: Ethernet 1 Gbps; Portas: 2
-* Protocolo: RS-232 115 Kbps; Portas: 4
-* Protocolo: USB 12 Mbps; Portas: 4
+| Ethernet 10 Gbps | 4 
+|===
 
 
+=== Total de IO
+
+|===
+
+
+| Protocolo | Portos 
+
+
+| Ethernet 100 Gbps | 4 
+
+
+| Ethernet 25 Gbps | 20 
+
+
+| Ethernet 10 Gbps | 4 
+
+
+| FC 32 Gbps | 16 
+
+
+| NVMe/FC 32 Gbps | 16 
+
+
+|  | 0 
+|===
+
+
+=== Portas de Gestão
+
+|===
+
+
+| Protocolo | Portos 
+
+
+| Ethernet 1 Gbps | 2 
+
+
+| RS-232 115 Kbps | 4 
+
+
+| USB 12 Mbps | 4 
+|===
 
 
 == Rede de armazenamento suportada
 
-* CIFS
-* FC
-* iSCSI
-* NFS v3
-* NFS v4.0
-* NFS v4.1
-* NFS v4.2
-* NVMe/FC
-* NVMe/TCP
-* S3
-* S3 com NAS
-* SMB 2.0
-* SMB 2.1
-* SMB 2.x
-* SMB 3.0
-* SMB 3.1
-* SMB 3.1.1 == Especificações do ambiente do sistema
+CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NVMe/FC; NVMe/TCP; S3; S3 com NAS; SMB 2.0; SMB 2.1; SMB 2.x; SMB 3.0; SMB 3.1; SMB 3.1.1;
+
+
+
+== Especificações do ambiente do sistema
+
 * Potência típica: 2906 BTU/h
 * Pior cenário de potência: 3750 BTU/h
-* Peso: 54,3 lb 24,6 kg
+* Peso: 54,3 lbbr/24,6 kg
 * Altura: 2U
 * Largura: 19” compatível com rack IEC (17,6” 44,7 cm)
 * Profundidade:
-* Temperatura/Altitude/Umidade de operação: 10°C a 35°C (50°F a 95°F) a 3048 m (10000 pés) de altitude; 8% a 80% de umidade relativa, sem condensação
-* Temperatura/Umidade fora de operação: -40°C a 70°C (-40°F a 158°F) até 12192m (40000 pés) 10% a 95% de umidade relativa, sem condensação, no recipiente original
-* Ruído acústico: Potência sonora declarada (LwAd): 7,2 Pressão sonora (LpAm) (posições de observação): 69,1 dB
+* Temperatura/Altitude/Umidade de operação: 10°C a 35°Cbr/50°F a br/95°F) atbr/= 3048mbr/= 10000 pés) de elevação; 8% a 80%br/umidade relativa, sem condensação
+* Temperatura/Umidade fora de operação: -40°C a 70°C (-40°F a 158°F) até 12192m (40000 pés)<br/>10% a 95% de umidade relativa, sem condensação, no recipiente original
+* Ruído acústico: Potência sonora declarada (LwAd): 7,2;br/Pressão sonora (LpAm) (posições de observação): 69,1 dB
 
 
 
@@ -109,7 +150,6 @@ A seguir estão especificações selecionadas para o sistema de armazenamento AF
 
 == Alta disponibilidade
 
-* Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP
-* Controladores redundantes hot-swappable
-* Fontes de alimentação redundantes com troca a quente
+Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP ; Controladores redundantes de troca a quente; Fontes de alimentação redundantes de troca a quente;
 
+[//] 2025-10-15 ontap-systems-internal/issues/1357

@@ -1,6 +1,7 @@
 ---
 permalink: a900/overview.html 
 sidebar: sidebar 
+keywords: AFF A900 specifications, AFF A900 specs, NetApp AFF A900, AFF A900 hardware 
 summary: Especificações principais para o grupo de plataformas A900 
 ---
 = Especificações principais do AFF A900
@@ -111,5 +112,5 @@ Não há dados de E/S integrados.
 * Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP
 * Controladores redundantes hot-swappable
 * Fontes de alimentação redundantes com troca a quente
-* Gerenciamento de banda SAS em conexões SAS
+* Gerenciamento de banda SAS em conexões SAS [//] 2025-10-15 ontap-systems-internal/issues/1357
 

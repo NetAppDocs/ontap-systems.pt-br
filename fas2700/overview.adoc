@@ -1,6 +1,7 @@
 ---
 permalink: fas2700/overview.html 
 sidebar: sidebar 
+keywords: FAS2700 specifications, FAS2700 specs, NetApp FAS2700, FAS2700 hardware 
 summary: Especificações principais para o grupo de plataformas FAS2700 
 ---
 = Especificações principais para FAS2750
@@ -109,5 +110,5 @@ A seguir estão especificações selecionadas para o sistema de armazenamento FA
 * Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP
 * Controladores redundantes hot-swappable
 * Fontes de alimentação redundantes com troca a quente
-* Gerenciamento de banda SAS por meio de conexões SAS para prateleiras externas
+* Gerenciamento de banda SAS em conexões SAS para prateleiras externas [//] 2025-10-15 ontap-systems-internal/issues/1357
 

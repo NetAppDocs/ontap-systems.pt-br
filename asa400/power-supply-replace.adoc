@@ -1,10 +1,10 @@
 ---
 permalink: asa400/power-supply-replace.html 
 sidebar: sidebar 
-keywords: asa a400, asa, a400, replace, replacing, power, supply, psu, disconnect, target, psu, unplug, power, cable, removing, remove, replacement, source, replace a power supply 
-summary: A substituição de uma fonte de alimentação envolve desconetar a fonte de alimentação de destino da fonte de alimentação, desconetar o cabo de alimentação, remover a fonte de alimentação antiga e instalar a fonte de alimentação de substituição e, em seguida, reconetar a fonte de alimentação de substituição à fonte de alimentação. 
+keywords: asa a400, replace a power supply 
+summary: 'A substituição de uma fonte de alimentação envolve desconetar a fonte de alimentação de destino (PSU) da fonte de alimentação, desconetar o cabo de alimentação, remover a fonte de alimentação antiga e instalar a fonte de alimentação de substituição e conectá-la novamente à fonte de alimentação.' 
 ---
-= Substituição de uma fonte de alimentação - ASA A400
+= Troca a quente de uma fonte de alimentação - ASA A400
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,7 +13,7 @@ summary: A substituição de uma fonte de alimentação envolve desconetar a fon
 [role="lead"]
 A substituição de uma fonte de alimentação (PSU) envolve desconetar a fonte de alimentação de destino, desconetar o cabo de alimentação, remover a fonte de alimentação antiga e instalar a fonte de alimentação de substituição e, em seguida, reconetar a fonte de alimentação de substituição à fonte de alimentação.
 
-* As fontes de alimentação são redundantes e hot-swap.
+* As fontes de alimentação são redundantes e intercambiáveis a quente. Não é necessário desligar o controlador para substituir uma PSU.
 * Este procedimento é escrito para substituir uma fonte de alimentação de cada vez.
 +
 
