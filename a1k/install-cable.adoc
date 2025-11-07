@@ -64,7 +64,7 @@ image::../media/drw_a1k_tnsc_cluster_cabling_ieops-1648.svg[Diagrama de cabeamen
 --
 .Cabeamento de cluster comutado
 --
-Use o cabo de 100 GbE para conetar as portas e1a a e1a e as portas e7a a e7a.
+Utilize o cabo 100 GbE para conectar as portas e1a e e7a dos Controladores A e B aos switches de rede do cluster A e B.
 
 .Passos
 . Conete a porta e1a no controlador A e a porta e1a no controlador B ao switch de rede do cluster A..
