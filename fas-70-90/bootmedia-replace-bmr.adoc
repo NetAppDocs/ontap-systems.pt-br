@@ -17,10 +17,28 @@ O processo automatizado de recuperação de mídia de inicialização é compat�
 
 O suporte de arranque encontra-se no interior do módulo de gestão do sistema e é acedido removendo o módulo do sistema.
 
-Substitua a mídia de inicialização.
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Desconecte os cabos de alimentação das PSUs.
++
 
+NOTE: Se o sistema de armazenamento tiver fontes de alimentação CC, desconete o bloco de cabos de alimentação das unidades de fonte de alimentação (PSUs).
+
+. Retire o módulo de gestão do sistema:
++
+.. Retire todos os cabos ligados ao módulo de gestão do sistema. Certifique-se de que identifica onde os cabos foram ligados, para que possa ligá-los às portas corretas quando reinstalar o módulo.
+.. Gire a bandeja de gerenciamento de cabos para baixo puxando os botões de ambos os lados no interior da bandeja de gerenciamento de cabos e, em seguida, gire a bandeja para baixo.
+.. Prima o botão do came de gestão do sistema.
+.. Rode o trinco do excêntrico para baixo o mais longe possível.
+.. Retire o módulo de gestão do sistema do compartimento, prendendo o dedo na abertura da alavanca do came e puxando o módulo para fora do compartimento.
+.. Coloque o módulo de gestão do sistema num tapete anti-estático, de forma a que o suporte de arranque fique acessível.
+
+
+. Retire o suporte de arranque do módulo de gestão:
++
 image::../media/drw_a1k_boot_media_remove_replace_ieops-1377.svg[Mídia de inicialização Substituir gráfico]
 
++
 [cols="1,4"]
 |===
 
@@ -45,24 +63,6 @@ image::../media/icon_round_3.png[Legenda número 3]
 Suporte de arranque
 
 |===
-.Passos
-. Se você ainda não está aterrado, aterre-se adequadamente.
-. Desconecte os cabos de alimentação das PSUs.
-+
-
-NOTE: Se o sistema de armazenamento tiver fontes de alimentação CC, desconete o bloco de cabos de alimentação das unidades de fonte de alimentação (PSUs).
-
-. Retire o módulo de gestão do sistema:
-+
-.. Retire todos os cabos ligados ao módulo de gestão do sistema. Certifique-se de que identifica onde os cabos foram ligados, para que possa ligá-los às portas corretas quando reinstalar o módulo.
-.. Gire a bandeja de gerenciamento de cabos para baixo puxando os botões de ambos os lados no interior da bandeja de gerenciamento de cabos e, em seguida, gire a bandeja para baixo.
-.. Prima o botão do came de gestão do sistema.
-.. Rode o trinco do excêntrico para baixo o mais longe possível.
-.. Retire o módulo de gestão do sistema do compartimento, prendendo o dedo na abertura da alavanca do came e puxando o módulo para fora do compartimento.
-.. Coloque o módulo de gestão do sistema num tapete anti-estático, de forma a que o suporte de arranque fique acessível.
-
-
-. Retire o suporte de arranque do módulo de gestão:
 +
 .. Prima o botão azul de trancamento.
 .. Rode o suporte de arranque para cima, deslize-o para fora do encaixe e coloque-o de lado.

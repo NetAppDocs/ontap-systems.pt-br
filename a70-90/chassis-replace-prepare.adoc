@@ -13,55 +13,30 @@ summary: Prepare-se para substituir o chassi com deficiência no sistema AFF A70
 [role="lead"]
 Prepare-se para substituir o chassi com deficiência no sistema AFF A70 ou AFF A90 identificando o chassi com deficiência, verificando os componentes de substituição e rotulando os cabos e os módulos do controlador.
 
-
-
-== Passo 1: Localize e monitore seu sistema
-
-Você deve abrir uma sessão de console e salvar Registros de sessões para referência futura e também ativar o LED de localização do sistema para encontrar o chassi com deficiência.
-
 .Passos
 . Conete-se à porta do console serial à interface e monitore o sistema.
-. Localize e ligue o LED de localização do controlador:
+. Ligue o LED de localização do controlador:
 +
-.. Use o `system controller location-led show` comando para mostrar o estado atual do LED de localização.
-.. Altere o estado do LED de localização para "On" (ligado):
+.. Use o `system controller location-led show` Comando para exibir o estado atual do LED de localização.
+.. Ligue o LED de localização:
 +
-`system controller location-led modify -node _node1_ -state on`.
+`system controller location-led modify -node _node1_ -state on`
 
 +
 O LED de localização permanece aceso durante 30 minutos.
 
 
 
-
-
-
-
-== Passo 2: Verifique os componentes de substituição
-
-Você deve verificar se recebeu os componentes necessários, removê-los da embalagem e salvar a embalagem.
-
-.Passos
-. Antes de abrir a embalagem, você deve olhar para a etiqueta da embalagem e verificar:
+. Antes de abrir a embalagem, examine o rótulo e verifique o seguinte:
 +
-** Número de peça do componente.
-** Descrição da peça.
-** Quantidade na caixa.
+** Número da peça do componente
+** Descrição da peça
+** Quantidade na caixa
 
 
-. Remova o conteúdo da embalagem e use a embalagem para retornar o componente com falha ao NetApp.
-
-
-
-
-== Passo 3: Identifique os cabos e os módulos do controlador
-
-Você deve rotular os cabos e os módulos do controlador antes de removê-los dos módulos do controlador ou do chassi.
-
-.Passos
-. Identifique todos os cabos associados ao sistema de armazenamento. Isso ajuda a desativar mais tarde neste procedimento.
-. Etiquete os módulos do controlador.
-. Se você ainda não está devidamente aterrado, aterre-se.
+. Retire o conteúdo da embalagem e guarde-a para devolver o componente com defeito à NetApp.
+. Identifique todos os cabos conectados ao sistema de armazenamento.  Isso garante a correta recablagem posteriormente neste procedimento.
+. Conecte-se com a terra, caso ainda não esteja conectado.
 
 
 .O que se segue?

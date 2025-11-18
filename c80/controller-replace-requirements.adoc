@@ -16,23 +16,23 @@ Antes de substituir o controlador no seu sistema AFF C80, certifique-se de que c
 Reveja os requisitos para substituir o módulo do controlador.
 
 * Todas as gavetas de unidades devem estar funcionando corretamente.
-* O controlador saudável deve ser capaz de assumir o controlador que está a ser substituído (referido neste procedimento como ""controlador deficiente"").
-* Não utilize este procedimento para atualizações do controlador; em vez disso, consulte o https://docs.netapp.com/us-en/ontap-systems-upgrade/choose_controller_upgrade_procedure.html["Escolha o procedimento de atualização do hardware do controlador"] para obter orientação.
-* Se o sistema estiver em uma configuração do MetroCluster, você deverá revisar https://docs.netapp.com/us-en/ontap-metrocluster/disaster-recovery/concept_choosing_the_correct_recovery_procedure_parent_concept.html["Escolher o procedimento de recuperação correto"] para determinar se deve usar esse procedimento.
-* Você deve substituir o componente com falha pela unidade substituível em campo (FRU) que você recebeu da NetApp.
-* É necessário substituir um módulo controlador por um módulo controlador do mesmo tipo de modelo. Você não pode atualizar seu sistema apenas substituindo o módulo do controlador.
-* Não é possível alterar nenhuma unidade ou compartimentos de unidades como parte deste procedimento.
-* Como o dispositivo de inicialização está localizado no módulo Gerenciamento do sistema instalado na parte traseira do sistema, você não precisa mover o dispositivo de inicialização ao substituir um módulo controlador.
-* É importante que você aplique os comandos nessas etapas nos sistemas corretos:
+* O controlador em bom estado deve ser capaz de assumir o controle do controlador que está sendo substituído (referido neste procedimento como controlador com defeito).
+* Não utilize este procedimento para atualizações de controladores.  Consulte https://docs.netapp.com/us-en/ontap-systems-upgrade/choose_controller_upgrade_procedure.html["Escolha o procedimento de atualização do hardware do controlador"] para orientação.
+* Se o seu sistema estiver em uma configuração MetroCluster , revise https://docs.netapp.com/us-en/ontap-metrocluster/disaster-recovery/concept_choosing_the_correct_recovery_procedure_parent_concept.html["Escolher o procedimento de recuperação correto"] para determinar se este procedimento deve ser utilizado.
+* Substitua o componente defeituoso pela unidade substituível em campo (FRU) que você recebeu da NetApp.
+* Substitua o módulo controlador por um módulo controlador do mesmo modelo.  Não é possível atualizar o sistema substituindo o módulo controlador.
+* Não é possível trocar unidades de disco ou gavetas de unidades como parte deste procedimento.
+* O dispositivo de inicialização está localizado no módulo de gerenciamento do sistema, instalado na parte traseira do computador.  Não é necessário mover o dispositivo de inicialização ao substituir um módulo controlador.
+* Compreenda a terminologia do controlador utilizada neste procedimento:
 +
-** O controlador _prejudicado_ é o controlador que está sendo substituído.
-** O controlador _replacement_ é o novo controlador que está substituindo o controlador prejudicado.
+** O controlador _com defeito_ é o controlador que está sendo substituído.
+** O controlador _de substituição_ é o novo controlador que substitui o controlador com defeito.
 ** O controlador _Healthy_ é o controlador sobrevivente.
 
 
-* Você deve sempre capturar a saída do console do controlador para um arquivo de log de texto.
+* Capture a saída do console do controlador em um arquivo de registro de texto.
 +
-Isso fornece um Registro do procedimento para que você possa solucionar qualquer problema que possa encontrar durante o processo de substituição.
+Isso fornece um registro do procedimento para solucionar quaisquer problemas durante o processo de substituição.
 
 
 

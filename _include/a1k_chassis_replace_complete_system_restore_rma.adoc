@@ -1,12 +1,6 @@
-= Passo 1: Inicialize os controladores e devolva os controladores
+= 
 :allow-uri-read: 
 
-
-
-
-== Passo 1: Inicialize os controladores e devolva os controladores
-
-Após a reinicialização dos controladores, inicialize o ONTAP e devolva os controladores.
 
 .Passos
 . Verifique a saída da consola:
@@ -23,21 +17,5 @@ Após a reinicialização dos controladores, inicialize o ONTAP e devolva os con
 .. Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos: `system node autosupport invoke -node * -type all -message MAINT=END`
 
 
+. Após a devolução ser concluída, execute https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"] Para verificar a integridade do sistema de armazenamento e corrigir quaisquer problemas encontrados.
 
-
-
-
-== Etapa 2: Verificar a integridade do sistema de armazenamento
-
-Depois que o controlador devolver o armazenamento, você deve verificar a integridade geral com https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"].
-
-.Passos
-. Após a conclusão do giveback, execute o Active IQ Config Advisor para verificar a integridade do sistema de storage.
-. Corrija quaisquer problemas que você encontrar.
-
-
-
-
-== Passo 3: Devolva a peça com falha ao NetApp
-
-Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

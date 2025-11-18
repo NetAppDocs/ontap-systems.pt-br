@@ -11,7 +11,7 @@ summary: 'Substitua o chassi do seu sistema ASA A70 ou ASA A90 quando uma falha 
 
 
 [role="lead"]
-Substitua o chassi do seu sistema ASA A70 ou ASA A90 quando uma falha de hardware o exigir. O processo de substituição envolve a remoção dos controladores e das unidades de fonte de alimentação (PSUs), a remoção das unidades, a instalação do chassi de substituição e a reinstalação dos componentes do chassi.
+Substitua o chassi do seu ASA A70 e ASA A90 quando uma falha de hardware assim o exigir.  Remova os controladores e as fontes de alimentação (PSUs), remova as unidades de disco, instale o chassi de substituição e reinstale todos os componentes.
 
 
 
@@ -149,9 +149,9 @@ NOTE: Os acionamentos são frágeis. Utilize sempre as duas mãos para suportar 
 
 
 
-== Passo 3: Substitua o chassis com deficiência
+== Etapa 3: Substitua o chassi e instale os componentes.
 
-Retire o chassis danificado e instale o chassis de substituição.
+Remova o chassi danificado, instale o chassi de substituição e reinstale todos os componentes.
 
 .Passos
 . Retire o chassis danificado:
@@ -167,15 +167,6 @@ Retire o chassis danificado e instale o chassis de substituição.
 .. Fixe a parte frontal do chassis ao rack de equipamentos ou ao gabinete do sistema, usando os parafusos que você removeu do chassi danificado.
 
 
-
-
-
-
-== Passo 4: Instale os componentes do chassis
-
-Depois que o chassi de substituição for instalado, você precisará instalar os módulos do controlador, reinstalá-los e reinstalar as unidades e PSUs.
-
-.Passos
 . Começando pelo módulo do controlador inferior, instale os módulos do controlador no chassis de substituição:
 +
 .. Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o controlador até ao chassis.
@@ -217,4 +208,4 @@ Os módulos do controlador começam a inicializar assim que as PSUs são instala
 
 
 .O que se segue?
-Depois de substituir o chassi ASA A70 ou ASA A90 com problemas e reinstalar os componentes nele, é necessário link:chassis-replace-complete-system-restore-rma.html["complete a substituição do chassis"].
+Após substituir o chassi danificado e reinstalar os componentes,link:chassis-replace-complete-system-restore-rma.html["complete a substituição do chassis"] .

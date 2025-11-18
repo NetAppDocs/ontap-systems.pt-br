@@ -13,6 +13,8 @@ summary: A mídia de inicialização do seu sistema AFF C80 armazena dados essen
 [role="lead"]
 A mídia de inicialização do seu sistema AFF C80 armazena dados essenciais de firmware e configuração. O processo de substituição envolve a remoção do módulo de Gerenciamento do Sistema, a remoção da mídia de inicialização danificada, a instalação da mídia de inicialização de substituição e a transferência manual da imagem ONTAP para a mídia de inicialização de substituição usando um pen drive USB.
 
+Se o seu sistema estiver executando o ONTAP 9.17.1 e posterior, use o link:bootmedia-replace-workflow-bmr.html["procedimento de recuperação de inicialização automática"] .
+
 
 
 == Passo 1: Substitua o suporte de arranque

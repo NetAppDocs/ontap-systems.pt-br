@@ -1,0 +1,57 @@
+= 
+:allow-uri-read: 
+
+
+.Passos
+. Retire o chassis danificado:
++
+.. Retire os parafusos dos pontos de montagem do chassis.
+.. Usando duas pessoas ou um elevador, deslize o chassi prejudicado para fora dos trilhos do rack em um gabinete do sistema ou rack de equipamentos e, em seguida, coloque-o de lado.
+
+
+. Instale o chassis de substituição:
++
+.. Usando duas pessoas ou um elevador, instale o chassi de substituição no rack de equipamentos ou no gabinete do sistema guiando o chassi nos trilhos do rack em um gabinete do sistema ou rack de equipamentos.
+.. Deslize o chassi até o rack de equipamentos ou o gabinete do sistema.
+.. Fixe a parte frontal do chassis ao rack de equipamentos ou ao gabinete do sistema, usando os parafusos que você removeu do chassi danificado.
+
+
+. Começando pelo módulo do controlador inferior, instale os módulos do controlador no chassis de substituição:
++
+.. Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o controlador até ao chassis.
+.. Rode os trincos de bloqueio para cima, para a posição de bloqueio.
+.. Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos e reconete o controlador.
++
+Se você removeu os conversores de Mídia (QSFPs ou SFPs), lembre-se de reinstalá-los.
+
++
+Certifique-se de que os cabos estão ligados consultando as etiquetas dos cabos.
+
+
+
+. Reinstale as unidades em seus compartimentos de unidade correspondentes na parte frontal do chassi.
+. Instale todas as quatro PSUs:
++
+.. Utilizando ambas as mãos, apoie e alinhe as extremidades da PSU com a abertura no módulo do controlador.
+.. Empurre cuidadosamente a PSU para dentro do módulo do controlador até que a patilha de bloqueio encaixe no lugar.
++
+As fontes de alimentação apenas engatarão adequadamente com o conetor interno e trancam no lugar de uma forma.
+
++
+
+NOTE: Para evitar danificar o conetor interno, não utilize força excessiva ao deslizar a PSU para o sistema.
+
+
+
+. Reconecte os cabos de alimentação da PSU às quatro PSUs.
++
+.. Fixe o cabo de alimentação à PSU utilizando o retentor do cabo de alimentação.
++
+Se você tiver fontes de alimentação CC, reconete o bloco de alimentação às fontes de alimentação depois que o módulo do controlador estiver totalmente encaixado no chassi e prenda o cabo de alimentação à PSU com os parafusos de aperto manual.
+
+
+
++
+Os módulos do controlador começam a inicializar assim que as PSUs são instaladas e a energia é restaurada.
+
+

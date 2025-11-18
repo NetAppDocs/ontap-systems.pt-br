@@ -4,9 +4,9 @@ indexpage:
   summary: A documentação do sistema de storage permite instalar, configurar e manter
     seu sistema ASA Série A.
   keywords: asa, a-series, asa a150, asa a250, asa a400, asa a800, asa a900, datasheet
-  lead: Os sistemas ASA A-Series e ASA C-Series oferecem uma experiência de SAN simplificada
-    e dedicada que fornece disponibilidade de dados contínua para bancos de dados
-    empresariais essenciais e outros workloads SAN que usam o protocolo FCP ou iSCSI.
+  lead: Os sistemas ASA oferecem uma experiência SAN simplificada e dedicada, que
+    proporciona disponibilidade contínua de dados para bancos de dados de missão crítica
+    corporativos e outras cargas de trabalho SAN usando o protocolo FCP ou iSCSI.
   tiles:
   - title: Comece agora
     links:
@@ -18,7 +18,7 @@ indexpage:
       url: https://www.netapp.com/pdf.html?item=/media/19466-SB-4081.pdf
     - title: Relatório técnico da ASA
       url: https://www.netapp.com/pdf.html?item=/media/85671-tr-4968.pdf
-  - title: Instalar e configurar sistemas A-Series
+  - title: Instalar e configurar sistemas ASA
     links:
     - title: ASA A150
       url: "../asa150/install-setup.html"
@@ -30,15 +30,7 @@ indexpage:
       url: "../asa800/install-setup.html"
     - title: ASA A900
       url: "../asa900/install_setup.html"
-  - title: Instalar e configurar sistemas C-Series
-    links:
-    - title: ASA C250
-      url: "../asa-c250/install-setup.html"
-    - title: ASA C400
-      url: "../asa-c400/install-setup.html"
-    - title: ASA C800
-      url: "../asa-c800/install-setup.html"
-  - title: Manter os sistemas A-Series
+  - title: Manter sistemas ASA
     links:
     - title: ASA A150
       url: "../asa150/maintain-overview.html"
@@ -50,14 +42,6 @@ indexpage:
       url: "../asa800/maintain-overview.html"
     - title: ASA A900
       url: "../asa900/maintain-overview.html"
-  - title: Manter os sistemas C-Series
-    links:
-    - title: ASA C250
-      url: "../asa-c250/maintain-overview.html"
-    - title: ASA C400
-      url: "../asa-c400/maintain-overview.html"
-    - title: ASA C800
-      url: "../asa-c800/maintain-overview.html"
   - title: Interrutores suportados
     links:
     - title: BES-53248 com suporte Broadcom

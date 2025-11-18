@@ -20,12 +20,21 @@ Para concluir a substituição do controlador do seu sistema AFF A70 ou AFF A90,
 Antes de retornar o nó de substituição ao serviço, verifique se as interfaces lógicas estão em suas portas iniciais, verifique a integridade do cluster e redefina a giveback automática.
 
 .Passos
-. Verifique se as interfaces lógicas estão relatando para o servidor doméstico e as portas: `network interface show -is-home false`
+. Verifique se as interfaces lógicas estão reportando ao servidor doméstico e às portas:
 +
-Se alguma interface lógica for listada como falsa, reverta-as para suas portas iniciais: `network interface revert -vserver * -lif *`
+`network interface show -is-home false`
 
-. Verifique a integridade do cluster. Consulte o https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["Como realizar uma verificação de integridade do cluster com um script no ONTAP"^] artigo da KB para obter mais informações.
-. Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true`
++
+Se alguma interface lógica estiver listada como falsa, reverta-a para suas portas originais:
+
++
+`network interface revert -vserver * -lif *`
+
+. Verifique a integridade do seu cluster.  Veja o https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["Como realizar uma verificação de integridade do cluster com um script no ONTAP"^] Artigo da Base de Conhecimento.
+. Se a giveback automática foi desativada, reative-a:
++
+`storage failover modify -node local -auto-giveback true`
+
 
 
 

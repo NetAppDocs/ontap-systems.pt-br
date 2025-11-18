@@ -1,0 +1,166 @@
+= 
+:allow-uri-read: 
+
+
+.Passos
+. Determine qual gerenciador de chaves está habilitado em seu sistema:
++
+[cols="1a,2a"]
+|===
+| Versão de ONTAP | Execute este comando 
+
+
+ a| 
+ONTAP 9.14,1 ou posterior
+ a| 
+`security key-manager keystore show`
+
+** Se EKM estiver ativado, `EKM` é listado na saída do comando.
+** Se OKM estiver ativado, `OKM` o será listado na saída do comando.
+** Se nenhum gerenciador de chaves estiver habilitado, `No key manager keystores configured` o será listado na saída do comando.
+
+
+
+
+ a| 
+ONTAP 9.13,1 ou anterior
+ a| 
+`security key-manager show-key-store`
+
+** Se EKM estiver ativado, `external` é listado na saída do comando.
+** Se OKM estiver ativado, `onboard` o será listado na saída do comando.
+** Se nenhum gerenciador de chaves estiver habilitado, `No key managers configured` o será listado na saída do comando.
+
+
+|===
+. Dependendo se um gerenciador de chaves estiver configurado em seu sistema, faça um dos seguintes procedimentos:
++
+*Se nenhum gerenciador de chaves estiver configurado:*
+
++
+Você pode desligar com segurança o controlador com defeito e prosseguir com o procedimento de desligamento.
+
++
+*Se um gerenciador de chaves estiver configurado (EKM ou OKM):*
+
++
+.. Insira o seguinte comando de consulta para exibir o status das chaves de autenticação no seu gerenciador de chaves:
++
+`security key-manager key query`
+
+.. Analise a saída e verifique o valor em `Restored` coluna.  Esta coluna indica se as chaves de autenticação do seu gerenciador de chaves (EKM ou OKM) foram restauradas com sucesso.
+
+
+. Conclua o procedimento adequado com base no seu tipo de gestor de chaves:
++
+[role="tabbed-block"]
+====
+.Gerenciador de chaves externo (EKM)
+--
+Complete estas etapas com base no valor em `Restored` coluna.
+
+*Se todas as chaves estiverem visíveis `true` na coluna Restaurado:*
+
+Você pode desligar com segurança o controlador com defeito e prosseguir com o procedimento de desligamento.
+
+*Se alguma chave apresentar um valor diferente de `true` na coluna Restaurado:*
+
+.. Restaure as chaves de autenticação de gerenciamento de chaves externas em todos os nós do cluster:
++
+`security key-manager external restore`
+
++
+Se o comando falhar, entre em contato com o Suporte da NetApp .
+
+.. Verifique se todas as chaves de autenticação foram restauradas:
++
+`security key-manager key query`
+
++
+Confirme que o `Restored` exibição de coluna `true` para todas as chaves de autenticação.
+
+.. Se todas as teclas forem restauradas, você poderá desligar o controlador com defeito em segurança e prosseguir com o procedimento de desligamento.
+
+
+--
+.Gerenciador de chaves integrado (OKM)
+--
+Complete estas etapas com base no valor em `Restored` coluna.
+
+*Se todas as chaves estiverem visíveis `true` na coluna Restaurado:*
+
+.. Faça backup das informações do OKM:
++
+... Alternar para o modo de privilégios avançados:
++
+`set -priv advanced`
+
++
+Digitar `y` quando solicitado a continuar.
+
+... Exibir as informações de backup do gerenciamento de chaves:
++
+`security key-manager onboard show-backup`
+
+... Copie as informações de backup para um arquivo separado ou para o seu arquivo de registro.
++
+Você precisará dessas informações de backup caso precise recuperar o OKM manualmente durante o procedimento de substituição.
+
+... Voltar ao modo administrador:
++
+`set -priv admin`
+
+
+
+.. Você pode desligar com segurança o controlador com defeito e prosseguir com o procedimento de desligamento.
+
+
+*Se alguma chave apresentar um valor diferente de `true` na coluna Restaurado:*
+
+.. Sincronizar o gerenciador de chaves integrado:
++
+`security key-manager onboard sync`
+
++
+Digite a senha alfanumérica de 32 caracteres para gerenciamento da chave de bordo quando solicitado.
+
++
+
+NOTE: Esta é a senha de todo o cluster que você criou ao configurar inicialmente o Gerenciador de Chaves Integrado.  Caso não possua essa senha, entre em contato com o Suporte da NetApp .
+
+.. Verifique se todas as chaves de autenticação foram restauradas:
++
+`security key-manager key query`
+
++
+Confirme que o `Restored` exibição de coluna `true` para todas as chaves de autenticação e o `Key Manager` tipo mostra `onboard` .
+
+.. Faça backup das informações do OKM:
++
+... Alternar para o modo de privilégios avançados:
++
+`set -priv advanced`
+
++
+Digitar `y` quando solicitado a continuar.
+
+... Exibir as informações de backup do gerenciamento de chaves:
++
+`security key-manager onboard show-backup`
+
+... Copie as informações de backup para um arquivo separado ou para o seu arquivo de registro.
++
+Você precisará dessas informações de backup caso precise recuperar o OKM manualmente durante o procedimento de substituição.
+
+... Voltar ao modo administrador:
++
+`set -priv admin`
+
+
+
+.. Você pode desligar com segurança o controlador com defeito e prosseguir com o procedimento de desligamento.
+
+
+--
+====
+

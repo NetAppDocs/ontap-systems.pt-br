@@ -164,7 +164,7 @@ image::../media/icon_round_2.png[Legenda número 2]
 Módulo da ventoinha
 
 |===
-. Mova o módulo da ventoinha para o módulo do controlador de substituição e, em seguida, instale o módulo da ventoinha alinhando as extremidades com a abertura no módulo do controlador e, em seguida, deslizando o módulo da ventoinha para o módulo do controlador até que os trincos de bloqueio encaixem no lugar.
+. Transfira o módulo da ventoinha para o módulo controlador de substituição e, em seguida, instale-o alinhando suas bordas com a abertura no módulo controlador e deslizando-o até que as travas de fixação se encaixem no lugar.
 . Repita estes passos para os restantes módulos do ventilador.
 
 
@@ -283,8 +283,16 @@ NOTE: Inspecione visualmente o DIMM para verificar se ele está alinhado uniform
 
 Mova os módulos de e/S para o módulo do controlador de substituição.
 
+.Passos
+. Desconete qualquer cabeamento do módulo de e/S de destino.
++
+Certifique-se de etiquetar os cabos para que saiba de onde vieram.
+
+. Rode o ARM de gestão de cabos para baixo puxando os botões no interior do ARM de gestão de cabos e rodando-o para baixo.
++
 image::../media/drw_a70_90_io_remove_replace_ieops-1532.svg[Remova o módulo de e/S.]
 
++
 [cols="1,4"]
 |===
 
@@ -293,12 +301,6 @@ image::../media/drw_a70_90_io_remove_replace_ieops-1532.svg[Remova o módulo de 
 image::../media/icon_round_1.png[Legenda número 1]
 | Alavanca do came do módulo de e/S. 
 |===
-.Passos
-. Desconete qualquer cabeamento do módulo de e/S de destino.
-+
-Certifique-se de etiquetar os cabos para que saiba de onde vieram.
-
-. Rode o ARM de gestão de cabos para baixo puxando os botões no interior do ARM de gestão de cabos e rodando-o para baixo.
 . Retire os módulos de e/S do módulo do controlador:
 +
 .. Prima o botão de engate do came do módulo de e/S alvo.
@@ -329,8 +331,12 @@ NOTE: Para mover os módulos de e/S dos slots 6 e 7, você deve mover o transpor
 
 Desloque o módulo de gestão do sistema para o módulo do controlador de substituição.
 
+.Passos
+. Retire o módulo de gestão do sistema do módulo do controlador afetado:
++
 image::../media/drw_70-90_sys-mgmt_remove_ieops-1817.svg[Mova o módulo de Gestão do sistema]
 
++
 [cols="1,4"]
 |===
 
@@ -341,8 +347,6 @@ image::../media/icon_round_1.png[Legenda número 1]
 Trinco do excêntrico do módulo de gestão do sistema
 
 |===
-.Passos
-. Retire o módulo de gestão do sistema do módulo do controlador afetado:
 +
 .. Prima o botão do came de gestão do sistema.
 .. Rode a alavanca do excêntrico totalmente para baixo.
@@ -363,8 +367,12 @@ Trinco do excêntrico do módulo de gestão do sistema
 
 Mova o módulo NVRAM para o módulo do controlador de substituição.
 
+.Passos
+. Retire o módulo NVRAM do módulo do controlador desativado:
++
 image::../media/drw_a70-90_nvram12_remove_replace_ieops-1370.svg[Remova o módulo NVRAM12 e os DIMMs]
 
++
 [cols="1,4"]
 |===
 
@@ -382,8 +390,6 @@ image:../media/icon_round_2.png["Legenda número 2"]
 Guia de travamento do DIMM
 
 |===
-.Passos
-. Retire o módulo NVRAM do módulo do controlador desativado:
 +
 .. Prima o botão do trinco do excêntrico.
 +
@@ -454,4 +460,4 @@ NOTE: Se você tiver fontes de alimentação CC, reconete o bloco de alimentaç�
 
 
 .O que se segue?
-Depois de substituir o controlador AFF A70 ou AFF A90 com problemas, é necessário link:controller-replace-system-config-restore-and-verify.html["restaure a configuração do sistema"].
+Após substituir o controlador AFF A70 ou AFF A90 com defeito, você precisalink:controller-replace-system-config-restore-and-verify.html["restaure a configuração do sistema"] .

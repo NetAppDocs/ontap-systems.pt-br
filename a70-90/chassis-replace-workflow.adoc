@@ -13,22 +13,22 @@ summary: Comece a substituir o chassi do sistema de storage AFF A70 ou AFF A90, 
 [role="lead"]
 Comece a substituir o chassi do sistema de storage AFF A70 ou AFF A90, revisando os requisitos de substituição, desligando os controladores, substituindo o chassi e verificando as operações do sistema.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"]link:chassis-replace-requirements.html["Reveja os requisitos de substituição do chassis"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"]link:chassis-replace-requirements.html["Analise os requisitos de substituição do chassi."]
 [role="quick-margin-para"]
-Reveja os requisitos de substituição do chassis.
+Analise os requisitos de substituição do chassi, incluindo compatibilidade do sistema, ferramentas necessárias, credenciais ONTAP e verificação da funcionalidade dos componentes.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["dois"]link:chassis-replace-prepare.html["Prepare-se para a substituição do chassis"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["dois"]link:chassis-replace-prepare.html["Prepare-se para a substituição do chassi"]
 [role="quick-margin-para"]
-Prepare-se para substituir o chassi localizando o sistema, reunindo credenciais do sistema e ferramentas necessárias, verificando se o chassi de substituição foi recebido e rotulando os cabos do sistema.
+Prepare-se para a substituição do chassi localizando o sistema, reunindo as credenciais e ferramentas necessárias, verificando o chassi de substituição e etiquetando os cabos.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["três"]link:chassis-replace-shutdown.html["Desligue os controladores"]
 [role="quick-margin-para"]
-Desligue os controladores para que possa efetuar a manutenção no chassis.
+Desligue os controladores para realizar a manutenção do chassi com segurança.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"]link:chassis-replace-move-hardware.html["Substitua o chassis"]
 [role="quick-margin-para"]
-Substitua o chassis deslocando os componentes do chassis danificado para o chassis de substituição.
+Transfira os componentes do chassi danificado para o chassi de substituição.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinco"]link:chassis-replace-complete-system-restore-rma.html["Complete a substituição do chassis"]
 [role="quick-margin-para"]
-Conclua a substituição do chassi trazendo os controladores para cima, devolvendo os controladores e retornando o chassi com falha ao NetApp.
+Conclua a substituição inicializando os controladores, realizando o giveback e devolvendo o chassi com defeito à NetApp.

@@ -1,0 +1,83 @@
+= 
+:allow-uri-read: 
+
+
+.Passos
+. Verifique se o LED âmbar de status do NVRAM localizado no slot 4/5 na parte traseira de cada módulo do controlador está desligado. Procure o ícone NV.
++
+image::../media/drw_a1K-70-90_nvram-led_ieops-1463.svg[Gráfico de localização do LED de estado e atenção do NVRAM]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+LED de estado do NVRAM
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+LED de atenção NVRAM
+
+|===
++
+** Se o LED NVRAM estiver desligado, passe à próxima etapa.
+** Se o LED NVRAM estiver intermitente, aguarde que o intermitente pare. Se a intermitência continuar durante mais de 5 minutos, contacte http://mysupport.netapp.com/["Site de suporte da NetApp"^] para obter assistência.
+
+
+. Retire os módulos do controlador:
++
+.. Prima ambos os trincos de bloqueio no controlador e, em seguida, rode ambos os trincos para baixo ao mesmo tempo.
++
+O módulo do controlador desloca-se ligeiramente para fora do chassis.
+
++
+image::../media/drw_a70-90_pcm_remove_replace_ieops-1365.svg[Controlador remover gráfico]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Trinco de bloqueio
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Pino de bloqueio
+
+|===
+.. Deslize o módulo do controlador para fora do chassis pelos trincos de bloqueio e coloque-o numa superfície plana e estável.
++
+Certifique-se de que suporta a parte inferior do módulo do controlador enquanto o desliza para fora do chassis.
+
+.. Repita estes passos para o segundo módulo do controlador.
+
+
+. Remova as unidades:
++
+.. Retire cuidadosamente a moldura da parte frontal do sistema.
+.. Prima o botão de libertação na parte superior da face do suporte da unidade, por baixo dos LEDs.
+.. Puxe o manípulo do excêntrico para a posição totalmente aberta para retirar a transmissão do plano médio e, em seguida, deslize cuidadosamente a unidade para fora do chassis.
++
+A transmissão deve desengatar-se do chassis, permitindo que deslize para fora do chassis.
+
++
+
+NOTE: Os acionamentos são frágeis. Utilize sempre as duas mãos para suportar o peso de condução ao remover uma unidade para evitar danos.
+
+.. Mantenha o controle de qual compartimento de unidade cada unidade estava dentro e coloque a unidade de lado em um carrinho ou mesa sem estática.
+.. Repita esta etapa para as unidades restantes no chassi.
+
+
+

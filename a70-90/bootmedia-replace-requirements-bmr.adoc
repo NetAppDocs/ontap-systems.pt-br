@@ -2,7 +2,7 @@
 permalink: a70-90/bootmedia-replace-requirements-bmr.html 
 sidebar: sidebar 
 keywords: aff a70, aff a90, replace the boot media 
-summary: Antes de substituir a mídia de inicialização no seu sistema de armazenamento AFF A70 ou AFF A90 , certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. 
+summary: Verifique os requisitos antes de substituir a mídia de inicialização no seu sistema de armazenamento AFF A70 ou AFF A90 . 
 ---
 = Requisitos para recuperação automatizada de mídia de inicialização - AFF A70 e AFF A90
 :allow-uri-read: 
@@ -11,9 +11,9 @@ summary: Antes de substituir a mídia de inicialização no seu sistema de armaz
 
 
 [role="lead"]
-Antes de substituir a mídia de inicialização no seu sistema de armazenamento AFF A70 ou AFF A90 , certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se você possui a mídia de inicialização de substituição correta, confirmar se as portas do cluster no controlador danificado estão funcionando corretamente e determinar se o Gerenciador de Chaves Onboard (OKM) ou o Gerenciador de Chaves Externo (EKM) está habilitado.
+Antes de substituir a mídia de inicialização no seu sistema de armazenamento AFF A70 ou AFF A90 , verifique os requisitos, incluindo a funcionalidade da porta de cluster, a configuração do gerenciador de chaves e a compatibilidade com a versão do ONTAP .
 
-O processo automatizado de recuperação de mídia de inicialização é compatível apenas com o ONTAP 9.17.1 e versões posteriores. Se o seu sistema de armazenamento estiver executando uma versão anterior do ONTAP, use o link:bootmedia-replace-workflow.html["procedimento de recuperação de inicialização manual"] .
+O processo automatizado de recuperação da mídia de inicialização requer o ONTAP 9.17.1 ou posterior.  Se o seu sistema de armazenamento executar uma versão anterior do ONTAP, use olink:bootmedia-replace-workflow.html["procedimento de recuperação de inicialização manual"] .
 
 Reveja os seguintes requisitos.
 
@@ -28,7 +28,7 @@ Reveja os seguintes requisitos.
 ** /cfcard/kmip/certs/CA.pem
 
 
-* É fundamental aplicar os comandos ao controlador correto ao substituir a mídia de inicialização danificada:
+* Compreenda a terminologia do controlador utilizada neste procedimento:
 +
 ** O _controlador danificado_ é o controlador no qual você está executando a manutenção.
 ** O _controlador saudável_ é o parceiro HA do controlador prejudicado.

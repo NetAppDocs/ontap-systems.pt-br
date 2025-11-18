@@ -1,0 +1,63 @@
+= 
+:allow-uri-read: 
+
+
+.Passos
+. Abra a conduta de ar do controlador na parte superior do controlador.
++
+.. Insira os dedos nas reentrâncias nas extremidades distantes da conduta de ar.
+.. Levante a conduta de ar e rode-a para cima o mais longe possível.
+
+
+. Localize os DIMMs do sistema na placa-mãe, usando o mapa DIMM na parte superior da conduta de ar.
++
+Os locais de DIMM, por modelo, estão listados na seguinte tabela:
+
++
+[cols="1,4"]
+|===
+
+
+| Modelo | Localização do slot DIMM 
+
+
+ a| 
+FAS70
+| 3, 10, 19, 26 
+
+
+ a| 
+FAS90
+| 3, 7, 10, 14, 19, 23, 26, 30 
+|===
++
+image::../media/drw_a70_90_dimm_ieops-1513.svg[Mapa de DIMM]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+| DIMM do sistema 
+|===
+. Observe a orientação do DIMM no soquete para que você possa inserir o DIMM no módulo do controlador de substituição na orientação adequada.
+. Ejete o DIMM de seu slot, empurrando lentamente as duas abas do ejetor do DIMM em ambos os lados do DIMM e, em seguida, deslize o DIMM para fora do slot.
++
+
+NOTE: Segure cuidadosamente o DIMM pelas bordas para evitar a pressão nos componentes da placa de circuito DIMM.
+
+. Localize o slot no módulo do controlador de substituição onde você está instalando o DIMM.
+. Insira o DIMM diretamente no slot.
++
+O DIMM encaixa firmemente no slot, mas deve entrar facilmente. Caso contrário, realinhar o DIMM com o slot e reinseri-lo.
+
++
+
+NOTE: Inspecione visualmente o DIMM para verificar se ele está alinhado uniformemente e totalmente inserido no slot.
+
+. Empurre com cuidado, mas firmemente, na borda superior do DIMM até que as abas do ejetor se encaixem no lugar sobre os entalhes nas extremidades do DIMM.
+. Repita estas etapas para os DIMMs restantes.
+. Feche a conduta de ar do controlador.
+

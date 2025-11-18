@@ -2,7 +2,7 @@
 permalink: asa-r2-70-90/chassis-replace-requirements.html 
 sidebar: sidebar 
 keywords: asa r2 a70, asa r2 a90, replace the chassis 
-summary: Antes de substituir o chassi do sistema ASA A70 ou ASA A90, certifique-se de que atende aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, verificar se você tem credenciais de administrador local para o ONTAP, o chassi de substituição correto e as ferramentas necessárias. 
+summary: Antes de substituir o chassi do seu sistema ASA A70 ou ASA A90, certifique-se de que atende aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, verificar se você tem credenciais de administrador local para o ONTAP, o chassi de substituição correto e as ferramentas necessárias. 
 ---
 = Requisito para substituir o chassis - ASA A70 e ASA A90
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Antes de substituir o chassi do sistema ASA A70 ou ASA A90, certifique-
 
 
 [role="lead"]
-Antes de substituir o chassi do sistema ASA A70 ou ASA A90, certifique-se de que atende aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, verificar se você tem credenciais de administrador local para o ONTAP, o chassi de substituição correto e as ferramentas necessárias.
+Antes de substituir o chassi do seu sistema ASA A70 ou ASA A90, certifique-se de que atende aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, verificar se você tem credenciais de administrador local para o ONTAP, o chassi de substituição correto e as ferramentas necessárias.
 
 O chassi é o gabinete físico que abriga todos os componentes do controlador, como a unidade controladora/CPU, fonte de alimentação e e/S.
 
@@ -26,4 +26,4 @@ Reveja os seguintes requisitos.
 
 
 .O que se segue?
-Depois de analisar os requisitos de substituição do chassi, você precisa link:chassis-replace-prepare.html["prepare-se para a substituição do chassis"].
+Após analisar os requisitos,link:chassis-replace-prepare.html["prepare-se para substituir o chassis"] .

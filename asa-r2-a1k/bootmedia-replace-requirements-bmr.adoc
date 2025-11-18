@@ -26,7 +26,7 @@ Reveja os seguintes requisitos.
 ** /cfcard/kmip/certs/CA.pem
 
 
-* É fundamental aplicar os comandos ao controlador correto ao substituir a mídia de inicialização danificada:
+* Compreenda a terminologia do controlador utilizada neste procedimento:
 +
 ** O _controlador danificado_ é o controlador no qual você está executando a manutenção.
 ** O _controlador saudável_ é o parceiro HA do controlador prejudicado.
