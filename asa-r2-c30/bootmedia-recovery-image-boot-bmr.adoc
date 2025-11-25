@@ -63,7 +63,7 @@ A criptografia não está instalada no sistema.
 +
 `storage failover giveback -ofnode _impaired_node_name_`
 
-.. Vá para a etapa 6 para reativar a devolução automática, caso esteja desativada.
+.. Vá para <<reenable-auto-giveback,reativando a devolução automática>> se estivesse desativado.
 
 
 
@@ -71,13 +71,16 @@ A criptografia não está instalada no sistema.
  a| 
 `key manager is configured.`
  a| 
-A criptografia está instalada.  Vá para o passo 4 para restaurar o gerenciador de chaves.
+A criptografia está instalada. Vá para<<restore-key-manager,restaurando o gerenciador de chaves>> .
 
 |===
 +
 
 NOTE: Se o sistema não conseguir identificar a configuração do gerenciador de chaves, ele exibirá uma mensagem de erro e solicitará que você confirme se o gerenciador de chaves está configurado e qual o tipo (integrado ou externo).  Responda às perguntas para prosseguir.
 
+
+
+[[restore-key-manager]]
 . Restaure o gerenciador de chaves usando o procedimento apropriado para sua configuração:
 +
 [role="tabbed-block"]
@@ -138,7 +141,7 @@ Successfully recovered keymanager secrets.
 `security key-manager onboard sync`
 
 +
-Vá para a etapa 5 para reativar a devolução automática, caso esteja desativada.
+Vá para <<reenable-auto-giveback,reativando a devolução automática>> se estivesse desativado.
 
 
 
@@ -282,7 +285,7 @@ LOADER-B>
 `storage failover giveback -ofnode _impaired_node_name_`
 
 +
-Vá para a etapa 5 para reativar a devolução automática, caso esteja desativada.
+Vá para <<reenable-auto-giveback,reativando a devolução automática>> se estivesse desativado.
 
 
 
@@ -290,6 +293,7 @@ Vá para a etapa 5 para reativar a devolução automática, caso esteja desativa
 ====
 
 
+[[reenable-auto-giveback]]
 . Se a giveback automática foi desativada, reative-a:
 +
 `storage failover modify -node local -auto-giveback true`

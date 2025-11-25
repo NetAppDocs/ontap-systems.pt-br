@@ -74,7 +74,7 @@ Esse tempo permite que o ONTAP exclua adequadamente o endereço do compartimento
 
 
 . Volte a colocar a tampa da extremidade esquerda.
-. Repita as etapas de 1 a 9 para cada compartimento de disco adicional.
+. Repita os passos anteriores para cada compartimento de disco adicional.
 . Verifique se o sistema não tem IDs de gaveta duplicadas.
 +
 Quando dois ou mais compartimentos de disco têm a mesma ID, o sistema atribui ao compartimento de disco duplicado um número de ID flexível igual ou superior a 100. Tem de alterar o número de ID virtual (duplicado).

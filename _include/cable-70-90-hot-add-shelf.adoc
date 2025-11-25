@@ -59,7 +59,7 @@ Gaveta 1
 .. Cabo NSM A porta e0b para a porta b (e8b) do slot 8 do controlador B.
 .. Cabo NSM B porta e0a para o slot B do controlador 11 porta a (e11a).
 .. Cabo NSM B porta e0b para o slot 8 do controlador A porta b (e8b).
-.. Se você estiver adicionando uma segunda prateleira a quente, conclua as subetapas "'prateleira 2"; caso contrário, vá para a etapa 3.
+.. Se você estiver adicionando uma segunda prateleira com o produto em funcionamento, conclua as subetapas "`Prateleira 2`"; caso contrário, vá para a próxima etapa.
 
 
 A ilustração a seguir mostra o cabeamento de uma gaveta hot-added usando dois módulos de e/S compatíveis com RoCE em cada módulo de controladora:
@@ -75,7 +75,7 @@ Gaveta 2
 .. Cabo NSM A porta e0b para a porta b (e11b) do slot 11 do controlador B.
 .. Cabo NSM B porta e0a para o slot B do controlador 8 porta a (e8a).
 .. Cabo NSM B porta e0b para o slot 11 do controlador A porta b (e11b).
-.. Avance para o passo 3.
+.. Vá para a próxima etapa.
 
 
 A ilustração a seguir mostra o cabeamento de duas prateleiras hot-added usando dois módulos de e/S compatíveis com RoCE em cada módulo de controladora:

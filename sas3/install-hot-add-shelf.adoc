@@ -269,7 +269,7 @@ NOTE: As atualizações de firmware podem levar até 30 minutos.
 Você precisa atribuir manualmente a propriedade do disco se os discos na stack forem de propriedade de ambas as controladoras de um par de HA.
 
 +
-Você desativa a atribuição automática de propriedade de disco antes de fazer o cabeamento das gavetas de disco hot-Added e, depois, na etapa 7, reativá-la após o cabeamento das gavetas de disco hot-added.
+Você desativa a atribuição automática de propriedade do disco antes de conectar os gabinetes de discos adicionados a quente e, em seguida, a reativa posteriormente neste procedimento, após a conexão dos gabinetes de discos adicionados a quente.
 
 +
 .. Verifique se a atribuição automática de propriedade de disco está ativada:``storage disk option show``
@@ -285,7 +285,7 @@ Você precisa desativar a atribuição automática de propriedade de disco em am
 
 
 
-. Se você estiver adicionando uma pilha de compartimentos de disco diretamente a uma controladora, execute as seguintes etapas; caso contrário, vá para a etapa 3.
+. Se você estiver adicionando dinamicamente uma pilha de gavetas de disco diretamente a um controlador, conclua as seguintes subetapas; caso contrário, vá para a próxima etapa.
 +
 .. Se a pilha que você está adicionando a quente tiver mais de um compartimento de disco, faça o cabeamento das conexões prateleira a prateleira; caso contrário, vá para a subetapa b.
 +

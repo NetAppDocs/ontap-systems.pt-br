@@ -73,7 +73,7 @@ Quando portas não dedicadas não são configuradas para uso de armazenamento, o
 
 . Se as portas não dedicadas estiverem configuradas para uso de armazenamento, você será feito com este procedimento.
 +
-Caso contrário, você precisa configurar as portas executando as etapas 4 a 7.
+Caso contrário, você precisará configurar as portas seguindo os passos abaixo.
 
 . Configure as portas não dedicadas para uso de storage em um dos controladores:
 +
@@ -98,7 +98,7 @@ ONTAP 9,7
 `storage port enable -node _node_name_ -port _port_name_`
 
 |===
-. Repita o passo 4 para o segundo controlador.
+. Repita o passo anterior para o segundo controlador.
 . Verifique se as portas não dedicadas em ambos os controladores estão configuradas para uso no storage: `storage port show`
 +
 ** Se o seu par de HA estiver executando o ONTAP 9.8 ou posterior, as portas não dedicadas serão exibidas `storage` `Mode` na coluna.

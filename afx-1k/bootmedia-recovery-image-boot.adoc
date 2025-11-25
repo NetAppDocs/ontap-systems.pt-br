@@ -221,7 +221,7 @@ Entering Bootmenu Option 11...
 +
 *** Se você ver `kmip2_client: Successfully imported the keys from external key server: xxx.xxx.xxx.xxx:5696` na saída, a configuração do EKM foi restaurada com sucesso.
 +
-O processo tenta restaurar os arquivos apropriados do nó parceiro e reinicia o nó.  Vá para a etapa d.
+O processo tenta restaurar os arquivos apropriados do nó parceiro e reinicia o nó. Continue para a próxima etapa.
 
 *** Se a chave não for restaurada com sucesso, o sistema irá parar e indicar que não conseguiu restaurar a chave.  As mensagens de erro e aviso são exibidas.  Você deve executar novamente o processo de recuperação:
 +

@@ -44,10 +44,6 @@ NOTE: Quando você vir _Deseja desabilitar o retorno automático?_, digite `y` .
 +
 `system ha interconnect link off -node healthy-node -link 1`
 
-+
-
-NOTE: Se você não estiver executando o ONTAP versão 9.17.1, pule a etapa acima e vá para a etapa 3.
-
 
 
 . Leve o controlador prejudicado para o prompt Loader:

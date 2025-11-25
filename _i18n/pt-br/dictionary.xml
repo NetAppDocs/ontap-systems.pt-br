@@ -2403,14 +2403,12 @@
   <block id="635ff36fada70d6b9a46124ec04022cf" category="list-text">Cabo NSM A porta e0b para a porta b (e8b) do slot 8 do controlador B.</block>
   <block id="3adcb5d3f00489780b17f91dbcf4c8b6" category="list-text">Cabo NSM B porta e0a para o slot B do controlador 11 porta a (e11a).</block>
   <block id="fed38315c77f3f617a7a61ed019eb467" category="list-text">Cabo NSM B porta e0b para o slot 8 do controlador A porta b (e8b).</block>
-  <block id="3992e90365cd83d200a23714fd7144bd" category="list-text">Se você estiver adicionando uma segunda prateleira a quente, conclua as subetapas "'prateleira 2"; caso contrário, vá para a etapa 3.</block>
   <block id="8b2cc73a271f9ec9f419e138f66cb109" category="paragraph">A ilustração a seguir mostra o cabeamento de uma gaveta hot-added usando dois módulos de e/S compatíveis com RoCE em cada módulo de controladora:</block>
   <block id="a740221e4a860e8ea31ec9d725dfdeec" category="paragraph">Gaveta 2</block>
   <block id="efd179e747ea06abffaa97721b0cc372" category="list-text">Cabo NSM A porta e0a para controlador A slot 8 porta a (e8a).</block>
   <block id="9db08de14bb838886cf8eaaee8575093" category="list-text">Cabo NSM A porta e0b para a porta b (e11b) do slot 11 do controlador B.</block>
   <block id="e227bb2c8482a8ac7a342596ddc812fe" category="list-text">Cabo NSM B porta e0a para o slot B do controlador 8 porta a (e8a).</block>
   <block id="6d4a579eaf72f5aec95723d499d76fe9" category="list-text">Cabo NSM B porta e0b para o slot 11 do controlador A porta b (e11b).</block>
-  <block id="0dcadfb972a7b539c769d330f7ccc286" category="list-text">Avance para o passo 3.</block>
   <block id="ae14ce538d268aca5ec54fbb093b2156" category="paragraph">A ilustração a seguir mostra o cabeamento de duas prateleiras hot-added usando dois módulos de e/S compatíveis com RoCE em cada módulo de controladora:</block>
   <block id="14ac662b33a52d48f6573c07b50e5b8f" category="list-text">Verifique se o compartimento hot-added está cabeado corretamente usando<block ref="7064c89577900622f24a070c24ebbaa7" category="inline-link-rx"></block>o .</block>
   <block id="be18329abc2d39cf668517f7b74c32c6" category="paragraph">Se forem gerados erros de cabeamento, siga as ações corretivas fornecidas.</block>
@@ -6543,7 +6541,6 @@
   <block id="e0a29acbd9bdcb48c7307027b6c4dd53" category="paragraph">As fontes de alimentação não têm um interrutor de alimentação.</block>
   <block id="a007137d2370650b20ec02dbf15cc9ab" category="list-text">Desconete o cabeamento de storage (da gaveta até as controladoras).</block>
   <block id="7afc6825591dcf8e4f43bb0ebb7eda2a" category="list-text">Remova fisicamente a prateleira do rack ou gabinete.</block>
-  <block id="ea5d3bb3a6f3f53ef42084bdf7da0a58" category="list-text">Se estiver removendo mais de uma prateleira, repita as etapas 2 a 5.</block>
   <block id="fb1672d3b9cbaeecaea5d014d4664b11" category="list-text">Se você desativou a atribuição automática de unidade quando removeu a propriedade das unidades, reative-a:<block ref="9518ee5351ea31dd67cceada18bfcfd6" prefix=" " category="inline-code"></block></block>
   <block id="67d6ac4bf6a91c77849e039f6cf3781f" category="paragraph">Você executa o comando em ambos os módulos do controlador.</block>
   <block id="e51f4a966b3b35e8279bd6056a17d73d" category="list-text">Verifique os nomes das portas não dedicadas, atualmente configuradas para uso em armazenamento:<block ref="90e0991b70398b08e4e3eb0ae46c4163" prefix=" " category="inline-code"></block></block>
@@ -6617,7 +6614,6 @@
   <block id="9c421700c0f93ff32ed586c9cde9ac20" category="list-text">Se o seu par de HA estiver executando o ONTAP 9.8 ou posterior, as portas não dedicadas serão exibidas<block ref="ddecebdea58b5f264d27f1f7909bab74" prefix=" " category="inline-code"></block><block ref="650be61892bf690026089544abbd9d26" prefix=" " category="inline-code"></block> na coluna.</block>
   <block id="07d80afbccd38f7712fa336226de0865" category="paragraph">Quando portas não dedicadas não são configuradas para uso de armazenamento, o comando output exibe o seguinte:</block>
   <block id="d0d1f0809de877f29fd0a846c8876708" category="list-text">Se as portas não dedicadas estiverem configuradas para uso de armazenamento, você será feito com este procedimento.</block>
-  <block id="5fc0fcdc83b05fb4f062a9fa1fe851d9" category="paragraph">Caso contrário, você precisa configurar as portas executando as etapas 4 a 7.</block>
   <block id="cac946705a8c279083094c886d6e736a" category="list-text">Configure as portas não dedicadas para uso de storage em um dos controladores:</block>
   <block id="1529765b6b367d0e6b6e265150953287" category="paragraph">Você deve repetir o comando aplicável para cada porta que você está configurando.</block>
   <block id="394247ac369fff4729d586172906244e" category="cell">Use este comando...</block>
@@ -6842,8 +6838,6 @@
   <block id="01d36c3de356a203f6380095e17d5483" category="list-text">Se você quiser atribuir manualmente a propriedade da unidade para a unidade de substituição, você precisa desativar a atribuição automática de unidade se ela estiver ativada.</block>
   <block id="ba85497a31a9938c9ee8b64479f5eb73" category="paragraph">Se a atribuição automática de acionamento estiver ativada, a saída será exibida<block ref="ed2b5c0139cec8ad2873829dc1117d50" prefix=" " category="inline-code"></block><block ref="36dcdb9f764aaa4313fab85a6eb8d6a6" prefix=" " category="inline-code"></block> na coluna (para cada módulo do controlador).</block>
   <block id="ea606fa7b548cf2b580d32d8a7e06738" category="list-text">Feche a pega do came de forma a que a unidade fique totalmente assente no plano intermédio e a pega encaixe no devido lugar.</block>
-  <block id="b1fed0a03aae9e2c00ae3f49b6c9b739" category="list-text">Se estiver substituindo outra unidade, repita as etapas 3 a 7.</block>
-  <block id="231236e14086359b3d54dea9955a700b" category="list-text">Se você desativou a atribuição automática de unidade na etapa 1, atribua manualmente a propriedade da unidade e, em seguida, reative a atribuição automática de unidade, se necessário:</block>
   <block id="acdfef9c5579ff3ba02ba954b42b0b9d" category="summary">Você pode substituir um ventilador com falha sem interrupções em um compartimento de unidade de NS224 TB que esteja ligado e enquanto e/S estiver em andamento.</block>
   <block id="19ca7e08bce4c0e124faa15fe7b1d419" category="list-text">Quando você desembalar o ventilador de substituição, salve todos os materiais de embalagem para uso quando você devolver o ventilador com falha.</block>
   <block id="adf9a21a79092388f61e544af11cd756" category="video-title">Substitua um ventilador em uma prateleira NS224</block>
@@ -7290,7 +7284,6 @@
   <block id="0526a53962b9d1e594dbbbe4f645ef86" category="list-text">Se você estiver removendo toda uma pilha de compartimentos de disco, execute as seguintes etapas; caso contrário, vá para a próxima etapa:</block>
   <block id="271fd74603b356597cb36da3cd6bb967" category="list-text">Remova todos os cabos SAS no caminho A (Iom A) e no caminho B (IOM B).</block>
   <block id="5749b0bc6aac212bd52cf2ceb0bc7e06" category="paragraph">Isso inclui cabos controlador a compartimento e cabos de prateleira a prateleira para todas as gavetas de disco na stack que você está removendo.</block>
-  <block id="f1bf50366739c2deaea051a7aec101e7" category="list-text">Avance para o passo 9.</block>
   <block id="5049f1ff4aa9257508eb89a945b63e9d" category="list-text">Se você estiver removendo uma ou mais compartimentos de disco de uma stack (mas mantendo a stack), reabilite as conexões de stack de caminho A (Iom A) para ignorar as gavetas de disco que você está removendo preenchendo o conjunto de subetapas aplicável:</block>
   <block id="8dc554d95262c3a398cad315b4d70e62" category="paragraph">Se você estiver removendo mais de um compartimento de disco na pilha, conclua o conjunto aplicável de subetapas de um compartimento de disco de cada vez.</block>
   <block id="7dd4f77a1d8a0add44b6d788582b503a" category="admonition">Aguarde pelo menos 10 segundos antes de ligar a porta. Os conetores de cabo SAS são chaveados; quando orientados corretamente para uma porta SAS, o conetor se encaixa no lugar e o LED LNK da porta SAS do compartimento de disco fica verde. Para compartimentos de disco, você insere um conetor de cabo SAS com a aba de puxar orientada para baixo (na parte inferior do conetor).</block>
@@ -7667,7 +7660,6 @@
   <block id="e36a558e7bc20ae0e75bec222964d055" category="paragraph">Ambos os números no visor digital começam a piscar e o LED âmbar no painel do visor do operador acende-se após cerca de cinco segundos, alertando-o de que a ID pendente do compartimento do disco ainda não entrou em vigor.</block>
   <block id="9c221bef9744439a86ecbb6f88e250ff" category="list-text">Ligue o compartimento de disco para fazer com que o ID do compartimento entre em vigor.</block>
   <block id="205f1a8463c3864309c68834a88b379a" category="paragraph">Tem de desligar ambos os interrutores de alimentação, aguardar o período de tempo adequado e, em seguida, ligá-los novamente para concluir o ciclo de alimentação.</block>
-  <block id="0de4baec8d6e3dac5c52267ff0631bac" category="list-text">Repita as etapas de 1 a 9 para cada compartimento de disco adicional.</block>
   <block id="c6f83377a8f707e5d4500fa6c34141e8" category="list-text">Verifique se o sistema não tem IDs de gaveta duplicadas.</block>
   <block id="79a8830b6eb260be5b914306191dde58" category="paragraph">Quando dois ou mais compartimentos de disco têm a mesma ID, o sistema atribui ao compartimento de disco duplicado um número de ID flexível igual ou superior a 100. Tem de alterar o número de ID virtual (duplicado).</block>
   <block id="26a846deb04c0d63c063041ad0fa15ef" category="list-text">Execute o Active IQ Config Advisor para verificar se há alertas duplicados de ID de gaveta ou execute o<block ref="82b00438bdff68cba792c38604023279" prefix=" " category="inline-code"></block> comando para ver uma lista de IDs de gaveta já em uso, incluindo quaisquer IDs duplicados.</block>
@@ -7753,13 +7745,11 @@
   <block id="b88824e6d8603c9320c904617d837190" category="list-text">Depois de cabear as gavetas de disco hot-added, o ONTAP as reconhece: A propriedade do disco é atribuída se a atribuição automática de propriedade do disco estiver ativada; o firmware da gaveta de disco (IOM) e a firmware da unidade de disco devem ser atualizados automaticamente, se necessário; e se o ACP na banda estiver habilitado na configuração, ele será ativado automaticamente nas gavetas de disco hot-added.</block>
   <block id="07c4fdfdcd4fa801d7558b1c815fb28d" category="list-text">Se você quiser atribuir manualmente a propriedade do disco para as prateleiras de disco que você está adicionando a quente, será necessário desativar a atribuição automática de propriedade do disco se estiver ativada; caso contrário, vá para a próxima etapa.</block>
   <block id="d9ce71b03c108dcad1fcc7bdde993749" category="paragraph">Você precisa atribuir manualmente a propriedade do disco se os discos na stack forem de propriedade de ambas as controladoras de um par de HA.</block>
-  <block id="2493fd5b459ed2fddb90c3c88dd93d84" category="paragraph">Você desativa a atribuição automática de propriedade de disco antes de fazer o cabeamento das gavetas de disco hot-Added e, depois, na etapa 7, reativá-la após o cabeamento das gavetas de disco hot-added.</block>
   <block id="92116092ac990ea4250874487fb2b721" category="list-text">Verifique se a atribuição automática de propriedade de disco está ativada:<block ref="95e8c3545da27ac609a73ab063932ef7" prefix="" category="inline-code"></block></block>
   <block id="41376ea1d47dd16fc11b38286309ee65" category="paragraph">Se você tiver um par de HA, poderá inserir o comando no console de qualquer controlador.</block>
   <block id="b21eb2f8b72a60653498f3a1f1e0241d" category="paragraph">Se a atribuição automática de propriedade de disco estiver ativada, a saída mostrará "'on'" (para cada controlador) na coluna "'Auto Assign'".</block>
   <block id="5e7b2771491c1f74a4de4ccf47100e80" category="list-text">Se a atribuição automática de propriedade de disco estiver ativada, você precisará desativá-la:<block ref="40c7b547246543fa5bc52d2bbc1719cf" prefix="" category="inline-code"></block></block>
   <block id="5ae892a217fddefdc39690fe39f16ed0" category="paragraph">Você precisa desativar a atribuição automática de propriedade de disco em ambos os controladores em um par de HA.</block>
-  <block id="3f876ffd29608a6fdd6c56b2bcd2373a" category="list-text">Se você estiver adicionando uma pilha de compartimentos de disco diretamente a uma controladora, execute as seguintes etapas; caso contrário, vá para a etapa 3.</block>
   <block id="aab34a0f20291dc4eca51492b7dda4a1" category="list-text">Se a pilha que você está adicionando a quente tiver mais de um compartimento de disco, faça o cabeamento das conexões prateleira a prateleira; caso contrário, vá para a subetapa b.</block>
   <block id="bfa9de45095a3a90ebc55708a5ee6dd2" category="cell">Se...</block>
   <block id="0f3465a3f0de913b314ff9fa769f5b77" category="paragraph">Você está fazendo o cabeamento de uma stack com HA multipath, HA de três caminhos, multipath, HA de caminho único ou conectividade de caminho único para as controladoras</block>
@@ -9706,7 +9696,6 @@
   <block id="32b07ce753eb975c01de4108e4155ee7" category="list-text">Se você determinar que as portas não dedicadas com capacidade para RoCE no seu par de HA não estão configuradas para uso de storage, será um procedimento sem interrupções configurá-las. Não é necessário reiniciar os controladores, a menos que um ou ambos os controladores estejam no modo de manutenção. Este procedimento pressupõe que nenhum controlador está no modo de manutenção.</block>
   <block id="eb86e0541d4143c0318c9a167d5ce6fc" category="list-text">Se o seu par de HA estiver executando o ONTAP 9,7, as portas não dedicadas, exibidas<block ref="68934a3e9455fa72420237eb05902327" prefix=" " category="inline-code"></block><block ref="c7b4666e1f46b9d8409deace1de37977" prefix=" " category="inline-code"></block> na coluna, também serão exibidas<block ref="a10311459433adf322f2590a4987c423" prefix=" " category="inline-code"></block> na<block ref="46a2a41cc6e552044816a2d04634545d" prefix=" " category="inline-code"></block> coluna.</block>
   <block id="65889651ccf1dd661e3408010cd1a0cf" category="list-text">Se o seu par de HA estiver executando o ONTAP 9,7, as portas não dedicadas, exibidas<block ref="68934a3e9455fa72420237eb05902327" prefix=" " category="inline-code"></block><block ref="7ed427253695f845f908985c78b9f390" prefix=" " category="inline-code"></block> na coluna, também serão exibidas<block ref="075ae3d2fc31640504f814f60e5ef713" prefix=" " category="inline-code"></block> na<block ref="46a2a41cc6e552044816a2d04634545d" prefix=" " category="inline-code"></block> coluna.</block>
-  <block id="52dba85eb288ea326ebb5d4df4417d51" category="list-text">Repita o passo 4 para o segundo controlador.</block>
   <block id="10251d86a3f1068222c5cda1b3021db3" category="open-title">AFF A70, AFF A90 ou AFF C80</block>
   <block id="b736a5ee7f8805d6653d8da0961406f7" category="list-text">Se você estiver adicionando uma segunda prateleira, reconetável a primeira prateleira através dos módulos de e/S compatíveis com RoCE no slot 2 e slot 10 em cada controladora.</block>
   <block id="500e77e5799330d4d88ed16c0d87beee" category="paragraph">As subetapas assumem que a gaveta existente é cabeada para um módulo de e/S compatível com RoCE no slot 2 em cada controladora.</block>
@@ -11658,10 +11647,8 @@
   <block id="b3d28b344c55260439945f6caed47e6c" category="list-text">A máscara de rede para a porta</block>
   <block id="0471579d34255a0d9b6386ea78d8fd44" category="list-text">O endereço IP do gateway padrão</block>
   <block id="240de215578701a602c7ee68dfdcb425" category="list-text">Se você ver<block ref="ac676b9b4d7ad5923ab3fe5f9ae60aa8" prefix=" " category="inline-code"></block> na saída, a configuração do EKM foi restaurada com sucesso.</block>
-  <block id="42701a1ff76597ba7c5638bce0d2af9b" category="paragraph">O processo tenta restaurar os arquivos apropriados do nó parceiro e reinicia o nó.  Vá para a etapa d.</block>
   <block id="0c387b1b026e4f3547ed2f50da22a39e" category="list-text">Se a chave não for restaurada com sucesso, o sistema irá parar e indicar que não conseguiu restaurar a chave.  As mensagens de erro e aviso são exibidas.  Você deve executar novamente o processo de recuperação:</block>
   <block id="1c27eb77b57ec03853c37b1f761a36dc" category="list-text">Se quiser atribuir manualmente a propriedade da unidade para a unidade de substituição, será necessário desabilitar a atribuição automática de unidade, se ela estiver habilitada.</block>
-  <block id="9fb832dec5cd2e7d518230b1cfb70020" category="list-text">Se você estiver substituindo outra unidade, repita as etapas 3 a 7.</block>
   <block id="9b36684b5751c1f43c35d80933024e6d" category="paragraph"><block ref="e546c7c0f19a803f32f47d3907849b62" prefix="" category="inline-code"></block></block>
   <block id="6d81f890ae97b7a0ebc76c301009ec65" category="paragraph">Contato<block ref="eb2c61027d5e6c8b35692c1e74187026" category="inline-link-rx"></block> se você precisar do número RMA ou de ajuda adicional com o procedimento de substituição.</block>
   <block id="e55cf153efde1bb25a6c8b4b2a77e3a3" category="paragraph">Entre em contato com o suporte técnico<block ref="eb2c61027d5e6c8b35692c1e74187026" category="inline-link-rx"></block> se você precisar do número RMA ou de ajuda adicional com o procedimento de substituição.</block>
@@ -11786,7 +11773,6 @@
   <block id="2658eb11cd0ca39cfc2d7394809fff01" category="list-text">Defina as portas do MetroCluster como iniciadores:<block ref="2c8f25cb974f5d5b1e520b768a31cde6" prefix=" " category="inline-code"></block></block>
   <block id="262d6ff37dc133df81dc97d7127c21ca" category="list-text">Reinstale o módulo do controlador:</block>
   <block id="aae9b254c24cc3785086114d3d117232" category="list-text">Se você estiver substituindo outra unidade, repita as etapas 3 a 7.</block>
-  <block id="7c9d4c7520ca0f8e1dc57c8c26289d65" category="list-text">Se você estiver substituindo outra unidade, repita as etapas 4 a 8.</block>
   <block id="6ab51c87498e3948742262b60aeeee14" category="paragraph">A recuperação automatizada da imagem de inicialização envolve a identificação e seleção automáticas pelo sistema da opção de menu de inicialização apropriada. Ele utiliza a imagem de inicialização no nó parceiro para reinstalar o ONTAP na mídia de inicialização de substituição no seu sistema de armazenamento AFF A1K.</block>
   <block id="1598afb8f3a2e9755fe6204af9dbaa8d" category="inline-link-macro">procedimento automatizado de recuperação de inicialização</block>
   <block id="a3484b2f8cbf6736974f7d02ebc99cb3" category="paragraph">Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use o<block ref="0326355f0329bd91b304522a96676e27" category="inline-link-macro-rx"></block> .  Se o seu sistema estiver executando uma versão anterior do ONTAP, você deverá usar o procedimento de recuperação de inicialização manual.</block>
@@ -13629,7 +13615,6 @@
   <block id="22dd5ea8b069cf90dfb213fcf3136023" category="list-text">Se você tiver um cluster com mais de quatro nós, ele deverá estar no quorum.  Para visualizar informações de cluster sobre seus nós, use o<block ref="639161158d7426b3865ce9c5a6f648b3" prefix=" " category="inline-code"></block> comando.  Para mais informações sobre o<block ref="639161158d7426b3865ce9c5a6f648b3" prefix=" " category="inline-code"></block> comando, veja<block ref="812d195420030f92a12eef2f47c24053" category="inline-link-macro-rx"></block> .</block>
   <block id="3339c1abb6a38c2a82f66c0780893536" category="list-text">Se o cluster não estiver em quorum ou se a integridade ou elegibilidade de qualquer controlador (exceto o controlador com defeito) for mostrada como falsa, você deverá corrigir o problema antes de desligar o controlador com defeito. Ver <block ref="68d9e980b8b4998ef88139d7b7ab8ff6" category="inline-link-macro-rx"></block> .</block>
   <block id="eea7e5b28d3e1c4e8e7e7e8e310d7994" category="list-text">Se você estiver executando o ONTAP versão 9.17.1 e o controlador com problemas não puder ser ativado ou já tiver sido assumido, será necessário desativar o link de interconexão HA do controlador íntegro antes de inicializar o controlador com problemas.  Isso impede que o controlador prejudicado execute o retorno automático.</block>
-  <block id="78fa259f1575c0e9b637544144ce5988" category="admonition">Se você não estiver executando o ONTAP versão 9.17.1, pule a etapa acima e vá para a etapa 3.</block>
   <block id="c30938ccf076c4ec0d3f2ba34fd8f16e" category="paragraph">Assuma ou interrompa o controlador prejudicado do controlador saudável:<block ref="db99891238c978ac8afa2f5699f2917d" prefix=" " category="inline-code"></block></block>
   <block id="4ab0c772ea9a8193b238eb673a9fb06f" category="paragraph">O parâmetro _-halt true_ leva o nó prejudicado ao prompt do LOADER.</block>
   <block id="cea31bd46ad20e8b209bfbe53fc5e093" category="paragraph">Quando você substitui o módulo de gerenciamento do sistema, o número de série do sistema (SSN) do controlador muda.  Você deve instalar novas licenças para o nó se o nó danificado estiver usando recursos do ONTAP que exigem uma licença padrão (bloqueada por nó).  Para recursos com licenças padrão, cada nó no cluster deve ter sua própria chave para o recurso.</block>
@@ -14119,8 +14104,6 @@
   <block id="4754524f8b29b8650fe75329e6042256" category="paragraph">A criptografia não está instalada no sistema.</block>
   <block id="509770c8dda30e85db49f8642db6ca11" category="list-text">Aguarde até que a tela de login seja exibida.</block>
   <block id="0e24346f9a92e6d04d57b5ccead814c3" category="list-text">Faça login no nó e devolva o espaço de armazenamento:</block>
-  <block id="78f0d70cb3d505c2399506f81065c747" category="list-text">Vá para a etapa 6 para reativar a devolução automática, caso esteja desativada.</block>
-  <block id="0e8a095551e7e50c3ca3d504bd2ad77b" category="paragraph">A criptografia está instalada.  Vá para o passo 4 para restaurar o gerenciador de chaves.</block>
   <block id="20d2bf4f3f943fcc1e340e99a4d368ba" category="admonition">Se o sistema não conseguir identificar a configuração do gerenciador de chaves, ele exibirá uma mensagem de erro e solicitará que você confirme se o gerenciador de chaves está configurado e qual o tipo (integrado ou externo).  Responda às perguntas para prosseguir.</block>
   <block id="4aac054c51ae042dd6c06bdad5d13845" category="list-text">Restaure o gerenciador de chaves usando o procedimento apropriado para sua configuração:</block>
   <block id="564c83534ce0095bf811b4f45e8a7587" category="paragraph">O sistema exibe a seguinte mensagem e inicia a execução da Opção 10 do Menu de Inicialização:</block>
@@ -14132,7 +14115,6 @@
   <block id="3ba7e3971d948d8fa9119ea7d3326cd3" category="paragraph">Quando o processo de recuperação estiver concluído, o nó será reinicializado.  As mensagens a seguir indicam uma recuperação bem-sucedida:</block>
   <block id="5403c23d7cc21fd6b1016c3d10c93711" category="list-text">Após a reinicialização do nó, verifique se o sistema está novamente online e operacional.</block>
   <block id="1041ca100654e89f3959fe8698d3fe03" category="list-text">Após o nó parceiro estar totalmente operacional e fornecendo dados, sincronize as chaves OKM em todo o cluster:</block>
-  <block id="682b9eab5d02570a6044fbb81a96818d" category="paragraph">Vá para a etapa 5 para reativar a devolução automática, caso esteja desativada.</block>
   <block id="c611091d645837a22ce250179398219c" category="paragraph">O sistema exibe a seguinte mensagem e inicia a execução da Opção 11 do Menu de Inicialização:</block>
   <block id="51d6f35e7cccefb24fbfc4c082b44026" category="list-text">Insira as configurações do EKM quando solicitado:</block>
   <block id="abc81377b7e3cbf13c4b821e795e2424" category="list-text">Insira o conteúdo do certificado do cliente a partir do<block ref="d606236dedb6ed649b29651c1ec53a99" prefix=" " category="inline-code"></block> arquivo:</block>
@@ -14301,4 +14283,21 @@
   <block id="9ec706133a8a1899257edbed12b2d39a" category="sidebar">Os sistemas ASA oferecem uma experiência SAN simplificada e dedicada, que proporciona disponibilidade contínua de dados para bancos de dados de missão crítica corporativos e outras cargas de trabalho SAN usando o protocolo FCP ou iSCSI.</block>
   <block id="3898e1d169485951c2a49a4a69789502" category="sidebar">Instalar e configurar sistemas ASA</block>
   <block id="10b7e05447c2dbec670e886811f71bcb" category="sidebar">Manter sistemas ASA</block>
+  <block id="c239ad11021e49c97ea2bf8272c6588a" category="paragraph">O processo tenta restaurar os arquivos apropriados do nó parceiro e reinicia o nó. Continue para a próxima etapa.</block>
+  <block id="774ee8b1398c2f16e1d77ddac27a50b0" category="inline-xref">reativando a devolução automática</block>
+  <block id="d3218fd897781ec8a86658de26e1ddf1" category="list-text">Vá para <block ref="7aacd8b9a7e4a74d04304c7c616e940e" category="inline-xref-macro-rx"></block> se estivesse desativado.</block>
+  <block id="2ff143fefd61054fa148afd75a8c98be" category="inline-xref">restaurando o gerenciador de chaves</block>
+  <block id="1f74fd97b861dbc201b74171805bda09" category="paragraph">A criptografia está instalada. Vá para<block ref="74744f98b89b6a4dbb3b3e013250a83f" category="inline-xref-macro-rx"></block> .</block>
+  <block id="f1d6db02f39f4711fa05b5edf32c6425" category="list-text">Se você estiver adicionando uma segunda prateleira com o produto em funcionamento, conclua as subetapas "`Prateleira 2`"; caso contrário, vá para a próxima etapa.</block>
+  <block id="be7b8247eb925c7add4470f65b89e936" category="list-text">Se estiver a substituir outra unidade, repita os passos anteriores.</block>
+  <block id="d2fddd9e240829fc1dc928ed61196fbf" category="list-text">Se você desativou a atribuição automática de unidades anteriormente neste procedimento, atribua manualmente a propriedade da unidade e, em seguida, reative a atribuição automática de unidades, se necessário:</block>
+  <block id="4cca325ed840b8ff6bedb9a2bcf0134f" category="paragraph">Entre em contato com o suporte técnico em<block ref="eb2c61027d5e6c8b35692c1e74187026" category="inline-link-rx"></block>, 888-463-8277 (América do Norte), 00-800-44-638277 (Europa) ou +800-800-80-800 (Ásia/Pacífico) se precisar do número RMA ou de ajuda adicional com o procedimento de substituição.//2025-11-17 ontap-systems-internal/issues/1391</block>
+  <block id="696e3a46f755e71b2efb8fc66ed7bf86" category="paragraph">Caso contrário, o procedimento de adição de prateleira a quente está concluído. ====//2025-11-17 ontap-systems-internal/issues/1391</block>
+  <block id="ac5e04a2b567f923df0569c7177f596f" category="list-text">Se você for remover mais de uma prateleira, repita os passos anteriores.</block>
+  <block id="959de3aca4b6b23d81011f18ca2b15f7" category="paragraph">Caso contrário, você precisará configurar as portas seguindo os passos abaixo.</block>
+  <block id="75fc199dd3b8c9f1fc952121556e245d" category="list-text">Repita o passo anterior para o segundo controlador.</block>
+  <block id="b7cf733f61d2f31373ecbc67f036248f" category="list-text">Se necessário, avance para a seção sobre como reativar a atribuição automática (vários passos abaixo).</block>
+  <block id="98b8aea422580c306bf6d9bfa94dd665" category="list-text">Repita os passos anteriores para cada compartimento de disco adicional.</block>
+  <block id="f843ac1c00181fdda1ccb77040024169" category="paragraph">Você desativa a atribuição automática de propriedade do disco antes de conectar os gabinetes de discos adicionados a quente e, em seguida, a reativa posteriormente neste procedimento, após a conexão dos gabinetes de discos adicionados a quente.</block>
+  <block id="ec25bc86b3fe7d64ec86315f71195fc0" category="list-text">Se você estiver adicionando dinamicamente uma pilha de gavetas de disco diretamente a um controlador, conclua as seguintes subetapas; caso contrário, vá para a próxima etapa.</block>
 </blocks>

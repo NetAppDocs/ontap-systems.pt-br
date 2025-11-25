@@ -102,7 +102,7 @@ NOTE: Essas subetapas supõem que você está iniciando o cabeamento pela porta 
 .. Cabo NSM A porta e0b para a porta B do slot 7 do controlador b.
 .. Cabo NSM B porta e0a para a 3 porta a. do slot B do controlador B..
 .. Cabo NSM B porta e0b para controlador A slot 7 porta b..
-.. Se você estiver adicionando uma segunda prateleira a quente, conclua as subetapas "'prateleira 2"; caso contrário, vá para a etapa 3.
+.. Se você estiver adicionando uma segunda prateleira com o produto em funcionamento, conclua as subetapas "`Prateleira 2`"; caso contrário, vá para a próxima etapa.
 
 
 
@@ -117,7 +117,7 @@ NOTE: Essas subetapas supõem que você está iniciando o cabeamento pela porta 
 .. Cabo NSM A porta e0b para a porta B do slot 3 do controlador b.
 .. Cabo NSM B porta e0a para a 7 porta a. do slot B do controlador B..
 .. Cabo NSM B porta e0b para controlador A slot 3 porta b..
-.. Avance para o passo 3.
+.. Vá para a próxima etapa.
 
 
 |===
@@ -174,6 +174,6 @@ Se forem gerados erros de cabeamento, siga as ações corretivas fornecidas.
 .O que se segue?
 Se você desativou a atribuição automática de unidade como parte da preparação para este procedimento, será necessário atribuir manualmente a propriedade da unidade e, em seguida, reativar a atribuição automática de unidade, se necessário. Vá para link:complete-hot-add-shelf.html["Complete o hot-add"].
 
-Caso contrário, você é feito com o procedimento de hot-add prateleira.
+Caso contrário, o procedimento de adição de prateleira a quente está concluído. ====//2025-11-17 ontap-systems-internal/issues/1391
 
 ====
