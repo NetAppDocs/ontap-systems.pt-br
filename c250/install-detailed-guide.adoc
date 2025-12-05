@@ -346,6 +346,9 @@ image:../media/drw_affa250_1shelf_cabling_b.png["Cabeamento da controladora B."]
 
 Conclua a configuração e a configuração do sistema usando a descoberta de cluster apenas com uma conexão com o switch e laptop, ou conetando-se diretamente a um controlador no sistema e, em seguida, conetando-se ao switch de gerenciamento.
 
+
+NOTE: Para obter informações sobre como estabelecer conectividade contínua de uma porta de console do controlador para gerenciamento remoto, consulte o artigo da Base de Conhecimento. https://kb.netapp.com/on-prem/ontap/OHW/OHW-KBs/How_to_connect_an_ONTAP_controller_console_port_for_remote_management["Como conectar uma porta de console do controlador ONTAP para gerenciamento remoto"^].
+
 [role="tabbed-block"]
 ====
 .Opção 1: Se a deteção de rede estiver ativada
