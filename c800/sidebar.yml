@@ -55,28 +55,34 @@ entries:
   - title: Chassis
     pdf-filename: Chassis AFF C800
     entries:
-    - title: Visão geral
-      url: "/c800/chassis-replace-overview.html"
-    - title: Desligue o controlador desativado
+    - title: Fluxo de trabalho de substituição do chassis
+      url: "/c800/chassis-replace-workflow.html"
+    - title: Rever os requisitos
+      url: "/c800/chassis-replace-requirements.html"
+    - title: Prepare-se para substituir
+      url: "/c800/chassis-replace-prepare.html"
+    - title: Desligue os controladores
       url: "/c800/chassis-replace-shutdown.html"
-    - title: Substitua o material de fixação
+    - title: Substitua o chassi
       url: "/c800/chassis-replace-move-hardware.html"
-    - title: Substituição completa
+    - title: Substituição completa do chassis
       url: "/c800/chassis-replace-complete-system-restore-rma.html"
   - title: Controlador
     pdf-filename: Módulo do controlador AFF C800
     entries:
-    - title: Visão geral
-      url: "/c800/controller-replace-overview.html"
+    - title: Fluxo de trabalho de substituição do controlador
+      url: "/c800/controller-replace-workflow.html"
+    - title: Rever os requisitos
+      url: "/c800/controller-replace-requirements.html"
     - title: Desligue o controlador desativado
       url: "/c800/controller-replace-shutdown.html"
-    - title: Substitua o módulo do controlador
+    - title: Substitua o controlador
       url: "/c800/controller-replace-move-hardware.html"
     - title: Restaure a configuração do sistema
       url: "/c800/controller-replace-system-config-restore-and-verify.html"
     - title: Sistema Recable
       url: "/c800/controller-replace-recable-reassign-disks.html"
-    - title: Substituição completa
+    - title: Substituição completa do controlador
       url: "/c800/controller-replace-restore-system-rma.html"
   - title: DIMM
     url: "/c800/dimm-replace.html"

@@ -11,6 +11,8 @@ summary: Para encerrar o controlador com deficiência, você deve determinar o s
 
 
 [role="lead"]
+Desligue o controlador do seu sistema de armazenamento ASA A800 para evitar perda de dados e garantir a estabilidade do sistema ao substituir o controlador.
+
 Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
 
 .Sobre esta tarefa
@@ -73,3 +75,6 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 
 |===
 
+
+.O que se segue?
+Depois de desligar o controlador, é necessário link:controller-replace-move-hardware.html["substitua o controlador"].

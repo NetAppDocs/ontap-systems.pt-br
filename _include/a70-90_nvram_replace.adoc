@@ -10,12 +10,51 @@ Substitua o módulo NVRAM ou DIMMs NVRAM usando a opção a seguir apropriada.
 --
 Para substituir o módulo NVRAM, localize-o na ranhura 4/5 no chassis e siga a sequência específica de passos.
 
+. Se você ainda não está aterrado, aterre-se adequadamente.
 . Certifique-se de que todas as unidades no chassis estão firmemente assentadas contra o plano médio, utilizando os polegares para empurrar cada unidade até sentir um batente positivo.
 +
-image::../media/drw_a800_drive_seated_IEOPS-960.svg[Acionamentos do disco do assento]
+.Vídeo - Confirme o assento do motorista
+video::2c46e4af-2c21-4f12-b065-b38b003d0ea2[panopto]
++
+image::../media/drw_a800_drive_seated_IEOPS-960.svg[Instale os drives]
 
-. Vá para a parte traseira do chassis. Se você ainda não está aterrado, aterre-se adequadamente.
-. Se você ainda não está aterrado, aterre-se adequadamente.
+. Verifique os drivers do controlador com base no status do sistema:
++
+.. No controlador em bom funcionamento, verifique se algum grupo RAID ativo está em estado degradado, com falha ou ambos:
++
+[source, cli]
+----
+storage aggregate show -raidstatus !*normal*
+----
++
+*** Se o comando retornar `There are no entries matching your query.` continuar para<<Check-missing-drives,Vá para a próxima subetapa para verificar se há unidades ausentes.>> .
+*** Caso o comando retorne outros resultados, colete os dados do AutoSupport de ambos os controladores e entre em contato com o Suporte da NetApp para obter mais assistência.
++
+[source, cli]
+----
+system node autosupport invoke -node * -type all -message '<message_name>'
+----
+
+
+.. [[Verificar unidades ausentes]]Verifique se há problemas com unidades ausentes, tanto no sistema de arquivos quanto em unidades sobressalentes:
++
+[source, cli]
+----
+event log show -severity * -node * -message-name *disk.missing*
+----
++
+*** Se o comando retornar `There are no entries matching your query.` continuar para<<Go-to-the-rear,vá para a próxima etapa>> .
+*** Caso o comando retorne outros resultados, colete os dados do AutoSupport de ambos os controladores e entre em contato com o Suporte da NetApp para obter mais assistência.
++
+[source, cli]
+----
+system node autosupport invoke -node * -type all -message '<message_name>'
+----
+
+
+
+
+. [[Ir para a traseira]]Vá para a parte traseira do chassi.
 . Desconecte as PSUs do controlador.
 +
 
@@ -91,11 +130,51 @@ NOTE: Se você tiver fontes de alimentação CC, reconecte o bloco de energia à
 --
 Para substituir DIMMs NVRAM no módulo NVRAM, primeiro deve remover o módulo NVRAM e, em seguida, substituir o DIMM de destino.
 
+. Se você ainda não está aterrado, aterre-se adequadamente.
 . Certifique-se de que todas as unidades no chassis estão firmemente assentadas contra o plano médio, utilizando os polegares para empurrar cada unidade até sentir um batente positivo.
 +
-image::../media/drw_a800_drive_seated_IEOPS-960.svg[Acionamentos do disco do assento]
+.Vídeo - Confirme o assento do motorista
+video::2c46e4af-2c21-4f12-b065-b38b003d0ea2[panopto]
++
+image::../media/drw_a800_drive_seated_IEOPS-960.svg[Instale os drives]
 
-. Vá para a parte traseira do chassis. Se você ainda não está aterrado, aterre-se adequadamente.
+. Verifique os drivers do controlador com base no status do sistema:
++
+.. No controlador em bom funcionamento, verifique se algum grupo RAID ativo está em estado degradado, com falha ou ambos:
++
+[source, cli]
+----
+storage aggregate show -raidstatus !*normal*
+----
++
+*** Se o comando retornar `There are no entries matching your query.` continuar para<<Check-missing-drives,Vá para a próxima subetapa para verificar se há unidades ausentes.>> .
+*** Caso o comando retorne outros resultados, colete os dados do AutoSupport de ambos os controladores e entre em contato com o Suporte da NetApp para obter mais assistência.
++
+[source, cli]
+----
+system node autosupport invoke -node * -type all -message '<message_name>'
+----
+
+
+.. [[Verificar unidades ausentes]]Verifique se há problemas com unidades ausentes, tanto no sistema de arquivos quanto em unidades sobressalentes:
++
+[source, cli]
+----
+event log show -severity * -node * -message-name *disk.missing*
+----
++
+*** Se o comando retornar `There are no entries matching your query.` continuar para<<Go-to-the-rear,vá para a próxima etapa>> .
+*** Caso o comando retorne outros resultados, colete os dados do AutoSupport de ambos os controladores e entre em contato com o Suporte da NetApp para obter mais assistência.
++
+[source, cli]
+----
+system node autosupport invoke -node * -type all -message '<message_name>'
+----
+
+
+
+
+. [[Ir para a traseira]]Vá para a parte traseira do chassi.
 . Desconecte as PSUs do controlador.
 +
 

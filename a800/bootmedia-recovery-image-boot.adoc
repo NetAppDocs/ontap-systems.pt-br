@@ -11,7 +11,7 @@ summary: Você deve inicializar a imagem ONTAP a partir da unidade USB, restaura
 
 
 [role="lead"]
-Depois de instalar o novo dispositivo multimédia de arranque no seu sistema, pode arrancar a imagem de recuperação a partir de uma unidade USB e restaurar a configuração a partir do nó do parceiro.
+Após instalar o novo dispositivo de mídia de inicialização no seu sistema AFF A800 , você pode inicializar a imagem de recuperação a partir de uma unidade USB e restaurar a configuração do nó parceiro.
 
 Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use olink:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"] .  Se o seu sistema estiver executando uma versão anterior do ONTAP, você deverá usar o procedimento de recuperação de inicialização manual.
 
@@ -104,3 +104,6 @@ Após o procedimento de restauração ser concluído com sucesso, esta mensagem 
 `system node autosupport invoke -node * -type all -message MAINT=END`
 
 
+
+.O que se segue?
+Depois de inicializar a imagem de recuperação, você precisa link:bootmedia-encryption-restore.html["restaure a encriptação no suporte de arranque"].

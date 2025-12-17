@@ -1,0 +1,29 @@
+= 
+:allow-uri-read: 
+
+
+.Passos
+. Conete-se à porta do console serial à interface e monitore o sistema.
+. Ligue o LED de localização do controlador:
++
+.. Use o `system controller location-led show` Comando para exibir o estado atual do LED de localização.
+.. Ligue o LED de localização:
++
+`system controller location-led modify -node _node1_ -state on`
+
++
+O LED de localização permanece aceso durante 30 minutos.
+
+
+
+. Antes de abrir a embalagem, examine o rótulo e verifique o seguinte:
++
+** Número da peça do componente
+** Descrição da peça
+** Quantidade na caixa
+
+
+. Retire o conteúdo da embalagem e guarde-a para devolver o componente com defeito à NetApp.
+. Identifique todos os cabos conectados ao sistema de armazenamento.  Isso garante a correta recablagem posteriormente neste procedimento.
+. Conecte-se com a terra, caso ainda não esteja conectado.
+

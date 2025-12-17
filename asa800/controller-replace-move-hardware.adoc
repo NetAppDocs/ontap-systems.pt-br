@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: asa a800, move the controller module hardware 
 summary: Para substituir um módulo de controlador, é necessário remover o controlador prejudicado, mover os componentes FRU para o módulo de controlador de substituição, instalar o módulo de controlador de substituição no chassis e, em seguida, inicializar o sistema para o modo de manutenção. 
 ---
-= Substitua o controlador - ASA A800
+= Substitua o hardware do módulo controlador - ASA A800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Para substituir o controlador, tem de remover o controlador afetado, mover os componentes FRU para o módulo do controlador de substituição, instalar o módulo do controlador de substituição no chassis e, em seguida, arrancar o sistema para o modo de manutenção.
+Substitua o controlador do seu sistema ASA A800 quando uma falha de hardware assim o exigir. O processo de substituição envolve remover o controlador danificado, mover os componentes para o controlador de substituição, instalar o controlador de substituição e reiniciá-lo.
 
 
 
@@ -19,14 +19,53 @@ Para substituir o controlador, tem de remover o controlador afetado, mover os co
 
 Deve remover o módulo do controlador do chassis quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
 
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
 . Certifique-se de que todas as unidades no chassis estão firmemente assentadas contra o plano médio, utilizando os polegares para empurrar cada unidade até sentir um batente positivo.
 +
-image::../media/drw_a800_drive_seated_IEOPS-960.svg[Acionamentos do disco do assento]
+.Vídeo - Confirme o assento do motorista
+video::2c46e4af-2c21-4f12-b065-b38b003d0ea2[panopto]
++
+image::../media/drw_a800_drive_seated_IEOPS-960.svg[Instale os drives]
 
-. Vá para a parte traseira do chassis. Se você ainda não está aterrado, aterre-se adequadamente.
-. Desconete as fontes de alimentação do módulo do controlador da fonte.
-. Solte os fixadores do cabo de alimentação e, em seguida, desconete os cabos das fontes de alimentação.
-. Solte o gancho e a alça de loop que prendem os cabos ao dispositivo de gerenciamento de cabos e, em seguida, desconete os cabos do sistema e os módulos SFP e QSFP (se necessário) do módulo do controlador, mantendo o controle de onde os cabos foram conetados.
+. Verifique os drivers do controlador com base no status do sistema:
++
+.. No controlador em bom funcionamento, verifique se algum grupo RAID ativo está em estado degradado, com falha ou ambos:
++
+[source, cli]
+----
+storage aggregate show -raidstatus !*normal*
+----
++
+*** Se o comando retornar `There are no entries matching your query.` continuar para<<Check-missing-drives,Vá para a próxima subetapa para verificar se há unidades ausentes.>> .
+*** Caso o comando retorne outros resultados, colete os dados do AutoSupport de ambos os controladores e entre em contato com o Suporte da NetApp para obter mais assistência.
++
+[source, cli]
+----
+system node autosupport invoke -node * -type all -message '<message_name>'
+----
+
+
+.. [[Verificar unidades ausentes]]Verifique se há problemas com unidades ausentes, tanto no sistema de arquivos quanto em unidades sobressalentes:
++
+[source, cli]
+----
+event log show -severity * -node * -message-name *disk.missing*
+----
++
+*** Se o comando retornar `There are no entries matching your query.` continuar para<<remove-power-cables,vá para a próxima etapa>> .
+*** Caso o comando retorne outros resultados, colete os dados do AutoSupport de ambos os controladores e entre em contato com o Suporte da NetApp para obter mais assistência.
++
+[source, cli]
+----
+system node autosupport invoke -node * -type all -message '<message_name>'
+----
+
+
+
+
+. [[remover-cabos-de-alimentação]]Remova os fixadores dos cabos de alimentação e, em seguida, desconecte os cabos das fontes de alimentação.
+. Afrouxe a tira de velcro do dispositivo de gerenciamento de cabos.  Desconecte os cabos do sistema e os módulos SFP/QSFP (se necessário) do módulo controlador.  Anote a localização de cada cabo.
 +
 Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar o dispositivo de gerenciamento de cabos, os cabos sejam organizados.
 
@@ -36,7 +75,7 @@ Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar 
 O módulo do controlador desloca-se ligeiramente para fora do chassis.
 
 +
-image::../media/drw_a800_pcm_remove.png[Solte o módulo do controlador]
+image::../media/drw_a800_pcm_remove.png[Retirar o módulo do controlador]
 
 +
 [cols="1,4"]
@@ -58,42 +97,7 @@ Pino de bloqueio
 |===
 . Deslize o módulo do controlador para fora do chassis e coloque-o numa superfície plana e estável.
 +
-Certifique-se de que suporta a parte inferior do módulo do controlador enquanto o desliza para fora do chassis. .
-
-. Coloque o módulo do controlador numa superfície estável e plana.
-. Abra a conduta de ar do módulo do controlador:
-+
-.. Pressione as patilhas de bloqueio nas laterais da conduta de ar em direção ao centro do módulo do controlador.
-.. Deslize a conduta de ar em direção aos módulos da ventoinha e, em seguida, rode-a para cima até à posição completamente aberta.
-+
-image::../media/drw_a800_open_air_duct.png[Abra a conduta de ar]
-
-+
-[cols="1,4"]
-|===
-
-
- a| 
-image:../media/icon_round_1.png["Legenda número 1"]
- a| 
-Patilhas de bloqueio da conduta de ar
-
-
-
- a| 
-image:../media/icon_round_2.png["Legenda número 2"]
- a| 
-Deslize a conduta de ar em direção aos módulos do ventilador
-
-
-
- a| 
-image:../media/icon_round_3.png["Legenda número 3"]
- a| 
-Gire a conduta de ar em direção aos módulos do ventilador
-
-|===
-
+Ao deslizar o módulo controlador para fora do chassi, apoie a parte inferior.
 
 
 
@@ -101,8 +105,9 @@ Gire a conduta de ar em direção aos módulos do ventilador
 
 == Passo 2: Mova as fontes de alimentação
 
-É necessário mover as fontes de alimentação do módulo do controlador desativado para o módulo do controlador de substituição quando substituir um módulo do controlador.
+Transfira as fontes de alimentação para o módulo controlador de substituição.
 
+.Passos
 . Rode a pega do excêntrico de forma a que possa ser utilizada para retirar a fonte de alimentação do módulo do controlador enquanto prime a patilha de bloqueio.
 +
 
@@ -144,8 +149,9 @@ NOTE: Para evitar danificar o conetor interno, não utilize força excessiva ao 
 
 == Passo 3: Mova os fãs
 
-É necessário mover as ventoinhas do módulo do controlador desativado para o módulo de substituição ao substituir um módulo do controlador com falha.
+Transfira os módulos de ventoinha para o módulo controlador de substituição.
 
+.Passos
 . Retire o módulo da ventoinha apertando as patilhas de bloqueio na parte lateral do módulo da ventoinha e, em seguida, levantando o módulo da ventoinha diretamente para fora do módulo do controlador.
 +
 image::../media/drw_a800_replace_fan.png[Retire a ventoinha]
@@ -176,8 +182,9 @@ Módulo da ventoinha
 
 == Etapa 4: Mova a bateria NVDIMM
 
-Ao substituir o módulo do controlador, tem de mover a bateria do NVRAM do módulo do controlador desativado para o módulo do controlador de substituição
+Transfira a bateria NVDIMM para o módulo controlador de substituição.
 
+.Passos
 . Abra a tampa da conduta de ar e localize a bateria NVDIMM na riser.
 +
 image::../media/drw_a800_nvdimm_battery_replace.png[Substitua a bateria NVDIMM]
@@ -224,8 +231,9 @@ Bateria NVDIMM
 
 == Passo 5: Remova os risers PCIe
 
-Como parte do processo de substituição da controladora, você deve remover os módulos PCIe do módulo controlador prejudicado. Você deve instalá-los no mesmo local no módulo do controlador de substituição assim que os NVDIMMS e DIMMs tiverem sido movidos para o módulo do controlador de substituição.
+Remova os cabos riser PCIe do módulo controlador com defeito.
 
+.Passos
 . Remova a riser PCIe do módulo da controladora:
 +
 .. Remova quaisquer módulos SFP ou QSFP que possam estar nas placas PCIe.
@@ -265,8 +273,9 @@ Travas de travamento do riser 1 (riser esquerdo), riser 2 (riser intermediário)
 
 == Passo 6: Mova os DIMMs do sistema
 
-Para mover os DIMMs, localize-os e mova-os do controlador prejudicado para o controlador de substituição e siga a sequência específica de passos.
+Transfira os módulos DIMM do sistema para o módulo controlador de substituição.
 
+.Passos
 . Observe a orientação do DIMM no soquete para que você possa inserir o DIMM no módulo do controlador de substituição na orientação adequada.
 . Ejete o DIMM de seu slot, empurrando lentamente as duas abas do ejetor do DIMM em ambos os lados do DIMM e, em seguida, deslize o DIMM para fora do slot.
 +
@@ -290,8 +299,9 @@ NOTE: Inspecione visualmente o DIMM para verificar se ele está alinhado uniform
 
 == Etapa 7: Mova os NVDIMMs
 
-Para mover os NVDIMMs, localize-os e mova-os do controlador prejudicado para o controlador de substituição e siga a sequência específica de passos.
+Transfira o NVDIMMS para o módulo controlador de substituição.
 
+.Passos
 . Localize os NVDIMMs no módulo do controlador.
 +
 image::../media/drw_a800_no_risers_nvdimm_move.svg[Mova NVDIMMs]
@@ -337,11 +347,10 @@ NOTE: Inspecione visualmente o NVDIMM para verificar se ele está alinhado unifo
 
 == Passo 8: Mova a Mídia de inicialização
 
-Tem de mover o dispositivo multimédia de arranque do controlador afetado e instalá-lo no controlador de substituição.
+Transfira a mídia de inicialização para o módulo controlador de substituição.
 
-O suporte de arranque encontra-se sob a riser 3.
-
-. Localize o suporte de arranque:
+.Passos
+. Localize a mídia de inicialização sob o riser 3.
 +
 image::../media/drw_a800_pcm_replace_only_boot_media.png[Retire o suporte de arranque]
 
@@ -406,8 +415,9 @@ Não aperte demasiado o parafuso ou poderá danificar o suporte de arranque.
 
 == Passo 9: Instale os risers PCIe
 
-Você instala os risers PCIe no módulo do controlador de substituição depois de mover os DIMMs, NVDIMMs e Mídia de inicialização.
+Instale os cabos de extensão no módulo controlador de substituição.
 
+.Passos
 . Instale a riser no módulo do controlador de substituição:
 +
 .. Alinhe o lábio da riser com a parte inferior da chapa metálica do módulo do controlador.
@@ -426,45 +436,17 @@ Quando bloqueado, a trava de travamento fica alinhada com a parte superior da ri
 
 == Passo 10: Instale o módulo do controlador
 
-Depois de todos os componentes terem sido movidos do módulo do controlador afetado para o módulo do controlador de substituição, tem de instalar o módulo do controlador de substituição no chassis e, em seguida, iniciá-lo no modo de manutenção.
+Reinstale o módulo do controlador e reinicie-o.
 
-. Se ainda não o tiver feito, feche a conduta de ar:
-+
-.. Desloque a conduta de ar até ao módulo do controlador.
-.. Faça deslizar a conduta de ar na direção dos tirantes até que as patilhas de bloqueio encaixem no lugar.
-.. Inspecione a conduta de ar para se certificar de que está corretamente encaixada e trancada no lugar.
-+
-image::../media/drw_a800_close_air_duct.png[Feche a conduta de ar]
-
-+
-[cols="1,4"]
-|===
-
-
- a| 
-image:../media/icon_round_1.png["Legenda número 1"]
- a| 
-Patilhas de bloqueio
-
-
-
- a| 
-image:../media/icon_round_2.png["Legenda número 2"]
- a| 
-Deslize o êmbolo
-
-|===
-
-
+.Passos
 . Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
 +
 
 NOTE: Não introduza completamente o módulo do controlador no chassis até ser instruído a fazê-lo.
 
-. Faça o cabeamento apenas das portas de gerenciamento e console, para que você possa acessar o sistema para executar as tarefas nas seções a seguir.
+. Recable o sistema, conforme necessário.
 +
-
-NOTE: Você conetará o resto dos cabos ao módulo do controlador posteriormente neste procedimento.
+Se você removeu os conversores de Mídia (QSFPs ou SFPs), lembre-se de reinstalá-los se você estiver usando cabos de fibra ótica.
 
 . Conclua a reinstalação do módulo do controlador:
 +
@@ -477,15 +459,26 @@ Os trincos de bloqueio sobem quando o módulo do controlador está totalmente as
 NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
 
 .. Rode os trincos de bloqueio para cima, inclinando-os de forma a que estes limpem os pinos de bloqueio e, em seguida, baixe-os para a posição de bloqueio.
-
-
-. Conete os cabos do sistema e os módulos do transcetor ao módulo do controlador e reinstale o dispositivo de gerenciamento de cabos.
-. Ligue os cabos de alimentação às fontes de alimentação e volte a instalar os fixadores do cabo de alimentação.
+.. Conete os cabos de alimentação às fontes de alimentação, reinstale o colar de travamento do cabo de alimentação e, em seguida, conete as fontes de alimentação à fonte de alimentação.
 +
-O módulo do controlador começa a arrancar assim que está ligado à alimentação. Esteja preparado para interromper o processo de inicialização.
+O módulo do controlador começa a inicializar assim que a energia é restaurada. Esteja preparado para interromper o processo de inicialização.
 
+.. Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos.
+
+
+. Volte a colocar o controlador afetado em funcionamento normal, devolvendo o respetivo armazenamento:
 +
+`storage failover giveback -ofnode _impaired_node_name_`.
 
-NOTE: Se o sistema tiver fontes de alimentação CC, certifique-se de que os parafusos de aperto manual do cabo da fonte de alimentação estão apertados.
+. Se a giveback automática foi desativada, reative-a:
++
+`storage failover modify -node local -auto-giveback true`.
+
+. Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`.
 
 
+
+.O que se segue?
+Após substituir o controlador ASA A800 com defeito, você precisalink:controller-replace-system-config-restore-and-verify.html["restaure a configuração do sistema"]

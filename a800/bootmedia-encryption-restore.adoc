@@ -11,7 +11,7 @@ summary: 'Uma vez que as variáveis de ambiente estejam marcadas, você deve con
 
 
 [role="lead"]
-Restaure a encriptação no suporte de arranque de substituição.
+Restaure a criptografia na mídia de inicialização de substituição do seu sistema AFF A800 para garantir a proteção contínua dos dados. O processo de substituição envolve a verificação da disponibilidade da chave, a reaplicação das configurações de criptografia e a confirmação do acesso seguro aos seus dados.
 
 Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use olink:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"] .  Se o seu sistema estiver executando uma versão anterior do ONTAP, você deverá usar o procedimento de recuperação de inicialização manual.
 
@@ -432,3 +432,5 @@ Selection (1-11)? 1
 
 --
 ====
+.O que se segue?
+Depois de restaurar a encriptação no suporte de arranque, tem de link:bootmedia-complete-rma.html["Devolva a peça com falha ao NetApp"].

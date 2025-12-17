@@ -11,23 +11,19 @@ summary: Você deve remarcar o armazenamento e confirmar a reatribuição do dis
 
 
 [role="lead"]
-Continue o procedimento de substituição reativando o armazenamento e confirmando a reatribuição do disco.
+Devolva o controle dos recursos de armazenamento ao controlador de substituição para que seu sistema AFF A800 possa retomar a operação normal.  O procedimento de devolução varia de acordo com o tipo de criptografia usado pelo seu sistema: sem criptografia ou com criptografia Onboard Key Manager (OKM).
 
 
 
 == Passo 1: Recable o sistema
 
-Verifique as conexões de rede e armazenamento do módulo do controlador.
+Verifique as conexões de armazenamento e rede do módulo controlador usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"] .
 
 .Passos
-. Verifique se o cabeamento está correto usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"]o .
-+
-.. Baixe e instale o Config Advisor.
-.. Insira as informações do sistema de destino e clique em coletar dados.
-.. Clique na guia cabeamento e examine a saída. Certifique-se de que todos os compartimentos de disco sejam exibidos e todos os discos apareçam na saída, corrigindo quaisquer problemas de cabeamento encontrados.
-.. Verifique outro cabeamento clicando na guia apropriada e, em seguida, examinando a saída do Config Advisor.
-
-
+. Baixe e instale o Config Advisor.
+. Insira as informações do sistema de destino e clique em coletar dados.
+. Clique na guia cabeamento e examine a saída. Certifique-se de que todos os compartimentos de disco sejam exibidos e todos os discos apareçam na saída, corrigindo quaisquer problemas de cabeamento encontrados.
+. Verifique outro cabeamento clicando na guia apropriada e, em seguida, examinando a saída do Config Advisor.
 
 
 
@@ -36,8 +32,9 @@ Verifique as conexões de rede e armazenamento do módulo do controlador.
 
 Se o sistema de storage estiver em um par de HA, a ID do sistema do novo módulo de controladora será automaticamente atribuída aos discos quando o giveback ocorrer no final do procedimento. Você deve confirmar a alteração do ID do sistema quando você inicializar o controlador _replacement_ e, em seguida, verificar se a alteração foi implementada.
 
-Este procedimento aplica-se apenas a sistemas que executam o ONTAP em um par de HA.
+Esta etapa aplica-se somente a sistemas que executam o ONTAP em um par de alta disponibilidade (HA).
 
+.Passos
 . Se o controlador _replacement_ estiver no modo Manutenção (mostrando o `*>` prompt, saia do modo Manutenção e vá para o prompt Loader: `halt`
 . A partir do prompt Loader no controlador _replacement_, inicialize o controlador, inserindo `y` se for solicitado a substituir o ID do sistema devido a uma incompatibilidade de ID do sistema:``boot_ontap``
 . Aguarde até que a `Waiting for giveback...` mensagem seja exibida no console do controlador _replacement_ e, em seguida, a partir do controlador saudável, verifique se o novo ID do sistema do parceiro foi atribuído automaticamente: `storage failover show`

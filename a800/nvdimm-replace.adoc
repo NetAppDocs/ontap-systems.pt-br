@@ -11,15 +11,18 @@ summary: Você deve substituir o NVDIMM no módulo do controlador quando o siste
 
 
 [role="lead"]
-Você deve substituir o NVDIMM no módulo do controlador quando o sistema Registrar que a vida útil do flash está quase no fim ou que o NVDIMM identificado não está funcionando em geral; a falha em fazê-lo causa um pânico no sistema.
+Substitua o NVDIMM no seu sistema AFF A800 quando o sistema detectar que a vida útil da memória flash está quase no fim ou que o NVDIMM identificado não está em boas condições; caso contrário, o sistema entrará em pânico.
 
-Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+.Antes de começar
+* Certifique-se de que o módulo NVDIMM de substituição que você recebeu da NetApp é compatível com o seu sistema AFF A800 .
+* Certifique-se de que todos os outros componentes do sistema de armazenamento estejam funcionando corretamente; caso contrário, entre em contato com o Suporte da NetApp .
 
-Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor.
 
 
 
 == Passo 1: Desligue o controlador desativado
+
+Desligue ou assuma o controlador desativado.
 
 Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
 
@@ -90,14 +93,53 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 
 Deve remover o módulo do controlador do chassis quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
 
+.Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Certifique-se de que todas as unidades no chassis estão firmemente assentadas contra o plano médio, utilizando os polegares para empurrar cada unidade até sentir um batente positivo.
 +
-image::../media/drw_a800_drive_seated_IEOPS-960.svg[Acionamentos do disco do assento]
+.Vídeo - Confirme o assento do motorista
+video::2c46e4af-2c21-4f12-b065-b38b003d0ea2[panopto]
++
+image::../media/drw_a800_drive_seated_IEOPS-960.svg[Instale os drives]
 
-. Desconete as fontes de alimentação do módulo do controlador da fonte.
-. Solte os fixadores do cabo de alimentação e, em seguida, desconete os cabos das fontes de alimentação.
-. Solte o gancho e a alça de loop que prendem os cabos ao dispositivo de gerenciamento de cabos e, em seguida, desconete os cabos do sistema e os módulos SFP e QSFP (se necessário) do módulo do controlador, mantendo o controle de onde os cabos foram conetados.
+. Verifique os drivers do controlador com base no status do sistema:
++
+.. No controlador em bom funcionamento, verifique se algum grupo RAID ativo está em estado degradado, com falha ou ambos:
++
+[source, cli]
+----
+storage aggregate show -raidstatus !*normal*
+----
++
+*** Se o comando retornar `There are no entries matching your query.` continuar para<<Check-missing-drives,Vá para a próxima subetapa para verificar se há unidades ausentes.>> .
+*** Caso o comando retorne outros resultados, colete os dados do AutoSupport de ambos os controladores e entre em contato com o Suporte da NetApp para obter mais assistência.
++
+[source, cli]
+----
+system node autosupport invoke -node * -type all -message '<message_name>'
+----
+
+
+.. [[Verificar unidades ausentes]]Verifique se há problemas com unidades ausentes, tanto no sistema de arquivos quanto em unidades sobressalentes:
++
+[source, cli]
+----
+event log show -severity * -node * -message-name *disk.missing*
+----
++
+*** Se o comando retornar `There are no entries matching your query.` continuar para<<remove-power-cables,vá para a próxima etapa>> .
+*** Caso o comando retorne outros resultados, colete os dados do AutoSupport de ambos os controladores e entre em contato com o Suporte da NetApp para obter mais assistência.
++
+[source, cli]
+----
+system node autosupport invoke -node * -type all -message '<message_name>'
+----
+
+
+
+
+. [[remover-cabos-de-alimentação]]Remova os fixadores dos cabos de alimentação e, em seguida, desconecte os cabos das fontes de alimentação.
+. Afrouxe a tira de velcro do dispositivo de gerenciamento de cabos.  Desconecte os cabos do sistema e os módulos SFP/QSFP (se necessário) do módulo controlador.  Anote a localização de cada cabo.
 +
 Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar o dispositivo de gerenciamento de cabos, os cabos sejam organizados.
 
@@ -107,7 +149,7 @@ Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar 
 O módulo do controlador desloca-se ligeiramente para fora do chassis.
 
 +
-image::../media/drw_a800_pcm_remove.png[Solte o módulo do controlador]
+image::../media/drw_a800_pcm_remove.png[Retirar o módulo do controlador]
 
 +
 [cols="1,4"]
@@ -127,53 +169,20 @@ image:../media/icon_round_2.png["Legenda número 2"]
 Pino de bloqueio
 
 |===
-. Faça deslizar o módulo do controlador para fora do chassis.
+. Deslize o módulo do controlador para fora do chassis e coloque-o numa superfície plana e estável.
 +
-Certifique-se de que suporta a parte inferior do módulo do controlador enquanto o desliza para fora do chassis.
+Ao deslizar o módulo controlador para fora do chassi, apoie a parte inferior.
 
-. Coloque o módulo do controlador numa superfície estável e plana e, em seguida, abra a conduta de ar:
-+
-.. Pressione as patilhas de bloqueio nas laterais da conduta de ar em direção ao centro do módulo do controlador.
-.. Deslize a conduta de ar em direção aos módulos da ventoinha e, em seguida, rode-a para cima até à posição completamente aberta.
-+
-image::../media/drw_a800_open_air_duct.png[Abrir a conduta de ar]
-
-
-
-+
-[cols="1,4"]
-|===
-
-
- a| 
-image:../media/icon_round_1.png["Legenda número 1"]
- a| 
-Patilhas de bloqueio da conduta de ar
-
-
-
- a| 
-image:../media/icon_round_2.png["Legenda número 2"]
- a| 
-Deslize a conduta de ar em direção aos módulos do ventilador
-
-
-
- a| 
-image:../media/icon_round_3.png["Legenda número 3"]
- a| 
-Gire a conduta de ar em direção aos módulos do ventilador
-
-|===
 
 
 
 
 == Passo 3: Substitua o NVDIMM
 
-Para substituir o NVDIMM, você deve localizá-lo no módulo do controlador usando a etiqueta de mapa NVDIMM na parte superior da conduta de ar e, em seguida, substituí-lo seguindo a sequência específica de etapas.
+Localize o NVDIMM no módulo controlador usando a etiqueta do mapa NVDIMM na parte superior do duto de ar e, em seguida, substitua-o.
 
-. Se você estiver removendo ou movendo um NVDIMM, desbloqueie a trava de travamento na riser e remova a riser aplicável.
+.Passos
+. Para acessar o NVDIMM, destrave a trava de segurança no riser correspondente e, em seguida, remova o riser.
 +
 image::../media/drw_A800_nvdimm_replace_ieops-1953.svg[Substitua um NVDIMM]
 
@@ -230,36 +239,9 @@ NOTE: Inspecione visualmente o NVDIMM para verificar se ele está alinhado unifo
 
 == Passo 4: Reinstale o módulo do controlador e inicializando o sistema
 
-Depois de substituir uma FRU no módulo do controlador, você deve reinstalar o módulo do controlador e reiniciá-lo.
+Reinstale o módulo do controlador e reinicie-o.
 
-. Se ainda não o tiver feito, feche a conduta de ar:
-+
-.. Desloque a conduta de ar até ao módulo do controlador.
-.. Faça deslizar a conduta de ar na direção dos tirantes até que as patilhas de bloqueio encaixem no lugar.
-.. Inspecione a conduta de ar para se certificar de que está corretamente encaixada e trancada no lugar.
-+
-image::../media/drw_a700s_close_air_duct.png[Feche a conduta de ar]
-
-+
-[cols="1,4"]
-|===
-
-
- a| 
-image:../media/icon_round_1.png["Legenda número 1"]
- a| 
-Patilhas de bloqueio
-
-
-
- a| 
-image:../media/icon_round_2.png["Legenda número 2"]
- a| 
-Deslize o êmbolo
-
-|===
-
-
+.Passos
 . Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
 +
 
@@ -287,10 +269,22 @@ O módulo do controlador começa a inicializar assim que a energia é restaurada
 .. Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos.
 
 
+. Volte a colocar o controlador afetado em funcionamento normal, devolvendo o respetivo armazenamento:
++
+`storage failover giveback -ofnode _impaired_node_name_`.
+
+. Se a giveback automática foi desativada, reative-a:
++
+`storage failover modify -node local -auto-giveback true`.
+
+. Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`.
 
 
 
 
-== Passo 4: Devolva a peça com falha ao NetApp
+
+== Passo 5: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

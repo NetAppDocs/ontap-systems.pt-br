@@ -11,13 +11,13 @@ summary: Para substituir a bateria NVDIMM, é necessário remover o módulo do c
 
 
 [role="lead"]
-Para substituir a bateria NVDIMM, é necessário remover o módulo do controlador, remover a bateria, substituir a bateria e reinstalar o módulo do controlador.
-
-Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+Substitua a bateria NV do seu sistema AFF C800 quando ela começar a perder carga ou falhar, pois é responsável por preservar os dados críticos do sistema durante quedas de energia. O processo de substituição envolve desligar o controlador danificado, remover o módulo do controlador, substituir a bateria NV, reinstalar o módulo do controlador e devolver a peça com defeito à NetApp.
 
 
 
-== Passo 1: Desligue o controlador desativado
+== Passo 1: Desligue o controlador com defeito
+
+Desligue ou assuma o controlador desativado.
 
 Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
 
@@ -88,14 +88,53 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 
 Deve remover o módulo do controlador do chassis quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
 
+.Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Certifique-se de que todas as unidades no chassis estão firmemente assentadas contra o plano médio, utilizando os polegares para empurrar cada unidade até sentir um batente positivo.
 +
-image::../media/drw_a800_drive_seated_IEOPS-960.svg[Acionamentos do disco do assento]
+.Vídeo - Confirme o assento do motorista
+video::2c46e4af-2c21-4f12-b065-b38b003d0ea2[panopto]
++
+image::../media/drw_a800_drive_seated_IEOPS-960.svg[Instale os drives]
 
-. Desconete as fontes de alimentação do módulo do controlador da fonte.
-. Solte os fixadores do cabo de alimentação e, em seguida, desconete os cabos das fontes de alimentação.
-. Solte o gancho e a alça de loop que prendem os cabos ao dispositivo de gerenciamento de cabos e, em seguida, desconete os cabos do sistema e os módulos SFP e QSFP (se necessário) do módulo do controlador, mantendo o controle de onde os cabos foram conetados. Solte o gancho e a alça de loop que prendem os cabos ao dispositivo de gerenciamento de cabos e, em seguida, desconete os cabos do sistema do módulo do controlador, mantendo o controle de onde os cabos estavam conetados.
+. Verifique os drivers do controlador com base no status do sistema:
++
+.. No controlador em bom funcionamento, verifique se algum grupo RAID ativo está em estado degradado, com falha ou ambos:
++
+[source, cli]
+----
+storage aggregate show -raidstatus !*normal*
+----
++
+*** Se o comando retornar `There are no entries matching your query.` continuar para<<Check-missing-drives,Vá para a próxima subetapa para verificar se há unidades ausentes.>> .
+*** Caso o comando retorne outros resultados, colete os dados do AutoSupport de ambos os controladores e entre em contato com o Suporte da NetApp para obter mais assistência.
++
+[source, cli]
+----
+system node autosupport invoke -node * -type all -message '<message_name>'
+----
+
+
+.. [[Verificar unidades ausentes]]Verifique se há problemas com unidades ausentes, tanto no sistema de arquivos quanto em unidades sobressalentes:
++
+[source, cli]
+----
+event log show -severity * -node * -message-name *disk.missing*
+----
++
+*** Se o comando retornar `There are no entries matching your query.` continuar para<<remove-power-cables,vá para a próxima etapa>> .
+*** Caso o comando retorne outros resultados, colete os dados do AutoSupport de ambos os controladores e entre em contato com o Suporte da NetApp para obter mais assistência.
++
+[source, cli]
+----
+system node autosupport invoke -node * -type all -message '<message_name>'
+----
+
+
+
+
+. [[remover-cabos-de-alimentação]]Remova os fixadores dos cabos de alimentação e, em seguida, desconecte os cabos das fontes de alimentação.
+. Afrouxe a tira de velcro do dispositivo de gerenciamento de cabos.  Desconecte os cabos do sistema e os módulos SFP/QSFP (se necessário) do módulo controlador.  Anote a localização de cada cabo.
 +
 Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar o dispositivo de gerenciamento de cabos, os cabos sejam organizados.
 
@@ -105,7 +144,7 @@ Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar 
 O módulo do controlador desloca-se ligeiramente para fora do chassis.
 
 +
-image::../media/drw_a800_pcm_remove.png[Solte o módulo do controlador]
+image::../media/drw_a800_pcm_remove.png[Retirar o módulo do controlador]
 
 +
 [cols="1,4"]
@@ -125,19 +164,19 @@ image:../media/icon_round_2.png["Legenda número 2"]
 Pino de bloqueio
 
 |===
-. Faça deslizar o módulo do controlador para fora do chassis.
+. Deslize o módulo do controlador para fora do chassis e coloque-o numa superfície plana e estável.
 +
-Certifique-se de que suporta a parte inferior do módulo do controlador enquanto o desliza para fora do chassis.
+Ao deslizar o módulo controlador para fora do chassi, apoie a parte inferior.
 
-. Coloque o módulo do controlador de lado num local seguro.
 
 
 
 
 == Etapa 3: Substitua a bateria NVDIMM
 
-Para substituir a bateria NVDIMM, você deve remover a bateria com falha do módulo do controlador e instalar a bateria de substituição no módulo do controlador.
+Substitua a bateria NVDIMM removendo a bateria defeituosa do módulo controlador e instalando a bateria de substituição no módulo controlador.
 
+.Passos
 . Abra a tampa da conduta de ar e localize a bateria NVDIMM na riser.
 +
 image::../media/drw_a800_nvdimm_battery_replace.png[Substitua a bateria NVDIMM]
@@ -188,10 +227,11 @@ Certifique-se de que a ficha se encaixa na tomada.
 
 
 
-== Passo 4: Reinstale o módulo do controlador e inicializando o sistema
+== Etapa 4: Reinstale o módulo do controlador
 
-Depois de substituir uma FRU no módulo do controlador, você deve reinstalar o módulo do controlador e reiniciá-lo.
+Reinstale o módulo do controlador e reinicie-o.
 
+.Passos
 . Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
 +
 
@@ -218,6 +258,18 @@ O módulo do controlador começa a inicializar assim que a energia é restaurada
 
 .. Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos.
 
+
+. Volte a colocar o controlador afetado em funcionamento normal, devolvendo o respetivo armazenamento:
++
+`storage failover giveback -ofnode _impaired_node_name_`.
+
+. Se a giveback automática foi desativada, reative-a:
++
+`storage failover modify -node local -auto-giveback true`.
+
+. Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`.
 
 
 

@@ -1,0 +1,29 @@
+---
+permalink: a800/chassis-replace-requirements.html 
+sidebar: sidebar 
+keywords: aff a800, replace the chassis 
+summary: Antes de substituir o chassi do seu sistema AFF A800, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, verificar se você tem credenciais de administrador local para o ONTAP, o chassi de substituição correto e as ferramentas necessárias. 
+---
+= Requisitos para substituição do chassi - AFF A800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de substituir o chassi do seu sistema AFF A800, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, verificar se você tem credenciais de administrador local para o ONTAP, o chassi de substituição correto e as ferramentas necessárias.
+
+O chassi é o gabinete físico que abriga todos os componentes do controlador, como a unidade controladora/CPU, fonte de alimentação e e/S.
+
+Reveja os seguintes requisitos.
+
+* Certifique-se de que todos os outros componentes do sistema estão a funcionar corretamente; caso contrário, contacte http://mysupport.netapp.com/["Suporte à NetApp"^] para obter assistência.
+* Obtenha credenciais de administrador local para o ONTAP se você não as tiver.
+* Certifique-se de que tem as ferramentas e o equipamento necessários para a substituição.
+* Pode utilizar o procedimento de substituição do chassis com todas as versões do ONTAP suportadas pelo seu sistema.
+* O procedimento de substituição do chassi é escrito partindo do pressuposto de que você está movendo o painel frontal, as unidades NVMe e os módulos do controlador para o novo chassi e de que o chassi de substituição é um novo componente do NetApp.
+* O procedimento de substituição do chassis é disruptivo. Para um cluster de dois nós, você terá uma interrupção de serviço completa e uma interrupção parcial em um cluster de vários nós.
+
+
+.O que se segue?
+Após analisar os requisitos,link:chassis-replace-prepare.html["prepare-se para substituir o chassis"] .

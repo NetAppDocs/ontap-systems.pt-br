@@ -11,17 +11,18 @@ summary: 'Você substitui a bateria do relógio em tempo real (RTC) no módulo d
 
 
 [role="lead"]
-Você substitui a bateria do relógio em tempo real (RTC) no módulo do controlador para que os serviços e aplicativos do sistema que dependem da sincronização precisa de tempo continuem funcionando.
+Substitua a bateria do relógio de tempo real (RTC), comumente conhecida como bateria tipo moeda, em seu sistema ASA C800 para garantir que os serviços e aplicativos que dependem da sincronização precisa de tempo permaneçam operacionais.
 
-* Pode utilizar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema
-* Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+.Antes de começar
+* Entenda que você pode usar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema.
+* Certifique-se de que todos os outros componentes do sistema estão a funcionar corretamente; caso contrário, tem de contactar a assistência técnica.
 
-
-Você deve usar uma bateria RTC aprovada.
 
 
 
 == Passo 1: Desligue o controlador desativado
+
+Desligue ou assuma o controlador desativado.
 
 Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
 
@@ -92,14 +93,53 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 
 Deve remover o módulo do controlador do chassis quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
 
+.Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Certifique-se de que todas as unidades no chassis estão firmemente assentadas contra o plano médio, utilizando os polegares para empurrar cada unidade até sentir um batente positivo.
 +
-image::../media/drw_a800_drive_seated_IEOPS-960.svg[Acionamentos do disco do assento]
+.Vídeo - Confirme o assento do motorista
+video::2c46e4af-2c21-4f12-b065-b38b003d0ea2[panopto]
++
+image::../media/drw_a800_drive_seated_IEOPS-960.svg[Instale os drives]
 
-. Desconete as fontes de alimentação do módulo do controlador da fonte.
-. Solte os fixadores do cabo de alimentação e, em seguida, desconete os cabos das fontes de alimentação.
-. Solte o gancho e a alça de loop que prendem os cabos ao dispositivo de gerenciamento de cabos e, em seguida, desconete os cabos do sistema e os módulos SFP e QSFP (se necessário) do módulo do controlador, mantendo o controle de onde os cabos foram conetados.
+. Verifique os drivers do controlador com base no status do sistema:
++
+.. No controlador em bom funcionamento, verifique se algum grupo RAID ativo está em estado degradado, com falha ou ambos:
++
+[source, cli]
+----
+storage aggregate show -raidstatus !*normal*
+----
++
+*** Se o comando retornar `There are no entries matching your query.` continuar para<<Check-missing-drives,Vá para a próxima subetapa para verificar se há unidades ausentes.>> .
+*** Caso o comando retorne outros resultados, colete os dados do AutoSupport de ambos os controladores e entre em contato com o Suporte da NetApp para obter mais assistência.
++
+[source, cli]
+----
+system node autosupport invoke -node * -type all -message '<message_name>'
+----
+
+
+.. [[Verificar unidades ausentes]]Verifique se há problemas com unidades ausentes, tanto no sistema de arquivos quanto em unidades sobressalentes:
++
+[source, cli]
+----
+event log show -severity * -node * -message-name *disk.missing*
+----
++
+*** Se o comando retornar `There are no entries matching your query.` continuar para<<remove-power-cables,vá para a próxima etapa>> .
+*** Caso o comando retorne outros resultados, colete os dados do AutoSupport de ambos os controladores e entre em contato com o Suporte da NetApp para obter mais assistência.
++
+[source, cli]
+----
+system node autosupport invoke -node * -type all -message '<message_name>'
+----
+
+
+
+
+. [[remover-cabos-de-alimentação]]Remova os fixadores dos cabos de alimentação e, em seguida, desconecte os cabos das fontes de alimentação.
+. Afrouxe a tira de velcro do dispositivo de gerenciamento de cabos.  Desconecte os cabos do sistema e os módulos SFP/QSFP (se necessário) do módulo controlador.  Anote a localização de cada cabo.
 +
 Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar o dispositivo de gerenciamento de cabos, os cabos sejam organizados.
 
@@ -109,10 +149,9 @@ Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar 
 O módulo do controlador desloca-se ligeiramente para fora do chassis.
 
 +
-image::../media/drw_a800_pcm_remove.png[Solte o módulo do controlador]
+image::../media/drw_a800_pcm_remove.png[Retirar o módulo do controlador]
 
-
-
++
 [cols="1,4"]
 |===
 
@@ -130,43 +169,9 @@ image:../media/icon_round_2.png["Legenda número 2"]
 Pino de bloqueio
 
 |===
-. Faça deslizar o módulo do controlador para fora do chassis.
+. Deslize o módulo do controlador para fora do chassis e coloque-o numa superfície plana e estável.
 +
-Certifique-se de que suporta a parte inferior do módulo do controlador enquanto o desliza para fora do chassis.
-
-. Coloque o módulo do controlador numa superfície estável e plana e, em seguida, abra a conduta de ar:
-+
-.. Pressione as patilhas de bloqueio nas laterais da conduta de ar em direção ao centro do módulo do controlador.
-.. Deslize a conduta de ar em direção aos módulos da ventoinha e, em seguida, rode-a para cima até à posição completamente aberta.
-+
-image::../media/drw_a800_open_air_duct.png[Abra a conduta de ar]
-
-+
-[cols="1,4"]
-|===
-
-
- a| 
-image:../media/icon_round_1.png["Legenda número 1"]
- a| 
-Patilhas de bloqueio da conduta de ar
-
-
-
- a| 
-image:../media/icon_round_2.png["Legenda número 2"]
- a| 
-Deslize a conduta de ar em direção aos módulos do ventilador
-
-
-
- a| 
-image:../media/icon_round_3.png["Legenda número 3"]
- a| 
-Gire a conduta de ar em direção aos módulos do ventilador
-
-|===
-
+Ao deslizar o módulo controlador para fora do chassi, apoie a parte inferior.
 
 
 
@@ -174,10 +179,18 @@ Gire a conduta de ar em direção aos módulos do ventilador
 
 == Passo 3: Substitua a bateria RTC
 
+Substitua a bateria do RTC.
+
+O procedimento para substituir a bateria RTC varia dependendo se o seu controlador é um modelo Original ou VER2.  Utilize as abas abaixo para selecionar as instruções apropriadas para o modelo do seu controlador.
+
+.Sobre esta tarefa
+A bateria está localizada sob o riser 2 (o riser do meio) nos controladores originais e perto dos módulos DIMM nos controladores VER2.
+
 [role="tabbed-block"]
 ====
 .Controlador original
 --
+.Passos
 . Remova o riser PCIe 2 (riser central) do módulo da controladora:
 +
 .. Remova quaisquer módulos SFP ou QSFP que possam estar nas placas PCIe.
@@ -262,6 +275,7 @@ Quando bloqueado, a trava de travamento fica alinhada com a parte superior da ri
 --
 .Controlador VER2
 --
+.Passos
 . Localize a bateria RTC perto dos DIMMs.
 +
 image::../media/drw_a800_rtc_battery_replace_v2.png[Retire e substitua a bateria do RTC]
@@ -300,12 +314,13 @@ NOTE: Observe a polaridade da bateria ao removê-la do suporte. A bateria está 
 
 == Etapa 4: Reinstale o módulo do controlador
 
-Depois de substituir um componente no módulo do controlador, tem de reinstalar o módulo do controlador no chassis do sistema, repor a hora e a data no controlador e, em seguida, iniciá-lo.
+Reinstale o módulo do controlador e reinicie-o.
 
-. Se ainda não o tiver feito, feche a tampa da conduta de ar ou do módulo do controlador.
+.Passos
 . Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
 +
-Não introduza completamente o módulo do controlador no chassis até ser instruído a fazê-lo.
+
+NOTE: Não introduza completamente o módulo do controlador no chassis até ser instruído a fazê-lo.
 
 . Recable o sistema, conforme necessário.
 +
@@ -327,21 +342,20 @@ NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para de
 O módulo do controlador começa a inicializar assim que a energia é restaurada. Esteja preparado para interromper o processo de inicialização.
 
 .. Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos.
-.. Interrompa o controlador no prompt DO Loader.
 
 
-. Redefina a hora e a data no controlador:
+. Volte a colocar o controlador afetado em funcionamento normal, devolvendo o respetivo armazenamento:
 +
-.. Verifique a data e a hora no controlador saudável com o `show date` comando.
-.. No prompt Loader no controlador de destino, verifique a hora e a data.
-.. Se necessário, modifique a data com o `set date mm/dd/yyyy` comando.
-.. Se necessário, defina a hora, em GMT, usando o `set time hh:mm:ss` comando.
-.. Confirme a data e a hora no controlador de destino.
+`storage failover giveback -ofnode _impaired_node_name_`.
 
+. Se a giveback automática foi desativada, reative-a:
++
+`storage failover modify -node local -auto-giveback true`.
 
-. No prompt Loader, digite `bye` para reinicializar as placas PCIe e outros componentes e deixar a controladora reiniciar.
-. Volte a colocar o controlador em funcionamento normal, devolvendo o respetivo armazenamento: `storage failover giveback -ofnode _impaired_node_name_`
-. Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback true`
+. Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`.
+
 
 
 

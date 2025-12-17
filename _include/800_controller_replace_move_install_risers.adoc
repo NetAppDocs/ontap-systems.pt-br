@@ -1,0 +1,18 @@
+= 
+:allow-uri-read: 
+
+
+.Passos
+. Instale a riser no módulo do controlador de substituição:
++
+.. Alinhe o lábio da riser com a parte inferior da chapa metálica do módulo do controlador.
+.. Guie a riser ao longo dos pinos no módulo da controladora e baixe a riser para dentro do módulo da controladora.
+.. Desloque o trinco de bloqueio para baixo e clique-o na posição de bloqueio.
++
+Quando bloqueado, a trava de travamento fica alinhada com a parte superior da riser e a riser fica bem no módulo da controladora.
+
+.. Reinsira todos os módulos SFP ou QSFP que foram removidos das placas PCIe.
+
+
+. Repita a etapa anterior para os risers PCIe restantes.
+

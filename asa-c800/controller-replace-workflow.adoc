@@ -1,0 +1,38 @@
+---
+permalink: asa-c800/controller-replace-workflow.html 
+sidebar: sidebar 
+keywords: asa c800, replace the controller workflow 
+summary: Para começar a substituir o controlador do seu sistema de armazenamento ASA C800, desligue o controlador com defeito, remova e substitua o controlador, reconfigure as definições do sistema e verifique o funcionamento do sistema. 
+---
+= Fluxo de trabalho de substituição do controlador - ASA C800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Substitua o controlador do seu sistema de armazenamento ASA C800 desligando o controlador com defeito, removendo e substituindo o controlador, restaurando a configuração do sistema e devolvendo o controle dos recursos de armazenamento ao controlador de substituição.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"]link:controller-replace-requirements.html["Reveja os requisitos para substituir o controlador"]
+[role="quick-margin-para"]
+Analise os requisitos de substituição do controlador, incluindo compatibilidade do sistema, ferramentas necessárias, credenciais ONTAP e verificação da funcionalidade dos componentes.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"]link:controller-replace-shutdown.html["Desligue o controlador desativado"]
+[role="quick-margin-para"]
+Encerre ou assuma o controlador afetado para que o controlador íntegro continue a fornecer dados do armazenamento do controlador desativado.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"]link:controller-replace-move-hardware.html["Substitua o controlador"]
+[role="quick-margin-para"]
+Remova o controlador defeituoso, transfira os componentes da FRU para o módulo de controlador de substituição e instale o módulo de controlador de substituição no gabinete.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"]link:controller-replace-system-config-restore-and-verify.html["Restaure e verifique a configuração do sistema"]
+[role="quick-margin-para"]
+Verifique a configuração do sistema de baixo nível do controlador de substituição e reconfigure as definições do sistema conforme necessário.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinco"]link:controller-replace-recable-reassign-disks.html["Recable e devolver o controlador"]
+[role="quick-margin-para"]
+Recable o controlador e transfira a propriedade dos recursos de armazenamento de volta para o controlador de substituição.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Seis"]link:controller-replace-restore-system-rma.html["Substituição completa do controlador"]
+[role="quick-margin-para"]
+Verifique as LIFs, verifique a integridade do cluster e devolva a peça com falha ao NetApp.

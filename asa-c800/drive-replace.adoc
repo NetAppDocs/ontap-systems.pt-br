@@ -10,7 +10,10 @@ summary: Você deve substituir uma unidade quando a plataforma Registrar uma men
 :imagesdir: ../media/
 
 
-[role="lead lead"]
+[role="lead"]
+Substitua uma unidade no seu sistema ASA C800 quando uma unidade falhar ou precisar de uma atualização. O processo de substituição envolve identificar a unidade defeituosa, removê-la com segurança e instalar uma nova unidade para garantir o acesso contínuo aos dados e o desempenho do sistema.
+
+[role="lead"]
 Você pode substituir uma unidade com falha sem interrupções enquanto a e/S estiver em andamento. O procedimento para substituir um SSD destina-se a unidades não giratórias e o procedimento para substituir um HDD destina-se a unidades giratórias.
 
 Quando uma unidade falha, a plataforma Registra uma mensagem de aviso no console do sistema indicando qual unidade falhou. Além disso, o LED de avaria no painel do visor do operador e o LED de avaria na unidade avariada acendem-se.

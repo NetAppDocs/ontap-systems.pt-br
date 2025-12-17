@@ -1,0 +1,39 @@
+= 
+:allow-uri-read: 
+
+
+.Passos
+. Remova a riser PCIe do módulo da controladora:
++
+.. Remova quaisquer módulos SFP ou QSFP que possam estar nas placas PCIe.
+.. Gire a trava de travamento do riser no lado esquerdo da riser para cima e em direção aos módulos do ventilador.
++
+A riser levanta-se ligeiramente do módulo do controlador.
+
+.. Levante a riser, mova-a em direção aos ventiladores de modo que a aba de chapa metálica na riser limpe a borda do módulo do controlador, levante a riser para fora do módulo do controlador e, em seguida, coloque-a em uma superfície estável e plana.
++
+image::../media/drw_a800_riser_2_3_remove.png[Remova os tirantes 2 e 3]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Conduta de ar
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Travas de travamento do riser 1 (riser esquerdo), riser 2 (riser intermediário) e 3 (riser direito)
+
+|===
+
+
+. Repita o passo anterior para os restantes risers no módulo do controlador desativado.
+. Repita os passos acima com os risers vazios no controlador de substituição e guarde-os.
+

@@ -11,6 +11,8 @@ summary: Depois de concluir a substituição de hardware e a inicialização par
 
 
 [role="lead"]
+Devolva o controle dos recursos de armazenamento ao controlador de substituição para que seu sistema AFF A800 possa retomar a operação normal.  O procedimento de devolução varia de acordo com o tipo de criptografia usado pelo seu sistema: sem criptografia ou com criptografia Onboard Key Manager (OKM).
+
 Depois de concluir a substituição de hardware e a inicialização para o modo de manutenção, você verifica a configuração de sistema de baixo nível do controlador de substituição e reconfigura as configurações do sistema conforme necessário.
 
 
@@ -68,3 +70,6 @@ O valor para HA-State pode ser um dos seguintes:
 . Se o estado do sistema apresentado do módulo do controlador não corresponder à configuração do sistema, defina o `HA` estado para o módulo do controlador: `ha-config modify controller ha-state`
 . Confirme se a definição foi alterada: `ha-config show`
 
+
+.O que se segue?
+Depois de transferir a propriedade dos recursos de armazenamento de volta para o controlador de substituição, você precisa link:controller-replace-restore-system-rma.html["complete a substituição do controlador"]fazer o procedimento.

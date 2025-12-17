@@ -11,7 +11,7 @@ summary: Localize o suporte de arranque com falha no módulo do controlador remo
 
 
 [role="lead"]
-Para substituir o suporte de arranque, tem de remover o módulo do controlador afetado, instalar o suporte de arranque de substituição e transferir a imagem de arranque para uma unidade flash USB.
+A mídia de inicialização do seu sistema AFF A800 armazena dados essenciais de firmware e configuração. O processo de substituição envolve a remoção do módulo de Gerenciamento do Sistema, a remoção da mídia de inicialização danificada, a instalação da mídia de inicialização de substituição e a transferência manual da imagem ONTAP para a mídia de inicialização de substituição usando um pen drive USB.
 
 Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use olink:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"] .  Se o seu sistema estiver executando uma versão anterior do ONTAP, você deverá usar o procedimento de recuperação de inicialização manual.
 
@@ -268,3 +268,6 @@ O módulo do controlador começa a inicializar assim que a energia é restaurada
 Se você perder essa mensagem, pressione Ctrl-C, selecione a opção para inicializar no modo Manutenção e, em seguida, interrompa o controlador para inicializar NO Loader.
 
 
+
+.O que se segue?
+Depois de substituir a Mídia de inicialização, você precisa link:bootmedia-recovery-image-boot.html["inicie a imagem de recuperação"].

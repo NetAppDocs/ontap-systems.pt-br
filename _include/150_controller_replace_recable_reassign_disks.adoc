@@ -8,17 +8,13 @@ Para concluir o procedimento de substituição e restaurar o sistema para o func
 
 == Passo 1: Recable o sistema
 
-Verifique as conexões de rede e armazenamento do módulo do controlador.
+Verifique as conexões de armazenamento e rede do módulo controlador usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"] .
 
 .Passos
-. Verifique se o cabeamento está correto usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"]o .
-+
-.. Baixe e instale o Config Advisor.
-.. Insira as informações do sistema de destino e clique em coletar dados.
-.. Clique na guia cabeamento e examine a saída. Certifique-se de que todos os compartimentos de disco sejam exibidos e todos os discos apareçam na saída, corrigindo quaisquer problemas de cabeamento encontrados.
-.. Verifique outro cabeamento clicando na guia apropriada e, em seguida, examinando a saída do Config Advisor.
-
-
+. Baixe e instale o Config Advisor.
+. Insira as informações do sistema de destino e clique em coletar dados.
+. Clique na guia cabeamento e examine a saída. Certifique-se de que todos os compartimentos de disco sejam exibidos e todos os discos apareçam na saída, corrigindo quaisquer problemas de cabeamento encontrados.
+. Verifique outro cabeamento clicando na guia apropriada e, em seguida, examinando a saída do Config Advisor.
 
 
 

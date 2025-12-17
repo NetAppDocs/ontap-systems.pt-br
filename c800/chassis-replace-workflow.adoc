@@ -1,0 +1,34 @@
+---
+permalink: c800/chassis-replace-workflow.html 
+sidebar: sidebar 
+keywords: aff c800, replace the chassis workflow 
+summary: Para começar a substituir o chassi do seu sistema de armazenamento AFF C800 , revise os requisitos de substituição, desligue os controladores, substitua o chassi e verifique o funcionamento do sistema. 
+---
+= Fluxo de trabalho de substituição de chassi - AFF C800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para começar a substituir o chassi do seu sistema de armazenamento AFF C800 , revise os requisitos de substituição, desligue os controladores, substitua o chassi e verifique o funcionamento do sistema.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"]link:chassis-replace-requirements.html["Analise os requisitos de substituição do chassi."]
+[role="quick-margin-para"]
+Analise os requisitos de substituição do chassi, incluindo compatibilidade do sistema, ferramentas necessárias, credenciais ONTAP e verificação da funcionalidade dos componentes.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["dois"]link:chassis-replace-prepare.html["Prepare-se para a substituição do chassi"]
+[role="quick-margin-para"]
+Prepare-se para a substituição do chassi localizando o sistema, reunindo as credenciais e ferramentas necessárias, verificando o chassi de substituição e etiquetando os cabos.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["três"]link:chassis-replace-shutdown.html["Desligue os controladores"]
+[role="quick-margin-para"]
+Desligue os controladores para realizar a manutenção do chassi com segurança.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"]link:chassis-replace-move-hardware.html["Substitua o chassis"]
+[role="quick-margin-para"]
+Transfira os componentes do chassi danificado para o chassi de substituição.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinco"]link:chassis-replace-complete-system-restore-rma.html["Complete a substituição do chassis"]
+[role="quick-margin-para"]
+Conclua a substituição inicializando os controladores, realizando o giveback e devolvendo o chassi com defeito à NetApp.

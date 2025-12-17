@@ -55,9 +55,13 @@ entries:
   - title: Chassis
     pdf-filename: Chassis ASA C800
     entries:
-    - title: Visão geral
-      url: "/asa-c800/chassis-replace-overview.html"
-    - title: Desligue o controlador desativado
+    - title: Fluxo de trabalho de substituição do chassis
+      url: "/asa-c800/chassis-replace-workflow.html"
+    - title: Rever os requisitos
+      url: "/asa-c800/chassis-replace-requirements.html"
+    - title: Prepare-se para substituir
+      url: "/asa-c800/chassis-replace-prepare.html"
+    - title: Desligue os controladores
       url: "/asa-c800/chassis-replace-shutdown.html"
     - title: Substitua o chassi
       url: "/asa-c800/chassis-replace-move-hardware.html"
@@ -66,8 +70,10 @@ entries:
   - title: Controlador
     pdf-filename: Módulo do controlador ASA C800
     entries:
-    - title: Visão geral
-      url: "/asa-c800/controller-replace-overview.html"
+    - title: Fluxo de trabalho de substituição do controlador
+      url: "/asa-c800/controller-replace-workflow.html"
+    - title: Rever os requisitos
+      url: "/asa-c800/controller-replace-requirements.html"
     - title: Desligue o controlador desativado
       url: "/asa-c800/controller-replace-shutdown.html"
     - title: Substitua o controlador

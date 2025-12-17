@@ -4,19 +4,22 @@ sidebar: sidebar
 keywords: asa a800, move hardware components, replace the chassis 
 summary: Mova as fontes de alimentação, as unidades de disco rígido e o módulo ou os módulos do controlador do chassis danificado para o novo chassis e troque o chassis danificado do rack de equipamentos ou do armário do sistema pelo novo chassis do mesmo modelo que o chassis danificado. 
 ---
-= Substitua o chassi - ASA A800
+= Substitua o chassis - ASA A800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Mova as fontes de alimentação, as unidades de disco rígido e o módulo do controlador do chassis danificado para o novo chassis e troque o chassis danificado pelo novo chassis do mesmo modelo que o chassis danificado.
+Substitua o chassi do seu sistema ASA A800 quando uma falha de hardware assim o exigir. O processo de substituição envolve a remoção dos controladores, a transferência das unidades para o chassi de substituição, a remoção do chassi danificado, a instalação do chassi de substituição e a reinstalação dos componentes do chassi.
 
 
 
-== Passo 1: Remova os módulos do controlador
+== Passo 1: Remova os módulos de controle do chassi antigo.
 
+Remova os módulos de controle do chassi antigo.
+
+.Passos
 Para substituir o chassis, tem de remover os módulos do controlador do chassis antigo.
 
 . Se você ainda não está aterrado, aterre-se adequadamente.
@@ -62,8 +65,9 @@ Certifique-se de que suporta a parte inferior do módulo do controlador enquanto
 
 == Passo 2: Mova as unidades para o novo chassi
 
-Você precisa mover as unidades de cada abertura do compartimento no chassi antigo para a mesma abertura do compartimento no novo chassi.
+Transfira os discos rígidos do chassi antigo para o novo.
 
+.Passos
 . Retire cuidadosamente a moldura da parte frontal do sistema.
 . Remova as unidades:
 +
@@ -98,8 +102,9 @@ Certifique-se de que fecha lentamente o manípulo do excêntrico de forma a que 
 
 == Etapa 3: Substitua um chassi de dentro do rack de equipamentos ou do gabinete do sistema
 
-Você deve remover o chassi existente do rack de equipamentos ou do gabinete do sistema antes de instalar o chassi de substituição.
+Substitua o chassi danificado no rack de equipamentos ou gabinete do sistema pelo novo chassi.
 
+.Passos
 . Retire os parafusos dos pontos de montagem do chassis.
 . Com duas pessoas, deslize o chassi antigo para fora dos trilhos do rack em um gabinete do sistema ou rack de equipamentos e, em seguida, coloque-o de lado.
 . Se você ainda não está aterrado, aterre-se adequadamente.
@@ -111,12 +116,13 @@ Você deve remover o chassi existente do rack de equipamentos ou do gabinete do 
 
 
 
-== Passo 4: Instale os módulos do controlador
+== Etapa 4: Instale os módulos de controle no novo chassi.
 
 Depois de instalar os módulos do controlador no novo chassi, você precisa iniciá-lo.
 
 Para pares de HA com dois módulos de controlador no mesmo chassi, a sequência em que você instala o módulo de controlador é especialmente importante porque ele tenta reiniciar assim que você o senta completamente no chassi.
 
+.Passos
 . Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
 +
 
@@ -144,3 +150,6 @@ O módulo do controlador começa a inicializar assim que a energia é restaurada
 
 . Repita os passos anteriores para instalar o segundo controlador no novo chassis.
 
+
+.O que se segue?
+Após substituir o chassi ASA A800 danificado e reinstalar os componentes, você precisalink:chassis-replace-complete-system-restore-rma.html["complete a substituição do chassis"]
