@@ -3619,12 +3619,6 @@
   <block id="7a463f9e839bbbeef6456ebce3997799" category="paragraph">Encerre ou assuma o controlador prejudicado usando procedimentos diferentes, dependendo da configuração do hardware do sistema de armazenamento.</block>
   <block id="7b08469ac72ae10a3800fd65a60dd1ad" category="doc">Troque uma fonte de alimentação - AFF A200</block>
   <block id="c595b45124aedeb764e69a91821529a0" category="paragraph">Se você tiver um sistema AFF A200, uma aba de plástico dentro do slot agora vazio é liberada para cobrir a abertura e manter o fluxo de ar e o resfriamento.</block>
-  <block id="b20f6d14e4d2aa074f783ed7ba24d15f" category="doc">Substitua a unidade com falha - AFF A200</block>
-  <block id="f24bbd8bd23b87a9a7d8b466f2edd685" category="list-text">A prática recomendada é instalar a versão atual do Pacote de Qualificação de disco (DQP) antes de trocar uma unidade em modo automático.</block>
-  <block id="408521a2467d21746b611d562e795e60" category="list-text">Identifique a unidade de disco com falha executando o<block ref="aadfe3f601179615e320615d73c89773" prefix=" " category="inline-code"></block> comando a partir do console do sistema. A unidade com falha aparece na lista de unidades com falha. Se isso não acontecer, você deve esperar, e então executar o comando novamente.</block>
-  <block id="38b15850492133a635d50ad8448e62b9" category="list-text">A forma como você troca a quente o disco depende de como a unidade de disco está sendo usada. Se a autenticação SED estiver ativada, você deverá usar as instruções de substituição SED no<block ref="fc87e4868a863f484cb32d2391c4aa0d" category="inline-link-rx"></block>. Estas instruções descrevem etapas adicionais que você deve executar antes e depois de substituir um SED.</block>
-  <block id="6e3d311e755c860fa8be4786c7ffe617" category="list-text">A unidade de substituição deve ser suportada pela sua plataforma. Consulte<block ref="ed4326c3351d8ac0e334b8b4d9b37c82" category="inline-link-rx"></block> .</block>
-  <block id="ab580dd61655d242c5e7898b10207e71" category="paragraph">Ao substituir várias unidades de disco, você deve esperar um minuto entre a remoção de cada unidade de disco com falha e a inserção da unidade de disco de substituição para permitir que o sistema de armazenamento reconheça a existência de cada novo disco.</block>
   <block id="61ebd8fcdf103b9ce92a28b6cb2ee6bb" category="doc">Substitua a bateria do relógio em tempo real - AFF A200</block>
   <block id="c1c291ca5cf78e215265819107e0d8b2" category="doc">Devolva a peça com falha ao NetApp - AFF A220</block>
   <block id="3cd70cdc891507d5b1a01cf7e98502c0" category="doc">Verifique o suporte e o status da chave de criptografia - AFF A220</block>
@@ -3893,10 +3887,6 @@
   <block id="a192a372cc891c7f0839a86b1b42a3e2" category="list-text">Vá para <block ref="39ef488856eb21b3aaabcded4bff7c5d" category="inline-xref-macro-rx"></block>.</block>
   <block id="17c7d5cfc1341d03fca63b7c848b5ad1" category="paragraph">Um par de HA com um segundo módulo de controladora</block>
   <block id="ebb1194e26e6cc8c6c5c749fda017889" category="paragraph">Sair do modo de manutenção:<block ref="4a1bde0ea8bcda2a591f42646813c477" prefix=" " category="inline-code"></block> O prompt Loader é exibido.</block>
-  <block id="8394191e21f04380d08fe40ae8199691" category="summary">Para substituir o chassi, você deve desligar o controlador. Este procedimento é disruptivo. Para um cluster de dois nós, você terá uma interrupção de serviço completa e uma interrupção parcial em um cluster de vários nós.</block>
-  <block id="a5c7a7f72206c6b63d2ec6de862b1cfd" category="doc">Desligue os controladores - AFF A300</block>
-  <block id="c1835b78219bf98dc8901ba1eb56866b" category="paragraph">Você deve desligar os controladores antes de substituir o chassi.</block>
-  <block id="781ec9f87f3965b6a34526e735ee3c5b" category="section-title">Opção 2: Os controladores estão em um MetroCluster de dois nós</block>
   <block id="a75dd44a30c437dc825bac9da1d4e3b5" category="summary">Mova as fontes de alimentação, as ventoinhas e os módulos do controlador do chassis danificado para o novo chassis e troque o chassis danificado do rack do equipamento ou do armário do sistema pelo novo chassis do mesmo modelo que o chassis danificado.</block>
   <block id="23afe5a44fb7df71a9b5f333ac3d9ee5" category="doc">Substitua o hardware - AFF A300</block>
   <block id="dcb58cd491b43356462c2529a579197a" category="list-text">Prima o trinco de libertação no manípulo do excêntrico da fonte de alimentação e, em seguida, baixe o manípulo do excêntrico até à posição totalmente aberta para libertar a fonte de alimentação do plano intermédio.</block>
@@ -4105,7 +4095,6 @@
   <block id="66615867af958c8a291bb063be5c3c2e" category="image-alt">Remover ou instalar os braços de gestão do cabo</block>
   <block id="314e31cf4cbebcf3a827e9ba64a1e005" category="list-text">Rode a conduta de ar para a posição aberta.</block>
   <block id="4de03bc95ff205a87859998054c21b43" category="paragraph">Depois de ter substituído o componente no módulo do controlador, tem de reinstalar o módulo do controlador no chassis.</block>
-  <block id="5d670c53861caee9002db54ba657302f" category="doc">Conclua o processo de substituição da ventoinha - AFF A320</block>
   <block id="19700f9c729dfc1036b3ebeb2a20006a" category="doc">Módulo da ventoinha de troca a quente - AFF A320</block>
   <block id="d41ba6049ada491c1bedd4e982b5a12a" category="image-alt">Substitua uma ventoinha</block>
   <block id="29d6646c4ba000d4b3b4a533c4f85905" category="summary">Este guia fornece instruções detalhadas passo a passo para instalar um sistema NetApp típico. Use este guia se quiser instruções de instalação mais detalhadas.</block>
@@ -4412,8 +4401,6 @@
   <block id="d260942f0653768689557c31bc7e181b" category="doc">Desligue o controlador desativado - AFF 700</block>
   <block id="082d64734ba1d9f3f7f1b35831f45b6f" category="doc">Restaure e verifique a configuração do sistema - AFF A700</block>
   <block id="cd67f3200bd96874c907fff4c2f87ef0" category="doc">Substitua o hardware do módulo do controlador - AFF A700</block>
-  <block id="44e53c2846c4f980518ba5d7283e9081" category="doc">Descarte as baterias - AFF A700</block>
-  <block id="f2ff55accbe6a2f86bcb85e25825d8fb" category="doc">Conclua o processo de substituição - AFF A700 e FAS9000</block>
   <block id="a4a9da0210f62016e71b1c10b9e4c492" category="doc">Módulo de alimentação do controlador de fase de troca a quente (DCPM) - AFF A700</block>
   <block id="292ce50c48ac5c7190c639ba6b1b977d" category="doc">Substitua o módulo DCPM - AFF A700</block>
   <block id="ceeabc8de1992b857f097aa39825ded7" category="doc">Substitua um DIMM - AFF A700</block>
@@ -4511,7 +4498,6 @@
   <block id="ec3ff203f5d79b791c68957799b25408" category="doc">Adicione um módulo de armazenamento X91148A em um sistema sem slots abertos - A700</block>
   <block id="8b65f5a86f9a567acc97a77c420d3630" category="doc">Adicione um módulo X91148A em um sistema com slots abertos - A700</block>
   <block id="feb6e7b3091c7242849233efd75d8a7e" category="doc">Devolva a peça com falha ao NetApp - AFF A700s</block>
-  <block id="2e7119d7d654a51006d39261079ed460" category="doc">Retire o módulo do controlador - AFF A700s</block>
   <block id="22969388a58653a9ab4e9f8f503beb09" category="list-text">Desconete a fonte de alimentação do módulo do controlador da fonte e desconete o cabo da fonte de alimentação.</block>
   <block id="cc278673be0ce007e60343587ca221b7" category="image-alt">Opoen a conduta de ar</block>
   <block id="357726df28778aa8dccb6c780dddce89" category="doc">Verifique o suporte e o status da chave de criptografia - AFF A700s</block>
@@ -4798,7 +4784,6 @@
   <block id="68908cbb53a7b71659933af600697a19" category="summary">Para trocar a quente um módulo de alimentação do controlador de estágio (DCPM), que contém a bateria de NVRAM11 V, você deve localizar o módulo DCPM com falha, removê-lo do chassi e instalar o módulo DCPM de substituição.</block>
   <block id="d04f6248062fc9d16de8588d61c28d1e" category="doc">Substitua o módulo de alimentação de controlo de destino que contém a bateria de NVRAM11 V - AFF A900</block>
   <block id="fcc9aa8940599a2c3be38723a65e9e21" category="doc">Substitua um DIMM - AFF A900</block>
-  <block id="10446d8e0f9e8e6b297995ce7dafe03c" category="doc">Conclua o processo de substituição - AFF A900</block>
   <block id="13c4db3516e2bb246a5834f3d7814d4f" category="doc">Troque um ventilador - AFF A900</block>
   <block id="4e706549108dd992136b348b1e2617fc" category="summary">Mantenha o hardware ASA A900</block>
   <block id="0b56204171e041e1a9328dbc4c64073c" category="doc">Manter o hardware do AFF A900</block>
@@ -4925,9 +4910,7 @@
   <block id="ac153f0a41690d0111bba47080ad4deb" category="summary">Existem dois kits de trilho de suporte de dois postes que podem ser usados com os sistemas FAS9000 e AFF A700. Um kit permite-lhe montar o seu sistema de montagem embutida no rack de dois pilares, e o outro kit permite-lhe montar o seu sistema no rack de dois pilares.</block>
   <block id="3d621fa2786c28a29e81425001413c0e" category="doc">Instruções de instalação do kit de trilho de suporte de dois pilares - AFF A700 e FAS9000</block>
   <block id="9de356bba732ea3279684bd5fa1e5f9f" category="section-title">Instale o kit de calha de montagem intermédia de dois postes</block>
-  <block id="793c006966d00d222996468e86da89f4" category="image-alt">Instalação de montagem central em rack de telecomunicações</block>
   <block id="17bc73815850fd6dc60d586cf707300e" category="section-title">Instale o kit de calha de montagem embutida de dois pilares</block>
-  <block id="7f615fc773ecf20799d3f2a060bd3afb" category="image-alt">Instalação de rack de telecomunicações</block>
   <block id="d86ad8650b661d28cc2d4ab2c5649c4a" category="doc">Devolva a peça com falha ao NetApp - ASA C250</block>
   <block id="6f986992e70a8e97c82b44d5221b88bd" category="doc">Inicie a imagem de recuperação - ASA C250</block>
   <block id="363dbb7bd38c3746663861884552a6ca" category="doc">Descrição geral da substituição do suporte de arranque - ASA C250</block>
@@ -5238,7 +5221,6 @@
   <block id="3610d67c9202f4e5ebb6e2f7473bae75" category="doc">Restaure e verifique a configuração do sistema - ASA A900</block>
   <block id="7d1fb483052073af4f4cc12799641b5e" category="doc">Substitua o DCPM que contém a bateria NVRAM11 - ASA A900</block>
   <block id="0b03535505d87f108fe49abb6aa06130" category="doc">Substitua um DIMM - ASA A900</block>
-  <block id="5be7906317aa19835143b0c0fe5bf8dd" category="doc">Conclua o processo de substituição - ASA A900</block>
   <block id="0c37dcb25b5173e62412edae7cd5b2e5" category="doc">Troque um ventilador - ASA A900</block>
   <block id="6e0eb0ebd490048623133577e991bfbb" category="doc">Manter o hardware do ASA A900</block>
   <block id="ae383c4833f526c25894b4e6dec33459" category="paragraph">Para o sistema de armazenamento ASA A900, pode executar procedimentos de manutenção nos seguintes componentes.</block>
@@ -6153,7 +6135,6 @@
   <block id="e8aff1eca48ad56a3b7a6f32b35725fb" category="list-text">Se você tiver um sistema FAS8700, os DIMMs do sistema estão localizados nos slots 2, 4, 7, 9, 13, 15, 18 e 20.</block>
   <block id="23322e561ac6bea2fdd969f81f065cb0" category="list-text">O NVDIMM está localizado no slot 11.</block>
   <block id="48d478390eb7cda13973a166fcbc6922" category="paragraph">Você pode usar a animação, desenho ou as etapas escritas a seguir para instalar o módulo do controlador no chassi.</block>
-  <block id="ed8e6ac65f869dd5cec262d6da357514" category="doc">Conclua o processo de substituição - FAS8300 e FAS8700</block>
   <block id="f53fd2bac78253daaa912be518fddcc2" category="doc">Módulo da ventoinha de troca a quente - FAS8300 e FAS8700</block>
   <block id="f406838ab1af1615895d90b4b0439c67" category="doc">Guia detalhado - FAS8300 e FAS8700</block>
   <block id="1f583998630e94806bf5b9e059227dd4" category="paragraph"><block ref="1f583998630e94806bf5b9e059227dd4" category="inline-link-rx"></block></block>
@@ -6199,8 +6180,6 @@
   <block id="f149ffc69b5cfb8f7aad3b01a8a19d4a" category="doc">Recable o sistema e reatribuir discos - FAS9000</block>
   <block id="42931fc42c4d6318825bf2ccae8b6e90" category="doc">Restaure e verifique a configuração do sistema - FAS9000</block>
   <block id="20be13c1d1090a2ab17f091e497bb866" category="doc">Substitua o hardware do módulo do controlador - FAS9000</block>
-  <block id="4d34a1694a90d19bee6a0506ea02117f" category="doc">Descarte as baterias - FAS9000</block>
-  <block id="293b81cec704d1c7b8c338a1a7533f56" category="doc">Conclua o processo de substituição - FAS9000</block>
   <block id="74aa9c71bfd41b33dc21e26b67720c49" category="doc">Módulo de alimentação do controlador de fase de troca a quente (DCPM) - FAS9000</block>
   <block id="07cfa70afd020d861e6d6315e4c9850b" category="doc">Substitua o módulo DCPM - FAS9000</block>
   <block id="d9f3feb3ff9dd83a5d862eb64cc9a110" category="doc">Substitua um DIMM - FAS9000</block>
@@ -6420,7 +6399,6 @@
   <block id="f4bf409b84e11d30249909dc7746ba6d" category="example-title">Prateleira de cabos para FAS500f</block>
   <block id="a89eecfaa6455eb7bc4017895b259e99" category="paragraph">Quando for necessário storage adicional, é possível adicionar um compartimento de NS224 TB a um par de HA da FAS500f.</block>
   <block id="a372a75abe895e1d1df66a7346836990" category="image-alt">Cabeamento de FAS500f AFF A250 ou AFF C250 com uma gaveta de NS224 e um conjunto de portas</block>
-  <block id="f890bb9917c8ebad074582718fe97720" category="doc">Compartimento de cabos para sistemas FAS - NS224 gavetas</block>
   <block id="833d8fad165a38386db2f5d83d561178" category="doc">Visão geral do cabeamento para um hot-add - NS224 gavetas</block>
   <block id="46f11d99d5f59f4aa316ba3db790a179" category="paragraph">Esta seção de cabeamento descreve como fazer o cabeamento da gaveta NS224 para os seguintes sistemas de storage:</block>
   <block id="a392e2560dc5e657e918caf1331842b5" category="inline-link-macro">Cabo para sistemas AFF</block>
@@ -7207,11 +7185,7 @@
   <block id="1a603190ae07bbceebb7036072831b8b" category="image-alt">Como instalar o SuperRail em um rack de quatro postes de orifício redondo</block>
   <block id="7c89b00bc8ce7878c39671bd32585c2d" category="image-alt">Como instalar o kit de calha de montagem intermédia de dois postes</block>
   <block id="887f19a9ed16e42d506a7ee90031e54f" category="image-alt">Como instalar o kit de calha de montagem embutida de dois postes</block>
-  <block id="c715a9373bbec24b23f4dc8858259082" category="summary">Notas de versão para ONTAP</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="doc">Notas de lançamento</block>
-  <block id="425e1349202124b82f3764d0351df734" category="paragraph">Notas de versão estão disponíveis fora deste site. Você será solicitado a fazer login usando suas credenciais do site de suporte da NetApp.</block>
-  <block id="e43128f7c789cef4c5803c71a455e62b" category="inline-link">Acesse as Notas de versão do ONTAP 9</block>
-  <block id="aee57c40ad1b8fc3b33e5e954861e270" category="paragraph"><block ref="aee57c40ad1b8fc3b33e5e954861e270" category="inline-link-rx"></block></block>
   <block id="ebd0dccffb1781aa1b03445f61d87344" category="summary">Você pode substituir um compartimento de disco frio por IOM12 módulos.</block>
   <block id="bd7b8cb1f03ceb90528c843b3cd8c0a4" category="summary">Você pode remover sem interrupção um compartimento de disco com IOM12 módulos (remover sem interrupções um compartimento de disco de um sistema ligado e e/S em andamento) quando precisar mover ou substituir o compartimento de disco. É possível remover um ou mais compartimentos de disco de qualquer lugar dentro de uma stack de gavetas de disco ou remover uma stack de gavetas de disco.</block>
   <block id="4b077b9294c983e4fcb79f22bbbd7059" category="list-text">Seu sistema precisa ser uma configuração de HA, HA de três caminhos, multipath, HA de quatro caminhos ou de quatro caminhos.</block>
@@ -9430,7 +9404,6 @@
   <block id="bb20d77f45b4cc0d8fb7e2ceeb73a6e8" category="paragraph">Certifique-se de que apoia a parte inferior do NSM enquanto o desliza para fora da prateleira.</block>
   <block id="badfffbcf4c415d2d54e8598e4f36a66" category="paragraph">Rode as pegas para a posição vertical (junto às patilhas) para as afastar.</block>
   <block id="39ef8cb3c259a4bd68bc8b173e6232d4" category="doc">Devolva a peça com falha ao NetApp - AFF A20, AFF A30 e AFF A50</block>
-  <block id="d0b57c9831251827dec0d4fee9bfbfad" category="summary">Você deve substituir o módulo do controlador quando o sistema Registrar um número crescente de códigos de correção de erros (ECC); a falha em fazê-lo causa um pânico no sistema.</block>
   <block id="56b8cde3b1f3e08c4473d9b2684dcde7" category="paragraph-title"><block ref="444c1bf2e877f5617e8ce0a2ded57f4f" category="inline-image-macro-rx" type="image"></block><block ref="0caeda8d60cf80f7a042375ba653d60a" category="inline-link-macro-rx"></block></block>
   <block id="3d380bb3e10695f0ff14d7bd2503d30a" category="paragraph-title"><block ref="4f954e3aac01b1dc982b61d245b37a02" category="inline-image-macro-rx" type="image"></block><block ref="7444ce336f5cb99437679b1ac8b6aefb" category="inline-link-macro-rx"></block></block>
   <block id="4cb467fae72dd386afc8ef7522d342e3" category="paragraph-title"><block ref="d5b760e3b486da6aca46a9bd83d66c13" category="inline-image-macro-rx" type="image"></block><block ref="d5411bd0189d789655f8f33f07ceef1c" category="inline-link-macro-rx"></block></block>
@@ -10973,8 +10946,6 @@
   <block id="008e878c00337b7c1676a1bf2b5e1f88" category="summary">Quando um componente no seu sistema de armazenamento ASA C30 falhar, devolva a peça com defeito para a NetApp.</block>
   <block id="1a74384be12ec55525108f8b4b66e4cf" category="doc">Devolva a peça com falha ao NetApp - ASA C30</block>
   <block id="5c57ecccb489a807b7ce058e84066112" category="paragraph">Quando um componente no seu sistema de armazenamento ASA C30 falhar, devolva a peça com defeito para a NetApp. Consulte a<block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> página para obter mais informações.</block>
-  <block id="998d7afe02e862a99bc2356bb4360a68" category="doc">Reinstale o controlador - ASA C30</block>
-  <block id="f7fa8f7e10c9cc8ec8c1a66e7e044c0c" category="doc">Remova o controlador - ASA C30</block>
   <block id="a6090718a9aeffd0a4509ab0c7982422" category="summary">Depois de instalar o novo dispositivo de mídia de inicialização no seu sistema de armazenamento ASA C30, você pode iniciar o processo automatizado de recuperação de mídia de inicialização para restaurar a configuração do nó íntegro.</block>
   <block id="c2de4d4510a9a64facdf71ce04df1256" category="doc">Restaurar a imagem ONTAP na mídia de inicialização - ASA C30</block>
   <block id="ea8fd5bd6c26f06b31f96391b253c778" category="summary">A mídia de inicialização no seu sistema de armazenamento ASA C30 armazena dados essenciais de firmware e configuração. O processo de substituição envolve a remoção do módulo do controlador, remoção do suporte de arranque danificado, instalação do suporte de arranque de substituição e, em seguida, transferência da imagem ONTAP para o suporte de arranque de substituição.</block>
@@ -12315,13 +12286,8 @@
   <block id="9b7b330028a8e9da6f55b86fd3d33f89" category="section-title">Especificações do ambiente do sistema</block>
   <block id="5df6a3025f4f85ae5bc83b02f5916f87" category="list-text">Potência típica: 1209 BTU/h</block>
   <block id="64e22d62ec39174118c9e82cc6dcfa6b" category="list-text">Pior cenário de potência: 1676 BTU/h</block>
-  <block id="0a468b2bd789d07addc76d7889e6e2d8" category="list-text">Peso: 60,8 lb&lt;br/&gt;27,6 kg</block>
   <block id="88a8e41521299f0493891f0c6b79967a" category="list-text">Altura: 2U</block>
   <block id="b0f6bb9e15d5385ada0d645f19f9f8e9" category="list-text">Largura: 19” compatível com rack IEC (17,6” 44,7 cm)</block>
-  <block id="d4411cb4316548ce03dbb23ca9c17b7a" category="list-text">Profundidade: 19,0”&lt;br/&gt;(24,1” com suporte para gerenciamento de cabos)</block>
-  <block id="9d56de4dc650ba03a2f7cd023d11f7be" category="list-text">Temperatura/Altitude/Umidade de operação: 5°C a 45°C&lt;br/&gt;41°F a &lt;br/&gt;113°F) a&lt;br/&gt;&lt;= 3048m&lt;br/&gt;&lt;= 10000 pés) de altitude; 8% a 90%&lt;br/&gt;de umidade relativa, sem condensação</block>
-  <block id="c41e237102e6691218f7320a8d877dfe" category="list-text">Temperatura/Umidade fora de operação: -40°C a 70°C (-40°F a 158°F) até 12192m (40000 pés)&lt;br/&gt;10% a 95% de umidade relativa, sem condensação, no recipiente original</block>
-  <block id="a0f11d40bf496f127af5f6d70b58cd12" category="list-text">Ruído acústico: Potência sonora declarada (LwAd): 6,9;&lt;br/&gt;Pressão sonora (LpAm) (posições de observação): 51,0 dB</block>
   <block id="9c0408c775a2b61052a2e700a89f396f" category="section-title">Conformidade</block>
   <block id="4c00771b9a13a18c84a302748b7e2016" category="list-text">Certificações EMC/EMI: AMCA, FCC, ICES, KC, Marrocos, VCCI</block>
   <block id="c8d90a6281a35910b880ffff81384a91" category="list-text">Certificações de segurança: BIS, CB, CSA, G_K_U-SoR, IRAM, NOM, NRCS, SONCAP, TBS</block>
@@ -12358,11 +12324,8 @@
   <block id="6b0fa4590459e6ee34459dd90571d0b3" category="list-text">SMB 2.x</block>
   <block id="e3b6710d220a8b184b813afd623b6126" category="list-text">SMB 3.0</block>
   <block id="d13f7003befcd5012d9b171e5cc1ec7c" category="list-text">SMB 3.1</block>
-  <block id="ad885d13a6931dbe9364981c4a9e46f8" category="list-text">SMB 3.1.1 == Especificações do ambiente do sistema</block>
   <block id="2dd3dbbb4fb385b867ab48d985ebe0d0" category="list-text">Peso: 60,8 lb 27,6 kg</block>
   <block id="a6277a061ba7ff4bee1620efc87bc236" category="list-text">Profundidade: 19,0” (24,1” com suporte de gerenciamento de cabos)</block>
-  <block id="b11a5ee48097596f5af95c2bb8a616ac" category="list-text">Temperatura/Altitude/Umidade de operação: 5°C a 45°C (41°F a 113°F) a &lt;= 3048m &lt;= 10000 pés) de altitude; 8% a 90% de umidade relativa, sem condensação</block>
-  <block id="208d1a3e7dafc1baa32977b369442c05" category="list-text">Temperatura/Umidade fora de operação: -40°C a 70°C (-40°F a 158°F) até 12192m (40000 pés) 10% a 95% de umidade relativa, sem condensação, no recipiente original</block>
   <block id="40a919b5a0505ca942495ee4446b4f98" category="list-text">Ruído acústico: Potência sonora declarada (LwAd): 6,9 Pressão sonora (LpAm) (posições de observação): 51,0 dB</block>
   <block id="05807e454c19f244770adae059b3c330" category="section-title">Alta disponibilidade</block>
   <block id="c5c02fffbc2ee6fe6623153a2a5e9e19" category="list-text">Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP</block>
@@ -12371,13 +12334,11 @@
   <block id="fb9739d8125a9b29ff16762480779e87" category="list-text">Gerenciamento de banda SAS em conexões SAS</block>
   <block id="3a11f68c452218eaaba02353655fd4c1" category="summary">Especificações principais para o grupo de plataforma A1K</block>
   <block id="99796d31c3e48d5cd6e9ed06d9fb9a47" category="doc">Especificações principais para AFF A1K</block>
-  <block id="a335bb33fcb9e8c831ff747ec976669e" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento AFF A1K em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
   <block id="a79a212c9edd36428ef764ada9dc6cb3" category="list-text">Configuração da plataforma: AFF A1K Dual Chassis HA Pair</block>
   <block id="02eacd56ba58be7852d6581d938e6a4e" category="list-text">Capacidade Máxima de Bruto: 14.6880 PB</block>
   <block id="b3b84944f4fcdd5a638e0b97332f25c5" category="list-text">Memória: 2048.0000 GB</block>
   <block id="2ab4f08685ad9b1d2fa19d89e6ba868d" category="list-text">Fator de forma: chassi 2U com 1 controlador HA</block>
   <block id="c9953c4267de28d4e4f4289b7b365daf" category="list-text">Slots de expansão PCIe: 18</block>
-  <block id="d42c81998c8bb20f01a171602fa2f1a4" category="list-text">Versão mínima do ONTAP : ONTAP 9.15.1RC2 == Máximos de escalonamento</block>
   <block id="9b47b9e090f3ed760ac1261a644c05f0" category="list-text">Tipo: NAS; Pares HA: 12; Capacidade bruta: 176,3 PB / 156,5 PiB; Memória máxima: 24576 GB</block>
   <block id="f327af4f44f0baf2a9bb36a92f38228b" category="list-text">Tipo: SAN; Pares HA: 6; Capacidade bruta: 88,1 PB / 78,3 PiB; Memória máxima: 12288 GB</block>
   <block id="cf229378f8192fe9232cb0dd2665b5c2" category="list-text">Tipo: Par HA; Capacidade bruta: 14,7 PB / 13,0 PiB; Memória máxima: 2048.0000</block>
@@ -12399,7 +12360,6 @@
   <block id="99a11be73f2f4988ed4b0695ca00ca62" category="list-text">Peso: 59,5 lb 27,0 kg</block>
   <block id="658d4184d5ca9a8b014acdf84474ea7e" category="list-text">Largura: 19” compatível com rack IEC (17,7” 44,9 cm)</block>
   <block id="b7c705f03831e422ad258e381f62556f" category="list-text">Profundidade: 30,0” (35,2” com suporte para gerenciamento de cabos)</block>
-  <block id="aa535ccad0e06026b2c80c79e42a2b75" category="list-text">Temperatura/Altitude/Umidade de operação: 10°C a 35°C (50°F a 95°F) a 3048 m (10000 pés) de altitude; 8% a 80% de umidade relativa, sem condensação</block>
   <block id="5cff7da614bbbf25f8c9cca36c38f691" category="list-text">Ruído acústico: Potência sonora declarada (LwAd): 8,5 Pressão sonora (LpAm) (posições de observação): 67,7 dB</block>
   <block id="a7daecb8dc316b95333993b2c485c8f2" category="list-text">Normas EMC/EMI: BS-EN-55032, BS-EN55035, CISPR 32, EN55022, EN55024, EN55032, EN55035, EN61000-3-2, EN61000-3-3, FCC Parte 15 Classe A, ICES-003, KS C 9832, KS C 9835</block>
   <block id="d44b841abd6708491fa419df7215fd64" category="list-text">Normas de segurança: ANSI/UL60950-1, ANSI/UL62368-1, BS-EN62368-1, CAN/CSA C22.2 No. 60950-1, CAN/CSA C22.2 No. 62368-1, CNS 15598-1, EN60825-1, EN62368-1, IEC 62368-1, IEC60950-1, IS 13252 (parte 1)</block>
@@ -12411,7 +12371,6 @@
   <block id="bb982cf1c6df93898547742fd7c13e34" category="list-text">Capacidade Máxima de Bruto: 4.0392 PB</block>
   <block id="1f36f37c7c81df7b77e777706e8262f9" category="list-text">Memória: 128.0000 GB</block>
   <block id="f4c24a91325c512de420ced357e65577" category="list-text">Slots de expansão PCIe: 8</block>
-  <block id="5b3dc59120722ac76ee6af21d9abc7e7" category="list-text">Versão mínima do ONTAP : ONTAP 9.16.1RC1 == Máximos de escalonamento</block>
   <block id="06cf2fed8ae499b2f77075b4924fa458" category="list-text">Tipo: NAS; Pares HA: 3; Capacidade bruta: 12,1 PB / 10,8 PiB; Memória máxima: 384 GB</block>
   <block id="0dc78f5fc53d592da101560a72c495ee" category="list-text">Tipo: SAN; Pares HA: 3; Capacidade bruta: 12,1 PB / 10,8 PiB; Memória máxima: 384 GB</block>
   <block id="6e2d02e867428685021b5207f032cc30" category="list-text">Tipo: Par HA; Capacidade bruta: 4,0 PB / 3,6 PiB; Memória máxima: 128.0000</block>
@@ -12419,7 +12378,6 @@
   <block id="23841fcfa56717ecbb90e2b28b0be81e" category="list-text">Protocolo: Ethernet 25 Gbps; Portas: 32</block>
   <block id="8c5245963873dc44aed87d82e8c6090f" category="list-text">Protocolo: Ethernet 10 Gbps; Portas: 24</block>
   <block id="e5c0138c0b3f7e29403979905d7f0ffd" category="list-text">Protocolo: FC 64 Gbps; Portas: 24</block>
-  <block id="540fda4e6727c0b4511226f712bfccac" category="list-text">Protocolo: NVMe/FC 64 Gbps; Portas: 24</block>
   <block id="ec21c9636f37a17e64c44f57b2d45f1f" category="list-text">Protocolo: SAS 12 Gbps; Portas: 16</block>
   <block id="36ce54fb78d86bb29a64f39130a0e48e" category="list-text">Potência típica: 2489 BTU/h</block>
   <block id="ffac78d3bc24df13cd04b1c34ed6c9bc" category="list-text">Pior cenário de potência: 3890 BTU/h</block>
@@ -12466,9 +12424,6 @@
   <block id="cfcd208495d565ef66e7dff9f98764da" category="cell">0</block>
   <block id="23154a4c417ae30150c8183e97228049" category="cell">USB 600 Mbps</block>
   <block id="e1ed1cc7f2ba5df4283f016409893812" category="paragraph">CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NVMe/FC; NVMe/TCP; S3; S3 com NAS; SMB 2.0; SMB 2.1; SMB 2.x; SMB 3.0; SMB 3.1; SMB 3.1.1;</block>
-  <block id="23dfbabb7837ab3a7b1454bbdde8dcc8" category="list-text">Peso: 60,7 lbbr/27,5 kg</block>
-  <block id="319e7cb7bbbedc00c30be1b9a4530542" category="list-text">Temperatura/Altitude/Umidade de operação: 10°C a 35°Cbr/50°F a br/95°F) atbr/= 3048mbr/= 10000 pés) de elevação; 8% a 80%br/umidade relativa, sem condensação</block>
-  <block id="2d4e493bd03e1f489892a17ab8b7aea5" category="list-text">Ruído acústico: Potência sonora declarada (LwAd): 8,0;br/Pressão sonora (LpAm) (posições de observação): 70,5 dB</block>
   <block id="d2aa9231f8ce36fee3257dac7f9040ef" category="paragraph">Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP ; Controladores redundantes de troca a quente; Fontes de alimentação redundantes de troca a quente; Gerenciamento SAS em banda por meio de conexões SAS para prateleiras externas;</block>
   <block id="3a5eef6111f051ba247922c28e4d140c" category="cell">12,1 PB / 10,8 PiB</block>
   <block id="5c4e7400165835e351764cdbeb0d733e" category="cell">128,0000</block>
@@ -12490,8 +12445,6 @@
   <block id="2175c342acbf385248108299c44118b8" category="cell">NVMe/FC 32 Gbps</block>
   <block id="06f18c4daece38548aaed1f8e7ad7a65" category="list-text">Potência típica: 2642 BTU/h</block>
   <block id="caee1a6bd998eef961868a45bd4dbc8b" category="list-text">Pior cenário de potência: 3476 BTU/h</block>
-  <block id="7d5423ead4cc9c9c7523162c96b9a70a" category="list-text">Peso: 54,3 lbbr/24,6 kg</block>
-  <block id="bfb224eca9d5778fa9096edb45c6e0a6" category="list-text">Ruído acústico: Potência sonora declarada (LwAd): 7,2;br/Pressão sonora (LpAm) (posições de observação): 69,1 dB</block>
   <block id="8620fd4a54bd59df48445495cc60d6a1" category="list-text">Tipo: Par HA; Capacidade bruta: 1,1 PB / 1,0 PiB; Memória máxima: 128.0000</block>
   <block id="f350094c762b190b03da78050fac38f6" category="list-text">Protocolo: Ethernet 25 Gbps; Portas: 4</block>
   <block id="ae6233ad0fe7d541d74b7fcbd8e20ee1" category="list-text">Protocolo: Ethernet 10 Gbps; Portas: 4</block>
@@ -12516,11 +12469,7 @@
   <block id="82b23dd1d66ccbbfcd3a41578d44c162" category="paragraph">CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NFSv3/RDMA; NFSv4/RDMA; NVMe/FC; NVMe/TCP; S3; S3 com NAS; SMB 2.0; SMB 2.1; SMB 2.x; SMB 3.0; SMB 3.1; SMB 3.1.1;</block>
   <block id="333946675ad4bc16ff4866e620f0381a" category="list-text">Potência típica: 4209 BTU/h</block>
   <block id="4828cf039ad8ba2d28d9246597351104" category="list-text">Pior cenário de potência: 5215 BTU/h</block>
-  <block id="b964471e3140e0a2dc6c7f25ca5880ee" category="list-text">Peso: 110,0 lbbr/49,9 kg</block>
   <block id="99190bf361f23d7f60b0311ed65db52c" category="list-text">Altura: 4U</block>
-  <block id="fd82bddbad5203300e57904c991cb840" category="list-text">Profundidade: 32,6”br/(34,7” com suporte de gerenciamento de cabos)</block>
-  <block id="9725247c68aace7973804f231cbdd26b" category="list-text">Ruído acústico: Potência sonora declarada (LwAd): 8,5;br/Pressão sonora (LpAm) (posições de observação): 67,2 dB</block>
-  <block id="8d6f1126e03ba70819901e3191bf6358" category="list-text">Versão mínima do ONTAP : ONTAP 9.7RC1 == Máximos de escalonamento</block>
   <block id="603170cd5591c91144ede853fb7004e9" category="list-text">Protocolo: Ethernet 25 Gbps; Portas: 12</block>
   <block id="c3346d55fb4bcd313308cf344c3c9956" category="list-text">Protocolo: Ethernet 100 Gbps; Portas: 20</block>
   <block id="1f9a9c48fecfca4a044d529a9d033783" category="list-text">Protocolo: Ethernet 10 Gbps; Portas: 32</block>
@@ -12539,7 +12488,6 @@
   <block id="b19c2c7048b82c29d5feda222d696605" category="list-text">Tipo: Par HA; Capacidade bruta: 6,6 PB / 5,9 PiB; Memória máxima: 256.0000</block>
   <block id="c803d8d230c5020cdc30a3cb8e9303f4" category="list-text">Potência típica: 6938 BTU/h</block>
   <block id="dc7a593c222c4030f739c8d0e1f00f2e" category="list-text">Pior cenário de potência: 9089 BTU/h</block>
-  <block id="393e9f65cd03d1b202348e74d85ea15c" category="list-text">Peso: 118,0 lb 53,5 kg</block>
   <block id="7c7e70fa4ec76732aa0e3f8c34e33b0a" category="list-text">Profundidade: 34,5” (36,6” com suporte para gerenciamento de cabos)</block>
   <block id="8b00587d45c71c577c712b3a1bb0c9f2" category="list-text">Ruído acústico: Potência sonora declarada (LwAd): 8,6 Pressão sonora (LpAm) (posições de observação): 71,6 dB</block>
   <block id="ea033f663b18ef68b8d1ea62bc608ed6" category="summary">Especificações principais do AFF A90</block>
@@ -12567,9 +12515,6 @@
   <block id="6614ba120512c4b5534e09992ffb3b48" category="list-text">Ethernet 1 Gbps: 2 portas</block>
   <block id="a641c2b52081bb6d5109bd6c1aed3da6" category="list-text">RS-232 115 Kbps: 4 portas</block>
   <block id="178dcda4ffd023c89a1eb518337f3c34" category="list-text">USB 600 Mbps: 2 portas</block>
-  <block id="cfb07b6404929452a20cf49b5564f634" category="list-text">Peso: 118,0 lbbr/53,5 kg</block>
-  <block id="75c66802e076ebfbdb8135f4d73d33a3" category="list-text">Profundidade: 34,5”br/(36,6” com suporte para gerenciamento de cabos)</block>
-  <block id="e3f8e554738613be85c954cb0fe985be" category="list-text">Ruído acústico: Potência sonora declarada (LwAd): 8,6;br/Pressão sonora (LpAm) (posições de observação): 71,6 dB</block>
   <block id="d81fc6af6ea13811aecbc5e80e82a6e0" category="summary">Especificações principais para o sistema de armazenamento AFF A90</block>
   <block id="9b05f025388044bfb675c0d7665f9af8" category="paragraph">A seguir estão algumas especificações selecionadas para o AFF A90.  Visita<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> (HWU) para uma lista completa das especificações do AFF A90 .  Esta página reflete um único par de alta disponibilidade.</block>
   <block id="1449c87ec77b43f028315be24aff95c6" category="list-text">NAS: 12 pares HA, capacidade bruta de 79,3 PB / 70,4 PiB, memória máxima de 24576 GB</block>
@@ -12577,10 +12522,8 @@
   <block id="b4e746b652dc71bc904fa260cd47dd74" category="list-text">Par HA: 6,6 PB / 5,9 PiB de capacidade bruta, 2048.0000 GB de memória máxima</block>
   <block id="f4ccae1af0c039ef6331a12dfa192bc4" category="summary">Especificações principais para o grupo de plataformas A800</block>
   <block id="4412f4700447802c6ab24953f2967296" category="doc">Especificações principais do AFF A800</block>
-  <block id="bdb11ff259e5f7f084623cae9c68c9a0" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento AFF A800 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
   <block id="e29752183e34c8411a0856db12339812" category="list-text">Configuração da plataforma: Par de HA de chassi único AFF A800</block>
   <block id="17f48666aa0c35f775a1b2aac2486d64" category="list-text">Memória: 1280.0000 GB</block>
-  <block id="1f54434a03024a54ecb330e9febd2445" category="list-text">Versão mínima do ONTAP : ONTAP 9.4RC1 == Máximos de escalonamento</block>
   <block id="10f6bfd3f9f7efb9da69f6aaaf00dd2e" category="list-text">Tipo: NAS; Pares HA: 12; Capacidade bruta: 79,3 PB / 70,4 PiB; Memória máxima: 15360 GB</block>
   <block id="7076302b15d2e2833bdd55e6aa4d498f" category="list-text">Tipo: SAN; Pares HA: 6; Capacidade bruta: 39,7 PB / 35,2 PiB; Memória máxima: 7680 GB</block>
   <block id="93b2830e4ec577d691b02f4284fe92e0" category="list-text">Tipo: Par HA; Capacidade bruta: 6,6 PB / 5,9 PiB; Memória máxima: 1280.0000</block>
@@ -12591,15 +12534,12 @@
   <block id="8128140dc138c0144edf19fd950d1ee2" category="list-text">Potência típica: 6626 BTU/h</block>
   <block id="e42b526fbe0f3c1227d56efb1f018003" category="list-text">Pior cenário de potência: 8417 BTU/h</block>
   <block id="39fe1ab17015b4c54d3acbb381464843" category="list-text">Peso: 132,5 lb 60,1 kg</block>
-  <block id="c407b354a69fc0f35ea83e395d7236e0" category="list-text">Temperatura/Altitude/Umidade de operação: 5°C a 40°C (41°F a 104°F) a 3048 m (10000 pés) de altitude; 8% a 90% de umidade relativa, sem condensação</block>
   <block id="884a1ad02adc9b1a30d1fb64a488ff81" category="list-text">Ruído acústico: Potência sonora declarada (LwAd): 8,0 Pressão sonora (LpAm) (posições de observação): 62,8 dB</block>
   <block id="374f686d1050b8db4234a3cff60f21f6" category="summary">Especificações principais para o grupo de plataformas A900</block>
   <block id="baccae61b0b2c7a795093da2188894c0" category="doc">Especificações principais do AFF A900</block>
-  <block id="d7377ef7ac2fe02f983d361f9ccd35ce" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento AFF A900 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
   <block id="d786d99c8a946cff6ec7792dc598b9f8" category="list-text">Configuração da plataforma: Par de HA de chassi único AFF A900</block>
   <block id="23bcd6d5f3a8deb59601aecde62055ac" category="list-text">Fator de forma: chassi 8U com 2 controladores HA</block>
   <block id="fcc16789555a80dd6421ce488b7de02f" category="list-text">Slots de expansão PCIe: 20</block>
-  <block id="4e4544052daf1f29c67fcb821b779206" category="list-text">Versão mínima do ONTAP : ONTAP 9.10.1RC2 == Máximos de escalonamento</block>
   <block id="a0177ff33f36bce292684d5f6e69b13c" category="list-text">Protocolo: Ethernet 100 Gbps; Portas: 32</block>
   <block id="a4b06306ca8860e11ab1daa2f1d103d7" category="list-text">Protocolo: Ethernet 25 Gbps; Portas: 64</block>
   <block id="3f954f581bbf55d1e42c397e6d2a769c" category="list-text">Protocolo: Ethernet 10 Gbps; Portas: 64</block>
@@ -12616,19 +12556,15 @@
   <block id="f8f37ef9a6b72f1149134728ec9a48d4" category="list-text">Ruído acústico: Potência sonora declarada (LwAd): 7,4 Pressão sonora (LpAm) (posições de observação): 65,0 dB</block>
   <block id="46ae63d798657637d7b0da22ab66be8f" category="summary">Especificações principais para o grupo de plataformas ASA-C250</block>
   <block id="8b14cc17bebb14141a13d943fbf03bea" category="doc">Especificações principais do ASA C250</block>
-  <block id="2fb11ccabb5f061076955212cf9e3ce1" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento ASA C250 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
   <block id="fdd6c5bebca24bc951e9fd52ceb5eecf" category="list-text">Configuração da plataforma: Par de HA de chassi único ASA C250</block>
   <block id="f91b8c8831bab83cc95ee102087c617f" category="list-text">Capacidade máxima de matéria-prima: 1,4736 PB</block>
-  <block id="8803112546143acade991372c28bca22" category="list-text">Versão mínima do ONTAP : ONTAP 9.13.1P1 == Máximos de escalonamento</block>
   <block id="d199fe3f9b1e4090a8f9c733e498aa7e" category="list-text">Tipo: NAS</block>
   <block id="a23d2142a38187167c012fc417446750" category="list-text">Tipo: SAN; Pares HA: 6; Capacidade bruta: 8,8 PB / 7,9 PiB; Memória máxima: 768 GB</block>
   <block id="bd65761abbdcb433903d000fc35bf75d" category="list-text">Tipo: Par HA; Capacidade bruta: 1,5 PB / 1,3 PiB; Memória máxima: 128.0000</block>
-  <block id="12232c1b0db425eb005a4461c504595d" category="list-text">NVMe/FC == Especificações do ambiente do sistema</block>
   <block id="0159c5ec653e15fcbcae39428fa791d8" category="list-text">Potência típica: 2906 BTU/h</block>
   <block id="d707b620c17bdc4f1ab8681a199b43f0" category="list-text">Pior cenário de potência: 3750 BTU/h</block>
   <block id="3c202f79f61f28bb47426c96d75b8df6" category="summary">Especificações principais para o grupo de plataformas ASA-C400</block>
   <block id="71baed637b22c2f4560587af954092b7" category="doc">Especificações principais para ASA C400</block>
-  <block id="dc5457cf69538274fe26d7679976aade" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento ASA C400 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
   <block id="280a6502db2cb8db47a1361c0ec70b69" category="list-text">Configuração da plataforma: Par de HA de chassi único ASA C400A, pacote Ethernet</block>
   <block id="06ebb33b1d02a3a4d52515c3169814cc" category="list-text">Capacidade Máxima de Bruto: 2,9472 PB</block>
   <block id="f0895b0c06e00482b7082cef32c9359f" category="list-text">Tipo: SAN; Pares HA: 6; Capacidade bruta: 17,7 PB / 15,7 PiB; Memória máxima: 1536 GB</block>
@@ -12639,7 +12575,6 @@
   <block id="47ddf3a62f6716ffc2f5dcb2920d6923" category="list-text">Protocolo: NVMe/FC 32 Gbps; Portas: 40</block>
   <block id="91fc1bf42be5829ef3dba0f799901b92" category="summary">Especificações principais para o grupo de plataformas ASA-C800</block>
   <block id="43901cff589f977e8a6fb9b0ed89e14f" category="doc">Especificações principais do ASA C800</block>
-  <block id="5a16a1d0d6cb4dff48ee98d4b2fe7b43" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento ASA C800 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
   <block id="484376736a8b3c83db54118bb81c0552" category="list-text">Configuração da plataforma: Par de HA de chassi único ASA C800</block>
   <block id="590ea72c375cf8671060032d26812f04" category="list-text">Capacidade bruta máxima: 7,3680 PB</block>
   <block id="bd1b05bb015a0a2acf5c371d5fcae997" category="list-text">Tipo: SAN; Pares HA: 6; Capacidade bruta: 44,2 PB / 39,3 PiB; Memória máxima: 7680 GB</block>
@@ -12649,15 +12584,12 @@
   <block id="7c79445526ccce20b92cbf01e1a47e8d" category="section-title">Especificações de capacidade principal, memória, fator de forma e versão do ONTAP</block>
   <block id="5e87e402ec6e815000f9fcf30cb59e70" category="list-text">Configuração da plataforma: Par de chassi duplo ASA A1KA HA</block>
   <block id="594ea955f42a459c95e5ec7be911e8b3" category="list-text">Capacidade máxima de matéria-prima: 2,6622 PB</block>
-  <block id="0bcdc83987481874b3df2da8ad3f5001" category="list-text">Versão mínima do ONTAP : ONTAP 9.16.0 == Máximos de escalonamento</block>
   <block id="14280657c7fa8d036ae80129b1cfe036" category="list-text">Tipo: SAN; Pares HA: 6; Capacidade bruta: 16,0 PB / 14,2 PiB; Memória máxima: 12288 GB</block>
   <block id="694db4398fbad6ed501214dd8938f337" category="list-text">Tipo: Par HA; Capacidade bruta: 2,7 PB / 2,4 PiB; Memória máxima: 2048.0000</block>
-  <block id="be5f78085e15e220c97d810039c3d2be" category="list-text">NVMe/TCP == Especificações do ambiente do sistema</block>
   <block id="987d679b705691bf50ce94ba0126b762" category="summary">Especificações principais para ASA A20</block>
   <block id="067b5fa0404e0a1d2eca59c5e5161621" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento ASA A20 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
   <block id="f69463a171f3ace651b547cb61052c23" category="list-text">Configuração da plataforma: Par de HA de chassi único ASA A20</block>
   <block id="55ff5c7e853405bb677fe7963b81c4a5" category="list-text">Capacidade máxima de matéria-prima: 0,7344 PB</block>
-  <block id="9947eeeafeed3d5406463e828a6143b0" category="list-text">Versão mínima do ONTAP : ONTAP 9.16.1 == Máximos de escalonamento</block>
   <block id="07e012e88c2eae0569e081f75bdc556c" category="list-text">Tipo: SAN; Pares HA: 3; Capacidade bruta: 2,2 PB / 2,0 PiB; Memória máxima: 384 GB</block>
   <block id="0d8ec3cd4998a46e4220bea48bd01c3b" category="list-text">Tipo: Par HA; Capacidade bruta: 0,7 PB / 0,7 PiB; Memória máxima: 128.0000</block>
   <block id="a6064ac30820627594be27df076928cb" category="summary">Especificações principais para ASA A30</block>
@@ -12714,9 +12646,6 @@
   <block id="b92faf9c4929da09bc231f321d401aa8" category="cell">12288 GB</block>
   <block id="98cdd85e8301f2ead1b77774d04aeb95" category="cell">2048,0000</block>
   <block id="ea5d2f1c4608232e07d3aa3d998e5135" category="cell">64</block>
-  <block id="d5badd98590f7c8475031c722bee9f13" category="list-text">Peso: 220,5 lbbr/100,0 kg</block>
-  <block id="d7dbfe33d50154da8ce85d1c1065e7be" category="list-text">Profundidade: 28,8”br/(36,8” com suporte de gerenciamento de cabos)</block>
-  <block id="a57159585077204011cc6d81536a227c" category="list-text">Ruído acústico: Potência sonora declarada (LwAd): 7,4;br/Pressão sonora (LpAm) (posições de observação): 65,0 dB</block>
   <block id="18dc17338011190ae60489762b18bbba" category="summary">Especificações principais para o sistema de armazenamento AFF C250</block>
   <block id="06b4db325464ed97a14422979b4d8924" category="doc">Especificações principais do AFF C250</block>
   <block id="12dc95d0bc892a4d68c08990a2e0e93f" category="paragraph">A seguir estão algumas especificações selecionadas para o AFF C250.  Visita<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> (HWU) para uma lista completa das especificações do AFF C250 .  Esta página reflete um único par de alta disponibilidade.</block>
@@ -12775,15 +12704,11 @@
   <block id="282171cc5dd323ec3623eb44944c319e" category="paragraph">Configuração da plataforma: Par de HA de chassi único AFF C800</block>
   <block id="1aa18ff2688eef082ca414ef6c1d0efb" category="cell">15360 GB</block>
   <block id="750d899f51fc7f647f07a546c5cedf65" category="cell">44,2 PB / 39,3 PiB</block>
-  <block id="439e4902245729253229992fd0a361ae" category="list-text">Peso: 132,5 lbbr/60,1 kg</block>
-  <block id="f60520e90b3a6d873ecb44d71d75b734" category="list-text">Temperatura/Altitude/Umidade de operação: 5°C a 40°Cbr/41°F a br/104°F) atbr/= 3048mbr/= 10000 pés) de elevação; 8% a 90%br/umidade relativa, sem condensação</block>
-  <block id="d5cacbff7b82ab3d26541de685b1a32b" category="list-text">Ruído acústico: Potência sonora declarada (LwAd): 8,0;br/Pressão sonora (LpAm) (posições de observação): 62,8 dB</block>
   <block id="8403c0175395ff495c9af55099b8fef4" category="summary">Especificações principais do FAS70</block>
   <block id="c96eb561070b12daad5027ae91335418" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento FAS70 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
   <block id="c692e4fa105561892a2a9228b34bffae" category="section-title">Especificações do FAS70 em resumo</block>
   <block id="b60dd0f48b757bf37e7152687a5f1e2a" category="list-text">Configuração da plataforma: Par de chassi duplo FAS70 HA</block>
   <block id="40d3ca6b2e5b5c3a7cf307c29003021c" category="list-text">Capacidade Máxima de Bruto: 15.0000 PB</block>
-  <block id="5452f0b55e47fd57056cfbc2c1df1383" category="list-text">Versão mínima do ONTAP : ONTAP 9.15.1 == Máximos de escalonamento</block>
   <block id="b254a13dcae5f4c43da172d62dc20c0d" category="list-text">Tipo: NAS; Pares HA: 12; Capacidade bruta: 180,0 PB / 159,9 PiB; Memória máxima: 3072 GB</block>
   <block id="4b63cb91007f9af60dc4a59b97bf7ca9" category="list-text">Tipo: SAN; Pares HA: 6; Capacidade bruta: 90,0 PB / 79,9 PiB; Memória máxima: 1536 GB</block>
   <block id="f3ded331a5a6e6365d277baac957b315" category="list-text">Tipo: Par HA; Capacidade bruta: 15,0 PB / 13,3 PiB; Memória máxima: 256.0000</block>
@@ -12791,10 +12716,7 @@
   <block id="6b50628d21385cc30c365a7eb8bffd16" category="list-text">Protocolo: Ethernet 25 Gbps; Portas: 48</block>
   <block id="e2eaefdeb48f05ec9cb35dfb6f615aeb" category="list-text">Protocolo: Ethernet 10 Gbps; Portas: 48</block>
   <block id="e5aa4df0ff781766e2e817068625c8b1" category="list-text">Protocolo: FC 64 Gbps; Portas: 48</block>
-  <block id="70e1c8cd6acecd7be46535fa29cde5eb" category="list-text">Protocolo: NVMe/FC 64 Gbps; Portas: 48</block>
   <block id="d2601122f2e33565668f0d284f9bba63" category="list-text">Protocolo: SAS 12 Gbps; Portas: 48</block>
-  <block id="9d02a28c4d1a1a71729bbb0ac80472a7" category="list-text">Potência típica: 2653 BTU/h</block>
-  <block id="7a334425f69fb6c06dfa651065352e0b" category="list-text">Pior cenário de potência: 3050 BTU/h</block>
   <block id="11c8af1f99a8557ee032710d4d130287" category="summary">Especificações principais para FAS90</block>
   <block id="9f993159e76f4a7d4b4b8b8eddb4460a" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento FAS90 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
   <block id="42779fde1dac86b0723d2e19199ac8fa" category="section-title">Especificações FAS90 em resumo</block>
@@ -12807,7 +12729,6 @@
   <block id="12425dc1c33eeeb8070ff1d0f0dd0990" category="list-text">Pior cenário de potência: 5136 BTU/h</block>
   <block id="524bbf314904b6048321bf7d57c0721a" category="summary">Especificações principais para o grupo de plataformas FAS2700</block>
   <block id="f9fdf8f9fd1bcb23867be4e8677041cd" category="doc">Especificações principais para FAS2750</block>
-  <block id="4b81974f9adc22dc0d93c489cfefd300" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento FAS2750 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
   <block id="b740280982e279e3689c99d02e31f681" category="list-text">Configuração da plataforma: Par de HA de chassi único FAS2750 UTA2</block>
   <block id="97d0e3c1fe730b3fc51986b2a3d86897" category="list-text">Capacidade bruta máxima: 2,6832 PB</block>
   <block id="10dfcb5c5a94973a0430e25e6c8fa34f" category="list-text">Slots de expansão PCIe: 2</block>
@@ -12816,11 +12737,9 @@
   <block id="b6b10df768149e4f90013273cf86d895" category="list-text">Tipo: Par HA; Capacidade bruta: 2,7 PB / 2,4 PiB; Memória máxima: 64.0000</block>
   <block id="43f7c906d8d706e8eaaac5f08222a66d" category="summary">Especificações principais para o grupo de plataformas FAS2800</block>
   <block id="9085692f34e3fb2c2c78d38a14521724" category="doc">Especificações principais para FAS2820</block>
-  <block id="128d9b59350624d5c79c6c363cab68cc" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento FAS2820 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
   <block id="39406851902f01211ead25d98062f61d" category="list-text">Configuração da plataforma: Par de HA de chassi único FAS2820</block>
   <block id="575985f97a1f988a6350ac06db427db9" category="list-text">Capacidade máxima de matéria-prima: 3,1680 PB</block>
   <block id="b0e3a3152d05dd16038908656c9c2f8a" category="list-text">Fator de forma: chassi 2U com 2 controladores HA e 12 slots de unidade</block>
-  <block id="af595004b31eb9535c259508ed0ae2fb" category="list-text">Versão mínima do ONTAP : ONTAP 9.13.1RC1 == Máximos de escalonamento</block>
   <block id="ba885ec4ce316bb75e770a53e3213761" category="list-text">Tipo: NAS; Pares HA: 12; Capacidade bruta: 38,0 PB / 33,8 PiB; Memória máxima: 1536 GB</block>
   <block id="d29c5defb734a27748e948f94d789e06" category="list-text">Tipo: SAN; Pares HA: 6; Capacidade bruta: 19,0 PB / 16,9 PiB; Memória máxima: 768 GB</block>
   <block id="fead3e0ee4def93b2151167022fb4533" category="list-text">Tipo: Par HA; Capacidade bruta: 3,2 PB / 2,8 PiB; Memória máxima: 128.0000</block>
@@ -12842,7 +12761,6 @@
   <block id="cbf45d5ba7051d1a5a5803d60ac6d3db" category="cell">10,6 PB / 9,4 PiB</block>
   <block id="5914ff703c6686a6800588a76dacab74" category="list-text">Potência típica: 2319 BTU/h</block>
   <block id="1c28248d81d6ff87ee55b4eb47056a8c" category="list-text">Pior cenário de potência: 3872 BTU/h</block>
-  <block id="b95d880eb71d3f28802d99353d93f6f0" category="list-text">Peso: 52,2 lbbr/23,7 kg</block>
   <block id="c0abf347ba9cbc3892abfa80eb2e4397" category="summary">Especificações principais do FAS8300</block>
   <block id="e0fa95a49988723bdb3a71e39da9c698" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento FAS8300 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
   <block id="39d93cb8cb49b1e34ce4682195baa972" category="section-title">Especificações do FAS8300 em resumo</block>
@@ -12871,7 +12789,6 @@
   <block id="73f56d8353140321c6d56ae1cd03dcbc" category="cell">24576 GB</block>
   <block id="5d1cd462bd74ff5016c71d1735d844d0" category="cell">90,0 PB / 79,9 PiB</block>
   <block id="6ec20c5ffb71fc8e6407815aba709ebe" category="cell">15,0 PB / 13,3 PiB</block>
-  <block id="e71a112fcba059348a330658e07fff85" category="list-text">Temperatura/Altitude/Umidade de operação: 10°C a 35°Cbr/50°F a br/95°F) atbr/= 3048mbr/= 10000 pés) de elevação; 8% a 90%br/umidade relativa, sem condensação</block>
   <block id="65a4d6fcc372057dd61e6cc7abb8c696" category="inline-link-macro">AFF A1K (Recuperação automatizada)</block>
   <block id="94bd55fe0571dbfa433cb6e80d3e228b" category="inline-link-macro">AFF A1K (Recuperação manual)</block>
   <block id="3c9419b0744beccd4fd6272e84be9db0" category="inline-link-macro">AFF A20/30/50 (Recuperação automatizada)</block>
@@ -12931,16 +12848,6 @@
   <block id="73b98ef043acd488522721608d1383c0" category="inline-link-macro">ASA 70/90</block>
   <block id="1424eb9825ad365579c4da49e4786b56" category="inline-link-macro">AFF A70/90</block>
   <block id="3acfb7ef5d74a9a2b83867ee2f648b5c" category="inline-link-macro">ASA A70/90</block>
-  <block id="9fb8b7f7ff808262345139c29591fbfd" category="cell">O chassi é o gabinete físico que abriga todos os componentes do controlador, como a unidade controladora/CPU, fonte de alimentação e E/S.</block>
-  <block id="1dd12ce23185605c475a49a224a49d9c" category="cell">O módulo de energia de memória persistente do data center (DCPM) fornece energia de reserva para módulos DCPM durante eventos inesperados de perda de energia.</block>
-  <block id="e93ac6e8beec2ad9885ab64cf4a808c1" category="cell">Um ventilador fornece fluxo de ar para resfriar os componentes do sistema e manter as temperaturas operacionais adequadas.</block>
-  <block id="58fed263b925f9d39e313af171460d1a" category="cell">Um módulo de E/S fornece interfaces de conectividade de rede e armazenamento para o controlador.</block>
-  <block id="860762194502ed1a9210218c7841a247" category="cell">O módulo LED fornece indicadores visuais de status para a integridade do sistema e status dos componentes.</block>
-  <block id="91ed5045bf07352365158d842f193224" category="cell">Uma placa mezzanine fornece conectividade de E/S adicional e recursos de expansão para o controlador.</block>
-  <block id="c7cd9ad7ad29f1254a2b2e42d95aa345" category="cell">Você deve substituir um NVDIMM (módulo de memória dual in-line não volátil) quando o módulo falhar ou apresentar erros.</block>
-  <block id="394c77de2c782fcabbeb8d9b2abf1c39" category="cell">O módulo NVRAM fornece armazenamento não volátil para metadados do sistema e dados de gravação em cache.</block>
-  <block id="e46170c7e18fcaa48a2a75898487c4bc" category="cell">Placas PCI e risers fornecem slots de expansão para funcionalidade adicional e conectividade de E/S.</block>
-  <block id="f1ec2e231b90edf57a42e251aa1ecd14" category="cell">O módulo de gerenciamento do sistema fornece recursos de gerenciamento fora de banda para o sistema.</block>
   <block id="5ef79279dd7f732336b5156398a8b391" category="section-title">Setembro de 2025</block>
   <block id="3e7278a35880ab6bc45afac28b6eccb7" category="section-title">Especificações da plataforma</block>
   <block id="da160308e3b4b4a80bf1b72b5bdbedb8" category="inline-link-macro">Hardware Universe</block>
@@ -13117,8 +13024,6 @@
   <block id="01a3f659112c26b68dc2a4223fa153e4" category="summary">Encontre procedimentos de substituição do módulo de energia DCPM para seu sistema de armazenamento NetApp organizados por família de plataforma.  Esta referência fornece links diretos para fluxos de trabalho de substituição de módulo de energia DCPM passo a passo para sistemas AFF, ASA e FAS para ajudar você a localizar rapidamente o procedimento correto para seu modelo específico.</block>
   <block id="24ba48f76c2f85b52a50c43721f703a5" category="doc">Procedimentos de substituição do módulo de energia DCPM por família de plataforma</block>
   <block id="50120036de2420f624aad48cd6524af4" category="paragraph">Encontre procedimentos de substituição do módulo de energia DCPM para seu sistema de armazenamento NetApp organizados por família de plataforma.  Esta referência fornece links diretos para fluxos de trabalho passo a passo de substituição de módulo de energia DCPM para sistemas AFF e FAS para ajudar você a localizar rapidamente o procedimento correto para seu modelo específico.</block>
-  <block id="070491ddebb3f660fcc77c7ca943e574" category="list-text"><block ref="070491ddebb3f660fcc77c7ca943e574" category="inline-link-macro-rx"></block></block>
-  <block id="51576e16019de8a26627c3b34c3cc4a6" category="list-text"><block ref="51576e16019de8a26627c3b34c3cc4a6" category="inline-link-macro-rx"></block></block>
   <block id="b0005daeb1b62349a88154ecde473f4a" category="summary">Encontre procedimentos de substituição de DIMM para seu sistema de armazenamento NetApp organizados por família de plataforma.  Esta referência fornece links diretos para fluxos de trabalho de substituição de DIMM passo a passo para sistemas AFF, ASA e FAS para ajudar você a localizar rapidamente o procedimento correto para seu modelo específico.</block>
   <block id="0f443b61e3296d8259f810843d2eee39" category="doc">Procedimentos de substituição de DIMM por família de plataforma</block>
   <block id="c6cf91f7c1afd4f1026ce9c6461ef869" category="paragraph">Encontre procedimentos de substituição de DIMM para seu sistema de armazenamento NetApp organizados por família de plataforma.  Esta referência fornece links diretos para fluxos de trabalho de substituição de DIMM passo a passo para sistemas AFF e FAS para ajudar você a localizar rapidamente o procedimento correto para seu modelo específico.</block>
@@ -13163,7 +13068,6 @@
   <block id="ca971619f09e56e46375817722921514" category="list-text"><block ref="ca971619f09e56e46375817722921514" category="inline-link-macro-rx"></block></block>
   <block id="3cf0cc20768b309ce48bae94338d1a4a" category="list-text"><block ref="3cf0cc20768b309ce48bae94338d1a4a" category="inline-link-macro-rx"></block></block>
   <block id="037bbd1e50309583e0757f2140d95bc0" category="list-text"><block ref="037bbd1e50309583e0757f2140d95bc0" category="inline-link-macro-rx"></block></block>
-  <block id="c0b6c1f9d7b6f47b6ad55fc4d44a89aa" category="summary">Encontre procedimentos de substituição de unidades para seu sistema de armazenamento NetApp organizados por família de plataformas.  Esta referência fornece links diretos para fluxos de trabalho de substituição de unidade passo a passo para sistemas AFF, ASA e FAS para ajudar você a localizar rapidamente o procedimento correto para seu modelo específico.</block>
   <block id="d5c3fc0c2d25177f5b932a7171ee9e15" category="doc">Procedimentos de substituição de acionamento por família de plataforma</block>
   <block id="a3d085470eba15e9280b129464b8ddb2" category="list-text"><block ref="a3d085470eba15e9280b129464b8ddb2" category="inline-link-macro-rx"></block></block>
   <block id="7c1733a0618e460dfa7b8102d537646a" category="list-text"><block ref="7c1733a0618e460dfa7b8102d537646a" category="inline-link-macro-rx"></block></block>
@@ -13223,45 +13127,23 @@
   <block id="23c6dc6e34e0e976cd5c554e6c02002a" category="list-text"><block ref="23c6dc6e34e0e976cd5c554e6c02002a" category="inline-link-macro-rx"></block></block>
   <block id="3aee59630782232e9467e39d10ac14fa" category="list-text"><block ref="3aee59630782232e9467e39d10ac14fa" category="inline-link-macro-rx"></block></block>
   <block id="768edc0422c0a8f015d113c020d7a9bc" category="list-text"><block ref="768edc0422c0a8f015d113c020d7a9bc" category="inline-link-macro-rx"></block></block>
-  <block id="56b2756b38a38c7e0d0795fd713f6dd6" category="summary">Encontre procedimentos de substituição para seu sistema de armazenamento NetApp organizados por tipo de componente.  Esta referência fornece links diretos para fluxos de trabalho de substituição passo a passo para sistemas AFF, ASA e FAS para ajudar você a localizar rapidamente o procedimento correto para suas necessidades específicas de manutenção de hardware.</block>
-  <block id="d9eb7d819b58e61afbb24550e2a1631c" category="doc">Referência de substituição para sistemas de armazenamento NetApp</block>
-  <block id="c7e61f30815ea807b2c62cf7cb92097b" category="cell">Componente do sistema</block>
   <block id="e7bad79193e24a89406e41f0c4e8f05e" category="inline-link-macro">Procedimentos de substituição de mídia de inicialização</block>
-  <block id="b2d0814c343d11f01888f171a3c58e43" category="cell"><block ref="b2d0814c343d11f01888f171a3c58e43" category="inline-link-macro-rx"></block></block>
   <block id="a076ab1593328ebead7d251317431612" category="inline-link-macro">Procedimentos de substituição do módulo de cache</block>
-  <block id="a85bc00ea0dfd82598b0da6e04516a5a" category="cell"><block ref="a85bc00ea0dfd82598b0da6e04516a5a" category="inline-link-macro-rx"></block></block>
   <block id="3757681a91eeded1b126522b38e3b046" category="inline-link-macro">Procedimentos de substituição do chassi</block>
-  <block id="0a48ed2c3490171246310058801a0443" category="cell"><block ref="0a48ed2c3490171246310058801a0443" category="inline-link-macro-rx"></block></block>
   <block id="a191d3c8972a062c47584de321d754d2" category="inline-link-macro">Procedimentos de substituição do controlador</block>
-  <block id="f5e86a00101d88eab5b0ae4913a273cb" category="cell"><block ref="f5e86a00101d88eab5b0ae4913a273cb" category="inline-link-macro-rx"></block></block>
   <block id="c8c976dddd090448c4cfbb511b7d169d" category="inline-link-macro">Procedimentos de substituição do módulo de energia DCPM</block>
-  <block id="e10aad718ca38836a4034ff265656adb" category="cell"><block ref="e10aad718ca38836a4034ff265656adb" category="inline-link-macro-rx"></block></block>
   <block id="1f8b57a714d976477d5cac757c69ff49" category="inline-link-macro">Procedimentos de substituição de DIMM</block>
-  <block id="fab84821bfd6dbd31c2695b34cb3d075" category="cell"><block ref="fab84821bfd6dbd31c2695b34cb3d075" category="inline-link-macro-rx"></block></block>
   <block id="33376dc38d7738903c34618cd5cf0a86" category="inline-link-macro">Procedimentos de substituição de unidade</block>
-  <block id="89ffe18c0f10ae937c5828a696b1b14e" category="cell"><block ref="89ffe18c0f10ae937c5828a696b1b14e" category="inline-link-macro-rx"></block></block>
   <block id="1c714e0299d03e0f90a132d58f10e2d2" category="inline-link-macro">Procedimentos de substituição do ventilador</block>
-  <block id="2fa0e3268413bc3e2f63a1589fa363c7" category="cell"><block ref="2fa0e3268413bc3e2f63a1589fa363c7" category="inline-link-macro-rx"></block></block>
-  <block id="4e085c80a7c964b51a8c45f937bedc70" category="inline-link-macro">Procedimentos de substituição do módulo IO</block>
-  <block id="f40defb7ceb52d828c04d4bc8d23006e" category="cell"><block ref="f40defb7ceb52d828c04d4bc8d23006e" category="inline-link-macro-rx"></block></block>
   <block id="fd696a0146c08cb1afec667b64236a41" category="inline-link-macro">Procedimentos de substituição do módulo LED</block>
-  <block id="daa172f31ec750d7c79713b3c2c05dd2" category="cell"><block ref="daa172f31ec750d7c79713b3c2c05dd2" category="inline-link-macro-rx"></block></block>
   <block id="8080dfea6d5ab34a8d6fe2a50c44788e" category="inline-link-macro">Procedimentos de substituição do mezanino</block>
-  <block id="c5fa3a7caefc23841d39414d7b336b34" category="cell"><block ref="c5fa3a7caefc23841d39414d7b336b34" category="inline-link-macro-rx"></block></block>
   <block id="4f4446698c5fb8f0eed8106cfea9817a" category="inline-link-macro">Procedimentos de substituição de NVDIMM</block>
-  <block id="15977e344cad74a295af6c97f27e92f3" category="cell"><block ref="15977e344cad74a295af6c97f27e92f3" category="inline-link-macro-rx"></block></block>
   <block id="ed4a29c77228f95b5f34ec27e46fedc2" category="inline-link-macro">Procedimentos de substituição de bateria NVMEM/ NVRAM</block>
-  <block id="aac5b994162555f58eb246c4ef86a7a0" category="cell"><block ref="aac5b994162555f58eb246c4ef86a7a0" category="inline-link-macro-rx"></block></block>
   <block id="d32eb153b568d7e40e55e2cafb029f40" category="inline-link-macro">Procedimentos de substituição do módulo NVRAM</block>
-  <block id="391566a35112726187e0fdf57736bbc9" category="cell"><block ref="391566a35112726187e0fdf57736bbc9" category="inline-link-macro-rx"></block></block>
   <block id="43c26decdf9e6a5f7bb6c271d50831f4" category="inline-link-macro">Procedimentos de substituição de placas PCI e risers</block>
-  <block id="c1cecd1ba364d60042f5a4e0a810ea14" category="cell"><block ref="c1cecd1ba364d60042f5a4e0a810ea14" category="inline-link-macro-rx"></block></block>
   <block id="78fa3a30758e4d5a65c341989241ee8f" category="inline-link-macro">Procedimentos de substituição da fonte de alimentação</block>
-  <block id="4d8df984cfa3270d805f8668ef8e657c" category="cell"><block ref="4d8df984cfa3270d805f8668ef8e657c" category="inline-link-macro-rx"></block></block>
   <block id="a7da9d6c9cdcddf6adea58eed6c0f530" category="inline-link-macro">Procedimentos de substituição de bateria RTC</block>
-  <block id="bee16daab2c491b6b955353538c49d9f" category="cell"><block ref="bee16daab2c491b6b955353538c49d9f" category="inline-link-macro-rx"></block></block>
   <block id="dff5719e2d9eaa7b6bd9235aaa97593d" category="inline-link-macro">Procedimentos de substituição do módulo de gerenciamento do sistema</block>
-  <block id="6fd4916afc23661bea63eff84ce82c9c" category="cell"><block ref="6fd4916afc23661bea63eff84ce82c9c" category="inline-link-macro-rx"></block></block>
   <block id="ce0289f5a93ebc431b8daf2de51af353" category="summary">Encontre procedimentos de substituição de módulos de E/S para seu sistema de armazenamento NetApp organizados por família de plataformas.  Esta referência fornece links diretos para fluxos de trabalho de substituição de módulos de E/S passo a passo para sistemas AFF, ASA e FAS para ajudar você a localizar rapidamente o procedimento correto para seu modelo específico.</block>
   <block id="ade554b9dd3913961cccafe3afa99fba" category="doc">Procedimentos de substituição de módulos de E/S por família de plataforma</block>
   <block id="d6b1e37b5093a063f4e832675aca8094" category="list-text"><block ref="d6b1e37b5093a063f4e832675aca8094" category="inline-link-macro-rx"></block></block>
@@ -13918,7 +13800,6 @@
   <block id="3d70b6b1c750645a1540b9185ec5dbfc" category="open-title">Opção 2: Troca a quente de uma fonte de alimentação CC</block>
   <block id="27b8025bf920b2fdec95f4719d7e3772" category="paragraph">As PSUs são redundantes e intercambiáveis a quente. Não é necessário desligar o controlador para substituir uma PSU.</block>
   <block id="41221ad2b8f379d044b6e4c034575270" category="list-text">Localize os números de série do sistema (SSN) para cada controlador que está sendo instalado.</block>
-  <block id="639a764bd23851da6594721b4ee0a7d1" category="paragraph">Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP ; Controladores redundantes de troca a quente; Fontes de alimentação redundantes de troca a quente; Gerenciamento SAS em banda por meio de conexões SAS; [//] 2025-10-15 ontap-systems-internal/issues/1357</block>
   <block id="67bfe38eadb8acf6e70be93f4020561b" category="doc">Troca a quente de uma fonte de alimentação - AFF A150</block>
   <block id="5ea0f09670f21c71300695e92b2cd256" category="admonition">Não utilize as portas e1b e e7b para conexões de rede do host. Use um cartão host separado.</block>
   <block id="e0c35bf779836a3b5e187a211457a2b9" category="list-text">Gerenciamento de banda SAS em conexões SAS para prateleiras externas [//] 2025-10-15 ontap-systems-internal/issues/1357</block>
@@ -13934,9 +13815,7 @@
   <block id="b61c2071102a270d16023e40ee5b949e" category="doc">Troca a quente de uma fonte de alimentação - AFF A700</block>
   <block id="9fdca944f84d0d7c1dd5bec5b33c4dad" category="doc">Troca a quente de uma fonte de alimentação - AFF A700s</block>
   <block id="c88ebc5327d1036601d0eda773d3a9b3" category="doc">Troca a quente de uma fonte de alimentação - AFF A800</block>
-  <block id="000e33b346cf40ffbe68a52c2d14f2ea" category="list-text">Gerenciamento de banda SAS em conexões SAS [//] 2025-10-15 ontap-systems-internal/issues/1357</block>
   <block id="8548a56c519034463f28eadc644360ab" category="doc">Troca a quente de uma fonte de alimentação - AFF A900</block>
-  <block id="20c8ebc12d960783bc610a9a7c628624" category="list-text">Fontes de alimentação redundantes hot-swappable [//] 2025-10-15 ontap-systems-internal/issues/1357</block>
   <block id="98c78afbee9a38af4c14116fcea041ee" category="doc">Troca a quente de uma fonte de alimentação - ASA C250</block>
   <block id="a93641a4525fdc7b24b1b838539eaefd" category="doc">Troca a quente de uma fonte de alimentação - ASA C400</block>
   <block id="c5fdd34e2ef42364012a118012d79fb4" category="doc">Troca a quente de uma fonte de alimentação - ASA C800</block>
@@ -13948,10 +13827,8 @@
   <block id="2c050786a43c0ea0115e636878783956" category="doc">Troca a quente de uma fonte de alimentação - ASA A400</block>
   <block id="a2ada69f15b8dc349c947f1966fadfab" category="doc">Troca a quente de uma fonte de alimentação - ASA A800</block>
   <block id="afa34f783768c8c33178d16016fc5fc4" category="doc">Troca a quente de uma fonte de alimentação - ASA A900</block>
-  <block id="a09a90cc8fcac9f4d3e4b984533b8cad" category="paragraph">[//] 2025-10-15 ontap-systems-internal/issues/1357</block>
   <block id="5e227aeb2fcad7eaeead32f5302682f3" category="doc">Troca a quente de uma fonte de alimentação - AFF C250</block>
   <block id="41002485b29502010a8644065a0c7d58" category="doc">Troca a quente de uma fonte de alimentação - AFF C400</block>
-  <block id="e8b86e4a9e550f2cd1adce1d2f24708b" category="paragraph">Controlador de gerenciamento de placa de base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP ; Controladores redundantes de troca a quente; Fontes de alimentação redundantes de troca a quente; [//] 2025-10-15 ontap-systems-internal/issues/1357</block>
   <block id="e742e13f0573253743538a54686b965c" category="doc">Troca a quente de uma fonte de alimentação - AFF C800</block>
   <block id="bb9a46a830b86006c64c8c357fbcb73c" category="doc">Troca a quente de uma fonte de alimentação - FAS70 e FAS90</block>
   <block id="c0fb977424a2b5bca01ac503e2f1b009" category="doc">Troca a quente de uma fonte de alimentação - FAS2700</block>
@@ -14463,4 +14340,79 @@
   <block id="c8e28ee11f5aed1ad0eadccaf8de83d7" category="list-text"><block ref="c8e28ee11f5aed1ad0eadccaf8de83d7" category="inline-link-macro-rx"></block></block>
   <block id="bcbb0b81d0720e2cc8e6293852d8f76b" category="list-text"><block ref="bcbb0b81d0720e2cc8e6293852d8f76b" category="inline-link-macro-rx"></block></block>
   <block id="70ef73c42db0b1681fa61ef4b1d4608c" category="list-text"><block ref="70ef73c42db0b1681fa61ef4b1d4608c" category="inline-link-macro-rx"></block></block>
+  <block id="a76d2084ed496076051922f0248b4853" category="list-text">Peso: 60,8 lb 27,6 kg</block>
+  <block id="1e0c5fdb95dbfe6d5185caa4e11b89b6" category="list-text">Profundidade: 19,0” (24,1” com suporte para gerenciamento de cabos)</block>
+  <block id="f3c536d4bfa76301d0b998924643f4ca" category="list-text">Temperatura/Altitude/Umidade de operação: 5°C a 45°C (41°F a 113°F) em altitudes de até 3048 m (10000 pés); umidade relativa de 8% a 90%, sem condensação.</block>
+  <block id="8ef9a06c0f63d5ff48d9a2cbed3169fc" category="list-text">Temperatura/Umidade fora de operação: -40 °C a 70 °C (-40 °F a 158 °F) até 12.192 m (40.000 pés), 10% a 95% de umidade relativa, sem condensação, na embalagem original.</block>
+  <block id="10fd02a64a2d685f6678b6e3eff801b4" category="list-text">Ruído acústico: Potência sonora declarada (LwAd): 6,9; Pressão sonora (LpAm) (posições de observador): 51,0 dB</block>
+  <block id="e447884015fc6cccd73419a58f4a2dc9" category="paragraph">Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP ; Controladores redundantes de troca a quente; Fontes de alimentação redundantes de troca a quente; Gerenciamento SAS em banda por meio de conexões SAS;</block>
+  <block id="055aaee38a4b81eee6b4c24afbfcf729" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento AFF A1K em um único par de alta disponibilidade. Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
+  <block id="6daf083a3b3af83606075a29263440e7" category="section-title">máximos de escala</block>
+  <block id="9f90ffdb250a94daf62a96eadd837607" category="list-text">SMB 3.1.1</block>
+  <block id="319496b6dca90504eb98e165573b640d" category="section-title">Especificações do ambiente do sistema</block>
+  <block id="d484740478fa346bb18d6910949dbf47" category="list-text">Temperatura/Altitude/Umidade de operação: 10°C a 35°C (50°F a 95°F) em altitudes de até 3048 m (10000 pés); umidade relativa de 8% a 80%, sem condensação.</block>
+  <block id="0a5236d201517d1045ceae9b22e84fd5" category="list-text">Temperatura/Umidade fora de operação: -40 °C a 70 °C (-40 °F a 158 °F) até 12.192 m (40.000 pés), 10% a 95% de umidade relativa, sem condensação, na embalagem original.</block>
+  <block id="c2c0077a342e25e5b74108a7f982ec71" category="list-text">Protocolo: NVMe/FC 64 Gbps; Portas: 24</block>
+  <block id="17243e3b5926560a59bcb5788ccee719" category="list-text">Peso: 60,7 lb, 27,5 kg</block>
+  <block id="a4d565bca0d7f8d64f35f9301a4f9778" category="list-text">Largura: 19" (44,7 cm), compatível com o padrão de rack IEC.</block>
+  <block id="5a751ecf985c6c64727d47f0e7aa7590" category="list-text">Temperatura/Altitude/Umidade de operação: 10°C a 35°C (50°F a 95°F) em altitudes de até 3048 m (10000 pés); umidade relativa de 8% a 80%, sem condensação.</block>
+  <block id="0c96908bdfe382795267cfd6b60bd0be" category="list-text">Temperatura/Umidade fora de operação: -40 °C a 70 °C (-40 °F a 158 °F) até 12.192 m (40.000 pés); 10% a 95% de umidade relativa, sem condensação, na embalagem original.</block>
+  <block id="a4618fbe6321146b02b45798227aa70f" category="list-text">Ruído acústico: Potência sonora declarada (LwAd): 8,0; Pressão sonora (LpAm) (posições de observador): 70,5 dB</block>
+  <block id="9d8e8dde4e8f21db43e81a7eac62bf71" category="list-text">Peso: 60,7 lb 27,5 kg</block>
+  <block id="85322b710a117737921e5b3c67e22faf" category="list-text">Potência típica: 2040 BTU/h</block>
+  <block id="9bead36a4acbbc6e579c9b09058b0562" category="list-text">Pior cenário de potência: 2907 BTU/h</block>
+  <block id="30ce8c4179e462c044d5b8c2f8dba6ed" category="list-text">Temperatura/Altitude/Umidade de operação: 10°C a 35°C (50°F a 95°F) a 3048 m (10000 pés) de altitude; 8% a 80% de umidade relativa, sem condensação</block>
+  <block id="306b0c1febd5a08539ced2821516e9d1" category="list-text">Peso: 54,3 lb 24,6 kg</block>
+  <block id="6e15f64fd5a71681231b94ba550418d0" category="list-text">Ruído acústico: Potência sonora declarada (LwAd): 7,2; Pressão sonora (LpAm) (posições de observador): 69,1 dB</block>
+  <block id="6357a9d7fb85d17241271315eb30967f" category="list-text">Peso: 110,0 lb 49,9 kg</block>
+  <block id="2ff9f624082a84f12f514886fe9395d7" category="list-text">Profundidade: 32,6” (34,7” com suporte para gerenciamento de cabos)</block>
+  <block id="d287c191cec43d3bb8ae0246b681601e" category="list-text">Ruído acústico: Potência sonora declarada (LwAd): 8,5; Pressão sonora (LpAm) (posições de observador): 67,2 dB</block>
+  <block id="98e02f6afb915ae8bd2a149fb34f71fd" category="paragraph">Controlador de gerenciamento de placa-mãe (BMC) baseado em Ethernet e interface de gerenciamento ONTAP ; Controladores redundantes hot-swappable; * Fontes de alimentação redundantes hot-swappable; * Gerenciamento SAS em banda sobre conexões SAS</block>
+  <block id="20e386cc0532205afba67fcf837b2de0" category="list-text">Protocolo: NVMe/FC 64 Gbps; Portas: 56</block>
+  <block id="c9abd2a6058c1c2e98bfaca8755c0d6c" category="list-text">Peso: 118,0 lb, 53,5 kg</block>
+  <block id="6db82ab8acd2176b1b41c4bfe7c21010" category="list-text">Profundidade: 34,5" (36,6" com suporte para gerenciamento de cabos)</block>
+  <block id="6bc18bdec69fb4197f471d1fa5bbbb8c" category="list-text">Ruído acústico: Potência sonora declarada (LwAd): 8,6; Pressão sonora (LpAm) (posições de observador): 71,6 dB</block>
+  <block id="bbc28ae220e6e9a6c8c415d1678a3b9b" category="list-text">Normas EMC/EMI: BS-EN-55032, BS-EN55035, CISPR 32, EN55022, EN55024, EN55032, EN55035, EN61000-3-2, EN61000-3-3, FCC Parte 15 Classe A, ICES-003, KS C 9832, KS C 9835</block>
+  <block id="0271d3a0295931efdb1b5f315d1d0872" category="list-text">Peso: 118,0 lb 53,5 kg</block>
+  <block id="f64096538a9a3a7d77db8a5e07a4ef1c" category="list-text">Profundidade: 34,5” (36,6” com suporte para gerenciamento de cabos)</block>
+  <block id="50dedd894f9f18dfab59fddde9f15cff" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento AFF A800 em um único par de alta disponibilidade. Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
+  <block id="7749107591c00050a7a97efbcce604e1" category="list-text">Versão mínima do ONTAP : ONTAP 9.4RC1</block>
+  <block id="0c9df2b89e75c6856ec132de86c9d91c" category="list-text">Temperatura/Altitude/Umidade de operação: 5°C a 40°C (41°F a 104°F) em altitudes de até 3048 m (10000 pés); umidade relativa de 8% a 90%, sem condensação.</block>
+  <block id="947bfdf26afda4c316cfe23dba310704" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento AFF A900 em um único par de alta disponibilidade. Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
+  <block id="3977f806931e67288d91a7d641a2ca23" category="list-text">Versão mínima do ONTAP : ONTAP 9.10.1RC2</block>
+  <block id="b428bcb6a99ba39cab6cb8a92f57b757" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento ASA C250 em um único par de alta disponibilidade. Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
+  <block id="4007e0d642a6de3d969bc6c8ded4d7b5" category="list-text">Versão mínima do ONTAP : ONTAP 9.13.1P1</block>
+  <block id="c3f605ba5c36c2235196166996b7e4e6" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento ASA C400 em um único par de alta disponibilidade. Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
+  <block id="8a55129d0495c7d8bf6dc99af7674c75" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento ASA C800 em um único par de alta disponibilidade. Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
+  <block id="c73d27ec459313829377c86c2266b5aa" category="list-text">Versão mínima do ONTAP : ONTAP 9.16.0</block>
+  <block id="98d68f2cca0362b7dda09b035396b473" category="list-text">Peso: 220,5 lb 100,0 kg</block>
+  <block id="b5c6fd1f9657fe4f02b5d9fd487b55a1" category="list-text">Profundidade: 28,8” (36,8” com suporte para gerenciamento de cabos)</block>
+  <block id="63f08a7208f7923adb07eca88a769dcf" category="list-text">Ruído acústico: Potência sonora declarada (LwAd): 7,4; Pressão sonora (LpAm) (posições de observador): 65,0 dB</block>
+  <block id="c7c3ddda9d210ef666a3c119a3fdcc0a" category="list-text">Peso: 132,5 lb 60,1 kg</block>
+  <block id="3727d02431fe5d12b18a99817596a8d2" category="list-text">Ruído acústico: Potência sonora declarada (LwAd): 8,0; Pressão sonora (LpAm) (posições de observador): 62,8 dB</block>
+  <block id="dc23e1b298369b74c90ed634c0abebbe" category="list-text">Versão mínima do ONTAP : ONTAP 9.15.1</block>
+  <block id="b95bccfd3c36e53baa48cdcd3e16ec1d" category="list-text">Protocolo: NVMe/FC 64 Gbps; Portas: 48</block>
+  <block id="59159f1c6a3f617b2eb84d699f5d7637" category="list-text">Peso: 59,5 lb, 27,0 kg</block>
+  <block id="5dd136cdf737da206284674962f850c7" category="list-text">Largura: 19" (44,9 cm), compatível com o padrão de rack IEC.</block>
+  <block id="a54db06e04e535848c65879c380cc721" category="list-text">Profundidade: 30,0" (35,2" com suporte para gerenciamento de cabos)</block>
+  <block id="b5af7f6404ef1a44420cf37f349cbe80" category="list-text">Ruído acústico: Potência sonora declarada (LwAd): 8,5; Pressão sonora (LpAm) (posições de observador): 67,7 dB</block>
+  <block id="8e76cd1d7f01fdb17314a9d2c896b3b1" category="list-text">Certificações EMC/EMI: AMCA, FCC, ICES, KC, Marrocos, VCCI</block>
+  <block id="fdb85fa0cd4484e694f6b09bd123a03a" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento FAS2750 em um único par de alta disponibilidade. Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
+  <block id="20772ee85911759c410115a8e7b6a12b" category="paragraph">A seguir estão especificações selecionadas para o sistema de armazenamento FAS2820 em um único par de alta disponibilidade. Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.</block>
+  <block id="c75ee040b0cc7ce4ae6a3a3b0b26d452" category="list-text">Versão mínima do ONTAP : ONTAP 9.13.1RC1</block>
+  <block id="ca35bdac11fca604dd48c1bf1faabae9" category="list-text">Peso: 52,2 lb 23,7 kg</block>
+  <block id="c562978db16268878442d34624b9ef6d" category="list-text">Protocolo: NVMe/FC 32 Gbps; Portas: 32</block>
+  <block id="3c12d3b3ef0feee8bcf9b0c6035c41dc" category="list-text">Temperatura/Altitude/Umidade de operação: 10°C a 35°C (50°F a 95°F) em altitudes de até 3048 m (10000 pés); umidade relativa de 8% a 90%, sem condensação.</block>
+  <block id="6e8c0bacd4c23b1cebf6863e7b060aab" category="summary">Encontre os procedimentos de substituição de unidades para o seu sistema de armazenamento NetApp , organizados por plataforma ou família de gabinetes. Esta referência fornece links diretos para fluxos de trabalho passo a passo de substituição de unidades para sistemas AFF, ASA e FAS , bem como para sistemas de prateleira, para ajudá-lo a localizar rapidamente o procedimento correto para o seu modelo específico.</block>
+  <block id="ad5a939dc335c66beb9dfbc62ee1f7b6" category="paragraph">Encontre os procedimentos de substituição de unidades para o seu sistema de armazenamento NetApp , organizados por plataforma ou família de gabinetes. Esta referência fornece links diretos para fluxos de trabalho passo a passo de substituição de unidades para sistemas AFF, ASA, FAS e de prateleira, para ajudá-lo a localizar rapidamente o procedimento correto para o seu modelo específico.</block>
+  <block id="cef67cd843b549a3b7a33216f421ecf6" category="inline-link-macro">DS212C, DS224C</block>
+  <block id="8144f53bc94254f3e689f803ce11f387" category="list-text"><block ref="8144f53bc94254f3e689f803ce11f387" category="inline-link-macro-rx"></block></block>
+  <block id="9111f621282fe2ae515f50178407689b" category="inline-link-macro">DS460C</block>
+  <block id="e6781bdef8fafc97acb61bb8c35bab93" category="list-text"><block ref="e6781bdef8fafc97acb61bb8c35bab93" category="inline-link-macro-rx"></block></block>
+  <block id="0a1948d40e59c471b7932718582bd42a" category="inline-link-macro">Gaveta DS460C</block>
+  <block id="95c6d3bb7f930d837907745c8402058e" category="list-text"><block ref="95c6d3bb7f930d837907745c8402058e" category="inline-link-macro-rx"></block></block>
+  <block id="cfd87148988e1c4ef0a45823691555b1" category="list-text"><block ref="cfd87148988e1c4ef0a45823691555b1" category="inline-link-macro-rx"></block></block>
+  <block id="2d501e4167e8802637141bdc2adc5926" category="inline-link-macro">DS212C, DS224C, DS460C</block>
+  <block id="c98448a1324dace9b0625e6a7320d285" category="list-text"><block ref="c98448a1324dace9b0625e6a7320d285" category="inline-link-macro-rx"></block></block>
+  <block id="fca9c8461c6c2e8a996867347aa55ff7" category="list-text"><block ref="fca9c8461c6c2e8a996867347aa55ff7" category="inline-link-macro-rx"></block></block>
 </blocks>

@@ -131,13 +131,13 @@ FC; iSCSI; NVMe/FC; NVMe/TCP;
 
 * Potência típica: 4209 BTU/h
 * Pior cenário de potência: 5212 BTU/h
-* Peso: 110,0 lbbr/49,9 kg
+* Peso: 110,0 lb 49,9 kg
 * Altura: 4U
 * Largura: 19” compatível com rack IEC (17,6” 44,7 cm)
-* Profundidade: 32,6”br/(34,7” com suporte de gerenciamento de cabos)
-* Temperatura/Altitude/Umidade de operação: 10°C a 35°Cbr/50°F a br/95°F) atbr/= 3048mbr/= 10000 pés) de elevação; 8% a 80%br/umidade relativa, sem condensação
-* Temperatura/Umidade fora de operação: -40°C a 70°C (-40°F a 158°F) até 12192m (40000 pés)<br/>10% a 95% de umidade relativa, sem condensação, no recipiente original
-* Ruído acústico: Potência sonora declarada (LwAd): 8,5;br/Pressão sonora (LpAm) (posições de observação): 67,2 dB
+* Profundidade: 32,6” (34,7” com suporte para gerenciamento de cabos)
+* Temperatura/Altitude/Umidade de operação: 10°C a 35°C (50°F a 95°F) em altitudes de até 3048 m (10000 pés); umidade relativa de 8% a 80%, sem condensação.
+* Temperatura/Umidade fora de operação: -40 °C a 70 °C (-40 °F a 158 °F) até 12.192 m (40.000 pés), 10% a 95% de umidade relativa, sem condensação, na embalagem original.
+* Ruído acústico: Potência sonora declarada (LwAd): 8,5; Pressão sonora (LpAm) (posições de observador): 67,2 dB
 
 
 
@@ -156,4 +156,4 @@ FC; iSCSI; NVMe/FC; NVMe/TCP;
 
 === Alta disponibilidade
 
-Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP ; Controladores redundantes de troca a quente; Fontes de alimentação redundantes de troca a quente; Gerenciamento SAS em banda por meio de conexões SAS; [//] 2025-10-15 ontap-systems-internal/issues/1357
+Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP ; Controladores redundantes de troca a quente; Fontes de alimentação redundantes de troca a quente; Gerenciamento SAS em banda por meio de conexões SAS;

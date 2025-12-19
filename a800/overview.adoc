@@ -11,7 +11,7 @@ summary: Especificações principais para o grupo de plataformas A800
 
 
 [role="lead"]
-A seguir estão especificações selecionadas para o sistema de armazenamento AFF A800 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.
+A seguir estão especificações selecionadas para o sistema de armazenamento AFF A800 em um único par de alta disponibilidade. Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.
 
 
 
@@ -23,7 +23,13 @@ A seguir estão especificações selecionadas para o sistema de armazenamento AF
 * Fator de forma: chassi 4U com 2 controladores HA e 48 slots de unidade
 * Versão ONTAP : ONTAP: 9.16.1P2
 * Slots de expansão PCIe: 10
-* Versão mínima do ONTAP : ONTAP 9.4RC1 == Máximos de escalonamento
+* Versão mínima do ONTAP : ONTAP 9.4RC1
+
+
+
+
+== máximos de escala
+
 * Tipo: NAS; Pares HA: 12; Capacidade bruta: 79,3 PB / 70,4 PiB; Memória máxima: 15360 GB
 * Tipo: SAN; Pares HA: 6; Capacidade bruta: 39,7 PB / 35,2 PiB; Memória máxima: 7680 GB
 * Tipo: Par HA; Capacidade bruta: 6,6 PB / 5,9 PiB; Memória máxima: 1280.0000
@@ -85,15 +91,21 @@ A seguir estão especificações selecionadas para o sistema de armazenamento AF
 * SMB 2.x
 * SMB 3.0
 * SMB 3.1
-* SMB 3.1.1 == Especificações do ambiente do sistema
+* SMB 3.1.1
+
+
+
+
+== Especificações do ambiente do sistema
+
 * Potência típica: 6626 BTU/h
 * Pior cenário de potência: 8417 BTU/h
 * Peso: 132,5 lb 60,1 kg
 * Altura: 4U
 * Largura: 19” compatível com rack IEC (17,6” 44,7 cm)
 * Profundidade: 34,5” (36,6” com suporte para gerenciamento de cabos)
-* Temperatura/Altitude/Umidade de operação: 5°C a 40°C (41°F a 104°F) a 3048 m (10000 pés) de altitude; 8% a 90% de umidade relativa, sem condensação
-* Temperatura/Umidade fora de operação: -40°C a 70°C (-40°F a 158°F) até 12192m (40000 pés) 10% a 95% de umidade relativa, sem condensação, no recipiente original
+* Temperatura/Altitude/Umidade de operação: 5°C a 40°C (41°F a 104°F) em altitudes de até 3048 m (10000 pés); umidade relativa de 8% a 90%, sem condensação.
+* Temperatura/Umidade fora de operação: -40 °C a 70 °C (-40 °F a 158 °F) até 12.192 m (40.000 pés), 10% a 95% de umidade relativa, sem condensação, na embalagem original.
 * Ruído acústico: Potência sonora declarada (LwAd): 8,0 Pressão sonora (LpAm) (posições de observação): 62,8 dB
 
 
@@ -116,5 +128,5 @@ A seguir estão especificações selecionadas para o sistema de armazenamento AF
 * Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP
 * Controladores redundantes hot-swappable
 * Fontes de alimentação redundantes com troca a quente
-* Gerenciamento de banda SAS em conexões SAS para prateleiras externas [//] 2025-10-15 ontap-systems-internal/issues/1357
+* Gerenciamento de banda SAS por meio de conexões SAS para prateleiras externas
 

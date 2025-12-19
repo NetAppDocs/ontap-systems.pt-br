@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: fru-reference/drive-fru-links.html 
 keywords: drive, field replaceable units, FRU, drive replacement 
-summary: Encontre procedimentos de substituição de unidades para seu sistema de armazenamento NetApp organizados por família de plataformas.  Esta referência fornece links diretos para fluxos de trabalho de substituição de unidade passo a passo para sistemas AFF, ASA e FAS para ajudar você a localizar rapidamente o procedimento correto para seu modelo específico. 
+summary: Encontre os procedimentos de substituição de unidades para o seu sistema de armazenamento NetApp , organizados por plataforma ou família de gabinetes. Esta referência fornece links diretos para fluxos de trabalho passo a passo de substituição de unidades para sistemas AFF, ASA e FAS , bem como para sistemas de prateleira, para ajudá-lo a localizar rapidamente o procedimento correto para o seu modelo específico. 
 ---
 = Procedimentos de substituição de acionamento por família de plataforma
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Encontre procedimentos de substituição de unidades para seu sistema d
 
 
 [role="lead"]
-Encontre procedimentos de substituição de unidades para seu sistema de armazenamento NetApp organizados por família de plataformas.  Esta referência fornece links diretos para fluxos de trabalho de substituição de unidade passo a passo para sistemas AFF, ASA e FAS para ajudar você a localizar rapidamente o procedimento correto para seu modelo específico.
+Encontre os procedimentos de substituição de unidades para o seu sistema de armazenamento NetApp , organizados por plataforma ou família de gabinetes. Esta referência fornece links diretos para fluxos de trabalho passo a passo de substituição de unidades para sistemas AFF, ASA, FAS e de prateleira, para ajudá-lo a localizar rapidamente o procedimento correto para o seu modelo específico.
 
 [role="tabbed-block"]
 ====
@@ -59,6 +59,9 @@ Encontre procedimentos de substituição de unidades para seu sistema de armazen
 --
 * link:../ns224/service-replace-drive.html["NS224"]
 * link:../nx224/service-replace-drive.html["NX224"]
+* link:../sas3/service-hot-swap-drive-ds224c-ds212c.html["DS212C, DS224C"]
+* link:../sas3/service-hot-swap-drive-ds460c.html["DS460C"]
+* link:../sas3/service-replace-drawer-ds460c.html["Gaveta DS460C"]
 
 
 --

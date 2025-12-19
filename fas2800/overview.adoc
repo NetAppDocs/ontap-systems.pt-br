@@ -11,7 +11,7 @@ summary: Especificações principais para o grupo de plataformas FAS2800
 
 
 [role="lead"]
-A seguir estão especificações selecionadas para o sistema de armazenamento FAS2820 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.
+A seguir estão especificações selecionadas para o sistema de armazenamento FAS2820 em um único par de alta disponibilidade. Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.
 
 
 
@@ -23,7 +23,13 @@ A seguir estão especificações selecionadas para o sistema de armazenamento FA
 * Fator de forma: chassi 2U com 2 controladores HA e 12 slots de unidade
 * Versão ONTAP : ONTAP: 9.16.1P2
 * Slots de expansão PCIe: 4
-* Versão mínima do ONTAP : ONTAP 9.13.1RC1 == Máximos de escalonamento
+* Versão mínima do ONTAP : ONTAP 9.13.1RC1
+
+
+
+
+== máximos de escala
+
 * Tipo: NAS; Pares HA: 12; Capacidade bruta: 38,0 PB / 33,8 PiB; Memória máxima: 1536 GB
 * Tipo: SAN; Pares HA: 6; Capacidade bruta: 19,0 PB / 16,9 PiB; Memória máxima: 768 GB
 * Tipo: Par HA; Capacidade bruta: 3,2 PB / 2,8 PiB; Memória máxima: 128.0000
@@ -81,15 +87,21 @@ A seguir estão especificações selecionadas para o sistema de armazenamento FA
 * SMB 2.x
 * SMB 3.0
 * SMB 3.1
-* SMB 3.1.1 == Especificações do ambiente do sistema
+* SMB 3.1.1
+
+
+
+
+== Especificações do ambiente do sistema
+
 * Potência típica: 1815 BTU/h
 * Pior cenário de potência: 2339 BTU/h
 * Peso: 57,2 lb 25,9 kg
 * Altura: 2U
 * Largura: 19” compatível com rack IEC (17,6” 44,7 cm)
 * Profundidade: 20,0” (25,1” com suporte para gerenciamento de cabos)
-* Temperatura/Altitude/Umidade de operação: 10°C a 35°C (50°F a 95°F) a 3048 m (10000 pés) de altitude; 8% a 80% de umidade relativa, sem condensação
-* Temperatura/Umidade fora de operação: -40°C a 70°C (-40°F a 158°F) até 12192m (40000 pés) 10% a 95% de umidade relativa, sem condensação, no recipiente original
+* Temperatura/Altitude/Umidade de operação: 10°C a 35°C (50°F a 95°F) em altitudes de até 3048 m (10000 pés); umidade relativa de 8% a 80%, sem condensação.
+* Temperatura/Umidade fora de operação: -40 °C a 70 °C (-40 °F a 158 °F) até 12.192 m (40.000 pés), 10% a 95% de umidade relativa, sem condensação, na embalagem original.
 * Ruído acústico: Potência sonora declarada (LwAd): 7,8 Pressão sonora (LpAm) (posições de observação): 68,4 dB
 
 
@@ -112,5 +124,5 @@ A seguir estão especificações selecionadas para o sistema de armazenamento FA
 * Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP
 * Controladores redundantes hot-swappable
 * Fontes de alimentação redundantes com troca a quente
-* Gerenciamento de banda SAS em conexões SAS para prateleiras externas [//] 2025-10-15 ontap-systems-internal/issues/1357
+* Gerenciamento de banda SAS por meio de conexões SAS para prateleiras externas
 
