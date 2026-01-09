@@ -1,8 +1,8 @@
 ---
 permalink: fas2700/bootmedia-replace.html 
 sidebar: sidebar 
-keywords: fas2700, aff a220, replace, boot, media, controller, module, fru map 
-summary: Você deve localizar o suporte de inicialização no controlador e seguir as instruções para substituí-lo. 
+keywords: fas2700, aff a220, replace, boot, media, controller, module, fru map, manual, manual boot recovery 
+summary: Substitua a mídia de inicialização com falha em um módulo controlador FAS2700. O sistema FAS2700 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada. 
 ---
 = Substitua o suporte de arranque - FAS2700
 :allow-uri-read: 
@@ -11,6 +11,10 @@ summary: Você deve localizar o suporte de inicialização no controlador e segu
 
 
 [role="lead"]
+Substitua a mídia de inicialização com falha em um módulo controlador FAS2700. Este procedimento inclui a remoção do módulo controlador do chassi, a substituição física do componente de mídia de inicialização, a transferência da imagem de inicialização para a mídia de substituição usando um pen drive USB e a restauração do sistema ao funcionamento normal.
+
+O sistema FAS2700 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada.
+
 Para substituir o suporte de arranque, tem de remover o módulo do controlador afetado, instalar o suporte de arranque de substituição e transferir a imagem de arranque para uma unidade flash USB.
 
 

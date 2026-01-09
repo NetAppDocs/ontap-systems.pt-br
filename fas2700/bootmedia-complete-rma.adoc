@@ -1,8 +1,8 @@
 ---
 permalink: fas2700/bootmedia-complete-rma.html 
 sidebar: sidebar 
-keywords: fas2700, aff a220, complete, replacement, process, replace, return, failed, rma, instructions 
-summary: Depois de substituir a peça, você pode devolver a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. 
+keywords: fas2700, aff a220, complete, replacement, process, replace, return, failed, rma, instructions, manual, manual boot recovery 
+summary: Após substituir a peça, você pode devolver a peça defeituosa à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. O sistema FAS2700 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. 
 ---
 = Devolva a peça com falha ao NetApp - AFF A220 e FAS2700
 :allow-uri-read: 
@@ -12,3 +12,5 @@ summary: Depois de substituir a peça, você pode devolver a peça com falha à 
 
 [role="lead"]
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.
+
+O sistema FAS2700 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada.

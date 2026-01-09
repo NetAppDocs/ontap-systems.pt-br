@@ -1,8 +1,8 @@
 ---
 permalink: fas8200/bootmedia-shutdown.html 
 sidebar: sidebar 
-keywords: fas8200, shut down the impaired controller 
-summary: Você pode desligar ou assumir o controlador prejudicado usando procedimentos diferentes, dependendo da configuração do hardware do sistema de armazenamento. 
+keywords: fas8200, shut down the impaired controller, manual, manual boot recovery 
+summary: Após concluir as verificações de criptografia, desligue o controlador com defeito em um sistema FAS8200 . O sistema FAS8200 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada. 
 ---
 = Desligue o controlador desativado - FAS8200
 :allow-uri-read: 
@@ -15,7 +15,15 @@ summary: Você pode desligar ou assumir o controlador prejudicado usando procedi
 == Opção 1: A maioria dos sistemas
 
 [role="lead"]
-Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador desativado. Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador desativado.
+Após concluir as verificações de criptografia, desligue o controlador com defeito em um sistema FAS8200 . Este procedimento inclui levar o controlador ao prompt LOADER, capturar as variáveis ​​de ambiente de inicialização para referência e preparar o controlador para a substituição da mídia de inicialização, com etapas específicas que variam dependendo da configuração do seu sistema.
+
+O sistema FAS8200 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada.
+
+
+
+== Opção 1: A maioria dos sistemas
+
+Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador desativado.
 
 .Passos
 . Leve o controlador prejudicado para o prompt Loader:

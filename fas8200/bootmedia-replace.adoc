@@ -1,8 +1,8 @@
 ---
 permalink: fas8200/bootmedia-replace.html 
 sidebar: sidebar 
-keywords: fas8200, replace the boot media 
-summary: Você deve localizar o suporte de inicialização no controlador e seguir as instruções para substituí-lo. 
+keywords: fas8200, replace the boot media, manual, manual boot recovery 
+summary: Substitua a mídia de inicialização com falha em um módulo controlador FAS8200 . O sistema FAS8200 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada. 
 ---
 = Substitua o suporte de arranque - FAS8200
 :allow-uri-read: 
@@ -11,7 +11,9 @@ summary: Você deve localizar o suporte de inicialização no controlador e segu
 
 
 [role="lead"]
-Para substituir o suporte de arranque, tem de remover o módulo do controlador afetado, instalar o suporte de arranque de substituição e transferir a imagem de arranque para uma unidade flash USB.
+Substitua a mídia de inicialização com falha em um módulo controlador FAS8200 . Este procedimento inclui a remoção do módulo controlador do chassi, a substituição física do componente de mídia de inicialização, a transferência da imagem de inicialização para a mídia de substituição usando um pen drive USB e a restauração do sistema ao funcionamento normal.
+
+O sistema FAS8200 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada.
 
 
 

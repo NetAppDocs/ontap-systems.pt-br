@@ -1,8 +1,8 @@
 ---
 permalink: a700s/bootmedia-recovery-image-boot-non-2n-mcc.html 
 sidebar: sidebar 
-keywords: aff a700s, aff, a700s, boot, ontap, image, usb, drive, restore, file, system, verify, environmental, variable 
-summary: Você deve inicializar a imagem ONTAP a partir da unidade USB, restaurar o sistema de arquivos e verificar as variáveis ambientais. 
+keywords: aff a700s, aff, a700s, boot, ontap, image, usb, drive, restore, file, system, verify, environmental, variable, manual, manual boot recovery 
+summary: Para restaurar a mídia de inicialização, inicialize o sistema AFF A700s a partir da imagem de recuperação do ONTAP na unidade USB. O sistema AFF A700s suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada. 
 ---
 = Inicie a imagem de recuperação - AFF A700s
 :allow-uri-read: 
@@ -11,8 +11,11 @@ summary: Você deve inicializar a imagem ONTAP a partir da unidade USB, restaura
 
 
 [role="lead"]
-Você deve inicializar a imagem ONTAP a partir da unidade USB, restaurar o sistema de arquivos e verificar as variáveis ambientais.
+Para restaurar a mídia de inicialização, inicialize o sistema AFF A700s a partir da imagem de recuperação do ONTAP na unidade USB. Este procedimento inclui inicializar a partir da unidade flash USB, restaurar o sistema de arquivos, verificar as variáveis ​​de ambiente e retornar o controlador à operação normal após a substituição da mídia de inicialização.
 
+O sistema AFF A700s suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada.
+
+.Passos
 . A partir do prompt Loader, inicialize a imagem de recuperação da unidade flash USB: `boot_recovery`
 +
 A imagem é transferida da unidade flash USB.

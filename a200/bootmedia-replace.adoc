@@ -1,7 +1,7 @@
 ---
 permalink: a200/bootmedia-replace.html 
 sidebar: sidebar 
-keywords: aff a200, locate, boot, media, controller, direction, replace 
+keywords: aff a200, locate, boot, media, controller, direction, replace, manual, manual boot recovery 
 summary: Você deve localizar o suporte de inicialização no controlador e seguir as instruções para substituí-lo. 
 ---
 = Substitua o suporte de arranque - AFF A200
@@ -11,7 +11,7 @@ summary: Você deve localizar o suporte de inicialização no controlador e segu
 
 
 [role="lead"]
-Para substituir o suporte de arranque, tem de remover o módulo do controlador afetado, instalar o suporte de arranque de substituição e transferir a imagem de arranque para uma unidade flash USB.
+Para substituir a mídia de inicialização, você deve remover o módulo controlador defeituoso, instalar a mídia de inicialização de substituição e transferir a imagem de inicialização para uma unidade flash USB. O sistema AFF A200 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada.
 
 
 

@@ -27,7 +27,7 @@ NOTE: Ao remover uma fonte de alimentação, utilize sempre duas mãos para supo
 .Animação - Remover/instalar a PSU
 video::6d0eee92-72e2-4da4-a4fa-adf9016b57ff[panopto]
 +
-image::../media/drw_a900_remove_install_PSU_module.png[Remova ou instale um módulo da PSU]
+image::../media/drw_a900_remove_install_PSU_module.svg[Remova ou instale um módulo da PSU]
 
 +
 [cols="1,4"]
@@ -60,7 +60,7 @@ NOTE: Os módulos da ventoinha são curtos. Apoie sempre a parte inferior do mó
 .Animação - Remover/instalar a ventoinha
 video::3c3c8d93-b48e-4554-87c8-adf9016af819[panopto]
 +
-image::../media/drw_a900_remove_install_fan.png[Remova ou instale a ventoinha]
+image::../media/drw_a900_remove_install_fan.svg[Remova ou instale a ventoinha]
 
 +
 [cols="1,4"]
@@ -97,7 +97,7 @@ Para substituir o chassis, tem de remover o ou os módulos do controlador do cha
 .Animação - Remover o controlador
 video::256721fd-4c2e-40b3-841a-adf2000df5fa[panopto]
 +
-image::../media/drw_a900_remove_PCM.png[Retire o controlador]
+image::../media/drw_a900_remove_PCM.svg[Retire o controlador]
 
 +
 [cols="1,4"]
@@ -154,7 +154,7 @@ Certifique-se de manter o controle de qual slot o módulo de e/S estava.
 .Animação - Remover/instalar o módulo de e/S.
 video::3a5b1f6e-15ec-40b4-bb2a-adf9016af7b6[panopto]
 +
-image:../media/drw_a900_remove_PCIe_module.png["Remova um módulo PCIe"]
+image:../media/drw_a900_remove_PCIe_module.svg["Remova um módulo PCIe"]
 
 
 
@@ -192,7 +192,7 @@ Retire os dois módulos de alimentação do controlador de desativação da part
 .Animação - Remover/instalar DCPM
 video::ade18276-5dbc-4b91-9a0e-adf9016b4e55[panopto]
 +
-image::../media/drw_a900_remove_NV_battery.png[Retire uma bateria NV]
+image::../media/drw_a900_remove_NV_battery.svg[Retire uma bateria NV]
 
 +
 [cols="1,4"]
@@ -216,7 +216,7 @@ Retire os módulos LED USB.
 
 .Animação - Remover/instalar USB
 video::eb715462-cc20-454f-bcf9-adf9016af84e[panopto]
-image::../media/drw_a900_remove_replace_LED_mod.png[Remova ou substitua um módulo LED USB]
+image::../media/drw_a900_remove_replace_LED_mod.svg[Remova ou substitua um módulo LED USB]
 
 [cols="1,4"]
 |===

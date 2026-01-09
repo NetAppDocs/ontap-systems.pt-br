@@ -1,8 +1,8 @@
 ---
 permalink: a700/bootmedia-replace.html 
 sidebar: sidebar 
-keywords: aff a700, fas9000, open, controller, module, system, access, component 
-summary: Para aceder aos componentes no interior do controlador, tem de remover primeiro o módulo do controlador do sistema e, em seguida, remover a tampa do módulo do controlador. 
+keywords: aff a700, open, controller, module, system, access, component, manual, manual boot recovery 
+summary: Substitua a mídia de inicialização com defeito em um módulo controlador AFF A700 . O sistema AFF A700 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada. 
 ---
 = Substitua o suporte de arranque - AFF A700
 :allow-uri-read: 
@@ -11,6 +11,10 @@ summary: Para aceder aos componentes no interior do controlador, tem de remover 
 
 
 [role="lead"]
+Substitua a mídia de inicialização com defeito em um módulo controlador AFF A700 . Este procedimento inclui a remoção do módulo controlador do chassi, a substituição física do componente de mídia de inicialização, a transferência da imagem de inicialização para a mídia de substituição usando um pen drive USB e a restauração do sistema ao funcionamento normal.
+
+O sistema AFF A700 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada.
+
 Para substituir o suporte de arranque, tem de remover o módulo do controlador afetado, instalar o suporte de arranque de substituição e transferir a imagem de arranque para uma unidade flash USB.
 
 

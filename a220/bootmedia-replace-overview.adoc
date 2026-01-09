@@ -1,8 +1,8 @@
 ---
 permalink: a220/bootmedia-replace-overview.html 
 sidebar: sidebar 
-keywords: fas2700, aff a220, replace, boot, media, image, nondisruptive, disruptive, replacement, fat32, usb 
-summary: 'A Mídia de inicialização armazena um conjunto primário e secundário de arquivos de sistema (imagem de inicialização) que o sistema usa quando ele é inicializado. Dependendo da configuração da rede, você pode realizar uma substituição sem interrupções ou disruptiva.' 
+keywords: fas2700, aff a220, replace, boot, media, image, nondisruptive, disruptive, replacement, fat32, usb, manual, manual boot recovery 
+summary: 'A mídia de inicialização armazena um conjunto primário e um conjunto secundário de arquivos de sistema (imagem de inicialização) que o sistema usa ao inicializar. Dependendo da configuração da sua rede, você pode realizar uma substituição sem interrupção ou com interrupção. O sistema AFF A220 suporta apenas procedimentos manuais de recuperação de mídia de inicialização.' 
 ---
 = Descrição geral da substituição do suporte de arranque - AFF A220
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: 'A Mídia de inicialização armazena um conjunto primário e secundár
 
 
 [role="lead"]
+O sistema AFF A220 suporta apenas procedimentos manuais de recuperação de mídia de inicialização.
+
 A Mídia de inicialização armazena um conjunto primário e secundário de arquivos do sistema (imagem de inicialização) que o sistema usa quando ele é inicializado. Dependendo da configuração da rede, você pode realizar uma substituição sem interrupções ou disruptiva.
 
 Tem de ter uma unidade flash USB, formatada para FAT32, com a quantidade de armazenamento adequada para guardar o `image_xxx.tgz` ficheiro.

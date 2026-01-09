@@ -1,8 +1,8 @@
 ---
 permalink: a700s/bootmedia-replace-overview.html 
 sidebar: sidebar 
-keywords: aff a700s, aff, a700s, primary, boot, media, store, ontap, image, system, restore, primary, media, secondary, usb, flash, drive, replace, replace the boot media 
-summary: A Mídia de inicialização principal armazena a imagem de inicialização do ONTAP que o sistema usa quando ele é inicializado. Pode restaurar a imagem principal do suporte de arranque utilizando a imagem ONTAP no suporte de arranque secundário ou, se necessário, utilizando uma unidade flash USB. 
+keywords: aff a700s, aff, a700s, primary, boot, media, store, ontap, image, system, restore, primary, media, secondary, usb, flash, drive, replace, replace the boot media, manual, manual boot recovery 
+summary: Saiba mais sobre a substituição da mídia de inicialização em um sistema AFF A700s e entenda os métodos de recuperação. O sistema AFF A700s suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada. 
 ---
 = Descrição geral da substituição do suporte de arranque - AFF A700s
 :allow-uri-read: 
@@ -11,7 +11,9 @@ summary: A Mídia de inicialização principal armazena a imagem de inicializaç
 
 
 [role="lead"]
-A Mídia de inicialização principal armazena a imagem de inicialização do ONTAP que o sistema usa quando ele é inicializado. Pode restaurar a imagem principal do suporte de arranque utilizando a imagem ONTAP no suporte de arranque secundário ou, se necessário, utilizando uma unidade flash USB.
+Saiba mais sobre a substituição da mídia de inicialização em um sistema AFF A700s e entenda os métodos de recuperação. A mídia de inicialização primária armazena a imagem de inicialização do ONTAP que o sistema usa durante a inicialização. Você pode restaurar a imagem da mídia de inicialização primária usando a imagem ONTAP da mídia de inicialização secundária ou, se necessário, de uma unidade flash USB formatada em FAT32.
+
+O sistema AFF A700s suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada.
 
 Se a Mídia de inicialização secundária tiver falhado ou estiver faltando o arquivo image.tgz, você deve restaurar a Mídia de inicialização primária usando uma unidade flash USB. A unidade deve ser formatada para FAT32 e deve ter a quantidade apropriada de armazenamento para manter o arquivo image_xxx.tgz.
 

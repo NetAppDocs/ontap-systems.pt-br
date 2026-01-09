@@ -1,8 +1,8 @@
 ---
 permalink: a700/bootmedia-shutdown.html 
 sidebar: sidebar 
-keywords: aff a700, fas9000, shut, down, impaired, controller, take, over 
-summary: Você pode desligar ou assumir o controlador prejudicado usando procedimentos diferentes, dependendo da configuração do hardware do sistema de armazenamento. 
+keywords: aff a700, shut, down, impaired, controller, take, over, manual, manual boot recovery 
+summary: Após concluir as verificações de criptografia, desligue o controlador com defeito em um sistema AFF A700 . O sistema AFF A700 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada. 
 ---
 = Desligue o controlador desativado - AFF A700
 :allow-uri-read: 
@@ -11,7 +11,9 @@ summary: Você pode desligar ou assumir o controlador prejudicado usando procedi
 
 
 [role="lead"]
-Encerre ou assuma o controlador afetado utilizando o procedimento adequado para a sua configuração.
+Após concluir as verificações de criptografia, desligue o controlador com defeito em um sistema AFF A700 . Este procedimento inclui levar o controlador ao prompt LOADER, capturar as variáveis ​​de ambiente de inicialização para referência e preparar o controlador para a substituição da mídia de inicialização, com etapas específicas que variam dependendo da configuração do seu sistema.
+
+O sistema AFF A700 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada.
 
 
 

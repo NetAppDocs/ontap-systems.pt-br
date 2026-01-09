@@ -1,8 +1,8 @@
 ---
 permalink: a700s/bootmedia-replace.html 
 sidebar: sidebar 
-keywords: aff a700s, aff, a700s, locate, fail, boot, media, controller, module, pcie, led, replace, replace the boot media 
-summary: Você deve localizar o suporte de inicialização com falha no módulo do controlador removendo o módulo PCIe do meio no módulo do controlador, localize o suporte de inicialização com falha pelo LED aceso próximo ao suporte de inicialização e, em seguida, substitua o suporte de inicialização. 
+keywords: aff a700s, aff, a700s, locate, fail, boot, media, controller, module, pcie, led, replace, replace the boot media, manual, manual boot recovery 
+summary: Substitua a mídia de inicialização com defeito em um módulo controlador AFF A700s . O sistema AFF A700s suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada. 
 ---
 = Substitua o suporte de arranque - AFF A700s
 :allow-uri-read: 
@@ -11,7 +11,9 @@ summary: Você deve localizar o suporte de inicialização com falha no módulo 
 
 
 [role="lead"]
-Tem de remover o módulo do controlador do chassis, abri-lo e, em seguida, substituir o suporte de arranque com falha.
+Substitua a mídia de inicialização com defeito em um módulo controlador AFF A700s . Este procedimento inclui a remoção do módulo controlador do chassi, a localização da mídia de inicialização com falha usando o indicador LED aceso, a substituição física do componente da mídia de inicialização e a restauração do sistema ao funcionamento normal.
+
+O sistema AFF A700s suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada.
 
 
 

@@ -1,8 +1,8 @@
 ---
 permalink: a700s/bootmedia-encryption-preshutdown-checks.html 
 sidebar: sidebar 
-keywords: aff a700s, aff, a700s, shut, down, impair, controller, check, status, onboard, encryption, keys, status, disable, automatic, giveback, ontap, pre-shutdown, pre-shutdown checks for onboard encyption keys 
-summary: Antes de desligar o controlador com deficiência e verificar o estado das chaves de encriptação integradas, tem de verificar o estado do controlador com deficiência, desativar a giveback automática e verificar a versão do ONTAP em execução. 
+keywords: aff a700s, aff, a700s, shut, down, impair, controller, check, status, onboard, encryption, keys, status, disable, automatic, giveback, ontap, pre-shutdown, pre-shutdown checks for onboard encyption keys, manual, manual boot recovery 
+summary: Verifique o suporte e o status da chave de criptografia antes de desligar o controlador com defeito em um sistema AFF A700s . O sistema AFF A700s suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada. 
 ---
 = Verifique o suporte e o status da chave de criptografia - AFF A700s
 :allow-uri-read: 
@@ -11,7 +11,9 @@ summary: Antes de desligar o controlador com deficiência e verificar o estado d
 
 
 [role="lead"]
-Para garantir a segurança dos dados no sistema de armazenamento, é necessário verificar o suporte e o status da chave de criptografia na Mídia de inicialização. Verifique se sua versão do ONTAP suporta criptografia de volume NetApp (NVE) e, antes de desligar a controladora, verifique se o gerenciador de chaves está ativo.
+Verifique o suporte e o status da chave de criptografia antes de desligar o controlador com defeito em um sistema AFF A700s . Este procedimento inclui verificar a compatibilidade da versão do ONTAP com o NetApp Volume Encryption (NVE), verificar a configuração do gerenciador de chaves e fazer backup das informações de criptografia para garantir a segurança dos dados durante a recuperação da mídia de inicialização.
+
+O sistema AFF A700s suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada.
 
 
 

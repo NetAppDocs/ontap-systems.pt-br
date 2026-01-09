@@ -1,8 +1,8 @@
 ---
 permalink: a300/bootmedia-recovery-image-boot-options.html 
 sidebar: sidebar 
-keywords: aff a300, boot the recovery image 
-summary: O procedimento para inicializar o controlador prejudicado a partir da imagem de recuperação depende se o sistema está em uma configuração de MetroCluster de dois nós. 
+keywords: aff a300, boot the recovery image, manual, manual boot recovery 
+summary: O procedimento para inicializar o controlador com defeito a partir da imagem de recuperação depende de o sistema estar em uma configuração MetroCluster de dois nós. O sistema AFF A300 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. 
 ---
 = Inicie a imagem de recuperação - AFF A300
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: O procedimento para inicializar o controlador prejudicado a partir da i
 
 
 [role="lead"]
-O procedimento para inicializar o controlador prejudicado a partir da imagem de recuperação depende se o sistema está em uma configuração MetroCluster de dois controladores.
+O procedimento para inicializar o controlador com defeito a partir da imagem de recuperação depende de o sistema estar em uma configuração MetroCluster com dois controladores. O sistema AFF A300 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada.
 
 
 

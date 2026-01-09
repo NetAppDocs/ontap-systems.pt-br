@@ -1,8 +1,8 @@
 ---
 permalink: fas9000/bootmedia-replace.html 
 sidebar: sidebar 
-keywords: aff a700, fas9000, open, controller, module, system, access, component 
-summary: Para aceder aos componentes no interior do controlador, tem de remover primeiro o módulo do controlador do sistema e, em seguida, remover a tampa do módulo do controlador. 
+keywords: aff a700, fas9000, open, controller, module, system, access, component, manual, manual boot recovery 
+summary: Para acessar os componentes internos do controlador, primeiro você deve remover o módulo do controlador do sistema e, em seguida, remover a tampa do módulo do controlador. O sistema FAS9000 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. 
 ---
 = Substitua o suporte de arranque - FAS9000
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: Para aceder aos componentes no interior do controlador, tem de remover 
 
 
 [role="lead"]
+Para substituir a mídia de inicialização, você deve remover o módulo controlador defeituoso, instalar a mídia de inicialização de substituição e transferir a imagem de inicialização para uma unidade flash USB. O sistema FAS9000 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada.
+
 Para substituir o suporte de arranque, tem de remover o módulo do controlador afetado, instalar o suporte de arranque de substituição e transferir a imagem de arranque para uma unidade flash USB.
 
 

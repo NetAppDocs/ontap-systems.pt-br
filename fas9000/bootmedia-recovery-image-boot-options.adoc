@@ -1,8 +1,8 @@
 ---
 permalink: fas9000/bootmedia-recovery-image-boot-options.html 
 sidebar: sidebar 
-keywords: aff a700, fas9000, boot, recovery, image, two, node, metrocluster, configuration 
-summary: O procedimento para inicializar o nó prejudicado a partir da imagem de recuperação depende se o sistema está em uma configuração MetroCluster de dois nós. 
+keywords: aff a700, fas9000, boot, recovery, image, two, node, metrocluster, configuration, manual, manual boot recovery 
+summary: O procedimento para inicializar o nó com problemas a partir da imagem de recuperação depende de o sistema estar em uma configuração MetroCluster de dois nós. O sistema FAS9000 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. 
 ---
 = Inicie a imagem de recuperação - FAS9000
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: O procedimento para inicializar o nó prejudicado a partir da imagem de
 
 
 [role="lead"]
+O procedimento para inicializar o nó com problemas a partir da imagem de recuperação depende de o sistema estar em uma configuração MetroCluster de dois nós. O sistema FAS9000 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada.
+
 O procedimento para inicializar o nó prejudicado a partir da imagem de recuperação depende se o sistema está em uma configuração MetroCluster de dois nós.
 
 

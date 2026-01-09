@@ -1,8 +1,8 @@
 ---
 permalink: a700/bootmedia-recovery-image-boot-options.html 
 sidebar: sidebar 
-keywords: aff a700, fas9000, boot, recovery, image, two, node, metrocluster, configuration 
-summary: O procedimento para inicializar o nó prejudicado a partir da imagem de recuperação depende se o sistema está em uma configuração MetroCluster de dois nós. 
+keywords: aff a700, boot, recovery, image, two, node, metrocluster, configuration, manual, manual boot recovery 
+summary: Para restaurar a mídia de inicialização, inicie o sistema AFF A700 a partir da imagem de recuperação do ONTAP na unidade USB. O sistema AFF A700 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada. 
 ---
 = Inicie a imagem de recuperação - AFF A700
 :allow-uri-read: 
@@ -11,6 +11,10 @@ summary: O procedimento para inicializar o nó prejudicado a partir da imagem de
 
 
 [role="lead"]
+Para restaurar a mídia de inicialização, inicie o sistema AFF A700 a partir da imagem de recuperação do ONTAP na unidade USB. Este procedimento inclui inicializar a partir da unidade flash USB, restaurar o sistema de arquivos, verificar as variáveis ​​de ambiente e retornar o controlador à operação normal, com etapas específicas que variam dependendo se o sistema está em uma configuração MetroCluster de dois nós.
+
+O sistema AFF A700 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada.
+
 O procedimento para inicializar o nó prejudicado a partir da imagem de recuperação depende se o sistema está em uma configuração MetroCluster de dois nós.
 
 

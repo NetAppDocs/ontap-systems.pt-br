@@ -1,8 +1,8 @@
 ---
 permalink: fas2600/bootmedia-recovery-image-boot-non-2n-mcc.html 
 sidebar: sidebar 
-keywords: fas2600, verify environment variables, image, boot the recovery image 
-summary: Você deve inicializar a imagem ONTAP a partir da unidade USB, restaurar o sistema de arquivos e verificar as variáveis ambientais. 
+keywords: fas2600, verify environment variables, image, boot the recovery image, manual, manual boot recovery 
+summary: Inicialize a imagem de recuperação do ONTAP a partir da unidade USB em um sistema FAS2600 para restaurar a mídia de inicialização. O sistema FAS2600 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada. 
 ---
 = Inicie a imagem de recuperação - FAS2600
 :allow-uri-read: 
@@ -11,7 +11,9 @@ summary: Você deve inicializar a imagem ONTAP a partir da unidade USB, restaura
 
 
 [role="lead"]
-Você deve inicializar a imagem ONTAP a partir da unidade USB, restaurar o sistema de arquivos e verificar as variáveis ambientais.
+Inicialize a imagem de recuperação do ONTAP a partir da unidade USB em um sistema FAS2600 para restaurar a mídia de inicialização. Este procedimento inclui inicializar a partir da unidade flash USB, restaurar o sistema de arquivos, verificar as variáveis ​​de ambiente e retornar o controlador à operação normal após a substituição da mídia de inicialização.
+
+O sistema FAS2600 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada.
 
 .Passos
 . A partir do prompt Loader, inicialize a imagem de recuperação da unidade flash USB: `boot_recovery`

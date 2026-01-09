@@ -1,8 +1,8 @@
 ---
 permalink: a700/bootmedia-encryption-preshutdown-checks.html 
 sidebar: sidebar 
-keywords: aff a700, fas9000, shutdown, check, onboard, encryption, key 
-summary: Antes de desligar o nó prejudicado e verificar o status das chaves de criptografia integradas, você deve verificar o status do nó prejudicado, desativar a giveback automática e verificar qual versão do ONTAP o sistema está sendo executado. 
+keywords: aff a700, shutdown, check, onboard, encryption, key, manual, manual boot recovery 
+summary: Antes de desligar o nó com problemas e verificar o status das chaves de criptografia integradas, você deve verificar o status do nó com problemas, desativar a devolução automática e verificar qual versão do ONTAP o sistema está executando. O sistema AFF A700 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. 
 ---
 = Verifique o suporte e o status da chave de criptografia - AFF A700
 :allow-uri-read: 
@@ -11,7 +11,9 @@ summary: Antes de desligar o nó prejudicado e verificar o status das chaves de 
 
 
 [role="lead"]
-Para garantir a segurança dos dados no sistema de armazenamento, é necessário verificar o suporte e o status da chave de criptografia na Mídia de inicialização. Verifique se sua versão do ONTAP suporta criptografia de volume NetApp (NVE) e, antes de desligar a controladora, verifique se o gerenciador de chaves está ativo.
+Para garantir a segurança dos dados no seu sistema de armazenamento, você precisa verificar o suporte e o status da chave de criptografia na sua mídia de inicialização. O sistema AFF A700 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada.
+
+Verifique se a sua versão do ONTAP é compatível com a Criptografia de Volume NetApp (NVE) e, antes de desligar o controlador, verifique se o gerenciador de chaves está ativo.
 
 
 

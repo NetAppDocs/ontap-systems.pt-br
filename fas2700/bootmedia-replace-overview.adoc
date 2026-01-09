@@ -1,16 +1,20 @@
 ---
 permalink: fas2700/bootmedia-replace-overview.html 
 sidebar: sidebar 
-keywords: fas2700, aff a220, replace, boot, media, image, nondisruptive, disruptive, replacement, fat32, usb 
-summary: 'A Mídia de inicialização armazena um conjunto primário e secundário de arquivos de sistema (imagem de inicialização) que o sistema usa quando ele é inicializado. Dependendo da configuração da rede, você pode realizar uma substituição sem interrupções ou disruptiva.' 
+keywords: fas2700, aff a220, replace, boot, media, image, nondisruptive, disruptive, replacement, fat32, usb, manual, manual boot recovery 
+summary: 'Saiba mais sobre a substituição da mídia de inicialização em um sistema FAS2700 e entenda os diferentes métodos de substituição. A mídia de inicialização armazena arquivos de imagem de inicialização primários e secundários que o sistema usa durante a inicialização. Dependendo da configuração da sua rede, você pode realizar uma substituição sem interrupção (par HA conectado à rede) ou uma substituição com interrupção (requer duas reinicializações).' 
 ---
-= Descrição geral da substituição do suporte de arranque - AFF A220 e FAS2700
+= Visão geral da substituição da mídia de inicialização - FAS2700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Saiba mais sobre a substituição da mídia de inicialização em um sistema FAS2700 e entenda os diferentes métodos de substituição.
+
+A mídia de inicialização armazena arquivos de imagem de inicialização primários e secundários que o sistema usa durante a inicialização. Dependendo da configuração da sua rede, você pode realizar uma substituição sem interrupção (par HA conectado à rede) ou uma substituição com interrupção (requer duas reinicializações).
+
 A Mídia de inicialização armazena um conjunto primário e secundário de arquivos do sistema (imagem de inicialização) que o sistema usa quando ele é inicializado. Dependendo da configuração da rede, você pode realizar uma substituição sem interrupções ou disruptiva.
 
 Tem de ter uma unidade flash USB, formatada para FAT32, com a quantidade de armazenamento adequada para guardar o `image_xxx.tgz` ficheiro.

@@ -1,8 +1,8 @@
 ---
 permalink: a700s/bootmedia-shutdown.html 
 sidebar: sidebar 
-keywords: aff a700s, aff, a700s, completing, complete, nve, nse, shutdown, impair, controller, shut down the controller 
-summary: Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador desativado. 
+keywords: aff a700s, aff, a700s, completing, complete, nve, nse, shutdown, impair, controller, shut down the controller, manual, manual boot recovery 
+summary: Após concluir as verificações de criptografia, desligue o controlador com defeito em um sistema AFF A700s . O sistema AFF A700s suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada. 
 ---
 = Desligue o controlador - AFF A700s
 :allow-uri-read: 
@@ -11,6 +11,10 @@ summary: Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desl
 
 
 [role="lead"]
+Após concluir as verificações de criptografia, desligue o controlador com defeito em um sistema AFF A700s . Este procedimento inclui levar o controlador ao prompt LOADER, capturar as variáveis ​​de ambiente de inicialização para referência e preparar o controlador para a substituição da mídia de inicialização.
+
+O sistema AFF A700s suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada.
+
 Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador desativado.
 
 .Passos

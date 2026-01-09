@@ -1,8 +1,8 @@
 ---
 permalink: c190/bootmedia-replace-overview.html 
 sidebar: sidebar 
-keywords: AFF c190, nondisruptive, disruptive, replace the boot media 
-summary: 'A Mídia de inicialização armazena um conjunto primário e secundário de arquivos de sistema (imagem de inicialização) que o sistema usa quando ele é inicializado. Dependendo da configuração da rede, você pode realizar uma substituição sem interrupções ou disruptiva.' 
+keywords: AFF c190, nondisruptive, disruptive, replace the boot media, manual, manual boot recovery 
+summary: Saiba mais sobre a substituição da mídia de inicialização em um sistema AFF C190 e entenda os diferentes métodos de substituição. O sistema AFF C190 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada. 
 ---
 = Descrição geral da substituição do suporte de arranque - AFF C190
 :allow-uri-read: 
@@ -11,7 +11,9 @@ summary: 'A Mídia de inicialização armazena um conjunto primário e secundár
 
 
 [role="lead"]
-A Mídia de inicialização armazena um conjunto primário e secundário de arquivos do sistema (imagem de inicialização) que o sistema usa quando ele é inicializado. Dependendo da configuração da rede, você pode realizar uma substituição sem interrupções ou disruptiva.
+Saiba mais sobre a substituição da mídia de inicialização em um sistema AFF C190 e entenda os diferentes métodos de substituição. A mídia de inicialização armazena arquivos de imagem de inicialização primários e secundários que o sistema usa durante a inicialização. Dependendo da configuração da sua rede, você pode realizar uma substituição sem interrupção (par HA conectado à rede) ou uma substituição com interrupção (requer duas reinicializações).
+
+O sistema AFF C190 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada.
 
 Tem de ter uma unidade flash USB, formatada para FAT32, com a quantidade de armazenamento adequada para guardar o `image_xxx.tgz` ficheiro.
 

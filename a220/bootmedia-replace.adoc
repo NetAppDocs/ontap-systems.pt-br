@@ -1,8 +1,8 @@
 ---
 permalink: a220/bootmedia-replace.html 
 sidebar: sidebar 
-keywords: aff a220, replace, boot, media, controller, module, fru map 
-summary: Você deve localizar o suporte de inicialização no controlador e seguir as instruções para substituí-lo. 
+keywords: aff a220, replace, boot, media, controller, module, fru map, manual, manual boot recovery 
+summary: Você deve localizar a mídia de inicialização no controlador e seguir as instruções para substituí-la. O sistema AFF A220 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. 
 ---
 = Substitua o suporte de arranque - AFF A220
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: Você deve localizar o suporte de inicialização no controlador e segu
 
 
 [role="lead"]
+O sistema AFF A220 suporta apenas procedimentos manuais de recuperação de mídia de inicialização.
+
 Para substituir o suporte de arranque, tem de remover o módulo do controlador afetado, instalar o suporte de arranque de substituição e transferir a imagem de arranque para uma unidade flash USB.
 
 

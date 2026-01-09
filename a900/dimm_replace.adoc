@@ -155,7 +155,7 @@ Para aceder aos componentes no interior do controlador, tem de remover primeiro 
 .Animação - Remover o controlador
 video::256721fd-4c2e-40b3-841a-adf2000df5fa[panopto]
 +
-image::../media/drw_a900_remove_PCM.png[Solte o controlador]
+image::../media/drw_a900_remove_PCM.svg[Solte o controlador]
 
 +
 [cols="1,4"]
@@ -181,7 +181,7 @@ Certifique-se de que suporta a parte inferior do módulo do controlador enquanto
 
 . Coloque a tampa do módulo do controlador para cima sobre uma superfície estável e plana, pressione o botão azul na tampa, deslize a tampa para a parte traseira do módulo do controlador e, em seguida, gire a tampa para cima e levante-a do módulo do controlador.
 +
-image::../media/drw_a900_PCM_open.png[Levante a tampa do módulo do controlador]
+image::../media/drw_a900_PCM_open.svg[Levante a tampa do módulo do controlador]
 
 +
 [cols="1,4"]
@@ -208,7 +208,7 @@ NOTE: O CONTROLADOR Ver2 tem menos soquetes DIMM. Não há redução no número 
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Localize os DIMMs no módulo do controlador.
 +
-image::../media/drw_a900_DIMM_map.png[Mapa de localização do DIMM]
+image::../media/drw_a900_DIMM_map.svg[Mapa de localização do DIMM]
 
 . Ejete o DIMM de seu slot, empurrando lentamente as duas abas do ejetor do DIMM em ambos os lados do DIMM e, em seguida, deslize o DIMM para fora do slot.
 +
@@ -219,7 +219,7 @@ IMPORTANT: Segure cuidadosamente o DIMM pelas bordas para evitar a pressão nos 
 .Animação - Substituir DIMM
 video::db161030-298a-4ae4-b902-adf2000e2aa4[panopto]
 +
-image::../media/drw_a900_replace_PCM_dimms.png[Remova um DIMM]
+image::../media/drw_a900_replace_PCM_dimms.svg[Remova um DIMM]
 
 +
 [cols="1,4"]
@@ -266,7 +266,7 @@ Para pares de HA com dois módulos de controlador no mesmo chassi, a sequência 
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Se ainda não o tiver feito, substitua a tampa no módulo do controlador.
 +
-image::../media/drw_a900_PCM_open.png[Levante a tampa do módulo do controlador]
+image::../media/drw_a900_PCM_open.svg[Levante a tampa do módulo do controlador]
 
 +
 [cols="1,4"]
@@ -284,7 +284,7 @@ Botão de bloqueio da tampa do módulo do controlador
 .Animação - Instalar controlador
 video::099237f3-d7f2-4749-86e2-adf2000df53c[panopto]
 +
-image::../media/drw_a900_remove_PCM.png[Solte o controlador]
+image::../media/drw_a900_remove_PCM.svg[Solte o controlador]
 
 +
 [cols="1,4"]

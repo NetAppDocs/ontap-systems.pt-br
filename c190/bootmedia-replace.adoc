@@ -1,8 +1,8 @@
 ---
 permalink: c190/bootmedia-replace.html 
 sidebar: sidebar 
-keywords: aff c190, locate, boot, media, controller, direction, replace 
-summary: Deve localizar o suporte de arranque no módulo do controlador e, em seguida, seguir as instruções para o substituir. 
+keywords: aff c190, locate, boot, media, controller, direction, replace, manual, manual boot recovery 
+summary: Substitua a mídia de inicialização com defeito em um módulo controlador AFF C190 . O sistema AFF C190 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada. 
 ---
 = Substitua o suporte de arranque - AFF C190
 :allow-uri-read: 
@@ -11,7 +11,9 @@ summary: Deve localizar o suporte de arranque no módulo do controlador e, em se
 
 
 [role="lead"]
-Para substituir o suporte de arranque, tem de remover o módulo do controlador afetado, instalar o suporte de arranque de substituição e transferir a imagem de arranque para uma unidade flash USB.
+Substitua a mídia de inicialização com defeito em um módulo controlador AFF C190 . Este procedimento inclui a remoção do módulo controlador do chassi, a substituição física do componente de mídia de inicialização, a transferência da imagem de inicialização para a mídia de substituição usando um pen drive USB e a restauração do sistema ao funcionamento normal.
+
+O sistema AFF C190 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada.
 
 
 

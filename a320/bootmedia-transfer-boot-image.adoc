@@ -1,8 +1,8 @@
 ---
 permalink: a320/bootmedia-transfer-boot-image.html 
 sidebar: sidebar 
-keywords: aff, a320, aff a320, replacement, boot, media, install, image, transfer, usb, flash, drive, transfer the boot image to the boot media using a usb flash drive 
-summary: A Mídia de inicialização de substituição que você instalou não tem uma imagem de inicialização, então você precisa transferir uma imagem de inicialização usando uma unidade flash USB. 
+keywords: aff, a320, aff a320, replacement, boot, media, install, image, transfer, usb, flash, drive, transfer the boot image to the boot media using a usb flash drive, manual, manual boot recovery 
+summary: A mídia de inicialização de substituição que você instalou não possui uma imagem de inicialização, portanto, você precisa transferir uma imagem de inicialização usando um pen drive USB. O sistema AFF A320 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada. 
 ---
 = Transfira a imagem de arranque para o suporte de arranque utilizando uma unidade flash USB - AFF A320
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: A Mídia de inicialização de substituição que você instalou não t
 
 
 [role="lead"]
-A Mídia de inicialização de substituição que você instalou não tem uma imagem de inicialização, então você precisa transferir uma imagem de inicialização usando uma unidade flash USB.
+A mídia de inicialização de substituição que você instalou não possui uma imagem de inicialização, portanto, você precisa transferir uma imagem de inicialização usando um pen drive USB. O sistema AFF A320 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada.
 
 * Você deve ter uma unidade flash USB, formatada para MBR/FAT32, com pelo menos 4GBGB de capacidade
 * Uma cópia da mesma versão de imagem do ONTAP que a que o controlador afetado estava a executar. Você pode baixar a imagem apropriada da seção Downloads no site de suporte da NetApp

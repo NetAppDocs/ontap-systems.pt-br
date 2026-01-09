@@ -1,8 +1,8 @@
 ---
 permalink: c190/bootmedia-recovery-image-boot-non-2n-mcc.html 
 sidebar: sidebar 
-keywords: aff c190, verify environment variables, image, boot the recovery image 
-summary: Você deve inicializar a imagem ONTAP a partir da unidade USB, restaurar o sistema de arquivos e verificar as variáveis ambientais. 
+keywords: aff c190, verify environment variables, image, boot the recovery image, manual, manual boot recovery 
+summary: Para restaurar a mídia de inicialização, inicie o sistema AFF C190 a partir da imagem de recuperação do ONTAP na unidade USB. O sistema AFF C190 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada. 
 ---
 = Inicie a imagem de recuperação - AFF C190
 :allow-uri-read: 
@@ -11,7 +11,9 @@ summary: Você deve inicializar a imagem ONTAP a partir da unidade USB, restaura
 
 
 [role="lead"]
-Você deve inicializar a imagem ONTAP a partir da unidade USB, restaurar o sistema de arquivos e verificar as variáveis ambientais.
+Para restaurar a mídia de inicialização, inicie o sistema AFF C190 a partir da imagem de recuperação do ONTAP na unidade USB. Este procedimento inclui inicializar a partir da unidade flash USB, restaurar o sistema de arquivos, verificar as variáveis ​​de ambiente e retornar o controlador à operação normal após a substituição da mídia de inicialização.
+
+O sistema AFF C190 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada.
 
 .Passos
 . A partir do prompt Loader, inicialize a imagem de recuperação da unidade flash USB:
