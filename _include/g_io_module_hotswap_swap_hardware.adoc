@@ -2,11 +2,11 @@
 :allow-uri-read: 
 
 
-Substitua o cluster com falha e o módulo de E/S HA no slot 4 por um módulo de E/S equivalente:
+Substitua o módulo de E/S com defeito por um módulo de E/S equivalente:
 
 .Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
-. Remova o cluster com falha e o módulo de E/S HA do controlador danificado:
+. Remova o módulo de E/S com defeito do controlador com falha:
 +
 image::../media/drw_g_io_module_hotswap_slot4_ieops-2366.svg[cluster hotswap e módulo de E/S ha no slot 4]
 
@@ -28,7 +28,7 @@ image::../media/icon_round_2.png[Legenda número 2]
 Puxe o módulo de E/S para fora do controlador usando a aba da etiqueta da porta à esquerda e o parafuso de aperto manual à direita.
 
 |===
-. Instale o cluster de substituição e o módulo de E/S HA no slot 4:
+. Instale o módulo de E/S de substituição:
 +
 .. Alinhe o módulo de e/S com as extremidades da ranhura.
 .. Empurre cuidadosamente o módulo de E/S até o slot, certificando-se de encaixá-lo corretamente no conector.
@@ -38,5 +38,5 @@ Você pode usar a aba à esquerda e o parafuso de aperto manual à direita para 
 .. Rode o parafuso de aperto manual no sentido dos ponteiros do relógio para apertar.
 
 
-. Conecte os cabos do cluster e do módulo HA I/O.
+. Conecte o módulo de I/O de substituição.
 

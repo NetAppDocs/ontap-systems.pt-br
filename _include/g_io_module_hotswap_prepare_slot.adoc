@@ -1,0 +1,108 @@
+= 
+:allow-uri-read: 
+
+
+Prepare o sistema de storage e o slot do módulo de I/O para que seja seguro remover o módulo de I/O com defeito:
+
+.Passos
+. Aterre-se corretamente.
+. Desconecte os cabos do módulo de E/S com defeito.
++
+Certifique-se de etiquetar os cabos para que você possa reconectá-los às mesmas portas posteriormente neste procedimento.
+
++
+[NOTE]
+====
+O módulo de E/S deve apresentar falha (as portas devem estar no estado de link inativo); no entanto, se os links ainda estiverem ativos e contiverem a última porta funcional do cluster, desconectar os cabos aciona um takeover automático.
+
+Aguarde cinco minutos após desconectar os cabos para garantir que quaisquer takeovers ou failovers de LIF sejam concluídos antes de prosseguir com este procedimento.
+
+====
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport:
++
+`system node autosupport invoke -node * -type all -message MAINT=<number of hours down>h`
+
++
+Por exemplo, a seguinte mensagem do AutoSupport suprime a criação automática de casos por duas horas:
+
++
+`node2::> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Conforme necessário para a versão do ONTAP em que seu sistema de storage está sendo executado e o estado dos controladores, desative o giveback:
++
+[cols="1,2,3"]
+|===
+| Versão de ONTAP | Se... | Então... 
+
+
+ a| 
+9.17.1 ou 9.18.1RC
+ a| 
+Se o controlador incapacitado assumiu automaticamente o controle do controlador saudável
+ a| 
+Desabilitar devolução automática:
+
+.. Digite o seguinte comando no console do controlador com defeito
++
+`storage failover modify -node local -auto-giveback false`
+
+.. Digitar `y` quando você vê o prompt _Você quer desabilitar o retorno automático?_
+
+
+
+
+ a| 
+9.18.1GA ou posterior
+ a| 
+Se um dos controladores realizou o takeover automático do seu parceiro
+ a| 
+Desabilitar devolução automática:
+
+.. Digite o seguinte comando no console do controlador que fez o takeover do controlador do parceiro:
++
+`storage failover modify -node local -auto-giveback false`
+
+.. Digitar `y` quando você vê o prompt _Você quer desabilitar o retorno automático?_
+
+
+
+
+ a| 
+9.18.1GA ou posterior
+ a| 
+Ambos os controladores estão ativos e executando E/S (servindo dados)
+ a| 
+Vá para a próxima etapa.
+
+|===
+. Prepare o módulo de E/S com defeito para remoção, retirando-o de serviço e desligando-o:
++
+.. Digite o seguinte comando:
++
+`system controller slot module remove -node _impaired_node_name_ -slot _slot_number_`
+
+.. Digitar `y` quando você vê o prompt _Você quer continuar?_
++
+Por exemplo, o seguinte comando prepara o módulo com falha no slot 4 do nó 2 (o controlador com defeito) para remoção e exibe uma mensagem informando que é seguro removê-lo:
+
++
+[listing]
+----
+node2::> system controller slot module remove -node node2 -slot 4
+
+Warning: IO_2X_100GBE_NVDA_NIC module in slot 4 of node node2 will be powered off for removal.
+
+Do you want to continue? {y|n}: y
+
+The module has been successfully removed from service and powered off. It can now be safely removed.
+----
+
+
+. Verifique se o módulo de E/S com falha está desligado:
++
+`system controller slot module show`
+
++
+O resultado deve mostrar  `_powered-off_` na  `_status_` coluna para o módulo com falha e seu número de slot.
+
+

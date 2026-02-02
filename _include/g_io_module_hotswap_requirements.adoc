@@ -1,0 +1,59 @@
+= 
+:allow-uri-read: 
+
+
+Para utilizar este procedimento, seu sistema de storage deve estar executando ONTAP 9.17.1 ou posterior, e seu sistema de storage deve atender a todos os requisitos para a versão do ONTAP que seu sistema de storage está executando.
+
+
+NOTE: Se o seu sistema de storage não estiver executando ONTAP 9.17.1 ou posterior, ou não atender a todos os requisitos da versão do ONTAP que o seu sistema de storage está executando, você não pode usar este procedimento, você deve usar o link:io-module-replace.html["procedimento de substituição de um módulo de E/S"].
+
+[role="tabbed-block"]
+====
+.ONTAP 9.17.1 ou 9.18.1RC
+--
+* Você está realizando uma substituição a quente de um cluster com falha e um módulo de I/O HA no slot 4 por um módulo de I/O equivalente. Você não pode alterar o tipo do módulo de I/O.
+* O controlador com o cluster e o módulo de E/S de alta disponibilidade (HA) com falha (o controlador comprometido) já deve ter assumido o controlador do parceiro saudável. O takeover deveria ter ocorrido automaticamente se o módulo de E/S falhou.
++
+Em clusters de dois nós, o sistema de storage não consegue discernir qual controlador possui o módulo de E/S com falha, portanto, qualquer um dos controladores pode iniciar o takeover. A substituição a quente só é suportada quando o controlador com o módulo de E/S com falha (o controlador comprometido) assumiu o controle do controlador em funcionamento. A substituição a quente do módulo de E/S é a única maneira de recuperar sem uma interrupção.
+
++
+Você pode verificar se o controlador prejudicado assumiu com sucesso o controlador saudável inserindo o  `storage failover show` comando.
+
++
+Se você não tiver certeza de qual controlador possui o módulo de E/S com falha, entre em contato  https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] .
+
+* A configuração do seu sistema de armazenamento deve ter apenas um cluster e um módulo de E/S HA localizados no slot 4, não dois clusters e módulos de E/S HA.
+* Seu sistema de armazenamento deve ser uma configuração de cluster de dois nós (sem comutação ou comutado).
+* Todos os outros componentes do sistema de armazenamento devem estar a funcionar corretamente; caso contrário, contacte https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de continuar com este procedimento.
+
+
+--
+.ONTAP 9.18.1GA ou posterior
+--
+* Você está realizando a substituição a quente de um módulo de E/S Ethernet em qualquer slot que possua qualquer combinação de portas usadas para cluster, HA e cliente, por um módulo de E/S equivalente. Você não pode alterar o tipo do módulo de E/S.
++
+Módulos de E/S Ethernet com portas usadas para armazenamento ou MetroCluster não são com substituição a quente.
+
+* Seu sistema de storage (configuração de cluster com ou sem switch) pode ter qualquer número de nós suportados para o seu sistema de storage.
+* Todos os nós do cluster devem estar executando a mesma versão do ONTAP (ONTAP 9.18.1GA ou posterior) ou executando diferentes níveis de patch da mesma versão do ONTAP.
++
+Se os nós do seu cluster estiverem executando versões diferentes do ONTAP, isso é considerado um cluster de versões mistas e a substituição a quente de um módulo de E/S não é suportada.
+
+
+
+* Os controladores do seu sistema de storage podem estar em um dos seguintes estados:
++
+** Ambos os controladores podem estar ativos e executando E/S (servindo dados).
+** Qualquer um dos controladores pode estar em estado de takeover se o takeover foi causado pela falha do módulo de E/S e os controladores estiverem funcionando corretamente.
++
+Em determinadas situações, ONTAP pode realizar automaticamente um takeover de qualquer um dos controladores devido à falha do módulo de E/S. Por exemplo, se o módulo de E/S com falha contiver todas as portas do cluster (todos os links do cluster nesse controlador ficarem inativos), ONTAP realiza automaticamente um takeover.
+
+
+
+
+
+* Todos os outros componentes do sistema de armazenamento devem estar a funcionar corretamente; caso contrário, contacte https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de continuar com este procedimento.
+
+
+--
+====

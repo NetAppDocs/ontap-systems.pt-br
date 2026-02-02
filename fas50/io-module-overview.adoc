@@ -19,9 +19,9 @@ Você pode substituir um módulo de E/S com defeito no seu sistema de armazename
 +
 A adição de módulos de e/S adicionais pode melhorar a redundância, ajudando a garantir que o sistema de storage permaneça operacional mesmo que um módulo de e/S falhe.
 
-* link:io-module-hotswap-ha-slot4.html["Troca a quente de um cluster e um módulo de E/S HA"]
+* link:io-module-hotswap.html["Substituição a quente de um módulo de E/S"]
 +
-A troca a quente de um cluster com falha e de um módulo de E/S de alta disponibilidade pode restaurar o sistema de armazenamento ao seu estado operacional ideal. A troca a quente é realizada sem a necessidade de assumir manualmente o controlador com defeito.
+É possível realizar a substituição a quente de determinados módulos de E/S por um módulo de E/S equivalente para restaurar o sistema de storage ao seu estado operacional ideal. A substituição a quente é feita sem a necessidade de realizar uma tomada manual.
 
 +
 Para usar este procedimento, seu sistema de armazenamento deve estar executando o ONTAP 9.17.1 ou posterior e atender a requisitos específicos do sistema.

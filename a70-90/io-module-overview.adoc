@@ -19,6 +19,14 @@ Você pode substituir um módulo de e/S com falha em seu sistema de storage AFF 
 +
 Adicionar módulos adicionais pode melhorar a redundância, ajudando a garantir que o sistema permaneça operacional mesmo que um módulo falhe.
 
+* link:io-module-hotswap.html["Substituição a quente de um módulo de E/S"]
++
+É possível realizar a substituição a quente de determinados módulos de E/S por um módulo de E/S equivalente para restaurar o sistema de storage ao seu estado operacional ideal. A substituição a quente é feita sem a necessidade de realizar uma tomada manual.
+
+
+
+Para usar este procedimento, seu sistema de storage deve estar executando ONTAP 9.18.1 ou posterior.
+
 * link:io-module-replace.html["Substitua um módulo de e/S."]
 +
 A substituição de um módulo de e/S com falha pode restaurar o sistema ao seu estado de funcionamento ideal.

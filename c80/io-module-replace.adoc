@@ -150,15 +150,12 @@ Para substituir um módulo de e/S, localize-o no módulo do controlador e siga a
 
 .Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
-. Desconete qualquer cabeamento do módulo de e/S de destino.
-+
-Certifique-se de etiquetar os cabos para que você saiba de onde eles vieram.
-
+. Identifique os cabos para saber de onde vieram e, em seguida, desconecte todos os cabos do módulo de E/S de destino.
 . Gire a bandeja de gerenciamento de cabos para baixo puxando os botões no interior da bandeja de gerenciamento de cabos e girando-a para baixo.
 . Retire o módulo de e/S do módulo do controlador:
 +
 
-NOTE: Esta ilustração a seguir mostra a remoção de um módulo de e/S horizontal e vertical. Normalmente, você só removerá um módulo de e/S.
+NOTE: A ilustração a seguir mostra a remoção de um módulo de E/S horizontal e vertical. Normalmente, você removerá apenas um módulo de E/S.
 
 +
 image::../media/drw_a70_90_io_remove_replace_ieops-1532.svg[Remova o módulo de e/S.]
@@ -176,10 +173,10 @@ Botão de bloqueio do came
 |===
 +
 .. Prima o botão do trinco do excêntrico.
-.. Rode o trinco do excêntrico afastando-o do módulo o mais longe possível.
+.. Rode o trinco do excêntrico para longe do módulo o mais longe possível.
 .. Retire o módulo do módulo do controlador encaixando o dedo na abertura da alavanca do came e puxando o módulo para fora do módulo do controlador.
 +
-Certifique-se de manter o controle de qual slot o módulo de e/S estava.
+Mantenha o controle de qual slot o módulo de E/S estava.
 
 
 
@@ -191,7 +188,6 @@ Certifique-se de manter o controle de qual slot o módulo de e/S estava.
 
 
 . Faça o cabo do módulo de e/S.
-. Repita as etapas de remoção e instalação para substituir módulos adicionais para o controlador.
 . Rode o tabuleiro de gestão de cabos para a posição de bloqueio.
 
 

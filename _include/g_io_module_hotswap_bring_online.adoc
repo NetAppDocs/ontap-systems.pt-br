@@ -2,18 +2,21 @@
 :allow-uri-read: 
 
 
-Coloque o cluster de substituição e o módulo HA I/O no slot 4 on-line, verifique se as portas do módulo foram inicializadas com sucesso, verifique se o slot 4 está ligado e, em seguida, verifique se o módulo está on-line e é reconhecido.
+Coloque o módulo de E/S de substituição online, verifique se as portas do módulo de E/S foram inicializadas com sucesso, verifique se o slot está energizado e então verifique se o módulo de E/S está online e reconhecido.
+
+.Sobre esta tarefa
+Após a substituição do módulo de E/S e o retorno das portas ao estado normal de funcionamento, os LIFs são revertidos para o módulo de E/S substituído.
 
 .Passos
-. Coloque o cluster de substituição e o módulo de E/S HA on-line:
+. Coloque o módulo de E/S de substituição em funcionamento:
 +
 .. Digite o seguinte comando:
 +
-`system controller slot module insert -node _impaired_node_name_ -slot _slot_name_`
+`system controller slot module insert -node _impaired_node_name_ -slot _slot_number_`
 
 .. Digitar `y` quando você vê o prompt, _Você quer continuar?_
 +
-A saída deve confirmar que o cluster e o módulo HA I/O foram colocados on-line com sucesso (ligados, inicializados e colocados em serviço).
+A saída deve confirmar que o módulo de E/S foi colocado online com sucesso (ligado, inicializado e colocado em funcionamento).
 
 +
 Por exemplo, o comando a seguir coloca o slot 4 no nó 2 (o controlador prejudicado) online e exibe uma mensagem de que o processo foi bem-sucedido:
@@ -31,19 +34,21 @@ The module has been successfully powered on, initialized and placed into service
 ----
 
 
-. Verifique se cada porta no cluster e o módulo de E/S HA foram inicializados com sucesso:
+. Verifique se cada porta do módulo de E/S foi inicializada com sucesso:
++
+.. Digite o seguinte comando no console do controlador com defeito:
 +
 `event log show -event \*hotplug.init*`
 
 +
 
-NOTE: Pode levar vários minutos para permitir quaisquer atualizações de firmware necessárias e a inicialização da porta.
+NOTE: Pode levar vários minutos para quaisquer atualizações de firmware necessárias e a inicialização das portas.
 
 +
-A saída deve mostrar um evento hotplug.init.success EMS registrado para cada porta no cluster e módulo HA I/O com  `_hotplug.init.success:_` no  `_Event_` coluna.
+A saída deve mostrar um ou mais eventos EMS hotplug.init.success indicando que cada porta no módulo de E/S foi iniciada com sucesso.
 
 +
-Por exemplo, a saída a seguir mostra que a inicialização foi bem-sucedida para as portas e4b e e4a do cluster e do módulo de E/S HA:
+Por exemplo, a seguinte saída mostra que a inicialização foi bem-sucedida para as portas de I/O e4b e e4a:
 
 +
 [listing]
@@ -60,25 +65,28 @@ Time                Node             Severity      Event
 
 2 entries were displayed.
 ----
-. Verifique se o slot 4 do módulo de E/S está ligado e pronto para operação:
+.. Caso a inicialização da porta falhe, consulte o log do EMS para saber os próximos passos a serem tomados.
+
+
+. Verifique se o slot do módulo de E/S está energizado e pronto para operação:
 +
 `system controller slot module show`
 
 +
-A saída deve mostrar o status do slot 4 como  `_powered-on_` e, portanto, pronto para a operação do cluster de substituição e do módulo HA I/O.
+A saída deve mostrar o status do slot como  `_powered-on_` e, portanto, pronto para operação do módulo de I/O.
 
-. Verifique se o cluster de substituição e o módulo de E/S HA estão on-line e são reconhecidos.
+. Verifique se o módulo de I/O está online e reconhecido.
 +
 Digite o comando do console do controlador com deficiência:
 
 +
-`system controller config show -node local -slot4`
+`system controller config show -node local -slot _slot_number_`
 
 +
-Se o cluster de substituição e o módulo de E/S HA forem colocados on-line com sucesso e reconhecidos, a saída mostrará informações do módulo de E/S, incluindo informações de porta, para o slot 4.
+Se o módulo de E/S foi conectado com sucesso e é reconhecido, a saída exibirá informações do módulo de E/S, incluindo informações da porta do slot.
 
 +
-Por exemplo, você deverá ver uma saída semelhante à seguinte:
+Por exemplo, você deverá ver uma saída semelhante à seguinte para um módulo de I/O no slot 4:
 
 +
 [listing]

@@ -7,30 +7,11 @@ Restaure o sistema de storage ao funcionamento normal, devolvendo o armazenament
 .Passos
 . Conforme necessário para a versão do ONTAP que seu sistema de storage está executando e o estado dos controladores, devolva o armazenamento e restaure o giveback automático no controlador que foi assumido:
 +
-[cols="1,2,3"]
+[cols="1,2"]
 |===
-| Versão de ONTAP | Se... | Então... 
+| Se... | Então... 
 
 
- a| 
-9.17.1 ou 9.18.1RC
- a| 
-Se o controlador incapacitado assumiu automaticamente o controle do controlador saudável
- a| 
-.. Retorne o controlador saudável à operação normal realizando o giveback do seu armazenamento:
-+
-`storage failover giveback -ofnode _healthy_node_name_`
-
-.. Restaurar o giveback automático a partir do console do controlador com defeito:
-+
-`storage failover modify -node local -auto-giveback _true_`
-
-
-
-
-
- a| 
-9.18.1GA ou posterior
  a| 
 Se um dos controladores realizou o takeover automático do seu parceiro
  a| 
@@ -47,14 +28,12 @@ Se um dos controladores realizou o takeover automático do seu parceiro
 
 
  a| 
-9.18.1GA ou posterior
- a| 
 Ambos os controladores estão ativos e executando E/S (servindo dados)
  a| 
 Vá para a próxima etapa.
 
 |===
-. Verifique se as interfaces lógicas estão relatando para o servidor doméstico e as portas: `network interface show -is-home false`
+. Verifique se as interfaces lógicas estão relatando ao nó e às portas de origem: `network interface show -is-home false`
 +
 Se algum LIFs estiver listado como false, reverta-os para suas portas iniciais: `network interface revert -vserver * -lif *`
 

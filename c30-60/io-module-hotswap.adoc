@@ -1,0 +1,432 @@
+---
+permalink: c30-60/io-module-hotswap.html 
+sidebar: sidebar 
+keywords: aff c30, aff c60, hot swap a cluster ha card, hot swap ethernet client io module, hotswap io module, hot swap io module 
+summary: Você pode realizar a substituição a quente de um módulo de E/S Ethernet em seu sistema de storage AFF C30 ou AFF C60 caso um módulo apresente falha e seu sistema de storage atenda a todos os requisitos de versão do ONTAP. 
+---
+= Substituição a quente de um módulo de E/S - AFF C30 e AFF C60
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode realizar a substituição a quente de um módulo de E/S Ethernet em seu sistema de storage AFF C30 ou AFF C60 caso um módulo apresente falha e seu sistema de storage atenda a todos os requisitos de versão do ONTAP.
+
+Para substituir a quente um módulo de E/S, certifique-se de que seu sistema de storage atenda aos requisitos de versão do ONTAP, prepare seu sistema de storage e o módulo de E/S, faça a substituição a quente do módulo com defeito, coloque o módulo de substituição online, restaure o sistema de storage à operação normal e devolva o módulo com defeito para a NetApp.
+
+.Sobre esta tarefa
+* A substituição a quente do módulo de E/S significa que você não precisa realizar um takeover manual antes de substituir o módulo de E/S com defeito.
+* Aplique os comandos ao controlador e ao slot de E/S corretos ao realizar a substituição a quente do módulo de E/S:
++
+** O _controlador com defeito_ é o controlador no qual você está realizando a substituição a quente do módulo de E/S.
+** O _controlador saudável_ é o parceiro HA do controlador prejudicado.
+
+
+* Você pode ativar os LEDs de localização (azuis) do sistema de storage para auxiliar na localização física do sistema de storage. Faça login no BMC usando SSH e insira o comando  `system location-led _on_`.
++
+Um sistema de armazenamento tem três LEDs de localização: Um no painel de visualização do operador e um em cada controlador. Os LEDs de localização permanecem acesos durante 30 minutos.
+
++
+Você pode desativá-los digitando o `system location-led _off_` comando. Se não tiver a certeza se os LEDs estão ligados ou desligados, pode verificar o seu estado introduzindo o `system location-led show` comando.
+
+
+
+
+
+== Etapa 1: Certifique-se de que o sistema de armazenamento atenda aos requisitos do procedimento
+
+Para utilizar este procedimento, seu sistema de storage deve estar executando ONTAP 9.17.1 ou posterior, e seu sistema de storage deve atender a todos os requisitos para a versão do ONTAP que seu sistema de storage está executando.
+
+
+NOTE: Se o seu sistema de storage não estiver executando ONTAP 9.17.1 ou posterior, ou não atender a todos os requisitos da versão do ONTAP que o seu sistema de storage está executando, você não pode usar este procedimento, você deve usar o link:io-module-replace.html["procedimento de substituição de um módulo de E/S"].
+
+[role="tabbed-block"]
+====
+.ONTAP 9.17.1 ou 9.18.1RC
+--
+* Você está realizando uma substituição a quente de um cluster com falha e um módulo de I/O HA no slot 4 por um módulo de I/O equivalente. Você não pode alterar o tipo do módulo de I/O.
+* O controlador com o cluster e o módulo de E/S de alta disponibilidade (HA) com falha (o controlador comprometido) já deve ter assumido o controlador do parceiro saudável. O takeover deveria ter ocorrido automaticamente se o módulo de E/S falhou.
++
+Em clusters de dois nós, o sistema de storage não consegue discernir qual controlador possui o módulo de E/S com falha, portanto, qualquer um dos controladores pode iniciar o takeover. A substituição a quente só é suportada quando o controlador com o módulo de E/S com falha (o controlador comprometido) assumiu o controle do controlador em funcionamento. A substituição a quente do módulo de E/S é a única maneira de recuperar sem uma interrupção.
+
++
+Você pode verificar se o controlador prejudicado assumiu com sucesso o controlador saudável inserindo o  `storage failover show` comando.
+
++
+Se você não tiver certeza de qual controlador possui o módulo de E/S com falha, entre em contato  https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] .
+
+* A configuração do seu sistema de armazenamento deve ter apenas um cluster e um módulo de E/S HA localizados no slot 4, não dois clusters e módulos de E/S HA.
+* Seu sistema de armazenamento deve ser uma configuração de cluster de dois nós (sem comutação ou comutado).
+* Todos os outros componentes do sistema de armazenamento devem estar a funcionar corretamente; caso contrário, contacte https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de continuar com este procedimento.
+
+
+--
+.ONTAP 9.18.1GA ou posterior
+--
+* Você está realizando a substituição a quente de um módulo de E/S Ethernet em qualquer slot que possua qualquer combinação de portas usadas para cluster, HA e cliente, por um módulo de E/S equivalente. Você não pode alterar o tipo do módulo de E/S.
++
+Módulos de E/S Ethernet com portas usadas para armazenamento ou MetroCluster não são com substituição a quente.
+
+* Seu sistema de storage (configuração de cluster com ou sem switch) pode ter qualquer número de nós suportados para o seu sistema de storage.
+* Todos os nós do cluster devem estar executando a mesma versão do ONTAP (ONTAP 9.18.1GA ou posterior) ou executando diferentes níveis de patch da mesma versão do ONTAP.
++
+Se os nós do seu cluster estiverem executando versões diferentes do ONTAP, isso é considerado um cluster de versões mistas e a substituição a quente de um módulo de E/S não é suportada.
+
+
+
+* Os controladores do seu sistema de storage podem estar em um dos seguintes estados:
++
+** Ambos os controladores podem estar ativos e executando E/S (servindo dados).
+** Qualquer um dos controladores pode estar em estado de takeover se o takeover foi causado pela falha do módulo de E/S e os controladores estiverem funcionando corretamente.
++
+Em determinadas situações, ONTAP pode realizar automaticamente um takeover de qualquer um dos controladores devido à falha do módulo de E/S. Por exemplo, se o módulo de E/S com falha contiver todas as portas do cluster (todos os links do cluster nesse controlador ficarem inativos), ONTAP realiza automaticamente um takeover.
+
+
+
+
+
+* Todos os outros componentes do sistema de armazenamento devem estar a funcionar corretamente; caso contrário, contacte https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de continuar com este procedimento.
+
+
+--
+====
+
+
+== Etapa 2: prepare o sistema de storage e o slot do módulo de E/S
+
+Prepare o sistema de storage e o slot do módulo de I/O para que seja seguro remover o módulo de I/O com defeito:
+
+.Passos
+. Aterre-se corretamente.
+. Desconecte os cabos do módulo de E/S com defeito.
++
+Certifique-se de etiquetar os cabos para que você possa reconectá-los às mesmas portas posteriormente neste procedimento.
+
++
+[NOTE]
+====
+O módulo de E/S deve apresentar falha (as portas devem estar no estado de link inativo); no entanto, se os links ainda estiverem ativos e contiverem a última porta funcional do cluster, desconectar os cabos aciona um takeover automático.
+
+Aguarde cinco minutos após desconectar os cabos para garantir que quaisquer takeovers ou failovers de LIF sejam concluídos antes de prosseguir com este procedimento.
+
+====
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport:
++
+`system node autosupport invoke -node * -type all -message MAINT=<number of hours down>h`
+
++
+Por exemplo, a seguinte mensagem do AutoSupport suprime a criação automática de casos por duas horas:
+
++
+`node2::> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Conforme necessário para a versão do ONTAP em que seu sistema de storage está sendo executado e o estado dos controladores, desative o giveback:
++
+[cols="1,2,3"]
+|===
+| Versão de ONTAP | Se... | Então... 
+
+
+ a| 
+9.17.1 ou 9.18.1RC
+ a| 
+Se o controlador incapacitado assumiu automaticamente o controle do controlador saudável
+ a| 
+Desabilitar devolução automática:
+
+.. Digite o seguinte comando no console do controlador com defeito
++
+`storage failover modify -node local -auto-giveback false`
+
+.. Digitar `y` quando você vê o prompt _Você quer desabilitar o retorno automático?_
+
+
+
+
+ a| 
+9.18.1GA ou posterior
+ a| 
+Se um dos controladores realizou o takeover automático do seu parceiro
+ a| 
+Desabilitar devolução automática:
+
+.. Digite o seguinte comando no console do controlador que fez o takeover do controlador do parceiro:
++
+`storage failover modify -node local -auto-giveback false`
+
+.. Digitar `y` quando você vê o prompt _Você quer desabilitar o retorno automático?_
+
+
+
+
+ a| 
+9.18.1GA ou posterior
+ a| 
+Ambos os controladores estão ativos e executando E/S (servindo dados)
+ a| 
+Vá para a próxima etapa.
+
+|===
+. Prepare o módulo de E/S com defeito para remoção, retirando-o de serviço e desligando-o:
++
+.. Digite o seguinte comando:
++
+`system controller slot module remove -node _impaired_node_name_ -slot _slot_number_`
+
+.. Digitar `y` quando você vê o prompt _Você quer continuar?_
++
+Por exemplo, o seguinte comando prepara o módulo com falha no slot 4 do nó 2 (o controlador com defeito) para remoção e exibe uma mensagem informando que é seguro removê-lo:
+
++
+[listing]
+----
+node2::> system controller slot module remove -node node2 -slot 4
+
+Warning: IO_2X_100GBE_NVDA_NIC module in slot 4 of node node2 will be powered off for removal.
+
+Do you want to continue? {y|n}: y
+
+The module has been successfully removed from service and powered off. It can now be safely removed.
+----
+
+
+. Verifique se o módulo de E/S com falha está desligado:
++
+`system controller slot module show`
+
++
+O resultado deve mostrar  `_powered-off_` na  `_status_` coluna para o módulo com falha e seu número de slot.
+
+
+
+
+
+== Etapa 3: substitua o módulo de E/S com defeito a quente
+
+Substitua o módulo de E/S com defeito por um módulo de E/S equivalente:
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Remova o módulo de E/S com defeito do controlador com falha:
++
+image::../media/drw_g_io_module_hotswap_slot4_ieops-2366.svg[cluster hotswap e módulo de E/S ha no slot 4]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Legenda número 1]
+ a| 
+Rode o parafuso de aperto manual do módulo de e/S no sentido contrário ao dos ponteiros do relógio para soltar.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Legenda número 2]
+ a| 
+Puxe o módulo de E/S para fora do controlador usando a aba da etiqueta da porta à esquerda e o parafuso de aperto manual à direita.
+
+|===
+. Instale o módulo de E/S de substituição:
++
+.. Alinhe o módulo de e/S com as extremidades da ranhura.
+.. Empurre cuidadosamente o módulo de E/S até o slot, certificando-se de encaixá-lo corretamente no conector.
++
+Você pode usar a aba à esquerda e o parafuso de aperto manual à direita para empurrar o módulo de E/S.
+
+.. Rode o parafuso de aperto manual no sentido dos ponteiros do relógio para apertar.
+
+
+. Conecte o módulo de I/O de substituição.
+
+
+
+
+== Etapa 4: Coloque o módulo de E/S de substituição online
+
+Coloque o módulo de E/S de substituição online, verifique se as portas do módulo de E/S foram inicializadas com sucesso, verifique se o slot está energizado e então verifique se o módulo de E/S está online e reconhecido.
+
+.Sobre esta tarefa
+Após a substituição do módulo de E/S e o retorno das portas ao estado normal de funcionamento, os LIFs são revertidos para o módulo de E/S substituído.
+
+.Passos
+. Coloque o módulo de E/S de substituição em funcionamento:
++
+.. Digite o seguinte comando:
++
+`system controller slot module insert -node _impaired_node_name_ -slot _slot_number_`
+
+.. Digitar `y` quando você vê o prompt, _Você quer continuar?_
++
+A saída deve confirmar que o módulo de E/S foi colocado online com sucesso (ligado, inicializado e colocado em funcionamento).
+
++
+Por exemplo, o comando a seguir coloca o slot 4 no nó 2 (o controlador prejudicado) online e exibe uma mensagem de que o processo foi bem-sucedido:
+
++
+[listing]
+----
+node2::> system controller slot module insert -node node2 -slot 4
+
+Warning: IO_2X_100GBE_NVDA_NIC module in slot 4 of node node2 will be powered on and initialized.
+
+Do you want to continue? {y|n}: `y`
+
+The module has been successfully powered on, initialized and placed into service.
+----
+
+
+. Verifique se cada porta do módulo de E/S foi inicializada com sucesso:
++
+.. Digite o seguinte comando no console do controlador com defeito:
++
+`event log show -event \*hotplug.init*`
+
++
+
+NOTE: Pode levar vários minutos para quaisquer atualizações de firmware necessárias e a inicialização das portas.
+
++
+A saída deve mostrar um ou mais eventos EMS hotplug.init.success indicando que cada porta no módulo de E/S foi iniciada com sucesso.
+
++
+Por exemplo, a seguinte saída mostra que a inicialização foi bem-sucedida para as portas de I/O e4b e e4a:
+
++
+[listing]
+----
+node2::> event log show -event *hotplug.init*
+
+Time                Node             Severity      Event
+
+------------------- ---------------- ------------- ---------------------------
+
+7/11/2025 16:04:06  node2      NOTICE        hotplug.init.success: Initialization of ports "e4b" in slot 4 succeeded
+
+7/11/2025 16:04:06  node2      NOTICE        hotplug.init.success: Initialization of ports "e4a" in slot 4 succeeded
+
+2 entries were displayed.
+----
+.. Caso a inicialização da porta falhe, consulte o log do EMS para saber os próximos passos a serem tomados.
+
+
+. Verifique se o slot do módulo de E/S está energizado e pronto para operação:
++
+`system controller slot module show`
+
++
+A saída deve mostrar o status do slot como  `_powered-on_` e, portanto, pronto para operação do módulo de I/O.
+
+. Verifique se o módulo de I/O está online e reconhecido.
++
+Digite o comando do console do controlador com deficiência:
+
++
+`system controller config show -node local -slot _slot_number_`
+
++
+Se o módulo de E/S foi conectado com sucesso e é reconhecido, a saída exibirá informações do módulo de E/S, incluindo informações da porta do slot.
+
++
+Por exemplo, você deverá ver uma saída semelhante à seguinte para um módulo de I/O no slot 4:
+
++
+[listing]
+----
+node2::> system controller config show -node local -slot 4
+
+Node: node2
+Sub- Device/
+Slot slot Information
+---- ---- -----------------------------
+   4    - Dual 40G/100G Ethernet Controller CX6-DX
+                  e4a MAC Address: d0:39:ea:59:69:74 (auto-100g_cr4-fd-up)
+                          QSFP Vendor:        CISCO-BIZLINK
+                          QSFP Part Number:   L45593-D218-D10
+                          QSFP Serial Number: LCC2807GJFM-B
+                  e4b MAC Address: d0:39:ea:59:69:75 (auto-100g_cr4-fd-up)
+                          QSFP Vendor:        CISCO-BIZLINK
+                          QSFP Part Number:   L45593-D218-D10
+                          QSFP Serial Number: LCC2809G26F-A
+                  Device Type:        CX6-DX PSID(NAP0000000027)
+                  Firmware Version:   22.44.1700
+                  Part Number:        111-05341
+                  Hardware Revision:  20
+                  Serial Number:      032403001370
+----
+
+
+
+
+== Etapa 5: restaurar o sistema de armazenamento para operação normal
+
+Restaure o sistema de storage ao funcionamento normal, devolvendo o armazenamento ao controlador que foi assumido (conforme necessário), restaurando o giveback automático (conforme necessário), verificando se as LIFs estão em suas portas de origem e reativando a criação automática de casos do AutoSupport.
+
+.Passos
+. Conforme necessário para a versão do ONTAP que seu sistema de storage está executando e o estado dos controladores, devolva o armazenamento e restaure o giveback automático no controlador que foi assumido:
++
+[cols="1,2,3"]
+|===
+| Versão de ONTAP | Se... | Então... 
+
+
+ a| 
+9.17.1 ou 9.18.1RC
+ a| 
+Se o controlador incapacitado assumiu automaticamente o controle do controlador saudável
+ a| 
+.. Retorne o controlador saudável à operação normal realizando o giveback do seu armazenamento:
++
+`storage failover giveback -ofnode _healthy_node_name_`
+
+.. Restaurar o giveback automático a partir do console do controlador com defeito:
++
+`storage failover modify -node local -auto-giveback _true_`
+
+
+
+
+
+ a| 
+9.18.1GA ou posterior
+ a| 
+Se um dos controladores realizou o takeover automático do seu parceiro
+ a| 
+.. Retorne o controlador que foi assumido ao funcionamento normal realizando o giveback do seu armazenamento:
++
+`storage failover giveback -ofnode _controller that was taken over_name_`
+
+.. Restaurar o giveback automático a partir do console do controlador que foi assumido:
++
+`storage failover modify -node local -auto-giveback _true_`
+
+
+
+
+
+ a| 
+9.18.1GA ou posterior
+ a| 
+Ambos os controladores estão ativos e executando E/S (servindo dados)
+ a| 
+Vá para a próxima etapa.
+
+|===
+. Verifique se as interfaces lógicas estão relatando para o servidor doméstico e as portas: `network interface show -is-home false`
++
+Se algum LIFs estiver listado como false, reverta-os para suas portas iniciais: `network interface revert -vserver * -lif *`
+
+. Se o AutoSupport estiver ativado, restaure a criação automática de casos:
++
+`system node autosupport invoke -node * -type all -message MAINT=end`
+
+
+
+
+
+== Passo 6: Devolva a peça com falha ao NetApp
+
+Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.
