@@ -4,13 +4,17 @@ sidebar: sidebar
 keywords: aff a250, replace the boot media 
 summary: Pode localizar o suporte de arranque avariado no módulo do controlador removendo a conduta de ar no módulo do controlador antes de poder substituir o suporte de arranque. 
 ---
-= Substitua o suporte de arranque - AFF A250
+= Substitua a mídia de inicialização e prepare-se para a recuperação manual de inicialização - AFF A250
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+A mídia de inicialização no seu AFF A250 armazena dados essenciais de firmware e configuração. O processo de substituição envolve remover o módulo de gerenciamento do sistema, remover a mídia de inicialização com problema, instalar a mídia de inicialização de substituição e, em seguida, transferir manualmente a imagem do ONTAP para a mídia de inicialização de substituição usando um pen drive USB.
+
+Se o seu sistema de storage estiver executando ONTAP 9.18.1 ou posterior, use o link:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"]. Se o seu sistema estiver executando uma versão anterior do ONTAP, você deve usar o procedimento de recuperação de inicialização manual.
+
 Para substituir o suporte de arranque, tem de remover o módulo do controlador afetado, instalar o suporte de arranque de substituição e transferir a imagem de arranque para uma unidade flash USB.
 
 
@@ -217,3 +221,6 @@ O sistema começa a inicializar e pára no prompt DO Loader.
 
 
 
+
+.O que se segue?
+Depois de substituir a Mídia de inicialização, você precisa link:bootmedia-recovery-image-boot.html["inicie a imagem de recuperação"].

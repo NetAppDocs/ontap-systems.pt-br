@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: asa c250, verify and set HA state,  complete the replacement process 
 summary: Você deve verificar o estado de HA do chassi e devolver a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. 
 ---
-= Conclua o processo de restauração e substituição - ASA C250
+= Conclua a substituição do chassi - ASA C250
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Reinicie os controladores, verifique a integridade do sistema e devolva a peça com defeito para NetApp para concluir a etapa final do procedimento de substituição do chassi ASA C250.
+
 Você precisa verificar o estado de HA do chassi e devolver a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit.
 
 

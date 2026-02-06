@@ -1,0 +1,109 @@
+---
+permalink: fas500f/bootmedia-recovery-image-boot.html 
+sidebar: sidebar 
+keywords: fas500f, boot the recovery image 
+summary: Você deve inicializar a imagem ONTAP a partir da unidade USB, restaurar o sistema de arquivos e verificar as variáveis ambientais. 
+---
+= Recuperação manual de mídia de inicialização a partir de uma unidade USB - FAS500f
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Após instalar o novo dispositivo de mídia de inicialização no seu FAS500f, você pode inicializar a imagem de recuperação a partir de uma unidade USB e restaurar a configuração do nó parceiro.
+
+Se o seu sistema de storage estiver executando ONTAP 9.18.1 ou posterior, use o link:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"]. Se o seu sistema estiver executando uma versão anterior do ONTAP, você deve usar o procedimento de recuperação de inicialização manual.
+
+.Antes de começar
+* Certifique-se de que seu console esteja conectado ao controle com defeito.
+* Verifique se você possui um pen drive com a imagem de recuperação.
+* Verifique se o seu sistema utiliza criptografia.  Você precisará selecionar a opção apropriada na etapa 3, dependendo se a criptografia está ativada ou não.
+
+
+.Passos
+. A partir do prompt LOADER no controlador com defeito, inicialize a imagem de recuperação a partir da unidade flash USB:
++
+`boot_recovery`
+
++
+A imagem de recuperação é baixada da unidade flash USB.
+
+. Quando solicitado, digite o nome da imagem ou pressione *Enter* para aceitar a imagem padrão exibida entre colchetes.
+. Restaure o sistema de arquivos var usando o procedimento para sua versão do ONTAP :
++
+[role="tabbed-block"]
+====
+.ONTAP 9.16,0 ou anterior
+--
+Conclua as seguintes etapas no controlador incapacitado e no controlador parceiro:
+
+.. *No controlador com defeito:* Pressione `Y` quando você vê `Do you want to restore the backup configuration now?`
+.. *No controlador com defeito:* Se solicitado, pressione `Y` para sobrescrever _/etc/ssh/ssh_host_ecdsa_key_.
+.. *No controlador parceiro:* Defina o controlador com problemas para o nível de privilégio avançado:
++
+`set -privilege advanced`
+
+.. *No controlador parceiro:* Execute o comando de restauração de backup:
++
+`system node restore-backup -node local -target-address _impaired_node_IP_address_`
+
++
+
+NOTE: Se você vir qualquer mensagem diferente de uma restauração bem-sucedida, entre em contato com o Suporte da NetApp .
+
+.. *No controlador de parceiros:* Retornar ao nível de administrador:
++
+`set -privilege admin`
+
+.. *No controlador com defeito:* Pressione `Y` quando você vê `Was the restore backup procedure successful?`
+.. *No controlador com defeito:* Pressione `Y` quando você vê `...would you like to use this restored copy now?`
+.. *No controlador com defeito:* Pressione `Y` Quando solicitado a reiniciar, pressione `Ctrl-C` quando você vir o Menu de Inicialização.
+.. *No controlador inoperante:* Faça um dos seguintes procedimentos:
++
+*** Se o sistema não usar criptografia, selecione _Opção 1 Inicialização Normal_ no Menu de Inicialização.
+*** Se o sistema usar criptografia, acesselink:bootmedia-encryption-restore.html["Restaure a criptografia"] .
+
+
+
+
+--
+.ONTAP 9.16.1 ou posterior
+--
+Conclua os seguintes passos no controlador comprometido:
+
+.. Pressione `Y` quando solicitado para restaurar a configuração de backup.
++
+Após o procedimento de restauração ser concluído com sucesso, esta mensagem é exibida: `syncflash_partner: Restore from partner complete`
+
+.. Imprensa `Y` quando solicitado a confirmar que a restauração do backup foi bem-sucedida.
+.. Imprensa `Y` quando solicitado a usar a configuração restaurada.
+.. Imprensa `Y` quando solicitado a reiniciar o nó.
+.. Imprensa `Y` Quando solicitado a reiniciar novamente, pressione `Ctrl-C` quando você vir o Menu de Inicialização.
+.. Execute um dos seguintes procedimentos:
++
+*** Se o sistema não usar criptografia, selecione _Opção 1 Inicialização Normal_ no Menu de Inicialização.
+*** Se o sistema usar criptografia, acesselink:bootmedia-encryption-restore.html["Restaure a criptografia"] .
+
+
+
+
+--
+====
+. Conete o cabo do console ao controlador do parceiro.
+. Volte a colocar o controlador em funcionamento normal, devolvendo o respetivo armazenamento:
++
+`storage failover giveback -fromnode local`
+
+. Se você desativou a devolução automática, reative-a:
++
+`storage failover modify -node local -auto-giveback true`
+
+. Se o AutoSupport estiver ativado, restaure a criação automática de casos:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
+
+
+.O que se segue?
+Depois de inicializar a imagem de recuperação, você precisa link:bootmedia-encryption-restore.html["restaure a encriptação no suporte de arranque"].

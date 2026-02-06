@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: fas500f, move the hardware components 
 summary: Para substituir o hardware do módulo do controlador, é necessário remover o módulo do controlador prejudicado, mover os componentes FRU para o módulo do controlador de substituição, instalar o módulo do controlador de substituição no chassis e, em seguida, inicializar o sistema para o modo de manutenção. 
 ---
-= Substitua o hardware do módulo do controlador - FAS500f
+= Substitua o controlador - FAS500f
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Substitua o controlador no seu sistema FAS500f quando uma falha de hardware exigir. O processo de substituição envolve remover o controlador com problema, mover os componentes para o controlador de substituição, instalar o controlador de substituição e reiniciá-lo.
+
 Para substituir o hardware do módulo do controlador, é necessário remover o controlador prejudicado, mover os componentes FRU para o módulo do controlador de substituição, instalar o módulo do controlador de substituição no chassis e, em seguida, inicializar o sistema para o modo de manutenção.
 
 
@@ -21,7 +23,7 @@ Deve remover o módulo do controlador do chassis quando substituir um componente
 
 Certifique-se de etiquetar os cabos para que saiba de onde vieram.
 
-Você pode usar o vídeo a seguir ou as etapas tabuladas para substituir um módulo de controlador:
+Use o vídeo a seguir ou os passos tabulados para substituir um módulo de controlador:
 
 .Animação - substitua um módulo do controlador
 video::ab0ebe6b-e891-489c-aab4-ac5b015c8f01[panopto]
@@ -37,6 +39,7 @@ NOTE: Se tiver dificuldade em remover o módulo do controlador, coloque os dedos
 image::../media/drw_a250_pcm_remove_install.png[Abrir o mecanismo de bloqueio]
 
 +
+[cols="1,3"]
 |===
 
 
@@ -57,6 +60,7 @@ Mecanismo de bloqueio
 image::../media/drw_a250_open_controller_module_cover.png[Abrir a tampa do módulo do controlador]
 
 +
+[cols="1,3"]
 |===
 
 
@@ -92,9 +96,13 @@ Deve mover a fonte de alimentação do módulo do controlador afetado para o mó
 CAUTION: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
 
 +
+A fonte de alimentação é curta. Utilize sempre as duas mãos para o apoiar quando o retirar do módulo do controlador, de modo a que não se liberte subitamente do módulo do controlador e o machuque.
+
++
 image::../media/drw_a250_replace_psu.png[Retirar a fonte de alimentação]
 
 +
+[cols="1,3"]
 |===
 
 
@@ -116,7 +124,7 @@ As fontes de alimentação apenas engatarão adequadamente com o conetor interno
 
 +
 
-IMPORTANT: Para evitar danificar o conetor interno, não utilize força excessiva ao deslizar a fonte de alimentação para o sistema.
+CAUTION: Para evitar danificar o conetor interno, não utilize força excessiva ao deslizar a fonte de alimentação para o sistema.
 
 
 
@@ -131,6 +139,7 @@ IMPORTANT: Para evitar danificar o conetor interno, não utilize força excessiv
 image::../media/drw_a250_replace_fan.png[Retirar o módulo da ventoinha]
 
 +
+[cols="1,3"]
 |===
 
 
@@ -146,15 +155,19 @@ image:../media/icon_round_1.png["Legenda número 1"]
 
 == Passo 4: Mova a Mídia de inicialização
 
-Existe um dispositivo multimédia de arranque no AFF A250 sob a conduta de ar no módulo do controlador. Deve movê-lo do módulo do controlador desativado para o módulo do controlador de substituição.
+Tem de mover o dispositivo multimédia de arranque do módulo do controlador afetado para o módulo do controlador de substituição.
 
 Você precisa de uma chave de fenda Phillips magnética nº 1 para remover o parafuso que prende o suporte de inicialização no lugar. Devido às restrições de espaço dentro do módulo do controlador, você também deve ter um ímã para transferir o parafuso para que você não o perca.
 
 . Localize e mova o suporte de arranque do módulo do controlador afetado para o módulo do controlador de substituição.
 +
+O suporte da bagageira encontra-se sob a tampa da conduta de ar removida anteriormente neste procedimento.
+
++
 image::../media/drw_a250_replace_boot_media.png[Substituir o suporte de arranque]
 
 +
+[cols="1,3"]
 |===
 
 
@@ -169,15 +182,12 @@ image:../media/icon_round_2.png["Legenda número 2"]
 Levante o suporte da bagageira para fora do módulo do controlador avariado.
 
 |===
-+
-.. Utilizando a chave de fendas magnética nº 1, retire o parafuso do suporte de arranque e coloque-o de lado com segurança no íman.
-.. Levante cuidadosamente o suporte de arranque diretamente para fora do encaixe e alinhe-o no devido lugar no módulo do controlador de substituição.
-.. Utilizando a chave de fendas magnética nº 1, introduza e aperte o parafuso no suporte de arranque.
+. Utilizando a chave de fendas magnética nº 1, retire o parafuso do suporte de arranque e coloque-o de lado com segurança no íman.
+. Levante cuidadosamente o suporte de arranque diretamente para fora do encaixe e alinhe-o no devido lugar no módulo do controlador de substituição.
+. Utilizando a chave de fendas magnética nº 1, introduza e aperte o parafuso no suporte de arranque.
 +
 
 NOTE: Não aplique força ao apertar o parafuso na Mídia de inicialização; você pode quebrá-lo.
-
-
 
 
 
@@ -190,12 +200,12 @@ Para mover os DIMMs, localize-os e mova-os do controlador prejudicado para o con
 image::../media/drw_a250_dimm_replace.png[Substituição dos DIMMs]
 
 
-IMPORTANT: Instale cada DIMM no mesmo slot que ocupou no módulo do controlador prejudicado.
+NOTE: Instale cada DIMM no mesmo slot que ocupou no módulo do controlador prejudicado.
 
 . Empurre lentamente as abas do ejetor DIMM em ambos os lados do DIMM e deslize o DIMM para fora do slot.
 +
 
-IMPORTANT: Segure o DIMM pelas bordas para evitar a pressão nos componentes da placa de circuito DIMM.
+NOTE: Segure o DIMM pelas bordas para evitar a pressão nos componentes da placa de circuito DIMM.
 
 . Localize o slot DIMM correspondente no módulo do controlador de substituição.
 . Certifique-se de que as abas do ejetor DIMM no soquete DIMM estão na posição aberta e insira o DIMM diretamente no soquete.
@@ -217,6 +227,7 @@ Para mover uma placa mezzanine, você deve remover o cabeamento e quaisquer QSFP
 image::../media/drw_a250_replace_mezz_card.png[Retirar a placa mezzanine]
 
 +
+[cols="1,3"]
 |===
 
 
@@ -269,6 +280,7 @@ Ao substituir o módulo do controlador, tem de deslocar a bateria NV do módulo 
 image::../media/drw_a250_replace_nvmem_batt.png[Retirar a bateria do NVMEM]
 
 +
+[cols="1,3"]
 |===
 
 
@@ -311,7 +323,7 @@ Levante a bateria para fora do suporte e do módulo do controlador.
 
 Depois de todos os componentes terem sido movidos do módulo do controlador afetado para o módulo do controlador de substituição, tem de instalar o módulo do controlador de substituição no chassis e, em seguida, iniciá-lo no modo de manutenção.
 
-Você pode usar a ilustração a seguir ou as etapas escritas para instalar o módulo do controlador de substituição no chassi.
+Pode utilizar as seguintes ilustrações ou os passos escritos para instalar o módulo do controlador de substituição no chassis.
 
 . Se ainda não o tiver feito, instale a conduta de ar.
 +
@@ -322,6 +334,7 @@ image::../media/drw_a250_install_airduct_cover.png[Instalação da conduta de ar
 image::../media/drw_a250_close_controller_module_cover.png[Fechar a tampa do módulo do controlador]
 
 +
+[cols="1,3"]
 |===
 
 
@@ -346,16 +359,23 @@ NOTE: Não introduza completamente o módulo do controlador no chassis até ser 
 
 NOTE: Você conetará o resto dos cabos ao módulo do controlador posteriormente neste procedimento.
 
-. Insira o módulo do controlador no chassis.
-. Certifique-se de que os braços do mecanismo de engate estão bloqueados na posição totalmente estendida.
-. Utilizando ambas as mãos, alinhe e deslize suavemente o módulo do controlador para dentro dos braços do mecanismo de bloqueio até parar.
-. Coloque os dedos indicadores através dos orifícios dos dedos a partir do interior do mecanismo de bloqueio.
-. Pressione os polegares para baixo nas patilhas cor-de-laranja na parte superior do mecanismo de bloqueio e empurre suavemente o módulo do controlador sobre o batente.
-. Solte os polegares da parte superior dos mecanismos de travamento e continue empurrando até que os mecanismos de travamento se encaixem no lugar.
+. Insira o módulo do controlador no chassis:
 +
-O módulo do controlador começa a arrancar assim que estiver totalmente assente no chassis. Esteja preparado para interromper o processo de inicialização.
-
+.. Certifique-se de que os braços do mecanismo de engate estão bloqueados na posição totalmente estendida.
+.. Utilizando ambas as mãos, alinhe e deslize suavemente o módulo do controlador para dentro dos braços do mecanismo de bloqueio até parar.
+.. Coloque os dedos indicadores através dos orifícios dos dedos a partir do interior do mecanismo de bloqueio.
+.. Pressione os polegares para baixo nas patilhas cor-de-laranja na parte superior do mecanismo de bloqueio e empurre suavemente o módulo do controlador sobre o batente.
+.. Solte os polegares da parte superior dos mecanismos de travamento e continue empurrando até que os mecanismos de travamento se encaixem no lugar.
 +
 O módulo do controlador deve ser totalmente inserido e alinhado com as bordas do chassi.
 
+.. Conete os cabos de alimentação às fontes de alimentação, reinstale o colar de travamento do cabo de alimentação e, em seguida, conete as fontes de alimentação à fonte de alimentação.
++
+O módulo do controlador começa a inicializar assim que a energia é restaurada. Esteja preparado para interromper o processo de inicialização.
 
+
+
+
+
+.O que se segue?
+Após substituir o controlador FAS500f defeituoso, você precisa link:controller-replace-system-config-restore-and-verify.html["restaure e verifique a configuração do sistema"].

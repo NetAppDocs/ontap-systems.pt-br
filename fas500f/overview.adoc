@@ -1,0 +1,156 @@
+---
+permalink: fas500f/overview.html 
+sidebar: sidebar 
+keywords: FAS500f specifications, FAS500f specs, NetApp FAS500f, FAS500f hardware 
+summary: Especificações principais do sistema de storage FAS500f 
+---
+= Especificações principais para FAS500f
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A seguir, apresentamos algumas especificações selecionadas para o FAS500f. Visite https://hwu.netapp.com["NetApp Hardware Universe"^] (HWU) para obter uma lista completa das especificações do FAS500f. Esta página refere-se a um único par de alta disponibilidade.
+
+
+
+=== Especificações principais para FAS500f
+
+Configuração da plataforma: FAS500f par HA de chassi único
+
+Capacidade Máxima de Bruto: 1,1016 PB
+
+Memória: 128.0000 GB
+
+Fator de forma: chassi 2U com 2 controladores HA e 24 slots de unidade
+
+Versão do ONTAP: 9.16.1P2
+
+Slots de expansão PCIe: 4
+
+Versão mínima do ONTAP : ONTAP 9.8RC1
+
+
+
+=== Máximos de Escalabilidade
+
+|===
+
+
+| Tipo | Pares HA | Capacidade bruta | Memória Máxima 
+
+
+| NAS | 12 | 13,2 PB / 11,7 PiB | 1536 GB 
+
+
+| SAN | 6 | 6,6 PB / 5,9 PiB | 768 GB 
+
+
+| Par HA |  | 1,1 PB / 1,0 PiB | 128,0000 
+|===
+
+
+=== IO
+
+
+
+==== IO integrado
+
+|===
+
+
+| Protocolo | Portos 
+
+
+| Ethernet 25 Gbps | 4 
+
+
+| Ethernet 10 Gbps | 4 
+|===
+
+
+==== Total de IO
+
+|===
+
+
+| Protocolo | Portos 
+
+
+| Ethernet 100 Gbps | 4 
+
+
+| Ethernet 25 Gbps | 20 
+
+
+| Ethernet 10 Gbps | 4 
+
+
+| FC 32 Gbps | 16 
+
+
+| NVMe/FC 32 Gbps | 16 
+
+
+|  | 0 
+
+
+| SAS 12 Gbps | 8 
+|===
+
+
+==== Portas de Gestão
+
+|===
+
+
+| Protocolo | Portos 
+
+
+| Ethernet 1 Gbps | 2 
+
+
+| RS-232 115 Kbps | 4 
+
+
+| USB 12 Mbps | 4 
+|===
+
+
+=== Rede de armazenamento suportada
+
+CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NVMe/FC; NVMe/TCP; S3; S3 com NAS; SMB 2.0; SMB 2.1; SMB 2.x; SMB 3.0; SMB 3.1; SMB 3.1.1;
+
+
+
+=== Especificações do ambiente do sistema
+
+* Potência típica: 2642 BTU/h
+* Pior cenário de potência: 3476 BTU/h
+* Peso: 54,3 lb 24,6 kg
+* Altura: 2U
+* Largura: 19" (44,7 cm), compatível com o padrão de rack IEC.
+* Profundidade: 21,38" (54,3 cm)
+* Temperatura/Altitude/Umidade de operação: 10°C a 35°C (50°F a 95°F) em altitudes de até 3048 m (10000 pés); umidade relativa de 8% a 80%, sem condensação.
+* Temperatura/Umidade fora de operação: -40 °C a 70 °C (-40 °F a 158 °F) até 12.192 m (40.000 pés), 10% a 95% de umidade relativa, sem condensação, na embalagem original.
+* Ruído acústico: Potência sonora declarada (LwAd): 7,2; Pressão sonora (LpAm) (posições de observador): 69,1 dB
+
+
+
+
+=== Conformidade
+
+* Certificações EMC/EMI: AMCA, FCC, ICES, KC, Marrocos, VCCI
+* Certificações de segurança: BIS, CB, CSA, G_K_U-SoR, IRAM, NOM, NRCS, SONCAP, TBS
+* Certificações Segurança/EMC/EMI: EAC, UKRSEPRO
+* Certificações Segurança/EMC/EMI/RoHS: BSMI, CE DoC, UKCA DoC
+* Normas EMC/EMI: BS-EN-55024, BS-EN55035, CISPR 32, EN55022, EN55024, EN55032, EN55035, EN61000-3-2, EN61000-3-3, FCC Parte 15 Classe A, ICES-003, KS C 9832, KS C 9835
+* Normas de segurança: ANSI/UL60950-1, ANSI/UL62368-1, BS-EN62368-1, CAN/CSA C22.2 No. 60950-1, CAN/CSA C22.2 No. 62368-1, CNS 14336, EN60825-1, EN62368-1, IEC 62368-1, IEC60950-1, IS 13252 (parte 1)
+
+
+
+
+=== Alta disponibilidade
+
+Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP ; Controladores redundantes de troca a quente; Fontes de alimentação redundantes de troca a quente; Gerenciamento SAS em banda por meio de conexões SAS para prateleiras externas;

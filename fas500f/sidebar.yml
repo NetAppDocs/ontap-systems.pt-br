@@ -16,21 +16,38 @@ entries:
 - title: Manutenção
   pdf-filename: Manutenção da FAS500f
   entries:
-  - title: Visão geral
+  - title: Visão geral da manutenção
     url: "/fas500f/maintain-overview.html"
-  - title: Suporte de arranque
-    pdf-filename: Mídia de inicialização do FAS500f
+  - title: Mídia de inicialização - recuperação automatizada
+    pdf-filename: Mídia de inicialização automatizada FAS500f
     entries:
-    - title: Visão geral
-      url: "/fas500f/bootmedia-replace-overview.html"
+    - title: Fluxo de trabalho de substituição de Mídia de inicialização
+      url: "/fas500f/bootmedia-replace-workflow-bmr.html"
+    - title: Rever os requisitos
+      url: "/fas500f/bootmedia-replace-requirements-bmr.html"
+    - title: Desligue o controlador desativado
+      url: "/fas500f/bootmedia-shutdown-bmr.html"
+    - title: Substitua o suporte de arranque
+      url: "/fas500f/bootmedia-replace-bmr.html"
+    - title: Imagem de recuperação de inicialização
+      url: "/fas500f/bootmedia-recovery-image-boot-bmr.html"
+    - title: Devolver artigo com falha ao NetApp
+      url: "/fas500f/bootmedia-complete-rma-bmr.html"
+  - title: Mídia de inicialização - recuperação manual
+    pdf-filename: FAS500f Manual de mídia de inicialização
+    entries:
+    - title: Fluxo de trabalho de substituição de Mídia de inicialização
+      url: "/fas500f/bootmedia-replace-workflow.html"
+    - title: Rever os requisitos
+      url: "/fas500f/bootmedia-replace-requirements.html"
     - title: Verifique as chaves de criptografia
       url: "/fas500f/bootmedia-encryption-preshutdown-checks.html"
-    - title: Encerre o nó
+    - title: Desligue o controlador desativado
       url: "/fas500f/bootmedia-shutdown.html"
-    - title: Substitua a imagem de inicialização
+    - title: Substitua o suporte de arranque
       url: "/fas500f/bootmedia-replace.html"
     - title: Imagem de recuperação de inicialização
-      url: "/fas500f/bootmedia-recovery-image-boot-non-2n-mcc.html"
+      url: "/fas500f/bootmedia-recovery-image-boot.html"
     - title: Restaure a criptografia
       url: "/fas500f/bootmedia-encryption-restore.html"
     - title: Devolver artigo com falha ao NetApp
@@ -38,28 +55,34 @@ entries:
   - title: Chassis
     pdf-filename: Chassis FAS500f
     entries:
-    - title: Visão geral
-      url: "/fas500f/chassis-replace-overview.html"
-    - title: Desligue o controlador desativado
+    - title: Fluxo de trabalho de substituição do chassis
+      url: "/fas500f/chassis-replace-workflow.html"
+    - title: Rever os requisitos
+      url: "/fas500f/chassis-replace-requirements.html"
+    - title: Prepare-se para substituir
+      url: "/fas500f/chassis-replace-prepare.html"
+    - title: Desligue os controladores
       url: "/fas500f/chassis-replace-shutdown.html"
-    - title: Substitua o material de fixação
+    - title: Substitua o chassi
       url: "/fas500f/chassis-replace-move-hardware.html"
-    - title: Substituição completa
+    - title: Substituição completa do chassis
       url: "/fas500f/chassis-replace-complete-system-restore-rma.html"
   - title: Controlador
     pdf-filename: Módulo do controlador FAS500f
     entries:
-    - title: Visão geral
-      url: "/fas500f/controller-replace-overview.html"
+    - title: Fluxo de trabalho de substituição do controlador
+      url: "/fas500f/controller-replace-workflow.html"
+    - title: Rever os requisitos
+      url: "/fas500f/controller-replace-requirements.html"
     - title: Desligue o controlador desativado
       url: "/fas500f/controller-replace-shutdown.html"
-    - title: Substitua o módulo do controlador
+    - title: Substitua o controlador
       url: "/fas500f/controller-replace-move-hardware.html"
     - title: Restaure a configuração do sistema
       url: "/fas500f/controller-replace-system-config-restore-and-verify.html"
     - title: Sistema Recable
       url: "/fas500f/controller-replace-recable-reassign-disks.html"
-    - title: Restauração completa do sistema
+    - title: Substituição completa do controlador
       url: "/fas500f/controller-replace-restore-system-rma.html"
   - title: DIMM
     url: "/fas500f/dimm-replace.html"
@@ -70,8 +93,10 @@ entries:
   - title: Placa mezzanine
     url: "/fas500f/mezzanine-replace.html"
   - title: Bateria NVMEM
-    url: "/fas500f/nvmem-battery-replace.html"
+    url: "/fas500f/nvmem-nvram-battery-replace.html"
   - title: Fonte de alimentação
     url: "/fas500f/power-supply-replace.html"
   - title: Bateria de relógio em tempo real
     url: "/fas500f/rtc-battery-replace.html"
+- title: Especificações principais
+  url: "/fas500f/overview.html"

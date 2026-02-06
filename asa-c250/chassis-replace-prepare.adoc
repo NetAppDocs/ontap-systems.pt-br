@@ -1,0 +1,43 @@
+---
+permalink: asa-c250/chassis-replace-prepare.html 
+sidebar: sidebar 
+keywords: asa c250, replace the chassis 
+summary: Prepare-se para substituir o chassi com problema em seu sistema ASA C250, identificando o chassi com problema, verificando os componentes de substituição e etiquetando os cabos e módulos do controlador. 
+---
+= Prepare-se para substituir o chassi - ASA C250
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prepare-se para substituir o chassi com problema em seu sistema ASA C250, identificando o chassi com problema, verificando os componentes de substituição e etiquetando os cabos e módulos do controlador.
+
+.Passos
+. Conete-se à porta do console serial à interface e monitore o sistema.
+. Ligue o LED de localização do controlador:
++
+.. Use o `system controller location-led show` Comando para exibir o estado atual do LED de localização.
+.. Ligue o LED de localização:
++
+`system controller location-led modify -node _node1_ -state on`
+
++
+O LED de localização permanece aceso durante 30 minutos.
+
+
+
+. Antes de abrir a embalagem, examine o rótulo e verifique o seguinte:
++
+** Número da peça do componente
+** Descrição da peça
+** Quantidade na caixa
+
+
+. Retire o conteúdo da embalagem e guarde-a para devolver o componente com defeito à NetApp.
+. Identifique todos os cabos conectados ao sistema de armazenamento.  Isso garante a correta recablagem posteriormente neste procedimento.
+. Conecte-se com a terra, caso ainda não esteja conectado.
+
+
+.O que se segue?
+Depois de se preparar para substituir o hardware do chassi ASA C250, você precisa link:chassis-replace-shutdown.html["desligue os controladores"].

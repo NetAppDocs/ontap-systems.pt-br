@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff a250, move the hardware components 
 summary: Para substituir o hardware do módulo do controlador, é necessário remover o módulo do controlador prejudicado, mover os componentes FRU para o módulo do controlador de substituição, instalar o módulo do controlador de substituição no chassis e, em seguida, inicializar o sistema para o modo de manutenção. 
 ---
-= Substitua o hardware do módulo do controlador - AFF A250
+= Substitua o controlador - AFF A250
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Substitua o controlador no seu sistema AFF A250 quando uma falha de hardware exigir. O processo de substituição envolve remover o controlador com problema, mover os componentes para o controlador de substituição, instalar o controlador de substituição e reiniciá-lo.
+
 Para substituir o hardware do módulo do controlador, é necessário remover o controlador prejudicado, mover os componentes FRU para o módulo do controlador de substituição, instalar o módulo do controlador de substituição no chassis e, em seguida, inicializar o sistema para o modo de manutenção.
 
 
@@ -374,3 +376,6 @@ O módulo do controlador começa a inicializar assim que a energia é restaurada
 
 
 
+
+.O que se segue?
+Após substituir o controlador A250 defeituoso, você precisa link:controller-replace-system-config-restore-and-verify.html["restaure e verifique a configuração do sistema"].

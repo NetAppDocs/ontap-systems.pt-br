@@ -11,7 +11,9 @@ summary: 'Uma vez que as variáveis de ambiente estejam marcadas, você deve con
 
 
 [role="lead"]
-Restaure a encriptação no suporte de arranque de substituição.
+Restaure a criptografia na mídia de inicialização de substituição do seu AFF A250 para garantir a proteção contínua dos dados. O processo de substituição envolve verificar a disponibilidade da chave, reaplicar as configurações de criptografia e confirmar o acesso seguro aos seus dados.
+
+Se o seu sistema de storage estiver executando ONTAP 9.18.1 ou posterior, use o link:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"]. Se o seu sistema estiver executando uma versão anterior do ONTAP, você deve usar o procedimento de recuperação de inicialização manual.
 
 Siga os passos adequados para restaurar a criptografia no seu sistema, de acordo com o tipo de gerenciador de chaves utilizado.  Se você não tiver certeza de qual gerenciador de chaves seu sistema utiliza, verifique as configurações que você registrou no início do procedimento de substituição da mídia de inicialização.
 
@@ -430,3 +432,5 @@ Selection (1-11)? 1
 
 --
 ====
+.O que se segue?
+Depois de restaurar a encriptação no suporte de arranque, tem de link:bootmedia-complete-rma.html["Devolva a peça com falha ao NetApp"].

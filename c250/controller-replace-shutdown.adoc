@@ -11,6 +11,8 @@ summary: Para desligar o módulo do controlador afetado, é necessário determin
 
 
 [role="lead"]
+Desligue o controlador no seu sistema de storage AFF C250 para evitar perda de dados e garantir a estabilidade do sistema ao substituir o controlador.
+
 Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
 
 .Sobre esta tarefa
@@ -73,3 +75,6 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 
 |===
 
+
+.O que se segue?
+Depois de desligar o controlador, você precisa link:controller-replace-move-hardware.html["Substitua o controlador"]

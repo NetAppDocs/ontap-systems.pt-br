@@ -1,20 +1,24 @@
 ---
 permalink: a250/bootmedia-shutdown.html 
 sidebar: sidebar 
-keywords: aff a250, shutdown 
+keywords: aff a250, shut down the controller 
 summary: Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador desativado. 
 ---
-= Desligue o controlador - AFF A250
+= Desligue o controlador para recuperação manual da mídia de inicialização - AFF A250
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
+[role="lead"]
+Desligue o controlador com defeito no seu sistema de storage AFF A250 para evitar perda de dados e manter a estabilidade do sistema durante o processo automatizado de recuperação da mídia de inicialização.
+
+Se o seu sistema de storage estiver executando ONTAP 9.18.1 ou posterior, use o link:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"]. Se o seu sistema estiver executando uma versão anterior do ONTAP, você deve usar o procedimento de recuperação de inicialização manual.
+
 
 
 == Opção 1: A maioria dos sistemas
 
-[role="lead"]
 Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador desativado.
 
 .Passos
@@ -56,9 +60,7 @@ NOTE: Este comando pode não funcionar se o dispositivo de inicialização estiv
 
 
 
-== Opção 2: Sistemas em um MetroCluster
-
-Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador desativado.
+== Opção 2: O sistema está em um MetroCluster
 
 
 NOTE: Não use este procedimento se o sistema estiver em uma configuração de MetroCluster de dois nós.
@@ -105,3 +107,6 @@ Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctr
 
 |===
 
+
+.O que se segue?
+Depois de desligar o controlador, é necessário link:bootmedia-replace.html["substitua o suporte de arranque"].

@@ -2,7 +2,7 @@
 permalink: fas500f/maintain-overview.html 
 sidebar: sidebar 
 keywords: fas500f maintenance, maintenance, repairing, repairing fas500f, replace fas500f components, replace fas500f components 
-summary: Mantenha o hardware ASA C800 
+summary: Realizar manutenção no hardware FAS500f 
 ---
 = Mantenha o hardware FAS500f
 :allow-uri-read: 
@@ -11,64 +11,93 @@ summary: Mantenha o hardware ASA C800
 
 
 [role="lead"]
+Faça a manutenção do hardware do seu sistema de storage FAS500f para garantir confiabilidade a longo prazo e desempenho ideal. Execute tarefas de manutenção regulares, como a substituição de componentes defeituosos, pois isso ajuda a evitar tempo de inatividade e perda de dados.
+
+Os procedimentos de manutenção pressupõem que o FAS500f storage system já tenha sido implementado como um nó de storage no ambiente ONTAP.
+
+
+
+== Componentes do sistema
+
 Para o sistema de armazenamento FAS500f, pode executar procedimentos de manutenção nos seguintes componentes.
 
+[cols="25,65"]
+|===
 
 
-== Suporte de arranque
+ a| 
+link:bootmedia-replace-workflow-bmr.html["Mídia de inicialização - recuperação automatizada"]
+ a| 
+A mídia de inicialização armazena um conjunto primário e um conjunto secundário de arquivos de imagem ONTAP que o sistema de storage usa para inicializar. Durante a recuperação automatizada, o sistema recupera a imagem de inicialização do nó parceiro e executa automaticamente a opção apropriada do menu de inicialização para instalar a imagem na sua mídia de inicialização de substituição. O processo de recuperação automatizada da mídia de inicialização é compatível apenas com ONTAP 9.18.1 e versões posteriores. Se o seu sistema de storage estiver executando uma versão anterior do ONTAP, use o link:bootmedia-replace-workflow.html["procedimento de recuperação de inicialização manual"].
 
-A Mídia de inicialização armazena um conjunto primário e secundário de arquivos de imagem de inicialização que o sistema usa quando ele é inicializado.
+
+
+ a| 
+link:bootmedia-replace-workflow.html["Mídia de inicialização - recuperação manual"]
+ a| 
+A mídia de inicialização armazena um conjunto primário e um secundário de arquivos de imagem ONTAP que o sistema de storage usa para inicializar. Durante a recuperação manual, você inicializa o sistema de storage a partir de uma unidade USB e restaura manualmente a imagem do sistema de arquivos e a configuração. Se o seu sistema de storage estiver executando ONTAP 9.18.1 ou posterior, use o link:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"].
 
 
 
-== Chassis
-
+ a| 
+link:chassis-replace-workflow.html["Chassis"]
+ a| 
 O chassi é o gabinete físico que abriga todos os componentes do controlador, como a unidade controladora/CPU, fonte de alimentação e e/S.
 
 
 
-== Controlador
-
+ a| 
+link:controller-replace-workflow.html["Controlador"]
+ a| 
 Um controlador consiste em uma placa, firmware e software. Controla as unidades e implementa as funções do ONTAP.
 
 
 
-== DIMM
-
+ a| 
+link:dimm-replace.html["DIMM"]
+ a| 
 Você deve substituir um DIMM (módulo de memória dual in-line) quando houver uma incompatibilidade de memória ou se tiver um DIMM com falha.
 
 
 
-== Condução
-
+ a| 
+link:drive-replace.html["Condução"]
+ a| 
 Uma unidade é um dispositivo que fornece a Mídia de armazenamento físico para dados.
 
 
 
-== Ventoinha
-
+ a| 
+link:fan-replace.html["Ventoinha"]
+ a| 
 A ventoinha arrefece o controlador.
 
 
 
-== Placa mezzanine
-
-Um cartão Mezzanine é uma placa de circuito impresso que se coneta diretamente a outro cartão de plug-in.
-
-
-
-== Bateria NVMEM
-
-Uma bateria é incluída com o controlador e preserva os dados em cache se a energia CA falhar.
+ a| 
+link:mezzanine-replace.html["Placa mezzanine"]
+ a| 
+A placa Mezzanine é uma placa de circuito impresso que se conecta diretamente a outra placa plug-in.
 
 
 
-== Fonte de alimentação
+ a| 
+link:nvmem-nvram-battery-replace.html["Bateria NVMEM"]
+ a| 
+A bateria NVMEM é responsável por preservar os dados em cache caso haja falha na alimentação CA.
 
+
+
+ a| 
+link:power-supply-replace.html["Fonte de alimentação"]
+ a| 
 Uma fonte de alimentação fornece uma fonte de alimentação redundante em um compartimento de controladora.
 
 
 
-== Bateria de relógio em tempo real
-
+ a| 
+link:rtc-battery-replace.html["Bateria de relógio em tempo real"]
+ a| 
 Uma bateria de relógio em tempo real preserva as informações de data e hora do sistema se a energia estiver desligada.
+
+|===

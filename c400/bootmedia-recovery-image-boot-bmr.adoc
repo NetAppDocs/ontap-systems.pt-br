@@ -80,10 +80,7 @@ A criptografia está instalada. Vá para<<restore-key-manager,restaurando o gere
 
 NOTE: Se o sistema não conseguir identificar a configuração do gerenciador de chaves, ele exibirá uma mensagem de erro e solicitará que você confirme se o gerenciador de chaves está configurado e qual o tipo (integrado ou externo).  Responda às perguntas para prosseguir.
 
-
-
-[[restore-key-manager]]
-. Restaure o gerenciador de chaves usando o procedimento apropriado para sua configuração:
+. [[restore-key-manager]] Restaure o gerenciador de chaves usando o procedimento apropriado para sua configuração:
 +
 [role="tabbed-block"]
 ====
@@ -295,8 +292,7 @@ Vá para <<reenable-auto-giveback,reativando a devolução automática>> se esti
 ====
 
 
-[[reenable-auto-giveback]]
-. Se a giveback automática foi desativada, reative-a:
+. [[reenable-auto-giveback]]Se o giveback automático foi desativado, reative-o:
 +
 `storage failover modify -node local -auto-giveback true`
 

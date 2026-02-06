@@ -11,6 +11,8 @@ summary: Mova as fontes de alimentação, as unidades de disco rígido e o módu
 
 
 [role="lead"]
+Substitua o chassi do seu sistema ASA A250 quando uma falha de hardware exigir. O processo de substituição envolve a remoção dos controladores e das fontes de alimentação (PSUs), a remoção das unidades de disco, a instalação do chassi de substituição e a reinstalação dos componentes do chassi.
+
 Para substituir o chassi, você move as fontes de alimentação, os discos rígidos e o módulo do controlador do chassi com deficiência para o novo chassi e troca o chassi com deficiência pelo novo chassi do mesmo modelo que o chassi com deficiência.
 
 
@@ -140,3 +142,6 @@ O módulo do controlador começa a inicializar assim que a energia é restaurada
 
 . Repita os passos anteriores para instalar o segundo controlador no novo chassis.
 
+
+.O que se segue?
+Após substituir o chassi ASA A250 e reinstalar os componentes, você precisa link:chassis-replace-complete-system-restore-rma.html["complete a substituição do chassis"]

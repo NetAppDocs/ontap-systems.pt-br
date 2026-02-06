@@ -11,6 +11,8 @@ summary: Você deve remarcar o armazenamento e confirmar a reatribuição do dis
 
 
 [role="lead"]
+Após concluir a restauração e verificar a configuração do sistema FAS500f, você precisa reconectar o sistema e reatribuir os discos.
+
 Continue o procedimento de substituição reativando o armazenamento e confirmando a reatribuição do disco.
 
 
@@ -144,3 +146,6 @@ dr-group-id            cluster node           configuration-state
 . Verifique se os volumes esperados estão presentes para cada controlador: `vol show -node node-name`
 . Se você desativou o controle automático na reinicialização, ative-o a partir do controlador íntegro: `storage failover modify -node replacement-node-name -onreboot true`
 
+
+.O que se segue?
+Depois de reconectar o sistema e reatribuir os discos, você precisa link:controller-replace-restore-system-rma.html["complete a substituição do controlador"].

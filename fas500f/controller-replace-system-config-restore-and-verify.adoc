@@ -11,6 +11,8 @@ summary: Depois de concluir a substituição de hardware e a inicialização par
 
 
 [role="lead"]
+Após concluir a substituição do hardware e inicializar o seu sistema FAS500f no modo de manutenção, você precisa verificar a configuração de baixo nível do controlador de substituição e reconfigurar as definições do sistema conforme necessário.
+
 Depois de concluir a substituição de hardware e a inicialização para o modo de manutenção, você verifica a configuração de sistema de baixo nível do controlador de substituição e reconfigura as configurações do sistema conforme necessário.
 
 
@@ -46,7 +48,7 @@ A data e a hora são dadas em GMT.
 
 
 
-== Etapa 2: Verifique e defina o estado HA do chassi
+== Etapa 2: Verifique e defina o estado HA do controlador
 
 Você deve verificar o `HA` estado do módulo do controlador e, se necessário, atualizar o estado para corresponder à configuração do sistema.
 
@@ -68,3 +70,6 @@ O valor para HA-State pode ser um dos seguintes:
 . Se o estado do sistema apresentado do módulo do controlador não corresponder à configuração do sistema, defina o `HA` estado para o módulo do controlador: `ha-config modify controller ha-state`
 . Confirme se a definição foi alterada: `ha-config show`
 
+
+.O que se segue?
+Após restaurar e verificar a configuração do sistema, você precisa link:controller-replace-recable-reassign-disks.html["Recable o sistema e reatribua os discos"].

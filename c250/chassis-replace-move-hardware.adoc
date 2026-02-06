@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff c250, move hardware components, replace the chassis 
 summary: Mova as fontes de alimentação, as unidades de disco rígido e o módulo ou os módulos do controlador do chassis danificado para o novo chassis e troque o chassis danificado do rack de equipamentos ou do armário do sistema pelo novo chassis do mesmo modelo que o chassis danificado. 
 ---
-= Substitua o hardware - AFF C250
+= Substitua o chassi - AFF C250
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Substitua o chassi do seu sistema AFF C250 quando uma falha de hardware exigir. O processo de substituição envolve remover os controladores e as fontes de alimentação (PSUs), remover as unidades de disco, instalar o chassi de substituição e reinstalar os componentes do chassi.
+
 Para substituir o chassi, você move as fontes de alimentação, os discos rígidos e o módulo do controlador do chassi com deficiência para o novo chassi e troca o chassi com deficiência pelo novo chassi do mesmo modelo que o chassi com deficiência.
 
 
@@ -140,3 +142,6 @@ O módulo do controlador começa a inicializar assim que a energia é restaurada
 
 . Repita os passos anteriores para instalar o segundo controlador no novo chassis.
 
+
+.O que se segue?
+Após substituir o chassi AFF C250 e reinstalar os componentes, você precisa link:chassis-replace-complete-system-restore-rma.html["complete a substituição do chassis"]

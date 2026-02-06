@@ -4,14 +4,16 @@ sidebar: sidebar
 keywords: fas500f, verify and set HA state, complete the replacement process 
 summary: Você deve verificar o estado de HA do chassi e devolver a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. 
 ---
-= Conclua o processo de restauração e substituição - FAS500f
+= Conclua a substituição do chassi - FAS500f
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Você deve verificar o estado de HA do chassi e devolver a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit.
+Reinicie os controladores, verifique a integridade do sistema e devolva a peça com defeito para NetApp para concluir a etapa final do procedimento de substituição do chassi FAS500f.
+
+Você precisa verificar o estado de HA do chassi e devolver a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit.
 
 
 
