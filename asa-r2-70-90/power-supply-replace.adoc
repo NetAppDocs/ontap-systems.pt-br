@@ -16,12 +16,13 @@ Substitua uma fonte de alimentação CA ou CC (PSU) em seu sistema ASA A70 ou AS
 As fontes de alimentação são redundantes e intercambiáveis a quente. Não é necessário desligar o controlador para substituir uma PSU.
 
 .Sobre esta tarefa
-Este procedimento é escrito para substituir uma PSU de cada vez.
+Este procedimento foi escrito para a substituição de uma PSU por vez. Utilize o procedimento apropriado para o seu tipo de PSU: AC ou DC.
 
 
 IMPORTANT: Não misture PSUs com diferentes classificações de eficiência ou tipos de entrada diferentes. Sempre substitua como por like.
 
-Use o procedimento apropriado para o seu tipo de PSU: AC ou DC.
+
+CAUTION: Use sempre uma pulseira antiestática aterrada, conectada a um ponto de aterramento verificado durante a instalação e os procedimentos de manutenção. A não observância das precauções adequadas contra ESD pode causar danos permanentes aos nós controladores, prateleiras de armazenamento e switches de rede.
 
 [role="tabbed-block"]
 ====
@@ -30,7 +31,6 @@ Use o procedimento apropriado para o seu tipo de PSU: AC ou DC.
 Para substituir uma PSU CA, execute as etapas a seguir.
 
 .Passos
-. Se você ainda não está aterrado, aterre-se adequadamente.
 . Identifique a PSU que você deseja substituir, com base em mensagens de erro do console ou através do LED vermelho de falha na PSU.
 . Desligar a PSU:
 +

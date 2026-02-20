@@ -21,6 +21,9 @@ Você pode usar esse procedimento com todas as versões do ONTAP compatíveis co
 
 
 
+CAUTION: Use sempre uma pulseira antiestática aterrada, conectada a um ponto de aterramento verificado durante a instalação e os procedimentos de manutenção. A não observância das precauções adequadas contra ESD pode causar danos permanentes aos nós controladores, prateleiras de armazenamento e switches de rede.
+
+
 
 == Etapa 1: Encerre o nó prejudicado
 
@@ -151,7 +154,6 @@ Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctr
 Para substituir um módulo de e/S, localize-o dentro do gabinete e siga a sequência específica de etapas.
 
 .Passos
-. Se você ainda não está aterrado, aterre-se adequadamente.
 . Desconete qualquer cabeamento do módulo de e/S de destino.
 +
 

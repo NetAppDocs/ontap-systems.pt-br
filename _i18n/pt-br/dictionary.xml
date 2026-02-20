@@ -14813,7 +14813,6 @@
   <block id="1ca77b2777ea29fd9e6f113829f2f359" category="summary">Realizar manutenção no hardware AFF C250</block>
   <block id="5370447dcd53e366544473fe9ce67f7b" category="paragraph">Faça a manutenção do hardware do seu sistema de storage AFF C250 para garantir confiabilidade a longo prazo e desempenho ideal. Execute tarefas de manutenção regulares, como a substituição de componentes defeituosos, pois isso ajuda a evitar tempo de inatividade e perda de dados.</block>
   <block id="aa857f1fcaf6380b946a1dc363fefca9" category="paragraph">Os procedimentos de manutenção pressupõem que o AFF C250 já tenha sido implementado como um nó de storage no ambiente ONTAP.</block>
-  <block id="21cefb007c9064d8adcf6c162e74b0bf" category="paragraph">Cisco Nexus 3232C</block>
   <block id="e48e73e576f724fd4213ab1eca7edb4a" category="paragraph">ONTAP 9.18.1</block>
   <block id="1d8bdbbecd2a7992d9b2c5314cbc8da8" category="paragraph">Cisco Nexus 3132Q-V</block>
   <block id="f8215ac1ab39569e2ede8f10c0a8405a" category="paragraph">Cisco Nexus 92300YC</block>
@@ -14910,4 +14909,7 @@
   <block id="028a5f76f5ae8b0784cb7f71dcacb0ac" category="sidebar">Prepare-se para a substituição do chassi</block>
   <block id="3857caf5489220ee3ad8ce823746d7d7" category="sidebar">Mídia de inicialização automatizada FAS500f</block>
   <block id="e97e37b3736f4796b4922c33c509044e" category="sidebar">FAS500f Manual de mídia de inicialização</block>
+  <block id="3e43f7eeca64d5c830b0064870a6156b" category="admonition">Use sempre uma pulseira antiestática aterrada, conectada a um ponto de aterramento verificado durante a instalação e os procedimentos de manutenção. A não observância das precauções adequadas contra ESD pode causar danos permanentes aos nós controladores, prateleiras de armazenamento e switches de rede.</block>
+  <block id="65a7bfdd77aba70777e2700d48d0925f" category="paragraph">Este procedimento foi escrito para a substituição de uma PSU por vez. Utilize o procedimento apropriado para o seu tipo de PSU: AC ou DC.</block>
+  <block id="9bedcc9650ba1fe86ed7720eb975429e" category="list-text">Vá para a parte traseira do chassi.</block>
 </blocks>

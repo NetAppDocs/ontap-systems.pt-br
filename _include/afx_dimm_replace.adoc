@@ -137,7 +137,9 @@ Certifique-se de que suporta a parte inferior do módulo do controlador enquanto
 
 Você deve substituir um DIMM quando o sistema relatar uma condição de falha permanente para esse DIMM.
 
-. Se você ainda não está aterrado, aterre-se adequadamente.
+
+CAUTION: Use sempre uma pulseira antiestática aterrada, conectada a um ponto de aterramento verificado durante a instalação e os procedimentos de manutenção. A não observância das precauções adequadas contra ESD pode causar danos permanentes aos nós controladores, prateleiras de armazenamento e switches de rede.
+
 . Abra a conduta de ar do controlador na parte superior do controlador.
 +
 .. Insira os dedos nas reentrâncias nas extremidades distantes da conduta de ar.

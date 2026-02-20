@@ -161,6 +161,9 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 
 Você deve remover o módulo do controlador do gabinete quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
 
+
+CAUTION: Use sempre uma pulseira antiestática aterrada, conectada a um ponto de aterramento verificado durante a instalação e os procedimentos de manutenção. A não observância das precauções adequadas contra ESD pode causar danos permanentes aos nós controladores, prateleiras de armazenamento e switches de rede.
+
 .Passos
 . Verifique o LED de status do NVRAM localizado no slot 4/5 do sistema. Há também um LED NVRAM no painel frontal do módulo do controlador. Procure o ícone NV:
 +
@@ -189,7 +192,6 @@ LED de atenção NVRAM
 ** Se o LED NV estiver intermitente, aguarde que o intermitente pare. Se a intermitência continuar durante mais de 5 minutos, contacte o suporte técnico para obter assistência.
 
 
-. Se você ainda não está aterrado, aterre-se adequadamente.
 . Na parte da frente da unidade, prenda os dedos nos orifícios dos cames de bloqueio, aperte as patilhas nas alavancas do excêntrico e, com cuidado, mas rode firmemente ambas as travas na sua direção ao mesmo tempo.
 +
 O módulo do controlador move-se ligeiramente para fora do compartimento.

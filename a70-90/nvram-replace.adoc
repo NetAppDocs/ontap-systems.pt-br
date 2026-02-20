@@ -164,7 +164,10 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 
 == Etapa 2: Substitua o módulo NVRAM ou o DIMM NVRAM
 
-Substitua o módulo NVRAM ou DIMMs NVRAM usando a opção a seguir apropriada.
+Substitua o módulo NVRAM ou os DIMMs NVRAM usando a opção apropriada.
+
+
+CAUTION: Use sempre uma pulseira antiestática aterrada, conectada a um ponto de aterramento verificado durante a instalação e os procedimentos de manutenção. A não observância das precauções adequadas contra ESD pode causar danos permanentes aos nós controladores, prateleiras de armazenamento e switches de rede.
 
 [role="tabbed-block"]
 ====
@@ -172,7 +175,6 @@ Substitua o módulo NVRAM ou DIMMs NVRAM usando a opção a seguir apropriada.
 --
 Para substituir o módulo NVRAM, localize-o na ranhura 4/5 no chassis e siga a sequência específica de passos.
 
-. Se você ainda não está aterrado, aterre-se adequadamente.
 . Certifique-se de que todas as unidades no chassis estão firmemente assentadas contra o plano médio, utilizando os polegares para empurrar cada unidade até sentir um batente positivo.
 +
 .Vídeo - Confirme o assento do motorista

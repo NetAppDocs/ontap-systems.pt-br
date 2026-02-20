@@ -18,6 +18,9 @@ Você pode desativá-los digitando o `system location-led _off_` comando. Se nã
 
 
 
+
+CAUTION: Use sempre uma pulseira antiestática aterrada, conectada a um ponto de aterramento verificado durante a instalação e os procedimentos de manutenção. A não observância das precauções adequadas contra ESD pode causar danos permanentes aos nós controladores, prateleiras de armazenamento e switches de rede.
+
 [role="tabbed-block"]
 ====
 .Opção 1: Troca a quente de uma fonte de alimentação CA
@@ -25,7 +28,6 @@ Você pode desativá-los digitando o `system location-led _off_` comando. Se nã
 Para substituir uma PSU CA, execute as etapas a seguir.
 
 .Passos
-. Se você ainda não está aterrado, aterre-se adequadamente.
 . Identifique a PSU avariada com base em mensagens de erro da consola ou através do LED de atenção vermelho na PSU.
 . Desconete o cabo de alimentação da PSU abrindo o retentor do cabo de alimentação e, em seguida, desconete o cabo de alimentação da PSU.
 +

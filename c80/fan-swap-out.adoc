@@ -157,8 +157,10 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 
 == Passo 2: Remova o módulo do controlador
 
+
+CAUTION: Use sempre uma pulseira antiestática aterrada, conectada a um ponto de aterramento verificado durante a instalação e os procedimentos de manutenção. A não observância das precauções adequadas contra ESD pode causar danos permanentes aos nós controladores, prateleiras de armazenamento e switches de rede.
+
 .Passos
-. Se você ainda não está aterrado, aterre-se adequadamente.
 . Certifique-se de que todas as unidades no chassis estão firmemente assentadas contra o plano médio, utilizando os polegares para empurrar cada unidade até sentir um batente positivo.
 +
 .Vídeo - Confirme o assento do motorista
@@ -276,6 +278,9 @@ Certifique-se de que suporta a parte inferior do módulo do controlador enquanto
 == Etapa 3: Substitua o ventilador
 
 Para substituir uma ventoinha, retire o módulo da ventoinha com avaria e substitua-o por um novo módulo da ventoinha.
+
+
+CAUTION: Use sempre uma pulseira antiestática aterrada, conectada a um ponto de aterramento verificado durante a instalação e os procedimentos de manutenção. A não observância das precauções adequadas contra ESD pode causar danos permanentes aos nós controladores, prateleiras de armazenamento e switches de rede.
 
 .Passos
 . Identifique o módulo do ventilador que você deve substituir verificando as mensagens de erro do console.

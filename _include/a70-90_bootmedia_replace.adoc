@@ -8,8 +8,11 @@
 
 O suporte de arranque encontra-se no interior do módulo de gestão do sistema e é acedido removendo o módulo do sistema.
 
+
+CAUTION: Use sempre uma pulseira antiestática aterrada, conectada a um ponto de aterramento verificado durante a instalação e os procedimentos de manutenção. A não observância das precauções adequadas contra ESD pode causar danos permanentes aos nós controladores, prateleiras de armazenamento e switches de rede.
+
 .Passos
-. Vá para a parte traseira do chassis. Se você ainda não está aterrado, aterre-se adequadamente.
+. Vá para a parte traseira do chassi.
 . Desconecte as PSUs do controlador.
 +
 

@@ -11,8 +11,10 @@ IMPORTANT: Não misture PSUs com diferentes classificações de eficiência. Sem
 * As fontes de alimentação são redundantes e intercambiáveis a quente; você não precisa assumir o controle do controlador para executar essa tarefa.
 
 
+
+CAUTION: Use sempre uma pulseira antiestática aterrada, conectada a um ponto de aterramento verificado durante a instalação e os procedimentos de manutenção. A não observância das precauções adequadas contra ESD pode causar danos permanentes aos nós controladores, prateleiras de armazenamento e switches de rede.
+
 .Passos
-. Se você ainda não está aterrado, aterre-se adequadamente.
 . Identifique a PSU que você deseja substituir, com base em mensagens de erro do console ou através do LED vermelho de falha na PSU.
 . Desligar a PSU:
 +
