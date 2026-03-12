@@ -15,7 +15,7 @@ O módulo NVRAM consiste no hardware NVRAM12 e DIMMs substituíveis em campo. Vo
 
 Desligue ou assuma o controlador desativado.
 
-Para desligar o controlador com defeito, você deve determinar o status do controlador e, se necessário, executar uma aquisição de failover de armazenamento do controlador para que o controlador íntegro continue a fornecer dados do armazenamento do controlador com defeito.
+Assuma o controle e interrompa o controlador com defeito para que o controlador em bom estado continue a fornecer dados do armazenamento do controlador com defeito. Para fazer isso, você suprime a criação automática de casos em AutoSupport, desativa o giveback automático e leva o controlador com defeito ao prompt LOADER. O prompt LOADER é o estado de parada segura a partir do qual você pode substituir a FRU.
 
 .Sobre esta tarefa
 * Se você tiver um cluster com mais de quatro nós, ele deverá estar no quorum.  Para visualizar informações de cluster sobre seus nós, use o `cluster show` comando.  Para mais informações sobre o `cluster show` comando, vejalink:https://docs.netapp.com/us-en/ontap/system-admin/display-nodes-cluster-task.html["Exibir detalhes no nível do nó em um cluster ONTAP"^] .

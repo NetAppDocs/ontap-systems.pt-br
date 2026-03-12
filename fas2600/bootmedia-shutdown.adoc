@@ -15,7 +15,7 @@ Após concluir as verificações de criptografia, desligue o controlador com def
 
 O sistema FAS2600 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada.
 
-Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador desativado.
+Conclua o desligamento do controlador com defeito, interrompendo-o até o prompt LOADER e capturando as variáveis de ambiente de inicialização. O prompt LOADER é o estado de parada seguro a partir do qual você pode substituir a mídia de inicialização.
 
 .Passos
 . Leve o controlador prejudicado para o prompt Loader:

@@ -15,7 +15,7 @@ Desligue o controlador danificado no seu sistema de armazenamento FAS8300 ou FAS
 
 O processo automatizado de recuperação de mídia de inicialização é compatível apenas com o ONTAP 9.17.1 e versões posteriores. Se o seu sistema de armazenamento estiver executando uma versão anterior do ONTAP, use o link:bootmedia-replace-workflow.html["procedimento de recuperação de inicialização manual"] .
 
-Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
+Assuma o controle e interrompa o controlador com defeito para que o controlador em bom estado continue a fornecer dados do armazenamento do controlador com defeito. Para fazer isso, você suprime a criação automática de casos em AutoSupport, desativa o giveback automático e leva o controlador com defeito ao prompt LOADER. O prompt LOADER é o estado de parada segura a partir do qual você pode substituir a FRU.
 
 .Sobre esta tarefa
 * Se você tiver um sistema SAN, você deve ter verificado mensagens de  `cluster kernel-service show`evento ) para o blade SCSI do controlador afetado. O `cluster kernel-service show` comando (do modo avançado priv) exibe o nome do nó, link:https://docs.netapp.com/us-en/ontap/system-admin/display-nodes-cluster-task.html["status do quorum"]desse nó, o status de disponibilidade desse nó e o status operacional desse nó.

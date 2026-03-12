@@ -23,7 +23,7 @@ O sistema FAS8200 suporta apenas procedimentos manuais de recuperação de mídi
 
 == Opção 1: A maioria dos sistemas
 
-Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador desativado.
+Conclua o desligamento do controlador com defeito, interrompendo-o até o prompt LOADER e capturando as variáveis de ambiente de inicialização. O prompt LOADER é o estado de parada seguro a partir do qual você pode substituir a mídia de inicialização.
 
 .Passos
 . Leve o controlador prejudicado para o prompt Loader:
@@ -69,7 +69,7 @@ NOTE: Este comando pode não funcionar se o dispositivo de inicialização estiv
 
 NOTE: Não use este procedimento se o sistema estiver em uma configuração de MetroCluster de dois nós.
 
-Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
+Assuma o controle e interrompa o controlador com defeito para que o controlador em bom estado continue a fornecer dados do armazenamento do controlador com defeito. Para fazer isso, você suprime a criação automática de casos em AutoSupport, desativa o giveback automático e leva o controlador com defeito ao prompt LOADER. O prompt LOADER é o estado de parada segura a partir do qual você pode substituir a FRU.
 
 * Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
 * Se você tiver uma configuração MetroCluster, você deve ter confirmado que o estado de configuração do MetroCluster está configurado e que os nós estão em um estado ativado e normal (`metrocluster node show`).
