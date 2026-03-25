@@ -360,6 +360,10 @@ A riser levanta-se ligeiramente do módulo do controlador.
 .. Solte os parafusos de aperto manual na placa do mezanino e levante cuidadosamente a placa diretamente para fora do soquete e coloque-a de lado.
 .. Alinhe a placa de mezanino de substituição sobre o soquete e os pinos-guia e empurre cuidadosamente a placa para dentro do soquete.
 .. Aperte os parafusos de aperto manual na placa do mezanino.
++
+
+NOTE: Aperte completamente os parafusos de fixação da placa mezzanine. Se estiverem soltos, as portas e0e a e0h podem não ser detectadas, o LED pode piscar continuamente e os registros podem mostrar um erro de "cabo não suportado".
+
 
 
 . Reinstale a riser:

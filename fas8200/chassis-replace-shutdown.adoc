@@ -23,17 +23,10 @@ Este procedimento destina-se a sistemas com duas configurações de nós. Para o
 * Certifique-se de que tem as permissões e credenciais necessárias:
 +
 ** Credenciais de administrador local para o ONTAP.
-** BMC accessability para cada controlador.
+** Acessibilidade do BMC para cada controlador.
 
 
 * Certifique-se de que tem as ferramentas e o equipamento necessários para a substituição.
-* Como uma prática recomendada antes do desligamento, você deve:
-+
-** Execute mais https://kb.netapp.com/onprem/ontap/os/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["verificações de integridade do sistema"].
-** Atualize o ONTAP para uma versão recomendada para o sistema.
-** Resolva qualquer https://activeiq.netapp.com/["Alertas e riscos de bem-estar do Active IQ"]. Tome nota de quaisquer avarias atualmente no sistema, tais como LEDs nos componentes do sistema.
-
-
 
 
 .Passos
@@ -52,9 +45,11 @@ Este procedimento destina-se a sistemas com duas configurações de nós. Para o
 +
 `exit`
 
-. Faça login no SP/BMC via SSH usando o endereço IP de qualquer um dos nós listados na saída da etapa anterior para monitorar o progresso.
+. Faça login no SP/BMC de cada controlador usando o endereço IP identificado na etapa anterior:
 +
-Se você estiver usando um console/laptop, faça login no controlador usando as mesmas credenciais de administrador de cluster.
+** Se você fizer login no BMC via SSH, conecte-se usando o endereço SP/BMC (por exemplo, `ssh admin@<SP/BMC_address>`), depois insira o comando `system console` e autentique-se.
+** Se você estiver usando um console local ou um laptop conectado diretamente ao controlador, faça login usando as mesmas credenciais de administrador do cluster.
+
 
 . Parar os dois nós localizados no chassi com deficiência:
 +

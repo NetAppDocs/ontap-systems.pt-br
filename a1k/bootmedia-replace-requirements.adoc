@@ -21,6 +21,8 @@ Antes de substituir o suporte de arranque no sistema AFF A1K, certifique-se de q
 .Preparação do arquivo
 Copie o  `image_xxx.tgz` arquivo para o pen drive USB. Este arquivo será usado quando você transferir a imagem ONTAP usando o pen drive USB.
 
+Da imagem ONTAP extraída, copie a pasta  `EFI` para o diretório raiz da unidade flash USB.
+
 .Substituição de componentes
 Substitua o componente com falha pelo componente de substituição fornecido pela NetApp.
 

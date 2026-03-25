@@ -3141,13 +3141,7 @@
   <block id="d61b46d9cd719b77efb76269147aa377" category="list-text">Suspender trabalhos de cópia de segurança externos.</block>
   <block id="d8b00338b050b9e3674ca7cb93db3005" category="list-text">Certifique-se de que tem as permissões e credenciais necessárias:</block>
   <block id="68d685ddbaa25f1a411d5e93d6f91913" category="list-text">Credenciais de administrador local para o ONTAP.</block>
-  <block id="3fa7c0866aba2253b800fb8f1b9d08dc" category="list-text">BMC accessability para cada controlador.</block>
   <block id="cffb1f7ec4551961dfb3f4305396ba7a" category="list-text">Certifique-se de que tem as ferramentas e o equipamento necessários para a substituição.</block>
-  <block id="356bf392971487f892daba5338258571" category="list-text">Como uma prática recomendada antes do desligamento, você deve:</block>
-  <block id="2ee5edc561a6167cf2d57a64ee655bef" category="inline-link">verificações de integridade do sistema</block>
-  <block id="7023017d0098f741d6569842ee62b922" category="list-text">Execute mais<block ref="9ace058273de133e6accbea83a7d278a" category="inline-link-rx"></block>.</block>
-  <block id="f40b8507b340a958be200bec6d3758a0" category="list-text">Atualize o ONTAP para uma versão recomendada para o sistema.</block>
-  <block id="c5df4dcae9a001142a36959487445ff6" category="list-text">Resolva qualquer<block ref="31b25beca26cb366eeb0665e3c0d7cbf" category="inline-link-rx"></block>. Tome nota de quaisquer avarias atualmente no sistema, tais como LEDs nos componentes do sistema.</block>
   <block id="3923b7d5100131c85be2160c8b680704" category="list-text">Faça login no cluster através de SSH ou faça login de qualquer nó no cluster usando um cabo de console local e um laptop/console.</block>
   <block id="435d3b4c3155a5707da928ecab161564" category="list-text">Parar os dois nós localizados no chassi com deficiência:</block>
   <block id="a39c8c38e51a42fcfaac22367dd19064" category="list-text">Aguarde que cada controlador pare e exiba o prompt Loader.</block>
@@ -8747,7 +8741,6 @@
   <block id="9959e1ea8c67446c566e6a371f9e14cb" category="list-text">No controlador desativado,<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block> prima quando solicitado para confirmar se a cópia de segurança de restauro foi bem sucedida.</block>
   <block id="b883391d9dfbf834ff0bda07a53554f5" category="list-text">No controlador prejudicado,<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block> pressione quando solicitado a usar a configuração restaurada.</block>
   <block id="d0ec0afe83814a07fcdbf02b0d2e2e8b" category="list-text">No controlador prejudicado,<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block> pressione quando solicitado a reinicializar o nó.</block>
-  <block id="cd979ca520736846558f2b04a04b63da" category="paragraph">Se você estiver usando um console/laptop, faça login no controlador usando as mesmas credenciais de administrador de cluster.</block>
   <block id="4250e5b5781f94ff901cc1822461f6ae" category="doc">Substitua o módulo de gestão do sistema - AFF A1K</block>
   <block id="b1b14a007e6d27cacb6cbf9837dd5e7e" category="doc">Devolver o controlador - AFF A70 e AFF A90</block>
   <block id="4443f66d8d4febc600e0d4d0b3b0db91" category="doc">Devolva o controlador - ASA A70 e ASA A90</block>
@@ -9389,7 +9382,6 @@
   <block id="7329bfa51dec924de206ced093bea600" category="paragraph">*Cabos de 40/100 GbE*</block>
   <block id="8f31147c7cfeb7520dc9739e31dedc90" category="image-alt">Cabo de 40/100 GB</block>
   <block id="ec83c89c1bfd1fa2fe72db4df75b0e43" category="image-alt">Cabo para switches de rede host ethernet 40/100gbe</block>
-  <block id="8f03269dbdbab70bab244893051fb6ec" category="paragraph">Em cada controladora, cable as portas 1a, 1b, 1c e 1D para os switches de rede de host FC.</block>
   <block id="241c17a1be2cc4feae5c8c6007f8aed3" category="paragraph">*Cabos FC de 64 GB/s*</block>
   <block id="176084e0e3d1d8b98919ade28704bd7b" category="inline-image-macro">Cabo fc de 64 GB, largura de 100px mm</block>
   <block id="0174aef3c6edce25256f90638a06bdca" category="paragraph"><block ref="0174aef3c6edce25256f90638a06bdca" category="inline-image-macro-rx" type="image"></block></block>
@@ -9857,7 +9849,6 @@
   <block id="4288b2b72921e4670bb8b42ba6a5248d" category="list-text">Identifique o endereço SP/BMC de todos os nós de cluster:</block>
   <block id="bb000e8434af9c71358c26cf3aa76ce3" category="list-text">Saia do shell do cluster:</block>
   <block id="d9f6eac526670fe9182f1a63d251a180" category="paragraph"><block ref="f24f62eeb789199b9b2e467df3b1876b" prefix="" category="inline-code"></block></block>
-  <block id="29b1aa97ab42c7253b7c5769a711e501" category="list-text">Faça login no SP/BMC via SSH usando o endereço IP de qualquer um dos nós listados na saída da etapa anterior para monitorar o progresso.</block>
   <block id="4e66424513d5ccef0e91ad9aa7c87642" category="list-text">Digite *y* para cada controlador no cluster quando você vir:</block>
   <block id="38ae227cf94e3775806bccfd95814d4b" category="paragraph"><block ref="035b082bfaf23bf2d7b95c3ef597d380" prefix="" category="inline-code"></block></block>
   <block id="a5e51e5f50ca83720f1d0d8b17c1e93b" category="list-text">Esses procedimentos mostram configurações comuns. O cabeamento específico depende dos componentes solicitados para o seu sistema de storage. Para obter detalhes abrangentes de configuração e prioridade de slot, <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>consulte .</block>
@@ -14914,4 +14905,12 @@
   <block id="0cea086e190611d579375e0cfbe7f6b7" category="paragraph">Conclua o desligamento do controlador com defeito, interrompendo-o até o prompt LOADER e capturando as variáveis de ambiente de inicialização. O prompt LOADER é o estado de parada seguro a partir do qual você pode substituir a mídia de inicialização.</block>
   <block id="580317d87f0c97d7c347306d452cfb2c" category="paragraph">Desligue ou assuma o controle do controlador com defeito. - Assuma o controle e pare o controlador com defeito para que o controlador em bom funcionamento continue a fornecer dados do armazenamento do controlador com defeito. Para fazer isso, você suprime a criação automática de casos em AutoSupport, desativa o giveback automático e leva o controlador com defeito ao prompt LOADER. O prompt LOADER é o estado de parada segura a partir do qual você pode substituir a FRU.</block>
   <block id="0348833f0ff47bd2ae37f1706a53ef42" category="list-text">Se os links de interconexão HA foram desativados, restaure-os:</block>
+  <block id="5689c5ea3692b97ad8c9b15340cdeaf8" category="admonition">Aperte completamente os parafusos de fixação da placa mezzanine. Se estiverem soltos, as portas e0e a e0h podem não ser detectadas, o LED pode piscar continuamente e os registros podem mostrar um erro de "cabo não suportado".</block>
+  <block id="4383fe9a37feb4f64a0355e3ec27ad10" category="paragraph">Da imagem ONTAP extraída, copie a pasta <block ref="6e2807816e9d2621b7e5dffff6c33711" prefix=" " category="inline-code"></block> para o diretório raiz da unidade flash USB.</block>
+  <block id="8b0642e6333dcba17664a67ef72215ec" category="list-text">Acessibilidade do BMC para cada controlador.</block>
+  <block id="da9053d5fc06539ec5cadf63d46c662d" category="list-text">Faça login no SP/BMC de cada controlador usando o endereço IP identificado na etapa anterior:</block>
+  <block id="43ed5e374baf2e56183228d2ee15fdc4" category="list-text">Se você fizer login no BMC via SSH, conecte-se usando o endereço SP/BMC (por exemplo,<block ref="4af43ee092242a6ac7ac3f68e7a27542" prefix=" " category="inline-code"></block>), depois insira o comando<block ref="6a412eb180c3f0a9798690443fba49e1" prefix=" " category="inline-code"></block> e autentique-se.</block>
+  <block id="4238d84ec7e4655601b7b55b2f076b2e" category="list-text">Se você estiver usando um console local ou um laptop conectado diretamente ao controlador, faça login usando as mesmas credenciais de administrador do cluster.</block>
+  <block id="8e06442a81408e5b3d9d881ee34604d9" category="list-text">Conecte a porta e10b à porta e0b do shelf 1 NSM B.</block>
+  <block id="e075a310e0208871f253ed1786f7aa85" category="list-text">Em cada controlador, conecte as portas 2a, 2b, 2c e 2d aos switches de rede FC do host.</block>
 </blocks>
