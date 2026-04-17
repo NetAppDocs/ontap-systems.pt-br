@@ -2,7 +2,7 @@
 permalink: ns224/change-shelf-id.html 
 sidebar: sidebar 
 keywords: ns224, shelves, shelf, ns224 shelves, change, shelf, id, system, ontap, unown, spare, offline, aggregate, change an ns224 drive shelf id 
-summary: 'Você pode alterar o ID de um shelf em um sistema quando o ONTAP ainda não estiver em execução ou quando adicionar um shelf antes de ser cabeado ao sistema. Você também pode alterar um ID de gaveta quando o ONTAP está ativo e em execução (os módulos de controladora estão disponíveis para fornecer dados) e todas as unidades na gaveta são não possuídas, sobressalentes ou parte de agregados desalinhados.' 
+summary: 'Você pode alterar o ID de um shelf em um sistema quando o ONTAP ainda não estiver em execução ou quando adicionar um shelf antes de ser cabeado ao sistema. Você também pode alterar o ID de um compartimento quando o ONTAP estiver ativo e em execução (os módulos da controladora estão disponíveis para fornecer dados) e todas as unidades da gaveta forem de propriedade não pertencentes, sobressalentes ou parte de agregado(s) desconetado(s).' 
 ---
 = Alterar o ID de um compartimento - NS224 gavetas
 :allow-uri-read: 

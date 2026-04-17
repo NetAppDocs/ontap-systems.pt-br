@@ -2,7 +2,7 @@
 permalink: fas2800/caching-module-replace.html 
 sidebar: sidebar 
 keywords: replace, caching, module,  fas2800, shut, down, impaired, controller, controller, aggregates, metrocluster, configuration, replace, reinstall 
-summary: 'Você deve substituir o módulo de cache no módulo do controlador quando o sistema Registrar uma única mensagem AutoSupport (ASUP) informando que o módulo ficou offline; se não o fizer, isso resultará na degradação do desempenho.' 
+summary: Você deve substituir o módulo de armazenamento em cache no módulo controlador quando o sistema registrar uma única mensagem ASUP AutoSupport indicando que o módulo ficou offline. Se você não substituir o módulo com falha, seu sistema de storage sofrerá degradação de desempenho. 
 ---
 = Substitua o módulo de armazenamento em cache - FAS2820
 :allow-uri-read: 

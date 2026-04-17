@@ -2,7 +2,7 @@
 permalink: asa-c250/dimm-replace.html 
 sidebar: sidebar 
 keywords: asa c250, replace a dimm 
-summary: 'É necessário substituir um DIMM no módulo do controlador quando o sistema registar um número crescente de códigos de correção de erros (ECC); se não o fizer, o sistema entra em pânico.' 
+summary: Substitua um DIMM no módulo de controlador ASA C250 quando o sistema registrar um número crescente de códigos de correção de erros corrigíveis ou erros ECC incorrigíveis. A não substituição de um DIMM defeituoso pode causar um pânico no sistema. 
 ---
 = Substitua um DIMM - ASA C250
 :allow-uri-read: 

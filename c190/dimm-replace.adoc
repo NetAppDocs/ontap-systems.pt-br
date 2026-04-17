@@ -2,7 +2,7 @@
 permalink: c190/dimm-replace.html 
 sidebar: sidebar 
 keywords: aff c190, replace dimm 
-summary: 'É necessário substituir um DIMM no módulo do controlador quando o sistema registar um número crescente de códigos de correção de erros (ECC); se não o fizer, o sistema entra em pânico.' 
+summary: 'Você deve substituir um módulo DIMM no controlador quando seu sistema de storage encontrar erros como erros excessivos de código de correção corrigíveis (ECC) com base em alertas do Health Monitor ou erros ECC não corrigíveis, normalmente causados por uma única falha de DIMM que impede o sistema de storage de inicializar o ONTAP.' 
 ---
 = Substitua um DIMM - AFF C190
 :allow-uri-read: 

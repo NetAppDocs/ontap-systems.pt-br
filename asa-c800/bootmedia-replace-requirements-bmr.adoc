@@ -2,7 +2,7 @@
 permalink: asa-c800/bootmedia-replace-requirements-bmr.html 
 sidebar: sidebar 
 keywords: asa c800, replace the boot media 
-summary: Antes de substituir a mídia de inicialização no seu sistema ASA C800, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. 
+summary: Antes de substituir a mídia de inicialização do seu ASA C800, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se você possui a mídia de inicialização de substituição correta, confirmar se a porta e0S ou e0M wrench no controlador com defeito não está com problemas e determinar se o Onboard Key Manager ou o External Key Manager está habilitado. 
 ---
 = Requisitos para recuperação automatizada de mídia de inicialização - ASA C800
 :allow-uri-read: 

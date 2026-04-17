@@ -2,7 +2,7 @@
 permalink: asa-c400/nvdimm-replace.html 
 sidebar: sidebar 
 keywords: asa c400, asa, c400, replace, nvdimm, controller, module, system, register, flash, lifetime, healthy, system, panic, shut, down, impair, two-node, metrocluster, complete, replacement, process, replace an nvdimm, shut down the impaired controller, remove the controller module, replace the nvdimm, install the controller module, restore the controller module to operation, switch back aggregates in a two-node metrocluster configuration, complete the replacement process 
-summary: Você deve substituir o NVDIMM no módulo do controlador quando o sistema Registrar que a vida útil do flash está quase no fim ou que o NVDIMM identificado não está funcionando em geral; a falha em fazê-lo causa um pânico no sistema. 
+summary: Você deve substituir o NVDIMM no módulo controlador quando o sistema registrar que a vida útil da memória flash está quase no fim ou que o NVDIMM identificado não está saudável em geral. A falha em fazê-lo causa um pânico do sistema. 
 ---
 = Substitua um NVDIMM - ASA C400
 :allow-uri-read: 

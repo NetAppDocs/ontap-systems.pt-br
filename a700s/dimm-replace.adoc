@@ -2,7 +2,7 @@
 permalink: a700s/dimm-replace.html 
 sidebar: sidebar 
 keywords: aff a700s, aff, a700s, replace, fimm, controller, module, system, register, increase, increasing, number, correctable, error, correction, code, ecc, failure, system, panic, dimm, shut, down, impair, complete, replacement, process, replace a dimmm, shut down the impaired controller, remove the controller module, replace a dimm, reinstall the controller module and booting the system, complete the replacement process 
-summary: 'É necessário substituir um DIMM no módulo do controlador quando o sistema registar um número crescente de códigos de correção de erros (ECC); se não o fizer, o sistema entra em pânico.' 
+summary: Substitua um DIMM no módulo do controlador AFF A700s quando o sistema registrar um número crescente de códigos de correção de erro corrigíveis ou erros ECC incorrigíveis. A não substituição de um DIMM defeituoso pode causar um pânico no sistema. 
 ---
 = Substitua um DIMM - AFF A700s
 :allow-uri-read: 

@@ -2,7 +2,7 @@
 permalink: afx-1k/controller-replace-restore-system-rma.html 
 sidebar: sidebar 
 keywords: afx 1k, how to restore NetApp Storage Encryption, how to complete the replacement process 
-summary: 'Verifique se as interfaces lógicas (LIFs) estão reportando à porta inicial, execute uma verificação de integridade do cluster e, em seguida, devolva a peça com falha à NetApp para concluir a etapa final do procedimento de substituição do controlador AFX 1K.' 
+summary: Verifique se as interfaces lógicas estão se comunicando com a porta inicial, execute uma verificação de integridade e, em seguida, retorne a peça com defeito para NetApp para concluir a etapa final do procedimento de substituição do controlador AFX 1K. 
 ---
 = Substituição completa do controlador - AFX 1K
 :allow-uri-read: 

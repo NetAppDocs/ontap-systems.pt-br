@@ -2,7 +2,7 @@
 permalink: asa800/nvdimm-replace.html 
 sidebar: sidebar 
 keywords: asa a800, replace an nvdimm 
-summary: Você deve substituir o NVDIMM no módulo do controlador quando o sistema Registrar que a vida útil do flash está quase no fim ou que o NVDIMM identificado não está funcionando em geral; a falha em fazê-lo causa um pânico no sistema. 
+summary: Substitua o NVDIMM no seu sistema ASA A800 quando o sistema registrar que a vida útil da memória flash está quase no fim ou que o NVDIMM identificado não está saudável em geral. A não realização dessa ação causa um pânico no sistema. 
 ---
 = Substitua um NVDIMM - ASA A800
 :allow-uri-read: 

@@ -2,7 +2,7 @@
 permalink: c800/dimm-replace.html 
 sidebar: sidebar 
 keywords: aff c800, replace a dimm 
-summary: 'É necessário substituir um DIMM no módulo do controlador quando o sistema registar um número crescente de códigos de correção de erros (ECC); se não o fizer, o sistema entra em pânico.' 
+summary: Substitua um DIMM no seu sistema AFF C800 se forem detectados erros de memória excessivos, corrigíveis ou não corrigíveis. Esses erros podem impedir que o sistema de storage inicialize o ONTAP. 
 ---
 = Substitua um DIMM - AFF C800
 :allow-uri-read: 

@@ -2,7 +2,7 @@
 permalink: asa-r2-a20-30-50/bootmedia-replace-requirements-bmr.html 
 sidebar: sidebar 
 keywords: asa a20, asa a30, asa a50, replace the boot media 
-summary: 'Antes de substituir a mídia de inicialização no seu sistema de armazenamento ASA A20, ASA A30 ou ASA A50, certifique-se de atender aos requisitos e considerações necessários para uma substituição bem-sucedida. Isso inclui verificar se você tem a mídia de inicialização de substituição correta, confirmar se a porta e0M (chave inglesa) no controlador danificado está funcionando corretamente e determinar se o Onboard Key Manager (OKM) ou o External Key Manager (EKM) está habilitado.' 
+summary: Antes de substituir a mídia de inicialização no seu ASA A20, ASA A30 ou ASA A50 sistema de storage, certifique-se de atender aos requisitos e considerações necessários para uma substituição bem-sucedida. Isso inclui verificar se você possui a mídia de inicialização de substituição correta, confirmar se a porta e0M no controlador com defeito está funcionando corretamente e determinar se o Onboard Key Manager ou o External Key Manager está habilitado. 
 ---
 = Requisitos para substituir o suporte de arranque - ASA A20, ASA A30 e ASA A50
 :allow-uri-read: 

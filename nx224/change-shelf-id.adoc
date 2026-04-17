@@ -2,7 +2,7 @@
 permalink: nx224/change-shelf-id.html 
 sidebar: sidebar 
 keywords: nx224, shelves, shelf, nx224 shelves, change, shelf, id, system, ontap, unown, spare, offline, aggregate, change an nx224 drive shelf id 
-summary: 'Você pode alterar uma ID de prateleira em um sistema quando o ONTAP ainda não estiver em execução ou ao adicionar uma prateleira antes de ela ser conectada ao sistema.  Você também pode alterar uma ID de prateleira quando o ONTAP estiver ativo e em execução (os módulos do controlador estão disponíveis para fornecer dados) e todas as unidades na prateleira não forem proprietárias, forem sobressalentes ou fizerem parte de agregados offline.' 
+summary: 'Você pode alterar uma ID de prateleira NX224 em um sistema quando o ONTAP ainda não estiver em execução ou ao adicionar uma prateleira antes de ela ser cabeada ao sistema.  Você também pode alterar uma ID de prateleira quando o ONTAP estiver ativo e em execução (os módulos do controlador estão disponíveis para fornecer dados) e todas as unidades na prateleira não forem proprietárias ou forem sobressalentes.' 
 ---
 = Alterar ID de prateleira - prateleiras NX224
 :allow-uri-read: 

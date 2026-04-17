@@ -1,7 +1,7 @@
 ---
 permalink: a700s/nvram-or-nvram-dimm-replacement.html 
 sidebar: sidebar 
-keywords: aff a700s, aff, a700s, replace, fail, nvram, card, remove, riser, controller, module, system, id, nvram, dimm, shut, down, reassign, disk, restore, encryption, functionality, complete, replacement, process, replace the nvram module and/or nvram dimms, shut down the impaired controller, shut down the impaired controller, remove the controller module, remove the nvram card, reinstall the controller module and booting the system, reassign disks, restore storage and volume encryption functionality, complete the replacement process 
+keywords: aff a700s, aff, a700s, replace, fail, nvram, card, remove, riser, controller, module, system, id, nvram, dimm, shut, down, reassign, disk, restore, encryption, functionality, complete, replacement 
 summary: Para substituir uma placa NVRAM com falha, você deve remover a riser NVRAM, Riser 1, do módulo da controladora, remover a placa com falha da riser, instalar a nova placa NVRAM na riser e reinstalar a riser no módulo da controladora. Uma vez que a ID do sistema é derivada da placa NVRAM, se substituir o módulo, os discos pertencentes ao sistema são reatribuídos à nova ID do sistema. 
 ---
 = Substitua o módulo NVRAM e os DIMMs NVRAM - AFF A700s

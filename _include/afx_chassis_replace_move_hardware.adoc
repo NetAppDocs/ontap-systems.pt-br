@@ -1,17 +1,6 @@
----
-permalink: afx-1k/chassis-replace-move-hardware.html 
-sidebar: sidebar 
-keywords: afx 1k, move hardware components, replace the chassis 
-summary: Substitua o chassi do seu sistema de storage AFX 1K quando uma falha de hardware exigir. O processo de substituição envolve remover o controlador da parte frontal do chassi, remover as fontes de alimentação, NVRAM12, módulos de I/O e tampas, e o módulo de gerenciamento do sistema, e então instalar o chassi de substituição e reinstalar os componentes do chassi. 
----
-= Substituir o chassi - AFX 1K
+= Etapa 1: Remova as PSUs e os cabos
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
-
-[role="lead"]
-Substitua o chassi do seu sistema de armazenamento AFX 1K quando uma falha de hardware exigir isso. O processo de substituição envolve a remoção do controlador, placas de E/S, módulo NVRAM12, módulo de gerenciamento do sistema e unidades de fonte de alimentação (PSUs), a instalação do chassi de substituição e a reinstalação dos componentes do chassi.
 
 
 
@@ -239,6 +228,3 @@ NOTE: Para evitar danificar o conetor interno, não utilize força excessiva ao 
 Os módulos do controlador começam a inicializar assim que as PSUs são instaladas e a energia é restaurada.
 
 
-
-.O que se segue?
-Após substituir o chassi AFX 1K com defeito e reinstalar seus componentes, conclua o link:chassis-replace-complete-system-restore-rma.html["substituição do chassi"].

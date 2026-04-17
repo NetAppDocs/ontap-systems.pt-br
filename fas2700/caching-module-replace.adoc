@@ -2,7 +2,7 @@
 permalink: fas2700/caching-module-replace.html 
 sidebar: sidebar 
 keywords: replace, caching, module, aff a220, fas 2700, shut, down, impaired, controller, controller, aggregates, metrocluster, configuration, replace, reinstall 
-summary: 'Você deve substituir o módulo de cache no módulo do controlador quando o sistema Registrar uma única mensagem AutoSupport (ASUP) informando que o módulo ficou offline; se não o fizer, isso resultará na degradação do desempenho.' 
+summary: Você deve substituir o módulo de armazenamento em cache no módulo controlador quando o sistema registrar uma única mensagem ASUP AutoSupport indicando que o módulo ficou offline. A falha em fazer isso resulta em degradação do desempenho. 
 ---
 = Substitua o módulo de armazenamento em cache - FAS2700
 :allow-uri-read: 

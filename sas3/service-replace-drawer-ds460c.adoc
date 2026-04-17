@@ -1,7 +1,7 @@
 ---
 permalink: sas3/service-replace-drawer-ds460c.html 
 sidebar: sidebar 
-keywords: i/o activity, power, off, shelf, replacing, replace, drive, drawer, disk, replace a drive drawer in a ds460c disk shelf, dcm2, dcm 
+keywords: I O activity, power, off, shelf, replacing, replace, drive, drawer, disk, replace a drive drawer in a ds460c disk shelf, dcm2, dcm 
 summary: 'Substituir um gaveta de unidade em uma gaveta requer que você interrompa todo o sistema de storage (par de HA), o que permite manter os agregados de dados na gaveta ou que você tenha a opção de manter o par de HA em funcionamento, o que requer que você mova todos os dados dos agregados de dados nas unidades de disco e offline e exclua os agregados de dados. No entanto, se o compartimento contiver um agregado de raiz, será necessário interromper o par de HA.' 
 ---
 = Substituir uma gaveta de unidade - DS460C

@@ -1,8 +1,8 @@
 ---
 permalink: ns224/service-replace-boot-media.html 
 sidebar: sidebar 
-keywords: ns224, shelves, shelf, ns224 shelves, boot, media, run, ontap, nvme, module, nsm, firmware, version, nondisruptive, i/o 
-summary: Quando a Mídia de inicialização falhar em um compartimento de NS224 unidades em um par de HA que esteja executando o ONTAP 9.7 ou posterior, ou se o compartimento estiver executando o firmware do módulo de gaveta NVMe versão 1,1x ou posterior, você poderá substituir a Mídia de inicialização. A substituição da Mídia de inicialização pode ser feita sem interrupções, enquanto o compartimento de unidades está ligado e e e/S está em andamento. 
+keywords: ns224, shelves, shelf, ns224 shelves, boot, media, run, ontap, nvme, module, nsm, firmware, version, nondisruptive, io 
+summary: Você pode substituir uma Mídia de inicialização com falha em uma gaveta de NS224. A substituição da Mídia de inicialização pode ser feita sem interrupções, enquanto o compartimento de unidades está ligado e e e/S está em andamento. 
 ---
 = Substitua a Mídia de inicialização - NS224 prateleiras
 :allow-uri-read: 

@@ -2,7 +2,7 @@
 permalink: c400/bootmedia-replace.html 
 sidebar: sidebar 
 keywords: aff c400, aff, c400, locate, boot, media, controller, module, fre, map, direction, replace, replace the boot media 
-summary: 'Deve localizar o suporte de arranque no módulo do controlador (consulte o mapa da FRU no módulo do controlador) e, em seguida, siga as instruções para o substituir.' 
+summary: Para substituir o suporte de arranque, tem de remover o módulo do controlador afetado, instalar o suporte de arranque de substituição e transferir a imagem de arranque para uma unidade flash USB. 
 ---
 = Substitua a mídia de inicialização e prepare-se para recuperação de inicialização manual - AFF C400
 :allow-uri-read: 

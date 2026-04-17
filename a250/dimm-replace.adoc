@@ -2,7 +2,7 @@
 permalink: a250/dimm-replace.html 
 sidebar: sidebar 
 keywords: aff a250, replace a dimm 
-summary: 'É necessário substituir um DIMM no módulo do controlador quando o sistema registar um número crescente de códigos de correção de erros (ECC); se não o fizer, o sistema entra em pânico.' 
+summary: Substitua um módulo DIMM no seu AFF A250 quando o sistema apresentar erros CECC excessivos com base em alertas do Health Monitor, ou erros ECC incorrigíveis que impeçam o sistema de storage de inicializar o ONTAP. 
 ---
 = Substitua um DIMM - AFF A250
 :allow-uri-read: 

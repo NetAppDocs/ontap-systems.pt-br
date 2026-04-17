@@ -2,7 +2,7 @@
 permalink: a1k/controller-replace-restore-system-rma.html 
 sidebar: sidebar 
 keywords: aff a1k, how to restore NetApp Storage Encryption, how to complete the replacement process 
-summary: 'Verifique se as interfaces lógicas (LIFs) estão relatando para sua porta inicial, execute uma verificação de integridade do cluster e, em seguida, retorne a peça com falha ao NetApp para concluir a etapa final no procedimento de substituição do controlador AFF A1K.' 
+summary: Para concluir a substituição do controlador do seu AFF A1K, restaure a configuração de criptografia de storage NetApp, confirme se as interfaces lógicas estão reportando às suas portas iniciais, execute uma verificação de integridade do cluster e devolva a peça com defeito para a NetApp. 
 ---
 = Substituição completa do controlador - AFF A1K
 :allow-uri-read: 

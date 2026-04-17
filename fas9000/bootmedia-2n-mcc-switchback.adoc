@@ -2,7 +2,7 @@
 permalink: fas9000/bootmedia-2n-mcc-switchback.html 
 sidebar: sidebar 
 keywords: fas9000, aff a700, metrocluster, switchback, manual, manual boot recovery 
-summary: 'Após concluir a substituição da FRU em uma configuração MetroCluster de dois nós, você pode executar a operação de reversão do MetroCluster . Isso restaura a configuração ao seu estado operacional normal, com as máquinas virtuais de armazenamento de origem de sincronização (SVMs) no site anteriormente comprometido agora ativas e fornecendo dados dos pools de discos locais. O sistema FAS9000 suporta apenas procedimentos manuais de recuperação de mídia de inicialização.' 
+summary: 'Após concluir a substituição da FRU em uma configuração MetroCluster de dois nós, você pode executar a operação de reversão MetroCluster. Isso retorna a configuração ao seu estado operacional normal, com as máquinas virtuais de storage de origem de sincronização (SVMs) no site anteriormente afetado agora ativas e fornecendo dados dos pools de discos locais. O sistema FAS9000 suporta apenas procedimentos manuais de recuperação da mídia de inicialização.' 
 ---
 = Alterne agregados em uma configuração de MetroCluster de dois nós - FAS9000
 :allow-uri-read: 

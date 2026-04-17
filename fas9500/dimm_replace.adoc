@@ -2,7 +2,7 @@
 permalink: fas9500/dimm_replace.html 
 sidebar: sidebar 
 keywords:  
-summary: 'É necessário substituir um DIMM no módulo do controlador quando o sistema registar um número crescente de códigos de correção de erros (ECC); se não o fizer, o sistema entra em pânico.' 
+summary: Você deve substituir um DIMM no controlador quando seu sistema de storage encontrar erros como erros CECC excessivos com base em alertas do Health Monitor ou erros ECC incorrigíveis, normalmente causados por uma única falha de DIMM que impede o sistema de storage de inicializar o ONTAP. 
 ---
 = Substitua um DIMM - FAS9500
 :allow-uri-read: 

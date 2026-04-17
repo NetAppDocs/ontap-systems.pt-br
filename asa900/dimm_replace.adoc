@@ -2,7 +2,7 @@
 permalink: asa900/dimm_replace.html 
 sidebar: sidebar 
 keywords:  
-summary: 'É necessário substituir um DIMM no módulo do controlador quando o sistema registar um número crescente de códigos de correção de erros (ECC); se não o fizer, o sistema entra em pânico.' 
+summary: 'Você deve substituir um módulo DIMM no controlador quando o sistema registrar um número crescente de códigos de correção de erros corrigíveis (ECC). Caso contrário, o sistema entrará em pânico.' 
 ---
 = Substitua um DIMM - ASA A900
 :allow-uri-read: 

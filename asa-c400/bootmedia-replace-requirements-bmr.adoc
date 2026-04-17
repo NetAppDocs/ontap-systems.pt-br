@@ -2,7 +2,7 @@
 permalink: asa-c400/bootmedia-replace-requirements-bmr.html 
 sidebar: sidebar 
 keywords: asa-c400, replace the boot media 
-summary: Antes de substituir a mídia de inicialização no seu sistema ASA C400, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. 
+summary: Antes de substituir a mídia de inicialização do seu ASA C400, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se você possui a mídia de inicialização de substituição correta, confirmar se a porta de chave inglesa e0S ou e0M no controlador com defeito não está com problemas e determinar se Onboard Key Manager ou External Key Manager está habilitado. 
 ---
 = Requisitos para recuperação automatizada de mídia de inicialização - ASA C400
 :allow-uri-read: 

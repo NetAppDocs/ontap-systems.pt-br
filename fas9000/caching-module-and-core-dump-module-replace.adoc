@@ -2,7 +2,7 @@
 permalink: fas9000/caching-module-and-core-dump-module-replace.html 
 sidebar: sidebar 
 keywords: aff a700, fas9000, replace caching module 
-summary: 'Você deve substituir o módulo de cache no módulo do controlador quando o sistema Registrar uma única mensagem AutoSupport (ASUP) informando que o módulo ficou offline; se não o fizer, isso resultará na degradação do desempenho.' 
+summary: Você deve substituir o módulo de armazenamento em cache no módulo controlador quando o sistema registrar uma única mensagem ASUP AutoSupport indicando que o módulo ficou offline. A falha em fazer isso resulta em degradação do desempenho. 
 ---
 = Substitua o módulo de armazenamento em cache ou adicione/substitua um módulo de despejo de núcleo - FAS9000
 :allow-uri-read: 

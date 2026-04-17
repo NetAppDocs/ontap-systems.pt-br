@@ -2,7 +2,7 @@
 permalink: a800/nvdimm-replace.html 
 sidebar: sidebar 
 keywords: aff a800, replace an nvdimm 
-summary: Você deve substituir o NVDIMM no módulo do controlador quando o sistema Registrar que a vida útil do flash está quase no fim ou que o NVDIMM identificado não está funcionando em geral; a falha em fazê-lo causa um pânico no sistema. 
+summary: Substitua o NVDIMM no módulo controlador AFF A800 quando o sistema detectar que a vida útil da memória flash está quase no fim ou que o NVDIMM identificado não está saudável. A não substituição de um NVDIMM defeituoso pode causar um pânico no sistema. 
 ---
 = Substitua um NVDIMM - AFF A800
 :allow-uri-read: 
