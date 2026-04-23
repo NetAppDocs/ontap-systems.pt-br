@@ -5835,13 +5835,9 @@
   <block id="c0c80117cce7bb03ee803f73b530673c" category="list-text">Remova a bateria com falha do módulo do controlador:</block>
   <block id="ffdab672b5303a82bceb504a929ac040" category="list-text">Desligue a bateria do módulo do controlador</block>
   <block id="3236ef72d450eec8cfc673cc7faea15d" category="list-text">Retire a bateria de substituição da respetiva embalagem. Instale a bateria de substituição:</block>
-  <block id="db5c04ca6cb958f296ff071cf8420f54" category="paragraph">Substitua a placa mezzanine desconetanto os cabos e todos os módulos SFP e QSFP da placa, substitua a placa mezzanine com falha e, em seguida, reconetável as placas.</block>
-  <block id="783de30113379b15fc6135387f11b7e6" category="video-title">Animação - substitua a placa mezzanine</block>
   <block id="cf6800eb49ae54456676c105c115a1fa" category="section-title">Passo 3: Substitua a placa mezzanine</block>
   <block id="6918dd1d1ecfa7a18a047a925c4f30ee" category="paragraph">Volte a colocar a placa do mezanino.</block>
   <block id="64016c063cf6b470fdcccc5a97f852b1" category="list-text">Solte os parafusos de aperto manual na placa do mezanino e levante a placa do mezanino diretamente para cima.</block>
-  <block id="4bca5310f65e82fe5c4eec2c7a1c6c17" category="list-text">Alinhe o soquete no plugue da placa mezzanine de substituição com o soquete na placa-mãe e, em seguida, encaixe suavemente a placa diretamente no soquete.</block>
-  <block id="f2972968e044e6666c42c0182107b4f6" category="paragraph">Reinstale o módulo do controlador.</block>
   <block id="f13ddfa8c0e2762d2f399acfc6f0806b" category="summary">A troca de uma fonte de alimentação envolve desligar, desligar e remover a fonte de alimentação prejudicada e instalar, ligar e ligar a fonte de alimentação de substituição.</block>
   <block id="9b0f331e43ad447dbbb78d71a44b1734" category="video-title">Animação - substitua a fonte de alimentação</block>
   <block id="103256b354864966fcc74d6466bc1cc4" category="paragraph">Substitua a bateria do RTC localizando-a no interior do controlador e siga a sequência específica de passos.</block>
@@ -10886,7 +10882,6 @@
   <block id="56632d1795a7d32b89a455a3b633b7f5" category="list-text">Ligue a prateleira e defina os IDs das prateleiras usando a animação no início desta etapa.</block>
   <block id="6a3ffb8f58252e034e90b5eb7a9cc233" category="list-text">Ligue a prateleira e defina as IDs das prateleiras usando a animação no início desta etapa.</block>
   <block id="cb102c5c1eccde9b442d1de001f76cc3" category="image-alt">Remova a tampa do controlador</block>
-  <block id="8fca7d700183532fd08f68b674a86c60" category="image-alt">Abra o controlador</block>
   <block id="6abebf9335209d6b986ad1d41e48f43b" category="image-alt">Substituir um cartão mezanino</block>
   <block id="9f8a96e46f0e86179108737100c29b9d" category="list-text">Reinstale a tampa do controlador.</block>
   <block id="627450f7182bd50247300c6db6f17129" category="image-alt">Remover um módulo PCI</block>
@@ -15006,4 +15001,48 @@
   <block id="284f3d864e67ec64454ad1382833e490" category="summary">Encontre os procedimentos de substituição do módulo NVMe para a sua prateleira de storage NetApp, organizados por modelo de prateleira. Esta referência fornece links diretos para fluxos de trabalho passo a passo de substituição de NSM para as prateleiras NS224 e NX224, ajudando você a localizar rapidamente o procedimento correto para o seu modelo específico de prateleira.</block>
   <block id="a461d5a3ec6eff00835d5b1479552285" category="doc">Procedimentos de substituição da bateria NVMEM ou NVRAM por família de plataforma</block>
   <block id="66439d0b114daf635ee9ba53d5e8d568" category="summary">O gabinete do sistema suporta diferentes tipos de Unidades de Distribuição de Energia (PDUs). As PDUs são compatíveis com NEMA ou IEC.</block>
+  <block id="bb67cf9a22f6bca036da3944f082f70d" category="admonition">Antes de fechar a tampa do controlador danificado, certifique-se de que as linguetas de ejeção em todos os slots DIMM vazios estejam totalmente encaixadas na posição travada.</block>
+  <block id="669e934b15627ccb89dc33fcabeddbfb" category="paragraph">Substitua a placa mezzanine do seu FAS2820 caso ela apresente defeito ou atualize-a para um protocolo diferente instalando uma nova placa.</block>
+  <block id="188325fb14c01076ac7986e006024318" category="list-text">Utilize este procedimento com qualquer versão do ONTAP compatível com o seu sistema.</block>
+  <block id="ac252143999e21b283146112dd2be869" category="list-text">Substitua a placa do mezanino por uma do mesmo tipo ou por uma de tipo diferente.</block>
+  <block id="fe8724291ba433d10b4fcf50b8fb75e8" category="list-text">Anote as informações de ifgrp e VLAN antes de desligar o controlador.</block>
+  <block id="f161beffd589a67ef92732e9b253cdd7" category="list-text">Se for alterar o tipo de placa mezzanine, altere as configurações de LIF e porta após a reinicialização do controlador.</block>
+  <block id="449e834456e7e68b70b454418fba97ab" category="list-text">Verifique se todos os outros componentes do sistema estão funcionando. Se o problema persistir, entre em contato com o suporte técnico.</block>
+  <block id="5bff8c12368fa11b6a921de13c7b88c4" category="list-text">Se você estiver alterando o tipo de placa mezzanine, capture as informações de ifgrp e VLAN do nó com problemas.</block>
+  <block id="f8d7ee81ae11933d89c54b63f5fadf14" category="paragraph">Remova o módulo controlador e sua tampa.</block>
+  <block id="209665c3ca401651aef828199962e8e6" category="list-text">Solte a fita de velcro, observe onde os cabos estão conectados e, em seguida, desconecte os cabos do sistema e os SFPs (se necessário).</block>
+  <block id="3cd42af34b01ed058f7c2cd55e0996dd" category="paragraph">Deixe os cabos no organizador de cabos para mantê-los organizados.</block>
+  <block id="7b0ea8fe43bfe3b98d824632eff95227" category="list-text">Solte a trava da alavanca de came, abra-a completamente e puxe o módulo controlador para fora do chassi.</block>
+  <block id="98218aa7f65c228232e406628bf68c52" category="list-text">Vire o controlador e coloque-o sobre uma superfície plana e estável.</block>
+  <block id="c423597c377723410ddff79391c30184" category="list-text">Pressione os botões azuis nas laterais do módulo de controle para liberar a tampa. Gire a tampa para cima e retire-a do módulo de controle.</block>
+  <block id="049bcfe9f533b1ce55e8c569103ad005" category="list-text">Alinhe o conector da placa mezzanine de substituição com o soquete na placa-mãe e, em seguida, encaixe a placa cuidadosamente no soquete.</block>
+  <block id="9995c7de2e4f28bd5897f9cddbfb7fe2" category="list-text">Recoloque a tampa do módulo de controle e trave-a.</block>
+  <block id="8b9e2d3291c598b800be072b8afefa3b" category="section-title">Passo 4: Instale e reinicialize o módulo controlador</block>
+  <block id="df34b20e74975704c940ac43d85db1a0" category="paragraph">Reinstale e reinicialize o módulo controlador.</block>
+  <block id="aa8d1cbe476192b8bca04b6db3820a20" category="list-text">Empurre cuidadosamente o módulo controlador até a metade do chassi.</block>
+  <block id="f537a6f2f3860f6a3385b2dba60ee50d" category="list-text">Reconecte os cabos do sistema conforme necessário.</block>
+  <block id="f44818abfdb464a54383bded154be7a6" category="list-text">Com a alavanca de travamento aberta, empurre firmemente o módulo controlador até que esteja totalmente encaixado. Feche a alavanca de travamento para travar.</block>
+  <block id="3caa3f6c101dc917e6e89ed7e891e2e7" category="list-text">Prenda os cabos ao dispositivo de gerenciamento de cabos com a fita de velcro. == Etapa 5: reconfigure a placa mezzanine (se o tipo foi alterado)</block>
+  <block id="e705f3e2e1683e9fdc37c829b76df435" category="paragraph">Após o controlador reiniciar, altere as configurações da placa mezzanine para corresponder à nova placa, caso a tenha substituído por um tipo diferente.</block>
+  <block id="4a75ad40a6302b2865f475233d3fb5e5" category="open-title">Opção 1: Placa mezzanine Fibre Channel para Ethernet</block>
+  <block id="3eab4e5e3f38a487e4c0ff8986b53620" category="paragraph">Configure a placa mezzanine de substituição Ethernet atualizando as LIFs e as configurações de porta conforme necessário.</block>
+  <block id="5f0a91ebda5419c9dae2884b55adbe74" category="list-text">Utilize o comando <block ref="838c4deb1e9c47dcd4c44b6e40276467" prefix=" " category="inline-code"></block> para confirmar novos nomes de porta e estados de link.</block>
+  <block id="3efcada16cb2f3e01caddea484618416" category="list-text">Recrie todos os ifgrps e VLANs nas novas portas Ethernet mezzanine.</block>
+  <block id="6e2960cee1a644afd90e3d3b838fd123" category="list-text">Coloque as novas portas, ou portas ifgrp/VLAN, nos domínios de broadcast e IPspaces corretos e defina os valores de MTU.</block>
+  <block id="4c56c513928e3bd961610cfdc822c8d9" category="list-text">Atualize a porta inicial e as configurações de failover afetadas.</block>
+  <block id="a795d709ecd423b1744a5ef88448d471" category="list-text">Exclua os LIFs que não são mais necessários.</block>
+  <block id="2379f006c7634c9a3930eb53207e352b" category="inline-link-macro">Saiba mais sobre a configuração de portas de rede ONTAP</block>
+  <block id="b98137e3a1d1b6f4b29e605a6485919a" category="paragraph">Consulte <block ref="cb17047b6380f83ae8de9ed3ea1a53d8" category="inline-link-macro-rx"></block> para obter informações mais detalhadas sobre como configurar Ethernet no ONTAP.</block>
+  <block id="52a696c40ad570403490bdec6c48e094" category="open-title">Opção 2: Ethernet para placa mezzanine Fibre Channel</block>
+  <block id="e9e71980f309166c903d0c3d71389741" category="paragraph">Configure a placa mezzanine FC de substituição atualizando as LIFs e as configurações de porta conforme necessário.</block>
+  <block id="fea1b58373a99298346b2ee3c42f7a8e" category="list-text">Habilite o FCP nos SVMs relevantes. Crie novos LIFs de dados.</block>
+  <block id="da9bb3b5a73b19eb3674470b3621051d" category="list-text">Atualize o zoneamento da malha e os caminhos dos hosts. Atualize portset, igroup e os mapeamentos de LUN conforme necessário.</block>
+  <block id="87160066c3c44a03aee7080e00432c64" category="list-text">Verifique o multipath do host. Confirme se não há caminhos obsoletos e se os caminhos estão balanceados entre caminhos otimizados e não otimizados.</block>
+  <block id="062a9fa0f81c39da805029b15f680004" category="list-text">Verifique se não há LIFs configuradas em portas Ethernet removidas, se todas as LIFs FC estão ativas e fornecendo E/S e se o monitoramento do AutoSupport reflete a nova configuração.</block>
+  <block id="563c6fa09f1e284ce85546393fc8feb8" category="inline-link-macro">Visão geral do gerenciamento de SAN</block>
+  <block id="63018430f374d831226e536d0e46ce53" category="paragraph">Consulte <block ref="02b029a61c3a3a6905adcb1c22e947fd" category="inline-link-macro-rx"></block> para informações mais detalhadas sobre como configurar o Fibre Channel no ONTAP.</block>
+  <block id="b677c618703db10bec968500a7722ccc" category="section-title">Etapa 6: Retorne o controlador à operação normal</block>
+  <block id="21eb4ba3e07d5691bb2ca2aeeaea8fca" category="paragraph">Devolva o armazenamento ao controlador com defeito, restaure o giveback automático e encerre a janela de manutenção do AutoSupport.</block>
+  <block id="b0cf17c34e1e13a80699938c1fb9a3a1" category="list-text">A partir do controlador em bom funcionamento ou de um prompt de administrador do cluster, restaure o controlador ao funcionamento normal, restaurando seu armazenamento:<block ref="30edaf7c9fa43c78aeaf4b8fabb7af1a" prefix=" " category="inline-code"></block></block>
+  <block id="5a1c9794f830d65f2a212554cf798ab8" category="admonition">Antes de fechar a tampa do NSM danificado, certifique-se de que as linguetas de ejeção em todos os slots DIMM vazios estejam totalmente encaixadas na posição travada.</block>
 </blocks>
