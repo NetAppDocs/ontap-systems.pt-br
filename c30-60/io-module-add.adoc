@@ -11,11 +11,17 @@ summary: Adicione um módulo de E/S ao seu sistema de storage AFF C30 ou AFF C60
 
 
 [role="lead"]
-Adicione um módulo de E/S ao seu sistema de armazenamento AFF C30 ou AFF C60 para melhorar a conectividade de rede e expandir a capacidade do seu sistema de lidar com o tráfego de dados.
+Adicione um módulo de E/S ao seu AFF C30 ou AFF C60 sistema de storage para melhorar a conectividade de rede e expandir a capacidade do seu sistema de lidar com tráfego de dados. Você pode usar este procedimento para adicionar um módulo de E/S a um controlador em operação, como uma atualização planejada, ou a um controlador com problemas durante a manutenção.
 
 Você pode adicionar um módulo de e/S aos sistemas de armazenamento AFF C30 e AFF C60 quando houver slots disponíveis ou quando todos os slots estiverem totalmente preenchidos.
 
 .Sobre esta tarefa
+Você pode executar este procedimento em qualquer um dos controladores do par de HA, independentemente de o controlador estar operacional ou com falha. Como um módulo de E/S não pode ser adicionado a um controlador em execução, o controlador de destino deve ser desligado antes da instalação do módulo. O parceiro do par de HA assume as operações de storage durante o procedimento para que os dados permaneçam disponíveis para os clientes.
+
+* Se o controlador de destino estiver *operacional* (adição planejada), siga os passos de desligamento conforme descrito, tratando o controlador de destino como o controlador "com defeito" nesse conteúdo.
+* Se o controlador de destino estiver *com defeito*, siga os passos de desligamento conforme descrito.
+
+
 Se necessário, você pode ligar os LEDs de localização do sistema de armazenamento (azul) para ajudar a localizar fisicamente o sistema de armazenamento afetado. Faça login no BMC usando SSH e digite o `system location-led _on_` comando.
 
 Um sistema de armazenamento tem três LEDs de localização: Um no painel de visualização do operador e um em cada controlador. Os LEDs de localização permanecem acesos durante 30 minutos.
@@ -24,7 +30,9 @@ Você pode desativá-los digitando o `system location-led _off_` comando. Se nã
 
 
 
-== Passo 1: Desligue o módulo do controlador desativado
+== Passo 1: Desligue o módulo controlador de destino
+
+Assuma o controle e desligue o módulo controlador de destino para que seu par de HA continue fornecendo dados enquanto você adiciona o módulo de E/S. As etapas mencionadas referem-se ao controlador que está sendo desligado como o controlador "com problemas"; as mesmas etapas se aplicam tanto se você estiver assumindo o controle de um controlador operacional para uma adição planejada quanto se estiver desligando um controlador que já está com problemas.
 
 [role="tabbed-block"]
 ====
@@ -43,7 +51,10 @@ Cada processo SCSI-blade deve estar em quórum com os outros nós no cluster. Qu
 .Passos
 . Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport:
 +
-`system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
+`system node autosupport invoke -node * -type all -message MAINT=<number of hours down>h`
+
++
+Isso impede a abertura automática de chamados de suporte durante sua janela de manutenção planejada. A duração máxima da supressão é de 72 horas. Se a manutenção for concluída antes do prazo, você pode reativar a criação de chamados enviando uma mensagem AutoSupport com  `MAINT=END`. Para mais informações, consulte  https://kb.netapp.com/Support_Bulletins/Customer_Bulletins/SU92["Como impedir a criação automática de chamados durante janelas de manutenção programadas"^].
 
 +
 A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas:
@@ -108,7 +119,10 @@ Assuma o controle e interrompa o controlador com defeito para que o controlador 
 .Passos
 . Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport:
 +
-`system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
+`system node autosupport invoke -node * -type all -message MAINT=<number of hours down>h`
+
++
+Isso impede a abertura automática de chamados de suporte durante sua janela de manutenção planejada. A duração máxima da supressão é de 72 horas. Se a manutenção for concluída antes do prazo, você pode reativar a criação de chamados enviando uma mensagem AutoSupport com  `MAINT=END`. Para mais informações, consulte  https://kb.netapp.com/Support_Bulletins/Customer_Bulletins/SU92["Como impedir a criação automática de chamados durante janelas de manutenção programadas"^].
 
 +
 A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas:

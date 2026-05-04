@@ -332,8 +332,6 @@
   <block id="93693d8b94899fb843897083df3dfad1" category="list-text">O controlador _prejudicado_ é o controlador que está sendo substituído.</block>
   <block id="8fc18417b34debbf06d43a8004e7af83" category="list-text">O controlador _replacement_ é o novo controlador que está substituindo o controlador prejudicado.</block>
   <block id="adb78e1174ae799e5d64ba90539a8d1a" category="list-text">O controlador _Healthy_ é o controlador sobrevivente.</block>
-  <block id="d1e26bcc4cbc247391931bd56755d0de" category="list-text">Você deve sempre capturar a saída do console do controlador para um arquivo de texto.</block>
-  <block id="c05037a88de91ff2d60122b1ccf7291a" category="paragraph">Isso fornece um Registro do procedimento para que você possa solucionar qualquer problema que possa encontrar durante o processo de substituição.</block>
   <block id="8fda4ed107d1ec1aebbec15e8e97e9c9" category="doc">Passo 1: Recable o sistema</block>
   <block id="ac5b5b75bd82572e4d052c9c0ed18250" category="paragraph">Para concluir o procedimento de substituição e restaurar o sistema para o funcionamento completo, tem de voltar a efetuar a remarcação do armazenamento, confirmar a reatribuição do disco, restaurar a configuração da encriptação de armazenamento NetApp (se necessário) e instalar licenças para o novo controlador. Você deve concluir uma série de tarefas antes de restaurar o sistema para a operação completa.</block>
   <block id="865e9b4ef52f3b0d3050c8b3c14eb660" category="inline-link">Active IQ Config Advisor</block>
@@ -1250,7 +1248,6 @@
   <block id="bd27adfc86de062b9f9126c881c09f52" category="list-text">O nó _prejudicado_ é o nó que está sendo substituído.</block>
   <block id="d1fa186cdefd81b91a15808c2af74110" category="list-text">O nó _replacement_ é o novo nó que está substituindo o nó prejudicado.</block>
   <block id="1747d832b55f55ab2365153d8657c603" category="list-text">O nó _Healthy_ é o nó sobrevivente.</block>
-  <block id="ef82d539dc8acbd089c50343493834e6" category="list-text">Você deve sempre capturar a saída do console do nó para um arquivo de texto.</block>
   <block id="b78bf62e6c1dd80b4eab87a4a3039f94" category="paragraph">Para substituir o hardware do módulo do controlador, você deve remover o nó prejudicado, mover os componentes FRU para o módulo do controlador de substituição, instalar o módulo do controlador de substituição no chassi e, em seguida, inicializar o sistema para o modo de manutenção.</block>
   <block id="2a2508e145c26be9a521a151ff4382ee" category="section-title">Passo 2: Mova a Mídia de inicialização</block>
   <block id="d2e659a165a5fc9686cffcf720df161a" category="paragraph">Você deve localizar o suporte de inicialização e seguir as instruções para removê-lo do controlador antigo e inseri-lo no novo controlador.</block>
@@ -1705,14 +1702,11 @@
   <block id="6e4968851f4373ab9764e16cffb39389" category="list-text">Se houver vários slots disponíveis, verifique as prioridades do slot<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> e use a melhor disponível para seu módulo de e/S.</block>
   <block id="e01b6c84aaebe2321eef7b7a933b171f" category="list-text">Para adicionar sem interrupções um módulo de e/S, você deve assumir o controlador de destino, remover a tampa cega do slot no slot de destino ou remover um módulo de e/S existente, adicionar o módulo de e/S novo ou de substituição e, em seguida, giveback o controlador de destino.</block>
   <block id="bc5719b37f755088b3bb793c36a74d06" category="section-title">Etapa 1: Encerre o nó prejudicado</block>
-  <block id="a6efff0cc5b19d4c49cb4467336db466" category="list-text">Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando um comando AutoSupport message:<block ref="fbcb7868c4849064439910664677cb60" prefix=" " category="inline-code"></block></block>
-  <block id="61612a74be5170dd342eb619d607d9a0" category="paragraph">O seguinte comando AutoSupport suprime a criação automática de casos por duas horas:<block ref="6cf51b10a85b7bdc2a6698400ee841b7" prefix=" " category="inline-code"></block></block>
   <block id="bf7918e10696cda0294441f81ad32ee4" category="paragraph"><block ref="fd66c964768074eb90f4f1426229bf3e" prefix="" category="inline-code"></block></block>
   <block id="ab859514fa976f71299cd0d5366c702d" category="paragraph">Parar ou assumir o controlador prejudicado do controlador saudável:<block ref="64d2ac6bbd59fb854ec2bed7b2dbe259" prefix=" " category="inline-code"></block></block>
   <block id="bd8eb6c12d8928906b264ff9daf7b9e7" category="open-title">Opção 2: O controlador está em um MetroCluster</block>
   <block id="b3ead59e066683fe0070a3107e660906" category="admonition">Não use este procedimento se o sistema estiver em uma configuração de MetroCluster de dois nós.</block>
   <block id="159dd817f86d57640ec3082399a576f9" category="list-text">Se você tiver uma configuração MetroCluster, você deve ter confirmado que o estado de configuração do MetroCluster está configurado e que os nós estão em um estado ativado e normal <block ref="4d06f3844212ac745a73965bbb3f6e51" prefix="(" category="inline-code"></block>).</block>
-  <block id="fd9366185c7040d2814e95fefcce2264" category="list-text">Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando um comando AutoSupport:<block ref="fbcb7868c4849064439910664677cb60" prefix=" " category="inline-code"></block></block>
   <block id="44e91a10c5fb9bc923eb6ca613b41106" category="list-text">Prima o trinco do excêntrico numerado e com letras.</block>
   <block id="c45c3f1f9d099575b7abd851e7ef8b33" category="list-text">Rode o trinco da árvore de cames para baixo até estar na posição aberta.</block>
   <block id="9a08e35bf8850515585d9bd11e96351b" category="list-text">Instale o módulo de e/S:</block>
@@ -2082,7 +2076,6 @@
   <block id="ed3f8b7cf16a504e6873c49f3ad8c721" category="list-text">Localize o slot onde você está instalando o DIMM no módulo do controlador de substituição.</block>
   <block id="3874bbf004c50eed71c2b06f7ce4e648" category="list-text">Repita estas etapas para os DIMMs restantes. Feche a conduta de ar da placa-mãe.</block>
   <block id="d20809d05af81f52d71c6d3d4f4fe771" category="list-text">Como o dispositivo de inicialização está localizado no módulo Gerenciamento do sistema instalado na parte traseira do sistema, você não precisa mover o dispositivo de inicialização ao substituir um módulo controlador.</block>
-  <block id="c78805aa63e8c47c7cae0cdebcc54f64" category="list-text">Você deve sempre capturar a saída do console do controlador para um arquivo de log de texto.</block>
   <block id="01df70585b251d67c7e85dbced3f0bae" category="paragraph">Transfira a propriedade dos recursos de armazenamento de volta para o controlador de substituição.</block>
   <block id="f9d9eff2772e16e9135d964e4533138c" category="list-text">Se o sistema de armazenamento tiver a encriptação configurada, tem de restaurar a funcionalidade armazenamento ou encriptação de volume utilizando o seguinte procedimento para reiniciar o sistema:</block>
   <block id="c380f4d06afd36dcee7654a86545b95b" category="list-text">Inicialize no Menu e execute a opção 10</block>
@@ -2942,7 +2935,6 @@
   <block id="2abfff2974f589f7a217325f304e0ec5" category="paragraph">ONTAP 9,8</block>
   <block id="0328774aec0a00ab97b619f670f3584f" category="inline-link">X91122A</block>
   <block id="22fb50240417da3b46a5b9bc9f4fba23" category="paragraph"><block ref="22fb50240417da3b46a5b9bc9f4fba23" category="inline-link-rx"></block></block>
-  <block id="0c54c33cbdaf870abc3b1f6dccea1cd7" category="paragraph">2 portas 25GbE RoCE QSFP28</block>
   <block id="8c6eb6a8f3b879a85c9abb062dcf57b6" category="inline-link">X9170A</block>
   <block id="dfd3db7fdc1a7e88e6e8d964ce5bed7b" category="paragraph"><block ref="dfd3db7fdc1a7e88e6e8d964ce5bed7b" category="inline-link-rx"></block></block>
   <block id="8ed5851faf32cc00c77e732fa7ccd048" category="paragraph">Módulo SSD NVMe (1 TB)</block>
@@ -2967,7 +2959,6 @@
   <block id="040a43f160d19358d6aaa58c129061c6" category="list-text">AFF A700/AFF ASA A700</block>
   <block id="a2830a8a6b7415efd3d60ab3af3c1b02" category="list-text">AFF A400/AFF ASA A400</block>
   <block id="73ab298c8e00d66d28156892903a39ce" category="list-text">AFF A320</block>
-  <block id="fc2c2083a19a418b8843fac67146e44d" category="paragraph">Suporte ao switch de interconexão de cluster BES-53248 Broadcom para controladores AFF/FAS com portas de 10 GbE/25GbE GbE.</block>
   <block id="afa798215d91c0ee616815befa600f66" category="paragraph">ONTAP 9.5P8</block>
   <block id="ad30bda50ee1d84821c1e37d140d5779" category="section-title">Suporte a nova plataforma</block>
   <block id="8d5222cdfab2ef87317118b2f5929210" category="cell">Plataformas (com links para folhas de dados)</block>
@@ -3768,7 +3759,6 @@
   <block id="9c5bcb67e10ffb465deabdb27ded4b10" category="list-text">Contacte o administrador da rede para obter informações sobre como ligar o sistema aos comutadores.</block>
   <block id="089103029c56ad66034dfe6bd70cfdcb" category="paragraph">Use a animação ou as etapas tabuladas para concluir o cabeamento entre os controladores e os switches. Execute as etapas em cada controlador.</block>
   <block id="940761e28da4b693854d6f9dd90cf253" category="video-title">Animação - Cabo de dois nós sem switch cluster</block>
-  <block id="e8da070fbb7ed9f4e58234be76f00e95" category="list-text">Use o cabo de interconexão de cluster 25GbE para conetar as portas de interconexão de cluster e0c a e0c e e0d a e0d.</block>
   <block id="0c46a6fa46f929c6b547c327a032b10f" category="paragraph"><block ref="a1afb0f3e8ab3c3594052bdc55e1ed7f" category="inline-image-macro-rx" type="image"></block>:</block>
   <block id="b5b1f2ce574bc879ffb797775c8cbc5c" category="inline-image-macro">Cabeamento de interconexão de cluster em um cluster sem switch de dois nós</block>
   <block id="93ddd75580e8ea4f1aa7111fac1d31ce" category="paragraph"><block ref="93ddd75580e8ea4f1aa7111fac1d31ce" category="inline-image-macro-rx" type="image"></block></block>
@@ -3780,7 +3770,6 @@
   <block id="c70e1bb54be72f5abb826ad4d460ecab" category="paragraph"><block ref="c70e1bb54be72f5abb826ad4d460ecab" category="inline-image-macro-rx" type="image"></block></block>
   <block id="40a8f8b2f4ff5acd74232849a99a8a04" category="section-title">Passo 4: Cabo para rede de host ou armazenamento (opcional)</block>
   <block id="af28ebab5d3a50ec2aa0d0aefd31b178" category="paragraph">Você tem cabeamento opcional dependente da configuração para as redes de host Fibre Channel ou iSCSI ou armazenamento de conexão direta. Esse cabeamento não é exclusivo; você pode ter cabeamento para uma rede host e armazenamento.</block>
-  <block id="3620e8833d6beeecd610b282d65a89b5" category="admonition"><block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block> A prioridade de slot para placas de rede host (Fibre Channel ou 25GbE) é o slot 2. No entanto, se você tiver ambas as placas, a placa Fibre Channel vai para o slot 2 e a placa 25GbE vai para o slot 1 (como mostrado nas opções abaixo). Se você tiver uma gaveta externa, a placa de armazenamento vai para o slot 1, o único slot suportado para prateleiras.</block>
   <block id="03c1ffcb3fc95b8bfccde9eae4c521cb" category="open-title">Opção 1: Cabo para rede host Fibre Channel</block>
   <block id="b24498c2793e7d8d3cefa3bb843a56da" category="paragraph">As portas Fibre Channel nos controladores são conetadas aos switches de rede host Fibre Channel.</block>
   <block id="b6f08137ef915aeef8b0f7a87febae2a" category="image-alt">Conetor de cabo com patilha na parte superior</block>
@@ -3789,8 +3778,6 @@
   <block id="91007f6223d7f1e23fa6822f2e16adad" category="list-text">Portas de cabo de 2a a 2D para os switches de host FC.</block>
   <block id="7c5ebee65c5ddb33677b8dc9d6b7cb9d" category="inline-image-macro">Cabeamento de host Fibre Channel</block>
   <block id="79fa782513967e82cd68adb7bbacbe83" category="paragraph"><block ref="79fa782513967e82cd68adb7bbacbe83" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="63acd4af39a4e0dda6fe6c3d381743a7" category="open-title">Opção 2: Cabo para dados 25GbE ou rede host</block>
-  <block id="2283d2460c1fb366154589c8106aeabb" category="paragraph">As portas 25GbE nos controladores são conetadas a switches de rede de host ou dados 25GbE.</block>
   <block id="277ba6b7a127ec6b40495a0cd012279f" category="list-text">Portas de cabo de e4a a e4d para os switches de rede de host 10GbE.</block>
   <block id="d0175e54fdd0be6c9ad0210ee93766fb" category="inline-image-macro">Cabeamento de 25 GbE</block>
   <block id="c80d8a360aeca78a73d3c1de3e5f14ab" category="paragraph"><block ref="c80d8a360aeca78a73d3c1de3e5f14ab" category="inline-image-macro-rx" type="image"></block></block>
@@ -4219,7 +4206,6 @@
   <block id="4653f37d997fd730d216474b1f92447c" category="paragraph">X66030A (112-00435), 5m</block>
   <block id="e7e749fdb513f8650505d5c05ea4890c" category="paragraph">Cabos HD mini-SAS para mini-SAS (dependendo da ordem)</block>
   <block id="b8baf655ec765d5d983898664c9272aa" category="paragraph">X66250-2-N-C (112-00342)</block>
-  <block id="13378a0df578c502443ae7f6cba29221" category="paragraph">Cabos FC de 16 GB ou 25GbE para placas mezzanine (dependendo da ordem)</block>
   <block id="6a34534c1e57a69bc063e8a88767c875" category="list-text">Reveja o _Guia de Configuração do NetApp ONTAP_ e recolha as informações necessárias listadas nesse guia.</block>
   <block id="04f13a81f468108c54934d79ebdf3ceb" category="admonition">Se as etiquetas de porta na placa não estiverem visíveis, verifique a orientação de instalação da placa (o soquete do conetor PCIe está no lado esquerdo do slot da placa no A400 e no FAS8300/8700) e, em seguida, procure a placa, por número de peça, no<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> para obter um gráfico da moldura que mostrará as etiquetas da porta. O número de peça do cartão pode ser encontrado usando o<block ref="432345ed72f5509f18312f01d4f08dff" prefix=" " category="inline-code"></block> comando ou na lista de embalagem do sistema.</block>
   <block id="fc3118913338c7fb342195db815855cb" category="admonition">Se você estiver fazendo o cabeamento de uma configuração IP do MetroCluster, as portas e0a/e0b estarão disponíveis para hospedar LIFs de dados (geralmente no IPSpace padrão).</block>
@@ -4781,7 +4767,6 @@
   <block id="e459e836c4eb0f13220d0fdbb30451f6" category="inline-image-macro">Cabo de 100 GbE</block>
   <block id="f433e93aef4182760deb06094eb03e24" category="paragraph"><block ref="f433e93aef4182760deb06094eb03e24" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1e7e71df71ba5cdbb63d04bb2bf5eb4d" category="paragraph"><block ref="1e7e71df71ba5cdbb63d04bb2bf5eb4d" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="3b632bef76bf01e7a7e2e0c7d8200b68" category="paragraph">Switches de rede do cabo 25GbE:</block>
   <block id="8b891f41fe066d01d04ca12a9bd0033f" category="paragraph">Cabo conexões FC de 32 GB:</block>
   <block id="fd39828687c1d928d80860408fbad6fe" category="paragraph">Faça a cabeamento de uma única gaveta de unidades de NS224 TB ou duas gavetas de unidades de NS224 TB para seus controladores.</block>
   <block id="b10d0d290118effc922ad6f19fc77818" category="open-title">Opção 1: Cable os controladores para um único compartimento de unidade de NS224 TB</block>
@@ -5311,9 +5296,7 @@
   <block id="b00f162fad84edda46484fcada242a8c" category="inline-link">HWU</block>
   <block id="0b596d3b9a72deeb4bca2c3f00662c30" category="list-text">Os clientes com requisitos de energia específicos devem verificar<block ref="911e5b8f28f318acfdc1d057cd36b40e" category="inline-link-rx"></block> as opções de configuração.</block>
   <block id="eba4465f65ac7360936f8f238b09999c" category="list-text">Cabos de rede adicionais para conetar seu sistema ao switch de rede e laptop ou console com um navegador da Web.</block>
-  <block id="370d65afeef540ea21d331a7da8675ec" category="list-text">Cable as portas de interconexão de cluster e0c a e0c e e0d a e0d com os cabos de interconexão de cluster 25GbE.</block>
   <block id="57f232cf1846457526a67fb857654097" category="paragraph">Execute o passo em cada módulo do controlador.</block>
-  <block id="46bef70db2abdd00f0d4fccb83fbd3db" category="open-title">Opção 2: Cabo para uma rede de dados 25GbE ou host</block>
   <block id="be838816a39a48461edd5a1e87b6d8e5" category="list-text">Ligue o computador portátil ou a consola ao interrutor de gestão.</block>
   <block id="fea0a68e925a0ae2df0aa5bbdbe7c891" category="list-text">Atribua um endereço TCP/IP ao laptop ou console, usando um que esteja no switch de gerenciamento.</block>
   <block id="a363ebbaf5776be0c980b7b95cd927d3" category="inline-link">conta existente ou crie uma conta</block>
@@ -5858,13 +5841,11 @@
   <block id="86dc7cd20630b2e611de506fafba9463" category="summary">Esta seção fornece instruções detalhadas passo a passo para a instalação de um sistema FAS500f.</block>
   <block id="591619e8839fdfc064f5e99d963dd15b" category="doc">Passos detalhados - FAS500f</block>
   <block id="3b92fecaa3772b0492ba3935a96dedea" category="paragraph">Para instalar o sistema FAS500f, você precisa criar uma conta e Registrar o sistema. Você também precisa fazer o inventário do número e do tipo apropriados de cabos para o seu sistema e coletar informações específicas de rede.</block>
-  <block id="3ea38b3923e0e690201e332cebb4b94d" category="paragraph">Ligue as portas de interconexão de cluster umas às outras com o cabo de interconexão de cluster 25GbE</block>
   <block id="59fffbd09d1c7158959327a869b9292f" category="list-text">e0c a e0c</block>
   <block id="c14bafda5fc1bf439f2f4cfca3341edc" category="list-text">e0d a e0d <block ref="93ddd75580e8ea4f1aa7111fac1d31ce" category="inline-image-macro-rx" type="image"></block></block>
   <block id="09401fd662d47d1159b97106f3c2c4b4" category="paragraph">Cable as portas de interconexão de cluster aos switches de interconexão de cluster de 25 GbE.</block>
   <block id="96640993dd2592a16c29226daf83b860" category="list-text">e0c</block>
   <block id="303733abd5903144b11873d493c42f36" category="list-text">e0d <block ref="c70e1bb54be72f5abb826ad4d460ecab" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="56207a9d07b6607ddcfada226919fb00" category="list-text"><block ref="9f2a6ae0f8e4e0c002cabfcf0d3b8027" category="inline-xref-macro-rx"></block></block>
   <block id="030773f8722b074a51df84aa530f0c3d" category="paragraph">Use a animação ou as etapas tabuladas para concluir o cabeamento entre as controladoras e a gaveta única:</block>
   <block id="e342ccefdad489effa04cf864943b633" category="paragraph">Controlador de cabo A para a prateleira: <block ref="d63cb0bb7471d754822a206796e30fe6" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f7125baa982fde1a0522d27380012310" category="paragraph">Controlador de cabo B para a prateleira: <block ref="58dd78900f778b4b80068307b943d7b3" category="inline-image-macro-rx" type="image"></block></block>
@@ -9102,7 +9083,6 @@
   <block id="0f4c05d658aace7b29b5ea53d3fa4cf2" category="list-text">Todas as prateleiras devem estar funcionando corretamente.</block>
   <block id="34f0c52d74ac2c621ab6284425793c19" category="list-text">Você deve substituir um controlador por um controlador do mesmo tipo de modelo. Você não pode atualizar seu sistema apenas substituindo o controlador.</block>
   <block id="f66467941a18b4f0a908d26d19b031ae" category="list-text">Não é possível alterar nenhuma unidade ou compartimentos como parte deste procedimento.</block>
-  <block id="11f1efcf5793dbf6efc77f8d776228ce" category="paragraph">A saída do console fornece um Registro do procedimento que você pode usar para solucionar problemas que você pode encontrar durante o processo de substituição.</block>
   <block id="c5977cf82bd57f5e5245e58d04c5be10" category="list-text">É importante aplicar os comandos neste procedimento ao controlador correto:</block>
   <block id="057fbac6858b356c70e8500db3bd9f68" category="paragraph">Você deve verificar o<block ref="594c16ca0695f6665d7cf4971707adf6" prefix=" " category="inline-code"></block> estado do controlador e, se necessário, atualizar o estado para corresponder à configuração do sistema de armazenamento.</block>
   <block id="cc4a4c0fdb2dd603766bf674e02390ba" category="list-text">Arranque para o modo de manutenção:</block>
@@ -9328,8 +9308,6 @@
   <block id="04fca3f1f2d55aeb84370ab3e66d9214" category="list-text">Porta e4b do controlador de cabo B para o switch de rede do cluster B.</block>
   <block id="044628848918241f36841cbeb4d4dc4e" category="admonition">O tráfego de interconexão de cluster e o tráfego de HA compartilham as mesmas portas físicas (no módulo de e/S no slot 4). As portas são de 10/25 GbE.</block>
   <block id="9d14c26ccbbb0d65a3b5d05e2013404b" category="paragraph">*Cabos de interconexão de cluster/HA de 10/25 GbE*</block>
-  <block id="3488ff918c31f4a57e74bbab6ef9bcc9" category="inline-image-macro">diagrama de cabeamento de cluster comutado a20 usando um módulo de e/s 25gbe</block>
-  <block id="ae3bd4fc66b4084d0dc856b5f0230d72" category="paragraph"><block ref="ae3bd4fc66b4084d0dc856b5f0230d72" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7f99cbc2aa28ab9fed6e99fa94242b4a" category="section-title">Etapa 2: Faça o cabeamento das conexões de rede do host</block>
   <block id="8246042d23ca859d83185957ac9c4044" category="paragraph">Em cada controladora, as portas de cabo E2B e e4b para os switches de rede host Ethernet.</block>
   <block id="e827a0600a7ebd00f36ea855012f66a1" category="admonition">As portas nos módulos de e/S no slot 2 e 4 são de 40/100 GbE (a conectividade de host é de 40/100 GbE).</block>
@@ -10491,7 +10469,6 @@
   <block id="587bed5e1b1013acb3b0cad78e0dc97f" category="inline-image-macro">diagrama de cabeamento de cluster comutado fas50 usando um módulo de e/s 100gbe</block>
   <block id="5af61e2d32561bdfd725b4ff1abad33d" category="paragraph"><block ref="5af61e2d32561bdfd725b4ff1abad33d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="30116aad52f0bad698fa0cb2a523a7d2" category="example-title">FAS50 com um módulo de e/S de 10/25 GbE de 4 portas</block>
-  <block id="83ed0059cf7b8565a69e40d218194766" category="image-alt">cabo fas50 para switches de rede host ethernet 10/25gbe</block>
   <block id="97999a10174c7270f80d69a61f881c34" category="example-title">FAS50 com um módulo de e/S FC de 4 portas de 64 GB/s.</block>
   <block id="4af0635b9b0fa01d90348d64d44ac5a7" category="paragraph">Os procedimentos a seguir mostram como vincular os controladores a uma ou duas gavetas DS460C.</block>
   <block id="0d4ae2c19fb1eec9c73a9ba31cf7b80f" category="list-text">Os exemplos de cabeamento mostram DS460C gavetas. No entanto, há suporte para gavetas SAS adicionais, <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>consulte .</block>
@@ -10559,7 +10536,6 @@
   <block id="58a7a102daa03629c6548f4b567a8bdc" category="sidebar">FAS50 MÓDULO DE E/S.</block>
   <block id="42ce83dc3f5ef22d986311b267a5ac20" category="section-title">Abril de 2025</block>
   <block id="a574039687c6d52e2a17e47affbc4d8d" category="list-text">Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport:</block>
-  <block id="5c40960208a7535beecf44f84d10cea9" category="paragraph"><block ref="fa00b95aa82b5506a4c27cc4a50f05d7" prefix="" category="inline-code"></block></block>
   <block id="2a9205137f8a0ec57be25e6b19b96284" category="paragraph">A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas:</block>
   <block id="cd080b2ac496489acb1e57ed7c6444c6" category="paragraph"><block ref="387708b955ccf034fcf9197ad51ba879" prefix="" category="inline-code"></block></block>
   <block id="b452c4bf6d6344fb288a06006598685e" category="paragraph"><block ref="f454cdc7efb7d9bfad8109c4264a3a1b" prefix="" category="inline-code"></block></block>
@@ -10571,7 +10547,6 @@
   <block id="83057bdb135cca58f0756be73b3fe4f0" category="paragraph">O valor para o estado HA pode ser um dos seguintes:</block>
   <block id="b0e2306e9f0b1db26beda9207b643adc" category="list-text">Você deve ter confirmado que o estado de configuração do MetroCluster está configurado e que os nós estão em um estado ativado e normal:</block>
   <block id="ecada3140a47012aab89f14c63ba9190" category="paragraph"><block ref="4d06f3844212ac745a73965bbb3f6e51" prefix="" category="inline-code"></block></block>
-  <block id="f045de31e6ca5c44bdd82fc2b4ea9e53" category="paragraph"><block ref="fbcb7868c4849064439910664677cb60" prefix="" category="inline-code"></block></block>
   <block id="b56b78769068ef30879ff862bf0d7d58" category="paragraph"><block ref="6cf51b10a85b7bdc2a6698400ee841b7" prefix="" category="inline-code"></block></block>
   <block id="5f54996be1665b2f88bba84f87a93569" category="paragraph">Use o mapa FRU no duto de ar do controlador para localizar o slot DIMM.</block>
   <block id="7d0097234d19020f58b7650559edaf2b" category="section-title">Etapa 2: Substitua o módulo NVRAM ou o DIMM NVRAM</block>
@@ -10642,8 +10617,6 @@
   <block id="11695514a878032b3fb5ecdf5e659b5b" category="paragraph">Se você não vir sua configuração aqui, <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>acesse para obter informações abrangentes de configuração e prioridade de slot para fazer o cabeamento do seu sistema de armazenamento.</block>
   <block id="2e169c8e6f4cc1f6315545b46d7284a2" category="inline-image-macro">Cabo fc de 64 GB</block>
   <block id="0bf370304560205688213d22ba637c07" category="paragraph"><block ref="0bf370304560205688213d22ba637c07" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="beb0d5517240a78e9a0d820d0cc72901" category="cell">Para... 2 ou mais</block>
-  <block id="41808d27e9d2aded3d4e7b4d381cd4f6" category="paragraph">X66240-2 (112-00573), 2m .3 mais</block>
   <block id="610784c65e00a7160be578b24e829e1f" category="inline-image-macro">Cabeamento da controladora 1</block>
   <block id="fb1a92a9f3466626feb9c8b39fc2f15a" category="paragraph"><block ref="fb1a92a9f3466626feb9c8b39fc2f15a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="4aee1879aa42ff92e3eacf5873fbb5d4" category="inline-image-macro">Cabeamento da controladora 2</block>
@@ -11309,7 +11282,6 @@
   <block id="4db3443ca8b7e077da6fda74143b5d12" category="sidebar">Multipath HA</block>
   <block id="98a06331c5019fee7c2bec76b5d289fb" category="sidebar">HA de quatro vias</block>
   <block id="fd00151c44420f6f79e4b58679a95624" category="sidebar">As prateleiras DS212C, DS224C ou DS460C mantêm</block>
-  <block id="445dfd5b6a6cefa8cddbd35f02b84b3f" category="list-text">Verifique se a porta e0M (chave inglesa) no controlador danificado está conectada e não está com defeito.</block>
   <block id="28ee83acca422d1018aa8c24fc45a4ae" category="paragraph">A porta e0M é usada para comunicação entre os dois controladores durante o processo de recuperação de inicialização automatizada.</block>
   <block id="6dcd1ebf4390170868ab9bcdfd967581" category="list-text">Digite o seguinte comando:</block>
   <block id="fafdccda6cda9f9e3734c54d6282a4a7" category="list-text">Digitar<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> quando você vê o prompt, _Você quer continuar?_</block>
@@ -11429,7 +11401,6 @@
   <block id="d3db264d9eacbc28b1e95a3db2488f15" category="summary">Substitua um DIMM no seu sistema de armazenamento AFF C30 ou AFF C60 se forem detectados erros excessivos de memória corrigíveis ou incorrigíveis.  Esses erros podem impedir que o sistema de armazenamento inicialize o ONTAP.  O processo de substituição envolve desligar o controlador danificado, removê-lo, substituir o DIMM, reinstalar o controlador e, em seguida, devolver a peça com defeito à NetApp.</block>
   <block id="e64c35566f4192910fd96255b2ce6829" category="summary">Substitua uma unidade no seu sistema de armazenamento AFF C30 ou AFF C60 quando uma unidade falhar ou precisar de uma atualização.  O processo de substituição envolve identificar a unidade defeituosa, removê-la com segurança e instalar uma nova unidade para garantir o acesso contínuo aos dados e o desempenho do sistema.</block>
   <block id="30039d681358f47535e9dc792b85b7ff" category="summary">Substitua um módulo de ventilador no seu sistema de armazenamento AFF C30 ou AFF C60 quando um ventilador falhar ou não estiver operando de forma eficiente, pois isso pode afetar o resfriamento do sistema e o desempenho geral.  O processo de substituição envolve desligar o controlador, removê-lo, substituir o ventilador, reinstalar o controlador e devolver a peça com defeito à NetApp.</block>
-  <block id="d8a896f9e037be6fb6681599c6a8aa8c" category="summary">Adicione um módulo de E/S ao seu sistema de armazenamento AFF C30 ou AFF C60 para melhorar a conectividade de rede e expandir a capacidade do seu sistema de lidar com o tráfego de dados.</block>
   <block id="9b18885feab6818399cdcd5895dc6c4c" category="summary">Substitua um módulo de E/S no seu sistema de armazenamento AFF C30 ou AFF C60 quando o módulo falhar ou precisar de uma atualização para oferecer suporte a maior desempenho ou recursos adicionais. O processo de substituição envolve desligar o controlador, substituir o módulo de E/S com falha, reinicializar o controlador e devolver a peça com falha à NetApp.</block>
   <block id="c76ddb32b3eb44ec7a4a9ee7f5667f81" category="summary">Substitua a bateria NV no seu sistema de armazenamento AFF C30 ou AFF C60 quando a bateria começar a perder carga ou falhar, pois ela é responsável por preservar dados críticos do sistema durante quedas de energia.  O processo de substituição envolve desligar o controlador danificado, remover o módulo do controlador, substituir a bateria NV, reinstalar o módulo do controlador e devolver a peça com defeito à NetApp.</block>
   <block id="27fb3d3ae019d8ba63f63d1bd7545c44" category="summary">Substitua uma fonte de alimentação CA ou CC (PSU) no seu sistema de armazenamento AFF C30 ou AFF C60 quando ela falhar ou apresentar defeito, garantindo que seu sistema continue recebendo a energia necessária para uma operação estável.  O processo de substituição envolve desconectar a PSU defeituosa da fonte de alimentação, desconectar o cabo de alimentação, substituir a PSU defeituosa e reconectá-la à fonte de alimentação.</block>
@@ -11822,7 +11793,6 @@
   <block id="a9f25df7e08b579215eb3375343eb3a5" category="paragraph">Antes de substituir a mídia de inicialização no seu FAS8300 ou FAS8700, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida.  Isso inclui verificar se você tem a mídia de inicialização de substituição correta, confirmar se a porta e0S (chave e0M) no controlador danificado não está com defeito e determinar se o Onboard Key Manager (OKM) ou o External Key Manager (EKM) está habilitado.</block>
   <block id="be767870bb556c204155138a2ea3ad9f" category="summary">Antes de substituir a mídia de inicialização no seu sistema FAS8300 e FAS8700 , certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. Isso inclui certificar-se de que você possui um pen drive USB com a capacidade de armazenamento adequada e verificar se você possui o dispositivo de inicialização de substituição correto.</block>
   <block id="cc2c652dd46d9b43caba43e56578d8fc" category="doc">Requisitos para recuperação manual de mídia de inicialização - FAS8300 e FAS8700</block>
-  <block id="00211911b2ba513521720fdc3f5c8683" category="paragraph">Antes de substituir a mídia de inicialização no seu sistema FAS8300 ou FAS8700 , certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. Isso inclui certificar-se de que você possui um pen drive USB com a capacidade de armazenamento adequada e verificar se você possui o dispositivo de inicialização de substituição correto.</block>
   <block id="65899bfeb0f4080d023f5b76933df62a" category="summary">Comece a substituir a mídia de inicialização no seu sistema de armazenamento FAS8300 ou FAS8700 revisando os requisitos de substituição, desligando o controlador, substituindo a mídia de inicialização, restaurando a imagem na mídia de inicialização e verificando a funcionalidade do sistema.</block>
   <block id="9c211242417a2d4e971c87e2f2ab93b0" category="doc">Fluxo de trabalho de recuperação automatizada de mídia de inicialização - FAS8300 e FAS8700</block>
   <block id="c23c751e94afc93f18b1692d0c6f7466" category="paragraph">A recuperação automatizada da imagem de inicialização envolve a identificação e seleção automáticas pelo sistema da opção de menu de inicialização apropriada. Ele usa a imagem de inicialização no nó parceiro para reinstalar o ONTAP na mídia de inicialização de substituição no seu sistema de armazenamento FAS8300 ou FAS8700 .</block>
@@ -13240,8 +13210,6 @@
   <block id="306709d67f2dec8b8ba6331b0da7011d" category="paragraph">Os sistemas ASA r2 oferecem uma solução unificada de hardware e software que cria uma experiência simplificada específica para as necessidades dos clientes somente SAN. <block ref="67383e616307465eca49426accf697dc" category="inline-link-macro-rx"></block> .</block>
   <block id="277f3da1559e139922ed3989a9354148" category="paragraph">As prateleiras de unidades são projetadas especificamente para sistemas NetApp AFF, AFX, ASA e FAS e ajudam a fornecer o desempenho, a resiliência e a flexibilidade que sua transformação digital precisa.</block>
   <block id="15098ffd77b0868f845cfc616f250a6b" category="list-text">Prateleira NSX224 para sistemas AFX</block>
-  <block id="3cfc071da5a0fdf899bb147a25be0c08" category="list-text">Se o AutoSupport estiver habilitado, suprima a criação automática de casos invocando um comando de mensagem do AutoSupport :</block>
-  <block id="2a9c9df22f9538653501b32719999555" category="paragraph">O seguinte comando AutoSupport suprime a criação automática de casos por duas horas:</block>
   <block id="a5e0a9798bce38c0259a506f0fd1147d" category="list-text">Desabilite o retorno automático do console do controlador saudável:</block>
   <block id="a9f9ae342279f5d338d3038ce3af820c" category="paragraph"><block ref="7b903d789523bfa1771a2f63b3523783" prefix="" category="inline-code"></block></block>
   <block id="506e005a43769e0aa9d2a519e91ac21a" category="paragraph"><block ref="5fd0741516e2bbd70fc3c26403444415" prefix="" category="inline-code"></block></block>
@@ -13659,8 +13627,6 @@
   <block id="f2ea399faffde1f5e44ec5d36a46743b" category="list-text">Compreenda a terminologia do controlador utilizada neste procedimento:</block>
   <block id="fd9d57e205ad7278ee5e9d7da776e592" category="list-text">O controlador _com defeito_ é o controlador que está sendo substituído.</block>
   <block id="2a9c66dec8268e51da2f8aeefaacc47b" category="list-text">O controlador _de substituição_ é o novo controlador que substitui o controlador com defeito.</block>
-  <block id="dfa9a1a987cae2ab54b634b23d17d07f" category="list-text">Capture a saída do console do controlador em um arquivo de registro de texto.</block>
-  <block id="75eecc98c33af038783f7353a8c916ec" category="paragraph">Isso fornece um registro do procedimento para solucionar quaisquer problemas durante o processo de substituição.</block>
   <block id="a3a951ff4647dbd0664ca7a8ea23ed07" category="paragraph">Verifique as configurações de alta disponibilidade (HA) e a lista de discos antes de colocar o sistema em funcionamento novamente.</block>
   <block id="04d87613fffde1c6cb2c90776f2d0c2a" category="list-text">Se o estado do sistema exibido no módulo controlador não corresponder à configuração do seu sistema, defina o<block ref="594c16ca0695f6665d7cf4971707adf6" prefix=" " category="inline-code"></block> Estado do módulo controlador:</block>
   <block id="b883881b0cd895a8decfc031e7c33695" category="list-text">Verifique se o adaptador lista os caminhos para todos os discos:<block ref="c41292f339fa0dd66d84b7c3a9eac054" prefix=" " category="inline-code"></block></block>
@@ -14957,7 +14923,6 @@
   <block id="e34b47b2fc72c64c99406982ed952d64" category="summary">Após verificar as variáveis de ambiente, você deve concluir as etapas específicas para sistemas que possuem Onboard Key Manager, NetApp Storage Encryption ou NetApp Volume Encryption ativados.</block>
   <block id="6fea8dae69f912b0a722a051419e6ef1" category="summary">Para concluir a substituição do controlador do seu sistema AFF C250 e garantir o pleno funcionamento, você deve restaurar a configuração de NetApp Storage Encryption, instalar as licenças para o novo controlador e devolver a peça com defeito para a NetApp.</block>
   <block id="15644129509c2584f7bffe491694e5c1" category="summary">Adicione um módulo de E/S ao seu sistema de storage AFF C30 ou AFF C60 para melhorar a conectividade de rede e expandir a capacidade do seu sistema de lidar com o tráfego de dados.</block>
-  <block id="72c9bdd2d54c242e898b2fcd4b5fbbe6" category="doc">Adicionar um módulo de E/S - AFF C30 e AFF C60</block>
   <block id="dbd80ee306ba34928c51a4931c276537" category="summary">Substitua uma unidade de fonte de alimentação CA ou CC no seu sistema de storage AFF C30 ou AFF C60 quando ela falhar ou apresentar defeito, garantindo que seu sistema continue recebendo a energia necessária para uma operação estável. O processo de substituição envolve desconectar a fonte de alimentação defeituosa da fonte de energia, desconectar o cabo de força, substituir a fonte de alimentação defeituosa e, em seguida, reconectá-la à fonte de energia.</block>
   <block id="71d361350ed28dfae001760251b6e988" category="summary">Substitua a bateria do relógio de tempo real, comumente conhecida como bateria tipo moeda, no seu sistema de storage AFF C30 ou AFF C60 para garantir que os serviços e aplicativos que dependem da sincronização precisa de tempo permaneçam operacionais.</block>
   <block id="9c0259404d69f4d29b60fec70f11e02b" category="summary">Você deve substituir um módulo DIMM no controlador quando o sistema registrar um número crescente de códigos de correção de erros (ECC) corrigíveis ou, caso contrário, isso causará uma pane no sistema.</block>
@@ -15045,4 +15010,34 @@
   <block id="21eb4ba3e07d5691bb2ca2aeeaea8fca" category="paragraph">Devolva o armazenamento ao controlador com defeito, restaure o giveback automático e encerre a janela de manutenção do AutoSupport.</block>
   <block id="b0cf17c34e1e13a80699938c1fb9a3a1" category="list-text">A partir do controlador em bom funcionamento ou de um prompt de administrador do cluster, restaure o controlador ao funcionamento normal, restaurando seu armazenamento:<block ref="30edaf7c9fa43c78aeaf4b8fabb7af1a" prefix=" " category="inline-code"></block></block>
   <block id="5a1c9794f830d65f2a212554cf798ab8" category="admonition">Antes de fechar a tampa do NSM danificado, certifique-se de que as linguetas de ejeção em todos os slots DIMM vazios estejam totalmente encaixadas na posição travada.</block>
+  <block id="66f72fed10eea65ffd47206a4c0e4a12" category="paragraph">NetApp recomenda fortemente que você habilite o registro de logs no console nos dispositivos que estiver utilizando e execute as seguintes ações ao realizar este procedimento:</block>
+  <block id="d60697e9ad2359c8b84595bbbf7b4dd1" category="list-text">Deixe AutoSupport ativado durante a sua manutenção. Isso permite que o suporte da NetApp receba informações de diagnóstico caso ocorram problemas.</block>
+  <block id="fb42fce84a1f5a648367e2e027a6c941" category="inline-link">Como configurar o PuTTY para obter conectividade ideal com sistemas ONTAP</block>
+  <block id="28d499572d8b4be2e6b17a164ce69bb7" category="list-text">Habilite o registro de sessão para todas as sessões da CLI. Isso cria um registro completo de todos os comandos e da saída do sistema durante a atividade de manutenção. Para obter orientações sobre como habilitar o registro de sessão, consulte <block ref="969f6e4e41456399a13556dea44fc607" category="inline-link-rx"></block>.</block>
+  <block id="4b48b65f16187f40e68db0c4df7cb08a" category="inline-link">Como impedir a criação automática de chamados durante janelas de manutenção programadas</block>
+  <block id="ccbd6c8b93f413ab5d3cabde9555077b" category="paragraph">Isso impede a abertura automática de chamados de suporte durante sua janela de manutenção planejada. A duração máxima da supressão é de 72 horas. Se a manutenção for concluída antes do prazo, você pode reativar a criação de chamados enviando uma mensagem AutoSupport com <block ref="f0f32d61e0cd2495dc3cf151e5af854d" prefix=" " category="inline-code"></block>. Para mais informações, consulte <block ref="103c5a3d17ace9358d9c20d8a69a4d2c" category="inline-link-rx"></block>.</block>
+  <block id="c2226ed1d066c6a94ef089cb63240788" category="list-text">Verifique se a interface e0S (porta de chave inglesa e0M) no controlador com defeito não está com falha.</block>
+  <block id="18a7044864206b80675dbf6c85b18b1d" category="list-text">Verifique se a interface e0S (porta de chave inglesa e0M) no controlador com defeito não está com falha.</block>
+  <block id="d691a1ea4819b7230086723af3ecd3a0" category="paragraph">RoCE QSFP28 de 25 GbE com 2 portas</block>
+  <block id="21df9f311f1f416a9e469b29179c8aa1" category="paragraph">Suporte do switch de interconexão de cluster Broadcom BES-53248 para controladores AFF/FAS com portas 10/25 GbE.</block>
+  <block id="a9c7addc04fb05dcf8c26ea8c1d6e122" category="inline-image-macro">Diagrama de cabeamento de cluster comutado a20 usando um módulo de E/S de 25 GbE</block>
+  <block id="31022f648a706591ff17bdcf7d2de430" category="paragraph"><block ref="31022f648a706591ff17bdcf7d2de430" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1b566031093c2862a24b61416128a899" category="list-text">Use o cabo de interconexão de cluster de 25 GbE para conectar as portas de interconexão de cluster e0c a e0c e e0d a e0d.</block>
+  <block id="88ed1058d08ec766642e8b39b6f34c94" category="admonition"><block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>A prioridade de slot para placas de rede do host (Fibre Channel ou 25 GbE) é o slot 2. No entanto, se você tiver ambas as placas, a placa Fibre Channel vai no slot 2 e a placa 25 GbE vai no slot 1 (como mostrado nas opções abaixo). Se você tiver um shelf externo, a placa de storage vai no slot 1, o único slot compatível com shelves.</block>
+  <block id="5835c21fa077803ab06f9ca055cffa02" category="open-title">Opção 2: cabo para rede de dados ou de host de 25 GbE</block>
+  <block id="f3009b83cc38372f17ed6158a021abe6" category="paragraph">As portas 25 GbE dos controladores são conectadas a switches de dados ou de rede de host de 25 GbE.</block>
+  <block id="854f160935893031748d736c0d182855" category="paragraph">Cabos FC de 16 Gb ou GbE de 25 Gb para placas mezzanine (dependendo do pedido)</block>
+  <block id="65c598353c15f10a9eb14a722d053351" category="list-text">Conecte as portas de interconexão de cluster e0c a e0c e e0d a e0d com os cabos de interconexão de cluster de 25 GbE.</block>
+  <block id="85a6c0ec28664166f4a156353c8b037c" category="open-title">Opção 2: conecte o cabo a uma rede de dados ou de host de 25 GbE</block>
+  <block id="877ce8d6e2378f25eb1934d780634787" category="doc">Adicionar um módulo de E/S - AFF C30 e AFF C60</block>
+  <block id="0a3f2b72eb2ea0bdcd4dc118b1aae238" category="paragraph">Adicione um módulo de E/S ao seu AFF C30 ou AFF C60 sistema de storage para melhorar a conectividade de rede e expandir a capacidade do seu sistema de lidar com tráfego de dados. Você pode usar este procedimento para adicionar um módulo de E/S a um controlador em operação, como uma atualização planejada, ou a um controlador com problemas durante a manutenção.</block>
+  <block id="97607991c1dd6b608ef187243a963982" category="paragraph">Você pode executar este procedimento em qualquer um dos controladores do par de HA, independentemente de o controlador estar operacional ou com falha. Como um módulo de E/S não pode ser adicionado a um controlador em execução, o controlador de destino deve ser desligado antes da instalação do módulo. O parceiro do par de HA assume as operações de storage durante o procedimento para que os dados permaneçam disponíveis para os clientes.</block>
+  <block id="1e0843e40bafc397e75bea095831f620" category="list-text">Se o controlador de destino estiver *operacional* (adição planejada), siga os passos de desligamento conforme descrito, tratando o controlador de destino como o controlador "com defeito" nesse conteúdo.</block>
+  <block id="085d901dd9c5d889c883f7e54c4cfb71" category="list-text">Se o controlador de destino estiver *com defeito*, siga os passos de desligamento conforme descrito.</block>
+  <block id="3cde15579201073e7ad07db8b2135498" category="section-title">Passo 1: Desligue o módulo controlador de destino</block>
+  <block id="43fb137870b7f187f8cab19a2c6819a1" category="paragraph">Assuma o controle e desligue o módulo controlador de destino para que seu par de HA continue fornecendo dados enquanto você adiciona o módulo de E/S. As etapas mencionadas referem-se ao controlador que está sendo desligado como o controlador "com problemas"; as mesmas etapas se aplicam tanto se você estiver assumindo o controle de um controlador operacional para uma adição planejada quanto se estiver desligando um controlador que já está com problemas.</block>
+  <block id="5bb9eb7c6de6a5f45df6464218ff1cf1" category="image-alt">cabo FAS50 para switches de rede host Ethernet 10/25 GbE</block>
+  <block id="9032ec2413add8bae5c7091ded2efd15" category="paragraph">Conecte as portas de interconexão de cluster entre si com o cabo de interconexão de cluster de 25 GbE</block>
+  <block id="ae50728003d401e456e4268de55cb82f" category="list-text"><block ref="22c13bbaef49007250d4766c3983eb52" category="inline-xref-macro-rx"></block></block>
+  <block id="c8319347335872bf1fd4bd3b782289bd" category="paragraph">Antes de substituir a mídia de inicialização no seu sistema FAS8300 ou FAS8700, certifique-se de que atende aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se você possui a mídia de inicialização de substituição correta, confirmar se a porta e0S (chave inglesa e0M) no controlador com defeito não está com problemas e determinar se Onboard Key Manager (OKM) ou External Key Manager (EKM) está habilitado.</block>
 </blocks>

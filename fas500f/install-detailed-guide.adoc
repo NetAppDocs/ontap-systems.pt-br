@@ -196,7 +196,7 @@ video::beec3966-0a01-473c-a5de-ac68017fbf29[panopto]
  a| 
 image:../media/icon_square_1_green.png["Passo 1"]
  a| 
-Ligue as portas de interconexão de cluster umas às outras com o cabo de interconexão de cluster 25GbE
+Conecte as portas de interconexão de cluster entre si com o cabo de interconexão de cluster de 25 GbE
 
 image:../media/oie_cable_sfp_gbe_copper.png["Conetor de cobre GbE SFP"]:
 
@@ -317,7 +317,7 @@ image::../media/drw_affa250_fc_host_cabling.png[Cabeamento de host Fibre Channel
  a| 
 Para executar outro cabeamento opcional, escolha entre:
 
-* <<Opção 2: Cabo para uma rede de dados 25GbE ou host>>
+* <<Opção 2: conecte o cabo a uma rede de dados ou de host de 25 GbE>>
 * <<Opção 3: Cabeamento das controladoras a um único compartimento de unidade>>
 
 
@@ -331,9 +331,9 @@ Para concluir a configuração do sistema, link:install-detailed-guide.html#step
 |===
 
 
-==== Opção 2: Cabo para uma rede de dados 25GbE ou host
+==== Opção 2: conecte o cabo a uma rede de dados ou de host de 25 GbE
 
-As portas 25GbE nos controladores são conetadas a switches de rede de host ou dados 25GbE.
+As portas 25 GbE dos controladores são conectadas a switches de dados ou de rede de host de 25 GbE.
 
 .Antes de começar
 Contacte o administrador da rede para obter informações sobre como ligar o sistema aos comutadores.

@@ -34,12 +34,6 @@ Você pode inserir o seguinte comando para monitorar o progresso do comando save
 .. Voltar ao nível de privilégio de administrador: `set -privilege admin`
 
 
-. Se o sistema de storage tiver o Storage ou o volume Encryption configurado, você deverá restaurar a funcionalidade Storage ou volume Encryption usando um dos procedimentos a seguir, dependendo se você estiver usando o gerenciamento de chaves integrado ou externo:
-+
-** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-onboard-key-management-encryption-keys-task.html["Restaurar chaves de criptografia integradas de gerenciamento de chaves"^]
-** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-external-encryption-keys-93-later-task.html["Restaurar chaves de criptografia de gerenciamento de chaves externas"^]
-
-
 . Devolver o controlador:
 +
 .. A partir do controlador saudável, devolva o armazenamento do controlador substituído: `storage failover giveback -ofnode _replacement_node_name_`
@@ -60,6 +54,12 @@ http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62
 +
 A saída do `storage failover show` comando não deve incluir a ID do sistema alterada na mensagem do parceiro.
 
+
+
+. Se o sistema de storage tiver o Storage ou o volume Encryption configurado, você deverá restaurar a funcionalidade Storage ou volume Encryption usando um dos procedimentos a seguir, dependendo se você estiver usando o gerenciamento de chaves integrado ou externo:
++
+** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-onboard-key-management-encryption-keys-task.html["Restaurar chaves de criptografia integradas de gerenciamento de chaves"^]
+** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-external-encryption-keys-93-later-task.html["Restaurar chaves de criptografia de gerenciamento de chaves externas"^]
 
 
 . Verifique se os discos foram atribuídos corretamente: `storage disk show -ownership`

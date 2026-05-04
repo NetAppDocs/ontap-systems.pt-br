@@ -17,6 +17,15 @@ O processo automatizado de recuperação da mídia de inicialização requer o O
 
 Reveja os seguintes requisitos.
 
+[NOTE]
+====
+NetApp recomenda fortemente que você habilite o registro de logs no console nos dispositivos que estiver utilizando e execute as seguintes ações ao realizar este procedimento:
+
+* Deixe AutoSupport ativado durante a sua manutenção. Isso permite que o suporte da NetApp receba informações de diagnóstico caso ocorram problemas.
+* Habilite o registro de sessão para todas as sessões da CLI. Isso cria um registro completo de todos os comandos e da saída do sistema durante a atividade de manutenção. Para obter orientações sobre como habilitar o registro de sessão, consulte  https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_configure_PuTTY_for_optimal_connectivity_to_ONTAP_systems["Como configurar o PuTTY para obter conectividade ideal com sistemas ONTAP"^].
+
+
+====
 * Tem de substituir o suporte de arranque com falha por um suporte de arranque de substituição que recebeu do NetApp.
 * As portas do cluster são usadas para comunicação entre os dois controladores durante o processo de recuperação de inicialização automatizada. Certifique-se de que as portas do cluster no controlador afetado estejam funcionando corretamente.
 * Para o OKM, você precisa da senha de todo o cluster e também dos dados de backup.

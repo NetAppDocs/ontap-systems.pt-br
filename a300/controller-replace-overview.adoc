@@ -13,6 +13,15 @@ summary: Tem de rever os pré-requisitos para o procedimento de substituição e
 [role="lead"]
 Tem de rever os pré-requisitos para o procedimento de substituição e selecionar o correto para a sua versão do sistema operativo ONTAP.
 
+[NOTE]
+====
+NetApp recomenda fortemente que você habilite o registro de logs no console nos dispositivos que estiver utilizando e execute as seguintes ações ao realizar este procedimento:
+
+* Deixe AutoSupport ativado durante a sua manutenção. Isso permite que o suporte da NetApp receba informações de diagnóstico caso ocorram problemas.
+* Habilite o registro de sessão para todas as sessões da CLI. Isso cria um registro completo de todos os comandos e da saída do sistema durante a atividade de manutenção. Para obter orientações sobre como habilitar o registro de sessão, consulte  https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_configure_PuTTY_for_optimal_connectivity_to_ONTAP_systems["Como configurar o PuTTY para obter conectividade ideal com sistemas ONTAP"^].
+
+
+====
 * Todas as gavetas de unidades devem estar funcionando corretamente.
 * Se o seu sistema estiver em um par de HA, o controlador saudável deve ser capaz de assumir o controlador que está sendo substituído (referido neste procedimento como ""controlador prejudicado"").
 * Se o sistema estiver em uma configuração do MetroCluster, você deverá revisar a seção https://docs.netapp.com/us-en/ontap-metrocluster/disaster-recovery/concept_choosing_the_correct_recovery_procedure_parent_concept.html["Escolher o procedimento de recuperação correto"] para determinar se deve usar esse procedimento.
@@ -37,9 +46,5 @@ https://hwu.netapp.com["NetApp Hardware Universe"]
 ** O controlador _replacement_ é o novo controlador que está substituindo o controlador prejudicado.
 ** O controlador _Healthy_ é o controlador sobrevivente.
 
-
-* Você deve sempre capturar a saída do console do controlador para um arquivo de texto.
-+
-Isso fornece um Registro do procedimento para que você possa solucionar qualquer problema que possa encontrar durante o processo de substituição.
 
 

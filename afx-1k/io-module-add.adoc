@@ -25,12 +25,15 @@ Assuma o controle e interrompa o controlador com defeito para que o controlador 
 Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .
 
 .Passos
-. Se o AutoSupport estiver habilitado, suprima a criação automática de casos invocando um comando de mensagem do AutoSupport :
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport:
 +
-`system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
+`system node autosupport invoke -node * -type all -message MAINT=<number of hours down>h`
 
 +
-O seguinte comando AutoSupport suprime a criação automática de casos por duas horas:
+Isso impede a abertura automática de chamados de suporte durante sua janela de manutenção planejada. A duração máxima da supressão é de 72 horas. Se a manutenção for concluída antes do prazo, você pode reativar a criação de chamados enviando uma mensagem AutoSupport com  `MAINT=END`. Para mais informações, consulte  https://kb.netapp.com/Support_Bulletins/Customer_Bulletins/SU92["Como impedir a criação automática de chamados durante janelas de manutenção programadas"^].
+
++
+A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas:
 
 +
 `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`

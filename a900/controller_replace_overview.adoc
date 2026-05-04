@@ -16,6 +16,15 @@ Para substituir o módulo do controlador desativado, tem de desligar o controlad
 .Antes de começar
 Tem de rever os pré-requisitos para o procedimento de substituição e selecionar o correto para a sua versão do sistema operativo ONTAP.
 
+[NOTE]
+====
+NetApp recomenda fortemente que você habilite o registro de logs no console nos dispositivos que estiver utilizando e execute as seguintes ações ao realizar este procedimento:
+
+* Deixe AutoSupport ativado durante a sua manutenção. Isso permite que o suporte da NetApp receba informações de diagnóstico caso ocorram problemas.
+* Habilite o registro de sessão para todas as sessões da CLI. Isso cria um registro completo de todos os comandos e da saída do sistema durante a atividade de manutenção. Para obter orientações sobre como habilitar o registro de sessão, consulte  https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_configure_PuTTY_for_optimal_connectivity_to_ONTAP_systems["Como configurar o PuTTY para obter conectividade ideal com sistemas ONTAP"^].
+
+
+====
 * Todas as gavetas de unidades devem estar funcionando corretamente.
 * Se o seu sistema tiver uma licença V_StorageAttach, você deve consultar as etapas adicionais necessárias antes de executar este procedimento.
 * Se o seu sistema estiver em um par de HA, o controlador saudável deve ser capaz de assumir o controlador que está sendo substituído (referido neste procedimento como ""controlador prejudicado"").
@@ -33,9 +42,5 @@ Se esse for o procedimento que você deve usar, observe que o procedimento de su
 ** O controlador de substituição é o novo controlador que está substituindo o controlador prejudicado.
 ** O controlador saudável é o controlador sobrevivente.
 
-
-* Você deve sempre capturar a saída do console do controlador para um arquivo de texto.
-+
-Isso fornece um Registro do procedimento para que você possa solucionar qualquer problema que possa encontrar durante o processo de substituição.
 
 

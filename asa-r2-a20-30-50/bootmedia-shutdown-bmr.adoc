@@ -26,7 +26,10 @@ Cada processo SCSI-blade deve estar em quórum com os outros nós no cluster. Qu
 .Passos
 . Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport:
 +
-`system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
+`system node autosupport invoke -node * -type all -message MAINT=<number of hours down>h`
+
++
+Isso impede a abertura automática de chamados de suporte durante sua janela de manutenção planejada. A duração máxima da supressão é de 72 horas. Se a manutenção for concluída antes do prazo, você pode reativar a criação de chamados enviando uma mensagem AutoSupport com  `MAINT=END`. Para mais informações, consulte  https://kb.netapp.com/Support_Bulletins/Customer_Bulletins/SU92["Como impedir a criação automática de chamados durante janelas de manutenção programadas"^].
 
 +
 A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas:

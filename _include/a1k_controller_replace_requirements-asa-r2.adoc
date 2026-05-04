@@ -4,6 +4,15 @@
 
 Reveja os requisitos.
 
+[NOTE]
+====
+NetApp recomenda fortemente que você habilite o registro de logs no console nos dispositivos que estiver utilizando e execute as seguintes ações ao realizar este procedimento:
+
+* Deixe AutoSupport ativado durante a sua manutenção. Isso permite que o suporte da NetApp receba informações de diagnóstico caso ocorram problemas.
+* Habilite o registro de sessão para todas as sessões da CLI. Isso cria um registro completo de todos os comandos e da saída do sistema durante a atividade de manutenção. Para obter orientações sobre como habilitar o registro de sessão, consulte  https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_configure_PuTTY_for_optimal_connectivity_to_ONTAP_systems["Como configurar o PuTTY para obter conectividade ideal com sistemas ONTAP"^].
+
+
+====
 * Todas as gavetas de unidades devem estar funcionando corretamente.
 * O controlador saudável deve ser capaz de assumir o controlador que está a ser substituído (referido neste procedimento como ""controlador deficiente"").
 * Você deve substituir o componente com falha por um componente de substituição que você recebeu da NetApp.
@@ -17,9 +26,5 @@ Reveja os requisitos.
 ** O controlador _replacement_ é o novo controlador que está substituindo o controlador prejudicado.
 ** O controlador _Healthy_ é o controlador sobrevivente.
 
-
-* Você deve sempre capturar a saída do console do controlador para um arquivo de log de texto.
-+
-Isso fornece um Registro do procedimento para que você possa solucionar qualquer problema que possa encontrar durante o processo de substituição.
 
 

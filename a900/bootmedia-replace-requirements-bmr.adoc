@@ -15,8 +15,17 @@ Antes de substituir a mídia de inicialização no seu AFF A900, certifique-se d
 
 O processo automatizado de recuperação de mídia de inicialização é compatível apenas com o ONTAP 9.17.1 e versões posteriores. Se o seu sistema de armazenamento estiver executando uma versão anterior do ONTAP, use o link:bootmedia-replace-workflow.html["procedimento de recuperação de inicialização manual"] .
 
+[NOTE]
+====
+NetApp recomenda fortemente que você habilite o registro de logs no console nos dispositivos que estiver utilizando e execute as seguintes ações ao realizar este procedimento:
+
+* Deixe AutoSupport ativado durante a sua manutenção. Isso permite que o suporte da NetApp receba informações de diagnóstico caso ocorram problemas.
+* Habilite o registro de sessão para todas as sessões da CLI. Isso cria um registro completo de todos os comandos e da saída do sistema durante a atividade de manutenção. Para obter orientações sobre como habilitar o registro de sessão, consulte  https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_configure_PuTTY_for_optimal_connectivity_to_ONTAP_systems["Como configurar o PuTTY para obter conectividade ideal com sistemas ONTAP"^].
+
+
+====
 * Você deve substituir o componente com falha por um componente FRU de substituição da mesma capacidade que recebeu do NetApp.
-* Verifique se a porta e0M (chave inglesa) no controlador danificado está conectada e não está com defeito.
+* Verifique se a interface e0S (porta de chave inglesa e0M) no controlador com defeito não está com falha.
 +
 A porta e0M é usada para comunicação entre os dois controladores durante o processo de recuperação de inicialização automatizada.
 

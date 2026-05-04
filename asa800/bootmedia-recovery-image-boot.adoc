@@ -17,6 +17,7 @@ Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior
 
 .Antes de começar
 * Certifique-se de que seu console esteja conectado ao controle com defeito.
+* Verifique se a interface e0S (porta de chave inglesa e0M) no controlador com defeito não está com falha.
 * Verifique se você possui um pen drive com a imagem de recuperação.
 * Verifique se o seu sistema utiliza criptografia.  Você precisará selecionar a opção apropriada na etapa 3, dependendo se a criptografia está ativada ou não.
 

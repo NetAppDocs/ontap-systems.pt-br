@@ -17,6 +17,15 @@ A mídia de inicialização armazena arquivos de imagem de inicialização prim�
 
 A Mídia de inicialização armazena um conjunto primário e secundário de arquivos do sistema (imagem de inicialização) que o sistema usa quando ele é inicializado. Dependendo da configuração da rede, você pode realizar uma substituição sem interrupções ou disruptiva.
 
+[NOTE]
+====
+NetApp recomenda fortemente que você habilite o registro de logs no console nos dispositivos que estiver utilizando e execute as seguintes ações ao realizar este procedimento:
+
+* Deixe AutoSupport ativado durante a sua manutenção. Isso permite que o suporte da NetApp receba informações de diagnóstico caso ocorram problemas.
+* Habilite o registro de sessão para todas as sessões da CLI. Isso cria um registro completo de todos os comandos e da saída do sistema durante a atividade de manutenção. Para obter orientações sobre como habilitar o registro de sessão, consulte  https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_configure_PuTTY_for_optimal_connectivity_to_ONTAP_systems["Como configurar o PuTTY para obter conectividade ideal com sistemas ONTAP"^].
+
+
+====
 Tem de ter uma unidade flash USB, formatada para FAT32, com a quantidade de armazenamento adequada para guardar o `image_xxx.tgz` ficheiro.
 
 Você também deve copiar o `image_xxx.tgz` arquivo para a unidade flash USB para uso posterior neste procedimento.
