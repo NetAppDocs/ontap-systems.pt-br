@@ -1,7 +1,7 @@
 ---
 permalink: c80/bootmedia-encryption-preshutdown-checks.html 
 sidebar: sidebar 
-keywords: c80, pre-shutdown checks for onboard encryption keys 
+keywords: aff c80, pre-shutdown checks for onboard encryption keys 
 summary: Para garantir a segurança dos dados no seu sistema de armazenamento AFF C80, você precisa verificar o suporte e o status da chave de criptografia na sua mídia de inicialização. Verifique se a sua versão do ONTAP é compatível com o NetApp Volume Encryption e, antes de desligar o controlador, verifique se o gerenciador de chaves está ativo. 
 ---
 = Verifique o suporte de criptografia para recuperação manual de mídia de inicialização - AFF C80

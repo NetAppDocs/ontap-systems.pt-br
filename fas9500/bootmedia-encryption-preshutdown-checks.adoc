@@ -1,7 +1,7 @@
 ---
 permalink: fas9500/bootmedia-encryption-preshutdown-checks.html 
 sidebar: sidebar 
-keywords:  
+keywords: fas9500, pre-shutdown checks for onboard encryption keys 
 summary: Antes de desligar o nó prejudicado e verificar o status das chaves de criptografia integradas, você deve verificar o status do nó prejudicado, desativar a giveback automática e verificar qual versão do ONTAP o sistema está sendo executado. 
 ---
 = Verifique o suporte e o status da chave de criptografia - FAS9500

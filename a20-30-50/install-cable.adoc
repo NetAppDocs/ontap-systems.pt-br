@@ -44,18 +44,17 @@ Se você não vir sua configuração aqui, link:https://hwu.netapp.com["NetApp H
 ====
 .Cabeamento de cluster sem switch
 --
+Utilize esta opção de cabeamento quando os dois controladores estiverem conectados diretamente um ao outro, sem o uso de switches de rede em cluster.
+
 .AFF A30 ou AFF A50 com dois módulos de e/S de 40/100 GbE de 2 portas
-[%collapsible]
-=====
-.Passos
-. Cable as conexões de interconexão cluster/HA:
-+
+Conecte os cabos das portas de interconexão do cluster/HA nos módulos de E/S nos slots 2 e 4.
+
 
 NOTE: O tráfego de interconexão de cluster e o tráfego de HA compartilham as mesmas portas físicas (nos módulos de e/S nos slots 2 e 4). As portas são de 40/100 GbE.
 
-+
-.. Controlador de cabo A porta E2A para a porta E2A do controlador B.
-.. Controlador de cabo A porta e4a para a porta e4a do controlador B.
+.Passos
+. Controlador de cabo A porta E2A para a porta E2A do controlador B.
+. Controlador de cabo A porta e4a para a porta e4a do controlador B.
 +
 
 NOTE: As portas E2B e e4b do módulo de e/S não são utilizadas e estão disponíveis para conetividade de rede de host.
@@ -71,21 +70,15 @@ image::../media/drw_isi_a30-50_switchless_2p_100gbe_2card_cabling_ieops-2011.svg
 
 
 
-
-
-=====
 .AFF A30 ou AFF A50 com um módulo de e/S de 40/100 GbE de 2 portas
-[%collapsible]
-=====
-.Passos
-. Cable as conexões de interconexão cluster/HA:
-+
+Conecte os cabos das portas de interconexão do cluster/HA no módulo de E/S no slot 4.
+
 
 NOTE: O tráfego de interconexão de cluster e o tráfego de HA compartilham as mesmas portas físicas (no módulo de e/S no slot 4). As portas são de 40/100 GbE.
 
-+
-.. Controlador de cabo A porta e4a para a porta e4a do controlador B.
-.. Controlador de cabo A porta e4b para a porta e4b do controlador B.
+.Passos
+. Controlador de cabo A porta e4a para a porta e4a do controlador B.
+. Controlador de cabo A porta e4b para a porta e4b do controlador B.
 +
 *Cabos de interconexão de cluster/HA de 100 GbE*
 
@@ -97,21 +90,15 @@ image::../media/drw_isi_a30-50_switchless_2p_100gbe_1card_cabling_ieops-1925.svg
 
 
 
-
-
-=====
 .AFF A20 com um módulo de e/S de 10/25 GbE de 2 portas
-[%collapsible]
-=====
-.Passos
-. Cable as conexões de interconexão cluster/HA:
-+
+Conecte os cabos das portas de interconexão do cluster/HA no módulo de E/S no slot 4.
+
 
 NOTE: O tráfego de interconexão de cluster e o tráfego de HA compartilham as mesmas portas físicas (no módulo de e/S no slot 4). As portas são de 10/25 GbE.
 
-+
-.. Controlador de cabo A porta e4a para a porta e4a do controlador B.
-.. Controlador de cabo A porta e4b para a porta e4b do controlador B.
+.Passos
+. Controlador de cabo A porta e4a para a porta e4a do controlador B.
+. Controlador de cabo A porta e4b para a porta e4b do controlador B.
 +
 *Cabos de interconexão de cluster/HA de 25 GbE*
 
@@ -123,26 +110,22 @@ image::../media/drw_isi_a20_switchless_2p_25gbe_cabling_ieops-2018.svg[diagrama 
 
 
 
-
-
-=====
 --
 .Cabeamento de cluster comutado
 --
+Utilize esta opção de cabeamento quando os controladores se conectarem a switches de rede do cluster em vez de estarem conectados diretamente uns aos outros.
+
 .AFF A30 ou AFF A50 com dois módulos de e/S de 40/100 GbE de 2 portas
-[%collapsible]
-=====
-.Passos
-. Cable as conexões de interconexão cluster/HA:
-+
+Conecte os cabos das portas de interconexão cluster/HA nos módulos de E/S nos slots 2 e 4 aos switches de rede do cluster.
+
 
 NOTE: O tráfego de interconexão de cluster e o tráfego de HA compartilham as mesmas portas físicas (nos módulos de e/S nos slots 2 e 4). As portas são de 40/100 GbE.
 
-+
-.. Controlador de cabo A porta e4a para o switch de rede do cluster A..
-.. Controlador de cabo A porta E2A para o switch de rede do cluster B.
-.. Porta e4a do controlador de cabo B para o switch de rede do cluster A..
-.. Porta E2A do controlador de cabo B para o switch de rede do cluster B.
+.Passos
+. Controlador de cabo A porta e4a para o switch de rede do cluster A..
+. Controlador de cabo A porta E2A para o switch de rede do cluster B.
+. Porta e4a do controlador de cabo B para o switch de rede do cluster A..
+. Porta E2A do controlador de cabo B para o switch de rede do cluster B.
 +
 
 NOTE: As portas E2B e e4b do módulo de e/S não são utilizadas e estão disponíveis para conetividade de rede de host.
@@ -158,23 +141,17 @@ image::../media/drw_isi_a30-50_switched_2p_100gbe_2card_cabling_ieops-2013.svg[d
 
 
 
-
-
-=====
 .AFF A30 ou AFF A50 com um módulo de e/S de 40/100 GbE de 2 portas
-[%collapsible]
-=====
-.Passos
-. Faça o cabo dos controladores para os switches de rede do cluster:
-+
+Conecte os cabos das portas de interconexão cluster/HA no módulo de E/S no slot 4 aos switches de rede do cluster.
+
 
 NOTE: O tráfego de interconexão de cluster e o tráfego de HA compartilham as mesmas portas físicas (no módulo de e/S no slot 4). As portas são de 40/100 GbE.
 
-+
-.. Controlador de cabo A porta e4a para o switch de rede do cluster A..
-.. Controlador de cabo A porta e4b para o switch de rede do cluster B.
-.. Porta e4a do controlador de cabo B para o switch de rede do cluster A..
-.. Porta e4b do controlador de cabo B para o switch de rede do cluster B.
+.Passos
+. Controlador de cabo A porta e4a para o switch de rede do cluster A..
+. Controlador de cabo A porta e4b para o switch de rede do cluster B.
+. Porta e4a do controlador de cabo B para o switch de rede do cluster A..
+. Porta e4b do controlador de cabo B para o switch de rede do cluster B.
 +
 *Cabos de interconexão de cluster/HA de 40/100 GbE*
 
@@ -186,22 +163,17 @@ image::../media/drw_isi_a30-50_2p_100gbe_1card_switched_cabling_ieops-1926.svg[C
 
 
 
-
-
-=====
 .AFF A20 com um módulo de e/S de 10/25 GbE de 2 portas
-[%collapsible]
-=====
-. Faça o cabo dos controladores para os switches de rede do cluster:
-+
+Conecte os cabos das portas de interconexão cluster/HA no módulo de E/S no slot 4 aos switches de rede do cluster.
+
 
 NOTE: O tráfego de interconexão de cluster e o tráfego de HA compartilham as mesmas portas físicas (no módulo de e/S no slot 4). As portas são de 10/25 GbE.
 
-+
-.. Controlador de cabo A porta e4a para o switch de rede do cluster A..
-.. Controlador de cabo A porta e4b para o switch de rede do cluster B.
-.. Porta e4a do controlador de cabo B para o switch de rede do cluster A..
-.. Porta e4b do controlador de cabo B para o switch de rede do cluster B.
+.Passos
+. Controlador de cabo A porta e4a para o switch de rede do cluster A..
+. Controlador de cabo A porta e4b para o switch de rede do cluster B.
+. Porta e4a do controlador de cabo B para o switch de rede do cluster A..
+. Porta e4b do controlador de cabo B para o switch de rede do cluster B.
 +
 *Cabos de interconexão de cluster/HA de 10/25 GbE*
 
@@ -213,9 +185,6 @@ image:../media/drw_isi_a20_switched_2p_25gbe_cabling_ieops-2019.svg["Diagrama de
 
 
 
-
-
-=====
 --
 ====
 
@@ -235,83 +204,56 @@ Se você não vir sua configuração aqui, link:https://hwu.netapp.com["NetApp H
 ====
 .Cabeamento de host Ethernet
 --
+Conecte os controladores à sua rede Ethernet usando as portas apropriadas, com base na configuração do seu módulo de E/S.
+
 .AFF A30 ou AFF A50 com dois módulos de e/S de 40/100 GbE de 2 portas
-[%collapsible]
-=====
-.Passos
-. Em cada controladora, as portas de cabo E2B e e4b para os switches de rede host Ethernet.
-+
+Em cada controladora, as portas de cabo E2B e e4b para os switches de rede host Ethernet.
+
 
 NOTE: As portas nos módulos de e/S no slot 2 e 4 são de 40/100 GbE (a conectividade de host é de 40/100 GbE).
 
-+
 *Cabos de 40/100 GbE*
 
-+
 image::../media/oie_cable_sfp_gbe_copper.png[Cabo de 40/100 GB]
 
-+
 image::../media/drw_isi_a30-50_host_2p_40-100gbe_2card_cabling_ieops-2014.svg[Cabo para switches de rede host ethernet 40/100gbe]
 
+.AFF A20, AFF A30 ou AFF A50 com um módulo de E/S de 4 portas 10/25 GbE
+Em cada controlador, as portas de cabo E2A, E2B, E2C e e2D para os switches de rede de host Ethernet.
 
-
-=====
-.AFF A20, A30 ou AFF A50 com um módulo de e/S de 10/25 GbE de 4 portas
-[%collapsible]
-=====
-.Passos
-. Em cada controlador, as portas de cabo E2A, E2B, E2C e e2D para os switches de rede de host Ethernet.
-+
 *Cabos de 10/25 GbE*
 
-+
 image:../media/oie_cable_sfp_gbe_copper.png["Conetor de cobre GbE SFP"]
 
-+
 image::../media/drw_isi_a30-50_host_2p_40-100gbe_1card_cabling_ieops-1923.svg[Cabo para switches de rede host ethernet 40/100gbe]
 
-
-
-=====
 --
 .Cabeamento de host FC
 --
-.AFF A20, A30 ou AFF A50 com um módulo de e/S FC de 4 portas de 64 GB/s.
-[%collapsible]
-=====
-.Passos
-. Em cada controlador, conecte as portas 2a, 2b, 2c e 2d aos switches de rede FC do host.
-+
+Conecte os controladores à sua rede Fibre Channel usando o módulo de E/S FC do seu sistema.
+
+.AFF A20, AFF A30 ou AFF A50 com um módulo de E/S FC de 4 portas 64 Gb/s
+Em cada controlador, conecte as portas 2a, 2b, 2c e 2d aos switches de rede FC do host.
+
 *Cabos FC de 64 GB/s*
 
-+
 image:../media/oie_cable_sfp_gbe_copper.png["Cabo fc de 64 GB"]
 
-+
 image::../media/drw_isi_a30-50_4p_64gb_fc_1card_cabling_ieops-1924.svg[Cabo para switches de rede host 64GB fc]
 
-
-
-=====
 --
 ====
 
 
 == Passo 3: Faça o cabeamento das conexões de rede de gerenciamento
 
-Ligue os controladores à rede de gestão.
+Cable as portas de gerenciamento (chave inglesa) em cada controlador para os switches de rede de gerenciamento.
 
-. Cable as portas de gerenciamento (chave inglesa) em cada controlador para os switches de rede de gerenciamento.
-+
 *CABOS RJ-45 DE 1000BASEBASE-T*
 
-+
 image::../media/oie_cable_rj45.png[Cabos RJ-45]
 
-+
 image::../media/drw_isi_g_wrench_cabling_ieops-1928.svg[Conete-se à sua rede de gerenciamento]
-
-
 
 
 IMPORTANT: Não conete os cabos de energia ainda.
@@ -341,23 +283,15 @@ image::../media/oie_cable100_gbe_qsfp28.png[Cabo de cobre de 100 GbE QSFP28]
 
 
 .Passos
-. Controlador de cabo A para a prateleira:
-+
-.. Controlador de cabo A porta E3A para NSM A porta e1a.
-.. Controlador de cabo A porta e3b para NSM B porta e1b.
+. Controlador de cabo A porta E3A para NSM A porta e1a.
+. Controlador de cabo A porta e3b para NSM B porta e1b.
 +
 image:../media/drw_isi_g_1_ns224_controller_a_cabling_ieops-1945.svg["Controladora A, portas E3A e e3b cabeadas para uma gaveta de NS224 U."]
 
-
-
-. Controlador de cabo B para a prateleira:
-+
-.. Porta B do controlador de cabo E3A para a porta e1a do NSM B.
-.. Porta B do controlador de cabo e3b para a porta e1b do NSM A.
+. Porta B do controlador de cabo E3A para a porta e1a do NSM B.
+. Porta B do controlador de cabo e3b para a porta e1b do NSM A.
 +
 image:../media/drw_isi_g_1_ns224_controller_b_cabling_ieops-1946.svg["Portas E3A e e3b do controlador B cabeadas para uma gaveta de NS224 U."]
-
-
 
 
 

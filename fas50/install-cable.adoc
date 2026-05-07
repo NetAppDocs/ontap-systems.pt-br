@@ -44,48 +44,41 @@ Se você não vir sua configuração aqui, link:https://hwu.netapp.com["NetApp H
 ====
 .Cabeamento de cluster sem switch
 --
+Utilize esta opção de cabeamento quando os dois controladores estiverem conectados diretamente um ao outro, sem o uso de switches de rede em cluster.
+
 .FAS50 com um módulo de e/S de 40/100 GbE de 2 portas
-[%collapsible]
-=====
-.Passos
-. Cable as conexões de interconexão cluster/HA:
-+
+Conecte os cabos das portas de interconexão do cluster/HA no módulo de E/S no slot 4.
+
 
 NOTE: O tráfego de interconexão de cluster e o tráfego de HA compartilham as mesmas portas físicas (no módulo de e/S no slot 4). As portas são de 40/100 GbE.
 
-+
-.. Controlador de cabo A porta e4a para a porta e4a do controlador B.
-.. Controlador de cabo A porta e4b para a porta e4b do controlador B.
-+
+.Passos
+. Controlador de cabo A porta e4a para a porta e4a do controlador B.
+. Controlador de cabo A porta e4b para a porta e4b do controlador B.
+
+
 *Cabos de interconexão de cluster/HA de 100 GbE*
 
-+
 image::../media/oie_cable100_gbe_qsfp28.png[Cabo de cluster HA de 100 GbE]
 
-+
 image::../media/drw_isi_fas50_switchless_2p_100gbe_cabling_ieops-1937.svg[diagrama de cabeamento de cluster sem switch de fas50 gbe usando um módulo de e/s de 100gbe gbe]
 
-
-
-
-
-=====
 --
 .Cabeamento de cluster comutado
 --
+Utilize esta opção de cabeamento quando os controladores se conectarem a switches de rede do cluster em vez de estarem conectados diretamente uns aos outros.
+
 .FAS50 com um módulo de e/S de 40/100 GbE de 2 portas
-[%collapsible]
-=====
-. Faça o cabo dos controladores para os switches de rede do cluster:
-+
+Conecte os cabos das portas de interconexão cluster/HA no módulo de E/S no slot 4 aos switches de rede do cluster.
+
 
 NOTE: O tráfego de interconexão de cluster e o tráfego de HA compartilham as mesmas portas físicas (no módulo de e/S no slot 4). As portas são de 40/100 GbE.
 
-+
-.. Controlador de cabo A porta e4a para o switch de rede do cluster A..
-.. Controlador de cabo A porta e4b para o switch de rede do cluster B.
-.. Porta e4a do controlador de cabo B para o switch de rede do cluster A..
-.. Porta e4b do controlador de cabo B para o switch de rede do cluster B.
+.Passos
+. Controlador de cabo A porta e4a para o switch de rede do cluster A..
+. Controlador de cabo A porta e4b para o switch de rede do cluster B.
+. Porta e4a do controlador de cabo B para o switch de rede do cluster A..
+. Porta e4b do controlador de cabo B para o switch de rede do cluster B.
 +
 *Cabos de interconexão de cluster/HA de 40/100 GbE*
 
@@ -97,9 +90,6 @@ image:../media/drw_isi_fas50_2p_100gbe_switched_cluster_cabling_ieops-1936.svg["
 
 
 
-
-
-=====
 --
 ====
 
@@ -119,62 +109,44 @@ Se você não vir sua configuração aqui, link:https://hwu.netapp.com["NetApp H
 ====
 .Cabeamento de host Ethernet
 --
+Conecte os controladores à sua rede Ethernet usando as portas apropriadas, com base na configuração do seu módulo de E/S.
+
 .FAS50 com um módulo de e/S de 10/25 GbE de 4 portas
-[%collapsible]
-=====
-.Passos
-. Em cada controlador, as portas de cabo E2A, E2B, E2C e e2D para os switches de rede de host Ethernet.
-+
+Em cada controlador, as portas de cabo E2A, E2B, E2C e e2D para os switches de rede de host Ethernet.
+
 *Cabos de 10/25 GbE*
 
-+
 image:../media/oie_cable_sfp_gbe_copper.png["Conetor de cobre GbE SFP, largura de 100px mm"]
 
-+
 image::../media/drw_isi_fas50_4p_25gbe_optional_cabling_ieops-1934.svg[cabo FAS50 para switches de rede host Ethernet 10/25 GbE]
 
-
-
-=====
 --
 .Cabeamento de host FC
 --
+Conecte os controladores à sua rede Fibre Channel usando o módulo de E/S FC do seu sistema.
+
 .FAS50 com um módulo de e/S FC de 4 portas de 64 GB/s.
-[%collapsible]
-=====
-.Passos
-. Em cada controlador, conecte as portas 2a, 2b, 2c e 2d aos switches de rede FC do host.
-+
+Em cada controlador, conecte as portas 2a, 2b, 2c e 2d aos switches de rede FC do host.
+
 *Cabos FC de 64 GB/s*
 
-+
 image:../media/oie_cable_sfp_gbe_copper.png["Cabo fc de 64 GB, largura de 100px mm"]
 
-+
 image::../media/drw_isi_fas50_4p_64gb_fc_optional_cabling_ieops-1935.svg[Cabo para switches de rede host 64GB fc]
 
-
-
-=====
 --
 ====
 
 
 == Passo 3: Faça o cabeamento das conexões de rede de gerenciamento
 
-Ligue os controladores à rede de gestão.
+Cable as portas de gerenciamento (chave inglesa) em cada controlador para os switches de rede de gerenciamento.
 
-. Cable as portas de gerenciamento (chave inglesa) em cada controlador para os switches de rede de gerenciamento.
-+
 *CABOS RJ-45 DE 1000BASEBASE-T*
 
-+
 image::../media/oie_cable_rj45.png[Cabos RJ-45]
 
-+
 image::../media/drw_isi_fas50_wrench_cabling_ieops-1938.svg[Conete-se à sua rede de gerenciamento]
-
-
 
 
 IMPORTANT: Não conete os cabos de energia ainda.
@@ -201,26 +173,20 @@ image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[Cabo mini-SAS HD]
 
 
 
-[role="tabbed-block"]
-====
-.Opção 1: Uma prateleira DS460C
---
+
+
+=== Uma prateleira DS460C
+
 Conete cada controlador a cada módulo IOM12 na gaveta DS460C.
 
 .Passos
-. Controlador de cabo A para a prateleira:
-+
-.. Controlador de cabo A porta 3a para a porta IOMA 1.
-.. Controlador de cabo A porta 3D para porta IOMB 3.
+. Controlador de cabo A porta 3a para a porta IOMA 1.
+. Controlador de cabo A porta 3D para porta IOMB 3.
 +
 image:../media/drw_isi_fas50_1_ds460c_controller_a_cabling_ieops-2167.svg["Controladora A, portas 3a e 3D cabeadas para uma gaveta de DS460C U."]
 
-
-
-. Controlador de cabo B para a prateleira:
-+
-.. Porta B do controlador de cabo 3a para a porta IOMB 1.
-.. Porta B do controlador de cabo 3D para a porta IOMA 3.
+. Porta B do controlador de cabo 3a para a porta IOMB 1.
+. Porta B do controlador de cabo 3D para a porta IOMA 3.
 +
 image:../media/drw_isi_fas50_1_ds460c_controller_b_cabling_ieops-2169.svg["Portas 3a e 3D do controlador B cabeadas para uma gaveta de DS460C U."]
 
@@ -228,41 +194,26 @@ image:../media/drw_isi_fas50_1_ds460c_controller_b_cabling_ieops-2169.svg["Porta
 
 
 
---
-.Opção 2: Duas prateleiras DS460C
---
+=== Duas prateleiras DS460C
+
 Conecte cada controladora aos IOM12 módulos das duas gavetas DS460C.
 
-. Faça o cabeamento das conexões da prateleira para a prateleira:
-+
-.. Compartimento de cabos 1 porta IOMA 3 para gaveta 2 porta IOMA 1.
-.. Compartimento de cabos 1 porta IOMB 3 para gaveta 2 porta IOMB 1.
+. Compartimento de cabos 1 porta IOMA 3 para gaveta 2 porta IOMA 1.
+. Compartimento de cabos 1 porta IOMB 3 para gaveta 2 porta IOMB 1.
 +
 image:../media/drw_isi_fas50_2_ds460c_shelf_to_shelf_ieops-2172.svg["conexões da prateleira de cabos à prateleira"]
 
-
-
-. Controlador de cabos A para as prateleiras:
-+
-.. Controlador de cabo A porta 3a para gaveta 1 porta IOMA 1.
-.. Controlador de cabo A porta 3D para gaveta 2 porta IOMB 3.
+. Controlador de cabo A porta 3a para gaveta 1 porta IOMA 1.
+. Controlador de cabo A porta 3D para gaveta 2 porta IOMB 3.
 +
 image:../media/drw_isi_fas50_2_ds460c_controller_a_cabling_ieops-2170.svg["Controladora A portas 3a e 3D cabeadas para duas gavetas DS460C"]
 
-
-
-. Controlador de cabos B para as prateleiras:
-+
-.. Porta B do controlador de cabo 3a para a gaveta 1 porta IOMB 1.
-.. Porta B do controlador de cabo 3D para a gaveta 2 porta IOMA 3.
+. Porta B do controlador de cabo 3a para a gaveta 1 porta IOMB 1.
+. Porta B do controlador de cabo 3D para a gaveta 2 porta IOMA 3.
 +
 image:../media/drw_isi_fas50_2_ds460c_controller_b_cabling_ieops-2171.svg["Portas 3a e 3D do controlador B cabeadas para duas gavetas DS460C"]
 
 
 
-
-
---
-====
 .O que se segue?
 Depois de ativar o hardware para o sistema de storage, você link:install-power-hardware.html["ligue o sistema de armazenamento"].

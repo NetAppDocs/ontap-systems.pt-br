@@ -9277,7 +9277,6 @@
   <block id="d16a227aab66041a81c6f88b290eb486" category="section-title">Etapa 1: Faça o cabeamento das conexões cluster/HA</block>
   <block id="134e0586a0879fa097abfb47d5e64dbe" category="open-title">Cabeamento de cluster sem switch</block>
   <block id="ee68cf12a16ca46d58bedd8cf9051f32" category="example-title">AFF A30 ou AFF A50 com dois módulos de e/S de 40/100 GbE de 2 portas</block>
-  <block id="a8d16746fb80901317600cba36862a10" category="list-text">Cable as conexões de interconexão cluster/HA:</block>
   <block id="6780657f10ef4bbe5e784f3b1e7777e3" category="admonition">O tráfego de interconexão de cluster e o tráfego de HA compartilham as mesmas portas físicas (nos módulos de e/S nos slots 2 e 4). As portas são de 40/100 GbE.</block>
   <block id="efe3bfda2c730f42fd2741bc4722e6f0" category="list-text">Controlador de cabo A porta E2A para a porta E2A do controlador B.</block>
   <block id="064b137ca9cfb01af5cef5f59d057fe2" category="list-text">Controlador de cabo A porta e4a para a porta e4a do controlador B.</block>
@@ -9303,10 +9302,8 @@
   <block id="b53a4effb80334f95a8d3a106ebd8d78" category="paragraph">*Cabos de interconexão de cluster/HA de 40/100 GbE*</block>
   <block id="b0f68808f5130fe93780d063d5a249ef" category="image-alt">Cabo de cluster HA de 40/100 GbE</block>
   <block id="fdf9561d280feaca372af24a497c913c" category="image-alt">diagrama de cabeamento de cluster comutado a30 e a50 usando dois módulos de e/s 100gbe</block>
-  <block id="03b14fd60bbaa553460ca8bf5858ac71" category="list-text">Faça o cabo dos controladores para os switches de rede do cluster:</block>
   <block id="2cfaddf7a4d44f5351fdb0ee36c9c36b" category="list-text">Controlador de cabo A porta e4b para o switch de rede do cluster B.</block>
   <block id="04fca3f1f2d55aeb84370ab3e66d9214" category="list-text">Porta e4b do controlador de cabo B para o switch de rede do cluster B.</block>
-  <block id="044628848918241f36841cbeb4d4dc4e" category="admonition">O tráfego de interconexão de cluster e o tráfego de HA compartilham as mesmas portas físicas (no módulo de e/S no slot 4). As portas são de 10/25 GbE.</block>
   <block id="9d14c26ccbbb0d65a3b5d05e2013404b" category="paragraph">*Cabos de interconexão de cluster/HA de 10/25 GbE*</block>
   <block id="7f99cbc2aa28ab9fed6e99fa94242b4a" category="section-title">Etapa 2: Faça o cabeamento das conexões de rede do host</block>
   <block id="8246042d23ca859d83185957ac9c4044" category="paragraph">Em cada controladora, as portas de cabo E2B e e4b para os switches de rede host Ethernet.</block>
@@ -9321,18 +9318,15 @@
   <block id="c053ea984f8ec26545ef5a0f8e3c516b" category="paragraph">*Cabos de 10/25 GbE*</block>
   <block id="53b32e6926c94a5a2ab06b2fe3836135" category="image-alt">Cabo para switches de rede host 64GB fc</block>
   <block id="945babbf23a8741321d27a1c4a0c4200" category="section-title">Passo 3: Faça o cabeamento das conexões de rede de gerenciamento</block>
-  <block id="b88fb46fa64622aa179b7b543ddf13a5" category="paragraph">Ligue os controladores à rede de gestão.</block>
   <block id="e42848811631f979cb5744f72268013a" category="list-text">Cable as portas de gerenciamento (chave inglesa) em cada controlador para os switches de rede de gerenciamento.</block>
   <block id="cc9dc8ff5d926a2f202e16be7619d147" category="section-title">Etapa 4: Faça o cabeamento das conexões da prateleira</block>
   <block id="63a714a4848b4ea90e8f63ae1efc6250" category="paragraph">Este procedimento mostra como enviar os controladores para uma gaveta de NS224 U.</block>
   <block id="02b0ddc9c51a6fd3d072763fb5b859f3" category="list-text">Para obter o número máximo de gavetas compatíveis com o seu sistema de storage e para todas as opções de cabeamento, como ótico e conectado a switch, <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>consulte .</block>
   <block id="302158186d4e933e7fd1df5cef7e5e27" category="list-text">Os gráficos mostram o cabeamento A do controlador em azul e o cabeamento B do controlador em amarelo.</block>
-  <block id="252938adaa820c554614fbc402a51423" category="list-text">Controlador de cabo A para a prateleira:</block>
   <block id="3c4324a5217fea116e9e54ac43c2946d" category="list-text">Controlador de cabo A porta E3A para NSM A porta e1a.</block>
   <block id="3146f6e92eca07f5f546ef1fab1f08db" category="list-text">Controlador de cabo A porta e3b para NSM B porta e1b.</block>
   <block id="c4026e3ae600ac06e1796e4025a51f22" category="inline-image-macro">Controladora A, portas E3A e e3b cabeadas para uma gaveta de NS224 U.</block>
   <block id="5b9ac89947f29d7d4db86ad300db69d3" category="paragraph"><block ref="5b9ac89947f29d7d4db86ad300db69d3" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="f267ad5aad3c1a8c5c19c559fb9d2b34" category="list-text">Controlador de cabo B para a prateleira:</block>
   <block id="9640655140834664cdff76358e447096" category="list-text">Porta B do controlador de cabo E3A para a porta e1a do NSM B.</block>
   <block id="b0e91ffa1bef20547911449f7a3300db" category="list-text">Porta B do controlador de cabo e3b para a porta e1b do NSM A.</block>
   <block id="a7232cb75808a8e7cf49cc148792b59d" category="inline-image-macro">Portas E3A e e3b do controlador B cabeadas para uma gaveta de NS224 U.</block>
@@ -9698,9 +9692,7 @@
   <block id="34f650ca44fabe66ff7e4095a137da22" category="list-text">Certifique-se de que todos os outros componentes do sistema de armazenamento estão a funcionar corretamente; caso contrário, contacte<block ref="eb2c61027d5e6c8b35692c1e74187026" category="inline-link-rx"></block> antes de continuar."</block>
   <block id="d48b3cfe096b47bcb7f13e683c934beb" category="paragraph">Faça o cabeamento das controladoras à rede de host Ethernet ou FC.</block>
   <block id="bb8661c49545cac68358046e25b8f950" category="open-title">Cabeamento de host Ethernet</block>
-  <block id="3c90cea8d34e6c024dcfcf7fbe2bc396" category="example-title">AFF A20, A30 ou AFF A50 com um módulo de e/S de 10/25 GbE de 4 portas</block>
   <block id="91ca13b03c277f557b91f705d4455de5" category="open-title">Cabeamento de host FC</block>
-  <block id="45adc6168b3bfdd0a69aad7185cab6d2" category="example-title">AFF A20, A30 ou AFF A50 com um módulo de e/S FC de 4 portas de 64 GB/s.</block>
   <block id="5b903193757e7495dce32499ded20f07" category="paragraph">Antes de instalar seu sistema de storage, ele deve atender aos requisitos de instalação.</block>
   <block id="82f66f7658dd53410415bd1c67e9ccad" category="paragraph">Para se preparar para a instalação, prepare o local, verifique os requisitos ambientais e elétricos e certifique-se de que há espaço suficiente no rack. Em seguida, desembale o equipamento, compare o conteúdo com o slip de embalagem e Registre o hardware para acessar os benefícios de suporte.</block>
   <block id="c273a3f4ab5c9add6857208b8a70d10e" category="example-title">AFF C30 ou AFF C60 com um módulo de e/S de 10/25 GbE de 4 portas</block>
@@ -10465,7 +10457,6 @@
   <block id="176d935f21584d13a73cc2fee6d2006f" category="paragraph">Depois de instalar o hardware do sistema de storage FAS50, faça o cabeamento das controladoras à rede e às gavetas.</block>
   <block id="e7bd234f89aa10fe2a25ab70f1881386" category="example-title">FAS50 com um módulo de e/S de 40/100 GbE de 2 portas</block>
   <block id="ab0929853066bc5afff8f565bc7e138d" category="image-alt">diagrama de cabeamento de cluster sem switch de fas50 gbe usando um módulo de e/s de 100gbe gbe</block>
-  <block id="f5e2edd1a08f37ae784f4706be49b73d" category="admonition">O tráfego de interconexão de cluster e o tráfego de HA compartilham as mesmas portas físicas (no módulo de e/S no slot 4). As portas são de 40/100 GbE.</block>
   <block id="587bed5e1b1013acb3b0cad78e0dc97f" category="inline-image-macro">diagrama de cabeamento de cluster comutado fas50 usando um módulo de e/s 100gbe</block>
   <block id="5af61e2d32561bdfd725b4ff1abad33d" category="paragraph"><block ref="5af61e2d32561bdfd725b4ff1abad33d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="30116aad52f0bad698fa0cb2a523a7d2" category="example-title">FAS50 com um módulo de e/S de 10/25 GbE de 4 portas</block>
@@ -10477,7 +10468,6 @@
   <block id="41f30de602f778bd37fd94cde0e93d98" category="paragraph">O cabeamento para outras gavetas SAS com suporte é semelhante. <block ref="c0d7aa9ee22aab3ecf7bf0fe7732f94e" category="inline-link-macro-rx"></block>Consulte . Você também pode se referir <block ref="f178d666cc0e8ba0d12eda1a67319fdb" category="inline-link-macro-rx"></block>a .</block>
   <block id="0bf36a9d3e5241c7c2a803cca8393af0" category="list-text">Para obter o número máximo de gavetas compatíveis com o sistema de storage e todas as opções de cabeamento, como ótico e conectado a switch, <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>consulte .</block>
   <block id="72d885b36f3dabe9e44ce371442073d6" category="list-text">Você usa os cabos de armazenamento fornecidos com o sistema de armazenamento, que podem ser o seguinte tipo de cabo:</block>
-  <block id="72f4035027f2f7ca82b0a522cc86f866" category="open-title">Opção 1: Uma prateleira DS460C</block>
   <block id="1475db94c866c1134ab5b90020f91d8e" category="paragraph">Conete cada controlador a cada módulo IOM12 na gaveta DS460C.</block>
   <block id="4148c23baf0acb2d5a889bf39e98d451" category="list-text">Controlador de cabo A porta 3a para a porta IOMA 1.</block>
   <block id="83622a8ebd61bb324e46d859d063a629" category="list-text">Controlador de cabo A porta 3D para porta IOMB 3.</block>
@@ -10487,19 +10477,15 @@
   <block id="e8849143d50daef61f19b6d8a620b759" category="list-text">Porta B do controlador de cabo 3D para a porta IOMA 3.</block>
   <block id="ef1647c46666dea72c87973140aae982" category="inline-image-macro">Portas 3a e 3D do controlador B cabeadas para uma gaveta de DS460C U.</block>
   <block id="e4c4ceb79fe5729418dba70f3d3a4b6f" category="paragraph"><block ref="e4c4ceb79fe5729418dba70f3d3a4b6f" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="fd4b8702e1fece6900211aed1df08297" category="open-title">Opção 2: Duas prateleiras DS460C</block>
   <block id="d5b0fb86b04fadb04b2c1aabdc682124" category="paragraph">Conecte cada controladora aos IOM12 módulos das duas gavetas DS460C.</block>
-  <block id="92b6981d91e56c51ed8cd81ceb0c2725" category="list-text">Faça o cabeamento das conexões da prateleira para a prateleira:</block>
   <block id="4a433061aeb5f5489a4f6f2c6998431e" category="list-text">Compartimento de cabos 1 porta IOMA 3 para gaveta 2 porta IOMA 1.</block>
   <block id="953e03d7a579b26571697352f2be0e05" category="list-text">Compartimento de cabos 1 porta IOMB 3 para gaveta 2 porta IOMB 1.</block>
   <block id="123ab7e1c9141cb0b7e7b712d202404a" category="inline-image-macro">conexões da prateleira de cabos à prateleira</block>
   <block id="5b5c504f96f7bd830b1746878c952c52" category="paragraph"><block ref="5b5c504f96f7bd830b1746878c952c52" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="32711258ec649d276f0febe359183174" category="list-text">Controlador de cabos A para as prateleiras:</block>
   <block id="8a077fe26258a791808f6c79d3bb7497" category="list-text">Controlador de cabo A porta 3a para gaveta 1 porta IOMA 1.</block>
   <block id="3b49545c9e32c779ba99005b8bdb4459" category="list-text">Controlador de cabo A porta 3D para gaveta 2 porta IOMB 3.</block>
   <block id="262e032c06dfbe5a4f5e5984c10f93a8" category="inline-image-macro">Controladora A portas 3a e 3D cabeadas para duas gavetas DS460C</block>
   <block id="f55c64664eae8ba733b8672a7ff524f8" category="paragraph"><block ref="f55c64664eae8ba733b8672a7ff524f8" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="7a6143a096aca12e23bfad9f1d41fe20" category="list-text">Controlador de cabos B para as prateleiras:</block>
   <block id="0b811f09e9eac5e37e239a12858a54c1" category="list-text">Porta B do controlador de cabo 3a para a gaveta 1 porta IOMB 1.</block>
   <block id="01c7cda26a7b465d1c56f741d328e967" category="list-text">Porta B do controlador de cabo 3D para a gaveta 2 porta IOMA 3.</block>
   <block id="60fee2ee2c3e768d10719c680fb38afb" category="inline-image-macro">Portas 3a e 3D do controlador B cabeadas para duas gavetas DS460C</block>
@@ -10637,9 +10623,6 @@
   <block id="9cb7b36b3f2bccc776862e6f2f494077" category="list-text">e1a</block>
   <block id="03c334f1a71e7086b1987bb740b5b995" category="paragraph"><block ref="03c334f1a71e7086b1987bb740b5b995" category="inline-image-macro-rx" type="image"></block></block>
   <block id="149908e216dc72e0533f69ab126aad8f" category="doc">Devolva o controlador - AFF C30 e AFF C60</block>
-  <block id="d577eb8153a8191824e900c199f4adb5" category="image-alt">diagrama de cabeamento de cluster sem switch de a30 gbe e a60 gbe usando dois módulos de e/s de 100gbe gbe</block>
-  <block id="b36b92a50cc219291b67a5511975b913" category="image-alt">diagrama de cabeamento de cluster sem switch de a30 gbe e a60 gbe usando um módulo de e/s de 100gbe gbe</block>
-  <block id="ccea46e36f76a430c118e619834cee72" category="image-alt">diagrama de cabeamento de cluster comutado a30 e a60 usando dois módulos de e/s 100gbe</block>
   <block id="526ef9ab51ab95d97249aac6cc69c855" category="doc">Devolver o controlador - AFF C80</block>
   <block id="f114d3932a75433b75f66fa15d3b0340" category="list-text">Controladora 2 porta 0b a porta IOM B 3 na última gaveta de unidades na stack.</block>
   <block id="6ba9035799414ab848820232d6755ea3" category="paragraph">ficheiro:drw_autoDiscovery_controler_Select_ieops-1849.svg[Selecionar um ícone ONTAP]</block>
@@ -13577,8 +13560,6 @@
   <block id="53293de4445d9809b5beb36bf8b2bdd2" category="list-text"><block ref="53293de4445d9809b5beb36bf8b2bdd2" category="inline-link-macro-rx"></block></block>
   <block id="b1a10fdec821bde7511fcf1b956e5382" category="paragraph"><block ref="b6b8a8462966204b648f1ae9c887611d" category="inline-link-macro-rx"></block>.</block>
   <block id="8a484401787078890bc1e7fd9beb44fb" category="sidebar">Procedimentos de substituição do NSM</block>
-  <block id="9dd7ce2f864cf38177fc70779cbe6635" category="sidebar">Visão geral do AFF A70</block>
-  <block id="045d04f83b324cbd691c0a2eef106f65" category="sidebar">Visão geral do AFF A90</block>
   <block id="dcb60d37ecd73502c4c85283951d3ef3" category="paragraph">Utilize o cabo 100 GbE para conectar as portas e1a e e7a dos Controladores A e B aos switches de rede do cluster A e B.</block>
   <block id="bb7f8ab7bb4d8aa48ac1718817f85e14" category="list-text">Após a devolução ser concluída, execute<block ref="48865c7c1d8013246e4e5f705a9105de" category="inline-link-rx"></block> Para verificar a integridade do sistema de armazenamento e corrigir quaisquer problemas encontrados.</block>
   <block id="348d4833794229229acf56a65271f1b1" category="paragraph">Substitua a mídia de inicialização, que está localizada dentro do módulo de gerenciamento do sistema na parte traseira do controlador.</block>
@@ -15040,4 +15021,21 @@
   <block id="9032ec2413add8bae5c7091ded2efd15" category="paragraph">Conecte as portas de interconexão de cluster entre si com o cabo de interconexão de cluster de 25 GbE</block>
   <block id="ae50728003d401e456e4268de55cb82f" category="list-text"><block ref="22c13bbaef49007250d4766c3983eb52" category="inline-xref-macro-rx"></block></block>
   <block id="c8319347335872bf1fd4bd3b782289bd" category="paragraph">Antes de substituir a mídia de inicialização no seu sistema FAS8300 ou FAS8700, certifique-se de que atende aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se você possui a mídia de inicialização de substituição correta, confirmar se a porta e0S (chave inglesa e0M) no controlador com defeito não está com problemas e determinar se Onboard Key Manager (OKM) ou External Key Manager (EKM) está habilitado.</block>
+  <block id="9f111fc1eda18bc0e82125c03d816b62" category="paragraph">Utilize esta opção de cabeamento quando os dois controladores estiverem conectados diretamente um ao outro, sem o uso de switches de rede em cluster.</block>
+  <block id="5580d6ef55888e18898368c925aa8e52" category="paragraph">Conecte os cabos das portas de interconexão do cluster/HA nos módulos de E/S nos slots 2 e 4.</block>
+  <block id="97946d7a89e89a736323c25878b34550" category="paragraph">Conecte os cabos das portas de interconexão do cluster/HA no módulo de E/S no slot 4.</block>
+  <block id="d5029cecd62f8760a4e59f4e1ded8188" category="paragraph">Utilize esta opção de cabeamento quando os controladores se conectarem a switches de rede do cluster em vez de estarem conectados diretamente uns aos outros.</block>
+  <block id="78cf93b0fe428a0be986a2c28a10216f" category="paragraph">Conecte os cabos das portas de interconexão cluster/HA nos módulos de E/S nos slots 2 e 4 aos switches de rede do cluster.</block>
+  <block id="8c36cb2a1e1d7f5dc821ce32ab2aad17" category="paragraph">Conecte os cabos das portas de interconexão cluster/HA no módulo de E/S no slot 4 aos switches de rede do cluster.</block>
+  <block id="108e7b770dea3f3fb9b6db30c0e7b0f6" category="paragraph">Conecte os controladores à sua rede Ethernet usando as portas apropriadas, com base na configuração do seu módulo de E/S.</block>
+  <block id="5e8a0cb1b4d7dcff26906f3e887b61e7" category="paragraph-title">AFF A20, AFF A30 ou AFF A50 com um módulo de E/S de 4 portas 10/25 GbE</block>
+  <block id="1c1b2907a48ad79cead7728a563058b8" category="paragraph">Conecte os controladores à sua rede Fibre Channel usando o módulo de E/S FC do seu sistema.</block>
+  <block id="45101dabe48484da8329d9f4ce2fe9f3" category="paragraph-title">AFF A20, AFF A30 ou AFF A50 com um módulo de E/S FC de 4 portas 64 Gb/s</block>
+  <block id="c5189f4a776457dc21c60d6f43c07b75" category="image-alt">diagrama de cabeamento do cluster sem switch c30 e c60 usando dois módulos de io de 100gbe</block>
+  <block id="5907445d3493356c9bc5fa236dc3bb3e" category="image-alt">diagrama de cabeamento do cluster sem switch c30 e c60 usando um módulo de io de 100gbe</block>
+  <block id="8bb4519e94b250398d3a201fc380c5ad" category="image-alt">Diagrama de cabeamento de cluster comutado c30 e c60 usando dois módulos de E/S de 100 GbE</block>
+  <block id="767e4ed898ca6cd698046f422d170efa" category="section-title">Uma prateleira DS460C</block>
+  <block id="6b7f864bd91be16ace313bfe44f12e71" category="section-title">Duas prateleiras DS460C</block>
+  <block id="b62281acd6d6f68b211c9c140acb1de6" category="summary">Recabeie o sistema e reatribua os discos.</block>
+  <block id="c7585f11abe7b6b5267f9b01ab8db3d3" category="summary">Substitua a bateria do relógio em tempo real no módulo controlador.</block>
 </blocks>
