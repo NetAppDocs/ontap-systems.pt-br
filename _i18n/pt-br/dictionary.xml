@@ -8145,12 +8145,6 @@
   <block id="17732d64911b83c1ef019e7ce301df3a" category="sidebar">A documentação do sistema de armazenamento permite instalar, configurar e manter o sistema ASA.</block>
   <block id="ca28f9f86b3aa8b741c753f063bb94dc" category="sidebar">Datasheet do AFF C-Series</block>
   <block id="0fb9735ecb54169951a85054b16d2868" category="sidebar">Visão geral da plataforma AFF C-Series</block>
-  <block id="64f78e10c5d8a4db6f25299bf9a418cd" category="sidebar">Os sistemas AFF A-Series e C-Series são projetados para ajudar as organizações a transformar sua infraestrutura com mais rapidez e impulsionar estratégias orientadas pelos dados.</block>
-  <block id="d186b8a54af216bfae7a9573dc3dfd54" category="sidebar">A documentação dos sistemas AFF descreve como instalar, configurar e manter seus sistemas AFF A-Series e C-Series.</block>
-  <block id="8b4ad289620e7b0611000ddd6fa583c3" category="sidebar">Instalar e configurar sistemas A-Series</block>
-  <block id="c91d48fe9284f4d299615b787ff7c882" category="sidebar">Instalar e configurar sistemas C-Series</block>
-  <block id="d82b198ed12fecd580981b34c4959490" category="sidebar">Manter os sistemas A-Series</block>
-  <block id="e32ee65ffedbf05873ffce177cee51b5" category="sidebar">Manter os sistemas C-Series</block>
   <block id="c706be8edc4286046dcf6813e8dd8b18" category="sidebar">A documentação do sistema de storage permite instalar, configurar e manter seu sistema ASA Série A.</block>
   <block id="27562113eba41d0820398afd585cb267" category="sidebar">Configuração do software ASA</block>
   <block id="ff529c4d04327f7d20ae4d7b457bcd18" category="sidebar">Datasheet do ASA</block>
@@ -8203,8 +8197,6 @@
   <block id="cd5ec5f3586869573f3f0b3112426052" category="sidebar">TR-4290 - SAP HANA em sistemas NetApp FAS com NFS</block>
   <block id="b00c4b4112816929de0eb8a79af19e7f" category="sidebar">Documentos de sistemas de hardware ONTAP</block>
   <block id="d1f3a81423106ee57c19f4fc60f797ca" category="sidebar">Fim do suporte</block>
-  <block id="91be56ff709f018bb7b1a4c33c68d316" category="sidebar">Sistemas a-Series</block>
-  <block id="078c4b575f196efdc8ec79e58f26db9f" category="sidebar">Sistemas C-Series</block>
   <block id="ade01a5a398372194a42c36e9f5279ac" category="sidebar">Manutenção</block>
   <block id="3b4f8423fb92aace5b1c957248b6fd18" category="sidebar">Kits de gabinete e trilho</block>
   <block id="622847369a10871880b9d0b967b82ff7" category="sidebar">Kit SuperRail</block>
@@ -9771,7 +9763,6 @@
   <block id="38ae227cf94e3775806bccfd95814d4b" category="paragraph"><block ref="035b082bfaf23bf2d7b95c3ef597d380" prefix="" category="inline-code"></block></block>
   <block id="a5e51e5f50ca83720f1d0d8b17c1e93b" category="list-text">Esses procedimentos mostram configurações comuns. O cabeamento específico depende dos componentes solicitados para o seu sistema de storage. Para obter detalhes abrangentes de configuração e prioridade de slot, <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>consulte .</block>
   <block id="e5f780ef73bd41c1dd64af7a1a1a31ac" category="paragraph">Faça o cabeamento dos controladores ao cluster do ONTAP. Este procedimento difere dependendo do modelo do sistema de armazenamento e da configuração do módulo de e/S.</block>
-  <block id="0990249c3bba6596b74be9af46837266" category="list-text">Conete a porta e7a no controlador A à porta e1a no controlador B.</block>
   <block id="18695b824b22d82a916970e4903bf31d" category="paragraph">Use o cabo de 100 GbE para conetar as portas e1a a e1a e as portas e7a a e7a.</block>
   <block id="3b29102e499249644dff327644d96081" category="list-text">Conete as portas e9a e e9b ao switch de rede de dados Ethernet.</block>
   <block id="c7900e3ee1f4eb935f449465b57ad5c1" category="paragraph">Use os cabos RJ-45 de 1000BASEBASE-T para conetar as portas de gerenciamento (chave inglesa) em cada controlador aos switches de rede de gerenciamento.</block>
@@ -9802,7 +9793,6 @@
   <block id="8019bdcaff5849ab8015533c8674f305" category="paragraph">Prenda cada controladora aos módulos do NSM em ambas as gavetas NS224. Os gráficos mostram o cabeamento A do controlador em azul e o cabeamento B do controlador em amarelo.</block>
   <block id="546125971d4fce23d0f562118f0ce95f" category="open-title">Opção 3: Duas prateleiras DS460C</block>
   <block id="8994222dc8e3118b755e00531cef6a1c" category="paragraph">Cable cada controladora aos módulos IOM nas duas gavetas DS460C. Os gráficos mostram o cabeamento A do controlador em azul e o cabeamento B do controlador em amarelo.</block>
-  <block id="d42c87e93d80bf28fffc01d7bb494eb2" category="list-text"><block ref="d42c87e93d80bf28fffc01d7bb494eb2" category="inline-link-macro-rx"></block></block>
   <block id="98aab8017242eea1d6e23ba928b20ae5" category="list-text"><block ref="98aab8017242eea1d6e23ba928b20ae5" category="inline-link-macro-rx"></block></block>
   <block id="4e3c3284590d1aa1440e67b3bd65ba6e" category="list-text"><block ref="4e3c3284590d1aa1440e67b3bd65ba6e" category="inline-link-macro-rx"></block></block>
   <block id="370d2e6f20948d3881708f9706576691" category="sidebar">Prepare-se para substituir</block>
@@ -15038,4 +15028,6 @@
   <block id="6b7f864bd91be16ace313bfe44f12e71" category="section-title">Duas prateleiras DS460C</block>
   <block id="b62281acd6d6f68b211c9c140acb1de6" category="summary">Recabeie o sistema e reatribua os discos.</block>
   <block id="c7585f11abe7b6b5267f9b01ab8db3d3" category="summary">Substitua a bateria do relógio em tempo real no módulo controlador.</block>
+  <block id="4e219191285e6b026a35828fa008670f" category="list-text"><block ref="4e219191285e6b026a35828fa008670f" category="inline-link-macro-rx"></block></block>
+  <block id="f907c55a04055c61d778510e17a75874" category="list-text"><block ref="f907c55a04055c61d778510e17a75874" category="inline-link-macro-rx"></block></block>
 </blocks>

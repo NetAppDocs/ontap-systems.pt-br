@@ -22,27 +22,24 @@ sidebar:
       url: "/eoa-hardware.html"
   - title: Início rápido
     url: "/get-up-and-run.html"
-  - title: Sistemas AFF
-    url: "/aff-landing/index.html"
+  - title: Sistemas AFF A-Series
+    url: "/aff-aseries/index.html"
     entries:
-    - title: Sistemas a-Series
-      url: "/aff-aseries/index.html"
-      entries:
-      - section: a1k
-      - section: a70-90
-      - section: a20-30-50
-      - section: a150
-      - section: a250
-      - section: a400
-      - section: a800
-      - section: a900
-    - title: Sistemas C-Series
-      url: "/aff-cseries/index.html"
-      entries:
-      - section: c30-60
-      - section: c80
-      - section: c250
-      - section: c400
+    - section: a1k
+    - section: a70-90
+    - section: a20-30-50
+    - section: a150
+    - section: a250
+    - section: a400
+    - section: a800
+    - section: a900
+  - title: Sistemas AFF C-Series
+    url: "/aff-cseries/index.html"
+    entries:
+    - section: c30-60
+    - section: c80
+    - section: c250
+    - section: c400
   - title: Sistemas AFX
     url: "/afx/index.html"
     entries:

@@ -22,8 +22,10 @@ indexpage:
       url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508
   - title: Plataformas de storage
     links:
-    - title: Sistemas AFF
-      url: "/aff-landing/index.html"
+    - title: Sistemas AFF A-Series
+      url: "/aff-aseries/index.html"
+    - title: Sistemas AFF C-Series
+      url: "/aff-cseries/index.html"
     - title: Sistemas ASA
       url: "/allsan-landing/index.html"
     - title: Sistemas AFX
