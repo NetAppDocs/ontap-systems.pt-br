@@ -1,0 +1,33 @@
+= 
+:allow-uri-read: 
+
+
+Ao adicionar módulos adicionais a um par de HA A1K, é necessário reconectar os módulos existentes para equilibrar a conectividade entre vários módulos de E/S compatíveis com RoCE.
+
+* Se você estiver adicionando uma segunda prateleira com o equipamento em funcionamento, a primeira prateleira deve ser recabeada entre os slots 11 e 10. Para uma segunda prateleira, o procedimento pressupõe que a prateleira existente esteja cabeada a um módulo de E/S compatível com RoCE no slot 11 de cada controlador.
+* Se você estiver adicionando uma quarta prateleira com o equipamento em funcionamento, a terceira prateleira deve ser recabeada entre os slots 9 e 8. Para uma quarta prateleira, o procedimento pressupõe que a terceira prateleira esteja cabeada ao slot 9 em cada controlador.
+* Se você estiver adicionando uma terceira prateleira a quente e instalando um terceiro ou quarto módulo de E/S compatível com RoCE em cada controlador, a terceira prateleira será cabeada apenas ao terceiro ou ao terceiro e quarto módulos de E/S. Você não precisa recablar nenhuma prateleira existente, portanto, pode ignorar este procedimento.
+
+
+.Passos
+. Siga um destes procedimentos se você estiver adicionando uma segunda prateleira ou uma quarta prateleira a quente.
++
+** Se você estiver adicionando uma segunda prateleira, reconetável a primeira prateleira através dos módulos de e/S compatíveis com RoCE no slot 11 e slot 10 em cada controladora.
++
+... No controlador A, mova o cabo do slot 11 porta b (e11b) para o slot 10 porta b (e10b).
+... Repita o mesmo movimento do cabo no controlador B.
+
+
+** Se você estiver adicionando uma quarta prateleira, reconetável a terceira prateleira através dos módulos de e/S compatíveis com RoCE no slot 9 e slot 8 em cada controladora.
++
+... No controlador A, mova o cabo do slot 9 porta b (e9b) para o slot 8 porta b (e8b).
+... Repita o mesmo movimento do cabo no controlador B.
+
+
+
+
+. Verifique se a gaveta cabeada está cabeada corretamente usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]o .
++
+Se forem gerados erros de cabeamento, siga as ações corretivas fornecidas.
+
+

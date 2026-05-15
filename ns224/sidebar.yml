@@ -2,28 +2,124 @@
 section: ns224
 title: Gavetas NS224
 entries:
-- title: Gaveta para adicionar quente
+- title: Prateleira hot-add para sistemas AFF
   entries:
   - title: Fluxo de trabalho de adição automática
-    url: "/ns224/hot-add-shelf-overview.html"
+    url: "/ns224/hot-add-aff-workflow.html"
   - title: Requisitos e práticas recomendadas
-    url: "/ns224/requirements-hot-add-shelf.html"
+    url: "/ns224/hot-add-aff-requirements.html"
   - title: Prepare-se para adicionar a quente
-    url: "/ns224/prepare-hot-add-shelf.html"
-  - title: Instale a prateleira para adicionar quente
-    url: "/ns224/install-hot-add-shelf.html"
-  - title: Prateleira de cabos para hot-add
+    entries:
+    - title: Visão geral de preparação de adição a quente
+      url: "/ns224/hot-add-aff-prepare.html"
+    - title: AFF A1K
+      url: "/ns224/hot-add-aff-prepare-a1k.html"
+    - title: AFF A70, A90 e C80
+      url: "/ns224/hot-add-aff-prepare-a70-90-c80.html"
+    - title: AFF A800 e C800
+      url: "/ns224/hot-add-aff-prepare-a800-c800.html"
+    - title: AFF A400 e C400
+      url: "/ns224/hot-add-aff-prepare-a400-c400.html"
+    - title: AFF A900
+      url: "/ns224/hot-add-aff-prepare-a900.html"
+    - title: AFF A30, A50, C30 e C60
+      url: "/ns224/hot-add-aff-prepare-a30-50-60.html"
+  - title: Instalar prateleira
+    url: "/ns224/hot-add-aff-install.html"
+  - title: Cabo de sistemas AFF
     entries:
     - title: Visão geral do cabeamento
-      url: "/ns224/cable-overview-hot-add-shelf.html"
-    - title: Sistemas AFF
-      url: "/ns224/cable-aff-systems-hot-add-shelf.html"
-    - title: Sistemas ASA
-      url: "/ns224/cable-asa-systems-hot-add-shelf.html"
-    - title: Sistemas de fim de disponibilidade
-      url: "/ns224/cable-eoa-systems-hot-add-shelf.html"
+      url: "/ns224/hot-add-aff-cable-overview.html"
+    - title: AFF A1K
+      url: "/ns224/hot-add-aff-cable-a1k.html"
+    - title: AFF A20
+      url: "/ns224/hot-add-aff-cable-a20.html"
+    - title: AFF A30, A50, C30 e C60
+      url: "/ns224/hot-add-aff-cable-a30-50-60.html"
+    - title: AFF A70, A90 e C80
+      url: "/ns224/hot-add-aff-cable-a70-90-c80.html"
+    - title: AFF A250 e C250
+      url: "/ns224/hot-add-aff-cable-a250-c250.html"
+    - title: AFF A400 e C400
+      url: "/ns224/hot-add-aff-cable-a400-c400.html"
+    - title: AFF A800 e C800
+      url: "/ns224/hot-add-aff-cable-a800-c800.html"
+    - title: AFF A900
+      url: "/ns224/hot-add-aff-cable-a900.html"
   - title: Complete hot-add
-    url: "/ns224/complete-hot-add-shelf.html"
+    url: "/ns224/hot-add-aff-complete.html"
+- title: Prateleira hot-add para sistemas ASA
+  entries:
+  - title: Fluxo de trabalho de adição automática
+    url: "/ns224/hot-add-asa-workflow.html"
+  - title: Requisitos e práticas recomendadas
+    url: "/ns224/hot-add-asa-requirements.html"
+  - title: Prepare-se para adicionar a quente
+    entries:
+    - title: Visão geral de preparação de adição a quente
+      url: "/ns224/hot-add-asa-prepare.html"
+    - title: ASA A1K
+      url: "/ns224/hot-add-asa-prepare-a1k.html"
+    - title: ASA A70 ou A90
+      url: "/ns224/hot-add-asa-prepare-a70-90.html"
+    - title: ASA A800 ou C800
+      url: "/ns224/hot-add-asa-prepare-a800-c800.html"
+    - title: ASA A400 ou C400
+      url: "/ns224/hot-add-asa-prepare-a400-c400.html"
+    - title: ASA A900
+      url: "/ns224/hot-add-asa-prepare-a900.html"
+    - title: ASA A30 ou A50
+      url: "/ns224/hot-add-asa-prepare-a30-50.html"
+  - title: Instalar prateleira
+    url: "/ns224/hot-add-asa-install.html"
+  - title: Conectar sistemas ASA
+    entries:
+    - title: Visão geral do cabeamento
+      url: "/ns224/hot-add-asa-cable-overview.html"
+    - title: ASA A1K
+      url: "/ns224/hot-add-asa-cable-a1k.html"
+    - title: ASA A20
+      url: "/ns224/hot-add-asa-cable-a20.html"
+    - title: ASA A30 ou A50
+      url: "/ns224/hot-add-asa-cable-a30-50.html"
+    - title: ASA A70 ou A90
+      url: "/ns224/hot-add-asa-cable-a70-90.html"
+    - title: ASA A250
+      url: "/ns224/hot-add-asa-cable-a250.html"
+    - title: ASA A400 ou C400
+      url: "/ns224/hot-add-asa-cable-a400-c400.html"
+    - title: ASA A800 ou C800
+      url: "/ns224/hot-add-asa-cable-a800-c800.html"
+    - title: ASA A900
+      url: "/ns224/hot-add-asa-cable-a900.html"
+  - title: Complete hot-add
+    url: "/ns224/hot-add-asa-complete.html"
+- title: Prateleira hot-add para sistemas EOA
+  entries:
+  - title: Fluxo de trabalho de adição automática
+    url: "/ns224/hot-add-eoa-workflow.html"
+  - title: Requisitos e práticas recomendadas
+    url: "/ns224/hot-add-eoa-requirements.html"
+  - title: Prepare-se para adicionar a quente
+    entries:
+    - title: Visão geral de preparação de adição a quente
+      url: "/ns224/hot-add-eoa-prepare-overview.html"
+    - title: Sistemas EOA
+      url: "/ns224/hot-add-eoa-prepare-systems.html"
+  - title: Instalar prateleira
+    url: "/ns224/hot-add-eoa-install.html"
+  - title: Sistemas de fim de disponibilidade de cabos
+    entries:
+    - title: Visão geral do cabeamento
+      url: "/ns224/hot-add-eoa-cable-overview.html"
+    - title: AFF A320
+      url: "/ns224/hot-add-eoa-cable-a320.html"
+    - title: AFF A700
+      url: "/ns224/hot-add-eoa-cable-a700.html"
+    - title: FAS500f
+      url: "/ns224/hot-add-eoa-cable-fas500f.html"
+  - title: Complete hot-add
+    url: "/ns224/hot-add-eoa-complete.html"
 - title: Alterar ID do compartimento
   url: "/ns224/change-shelf-id.html"
 - title: Prateleiras de cabos como storage conetado a switch

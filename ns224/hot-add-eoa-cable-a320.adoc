@@ -1,0 +1,39 @@
+---
+permalink: ns224/hot-add-eoa-cable-a320.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, aff a320, cable, end-of-availability 
+summary: Conecte o shelf NS224 ao seu sistema AFF A320 de forma que cada shelf tenha duas conexões com cada controlador no par de HA. 
+---
+= Conecte uma shelf NS224 ao seu sistema AFF A320
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Conecte o shelf NS224 ao seu sistema AFF A320 de forma que cada shelf tenha duas conexões com cada controlador no par de HA.
+
+É possível adicionar uma segunda gaveta a um par de HA existente quando for necessário storage adicional.
+
+.Passos
+. Prenda o compartimento às controladoras.
++
+.. Cabo NSM A porta e0a para controlador A porta e0e.
+.. Cabo NSM A porta e0b para a porta e0b do controlador B.
+.. Cabo NSM B porta e0a para a porta e0e do controlador B.
+.. Cabo NSM B porta e0b para a porta e0b do controlador A. A ilustração a seguir mostra o cabeamento para a prateleira hot-added (prateleira 2):
++
+image::../media/drw_ns224_a320_2shelves_direct_attached.png[Cabeamento de um AFF A320 com duas gavetas NS224 e três conjuntos de portas integradas]
+
+
+
+. Verifique se o compartimento hot-added está cabeado corretamente usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]o .
++
+Se forem gerados erros de cabeamento, siga as ações corretivas fornecidas.
+
+
+
+.O que vem a seguir
+Se você desativou a atribuição automática de unidades como parte da preparação para este procedimento, será necessário atribuir manualmente a propriedade da unidade e, em seguida, reativar a atribuição automática de unidades, se necessário. Acesse link:hot-add-eoa-complete.html["Complete o hot-add"].
+
+Caso contrário, você é feito com o procedimento de hot-add prateleira.

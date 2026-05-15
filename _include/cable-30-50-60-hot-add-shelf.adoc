@@ -2,12 +2,6 @@
 :allow-uri-read: 
 
 
-.Antes de começar
-* Tem de ter revisto a link:requirements-hot-add-shelf.html["requisitos e práticas recomendadas de adição dinâmica"].
-* Você deve ter concluído os procedimentos aplicáveis no link:prepare-hot-add-shelf.html["Prepare-se para adicionar uma prateleira a quente"].
-* Você precisa ter instalado as gavetas, ligado e definido as IDs de gaveta como descrito em link:prepare-hot-add-shelf.html["Instale uma prateleira para adicionar um hot-add"].
-
-
 .Sobre esta tarefa
 * Esse procedimento pressupõe que seu par de HA tenha apenas storage interno (sem compartimentos externos) e que você esteja adicionando "Hot-Adding" a duas gavetas adicionais e dois módulos de e/S com capacidade para RoCE em cada controladora.
 * Este procedimento aborda os seguintes cenários de adição dinâmica:
@@ -112,8 +106,3 @@ image::../media/drw_ns224_g_2shelf_2card_ieops-2003.svg[Cabeamento para AFF A30/
 Se forem gerados erros de cabeamento, siga as ações corretivas fornecidas.
 
 
-
-.O que se segue?
-Se você desativou a atribuição automática de unidade como parte da preparação para este procedimento, será necessário atribuir manualmente a propriedade da unidade e, em seguida, reativar a atribuição automática de unidade, se necessário. Vá para link:complete-hot-add-shelf.html["Complete o hot-add"].
-
-Caso contrário, você é feito com o procedimento de hot-add prateleira.

@@ -2,12 +2,6 @@
 :allow-uri-read: 
 
 
-.Antes de começar
-* Tem de ter revisto a link:requirements-hot-add-shelf.html["requisitos e práticas recomendadas de adição dinâmica"].
-* Você deve ter concluído os procedimentos aplicáveis no link:prepare-hot-add-shelf.html["Prepare-se para adicionar uma prateleira a quente"].
-* Você precisa ter instalado as gavetas, ligado e definido as IDs de gaveta como descrito em link:prepare-hot-add-shelf.html["Instale uma prateleira para adicionar um hot-add"].
-
-
 .Passos
 . Se você estiver adicionando um compartimento usando um conjunto de portas compatíveis com RoCE (uma placa PCIe compatível com RoCE) em cada controladora e esse for o único compartimento de NS224 TB do seu par de HA, execute as seguintes etapas.
 +
@@ -81,8 +75,3 @@ image::../media/drw_ns224_a800_c800_2shelves_IEOPS-966.svg[drw ns224 A800 C800 2
 Se forem gerados erros de cabeamento, siga as ações corretivas fornecidas.
 
 
-
-.O que se segue?
-Se você desativou a atribuição automática de unidade como parte da preparação para este procedimento, será necessário atribuir manualmente a propriedade da unidade e, em seguida, reativar a atribuição automática de unidade, se necessário. Vá para link:complete-hot-add-shelf.html["Complete o hot-add"].
-
-Caso contrário, você é feito com o procedimento de hot-add prateleira.

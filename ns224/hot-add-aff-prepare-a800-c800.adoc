@@ -1,0 +1,132 @@
+---
+permalink: ns224/hot-add-aff-prepare-a800-c800.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, aff systems, preparation, roce, aff a800, aff c800 
+summary: Prepare seu sistema AFF A800 ou C800 para adicionar um shelf NS224 a quente, instalando placas PCIe compatíveis com RoCE, configurando portas, recabeando shelves existentes e desativando a atribuição automática de drives. 
+---
+= Prepare seu sistema AFF A800 ou C800 para adicionar um shelf NS224 com o sistema em funcionamento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prepare seu sistema AFF A800 ou C800 para adicionar um shelf NS224 a quente, garantindo portas de storage compatíveis com RoCE em número suficiente, configurando-as para uso de storage, recabeando os shelves existentes para resiliência de slot e desativando a atribuição automática de unidades.
+
+
+
+== Instale placas PCIe compatíveis com RoCE
+
+Se o seu sistema suporta o uso de placas PCIe ou módulos de E/S compatíveis com RoCE, o seu par de HA deve ter portas Ethernet compatíveis com RoCE suficientes para suportar o número de gavetas que você está adicionando dinamicamente.
+
+.Passos
+. Para cada gaveta que você está adicionando, verifique se há duas portas compatíveis com RoCE em cada controladora.
++
+Essas portas podem estar integradas aos controladores, em placas PCIe compatíveis com RoCE, em uma combinação de ambos ou em módulos de E/S compatíveis com RoCE, conforme suportado pelo seu sistema.
+
+. Se o seu par de HA não tiver portas compatíveis com RoCE suficientes disponíveis, instale as placas PCIe ou módulos de E/S adicionais nos slots de controlador corretos, conforme suportado pelo seu sistema.
++
+.. Identifique os slots de controlador corretos para o seu sistema. Consulte  https://hwu.netapp.com["NetApp Hardware Universe"^].
+.. Consulte a documentação do seu sistema para obter instruções de instalação da placa PCIe ou do módulo de E/S.
+
+
+
+
+
+
+== Configurar portas compatíveis com RoCE para uso de armazenamento
+
+Em alguns sistemas, as portas compatíveis com RoCE são automaticamente configuradas para uso de storage quando você instala uma placa PCIe compatível com RoCE ou um módulo de E/S compatível com RoCE em um slot de controlador compatível. No entanto, você deve concluir este procedimento para verificar se as portas estão configuradas corretamente para uso de storage.
+
+A configuração de portas não dedicadas compatíveis com RoCE para uso de armazenamento é um procedimento não disruptivo. Não é necessário reinicializar os controladores, a menos que um ou ambos estejam em modo de manutenção. Este procedimento pressupõe que nenhum dos controladores esteja em modo de manutenção.
+
+Se precisar alterar as portas de uso de storage para uso de rede no futuro, use o comando  `storage port modify -node _node_name_ -port _port_name_ -mode network`.
+
+.Passos
+. Verifique se você instalou quaisquer placas PCIe ou módulos de E/S adicionais compatíveis com RoCE em cada controlador.
+. Faça login no cluster usando SSH ou a porta serial do console.
+. Verifique se as portas não dedicadas no par de HA estão configuradas para uso de armazenamento inserindo o comando  `storage port show`.
++
+A saída do comando varia dependendo da sua versão do ONTAP:
+
++
+** **ONTAP 9.8 ou posterior:** As portas não dedicadas configuradas para uso de storage exibem  `storage` na coluna  `Mode`. Portas não configuradas para uso de storage exibem  `network` na coluna  `Mode`.
+** **ONTAP 9.7:** As portas não dedicadas configuradas para uso de armazenamento exibem  `false` na  `Is Dedicated?` coluna e  `enabled` na  `State` coluna. Portas não configuradas para uso de armazenamento exibem  `false` na  `Is Dedicated?` coluna e  `disabled` na  `State` coluna.
+
+
+. Se as portas não dedicadas estiverem configuradas para uso de armazenamento, você concluiu este procedimento. Caso contrário, conclua as etapas a seguir para configurar as portas.
+. Configure as portas não dedicadas para uso de storage em um dos controladores. Você deve repetir o comando aplicável para cada porta que estiver configurando.
++
+[cols="1,3"]
+|===
+| Se o seu par HA estiver em execução... | Use este comando... 
+
+
+ a| 
+ONTAP 9 .8 ou posterior
+ a| 
+`storage port modify -node _node_name_ -port _port_name_ -mode storage`
+
+
+
+ a| 
+ONTAP 9,7
+ a| 
+`storage port enable -node _node_name_ -port _port_name_`
+
+|===
+. Repita o passo anterior para o segundo controlador.
+. Verifique se as portas não dedicadas em ambos os controladores estão configuradas para uso de armazenamento inserindo o comando  `storage port show`.
++
+A saída do comando varia dependendo da sua versão do ONTAP:
+
++
+** **ONTAP 9.8 ou posterior:** As portas não dedicadas configuradas para uso de storage exibem  `storage` na  `Mode` coluna.
+** **ONTAP 9.7:** As portas não dedicadas configuradas para uso de storage exibem  `false` na  `Is Dedicated?` coluna e  `enabled` na  `State` coluna.
+
+
+
+
+
+
+== Gavetas existentes recuperáveis
+
+Ao adicionar uma segunda prateleira a um AFF A800 ou AFF C800 par de HA, é necessário refazer a fiação da primeira prateleira, conectando os cabos nas duas portas compatíveis com RoCE nos slots 5 e 3 de cada controlador.
+
+O procedimento pressupõe que a prateleira existente esteja cabeada a placas PCIe compatíveis com RoCE no slot 5 de cada controladora.
+
+.Passos
+. Recable o primeiro shelf nos dois conjuntos de portas compatíveis com RoCE no slot 5 e no slot 3 de cada controlador.
++
+.. No controlador A, mova o cabo do slot 5 porta b (e5b) para o slot 3 porta b (e3b).
+.. Repita o mesmo movimento do cabo no controlador B.
+
+
+. Verifique se a gaveta cabeada está cabeada corretamente usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]o .
++
+Se forem gerados erros de cabeamento, siga as ações corretivas fornecidas.
+
+
+
+
+
+== Desativar a atribuição automática de condução
+
+Se você não tiver certeza se deve atribuir manualmente a propriedade da unidade ou se deseja entender a atribuição automática de políticas de propriedade da unidade para seu sistema de armazenamento, vá para https://docs.netapp.com/us-en/ontap/disks-aggregates/disk-autoassignment-policy-concept.html["Sobre a atribuição automática de propriedade de disco"^].
+
+.Passos
+. Verifique se a atribuição automática de unidades está ativada: `storage disk option show`
++
+Você pode inserir o comando em qualquer nó.
+
++
+Se a atribuição automática de unidades estiver ativada, o resultado mostra  `on` na  `Auto Assign` coluna para cada nó.
+
+. Se a atribuição automática de condução estiver ativada, desative-a: `storage disk option modify -node _node_name_ -autoassign off`
++
+Você deve desativar a atribuição automática de unidade em ambos os nós.
+
+
+
+.O que vem a seguir
+Vá para link:hot-add-aff-install.html["instalar a prateleira"].

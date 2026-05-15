@@ -15,8 +15,12 @@ indexpage:
       url: "../nx224/change-shelf-id.html"
   - title: Instale as NS224 gavetas
     links:
-    - title: Gaveta para adicionar quente
-      url: "../ns224/hot-add-shelf-overview.html"
+    - title: Prateleira hot-add para sistemas AFF
+      url: "../ns224/hot-add-aff-workflow.html"
+    - title: Prateleira hot-add para sistemas ASA
+      url: "../ns224/hot-add-asa-workflow.html"
+    - title: Prateleira hot-add para sistemas EOA
+      url: "../ns224/hot-add-eoa-workflow.html"
     - title: Alterar ID do compartimento
       url: "../ns224/change-shelf-id.html"
     - title: Prateleiras de cabos como storage conetado a switch

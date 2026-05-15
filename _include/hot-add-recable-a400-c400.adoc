@@ -1,0 +1,38 @@
+= 
+:allow-uri-read: 
+
+
+Ao adicionar uma segunda prateleira a um AFF A400 ou AFF C400 par de HA, é necessário recablar a primeira prateleira através de dois conjuntos de portas compatíveis com RoCE em cada controlador.
+
+* Para o A400, o procedimento pressupõe que o shelf existente esteja cabeado às portas onboard compatíveis com RoCE e0c/e0d em cada controlador, e que você faça a reconexão dos cabos entre as portas onboard e0c/e0d e o slot 5.
+* Para o C400, o procedimento pressupõe que o chassi existente esteja cabeado às portas compatíveis com RoCE no slot 4 de cada controlador, e que você faça a recablagem entre o slot 4 e o slot 5.
+
+
+.Passos
+. Dependendo do seu sistema, faça um dos seguintes procedimentos:
++
+** Na A400:
++
+Recable a primeira gaveta através dos dois conjuntos de portas compatíveis com RoCE, integradas e0c/e0d e no slot 5, em cada controladora.
+
++
+... No controlador A, mova o cabo da porta e0d para a porta b (e5b) do slot 5.
+... Repita o mesmo movimento do cabo no controlador B.
+
+
+** No C400:
++
+Recable a primeira prateleira através dos dois conjuntos de portas compatíveis com RoCE no slot 4 e slot 5, em cada controlador.
+
++
+... No controlador A, mova o cabo do slot 4 porta a (e4a) para o slot 5 porta b (e5b).
+... Repita o mesmo movimento do cabo no controlador B.
+
+
+
+
+. Verifique se a gaveta cabeada está cabeada corretamente usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]o .
++
+Se forem gerados erros de cabeamento, siga as ações corretivas fornecidas.
+
+

@@ -1,0 +1,20 @@
+= 
+:allow-uri-read: 
+
+
+Ao adicionar uma segunda prateleira a um AFF A70 ou AFF A90 par de HA, é necessário refazer a fiação da primeira prateleira entre os módulos de E/S compatíveis com RoCE nos slots 11 e 8 de cada controlador.
+
+O procedimento pressupõe que a prateleira existente esteja cabeada a um módulo de E/S compatível com RoCE no slot 11 de cada controlador.
+
+.Passos
+. Recabeie o primeiro shelf através dos módulos de E/S compatíveis com RoCE nos slots 11 e 8 de cada controlador.
++
+.. No controlador A, mova o cabo do slot 11 porta b (e11b) para o slot 8 porta b (e8b).
+.. Repita o mesmo movimento do cabo no controlador B.
+
+
+. Verifique se a gaveta cabeada está cabeada corretamente usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]o .
++
+Se forem gerados erros de cabeamento, siga as ações corretivas fornecidas.
+
+

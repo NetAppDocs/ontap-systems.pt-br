@@ -1,0 +1,39 @@
+---
+permalink: ns224/hot-add-asa-workflow.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, asa systems, workflow 
+summary: Siga estes passos do fluxo de trabalho para adicionar um shelf NS224 ao seu sistema ASA. 
+---
+= Adicione uma shelf NS224 ao seu sistema ASA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Siga estes passos do fluxo de trabalho para adicionar um shelf NS224 ao seu sistema ASA.
+
+.Antes de começar
+* Este procedimento aplica-se apenas ao armazenamento conectado diretamente. Para visualizar as instruções para armazenamento conectado por switch, consulte link:cable-as-switch-attached.html["guia de cabeamento conetado ao switch"].
+* Para adicionar um módulo NS224 a quente, seu par de HA deve atender a certos requisitos. Consulte o link:hot-add-asa-requirements.html["requisitos e práticas recomendadas de adição dinâmica"].
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"]link:hot-add-asa-requirements.html["Analisar os requisitos de adição dinâmica"]
+[role="quick-margin-para"]
+Verifique se o seu sistema ASA atende aos requisitos para a adição dinâmica de um shelf NS224, incluindo suporte à versão do ONTAP, número de shelves e requisitos de cabeamento.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"]link:hot-add-asa-prepare.html["Prepare-se para adicionar a prateleira a quente"]
+[role="quick-margin-para"]
+Dependendo do modelo da sua plataforma, talvez seja necessário instalar placas PCIe ou módulos de e/S compatíveis com RoCE adicionais, configurar as portas Ethernet não dedicadas compatíveis com RoCE para uso de armazenamento, reabilitar uma gaveta existente em dois conjuntos de portas em slots diferentes para resiliência contra falha de slot e desativar a atribuição automática de unidade se você estiver atribuindo manualmente a propriedade da unidade.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"]link:hot-add-asa-install.html["Instale a prateleira"]
+[role="quick-margin-para"]
+Instale o kit de trilhos para a prateleira, instale e fixe a prateleira no rack ou gabinete de telecomunicações, conecte os cabos de alimentação para ligar a prateleira e atribua um ID exclusivo à prateleira para garantir que ela seja distinta dentro do par de HA.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"]link:hot-add-asa-cable-overview.html["Coloque o cabo na prateleira"]
+[role="quick-margin-para"]
+Faça o cabeamento da gaveta que você está adicionando quente, de modo que ela tenha duas conexões a cada controladora no par de HA.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinco"]link:hot-add-asa-complete.html["Complete o seu hot-add"]
+[role="quick-margin-para"]
+Se você desativou a atribuição automática de unidade como parte da preparação para o hot-add, será necessário atribuir manualmente a propriedade da unidade e, em seguida, reativar a atribuição automática de unidade, se necessário.

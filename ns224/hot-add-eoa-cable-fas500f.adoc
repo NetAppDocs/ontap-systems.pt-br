@@ -1,0 +1,42 @@
+---
+permalink: ns224/hot-add-eoa-cable-fas500f.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, fas500f, cable, end-of-availability 
+summary: Conecte o shelf NS224 ao seu sistema FAS500f de forma que cada shelf tenha duas conexões com cada controlador no par de HA. 
+---
+= Conecte uma prateleira NS224 ao seu sistema FAS500f
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Conecte o shelf NS224 ao seu sistema FAS500f de forma que cada shelf tenha duas conexões com cada controlador no par de HA.
+
+Quando for necessário storage adicional, é possível adicionar um compartimento de NS224 TB a um par de HA da FAS500f.
+
+.Sobre esta tarefa
+Quando vista da parte traseira do chassi da plataforma, a porta da placa compatível com RoCE à esquerda é a porta "a" (e1a) e a porta à direita é a porta "b" (e1b).
+
+.Passos
+. Faça o cabeamento das conexões da prateleira:
++
+.. Compartimento de cabos NSM A porta e0a para controlador A slot 1 porta a (e1a).
+.. Compartimento de cabos NSM A porta e0b para a porta b (e1b) do slot 1 do controlador B.
+.. Compartimento de cabos NSM B porta e0a para a porta a (e1a) do slot B do controlador B slot 1.
+.. Compartimento de cabos NSM B porta e0b para a porta b (e1b) do slot 1 do controlador A. A ilustração a seguir mostra o cabeamento da prateleira quando concluída.
++
+image::../media/drw_ns224_a250_c250_f500f_1shelf_ieops-1824.svg[Cabeamento de FAS500f AFF A250 ou AFF C250 com uma gaveta de NS224 e um conjunto de portas]
+
+
+
+. Verifique se o compartimento hot-added está cabeado corretamente usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]o .
++
+Se forem gerados erros de cabeamento, siga as ações corretivas fornecidas.
+
+
+
+.O que vem a seguir
+Se você desativou a atribuição automática de unidades como parte da preparação para este procedimento, será necessário atribuir manualmente a propriedade da unidade e, em seguida, reativar a atribuição automática de unidades, se necessário. Acesse link:hot-add-eoa-complete.html["Complete o hot-add"].
+
+Caso contrário, você é feito com o procedimento de hot-add prateleira.

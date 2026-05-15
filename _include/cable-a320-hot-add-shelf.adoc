@@ -1,0 +1,21 @@
+= 
+:allow-uri-read: 
+
+
+.Passos
+. Prenda o compartimento às controladoras.
++
+.. Cabo NSM A porta e0a para controlador A porta e0e.
+.. Cabo NSM A porta e0b para a porta e0b do controlador B.
+.. Cabo NSM B porta e0a para a porta e0e do controlador B.
+.. Cabo NSM B porta e0b para a porta e0b do controlador A. A ilustração a seguir mostra o cabeamento para a prateleira hot-added (prateleira 2):
++
+image::../media/drw_ns224_a320_2shelves_direct_attached.png[Cabeamento de um AFF A320 com duas gavetas NS224 e três conjuntos de portas integradas]
+
+
+
+. Verifique se o compartimento hot-added está cabeado corretamente usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]o .
++
+Se forem gerados erros de cabeamento, siga as ações corretivas fornecidas.
+
+

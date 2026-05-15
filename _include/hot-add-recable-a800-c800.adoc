@@ -1,0 +1,20 @@
+= 
+:allow-uri-read: 
+
+
+Ao adicionar uma segunda prateleira a um AFF A800 ou AFF C800 par de HA, é necessário refazer a fiação da primeira prateleira, conectando os cabos nas duas portas compatíveis com RoCE nos slots 5 e 3 de cada controlador.
+
+O procedimento pressupõe que a prateleira existente esteja cabeada a placas PCIe compatíveis com RoCE no slot 5 de cada controladora.
+
+.Passos
+. Recable o primeiro shelf nos dois conjuntos de portas compatíveis com RoCE no slot 5 e no slot 3 de cada controlador.
++
+.. No controlador A, mova o cabo do slot 5 porta b (e5b) para o slot 3 porta b (e3b).
+.. Repita o mesmo movimento do cabo no controlador B.
+
+
+. Verifique se a gaveta cabeada está cabeada corretamente usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]o .
++
+Se forem gerados erros de cabeamento, siga as ações corretivas fornecidas.
+
+

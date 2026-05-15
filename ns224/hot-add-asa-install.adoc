@@ -1,20 +1,20 @@
 ---
-permalink: ns224/install-hot-add-shelf.html 
+permalink: ns224/hot-add-asa-install.html 
 sidebar: sidebar 
-keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, install, hot-add an ns224 drive shelf 
-summary: É possível adicionar um compartimento de unidade de NS224 TB depois que o par de HA atender a certos requisitos e depois que as tarefas de preparação aplicáveis ao seu par de HA forem concluídas. 
+keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, asa systems, install 
+summary: Instale a prateleira NS224 em um gabinete ou rack de telecomunicações, conecte os cabos de alimentação e defina o ID da prateleira para o seu sistema ASA. 
 ---
-= Instale uma gaveta para adicionar mais quente - NS224 prateleiras
+= Instale uma prateleira NS224 no seu sistema ASA
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Você precisa instalar uma gaveta de NS224 U em um gabinete ou rack de telecomunicações, conetar os cabos de energia (que liga automaticamente a gaveta) e definir a ID da gaveta.
+Instale a prateleira NS224 em um gabinete ou rack de telecomunicações, conecte os cabos de alimentação e defina o ID da prateleira para o seu sistema ASA.
 
 .Antes de começar
-* Certifique-se de que tem um clipe de papel com um lado endireitado ou uma caneta esferográfica de ponta estreita.
+* Certifique-se de ter um clipe de papel com uma das extremidades retas ou uma caneta esferográfica de ponta fina.
 +
 Para alterar a ID da prateleira, use o clipe de papel ou a caneta esferográfica para acessar o botão ID da prateleira atrás do Painel do Mostrador do Operador (ODP) para a etapa alterar ID da prateleira.
 
@@ -118,4 +118,4 @@ Quando a energia é restaurada para as fontes de alimentação, seus LEDs bicolo
 
 
 .O que se segue?
-Faça o cabo da sua prateleira hot-add. Vá para link:cable-overview-hot-add-shelf.html["Visão geral do cabeamento para um hot-add"].
+Após instalar sua prateleira, link:hot-add-asa-cable-overview.html["Conecte o cabo na sua shelf"].

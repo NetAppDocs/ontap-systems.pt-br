@@ -1,0 +1,19 @@
+= 
+:allow-uri-read: 
+
+
+Se você não tiver certeza se deve atribuir manualmente a propriedade da unidade ou se deseja entender a atribuição automática de políticas de propriedade da unidade para seu sistema de armazenamento, vá para https://docs.netapp.com/us-en/ontap/disks-aggregates/disk-autoassignment-policy-concept.html["Sobre a atribuição automática de propriedade de disco"^].
+
+.Passos
+. Verifique se a atribuição automática de unidades está ativada: `storage disk option show`
++
+Você pode inserir o comando em qualquer nó.
+
++
+Se a atribuição automática de unidades estiver ativada, o resultado mostra  `on` na  `Auto Assign` coluna para cada nó.
+
+. Se a atribuição automática de condução estiver ativada, desative-a: `storage disk option modify -node _node_name_ -autoassign off`
++
+Você deve desativar a atribuição automática de unidade em ambos os nós.
+
+

@@ -1,0 +1,18 @@
+= 
+:allow-uri-read: 
+
+
+Se o seu sistema suporta o uso de placas PCIe ou módulos de E/S compatíveis com RoCE, o seu par de HA deve ter portas Ethernet compatíveis com RoCE suficientes para suportar o número de gavetas que você está adicionando dinamicamente.
+
+.Passos
+. Para cada gaveta que você está adicionando, verifique se há duas portas compatíveis com RoCE em cada controladora.
++
+Essas portas podem estar integradas aos controladores, em placas PCIe compatíveis com RoCE, em uma combinação de ambos ou em módulos de E/S compatíveis com RoCE, conforme suportado pelo seu sistema.
+
+. Se o seu par de HA não tiver portas compatíveis com RoCE suficientes disponíveis, instale as placas PCIe ou módulos de E/S adicionais nos slots de controlador corretos, conforme suportado pelo seu sistema.
++
+.. Identifique os slots de controlador corretos para o seu sistema. Consulte  https://hwu.netapp.com["NetApp Hardware Universe"^].
+.. Consulte a documentação do seu sistema para obter instruções de instalação da placa PCIe ou do módulo de E/S.
+
+
+

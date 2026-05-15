@@ -1,0 +1,44 @@
+---
+permalink: ns224/hot-add-eoa-requirements.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, eoa systems, end-of-availability, requirement 
+summary: Antes de adicionar um shelf NS224 ao seu sistema em fim de disponibilidade, revise os requisitos e as melhores práticas. 
+---
+= Requisitos e melhores práticas para adicionar um shelf NS224 ao seu sistema em fim de disponibilidade
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Verifique se o seu sistema em fim de disponibilidade atende aos requisitos de versão do ONTAP, capacidade do shelf e cabeamento antes de adicionar um shelf NS224 a quente. Revise as melhores práticas de firmware e configuração para garantir que o procedimento de adição a quente seja concluído com sucesso e sem erros.
+
+
+
+== Requisitos
+
+Seu par de HA deve atender aos seguintes requisitos para adicionar um shelf NS224 a quente.
+
+Versão do ONTAP:: O modelo da sua plataforma e a versão do ONTAP devem ser compatíveis com o shelf NS224 e as unidades que você está adicionando dinamicamente. Consulte  https://hwu.netapp.com["NetApp Hardware Universe"^].
+Número de prateleiras:: Seu par de HA deve suportar pelo menos uma prateleira adicional além do número atualmente instalado. Após adicionar prateleiras em funcionamento, você não pode exceder o número máximo de prateleiras suportadas pelo seu par de HA. Consulte  https://hwu.netapp.com["NetApp Hardware Universe"^].
+Cabeamento:: Você precisa ter a quantidade e o tipo corretos de cabos para conectar o shelf. Se você estiver adicionando um shelf a um par de HA que já possui um shelf NS224, seu par de HA deve estar cabeado como multipath HA, sem erros de cabeamento de storage.
++
+--
+Execute  https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^] para visualizar quaisquer mensagens de erro de cabeamento de storage e ações corretivas. Consulte  https://hwu.netapp.com["NetApp Hardware Universe"^] para os requisitos de cabeamento.
+
+--
+
+
+
+
+== Práticas recomendadas
+
+Familiarize-se com as práticas recomendadas a seguir antes de adicionar uma prateleira NS224.
+
+Pacote de Qualificação de disco:: Instale a versão atual do  https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["Pacote de Qualificação de disco"^]DQP antes de adicionar um shelf a quente. Ter o DQP atual instalado permite que seu sistema reconheça e utilize unidades recém-qualificadas, evita mensagens de eventos do sistema sobre informações desatualizadas da unidade e previne falhas de particionamento causadas por unidades não reconhecidas. O DQP também notifica você sobre firmware de unidade desatualizado.
+Active IQ Config Advisor:: Execute  https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^] antes e depois de adicionar uma shelf a quente. Executar antes de adicionar a shelf a quente fornece um instantâneo da conectividade Ethernet das shelves existentes, verifica as versões do firmware do NSM e identifica quaisquer IDs de shelf já em uso. Executar após adicionar a shelf a quente verifica se as shelves estão cabeadas corretamente e se os IDs das shelves são exclusivos dentro do par de HA.
+NSM e firmware de drive:: Instale as versões mais recentes de  https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["Firmware do módulo de gaveta NVMe (NSM)"^] e  https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["firmware da unidade"^] no seu sistema de storage antes de adicionar uma nova prateleira. Não reverta firmware para uma versão que não seja compatível com a sua prateleira e seus componentes.
+
+
+.O que vem a seguir
+Após analisar os requisitos, link:hot-add-eoa-prepare-overview.html["Prepare-se para adicionar sua prateleira a quente"].

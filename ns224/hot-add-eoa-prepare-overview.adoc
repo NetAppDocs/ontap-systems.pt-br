@@ -1,0 +1,28 @@
+---
+permalink: ns224/hot-add-eoa-prepare-overview.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, eoa systems, end-of-availability, preparation 
+summary: Prepare-se para adicionar um shelf NS224 ao seu sistema em fim de disponibilidade, instalando placas PCIe compatíveis com RoCE ou módulos de I/O, configurando as portas e desativando a atribuição automática de unidades, se necessário. 
+---
+= Visão geral da preparação para hot-add de um shelf NS224 ao seu sistema em fim de disponibilidade
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prepare-se para adicionar chassis NS224 ao seu sistema em fim de disponibilidade, garantindo portas de storage compatíveis com RoCE em número suficiente, configurando-as para uso de storage e otimizando sua configuração existente para o novo chassis.
+
+
+
+== O que preparar
+
+A preparação para adicionar racks NS224 em um sistema em fim de disponibilidade envolve a verificação e configuração da infraestrutura de conectividade de storage antes da instalação física dos novos racks. Essas tarefas garantem que seu par de HA tenha as portas Ethernet compatíveis com RoCE necessárias e que seu sistema esteja configurado para suportar capacidade de storage adicional.
+
+As tarefas específicas de preparação que você precisa concluir dependem do modelo da sua plataforma, da configuração atual e do número de prateleiras que você está adicionando:
+
+Instale placas PCIe ou módulos de e/S compatíveis com RoCE:: Verifique se o seu sistema possui portas Ethernet compatíveis com RoCE suficientes (duas por shelf em cada controladora). Se forem necessárias portas adicionais, instale placas PCIe compatíveis com RoCE ou módulos de E/S compatíveis com RoCE nos slots corretos da controladora.
+Configurar portas compatíveis com RoCE para uso de armazenamento:: Se você estiver usando portas não dedicadas compatíveis com RoCE para conectar o gabinete NS224, configure essas portas para uso de storage em vez de uso de rede. Este procedimento não causa interrupções.
+Gavetas existentes recuperáveis:: Para alguns modelos de plataforma, pode ser necessário refazer a fiação de um shelf existente em dois conjuntos de portas em slots diferentes para garantir resiliência contra falhas de slot após a instalação de placas PCIe ou módulos de E/S adicionais compatíveis com RoCE.
+Desativar a atribuição automática de condução:: Se você planeja atribuir manualmente a propriedade das unidades, desative a atribuição automática de unidades antes de adicionar gavetas a quente.
+

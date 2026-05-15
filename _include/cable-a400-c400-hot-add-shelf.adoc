@@ -1,16 +1,12 @@
-= 
+= Conectar a bandeja a um par de HA A400
 :allow-uri-read: 
 
 
-.Antes de começar
-* Tem de ter revisto a link:requirements-hot-add-shelf.html["requisitos e práticas recomendadas de adição dinâmica"].
-* Você deve ter concluído os procedimentos aplicáveis no link:prepare-hot-add-shelf.html["Prepare-se para adicionar uma prateleira a quente"].
-* Você precisa ter instalado as gavetas, ligado e definido as IDs de gaveta como descrito em link:prepare-hot-add-shelf.html["Instale uma prateleira para adicionar um hot-add"].
 
 
-* Prateleira de cabos para um par AFF A400 HA*
+== Conectar a bandeja a um par de HA A400
 
-Para um par de HA AFF A400, é possível adicionar mais quente a duas gavetas e usar portas integradas e0c/e0d e portas no slot 5 conforme necessário.
+Para um par de HA A400, você pode adicionar até duas prateleiras a quente e usar as portas integradas e0c/e0d e as portas no slot 5 conforme necessário.
 
 .Passos
 . Se você estiver adicionando um compartimento usando um conjunto de portas compatíveis com RoCE (portas integradas compatíveis com RoCE) em cada controladora e esse for o único compartimento de NS224 TB do seu par de HA, execute as seguintes etapas.
@@ -70,15 +66,13 @@ image::../media/drw_ns224_a400_2shelves_IEOPS-983.svg[Cabeamento para um /ASA A4
 +
 Se forem gerados erros de cabeamento, siga as ações corretivas fornecidas.
 
-. Se tiver desativado a atribuição automática de condução como parte da preparação para este procedimento, terá de atribuir manualmente a propriedade da unidade e, em seguida, voltar a ativar a atribuição automática de condução, se necessário. link:complete-hot-add-shelf.html["Complete o hot-add"]Consulte .
-+
-Caso contrário, você é feito com este procedimento.
 
 
 
-* Prateleira de cabos para um par AFF C400 HA*
 
-Para um par de HA da AFF C400, é possível adicionar mais quente a duas gavetas e usar portas nos slots 4 e 5, conforme necessário.
+== Conectar shelf a um par de HA C400
+
+Para um par de HA C400, você pode adicionar até duas prateleiras a quente e usar as portas nos slots 4 e 5 conforme necessário.
 
 .Passos
 . Se você estiver adicionando um compartimento usando um conjunto de portas compatíveis com RoCE em cada controladora e esse for o único compartimento de NS224 TB do seu par de HA, execute as seguintes etapas.
@@ -139,8 +133,3 @@ image::../media/drw_ns224_c400_2shelves_IEOPS-984.svg[Cabeamento para um AFF/ASA
 Se forem gerados erros de cabeamento, siga as ações corretivas fornecidas.
 
 
-
-.O que se segue?
-Se você desativou a atribuição automática de unidade como parte da preparação para este procedimento, será necessário atribuir manualmente a propriedade da unidade e, em seguida, reativar a atribuição automática de unidade, se necessário. Vá para link:complete-hot-add-shelf.html["Complete o hot-add"].
-
-Caso contrário, você é feito com o procedimento de hot-add prateleira.

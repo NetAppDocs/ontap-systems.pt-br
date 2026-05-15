@@ -1,0 +1,54 @@
+= 
+:allow-uri-read: 
+
+
+Em alguns sistemas, as portas compatíveis com RoCE são automaticamente configuradas para uso de storage quando você instala uma placa PCIe compatível com RoCE ou um módulo de E/S compatível com RoCE em um slot de controlador compatível. No entanto, você deve concluir este procedimento para verificar se as portas estão configuradas corretamente para uso de storage.
+
+A configuração de portas não dedicadas compatíveis com RoCE para uso de armazenamento é um procedimento não disruptivo. Não é necessário reinicializar os controladores, a menos que um ou ambos estejam em modo de manutenção. Este procedimento pressupõe que nenhum dos controladores esteja em modo de manutenção.
+
+Se precisar alterar as portas de uso de storage para uso de rede no futuro, use o comando  `storage port modify -node _node_name_ -port _port_name_ -mode network`.
+
+.Passos
+. Verifique se você instalou quaisquer placas PCIe ou módulos de E/S adicionais compatíveis com RoCE em cada controlador.
+. Faça login no cluster usando SSH ou a porta serial do console.
+. Verifique se as portas não dedicadas no par de HA estão configuradas para uso de armazenamento inserindo o comando  `storage port show`.
++
+A saída do comando varia dependendo da sua versão do ONTAP:
+
++
+** **ONTAP 9.8 ou posterior:** As portas não dedicadas configuradas para uso de storage exibem  `storage` na coluna  `Mode`. Portas não configuradas para uso de storage exibem  `network` na coluna  `Mode`.
+** **ONTAP 9.7:** As portas não dedicadas configuradas para uso de armazenamento exibem  `false` na  `Is Dedicated?` coluna e  `enabled` na  `State` coluna. Portas não configuradas para uso de armazenamento exibem  `false` na  `Is Dedicated?` coluna e  `disabled` na  `State` coluna.
+
+
+. Se as portas não dedicadas estiverem configuradas para uso de armazenamento, você concluiu este procedimento. Caso contrário, conclua as etapas a seguir para configurar as portas.
+. Configure as portas não dedicadas para uso de storage em um dos controladores. Você deve repetir o comando aplicável para cada porta que estiver configurando.
++
+[cols="1,3"]
+|===
+| Se o seu par HA estiver em execução... | Use este comando... 
+
+
+ a| 
+ONTAP 9 .8 ou posterior
+ a| 
+`storage port modify -node _node_name_ -port _port_name_ -mode storage`
+
+
+
+ a| 
+ONTAP 9,7
+ a| 
+`storage port enable -node _node_name_ -port _port_name_`
+
+|===
+. Repita o passo anterior para o segundo controlador.
+. Verifique se as portas não dedicadas em ambos os controladores estão configuradas para uso de armazenamento inserindo o comando  `storage port show`.
++
+A saída do comando varia dependendo da sua versão do ONTAP:
+
++
+** **ONTAP 9.8 ou posterior:** As portas não dedicadas configuradas para uso de storage exibem  `storage` na  `Mode` coluna.
+** **ONTAP 9.7:** As portas não dedicadas configuradas para uso de storage exibem  `false` na  `Is Dedicated?` coluna e  `enabled` na  `State` coluna.
+
+
+

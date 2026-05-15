@@ -1,0 +1,33 @@
+---
+permalink: ns224/hot-add-asa-cable-overview.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, asa systems, cable 
+summary: Conecte o shelf NS224 ao seu sistema ASA por meio de cabos para fornecer conectividade de caminho duplo, garantindo redundância de storage e alta disponibilidade para o par de HA. 
+---
+= Conecte uma prateleira NS224 ao seu sistema ASA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Conecte o shelf NS224 ao seu sistema ASA por meio de cabos para fornecer conectividade de caminho duplo, garantindo redundância de storage e alta disponibilidade para o par de HA.
+
+
+
+== Visão geral da cablagem para sistemas ASA
+
+A configuração dos cabos varia conforme o modelo da plataforma ASA, pois cada sistema possui atribuições de portas e configurações de módulos de E/S exclusivas.
+
+Durante o procedimento de cabeamento hot-add, você conecta cada gabinete NS224 a ambos os controladores no par de HA:
+
+* Cada módulo NSM de prateleira se conecta a uma porta de storage dedicada em cada controlador, criando dois caminhos por prateleira (um através do NSM A, um através do NSM B).
+* Essa configuração de caminho duplo oferece redundância de storage e garante o acesso contínuo aos dados caso um dos caminhos falhe.
+* Os cabos conectam das portas e0a/e0b do NSM de prateleira (NSM100) ou e1a/e1b (NSM100B) às portas de storage compatíveis com RoCE nos controladores.
+
+
+
+
+== Recursos adicionais
+
+Seu sistema de hardware pode ser compatível tanto com chassis NS224 com módulos NSM100 quanto com chassis NS224 com módulos NSM100B. Para obter informações completas sobre nomes de portas e detalhes de configuração, consulte  https://hwu.netapp.com["NetApp Hardware Universe"^].
