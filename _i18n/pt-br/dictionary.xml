@@ -4427,16 +4427,12 @@
   <block id="037b010332fb97984cd0e0f82925b8c2" category="list-text">Fixe o suporte da bagageira no devido lugar utilizando o parafuso.</block>
   <block id="860cf43001914d965b2435c1d0c7f8fe" category="admonition">Não aperte demasiado o parafuso. Isso pode quebrar a placa de circuito do meio de inicialização.</block>
   <block id="fc9b566637bbcf2a8a0459c61e065654" category="doc">Desligue o controlador - AFF A700s</block>
-  <block id="3ceabec6c24f4b298d5024f17ef30a0b" category="summary">Este procedimento só deve ser utilizado se a restauração secundária do suporte de arranque falhar ou se o ficheiro image.tgz não for encontrado no suporte de arranque secundário.</block>
   <block id="05dffff712f4aca6f86af6c7c42a9991" category="doc">Transfira a imagem de arranque para o suporte de arranque - AFF A700s</block>
-  <block id="f2517f7437e31c22e8ebbe3208bc1f18" category="paragraph">Pode instalar a imagem do sistema no suporte de arranque de substituição utilizando a imagem no segundo suporte de arranque instalado no módulo do controlador. Este é o método principal para transferir os ficheiros multimédia de arranque para o suporte de arranque de substituição em sistemas com dois suportes de arranque no módulo do controlador.</block>
-  <block id="c74fc698f6085001fa8e634011afdd6d" category="paragraph">A imagem na Mídia de inicialização secundária deve conter um<block ref="c1317185516b20a37b064c5ed31cf719" prefix=" " category="inline-code"></block> arquivo e não deve estar relatando falhas. Se o ficheiro image.tgz estiver em falta ou se o suporte de dados de arranque comunicar falhas, não pode utilizar este procedimento. Tem de transferir a imagem de arranque para o suporte de arranque de substituição utilizando o procedimento de substituição da unidade flash USB.</block>
   <block id="9a31048ac5a99c8ed4056d3af461b406" category="list-text">A partir do prompt Loader, inicialize a imagem de recuperação a partir da Mídia de inicialização secundária:<block ref="ec44bfe32a6d575f528cbdeeb29c9942" prefix=" " category="inline-code"></block></block>
   <block id="e640ac5f7f5b30fe8c1918548c6df741" category="paragraph">A imagem é transferida a partir do suporte de arranque secundário.</block>
   <block id="1a688134d3c3170545e61ebc16a95fe8" category="list-text">Pressione<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> quando solicitado para confirmar que o procedimento de backup foi bem-sucedido.</block>
   <block id="bc8660c5f3569dff11062aab0e8487d1" category="list-text">Depois que a sincronização da configuração for concluída sem erros, pressione<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> quando solicitado para confirmar que o procedimento de backup foi bem-sucedido.</block>
   <block id="499f2b4faaecf09ce2df725ed89b18e0" category="list-text"><block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block>Pressione quando solicitado a usar a cópia restaurada e pressione<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> quando solicitado a reinicializar o controlador.</block>
-  <block id="018ed71ecc770af5fd2b70a8cffb7032" category="paragraph">A partir do prompt do ONTAP, você pode emitir o comando 'stem node halt -skip-lif-migration-before-shutdown true -ignore-quórum-warnings true -inhibit-overall true'.</block>
   <block id="c2a9feacea3374ba5c6052aaa36c24d5" category="list-text">Restaure o giveback automático se você o desativou usando o<block ref="c3d371b8b22dcfeec38486606b0f219e" prefix=" " category="inline-code"></block> comando.</block>
   <block id="d574c271d37aff5dfc97b6ecd338458f" category="doc">Conclua o processo de restauração e substituição - AFF A700s</block>
   <block id="212a7c63df3073a24c5ba97aaad63e51" category="doc">Substitua o hardware - AFF A700s</block>
@@ -13139,9 +13135,7 @@
   <block id="0d9cb84ca4d1b976611c703d55106b16" category="image-alt">Alterar ID da prateleira NX224</block>
   <block id="c3248ba61632476b6423842b95414f99" category="paragraph">Botão de acesso ao ID da prateleira</block>
   <block id="f6b50513ccb0458f52042b169361dd21" category="list-text">Se o ONTAP estiver em execução (os controladores estiverem disponíveis para fornecer dados) e todas as unidades no compartimento forem sobressalentes e sem proprietário, aguarde pelo menos 180 segundos.</block>
-  <block id="9daf77d9d23bfd6b9091a7cc689fc060" category="doc">Adicionar uma unidade a quente - prateleiras NX224</block>
   <block id="6297d133d06242a84ced78f25874e3a3" category="summary">Você pode adicionar um rack de unidade NX224 a quente depois que seu cluster AFX atender a determinados requisitos e depois que as tarefas de preparação aplicáveis ao seu cluster AFX forem concluídas.</block>
-  <block id="21fcbf0345b3dd3b3ef04dc5e417d6f9" category="doc">Adicionar uma prateleira a quente - prateleiras NX224</block>
   <block id="a65fc212542af95abeff48e08e593cf1" category="paragraph">Você pode expandir seus recursos de armazenamento adicionando um rack NX224 à sua configuração de cluster AFX existente.</block>
   <block id="ea76371559e3b84b90531685bb2cc925" category="list-text">Depois de conectar uma prateleira adicionada a quente, o ONTAP reconhece a prateleira.  O firmware da prateleira NSM e o firmware da unidade devem ser atualizados automaticamente, se necessário.</block>
   <block id="0449258a59d5f091984e585ac1700de0" category="list-text">Antes de adicionar uma prateleira a quente, certifique-se de ter:</block>
@@ -13177,9 +13171,7 @@
   <block id="c73a63da4aa2a55331dc580e3f7a6058" category="paragraph">A ilustração a seguir destaca o cabeamento para adicionar uma prateleira adicional a uma configuração de switch.  Para adicionar prateleiras adicionais, siga a mesma metodologia de cabeamento baseada em switch.</block>
   <block id="b05d02c2614c4a2d2b2a26a857851df5" category="image-alt">Cabeamento do switch NX224 para AFX A1K</block>
   <block id="6556efde934a1b635008a5645f522b81" category="summary">Visão geral da manutenção da prateleira NX224.</block>
-  <block id="aea5557e47a25549577bff88a217d584" category="doc">Visão geral da manutenção de prateleiras - prateleiras NX224</block>
   <block id="993a8298922e1e33c5d4cd26d00918db" category="paragraph">Você pode tomar as seguintes ações para manter sua prateleira NX224:</block>
-  <block id="fd707bab34d37e3b52a981059bad8f48" category="doc">Prateleira de acionamento do monitor LEDs - prateleiras NX224</block>
   <block id="25a6c9168ed620e1583de103c9a0feda" category="paragraph">Você pode monitorar a integridade da sua prateleira entendendo a localização e as condições de status dos LEDs nos componentes da prateleira da unidade.</block>
   <block id="beab8079a8da60c183b5d6654c926a74" category="list-text">Os LEDs de localização (azuis), no painel de exibição do operador (ODP) de uma prateleira e em ambos os módulos de prateleira NVMe (NSMs), podem ser ativados para auxiliar na localização física da prateleira que precisa de manutenção:<block ref="d6bcc7ed2edc5b8ad7e7188bba8189eb" prefix=" " category="inline-code"></block></block>
   <block id="7162be5b0165c245b74c633ca80cf635" category="image-alt">Módulo LEDs NX224 NSM140</block>
@@ -13189,7 +13181,6 @@
   <block id="5d6dfe5ed734a2782721caf18e0b4c2c" category="paragraph">Sem alimentação CA para a PSU</block>
   <block id="bcf3b498a47e3fa766dac31a45cbe289" category="paragraph">Alimentação CA ligada, mas a PSU não está no gabinete</block>
   <block id="025f8295430770e736e984e6794d5d23" category="summary">Você pode substituir uma mídia de inicialização com falha em um compartimento NX224.  A substituição da mídia de inicialização pode ser feita sem interrupções, enquanto a prateleira estiver ligada e a E/S estiver em andamento.</block>
-  <block id="332b9527a936c07781bf0cadb44287ea" category="doc">Substituir a mídia de inicialização - prateleiras NX224</block>
   <block id="eb5f70737199e249936ef82aa6ae88c5" category="list-text">O NSM parceiro da prateleira deve estar instalado, funcionando e cabeado corretamente para que sua prateleira mantenha a conectividade quando você remover o NSM com a FRU com falha (NSM de destino).  Você pode verificar o status do parceiro NSM por<block ref="d3209ff29e83e82c4ec5003559161f56" category="inline-link-rx"></block> .</block>
   <block id="901f0035fc2e222a5f2556710312ea92" category="list-text">Desconecte o cabo de alimentação da fonte de alimentação abrindo o retentor do cabo de alimentação e, em seguida, desconectando o cabo de alimentação da fonte de alimentação.</block>
   <block id="49c7a6cf6e0ed8a4a54247d9cd7587a2" category="list-text">Reconecte o cabeamento de armazenamento às mesmas oito portas NSM.</block>
@@ -13197,7 +13188,6 @@
   <block id="3c562e952688339fa635b0286f963d4f" category="inline-link">executando o Active IQ Config Advisor</block>
   <block id="1da3eefc08ef3fe26013bf7d8153fa76" category="list-text">Verifique se o NSM está conectado corretamente, por<block ref="634f3ece8b47f8abdb5020d54bf495f5" category="inline-link-rx"></block> .</block>
   <block id="c9e888f57f6411c65b9b5e2979bef85d" category="summary">Você pode substituir um DIMM com defeito sem interrupções em uma prateleira de unidade NX224 ligada e enquanto a E/S estiver em andamento.</block>
-  <block id="475128cdfcd3d32fe12f61f1c5c81913" category="doc">Substituir um DIMM - prateleiras NX224</block>
   <block id="49386f77e99642fe7af5b51a113e488e" category="list-text">*Melhores práticas:* A melhor prática é ter versões atuais do firmware do módulo de prateleira NVMe (NSM) e do firmware da unidade no seu sistema antes de substituir os componentes da FRU. Você pode visitar o site de suporte da NetApp para <block ref="131f203722a665651ecdd6a35f72c75e" category="inline-link-rx"></block> e <block ref="33577154670f1ae7cae0968251dd0eac" category="inline-link-rx"></block> .</block>
   <block id="cd8dd115df9bdca0ec5fbe812575893b" category="list-text">O NSM parceiro da prateleira deve estar instalado e funcionando e conectado corretamente para que sua prateleira mantenha a conectividade quando você remover o NSM com a FRU com falha (NSM de destino).  Você pode verificar o status do parceiro NSM por<block ref="d3209ff29e83e82c4ec5003559161f56" category="inline-link-rx"></block> .</block>
   <block id="6c1921d7df069dd1505980207b7ea2f4" category="list-text">Todos os outros componentes do sistema, incluindo os outros três DIMMs, devem estar funcionando corretamente.</block>
@@ -13205,7 +13195,6 @@
   <block id="c642de7f35cea37f108d6c93586ba109" category="inline-link">executando o Config Advisor</block>
   <block id="0051f60b031fe2ab0d81803f9509c124" category="list-text">Verifique se o NSM está conectado corretamente, por<block ref="a1776ed37448018544fe80631966bcd7" category="inline-link-rx"></block> .</block>
   <block id="275d34ff75df0b93dbba7bdb3db9f37c" category="summary">Você pode substituir uma unidade com falha sem interrupções em uma prateleira NX224 que esteja ligada e enquanto a E/S estiver em andamento.</block>
-  <block id="7a87bb303f4254003a5ab0d31a1ed9fb" category="doc">Troca a quente de uma unidade - prateleiras NX224</block>
   <block id="cf2ae209b31955517ebee51c6c982859" category="list-text">A unidade que você está instalando deve ser suportada pela prateleira NX224.  Você pode verificar as unidades compatíveis da sua prateleira no<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> .</block>
   <block id="94f21a41afb0bb0d980e0970f99f7d57" category="inline-link">Visão geral da criptografia NetApp com a documentação da CLI</block>
   <block id="8fa5eb38a5f3ec0d799934def134e531" category="paragraph">Você pode visualizar as etapas adicionais que devem ser concluídas antes e depois de substituir um SED no<block ref="a45663e4b664b1d312b1973da8ba3d7f" category="inline-link-rx"></block> .</block>
@@ -13213,17 +13202,14 @@
   <block id="7e2123141c266fa24d4f529172a4b541" category="list-text">*Melhores práticas:* Certifique-se de que seu sistema pode reconhecer e usar unidades recém-qualificadas<block ref="3d50ed979df83d97dd20b0cc2c8bc3a9" category="inline-link-rx"></block> .</block>
   <block id="c9ebef258f2f12def066b21415a56382" category="paragraph">Isso evita mensagens de eventos do sistema sobre informações de unidade não atuais e a prevenção do particionamento da unidade porque as unidades não são reconhecidas.  O DQP também notifica você sobre firmware de unidade desatualizado.</block>
   <block id="9552387a009f53c2998cb220cd16067e" category="summary">Você pode substituir um ventilador com defeito sem interrupções em uma prateleira NX224 que esteja ligada e enquanto a E/S estiver em andamento.</block>
-  <block id="57d682160e2237bd5f87944217c26dcf" category="doc">Substituir um módulo de ventilador - prateleiras NX224</block>
   <block id="89f2ef4ce5077162c93e2010696841ef" category="paragraph">Se um ou ambos os ventiladores do seu módulo de ventilador falharem, você poderá substituí-lo.  Este procedimento pode ser concluído sem interrupções em uma prateleira NX224 ligada com E/S em andamento.</block>
   <block id="392ec912e5e56a755ba6aec50131adae" category="list-text">*Melhores práticas:* A melhor prática é ter versões atuais do firmware NSM e do firmware da unidade no seu sistema antes de substituir os componentes da FRU. Você pode visitar o site de suporte da NetApp para <block ref="131f203722a665651ecdd6a35f72c75e" category="inline-link-rx"></block> e <block ref="33577154670f1ae7cae0968251dd0eac" category="inline-link-rx"></block> .</block>
   <block id="37a8affe1fa106032de554c062e9e1cd" category="list-text">Desconecte o cabeamento da prateleira das portas NSM.</block>
   <block id="df72294c1d47e46ba433ddee498c7caa" category="list-text">Reconecte o cabeamento da prateleira às mesmas oito portas NSM.</block>
   <block id="795e5b2d8dd6ace5605e89211abdf341" category="summary">Você pode substituir um módulo de E/S Ethernet com falha sem interrupções em um rack NX224 ligado enquanto a E/S estiver em andamento.</block>
-  <block id="56c6680038919ffea816b0106b2ef69f" category="doc">Substituir o módulo de E/S Ethernet - prateleiras NX224</block>
   <block id="bcbb78790793c3b3a6c4cc3de0f22bc6" category="list-text">O NSM parceiro da prateleira deve estar instalado, funcionando e cabeado corretamente para que sua prateleira mantenha a conectividade quando você remover o NSM com falha.  Você pode verificar o status do parceiro NSM por<block ref="d3209ff29e83e82c4ec5003559161f56" category="inline-link-rx"></block> .</block>
   <block id="8b9a79e838c879494b6ec6a4dd9f83d7" category="list-text">Reencaixe o NSM:</block>
   <block id="2ddc2541950d2b7cf5fa865af0c30811" category="list-text">Verifique se os LEDs de atenção (âmbar) no NSM que contém o módulo de E/S com falha e o painel de exibição do operador da prateleira não estão mais acesos.</block>
-  <block id="868dffc494c85c09a39784a568ce58c4" category="doc">Substituir uma prateleira NSM - NX224</block>
   <block id="8caf14bc08677c718cf235d44b23051c" category="paragraph">Você pode substituir um módulo de prateleira NVMe (NSM) danificado sem interrupções em uma prateleira de unidade NX224 que esteja ligada e enquanto a E/S estiver em andamento.</block>
   <block id="1ca26d4850e86adaada89afb267eaf6f" category="list-text">A substituição do NSM envolve mover os DIMMs, ventiladores, mídia de inicialização, módulo de E/S e fonte de alimentação do NSM danificado para o NSM de substituição.</block>
   <block id="580caa7b67645719e0a4c78df2b4ea6a" category="paragraph">Não mova a bateria do relógio de tempo real (RTC).  Ele vem pré-instalado no NSM de substituição.</block>
@@ -13239,8 +13225,6 @@
   <block id="5b1662852c865a6bd771638b5db9e862" category="list-text">Com o polegar, pressione a aba de terracota na fonte de alimentação para liberar o mecanismo de travamento.</block>
   <block id="1b4028b0424fade1bdb82356997b35c2" category="list-text">Gire a alavanca da fonte de alimentação para baixo, para que ela não atrapalhe as operações normais.</block>
   <block id="c772043a43cbf70f178bc60e9c2bb650" category="summary">Você pode substituir uma fonte de alimentação com falha sem interrupções em um rack NX224 que esteja ligado e enquanto a E/S estiver em andamento.</block>
-  <block id="d50fc1b8ef2aa32e52f173d19ecc37c2" category="doc">Troca a quente de uma fonte de alimentação - prateleiras NX224</block>
-  <block id="8cd7ffd76d7b4b46c49c984da4cc21cf" category="doc">Substituir a bateria do relógio em tempo real - prateleiras NX224</block>
   <block id="504ce12704134674e6c4f4d48826e550" category="paragraph">Você pode substituir uma bateria de relógio em tempo real (RTC) com defeito, sem interrupções, em uma prateleira NX224 ligada, enquanto a E/S estiver em andamento.</block>
   <block id="99dfa28920a40a7be0858c50f989a3e5" category="section-title">Outubro de 2025</block>
   <block id="f48884bca72e8c9a2c859cce9d6c2275" category="section-title">Sistema de armazenamento AFX</block>
@@ -13987,8 +13971,6 @@
   <block id="045d601ea55137d06367b4e5c07294cb" category="summary">Após concluir as verificações de criptografia, desligue o controlador com defeito em um sistema AFF A700s . O sistema AFF A700s suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada.</block>
   <block id="1cde608d6fe62f56bdc3a29ae9eafc3b" category="paragraph">Após concluir as verificações de criptografia, desligue o controlador com defeito em um sistema AFF A700s . Este procedimento inclui levar o controlador ao prompt LOADER, capturar as variáveis ​​de ambiente de inicialização para referência e preparar o controlador para a substituição da mídia de inicialização.</block>
   <block id="7ff709ab33d28508eabb142a3db7ae80" category="summary">Transfira a imagem de inicialização para a mídia de inicialização de substituição em um sistema AFF A700s usando a mídia de inicialização secundária ou um pen drive USB. O sistema AFF A700s suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada.</block>
-  <block id="6827ba78ed93529d56c15a33eb4ff531" category="paragraph">Transfira a imagem de inicialização para a mídia de inicialização de substituição em um sistema AFF A700s usando a mídia de inicialização secundária ou um pen drive USB. Este procedimento inclui a restauração a partir da imagem na mídia de inicialização secundária como método principal, ou o uso de uma unidade flash USB caso a restauração a partir da mídia de inicialização secundária falhe ou o arquivo image.tgz esteja ausente.</block>
-  <block id="b3e6f6b7e4e5a440cfc3f9e0993cee92" category="section-title">Opção 1: Transferir arquivos usando a recuperação de backup da segunda mídia de inicialização.</block>
   <block id="e4e6847403baa34b19d3eda275449b4b" category="section-title">Opção 2: Transfira a imagem de inicialização usando um pen drive USB.</block>
   <block id="a9ada9881e4356b94c8f1b22d5de3285" category="summary">Após substituir a peça, você pode devolver a peça defeituosa à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. O sistema AFF C190 suporta apenas procedimentos manuais de recuperação de mídia de inicialização.</block>
   <block id="16938aed6aaf31d064148061342cc4bf" category="paragraph">Devolva a peça defeituosa à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Veja o<block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> Para mais informações, consulte a página. O sistema AFF C190 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada.</block>
@@ -15128,4 +15110,28 @@
   <block id="8d5e7895e7572495b322b60ec1134d14" category="sidebar">Conectar sistemas ASA</block>
   <block id="91d95e6e15279946ba73922f805b7916" category="sidebar">Sistemas EOA</block>
   <block id="9d0dcbcd43b2c01863b0888b33784f20" category="sidebar">Sistemas de fim de disponibilidade de cabos</block>
+  <block id="63dd54bdbae041eaa0355a49c82ac7f1" category="paragraph">Use a mensagem do BMC ou o LED de Atenção para identificar o módulo de ventoinha a ser substituído. BMC mapeia os módulos de ventoinha como Fan#_#, onde o primeiro número é o slot e o segundo é a linha (1=superior, 2=inferior); por exemplo, slot 1, segunda linha = Fan1_2.</block>
+  <block id="f6f03e6d93cc09c3d00cfa6485d8a770" category="paragraph">O módulo da ventoinha se afasta ligeiramente do chassi.</block>
+  <block id="c06f099c5d6289bd8592143ef4a8371d" category="paragraph">O LED de atenção apaga-se depois da ventoinha estar encaixada e atingir a velocidade de funcionamento.</block>
+  <block id="3c046249b91ec9e1b6e20b1dca03357b" category="paragraph">Transfira a imagem de inicialização para a mídia de inicialização de substituição em um AFF A700s usando a mídia de inicialização secundária (método primário) ou uma unidade flash USB (caso a restauração da mídia de inicialização secundária falhe ou o <block ref="c1317185516b20a37b064c5ed31cf719" prefix=" " category="inline-code"></block> arquivo esteja ausente).</block>
+  <block id="1c8d763a92bd021dd060e8e7d9ac1731" category="section-title">Opção 1: transferir a imagem do sistema usando recuperação de backup da segunda mídia de inicialização</block>
+  <block id="d5a720bc38c4a4820ccca7cd1812ddeb" category="paragraph">Você pode instalar a imagem do sistema na mídia de inicialização de substituição usando a imagem presente na segunda mídia de inicialização do módulo controlador. Este é o método principal para sistemas com duas mídias de inicialização no módulo controlador.</block>
+  <block id="2b749bec4e587e3e4467be27bd35ee54" category="paragraph">A imagem na mídia de inicialização secundária deve conter um <block ref="c1317185516b20a37b064c5ed31cf719" prefix=" " category="inline-code"></block> arquivo e não deve apresentar falhas. Se o <block ref="c1317185516b20a37b064c5ed31cf719" prefix=" " category="inline-code"></block> arquivo estiver ausente ou a mídia de inicialização apresentar falhas, você não poderá usar este procedimento. Use <block ref="480fd3d07776d9101453634e69c396f9" category="inline-xref-macro-rx"></block> em vez disso.</block>
+  <block id="7d4f9a8194d67a25499f31dd2c3c5474" category="paragraph">Este procedimento só deve ser utilizado se a restauração da mídia de inicialização secundária falhar ou se o <block ref="c1317185516b20a37b064c5ed31cf719" prefix=" " category="inline-code"></block> arquivo não for encontrado na mídia de inicialização secundária.</block>
+  <block id="a5c386e3a25844e2b0970f41423bd18b" category="list-text">Uma cópia da mesma versão da imagem do ONTAP que estava sendo executada no controlador com problemas. Você pode baixar a imagem apropriada na seção de Downloads no site de suporte da NetApp.</block>
+  <block id="b59e3c20d440ebde2a51c9f98270768b" category="list-text">Salve as variáveis de ambiente que você alterou com o comando <block ref="c1a29cc79fbc441f23fa8d5d10961fd8" prefix=" " category="inline-code"></block>.</block>
+  <block id="746e6404fb3c214cba42a49e00f4cdbc" category="list-text">Verifique se as variáveis de ambiente estão configuradas conforme o esperado.</block>
+  <block id="769810d91f37a33448f782804afe8b15" category="doc">Alterar o ID da gaveta de unidades NX224</block>
+  <block id="9462a81bfda8f9b77a3fb2f9e1f1d3fa" category="doc">Adicione uma unidade a quente a uma prateleira NX224</block>
+  <block id="7a327b955d36fb9e8769c059837e905f" category="doc">Adicione um shelf NX224 a um cluster AFX com o equipamento em funcionamento.</block>
+  <block id="9cbcc0cd643835114561467f05ae3a12" category="doc">Manutenção da prateleira NX224</block>
+  <block id="35ec49663bb0d725792ecfd7cdfd35d8" category="doc">Monitorar LEDs da prateleira NX224</block>
+  <block id="ff0b8412ab1e2c3c52a16bb8d94e3beb" category="doc">Substitua a mídia de inicialização em um shelf NX224</block>
+  <block id="cb0d0b8199238de6776631ac4982ab88" category="doc">Substitua um DIMM em um shelf NX224</block>
+  <block id="8571f926f0e56c390aab9e784e5aa2a8" category="doc">Troca a quente de uma unidade em um compartimento NX224</block>
+  <block id="4f770573b4054149d0e3f5d188ae4e4f" category="doc">Substitua o módulo de ventoinha em um shelf NX224</block>
+  <block id="a2faab4698e67845fc0fbe185cc98fd9" category="doc">Substitua o módulo de E/S Ethernet em um shelf NX224</block>
+  <block id="8f58e61d50af420886f01cc38be3cf6a" category="doc">Substitua um NSM em um shelf NX224</block>
+  <block id="5154a7eeeb6eb7c914e9aa6ac86007e6" category="doc">Substitua a fonte de alimentação em um shelf NX224.</block>
+  <block id="7b0bd118308264295dfa730998f7251f" category="doc">Substitua a bateria RTC em um shelf NX224</block>
 </blocks>

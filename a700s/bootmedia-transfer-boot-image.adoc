@@ -1,7 +1,7 @@
 ---
 permalink: a700s/bootmedia-transfer-boot-image.html 
 sidebar: sidebar 
-keywords: aff a700s, aff, a700s, procedure, secondary, boot, media, restore, fail, image, tgz, file, trasnfer, usb, flash, drive, transfer the boot image to the boot medai using a usb flash drive, manual, manual boot recovery 
+keywords: aff a700s, aff, a700s, procedure, secondary, boot, media, restore, fail, image, tgz, file, transfer, usb, flash, drive, transfer the boot image to the boot media using a usb flash drive, manual, manual boot recovery 
 summary: Transfira a imagem de inicialização para a mídia de inicialização de substituição em um sistema AFF A700s usando a mídia de inicialização secundária ou um pen drive USB. O sistema AFF A700s suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada. 
 ---
 = Transfira a imagem de arranque para o suporte de arranque - AFF A700s
@@ -11,17 +11,17 @@ summary: Transfira a imagem de inicialização para a mídia de inicialização 
 
 
 [role="lead"]
-Transfira a imagem de inicialização para a mídia de inicialização de substituição em um sistema AFF A700s usando a mídia de inicialização secundária ou um pen drive USB. Este procedimento inclui a restauração a partir da imagem na mídia de inicialização secundária como método principal, ou o uso de uma unidade flash USB caso a restauração a partir da mídia de inicialização secundária falhe ou o arquivo image.tgz esteja ausente.
+Transfira a imagem de inicialização para a mídia de inicialização de substituição em um AFF A700s usando a mídia de inicialização secundária (método primário) ou uma unidade flash USB (caso a restauração da mídia de inicialização secundária falhe ou o  `image.tgz` arquivo esteja ausente).
 
 O sistema AFF A700s suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada.
 
 
 
-== Opção 1: Transferir arquivos usando a recuperação de backup da segunda mídia de inicialização.
+== Opção 1: transferir a imagem do sistema usando recuperação de backup da segunda mídia de inicialização
 
-Pode instalar a imagem do sistema no suporte de arranque de substituição utilizando a imagem no segundo suporte de arranque instalado no módulo do controlador. Este é o método principal para transferir os ficheiros multimédia de arranque para o suporte de arranque de substituição em sistemas com dois suportes de arranque no módulo do controlador.
+Você pode instalar a imagem do sistema na mídia de inicialização de substituição usando a imagem presente na segunda mídia de inicialização do módulo controlador. Este é o método principal para sistemas com duas mídias de inicialização no módulo controlador.
 
-A imagem na Mídia de inicialização secundária deve conter um `image.tgz` arquivo e não deve estar relatando falhas. Se o ficheiro image.tgz estiver em falta ou se o suporte de dados de arranque comunicar falhas, não pode utilizar este procedimento. Tem de transferir a imagem de arranque para o suporte de arranque de substituição utilizando o procedimento de substituição da unidade flash USB.
+A imagem na mídia de inicialização secundária deve conter um  `image.tgz` arquivo e não deve apresentar falhas. Se o  `image.tgz` arquivo estiver ausente ou a mídia de inicialização apresentar falhas, você não poderá usar este procedimento. Use <<Opção 2: Transfira a imagem de inicialização usando um pen drive USB.>> em vez disso.
 
 .Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
@@ -88,10 +88,10 @@ A imagem é transferida a partir do suporte de arranque secundário.
 
 == Opção 2: Transfira a imagem de inicialização usando um pen drive USB.
 
-Este procedimento só deve ser utilizado se a restauração secundária do suporte de arranque falhar ou se o ficheiro image.tgz não for encontrado no suporte de arranque secundário.
+Este procedimento só deve ser utilizado se a restauração da mídia de inicialização secundária falhar ou se o  `image.tgz` arquivo não for encontrado na mídia de inicialização secundária.
 
 * Você deve ter uma unidade flash USB, formatada para FAT32, com pelo menos 4GBGB de capacidade.
-* Uma cópia da mesma versão de imagem do ONTAP que a que o controlador afetado estava a executar. Você pode baixar a imagem apropriada da seção Downloads no site de suporte da NetApp
+* Uma cópia da mesma versão da imagem do ONTAP que estava sendo executada no controlador com problemas. Você pode baixar a imagem apropriada na seção de Downloads no site de suporte da NetApp.
 +
 ** Se a NVE estiver ativada, transfira a imagem com encriptação de volume NetApp, conforme indicado no botão de transferência.
 ** Se a NVE não estiver ativada, transfira a imagem sem encriptação de volume NetApp, conforme indicado no botão de transferência.
@@ -176,7 +176,7 @@ Se você perder essa mensagem, pressione Ctrl-C, selecione a opção para inicia
 *** `bootarg.onboard_keymanager <value>`
 
 
-.. Salve as variáveis de ambiente que você alterou com o `savenv` comando
+.. Salve as variáveis de ambiente que você alterou com o comando  `savenv`.
 .. Confirme as alterações usando o `printenv _variable-name_` comando.
 
 
@@ -195,12 +195,11 @@ A imagem é transferida da unidade flash USB.
 .  `y`Pressione quando solicitado a usar a cópia restaurada e pressione `y` quando solicitado a reinicializar o controlador.
 . A partir do controlador parceiro no nível avançado de privilégio, inicie a sincronização de configuração utilizando o endereço IP registado na etapa anterior: `system node restore-backup -node local -target-address _impaired_node_IP_address_`
 . Depois que a sincronização da configuração for concluída sem erros, pressione `y` quando solicitado para confirmar que o procedimento de backup foi bem-sucedido.
-.  `y`Pressione quando solicitado a usar a cópia restaurada e pressione `y` quando solicitado a reinicializar o controlador.
-. Verifique se as variáveis ambientais estão definidas como esperado.
+. Verifique se as variáveis de ambiente estão configuradas conforme o esperado.
 +
 .. Leve o controlador para o prompt Loader.
 +
-A partir do prompt do ONTAP, você pode emitir o comando 'stem node halt -skip-lif-migration-before-shutdown true -ignore-quórum-warnings true -inhibit-overall true'.
+No prompt ONTAP, você pode emitir o comando `system node halt -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true`.
 
 .. Verifique as configurações de variáveis de ambiente com o `printenv` comando.
 .. Se uma variável de ambiente não for definida como esperado, modifique-a com o `setenv __environment-variable-name__ __changed-value__` comando.
