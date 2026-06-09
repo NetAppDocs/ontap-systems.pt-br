@@ -1,0 +1,67 @@
+= 
+:allow-uri-read: 
+
+
+Depois de todos os componentes terem sido movidos do módulo do controlador afetado para o módulo do controlador de substituição, tem de instalar o módulo do controlador de substituição no chassis e, em seguida, iniciá-lo no modo de manutenção.
+
+Você pode usar a animação, ilustração ou as etapas escritas a seguir para instalar o módulo do controlador de substituição no chassi.
+
+.Animação - instale o módulo do controlador
+video::0310fe80-b129-4685-8fef-ab19010e720a[panopto]
+image::../media/drw_A400_Install_controller_source.png[Instale o controlador]
+
+[cols="10,90"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Módulo do controlador
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Travas de travamento do controlador
+
+|===
+.Passos
+. Se ainda não o tiver feito, feche a conduta de ar.
+. Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
++
+
+NOTE: Não introduza completamente o módulo do controlador no chassis até ser instruído a fazê-lo.
+
+. Faça o cabeamento apenas das portas de gerenciamento e console, para que você possa acessar o sistema para executar as tarefas nas seções a seguir.
++
+
+NOTE: Você conetará o resto dos cabos ao módulo do controlador posteriormente neste procedimento.
+
+. Conclua a instalação do módulo do controlador:
++
+.. Utilizando os trincos de bloqueio, empurre firmemente o módulo do controlador para dentro do chassis até que os trincos de bloqueio comecem a subir.
++
+
+NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
+
+.. Assente totalmente o módulo do controlador no chassis, rodando os trincos de bloqueio para cima, inclinando-os para que estes limpem os pinos de bloqueio, empurre cuidadosamente o controlador totalmente para dentro e, em seguida, baixe os trincos de bloqueio para a posição de bloqueio.
+.. Conete os cabos de alimentação às fontes de alimentação, reinstale o colar de travamento do cabo de alimentação e, em seguida, conete as fontes de alimentação à fonte de alimentação.
++
+O módulo do controlador começa a inicializar assim que a energia é restaurada. Esteja preparado para interromper o processo de inicialização.
+
+.. Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos.
+.. Interrompa o processo normal de inicialização e inicialize no Loader pressionando `Ctrl-C`.
++
+
+NOTE: Se o sistema parar no menu de inicialização, selecione a opção para inicializar NO Loader.
+
+.. No prompt Loader, digite `bye` para reinicializar as placas PCIe e outros componentes.
+.. Interrompa o processo de inicialização e inicialize no prompt DO Loader pressionando `Ctrl-C`.
++
+Se o sistema parar no menu de inicialização, selecione a opção para inicializar NO Loader.
+
+
+
+

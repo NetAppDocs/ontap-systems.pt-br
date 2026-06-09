@@ -1,8 +1,8 @@
 ---
 permalink: fas8300/controller-replace-shutdown.html 
 sidebar: sidebar 
-keywords: fas8300, fas8700, shut down the impair controller 
-summary: Você pode desligar ou assumir o controlador prejudicado usando procedimentos diferentes, dependendo da configuração do hardware do sistema de armazenamento. 
+keywords: fas8300, fas8700, shut down the impaired controller 
+summary: Desligue o controlador do seu FAS8300 e FAS8700 sistema de storage para evitar perda de dados e garantir a estabilidade do sistema ao substituir o controlador. 
 ---
 = Desligue o controlador desativado - FAS8300 e FAS8700
 :allow-uri-read: 
@@ -11,7 +11,9 @@ summary: Você pode desligar ou assumir o controlador prejudicado usando procedi
 
 
 [role="lead"]
-Você pode desligar ou assumir o controlador prejudicado usando procedimentos diferentes, dependendo da configuração do hardware do sistema de armazenamento.
+Desligue o controlador do seu FAS8300 e FAS8700 sistema de storage para evitar perda de dados e garantir a estabilidade do sistema ao substituir o controlador.
+
+Desligue o módulo do controlador utilizando uma das seguintes opções.
 
 [role="tabbed-block"]
 ====
@@ -179,3 +181,5 @@ mcc1A::> metrocluster operation show
 
 --
 ====
+.O que se segue?
+Após desligar o controlador FAS8300 e FAS8700, você precisa link:controller-replace-move-hardware.html["substitua o controlador"].

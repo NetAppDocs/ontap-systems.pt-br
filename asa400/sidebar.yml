@@ -66,17 +66,19 @@ entries:
   - title: Controlador
     pdf-filename: Módulo do controlador ASA A400
     entries:
-    - title: Visão geral
-      url: "/asa400/controller-replace-overview.html"
+    - title: Fluxo de trabalho de substituição do controlador
+      url: "/asa400/controller-replace-workflow.html"
+    - title: Rever os requisitos
+      url: "/asa400/controller-replace-requirements.html"
     - title: Desligue o controlador desativado
       url: "/asa400/controller-replace-shutdown.html"
     - title: Substitua o controlador
       url: "/asa400/controller-replace-move-hardware.html"
     - title: Restaure a configuração do sistema
       url: "/asa400/controller-replace-system-config-restore-and-verify.html"
-    - title: Sistema Recable
+    - title: Devolver o controlador
       url: "/asa400/controller-replace-recable-reassign-disks.html"
-    - title: Restauração completa do sistema
+    - title: Substituição completa do controlador
       url: "/asa400/controller-replace-restore-system-rma.html"
   - title: DIMM
     pdf-filename: DIMM ASA A400

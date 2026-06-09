@@ -1,0 +1,53 @@
+= 
+:allow-uri-read: 
+
+
+Verifique as configurações de alta disponibilidade (HA) e a lista de discos antes de colocar o sistema em funcionamento novamente.
+
+.Passos
+. Arranque para o modo de manutenção:
++
+`boot_ontap maint`
+
+. Digite `y` quando você vir _continuar com boot?_.
++
+Se você vir a mensagem de aviso _incompatibilidade de ID do sistema_, digite `y`.
+
+. Introduza `sysconfig -v` e capture o conteúdo do visor.
++
+
+NOTE: Se você vir _INCOMPATIBILIDADE DE PERSONALIDADE_, entre em Contato com o suporte ao cliente.
+
+. Na `sysconfig -v` saída, compare as informações da placa adaptadora com as placas e localizações no controlador de substituição.
+. Verifique se todos os componentes apresentam o `HA` mesmo estado:
++
+`ha-config show`
+
++
+O estado HA deve ser o mesmo para todos os componentes.
+
+. Se o estado do sistema exibido no módulo controlador não corresponder à configuração do seu sistema, defina o `HA` Estado do módulo controlador:
++
+`ha-config modify controller _ha-state_`
+
++
+O valor para o estado HA pode ser um dos seguintes:
+
++
+** `ha`
+** `mcc`
+** `mcc-2n`
+** `mccip`
+** `non-ha`
+
+
+. Confirme se a definição foi alterada:
++
+`ha-config show`
+
+. Verifique se o adaptador lista os caminhos para todos os discos: `storage show disk -p`
++
+Se você vir algum problema, verifique o cabeamento e recoloque os cabos.
+
+. Sair do modo de manutenção: `halt`
+

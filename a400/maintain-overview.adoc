@@ -2,7 +2,7 @@
 permalink: a400/maintain-overview.html 
 sidebar: sidebar 
 keywords: aff A400 maintenance, maintenance, repairing A400, repairing aff A400, replace aff A400 components, replace aff A400 components 
-summary: Manutenção do hardware do AFF A400 
+summary: Faça a manutenção do hardware do seu sistema de armazenamento AFF A400 para garantir confiabilidade a longo prazo e desempenho ideal. Realize tarefas de manutenção regulares, como a substituição de componentes defeituosos, pois isso ajuda a evitar tempo de inatividade e perda de dados. 
 ---
 = Manter o hardware do AFF A400
 :allow-uri-read: 
@@ -47,7 +47,7 @@ O chassi é o gabinete físico que abriga todos os componentes do controlador, c
 
 
  a| 
-link:controller-replace-overview.html["Controlador"]
+link:controller-replace-workflow.html["Controlador"]
  a| 
 Um controlador consiste em uma placa, firmware e software. Controla as unidades e implementa as funções do ONTAP.
 

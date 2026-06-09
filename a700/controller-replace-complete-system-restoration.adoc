@@ -51,7 +51,7 @@ NOTE: As novas chaves de licença que você precisa são geradas automaticamente
 
 == Etapa 2: Verificando LIFs e registrando o número de série
 
-Antes de retornar o nó _replacement_ ao serviço, você deve verificar se os LIFs estão em suas portas iniciais e Registrar o número de série do nó _replacement_ se o AutoSupport estiver ativado e redefinir a giveback automática.
+Antes de retornar o nó _de substituição_ ao serviço, você deve verificar se as LIFs estão em suas portas de origem, registrar o número de série do nó _de substituição_ se AutoSupport estiver habilitado, verificar a integridade do seu cluster, fechar quaisquer janelas de manutenção e redefinir o giveback automático.
 
 .Passos
 . Verifique se as interfaces lógicas estão relatando para o servidor doméstico e as portas: `network interface show -is-home false`

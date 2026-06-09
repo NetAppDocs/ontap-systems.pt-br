@@ -66,17 +66,19 @@ entries:
   - title: Controlador
     pdf-filename: Módulo do controlador AFF A400
     entries:
-    - title: Visão geral
-      url: "/a400/controller-replace-overview.html"
+    - title: Fluxo de trabalho de substituição do controlador
+      url: "/a400/controller-replace-workflow.html"
+    - title: Rever os requisitos
+      url: "/a400/controller-replace-requirements.html"
     - title: Desligue o controlador desativado
       url: "/a400/controller-replace-shutdown.html"
     - title: Substitua o controlador
       url: "/a400/controller-replace-move-hardware.html"
     - title: Restaure a configuração do sistema
       url: "/a400/controller-replace-system-config-restore-and-verify.html"
-    - title: Sistema Recable
+    - title: Devolver o controlador
       url: "/a400/controller-replace-recable-reassign-disks.html"
-    - title: Restauração completa do sistema
+    - title: Substituição completa do controlador
       url: "/a400/controller-replace-restore-system-rma.html"
   - title: DIMM
     pdf-filename: DIMM AFF A400
@@ -85,10 +87,10 @@ entries:
     pdf-filename: Módulo da ventoinha AFF A400
     url: "/a400/fan-swap-out.html"
   - title: Bateria NVDIMM
-    pdf-filename: Bateria NVDIMM AFF A400
+    pdf-filename: Bateria NVDIMM do AFF A400
     url: "/a400/nvdimm-battery-replace.html"
   - title: NVDIMM
-    pdf-filename: NVDIMM AFF A320
+    pdf-filename: AFF A400 NVDIMM
     url: "/a400/nvdimm-replace.html"
   - title: Placa PCIe ou mezzanine
     pdf-filename: Placa AFF A400 PCIe ou Mezzanine

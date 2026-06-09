@@ -1,0 +1,53 @@
+= 
+:allow-uri-read: 
+
+
+Para mover a bateria NVDIMM do módulo do controlador desativado para o módulo do controlador de substituição, é necessário executar uma sequência específica de passos.
+
+Você pode usar a animação, a ilustração ou as etapas escritas a seguir para mover a bateria NVDIMM do módulo do controlador prejudicado para o módulo do controlador de substituição.
+
+.Animação - mova a bateria NVDIMM
+video::94d115b2-b02a-4234-805c-aad9012f204c[panopto]
+image::../media/drw_A400_nvdimm-batt.png[Retire a bateria NVDIMM]
+
+[cols="10,90"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Ficha da bateria NVDIMM
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Patilha de bloqueio da bateria NVDIMM
+
+
+
+ a| 
+image:../media/icon_round_3.png["Legenda número 3"]
+ a| 
+Bateria NVDIMM
+
+|===
+.Passos
+. Abrir a conduta de ar:
++
+.. Pressione as patilhas de bloqueio nas laterais da conduta de ar para dentro, em direção ao centro do módulo do controlador.
+.. Faça deslizar a conduta de ar em direção à parte de trás do módulo do controlador e, em seguida, rode-a para cima até à posição completamente aberta.
+
+
+. Localize a bateria NVDIMM no módulo do controlador.
+. Localize a ficha da bateria e aperte o clipe na face da ficha da bateria para soltar a ficha da tomada e, em seguida, desligue o cabo da bateria da tomada.
+. Segure a bateria e pressione a patilha de bloqueio azul marcada com PUSH e, em seguida, levante a bateria para fora do suporte e do módulo do controlador.
+. Desloque a bateria para o módulo do controlador de substituição.
+. Alinhe o módulo da bateria com a abertura para a bateria e, em seguida, empurre a bateria suavemente para dentro do compartimento até que ela se encaixe no lugar.
++
+
+NOTE: Não conete o cabo da bateria de volta à placa-mãe até que seja instruído a fazê-lo.
+
+

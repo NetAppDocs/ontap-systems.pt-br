@@ -2,7 +2,7 @@
 permalink: fas8300/maintain-overview.html 
 sidebar: sidebar 
 keywords: fas8300 maintenance, maintenance, repairing, repairing fas8300, replace fas8300 components, replace fas8300 components 
-summary: Manutenção do hardware FAS8300 e FAS8700 
+summary: Faça a manutenção do hardware do seu sistema de armazenamento FAS8300 e FAS8700 para garantir confiabilidade a longo prazo e desempenho ideal. Realize tarefas de manutenção regulares, como a substituição de componentes defeituosos, pois isso ajuda a evitar tempo de inatividade e perda de dados. 
 ---
 = Mantenha o hardware FAS8300 e FAS8700
 :allow-uri-read: 
@@ -54,7 +54,7 @@ O chassi é o gabinete físico que abriga todos os componentes do controlador, c
 
 
  a| 
-link:controller-replace-overview.html["Controlador"]
+link:controller-replace-workflow.html["Controlador"]
  a| 
 Um controlador consiste em uma placa, firmware e software. Controla as unidades e implementa as funções do ONTAP.
 

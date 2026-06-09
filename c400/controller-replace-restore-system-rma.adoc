@@ -2,16 +2,16 @@
 permalink: c400/controller-replace-restore-system-rma.html 
 sidebar: sidebar 
 keywords: aff c400, how to restore NetApp Storage Encryption, how to complete the replacement process 
-summary: 'Para restaurar o sistema para a operação completa, você deve restaurar a configuração de criptografia de armazenamento NetApp (se necessário), instalar licenças para a nova controladora e devolver a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit.' 
+summary: 'Conclua a substituição do controlador do seu sistema AFF C400. Instale as licenças para o controlador de substituição, confirme se as interfaces lógicas (LIFs) estão reportando às suas portas de origem e execute uma verificação de integridade. Por fim, devolva a peça com defeito para a NetApp.' 
 ---
-= Restauração completa do sistema - AFF C400
+= Substituição completa do controlador - AFF C400
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Para restaurar o sistema para a operação completa, você deve restaurar a configuração de criptografia de armazenamento NetApp (se necessário), instalar licenças para a nova controladora e devolver a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit.
+Conclua a substituição do controlador do seu sistema AFF C400. Instale as licenças para o controlador de substituição, confirme se as interfaces lógicas (LIFs) estão reportando às suas portas de origem e execute uma verificação de integridade. Por fim, devolva a peça com defeito para a NetApp.
 
 
 
@@ -49,9 +49,9 @@ NOTE: As novas chaves de licença que você precisa são geradas automaticamente
 
 
 
-== Passo 2: Verifique LIFs e registrando o número de série
+== Passo 2: Verifique LIFs e Registre o número de série
 
-Antes de retornar o nó _replacement_ ao serviço, você deve verificar se os LIFs estão em suas portas iniciais e Registrar o número de série do nó _replacement_ se o AutoSupport estiver ativado e redefinir a giveback automática.
+Antes de retornar o nó _de substituição_ ao serviço, você deve verificar se as LIFs estão em suas portas de origem, registrar o número de série do nó _de substituição_ se AutoSupport estiver habilitado, verificar a integridade do seu cluster, fechar quaisquer janelas de manutenção e redefinir o giveback automático.
 
 .Passos
 . Verifique se as interfaces lógicas estão relatando para o servidor doméstico e as portas: `network interface show -is-home false`

@@ -1,0 +1,71 @@
+= 
+:allow-uri-read: 
+
+
+Para aceder aos componentes no interior do módulo do controlador, tem de remover o módulo do controlador do chassis.
+
+Você pode usar a animação, ilustração ou as etapas escritas a seguir para remover o módulo do controlador do chassi.
+
+.Animação - retire o módulo do controlador
+video::ca74d345-e213-4390-a599-aae10019ec82[panopto]
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Solte os fixadores do cabo de alimentação e, em seguida, desconete os cabos das fontes de alimentação.
+. Solte o gancho e a alça de loop que prendem os cabos ao dispositivo de gerenciamento de cabos e, em seguida, desconete os cabos do sistema e os SFPs (se necessário) do módulo do controlador, mantendo o controle de onde os cabos estavam conetados.
++
+Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar o dispositivo de gerenciamento de cabos, os cabos sejam organizados.
+
+. Retire o dispositivo de gestão de cabos do módulo do controlador e coloque-o de lado.
+. Prima ambos os trincos de bloqueio para baixo e, em seguida, rode ambos os trincos para baixo ao mesmo tempo.
++
+O módulo do controlador desloca-se ligeiramente para fora do chassis.
+
++
+image::../media/drw_A400_Remove_controller.png[Solte o módulo do controlador]
+
++
+[cols="10a,90a"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Trincos de bloqueio
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+O controlador se move ligeiramente para fora do chassi
+
+|===
+. Faça deslizar o módulo do controlador para fora do chassis.
++
+Certifique-se de que suporta a parte inferior do módulo do controlador enquanto o desliza para fora do chassis.
+
+. Coloque o módulo do controlador numa superfície estável e plana.
+. No módulo do controlador de substituição, abra a conduta de ar e retire os risers vazios do módulo do controlador utilizando a animação, a ilustração ou os passos escritos:
++
+.Animação - Remova os risers vazios do módulo do controlador de substituição
+video::49053752-e813-4c15-a917-ab190147fa6e[panopto]
+
+
+image::../media/drw_a400_empty_riser_remove.png[Remova a riser vazia]
+
+[cols="10,90"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Travas de liberação da riser
+
+|===
+. Pressione as patilhas de bloqueio nas laterais da conduta de ar para dentro, em direção ao centro do módulo do controlador.
+. Faça deslizar a conduta de ar em direção à parte de trás do módulo do controlador e, em seguida, rode-a para cima até à posição completamente aberta.
+. Gire a trava de travamento da riser no lado esquerdo da riser 1 para cima e em direção à conduta de ar, levante a riser e, em seguida, coloque-a de lado.
+. Repita o passo anterior para os restantes risers.
+

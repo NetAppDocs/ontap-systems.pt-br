@@ -1,8 +1,8 @@
 ---
 permalink: asa-c400/controller-replace-shutdown.html 
 sidebar: sidebar 
-keywords: asa c400, shut down the impair controller 
-summary: Você pode desligar ou assumir o controlador prejudicado usando procedimentos diferentes, dependendo da configuração do hardware do sistema de armazenamento. 
+keywords: asa c400, shut down the impaired controller 
+summary: Desligue o controlador no seu sistema de storage ASA C400 para evitar perda de dados e garantir a estabilidade do sistema ao substituir o controlador. 
 ---
 = Desligue o controlador desativado - ASA C400
 :allow-uri-read: 
@@ -11,7 +11,9 @@ summary: Você pode desligar ou assumir o controlador prejudicado usando procedi
 
 
 [role="lead"]
-Encerre ou assuma o controlador afetado utilizando o procedimento adequado para a sua configuração.
+Desligue o controlador no seu sistema de storage ASA C400 para evitar perda de dados e garantir a estabilidade do sistema ao substituir o controlador.
+
+Desligue o módulo do controlador utilizando uma das seguintes opções.
 
 [role="tabbed-block"]
 ====
@@ -179,3 +181,5 @@ mcc1A::> metrocluster operation show
 
 --
 ====
+.O que se segue?
+Após desligar o controlador ASA C400, você precisa link:controller-replace-move-hardware.html["substitua o controlador"].

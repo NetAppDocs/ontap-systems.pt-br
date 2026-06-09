@@ -1,0 +1,76 @@
+= 
+:allow-uri-read: 
+
+
+Como parte do processo de substituição da controladora, você deve mover os risers PCIe e a placa mezzanine do módulo do controlador prejudicado para o módulo do controlador de substituição.
+
+Você pode usar as seguintes animações, ilustrações ou as etapas escritas para mover os risers PCIe e a placa mezzanine do módulo controlador prejudicado para o módulo controlador de substituição.
+
+Movimentação do riser PCIe 1 e 2 (risers esquerdo e médio):
+
+.Animação - mover risers PCI 1 e 2
+video::f4ee1d4d-6029-4fe6-a063-aad9012f170b[panopto]
+Movimentação da placa mezanino e do riser 3 (riser direito):
+
+.Animação - mova a placa mezzanine e o riser 3
+video::b0c3b575-3434-4e00-a421-aad9012f2e9e[panopto]
+image::../media/drw_A400_Replace-PCIe-cards.png[Remova as placas PCIe]
+
+[cols="10,90"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Trava de travamento da riser
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+Trinco de bloqueio da placa PCI
+
+
+
+ a| 
+image:../media/icon_round_3.png["Legenda número 3"]
+ a| 
+Placa de bloqueio PCI
+
+
+
+ a| 
+image:../media/icon_round_4.png["Legenda número 4"]
+ a| 
+Placa PCI
+
+|===
+.Passos
+. Mova os risers PCIe um e dois do módulo do controlador prejudicado para o módulo do controlador de substituição:
++
+.. Remova quaisquer módulos SFP ou QSFP que possam estar nas placas PCIe.
+.. Gire a trava de travamento da riser no lado esquerdo da riser para cima e em direção à conduta de ar.
++
+A riser levanta-se ligeiramente do módulo do controlador.
+
+.. Levante a riser e, em seguida, mova-a para o módulo do controlador de substituição.
+.. Alinhe a riser com os pinos na lateral do soquete da riser, abaixe a riser para baixo nos pinos, empurre a riser diretamente no soquete da placa-mãe e gire a trava para baixo com a chapa metálica na riser.
+.. Repita esta etapa para o riser número 2.
+
+
+. Remova o riser número 3, remova a placa mezanino e instale ambos no módulo do controlador de substituição:
++
+.. Remova quaisquer módulos SFP ou QSFP que possam estar nas placas PCIe.
+.. Gire a trava de travamento da riser no lado esquerdo da riser para cima e em direção à conduta de ar.
++
+A riser levanta-se ligeiramente do módulo do controlador.
+
+.. Levante a riser e, em seguida, coloque-a de lado em uma superfície estável e plana.
+.. Solte os parafusos de aperto manual na placa mezzanine e levante cuidadosamente a placa diretamente para fora do soquete e, em seguida, mova-a para o módulo controlador de substituição.
+.. Instale o mezanino no controlador de substituição e fixe-o com os parafusos de aperto manual.
+.. Instale a terceira riser no módulo do controlador de substituição.
+
+
+

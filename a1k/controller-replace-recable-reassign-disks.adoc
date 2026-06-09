@@ -15,7 +15,7 @@ Retorne o controle dos recursos de armazenamento ao controlador de substituiçã
 
 [role="tabbed-block"]
 ====
-.Sem criptografia
+.Sem criptografia ou External Key Manager (EKM)
 --
 Volte a colocar o controlador afetado em funcionamento normal, devolvendo o respetivo armazenamento.
 
@@ -35,11 +35,25 @@ Volte a colocar o controlador afetado em funcionamento normal, devolvendo o resp
 --
 .Criptografia integrada (OKM)
 --
-Redefina a criptografia integrada e retorne o controlador à operação normal.
+Restaure e vede novamente as chaves de criptografia integradas do OKM e retorne o controlador à operação normal.
+
+.Antes de começar
+Antes de começar, revise  https://docs.netapp.com/us-en/ontap-cli/security-key-manager-onboard-show-backup.html["security key-manager onboard show-backup"] ou entre em contato com o suporte da NetApp.
 
 .Passos
-. No prompt Loader, digite `boot_ontap maint`.
 . Inicie no menu ONTAP a partir do prompt Loader `boot_ontap menu` e selecione a opção 10.
+. Recupere e verifique a senha global do cluster a partir do controlador íntegro.
++
+.. Execute o seguinte comando para recuperar a senha de todo o cluster:
++
+`security key-manager onboard show-backup`
+
+.. Verifique a senha de todo o cluster usando o seguinte comando:
++
+`security key-manager onboard verify-backup`
+
+
+
 . Introduza a frase-passe OKM.
 +
 
@@ -63,9 +77,9 @@ NOTE: Você é solicitado duas vezes para a senha.
 
 NOTE: Você é solicitado a fornecer a senha de OKM para o cluster.
 
-.. Verifique o status das chaves: `security key-manager key query -restored _false_`
+.. Verifique o status das chaves: `security key-manager key query -restored false`
 +
-A saída não deve mostrar resultados quando devidamente sincronizada.
+Quando a sincronização estiver correta, a saída não deverá apresentar resultados.
 
 +
 Se a saída apresentar resultados (as IDs das chaves que não estão presentes na tabela de chaves internas do sistema), contacte https://support.netapp.com["Suporte à NetApp"].
@@ -74,6 +88,10 @@ Se a saída apresentar resultados (as IDs das chaves que não estão presentes n
 
 . Volte a colocar o controlador afetado em funcionamento normal, devolvendo o respetivo armazenamento: `storage failover giveback -ofnode _impaired_node_name_`
 . Se a giveback automática foi desativada, reative-a: `storage failover modify -node local -auto-giveback _true_`
++
+
+NOTE: Não ignore o veto no giveback para chaves ausentes. Entre em contato com o suporte da NetApp.
+
 . Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos: `system node autosupport invoke -node * -type all -message MAINT=END`
 
 

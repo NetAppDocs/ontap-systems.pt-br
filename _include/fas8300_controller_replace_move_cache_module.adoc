@@ -1,0 +1,27 @@
+= 
+:allow-uri-read: 
+
+
+Você deve mover o módulo de armazenamento em cache do módulo controlador com defeito para o módulo controlador de substituição ao substituir um módulo controlador.
+
+
+NOTE: O módulo controlador Ver2 tem apenas um soquete de módulo de cache no FAS8300. O FAS8700 não tem um módulo controlador Ver2. A funcionalidade do módulo de armazenamento em cache não é afetada pela remoção do socket.
+
+Você pode usar a animação, ilustração ou as etapas escritas a seguir para mover os módulos de cache para o novo módulo do controlador.
+
+.Animação - mova os módulos de cache
+video::d6a43902-0e78-40c3-a2bd-aad9012f5b94[panopto]
+image::../media/drw_8300_Replace-flashcache.png[Retire e substitua o módulo de armazenamento em cache]
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Mova os módulos de armazenamento em cache do módulo do controlador afetado para o módulo do controlador de substituição:
++
+.. Pressione a aba de liberação azul na extremidade do módulo de cache, gire o módulo para cima e remova o módulo do soquete.
+.. Mova o módulo de armazenamento em cache para o mesmo soquete no módulo do controlador de substituição.
+.. Alinhe as extremidades do módulo de armazenamento em cache com o soquete e insira cuidadosamente o módulo o mais longe possível no soquete.
+.. Gire o módulo de cache para baixo em direção à placa-mãe.
+.. Colocando o dedo na extremidade do módulo de armazenamento em cache pelo botão azul, empurre firmemente a extremidade do módulo de armazenamento em cache e, em seguida, levante o botão de bloqueio para bloquear o módulo de armazenamento em cache no lugar.
+
+
+
