@@ -1,25 +1,25 @@
 ---
 permalink: sas3/service-hot-swap-iom.html 
 sidebar: sidebar 
-keywords: system, configuration, whether, perform, nondisruptive, iom12, module, hot-swap, disruptive, replacement, hot-swap or replace an iom12 iom12b module, iom12b 
-summary: A configuração do sistema determina se você pode executar uma troca a quente sem interrupções de módulos IOM12/IOM12B ou uma substituição disruptiva de módulos IOM12/IOM12B quando um módulo IOM12/IOM12B falha. 
+keywords: module, hot-swap, replace, iom12, iom12b, iom12c, ds212c, ds224c, ds460c 
+summary: A configuração do seu sistema determina se você pode realizar uma troca a quente não disruptiva do shelf IOM ou uma substituição disruptiva do shelf IOM quando um shelf IOM12, IOM12B ou IOM12C falhar. 
 ---
-= Troca a quente ou substituição de um módulo IOM - DS212C, DS224C ou DS460C
+= Troque a quente ou substitua um módulo IOM DS212C, DS224C ou DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-A configuração do seu sistema determina se você pode executar uma troca a quente de IOM de prateleira não disruptiva ou uma substituição de IOM de prateleira disruptiva quando um IOM de prateleira IOM12 ou IOM12B falha.
+A configuração do seu sistema determina se você pode realizar uma troca a quente não disruptiva do shelf IOM ou uma substituição disruptiva do shelf IOM quando um shelf IOM12, IOM12B ou IOM12C falhar.
 
 .Sobre esta tarefa
-* Este procedimento se aplica a prateleiras com módulos IOM12 ou IOM12B.
+* Este procedimento aplica-se a shelves com módulos IOM12, IOM12B ou IOM12C.
 +
 
-NOTE: Este procedimento se aplica a trocas a quente ou substituições de IOMs de prateleira equivalentes. Isso significa que você só pode substituir um módulo IOM12 por outro módulo IOM12 ou um módulo IOM12B por outro módulo IOM12B.
+NOTE: Este procedimento destina-se à troca ou substituição a quente de módulos IOM idênticos já existentes. Isso significa que você só pode substituir um módulo IOM12 por outro módulo IOM12, um módulo IOM12B por outro módulo IOM12B ou um módulo IOM12C por outro módulo IOM12C.
 
-* Os módulos IOM12 ou IOM12B podem ser diferenciados por sua aparência:
+* Os módulos IOM12, IOM12B ou IOM12C podem ser distinguidos pela sua aparência:
 +
 Os IOM12 módulos distinguem-se por uma etiqueta "IOM12":
 
@@ -32,9 +32,14 @@ Os IOM12B módulos distinguem-se por uma faixa azul e uma etiqueta "IOM12B":
 +
 image::../media/iom12b.png[Frente do IOM12B]
 
++
+Os módulos IOM12C distinguem-se por uma faixa azul e cinza e uma etiqueta com a inscrição "IOM12C":
+
++
+image::../media/drw_iom12c_ieops-2175.svg[Frente do IOM12C]
+
 * Para configurações com vários caminhos (HA ou multipath), HA de três caminhos e caminhos quádruplos (HA de quatro caminhos ou quatro caminhos), você pode trocar a quente uma IOM de gaveta (substituir sem interrupções uma IOM de gaveta em um sistema que está ligado e fornecendo dados - e/S em andamento).
-* Para configurações de HA de caminho único das séries FAS2600 e FAS2700, você precisa executar uma operação de takeover e giveback para substituir uma IOM de gaveta em um sistema que está ativado e fornecendo dados - e/S está em andamento.
-* Para configurações de caminho único da série FAS2600, você precisa parar o sistema para substituir uma IOM de gaveta.
+* Para configurações de par de HA de caminho único da série FAS2700, você deve executar uma operação de takeover e giveback para substituir um IOM de shelf em um sistema que está ligado e fornecendo dados, com E/S em andamento.
 +
 
 CAUTION: Se você tentar trocar uma gaveta IOM em um compartimento de disco por uma conexão de caminho único, perderá todo o acesso às unidades de disco na gaveta de disco, bem como às gavetas de disco abaixo. Você também pode derrubar todo o seu sistema.
@@ -51,7 +56,7 @@ Uma gaveta de disco tem três LEDs de localização: Um no painel de exibição 
 
 
 .Antes de começar
-* Todos os outros componentes do sistema - incluindo o outro módulo IOM12/IOM12B - devem estar funcionando corretamente.
+* Todos os outros componentes do sistema, incluindo o outro módulo IOM12, IOM12B ou IOM12C, devem estar funcionando corretamente.
 * *Prática recomendada*: Certifique-se de que seu sistema tenha as versões atuais do firmware da prateleira de disco (IOM) e do firmware da unidade de disco antes de adicionar novas prateleiras de disco, componentes de FRU de prateleira ou cabos SAS. Você pode visitar o site de suporte da NetApp para  https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["baixar firmware da prateleira de disco"] e  https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["baixar firmware da unidade de disco"] .
 
 
@@ -77,22 +82,13 @@ Vá para a próxima etapa.
 
 
  a| 
-Configuração HA de caminho único das séries FAS2600 e FAS2700
+Configuração de HA de caminho único da série FAS2700
  a| 
 .. Determine o nó de destino (o nó ao qual a IOM da gaveta com falha pertence).
 +
 Iom A pertence ao controlador 1. IOM B pertence ao controlador 2.
 
 .. Assuma o nó de destino: `storage failover takeover -bynode _partner HA node_`
-
-
-
-
- a| 
-Configuração de caminho único da série FAS2600
- a| 
-.. Desligue o sistema a partir da consola do sistema: `halt`
-.. Verifique se o sistema parou verificando o console do sistema de armazenamento.
 
 
 |===
@@ -140,16 +136,9 @@ Vá para a próxima etapa.
 
 
  a| 
-Configuração HA de caminho único das séries FAS2600 e FAS2700
+Configuração de HA de caminho único da série FAS2700
  a| 
 Devolver o nó de destino: `storage failover giveback -fromnode partner_HA_node`
-
-
-
- a| 
-Configuração de caminho único da série FAS2600
- a| 
-Reinicie o sistema.
 
 |===
 . Verifique se os links da porta IOM da gaveta foram estabelecidos.

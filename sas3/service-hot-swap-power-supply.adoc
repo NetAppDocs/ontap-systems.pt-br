@@ -1,10 +1,10 @@
 ---
 permalink: sas3/service-hot-swap-power-supply.html 
 sidebar: sidebar 
-keywords: hot-swap, fail, power, supply, ds460c, ds224c, ds212c, disk, shelf-nondisruptive, shelf, nondisruptive, system, power, I O, progress, hot-swap a power supply 
+keywords: hot-swap, replace, power, supply, ds460c, ds224c, ds212c 
 summary: Você pode trocar a quente uma fonte de alimentação com falha em um compartimento de disco DS460C, DS224C ou DS212C. 
 ---
-= Troca a quente de uma fonte de alimentação - DS212C, DS224C ou DS460C
+= Troque a fonte de alimentação de um DS212C, DS224C ou DS460C com troca a quente
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,7 +13,7 @@ summary: Você pode trocar a quente uma fonte de alimentação com falha em um c
 [role="lead"]
 Você pode trocar a quente uma fonte de alimentação com falha em um compartimento de disco DS460C, DS224C ou DS212C.
 
-Este procedimento se aplica a prateleiras com módulos IOM12 ou IOM12B.
+Este procedimento aplica-se a prateleiras com módulos IOM12, IOM12B ou IOM12C.
 
 .Antes de começar
 * Todos os outros componentes do sistema - incluindo a outra fonte de alimentação - devem estar funcionando corretamente.

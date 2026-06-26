@@ -1,22 +1,24 @@
 ---
 permalink: sas3/install-hot-add-shelf.html 
 sidebar: sidebar 
-keywords: hot-add, disk, shelves, shelf, iom12, exist, stack, module, sas, hba, onboard, sas, port, controller, DS460C, transport DS460C, move DS460C, remove drives from DS460C, DS460C drive handling, iom12b 
-summary: Você pode adicionar sem desligamento uma ou mais gavetas de disco com módulos IOM12/IOM12B a uma stack existente de gavetas de disco com módulos IOM12/IOM12B ou adicionar uma stack de um ou mais compartimentos de disco com módulos IOM12/IOM12B diretamente a um HBA SAS ou a uma porta SAS integrada na controladora. 
+keywords: hot-add, add, disk, shelf, iom12, stack, sas, hba, port, controller, iom12b, iom12c, ds212c, ds224c, ds460c 
+summary: Você pode adicionar dinamicamente uma ou mais gavetas de discos a uma pilha existente de gavetas de discos ou adicionar dinamicamente uma pilha de uma ou mais gavetas de discos diretamente a um SAS HBA ou a uma porta SAS integrada no controlador. 
 ---
-= Prateleiras de adição a quente - DS212C, DS224C ou DS460C
+= Adicionar uma prateleira DS212C, DS224C ou DS460C com o equipamento em funcionamento
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Você pode adicionar sem desligamento uma ou mais gavetas de disco com módulos IOM12/IOM12B a uma stack existente de gavetas de disco com módulos IOM12/IOM12B ou adicionar uma stack de um ou mais compartimentos de disco com módulos IOM12/IOM12B diretamente a um HBA SAS ou a uma porta SAS integrada na controladora.
+Você pode adicionar dinamicamente uma ou mais gavetas de discos a uma pilha existente de gavetas de discos ou adicionar dinamicamente uma pilha de uma ou mais gavetas de discos diretamente a um SAS HBA ou a uma porta SAS integrada no controlador.
+
+Este procedimento aplica-se a prateleiras com módulos IOM12, IOM12B ou IOM12C.
 
 .Antes de começar
 Você deve atender a determinados requisitos e se familiarizar com as melhores práticas e considerações para esse procedimento antes de adicionar prateleiras de disco a quente.
 
-* Certifique-se de que seu sistema atenda a determinados requisitos antes de adicionar prateleiras de disco com módulos IOM12/IOM12B:
+* Certifique-se de que seu sistema atenda a determinados requisitos antes de adicionar gavetas de disco com módulos IOM12, IOM12B ou IOM12C com o sistema ligado:
 +
 ** Seu sistema e a versão do ONTAP devem ser compatíveis com os compartimentos de disco que você está adicionando a quente, incluindo IOMs, unidades de disco e cabos SAS. Você pode ver qual versão do ONTAP precisa para seus compartimentos na seção  https://hwu.netapp.com["NetApp Hardware Universe"^] .
 ** Seu sistema precisa ter menos do que o número máximo de unidades de disco suportadas, pelo menos o número de compartimentos de disco que você pretende adicionar a quente.
@@ -52,11 +54,11 @@ Depois de adicionar o compartimento de disco a quente, você deve substituir os 
 
 * Familiarize-se com as considerações gerais para concluir este procedimento:
 +
-** Se você estiver adicionando um compartimento de disco com módulos IOM12/IOM12B a uma pilha existente (de compartimentos de disco com módulos IOM12/IOM12B), você poderá adicionar o compartimento de disco à extremidade - o primeiro ou o último compartimento de disco lógico - da pilha.
+** Se você estiver adicionando dinamicamente um gabinete de discos com módulos IOM12, IOM12B ou IOM12C a uma pilha existente (de gabinetes de discos com módulos IOM12, IOM12B ou IOM12C), você pode adicionar dinamicamente o gabinete de discos a qualquer uma das extremidades, o primeiro ou o último gabinete de discos lógico, da pilha.
 +
 Para configurações de caminho único de HA e caminho único, conforme aplicável aos sistemas AFF A200, AFF A220, séries FAS2600 e FAS2700, você adiciona gavetas de disco hot-add ao fim da stack que não tem conexões de controladora.
 
-** Prateleiras de disco com módulos IOM12/IOM12B devem estar em sua própria pilha exclusiva.
+** Os compartimentos de discos com módulos IOM12, IOM12B ou IOM12C devem estar em sua própria pilha exclusiva.
 ** Este procedimento pressupõe que sua configuração esteja usando o ACP na banda.
 +
 Para configurações com o ACP na banda habilitado, o ACP na banda é ativado automaticamente em compartimentos de disco hot-Added. Para configurações em que o ACP na banda não está habilitado, os compartimentos de disco hot-Added operam sem qualquer funcionalidade ACP.

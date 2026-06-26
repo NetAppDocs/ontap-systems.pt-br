@@ -1,17 +1,17 @@
 ---
 permalink: sas3/sas3-shelf-overview.html 
 sidebar: sidebar 
-keywords: sas3, shelves, shelf, sas3 shelves, drive, aggregate, shelf maintenance 
-summary: visão geral da manutenção da prateleira sas3. 
+keywords: sas3, shelf, sas3 shelves, drive, aggregate, shelf maintenance, ds212c, ds224c, ds460c 
+summary: Visão geral da manutenção das prateleiras DS212C, DS224C ou DS460C. 
 ---
-= Visão geral da manutenção de prateleiras - DS212C, DS224C ou DS460C
+= Visão geral da manutenção das prateleiras DS212C, DS224C ou DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Você pode executar as seguintes ações para manter seu compartimento SAS:
+Você pode realizar as seguintes ações para manter sua shelf DS212C, DS224C ou DS460C:
 
 * link:hot-add-drive.html["Adicionar uma unidade a quente"]
 * link:cold-replace-shelf.html["Frio-substitua uma prateleira"]

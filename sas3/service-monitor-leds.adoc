@@ -1,10 +1,10 @@
 ---
 permalink: sas3/service-monitor-leds.html 
 sidebar: sidebar 
-keywords: monitor, health, disk, shelf, location, status, condition, led, component, operator, display, panel, iom12, power, supply, fan, ds460c, shelves, drive, monitor disk shelf leds, operator display panel leds, iom12 module leds, power supply leds, fan leds on ds460c disk shelves, disk drive leds 
+keywords: monitor, health, disk, shelf, location, status, led, iom12, iom12b, iom12c, drive, ds212c, ds224c, ds460c 
 summary: Você pode monitorar a integridade do compartimento de disco compreendendo a localização e as condições de status dos LEDs nos componentes do compartimento de disco. 
 ---
-= LEDs de prateleira de monitor - DS212C, DS224C ou DS460C
+= Monitore os LEDs da prateleira DS212C, DS224C ou DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -40,7 +40,7 @@ Uma ou mais fontes de alimentação estão fornecendo energia para o compartimen
 .2+| image:../media/drw_sas_fault_icon.svg["Ícone de atenção, largura: 5px mm"] .2+| Atenção  a| 
 Âmbar sólido
  a| 
-Ocorreu um erro com a função de uma de mais FRUs: O compartimento de disco, as unidades de disco, os módulos IOM12/IOM12B ou as fontes de alimentação.
+Ocorreu um erro na função de uma ou mais FRUs: a gaveta de discos, as unidades de disco, os módulos IOM12, IOM12B, IOM12C ou as fontes de alimentação.
 
 Verifique as mensagens de eventos para determinar as ações corretivas a serem tomadas.
 
@@ -64,7 +64,7 @@ Azul sólido
  a| 
 O administrador do sistema ativou esta função LED para ajudar a localizar fisicamente o compartimento de disco que requer manutenção.
 
-O LED de localização no painel de visualização do operador e ambos os módulos IOM12/IOM12B acendem-se quando esta função LED é ativada. Os LEDs de localização desligam-se automaticamente após 30 minutos.
+O LED de localização no painel de controle do operador e nos módulos IOM12, IOM12B ou IOM12C acende quando esta função de LED é ativada. Os LEDs de localização desligam-se automaticamente após 30 minutos.
 
 |===
 Dependendo do modelo do compartimento de disco, o painel de exibição do operador parece diferente; no entanto, os três LEDs estão dispostos da mesma maneira.
@@ -75,13 +75,13 @@ image::../media/drw_opd.gif[Visor do operador da tampa final]
 
 
 
-== LEDs do módulo IOM12/IOM12B
+== LEDs do módulo IOM12, IOM12B ou IOM12C
 
-Os LEDs no módulo IOM12/IOM12B indicam se o módulo está funcionando normalmente, se ele está pronto para tráfego de e/S e se há algum problema com o hardware.
+Os LEDs nos módulos IOM12, IOM12B ou IOM12C indicam se o módulo está funcionando normalmente, se está pronto para tráfego de E/S e se há algum problema com o hardware.
 
-A tabela a seguir descreve os LEDs do módulo IOM12/IOM12B associados à função do módulo e à função de cada porta SAS no módulo.
+A tabela a seguir descreve os LEDs dos módulos IOM12, IOM12B ou IOM12C associados à função do módulo e à função de cada porta SAS no módulo.
 
-O módulo IOM12/IOM12B é usado nas gavetas de disco DS460C, DS224C e DS212C.
+O módulo IOM12, IOM12B ou IOM12C é utilizado nos shelves de disco DS460C, DS224C e DS212C.
 
 [cols="4*"]
 |===
@@ -95,7 +95,7 @@ Atenção
  a| 
 Âmbar sólido
  a| 
-Função do módulo IOM12/IOM12B: Ocorreu um erro com a função do módulo IOM12/IOM12B.
+Função do módulo IOM12, IOM12B ou IOM12C: ocorreu um erro na função do módulo IOM12, IOM12B ou IOM12C.
 
 Função de porta SAS: Menos do que todas as quatro faixas SAS estabeleceram um link (com um adaptador ou outro compartimento de disco).
 
@@ -121,18 +121,22 @@ Localização
  a| 
 Azul sólido
  a| 
-O administrador do sistema ativou esta função LED para ajudar a localizar fisicamente o compartimento de disco com o módulo IOM12/IOM12B com falha.
+O administrador do sistema ativou essa função de LED para auxiliar na localização física da gaveta de discos com o módulo IOM12, IOM12B ou IOM12C com falha.
 
-O LED de localização no painel de visualização do operador e ambos os módulos IOM12/IOM12B acendem-se quando esta função LED é ativada. Os LEDs de localização desligam-se automaticamente após 30 minutos.
+O LED de localização no painel de controle do operador e nos módulos IOM12, IOM12B ou IOM12C acende quando esta função de LED é ativada. Os LEDs de localização desligam-se automaticamente após 30 minutos.
 
 |===
 A ilustração a seguir é para um módulo IOM12:
 
-image::../media/drw_iom12.gif[Módulo IOM12]
+image::../media/drw_iom12.gif[Módulo IOM12,828px,147px]
 
 Os IOM12B módulos distinguem-se por uma faixa azul e uma etiqueta "IOM12B":
 
-image::../media/iom12b.png[Módulo IOM12B]
+image::../media/iom12b.png[Módulo IOM12B,828px,147px]
+
+Os módulos IOM12C distinguem-se por uma faixa azul e cinza e uma etiqueta com a inscrição "IOM12C":
+
+image::../media/drw_iom12c_ieops-2175.svg[Módulo IOM12C,828px,147px]
 
 
 

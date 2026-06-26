@@ -1,17 +1,19 @@
 ---
 permalink: sas3/install-change-shelf-id.html 
 sidebar: sidebar 
-keywords: change, shelf, id, system, ontap, run, hot-add, ontap, controller, module, available, serve, data, unown, spare, offline, aggregate 
-summary: 'Você pode alterar o ID de um shelf em um sistema quando o ONTAP ainda não estiver em execução ou quando adicionar um shelf antes de ser cabeado ao sistema. Você também pode alterar o ID de um compartimento quando o ONTAP estiver ativo e em execução (os módulos da controladora estão disponíveis para fornecer dados) e todas as unidades da gaveta forem de propriedade não pertencentes, sobressalentes ou parte de agregado(s) desconetado(s).' 
+keywords: change, shelf, id, system, ontap, controller, module, ds212c, ds224c, ds460c 
+summary: Altere o ID de um shelf em um sistema quando o ONTAP ainda não está em execução, ao adicionar um shelf a quente antes de ele ser conectado ao sistema, ou quando o ONTAP está em funcionamento e todas as unidades no shelf não têm proprietário, são sobressalentes ou fazem parte de agregados off-line. 
 ---
-= Alterar uma ID de prateleira - DS212C, DS224C ou DS460C
+= Altere o ID da shelf DS212C, DS224C ou DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Você pode alterar o ID de uma prateleira em um sistema com módulos IOM12/IOM12B quando o ONTAP ainda não estiver em execução ou ao adicionar uma prateleira a quente antes de ela ser conectada ao sistema. Você também pode alterar o ID de uma prateleira quando o ONTAP estiver em execução (os módulos controladores estão disponíveis para servir dados) e todas as unidades na prateleira estiverem sem proprietário, forem sobressalentes ou fizerem parte de agregados offline.
+Você pode alterar o ID de um shelf em um DS212C, DS224C ou DS460C quando ONTAP ainda não estiver em execução ou ao adicionar um shelf a quente antes de ele ser conectado ao sistema. Você também pode alterar o ID de um shelf quando ONTAP estiver em funcionamento (módulos controladores disponíveis para fornecer dados) e todas as unidades no shelf estiverem sem proprietário, forem reservas ou fizerem parte de agregados offline.
+
+Este procedimento aplica-se a prateleiras com módulos IOM12, IOM12B ou IOM12C.
 
 .Sobre esta tarefa
 * Um ID válido do compartimento é de 00 a 99.

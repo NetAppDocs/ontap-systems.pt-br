@@ -1,17 +1,17 @@
 ---
 permalink: sas3/install-cabling-worksheet-template-multipath.html 
 sidebar: sidebar 
-keywords: complete, completing, worksheet, template, controller, sas, port, pair, cable, controller, disk, shelves, iom12, module, achieve, multipathed, connectivity, ha, pair, single-controller, configuration, worksheet, connection, controller-to-stack cabling worksheet template for multipathed connectivity, iom12b 
-summary: Ao concluir o modelo de Planilha, você pode definir os pares de portas SAS do controlador que você pode usar para vincular controladores a pilhas de compartimentos de disco com módulos IOM12/IOM12B para obter conectividade multipathed em um par de HA ou configuração de controladora única. Você também pode usar a Planilha completa para percorrer o cabeamento das conexões multipathed para sua configuração. 
+keywords: controller, sas, port, cable, disk, shelf, iom12, module, multipathed, ha, pair, iom12b, iom12c, ds212c, ds224c, ds460c 
+summary: Você pode usar uma planilha de cabeamento para definir os pares de portas SAS do controlador que você pode usar para conectar os controladores a conjuntos de gavetas de discos e obter conectividade multipath. 
 ---
-= Planilha de cabeamento para conectividade multipath - DS212C, DS224C ou DS460C
+= Planilha de cabeamento para conectividade multipath DS212C, DS224C ou DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Ao concluir o modelo de Planilha, você pode definir os pares de portas SAS do controlador que você pode usar para vincular controladores a pilhas de compartimentos de disco com módulos IOM12/IOM12B para obter conectividade multipathed em um par de HA ou configuração de controladora única. Você também pode usar a Planilha completa para percorrer o cabeamento das conexões multipathed para sua configuração.
+Você pode usar uma planilha de cabeamento para definir os pares de portas SAS do controlador que você pode usar para conectar controladores a conjuntos de shelf de discos, a fim de obter conectividade multipath em um par de HA ou em uma configuração de controlador único. Você também pode usar a planilha preenchida para orientar você no cabeamento das conexões multipath para sua configuração.
 
 .Antes de começar
 Se você tiver uma plataforma com armazenamento interno, use a seguinte Planilha:
@@ -24,7 +24,7 @@ link:install-cabling-worksheets-examples-fas2600.html["Exemplos de cabeamento e 
 Exemplos de planilhas concluídas são fornecidos para configurações multipath de HA e multipath.
 
 +
-Uma configuração com dois HBAs SAS de quatro portas e duas pilhas de compartimentos de disco com módulos IOM12/IOM12B é usada para os exemplos de Planilha.
+Para os exemplos da planilha, é utilizada uma configuração com dois HBAs SAS de quatro portas e duas pilhas de gabinetes de discos com módulos IOM12, IOM12B ou IOM12C.
 
 * O modelo de Planilha permite até seis pilhas; você precisa adicionar mais colunas, se necessário.
 * Se necessário, consulte o link:install-cabling-rules.html["Regras e conceitos de cabeamento de SAS"] para obter informações sobre as configurações compatíveis, a convenção de numeração de slots do controlador, a conectividade de prateleira a prateleira e a conectividade de controlador para compartimento (incluindo o uso de pares de portas).

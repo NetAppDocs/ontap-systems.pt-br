@@ -1,10 +1,10 @@
 ---
 permalink: sas3/install-new-system.html 
 sidebar: sidebar 
-keywords: install, cabling, cable, disk, shelves, shelf, iom12, module, system, installation, system, ha, pair, single-controller, configuration, cabinet, rack, requirement, install and cable disk shelves with iom12 modules for a new system installation, requirements for installing and cabling disk shelves with iom12 modules for a new system installation, considerations for installing and cabling disk shelves with iom12 modules for a new system installation, install disk shelves with iom12 modules for a new system installation, cable disk shelves with iom12 modules for a new system installation, DS460C, transport DS460C, move DS460C, remove drives from DS460C, DS460C drive handling, iom12b 
-summary: Se o seu novo sistema - par de HA ou configuração de controlador único - não veio instalado em um gabinete, você precisa instalar e fazer o cabeamento das gavetas de disco em um rack. 
+keywords: install, cable, disk, shelf, iom12, module, system, ha, pair, single-controller, configuration, iom12b, iom12c, ds212c, ds224c, ds460c 
+summary: Se o seu novo sistema não veio instalado em um gabinete, você deve instalar e cabear as gavetas de discos em um rack. 
 ---
-= Instalar e conectar prateleiras - DS212C, DS224C ou DS460C
+= Instale e conecte uma shelf DS212C, DS224C ou DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,7 +14,7 @@ summary: Se o seu novo sistema - par de HA ou configuração de controlador úni
 Se o seu novo sistema - par de HA ou configuração de controlador único - não tiver sido instalado em um gabinete, você poderá instalar e enviar os cabos das gavetas de disco em um rack.
 
 .Sobre esta tarefa
-* Os compartimentos de disco com módulos IOM12/IOM12B são fornecidos com IDs de gaveta predefinidas para 00.
+* Os gabinetes de discos com módulos IOM12, IOM12B ou IOM12C são enviados com os IDs dos gabinetes predefinidos como 00.
 +
 
 NOTE: Se você tiver um par de HA com pelo menos duas stacks, o compartimento de disco que contém os agregados raiz da segunda stack terá o ID do shelf predefinido para 10.
@@ -26,7 +26,7 @@ Você precisa definir IDs de gaveta para que elas sejam exclusivas na configura�
 +
 As etiquetas mostram o número da pilha; por exemplo, *Loop ou Stack: 1* e *Loop ou Stack: 2*. As gavetas de disco que não contêm os agregados raiz mostram apenas o número de série do compartimento de disco nas etiquetas.
 
-* Se, na instalação e configuração do sistema, você não configurar o sistema para usar a atribuição automática de propriedade de disco, será necessário atribuir a propriedade de disco manualmente.
+* Se você não configurar o sistema para usar a atribuição automática de propriedade de disco durante a instalação e configuração do sistema, será necessário atribuir a propriedade do disco manualmente.
 * O caminho de controlo alternativo (IBACP) na banda é ativado automaticamente.
 +
 O IBACP não é compatível com configurações de caminho único ou HA de caminho único.

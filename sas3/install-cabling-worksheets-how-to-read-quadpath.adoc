@@ -1,17 +1,17 @@
 ---
 permalink: sas3/install-cabling-worksheets-how-to-read-quadpath.html 
 sidebar: sidebar 
-keywords: example, guide, read, apply, complete, worksheet, stack, disk, shelves, shelf, iom12, quad-pathed, connectivity, how to read a worksheet to cable controller-to-stack connections for quad-pathed connectivity 
-summary: Você pode usar este exemplo para guiá-lo através de como ler e aplicar uma Planilha concluída a pilhas de cabos de prateleiras de disco com módulos IOM12/IOM12B para conetividade quad-pathed. 
+keywords: stack, disk, shelves, shelf, iom12, quad-pathed, connectivity, sas, ds212c, ds224c, ds460c 
+summary: Use este exemplo para orientar você na leitura e aplicação de uma planilha preenchida aos stacks de gavetas de discos para conectividade de quatro caminhos. 
 ---
-= Como ler uma planilha para conectar controladores de pilha para conectividade de quatro caminhos - DS212C, DS224C ou DS460C
+= Leia uma folha de exercícios para conectar o controlador ao stack nos modelos DS212C, DS224C ou DS460C com conectividade de quatro caminhos
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Você pode usar este exemplo para guiá-lo através de como ler e aplicar uma Planilha concluída a pilhas de cabos de prateleiras de disco com módulos IOM12/IOM12B para conetividade quad-pathed.
+Você pode usar este exemplo para orientar você sobre como ler e aplicar uma planilha preenchida a conjuntos de cabos de gabinetes de discos com módulos IOM12, IOM12B ou IOM12C para conectividade de quatro caminhos.
 
 .Sobre esta tarefa
 * Este procedimento faz referência ao exemplo de cabeamento e Planilha a seguir para demonstrar como ler uma Planilha para conexões de controladora a pilha de cabo.

@@ -1,17 +1,19 @@
 ---
 permalink: sas3/install-cabling-worksheets-examples-multipath.html 
 sidebar: sidebar 
-keywords: controller-to-stack, cabling, worksheet, cable, ha, pair, multipath, ha, configuration, controller-to-stack, cabling, controller-to-stack cabling worksheets and cabling examples for multipath ha configuration 
-summary: Você pode usar as planilhas de cabeamento e exemplos de cabeamento de controladora a stack para fazer o cabeamento do seu par de HA como uma configuração de HA multipath. 
+keywords: controller, stack, cable, ha, pair, multipath, configuration, ds212c, ds224c, ds460c 
+summary: Você pode usar as planilhas e exemplos de cabeamento do controlador para o stack para conectar seu par de HA como uma configuração de multipath HA. 
 ---
-= Planilhas de cabeamento para configurações de HA multicaminho - DS212C, DS224C ou DS460C
+= Planilhas de cabeamento para configurações multipath de par de HA DS212C, DS224C ou DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Você pode usar as planilhas de cabeamento do controlador para a pilha e os exemplos de cabeamento para cabear seu par de HA como uma configuração de HA multicaminho. Isso se aplica a prateleiras com módulos IOM12/IOM12B.
+Você pode usar as planilhas de cabeamento e exemplos de cabeamento de controladora a stack para fazer o cabeamento do seu par de HA como uma configuração de HA multipath.
+
+Isso se aplica a prateleiras com módulos IOM12, IOM12B ou IOM12C.
 
 
 NOTE: Essas informações se aplicam a plataformas sem armazenamento interno.

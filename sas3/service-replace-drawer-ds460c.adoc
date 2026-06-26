@@ -1,10 +1,10 @@
 ---
 permalink: sas3/service-replace-drawer-ds460c.html 
 sidebar: sidebar 
-keywords: I O activity, power, off, shelf, replacing, replace, drive, drawer, disk, replace a drive drawer in a ds460c disk shelf, dcm2, dcm 
-summary: 'Substituir um gaveta de unidade em uma gaveta requer que você interrompa todo o sistema de storage (par de HA), o que permite manter os agregados de dados na gaveta ou que você tenha a opção de manter o par de HA em funcionamento, o que requer que você mova todos os dados dos agregados de dados nas unidades de disco e offline e exclua os agregados de dados. No entanto, se o compartimento contiver um agregado de raiz, será necessário interromper o par de HA.' 
+keywords: shelf, sas, replace, drive, drawer, disk, dcm2, dcm, ds460c 
+summary: 'Ao substituir uma gaveta de disco em uma prateleira, você pode interromper todo o sistema de storage (par de HA) ou manter o par de HA em funcionamento.' 
 ---
-= Substituir uma gaveta de unidade - DS460C
+= Substitua a gaveta da unidade DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,7 +13,7 @@ summary: 'Substituir um gaveta de unidade em uma gaveta requer que você interro
 [role="lead"]
 Para substituir uma gaveta de unidade em uma prateleira, você pode interromper todo o sistema de armazenamento (par de alta disponibilidade), o que permite manter os agregados de dados na prateleira. Como alternativa, você pode manter o par de alta disponibilidade ativo e em execução, o que exige que você mova todos os dados dos agregados de dados nas unidades de disco da prateleira e, em seguida, coloque-os offline e exclua esses agregados de dados. Se a prateleira contiver um agregado raiz, você deverá interromper o par de alta disponibilidade.
 
-Este procedimento se aplica a prateleiras com módulos IOM12 ou IOM12B.
+Este procedimento aplica-se a prateleiras com módulos IOM12, IOM12B ou IOM12C.
 
 .Antes de começar
 Você precisa destes itens para este procedimento:
@@ -29,7 +29,7 @@ NOTE: *Possíveis danos ao hardware:* para evitar danos de descarga eletrostáti
 
 
 .Sobre esta tarefa
-* Este procedimento se aplica a prateleiras com gavetas de unidade DCM e/ou gavetas de unidade DCM2 ou DCM3. (As prateleiras também terão dois módulos IOM12 ou dois módulos IOM12B.)
+* Este procedimento aplica-se a racks com gavetas de unidades DCM e/ou gavetas de unidades DCM2 ou DCM3. (Os racks também terão dois módulos IOM12, dois módulos IOM12B ou dois módulos IOM12C.)
 +
 Quando uma gaveta de unidade DCM, DCM2 ou DCM3 falha, você recebe uma gaveta de unidade DCM, DCM2 ou DCM3 para substituí-la.
 
@@ -37,9 +37,9 @@ Quando uma gaveta de unidade DCM, DCM2 ou DCM3 falha, você recebe uma gaveta de
 
 [NOTE]
 ====
-Ao substituir uma gaveta de unidade com falha por uma gaveta de unidade DCM2 ou DCM3 mais nova, certifique-se de que o software ONTAP e o firmware do módulo IOM12 ou IOM12B estejam executando as versões mínimas necessárias para oferecer suporte às gavetas DCM2 ou DCM3.
+Ao substituir uma gaveta de unidade com falha por uma gaveta de unidade DCM2 ou DCM3 mais recente, certifique-se de que o software ONTAP e o firmware do módulo IOM12, IOM12B ou IOM12C estejam executando as versões mínimas necessárias para suportar gavetas DCM2 ou DCM3.
 
-A atualização IOM12 FW pode ser feita antes ou depois de substituir uma gaveta de unidade. Este procedimento permite atualizar o FW como parte do procedimento de preparação para a substituição da gaveta.
+A atualização de firmware (FW) do IOM12, IOM12B ou IOM12C pode ser feita antes ou depois da substituição da gaveta da unidade. Este procedimento orienta você a atualizar o firmware como parte da preparação para o procedimento de substituição da gaveta.
 
 ====
 * As gavetas de unidade DCM, DCM2 e DCM3 podem ser diferenciadas por sua aparência:
@@ -81,7 +81,7 @@ Antes de substituir uma gaveta de unidade, certifique-se de atualizar o firmware
 +
 Se necessário, você pode acessar o site de suporte da NetApp para  https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["baixar versões atuais do firmware da prateleira de disco"] . Caso contrário, vá para a próxima etapa.
 
-. Se sua prateleira tiver uma combinação de módulos IOM12 ou IOM12B com qualquer número de gavetas de unidade DCM3, seu sistema deverá estar executando as seguintes versões mínimas do ONTAP:
+. Se o seu shelf tiver uma combinação de módulos IOM12, IOM12B ou IOM12C com qualquer número de gavetas de unidades DCM3, seu sistema deve estar executando as seguintes versões mínimas do ONTAP:
 +
 ** ONTAP 9.17.1RC1
 ** ONTAP 9.16.1P3

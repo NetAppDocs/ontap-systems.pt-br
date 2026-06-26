@@ -1,17 +1,17 @@
 ---
 permalink: sas3/service-hot-swap-drive-ds224c-ds212c.html 
 sidebar: sidebar 
-keywords: hot-swap, fail, disk, drive, ds224c, ds212c, disk, shelf-nondisruptive, nondisruptive, replace, I O, hot-swap a disk drive in a ds224c or ds212c disk shelf 
+keywords: hot-swap, disk, drive, ds224c, ds212c, disk, replace, sas 
 summary: Você pode trocar a quente uma unidade de disco com falha em um compartimento de disco de DS224C GB ou DS212C GB. 
 ---
-= Troca a quente de uma unidade de disco - DS212C, DS224C
+= Troque a quente uma unidade de disco em um shelf DS212C ou DS224C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Você pode fazer a troca a quente de uma unidade de disco com falha em uma prateleira de disco DS224C ou DS212C com módulos IOM12, IOM12B.
+Você pode substituir a quente uma unidade com falha em um shelf de discos DS224C ou DS212C com módulos IOM12, IOM12B ou IOM12C.
 
 .Sobre esta tarefa
 * O firmware da unidade de disco é atualizado automaticamente (sem interrupções) em novas unidades de disco com versões de firmware não atuais.

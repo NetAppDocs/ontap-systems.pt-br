@@ -1,17 +1,17 @@
 ---
 permalink: sas3/install-cabling-worksheet-template-quadpath.html 
 sidebar: sidebar 
-keywords: complete, completing, worksheet, template, controller, sas, port, pair, cable, controller, disk, shelves, shelf, iom12, quad-pathed, connectivity, ha, pair, controller-to-stack, controller-to-stack cabling worksheet template for quad-pathed connectivity 
-summary: Ao concluir o modelo de Planilha, você pode definir os pares de portas SAS do controlador que você pode usar para enviar controladores a pilhas de compartimentos de disco com módulos IOM12/IOM12B para obter conetividade quad-pathed em um par de HA ou configuração de controladora única. Você também pode usar a Planilha completa para percorrer o cabeamento das conexões quad-pathed para sua configuração. 
+keywords: controller, sas, port, pair, cable, disk, shelf, iom12, quad-pathed, connectivity, ha, stack, iom12b, iom12c, ds212c, ds224c, ds460c 
+summary: Defina os pares de portas SAS do controlador que você pode usar para conectar os controladores a conjuntos de gavetas de discos para conectividade de quatro caminhos em um par de HA ou em uma configuração de controlador único. 
 ---
-= Planilha de cabeamento para conectividade de quatro vias - DS212C, DS224C ou DS460C
+= Planilha de cabeamento para conectividade quad-path DS212C, DS224C ou DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Ao concluir o modelo de Planilha, você pode definir os pares de portas SAS do controlador que você pode usar para enviar controladores a pilhas de compartimentos de disco com módulos IOM12/IOM12B para obter conetividade quad-pathed em um par de HA ou configuração de controladora única. Você também pode usar a Planilha completa para percorrer o cabeamento das conexões quad-pathed para sua configuração.
+Você pode usar uma planilha de cabeamento para definir os pares de portas SAS do controlador que você pode usar para conectar os controladores a conjuntos de gavetas de discos com módulos IOM12, IOM12B ou IOM12C, para obter conectividade de quatro caminhos em um par de HA ou em uma configuração de controlador único. Você também pode usar a planilha preenchida para orientar você no cabeamento das conexões de quatro caminhos para sua configuração.
 
 .Sobre esta tarefa
 * Este procedimento e modelo de folha de cálculo é aplicável à conetividade de quatro vias de cabeamento para uma configuração de HA ou quatro vias com uma ou mais pilhas.
@@ -19,7 +19,7 @@ Ao concluir o modelo de Planilha, você pode definir os pares de portas SAS do c
 Exemplos de planilhas concluídas são fornecidos para configurações de HA e quad-path.
 
 +
-Uma configuração com dois HBAs SAS de quatro portas e duas pilhas de compartimentos de disco com módulos IOM12/IOM12B é usada para os exemplos de Planilha.
+Para os exemplos da planilha, é utilizada uma configuração com dois HBAs SAS de quatro portas e duas pilhas de gabinetes de discos com módulos IOM12, IOM12B ou IOM12C.
 
 * O modelo de Planilha permite até duas pilhas; você precisa adicionar mais colunas, se necessário.
 * A conetividade de quatro vias para conexões de controlador para pilha consiste em dois conjuntos de cabeamento multipathed: O primeiro conjunto de cabeamento é chamado de ""caminhos"; o segundo conjunto de cabeamento é chamado de "caminhos quádruplos".

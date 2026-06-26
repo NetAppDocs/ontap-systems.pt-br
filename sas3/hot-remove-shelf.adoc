@@ -1,17 +1,19 @@
 ---
 permalink: sas3/hot-remove-shelf.html 
 sidebar: sidebar 
-keywords: hot-remove, disk, shelf, iom12, module, nondisruptive, module-nondisruptively, system, power, serving, data, I O, progress, hot-remove, stack, shelves, hot-remove a disk shelf with iom12 modules, DS460C, transport DS460C, move DS460C, remove drives from DS460C, DS460C drive handling, iom12b 
-summary: 'Você pode remover sem interrupção um compartimento de disco com IOM12 módulos (remover sem interrupções um compartimento de disco de um sistema ligado e e/S em andamento) quando precisar mover ou substituir o compartimento de disco. É possível remover um ou mais compartimentos de disco de qualquer lugar dentro de uma stack de gavetas de disco ou remover uma stack de gavetas de disco.' 
+keywords: hot-remove, remove, disk, shelf, sas3, iom12, iom12b, iom12c, stack, ds460c, transport, move, ds212c, ds224c 
+summary: Você pode remover a quente um compartimento de discos quando ele precisar ser removido ou substituído de um sistema que está ligado e com I/O em andamento. 
 ---
-= Remover uma prateleira a quente - DS212C, DS224C e DS460C
+= Remova com o equipamento ligado uma shelf DS212C, DS224C ou DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Você pode remover a quente uma prateleira de disco com módulos IOM12 ou IOM12B (remover sem interrupções uma prateleira de disco de um sistema ligado e com E/S em andamento) quando precisar mover ou substituir uma prateleira de disco. Você pode remover a quente uma ou mais prateleiras de disco de qualquer lugar dentro de uma pilha de prateleiras de disco ou remover uma pilha de prateleiras de disco.
+Você pode remover um shelf de discos a quente quando ele precisar ser removido ou substituído em um sistema que esteja ligado e com operações de E/S em andamento. Você pode remover um ou mais shelves de discos a quente de qualquer ponto dentro de uma pilha de shelves de discos ou remover uma pilha de shelves de discos.
+
+Este procedimento aplica-se a prateleiras com módulos IOM12, IOM12B ou IOM12C.
 
 .Sobre esta tarefa
 * Se você estiver removendo um compartimento de disco de uma stack (mas mantendo a stack), poderá verificar um caminho de cada vez (caminho A e, depois, caminho B) para ignorar o compartimento de disco que você está removendo para manter sempre a conectividade de caminho único das controladoras para a stack.
@@ -175,7 +177,7 @@ Um compartimento de disco do meio da Stack Um compartimento de disco no meio de 
 Você pode consultar os exemplos de cabeamento a seguir ao remover um compartimento de disco de uma extremidade de uma stack ou do meio de uma stack. Observe o seguinte sobre os exemplos de cabeamento:
 
 +
-** Os módulos IOM12/IOM12B estão dispostos lado a lado como em um compartimento de disco DS224C ou DS212C; se você tiver um DS460C, os módulos IOM12/IOM12B são dispostos um acima do outro.
+** Os módulos IOM12, IOM12B ou IOM12C são dispostos lado a lado, como em um shelf de discos DS224C ou DS212C; se você tiver um DS460C, os módulos IOM12, IOM12B ou IOM12C são dispostos um acima do outro.
 ** A stack em cada exemplo é cabeada por cabeamento padrão de gaveta a prateleira, que é usado em stacks cabeadas com HA multipath, HA de três caminhos ou conectividade multipath.
 +
 Você pode inferir a reativação se a pilha for cabeada com conetividade HA de quatro vias ou quatro vias, que usa cabeamento de duas grandes prateleiras para prateleiras.

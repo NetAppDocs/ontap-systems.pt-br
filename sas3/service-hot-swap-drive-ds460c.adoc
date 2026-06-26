@@ -1,17 +1,17 @@
 ---
 permalink: sas3/service-hot-swap-drive-ds460c.html 
 sidebar: sidebar 
-keywords: hot-swap, fail, disk, drive, ds460c, nondisruptive, replace, system, power, serving, data, I O, hot-swap a disk drive in a ds460c disk shelf 
+keywords: hot-swap, replace, disk, drive, ds460c, sas, shelf 
 summary: Você pode trocar a quente uma unidade de disco com falha em um compartimento de disco de DS460C TB. 
 ---
-= Troca a quente de uma unidade de disco - DS460C
+= Troque a quente uma unidade de disco em um shelf DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Você pode fazer a troca a quente de uma unidade de disco com falha em uma prateleira de disco DS460C com módulos IOM12 ou IOM12B.
+Você pode substituir a quente uma unidade de disco com falha em um shelf de discos DS460C com módulos IOM12, IOM12B ou IOM12C.
 
 .Antes de começar
 * A unidade de disco de substituição deve ser compatível com a prateleira de disco DS460C. Você pode visualizar as unidades de disco compatíveis com sua configuração no  https://hwu.netapp.com["NetApp Hardware Universe"] .

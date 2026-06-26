@@ -1,10 +1,10 @@
 ---
 permalink: sas3/service-replace-fan-ds460c.html 
 sidebar: sidebar 
-keywords: ds460c, drive, shelf, fan, module, cooling, disk, replace, replace a fan module in a ds460c disk shelf 
-summary: Cada compartimento de unidades DS460C inclui dois módulos de ventilador. Se um módulo do ventilador falhar, você deve substituí-lo o mais rápido possível para garantir que a prateleira tenha resfriamento adequado. Quando você remove o módulo de ventilador com falha, não é necessário desligar a energia do compartimento de disco. 
+keywords: ds460c, drive, shelf, fan, module, disk, replace 
+summary: Se um módulo de ventoinha falhar em um compartimento de unidades DS460C, você deve substituí-lo o mais rápido possível para garantir que o compartimento tenha resfriamento adequado. 
 ---
-= Substituir um módulo de ventilador - DS460C
+= Substitua o módulo de ventoinha do DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,7 +13,7 @@ summary: Cada compartimento de unidades DS460C inclui dois módulos de ventilado
 [role="lead"]
 Cada compartimento de unidades DS460C inclui dois módulos de ventilador. Se um módulo do ventilador falhar, você deve substituí-lo o mais rápido possível para garantir que a prateleira tenha resfriamento adequado. Quando você remove o módulo de ventilador com falha, não é necessário desligar a energia do compartimento de disco.
 
-Este procedimento se aplica a prateleiras com módulos IOM12 ou IOM12B.
+Este procedimento aplica-se a prateleiras com módulos IOM12, IOM12B ou IOM12C.
 
 .Antes de começar
 Deve certificar-se de que remove e substitui o módulo da ventoinha no espaço de 30 minutos para evitar o sobreaquecimento do sistema.
