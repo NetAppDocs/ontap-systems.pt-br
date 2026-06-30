@@ -3,13 +3,13 @@ indexpage:
   title: Mantenha seu sistema de armazenamento AFX
   summary: Faça a manutenção do hardware do seu sistema de armazenamento AFX para
     garantir confiabilidade a longo prazo e desempenho ideal.
-  keywords: maintain afx 1k
+  keywords: maintain afx 1k afx 2k
   lead: Faça a manutenção do hardware do seu sistema de armazenamento AFX para garantir
     confiabilidade a longo prazo e desempenho ideal. Realize tarefas de manutenção
     regulares, como a substituição de componentes defeituosos, pois isso ajuda a evitar
     tempo de inatividade e perda de dados.
   tiles:
-  - title: Componentes principais do sistema
+  - title: AFX 1K
     links:
     - title: Controlador
       url: "../afx-1k/controller-replace-workflow.html"
@@ -17,8 +17,6 @@ indexpage:
       url: "../afx-1k/chassis-replace-workflow.html"
     - title: Módulo de gestão do sistema
       url: "../afx-1k/system-management-replace.html"
-  - title: Memória e armazenamento
-    links:
     - title: Suporte de arranque
       url: "../afx-1k/bootmedia-replace-workflow.html"
     - title: DIMM
@@ -27,16 +25,12 @@ indexpage:
       url: "../afx-1k/nvram-replace.html"
     - title: Bateria NV
       url: "../afx-1k/nvdimm-battery-replace.html"
-  - title: Energia e refrigeração
-    links:
     - title: Fonte de alimentação
       url: "../afx-1k/power-supply-replace.html"
     - title: Ventoinha
       url: "../afx-1k/fan-replace.html"
     - title: Bateria de relógio em tempo real
       url: "../afx-1k/rtc-battery-replace.html"
-  - title: E/S e expansão
-    links:
     - title: Descrição geral do módulo I/O.
       url: "../afx-1k/io-module-overview.html"
     - title: Adicionar módulo de e/S.
@@ -45,3 +39,35 @@ indexpage:
       url: "../afx-1k/io-module-hotswap.html"
     - title: Substitua o módulo de e/S.
       url: "../afx-1k/io-module-replace.html"
+  - title: AFX 2K
+    links:
+    - title: Controlador
+      url: "../afx-2k/controller-replace-workflow.html"
+    - title: Chassis
+      url: "../afx-2k/chassis-replace-workflow.html"
+    - title: Módulo de gestão do sistema
+      url: "../afx-2k/system-management-replace.html"
+    - title: Suporte de arranque
+      url: "../afx-2k/bootmedia-replace-workflow.html"
+    - title: DIMM
+      url: "../afx-2k/dimm-replace.html"
+    - title: NVRAM
+      url: "../afx-2k/nvram-replace.html"
+    - title: NVRAM12-EX
+      url: "../afx-2k/nv12l-replace.html"
+    - title: Bateria NV
+      url: "../afx-2k/nvdimm-battery-replace.html"
+    - title: Fonte de alimentação
+      url: "../afx-2k/power-supply-replace.html"
+    - title: Ventoinha
+      url: "../afx-2k/fan-replace.html"
+    - title: Bateria de relógio em tempo real
+      url: "../afx-2k/rtc-battery-replace.html"
+    - title: Descrição geral do módulo I/O.
+      url: "../afx-2k/io-module-overview.html"
+    - title: Adicionar módulo de e/S.
+      url: "../afx-2k/io-module-add.html"
+    - title: Módulo de E/S substituição a quente
+      url: "../afx-2k/io-module-hotswap.html"
+    - title: Substitua o módulo de e/S.
+      url: "../afx-2k/io-module-replace.html"

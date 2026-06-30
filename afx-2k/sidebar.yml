@@ -1,0 +1,84 @@
+---
+section: afx-2k
+title: Sistemas AFX 2K
+entries:
+- title: Instalar e configurar
+  url: "/afx-2k/afx-2k-install-setup.html"
+- title: Manutenção
+  entries:
+  - title: Visão geral da manutenção
+    url: "/afx-2k/maintain-overview.html"
+  - title: Suporte de arranque
+    pdf-filename: Mídia de inicialização AFX 2K
+    entries:
+    - title: Fluxo de trabalho de substituição de Mídia de inicialização
+      url: "/afx-2k/bootmedia-replace-workflow.html"
+    - title: Rever os requisitos
+      url: "/afx-2k/bootmedia-replace-requirements.html"
+    - title: Desligue o controlador
+      url: "/afx-2k/bootmedia-shutdown.html"
+    - title: Substitua o suporte de arranque
+      url: "/afx-2k/bootmedia-replace.html"
+    - title: Restaurar mídia de inicialização
+      url: "/afx-2k/bootmedia-recovery-image-boot.html"
+    - title: Devolver artigo com falha ao NetApp
+      url: "/afx-2k/bootmedia-complete-rma.html"
+  - title: Chassis
+    pdf-filename: Chassi AFX 2K
+    entries:
+    - title: Fluxo de trabalho de substituição do chassis
+      url: "/afx-2k/chassis-replace-workflow.html"
+    - title: Rever os requisitos
+      url: "/afx-2k/chassis-replace-requirements.html"
+    - title: Prepare-se para substituir
+      url: "/afx-2k/chassis-replace-prepare.html"
+    - title: Desligue o controlador
+      url: "/afx-2k/chassis-replace-shutdown.html"
+    - title: Substitua o chassi
+      url: "/afx-2k/chassis-replace-move-hardware.html"
+    - title: Substituição completa do chassis
+      url: "/afx-2k/chassis-replace-complete-system-restore-rma.html"
+  - title: Controlador
+    pdf-filename: Controlador AFX 2K
+    entries:
+    - title: Fluxo de trabalho de substituição do controlador
+      url: "/afx-2k/controller-replace-workflow.html"
+    - title: Rever os requisitos
+      url: "/afx-2k/controller-replace-requirements.html"
+    - title: Desligue o controlador desativado
+      url: "/afx-2k/controller-replace-shutdown.html"
+    - title: Substitua o controlador
+      url: "/afx-2k/controller-replace-move-hardware.html"
+    - title: Restaure a configuração do sistema
+      url: "/afx-2k/controller-replace-system-config-restore-and-verify.html"
+    - title: Devolver o controlador
+      url: "/afx-2k/controller-replace-recable-reassign-disks.html"
+    - title: Substituição completa do controlador
+      url: "/afx-2k/controller-replace-restore-system-rma.html"
+  - title: DIMM
+    url: "/afx-2k/dimm-replace.html"
+  - title: Ventoinha
+    url: "/afx-2k/fan-replace.html"
+  - title: NVRAM
+    url: "/afx-2k/nvram-replace.html"
+  - title: NVRAM12-EX
+    url: "/afx-2k/nv12l-replace.html"
+  - title: Bateria NV
+    url: "/afx-2k/nvdimm-battery-replace.html"
+  - title: Módulo de e/S.
+    pdf-filename: Módulo de E/S AFX 2K
+    entries:
+    - title: Descrição geral do módulo I/O.
+      url: "/afx-2k/io-module-overview.html"
+    - title: Adicionar módulo de e/S.
+      url: "/afx-2k/io-module-add.html"
+    - title: Módulo de E/S substituição a quente
+      url: "/afx-2k/io-module-hotswap.html"
+    - title: Substitua o módulo de e/S.
+      url: "/afx-2k/io-module-replace.html"
+  - title: Fonte de alimentação
+    url: "/afx-2k/power-supply-replace.html"
+  - title: Bateria de relógio em tempo real
+    url: "/afx-2k/rtc-battery-replace.html"
+  - title: Módulo de gestão do sistema
+    url: "/afx-2k/system-management-replace.html"

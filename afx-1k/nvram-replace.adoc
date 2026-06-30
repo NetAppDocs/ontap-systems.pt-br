@@ -273,7 +273,7 @@ A saída do `storage failover show` comando não deve incluir a ID do sistema al
 
 NOTE: O comando a seguir só está disponível no nível de privilégio Modo de diagnóstico.
 
-. Se os links de interconexão HA foram desativados, reative-os:
+. Se os links de interconexão HA foram desativados, restaure-os:
 +
 `system ha interconnect link on -node healthy-node -link 0`
 

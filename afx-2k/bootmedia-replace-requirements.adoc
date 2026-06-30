@@ -1,0 +1,38 @@
+---
+permalink: afx-2k/bootmedia-replace-requirements.html 
+sidebar: sidebar 
+keywords: afx 2k, replace the boot media 
+summary: Antes de substituir a mídia de inicialização no seu sistema de storage afx 2k, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se você possui a mídia de inicialização de substituição correta, confirmar se não há portas de cluster defeituosas no controlador e determinar se o Onboard Key Manager ou o External Key Manager está habilitado. 
+---
+= Requisitos para substituir a mídia de inicialização - AFX 2K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de substituir a mídia de inicialização no seu sistema de storage AFX 2K, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se você possui a mídia de inicialização de substituição correta, confirmar que não há portas de cluster defeituosas no controlador e determinar se o Onboard Key Manager (OKM) ou o External Key Manager (EKM) está habilitado.
+
+Antes de substituir o suporte de arranque, certifique-se de que verifica os seguintes requisitos.
+
+[NOTE]
+====
+NetApp recomenda fortemente que você habilite o registro de logs no console nos dispositivos que estiver utilizando e execute as seguintes ações ao realizar este procedimento:
+
+* Deixe AutoSupport ativado durante a sua manutenção. Isso permite que o suporte da NetApp receba informações de diagnóstico caso ocorram problemas.
+* Habilite o registro de sessão para todas as sessões da CLI. Isso cria um registro completo de todos os comandos e da saída do sistema durante a atividade de manutenção. Para obter orientações sobre como habilitar o registro de sessão, consulte  https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_configure_PuTTY_for_optimal_connectivity_to_ONTAP_systems["Como configurar o PuTTY para obter conectividade ideal com sistemas ONTAP"^].
+
+
+====
+* Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor.
+* É importante que você aplique os comandos nestas etapas no controlador correto:
++
+** O controlador _prejudicado_ é o controlador no qual você está realizando a manutenção.
+** O controlador _Healthy_ é o parceiro de HA do controlador prejudicado.
+
+
+* Não deve haver portas do cluster defeituosas no controlador prejudicado.
+
+
+.O que se segue?
+Depois de revisar os requisitos para substituir a mídia de inicialização, você precisalink:bootmedia-shutdown.html["desligue o controlador"] .

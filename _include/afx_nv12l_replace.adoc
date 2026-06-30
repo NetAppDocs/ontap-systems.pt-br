@@ -1,0 +1,563 @@
+= Passo 1: Desligue o controlador desativado
+:allow-uri-read: 
+
+
+O módulo NVRAM12-EX consiste no hardware NVRAM12 e em DIMMs substituíveis em campo. Você pode substituir um módulo NVRAM12-EX com defeito, os DIMMs ou a bateria NVRAM dentro do módulo NVRAM12-EX.
+
+.Antes de começar
+* Certifique-se de que tem a peça de substituição disponível. Você deve substituir o componente com falha por um componente de substituição que você recebeu da NetApp.
+* Certifique-se de que todos os outros componentes do sistema de armazenamento estão a funcionar corretamente; caso contrário, https://support.netapp.com["Suporte à NetApp"]contacte o .
++
+
+NOTE: Antes de substituir o módulo NVRAM12-EX, certifique-se de desligar o controlador com defeito antes de prosseguir com a substituição.
+
+
+
+
+
+== Passo 1: Desligue o controlador desativado
+
+Desligue ou assuma o controlador desativado.
+
+Assuma o controle e interrompa o controlador com defeito para que o controlador em bom estado continue a fornecer dados do armazenamento do controlador com defeito. Para fazer isso, você suprime a criação automática de casos em AutoSupport, desativa o giveback automático e leva o controlador com defeito ao prompt LOADER. O prompt LOADER é o estado de parada segura a partir do qual você pode substituir a FRU.
+
+.Sobre esta tarefa
+* Se você tiver um cluster com mais de quatro nós, ele deverá estar no quorum.  Para visualizar informações de cluster sobre seus nós, use o `cluster show` comando.  Para mais informações sobre o `cluster show` comando, vejalink:https://docs.netapp.com/us-en/ontap/system-admin/display-nodes-cluster-task.html["Exibir detalhes no nível do nó em um cluster ONTAP"^] .
+* Se o cluster não estiver em quorum ou se a integridade ou elegibilidade de qualquer controlador (exceto o controlador com defeito) for mostrada como falsa, você deverá corrigir o problema antes de desligar o controlador com defeito. Ver link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^] .
+
+
+.Passos
+. Se o AutoSupport estiver ativado, suprimir a criação automática de casos invocando uma mensagem AutoSupport:
++
+`system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
+
++
+A seguinte mensagem AutoSupport suprime a criação automática de casos por duas horas:
+
++
+`cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. Desabilitar o retorno automático do console do controlador prejudicado:
++
+`storage failover modify -node impaired-node -auto-giveback-of false`
+
++
+
+NOTE: Quando você vir _Deseja desabilitar o retorno automático?_, digite `y` .
+
+. Leve o controlador prejudicado para o prompt Loader:
++
+[cols="1,2"]
+|===
+| Se o controlador afetado estiver a apresentar... | Então... 
+
+
+ a| 
+O prompt Loader
+ a| 
+Vá para a próxima etapa.
+
+
+
+ a| 
+Prompt do sistema ou prompt de senha
+ a| 
+Assuma ou interrompa o controlador prejudicado do controlador saudável:
+`storage failover takeover -ofnode _impaired_node_name_ -halt _true_`
+
+O parâmetro _-halt true_ leva o nó prejudicado ao prompt do LOADER.
+
+|===
+
+
+
+
+== Etapa 2: Substitua o módulo NVRAM12-EX, o DIMM NVRAM ou a bateria NVRAM
+
+Substitua o módulo NVRAM12-EX, os DIMMs NVRAM ou a bateria NVRAM usando as seguintes opções.
+
+Você deve remover o módulo do controlador do gabinete quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
+
+[role="tabbed-block"]
+====
+.Opção 1: Substitua o módulo NVRAM12-EX
+--
+Para substituir o módulo NVRAM12-EX, localize-o no slot 6/7 do gabinete e siga a sequência específica de etapas.
+
+. Verifique o LED de status da NVRAM localizado no slot 4/5 e o LED de status da NVRAM12-EX no slot 6/7 do sistema. Há também um LED de NVRAM no painel frontal do módulo controlador. Procure o ícone NV:
++
+image::../media/drw_a1K-70-90_nvram-led_ieops-1463.svg[Gráfico de localização do LED de estado e atenção do NVRAM]
+
++
+[cols="1,4"]
+|===
+
+
+2+| *NVRAM* 
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+LED de estado do NVRAM
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+LED de atenção NVRAM
+
+|===
++
+image::../media/drw_afx_emr_nvram-led_ieops-2962.svg[Gráfico de localização dos LEDs de atenção e status do NVRAM12-EX]
+
++
+[cols="1,4"]
+|===
+
+
+2+| *NVRAM12-EX* 
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+LED indicador de status NVRAM12-EX
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+LED de atenção NVRAM12-EX
+
+|===
++
+** Se o LED NV estiver desligado, passe à próxima etapa.
+** Se o LED NV estiver intermitente, aguarde que o intermitente pare. Se a intermitência continuar durante mais de 5 minutos, contacte o suporte técnico para obter assistência.
+
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Desconecte os cabos de alimentação das PSUs do controlador.
+. Gire a bandeja de gerenciamento de cabos para baixo puxando cuidadosamente os pinos nas extremidades da bandeja e girando-a para baixo.
+. Remova o módulo NVRAM12-EX defeituoso do gabinete:
++
+.. Pressione o botão de trava da came.
+.. Remova o módulo NVRAM12-EX defeituoso do gabinete puxando o módulo para fora do gabinete.
++
+image::../media/drw_afx_emr_nv12l_remove_replace_ieops-2879.svg[Remova o módulo NVRAM12-EX]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+| Botão de bloqueio do came 
+|===
+
+
+. Coloque o módulo NVRAM12-EX sobre uma superfície estável.
+. Abra a tampa do módulo NVRAM12-EX usando os dedos ou uma chave de fenda para soltar o parafuso de aperto manual na tampa e levante a tampa para removê-la do módulo.
++
+image::../media/drw_afx_emr_nv12l_remove_cover_ieops-2929.svg[Remova a tampa do NVRAM12-EX]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+| Parafuso de aperto manual para a tampa NVRAM12-EX 
+|===
+. Remova os DIMMs, um de cada vez, do módulo NVRAM12-EX com problema e instale-os no módulo NVRAM12-EX de substituição.
++
+image::../media/drw_afx_emr_nv12l_remove_dimms_ieops-2883.svg[Remova os DIMMs NVRAM12-EX]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+| Patilhas de bloqueio do DIMM 
+|===
+. Desconecte a bateria do módulo NVRAM12-EX:
++
+.. Aperte a trava na face do plugue da bateria para soltá-lo do soquete.
+.. Desligue o cabo da bateria da tomada.
+
+
+. Remova a bateria desconectada levantando-a para retirá-la do módulo.
++
+image::../media/drw_afx_emr_nv12l_remove_battery_ieops-2919.svg[Remova a bateria NVRAM12-EX]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+| Clipe de conexão da bateria NVRAM12-EX 
+|===
+. Instale a bateria no módulo NVRAM12-EX de substituição:
++
+.. Conecte o clipe da bateria ao soquete e certifique-se de que o plugue esteja travado no lugar.
+.. Insira a bateria na ranhura e pressione firmemente a bateria para baixo para se certificar de que está bloqueada no lugar.
+
+
+. Instale a tampa do módulo NVRAM12-EX alinhando a tampa com o orifício do parafuso e fixando a tampa com o parafuso de aperto manual.
+. Instale o módulo NVRAM12-EX de substituição no gabinete:
++
+.. Alinhe o módulo com as bordas da abertura do gabinete no slot 6/7.
+.. Deslize o módulo cuidadosamente para dentro do compartimento até o final para travar o módulo no lugar.
+
+
+. Rode o tabuleiro de gestão de cabos para cima até à posição fechada.
+
+
+--
+.Opção 2: Substitua o DIMM NVRAM
+--
+Para substituir os DIMMs NVRAM no módulo NVRAM12-EX, você deve remover o módulo NVRAM12-EX e, em seguida, substituir o DIMM desejado.
+
+. Verifique o LED de status da NVRAM localizado no slot 4/5 e o LED de status da NVRAM12-EX no slot 6/7 do sistema. Há também um LED de NVRAM no painel frontal do módulo controlador. Procure o ícone NV:
++
+image::../media/drw_a1K-70-90_nvram-led_ieops-1463.svg[Gráfico de localização do LED de estado e atenção do NVRAM]
+
++
+[cols="1,4"]
+|===
+
+
+2+| *NVRAM* 
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+LED de estado do NVRAM
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+LED de atenção NVRAM
+
+|===
++
+image::../media/drw_afx_emr_nvram-led_ieops-2962.svg[Gráfico de localização dos LEDs de atenção e status do NVRAM12-EX]
+
++
+[cols="1,4"]
+|===
+
+
+2+| *NVRAM12-EX* 
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+LED indicador de status NVRAM12-EX
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+LED de atenção NVRAM12-EX
+
+|===
++
+** Se o LED NV estiver desligado, passe à próxima etapa.
+** Se o LED NV estiver intermitente, aguarde que o intermitente pare. Se a intermitência continuar durante mais de 5 minutos, contacte o suporte técnico para obter assistência.
+
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Desconecte os cabos de alimentação das PSUs.
+. Gire a bandeja de gerenciamento de cabos para baixo puxando cuidadosamente os pinos nas extremidades da bandeja e girando-a para baixo.
+. Remova o módulo NVRAM12-EX alvo do gabinete:
++
+.. Pressione o botão de trava da came.
+.. Remova o módulo NVRAM12-EX defeituoso do gabinete puxando o módulo para fora do gabinete.
++
+image::../media/drw_afx_emr_nv12l_remove_replace_ieops-2879.svg[Remova o módulo NVRAM12-EX]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+| Botão de bloqueio do came 
+|===
+
+
+. Coloque o módulo NVRAM12-EX sobre uma superfície estável.
+. Abra a tampa do módulo NVRAM12-EX usando os dedos ou uma chave de fenda para soltar o parafuso de aperto manual na tampa e levante a tampa para removê-la do módulo.
++
+image::../media/drw_afx_emr_nv12l_remove_cover_ieops-2929.svg[Remova a tampa do NVRAM12-EX]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+| Parafuso de aperto manual para a tampa NVRAM12-EX 
+|===
+. Localize o DIMM a ser substituído dentro do módulo NVRAM12-EX.
++
+
+NOTE: Consulte a etiqueta do mapa FRU na lateral do módulo NVRAM12-EX para determinar as localizações dos slots DIMM 1 e 2.
+
+. Remova o DIMM pressionando as abas de travamento do DIMM e levantando o DIMM para fora do soquete.
++
+image::../media/drw_afx_emr_nv12l_remove_dimms_ieops-2883.svg[Remova os DIMMs NVRAM12-EX]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+| Patilhas de bloqueio do DIMM 
+|===
+. Instale o DIMM de substituição alinhando o DIMM com o soquete e empurrando cuidadosamente o DIMM para dentro do soquete até que as abas de travamento travem posição.
+. Instale a tampa do módulo NVRAM12-EX alinhando a tampa com o orifício do parafuso e fixando a tampa com o parafuso de aperto manual.
+. Instale o módulo NVRAM12-EX no gabinete:
++
+.. Deslize o módulo cuidadosamente para dentro do slot até que ele se encaixe no lugar.
+
+
+. Rode o tabuleiro de gestão de cabos para cima até à posição fechada.
+
+
+--
+.Opção 3: Substitua a bateria NVRAM
+--
+Para substituir os DIMMs de NVRAM no módulo NVRAM12-EX, você deve remover o módulo NVRAM12-EX e, em seguida, substituir a bateria.
+
+. Verifique o LED de status da NVRAM localizado no slot 4/5 e o LED de status da NVRAM12-EX no slot 6/7 do sistema. Há também um LED de NVRAM no painel frontal do módulo controlador. Procure o ícone NV:
++
+image::../media/drw_a1K-70-90_nvram-led_ieops-1463.svg[Gráfico de localização do LED de estado e atenção do NVRAM]
+
++
+[cols="1,4"]
+|===
+
+
+2+| *NVRAM* 
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+LED de estado do NVRAM
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+LED de atenção NVRAM
+
+|===
++
+image::../media/drw_afx_emr_nvram-led_ieops-2962.svg[Gráfico de localização dos LEDs de atenção e status do NVRAM12-EX]
+
++
+[cols="1,4"]
+|===
+
+
+2+| *NVRAM12-EX* 
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+LED indicador de status NVRAM12-EX
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+LED de atenção NVRAM12-EX
+
+|===
++
+** Se o LED NV estiver desligado, passe à próxima etapa.
+** Se o LED NV estiver intermitente, aguarde que o intermitente pare. Se a intermitência continuar durante mais de 5 minutos, contacte o suporte técnico para obter assistência.
+
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Desconecte os cabos de alimentação das PSUs.
+. Gire a bandeja de gerenciamento de cabos para baixo puxando cuidadosamente os pinos nas extremidades da bandeja e girando-a para baixo.
+. Remova o módulo NVRAM12-EX alvo do gabinete:
++
+.. Pressione o botão de trava da came.
+.. Remova o módulo NVRAM12-EX defeituoso do gabinete puxando o módulo para fora do gabinete.
++
+image::../media/drw_afx_emr_nv12l_remove_replace_ieops-2879.svg[Remova o módulo NVRAM12-EX]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+| Botão de bloqueio do came 
+|===
+
+
+. Coloque o módulo NVRAM12-EX sobre uma superfície estável.
+. Abra a tampa do módulo NVRAM12-EX usando os dedos ou uma chave de fenda para soltar o parafuso de aperto manual na tampa e levante a tampa para removê-la do módulo.
++
+image::../media/drw_afx_emr_nv12l_remove_cover_ieops-2929.svg[Remova a tampa do NVRAM12-EX]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+| Parafuso de aperto manual para a tampa NVRAM12-EX 
+|===
+. Desconecte a bateria do módulo NVRAM12-EX:
++
+.. Aperte a trava na face do plugue da bateria para soltá-lo do soquete.
+.. Desligue o cabo da bateria da tomada.
+
+
+. Remova a bateria desconectada levantando-a para retirá-la do módulo.
++
+image::../media/drw_afx_emr_nv12l_remove_battery_ieops-2919.svg[Remova a bateria NVRAM12-EX]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+| Clipe de conexão da bateria NVRAM12-EX 
+|===
+. Retire a bateria de substituição da respetiva embalagem.
+. Instale o pacote de bateria de substituição no módulo NVRAM12-EX:
++
+.. Conecte o clipe da bateria ao soquete e certifique-se de que o plugue esteja travado no lugar.
+.. Insira a bateria na ranhura e pressione firmemente a bateria para baixo para se certificar de que está bloqueada no lugar.
+
+
+. Instale a tampa do módulo NVRAM12-EX alinhando a tampa com o orifício do parafuso e fixando a tampa com o parafuso de aperto manual.
+. Instale o módulo NVRAM12-EX no gabinete:
++
+.. Deslize o módulo cuidadosamente para dentro do slot até que ele se encaixe no lugar.
+
+
+. Rode o tabuleiro de gestão de cabos para cima até à posição fechada.
+
+
+--
+====
+
+
+== Passo 3: Reinicie o controlador
+
+Depois de substituir a FRU, você deve reiniciar o módulo do controlador.
+
+. Conecte os cabos de alimentação novamente na PSU.
++
+O sistema começará a reiniciar, normalmente para o prompt Loader.
+
+. Digitar `bye` no prompt LOADER.
+
+
+
+
+== Etapa 4: Conclua a substituição do NVRAM12-EX
+
+Execute os seguintes passos para concluir a substituição do NVRAM12-EX.
+
+.Passos
+. No controlador íntegro, verifique se o novo ID do sistema parceiro foi atribuído automaticamente:
+`_storage failover show_`
++
+Na saída do comando, você deverá ver uma mensagem exibindo o estado atual da substituição do armazenamento. No exemplo a seguir,  `node2` passou por substituição e exibe o estado atual como  `In takeover`.
+
++
+[listing]
+----
+node1:> storage failover show
+                                    Takeover
+Node              Partner           Possible     State Description
+------------      ------------      --------     -------------------------------------
+node1             node2             false        In takeover
+node2             node1             -            Waiting for giveback
+----
+. Devolver o controlador:
++
+.. A partir do controlador em bom estado, devolva o armazenamento do controlador substituído: `_storage failover giveback -ofnode impaired_node_name_`
++
+O controlador recupera seu armazenamento e completa a inicialização.
+
++
+
+NOTE: Se o giveback for vetado, você pode considerar substituir os vetos.
+
++
+Para obter mais informações, consulte o https://docs.netapp.com/us-en/ontap/high-availability/ha_manual_giveback.html#if-giveback-is-interrupted["Comandos manuais de giveback"^] tópico para substituir o veto.
+
+.. Após a conclusão do giveback, confirme se o par de HA está saudável e que o controle é possível: _Storage failover show_
++
+A saída do `storage failover show` comando não deve incluir a ID do sistema alterada na mensagem do parceiro.
+
+
+
+. Verifique se os volumes esperados estão presentes para cada controlador:
++
+`vol show -node node-name`
+
+. Pressione <enter> quando as mensagens do console pararem.
++
+** Se você vir o prompt _login_, vá para a próxima etapa.
+** Se você não vir o prompt de login, faça login no nó do parceiro.
+
+
+. Aguarde 5 minutos após a conclusão do relatório de giveback e verifique o status de failover e o status de giveback:
++
+`storage failover show`e `storage failover show-giveback`
+
++
+
+NOTE: O comando a seguir só está disponível no nível de privilégio Modo de diagnóstico.
+
+. Se a giveback automática foi desativada, reative-a:
++
+`storage failover modify -node local -auto-giveback-of true`
+
+. Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
+
+
+
+
+== Passo 5: Devolva a peça com falha ao NetApp
+
+Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

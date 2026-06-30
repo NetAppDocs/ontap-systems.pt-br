@@ -5,7 +5,7 @@ indexpage:
     e software focada nas necessidades exclusivas de clientes NAS e S3 de alto desempenho.
     O desempenho e a escalabilidade são projetados especificamente para atender aos
     requisitos de cargas de trabalho de IA e ML.
-  keywords: afx, afx 1k, install, setup, maintain
+  keywords: afx, afx 1k, afx 2k, install, setup, maintain
   lead: O sistema de armazenamento NetApp AFX é uma solução desagregada de hardware
     e software focada nas necessidades exclusivas de clientes NAS e S3 de alto desempenho.
     O desempenho e a escalabilidade são projetados especificamente para atender aos
@@ -19,12 +19,18 @@ indexpage:
       url: https://docs.netapp.com/us-en/ontap-afx/get-started/system-design.html
     - title: Arquitetura AFX
       url: https://docs.netapp.com/us-en/ontap-afx/get-started/software-architecture.html
-  - title: Instalar e manter o AFX
+  - title: Instale e configure sistemas AFX
     links:
-    - title: Instalar hardware AFX
+    - title: Instale o hardware AFX 1K
       url: https://docs.netapp.com/us-en/ontap-afx/install-setup/install-setup-workflow.html
-    - title: Manutenção de hardware AFX
-      url: "../afx-landing-maintain/index.html"
+    - title: Instale o hardware AFX 2K
+      url: https://docs.netapp.com/us-en/ontap-afx/install-setup/install-setup-workflow.html
+  - title: Manter sistemas AFX
+    links:
+    - title: AFX 1K
+      url: "../afx-1k/maintain-overview.html"
+    - title: AFX 2K
+      url: "../afx-2k/maintain-overview.html"
   - title: Gerenciar dados no AFX
     links:
     - title: Criar um volume AFX
