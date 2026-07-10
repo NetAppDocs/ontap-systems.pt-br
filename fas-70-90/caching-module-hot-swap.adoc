@@ -23,6 +23,7 @@ Você pode executar qualquer um dos seguintes procedimentos dependendo do compon
 
 
 
+[[replace-the-flash-cache-module-carrier]]
 == Substitua o suporte do módulo Flash Cache
 
 O suporte do módulo Flash Cache está localizado no slot 6 e abriga até dois módulos Flash Cache. Não é possível trocar a operadora do módulo Flash Cache
@@ -34,6 +35,7 @@ O suporte do módulo Flash Cache está localizado no slot 6 e abriga até dois m
 
 
 
+[[step-1-shut-down-the-impaired-node]]
 === Etapa 1: Encerre o nó prejudicado
 
 Encerre ou assuma o controlador afetado utilizando uma das seguintes opções.
@@ -180,6 +182,7 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 ====
 
 
+[[step-2-replace-the-flash-cache-module-carrier]]
 === Passo 2: Substitua o suporte do módulo Flash Cache
 
 Execute as etapas a seguir para substituir o suporte do módulo Flash Cache.
@@ -249,6 +252,7 @@ LED de avaria do suporte do módulo Flash Cache
 
 
 
+[[step-3-reboot-the-controller]]
 === Passo 3: Reinicie o controlador
 
 Depois de substituir o suporte do módulo Flash Cache, tem de reiniciar o módulo do controlador.
@@ -265,12 +269,14 @@ NOTE: Isso reinicializa as placas de e/S e outros componentes e reinicializa o n
 
 
 
+[[step-4-return-the-failed-part-to-netapp]]
 === Passo 4: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.
 
 
 
+[[replace-the-caching-module]]
 == Substitua o módulo de armazenamento em cache
 
 Os módulos Flash Cache (módulos de cache) estão localizados no slot 6-1 ou no slot 6-2 ou no slot 6-1 e no slot 6-2.

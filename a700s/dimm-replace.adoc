@@ -19,6 +19,7 @@ Você deve substituir o componente com falha por um componente FRU de substitui�
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Passo 1: Desligue o controlador desativado
 
 Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
@@ -62,6 +63,7 @@ Quando o controlador prejudicado for exibido `Waiting for giveback...`, pression
 
 
 
+[[step-2-remove-the-controller-module]]
 == Passo 2: Remova o módulo do controlador
 
 Deve remover o módulo do controlador do chassis quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
@@ -139,6 +141,7 @@ Conduta de ar
 
 
 
+[[step-3-replace-a-dimm]]
 == Etapa 3: Substitua um DIMM
 
 Para substituir um DIMM, você deve localizá-lo no módulo do controlador usando o mapa de DIMM no interior do módulo do controlador e, em seguida, substituí-lo seguindo a sequência específica de etapas.
@@ -214,6 +217,7 @@ Se você removeu o riser NVRAM, Riser 1, certifique-se de conetar a bateria do N
 
 
 
+[[step-4-reinstall-the-controller-module-and-boot-the-system]]
 == Etapa 4: Reinstale o módulo do controlador e inicialize o sistema
 
 Depois de substituir uma FRU no módulo do controlador, você deve reinstalar o módulo do controlador e reiniciá-lo.
@@ -252,6 +256,7 @@ O módulo do controlador começa a inicializar assim que a energia é restaurada
 
 
 
+[[step-5return-the-failed-part-to-netapp]]
 == Passo 5: Devolver o artigo com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

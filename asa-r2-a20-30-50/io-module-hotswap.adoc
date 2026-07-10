@@ -34,6 +34,7 @@ Você pode desativá-los digitando o `system location-led _off_` comando. Se nã
 
 
 
+[[step-1-ensure-the-storage-system-meets-the-procedure-requirements]]
 == Etapa 1: Certifique-se de que o sistema de armazenamento atenda aos requisitos do procedimento
 
 Para utilizar este procedimento, seu sistema de storage deve estar executando ONTAP 9.17.1 ou posterior, e seu sistema de storage deve atender a todos os requisitos para a versão do ONTAP que seu sistema de storage está executando.
@@ -93,6 +94,7 @@ Em determinadas situações, ONTAP pode realizar automaticamente um takeover de 
 ====
 
 
+[[step-2-prepare-the-storage-system-and-io-module-slot]]
 == Etapa 2: prepare o sistema de storage e o slot do módulo de E/S
 
 Prepare o sistema de storage e o slot do módulo de I/O para que seja seguro remover o módulo de I/O com defeito:
@@ -202,6 +204,7 @@ O resultado deve mostrar  `_powered-off_` na  `_status_` coluna para o módulo c
 
 
 
+[[step-3-hot-swap-the-failed-io-module]]
 == Etapa 3: substitua o módulo de E/S com defeito a quente
 
 Substitua o módulo de E/S com defeito por um módulo de E/S equivalente:
@@ -245,6 +248,7 @@ Você pode usar a aba à esquerda e o parafuso de aperto manual à direita para 
 
 
 
+[[step-4-bring-the-replacement-io-module-online]]
 == Etapa 4: Coloque o módulo de E/S de substituição online
 
 Coloque o módulo de E/S de substituição online, verifique se as portas do módulo de E/S foram inicializadas com sucesso, verifique se o slot está energizado e então verifique se o módulo de E/S está online e reconhecido.
@@ -361,6 +365,7 @@ Slot slot Information
 
 
 
+[[step-5-restore-the-storage-system-to-normal-operation]]
 == Etapa 5: restaurar o sistema de armazenamento para operação normal
 
 Restaure o sistema de storage ao funcionamento normal, devolvendo o armazenamento ao controlador que foi assumido (conforme necessário), restaurando o giveback automático (conforme necessário), verificando se as LIFs estão em suas portas de origem e reativando a criação automática de casos do AutoSupport.
@@ -427,6 +432,7 @@ Se algum LIFs estiver listado como false, reverta-os para suas portas iniciais: 
 
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == Passo 6: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

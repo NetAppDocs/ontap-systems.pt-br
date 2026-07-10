@@ -26,6 +26,7 @@ NOTE: Antes de substituir o módulo NVRAM12-EX, certifique-se de desligar o cont
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Passo 1: Desligue o controlador desativado
 
 Desligue ou assuma o controlador desativado.
@@ -83,6 +84,7 @@ O parâmetro _-halt true_ leva o nó prejudicado ao prompt do LOADER.
 
 
 
+[[step-2-replace-the-nvram12-ex-module-nvram-dimm-or-nvram-battery]]
 == Etapa 2: Substitua o módulo NVRAM12-EX, o DIMM NVRAM ou a bateria NVRAM
 
 Substitua o módulo NVRAM12-EX, os DIMMs NVRAM ou a bateria NVRAM usando as seguintes opções.
@@ -487,6 +489,7 @@ image:../media/icon_round_1.png["Legenda número 1"]
 ====
 
 
+[[step-3-reboot-the-controller]]
 == Passo 3: Reinicie o controlador
 
 Depois de substituir a FRU, você deve reiniciar o módulo do controlador.
@@ -500,6 +503,7 @@ O sistema começará a reiniciar, normalmente para o prompt Loader.
 
 
 
+[[step-4-complete-nvram12-ex-replacement]]
 == Etapa 4: Conclua a substituição do NVRAM12-EX
 
 Execute os seguintes passos para concluir a substituição do NVRAM12-EX.
@@ -569,6 +573,7 @@ NOTE: O comando a seguir só está disponível no nível de privilégio Modo de 
 
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == Passo 5: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

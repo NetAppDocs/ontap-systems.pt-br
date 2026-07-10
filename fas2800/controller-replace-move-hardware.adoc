@@ -17,6 +17,7 @@ Substitua o hardware do módulo do controlador prejudicado removendo o controlad
 video::c83a3301-3161-4d65-86e8-af540147576a[panopto]
 
 
+[[step-1-remove-controller-module]]
 == Passo 1: Remova o módulo do controlador
 
 Retire o módulo do controlador desativado do chassis.
@@ -51,6 +52,7 @@ Botão de liberação da tampa do módulo do controlador
 |===
 
 
+[[step-2-move-the-nvmem-battery]]
 == Passo 2: Mova a bateria do NVMEM
 
 Retire a bateria do NVMEM do módulo do controlador desativado e instale-a no módulo do controlador de substituição.
@@ -98,6 +100,7 @@ NOTE: Não ligue ainda a bateria. Você o conetará assim que o restante dos com
 
 
 
+[[step-3-remove-the-mezzanine-card]]
 == Passo 3: Remova a placa mezzanine
 
 Remova a placa de e/S e a placa de mezanino PCIe do módulo do controlador afetado.
@@ -132,6 +135,7 @@ NOTE: Você pode soltar os parafusos com os dedos ou uma chave de fenda.
 
 
 
+[[step-4-move-the-boot-media]]
 == Passo 4: Mova a Mídia de inicialização
 
 Retire o suporte de arranque do módulo do controlador avariado e instale-o no módulo do controlador de substituição.
@@ -175,6 +179,7 @@ Se necessário, retire o suporte de arranque e volte a colocá-lo no socket.
 
 
 
+[[step-5-install-the-mezzanine-card-in-the-replacement-controller]]
 == Passo 5: Instale a placa mezzanine no controlador de substituição
 
 Instale a placa mezzanine no módulo do controlador de substituição.
@@ -191,6 +196,7 @@ Instale a placa mezzanine no módulo do controlador de substituição.
 
 
 
+[[step-6-move-the-dimms]]
 == Passo 6: Mova os DIMMs
 
 Remova os DIMMs do módulo do controlador prejudicado e instale-os no módulo do controlador de substituição.
@@ -250,6 +256,7 @@ NOTE: Inspecione visualmente o DIMM para verificar se ele está alinhado uniform
 
 
 
+[[step-7-move-a-caching-module]]
 == Passo 7: Mova um módulo de cache
 
 Retire o módulo de armazenamento em cache do módulo do controlador afetado, instale-o no módulo do controlador de substituição.
@@ -295,6 +302,7 @@ NOTE: Se a ligação à bateria for difícil, retire a bateria do módulo do con
 
 
 
+[[step-8-install-the-nv-battery]]
 == Passo 8: Instale a bateria NV
 
 Instale a bateria NV no módulo do controlador de substituição.
@@ -310,6 +318,7 @@ Certifique-se de que a ficha se fixa à tomada da bateria na placa-mãe.
 
 
 
+[[step-9-install-the-controller]]
 == Passo 9: Instale o controlador
 
 Instale o módulo do controlador de substituição no chassis do sistema e no ONTAP de arranque.

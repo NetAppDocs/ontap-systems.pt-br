@@ -15,6 +15,7 @@ Para concluir o procedimento de substituição e restaurar o sistema para o func
 
 
 
+[[step-1-recable-the-system]]
 == Passo 1: Recable o sistema
 
 Verifique as conexões de armazenamento e rede do módulo controlador usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"] .
@@ -28,6 +29,7 @@ Verifique as conexões de armazenamento e rede do módulo controlador usando htt
 
 
 
+[[step-2-reassign-disks]]
 == Etapa 2: Reatribuir discos
 
 Se o sistema de storage estiver em um par de HA, a ID do sistema do novo módulo de controladora será automaticamente atribuída aos discos quando o giveback ocorrer no final do procedimento. Em um sistema autônomo, você deve reatribuir manualmente a ID aos discos.
@@ -61,6 +63,7 @@ Configuração de MetroCluster de dois nós
 |===
 
 
+[[option-1-verify-the-system-id-change-on-an-ha-system]]
 === Opção 1: Verifique a alteração da ID do sistema em um sistema HA
 
 Você deve confirmar a alteração do ID do sistema quando você inicializar o controlador _replacement_ e, em seguida, verificar se a alteração foi implementada.
@@ -147,6 +150,7 @@ Disk  Aggregate Home  Owner  DR Home  Home ID    Owner ID  DR Home ID Reserver  
 
 
 
+[[option-2-manually-reassign-the-system-id-on-a-stand-alone-system-in-ontap]]
 === Opção 2: Reatribuir manualmente a ID do sistema em um sistema autônomo no ONTAP
 
 Em um sistema autônomo, você deve reatribuir manualmente os discos à ID do sistema do novo controlador antes de retornar o sistema à condição operacional normal.
@@ -209,6 +213,7 @@ disk_name    system-1  (118065481)  Pool0  J8Y0TDZC       system-1  (118065481)
 
 
 
+[[option-3-manually-reassign-the-system-id-on-systems-in-a-two-node-metrocluster-configuration]]
 === Opção 3: Reatribuir manualmente a ID do sistema em sistemas em uma configuração MetroCluster de dois nós
 
 Em uma configuração MetroCluster de dois nós executando o ONTAP, você deve reatribuir manualmente os discos à ID do sistema da nova controladora antes de retornar o sistema à condição operacional normal.

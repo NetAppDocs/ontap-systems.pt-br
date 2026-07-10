@@ -26,6 +26,7 @@ image::../media/drw_fas2600_cable_color_key.png[Chave de cor de cabo para plataf
 
 
 
+[[fas2820-platform-in-a-multipath-ha-configuration-with-no-external-shelves]]
 == Plataforma FAS2820 em uma configuração de HA multipath sem gavetas externas
 
 O exemplo a seguir mostra que nenhum cabeamento é necessário para acessar a conectividade de HA multipath:
@@ -34,6 +35,7 @@ image::../media/drw_fas2800_noshelf_mpha_IEOPS-954.svg[FAS2820 ha multipath sem 
 
 
 
+[[fas2820-platform-in-a-tri-path-ha-configuration-with-no-external-shelves]]
 == Plataforma FAS2820 em uma configuração de HA de três caminhos sem gavetas externas
 
 O exemplo de cabeamento a seguir mostra o cabeamento necessário entre as duas controladoras para obter conectividade tri-path:
@@ -42,6 +44,7 @@ image::../media/drw_fas2800_noshelf_tpha_IEOPS-955.svg[Fas2800 exemplo de cabeam
 
 
 
+[[fas2820-platform-in-a-tri-path-ha-configuration-with-one-multi-shelf-stack]]
 == Plataforma FAS2820 em uma configuração de HA de três caminhos com uma stack de várias shelves
 
 O exemplo de cabeamento e Planilha a seguir usa o par de portas 0a/0B1:
@@ -52,6 +55,7 @@ image::../media/drw_fas2800_withshelves_tpha_IEOPS-949.svg[FAS2820 exemplo de ca
 
 
 
+[[platforms-with-internal-storage-in-a-multipath-ha-configuration-with-one-multi-shelf-stack]]
 == Plataformas com storage interno em uma configuração de HA multipath com uma stack de várias shelves
 
 O exemplo de cabeamento e Planilha a seguir usa o par de portas 0a/0b:

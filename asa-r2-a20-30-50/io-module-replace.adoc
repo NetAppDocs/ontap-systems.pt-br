@@ -27,6 +27,7 @@ Você pode desativá-los digitando o `system location-led _off_` comando. Se nã
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Passo 1: Desligue o controlador desativado
 
 Assuma o controle e interrompa o controlador com defeito para que o controlador em bom estado continue a fornecer dados do armazenamento do controlador com defeito. Para fazer isso, você suprime a criação automática de casos em AutoSupport, desativa o giveback automático e leva o controlador com defeito ao prompt LOADER. O prompt LOADER é o estado de parada segura a partir do qual você pode substituir a FRU.
@@ -97,6 +98,7 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 
 
 
+[[step-2-replace-a-failed-io-module]]
 == Passo 2: Substitua um módulo de e/S com falha
 
 Para substituir um módulo de e/S com falha, localize-o no controlador e siga a sequência específica de passos.
@@ -144,6 +146,7 @@ Você pode usar a aba à esquerda e o parafuso de aperto manual para empurrar o 
 
 
 
+[[step-3-reboot-the-controller]]
 == Passo 3: Reinicie o controlador
 
 Depois de substituir um módulo de e/S, tem de reiniciar o controlador.
@@ -159,6 +162,7 @@ Reiniciar o controlador prejudicado também reinicializa os módulos de e/S e ou
 
 
 
+[[step-4-return-the-failed-part-to-netapp]]
 == Passo 4: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

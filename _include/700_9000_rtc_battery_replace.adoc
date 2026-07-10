@@ -12,6 +12,7 @@ Você deve usar uma bateria RTC aprovada.
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Passo 1: Desligue o controlador desativado
 
 Você pode desligar ou assumir o controlador prejudicado usando procedimentos diferentes, dependendo da configuração do hardware do sistema de armazenamento.
@@ -184,6 +185,7 @@ mcc1A::> metrocluster operation show
 ====
 
 
+[[step-2-remove-the-controller-module]]
 == Passo 2: Remova o módulo do controlador
 
 Para aceder aos componentes no interior do controlador, tem de remover primeiro o módulo do controlador do sistema e, em seguida, remover a tampa do módulo do controlador.
@@ -236,6 +238,7 @@ Botão de bloqueio da tampa do módulo do controlador
 
 
 
+[[step-3-replace-the-rtc-battery]]
 == Passo 3: Substitua a bateria RTC
 
 Para substituir a bateria RTC, tem de localizar a bateria avariada no módulo do controlador, removê-la do suporte e, em seguida, instalar a bateria de substituição no suporte.
@@ -278,6 +281,7 @@ NOTE: Observe a polaridade da bateria ao removê-la do suporte. A bateria está 
 
 
 
+[[step-4-reinstall-the-controller-module-and-set-timedate]]
 == Etapa 4: Reinstale o módulo do controlador e defina a hora/data
 
 Depois de substituir um componente no módulo do controlador, tem de reinstalar o módulo do controlador no chassis do sistema, repor a hora e a data no controlador e, em seguida, iniciá-lo.
@@ -322,6 +326,7 @@ NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para de
 
 
 
+[[step-5-switch-back-aggregates-in-a-two-node-metrocluster-configuration]]
 == Etapa 5: Alterne agregados de volta em uma configuração de MetroCluster de dois nós
 
 Esta tarefa só se aplica a configurações de MetroCluster de dois nós.
@@ -378,6 +383,7 @@ Se um switchback estiver demorando muito tempo para terminar, você pode verific
 
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == Passo 6: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

@@ -30,6 +30,7 @@ Você pode desativá-los digitando o `system location-led _off_` comando. Se nã
 
 
 
+[[step-1-shut-down-the-target-controller-module]]
 == Passo 1: Desligue o módulo controlador de destino
 
 Assuma o controle e desligue o módulo controlador de destino para que seu par de HA continue fornecendo dados enquanto você adiciona o módulo de E/S. As etapas mencionadas referem-se ao controlador que está sendo desligado como o controlador "com problemas"; as mesmas etapas se aplicam tanto se você estiver assumindo o controle de um controlador operacional para uma adição planejada quanto se estiver desligando um controlador que já está com problemas.
@@ -176,6 +177,7 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 ====
 
 
+[[step-2-add-the-new-io-module]]
 == Passo 2: Adicione o novo módulo de e/S.
 
 Se o sistema de armazenamento tiver slots disponíveis, instale o novo módulo de e/S em um dos slots disponíveis. Se todos os slots estiverem ocupados, remova um módulo de e/S existente para criar espaço e, em seguida, instale o novo.

@@ -6,6 +6,7 @@ Você precisa verificar o estado da HA do chassi, trocar agregados e devolver a 
 
 
 
+[[step-1-verify-and-set-the-ha-state-of-the-chassis]]
 == Etapa 1: Verifique e defina o estado HA do chassi
 
 Você deve verificar o estado de HA do chassi e, se necessário, atualizar o estado para corresponder à configuração do sistema.
@@ -38,6 +39,7 @@ O valor para HA-State pode ser um dos seguintes:
 
 
 
+[[step-2-switch-back-aggregates-in-a-two-node-metrocluster-configuration]]
 == Etapa 2: Alterne agregados de volta em uma configuração de MetroCluster de dois nós
 
 Esta tarefa só se aplica a configurações de MetroCluster de dois nós.
@@ -94,6 +96,7 @@ Se um switchback estiver demorando muito tempo para terminar, você pode verific
 
 
 
+[[step-3-return-the-failed-part-to-netapp]]
 == Passo 3: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

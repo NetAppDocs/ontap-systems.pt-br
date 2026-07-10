@@ -17,6 +17,7 @@ Verifique se a sua versão do ONTAP é compatível com a Criptografia de Volume 
 
 
 
+[[step-1-check-nve-support-and-download-the-correct-ontap-image]]
 == Passo 1: Verifique a compatibilidade com NVE e baixe a imagem ONTAP correta.
 
 Verifique se a sua versão do ONTAP é compatível com a Criptografia de Volume NetApp (NVE) para que você possa baixar a imagem correta do ONTAP para a substituição da mídia de inicialização.
@@ -43,6 +44,7 @@ NOTE: Faça o download da imagem do ONTAP do site de suporte da NetApp para o se
 
 
 
+[[step-2-verify-key-manager-status-and-back-up-configuration]]
 == Etapa 2: Verifique o status do gerenciador de chaves e faça backup da configuração.
 
 Antes de desligar o controlador com defeito, verifique a configuração do gerenciador de chaves e faça backup das informações necessárias.

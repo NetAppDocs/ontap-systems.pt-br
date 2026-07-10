@@ -15,6 +15,7 @@ Depois de vincular os controladores à rede e às gavetas do sistema de storage 
 
 
 
+[[step-1-power-on-the-shelf-and-assign-shelf-id]]
 == Etapa 1: Ligue a prateleira e atribua o ID da prateleira
 
 Cada prateleira é distinguida por um ID de prateleira exclusivo. Esse ID garante que o compartimento seja distinto na configuração do sistema de storage.
@@ -124,6 +125,7 @@ Quando uma fonte de alimentação é ligada, o LED bicolor deve acender-se a ver
 
 
 
+[[step-2-power-on-the-controllers]]
 == Passo 2: Ligue os controladores
 
 Depois de ativar as gavetas e atribuir a elas IDs exclusivas, ligue os controladores de storage.

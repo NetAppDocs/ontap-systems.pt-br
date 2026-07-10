@@ -7,6 +7,9 @@ Substitua o módulo NVRAM ou os DIMMs NVRAM usando a opção apropriada.
 
 CAUTION: Use sempre uma pulseira antiestática aterrada, conectada a um ponto de aterramento verificado durante a instalação e os procedimentos de manutenção. A não observância das precauções adequadas contra ESD pode causar danos permanentes aos nós controladores, prateleiras de armazenamento e switches de rede.
 
+
+WARNING: O módulo NVRAM não é com substituição a quente. Antes de substituí-lo, reinstale as unidades, desligue o nó, desconecte a alimentação do controlador e puxe o controlador alguns centímetros para fora do chassi.
+
 [role="tabbed-block"]
 ====
 .Opção 1: Substitua o módulo NVRAM
@@ -130,7 +133,7 @@ NOTE: Se você tiver fontes de alimentação CC, reconecte o bloco de energia à
 --
 .Opção 2: Substitua o DIMM NVRAM
 --
-Para substituir DIMMs NVRAM no módulo NVRAM, primeiro deve remover o módulo NVRAM e, em seguida, substituir o DIMM de destino.
+Para substituir os DIMMs de NVRAM no módulo NVRAM, primeiro você deve remover o módulo NVRAM e depois substituir o DIMM desejado.
 
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Certifique-se de que todas as unidades no chassis estão firmemente assentadas contra o plano médio, utilizando os polegares para empurrar cada unidade até sentir um batente positivo.
@@ -202,7 +205,9 @@ image::../media/drw_a70-90_nvram12_remove_replace_ieops-1370.svg[Remova o módul
 
  a| 
 image:../media/icon_round_1.png["Legenda número 1"]
-| Botão de bloqueio do came 
+ a| 
+Botão de bloqueio do came
+
 
 
  a| 
@@ -254,6 +259,7 @@ NOTE: Se você tiver fontes de alimentação CC, reconecte o bloco de energia à
 ====
 
 
+[[step-3-reassign-disks]]
 == Etapa 3: Reatribuir discos
 
 Você deve confirmar a alteração da ID do sistema quando inicializar o controlador e verificar se a alteração foi implementada.
@@ -287,8 +293,10 @@ node2             node1             -            Waiting for giveback (HA mailbo
 ----
 . Devolver o controlador:
 +
-.. Do controlador saudável, devolva o armazenamento do controlador substituído: +
+.. A partir do controlador em bom estado, devolva o armazenamento do controlador substituído:
++
 `storage failover giveback -ofnode replacement_node_name`
+
 +
 O controlador recupera seu armazenamento e completa a inicialização.
 

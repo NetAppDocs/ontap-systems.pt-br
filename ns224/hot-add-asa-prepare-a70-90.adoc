@@ -15,6 +15,7 @@ Prepare seu sistema ASA A70 ou A90 para adicionar um shelf NS224 a quente, garan
 
 
 
+[[install-roce-capable-io-modules]]
 == Instale módulos de E/S compatíveis com RoCE
 
 Se o seu sistema suporta o uso de placas PCIe ou módulos de E/S compatíveis com RoCE, o seu par de HA deve ter portas Ethernet compatíveis com RoCE suficientes para suportar o número de gavetas que você está adicionando dinamicamente.
@@ -34,6 +35,7 @@ Essas portas podem estar integradas aos controladores, em placas PCIe compatíve
 
 
 
+[[configure-roce-capable-ports-for-storage-use]]
 == Configurar portas compatíveis com RoCE para uso de armazenamento
 
 Em alguns sistemas, as portas compatíveis com RoCE são automaticamente configuradas para uso de storage quando você instala uma placa PCIe compatível com RoCE ou um módulo de E/S compatível com RoCE em um slot de controlador compatível. No entanto, você deve concluir este procedimento para verificar se as portas estão configuradas corretamente para uso de storage.
@@ -89,6 +91,7 @@ A saída do comando varia dependendo da sua versão do ONTAP:
 
 
 
+[[recable-existing-shelves]]
 == Gavetas existentes recuperáveis
 
 Ao adicionar uma segunda prateleira a um AFF A70 ou AFF A90 par de HA, é necessário refazer a fiação da primeira prateleira entre os módulos de E/S compatíveis com RoCE nos slots 11 e 8 de cada controlador.
@@ -110,6 +113,7 @@ Se forem gerados erros de cabeamento, siga as ações corretivas fornecidas.
 
 
 
+[[disable-automatic-drive-assignment]]
 == Desativar a atribuição automática de condução
 
 Se você não tiver certeza se deve atribuir manualmente a propriedade da unidade ou se deseja entender a atribuição automática de políticas de propriedade da unidade para seu sistema de armazenamento, vá para https://docs.netapp.com/us-en/ontap/disks-aggregates/disk-autoassignment-policy-concept.html["Sobre a atribuição automática de propriedade de disco"^].

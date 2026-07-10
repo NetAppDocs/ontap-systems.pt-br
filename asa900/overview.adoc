@@ -15,6 +15,7 @@ A seguir estão algumas especificações selecionadas para o ASA A900.  Visita h
 
 
 
+[[key-specifications-for-asa-a900]]
 === Especificações principais do ASA A900
 
 Configuração da plataforma: Par de HA de chassi único ASA A900
@@ -33,6 +34,7 @@ Versão mínima do ONTAP : ONTAP 9.13.1
 
 
 
+[[scaleout-maximums]]
 === Máximos de Escalabilidade
 
 |===
@@ -51,6 +53,7 @@ Versão mínima do ONTAP : ONTAP 9.13.1
 |===
 
 
+[[io]]
 === IO
 
 
@@ -109,12 +112,14 @@ Não há dados de E/S a bordo.
 |===
 
 
+[[storage-networking-supported]]
 === Rede de armazenamento suportada
 
 FC; iSCSI; NVMe/FC; NVMe/TCP;
 
 
 
+[[system-environment-specifications]]
 === Especificações do ambiente do sistema
 
 * Potência típica: 8004 BTU/h
@@ -130,6 +135,7 @@ FC; iSCSI; NVMe/FC; NVMe/TCP;
 
 
 
+[[compliance]]
 === Conformidade
 
 * Certificações EMC/EMI: AMCA, FCC, ICES, KC, Marrocos, VCCI
@@ -142,6 +148,7 @@ FC; iSCSI; NVMe/FC; NVMe/TCP;
 
 
 
+[[high-availability]]
 === Alta disponibilidade
 
 Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP ; Controladores redundantes de troca a quente; Fontes de alimentação redundantes de troca a quente; Gerenciamento SAS em banda por meio de conexões SAS;

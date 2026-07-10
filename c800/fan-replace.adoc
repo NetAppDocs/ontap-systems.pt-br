@@ -15,6 +15,7 @@ Substitua o módulo de ventoinha do seu sistema AFF C800 quando uma ventoinha fa
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Passo 1: Desligue o controlador desativado
 
 Desligue o controlador desativado
@@ -87,6 +88,7 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 
 
 
+[[step-2-remove-the-controller-module]]
 == Passo 2: Remova o módulo do controlador
 
 Deve remover o módulo do controlador do chassis quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
@@ -175,6 +177,7 @@ Ao deslizar o módulo controlador para fora do chassi, apoie a parte inferior.
 
 
 
+[[step-3-replace-a-fan]]
 == Passo 3: Substitua um ventilador
 
 Localize o módulo de ventoinha com defeito e substitua-o por um novo.
@@ -205,6 +208,7 @@ Módulo da ventoinha
 
 
 
+[[step-4-reinstall-the-controller-module]]
 == Etapa 4: Reinstale o módulo do controlador
 
 Reinstale o módulo do controlador e reinicie-o.
@@ -253,6 +257,7 @@ O módulo do controlador começa a inicializar assim que a energia é restaurada
 
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == Passo 5: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

@@ -15,6 +15,7 @@ Para restaurar o sistema para a operação completa, você deve restaurar a conf
 
 
 
+[[step-1-installing-licenses-for-the-replacement-controller-in-ontap]]
 == Passo 1: Instalando licenças para o controlador _replacement_ no ONTAP
 
 Você deve instalar novas licenças para o nó _replacement_ se o nó prejudicado estiver usando recursos do ONTAP que exigem uma licença padrão (node-locked). Para recursos com licenças padrão, cada nó no cluster deve ter sua própria chave para o recurso.
@@ -49,6 +50,7 @@ NOTE: As novas chaves de licença que você precisa são geradas automaticamente
 
 
 
+[[step-2-verifying-lifs-and-registering-the-serial-number]]
 == Etapa 2: Verificando LIFs e registrando o número de série
 
 Antes de retornar o nó _de substituição_ ao serviço, você deve verificar se as LIFs estão em suas portas de origem, registrar o número de série do nó _de substituição_ se AutoSupport estiver habilitado, verificar a integridade do seu cluster, fechar quaisquer janelas de manutenção e redefinir o giveback automático.
@@ -71,6 +73,7 @@ Se algum LIFs estiver listado como false, reverta-os para suas portas iniciais: 
 
 
 
+[[step-3-return-the-failed-part-to-netapp]]
 == Passo 3: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

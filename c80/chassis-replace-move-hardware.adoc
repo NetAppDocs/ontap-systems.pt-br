@@ -15,6 +15,7 @@ Substitua o chassi do seu sistema AFF C80 quando uma falha de hardware assim o e
 
 
 
+[[step-1-remove-the-psus-and-cables]]
 == Etapa 1: Remova as PSUs e os cabos
 
 Você precisa remover todas as quatro unidades de fonte de alimentação (PSUs), duas por controlador, antes de remover o controlador. Removê-los alivia o peso total de cada controlador.
@@ -63,6 +64,7 @@ NOTE: Os cabos devem ter sido identificados no início deste procedimento.
 
 
 
+[[step-2-remove-the-controller-modules-and-drives]]
 == Passo 2: Remova os módulos e unidades do controlador
 
 Remova os controladores do chassi e remova as unidades do chassi.
@@ -149,6 +151,7 @@ NOTE: Os acionamentos são frágeis. Utilize sempre as duas mãos para suportar 
 
 
 
+[[step-3-replace-the-chassis-and-install-components]]
 == Etapa 3: Substitua o chassi e instale os componentes.
 
 Remova o chassi danificado, instale o chassi de substituição e reinstale todos os componentes.

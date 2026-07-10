@@ -15,6 +15,7 @@ Você pode adicionar um módulo de e/S ao seu sistema de armazenamento AFF A900 
 
 
 
+[[step-1-shut-down-the-impaired-controller-module]]
 == Passo 1: Desligue o módulo do controlador desativado
 
 Desligue ou assuma o controlo do módulo do controlador desativado.
@@ -146,6 +147,7 @@ Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctr
 ====
 
 
+[[step-2-add-the-new-io-module]]
 == Passo 2: Adicione o novo módulo de e/S.
 
 Se o sistema de armazenamento tiver slots vazios, instale o novo módulo de e/S em um dos slots disponíveis. Se todos os slots estiverem ocupados, remova um módulo de e/S existente para criar espaço e, em seguida, instale o novo.

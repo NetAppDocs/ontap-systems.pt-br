@@ -17,6 +17,7 @@ O sistema AFF A700s suporta apenas procedimentos manuais de recuperação de mí
 
 
 
+[[option-1-transfer-the-system-image-using-backup-recovery-from-the-second-boot-media]]
 == Opção 1: transferir a imagem do sistema usando recuperação de backup da segunda mídia de inicialização
 
 Você pode instalar a imagem do sistema na mídia de inicialização de substituição usando a imagem presente na segunda mídia de inicialização do módulo controlador. Este é o método principal para sistemas com duas mídias de inicialização no módulo controlador.
@@ -86,6 +87,7 @@ A imagem é transferida a partir do suporte de arranque secundário.
 
 
 
+[[option-2-transfer-the-boot-image-using-a-usb-flash-drive]]
 == Opção 2: Transfira a imagem de inicialização usando um pen drive USB.
 
 Este procedimento só deve ser utilizado se a restauração da mídia de inicialização secundária falhar ou se o  `image.tgz` arquivo não for encontrado na mídia de inicialização secundária.

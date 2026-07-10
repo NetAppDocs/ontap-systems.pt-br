@@ -15,6 +15,7 @@ A seguir estão especificações selecionadas para o sistema de armazenamento AS
 
 
 
+[[key-specifications-for-asa-c800]]
 == Especificações principais do ASA C800
 
 * Configuração da plataforma: Par de HA de chassi único ASA C800
@@ -28,6 +29,7 @@ A seguir estão especificações selecionadas para o sistema de armazenamento AS
 
 
 
+[[scaleout-maximums]]
 == máximos de escala
 
 * Tipo: NAS
@@ -37,10 +39,12 @@ A seguir estão especificações selecionadas para o sistema de armazenamento AS
 
 
 
+[[io]]
 == E/S
 
 
 
+[[onboard-io]]
 === E/S integradas
 
 * Protocolo: Ethernet 100 Gbps; Portas: 4
@@ -48,6 +52,7 @@ A seguir estão especificações selecionadas para o sistema de armazenamento AS
 
 
 
+[[total-io]]
 === Total de E/S
 
 * Protocolo: Ethernet 100 Gbps; Portas: 20
@@ -61,6 +66,7 @@ A seguir estão especificações selecionadas para o sistema de armazenamento AS
 
 
 
+[[management-ports]]
 === Portas de gerenciamento
 
 * Protocolo: Ethernet 1 Gbps; Portas: 4
@@ -70,6 +76,7 @@ A seguir estão especificações selecionadas para o sistema de armazenamento AS
 
 
 
+[[storage-networking-supported]]
 == Rede de armazenamento suportada
 
 * FC
@@ -79,6 +86,7 @@ A seguir estão especificações selecionadas para o sistema de armazenamento AS
 
 
 
+[[system-environment-specifications]]
 == Especificações do ambiente do sistema
 
 * Potência típica: 6626 BTU/h
@@ -94,6 +102,7 @@ A seguir estão especificações selecionadas para o sistema de armazenamento AS
 
 
 
+[[compliance]]
 == Conformidade
 
 * Certificações EMC/EMI: AMCA, FCC, ICES, KC, Marrocos, VCCI
@@ -106,6 +115,7 @@ A seguir estão especificações selecionadas para o sistema de armazenamento AS
 
 
 
+[[high-availability]]
 == Alta disponibilidade
 
 * Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP

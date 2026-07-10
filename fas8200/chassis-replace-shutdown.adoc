@@ -15,6 +15,7 @@ Para substituir o chassi, você deve desligar os controladores.
 
 
 
+[[option-1-most-configurations]]
 == Opção 1: A maioria das configurações
 
 Este procedimento destina-se a sistemas com duas configurações de nós. Para obter mais informações sobre o desligamento normal ao fazer manutenção de um cluster, https://kb.netapp.com/on-prem/ontap/OHW/OHW-KBs/What_is_the_procedure_for_graceful_shutdown_and_power_up_of_a_storage_system_during_scheduled_power_outage["Desligue e ligue o seu sistema de armazenamento de dados - base de dados de Conhecimento da NetApp"] consulte .
@@ -68,6 +69,7 @@ NOTE: Para clusters que usam o SnapMirror síncrono operando no modo StrictSync:
 
 
 
+[[option-2-controller-is-in-a-two-node-metrocluster-configuration]]
 == Opção 2: O controlador está em uma configuração de MetroCluster de dois nós
 
 Para desligar o controlador desativado, você deve determinar o status do controlador e, se necessário, trocar o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador prejudicado.

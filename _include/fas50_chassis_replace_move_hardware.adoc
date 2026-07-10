@@ -4,6 +4,7 @@
 
 
 
+[[about-this-task]]
 == Sobre esta tarefa
 
 Se necessário, você pode ligar os LEDs de localização do sistema de armazenamento (azul) para ajudar a localizar fisicamente o sistema de armazenamento afetado. Faça login no BMC usando SSH e digite o `system location-led _on_` comando.
@@ -14,6 +15,7 @@ Você pode desativá-los digitando o `system location-led _off_` comando. Se nã
 
 
 
+[[step-1-remove-the-controller]]
 == Passo 1: Remova o controlador
 
 Você deve remover o controlador do chassi quando substituir o controlador ou substituir um componente dentro do controlador.
@@ -125,6 +127,7 @@ Se necessário, rode as pegas para a posição vertical (junto às patilhas) par
 
 
 
+[[step-2-remove-the-caching-modules-from-the-impaired-chassis]]
 == Passo 2: Remova os módulos de cache do chassis danificado
 
 Você precisa remover quaisquer módulos de cache e espaços em branco de unidade do chassi prejudicado para que, mais tarde, no procedimento, você possa instalá-los no chassi de substituição.
@@ -170,6 +173,7 @@ Ao remover um módulo de cache, use sempre duas mãos para suportar seu peso.
 
 
 
+[[step-3-replace-the-chassis-from-within-the-equipment-rack-or-system-cabinet]]
 == Etapa 3: Substitua o chassi de dentro do rack de equipamentos ou do gabinete do sistema
 
 Você remove o chassi prejudicado do rack de equipamentos ou do gabinete do sistema, instala o chassi de substituição, instala os controladores, instala os módulos de cache e as placas de unidade e, em seguida, instala o painel frontal.
@@ -189,6 +193,7 @@ NOTE: Se o sistema de armazenamento for fornecido em um gabinete do sistema NetA
 
 
 
+[[step-4-install-the-controllers]]
 == Passo 4: Instale os controladores
 
 Instale os controladores no chassi de substituição e reinicialize-os.

@@ -6,6 +6,7 @@ Continue o procedimento de substituição reativando o armazenamento e confirman
 
 
 
+[[step-1-recable-the-system]]
 == Passo 1: Recable o sistema
 
 Verifique as conexões de armazenamento e rede do módulo controlador usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"] .
@@ -19,6 +20,7 @@ Verifique as conexões de armazenamento e rede do módulo controlador usando htt
 
 
 
+[[step-2-reassign-disks]]
 == Etapa 2: Reatribuir discos
 
 Se o sistema de storage estiver em um par de HA, a ID do sistema do novo módulo de controladora será automaticamente atribuída aos discos quando o giveback ocorrer no final do procedimento. Você deve confirmar a alteração do ID do sistema quando você inicializar o controlador _replacement_ e, em seguida, verificar se a alteração foi implementada.
@@ -45,6 +47,7 @@ Configuração de MetroCluster de dois nós
 |===
 
 
+[[option-1-verify-the-system-id-change-on-an-ha-system]]
 === Opção 1: Verifique a alteração da ID do sistema em um sistema HA
 
 Você deve confirmar a alteração do ID do sistema quando você inicializar o controlador _replacement_ e, em seguida, verificar se a alteração foi implementada.
@@ -131,6 +134,7 @@ Disk  Aggregate Home  Owner  DR Home  Home ID    Owner ID  DR Home ID Reserver  
 
 
 
+[[option-2-manually-reassign-the-system-id-on-systems-in-a-two-node-metrocluster-configuration]]
 === Opção 2: Reatribuir manualmente a ID do sistema em sistemas em uma configuração MetroCluster de dois nós
 
 Em uma configuração MetroCluster de dois nós executando o ONTAP, você deve reatribuir manualmente os discos à ID do sistema da nova controladora antes de retornar o sistema à condição operacional normal.

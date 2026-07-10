@@ -19,6 +19,7 @@ Você substitui a bateria do relógio em tempo real (RTC) no módulo do controla
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Passo 1: Desligue o controlador desativado
 
 Assuma o controle e interrompa o controlador com defeito para que o controlador em bom estado continue a fornecer dados do armazenamento do controlador com defeito. Para fazer isso, você suprime a criação automática de casos em AutoSupport, desativa o giveback automático e leva o controlador com defeito ao prompt LOADER. O prompt LOADER é o estado de parada segura a partir do qual você pode substituir a FRU.
@@ -89,6 +90,7 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 
 
 
+[[step-2-remove-controller-module]]
 == Passo 2: Remova o módulo do controlador
 
 Retire o módulo do controlador do sistema e, em seguida, retire a tampa do módulo do controlador.
@@ -112,6 +114,7 @@ image::../media/drw_2850_open_controller_module_cover_IEOPS-695.svg[Remova a tam
 
 
 
+[[step-3-replace-the-rtc-battery]]
 == Passo 3: Substitua a bateria RTC
 
 Substitua a bateria do RTC localizando-a no interior do controlador e siga a sequência específica de passos.
@@ -136,6 +139,7 @@ NOTE: Observe a polaridade da bateria ao removê-la do suporte. A bateria está 
 
 
 
+[[step-4-reinstall-the-controller-module]]
 == Etapa 4: Reinstale o módulo do controlador
 
 Reinstale o módulo do controlador e inicialize-o no prompt DO Loader.
@@ -171,6 +175,7 @@ O controlador começa a arrancar assim que estiver sentado no chassis.
 
 
 
+[[step-5-set-timedate-after-rtc-battery-replacement]]
 == Passo 5: Defina a hora/data após a substituição da bateria RTC
 
 . Redefina a hora e a data no controlador:
@@ -190,6 +195,7 @@ O controlador começa a arrancar assim que estiver sentado no chassis.
 
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == Passo 6: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

@@ -21,6 +21,7 @@ NOTE: O módulo controlador Ver2 tem apenas um soquete de módulo de cache no FA
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Passo 1: Desligue o controlador desativado
 
 Você pode desligar ou assumir o controlador prejudicado usando procedimentos diferentes, dependendo da configuração do hardware do sistema de armazenamento.
@@ -181,6 +182,7 @@ mcc1A::> metrocluster operation show
 ====
 
 
+[[step-2-remove-the-controller-module]]
 == Passo 2: Remova o módulo do controlador
 
 Para aceder aos componentes no interior do módulo do controlador, tem de remover o módulo do controlador do chassis.
@@ -212,6 +214,7 @@ Certifique-se de que suporta a parte inferior do módulo do controlador enquanto
 
 
 
+[[step-3-replace-a-caching-module]]
 == Passo 3: Substitua um módulo de cache
 
 Para substituir um módulo de cache, chamado de Flash Cache na etiqueta do controlador, localize o slot dentro do controlador e siga a sequência específica de etapas. Consulte o mapa da FRU no módulo do controlador para obter a localização do Flash Cache.
@@ -274,6 +277,7 @@ A extremidade do módulo de armazenamento em cache fica afastada do separador de
 
 
 
+[[step-4-install-the-controller-module]]
 == Passo 4: Instale o módulo do controlador
 
 Depois de ter substituído o componente no módulo do controlador, tem de reinstalar o módulo do controlador no chassis.
@@ -321,6 +325,7 @@ NOTE: Se o sistema parar no menu de inicialização, selecione a opção para in
 
 
 
+[[step-5-restore-the-controller-module-to-operation]]
 == Passo 5: Restaure o módulo do controlador para a operação
 
 Você deve reajustar o sistema, devolver o módulo do controlador e, em seguida, reativar a giveback automática.
@@ -336,6 +341,7 @@ Se você removeu os conversores de Mídia (QSFPs ou SFPs), lembre-se de reinstal
 
 
 
+[[step-7-switch-back-aggregates-in-a-two-node-metrocluster-configuration]]
 == Etapa 7: Alterne agregados de volta em uma configuração de MetroCluster de dois nós
 
 Esta tarefa só se aplica a configurações de MetroCluster de dois nós.
@@ -392,6 +398,7 @@ Se um switchback estiver demorando muito tempo para terminar, você pode verific
 
 
 
+[[step-8-complete-the-replacement-process]]
 == Passo 8: Conclua o processo de substituição
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

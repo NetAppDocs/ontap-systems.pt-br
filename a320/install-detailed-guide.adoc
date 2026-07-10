@@ -15,6 +15,7 @@ Este guia fornece instruções detalhadas passo a passo para instalar um sistema
 
 
 
+[[prepare-for-installation]]
 == Prepare-se para a instalação
 
 Para instalar seu sistema AFF A320, você precisa criar uma conta, Registrar o sistema e obter chaves de licença. Você também precisa fazer o inventário do número e do tipo apropriados de cabos para o seu sistema e coletar informações específicas de rede.
@@ -175,6 +176,7 @@ https://library.netapp.com/ecm/ecm_download_file/ECMLP2839002["Folha de trabalho
 
 
 
+[[install-the-hardware]]
 == Instale o hardware
 
 Você precisa instalar seu sistema em um rack de 4 colunas ou gabinete do sistema NetApp, conforme aplicável.
@@ -197,12 +199,14 @@ image::../media/drw_a320_cable_management_arms.png[Retire ou instale os braços 
 
 
 
+[[cable-controllers-to-your-network]]
 == Controladores de cabo para a rede
 
 Você pode conetar os controladores à rede usando o método de cluster sem switch de dois nós ou usando a rede de interconexão de cluster.
 
 
 
+[[option-1-cable-a-two-node-switchless-cluster]]
 === Opção 1: Cabo de um cluster sem switch de dois nós
 
 As portas de dados opcionais, placas NIC opcionais e portas de gerenciamento nos módulos do controlador são conetadas aos switches. As portas de interconexão/HA do cluster são cabeadas em ambos os módulos do controlador.
@@ -276,6 +280,7 @@ NÃO conete os cabos de energia neste momento.
 
 
 
+[[option-2-cabling-a-switched-cluster]]
 === Opção 2: Cabeamento de um cluster comutado
 
 As portas de dados opcionais, placas NIC opcionais e portas de gerenciamento nos módulos do controlador são conetadas aos switches. As portas de interconexão/HA do cluster são cabeadas para o switch cluster/HA.
@@ -349,12 +354,14 @@ NÃO conete os cabos de energia neste momento.
 
 
 
+[[cable-controllers-to-drive-shelves]]
 == Controladores de cabos para compartimentos de unidades
 
 Você precisa vincular os controladores às gavetas usando as portas de storage integradas.
 
 
 
+[[option-1-cable-the-controllers-to-a-single-drive-shelf]]
 === Opção 1: Cabeamento das controladoras a um único compartimento de unidade
 
 Você deve vincular cada controlador aos módulos do NSM no compartimento de unidades NS224.
@@ -394,6 +401,7 @@ Controlador de cabo B para a prateleira: image:../media/drw_a320_storage_cabling
 
 
 
+[[option-2-cable-the-controllers-to-two-drive-shelves]]
 === Opção 2: Cabeamento das controladoras para dois compartimentos de unidades
 
 Você precisa vincular cada controlador aos módulos do NSM em ambas as gavetas de unidades NS224.
@@ -433,12 +441,14 @@ Controlador de cabos B para as prateleiras: image:../media/drw_a320_2_shelves_ca
 
 
 
+[[complete-system-setup-and-configuration]]
 == Configuração e configuração completas do sistema
 
 Você pode concluir a configuração e configuração do sistema usando a descoberta de cluster com apenas uma conexão com o switch e laptop, ou conetando-se diretamente a um controlador no sistema e, em seguida, conetando-se ao switch de gerenciamento.
 
 
 
+[[option-1-completing-system-setup-and-configuration-if-network-discovery-is-enabled]]
 === Opção 1: Concluir a configuração e a configuração do sistema se a deteção de rede estiver ativada
 
 Se tiver a deteção de rede ativada no seu computador portátil, pode concluir a configuração e configuração do sistema utilizando a deteção automática de cluster.
@@ -482,6 +492,7 @@ https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["Guia de configura
 
 
 
+[[option-2-completing-system-setup-and-configuration-if-network-discovery-is-not-enabled]]
 === Opção 2: Concluir a configuração e a configuração do sistema se a deteção de rede não estiver ativada
 
 Se a deteção de rede não estiver ativada no seu computador portátil, tem de concluir a configuração e a configuração utilizando esta tarefa.

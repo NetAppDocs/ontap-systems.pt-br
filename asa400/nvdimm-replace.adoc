@@ -19,6 +19,7 @@ Você deve substituir o componente com falha por um componente FRU de substitui�
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Passo 1: Desligue o controlador desativado
 
 Encerre ou assuma o controlador afetado utilizando o procedimento adequado para a sua configuração.
@@ -191,6 +192,7 @@ mcc1A::> metrocluster operation show
 ====
 
 
+[[step-2-remove-the-controller-module]]
 == Passo 2: Remova o módulo do controlador
 
 Para aceder aos componentes no interior do módulo do controlador, tem de remover o módulo do controlador do chassis.
@@ -236,6 +238,7 @@ Certifique-se de que suporta a parte inferior do módulo do controlador enquanto
 
 
 
+[[step-3-replace-the-nvdimm]]
 == Passo 3: Substitua o NVDIMM
 
 Para substituir o NVDIMM, você deve localizá-lo no módulo do controlador usando o mapa da FRU na parte superior do duto de ar ou o mapa da FRU na parte superior do riser do slot 1.
@@ -310,6 +313,7 @@ NOTE: Inspecione visualmente o NVDIMM para verificar se ele está alinhado unifo
 
 
 
+[[step-4-install-the-controller-module]]
 == Passo 4: Instale o módulo do controlador
 
 Depois de ter substituído o componente no módulo do controlador, tem de reinstalar o módulo do controlador no chassis e, em seguida, iniciá-lo no modo de manutenção.
@@ -354,6 +358,7 @@ Se o sistema parar no menu de inicialização, selecione a opção para iniciali
 
 
 
+[[step-5-restore-the-controller-module-to-operation]]
 == Passo 5: Restaure o módulo do controlador para a operação
 
 Você deve reajustar o sistema, devolver o módulo do controlador e, em seguida, reativar a giveback automática.
@@ -368,6 +373,7 @@ Se você removeu os conversores de Mídia (QSFPs ou SFPs), lembre-se de reinstal
 
 
 
+[[step-6-switch-back-aggregates-in-a-two-node-metrocluster-configuration]]
 == Etapa 6: Alterne agregados de volta em uma configuração de MetroCluster de dois nós
 
 Esta tarefa só se aplica a configurações de MetroCluster de dois nós.
@@ -424,6 +430,7 @@ Se um switchback estiver demorando muito tempo para terminar, você pode verific
 
 
 
+[[step-7-return-the-failed-part-to-netapp]]
 == Passo 7: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

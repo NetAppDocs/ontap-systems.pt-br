@@ -18,6 +18,7 @@ Você deve substituir o módulo de cache no módulo do controlador quando o sist
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Passo 1: Desligue o controlador desativado
 
 Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
@@ -86,6 +87,7 @@ Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctr
 
 
 
+[[step-2-remove-controller-module]]
 == Passo 2: Remova o módulo do controlador
 
 Retire o módulo do controlador do sistema e, em seguida, retire a tampa do módulo do controlador.
@@ -120,6 +122,7 @@ Botão de liberação da tampa do módulo do controlador
 |===
 
 
+[[step-3-replace-a-caching-module]]
 == Passo 3: Substitua um módulo de cache
 
 Localize o módulo de armazenamento em cache dentro do controlador, remova o módulo de armazenamento em cache com falha e substitua-o.
@@ -166,6 +169,7 @@ Se necessário, remova o módulo de cache e recoloque-o no soquete.
 
 
 
+[[step-4-reinstall-the-controller-module]]
 == Etapa 4: Reinstale o módulo do controlador
 
 Volte a instalar o módulo do controlador no chassis.
@@ -201,6 +205,7 @@ O controlador começa a inicializar assim que estiver completamente assentado no
 
 
 
+[[step-5-restore-automatic-giveback-and-autosupport]]
 == Passo 5: Restaurar a giveback automática e AutoSupport
 
 Restaure a giveback automática e o AutoSupport se tiverem sido desativados.
@@ -211,6 +216,7 @@ Restaure a giveback automática e o AutoSupport se tiverem sido desativados.
 
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == Passo 6: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

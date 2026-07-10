@@ -12,6 +12,7 @@ summary: Após concluir as verificações de criptografia, desligue o controlado
 
 
 
+[[option-1-most-systems]]
 == Opção 1: A maioria dos sistemas
 
 [role="lead"]
@@ -21,6 +22,7 @@ O sistema FAS8200 suporta apenas procedimentos manuais de recuperação de mídi
 
 
 
+[[option-1-most-systems]]
 == Opção 1: A maioria dos sistemas
 
 Conclua o desligamento do controlador com defeito, interrompendo-o até o prompt LOADER e capturando as variáveis de ambiente de inicialização. O prompt LOADER é o estado de parada seguro a partir do qual você pode substituir a mídia de inicialização.
@@ -64,6 +66,7 @@ NOTE: Este comando pode não funcionar se o dispositivo de inicialização estiv
 
 
 
+[[option-2-controller-is-in-a-metrocluster-configuration]]
 == Opção 2: O controlador está em uma configuração MetroCluster
 
 
@@ -123,6 +126,7 @@ Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctr
 
 
 
+[[option-3-controller-is-in-a-two-node-metrocluster]]
 == Opção 3: O controlador está em um MetroCluster de dois nós
 
 Para desligar o controlador desativado, você deve determinar o status do controlador e, se necessário, trocar o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador prejudicado.

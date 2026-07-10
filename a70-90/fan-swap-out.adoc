@@ -15,6 +15,7 @@ Substitua um módulo de ventilador no sistema AFF A70 ou AFF A90 quando um venti
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Passo 1: Desligue o controlador desativado
 
 Encerre ou assuma o controlador afetado utilizando uma das seguintes opções.
@@ -161,6 +162,7 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 ====
 
 
+[[step-2-remove-the-controller-module]]
 == Passo 2: Remova o módulo do controlador
 
 
@@ -281,6 +283,7 @@ Certifique-se de que suporta a parte inferior do módulo do controlador enquanto
 
 
 
+[[step-3-replace-the-fan]]
 == Etapa 3: Substitua o ventilador
 
 Para substituir uma ventoinha, retire o módulo da ventoinha com avaria e substitua-o por um novo módulo da ventoinha.
@@ -313,6 +316,7 @@ image:../media/icon_round_2.png["Legenda número 2"]
 
 
 
+[[step-4-reinstall-the-controller-module]]
 == Etapa 4: Reinstale o módulo do controlador
 
 Reinstale o módulo do controlador e reinicie-o.
@@ -366,6 +370,7 @@ Se você tiver fontes de alimentação CC, reconete o bloco de alimentação às
 
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == Passo 5: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

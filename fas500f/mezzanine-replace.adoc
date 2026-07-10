@@ -19,6 +19,7 @@ Para substituir uma placa mezzanine com falha, você deve remover os cabos e qua
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Passo 1: Desligue o controlador desativado
 
 Assuma o controle e interrompa o controlador com defeito para que o controlador em bom estado continue a fornecer dados do armazenamento do controlador com defeito. Para fazer isso, você suprime a criação automática de casos em AutoSupport, desativa o giveback automático e leva o controlador com defeito ao prompt LOADER. O prompt LOADER é o estado de parada segura a partir do qual você pode substituir a FRU.
@@ -89,6 +90,7 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 
 
 
+[[step-2-remove-the-controller-module]]
 == Passo 2: Remova o módulo do controlador
 
 Deve remover o módulo do controlador do chassis quando substituir um componente no interior do módulo do controlador.
@@ -145,6 +147,7 @@ Tampa do módulo do controlador.
 
 
 
+[[step-3-replace-or-install-a-mezzanine-card]]
 == Passo 3: Substitua ou instale uma placa mezzanine
 
 Para substituir uma placa mezzanine, você deve remover a placa prejudicada e instalar a placa de substituição; para instalar uma placa mezzanine, você deve remover a placa frontal e instalar a nova placa.
@@ -155,6 +158,7 @@ Você pode usar o vídeo a seguir ou as etapas tabuladas para substituir uma pla
 video::d8e7d4d9-8d28-4be1-809b-ac5b01643676[panopto]
 
 
+[[option-1-replace-a-mezzanine-card]]
 === Opção 1: Substituir uma placa mezzanine:
 
 . Localize e substitua a placa mezzanine prejudicada no módulo do controlador.
@@ -203,6 +207,7 @@ NOTE: Não aplique força ao apertar o parafuso na placa mezzanine; você pode r
 
 
 
+[[option-2-install-a-mezzanine-card]]
 === Opção 2: Instalar uma placa mezzanine:
 
 Você instala uma nova placa mezzanine se seu sistema não tiver uma.
@@ -219,6 +224,7 @@ NOTE: Não aplique força ao apertar o parafuso na placa mezzanine; você pode r
 
 
 
+[[step-4-reinstall-the-controller-module]]
 == Etapa 4: Reinstale o módulo do controlador
 
 Depois de substituir um componente dentro do módulo do controlador, você deve reinstalar o módulo do controlador no chassi do sistema e iniciá-lo.
@@ -264,6 +270,7 @@ O módulo do controlador deve ser totalmente inserido e alinhado com as bordas d
 
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == Passo 5: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

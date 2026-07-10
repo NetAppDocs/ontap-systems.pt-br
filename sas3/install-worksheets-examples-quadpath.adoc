@@ -38,6 +38,7 @@ Cada par de portas designado para cabeamento multipathed é circundado por um ov
 
 
 
+[[quad-path-ha-with-two-quad-port-sas-hbas-and-two-multi-shelf-stacks]]
 == HA de quatro vias com dois HBAs SAS de quatro portas e duas pilhas de várias prateleiras
 
 O exemplo de Planilha e cabeamento a seguir usa pares de portas 1a/2b (multipathed) e 2a/1D (quatro pathed) para a pilha 1, e pares de portas 1c/2D (multipathed) e 2c/1b (quatro pathed) para stack2.

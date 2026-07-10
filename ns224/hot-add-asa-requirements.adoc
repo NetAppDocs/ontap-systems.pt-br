@@ -15,6 +15,7 @@ Verifique se o seu sistema ASA atende aos requisitos de versão do ONTAP, capaci
 
 
 
+[[requirements]]
 == Requisitos
 
 Seu par de HA deve atender aos seguintes requisitos para adicionar um shelf NS224 a quente.
@@ -31,6 +32,7 @@ Execute  https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadviso
 
 
 
+[[best-practices]]
 == Práticas recomendadas
 
 Familiarize-se com as práticas recomendadas a seguir antes de adicionar uma prateleira NS224.

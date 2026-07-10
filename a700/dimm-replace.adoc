@@ -19,6 +19,7 @@ Você deve substituir o componente com falha por um componente FRU de substitui�
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Passo 1: Desligue o controlador desativado
 
 Você pode desligar ou assumir o controlador prejudicado usando procedimentos diferentes, dependendo da configuração do hardware do sistema de armazenamento.
@@ -191,6 +192,7 @@ mcc1A::> metrocluster operation show
 ====
 
 
+[[step-2-remove-the-controller-module]]
 == Passo 2: Remova o módulo do controlador
 
 Para aceder aos componentes no interior do controlador, tem de remover primeiro o módulo do controlador do sistema e, em seguida, remover a tampa do módulo do controlador.
@@ -243,6 +245,7 @@ Botão de bloqueio da tampa do módulo do controlador
 
 
 
+[[step-3-replace-the-dimms]]
 == Etapa 3: Substitua os DIMMs
 
 Para substituir os DIMMs, localize-os dentro do controlador e siga a sequência específica de passos.
@@ -298,6 +301,7 @@ NOTE: Inspecione visualmente o DIMM para verificar se ele está alinhado uniform
 
 
 
+[[step-4-install-the-controller]]
 == Passo 4: Instale o controlador
 
 Depois de instalar os componentes no módulo do controlador, tem de instalar o módulo do controlador novamente no chassis do sistema e arrancar o sistema operativo.
@@ -338,6 +342,7 @@ O módulo do controlador começa a arrancar assim que estiver totalmente assente
 
 
 
+[[step-5-switch-back-aggregates-in-a-two-node-metrocluster-configuration]]
 == Etapa 5: Alterne agregados de volta em uma configuração de MetroCluster de dois nós
 
 Esta tarefa só se aplica a configurações de MetroCluster de dois nós.
@@ -394,6 +399,7 @@ Se um switchback estiver demorando muito tempo para terminar, você pode verific
 
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == Passo 6: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

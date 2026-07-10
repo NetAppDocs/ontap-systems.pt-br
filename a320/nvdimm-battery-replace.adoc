@@ -17,6 +17,7 @@ Todos os outros componentes do sistema devem estar funcionando corretamente; cas
 
 
 
+[[step-1-shut-down-the-controller]]
 == Passo 1: Desligue o controlador
 
 Assuma o controle e interrompa o controlador com defeito para que o controlador em bom estado continue a fornecer dados do armazenamento do controlador com defeito. Para fazer isso, você suprime a criação automática de casos em AutoSupport, desativa o giveback automático e leva o controlador com defeito ao prompt LOADER. O prompt LOADER é o estado de parada segura a partir do qual você pode substituir a FRU.
@@ -87,6 +88,7 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 
 
 
+[[step-2-remove-the-controller-module]]
 == Passo 2: Remova o módulo do controlador
 
 Para aceder aos componentes no interior do módulo do controlador, tem de remover o módulo do controlador do chassis.
@@ -119,6 +121,7 @@ O gancho do mecanismo de travamento deve estar quase na vertical e deve estar li
 
 
 
+[[step-3-replace-the-nvdimm-battery]]
 == Etapa 3: Substitua a bateria NVDIMM
 
 Para substituir a bateria NVDIMM, você deve remover a bateria com falha do módulo do controlador e instalar a bateria de substituição no módulo do controlador.
@@ -135,6 +138,7 @@ image::../media/drw_a320_nvbat_move_animated_gif.png[Substitua a bateria NV]
 
 
 
+[[step-4-install-the-controller-module]]
 == Passo 4: Instale o módulo do controlador
 
 Depois de ter substituído o componente no módulo do controlador, tem de reinstalar o módulo do controlador no chassis e, em seguida, iniciá-lo.
@@ -175,6 +179,7 @@ O módulo do controlador começa a arrancar assim que estiver totalmente assente
 
 
 
+[[step-5-restore-the-controller-module-to-operation]]
 == Passo 5: Restaure o módulo do controlador para a operação
 
 Você deve reajustar o sistema, devolver o módulo do controlador e, em seguida, reativar a giveback automática.
@@ -189,6 +194,7 @@ Se você removeu os conversores de Mídia (QSFPs ou SFPs), lembre-se de reinstal
 
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == Passo 6: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

@@ -15,6 +15,7 @@ A seguir estão especificações selecionadas para o sistema de armazenamento AS
 
 
 
+[[key-capacity-memory-form-factor-and-ontap-version-specifications]]
 == Especificações de capacidade principal, memória, fator de forma e versão do ONTAP
 
 * Configuração da plataforma: Par de chassis único ASA A90 HA
@@ -28,6 +29,7 @@ A seguir estão especificações selecionadas para o sistema de armazenamento AS
 
 
 
+[[scaleout-maximums]]
 == máximos de escala
 
 * Tipo: NAS
@@ -37,16 +39,19 @@ A seguir estão especificações selecionadas para o sistema de armazenamento AS
 
 
 
+[[io]]
 == E/S
 
 
 
+[[onboard-io]]
 === E/S integradas
 
 Não há dados de E/S integrados.
 
 
 
+[[total-io]]
 === Total de E/S
 
 * Protocolo: Ethernet 200 Gbps; Portas: 24
@@ -60,6 +65,7 @@ Não há dados de E/S integrados.
 
 
 
+[[management-ports]]
 === Portas de gerenciamento
 
 * Protocolo: Ethernet 1 Gbps; Portas: 2
@@ -69,6 +75,7 @@ Não há dados de E/S integrados.
 
 
 
+[[storage-networking-supported]]
 == Rede de armazenamento suportada
 
 * FC
@@ -79,6 +86,7 @@ Não há dados de E/S integrados.
 
 
 
+[[system-environment-specifications]]
 == Especificações do ambiente do sistema
 
 * Potência típica: 8304 BTU/h
@@ -94,6 +102,7 @@ Não há dados de E/S integrados.
 
 
 
+[[compliance]]
 == Conformidade
 
 * Certificações EMC/EMI: AMCA, FCC, ICES, KC, Marrocos, VCCI
@@ -106,6 +115,7 @@ Não há dados de E/S integrados.
 
 
 
+[[high-availability]]
 == Alta disponibilidade
 
 * Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP

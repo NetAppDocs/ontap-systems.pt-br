@@ -15,6 +15,7 @@ A seguir estão algumas especificações selecionadas para o AFF C800.  Visita h
 
 
 
+[[key-specifications-for-aff-c800]]
 === Especificações principais do AFF C800
 
 Configuração da plataforma: Par de HA de chassi único AFF C800
@@ -33,6 +34,7 @@ Versão mínima do ONTAP : ONTAP 9.10.1P15
 
 
 
+[[scaleout-maximums]]
 === Máximos de Escalabilidade
 
 |===
@@ -51,6 +53,7 @@ Versão mínima do ONTAP : ONTAP 9.10.1P15
 |===
 
 
+[[io]]
 === IO
 
 
@@ -115,12 +118,14 @@ Versão mínima do ONTAP : ONTAP 9.10.1P15
 |===
 
 
+[[storage-networking-supported]]
 === Rede de armazenamento suportada
 
 CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NFSv3/RDMA; NFSv4/RDMA; NVMe/FC; NVMe/TCP; S3; S3 com NAS; SMB 2.0; SMB 2.1; SMB 2.x; SMB 3.0; SMB 3.1; SMB 3.1.1;
 
 
 
+[[system-environment-specifications]]
 === Especificações do ambiente do sistema
 
 * Potência típica: 6626 BTU/h
@@ -136,6 +141,7 @@ CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NFSv3/RDMA; NFSv4/RDMA; N
 
 
 
+[[compliance]]
 === Conformidade
 
 * Certificações EMC/EMI: AMCA, FCC, ICES, KC, Marrocos, VCCI
@@ -148,6 +154,7 @@ CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NFSv3/RDMA; NFSv4/RDMA; N
 
 
 
+[[high-availability]]
 === Alta disponibilidade
 
 Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP ; Controladores redundantes de troca a quente; Fontes de alimentação redundantes de troca a quente;

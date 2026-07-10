@@ -15,6 +15,7 @@ A seguir estão especificações selecionadas para o sistema de armazenamento AF
 
 
 
+[[key-specifications-for-aff-a800]]
 == Especificações principais do AFF A800
 
 * Configuração da plataforma: Par de HA de chassi único AFF A800
@@ -28,6 +29,7 @@ A seguir estão especificações selecionadas para o sistema de armazenamento AF
 
 
 
+[[scaleout-maximums]]
 == máximos de escala
 
 * Tipo: NAS; Pares HA: 12; Capacidade bruta: 79,3 PB / 70,4 PiB; Memória máxima: 15360 GB
@@ -37,10 +39,12 @@ A seguir estão especificações selecionadas para o sistema de armazenamento AF
 
 
 
+[[io]]
 == E/S
 
 
 
+[[onboard-io]]
 === E/S integradas
 
 * Protocolo: Ethernet 100 Gbps; Portas: 4
@@ -48,6 +52,7 @@ A seguir estão especificações selecionadas para o sistema de armazenamento AF
 
 
 
+[[total-io]]
 === Total de E/S
 
 * Protocolo: Ethernet 100 Gbps; Portas: 20
@@ -62,6 +67,7 @@ A seguir estão especificações selecionadas para o sistema de armazenamento AF
 
 
 
+[[management-ports]]
 === Portas de gerenciamento
 
 * Protocolo: Ethernet 1 Gbps; Portas: 4
@@ -71,6 +77,7 @@ A seguir estão especificações selecionadas para o sistema de armazenamento AF
 
 
 
+[[storage-networking-supported]]
 == Rede de armazenamento suportada
 
 * CIFS
@@ -96,6 +103,7 @@ A seguir estão especificações selecionadas para o sistema de armazenamento AF
 
 
 
+[[system-environment-specifications]]
 == Especificações do ambiente do sistema
 
 * Potência típica: 6626 BTU/h
@@ -111,6 +119,7 @@ A seguir estão especificações selecionadas para o sistema de armazenamento AF
 
 
 
+[[compliance]]
 == Conformidade
 
 * Certificações EMC/EMI: AMCA, FCC, ICES, KC, Marrocos, VCCI
@@ -123,6 +132,7 @@ A seguir estão especificações selecionadas para o sistema de armazenamento AF
 
 
 
+[[high-availability]]
 == Alta disponibilidade
 
 * Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP

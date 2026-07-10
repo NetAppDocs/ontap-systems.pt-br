@@ -6,6 +6,7 @@ Continue o procedimento de substituição reativando o armazenamento e confirman
 
 
 
+[[step-1-recable-the-system]]
 == Passo 1: Recable o sistema
 
 Verifique as conexões de armazenamento e rede do módulo controlador usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"] .
@@ -19,6 +20,7 @@ Verifique as conexões de armazenamento e rede do módulo controlador usando htt
 
 
 
+[[step-2-reassign-disks]]
 == Etapa 2: Reatribuir discos
 
 O procedimento usado depende da configuração de redundância do seu controlador.

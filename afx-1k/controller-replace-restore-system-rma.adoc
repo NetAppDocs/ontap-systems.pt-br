@@ -15,6 +15,7 @@ Verifique se as interfaces lógicas (LIFs) estão reportando à porta inicial, e
 
 
 
+[[step-1-verify-lifs-and-check-cluster-health]]
 == Etapa 1: Verificar LIFs e verificar a integridade do cluster
 
 Antes de retornar o nó de substituição ao serviço, certifique-se de que as interfaces lógicas estejam em suas portas iniciais, verifique a integridade do cluster e redefina o retorno automático.
@@ -35,6 +36,7 @@ Se alguma interface lógica for listada como falsa, retorne-a para suas portas i
 
 
 
+[[step-2-return-the-failed-part-to-netapp]]
 == Passo 2: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

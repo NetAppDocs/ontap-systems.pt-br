@@ -24,6 +24,7 @@ Você pode desativá-los digitando o `system location-led _off_` comando. Se nã
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Passo 1: Desligue o controlador desativado
 
 Assuma o controle e interrompa o controlador com defeito para que o controlador em bom estado continue a fornecer dados do armazenamento do controlador com defeito. Para fazer isso, você suprime a criação automática de casos em AutoSupport, desativa o giveback automático e leva o controlador com defeito ao prompt LOADER. O prompt LOADER é o estado de parada segura a partir do qual você pode substituir a FRU.
@@ -94,6 +95,7 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 
 
 
+[[step-2-add-the-new-io-module]]
 == Passo 2: Adicione o novo módulo de e/S.
 
 Se o sistema de armazenamento tiver slots disponíveis, instale o novo módulo de e/S em um dos slots disponíveis. Se todos os slots estiverem ocupados, remova um módulo de e/S existente para criar espaço e, em seguida, instale o novo.

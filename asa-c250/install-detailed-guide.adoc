@@ -15,6 +15,7 @@ Esta seção fornece instruções detalhadas passo a passo para a instalação d
 
 
 
+[[step-1-prepare-for-installation]]
 == Passo 1: Prepare-se para a instalação
 
 Para instalar o sistema AFF A250, você precisa criar uma conta e Registrar o sistema. Você também precisa fazer o inventário do número e do tipo apropriados de cabos para o seu sistema e coletar informações específicas de rede.
@@ -143,6 +144,7 @@ Ligar o sistema
 
 
 
+[[step-2-install-the-hardware]]
 == Passo 2: Instale o hardware
 
 Você precisa instalar seu sistema em um rack de 4 colunas ou gabinete do sistema NetApp, conforme aplicável.
@@ -163,6 +165,7 @@ image::../media/drw_affa250_weight_caution.png[Cuidado com o elevador para duas 
 
 
 
+[[step-3-cable-controllers-to-cluster]]
 == Passo 3: Controladores de cabo para cluster
 
 Conete os controladores a um cluster usando o método de cluster sem switch de dois nós ou usando o método de rede de interconexão de cluster.
@@ -244,6 +247,7 @@ image::../media/drw_affa250_mgmt_cabling.png[Cabeamento de porta de gerenciament
 ====
 
 
+[[step-4-cable-to-host-network-or-storage-optional]]
 == Passo 4: Cabo para rede de host ou armazenamento (opcional)
 
 Você tem cabeamento opcional dependente da configuração para as redes de host Fibre Channel ou iSCSI ou armazenamento de conexão direta. Esse cabeamento não é exclusivo; você pode ter cabeamento para uma rede host e armazenamento.
@@ -339,6 +343,7 @@ image:../media/drw_affa250_1shelf_cabling_b.png["Cabeamento da controladora B."]
 ====
 
 
+[[step-5-complete-system-setup]]
 == Passo 5: Conclua a configuração do sistema
 
 Conclua a configuração e a configuração do sistema usando a descoberta de cluster apenas com uma conexão com o switch e laptop, ou conetando-se diretamente a um controlador no sistema e, em seguida, conetando-se ao switch de gerenciamento.

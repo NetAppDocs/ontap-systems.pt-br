@@ -4,6 +4,7 @@
 
 
 
+[[about-this-task]]
 == Sobre esta tarefa
 
 Se necessário, você pode ligar os LEDs de localização do sistema de armazenamento (azul) para ajudar a localizar fisicamente o sistema de armazenamento afetado. Faça login no BMC usando SSH e digite o `system location-led _on_` comando.
@@ -14,6 +15,7 @@ Você pode desativá-los digitando o `system location-led _off_` comando. Se nã
 
 
 
+[[step-1-remove-the-controller]]
 == Passo 1: Remova o controlador
 
 Você deve remover o controlador do chassi quando substituir o controlador ou substituir um componente dentro do controlador.
@@ -125,6 +127,7 @@ Se necessário, rode as pegas para a posição vertical (junto às patilhas) par
 
 
 
+[[step-2-move-the-power-supply]]
 == Passo 2: Mova a fonte de alimentação
 
 Mova a fonte de alimentação (PSU) para o controlador de substituição.
@@ -262,6 +265,7 @@ NOTE: Para evitar danificar o conetor interno, não use força excessiva ao desl
 ====
 
 
+[[step-3-move-the-fans]]
 == Passo 3: Mova os fãs
 
 Mova as ventoinhas para o controlador de substituição.
@@ -290,6 +294,7 @@ image::../media/icon_round_2.png[Legenda número 2]
 
 
 
+[[step-4-move-the-nv-battery]]
 == Passo 4: Mova a bateria NV
 
 Mova a bateria NV para o controlador de substituição.
@@ -342,6 +347,7 @@ A bateria NV deve ficar nivelada no respetivo compartimento.
 
 
 
+[[step-5-move-system-dimms]]
 == Passo 5: Mova os DIMMs do sistema
 
 Mova os DIMMs para o controlador de substituição.
@@ -409,6 +415,7 @@ CAUTION: Antes de fechar a tampa do controlador danificado, certifique-se de que
 
 
 
+[[step-6-move-the-boot-media]]
 == Passo 6: Mova a Mídia de inicialização
 
 Mova o suporte de arranque para o controlador de substituição.
@@ -459,6 +466,7 @@ Puxe cuidadosamente a extremidade esquerda do suporte de arranque para fora do r
 
 
 
+[[step-7-move-the-io-modules]]
 == Passo 7: Mova os módulos de e/S.
 
 Mova os módulos de e/S e quaisquer módulos de supressão de e/S para o controlador de substituição.
@@ -510,6 +518,7 @@ Você pode usar a aba à esquerda e o parafuso de aperto manual para empurrar o 
 
 
 
+[[step-8-install-the-controller]]
 == Passo 8: Instale o controlador
 
 Reinstale o controlador no chassi e reinicialize-o.

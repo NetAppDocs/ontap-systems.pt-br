@@ -17,6 +17,7 @@ Todos os outros componentes do sistema devem estar funcionando corretamente; cas
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Passo 1: Desligue o controlador desativado
 
 Assuma o controle e interrompa o controlador com defeito para que o controlador em bom estado continue a fornecer dados do armazenamento do controlador com defeito. Para fazer isso, você suprime a criação automática de casos em AutoSupport, desativa o giveback automático e leva o controlador com defeito ao prompt LOADER. O prompt LOADER é o estado de parada segura a partir do qual você pode substituir a FRU.
@@ -87,6 +88,7 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 
 
 
+[[step-2-remove-the-controller-module]]
 == Passo 2: Remova o módulo do controlador
 
 Deve remover o módulo do controlador do chassis quando substituir um componente no interior do módulo do controlador.
@@ -149,6 +151,7 @@ Tampa do módulo do controlador.
 
 
 
+[[step-3-replace-the-nvmem-battery]]
 == Passo 3: Substitua a bateria do NVMEM
 
 Para substituir a bateria do NVMEM, tem de remover a bateria avariada do módulo do controlador e instalar a bateria de substituição no módulo do controlador.
@@ -207,6 +210,7 @@ Levante a bateria para fora do suporte e do módulo do controlador.
 
 
 
+[[step-4-install-the-controller-module]]
 == Passo 4: Instale o módulo do controlador
 
 Depois de ter substituído o componente no módulo do controlador, tem de reinstalar o módulo do controlador no chassis e, em seguida, iniciá-lo.
@@ -258,6 +262,7 @@ O módulo do controlador começa a inicializar assim que a energia é restaurada
 
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == Passo 5: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

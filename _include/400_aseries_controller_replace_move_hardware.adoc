@@ -6,6 +6,7 @@ Para substituir o hardware do módulo do controlador, é necessário remover o c
 
 
 
+[[step-1-remove-the-controller-module]]
 == Passo 1: Remova o módulo do controlador
 
 Para aceder aos componentes no interior do módulo do controlador, tem de remover o módulo do controlador do chassis.
@@ -77,6 +78,7 @@ Travas de liberação da riser
 
 
 
+[[step-2-move-the-power-supplies]]
 == Passo 2: Mova as fontes de alimentação
 
 Deve mover a fonte de alimentação do módulo do controlador afetado para o módulo do controlador de substituição quando substituir um módulo do controlador.
@@ -127,6 +129,7 @@ NOTE: Para evitar danificar o conetor interno, não utilize força excessiva ao 
 
 
 
+[[step-3-move-the-nvdimm-battery]]
 == Etapa 3: Mova a bateria NVDIMM
 
 Para mover a bateria NVDIMM do módulo do controlador desativado para o módulo do controlador de substituição, é necessário executar uma sequência específica de passos.
@@ -180,6 +183,7 @@ NOTE: Não conete o cabo da bateria de volta à placa-mãe até que seja instru�
 
 
 
+[[step-4-move-the-boot-media]]
 == Passo 4: Mova a Mídia de inicialização
 
 Tem de localizar o suporte de arranque e, em seguida, seguir as instruções para o remover do módulo do controlador afetado e inseri-lo no módulo do controlador de substituição.
@@ -229,6 +233,7 @@ Se necessário, retire o suporte de arranque e volte a colocá-lo no socket.
 
 
 
+[[step-5-move-the-pcie-risers-and-mezzanine-card]]
 == Passo 5: Mova os risers PCIe e a placa mezzanine
 
 Como parte do processo de substituição da controladora, você deve mover os risers PCIe e a placa mezzanine do módulo do controlador prejudicado para o módulo do controlador de substituição.
@@ -305,6 +310,7 @@ A riser levanta-se ligeiramente do módulo do controlador.
 
 
 
+[[step-6-move-the-dimms]]
 == Passo 6: Mova os DIMMs
 
 Você precisa localizar os DIMMs e depois movê-los do módulo do controlador prejudicado para o módulo do controlador de substituição.
@@ -372,6 +378,7 @@ Certifique-se de que a ficha fica fixa no módulo do controlador.
 
 
 
+[[step-7-install-the-controller-module]]
 == Passo 7: Instale o módulo do controlador
 
 Depois de todos os componentes terem sido movidos do módulo do controlador afetado para o módulo do controlador de substituição, tem de instalar o módulo do controlador de substituição no chassis e, em seguida, iniciá-lo no modo de manutenção.

@@ -17,6 +17,7 @@ O procedimento para inicializar o nó prejudicado a partir da imagem de recupera
 
 
 
+[[option-1-boot-the-recovery-image-in-most-systems]]
 == Opção 1: Inicialize a imagem de recuperação na maioria dos sistemas
 
 Você deve inicializar a imagem ONTAP a partir da unidade USB, restaurar o sistema de arquivos e verificar as variáveis ambientais.
@@ -134,6 +135,7 @@ Se alguma interface estiver listada como "false", reverta essas interfaces de vo
 
 
 
+[[option-2-boot-the-recovery-image-in-a-two-node-metrocluster-configuration]]
 == Opção 2: Inicialize a imagem de recuperação em uma configuração MetroCluster de dois nós
 
 Você deve inicializar a imagem ONTAP a partir da unidade USB e verificar as variáveis ambientais.

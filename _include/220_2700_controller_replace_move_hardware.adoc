@@ -6,6 +6,7 @@ Para substituir o hardware do módulo do controlador, é necessário remover o c
 
 
 
+[[step-1-remove-controller-module]]
 == Passo 1: Remova o módulo do controlador
 
 Para substituir o módulo do controlador, tem de remover primeiro o módulo do controlador antigo do chassis.
@@ -33,6 +34,7 @@ image::../media/drw_2600_opening_pcm_cover.png[Abrir ou fechar o módulo do cont
 
 
 
+[[step-2-move-the-nvmem-battery]]
 == Passo 2: Mova a bateria do NVMEM
 
 Para mover a bateria do NVMEM do módulo do controlador antigo para o novo módulo do controlador, tem de executar uma sequência específica de passos.
@@ -72,6 +74,7 @@ image::../media/drw_2600_nvmem_battery_move_animated_gif.png[Substituição da b
 
 
 
+[[step-3-move-the-boot-media]]
 == Passo 3: Mova a Mídia de inicialização
 
 Você deve localizar o suporte de inicialização e seguir as instruções para removê-lo do módulo antigo do controlador e inseri-lo no novo módulo do controlador.
@@ -95,6 +98,7 @@ Se necessário, retire o suporte de arranque e volte a colocá-lo no socket.
 
 
 
+[[step-4-move-the-dimms]]
 == Passo 4: Mova os DIMMs
 
 Para mover os DIMMs, você deve seguir as instruções para localizá-los e movê-los do antigo módulo do controlador para o módulo do controlador de substituição.
@@ -137,6 +141,7 @@ Certifique-se de que a ficha fica fixa no módulo do controlador.
 
 
 
+[[step-5-move-a-caching-module-if-present]]
 == Passo 5: Mova um módulo de cache, se presente
 
 Se o seu sistema AFF A220 ou FAS2700 tiver um módulo de armazenamento em cache, você precisará mover o módulo de armazenamento em cache do módulo antigo do controlador para o módulo de substituição do controlador. O módulo de armazenamento em cache é referido como a ""placa PCIe M,2"" na etiqueta do módulo da controladora.
@@ -164,6 +169,7 @@ Se necessário, remova o módulo de cache e recoloque-o no soquete.
 
 
 
+[[step-6-install-the-controller]]
 == Passo 6: Instale o controlador
 
 Depois de instalar os componentes do antigo módulo do controlador no novo módulo do controlador, tem de instalar o novo módulo do controlador no chassis do sistema e arrancar o sistema operativo.

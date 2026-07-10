@@ -15,6 +15,7 @@ A seguir estão especificações selecionadas para o sistema de armazenamento FA
 
 
 
+[[fas8700-specifications-at-a-glance]]
 == Especificações do FAS8700 em resumo
 
 * Configuração da plataforma: Par de HA de chassi único FAS8700 , pacote Ethernet
@@ -28,6 +29,7 @@ A seguir estão especificações selecionadas para o sistema de armazenamento FA
 
 
 
+[[scaleout-maximums]]
 == máximos de escala
 
 * Tipo: NAS; Pares HA: 12; Capacidade bruta: 180,0 PB / 159,9 PiB; Memória máxima: 6144 GB
@@ -37,10 +39,12 @@ A seguir estão especificações selecionadas para o sistema de armazenamento FA
 
 
 
+[[io]]
 == E/S
 
 
 
+[[onboard-io]]
 === E/S integradas
 
 * Protocolo: Ethernet 100 Gbps; Portas: 4
@@ -50,6 +54,7 @@ A seguir estão especificações selecionadas para o sistema de armazenamento FA
 
 
 
+[[total-io]]
 === Total de E/S
 
 * Protocolo: Ethernet 100 Gbps; Portas: 20
@@ -63,6 +68,7 @@ A seguir estão especificações selecionadas para o sistema de armazenamento FA
 
 
 
+[[management-ports]]
 === Portas de gerenciamento
 
 * Protocolo: Ethernet 1 Gbps; Portas: 2
@@ -72,6 +78,7 @@ A seguir estão especificações selecionadas para o sistema de armazenamento FA
 
 
 
+[[storage-networking-supported]]
 == Rede de armazenamento suportada
 
 * CIFS
@@ -95,6 +102,7 @@ A seguir estão especificações selecionadas para o sistema de armazenamento FA
 
 
 
+[[system-environment-specifications]]
 == Especificações do ambiente do sistema
 
 * Potência típica: 5430 BTU/h
@@ -110,6 +118,7 @@ A seguir estão especificações selecionadas para o sistema de armazenamento FA
 
 
 
+[[compliance]]
 == Conformidade
 
 * Certificações EMC/EMI: AMCA, FCC, ICES, KC, Marrocos, VCCI
@@ -122,6 +131,7 @@ A seguir estão especificações selecionadas para o sistema de armazenamento FA
 
 
 
+[[high-availability]]
 == Alta disponibilidade
 
 * Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP

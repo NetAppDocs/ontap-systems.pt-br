@@ -15,6 +15,7 @@ Este guia fornece instruções detalhadas passo a passo para instalar um sistema
 
 
 
+[[step-1-prepare-for-installation]]
 == Passo 1: Prepare-se para a instalação
 
 Para instalar seu sistema, você precisa criar uma conta no site de suporte da NetApp, Registrar seu sistema e obter chaves de licença. Você também precisa fazer o inventário do número e do tipo apropriados de cabos para o seu sistema e coletar informações específicas de rede.
@@ -178,6 +179,7 @@ https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["Guia de configura
 
 
 
+[[step-2-install-the-hardware]]
 == Passo 2: Instale o hardware
 
 Você precisa instalar seu sistema em um rack de 4 colunas ou gabinete do sistema NetApp, conforme aplicável.
@@ -205,12 +207,14 @@ image::../media/drw_9000_cable_management_arms.png[Anexando dispositivos de gere
 
 
 
+[[step-3-cable-controllers-to-your-network]]
 == Passo 3: Controladores de cabo para a sua rede
 
 Você pode conetar os controladores à rede usando o método de cluster sem switch de dois nós ou usando a rede de interconexão de cluster.
 
 
 
+[[option-1-two-node-switchless-cluster]]
 === Opção 1: Cluster sem switch de dois nós
 
 A rede de gerenciamento, a rede de dados e as portas de gerenciamento nos controladores são conetadas aos switches. As portas de interconexão de cluster são cabeadas em ambos os controladores.
@@ -237,6 +241,7 @@ image::../media/drw_9000_TNSC_composite_cabling.png[Cabeamento composto de clust
 
 
 
+[[option-2-switched-cluster]]
 === Opção 2: Cluster comutado
 
 A rede de gerenciamento, a rede de dados e as portas de gerenciamento nos controladores são conetadas aos switches. A interconexão de cluster e as portas de HA são cabeadas para o switch cluster/HA.
@@ -263,12 +268,14 @@ image:../media/drw_9000_switched_cluster_cabling.png["Cabeamento composto de clu
 
 
 
+[[step-4-cable-controllers-to-drive-shelves]]
 == Etapa 4: Controladores de cabos para compartimentos de unidades
 
 Você pode enviar seu novo sistema por cabo para DS212C, DS224C ou NS224 gavetas, dependendo se for um sistema AFF ou FAS.
 
 
 
+[[option-1-cable-the-controllers-to-ds212c-or-ds224c-drive-shelves]]
 === Opção 1: Faça o cabeamento das controladoras para DS212C ou DS224C gavetas de unidades
 
 Você precisa fazer o cabeamento das conexões de gaveta a gaveta e depois fazer o cabeamento das duas controladoras às gavetas de unidades DS212C ou DS224C.
@@ -320,6 +327,7 @@ image:../media/Cable_shelves_new_system_IOM12_shelves.png["Cabeamento do sistema
 
 
 
+[[option-2-cable-the-controllers-to-a-single-ns224-drive-shelf-in-aff-a700-and-asa-aff-a700-systems-running-ontap-9-8-and-later-only]]
 === Opção 2: Faça o cabeamento das controladoras a uma única gaveta de unidade de NS224 TB nos sistemas AFF A700 e ASA AFF A700 executando o ONTAP 9.8 e posterior somente
 
 Você deve enviar cada controlador por cabo aos módulos NSM no compartimento de unidades NS224 em um AFF A700 ou ASA AFF A700 executando o sistema ONTAP 9.8 ou posterior.
@@ -355,6 +363,7 @@ image::../media/single_NS224_shelf.png[Cabeamento de compartimento único]
 
 
 
+[[option-3-cable-the-controllers-to-two-ns224-drive-shelves-in-aff-a700-and-asa-aff-a700-systems-running-ontap-9-8-and-later-only]]
 === Opção 3: Faça o cabeamento das controladoras para dois compartimentos de unidades NS224 nos sistemas AFF A700 e ASA AFF A700 executando somente o ONTAP 9.8 e posterior
 
 Você precisa vincular cada controladora aos módulos do NSM nos NS224 compartimentos de unidades em um AFF A700 ou ASA AFF A700 executando o sistema ONTAP 9.8 ou posterior.
@@ -390,12 +399,14 @@ image::../media/two_NS224_shelves.png[Cabeamento de compartimento duplo]
 
 
 
+[[step-5-complete-system-setup-and-configuration]]
 == Passo 5: Conclua a configuração e configuração do sistema
 
 Você pode concluir a configuração e configuração do sistema usando a descoberta de cluster com apenas uma conexão com o switch e laptop, ou conetando-se diretamente a um controlador no sistema e, em seguida, conetando-se ao switch de gerenciamento.
 
 
 
+[[option-1-completing-system-setup-and-configuration-if-network-discovery-is-enabled]]
 === Opção 1: Concluir a configuração e a configuração do sistema se a deteção de rede estiver ativada
 
 Se tiver a deteção de rede ativada no seu computador portátil, pode concluir a configuração e configuração do sistema utilizando a deteção automática de cluster.
@@ -468,6 +479,7 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 
 
 
+[[option-2-completing-system-setup-and-configuration-if-network-discovery-is-not-enabled]]
 === Opção 2: Concluir a configuração e a configuração do sistema se a deteção de rede não estiver ativada
 
 Se a deteção de rede não estiver ativada no seu computador portátil, tem de concluir a configuração e a configuração utilizando esta tarefa.

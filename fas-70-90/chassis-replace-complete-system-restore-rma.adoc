@@ -15,6 +15,7 @@ Reinicie o controlador, verifique a integridade do sistema e devolva a peça com
 
 
 
+[[step-1-boot-the-controllers-and-verify-system-health]]
 == Passo 1: Inicialize os controladores e verifique a integridade do sistema.
 
 Após a reinicialização dos controladores, inicialize o ONTAP, devolva os controladores e verifique a integridade do sistema de armazenamento.
@@ -39,6 +40,7 @@ Após a reinicialização dos controladores, inicialize o ONTAP, devolva os cont
 
 
 
+[[step-2-return-the-failed-part-to-netapp]]
 == Passo 2: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

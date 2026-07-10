@@ -15,6 +15,7 @@ Substitua o controlador do seu sistema ASA C400 quando uma falha de hardware ass
 
 
 
+[[step-1-remove-the-controller-module]]
 == Passo 1: Remova o módulo do controlador
 
 Deve remover o módulo do controlador do chassis quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
@@ -89,6 +90,7 @@ Travas de liberação da riser
 
 
 
+[[step-2-move-the-power-supplies]]
 == Passo 2: Mova as fontes de alimentação
 
 Transfira as fontes de alimentação para o módulo controlador de substituição.
@@ -142,6 +144,7 @@ NOTE: Para evitar danificar o conetor interno, não utilize força excessiva ao 
 
 
 
+[[step-3-move-the-nvdimm-battery]]
 == Etapa 3: Mova a bateria NVDIMM
 
 Transfira a bateria NVDIMM para o módulo controlador de substituição.
@@ -198,6 +201,7 @@ NOTE: Não conete o cabo da bateria de volta à placa-mãe até que seja instru�
 
 
 
+[[step-4-move-the-boot-media]]
 == Passo 4: Mova a Mídia de inicialização
 
 Transfira a mídia de inicialização para o módulo controlador de substituição.
@@ -250,6 +254,7 @@ Se necessário, retire o suporte de arranque e volte a colocá-lo no socket.
 
 
 
+[[step-5-move-the-pcie-risers-and-mezzanine-card]]
 == Passo 5: Mova os risers PCIe e a placa mezzanine
 
 Transfira os risers PCIe e a placa mezzanine para o módulo controlador de substituição.
@@ -329,6 +334,7 @@ A riser levanta-se ligeiramente do módulo do controlador.
 
 
 
+[[step-6-move-the-dimms]]
 == Passo 6: Mova os DIMMs
 
 Mova os DIMMs para o módulo do controlador de substituição.
@@ -399,6 +405,7 @@ Certifique-se de que a ficha fica fixa no módulo do controlador.
 
 
 
+[[step-7-install-the-controller-module]]
 == Passo 7: Instale o módulo do controlador
 
 Reinstale o módulo do controlador e reinicie-o.

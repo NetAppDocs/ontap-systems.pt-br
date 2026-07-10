@@ -14,6 +14,7 @@ CAUTION: Use sempre uma pulseira antiestática aterrada, conectada a um ponto de
 
 
 
+[[step-1-shut-down-the-impaired-node]]
 == Etapa 1: Encerre o nó prejudicado
 
 Encerre ou assuma o controlador afetado utilizando uma das seguintes opções.
@@ -150,6 +151,7 @@ Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctr
 ====
 
 
+[[step-2-replace-a-failed-io-module]]
 == Passo 2: Substitua um módulo de e/S com falha
 
 Para substituir um módulo de e/S, localize-o dentro do gabinete e siga a sequência específica de etapas.
@@ -205,6 +207,7 @@ Certifique-se de manter o controle de qual slot o módulo de e/S estava.
 
 
 
+[[step-3-reboot-the-controller]]
 == Passo 3: Reinicie o controlador
 
 Depois de substituir um módulo de e/S, tem de reiniciar o controlador.
@@ -234,6 +237,7 @@ NOTE: Reiniciar o controlador prejudicado também reinicializa os módulos de e/
 
 
 
+[[step-4-return-the-failed-part-to-netapp]]
 == Passo 4: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

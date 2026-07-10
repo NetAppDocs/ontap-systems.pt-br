@@ -32,6 +32,7 @@ Os LEDs de localização permanecem acesos durante 30 minutos. Você pode desati
 
 
 
+[[operator-display-panel-leds]]
 == LEDs do painel de visualização do operador
 
 Os LEDs no painel frontal do monitor do operador (ODP) do compartimento de unidades indicam se o compartimento de unidades está funcionando normalmente ou se há problemas com o hardware.
@@ -87,6 +88,7 @@ O administrador do sistema ativou esta função LED.
 |===
 
 
+[[nsm-leds]]
 == LEDs NSM
 
 Os LEDs em um NSM indicam se o módulo está funcionando normalmente, se ele está pronto para tráfego de e/S e se há algum problema com o hardware.
@@ -264,6 +266,7 @@ Ligado
 |===
 
 
+[[power-supply-leds]]
 == LEDs da fonte de alimentação
 
 Os LEDs em uma fonte de alimentação CA (PSU) indicam se a PSU está funcionando normalmente ou se há problemas de hardware.
@@ -352,6 +355,7 @@ Desligado
 |===
 
 
+[[drive-leds]]
 == LEDs da unidade
 
 Os LEDs em uma unidade NVMe indicam se ela está funcionando normalmente ou se há problemas com o hardware.

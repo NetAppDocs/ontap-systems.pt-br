@@ -20,6 +20,7 @@ Substitua o NVDIMM no seu sistema ASA C800 quando o sistema detectar que a vida 
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Passo 1: Desligue o controlador desativado
 
 Desligue ou assuma o controlador desativado.
@@ -92,6 +93,7 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 
 
 
+[[step-2-remove-the-controller-module]]
 == Passo 2: Remova o módulo do controlador
 
 Deve remover o módulo do controlador do chassis quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
@@ -180,6 +182,7 @@ Ao deslizar o módulo controlador para fora do chassi, apoie a parte inferior.
 
 
 
+[[step-3-replace-the-nvdimm]]
 == Passo 3: Substitua o NVDIMM
 
 Localize o NVDIMM no módulo controlador usando a etiqueta do mapa NVDIMM na parte superior do duto de ar e, em seguida, substitua-o.
@@ -240,6 +243,7 @@ NOTE: Inspecione visualmente o NVDIMM para verificar se ele está alinhado unifo
 
 
 
+[[step-4-reinstall-the-controller-module-and-booting-the-system]]
 == Passo 4: Reinstale o módulo do controlador e inicializando o sistema
 
 Reinstale o módulo do controlador e reinicie-o.
@@ -288,6 +292,7 @@ O módulo do controlador começa a inicializar assim que a energia é restaurada
 
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == Passo 5: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

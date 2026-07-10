@@ -17,6 +17,7 @@ Todos os outros componentes do sistema devem estar funcionando corretamente; cas
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Passo 1: Desligue o controlador desativado
 
 Assuma o controle e interrompa o controlador com defeito para que o controlador em bom estado continue a fornecer dados do armazenamento do controlador com defeito. Para fazer isso, você suprime a criação automática de casos em AutoSupport, desativa o giveback automático e leva o controlador com defeito ao prompt LOADER. O prompt LOADER é o estado de parada segura a partir do qual você pode substituir a FRU.
@@ -71,6 +72,7 @@ Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctr
 
 
 
+[[step-2-remove-the-controller-module]]
 == Passo 2: Remova o módulo do controlador
 
 Deve remover o módulo do controlador do chassis quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
@@ -116,6 +118,7 @@ Certifique-se de que suporta a parte inferior do módulo do controlador enquanto
 
 
 
+[[step-3-replace-the-nvram-battery]]
 == Passo 3: Substitua a bateria do NVRAM
 
 Para substituir a bateria NVRAM, tem de remover a bateria NVRAM avariada do módulo do controlador e instalar a bateria NVRAM de substituição no módulo do controlador.
@@ -152,6 +155,7 @@ Patilha azul de bloqueio da bateria do NVRAM
 
 
 
+[[step-4-reinstall-the-controller-module]]
 == Etapa 4: Reinstale o módulo do controlador
 
 Depois de substituir um componente dentro do módulo do controlador, você deve reinstalar o módulo do controlador no chassi do sistema e iniciá-lo.
@@ -223,6 +227,7 @@ NOTE: Certifique-se de sair do modo de manutenção depois de concluir a convers
 
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == Passo 5: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

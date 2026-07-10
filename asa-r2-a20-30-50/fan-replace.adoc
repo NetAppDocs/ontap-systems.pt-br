@@ -22,6 +22,7 @@ Você pode desativá-los digitando o `system location-led _off_` comando. Se nã
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Passo 1: Desligue o controlador desativado
 
 Assuma o controle e interrompa o controlador com defeito para que o controlador em bom estado continue a fornecer dados do armazenamento do controlador com defeito. Para fazer isso, você suprime a criação automática de casos em AutoSupport, desativa o giveback automático e leva o controlador com defeito ao prompt LOADER. O prompt LOADER é o estado de parada segura a partir do qual você pode substituir a FRU.
@@ -92,6 +93,7 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 
 
 
+[[step-2-remove-the-controller]]
 == Passo 2: Remova o controlador
 
 Você deve remover o controlador do chassi quando substituir o controlador ou substituir um componente dentro do controlador.
@@ -203,6 +205,7 @@ Se necessário, rode as pegas para a posição vertical (junto às patilhas) par
 
 
 
+[[step-3-replace-fan]]
 == Etapa 3: Substitua o ventilador
 
 Para substituir um ventilador, remova o ventilador com falha e substitua-o por um ventilador novo.
@@ -232,6 +235,7 @@ image::../media/icon_round_2.png[Legenda número 2]
 
 
 
+[[step-4-reinstall-the-controller-module]]
 == Etapa 4: Reinstale o módulo do controlador
 
 Reinstale o controlador no chassi e reinicialize-o.
@@ -338,6 +342,7 @@ FONTE DE ALIMENTAÇÃO CC
 
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == Passo 5: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

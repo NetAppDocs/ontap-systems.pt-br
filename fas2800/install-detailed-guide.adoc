@@ -15,6 +15,7 @@ Este procedimento fornece instruções detalhadas passo a passo para a instalaç
 
 
 
+[[step-1-prepare-for-installation]]
 == Passo 1: Prepare-se para a instalação
 
 .Antes de começar
@@ -166,6 +167,7 @@ Cabo de rede FC adicional
 |===
 
 
+[[step-2-install-the-hardware]]
 == Passo 2: Instale o hardware
 
 Instale o sistema de armazenamento em um rack de telecomunicações ou gabinete do sistema de armazenamento NetApp, conforme aplicável.
@@ -189,6 +191,7 @@ image::../media/drw_cable_management_arm_install.svg[Instale o ARM de gerenciame
 
 
 
+[[step-3-cable-controllers-to-your-network]]
 == Passo 3: Controladores de cabo para a sua rede
 
 Encaminhe os controladores para a rede como um cluster sem switch de dois nós ou um cluster comutado.
@@ -389,6 +392,7 @@ IMPORTANT: Não ligue os cabos de alimentação.
 ====
 
 
+[[step-4-cable-controllers-to-drive-shelves]]
 == Etapa 4: Controladores de cabos para compartimentos de unidades
 
 Conete seus controladores ao armazenamento externo.
@@ -470,6 +474,7 @@ image::../media/dwr-2800_controller2-to shelves_IEOPS-897.svg[Conexão do contro
 
 
 
+[[step-5-complete-storage-system-setup-and-configuration]]
 == Passo 5: Conclua a configuração e configuração do sistema de armazenamento
 
 Conclua a configuração e a configuração do sistema de armazenamento usando a opção 1: Se a deteção de rede estiver ativada ou a opção 2: Se a deteção de rede não estiver ativada.

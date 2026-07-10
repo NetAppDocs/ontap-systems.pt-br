@@ -15,6 +15,7 @@ Substitua o controlador do seu sistema AFF A800 quando uma falha de hardware ass
 
 
 
+[[step-1-remove-the-controller-module]]
 == Passo 1: Remova o módulo do controlador
 
 Deve remover o módulo do controlador do chassis quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
@@ -103,6 +104,7 @@ Ao deslizar o módulo controlador para fora do chassi, apoie a parte inferior.
 
 
 
+[[step-2-move-the-power-supplies]]
 == Passo 2: Mova as fontes de alimentação
 
 Transfira as fontes de alimentação para o módulo controlador de substituição.
@@ -147,6 +149,7 @@ NOTE: Para evitar danificar o conetor interno, não utilize força excessiva ao 
 
 
 
+[[step-3-move-the-fans]]
 == Passo 3: Mova os fãs
 
 Transfira os módulos de ventoinha para o módulo controlador de substituição.
@@ -180,6 +183,7 @@ Módulo da ventoinha
 
 
 
+[[step-4-move-the-nvdimm-battery]]
 == Etapa 4: Mova a bateria NVDIMM
 
 Transfira a bateria NVDIMM para o módulo controlador de substituição.
@@ -229,6 +233,7 @@ Bateria NVDIMM
 
 
 
+[[step-5-remove-the-pcie-risers]]
 == Passo 5: Remova os risers PCIe
 
 Remova os cabos riser PCIe do módulo controlador com defeito.
@@ -271,6 +276,7 @@ Travas de travamento do riser 1 (riser esquerdo), riser 2 (riser intermediário)
 
 
 
+[[step-6-move-system-dimms]]
 == Passo 6: Mova os DIMMs do sistema
 
 Transfira os módulos DIMM do sistema para o módulo controlador de substituição.
@@ -297,6 +303,7 @@ NOTE: Inspecione visualmente o DIMM para verificar se ele está alinhado uniform
 
 
 
+[[step-7-move-the-nvdimms]]
 == Etapa 7: Mova os NVDIMMs
 
 Transfira o NVDIMMS para o módulo controlador de substituição.
@@ -345,6 +352,7 @@ NOTE: Inspecione visualmente o NVDIMM para verificar se ele está alinhado unifo
 
 
 
+[[step-8-move-the-boot-media]]
 == Passo 8: Mova a Mídia de inicialização
 
 Transfira a mídia de inicialização para o módulo controlador de substituição.
@@ -413,6 +421,7 @@ Não aperte demasiado o parafuso ou poderá danificar o suporte de arranque.
 
 
 
+[[step-9-install-the-pcie-risers]]
 == Passo 9: Instale os risers PCIe
 
 Instale os cabos de extensão no módulo controlador de substituição.
@@ -434,6 +443,7 @@ Quando bloqueado, a trava de travamento fica alinhada com a parte superior da ri
 
 
 
+[[step-10-install-the-controller-module]]
 == Passo 10: Instale o módulo do controlador
 
 Reinstale o módulo do controlador e reinicie-o.

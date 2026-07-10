@@ -34,6 +34,7 @@ image::../media/drw_cable_pull_tab_direction_ieops-1699.svg[Exemplo de orientaç
 
 
 
+[[step-1-connect-the-storage-controllers-to-your-network]]
 == Passo 1: Conete os controladores de armazenamento à sua rede
 
 Faça o cabeamento dos controladores ao cluster do ONTAP. Este procedimento difere dependendo do modelo do sistema de armazenamento e da configuração do módulo de e/S.
@@ -84,6 +85,7 @@ image::../media/drw_70-90_switched_cluster_cabling_ieops-1657.svg[Conexões do c
 ====
 
 
+[[step-2-cable-the-host-network-connections]]
 == Etapa 2: Faça o cabeamento das conexões de rede do host
 
 Conete as portas do módulo Ethernet à rede host.
@@ -119,6 +121,7 @@ image::../media/drw_70-90_network_cabling2_ieops-1655.svg[Cabo para rede Etherne
 
 
 
+[[step-3-cable-the-management-network-connections]]
 == Passo 3: Faça o cabeamento das conexões de rede de gerenciamento
 
 Use os cabos RJ-45 de 1000BASEBASE-T para conetar as portas de gerenciamento (chave inglesa) em cada controlador aos switches de rede de gerenciamento.
@@ -134,6 +137,7 @@ IMPORTANT: Não conete os cabos de energia ainda.
 
 
 
+[[step-4-cable-the-shelf-connections]]
 == Etapa 4: Faça o cabeamento das conexões da prateleira
 
 Os procedimentos de cabeamento a seguir mostram como conectar suas controladoras a um compartimento de storage. Escolha uma das seguintes opções de cabeamento que corresponda à sua configuração.

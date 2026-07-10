@@ -17,6 +17,7 @@ Para substituir o hardware do módulo do controlador, é necessário remover o c
 
 
 
+[[step-1-remove-the-controller-module]]
 == Passo 1: Remova o módulo do controlador
 
 Deve remover o módulo do controlador do chassis quando substituir um componente no interior do módulo do controlador.
@@ -83,6 +84,7 @@ image::../media/drw_a250_remove_airduct_cover.png[Levantar a tampa da conduta de
 
 
 
+[[step-2-move-the-power-supply]]
 == Passo 2: Mova a fonte de alimentação
 
 Deve mover a fonte de alimentação do módulo do controlador afetado para o módulo do controlador de substituição quando substituir um módulo do controlador.
@@ -130,6 +132,7 @@ CAUTION: Para evitar danificar o conetor interno, não utilize força excessiva 
 
 
 
+[[step-3-move-the-fans]]
 == Passo 3: Mova os fãs
 
 É necessário mover as ventoinhas do módulo do controlador desativado para o módulo de substituição ao substituir um módulo do controlador com falha.
@@ -153,6 +156,7 @@ image:../media/icon_round_1.png["Legenda número 1"]
 
 
 
+[[step-4-move-the-boot-media]]
 == Passo 4: Mova a Mídia de inicialização
 
 Tem de mover o dispositivo multimédia de arranque do módulo do controlador afetado para o módulo do controlador de substituição.
@@ -193,6 +197,7 @@ NOTE: Não aplique força ao apertar o parafuso na Mídia de inicialização; vo
 
 
 
+[[step-5-move-the-dimms]]
 == Passo 5: Mova os DIMMs
 
 Para mover os DIMMs, localize-os e mova-os do controlador prejudicado para o controlador de substituição e siga a sequência específica de passos.
@@ -218,6 +223,7 @@ Os DIMMs se encaixam firmemente no soquete. Caso contrário, reinsira o DIMM par
 
 
 
+[[step-6-move-a-mezzanine-card]]
 == Passo 6: Mova uma placa mezzanine
 
 Para mover uma placa mezzanine, você deve remover o cabeamento e quaisquer QSFPs e SFPs das portas, mover a placa mezzanine para a controladora de substituição, reinstalar quaisquer QSFPs e SFPs nas portas e fazer o cabeamento das portas.
@@ -271,6 +277,7 @@ NOTE: Não aplique força ao apertar o parafuso na placa mezzanine; você pode r
 
 
 
+[[step-7-move-the-nv-battery]]
 == Passo 7: Mova a bateria NV
 
 Ao substituir o módulo do controlador, tem de deslocar a bateria NV do módulo do controlador desativado para o módulo do controlador de substituição.
@@ -319,6 +326,7 @@ Levante a bateria para fora do suporte e do módulo do controlador.
 
 
 
+[[step-8-install-the-controller-module]]
 == Passo 8: Instale o módulo do controlador
 
 Depois de todos os componentes terem sido movidos do módulo do controlador afetado para o módulo do controlador de substituição, tem de instalar o módulo do controlador de substituição no chassis e, em seguida, iniciá-lo no modo de manutenção.

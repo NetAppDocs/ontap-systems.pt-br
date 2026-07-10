@@ -65,6 +65,8 @@ image::../media/drw_dcm3_ieops-2176.svg[Vista frontal de uma prateleira de unida
 
 
 
+[[step-1-prepare-to-replace-a-drive-drawer]]
+[[prepare_to_replace_drive_drawer]]
 == Etapa 1: Prepare-se para substituir uma gaveta de unidade
 
 Antes de substituir uma gaveta de unidade, certifique-se de atualizar o firmware do IOM e o ONTAP , se necessário, e interromper o par de alta disponibilidade, o que permite manter os agregados de dados na prateleira, ou manter o par de alta disponibilidade ativo e em execução, o que exige a movimentação de todos os dados dos agregados de dados residentes nas unidades de disco. Em seguida, você deve desconectar e excluir os agregados de dados. No entanto, se a prateleira contiver um agregado raiz, você deve interromper o par de alta disponibilidade. Por fim, você deve desligar a prateleira.
@@ -143,6 +145,8 @@ NOTE: Se você tiver unidades de disco com falha no compartimento, `broken` ser�
 
 
 
+[[step-2-remove-the-cable-chains]]
+[[remove_cable_chains]]
 == Etapa 2: Remova as correntes dos cabos
 
 As correntes de cabo esquerda e direita para cada gaveta de unidade na prateleira de unidade DS460C permitem que as gavetas deslizem para dentro e para fora. Antes de remover uma gaveta de unidade, você deve remover ambas as correntes de cabo.
@@ -291,6 +295,7 @@ A figura mostra o anel laranja no suporte horizontal que está sendo empurrado p
 
 
 
+[[step-3-remove-a-drive-drawer]]
 == Etapa 3: remover uma gaveta de unidade
 
 Depois de remover as correntes de cabos direita e esquerda, você pode remover a gaveta da unidade da prateleira da unidade. Remover uma gaveta de unidade implica deslizar a parte da gaveta da saída, remover as unidades e remover a gaveta da unidade.
@@ -346,6 +351,7 @@ image:../media/icon_round_1.png["Legenda número 1"]
 
 
 
+[[step-4-install-a-drive-drawer]]
 == Etapa 4: instalar uma gaveta de unidade
 
 Instalar uma gaveta de unidade em uma prateleira de unidade implica deslizar a gaveta para dentro do slot vazio, instalar as unidades e substituir a moldura frontal.
@@ -442,6 +448,7 @@ NOTE: *Risco de mau funcionamento do equipamento:* Certifique-se de fechar compl
 
 
 
+[[step-5-attach-the-cable-chains]]
 == Etapa 5: Prenda as correntes dos cabos
 
 A etapa final na instalação de uma gaveta de acionamento é conetar as correntes de cabo esquerda e direita de substituição à prateleira de acionamento. Ao fixar uma corrente de cabo, inverta a ordem que utilizou ao desligar a corrente de cabo. É necessário inserir o conetor horizontal da corrente no suporte horizontal do compartimento antes de inserir o conetor vertical da corrente no suporte vertical do compartimento.

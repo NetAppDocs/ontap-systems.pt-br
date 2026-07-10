@@ -15,6 +15,7 @@ A seguir estão algumas especificações selecionadas para o ASA A250.  Visita h
 
 
 
+[[key-specifications-for-asa-a250]]
 === Especificações principais para ASA A250
 
 Configuração da plataforma: ASA A250 100V Chassis único HA Pair
@@ -33,6 +34,7 @@ Versão mínima do ONTAP : ONTAP 9.13.1
 
 
 
+[[scaleout-maximums]]
 === Máximos de Escalabilidade
 
 |===
@@ -51,6 +53,7 @@ Versão mínima do ONTAP : ONTAP 9.13.1
 |===
 
 
+[[io]]
 === IO
 
 
@@ -115,18 +118,21 @@ Versão mínima do ONTAP : ONTAP 9.13.1
 |===
 
 
+[[storage-networking-supported]]
 === Rede de armazenamento suportada
 
 FC; iSCSI; NVMe/FC; NVMe/TCP;
 
 
 
+[[system-environment-specifications]]
 === Especificações do ambiente do sistema
 
 Não há dados ambientais disponíveis.
 
 
 
+[[compliance]]
 === Conformidade
 
 * Certificações EMC/EMI: AMCA, FCC, ICES, KC, Marrocos, VCCI
@@ -139,6 +145,7 @@ Não há dados ambientais disponíveis.
 
 
 
+[[high-availability]]
 === Alta disponibilidade
 
 Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP ; Controladores redundantes de troca a quente; Fontes de alimentação redundantes de troca a quente; Gerenciamento SAS em banda por meio de conexões SAS para prateleiras externas;

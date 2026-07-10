@@ -12,6 +12,7 @@ Você deve usar uma bateria RTC aprovada.
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Passo 1: Desligue o controlador desativado
 
 Encerre ou assuma o controlador afetado utilizando uma das seguintes opções.
@@ -148,6 +149,7 @@ Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctr
 ====
 
 
+[[step-2-remove-the-controller]]
 == Passo 2: Remova o controlador
 
 Para aceder aos componentes no interior do controlador, tem de remover primeiro o módulo do controlador do sistema e, em seguida, remover a tampa do módulo do controlador.
@@ -200,6 +202,7 @@ Botão de bloqueio da tampa do módulo do controlador
 |===
 
 
+[[step-3-replace-the-rtc-battery]]
 == Passo 3: Substitua a bateria RTC
 
 Para substituir a bateria RTC, tem de localizar a bateria avariada no módulo do controlador, removê-la do suporte e, em seguida, instalar a bateria de substituição no suporte.
@@ -244,6 +247,7 @@ NOTE: Observe a polaridade da bateria ao removê-la do suporte. A bateria está 
 
 
 
+[[step-4-reinstall-the-controller-module-and-set-timedate]]
 == Etapa 4: Reinstale o módulo do controlador e defina a hora/data
 
 Depois de substituir a bateria do RTC, tem de reinstalar o módulo do controlador. Se a bateria do RTC tiver sido deixada fora do módulo do controlador durante mais de 10 minutos, poderá ter de repor a hora e a data.
@@ -292,6 +296,7 @@ NOTE: Se o sistema parar no menu de inicialização, selecione a opção "Reboot
 
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == Passo 5: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

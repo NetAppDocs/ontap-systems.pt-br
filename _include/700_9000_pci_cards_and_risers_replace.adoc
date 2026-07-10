@@ -10,6 +10,7 @@ Para substituir um módulo de e/S, tem de executar uma sequência específica de
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Passo 1: Desligue o controlador desativado
 
 Você pode desligar ou assumir o controlador prejudicado usando procedimentos diferentes, dependendo da configuração do hardware do sistema de armazenamento.
@@ -182,6 +183,7 @@ mcc1A::> metrocluster operation show
 ====
 
 
+[[step-2-replace-io-modules]]
 == Passo 2: Substitua os módulos de e/S.
 
 Para substituir um módulo de e/S, localize-o no chassis e siga a sequência específica de passos.
@@ -236,6 +238,7 @@ Trinco da came de e/S completamente desbloqueado
 
 
 
+[[step-3-reboot-the-controller-after-io-module-replacement]]
 == Passo 3: Reinicie o controlador após a substituição do módulo de e/S.
 
 Depois de substituir um módulo de e/S, tem de reiniciar o módulo do controlador.
@@ -271,6 +274,7 @@ NOTE: Se o sistema estiver em uma configuração de MetroCluster de dois nós, s
 
 
 
+[[step-4-switch-back-aggregates-in-a-two-node-metrocluster-configuration]]
 == Etapa 4: Alterne agregados de volta em uma configuração de MetroCluster de dois nós
 
 Esta tarefa só se aplica a configurações de MetroCluster de dois nós.
@@ -327,6 +331,7 @@ Se um switchback estiver demorando muito tempo para terminar, você pode verific
 
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == Passo 5: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

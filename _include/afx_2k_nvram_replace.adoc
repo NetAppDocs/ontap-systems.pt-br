@@ -11,6 +11,7 @@ O módulo NVRAM consiste no hardware NVRAM12 e DIMMs substituíveis em campo. Vo
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Passo 1: Desligue o controlador desativado
 
 Desligue ou assuma o controlador desativado.
@@ -68,6 +69,7 @@ O parâmetro _-halt true_ leva o nó prejudicado ao prompt do LOADER.
 
 
 
+[[step-2-replace-the-nvram-module-or-nvram-dimm]]
 == Etapa 2: Substitua o módulo NVRAM ou o DIMM NVRAM
 
 Substitua o módulo NVRAM ou DIMMs NVRAM usando a opção a seguir apropriada.
@@ -169,6 +171,7 @@ NOTE: Consulte a etiqueta do mapa da FRU na lateral do módulo NVRAM para determ
 ====
 
 
+[[step-3-reboot-the-controller]]
 == Passo 3: Reinicie o controlador
 
 Depois de substituir a FRU, você deve reiniciar o módulo do controlador.
@@ -182,6 +185,7 @@ O sistema começará a reiniciar, normalmente para o prompt Loader.
 
 
 
+[[step-4-complete-nvram-replacement]]
 == Etapa 4: Substituição completa da NVRAM
 
 Execute as seguintes etapas para concluir a substituição da NVRAM .
@@ -265,6 +269,7 @@ NOTE: O comando a seguir só está disponível no nível de privilégio Modo de 
 
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == Passo 5: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

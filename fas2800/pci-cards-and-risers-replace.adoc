@@ -24,6 +24,7 @@ Substitua a placa mezzanine do seu FAS2820 caso ela apresente defeito ou atualiz
 video::a8ec891d-f6f6-4479-9ca2-af47017254ff[panopto]
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Passo 1: Desligue o controlador desativado
 
 .Antes de começar
@@ -88,6 +89,7 @@ Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctr
 
 
 
+[[step-2-remove-the-controller-module]]
 == Passo 2: Remova o módulo do controlador
 
 Remova o módulo controlador e sua tampa.
@@ -122,6 +124,7 @@ Botão de liberação da tampa do módulo do controlador
 |===
 
 
+[[step-3-replace-the-mezzanine-card]]
 == Passo 3: Substitua a placa mezzanine
 
 Volte a colocar a placa do mezanino.
@@ -170,6 +173,7 @@ NOTE: Você pode soltar os parafusos com os dedos ou uma chave de fenda. Se util
 
 
 
+[[step-4-install-and-reboot-the-controller-module]]
 == Passo 4: Instale e reinicialize o módulo controlador
 
 Reinstale e reinicialize o módulo controlador.
@@ -238,6 +242,7 @@ Consulte link:https://docs.netapp.com/us-en/ontap/san-admin/index.html["Visão g
 ====
 
 
+[[step-6-return-the-controller-to-normal-operation]]
 == Etapa 6: Retorne o controlador à operação normal
 
 Devolva o armazenamento ao controlador com defeito, restaure o giveback automático e encerre a janela de manutenção do AutoSupport.
@@ -249,6 +254,7 @@ Devolva o armazenamento ao controlador com defeito, restaure o giveback automát
 
 
 
+[[step-7-return-the-failed-part-to-netapp]]
 == Passo 7: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

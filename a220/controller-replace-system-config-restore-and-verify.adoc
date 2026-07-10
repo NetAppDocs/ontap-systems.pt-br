@@ -15,6 +15,7 @@ Depois de concluir a substituição de hardware e a inicialização para o modo 
 
 
 
+[[step-1-set-and-verify-system-time]]
 == Passo 1: Defina e verifique a hora do sistema
 
 Você deve verificar a hora e a data no módulo do controlador de substituição em relação ao módulo do controlador de integridade em um par de HA, ou em um servidor de tempo confiável em uma configuração autônoma. Se a hora e a data não corresponderem, tem de os repor no módulo do controlador de substituição para evitar possíveis interrupções nos clientes devido a diferenças de tempo.
@@ -46,6 +47,7 @@ A data e a hora são dadas em GMT.
 
 
 
+[[step-2-verify-and-set-the-controllers-ha-state]]
 == Etapa 2: Verifique e defina o estado HA do controlador
 
 Você deve verificar o `HA` estado do módulo do controlador e, se necessário, atualizar o estado para corresponder à configuração do sistema.

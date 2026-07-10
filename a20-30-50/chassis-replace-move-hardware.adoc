@@ -15,6 +15,7 @@ Substitua o chassi do seu sistema de armazenamento AFF A20, AFF A30 ou AFF A50 q
 
 
 
+[[about-this-task]]
 == Sobre esta tarefa
 
 Se necessário, você pode ligar os LEDs de localização do sistema de armazenamento (azul) para ajudar a localizar fisicamente o sistema de armazenamento afetado. Faça login no BMC usando SSH e digite o `system location-led _on_` comando.
@@ -25,6 +26,7 @@ Você pode desativá-los digitando o `system location-led _off_` comando. Se nã
 
 
 
+[[step-1-remove-the-controller]]
 == Passo 1: Remova o controlador
 
 Você deve remover o controlador do chassi quando substituir o controlador ou substituir um componente dentro do controlador.
@@ -136,6 +138,7 @@ Se necessário, rode as pegas para a posição vertical (junto às patilhas) par
 
 
 
+[[step-2-remove-the-drives-from-the-impaired-chassis]]
 == Passo 2: Remova as unidades do chassis com deficiência
 
 Você precisa remover todas as unidades e quaisquer lacunas de unidade do chassi prejudicado para que, mais tarde, no procedimento, você possa instalá-las no chassi de substituição.
@@ -184,6 +187,7 @@ NOTE: Como as unidades são frágeis, minimize o manuseio para evitar danificá-
 
 
 
+[[step-2-replace-the-chassis-from-within-the-equipment-rack-or-system-cabinet]]
 == Etapa 2: Substitua o chassi de dentro do rack de equipamentos ou do gabinete do sistema
 
 Você remove o chassi prejudicado do rack de equipamentos ou do gabinete do sistema, instala o chassi de substituição, instala as unidades, quaisquer lacunas de unidade e, em seguida, instala o painel frontal.
@@ -203,6 +207,7 @@ NOTE: Se o sistema de armazenamento for fornecido em um gabinete do sistema NetA
 
 
 
+[[step-4-install-the-controllers-and-drives]]
 == Etapa 4: Instalar os controladores e unidades
 
 Instale os controladores e unidades no chassi de substituição e reinicie os controladores.

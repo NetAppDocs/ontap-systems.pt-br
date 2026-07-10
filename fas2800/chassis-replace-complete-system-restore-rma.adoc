@@ -14,6 +14,7 @@ Verifique se o estado de HA do chassi apresenta o sistema e devolva a peça com 
 
 
 
+[[step-1-verify-and-set-the-ha-state-of-the-chassis]]
 == Etapa 1: Verifique e defina o estado HA do chassi
 
 Você deve verificar o estado de HA do chassi e, se necessário, atualizar o estado para corresponder à configuração do sistema.
@@ -43,6 +44,7 @@ O valor para HA-State pode ser um dos seguintes:
 
 
 
+[[step-2-bring-up-the-system]]
 == Passo 2: Abra o sistema
 
 . Se você não tiver feito isso, conete os cabos de alimentação de volta às PSUs.
@@ -66,6 +68,7 @@ NOTE: Como prática recomendada, você deve fazer o seguinte:
 ====
 
 
+[[step-3-return-the-failed-part-to-netapp]]
 == Passo 3: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

@@ -17,6 +17,7 @@ Todos os outros componentes do sistema devem estar funcionando corretamente; cas
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Passo 1: Desligue o controlador desativado
 
 Você pode desligar ou assumir o controlador prejudicado usando procedimentos diferentes, dependendo da configuração do hardware do sistema de armazenamento.
@@ -189,6 +190,7 @@ mcc1A::> metrocluster operation show
 ====
 
 
+[[step-2-open-the-controller-module]]
 == Passo 2: Abra o módulo do controlador
 
 Para aceder aos componentes no interior do controlador, tem de remover primeiro o módulo do controlador do sistema e, em seguida, remover a tampa do módulo do controlador.
@@ -229,6 +231,7 @@ Certifique-se de que suporta a parte inferior do módulo do controlador enquanto
 
 
 
+[[step-3-replace-the-nvmem-battery]]
 == Passo 3: Substitua a bateria do NVMEM
 
 Para substituir a bateria NVMEM no sistema, tem de remover a bateria NVMEM avariada do sistema e substituí-la por uma nova bateria NVMEM.
@@ -285,6 +288,7 @@ Certifique-se de que a ficha fica fixa à tomada.
 
 
 
+[[step-4-reinstall-the-controller]]
 == Etapa 4: Reinstale o controlador
 
 Depois de substituir um componente dentro do módulo do controlador, você deve reinstalar o módulo do controlador no chassi do sistema e iniciá-lo.
@@ -318,6 +322,7 @@ NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para de
 
 
 
+[[step-5-two-node-metrocluster-only-switch-back-aggregates]]
 == Etapa 5: (Somente MetroCluster de dois nós): Alterne agregados de volta
 
 Esta tarefa só se aplica a configurações de MetroCluster de dois nós.
@@ -374,6 +379,7 @@ Se um switchback estiver demorando muito tempo para terminar, você pode verific
 
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == Passo 6: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

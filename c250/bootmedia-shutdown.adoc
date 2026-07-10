@@ -12,6 +12,7 @@ summary: Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desl
 
 
 
+[[option-1-most-systems]]
 == Opção 1: A maioria dos sistemas
 
 [role="lead"]
@@ -56,6 +57,7 @@ NOTE: Este comando pode não funcionar se o dispositivo de inicialização estiv
 
 
 
+[[option-2-systems-in-a-metrocluster]]
 == Opção 2: Sistemas em um MetroCluster
 
 Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador desativado.

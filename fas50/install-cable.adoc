@@ -29,6 +29,7 @@ image:../media/drw_cable_pull_tab_direction_ieops-1699.svg["Direção da patilha
 
 
 
+[[step-1-cable-the-clusterha-connections]]
 == Etapa 1: Faça o cabeamento das conexões cluster/HA
 
 Crie as conexões do cluster do ONTAP. Para clusters sem switch, conecte as controladoras umas às outras. Para clusters comutados, conete os controladores aos switches de rede do cluster.
@@ -94,6 +95,7 @@ image:../media/drw_isi_fas50_2p_100gbe_switched_cluster_cabling_ieops-1936.svg["
 ====
 
 
+[[step-2-cable-the-host-network-connections]]
 == Etapa 2: Faça o cabeamento das conexões de rede do host
 
 Faça o cabeamento das controladoras à rede de host Ethernet ou FC.
@@ -138,6 +140,7 @@ image::../media/drw_isi_fas50_4p_64gb_fc_optional_cabling_ieops-1935.svg[Cabo pa
 ====
 
 
+[[step-3-cable-the-management-network-connections]]
 == Passo 3: Faça o cabeamento das conexões de rede de gerenciamento
 
 Cable as portas de gerenciamento (chave inglesa) em cada controlador para os switches de rede de gerenciamento.
@@ -153,6 +156,7 @@ IMPORTANT: Não conete os cabos de energia ainda.
 
 
 
+[[step-4-cable-the-shelf-connections]]
 == Etapa 4: Faça o cabeamento das conexões da prateleira
 
 Os procedimentos a seguir mostram como vincular os controladores a uma ou duas gavetas DS460C.
@@ -175,6 +179,7 @@ image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[Cabo mini-SAS HD]
 
 
 
+[[one-ds460c-shelf]]
 === Uma prateleira DS460C
 
 Conete cada controlador a cada módulo IOM12 na gaveta DS460C.
@@ -194,6 +199,7 @@ image:../media/drw_isi_fas50_1_ds460c_controller_b_cabling_ieops-2169.svg["Porta
 
 
 
+[[two-ds460c-shelves]]
 === Duas prateleiras DS460C
 
 Conecte cada controladora aos IOM12 módulos das duas gavetas DS460C.

@@ -17,6 +17,7 @@ Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior
 
 
 
+[[step-1-remove-the-controller-module]]
 == Passo 1: Remova o módulo do controlador
 
 Deve remover o módulo do controlador do chassis quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
@@ -98,6 +99,7 @@ Gire a conduta de ar em direção aos módulos do ventilador
 |===
 
 
+[[step-2-replace-the-boot-media]]
 == Passo 2: Substitua o suporte de arranque
 
 Localize o suporte de arranque com falha no módulo do controlador removendo o Riser 3 no módulo do controlador antes de poder substituir o suporte de arranque.
@@ -174,6 +176,7 @@ Não aperte demasiado o parafuso ou poderá danificar o suporte de arranque.
 
 
 
+[[step-3-transfer-the-boot-image-to-the-boot-media]]
 == Passo 3: Transfira a imagem de arranque para o suporte de arranque
 
 A Mídia de inicialização de substituição que você instalou é sem uma imagem de inicialização, então você precisa transferir uma imagem de inicialização usando uma unidade flash USB.

@@ -19,6 +19,7 @@ Se você tiver uma configuração do MetroCluster, use o https://docs.netapp.com
 
 
 
+[[step-1-prepare-for-installation]]
 == Passo 1: Prepare-se para a instalação
 
 Para instalar o seu sistema, crie uma conta no site de suporte da NetApp, registe o seu sistema e obtenha as suas chaves de licença. Você também precisa fazer o inventário do número e do tipo apropriados de cabos para o seu sistema e coletar informações específicas de rede.
@@ -159,6 +160,7 @@ Ligar o sistema
 
 
 
+[[step-2-install-the-hardware]]
 == Passo 2: Instale o hardware
 
 Instale o sistema em um rack de 4 colunas ou gabinete do sistema NetApp, conforme aplicável.
@@ -182,6 +184,7 @@ image::../media/drw_cable_management_arm_install.png[Anexando dispositivos de ge
 
 
 
+[[step-3-cable-controllers-to-network]]
 == Passo 3: Controladores de cabo para a rede
 
 Conete os controladores à rede usando o método de cluster sem switch de dois nós ou o método de rede de interconexão de cluster.
@@ -330,6 +333,7 @@ IMPORTANT: NÃO conete os cabos de energia neste momento.
 ====
 
 
+[[step-4-cable-controllers-to-drive-shelves]]
 == Etapa 4: Controladores de cabos para compartimentos de unidades
 
 Faça o cabeamento dos controladores para as gavetas usando portas de storage integradas. A NetApp recomenda cabeamento MP-HA para sistemas com storage externo.
@@ -381,6 +385,7 @@ Para obter informações adicionais sobre cabeamento, link:../sas3/install-new-s
 
 
 
+[[step-5-complete-system-setup]]
 == Passo 5: Conclua a configuração do sistema
 
 Você pode concluir a configuração e configuração do sistema usando a descoberta de cluster com apenas uma conexão com o switch e laptop, ou conetando-se diretamente a um controlador no sistema e, em seguida, conetando-se ao switch de gerenciamento.

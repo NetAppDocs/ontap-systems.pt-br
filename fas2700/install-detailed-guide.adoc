@@ -15,6 +15,7 @@ Esta página fornece instruções detalhadas passo a passo para instalar um sist
 
 
 
+[[step-1-prepare-for-installation]]
 == Passo 1: Prepare-se para a instalação
 
 Para instalar seu sistema FAS2700, você precisa criar uma conta no site de suporte da NetApp, Registrar seu sistema e obter chaves de licença. Você também precisa fazer o inventário do número e do tipo apropriados de cabos para o seu sistema e coletar informações específicas de rede.
@@ -167,6 +168,7 @@ https://library.netapp.com/ecm/ecm_download_file/ECMLP2839002["Folha de trabalho
 
 
 
+[[step-2-install-the-hardware]]
 == Passo 2: Instale o hardware
 
 Você precisa instalar seu sistema em um rack de 4 colunas ou gabinete do sistema NetApp, conforme aplicável.
@@ -190,12 +192,14 @@ image::../media/drw_cable_management_arm_install.png[Anexando dispositivos de ge
 
 
 
+[[step-3-cable-controllers-to-your-network]]
 == Passo 3: Controladores de cabo para a sua rede
 
 Você pode conetar os controladores à rede usando o método de cluster sem switch de dois nós ou usando a rede de interconexão de cluster.
 
 
 
+[[option-1-cable-a-two-node-switchless-cluster-unified-network-configuration]]
 === Opção 1: Cabo de um cluster sem switch de dois nós, configuração de rede unificada
 
 A rede de gerenciamento, a rede de dados UTA2 e as portas de gerenciamento nos controladores são conetadas aos switches. As portas de interconexão de cluster são cabeadas em ambos os controladores.
@@ -271,6 +275,7 @@ NÃO conete os cabos de energia neste momento.
 
 
 
+[[option-2-cable-a-switched-cluster-unified-network-configuration]]
 === Opção 2: Cable a switched cluster, configuração de rede unificada
 
 A rede de gerenciamento, a rede de dados UTA2 e as portas de gerenciamento nos controladores são conetadas aos switches. As portas de interconexão de cluster são cabeadas para os switches de interconexão de cluster.
@@ -348,6 +353,7 @@ NÃO conete os cabos de energia neste momento.
 
 
 
+[[option-3-cable-a-two-node-switchless-cluster-ethernet-network-configuration]]
 === Opção 3: Cable um cluster sem switch de dois nós, configuração de rede Ethernet
 
 A rede de gerenciamento, a rede de dados Ethernet e as portas de gerenciamento nos controladores são conetadas aos switches. As portas de interconexão de cluster são cabeadas em ambos os controladores.
@@ -412,6 +418,7 @@ NÃO conete os cabos de energia neste momento.
 
 
 
+[[option-4-cable-a-switched-cluster-ethernet-network-configuration]]
 === Opção 4: Cable a switched cluster, configuração de rede Ethernet
 
 A rede de gerenciamento, a rede de dados Ethernet e as portas de gerenciamento nos controladores são conetadas aos switches. As portas de interconexão de cluster são cabeadas para os switches de interconexão de cluster.
@@ -474,6 +481,7 @@ NÃO conete os cabos de energia neste momento.
 
 
 
+[[step-4-cable-controllers-to-drive-shelves]]
 == Etapa 4: Controladores de cabos para compartimentos de unidades
 
 Você precisa vincular os controladores às gavetas usando as portas de storage integradas. A NetApp recomenda cabeamento MP-HA para sistemas com storage externo. Se você tiver uma unidade de fita SAS, poderá usar cabeamento de caminho único. Se você não tiver gavetas externas, o cabeamento MP-HA para unidades internas será opcional (não exibido) se os cabos SAS forem solicitados com o sistema.
@@ -550,12 +558,14 @@ NOTE: Para obter mais informações sobre cabeamento SAS e planilhas, consulte l
 
 
 
+[[step-5-complete-system-setup-and-configuration]]
 == Passo 5: Conclua a configuração e configuração do sistema
 
 Você pode concluir a configuração e configuração do sistema usando a descoberta de cluster com apenas uma conexão com o switch e laptop, ou conetando-se diretamente a um controlador no sistema e, em seguida, conetando-se ao switch de gerenciamento.
 
 
 
+[[option-1-complete-system-setup-if-network-discovery-is-enabled]]
 === Opção 1: Conclua a configuração do sistema se a deteção de rede estiver ativada
 
 Se tiver a deteção de rede ativada no seu computador portátil, pode concluir a configuração e configuração do sistema utilizando a deteção automática de cluster.
@@ -609,6 +619,7 @@ https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["Guia de configura
 
 
 
+[[option-2-completing-system-setup-and-configuration-if-network-discovery-is-not-enabled]]
 === Opção 2: Concluir a configuração e a configuração do sistema se a deteção de rede não estiver ativada
 
 Se a deteção de rede não estiver ativada no seu computador portátil, tem de concluir a configuração e a configuração utilizando esta tarefa.

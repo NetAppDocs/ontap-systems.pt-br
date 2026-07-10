@@ -22,6 +22,7 @@ Você pode usar este procedimento com todas as versões do ONTAP suportadas pelo
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Passo 1: Desligue o controlador desativado
 
 Desligue ou assuma o controlador desativado.
@@ -94,6 +95,7 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 
 
 
+[[step-2-replace-a-failed-io-module]]
 == Passo 2: Substitua um módulo de e/S com falha
 
 .Passos
@@ -148,6 +150,7 @@ Certifique-se de manter o controle de qual slot o módulo de e/S estava.
 
 
 
+[[step-3-reboot-the-controller]]
 == Passo 3: Reinicie o controlador
 
 Depois de substituir um módulo de e/S, tem de reiniciar o controlador.
@@ -177,6 +180,7 @@ NOTE: Reiniciar o controlador prejudicado também reinicializa os módulos de e/
 
 
 
+[[step-4-return-the-failed-part-to-netapp]]
 == Passo 4: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

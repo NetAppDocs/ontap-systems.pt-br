@@ -31,19 +31,19 @@ Antes de começar, revise  https://docs.netapp.com/us-en/ontap-cli/security-key-
 
 .Passos
 . Inicie no menu ONTAP a partir do prompt Loader `boot_ontap menu` e selecione a opção 10.
-. Recupere e verifique a senha global do cluster a partir do controlador íntegro.
+. Exibir as informações de backup de gerenciamento de chaves para o cluster.
 +
-.. Execute o seguinte comando para recuperar a senha de todo o cluster:
+.. Execute o seguinte comando para exibir as informações de backup do gerenciamento de chaves para o cluster:
 +
 `security key-manager onboard show-backup`
 
-.. Verifique a senha de todo o cluster usando o seguinte comando:
+.. Execute o seguinte comando para verificar o backup do onboard key manager:
 +
 `security key-manager onboard verify-backup`
 
 
 
-. Introduza a frase-passe OKM.
+. Digite a senha do OKM e confirme a verificação bem-sucedida.
 +
 
 NOTE: Você é solicitado duas vezes para a senha.

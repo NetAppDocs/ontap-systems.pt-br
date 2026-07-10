@@ -6,6 +6,7 @@ Para substituir o hardware do módulo do controlador, você deve remover o nó p
 
 
 
+[[step-1-remove-the-controller-module]]
 == Passo 1: Remova o módulo do controlador
 
 Para aceder aos componentes no interior do controlador, tem de remover primeiro o módulo do controlador do sistema e, em seguida, remover a tampa do módulo do controlador.
@@ -57,6 +58,7 @@ Botão de bloqueio da tampa do módulo do controlador
 |===
 
 
+[[step-2-move-the-boot-media]]
 == Passo 2: Mova a Mídia de inicialização
 
 Você deve localizar o suporte de inicialização e seguir as instruções para removê-lo do controlador antigo e inseri-lo no novo controlador.
@@ -99,6 +101,7 @@ Se necessário, retire o suporte de arranque e volte a colocá-lo no socket.
 
 
 
+[[step-3-move-the-system-dimms]]
 == Etapa 3: Mova os DIMMs do sistema
 
 Para mover os DIMMs, localize-os e mova-os do controlador antigo para o controlador de substituição e siga a sequência específica de passos.
@@ -156,6 +159,7 @@ NOTE: Inspecione visualmente o DIMM para verificar se ele está alinhado uniform
 
 
 
+[[step-4-install-the-controller]]
 == Passo 4: Instale o controlador
 
 Depois de instalar os componentes no módulo do controlador, tem de instalar o módulo do controlador novamente no chassis do sistema e arrancar o sistema operativo.

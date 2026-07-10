@@ -22,6 +22,7 @@ Substitua ou adicione um módulo de E/S no seu sistema ASA C800 quando o módulo
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Passo 1: Desligue o controlador desativado
 
 Desligue ou assuma o controlador desativado.
@@ -94,6 +95,7 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 
 
 
+[[step-2-remove-the-controller-module]]
 == Passo 2: Remova o módulo do controlador
 
 Deve remover o módulo do controlador do chassis quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
@@ -182,6 +184,7 @@ Ao deslizar o módulo controlador para fora do chassi, apoie a parte inferior.
 
 
 
+[[step-3-replace-the-pcie-card]]
 == Etapa 3: Substitua a placa PCIe
 
 Para substituir uma placa PCIe, remova os cabos e quaisquer QSFPs e SFPs das portas das placas PCIe no riser de destino, remova o riser do módulo controlador, remova e substitua a placa PCIe, reinstale o riser e quaisquer QSFPs e SFPs nas portas e reconecte os cabos das portas.
@@ -331,6 +334,7 @@ Quando bloqueado, a trava de travamento fica alinhada com a parte superior da ri
 
 
 
+[[step-4-reinstall-the-controller-module]]
 == Etapa 4: Reinstale o módulo do controlador
 
 Reinstale o módulo do controlador e reinicie-o.
@@ -379,6 +383,7 @@ O módulo do controlador começa a inicializar assim que a energia é restaurada
 
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == Passo 5: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

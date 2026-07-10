@@ -33,12 +33,14 @@ image::../media/drw_controller_to_stack_cable_color_key_non2600_4stackcolors.gif
 
 
 
+[[controller-to-stack-cabling-worksheets-and-cabling-examples-for-multipath-ha-configurations-with-quad-port-sas-hbas]]
 == Planilhas de cabeamento de controladora a stack e exemplos de cabeamento para configurações de HA multipath com HBAs SAS de quatro portas
 
 Você pode usar as planilhas de cabeamento e exemplos de cabeamento completos de controladora a stack para realizar configurações de HA de multipath comuns que possuem HBAs SAS de quatro portas. Essas controladoras não têm portas SAS integradas.
 
 
 
+[[multipath-ha-with-one-quad-port-sas-hba-and-one-single-shelf-stack]]
 === Multipath HA com um HBA SAS de quatro portas e uma stack de compartimento único
 
 O exemplo de cabeamento e Planilha a seguir usa o par de portas 1a/1D:
@@ -49,6 +51,7 @@ image::../media/drw_mpha_slot_1_one_4porthba_one_singleshelf_stack.gif[Exemplo d
 
 
 
+[[multipath-ha-with-one-quad-port-sas-hba-and-two-single-shelf-stacks]]
 === Multipath HA com um HBA SAS de quatro portas e duas stacks de compartimento único
 
 O exemplo de cabeamento e Planilha a seguir usa pares de portas 1a/1D e 1c/1b:
@@ -59,6 +62,7 @@ image::../media/drw_mpha_slot_1_one_4porthba_two_singleshelf_stacks.gif[Exemplo 
 
 
 
+[[multipath-ha-with-two-quad-port-sas-hbas-and-two-multi-shelf-stacks]]
 === Multipath HA com dois HBAs SAS de quatro portas e duas stacks de várias shelves
 
 Quatro pares de portas estão disponíveis para esta configuração: 1A/2b, 2a/1D, 1c/2D e 2c/1b. Você pode conetar pares de portas por cabo na ordem em que eles são identificados (listados na Planilha) ou pode fazer o cabeamento de cada outro par de portas (ignorar pares de portas).
@@ -83,12 +87,14 @@ image::../media/drw_mpha_slots_1_and_2_two_4porthbas_two_stacks_skipped.gif[Exem
 
 
 
+[[controller-to-stack-cabling-worksheets-and-cabling-examples-for-multipath-ha-configurations-with-four-onboard-sas-ports]]
 == Planilhas de cabeamento e exemplos de cabeamento de controladora a stack para configurações de HA multipath com quatro portas SAS integradas
 
 Você pode usar as planilhas de cabeamento e exemplos de cabeamento completos de controladora a stack para realizar configurações de HA multipath comuns que têm quatro portas SAS integradas.
 
 
 
+[[multipath-ha-with-four-onboard-sas-ports-and-one-single-shelf-stack]]
 === Ha multipath com quatro portas SAS integradas e uma stack de compartimento único
 
 O exemplo de cabeamento e Planilha a seguir usa o par de portas 0a/0d:
@@ -99,6 +105,7 @@ image::../media/drw_mpha_slot_0_4ports_one_singleshelf_stack.gif[Exemplo de cabe
 
 
 
+[[multipath-ha-with-four-onboard-sas-ports-and-two-single-shelf-stacks]]
 === Ha multipath com quatro portas SAS integradas e duas stacks de compartimento único
 
 O exemplo de cabeamento e Planilha a seguir usa pares de portas 0a/0d e 0C/0b:
@@ -109,6 +116,7 @@ image::../media/drw_mpha_slot_0_4ports_two_singleshelf_stacks.gif[Exemplo de cab
 
 
 
+[[multipath-ha-with-four-onboard-sas-ports-a-quad-port-sas-hba-and-two-multi-shelf-stacks]]
 === Multipath HA com quatro portas SAS integradas, um SAS HBA de quatro portas e duas stacks de várias shelves
 
 Quatro pares de portas estão disponíveis para esta configuração: 0A/1b, 1a/0d, 0C/1D e 1c/0b. Você pode conetar pares de portas por cabo na ordem em que eles são identificados (listados na Planilha) ou pode fazer o cabeamento de cada outro par de portas (ignorar pares de portas).

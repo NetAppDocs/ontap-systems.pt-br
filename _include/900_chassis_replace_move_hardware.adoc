@@ -6,6 +6,7 @@ Para substituir o chassis, tem de remover os componentes do chassis danificado e
 
 
 
+[[step-1-remove-the-power-supplies]]
 == Etapa 1: Remova as fontes de alimentação
 
 Remover as fontes de alimentação ao substituir um chassi envolve desligar, desconetar e remover as quatro fontes de alimentação da parte traseira do chassi com deficiência.
@@ -45,6 +46,7 @@ Botão de bloqueio
 
 
 
+[[step-2-remove-the-fans]]
 == Passo 2: Remova os ventiladores
 
 Ao substituir o chassis, é necessário remover os seis módulos da ventoinha, localizados na parte dianteira do chassis.
@@ -86,6 +88,7 @@ Deslize o ventilador para dentro/fora do chassi
 
 
 
+[[step-3-remove-the-controller-module]]
 == Passo 3: Remova o módulo do controlador
 
 Para substituir o chassis, tem de remover o ou os módulos do controlador do chassis afetado.
@@ -127,6 +130,7 @@ Certifique-se de que suporta a parte inferior do módulo do controlador enquanto
 
 
 
+[[step-4-remove-the-io-modules]]
 == Passo 4: Remova os módulos de e/S.
 
 Para remover os módulos de e/S do chassis afetado, incluindo os módulos NVRAM, siga a sequência específica dos passos.
@@ -182,6 +186,7 @@ Trinco da came de e/S completamente desbloqueado
 
 
 
+[[step-5-remove-the-de-stage-controller-power-module]]
 == Passo 5: Retire o módulo de alimentação do controlador de fase de remoção
 
 Retire os dois módulos de alimentação do controlador de desativação da parte dianteira do chassis danificado.
@@ -210,6 +215,7 @@ Botão de bloqueio DCPM terra cotta
 
 
 
+[[step-6-remove-the-usb-led-module]]
 == Passo 6: Remova o módulo LED USB
 
 Retire os módulos LED USB.
@@ -242,6 +248,7 @@ Deslize para fora do chassi.
 
 
 
+[[step-7-remove-chassis]]
 == Etapa 7: Remova o chassi
 
 Você deve remover o chassi existente do rack de equipamentos ou do gabinete do sistema antes de instalar o chassi de substituição.
@@ -262,6 +269,7 @@ NOTE: Se o sistema estiver em um gabinete do sistema, talvez seja necessário re
 
 
 
+[[step-8-install-the-de-stage-controller-power-module]]
 == Passo 8: Instale o módulo de alimentação do controlador de fase de remoção
 
 Quando o chassi de substituição é instalado no rack ou no gabinete do sistema, você deve reinstalar os módulos de alimentação do controlador de estágio nele.
@@ -277,6 +285,7 @@ NOTE: O módulo e o slot são chaveados. Não force o módulo para dentro da abe
 
 
 
+[[step-9-install-fans-into-the-chassis]]
 == Passo 9: Instale ventiladores no chassi
 
 Para instalar os módulos do ventilador ao substituir o chassi, você deve executar uma sequência específica de tarefas.
@@ -292,6 +301,7 @@ Quando inserido num sistema ativo, o LED âmbar de atenção pisca quatro vezes 
 
 
 
+[[step-10-install-io-modules]]
 == Passo 10: Instale módulos de e/S.
 
 Para instalar módulos de e/S, incluindo os módulos NVRAM do chassis afetado, siga a sequência específica dos passos.
@@ -310,6 +320,7 @@ NOTE: Se o chassi com deficiência tiver painéis de e/S vazios, mova-os para o 
 
 
 
+[[step-11-install-the-power-supplies]]
 == Passo 11: Instale as fontes de alimentação
 
 A instalação das fontes de alimentação ao substituir um chassi envolve a instalação das fontes de alimentação no chassi de substituição e a conexão à fonte de alimentação.
@@ -334,6 +345,7 @@ IMPORTANT: Ligue apenas o cabo de alimentação à fonte de alimentação. Não 
 
 
 
+[[step-12-install-the-usb-led-modules]]
 == Passo 12: Instale os módulos LED USB
 
 Instale os módulos LED USB no chassis de substituição.
@@ -344,6 +356,7 @@ Instale os módulos LED USB no chassis de substituição.
 
 
 
+[[step-13-install-the-controller]]
 == Passo 13: Instale o controlador
 
 Depois de instalar o módulo do controlador e quaisquer outros componentes no chassis de substituição, inicie-o.

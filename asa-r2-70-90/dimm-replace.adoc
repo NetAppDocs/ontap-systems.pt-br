@@ -20,6 +20,7 @@ Substitua um DIMM no sistema ASA A70 ou ASA A90 se forem detetados erros de mem�
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Passo 1: Desligue o controlador desativado
 
 Desligue ou assuma o controlador desativado.
@@ -92,6 +93,7 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 
 
 
+[[step-2-remove-the-controller-module]]
 == Passo 2: Remova o módulo do controlador
 
 
@@ -212,6 +214,7 @@ Certifique-se de que suporta a parte inferior do módulo do controlador enquanto
 
 
 
+[[step-3-replace-a-dimm]]
 == Etapa 3: Substitua um DIMM
 
 Para substituir os DIMMs, localize-os dentro do controlador e siga a sequência específica de passos.
@@ -265,6 +268,7 @@ IMPORTANT: Inspecione visualmente o DIMM para verificar se ele está alinhado un
 
 
 
+[[step-4-reinstall-the-controller-module]]
 == Etapa 4: Reinstale o módulo do controlador
 
 Reinstale o módulo do controlador e reinicie-o.
@@ -318,6 +322,7 @@ Se você tiver fontes de alimentação CC, reconete o bloco de alimentação às
 
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == Passo 5: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

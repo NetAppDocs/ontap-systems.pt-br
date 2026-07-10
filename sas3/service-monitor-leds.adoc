@@ -15,6 +15,7 @@ Você pode monitorar a integridade do compartimento de disco compreendendo a loc
 
 
 
+[[operator-display-panel-leds]]
 == LEDs do painel de visualização do operador
 
 Os LEDs no painel de exibição frontal do operador da prateleira de discos indicam se o compartimento de disco está funcionando normalmente ou se há problemas com o hardware.
@@ -75,6 +76,7 @@ image::../media/drw_opd.gif[Visor do operador da tampa final]
 
 
 
+[[iom12-iom12b-or-iom12c-module-leds]]
 == LEDs do módulo IOM12, IOM12B ou IOM12C
 
 Os LEDs nos módulos IOM12, IOM12B ou IOM12C indicam se o módulo está funcionando normalmente, se está pronto para tráfego de E/S e se há algum problema com o hardware.
@@ -140,6 +142,7 @@ image::../media/drw_iom12c_ieops-2175.svg[Módulo IOM12C,828px,147px]
 
 
 
+[[power-supply-leds]]
 == LEDs da fonte de alimentação
 
 Os LEDs na fonte de alimentação indicam se a fonte de alimentação está funcionando normalmente ou se há problemas de hardware.
@@ -193,6 +196,7 @@ image::../media/drw_powersupply_913w_vsd.gif[LEDs da fonte de alimentação]
 
 
 
+[[fan-leds-on-ds460c-disk-shelves]]
 == LEDs do ventilador em DS460C prateleiras de disco
 
 Os LEDs nos ventiladores DS460C indicam se o ventilador está funcionando normalmente ou se há problemas de hardware.
@@ -220,12 +224,14 @@ image::../media/28_dwg_e2860_de460c_single_fan_canister_with_led_callout.gif[LED
 
 
 
+[[disk-drive-leds]]
 == LEDs da unidade de disco
 
 Os LEDs em uma unidade de disco indicam se ela está funcionando normalmente ou se há problemas com o hardware.
 
 
 
+[[disk-drive-leds-for-ds224c-and-ds212c-disk-shelves]]
 === LEDs da unidade de disco para compartimentos de disco DS224C e DS212C
 
 A tabela a seguir descreve os dois LEDs nas unidades de disco usadas nos compartimentos de disco DS224C e DS212C:
@@ -277,6 +283,7 @@ image::../media/drw_diskdrive_ds212c.gif[LEDs do suporte da unidade horizontal]
 
 
 
+[[disk-drive-leds-for-ds460c-disk-shelves]]
 === LEDs da unidade de disco para DS460C compartimentos de disco
 
 A ilustração e a tabela a seguir descrevem os LEDs de atividade da unidade na gaveta da unidade e seus estados operacionais:

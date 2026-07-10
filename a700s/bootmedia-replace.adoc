@@ -17,6 +17,7 @@ O sistema AFF A700s suporta apenas procedimentos manuais de recuperação de mí
 
 
 
+[[step-1-remove-the-controller-module]]
 == Passo 1: Remova o módulo do controlador
 
 Deve remover o módulo do controlador do chassis quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
@@ -94,6 +95,7 @@ Conduta de ar
 |===
 
 
+[[step-2-replace-the-boot-media-aff-a700s]]
 == Passo 2: Substitua o suporte de arranque - AFF A700s
 
 Você deve localizar a Mídia de inicialização com falha no módulo do controlador removendo o módulo PCIe do meio no módulo do controlador, localizar a Mídia de inicialização com falha e, em seguida, substituir a Mídia de inicialização.

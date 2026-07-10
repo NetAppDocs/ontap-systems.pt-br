@@ -45,6 +45,7 @@ Este procedimento utiliza a seguinte terminologia:
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Passo 1: Desligue o controlador desativado
 
 Desligue ou assuma o controlador desativado.
@@ -102,6 +103,7 @@ O parâmetro _-halt true_ leva o nó prejudicado ao prompt do LOADER.
 
 
 
+[[step-2-replace-the-impaired-system-management-module]]
 == Passo 2: Substitua o módulo de gestão do sistema afetado
 
 Substitua o módulo de gestão do sistema afetado.
@@ -189,6 +191,7 @@ Suporte de arranque
 
 
 
+[[step-3-reboot-the-controller-module]]
 == Passo 3: Reinicie o módulo do controlador
 
 Reinicie o módulo do controlador.
@@ -233,6 +236,7 @@ NOTE: O comando a seguir só está disponível no nível de privilégio Modo de 
 
 
 
+[[step-4-install-licenses-and-register-serial-number]]
 == Passo 4: Instale licenças e Registre o número de série
 
 Quando você substitui o módulo de gerenciamento do sistema, o número de série do sistema (SSN) do controlador muda.  Você deve instalar novas licenças para o nó se o nó danificado estiver usando recursos do ONTAP que exigem uma licença padrão (bloqueada por nó).  Para recursos com licenças padrão, cada nó no cluster deve ter sua própria chave para o recurso.
@@ -274,6 +278,7 @@ Para obter mais informações, consulte link:https://docs.netapp.com/us-en/ontap
 
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == Passo 5: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

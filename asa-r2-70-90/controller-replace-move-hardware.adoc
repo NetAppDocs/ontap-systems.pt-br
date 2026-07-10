@@ -15,6 +15,7 @@ Substitua o controlador no seu sistema ASA A70 ou ASA A90 quando uma falha de ha
 
 
 
+[[step-1-remove-the-controller-module]]
 == Passo 1: Remova o módulo do controlador
 
 Deve remover o módulo do controlador do chassis quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
@@ -137,6 +138,7 @@ Certifique-se de que suporta a parte inferior do módulo do controlador enquanto
 
 
 
+[[step-2-move-the-power-supplies]]
 == Passo 2: Mova as fontes de alimentação
 
 Mova as fontes de alimentação para o controlador de substituição.
@@ -179,6 +181,7 @@ NOTE: Para evitar danificar o conetor interno, não utilize força excessiva ao 
 
 
 
+[[step-3-move-the-fans]]
 == Passo 3: Mova os fãs
 
 Mova os módulos das ventoinhas para o módulo do controlador de substituição.
@@ -212,6 +215,7 @@ Módulo da ventoinha
 
 
 
+[[step-4-move-the-nv-battery]]
 == Passo 4: Mova a bateria NV
 
 Mova a bateria NV para o módulo do controlador de substituição.
@@ -255,6 +259,7 @@ Ficha da bateria NV
 
 
 
+[[step-5-move-system-dimms]]
 == Passo 5: Mova os DIMMs do sistema
 
 Mova os DIMMs para o módulo do controlador de substituição.
@@ -321,6 +326,7 @@ NOTE: Inspecione visualmente o DIMM para verificar se ele está alinhado uniform
 
 
 
+[[step-6-move-the-io-modules]]
 == Passo 6: Mova os módulos de e/S.
 
 Mova os módulos de e/S para o módulo do controlador de substituição.
@@ -369,6 +375,7 @@ NOTE: Para mover os módulos de e/S dos slots 6 e 7, você deve mover o transpor
 
 
 
+[[step-7-move-the-system-management-module]]
 == Passo 7: Mova o módulo Gerenciamento do sistema
 
 Desloque o módulo de gestão do sistema para o módulo do controlador de substituição.
@@ -405,6 +412,7 @@ Trinco do excêntrico do módulo de gestão do sistema
 
 
 
+[[step-8-move-the-nvram-module]]
 == Passo 8: Mova o módulo NVRAM
 
 Mova o módulo NVRAM para o módulo do controlador de substituição.
@@ -451,6 +459,7 @@ O botão do came afasta-se do chassis.
 
 
 
+[[step-9-install-the-controller-module]]
 == Passo 9: Instale o módulo do controlador
 
 Reinstale o módulo do controlador e reinicie-o.

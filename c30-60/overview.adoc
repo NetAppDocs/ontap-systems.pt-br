@@ -15,10 +15,12 @@ A seguir estão especificações selecionadas para o grupo de plataformas C30-60
 
 
 
+[[aff-c60]]
 == AFF C60
 
 
 
+[[key-specifications-for-aff-c60]]
 === Especificações principais do AFF C60
 
 Configuração da plataforma: Par de HA de chassi único AFF C60
@@ -37,6 +39,7 @@ Versão mínima do ONTAP : ONTAP 9.16.1RC1
 
 
 
+[[scaleout-maximums]]
 === Máximos de Escalabilidade
 
 |===
@@ -55,6 +58,7 @@ Versão mínima do ONTAP : ONTAP 9.16.1RC1
 |===
 
 
+[[io]]
 === IO
 
 
@@ -110,12 +114,14 @@ Não há dados de E/S a bordo.
 |===
 
 
+[[storage-networking-supported]]
 === Rede de armazenamento suportada
 
 CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NVMe/FC; NVMe/TCP; S3; S3 com NAS; SMB 2.0; SMB 2.1; SMB 2.x; SMB 3.0; SMB 3.1; SMB 3.1.1;
 
 
 
+[[system-environment-specifications]]
 === Especificações do ambiente do sistema
 
 * Potência típica: 2892 BTU/h
@@ -131,6 +137,7 @@ CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NVMe/FC; NVMe/TCP; S3; S3
 
 
 
+[[compliance]]
 === Conformidade
 
 * Certificações EMC/EMI: AMCA, FCC, ICES, KC, Marrocos, VCCI
@@ -143,16 +150,19 @@ CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NVMe/FC; NVMe/TCP; S3; S3
 
 
 
+[[high-availability]]
 === Alta disponibilidade
 
 Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP ; Controladores redundantes de troca a quente; Fontes de alimentação redundantes de troca a quente;
 
 
 
+[[aff-c30]]
 == AFF C30
 
 
 
+[[key-specifications-for-aff-c30]]
 === Especificações principais do AFF C30
 
 Configuração da plataforma: Par de HA de chassi único AFF C30
@@ -171,6 +181,7 @@ Versão mínima do ONTAP : ONTAP 9.16.1RC1
 
 
 
+[[scaleout-maximums]]
 === Máximos de Escalabilidade
 
 |===
@@ -189,6 +200,7 @@ Versão mínima do ONTAP : ONTAP 9.16.1RC1
 |===
 
 
+[[io]]
 === IO
 
 
@@ -244,12 +256,14 @@ Não há dados de E/S a bordo.
 |===
 
 
+[[storage-networking-supported]]
 === Rede de armazenamento suportada
 
 CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NVMe/FC; NVMe/TCP; S3; S3 com NAS; SMB 2.0; SMB 2.1; SMB 2.x; SMB 3.0; SMB 3.1; SMB 3.1.1;
 
 
 
+[[system-environment-specifications]]
 === Especificações do ambiente do sistema
 
 * Potência típica: 2892 BTU/h
@@ -265,6 +279,7 @@ CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NVMe/FC; NVMe/TCP; S3; S3
 
 
 
+[[compliance]]
 === Conformidade
 
 * Certificações EMC/EMI: AMCA, FCC, ICES, KC, Marrocos, VCCI
@@ -277,6 +292,7 @@ CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NVMe/FC; NVMe/TCP; S3; S3
 
 
 
+[[high-availability]]
 === Alta disponibilidade
 
 Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP ; Controladores redundantes de troca a quente; Fontes de alimentação redundantes de troca a quente;

@@ -19,6 +19,7 @@ Você substitui a bateria do relógio em tempo real (RTC) no módulo do controla
 
 
 
+[[step-1-shut-down-the-controller]]
 == Passo 1: Desligue o controlador
 
 Assuma o controle e interrompa o controlador com defeito para que o controlador em bom estado continue a fornecer dados do armazenamento do controlador com defeito. Para fazer isso, você suprime a criação automática de casos em AutoSupport, desativa o giveback automático e leva o controlador com defeito ao prompt LOADER. O prompt LOADER é o estado de parada segura a partir do qual você pode substituir a FRU.
@@ -89,12 +90,14 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 
 
 
+[[step-2-replace-the-rtc-battery]]
 == Passo 2: Substitua a bateria RTC
 
 É necessário localizar a bateria RTC dentro do módulo do controlador e, em seguida, seguir a sequência específica de passos.
 
 
 
+[[step-3-remove-the-controller-module]]
 == Passo 3: Remova o módulo do controlador
 
 Para aceder aos componentes no interior do módulo do controlador, tem de remover o módulo do controlador do chassis.
@@ -127,6 +130,7 @@ O gancho do mecanismo de travamento deve estar quase na vertical e deve estar li
 
 
 
+[[step-4-replace-the-rtc-battery]]
 == Passo 4: Substitua a bateria RTC
 
 image::../media/drw_a320_rtc_batt_replace_animated_gif.png[Substitua a bateria do RTC]
@@ -156,6 +160,7 @@ NOTE: Observe a polaridade da bateria ao removê-la do suporte. A bateria está 
 
 
 
+[[step-5-reinstall-the-controller-module-and-setting-timedate-after-rtc-battery-replacement]]
 == Etapa 5: Reinstale o módulo do controlador e ajuste a hora/data após a substituição da bateria do RTC
 
 Depois de substituir um componente no módulo do controlador, tem de reinstalar o módulo do controlador no chassis do sistema, repor a hora e a data no controlador e, em seguida, iniciá-lo.
@@ -208,6 +213,7 @@ O módulo do controlador começa a arrancar assim que estiver totalmente assente
 
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == Passo 6: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

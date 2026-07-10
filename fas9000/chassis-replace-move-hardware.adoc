@@ -15,6 +15,7 @@ Mova as ventoinhas, os discos rígidos e o módulo ou módulos do controlador do
 
 
 
+[[step-1-remove-the-power-supplies]]
 == Etapa 1: Remova as fontes de alimentação
 
 .Passos
@@ -52,6 +53,7 @@ Botão de bloqueio
 
 
 
+[[step-2-remove-the-fans]]
 == Passo 2: Remova os ventiladores
 
 Para remover os módulos do ventilador ao substituir o chassi, você deve executar uma sequência específica de tarefas.
@@ -83,6 +85,7 @@ Botão laranja de libertação
 
 
 
+[[step-3-remove-the-controller-module]]
 == Passo 3: Remova o módulo do controlador
 
 Para substituir o chassis, tem de remover o ou os módulos do controlador do chassis antigo.
@@ -120,6 +123,7 @@ Certifique-se de que suporta a parte inferior do módulo do controlador enquanto
 
 
 
+[[step-4-remove-the-io-modules]]
 == Passo 4: Remova os módulos de e/S.
 
 .Passos
@@ -172,6 +176,7 @@ Trinco da came de e/S completamente desbloqueado
 
 
 
+[[step-5-remove-the-de-stage-controller-power-module]]
 == Passo 5: Retire o módulo de alimentação do controlador de fase de remoção
 
 .Passos
@@ -197,6 +202,7 @@ Botão de bloqueio laranja do módulo DCPM
 
 
 
+[[step-6-replace-a-chassis-from-within-the-equipment-rack-or-system-cabinet]]
 == Etapa 6: Substitua um chassi de dentro do rack de equipamentos ou do gabinete do sistema
 
 .Passos
@@ -219,6 +225,7 @@ NOTE: Se o sistema estiver em um gabinete do sistema, talvez seja necessário re
 
 
 
+[[step-7-move-the-usb-led-module-to-the-new-chassis]]
 == Passo 7: Mova o módulo LED USB para o novo chassi
 
 .Passos
@@ -231,6 +238,7 @@ Uma vez que o novo chassi é instalado no rack ou gabinete, você deve mover o m
 
 
 
+[[step-8-install-the-de-stage-controller-power-module-when-replacing-the-chassis]]
 == Passo 8: Instale o módulo de alimentação do controlador de estágio ao substituir o chassi
 
 .Passos
@@ -246,6 +254,7 @@ NOTE: O módulo e o slot são chaveados. Não force o módulo para dentro da abe
 
 
 
+[[step-9-install-fans-into-the-chassis]]
 == Passo 9: Instale ventiladores no chassi
 
 .Passos
@@ -261,6 +270,7 @@ Quando inserido num sistema ativo, o LED âmbar de atenção pisca quatro vezes 
 
 
 
+[[step-10-install-io-modules]]
 == Passo 10: Instale módulos de e/S.
 
 .Passos
@@ -279,6 +289,7 @@ NOTE: Se o chassi antigo tiver painéis de e/S vazios, mova-os para o chassi de 
 
 
 
+[[step-11-install-the-power-supplies]]
 == Passo 11: Instale as fontes de alimentação
 
 .Passos
@@ -302,6 +313,7 @@ NOTE: Ligue apenas o cabo de alimentação à fonte de alimentação. Não ligue
 
 
 
+[[step-12-install-the-controller]]
 == Passo 12: Instale o controlador
 
 .Passos

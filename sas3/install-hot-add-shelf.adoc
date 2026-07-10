@@ -106,7 +106,7 @@ Você deve fazer o inventário das unidades.
 ** Depois de descompactar as unidades, você deve salvar os materiais de embalagem para uso futuro.
 +
 
-CAUTION: *Possível perda de acesso aos dados:* se, no futuro, você mover a prateleira para uma parte diferente do data center ou transportar a prateleira para um local diferente, você precisa remover as unidades das gavetas da unidade para evitar possíveis danos às gavetas e unidades da unidade.
+CAUTION: *Possível perda de acesso aos dados:* Se, no futuro, você mover o shelf para uma parte diferente do data center ou transportá-lo para um local diferente, deverá remover os discos das gavetas de disco para evitar possíveis danos às gavetas de disco e aos discos.
 
 +
 
@@ -122,6 +122,8 @@ Se uma pulseira não estiver disponível, toque numa superfície não pintada no
 
 
 
+[[step-1-install-disk-shelves-for-a-hot-add]]
+[[install_disk_shelves_for_a_hot_add]]
 == Etapa 1: instalar prateleiras de disco para uma adição a quente
 
 Para cada compartimento de disco adicionado a quente, instale o compartimento de disco em um rack, conete os cabos de energia, ligue o compartimento de disco e defina o ID do compartimento de disco antes de fazer o cabeamento das conexões SAS.
@@ -247,6 +249,7 @@ O ID do compartimento pisca e o LED âmbar do painel do operador pisca até liga
 
 
 
+[[step-2-cable-disk-shelves-for-a-hot-add]]
 == Etapa 2: Prateleiras de disco de cabos para uma adição a quente
 
 Você faz o cabeamento das conexões SAS (de gaveta a gaveta e de controladora a stack), conforme aplicável às gavetas de disco hot-Added, de modo que elas tenham conectividade com o sistema.
@@ -443,9 +446,10 @@ Na saída, "in-band" é listado como "ativo" para cada nó.
 
 
 
+[[optional-step-3-move-or-transport-ds460c-shelves]]
 == (Opcional) Etapa 3: mover ou transportar as prateleiras do DS460C
 
-Se no futuro você mover as prateleiras do DS460C para uma parte diferente do data center ou transportar as prateleiras para um local diferente, será necessário remover as unidades das gavetas para evitar possíveis danos às gavetas e unidades.
+Se no futuro você mover os shelves DS460C para outra parte do data center ou transportar os shelves para um local diferente, será necessário remover os discos das gavetas de disco para evitar possíveis danos às gavetas de disco e aos discos.
 
 * Se você guardou os materiais de embalagem da unidade quando instalou as prateleiras DS460C como parte da instalação a quente da prateleira, use-os para reembalar as unidades antes de movê-las.
 +

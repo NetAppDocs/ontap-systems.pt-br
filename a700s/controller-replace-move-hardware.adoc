@@ -15,6 +15,7 @@ Para substituir o hardware do módulo do controlador, é necessário remover o c
 
 
 
+[[step-1-remove-the-controller-module]]
 == Passo 1: Remova o módulo do controlador
 
 Deve remover o módulo do controlador do chassis quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
@@ -93,6 +94,7 @@ Conduta de ar
 
 
 
+[[step-2-move-the-nvram-card]]
 == Passo 2: Mova o cartão NVRAM
 
 Como parte do processo de substituição do controlador, tem de remover a placa NVRAM da Riser 1 no módulo do controlador afetado e instalar a placa no Riser 1 do módulo do controlador de substituição. Você só deve reinstalar o Riser 1 no módulo do controlador de substituição depois de mover os DIMMs do módulo do controlador prejudicado para o módulo do controlador de substituição.
@@ -173,6 +175,7 @@ NOTE: Certifique-se de que a placa está completamente encaixada no soquete rise
 
 
 
+[[step-3-move-pcie-cards]]
 == Passo 3: Mova as placas PCIe
 
 Como parte do processo de substituição da controladora, você deve remover ambos os módulos riser PCIe, Riser 2 (o riser intermediário) e Riser 3 (riser na extrema direita) do módulo controlador prejudicado, remover as placas PCIe dos módulos riser e instalar as placas nos mesmos módulos riser no módulo controlador de substituição. Você instalará os módulos riser no módulo controlador de substituição assim que os DIMMs tiverem sido movidos para o módulo controlador de substituição.
@@ -248,6 +251,7 @@ Certifique-se de que a placa está completamente encaixada no soquete riser.
 
 
 
+[[step-4-move-the-boot-media]]
 == Passo 4: Mova a Mídia de inicialização
 
 Há dois dispositivos de Mídia de inicialização no AFF A700s, um primário e um secundário ou um suporte de inicialização de backup. Você deve movê-los do controlador prejudicado para o controlador _replacement_ e instalá-los em seus respetivos slots no controlador _replacement_.
@@ -319,6 +323,7 @@ Não aperte demasiado o parafuso ou poderá danificar o suporte de arranque.
 
 
 
+[[step-5-move-the-fans]]
 == Passo 5: Mova os fãs
 
 É necessário mover as ventoinhas do módulo do controlador desativado para o módulo de substituição ao substituir um módulo do controlador com falha.
@@ -351,6 +356,7 @@ Módulo da ventoinha
 
 
 
+[[step-6-move-system-dimms]]
 == Passo 6: Mova os DIMMs do sistema
 
 Para mover os DIMMs, localize-os e mova-os do controlador prejudicado para o controlador de substituição e siga a sequência específica de passos.
@@ -412,6 +418,7 @@ NOTE: Inspecione visualmente o DIMM para verificar se ele está alinhado uniform
 
 
 
+[[step-7-install-the-nvram-module]]
 == Passo 7: Instale o módulo NVRAM
 
 Para instalar o módulo NVRAM, tem de seguir a sequência específica de passos.
@@ -431,6 +438,7 @@ Quando bloqueado, a trava de travamento fica alinhada com a parte superior da ri
 
 
 
+[[step-8-move-the-nvram-battery]]
 == Passo 8: Mova a bateria do NVRAM
 
 Ao substituir o módulo do controlador, tem de mover a bateria do NVRAM do módulo do controlador desativado para o módulo do controlador de substituição
@@ -470,6 +478,7 @@ Patilha azul de bloqueio da bateria do NVRAM
 
 
 
+[[step-9-install-a-pcie-riser]]
 == Passo 9: Instale um riser PCIe
 
 Para instalar um riser PCIe, você deve seguir uma sequência específica de etapas.
@@ -491,6 +500,7 @@ Quando bloqueado, a trava de travamento fica alinhada com a parte superior da ri
 
 
 
+[[step-10-move-the-power-supply]]
 == Passo 10: Mova a fonte de alimentação
 
 Deve mover a fonte de alimentação e a fonte de alimentação em branco do módulo do controlador afetado para o módulo do controlador de substituição quando substituir um módulo do controlador.
@@ -536,6 +546,7 @@ NOTE: Para evitar danificar o conetor interno, não utilize força excessiva ao 
 
 
 
+[[step-11-install-the-controller-module]]
 == Passo 11: Instale o módulo do controlador
 
 Depois de todos os componentes terem sido movidos do módulo do controlador afetado para o módulo do controlador de substituição, tem de instalar o módulo do controlador de substituição no chassis e, em seguida, iniciá-lo no modo de manutenção.

@@ -24,6 +24,7 @@ Você deve substituir o módulo de cache no módulo do controlador quando o sist
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Passo 1: Desligue o controlador desativado
 
 Você pode desligar ou assumir o controlador prejudicado usando procedimentos diferentes, dependendo da configuração do hardware do sistema de armazenamento.
@@ -196,6 +197,7 @@ mcc1A::> metrocluster operation show
 ====
 
 
+[[step-2-replace-or-add-a-caching-module]]
 == Passo 2: Substitua ou adicione um módulo de cache
 
 Os módulos NVMe SSD Flash Cache (Flash Cache ou módulos de cache) são módulos separados. Eles estão localizados na parte frontal do módulo NVRAM. Para substituir ou adicionar um módulo de armazenamento em cache, localize-o na parte traseira do sistema na ranhura 6 e, em seguida, siga a sequência específica de passos para o substituir.
@@ -256,6 +258,7 @@ Certifique-se de que suporta o módulo de cache enquanto o remove do módulo NVR
 
 
 
+[[step-3-add-or-replace-an-x9170a-core-dump-module]]
 == Passo 3: Adicionar ou substituir um módulo de despejo de memória X9170A
 
 O despejo do núcleo do cache 1TB, X9170A, é usado somente nos sistemas AFF A700. O módulo de despejo do núcleo não pode ser trocado a quente. O módulo de despejo de núcleo normalmente está localizado na parte frontal do módulo NVRAM no slot 6-1 na parte traseira do sistema. Para substituir ou adicionar o módulo de despejo do núcleo, localize o slot 6-1 e, em seguida, siga a sequência específica de etapas para adicioná-lo ou substituí-lo.
@@ -314,6 +317,7 @@ Certifique-se de apoiar o módulo de despejo de memória ao removê-lo do módul
 
 
 
+[[step-4-reboot-the-controller-after-fru-replacement]]
 == Passo 4: Reinicie o controlador após a substituição FRU
 
 Depois de substituir a FRU, você deve reiniciar o módulo do controlador.
@@ -324,6 +328,7 @@ Depois de substituir a FRU, você deve reiniciar o módulo do controlador.
 
 
 
+[[step-5-switch-back-aggregates-in-a-two-node-metrocluster-configuration]]
 == Etapa 5: Alterne agregados de volta em uma configuração de MetroCluster de dois nós
 
 Esta tarefa só se aplica a configurações de MetroCluster de dois nós.
@@ -380,6 +385,7 @@ Se um switchback estiver demorando muito tempo para terminar, você pode verific
 
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == Passo 6: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

@@ -15,78 +15,91 @@ Para o sistema de armazenamento AFF A700, pode executar procedimentos de manuten
 
 
 
+[[boot-media]]
 == Suporte de arranque
 
 A mídia de inicialização armazena um conjunto primário e um conjunto secundário de arquivos de imagem de inicialização que o sistema usa ao iniciar. Os sistemas AFF A700 e FAS9000 suportam apenas procedimentos manuais de recuperação de mídia de inicialização.
 
 
 
+[[caching-module]]
 == Módulo de armazenamento em cache
 
 Você deve substituir o módulo de cache do controlador quando o sistema Registrar uma única mensagem AutoSupport (ASUP) informando que o módulo ficou offline.
 
 
 
+[[chassis]]
 == Chassis
 
 O chassi é o gabinete físico que abriga todos os componentes do controlador, como a unidade controladora/CPU, fonte de alimentação e e/S.
 
 
 
+[[controller]]
 == Controlador
 
 Um controlador consiste em uma placa, firmware e software. Controla as unidades e implementa as funções do ONTAP.
 
 
 
+[[dcpm]]
 == DCPM
 
 O DCPM (módulo de alimentação do controlador de destage) contém a bateria de NVRAM11 V.
 
 
 
+[[dimm]]
 == DIMM
 
 Você deve substituir um DIMM (módulo de memória dual in-line) quando houver uma incompatibilidade de memória ou se tiver um DIMM com falha.
 
 
 
+[[fan]]
 == Ventoinha
 
 A ventoinha arrefece o controlador.
 
 
 
+[[io-module]]
 == Módulo de e/S.
 
 O módulo I/o (módulo de entrada/saída) é um componente de hardware que atua como intermediário entre o controlador e vários dispositivos ou sistemas que precisam trocar dados com o controlador.
 
 
 
+[[led-usb]]
 == LED USB
 
 O módulo LED USB fornece conetividade às portas da consola e ao estado do sistema.
 
 
 
+[[nvram]]
 == NVRAM
 
 O módulo NVRAM (memória de acesso aleatório não volátil) permite que o controlador retenha dados em ciclos de energia ou reinicializações do sistema.
 
 
 
+[[power-supply]]
 == Fonte de alimentação
 
 Uma fonte de alimentação fornece uma fonte de alimentação redundante em um compartimento de controladora.
 
 
 
+[[real-time-clock-battery]]
 == Bateria de relógio em tempo real
 
 Uma bateria de relógio em tempo real preserva as informações de data e hora do sistema se a energia estiver desligada.
 
 
 
+[[x91148a-module]]
 == Módulo X91148A
 
 O módulo X91148A é um módulo de e/S que atua como intermediário entre o controlador e vários dispositivos ou sistemas que precisam trocar dados com o controlador.

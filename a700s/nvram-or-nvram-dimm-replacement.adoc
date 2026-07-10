@@ -29,6 +29,7 @@ Para substituir uma placa NVRAM com falha, você deve remover a riser NVRAM, Ris
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Passo 1: Desligue o controlador desativado
 
 .Passos
@@ -91,6 +92,7 @@ https://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-nve/home.html["Guia de 
 
 
 
+[[step-2-remove-the-controller-module]]
 == Passo 2: Remova o módulo do controlador
 
 Deve remover o módulo do controlador do chassis quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
@@ -169,6 +171,7 @@ Conduta de ar
 
 
 
+[[step-3-remove-the-nvram-card]]
 == Passo 3: Remova a placa NVRAM
 
 A substituição do NVRAM consiste em remover a riser NVRAM, Riser 1, do módulo do controlador, desconetar a bateria NVRAM da placa NVRAM, remover a placa NVRAM com falha e instalar a placa NVRAM de substituição e reinstalar a riser NVRAM novamente no módulo do controlador.
@@ -260,6 +263,7 @@ Quando bloqueado, a trava de travamento fica alinhada com a parte superior da ri
 
 
 
+[[step-4-reinstall-the-controller-module-and-booting-the-system]]
 == Passo 4: Reinstale o módulo do controlador e inicializando o sistema
 
 Depois de substituir uma FRU no módulo do controlador, você deve reinstalar o módulo do controlador e reiniciá-lo.
@@ -300,6 +304,7 @@ O módulo do controlador começa a inicializar assim que a energia é restaurada
 
 
 
+[[step-5-verify-the-system-id-change-on-an-ha-system]]
 == Etapa 5: Verifique a alteração da ID do sistema em um sistema HA
 
 Você deve confirmar a alteração do ID do sistema quando você inicializar o controlador _replacement_ e, em seguida, verificar se a alteração foi implementada.
@@ -382,6 +387,7 @@ Disk  Aggregate Home  Owner  DR Home  Home ID    Owner ID  DR Home ID Reserver  
 
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == Passo 6: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

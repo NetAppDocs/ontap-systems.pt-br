@@ -15,6 +15,7 @@ Este guia fornece instruções detalhadas passo a passo para instalar um sistema
 
 
 
+[[step-1-prepare-for-installation]]
 == Passo 1: Prepare-se para a instalação
 
 Para instalar seu sistema, você precisa criar uma conta, Registrar o sistema e obter chaves de licença. Você também precisa fazer o inventário do número e do tipo apropriados de cabos para o seu sistema e coletar informações específicas de rede.
@@ -163,6 +164,7 @@ https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["Guia de configura
 
 
 
+[[step-2-install-the-hardware]]
 == Passo 2: Instale o hardware
 
 Você precisa instalar seu sistema em um rack de 4 colunas ou gabinete do sistema NetApp, conforme aplicável.
@@ -186,6 +188,7 @@ image::../media/drw_a320_cable_management_arms.png[Remover ou instalar os braço
 
 
 
+[[step-3-cable-controllers-to-your-network]]
 == Passo 3: Controladores de cabo para a sua rede
 
 Você pode conetar os controladores à rede usando o método de cluster sem switch de dois nós ou usando a rede de interconexão de cluster.
@@ -195,6 +198,7 @@ NOTE: Se as etiquetas de porta na placa não estiverem visíveis, verifique a or
 
 
 
+[[option-1-cable-a-two-node-switchless-cluster]]
 === Opção 1: Cabo de um cluster sem switch de dois nós
 
 As portas de dados opcionais, placas NIC opcionais e portas de gerenciamento nos módulos do controlador são conetadas aos switches. A interconexão de cluster e as portas de HA são cabeadas em ambos os módulos de controladora.
@@ -223,6 +227,7 @@ image::../media/drw_fas8300_TNSC_network_cabling.png[Diagrama de cabeamento de c
 
 
 
+[[option-2-cable-a-switched-cluster]]
 === Opção 2: Conjunto comutado por cabo a
 
 As portas de dados opcionais, placas NIC opcionais, placas mezzanine e portas de gerenciamento nos módulos do controlador são conetadas aos switches. A interconexão de cluster e as portas de HA são cabeadas para o switch cluster/HA.
@@ -251,10 +256,12 @@ image::../media/drw_fas8300_switched_network_cabling.png[Diagrama de cabeamento 
 
 
 
+[[step-4-cable-controllers-to-drive-shelves]]
 == Etapa 4: Controladores de cabos para compartimentos de unidades
 
 
 
+[[option-1-cable-the-controllers-to-sas-drive-shelves]]
 === Opção 1: Faça o cabeamento das controladoras para gavetas de unidade SAS
 
 Você precisa vincular cada controladora aos módulos IOM nas duas gavetas de unidades SAS.
@@ -279,12 +286,14 @@ image::../media/drw_fas8300_three-ds224c_shelves.png[Diagrama de cabeamento de t
 
 
 
+[[step-5-complete-system-setup-and-configuration]]
 == Passo 5: Conclua a configuração e configuração do sistema
 
 Você pode concluir a configuração e configuração do sistema usando a descoberta de cluster com apenas uma conexão com o switch e laptop, ou conetando-se diretamente a um controlador no sistema e, em seguida, conetando-se ao switch de gerenciamento.
 
 
 
+[[option-1-completing-system-setup-and-configuration-if-network-discovery-is-enabled]]
 === Opção 1: Concluir a configuração e a configuração do sistema se a deteção de rede estiver ativada
 
 Se tiver a deteção de rede ativada no seu computador portátil, pode concluir a configuração e configuração do sistema utilizando a deteção automática de cluster.
@@ -346,6 +355,7 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 
 
 
+[[option-2-completing-system-setup-and-configuration-if-network-discovery-is-not-enabled]]
 === Opção 2: Concluir a configuração e a configuração do sistema se a deteção de rede não estiver ativada
 
 Se a deteção de rede não estiver ativada no seu computador portátil, tem de concluir a configuração e a configuração utilizando esta tarefa.

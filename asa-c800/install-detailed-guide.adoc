@@ -15,6 +15,7 @@ Esta seção fornece instruções detalhadas passo a passo para a instalação d
 
 
 
+[[step-1-prepare-for-installation]]
 == Passo 1: Prepare-se para a instalação
 
 Para instalar o sistema ASA C800, você precisa criar uma conta e Registrar o sistema. Você também precisa fazer o inventário do número e do tipo apropriados de cabos para o seu sistema e coletar informações específicas de rede.
@@ -165,6 +166,7 @@ Ligar as PSUs à fonte de alimentação
 
 
 
+[[step-2-install-the-hardware]]
 == Passo 2: Instale o hardware
 
 Você precisa instalar seu sistema em um rack de 4 colunas ou gabinete do sistema NetApp, conforme aplicável.
@@ -191,12 +193,14 @@ image::../media/drw_affa800_install_cable_mgmt.png[Ligar o dispositivo de gestã
 
 
 
+[[step-3-cable-controllers]]
 == Passo 3: Controladores de cabo
 
 Há cabeamento necessário para o cluster da sua plataforma usando o método de cluster sem switch de dois nós ou o método de rede de interconexão de cluster. Há cabeamento opcional para as redes de host Fibre Channel ou iSCSI ou armazenamento de conexão direta. Este cabeamento não é exclusivo; você pode ter um cabo para uma rede host e armazenamento.
 
 
 
+[[required-cabling-cable-controllers-to-a-cluster]]
 === Cabeamento necessário: Controladores de cabo para um cluster
 
 Conete os controladores a um cluster usando o método de cluster sem switch de dois nós ou usando a rede de interconexão de cluster.
@@ -357,6 +361,7 @@ NÃO conete os cabos de energia neste momento.
 
 
 
+[[optional-cabling-cable-configuration-dependent-options]]
 === Cabeamento opcional: Opções dependentes da configuração de cabos
 
 Você tem cabeamento opcional dependente da configuração para as redes de host Fibre Channel ou iSCSI ou armazenamento de conexão direta. Esse cabeamento não é exclusivo; você pode ter cabeamento para uma rede host e armazenamento.
@@ -529,12 +534,14 @@ Para concluir a configuração do sistema, link:install-detailed-guide.html#step
 
 
 
+[[step-4-complete-system-setup-and-configuration]]
 == Passo 4: Conclua a configuração e configuração do sistema
 
 Conclua a configuração e a configuração do sistema usando a descoberta de cluster apenas com uma conexão com o switch e laptop, ou conetando-se diretamente a um controlador no sistema e, em seguida, conetando-se ao switch de gerenciamento.
 
 
 
+[[option-1-complete-system-setup-and-configuration-if-network-discovery-is-enabled]]
 === Opção 1: Conclua a configuração e a configuração do sistema se a deteção de rede estiver ativada
 
 Se tiver a deteção de rede ativada no seu computador portátil, pode concluir a configuração e configuração do sistema utilizando a deteção automática de cluster.
@@ -576,6 +583,7 @@ O System Manager é aberto.
 
 
 
+[[option-2-complete-system-setup-and-configuration-if-network-discovery-is-not-enabled]]
 === Opção 2: Conclua a configuração e a configuração do sistema se a deteção de rede não estiver ativada
 
 Se a deteção de rede não estiver ativada no seu computador portátil, tem de concluir a configuração e a configuração utilizando esta tarefa.

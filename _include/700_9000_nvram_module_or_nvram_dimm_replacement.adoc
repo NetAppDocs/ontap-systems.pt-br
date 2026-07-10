@@ -24,6 +24,7 @@ Uma vez que a ID do sistema é derivada do módulo NVRAM, se substituir o módul
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Passo 1: Desligue o controlador desativado
 
 Encerre ou assuma o controlador afetado utilizando uma das seguintes opções.
@@ -196,6 +197,7 @@ mcc1A::> metrocluster operation show
 ====
 
 
+[[step-2-replace-the-nvram-module]]
 == Passo 2: Substitua o módulo NVRAM
 
 Para substituir o módulo NVRAM, localize-o na ranhura 6 no chassis e siga a sequência específica de passos.
@@ -303,6 +305,7 @@ Guias de ejetor DIMM e DIMM
 
 
 
+[[step-3-replace-a-nvram-dimm]]
 == Etapa 3: Substitua um DIMM NVRAM
 
 Para substituir DIMMs NVRAM no módulo NVRAM, você deve remover o módulo NVRAM, abrir o módulo e, em seguida, substituir o DIMM de destino.
@@ -378,6 +381,7 @@ Guias de ejetor DIMM e DIMM
 
 
 
+[[step-4-reboot-the-controller-after-fru-replacement]]
 == Passo 4: Reinicie o controlador após a substituição FRU
 
 Depois de substituir a FRU, você deve reiniciar o módulo do controlador.
@@ -388,6 +392,7 @@ Depois de substituir a FRU, você deve reiniciar o módulo do controlador.
 
 
 
+[[step-5-reassign-disks]]
 == Etapa 5: Reatribuir discos
 
 Dependendo se você tem um par de HA ou uma configuração de MetroCluster de dois nós, você deve verificar a reatribuição de discos para o novo módulo de controladora ou reatribuir manualmente os discos.
@@ -645,6 +650,7 @@ Você precisa responder com `y` quando solicitado para continuar no modo avança
 ====
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == Passo 6: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

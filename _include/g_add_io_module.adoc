@@ -24,12 +24,14 @@ Você pode desativá-los digitando o `system location-led _off_` comando. Se nã
 
 
 
+[[option-1-add-io-modules-to-a-storage-system-with-available-slots]]
 == Opção 1: Adicionar módulos de e/S a um sistema de armazenamento com slots disponíveis
 
 Você pode adicionar um módulo de e/S em um slot disponível em cada controlador.
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 === Passo 1: Desligue o controlador desativado
 
 Encerre ou assuma o controlador afetado utilizando uma das seguintes opções.
@@ -161,6 +163,7 @@ Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctr
 ====
 
 
+[[step-2-add-io-modules-to-available-slots]]
 === Passo 2: Adicione módulos de e/S aos slots disponíveis
 
 . Se você ainda não está aterrado, aterre-se adequadamente.
@@ -215,6 +218,7 @@ Isso reinicializa os dispositivos PCIe, outros componentes e reinicializa o nó.
 
 
 
+[[option-2-add-io-modules-in-a-storage-system-with-unavailable-slots]]
 == Opção 2: Adicionar módulos de e/S em um sistema de armazenamento com slots indisponíveis
 
 Você pode adicionar módulos de e/S a um sistema de armazenamento totalmente preenchido removendo módulos de e/S existentes e substituindo-os por módulos de e/S diferentes.
@@ -250,6 +254,7 @@ Use o System Manager para migrar permanentemente os LIFs para diferentes portas 
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 === Passo 1: Desligue o controlador desativado
 
 Encerre ou assuma o controlador afetado utilizando uma das seguintes opções.
@@ -381,6 +386,7 @@ Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctr
 ====
 
 
+[[step-2-add-io-modules-to-unavailable-slots]]
 === Passo 2: Adicione módulos de e/S a slots indisponíveis
 
 . Se você ainda não está aterrado, aterre-se adequadamente.

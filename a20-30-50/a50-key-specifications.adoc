@@ -15,6 +15,7 @@ A seguir estão especificações selecionadas para o sistema de armazenamento AF
 
 
 
+[[aff-a50-specifications-at-a-glance]]
 == Especificações do AFF A50 em resumo
 
 * Configuração da plataforma: Par de chassis único AFF A50 HA
@@ -28,6 +29,7 @@ A seguir estão especificações selecionadas para o sistema de armazenamento AF
 
 
 
+[[scaleout-maximums]]
 == máximos de escala
 
 * Tipo: NAS; Pares HA: 12; Capacidade bruta: 48,5 PB / 43,0 PiB; Memória máxima: 3072 GB
@@ -37,16 +39,19 @@ A seguir estão especificações selecionadas para o sistema de armazenamento AF
 
 
 
+[[io]]
 == E/S
 
 
 
+[[onboard-io]]
 === E/S integradas
 
 Não há dados de E/S integrados.
 
 
 
+[[total-io]]
 === Total de E/S
 
 * Protocolo: Ethernet 100 Gbps; Portas: 16
@@ -60,6 +65,7 @@ Não há dados de E/S integrados.
 
 
 
+[[management-ports]]
 === Portas de gerenciamento
 
 * Protocolo: Ethernet 1 Gbps; Portas: 2
@@ -69,6 +75,7 @@ Não há dados de E/S integrados.
 
 
 
+[[storage-networking-supported]]
 == Rede de armazenamento suportada
 
 * CIFS
@@ -92,6 +99,7 @@ Não há dados de E/S integrados.
 
 
 
+[[system-environment-specifications]]
 == Especificações do ambiente do sistema
 
 * Potência típica: 3076 BTU/h
@@ -107,6 +115,7 @@ Não há dados de E/S integrados.
 
 
 
+[[compliance]]
 == Conformidade
 
 * Certificações EMC/EMI: AMCA, FCC, ICES, KC, Marrocos, VCCI
@@ -119,6 +128,7 @@ Não há dados de E/S integrados.
 
 
 
+[[high-availability]]
 == Alta disponibilidade
 
 * Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP

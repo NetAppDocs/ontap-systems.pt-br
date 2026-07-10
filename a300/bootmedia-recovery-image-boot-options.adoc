@@ -15,6 +15,7 @@ O procedimento para inicializar o controlador com defeito a partir da imagem de 
 
 
 
+[[option-1-most-systems]]
 == Opção 1: A maioria dos sistemas
 
 Você deve inicializar a imagem ONTAP a partir da unidade USB, restaurar o sistema de arquivos e verificar as variáveis ambientais.
@@ -106,6 +107,7 @@ Se alguma interface estiver listada como "false", reverta essas interfaces de vo
 
 
 
+[[option-2-controller-is-in-a-two-node-metrocluster]]
 == Opção 2: O controlador está em um MetroCluster de dois nós
 
 Você deve inicializar a imagem ONTAP a partir da unidade USB e verificar as variáveis ambientais.

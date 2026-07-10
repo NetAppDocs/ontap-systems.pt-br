@@ -19,6 +19,7 @@ Você substitui a bateria do relógio em tempo real (RTC) no módulo do controla
 
 
 
+[[step-1-shut-down-the-impaired-node]]
 == Etapa 1: Encerre o nó prejudicado
 
 Assuma o controle e interrompa o controlador com defeito para que o controlador em bom estado continue a fornecer dados do armazenamento do controlador com defeito. Para fazer isso, você suprime a criação automática de casos em AutoSupport, desativa o giveback automático e leva o controlador com defeito ao prompt LOADER. O prompt LOADER é o estado de parada segura a partir do qual você pode substituir a FRU.
@@ -89,6 +90,7 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 
 
 
+[[step-2-remove-the-controller]]
 == Passo 2: Remova o controlador
 
 Para aceder aos componentes no interior do controlador, tem de remover primeiro o módulo do controlador do sistema e, em seguida, remover a tampa do módulo do controlador.
@@ -142,6 +144,7 @@ Botão de bloqueio da tampa do módulo do controlador
 |===
 
 
+[[step-3-replace-the-rtc-battery]]
 == Passo 3: Substitua a bateria RTC
 
 Para substituir a bateria RTC, tem de localizar a bateria avariada no módulo do controlador, removê-la do suporte e, em seguida, instalar a bateria de substituição no suporte.
@@ -190,6 +193,7 @@ NOTE: Observe a polaridade da bateria ao removê-la do suporte. A bateria está 
 
 
 
+[[step-4-reinstall-the-controller-module-and-set-timedate]]
 == Etapa 4: Reinstale o módulo do controlador e defina a hora/data
 
 Depois de substituir a bateria do RTC, tem de reinstalar o módulo do controlador. Se a bateria do RTC tiver sido deixada fora do módulo do controlador durante mais de 10 minutos, poderá ter de repor a hora e a data.
@@ -239,6 +243,7 @@ NOTE: Se o sistema parar no menu de inicialização, selecione a opção "Reboot
 
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == Passo 5: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

@@ -19,6 +19,7 @@ Para substituir um módulo de e/S, tem de executar uma sequência específica de
 
 
 
+[[step-1-shut-down-the-impaired-node]]
 == Etapa 1: Encerre o nó prejudicado
 
 Assuma o controle e interrompa o controlador com defeito para que o controlador em bom estado continue a fornecer dados do armazenamento do controlador com defeito. Para fazer isso, você suprime a criação automática de casos em AutoSupport, desativa o giveback automático e leva o controlador com defeito ao prompt LOADER. O prompt LOADER é o estado de parada segura a partir do qual você pode substituir a FRU.
@@ -84,6 +85,7 @@ Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctr
 
 
 
+[[step-2-replace-io-modules]]
 == Passo 2: Substitua os módulos de e/S.
 
 Para substituir um módulo de e/S, localize-o no chassis e siga a sequência específica de passos.
@@ -141,6 +143,7 @@ Trinco da came de e/S completamente desbloqueado
 
 
 
+[[step-3-reboot-the-controller-after-io-module-replacement]]
 == Passo 3: Reinicie o controlador após a substituição do módulo de e/S.
 
 Depois de substituir um módulo de e/S, tem de reiniciar o módulo do controlador.
@@ -171,6 +174,7 @@ NOTE: Certifique-se de sair do modo de manutenção depois de concluir a convers
 
 
 
+[[step-4-return-the-failed-part-to-netapp]]
 == Passo 4: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

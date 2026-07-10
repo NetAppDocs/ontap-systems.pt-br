@@ -4,6 +4,7 @@
 
 
 
+[[step-1-remove-the-controller-module]]
 == Passo 1: Remova o módulo do controlador
 
 Para aceder aos componentes no interior do módulo do controlador, tem de remover o módulo do controlador do chassis.
@@ -49,6 +50,7 @@ Certifique-se de que suporta a parte inferior do módulo do controlador enquanto
 
 
 
+[[step-2-replace-the-boot-media]]
 == Passo 2: Substitua o suporte de arranque
 
 Deve localizar o suporte de arranque no módulo do controlador (consulte o mapa da FRU no módulo do controlador) e, em seguida, seguir as instruções para o substituir.
@@ -140,6 +142,7 @@ Se necessário, retire o suporte de arranque e volte a colocá-lo no socket.
 
 
 
+[[step-3-transfer-the-boot-image-to-the-boot-media]]
 == Passo 3: Transfira a imagem de arranque para o suporte de arranque
 
 A Mídia de inicialização de substituição que você instalou não tem uma imagem de inicialização, então você precisa transferir uma imagem de inicialização usando uma unidade flash USB.

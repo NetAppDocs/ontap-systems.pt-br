@@ -30,6 +30,7 @@ Você deve evitar desviar-se das regras; desvios podem reduzir a confiabilidade,
 
 
 
+[[configuration-rules]]
 == Regras de configuração
 
 Os gabinetes de discos com módulos IOM12, IOM12B ou IOM12C são suportados em tipos específicos de par de HA e configurações de controladores únicos.
@@ -71,6 +72,7 @@ Como o armazenamento interno usa conetividade de caminho único, o ONTAP emite a
 
 
 
+[[controller-slot-numbering-rules]]
 == Regras de numeração de slots do controlador
 
 Com o objetivo de aplicar regras de cabeamento em todos os pares de HA compatíveis e configurações de controladora única, é usada uma convenção de numeração de slot de controladora.
@@ -95,12 +97,14 @@ image::../media/slot0_rules.png[slot e slot [convénios de porta]
 
 
 
+[[shelf-to-shelf-connection-rules]]
 == Regras de conexão de prateleira para prateleira
 
 Quando você tem mais de um compartimento de disco em uma stack de gavetas de disco, eles se conectam entre si por meio de cada domínio SAS (Iom A e IOM B) usando o cabeamento de gaveta a prateleira "padrão" ou "amplo" aplicável. O uso do cabeamento "andard" ou "duble-wide" depende da configuração que você tem.
 
 
 
+[[standard-shelf-to-shelf-connectivity]]
 === Conectividade padrão de compartimento para compartimento
 
 * A conectividade padrão de compartimento para compartimento é usada em qualquer stack de gavetas de disco com mais de um compartimento de disco.
@@ -117,6 +121,7 @@ image::../media/drw_shelf_to_shelf_standard.gif[conectividade de gaveta padrão 
 
 
 
+[[double-wide-shelf-to-shelf-connectivity]]
 === Conectividade de gaveta a prateleira dupla
 
 * A conetividade de prateleira a prateleira de largura dupla é usada em configurações de caminho quádruplo (caminho quádruplo HA e caminho quádruplo).
@@ -133,12 +138,14 @@ image::../media/drw_shelf_to_shelf_double_wide.gif[conectividade de gaveta dupla
 
 
 
+[[controller-to-stack-connection-rules]]
 == Regras de conexão controlador para pilha
 
 Você pode fazer o cabeamento correto das conexões SAS de cada controladora para cada stack em um par de HA ou em uma configuração de controladora única, entendendo que os compartimentos de disco SAS usam a propriedade de disco baseada em software, como as portas A/C e B/D do controlador são conetadas a stacks, como as portas A/C e B/D do controlador são organizadas em pares de portas e como as plataformas com storage interno têm suas portas conectadas às stacks.
 
 
 
+[[sas-disk-shelf-software-based-disk-ownership-rule]]
 === Regra de propriedade de disco baseada em software do compartimento de disco SAS
 
 Os compartimentos de disco SAS usam a propriedade de disco baseada em software (não a propriedade de disco baseada em hardware). Isso significa que a propriedade da unidade de disco é armazenada na unidade de disco em vez de ser determinada pela topologia das conexões físicas do sistema de armazenamento (como é para a propriedade de disco baseado em hardware). Especificamente, a propriedade da unidade de disco é atribuída pelo ONTAP (automaticamente ou por comandos CLI), não por como você faz o cabeamento das conexões controladora para pilha.
@@ -147,6 +154,7 @@ Os compartimentos de disco SAS nunca devem ser cabeados usando o esquema de prop
 
 
 
+[[controller-a-and-c-port-connection-rules-for-platforms-without-internal-storage]]
 === Regras de conexão de portas A e C do controlador (para plataformas sem armazenamento interno)
 
 * As portas a e C são sempre os caminhos principais para uma pilha.
@@ -165,6 +173,7 @@ image::../media/drw_controller_to_stack_rules_ports_a_and_c_example.gif[Regras d
 
 
 
+[[controller-b-and-d-port-connection-rules-for-platforms-without-internal-storage]]
 === Regras de conexão de portas B e D do controlador (para plataformas sem armazenamento interno)
 
 * As portas B e D são sempre os caminhos secundários para uma pilha.
@@ -184,6 +193,7 @@ image::../media/drw_controller_to_stack_rules_ports_b_and_d_example.gif[Regras d
 
 
 
+[[port-pair-connection-rules-for-platforms-without-internal-storage]]
 === Regras de conexão de par de portas (para plataformas sem armazenamento interno)
 
 As portas SAS A, B, C e D da controladora são organizadas em pares de portas usando um método que aproveita todas as portas SAS para resiliência e consistência do sistema ao fazer cabeamento de conexões de controladora a stack em configurações de par de HA e controladora única.
@@ -255,6 +265,7 @@ link:install-cabling-worksheet-template-quadpath.html["Modelo de folha de trabal
 
 
 
+[[controller-0b0b1-and-0a-port-connection-rules-for-platforms-with-internal-storage]]
 === Regras de conexão de portas 0b/0B1 e 0a para plataformas com armazenamento interno
 
 As plataformas com armazenamento interno têm um conjunto exclusivo de regras de conexão porque cada controlador deve manter a mesma conetividade de domínio entre o armazenamento interno (porta 0b/0B1) e a pilha. Isso significa que, quando uma controladora está localizada no slot A do chassi (controladora 1), ela está no domínio A (Iom A) e, portanto, a porta 0b/0B1 deve se conetar ao Iom A na stack. Quando uma controladora está localizada no slot B do chassi (controladora 2), ela está no domínio B (IOM B) e, portanto, a porta 0b/0B1 deve se conetar ao IOM B na stack.
@@ -291,6 +302,7 @@ image::../media/drw_fas2600_mpha_domain_example_IEOPS-1172.svg[Conetividade de d
 
 
 
+[[tri-path-ha-connectivity]]
 === Conetividade HA de três vias
 
 A conectividade HA Tri-path está disponível em FAS2820 pares de HA. A conectividade de HA com três caminhos, de cada controladora, para compartimentos internos (IOM12GU) e externos:
@@ -319,6 +331,7 @@ Exemplos de cabeamento de par de HA FAS2820 podem ser encontrados link:install-c
 
 
 
+[[mini-sas-hd-sas-optical-cable-rules]]
 == Regras de cabo ótico mini-SAS HD SAS
 
 Você pode usar cabos óticos mini-SAS HD SAS - cabos de cabo ótico ativo multimodo (AOC) com conetores HD mini-SAS HD para mini-SAS e cabos multimodos (OM4) com conetores HD para LC mini-SAS - para alcançar conetividade SAS de longa distância para certas configurações que têm prateleiras de disco com módulos IOM12.

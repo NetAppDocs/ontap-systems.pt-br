@@ -20,6 +20,7 @@ Substitua a bateria do relógio de tempo real (RTC), comumente conhecida como ba
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Passo 1: Desligue o controlador desativado
 
 Encerre ou assuma o controlador afetado utilizando uma das seguintes opções.
@@ -77,6 +78,7 @@ O parâmetro _-halt true_ leva o nó prejudicado ao prompt do LOADER.
 
 
 
+[[step-2-remove-the-controller-module]]
 == Passo 2: Remova o módulo do controlador
 
 Você deve remover o módulo do controlador do gabinete quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
@@ -161,6 +163,7 @@ Certifique-se de que suporta a parte inferior do módulo do controlador enquanto
 
 
 
+[[step-3-replace-the-rtc-battery]]
 == Passo 3: Substitua a bateria RTC
 
 Remova a bateria RTC com defeito e instale a substituição.
@@ -196,6 +199,7 @@ NOTE: Observe a polaridade da bateria ao removê-la do suporte.  A bateria é ma
 
 
 
+[[step-4-reinstall-the-controller-module]]
 == Etapa 4: Reinstale o módulo do controlador
 
 Reinstale o módulo do controlador e inicialize-o.
@@ -218,6 +222,7 @@ O módulo do controlador começa a inicializar assim que estiver totalmente enca
 
 
 
+[[step-5-reset-the-time-and-date-on-the-controller]]
 == Passo 5: Redefina a hora e a data no controlador
 
 
@@ -283,6 +288,7 @@ NOTE: O comando a seguir só está disponível no nível de privilégio Modo de 
 
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == Passo 6: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

@@ -29,6 +29,7 @@ image:../media/drw_cable_pull_tab_direction_ieops-1699.svg["Direção da patilha
 
 
 
+[[step-1-cable-the-clusterha-connections]]
 == Etapa 1: Faça o cabeamento das conexões cluster/HA
 
 Crie as conexões do cluster do ONTAP. Para clusters sem switch, conecte as controladoras umas às outras. Para clusters comutados, conete os controladores aos switches de rede do cluster.
@@ -189,6 +190,7 @@ image:../media/drw_isi_a20_switched_2p_25gbe_cabling_ieops-2019.svg["Diagrama de
 ====
 
 
+[[step-2-cable-the-host-network-connections]]
 == Etapa 2: Faça o cabeamento das conexões de rede do host
 
 Faça o cabeamento das controladoras à rede de host Ethernet ou FC.
@@ -245,6 +247,7 @@ image::../media/drw_isi_a30-50_4p_64gb_fc_1card_cabling_ieops-1924.svg[Cabo para
 ====
 
 
+[[step-3-cable-the-management-network-connections]]
 == Passo 3: Faça o cabeamento das conexões de rede de gerenciamento
 
 Cable as portas de gerenciamento (chave inglesa) em cada controlador para os switches de rede de gerenciamento.
@@ -260,6 +263,7 @@ IMPORTANT: Não conete os cabos de energia ainda.
 
 
 
+[[step-4-cable-the-shelf-connections]]
 == Etapa 4: Faça o cabeamento das conexões da prateleira
 
 Este procedimento mostra como enviar os controladores para uma gaveta de NS224 U.

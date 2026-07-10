@@ -15,6 +15,7 @@ A seguir estão algumas especificações selecionadas para o FAS50.  Visita http
 
 
 
+[[key-specifications-for-fas50]]
 === Especificações principais para FAS50
 
 Configuração da plataforma: Par de HA de chassi único FAS50
@@ -33,6 +34,7 @@ Versão mínima do ONTAP : ONTAP 9.16.1
 
 
 
+[[scaleout-maximums]]
 === Máximos de Escalabilidade
 
 |===
@@ -51,6 +53,7 @@ Versão mínima do ONTAP : ONTAP 9.16.1
 |===
 
 
+[[io]]
 === IO
 
 
@@ -109,12 +112,14 @@ Não há dados de E/S a bordo.
 |===
 
 
+[[storage-networking-supported]]
 === Rede de armazenamento suportada
 
 CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NVMe/FC; NVMe/TCP; S3; S3 com NAS; SMB 2.0; SMB 2.1; SMB 2.x; SMB 3.0; SMB 3.1; SMB 3.1.1;
 
 
 
+[[system-environment-specifications]]
 === Especificações do ambiente do sistema
 
 * Potência típica: 2319 BTU/h
@@ -130,6 +135,7 @@ CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NVMe/FC; NVMe/TCP; S3; S3
 
 
 
+[[compliance]]
 === Conformidade
 
 * Certificações EMC/EMI: AMCA, FCC, ICES, KC, Marrocos, VCCI
@@ -142,6 +148,7 @@ CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NVMe/FC; NVMe/TCP; S3; S3
 
 
 
+[[high-availability]]
 === Alta disponibilidade
 
 Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP ; Controladores redundantes de troca a quente; Fontes de alimentação redundantes de troca a quente; Gerenciamento SAS em banda por meio de conexões SAS para prateleiras externas;

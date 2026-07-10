@@ -15,6 +15,7 @@ Conclua a substituição do controlador do seu sistema AFF C400. Instale as lice
 
 
 
+[[step-1-install-licenses-for-the-replacement-controller-in-ontap]]
 == Passo 1: Instale licenças para o controlador de substituição no ONTAP
 
 Você deve instalar novas licenças para o nó _replacement_ se o nó prejudicado estiver usando recursos do ONTAP que exigem uma licença padrão (node-locked). Para recursos com licenças padrão, cada nó no cluster deve ter sua própria chave para o recurso.
@@ -49,6 +50,7 @@ NOTE: As novas chaves de licença que você precisa são geradas automaticamente
 
 
 
+[[step-2-verify-lifs-and-register-the-serial-number]]
 == Passo 2: Verifique LIFs e Registre o número de série
 
 Antes de retornar o nó _de substituição_ ao serviço, você deve verificar se as LIFs estão em suas portas de origem, registrar o número de série do nó _de substituição_ se AutoSupport estiver habilitado, verificar a integridade do seu cluster, fechar quaisquer janelas de manutenção e redefinir o giveback automático.
@@ -71,6 +73,7 @@ Se algum LIFs estiver listado como false, reverta-os para suas portas iniciais: 
 
 
 
+[[step-3-switch-back-aggregates-in-a-two-node-metrocluster-configuration]]
 == Etapa 3: Alterne agregados de volta em uma configuração de MetroCluster de dois nós
 
 Esta tarefa só se aplica a configurações de MetroCluster de dois nós.
@@ -127,6 +130,7 @@ Se um switchback estiver demorando muito tempo para terminar, você pode verific
 
 
 
+[[step-4-return-the-failed-part-to-netapp]]
 == Passo 4: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

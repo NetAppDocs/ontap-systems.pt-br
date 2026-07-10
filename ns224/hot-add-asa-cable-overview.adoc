@@ -15,6 +15,7 @@ Conecte o shelf NS224 ao seu sistema ASA por meio de cabos para fornecer conecti
 
 
 
+[[cabling-overview-for-asa-systems]]
 == Visão geral da cablagem para sistemas ASA
 
 A configuração dos cabos varia conforme o modelo da plataforma ASA, pois cada sistema possui atribuições de portas e configurações de módulos de E/S exclusivas.
@@ -28,6 +29,7 @@ Durante o procedimento de cabeamento hot-add, você conecta cada gabinete NS224 
 
 
 
+[[additional-resources]]
 == Recursos adicionais
 
 Seu sistema de hardware pode ser compatível tanto com chassis NS224 com módulos NSM100 quanto com chassis NS224 com módulos NSM100B. Para obter informações completas sobre nomes de portas e detalhes de configuração, consulte  https://hwu.netapp.com["NetApp Hardware Universe"^].

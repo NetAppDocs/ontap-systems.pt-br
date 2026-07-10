@@ -15,10 +15,12 @@ A seguir estão especificações selecionadas para o grupo de plataformas A20-30
 
 
 
+[[aff-a50]]
 == AFF A50
 
 
 
+[[key-specifications-for-aff-a50]]
 === Especificações principais do AFF A50
 
 Configuração da plataforma: Par de chassis único AFF A50 HA
@@ -37,6 +39,7 @@ Versão mínima do ONTAP : ONTAP 9.16.1RC1
 
 
 
+[[scaleout-maximums]]
 === Máximos de Escalabilidade
 
 |===
@@ -55,6 +58,7 @@ Versão mínima do ONTAP : ONTAP 9.16.1RC1
 |===
 
 
+[[io]]
 === IO
 
 
@@ -113,12 +117,14 @@ Não há dados de E/S a bordo.
 |===
 
 
+[[storage-networking-supported]]
 === Rede de armazenamento suportada
 
 CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NVMe/FC; NVMe/TCP; S3; S3 com NAS; SMB 2.0; SMB 2.1; SMB 2.x; SMB 3.0; SMB 3.1; SMB 3.1.1;
 
 
 
+[[system-environment-specifications]]
 === Especificações do ambiente do sistema
 
 * Potência típica: 3076 BTU/h
@@ -134,6 +140,7 @@ CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NVMe/FC; NVMe/TCP; S3; S3
 
 
 
+[[compliance]]
 === Conformidade
 
 * Certificações EMC/EMI: AMCA, FCC, ICES, KC, Marrocos, VCCI
@@ -146,16 +153,19 @@ CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NVMe/FC; NVMe/TCP; S3; S3
 
 
 
+[[high-availability]]
 === Alta disponibilidade
 
 Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP ; Controladores redundantes de troca a quente; Fontes de alimentação redundantes de troca a quente; Gerenciamento SAS em banda por meio de conexões SAS para prateleiras externas;
 
 
 
+[[aff-a20]]
 == AFF A20
 
 
 
+[[key-specifications-for-aff-a20]]
 === Especificações principais do AFF A20
 
 Configuração da plataforma: Par de chassis único AFF A20 HA
@@ -174,6 +184,7 @@ Versão mínima do ONTAP : ONTAP 9.16.1RC1
 
 
 
+[[scaleout-maximums]]
 === Máximos de Escalabilidade
 
 |===
@@ -192,6 +203,7 @@ Versão mínima do ONTAP : ONTAP 9.16.1RC1
 |===
 
 
+[[io]]
 === IO
 
 
@@ -250,12 +262,14 @@ Não há dados de E/S a bordo.
 |===
 
 
+[[storage-networking-supported]]
 === Rede de armazenamento suportada
 
 CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NVMe/FC; NVMe/TCP; S3; S3 com NAS; SMB 2.0; SMB 2.1; SMB 2.x; SMB 3.0; SMB 3.1; SMB 3.1.1;
 
 
 
+[[system-environment-specifications]]
 === Especificações do ambiente do sistema
 
 * Potência típica: 2040 BTU/h
@@ -271,6 +285,7 @@ CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NVMe/FC; NVMe/TCP; S3; S3
 
 
 
+[[compliance]]
 === Conformidade
 
 * Certificações EMC/EMI: AMCA, FCC, ICES, KC, Marrocos, VCCI
@@ -283,12 +298,14 @@ CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NVMe/FC; NVMe/TCP; S3; S3
 
 
 
+[[high-availability]]
 === Alta disponibilidade
 
 Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP ; Controladores redundantes de troca a quente; Fontes de alimentação redundantes de troca a quente; Gerenciamento SAS em banda por meio de conexões SAS para prateleiras externas;
 
 
 
+[[key-specifications-for-aff-a30]]
 === Especificações principais do AFF A30
 
 Configuração da plataforma: AFF A30 Par de chassis único HA
@@ -307,6 +324,7 @@ Versão mínima do ONTAP : ONTAP 9.16.1RC1
 
 
 
+[[scaleout-maximums]]
 === Máximos de Escalabilidade
 
 |===
@@ -325,6 +343,7 @@ Versão mínima do ONTAP : ONTAP 9.16.1RC1
 |===
 
 
+[[io]]
 === IO
 
 
@@ -383,12 +402,14 @@ Não há dados de E/S a bordo.
 |===
 
 
+[[storage-networking-supported]]
 === Rede de armazenamento suportada
 
 CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NVMe/FC; NVMe/TCP; S3; S3 com NAS; SMB 2.0; SMB 2.1; SMB 2.x; SMB 3.0; SMB 3.1; SMB 3.1.1;
 
 
 
+[[system-environment-specifications]]
 === Especificações do ambiente do sistema
 
 * Potência típica: 2892 BTU/h
@@ -404,6 +425,7 @@ CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NVMe/FC; NVMe/TCP; S3; S3
 
 
 
+[[compliance]]
 === Conformidade
 
 * Certificações EMC/EMI: AMCA, FCC, ICES, KC, Marrocos, VCCI
@@ -416,6 +438,7 @@ CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NVMe/FC; NVMe/TCP; S3; S3
 
 
 
+[[high-availability]]
 === Alta disponibilidade
 
 Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP ; Controladores redundantes de troca a quente; Fontes de alimentação redundantes de troca a quente; Gerenciamento SAS em banda por meio de conexões SAS para prateleiras externas;

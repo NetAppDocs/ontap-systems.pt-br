@@ -34,6 +34,7 @@ Você pode desativá-los digitando o `system location-led _off_` comando. Se nã
 
 
 
+[[step-1-ensure-the-storage-system-meets-the-procedure-requirements]]
 == Etapa 1: Certifique-se de que o sistema de armazenamento atenda aos requisitos do procedimento
 
 Para utilizar este procedimento, seu sistema de storage deve estar executando ONTAP 9.18.1 GA ou posterior, e seu sistema de storage deve atender a todos os requisitos.
@@ -68,6 +69,7 @@ Em determinadas situações, ONTAP pode realizar automaticamente um takeover de 
 
 
 
+[[step-2-prepare-the-storage-system-and-io-module-slot]]
 == Etapa 2: prepare o sistema de storage e o slot do módulo de E/S
 
 Prepare o sistema de storage e o slot do módulo de I/O para que seja seguro remover o módulo de I/O com defeito:
@@ -154,12 +156,58 @@ O resultado deve mostrar  `_powered-off_` na  `_status_` coluna para o módulo c
 
 
 
+[[step-3-hot-swap-the-failed-io-module]]
 == Etapa 3: substitua o módulo de E/S com defeito a quente
 
-Diretiva não resolvida em stdin - include::../_include/afx_2k_io_module_hotswap_replace.adoc[]
+Substitua o módulo de E/S com defeito por um módulo de E/S equivalente por meio de substituição a quente.
+
+
+CAUTION: Use sempre uma pulseira antiestática aterrada, conectada a um ponto de aterramento verificado durante a instalação e os procedimentos de manutenção. A não observância das precauções adequadas contra ESD pode causar danos permanentes aos nós controladores, prateleiras de armazenamento e switches de rede.
+
+.Passos
+. Gire a bandeja de gerenciamento de cabos para baixo puxando os botões no interior da bandeja de gerenciamento de cabos e girando-a para baixo.
+. Retire o módulo de e/S do módulo do controlador:
++
+
+NOTE: A ilustração a seguir mostra a remoção de um módulo de E/S vertical. Normalmente, você removerá apenas um módulo de E/S.
+
++
+image::../media/drw_afx_2k_io_remove_replace_ieops-2878.svg[Remova o módulo de e/S.]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+Botão de bloqueio do came
+
+|===
++
+.. Prima o botão do trinco do excêntrico.
+.. Rode o trinco do excêntrico para longe do módulo o mais longe possível.
+.. Retire o módulo do módulo do controlador encaixando o dedo na abertura da alavanca do came e puxando o módulo para fora do módulo do controlador.
++
+Mantenha o controle de qual slot o módulo de E/S estava.
 
 
 
+. Coloque o módulo de e/S de lado.
+. Instale o módulo de e/S de substituição na ranhura de destino:
++
+.. Alinhe o módulo de e/S com as extremidades da ranhura.
+.. Deslize cuidadosamente o módulo para dentro do slot até o módulo do controlador e, em seguida, gire o trinco do came totalmente para cima para bloquear o módulo no lugar.
+
+
+. Faça o cabo do módulo de e/S.
+. Rode o tabuleiro de gestão de cabos para a posição de bloqueio.
+
+
+
+
+[[step-4-bring-the-replacement-io-module-online]]
 == Etapa 4: Coloque o módulo de E/S de substituição online
 
 Coloque o módulo de E/S de substituição online, verifique se as portas do módulo de E/S foram inicializadas com sucesso, verifique se o slot está energizado e então verifique se o módulo de E/S está online e reconhecido.
@@ -276,6 +324,7 @@ Slot slot Information
 
 
 
+[[step-5-restore-the-storage-system-to-normal-operation]]
 == Etapa 5: restaurar o sistema de armazenamento para operação normal
 
 Restaure o sistema de storage ao funcionamento normal, devolvendo o armazenamento ao controlador que foi assumido (conforme necessário), restaurando o giveback automático (conforme necessário), verificando se as LIFs estão em suas portas de origem e reativando a criação automática de casos do AutoSupport.
@@ -321,6 +370,7 @@ Se algum LIFs estiver listado como false, reverta-os para suas portas iniciais: 
 
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == Passo 6: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

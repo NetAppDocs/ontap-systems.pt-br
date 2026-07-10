@@ -15,6 +15,7 @@ Para concluir a substituição do controlador do seu sistema AFF A70 ou AFF A90,
 
 
 
+[[step-1-verify-lifs-and-check-cluster-health]]
 == Etapa 1: Verificar LIFs e verificar a integridade do cluster
 
 Antes de retornar o nó de substituição ao serviço, verifique se as interfaces lógicas estão em suas portas iniciais, verifique a integridade do cluster e redefina a giveback automática.
@@ -39,6 +40,7 @@ Se alguma interface lógica estiver listada como falsa, reverta-a para suas port
 
 
 
+[[step-2-return-the-failed-part-to-netapp]]
 == Passo 2: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

@@ -19,6 +19,7 @@ Para substituir o suporte de arranque, tem de remover o módulo do controlador a
 
 
 
+[[step-1-remove-the-controller-module]]
 == Passo 1: Remova o módulo do controlador
 
 Para aceder aos componentes no interior do controlador, tem de remover primeiro o módulo do controlador do sistema e, em seguida, remover a tampa do módulo do controlador.
@@ -45,6 +46,7 @@ image::../media/drw_2600_opening_pcm_cover.png[Abrir ou fechar o módulo do cont
 
 
 
+[[step-2-replace-the-boot-media]]
 == Passo 2: Substitua o suporte de arranque
 
 Você deve localizar o suporte de inicialização no controlador e seguir as instruções para substituí-lo.
@@ -71,6 +73,7 @@ Se necessário, retire o suporte de arranque e volte a colocá-lo no socket.
 
 
 
+[[step-3-transfer-the-boot-image-to-the-boot-media]]
 == Passo 3: Transfira a imagem de arranque para o suporte de arranque
 
 Pode instalar a imagem do sistema no suporte de arranque de substituição utilizando uma unidade flash USB com a imagem instalada. No entanto, tem de restaurar o sistema de ficheiros var durante este procedimento.

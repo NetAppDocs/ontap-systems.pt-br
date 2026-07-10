@@ -17,6 +17,7 @@ Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior
 
 
 
+[[step-1-remove-the-controller-module]]
 == Passo 1: Remova o módulo do controlador
 
 .Passos
@@ -47,6 +48,7 @@ Botão de liberação da tampa do módulo do controlador
 |===
 
 
+[[step-2-replace-the-boot-media]]
 == Passo 2: Substitua o suporte de arranque
 
 Localize a Mídia de inicialização no módulo do controlador, localizado sob a placa mezzanine e siga as instruções para substituí-la.
@@ -99,6 +101,7 @@ NOTE: Não torça nem puxe o suporte de arranque diretamente para cima, pois ist
 
 
 
+[[step-3-transfer-the-boot-image-to-the-boot-media]]
 == Passo 3: Transfira a imagem de arranque para o suporte de arranque
 
 Instale a imagem do sistema no suporte de arranque de substituição utilizando uma unidade flash USB com a imagem instalada. Tem de restaurar o sistema de ficheiros var durante este procedimento.

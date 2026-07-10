@@ -81,7 +81,7 @@ Você deve fazer o inventário das unidades juntamente com o resto do equipament
 ** Depois de descompactar as unidades, você deve salvar os materiais de embalagem para uso futuro.
 +
 
-CAUTION: *Possível perda de acesso aos dados:* se, no futuro, você mover a prateleira para uma parte diferente do data center ou transportar a prateleira para um local diferente, você precisa remover as unidades das gavetas da unidade para evitar possíveis danos às gavetas e unidades da unidade.
+CAUTION: *Possível perda de acesso aos dados:* Se, no futuro, você mover o shelf para uma parte diferente do data center ou transportá-lo para um local diferente, deverá remover os discos das gavetas de disco para evitar possíveis danos às gavetas de disco e aos discos.
 
 +
 
@@ -97,6 +97,7 @@ Se uma pulseira não estiver disponível, toque numa superfície não pintada no
 
 
 
+[[step-1-install-disk-shelves-for-a-new-system-installation]]
 == Etapa 1: instalar prateleiras de disco para uma nova instalação do sistema
 
 Instale as gavetas de disco em um rack usando os kits de montagem em rack fornecidos com as gavetas de disco.
@@ -197,6 +198,7 @@ NOTE: Não ligue as gavetas de disco no momento.
 
 
 
+[[step-2-cable-disk-shelves-for-a-new-system-installation]]
 == Etapa 2: Prateleiras de discos de cabos para instalação de um novo sistema
 
 Suas conexões SAS do compartimento de disco a cabo - de prateleira a prateleira (conforme aplicável) e controlador a compartimento - para estabelecer a conectividade de storage do sistema.
@@ -390,9 +392,10 @@ Na saída, "in-band" é listado como "ativo" para cada nó.
 
 
 
+[[optional-step-3-move-or-transport-ds460c-shelves]]
 == (Opcional) Etapa 3: mover ou transportar as prateleiras do DS460C
 
-Se no futuro você mover as prateleiras do DS460C para uma parte diferente do data center ou transportar as prateleiras para um local diferente, será necessário remover as unidades das gavetas para evitar possíveis danos às gavetas e unidades.
+Se no futuro você mover os shelves DS460C para outra parte do data center ou transportar os shelves para um local diferente, será necessário remover os discos das gavetas de disco para evitar possíveis danos às gavetas de disco e aos discos.
 
 * Se você guardou os materiais de embalagem da unidade quando instalou as prateleiras DS460C como parte da instalação do seu novo sistema, use-os para reembalar as unidades antes de movê-las.
 +

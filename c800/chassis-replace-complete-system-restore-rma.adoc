@@ -15,6 +15,7 @@ Reinicie os controladores, verifique a integridade do sistema e devolva a peça 
 
 
 
+[[step-1-verify-and-set-the-ha-state-of-the-chassis]]
 == Etapa 1: Verifique e defina o estado HA do chassi
 
 .Passos
@@ -44,12 +45,14 @@ O valor para HA-State pode ser um dos seguintes:
 
 
 
+[[step-2-verify-storage-system-health]]
 == Etapa 2: Verificar a integridade do sistema de armazenamento
 
 Após a conclusão da devolução do controlador, verifique a integridade do sistema usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"] .  Corrija quaisquer problemas encontrados.
 
 
 
+[[step-3-return-the-failed-part-to-netapp]]
 == Passo 3: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

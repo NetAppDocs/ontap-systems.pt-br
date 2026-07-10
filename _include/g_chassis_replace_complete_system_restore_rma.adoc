@@ -4,6 +4,7 @@
 
 
 
+[[step-1-verify-and-set-the-ha-state-of-the-chassis]]
 == Etapa 1: Verifique e defina o estado HA do chassi
 
 Você deve verificar o estado de HA do chassi e, se necessário, atualizar o estado para corresponder à configuração do sistema de storage.
@@ -35,6 +36,7 @@ O valor para HA-State deve ser _ha_. O valor para HA-State pode ser um dos segui
 
 
 
+[[step-2-return-the-failed-part-to-netapp]]
 == Passo 2: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

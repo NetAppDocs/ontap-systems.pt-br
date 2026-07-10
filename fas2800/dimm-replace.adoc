@@ -21,6 +21,7 @@ Você deve substituir o componente com falha por um componente FRU de substitui�
 video::6c035199-9b79-494b-9c65-af9a015ffaf0[panopto]
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == Passo 1: Desligue o controlador desativado
 
 Assuma o controle e interrompa o controlador com defeito para que o controlador em bom estado continue a fornecer dados do armazenamento do controlador com defeito. Para fazer isso, você suprime a criação automática de casos em AutoSupport, desativa o giveback automático e leva o controlador com defeito ao prompt LOADER. O prompt LOADER é o estado de parada segura a partir do qual você pode substituir a FRU.
@@ -75,6 +76,7 @@ Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctr
 
 
 
+[[step-2-remove-controller-module]]
 == Passo 2: Remova o módulo do controlador
 
 Retire o módulo do controlador do sistema e, em seguida, retire a tampa do módulo do controlador.
@@ -109,6 +111,7 @@ Botão de liberação da tampa do módulo do controlador
 |===
 
 
+[[step-3-replace-the-dimms]]
 == Etapa 3: Substitua os DIMMs
 
 Localize o DIMM dentro do controlador, remova-o e substitua-o.
@@ -209,6 +212,7 @@ Certifique-se de que a ficha se fixa à tomada de alimentação da bateria na pl
 
 
 
+[[step-4-reinstall-the-controller-module]]
 == Etapa 4: Reinstale o módulo do controlador
 
 Volte a instalar o módulo do controlador no chassis.
@@ -254,6 +258,7 @@ NOTE: Durante o processo de inicialização, você pode ver os seguintes prompts
 
 
 
+[[step-5-restore-automatic-giveback-and-autsupport]]
 == Passo 5: Restaurar a giveback automática e AutSupport
 
 Restaure a giveback automática e o AutoSupport se tiverem sido desativados.
@@ -264,6 +269,7 @@ Restaure a giveback automática e o AutoSupport se tiverem sido desativados.
 
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == Passo 6: Devolva a peça com falha ao NetApp
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

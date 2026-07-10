@@ -15,10 +15,12 @@ Saiba o que há de novo para os sistemas de hardware ONTAP. Para obter informaç
 
 
 
+[[july-2026]]
 == Julho de 2026
 
 
 
+[[afx-2k]]
 === AFX 2K
 
 .Sistema de storage AFX 2K
@@ -31,10 +33,12 @@ Os novos switches Cisco 9808 conectam-se aos nós controladores AFX 2K com os st
 
 
 
+[[january-2026]]
 == Janeiro de 2026
 
 
 
+[[io-module-hot-swap-procedures]]
 === Procedimentos de substituição a quente de módulos de E/S
 
 Os procedimentos de substituição a quente agora estão disponíveis para módulos de E/S selecionados em várias plataformas de hardware ONTAP e versões do ONTAP.
@@ -69,6 +73,7 @@ As seguintes plataformas são suportadas:
 
 
 
+[[aff-c800-end-of-availability]]
 === Fim da disponibilidade do AFF C800
 
 O sistema AFF C800 foi movido para a lista de fim de disponibilidade e não está mais disponível para novos pedidos.
@@ -77,6 +82,7 @@ link:endofavail/index.html["Veja o hardware com fim de disponibilidade"].
 
 
 
+[[2025-releases]]
 == Lançamentos de 2025
 
 .Outubro de 2025
@@ -135,6 +141,7 @@ link:https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["Saiba ma
 ====
 
 
+[[2024-releases]]
 == Lançamentos de 2024
 
 .Dezembro de 2024

@@ -24,6 +24,7 @@ Você pode desativá-los digitando o `system location-led _off_` comando. Se nã
 
 
 
+[[step-1-shut-down-the-impaired-controller-module]]
 == Passo 1: Desligue o módulo do controlador desativado
 
 Encerre ou assuma o controlo do módulo do controlador afetado utilizando uma das seguintes opções.
@@ -160,6 +161,7 @@ Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctr
 ====
 
 
+[[step-2-add-the-new-io-module]]
 == Passo 2: Adicione o novo módulo de e/S.
 
 Se o sistema de armazenamento tiver slots disponíveis, instale o novo módulo de e/S em um dos slots disponíveis. Se todos os slots estiverem ocupados, remova um módulo de e/S existente para criar espaço e, em seguida, instale o novo.

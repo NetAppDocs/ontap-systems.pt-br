@@ -15,6 +15,7 @@ Continue o procedimento de substituição reativando as configurações de armaz
 
 
 
+[[step-1-recable-the-system]]
 == Passo 1: Recable o sistema
 
 É necessário reabilitar as conexões de rede e armazenamento do módulo do controlador.
@@ -36,6 +37,7 @@ NOTE: As informações de identificação do sistema e atribuição de disco res
 
 
 
+[[step-2-reassign-disks]]
 == Etapa 2: Reatribuir discos
 
 Se o sistema de storage estiver em um par de HA, a ID do sistema do novo módulo de controladora será automaticamente atribuída aos discos quando o giveback ocorrer no final do procedimento. Você deve confirmar a alteração do ID do sistema quando você inicializar o nó _replacement_ e, em seguida, verificar se a alteração foi implementada.

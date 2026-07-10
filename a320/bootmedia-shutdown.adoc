@@ -15,6 +15,7 @@ Após concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do n
 
 
 
+[[option-1-most-systems]]
 == Opção 1: A maioria dos sistemas
 
 Conclua o desligamento do controlador com defeito, interrompendo-o até o prompt LOADER e capturando as variáveis de ambiente de inicialização. O prompt LOADER é o estado de parada seguro a partir do qual você pode substituir a mídia de inicialização.
@@ -58,6 +59,7 @@ NOTE: Este comando pode não funcionar se o dispositivo de inicialização estiv
 
 
 
+[[option-2-system-is-in-a-metrocluster]]
 == Opção 2: O sistema está em um MetroCluster
 
 
