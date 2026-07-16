@@ -197,9 +197,9 @@ image::../media/oie_cable100_gbe_qsfp28.png[Cabo de cobre de 100 GbE QSFP28]
 . No controlador A, ligue as seguintes portas:
 +
 .. Conete a porta e11a ao compartimento 1 NSM A porta e0a.
-.. Conete a porta e11b à porta e0b do NSM B da gaveta 2.
-.. Conete a porta e10a ao compartimento 2 NSM A porta e0a.
 .. Conecte a porta e10b à porta e0b do shelf 1 NSM B.
+.. Conete a porta e10a ao compartimento 2 NSM A porta e0a.
+.. Conete a porta e11b à porta e0b do NSM B da gaveta 2.
 +
 image:../media/drw_a1k_2shelf_cabling_a_ieops-1705.svg["Conexões controlador a compartimento para o controlador A"]
 
@@ -208,9 +208,9 @@ image:../media/drw_a1k_2shelf_cabling_a_ieops-1705.svg["Conexões controlador a 
 . No controlador B, ligue as seguintes portas:
 +
 .. Conete a porta e11a à porta e0a do NSM B da gaveta 1.
-.. Conete a porta e11b ao compartimento 2 NSM A porta e0b.
-.. Conete a porta e10a à porta e0a do NSM B da gaveta 2.
 .. Conete a porta e10b ao compartimento 1 NSM A porta e0b.
+.. Conete a porta e10a à porta e0a do NSM B da gaveta 2.
+.. Conete a porta e11b ao compartimento 2 NSM A porta e0b.
 +
 image:../media/drw_a1k_2shelf_cabling_b_ieops-1706.svg["Conexões controlador para compartimento para o controlador B"]
 

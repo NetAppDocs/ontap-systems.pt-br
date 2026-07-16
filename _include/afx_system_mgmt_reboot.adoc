@@ -1,0 +1,51 @@
+= 
+:allow-uri-read: 
+
+
+Após substituir o módulo de gerenciamento do sistema, reinicialize o controlador para restaurar a operação normal do par de HA. Você deve ligar o controlador, realizar um giveback parcial para ativar o agregado de raiz e, em seguida, concluir o giveback completo para retornar o controlador com problemas ao serviço.
+
+.Passos
+. Conecte os cabos de alimentação novamente na PSU.
++
+O sistema é reinicializado, normalmente no prompt do LOADER.
+
+. Digite _bye_ no prompt DO Loader.
+. Pressione <enter> quando as mensagens do console pararem.
++
+** Se você vir o prompt _login_, vá para a próxima etapa.
+** Se você não vir o prompt de login, faça login no nó do parceiro.
+
+
+. Devolva apenas a raiz com a opção override-destination-checks:
++
+`storage failover giveback -ofnode impaired-node -only-root true -override -destination-checks true`
+
++
+
+NOTE: O comando a seguir só está disponível no nível de privilégio Modo de diagnóstico.  Para obter mais informações sobre níveis de privilégio, consultelink:https://docs.netapp.com/us-en/ontap/system-admin/administrative-privilege-levels-concept.html["Entenda os níveis de privilégio para comandos ONTAP CLI"^] .
+
++
+Se encontrar erros, https://support.netapp.com["Suporte à NetApp"] contacte .
+
+. Aguarde 5 minutos após a conclusão do relatório de devolução e verifique os status de failover e devolução:
++
+`storage failover show`e `storage failover show-giveback`
+
++
+
+NOTE: O comando a seguir só está disponível no nível de privilégio Modo de diagnóstico.
+
+. Se os links de interconexão HA foram desativados, restaure-os:
++
+`system ha interconnect link on -node healthy-node -link 0`
+
++
+`system ha interconnect link on -node healthy-node -link 1`
+
+. Volte a colocar o controlador afetado em funcionamento normal, devolvendo o respetivo armazenamento:
++
+`storage failover giveback -ofnode _impaired_node_name_`
+
+. Se a devolução automática foi desabilitada, habilite-a novamente: `storage failover modify -node local -auto-giveback-of true` .
+. Se o AutoSupport estiver ativado, restaurar/anular a criação automática de casos: `system node autosupport invoke -node * -type all -message MAINT=END`.
+

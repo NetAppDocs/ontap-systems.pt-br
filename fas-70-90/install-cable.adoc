@@ -90,13 +90,13 @@ image::../media/drw_a1k_switched_cluster_cabling_ieops-1652.svg[Conexões do clu
 
 Conete as portas do módulo Ethernet à rede host.
 
-A seguir estão alguns exemplos típicos de cabeamento de rede de host. Consulte link:https://hwu.netapp.com["NetApp Hardware Universe"^] para obter a configuração específica do sistema.
+A seguir, apresentamos alguns exemplos típicos de cabeamento de rede para hosts. Consulte link:https://hwu.netapp.com["NetApp Hardware Universe"^] para a configuração específica do seu sistema.
 
 .Passos
 . Conete as portas e9a e e9b ao switch de rede de dados Ethernet.
 +
 
-NOTE: Não use as portas e1b e e7b para conexões de rede do host. Use um cartão host separado.
+NOTE: Não utilize as portas e1b e e7b para conexões de rede do host. Use uma placa de host separada.
 
 +
 *Cabo de 100 GbE*
@@ -147,7 +147,7 @@ Para obter o número máximo de gavetas compatíveis com o seu sistema de storag
 Para obter orientações adicionais sobre cabeamento de gaveta SAS, link:https://docs.netapp.com/us-en/ontap-systems/sas3/install-cabling-rules.html["Regras e conceitos de cabeamento SAS - compartimentos com módulos IOM12/IOM12B"]consulte .
 
 .Sobre esta tarefa
-Os sistemas de armazenamento FAS70 e FAS90 suportam prateleiras DS212C, DS224C, DS460C e NS224 com o módulo NSM100 ou NSM100B.
+Os sistemas de storage FAS70 e FAS90 são compatíveis com os shelves DS212C, DS224C, DS460C e NS224, com o módulo NSM100 ou NSM100B.
 
 As principais diferenças entre os módulos NS224 são:
 
@@ -171,7 +171,7 @@ image::../media/oie_cable100_gbe_qsfp28.png[Cabo de cobre de 100 GbE QSFP28]
 . No controlador A, ligue as seguintes portas:
 +
 .. Conete a porta e11a à porta NSM A e0a.
-.. Conete a porta e11b à porta NSM B e0b.
+.. Conecte a porta e11b à porta e0b do NSM B.
 +
 image:../media/drw_a1k_1shelf_cabling_a_ieops-1703.svg["Controladora A e11a e e11b em uma única gaveta de NS224 U."]
 
@@ -201,24 +201,24 @@ image::../media/oie_cable100_gbe_qsfp28.png[Cabo de cobre de 100 GbE QSFP28]
 . No controlador A, ligue as seguintes portas:
 +
 .. Conete a porta e11a ao compartimento 1 NSM A porta e0a.
-.. Conete a porta e11b à porta e0b do NSM B da gaveta 2.
-.. Conete a porta e10a ao compartimento 2 NSM A porta e0a.
 .. Conecte a porta e10b à porta e0b do shelf 1 NSM B.
-
-
+.. Conete a porta e10a ao compartimento 2 NSM A porta e0a.
+.. Conete a porta e11b à porta e0b do NSM B da gaveta 2.
 +
 image:../media/drw_a1k_2shelf_cabling_a_ieops-1705.svg["Controladora de cabos A portas e11a e11b e10a e e10b a duas gavetas NS224"]
+
+
 
 . No controlador B, ligue as seguintes portas:
 +
 .. Conete a porta e11a à porta e0a do NSM B da gaveta 1.
-.. Conete a porta e11b ao compartimento 2 NSM A porta e0b.
-.. Conete a porta e10a à porta e0a do NSM B da gaveta 2.
 .. Conete a porta e10b ao compartimento 1 NSM A porta e0b.
-
-
+.. Conete a porta e10a à porta e0a do NSM B da gaveta 2.
+.. Conete a porta e11b ao compartimento 2 NSM A porta e0b.
 +
 image:../media/drw_a1k_2shelf_cabling_b_ieops-1706.svg["Controladora de cabos B portas e11a e11b e10a e e10b a duas gavetas NS224"]
+
+
 
 
 

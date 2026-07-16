@@ -1,7 +1,7 @@
 ---
 permalink: c80/install-cable.html 
 sidebar: sidebar 
-keywords: aff c80, prepare installation 
+keywords: aff c80, prepare installation, cable the hardware 
 summary: As portas de rede de gerenciamento nos controladores são conetadas aos switches. As portas de interconexão de HA e interconexão de cluster são cabeadas em ambas as controladoras. Os módulos do controlador estão ligados ao armazenamento externo, se tiverem sido encomendados. 
 ---
 = Cable the hardware - AFF C80
@@ -58,7 +58,7 @@ Use o cabo de interconexão cluster/HA para conetar as portas e1a a e1a e as por
 image::../media/oie_cable_25Gb_Ethernet_SFP28_ieops-1069.png[Cabo de HA de cluster]
 
 +
-image::../media/drw_a1k_tnsc_cluster_cabling_ieops-1648.svg[Diagrama de cabeamento de cluster sem switch de dois nós]
+image::../media/drw_70-90_tnsc_cluster_cabling_ieops-1653.svg[Diagrama de cabeamento de cluster sem switch de dois nós]
 
 
 
@@ -73,9 +73,10 @@ Utilize o cabo 100 GbE para conectar as portas e1a e e7a dos Controladores A e B
 +
 *Cabo de 100 GbE*
 
-
-
++
 image::../media/oie_cable100_gbe_qsfp28.png[Cabo de 100 GB]
+
+
 
 image::../media/drw_70-90_switched_cluster_cabling_ieops-1657.svg[Conexões do cluster de cabos à rede do cluster]
 
@@ -88,13 +89,13 @@ image::../media/drw_70-90_switched_cluster_cabling_ieops-1657.svg[Conexões do c
 
 Conete as portas do módulo Ethernet à rede host.
 
-A seguir estão alguns exemplos típicos de cabeamento de rede de host. Consulte link:https://hwu.netapp.com["NetApp Hardware Universe"^] para obter a configuração específica do sistema.
+A seguir, apresentamos alguns exemplos típicos de cabeamento de rede para hosts. Consulte link:https://hwu.netapp.com["NetApp Hardware Universe"^] para a configuração específica do seu sistema.
 
 .Passos
 . Conete as portas e9a e e9b ao switch de rede de dados Ethernet.
 +
 
-NOTE: Não use as portas e1b e e7b para conexões de rede do host. Use um cartão host separado.
+NOTE: Não utilize as portas e1b e e7b para conexões de rede do host. Use uma placa de host separada.
 
 +
 *Cabo de 100 GbE*
@@ -105,7 +106,7 @@ image::../media/oie_cable_sfp_gbe_copper.png[100GB cabo Ethernet]
 +
 image::../media/drw_70-90_network_cabling1_ieops-1654.svg[Cabo para rede Ethernet 100GB]
 
-. Conete seus switches de rede host de 10/25 GbE.
+. Conecte suas placas de rede 10/25 GbE aos switches da sua rede host.
 +
 *Host de 4 portas e 10/25 GbE*
 
@@ -142,6 +143,15 @@ Os procedimentos de cabeamento a seguir mostram como conectar suas controladoras
 
 Para obter o número máximo de gavetas compatíveis com o seu sistema de storage e para todas as opções de cabeamento, link:https://hwu.netapp.com["NetApp Hardware Universe"^]consulte .
 
+.Sobre esta tarefa
+O sistema de storage AFF C80 suporta shelves NS224 com o módulo NSM100 ou NSM100B. As principais diferenças entre os módulos são:
+
+* Os módulos de prateleira NSM100 usam portas integradas e0a e e0b.
+* Os módulos de prateleira NSM100B usam as portas e1a e e1b no slot 1.
+
+
+O exemplo de cabeamento a seguir mostra módulos NSM100 nas prateleiras NS224 ao se referir às portas do módulo de prateleira.
+
 [role="tabbed-block"]
 ====
 .Opção 1: Uma gaveta de armazenamento de NS224 GB
@@ -154,7 +164,7 @@ image::../media/oie_cable100_gbe_qsfp28.png[Cabo de cobre de 100 GbE QSFP28]
 
 .Passos
 . Conete a porta e11a do controlador A à porta e0a do NSM A.
-. Conete a porta e11b do controlador A à porta e0b do NSM B.
+. Conecte a porta e11b do controlador A à porta e0b do NSM B.
 +
 image:../media/drw_a70-90_1shelf_cabling_a_ieops-1731.svg["Controladora A e11a e e11b em uma única gaveta de NS224 U."]
 
@@ -178,9 +188,9 @@ image::../media/oie_cable100_gbe_qsfp28.png[Cabo de cobre de 100 GbE QSFP28]
 . No controlador A, ligue as seguintes portas:
 +
 .. Conete a porta e11a ao compartimento 1, NSM A porta e0a.
-.. Conete a porta e11b à gaveta 2, porta NSM B e0b.
-.. Conete a porta e8a ao compartimento 2, NSM A porta e0a.
 .. Conete a porta e8b à gaveta 1, porta NSM B e0b.
+.. Conete a porta e8a ao compartimento 2, NSM A porta e0a.
+.. Conete a porta e11b à gaveta 2, porta NSM B e0b.
 +
 image:../media/drw_a70-90_2shelf_cabling_a_ieops-1733.svg["Conexões controlador a compartimento para o controlador A"]
 
@@ -189,9 +199,9 @@ image:../media/drw_a70-90_2shelf_cabling_a_ieops-1733.svg["Conexões controlador
 . No controlador B, ligue as seguintes portas:
 +
 .. Conete a porta e11a à gaveta 1, porta NSM B e0a.
-.. Conete a porta e11b ao compartimento 2, NSM A porta e0b.
-.. Conete a porta e8a à gaveta 2, porta NSM B e0a.
 .. Conete a porta e8b ao compartimento 1, NSM A porta e0b.
+.. Conete a porta e8a à gaveta 2, porta NSM B e0a.
+.. Conecte a porta e11b à prateleira 2, porta e0b do NSM A.
 +
 image:../media/drw_a70-90_2shelf_cabling_b_ieops-1734.svg["Conexões controlador para compartimento para o controlador B"]
 

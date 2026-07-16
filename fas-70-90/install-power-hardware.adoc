@@ -11,7 +11,7 @@ summary: Conete os cabos de alimentação e ligue as gavetas e os controladores.
 
 
 [role="lead"]
-Depois de instalar o hardware de rack para seu sistema de storage FAS70 0r FAS90 e instalar os cabos das controladoras e gavetas de storage, ligue as controladoras e as gavetas de storage.
+Após instalar o hardware do rack para o seu sistema de storage FAS70 ou FAS90 e conectar os cabos dos controladores e das prateleiras de armazenamento, você deve ligar as prateleiras de armazenamento e os controladores.
 
 
 
@@ -266,7 +266,7 @@ image::../media/drw_a1k_70-90_console_connection_ieops-1702.svg[Ligações da co
 . Atribua um endereço TCP/IP ao laptop, usando um que esteja na sub-rede de gerenciamento.
 . Conete os dois cabos de alimentação às fontes de alimentação do controlador e, em seguida, conete-os a fontes de alimentação em circuitos diferentes.
 +
-image::../media/drw_affa1k_power_source_icon_ieops-1700.svg[Diagrama de ligação de alimentação AFF A1K AFF A70 ou AFF A90 ou FAS70 ou FAS90]
+image::../media/drw_a1k_70-90_power_source_icon_ieops-1700.svg[Diagrama de ligação de alimentação AFF A1K AFF A70 ou AFF A90 ou FAS70 ou FAS90]
 
 +
 ** O sistema começa a arrancar. A inicialização inicial pode levar até oito minutos.

@@ -13,7 +13,7 @@ summary: Substitua o módulo de gerenciamento do sistema em seu sistema de stora
 [role="lead"]
 Substitua o módulo de gerenciamento do sistema em seu sistema de storage AFX 2K quando ele apresentar defeito ou seu firmware estiver corrompido. O processo de substituição envolve desligar o controlador, substituir o módulo de gerenciamento do sistema com defeito, reiniciar o controlador, atualizar as chaves de licença e devolver a peça com defeito para NetApp.
 
-O módulo de gerenciamento do sistema, localizado na parte traseira do controlador, à esquerda do slot 8, contém componentes integrados para gerenciamento do sistema, bem como portas para gerenciamento externo.  O controlador de destino deve ser desligado e desligado para substituir um módulo de gerenciamento do sistema danificado ou substituir a mídia de inicialização.
+O módulo de gerenciamento do sistema, localizado na parte traseira do controlador, à esquerda do slot 8, contém componentes integrados para gerenciamento do sistema, bem como portas para gerenciamento externo. O controlador em questão deve ser desligado e desenergizado para substituir um módulo de gerenciamento do sistema com defeito ou substituir a mídia de boot.
 
 O módulo de gerenciamento do sistema tem os seguintes componentes integrados:
 
@@ -47,8 +47,6 @@ Este procedimento utiliza a seguinte terminologia:
 
 [[step-1-shut-down-the-impaired-controller]]
 == Passo 1: Desligue o controlador desativado
-
-Desligue ou assuma o controlador desativado.
 
 Assuma o controle e interrompa o controlador com defeito para que o controlador em bom estado continue a fornecer dados do armazenamento do controlador com defeito. Para fazer isso, você suprime a criação automática de casos em AutoSupport, desativa o giveback automático e leva o controlador com defeito ao prompt LOADER. O prompt LOADER é o estado de parada segura a partir do qual você pode substituir a FRU.
 
@@ -106,12 +104,13 @@ O parâmetro _-halt true_ leva o nó prejudicado ao prompt do LOADER.
 [[step-2-replace-the-impaired-system-management-module]]
 == Passo 2: Substitua o módulo de gestão do sistema afetado
 
-Substitua o módulo de gestão do sistema afetado.
+O módulo de gerenciamento do sistema contém a mídia de inicialização e fornece funções de gerenciamento do sistema. Você deve remover o módulo de gerenciamento do sistema com defeito, transferir a mídia de inicialização para o módulo de substituição e reinstalar o módulo de substituição no gabinete.
 
+.Passos
 . Retire o módulo de gestão do sistema:
 +
 
-NOTE: Certifique-se de que o NVRAM foi concluído antes de prosseguir. Quando o LED no módulo NV está desligado, o NVRAM é desativado. Se o LED estiver piscando, aguarde até que o piscando pare. Se a intermitência continuar durante mais de 5 minutos, contacte o suporte técnico para obter assistência.
+NOTE: Certifique-se de que o destage da NVRAM foi concluído antes de prosseguir. Quando o LED no módulo NV estiver apagado, a NVRAM foi destageada. Se o LED estiver piscando, aguarde até que pare de piscar. Se a intermitência continuar por mais de 5 minutos, entre em contato com o Suporte Técnico para obter assistência.
 
 +
 image::../media/drw_afx_2k_sys_mgmt_remove_replace_ieops-2880.svg[Substitua o módulo de gestão do sistema]
@@ -194,8 +193,9 @@ Suporte de arranque
 [[step-3-reboot-the-controller-module]]
 == Passo 3: Reinicie o módulo do controlador
 
-Reinicie o módulo do controlador.
+Após substituir o módulo de gerenciamento do sistema, reinicialize o controlador para restaurar a operação normal do par de HA. Você deve ligar o controlador, realizar um giveback parcial para ativar o agregado de raiz e, em seguida, concluir o giveback completo para retornar o controlador com problemas ao serviço.
 
+.Passos
 . Conecte os cabos de alimentação novamente na PSU.
 +
 O sistema é reinicializado, normalmente no prompt do LOADER.

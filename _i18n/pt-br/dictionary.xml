@@ -2689,8 +2689,6 @@
   <block id="9c29eb35e98929529d99ca71cd855f4e" category="paragraph">*CABOS RJ-45 DE 1000BASEBASE-T*</block>
   <block id="a8536d671676b42d7c49328e04123a96" category="image-alt">Conete-se à sua rede de gerenciamento</block>
   <block id="38821947dff053760f4c97b648ca454a" category="admonition">Não conete os cabos de energia ainda.</block>
-  <block id="bd078f69cc3533ea9bc3100deef482d0" category="list-text">Use o cabo de interconexão cluster/HA para conetar as portas e1a a e1a e as portas e7a a e7a.</block>
-  <block id="d4f534f2d370cb0f29178f31331b3536" category="image-alt">Cabo para rede Ethernet de 100 GB</block>
   <block id="5a8b74659281e9e3495bfc29767b645c" category="paragraph">*Host de 4 portas e 10/25 GbE*</block>
   <block id="06d20f31fccdd7b31221a7b1e1ed37d1" category="image-alt">Cabo de 10/25 GB</block>
   <block id="95b007a39e5ec5c4d9b8e17f2ec0424d" category="image-alt">RJ45 cabos</block>
@@ -2718,7 +2716,6 @@
   <block id="bfe3957a11dab27de6793691acba1b94" category="paragraph">*Cabos de cobre 100 GbE QSFP28*</block>
   <block id="59850ec6ce706547c89ff81eb99141db" category="image-alt">Cabo de cobre de 100 GbE QSFP28</block>
   <block id="9dcc8dc3a558729dc61c31c84e00c3e4" category="list-text">Conete a porta e11a do controlador A à porta e0a do NSM A.</block>
-  <block id="918349807746744597338bfd03ce241f" category="list-text">Conete a porta e11b do controlador A à porta e0b do NSM B.</block>
   <block id="956aab6b8733f2140ed524c12e37f4bd" category="paragraph"><block ref="956aab6b8733f2140ed524c12e37f4bd" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a8861b3a8d06aef3022e3d2cfa014512" category="list-text">Conete a porta e11a do controlador B à porta e0a do NSM B.</block>
   <block id="6a5052a8c54e3e46dc1452dcb9c98eaa" category="list-text">Conete a porta e11b do controlador B à porta e0b do NSM A.</block>
@@ -2730,7 +2727,6 @@
   <block id="3d76afb25e68cbf6ec448ba97c8d77a4" category="list-text">Conete a porta e8b à gaveta 1, porta NSM B e0b.</block>
   <block id="f574117739b3e8dc40831cbb75e78d7f" category="paragraph"><block ref="f574117739b3e8dc40831cbb75e78d7f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7c74d901dd29a71ee51992bf6462dd04" category="list-text">Conete a porta e11a à gaveta 1, porta NSM B e0a.</block>
-  <block id="1e063e8299a01fcdf8268f46edf62dfe" category="list-text">Conete a porta e11b ao compartimento 2, NSM A porta e0b.</block>
   <block id="a032a8830d9e7689c545a9f5d436568b" category="list-text">Conete a porta e8a à gaveta 2, porta NSM B e0a.</block>
   <block id="a7ac225913423b42ae7801d894de31c8" category="list-text">Conete a porta e8b ao compartimento 1, NSM A porta e0b.</block>
   <block id="bf1f9977d76210449a57d0b526df80f9" category="paragraph"><block ref="bf1f9977d76210449a57d0b526df80f9" category="inline-image-macro-rx" type="image"></block></block>
@@ -4132,7 +4128,6 @@
   <block id="1fba4a247f94ae0adebcaa57fd54e768" category="image-alt">Exemplo de orientação da patilha de puxar do cabo</block>
   <block id="1ab7eafd757e6d1eae57d16228e5edc3" category="paragraph">Contacte o administrador da rede para obter informações sobre como ligar o sistema de armazenamento aos comutadores.</block>
   <block id="4303b29f12561a35dc71cb122558d909" category="inline-link-macro">Ligue o sistema de storage AFF A70 ou AFF A90</block>
-  <block id="f4e587df8e3873f191b7a2eaee7efc0d" category="paragraph">Depois de ter cabeado o hardware para o seu sistema AFF A70 ou AFF A90, <block ref="c5f2d57d7889d01ebbda3bc0e0e75909" category="inline-link-macro-rx"></block>você .</block>
   <block id="eaed2b50f9ac1d1c725b320e4c9f09e1" category="doc">Instale o hardware - AFF A70 e AFF A90</block>
   <block id="816bbd9f7f68bfea42f976bdd1e27e0d" category="paragraph">Depois de se preparar para instalar o sistema de storage AFF A70 ou AFF A90, instale o hardware do sistema. Primeiro, instale os kits de trilho. Em seguida, instale e proteja sua plataforma em um gabinete ou rack de telecomunicações.</block>
   <block id="fd0f91da61deb35dbaf2ae06cc064cf2" category="inline-link-macro">Cable o hardware do seu sistema de storage AFF A70 ou AFF A90</block>
@@ -5298,8 +5293,6 @@
   <block id="0b38b0938783d2cf1b3800f66d5154c3" category="paragraph">Depois de ter cabeado o hardware para o seu sistema FAS70 ou FAS90, <block ref="9d70727ad16ec47c3b1ffe9fcd624399" category="inline-link-macro-rx"></block>você .</block>
   <block id="a88ce76514a173cf2bddffce66860b3a" category="doc">Instale o material de fixação - FAS70 e FAS90</block>
   <block id="8f4b2475d7c4e7fd5a95811a1509212a" category="paragraph">Depois de se preparar para instalar o sistema de storage FAS70 ou FAS90, instale o hardware do sistema. Primeiro, instale os kits de trilho. Em seguida, instale e proteja sua plataforma em um gabinete ou rack de telecomunicações.</block>
-  <block id="6416cb7210c1cd9b1d9cc413f9b62376" category="inline-link-macro">Cable o hardware para o seu sistema de armazenamento FAS70 ou FAS90.</block>
-  <block id="c9ecf6c24d42c6c195a5d283af95a0b4" category="paragraph">Depois de instalar o hardware para o seu sistema de armazenamento FAS70 ou FAS90, <block ref="66229e533d818dbc7b41a3001638f04f" category="inline-link-macro-rx"></block>você .</block>
   <block id="90bee630c9da2d7d494cda69da33a583" category="summary">Siga estas etapas de alto nível para instalar e configurar o sistema de storage FAS70 e FAS90 e implantá-lo como um nó no sistema ONTAP.</block>
   <block id="9b2aaebbf51e1beb36472d0ce0cc3185" category="doc">Fluxo de trabalho de instalação e configuração - FAS70 e FAS90</block>
   <block id="bedb87d7b2671b0ded93144a6ce3c345" category="paragraph">Para instalar e configurar o sistema FAS70 ou FAS90, você analisa os requisitos de hardware, prepara o site, instala e faz o cabo dos componentes de hardware, liga o sistema e configura o cluster ONTAP.</block>
@@ -5312,12 +5305,10 @@
   <block id="a817c10af381296411c154c716af48b7" category="inline-link-macro">Ligue o sistema de armazenamento FAS70 ou FAS90</block>
   <block id="b2f6fbbaf5842fe5addbaac3aabc158d" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block><block ref="164a6e7d5b74e1ce7eb1009b0b13e4f3" category="inline-link-macro-rx"></block></block>
   <block id="d9eb7005000baef74822bf5afd90707b" category="doc">Ligue o sistema de armazenamento - FAS70 e FAS90</block>
-  <block id="f6d3448cfd45b6a4ae23d47aec38dd6f" category="paragraph">Depois de instalar o hardware de rack para seu sistema de storage FAS70 0r FAS90 e instalar os cabos das controladoras e gavetas de storage, ligue as controladoras e as gavetas de storage.</block>
   <block id="971e955dfe15e7503ed5654ed6ebd8e0" category="summary">Prepare-se para instalar sua plataforma FAS70 e FAS90.</block>
   <block id="03162faf493040269b3b60738c942373" category="doc">Prepare-se para instalar - FAS70 e FAS90</block>
   <block id="5c3b9df48b8876003c4bc9bef5a99d08" category="paragraph">Prepare-se para instalar o seu sistema de armazenamento FAS70 ou FAS90, preparando o local, desembalando as caixas e comparando o conteúdo das caixas com o slip de embalagem e registrando o sistema para acessar os benefícios de suporte.</block>
   <block id="c122f93f0a8c0d86fe624d89c395a42d" category="inline-link-macro">Instale o hardware do sistema de armazenamento FAS70 ou FAS90</block>
-  <block id="9ed07b45e5e582647bc2df0721e7b250" category="paragraph">Depois de se preparar para instalar o hardware FAS70 ou FAS90, <block ref="8b675fcd81dca00f177be4137f647288" category="inline-link-macro-rx"></block>você .</block>
   <block id="6a9167a5943a2edebb563033d742c92d" category="doc">Requisitos de instalação - FAS70 e FAS90</block>
   <block id="9ab04ed2ca5bf9f3a53912fe8182bc26" category="paragraph">Reveja o equipamento necessário e as precauções de elevação para o seu sistema de armazenamento FAS70 ou FAS90 e prateleiras de armazenamento.</block>
   <block id="831a011f3efcfa2b56239bdfd5507fdc" category="paragraph">Um sistema de armazenamento de FAS70kg ou FAS90kg pode pesar até 62,83 lbs (28,5 kg). Para levantar o sistema, utilize duas pessoas ou um elevador hidráulico.</block>
@@ -9025,7 +9016,6 @@
   <block id="aa2e3ee65f05caaf497283a0ab483129" category="doc">Prepare-se para instalar - AFF C80</block>
   <block id="ae94559d673eaece00e4a335f4347e99" category="paragraph">Prepare-se para instalar seu sistema de armazenamento AFF C80, preparando o site, desembalando as caixas e comparando o conteúdo das caixas com o slip de embalagem e registrando o sistema para acessar os benefícios de suporte.</block>
   <block id="11b741b11d83e458037ddbfc832295ac" category="inline-link-macro">Instale o hardware do seu sistema de storage AFF C80</block>
-  <block id="09350f8e92a2072060400a04780b4504" category="paragraph">Depois de se preparar para instalar o AFF C80hardware, <block ref="5529a04db23aefcda96e168a6808eaee" category="inline-link-macro-rx"></block>você .</block>
   <block id="ce16306562432372fadd2f97d4862648" category="summary">Reveja o equipamento necessário e as precauções de elevação para o seu sistema de armazenamento e prateleiras.</block>
   <block id="d74315adf12485d8310e758b0294275f" category="doc">Requisitos de instalação - AFF C80</block>
   <block id="a36836ef1b3b8277e163c5017c4ab7f9" category="paragraph">Reveja o equipamento necessário e as precauções de elevação para o seu sistema de armazenamento AFF C80 e prateleiras de armazenamento.</block>
@@ -9972,7 +9962,6 @@
   <block id="837c47c934f14522b94248f34ec495be" category="paragraph">Você substitui a bateria do relógio em tempo real (RTC) no controlador para que os serviços e aplicativos do sistema de armazenamento que dependem da sincronização precisa de tempo continuem funcionando.</block>
   <block id="55eba7ecf8d7b61636e734c095e4ed8c" category="paragraph">Verifique se o laptop está conetado à porta do console serial e se os controladores estão ligados.</block>
   <block id="91860a8cf69554e12c3e3a5720821c5a" category="list-text">É necessário desligar o ciclo de alimentação de uma gaveta (desligue o interrutor de alimentação em cada uma das fontes de alimentação da gaveta SAS, aguarde o período de tempo adequado e, em seguida, ligue novamente a alimentação) para que a ID da gaveta entre em vigor.</block>
-  <block id="f5afd4b6c78c970d9b9f36473a81eb43" category="paragraph">Uma prateleira de DS460C kg pode pesar até 260,4 lbs (181,1 kg). Para levantar a prateleira de armazenamento, pode ser necessário um máximo de cinco pessoas ou um elevador hidráulico. Mantenha todos os componentes na prateleira de armazenamento (dianteira e traseira) para evitar o desbalanceamento do peso da prateleira.</block>
   <block id="33ae25491bd1a8a3daa58c3e044ddc6f" category="doc">Devolva a peça com falha ao NetApp - FAS50</block>
   <block id="cb898608072ab3625e9f94c0f82cbc2f" category="paragraph">Se um componente no seu sistema FAS50 falhar, devolva a peça com falha ao NetApp. Consulte a<block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> página para obter mais informações.</block>
   <block id="0277d6392a2af9f708f9e4369e630a19" category="summary">Para garantir a segurança dos dados no seu sistema de armazenamento FAS50, tem de verificar o suporte e o estado da chave de encriptação no suporte de arranque. Verifique se sua versão do ONTAP suporta criptografia de volume NetApp (NVE) e, antes de desligar a controladora, verifique se o gerenciador de chaves está ativo.</block>
@@ -10062,7 +10051,6 @@
   <block id="f3239a5f1291696246e54607fd3b9a01" category="paragraph">Revise os requisitos do seu sistema de storage FAS50.</block>
   <block id="e56a8d138f62f4590eed5655df5c011f" category="paragraph">O sistema de armazenamento pode pesar até 53,8 lbs (24,4 kg). Para levantar o sistema de armazenamento, utilize duas pessoas ou um elevador hidráulico.</block>
   <block id="9c48a8da7b0db1cca470b9010947185e" category="image-alt">FAS50 ícone de aviso de peso</block>
-  <block id="af0319de88f3ed43d4ee4fb8b670c558" category="paragraph">Uma prateleira de DS460C kg pode pesar até 260,4 lbs (181,1 kg). Para levantar a prateleira, você pode precisar de até cinco pessoas ou um elevador hidráulico. Mantenha todos os componentes na prateleira (dianteira e traseira) para evitar desequilibrar o peso da prateleira.</block>
   <block id="26f561223ab76238a005189688efb525" category="doc">Adicionar um módulo de e/S - FAS50</block>
   <block id="c65fcc9bc376acee1b7dc4604e426776" category="doc">Substitua um módulo de e/S - FAS50</block>
   <block id="651d5528b03e26465b5710deab4b18d5" category="doc">Visão geral da manutenção de hardware - FAS50</block>
@@ -10270,7 +10258,6 @@
   <block id="30898d03a4ca37450e8ab2be81f38dd5" category="list-text">Os módulos NSM100B usam as portas e1a e e1b em um módulo de E/S no slot 1.</block>
   <block id="e6c68585977f6b3e8b2b4ced88ca3d4d" category="list-text">Os módulos NSM100 usam portas integradas (onboard) e0a e e0b.</block>
   <block id="215caa644827ccfb864125e557ed29f2" category="list-text">Você conecta cada controlador a cada módulo NSM na prateleira NS224 usando os cabos de armazenamento fornecidos com seu sistema de armazenamento, que podem ser do seguinte tipo de cabo:</block>
-  <block id="01bd09c5271f772a108914f35e7efcd3" category="paragraph">Os sistemas de armazenamento AFF A70 e 90 suportam prateleiras NS224 com o módulo NSM100 ou NSM100B. As principais diferenças entre os módulos são:</block>
   <block id="2486a91e78743df4d0cc635c5b8b51c8" category="list-text">Os módulos de prateleira NSM100 usam portas integradas e0a e e0b.</block>
   <block id="a53b96fad1d9b45d4ddb6e31d5f14d63" category="paragraph">Após substituir fisicamente a mídia de inicialização danificada, você <block ref="dcb4deaaa5f388ac9dd740fbe37648be" category="inline-link-macro-rx"></block> .</block>
   <block id="023d1fe5c37125b4e245d88460c90d81" category="summary">Comece a substituir a Mídia de inicialização no sistema de armazenamento ASA A20, ASA A30 e ASA A50, revisando os requisitos de substituição, desligando o controlador prejudicado, substituindo a Mídia de inicialização, restaurando a imagem na Mídia de inicialização e verificando a funcionalidade do sistema.</block>
@@ -10341,7 +10328,6 @@
   <block id="b4a3b44dc7350cb88f59a4a2eb7dda1d" category="sidebar">Chassis ASA C30</block>
   <block id="cb330090f109eb2fa5d8e0cb697b8627" category="sidebar">Módulo do controlador ASA C30</block>
   <block id="d6cf13e3e73df787bea3a13aaa745efd" category="sidebar">Módulo de e/S ASA C30</block>
-  <block id="8fdc5ec3ff56b023a707d257557cb7c1" category="paragraph">Os sistemas de armazenamento FAS70 e FAS90 suportam prateleiras DS212C, DS224C, DS460C e NS224 com o módulo NSM100 ou NSM100B.</block>
   <block id="cb1d7f2de7963108d3fe1b590a415523" category="paragraph">As principais diferenças entre os módulos NS224 são:</block>
   <block id="a1c52b2edb23bc93318c0b82dc9baead" category="paragraph">O exemplo de cabeamento NS224 a seguir mostra módulos NSM100 nas prateleiras NS224 ao se referir às portas do módulo de prateleira.</block>
   <block id="e275ee75ac16491873bfc9c9d1565329" category="paragraph">Retorne o controle dos recursos de armazenamento ao controlador de substituição para que seu sistema AFF A1K possa retomar a operação normal. O procedimento de devolução varia de acordo com o tipo de criptografia usado pelo seu sistema: sem criptografia ou criptografia Onboard Key Manager (OKM).</block>
@@ -12663,7 +12649,6 @@
   <block id="5862e3059693b0ae5802e65d68b3df4c" category="list-text">Verifique a data e a hora no controlador saudável com o<block ref="1cac34e5e8442fb80d6ade838d969fc0" prefix=" " category="inline-code"></block> comando.</block>
   <block id="06cc2a18a376ef6cef2529359a8c1853" category="list-text">No prompt LOADER no controlador de destino, verifique a hora e a data com o<block ref="7e17e2b336dbdd66c2f45405573b53de" prefix=" " category="inline-code"></block> comando.</block>
   <block id="ab00fa9bfc395c69bcff64c78065914d" category="list-text">Aguarde cinco minutos após a conclusão do relatório de devolução e verifique os status de failover e devolução:</block>
-  <block id="a58f4831d1e28d273ad0f645bcbb3725" category="paragraph">O módulo de gerenciamento do sistema, localizado na parte traseira do controlador, à esquerda do slot 8, contém componentes integrados para gerenciamento do sistema, bem como portas para gerenciamento externo.  O controlador de destino deve ser desligado e desligado para substituir um módulo de gerenciamento do sistema danificado ou substituir a mídia de inicialização.</block>
   <block id="2facfdec284e980f443264b431f4e8ac" category="list-text">Porta de serviço Ethernet RJ45 para acesso à rede e0M e BMC</block>
   <block id="5ddf9434bc54978c062928eafba9691f" category="list-text">Remova todos os cabos conectados ao módulo de gerenciamento do sistema.  Identifique os cabos onde eles foram conectados para que você possa reconectá-los às portas corretas ao reinstalar o módulo.</block>
   <block id="c13821e7f076ae89484ef92cc7173b08" category="list-text">Coloque o módulo de gerenciamento do sistema em um tapete antiestático para acessar a mídia de inicialização.</block>
@@ -12961,8 +12946,6 @@
   <block id="057cab5a212fb0cce841ca14b2cfeda3" category="doc">Troca a quente de uma fonte de alimentação - AFF A320</block>
   <block id="3bebfde8a4d27ae5e27f0cd50cf9a5de" category="doc">Troca a quente de uma fonte de alimentação - AFF A400</block>
   <block id="30432b9617d110e91bb55e0ee6592cdb" category="paragraph">Controlador de gerenciamento de placa de base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP ; Controladores redundantes de troca a quente; Fontes de alimentação redundantes de troca a quente; Gerenciamento SAS em banda por meio de conexões SAS para prateleiras externas; [//] 2025-10-15 ontap-systems-internal/issues/1357</block>
-  <block id="3076b9da82c66ef1cac1e7179b746828" category="paragraph">Use o cabo 100 GbE para conectar as portas e1a e e7a dos controladores A e B aos switches de rede do cluster A e B.</block>
-  <block id="92998a9e2d395c7927371ced81dc9182" category="admonition">Não use as portas e1b e e7b para conexões de rede do host. Use um cartão host separado.</block>
   <block id="ec3eca6cbff6c81c2c7efdc9ca0afcf4" category="doc">Troca a quente de uma fonte de alimentação - AFF A70 e AFF A90</block>
   <block id="b61c2071102a270d16023e40ee5b949e" category="doc">Troca a quente de uma fonte de alimentação - AFF A700</block>
   <block id="9fdca944f84d0d7c1dd5bec5b33c4dad" category="doc">Troca a quente de uma fonte de alimentação - AFF A700s</block>
@@ -15232,4 +15215,27 @@
   <block id="07264625bd1b5bafe8d9b9331bb63609" category="paragraph">Se você mover um gabinete DS460C para outra parte do data center ou transportá-lo para um local diferente, deverá remover os discos das gavetas de disco para evitar possíveis danos às gavetas de disco e aos discos.</block>
   <block id="c141638ba1fc3bb008bb5eb896def79e" category="admonition">*Possível perda de acesso aos dados:* Se, no futuro, você mover o shelf para uma parte diferente do data center ou transportá-lo para um local diferente, deverá remover os discos das gavetas de disco para evitar possíveis danos às gavetas de disco e aos discos.</block>
   <block id="c280702bf87115947662f11cc819ea08" category="paragraph">Se no futuro você mover os shelves DS460C para outra parte do data center ou transportar os shelves para um local diferente, será necessário remover os discos das gavetas de disco para evitar possíveis danos às gavetas de disco e aos discos.</block>
+  <block id="d06a07083a90ec9a4378029abfdec7cb" category="paragraph">Após substituir o módulo de gerenciamento do sistema, reinicialize o controlador para restaurar a operação normal do par de HA. Você deve ligar o controlador, realizar um giveback parcial para ativar o agregado de raiz e, em seguida, concluir o giveback completo para retornar o controlador com problemas ao serviço.</block>
+  <block id="6638946c2c71169de88e635bdf3a1573" category="paragraph">O módulo de gerenciamento do sistema contém a mídia de inicialização e fornece funções de gerenciamento do sistema. Você deve remover o módulo de gerenciamento do sistema com defeito, transferir a mídia de inicialização para o módulo de substituição e reinstalar o módulo de substituição no gabinete.</block>
+  <block id="6e30ba5caa64e4ca3667dadeaa11cefd" category="admonition">Certifique-se de que o destage da NVRAM foi concluído antes de prosseguir. Quando o LED no módulo NV estiver apagado, a NVRAM foi destageada. Se o LED estiver piscando, aguarde até que pare de piscar. Se a intermitência continuar por mais de 5 minutos, entre em contato com o Suporte Técnico para obter assistência.</block>
+  <block id="ea7f38fbe84ac28be0f7c90cca730a69" category="list-text">ONTAP 9.19.1</block>
+  <block id="e827146f835b35a49ebac185b3e71933" category="paragraph">A seguir, apresentamos alguns exemplos típicos de cabeamento de rede para hosts. Consulte <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block> para a configuração específica do seu sistema.</block>
+  <block id="bba084cab79d6f55fb1d0fc54cb54245" category="admonition">Não utilize as portas e1b e e7b para conexões de rede do host. Use uma placa de host separada.</block>
+  <block id="d435ad3bb0c177c293988bf9a83d48e5" category="list-text">Conecte suas placas de rede 10/25 GbE aos switches da sua rede host.</block>
+  <block id="d4757fa4dad3e14c7b22569e94598e77" category="paragraph">Os sistemas de storage AFF A70 e AFF A90 suportam gabinetes NS224 com o módulo NSM100 ou NSM100B. As principais diferenças entre os módulos são:</block>
+  <block id="c385525fc45151e02ea60146533c3edf" category="list-text">Conecte a porta e11b do controlador A à porta e0b do NSM B.</block>
+  <block id="d5c4ea0bd4062f3b335586480daba755" category="list-text">Conecte a porta e11b à prateleira 2, porta e0b do NSM A.</block>
+  <block id="c67f19e104ad3611b366ccb143f8c86d" category="paragraph">Depois de conectar os cabos do hardware do seu AFF A70 ou AFF A90, você <block ref="c5f2d57d7889d01ebbda3bc0e0e75909" category="inline-link-macro-rx"></block>.</block>
+  <block id="f158217b4d76e5895e22e6e5f12f3f82" category="paragraph">O módulo de gerenciamento do sistema, localizado na parte traseira do controlador, à esquerda do slot 8, contém componentes integrados para gerenciamento do sistema, bem como portas para gerenciamento externo. O controlador em questão deve ser desligado e desenergizado para substituir um módulo de gerenciamento do sistema com defeito ou substituir a mídia de boot.</block>
+  <block id="c252e729454f69bb6a0d6efb48dd02d3" category="paragraph">O sistema de storage AFF C80 suporta shelves NS224 com o módulo NSM100 ou NSM100B. As principais diferenças entre os módulos são:</block>
+  <block id="edf3046f20162fd9f4e8899af2dff261" category="paragraph">Depois de se preparar para instalar seu hardware AFF C80, você <block ref="5529a04db23aefcda96e168a6808eaee" category="inline-link-macro-rx"></block>.</block>
+  <block id="412841ff7918862aec2940d9550d7b94" category="paragraph">Os sistemas de storage FAS70 e FAS90 são compatíveis com os shelves DS212C, DS224C, DS460C e NS224, com o módulo NSM100 ou NSM100B.</block>
+  <block id="fff62239bbf7b8e4f913dd0c94d3de2f" category="list-text">Conecte a porta e11b à porta e0b do NSM B.</block>
+  <block id="36a89ad9239def1b5e6daf8a3f66d103" category="summary">Instale seu sistema de storage em um armário ou rack.</block>
+  <block id="56f562e1cc48bd1cf730414ac5a70986" category="inline-link-macro">Conecte os cabos de hardware para o seu sistema de storage FAS70 ou FAS90</block>
+  <block id="326a64162980e026d67fb6be05699641" category="paragraph">Após instalar o hardware do seu sistema de storage FAS70 ou FAS90, você <block ref="3611ae43317c18d7133d9ac6f85a86be" category="inline-link-macro-rx"></block>.</block>
+  <block id="6d05cad6882d00b69106773678892a60" category="paragraph">Após instalar o hardware do rack para o seu sistema de storage FAS70 ou FAS90 e conectar os cabos dos controladores e das prateleiras de armazenamento, você deve ligar as prateleiras de armazenamento e os controladores.</block>
+  <block id="f0459d9c2b469658ae28fdabcde86676" category="paragraph">Depois de se preparar para instalar o seu hardware FAS70 ou FAS90, você <block ref="8b675fcd81dca00f177be4137f647288" category="inline-link-macro-rx"></block>.</block>
+  <block id="b60cf29845b500861cf2f73b433dcb7a" category="paragraph">Uma estante DS460C pode pesar até 260,4 lbs (118,1 kg). Para levantar a estante de storage, você pode precisar de até cinco pessoas ou de um elevador hidráulico. Mantenha todos os componentes na estante de storage (tanto na parte frontal quanto na traseira) para evitar o desbalanceamento do peso da estante.</block>
+  <block id="ede44ca49dfc10f87edfa2084fe039d9" category="paragraph">Uma estante DS460C pode pesar até 260,4 lbs (118,1 kg). Para levantar a estante, você pode precisar de até cinco pessoas ou de um elevador hidráulico. Mantenha todos os componentes na estante (tanto na parte frontal quanto na traseira) para evitar o desbalanceamento do peso da estante.</block>
 </blocks>
