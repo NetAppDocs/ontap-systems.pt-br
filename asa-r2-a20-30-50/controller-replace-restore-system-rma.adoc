@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa a20, asa a30, asa a50, how to restore NetApp Storage Encryption, how to complete the replacement process 
 summary: Para concluir a substituição do controlador do seu ASA A20, ASA A30 ou ASA A50 sistema de storage, primeiro restaure a configuração de NetApp Storage Encryption e instale as licenças necessárias no novo controlador. Em seguida, confirme se as interfaces lógicas estão relatando para suas portas iniciais e execute uma verificação de integridade do cluster. Por fim, registre o número de série do novo controlador e depois devolva a peça com defeito para a NetApp. 
 ---
-= Substituição completa do controlador - ASA A20, ASA A30 e ASA A50
+= Conclua a substituição do controlador do seu sistema ASA A20, ASA A30 ou ASA A50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

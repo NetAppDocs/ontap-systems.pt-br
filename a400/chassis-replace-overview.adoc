@@ -2,19 +2,25 @@
 permalink: a400/chassis-replace-overview.html 
 sidebar: sidebar 
 keywords: aff a400, aff, a400, component, system, function, properly, contact, technical, support, replace, chassis, shut, down, controller, replacing, remove, module, fan, equipment, rack, cabinet, ha, state, switch, back, aggregate, two-node, metrocluster, configuration, complete, replacement, process, replace the chassis, shut down the controllers when replacing a chassis, remove the controller modules, move the fans, replace a chassis from within the equipment rack or system cabinet, install the controller modules, verify and set the ha state of the chassis, switch back aggregates in a two-node metrocluster configuration, complete the replacement process 
-summary: Substituir um chassis com deficiência o novo chassis do mesmo modelo que o chassis com deficiência. 
+summary: Comece a substituir o chassi do seu AFF A400 desligando os controladores, transferindo o hardware para o chassi de substituição e concluindo a restauração do sistema. 
 ---
-= Descrição geral da substituição do chassis - AFF A400
+= Fluxo de trabalho de substituição do chassi AFF A400
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Para substituir o chassis, tem de mover as ventoinhas e os módulos do controlador do chassis afetado para o novo chassis do mesmo modelo que o chassis danificado.
+Comece a substituir o chassi do seu AFF A400 desligando os controladores, transferindo o hardware para o chassi de substituição e concluindo a restauração do sistema.
 
-Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"]link:chassis-replace-shutdown.html["Desligue os controladores"]
+[role="quick-margin-para"]
+Desligue os controladores para realizar a manutenção do chassi com segurança.
 
-* Pode utilizar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema.
-* Este procedimento é disruptivo. Para um cluster de dois nós, você terá uma interrupção de serviço completa e uma interrupção parcial em um cluster com vários nós.
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"]link:chassis-replace-move-hardware.html["Substitua o chassis"]
+[role="quick-margin-para"]
+Transfira as ventoinhas, as unidades de disco e os módulos de controle do chassi com problema para o chassi de substituição.
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"]link:chassis-replace-complete-system-restore-rma.html["Complete a substituição do chassis"]
+[role="quick-margin-para"]
+Conclua a substituição verificando o estado de HA, revertendo os agregados, se necessário, e devolvendo o chassi com falha para a NetApp.

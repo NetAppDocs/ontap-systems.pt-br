@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff a400, aff, a400, replace, nvdimm, controller, module, system, register, flash, lifetime, healthy, system, panic, shut, down, impair, two-node, metrocluster, complete, replacement, process, replace an nvdimm, shut down the impaired controller, remove the controller module, replace the nvdimm, install the controller module, restore the controller module to operation, switch back aggregates in a two-node metrocluster configuration, complete the replacement process 
 summary: Substitua o NVDIMM no módulo controlador AFF A400 quando o sistema detectar que a vida útil da memória flash está quase no fim ou que o NVDIMM identificado não está em boas condições. A não substituição de um NVDIMM defeituoso pode causar um pânico no sistema. 
 ---
-= Substitua um NVDIMM - AFF A400
+= Substitua o NVDIMM no seu sistema AFF A400
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Substitua o NVDIMM do seu AFF A400 quando o sistema registrar que a vida útil da memória flash está quase no fim ou que o NVDIMM não está saudável. Se você não substituí-lo, pode causar um pânico no sistema.
+
 Você deve substituir o NVDIMM no módulo do controlador quando o sistema Registrar que a vida útil do flash está quase no fim ou que o NVDIMM identificado não está funcionando em geral; a falha em fazê-lo causa um pânico no sistema.
 
 Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.

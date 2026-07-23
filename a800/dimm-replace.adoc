@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a800, replace a dimm 
 summary: Substitua um DIMM no seu AFF A800 controller module quando o sistema registrar um número crescente de códigos de correção de erro corrigíveis ou erros ECC incorrigíveis. A não substituição de um DIMM defeituoso pode causar um pânico no sistema. 
 ---
-= Substitua um DIMM - AFF A800
+= Substitua um DIMM no seu sistema AFF A800 para corrigir erros de memória
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Substitua um módulo DIMM no seu sistema AFF A800 se forem detectados erros de memória excessivos, corrigíveis ou não corrigíveis. Esses erros podem impedir que o sistema de armazenamento inicialize o ONTAP. O processo de substituição envolve desligar o controlador danificado, removê-lo, substituir o DIMM, reinstalar o controlador e, em seguida, devolver a peça com defeito à NetApp.
+Substitua um DIMM no seu sistema AFF A800 quando o sistema de storage encontrar erros de memória corrigíveis (CECC) ou incorrigíveis em excesso. Esses erros podem impedir que o sistema de storage inicialize o ONTAP.
 
 .Antes de começar
 * Certifique-se de que todos os outros componentes do sistema estão a funcionar corretamente; caso contrário, tem de contactar a assistência técnica.

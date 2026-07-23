@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff a150, a150, aff, replace, boot, media, controller, module, fru map 
 summary: Você deve localizar o suporte de inicialização no controlador e seguir as instruções para substituí-lo. 
 ---
-= Substitua o suporte de arranque - AFF A150
+= Substitua a mídia de inicialização no seu sistema AFF A150
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+A mídia de inicialização do seu AFF A150 armazena firmware e dados essenciais de configuração. O processo de substituição envolve remover o módulo do controlador, remover a mídia de inicialização com falha, instalar a mídia de inicialização de substituição e, em seguida, transferir a imagem ONTAP para a mídia de inicialização de substituição usando um pen drive USB.
+
 Para substituir o suporte de arranque, tem de remover o módulo do controlador afetado, instalar o suporte de arranque de substituição e transferir a imagem de arranque para uma unidade flash USB.
 
 

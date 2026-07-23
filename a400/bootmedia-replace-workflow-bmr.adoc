@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: a400, replace the boot media 
 summary: Comece a substituir a mídia de inicialização no seu sistema de armazenamento AFF A400 revisando os requisitos de substituição, desligando o controlador, substituindo a mídia de inicialização, restaurando a imagem na mídia de inicialização e verificando a funcionalidade do sistema. 
 ---
-= Fluxo de trabalho de recuperação automatizada de mídia de inicialização - AFF A400
+= Fluxo de trabalho de substituição da mídia de inicialização do AFF A400 usando o processo automatizado de recuperação de inicialização
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Comece a substituir a mídia de inicialização no seu sistema de armazenamento AFF A400 revisando os requisitos de substituição, desligando o controlador, substituindo a mídia de inicialização, restaurando a imagem na mídia de inicialização e verificando a funcionalidade do sistema.
+A recuperação automatizada da imagem de inicialização envolve a identificação e seleção automáticas pelo sistema da opção de menu de inicialização apropriada. Ele usa a imagem de inicialização no nó parceiro para reinstalar o ONTAP na mídia de inicialização de substituição no seu sistema de armazenamento AFF A400 .
 
 O processo automatizado de recuperação de mídia de inicialização é compatível apenas com o ONTAP 9.17.1 e versões posteriores. Se o seu sistema de armazenamento estiver executando uma versão anterior do ONTAP, use o link:bootmedia-replace-workflow.html["procedimento de recuperação de inicialização manual"] .
 

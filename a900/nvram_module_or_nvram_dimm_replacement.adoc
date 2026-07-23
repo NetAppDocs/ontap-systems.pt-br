@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff a900, replace nvram 
 summary: O módulo NVRAM consiste no NVRAM11 e nos DIMMs e em até dois módulos Flash Cache SSD NVMe por módulo NVRAM. 
 ---
-= Substitua o módulo NVRAM e/ou DIMMs NVRAM - AFF A900
+= Substitua o módulo NVRAM ou os DIMMs NVRAM no seu sistema AFF A900
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Substitua o módulo NVRAM ou os DIMMs NVRAM do seu sistema AFF A900 quando o módulo falhar ou um DIMM apresentar defeito. O processo de substituição envolve remover o módulo NVRAM do chassi, substituir o componente com defeito e reinstalar o módulo.
+
 O módulo NVRAM consiste no NVRAM11 e DIMMs. Você pode substituir um módulo NVRAM com falha ou os DIMMs dentro do módulo NVRAM. Para substituir um módulo NVRAM com falha, você deve removê-lo do chassi, mover os DIMMs para o módulo de substituição e instalar o módulo NVRAM de substituição no chassi.
 
 Para substituir e DIMM NVRAM, você deve remover o módulo NVRAM do chassi, substituir o DIMM com falha no módulo e reinstalar o módulo NVRAM.

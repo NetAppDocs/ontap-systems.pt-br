@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff a250, nvmem battery replacement 
 summary: Para substituir uma bateria NVMEM no sistema, tem de remover o módulo do controlador do sistema, abri-lo, substituir a bateria e fechar e substituir o módulo do controlador. 
 ---
-= Substitua a bateria do NVMEM - AFF A250
+= Substitua a bateria NV no seu sistema AFF A250
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Substitua a bateria NVMEM do seu AFF A250 quando ela começar a perder carga ou falhar, pois ela preserva dados críticos do sistema durante quedas de energia. O processo de substituição envolve remover o módulo controlador, trocar a bateria e reinstalar o módulo controlador.
+
 Para substituir uma bateria NVMEM no sistema, tem de remover o módulo do controlador do sistema, abri-lo, substituir a bateria e fechar e substituir o módulo do controlador.
 
 Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.

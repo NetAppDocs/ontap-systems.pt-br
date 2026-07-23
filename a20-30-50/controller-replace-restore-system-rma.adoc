@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a20, aff a30, aff a50, how to restore NetApp Storage Encryption, how to complete the replacement process 
 summary: Para concluir a substituição do controlador do seu AFF A20, AFF A30 ou AFF A50 sistema de storage, restaure a configuração de criptografia de storage NetApp e instale as licenças necessárias no novo controlador. Confirme se as interfaces lógicas estão relatando para suas portas iniciais e execute uma verificação de integridade do cluster. Registre o número de série do novo controlador e devolva a peça com defeito para a NetApp. 
 ---
-= Substituição completa do controlador - AFF A20, AFF A30 e AFF A50
+= Conclua a substituição do controlador do seu sistema AFF A20, AFF A30 ou AFF A50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a900, pre-shutdown checks for onboard encryption keys 
 summary: Antes de desligar o controlador com deficiência e verificar o estado das chaves de encriptação integradas, tem de verificar o estado do controlador com deficiência, desativar a giveback automática e verificar a versão do ONTAP em execução. 
 ---
-= Verifique o suporte e o status da chave de criptografia - AFF A900
+= Verifique o suporte à criptografia na sua mídia de inicialização no seu sistema AFF A900
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Para garantir a segurança dos dados no sistema de armazenamento, é necessário verificar o suporte e o status da chave de criptografia na Mídia de inicialização. Verifique se sua versão do ONTAP suporta criptografia de volume NetApp (NVE) e, antes de desligar a controladora, verifique se o gerenciador de chaves está ativo.
+Para garantir a segurança dos dados no seu sistema de storage AFF A900, você precisa verificar o suporte à chave de criptografia e o status na sua mídia de inicialização. Verifique se a sua versão do ONTAP suporta NetApp Volume Encryption (NVE) e, antes de desligar o controlador, verifique se o gerenciador de chaves está ativo.
 
 Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use olink:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"] .  Se o seu sistema estiver executando uma versão anterior do ONTAP, você deverá usar o processo de recuperação de inicialização manual.
 

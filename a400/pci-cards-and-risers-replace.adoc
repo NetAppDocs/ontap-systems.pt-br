@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff a400, aff, a400, replace, pcie, mezzanine, card, disconnect, cable, sfp, qsfp, module, fail, mezzanine, shut, down, impair, controller, pcie, switch, aggregate, two-node, metrocluster, complete, replacement, process, replace a pcie or mezzanine card, shut down the impaired controller, remove the controller module, replace a pcie card, replace the mezzanine card, install the controller module, switch back aggregates in a two-node metrocluster configuration, restore the controller module to operation, complete the replacement process 
 summary: Para substituir uma placa PCIe ou mezzanine, você deve desconetar os cabos e todos os módulos SFP e QSFP das placas, substituir a placa PCIe ou mezzanine com falha e, em seguida, voltar a digitalizar as placas. 
 ---
-= Substitua uma placa PCIe ou mezzanine - AFF A400
+= Substitua uma placa PCIe ou mezzanine em seu sistema AFF A400
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Substitua uma placa PCIe ou mezzanine em seu sistema AFF A400 quando a placa apresentar defeito ou precisar de uma atualização. O processo de substituição envolve desconectar os cabos e os módulos SFP ou QSFP, substituir a placa e reconectar os cabos.
+
 Para substituir uma placa PCIe ou mezzanine, você deve desconetar os cabos e todos os módulos SFP e QSFP das placas, substituir a placa PCIe ou mezzanine com falha e, em seguida, voltar a digitalizar as placas.
 
 * Pode utilizar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema

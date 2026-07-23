@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa a20, asa a30, asa a50, shut down the controller 
 summary: Desligue o controlador desativado no sistema de armazenamento ASA A20, ASA A30 ou ASA A50 para evitar a perda de dados e garantir a estabilidade do sistema ao substituir a Mídia de inicialização. 
 ---
-= Desligue o controlador para substituir o suporte de arranque - ASA A20, ASA A30 e ASA A50
+= Desligue o controlador no seu sistema ASA A20, ASA A30 ou ASA A50 durante o processo de recuperação automática de inicialização.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

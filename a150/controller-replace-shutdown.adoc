@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff a150, a150, aff, shut down the impaired controller 
 summary: Você pode desligar ou assumir o controlador prejudicado usando procedimentos diferentes, dependendo da configuração do hardware do sistema de armazenamento. 
 ---
-= Desligue o controlador desativado - AFF A150
+= Desligue o controlador do seu sistema AFF A150 antes de substituir o controlador
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Desligue o controlador com defeito no seu sistema de storage AFF A150 para evitar perda de dados e garantir a estabilidade do sistema ao substituir o controlador.
+
 Assuma o controle e interrompa o controlador com defeito para que o controlador em bom estado continue a fornecer dados do armazenamento do controlador com defeito. Para fazer isso, você suprime a criação automática de casos em AutoSupport, desativa o giveback automático e leva o controlador com defeito ao prompt LOADER. O prompt LOADER é o estado de parada segura a partir do qual você pode substituir a FRU.
 
 .Sobre esta tarefa

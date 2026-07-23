@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a800, replace a pcie card 
 summary: Para substituir uma placa PCIe, você deve desconetar os cabos das placas, remover os módulos SFP e QSFP das placas antes de remover o riser, reinstalar o riser e reinstalar os módulos SFP e QSFP antes de fazer o cabeamento das placas. 
 ---
-= Substitua uma placa PCIe - AFF A800
+= Substitua uma placa PCIe no seu sistema AFF A800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Substitua ou adicione um módulo de E/S em seu sistema AFF A800 quando o módulo falhar, precisar de uma atualização para suportar maior desempenho ou recursos adicionais. O processo de substituição envolve desligar o controlador, substituir o módulo de E/S com falha, reinicializar o controlador e devolver a peça com falha à NetApp.
+Substitua uma placa PCIe no seu sistema AFF A800 quando a placa apresentar falha ou precisar de uma atualização. O processo de substituição envolve desconectar os cabos e os módulos SFP ou QSFP, substituir a placa e reconectar os cabos.
 
 .Antes de começar
 * Você precisa ter a peça nova ou de reposição da NetApp disponível.

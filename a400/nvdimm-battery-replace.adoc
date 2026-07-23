@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff a400, aff, a400, replace, nvdimm, battery, remove, controller, module, reinstall, impair, aggregate, switch, back, two-node, metrocluster, configuration, replacement, complete, process, replace the nvdimm battery, shut down the impaired controller, remove the controller module, replace the nvdimm battery, install the controller module, restore the controller module, switch back aggregates in a two-node metrocluster configuration, complete the replacement process 
 summary: Para substituir a bateria NVDIMM, é necessário remover o módulo do controlador, remover a bateria, substituir a bateria e reinstalar o módulo do controlador. 
 ---
-= Substitua a bateria NVDIMM - AFF A400
+= Substitua a bateria NVDIMM no seu sistema AFF A400
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Substitua a bateria NVDIMM do seu sistema AFF A400 quando ela começar a perder carga ou apresentar defeito. O processo de substituição envolve a remoção do módulo controlador, a troca da bateria e a reinstalação do módulo controlador.
+
 Para substituir a bateria NVDIMM, é necessário remover o módulo do controlador, remover a bateria, substituir a bateria e reinstalar o módulo do controlador.
 
 Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.

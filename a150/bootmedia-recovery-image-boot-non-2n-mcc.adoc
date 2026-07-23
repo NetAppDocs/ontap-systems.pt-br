@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff a150, a150, aff, boot, recovery, image, restore, file, system, environmental, varible 
 summary: Você deve inicializar a imagem ONTAP a partir da unidade USB, restaurar o sistema de arquivos e verificar as variáveis ambientais. 
 ---
-= Inicie a imagem de recuperação - AFF A150
+= Inicialize a imagem de recuperação no seu sistema AFF A150 usando o processo de recuperação de inicialização manual
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Após instalar a nova mídia de inicialização no seu sistema AFF A150, inicialize a imagem de recuperação do ONTAP a partir de uma unidade USB para restaurar o sistema de arquivos e verificar as variáveis de ambiente.
+
 Você deve inicializar a imagem ONTAP a partir da unidade USB, restaurar o sistema de arquivos e verificar as variáveis ambientais.
 
 .Passos

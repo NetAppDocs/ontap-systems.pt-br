@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a70, aff a90, replace the boot media 
 summary: A recuperação manual da imagem de inicialização envolve o uso de uma unidade USB para reinstalar o ONTAP na mídia de inicialização de substituição do sistema AFF A70 ou AFF A90 . Você deve baixar a imagem de recuperação do ONTAP apropriada no site de suporte da NetApp e copiá-la para uma unidade USB. Essa unidade USB preparada é então usada para executar a recuperação e restaurar o sistema ao status operacional. 
 ---
-= Fluxo de trabalho de recuperação manual de mídia de inicialização - AFF A70 e AFF A90
+= Fluxo de trabalho de substituição da mídia de inicialização do AFF A70 e AFF A90 usando o processo de recuperação de inicialização manual
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: AFF A900 
 summary: Tem de rever os pré-requisitos para o procedimento de substituição e selecionar o correto para a sua versão do sistema operativo ONTAP. 
 ---
-= Substitua o módulo do controlador - AFF A900
+= Fluxo de trabalho de substituição do controlador AFF A900
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Comece a substituir o controlador do seu sistema AFF A900 revisando os pré-requisitos, desligando o controlador com defeito, transferindo o hardware para o controlador de substituição e restaurando a configuração do sistema.
+
 Para substituir o módulo do controlador desativado, tem de desligar o controlador desativado, mover os componentes internos para o módulo do controlador de substituição, instalar o módulo do controlador de substituição e reiniciar o controlador de substituição.
 
 .Antes de começar

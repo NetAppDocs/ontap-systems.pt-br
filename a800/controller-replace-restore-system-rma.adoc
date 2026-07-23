@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a800, how to restore NetApp Storage Encryption, how to complete the replacement process 
 summary: Para restaurar o funcionamento completo do seu sistema AFF A800, restaure a configuração de criptografia de armazenamento NetApp, se necessário, instale as licenças para o novo controlador e devolva a peça com defeito para a NetApp. 
 ---
-= Restauração completa do sistema - AFF A800
+= Conclua a substituição do controlador do seu sistema AFF A800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Para restaurar o sistema para a operação completa, você deve restaurar a configuração de criptografia de armazenamento NetApp (se necessário), instalar licenças para a nova controladora e devolver a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit.
+Para concluir a substituição do controlador do seu sistema AFF A800, restaure a configuração de criptografia de storage da NetApp (se necessário), confirme se as interfaces lógicas (LIFs) estão reportando às suas portas de origem, execute uma verificação de integridade do cluster e devolva a peça com defeito para a NetApp.
 
 
 

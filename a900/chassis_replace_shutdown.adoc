@@ -4,16 +4,15 @@ sidebar: sidebar
 keywords: aff a900, shutdown the controllers 
 summary: Para substituir o chassi, você deve desligar os controladores. 
 ---
-= Desligue os controladores - AFF A900
+= Desligue seus controladores AFF A900 para substituir o chassi
 :allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
 
-
-
-
-[[shutdown-the-controllers-aff-a900]]
-== Desligue os controladores - AFF A900
 
 [role="lead"]
+Desligue os controladores do seu sistema de storage AFF A900 para evitar perda de dados e garantir a estabilidade do sistema ao substituir o chassi.
+
 Este procedimento destina-se a sistemas com duas configurações de nós. Para obter mais informações sobre o desligamento normal ao fazer manutenção de um cluster, https://kb.netapp.com/on-prem/ontap/OHW/OHW-KBs/What_is_the_procedure_for_graceful_shutdown_and_power_up_of_a_storage_system_during_scheduled_power_outage["Desligue e ligue o seu sistema de armazenamento de dados - base de dados de Conhecimento da NetApp"] consulte .
 
 .Antes de começar

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a20, aff a30, aff a50, boot the recovery image 
 summary: Após instalar o novo dispositivo de mídia de inicialização no seu sistema de armazenamento AFF A20, AFF A30 ou AFF A50, você pode iniciar o processo automatizado de recuperação de mídia de inicialização para restaurar a configuração do nó parceiro. Durante o processo de recuperação, o sistema verifica se a criptografia está habilitada e determina o tipo de criptografia de chave em uso. Se a criptografia de chave estiver habilitada, o sistema o guiará pelas etapas apropriadas para restaurá-la. 
 ---
-= Recuperação automatizada de mídia de inicialização do nó parceiro - AFF A20, AFF A30 e AFF A50
+= Restaure a imagem de inicialização no seu sistema AFF A20, AFF A30 ou AFF A50 usando o processo automatizado de recuperação de inicialização
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff a900, replace the real-time clock battery 
 summary: Você substitui a bateria do relógio de tempo real no módulo controlador para que os serviços e aplicativos do seu sistema que dependem da sincronização precisa do tempo continuem funcionando. 
 ---
-= Substituição da bateria do relógio em tempo real - AFF A900
+= Substitua a bateria do relógio em tempo real do seu AFF A900
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Substitua a bateria do relógio de tempo real (RTC) do seu sistema AFF A900 para garantir que os serviços e aplicativos que dependem da sincronização precisa do tempo continuem funcionando.
+
 Você substitui a bateria do relógio em tempo real (RTC) no módulo do controlador para que os serviços e aplicativos do sistema que dependem da sincronização precisa de tempo continuem funcionando.
 
 * Pode utilizar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema

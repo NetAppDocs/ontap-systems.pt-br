@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff a900, replace a dimm 
 summary: Substitua um DIMM no seu módulo de controlador AFF A900 quando o sistema registrar um número crescente de códigos de correção de erros corrigíveis ou erros ECC incorrigíveis. A não substituição de um DIMM defeituoso pode causar um pânico no sistema. 
 ---
-= Substitua um DIMM - AFF A900
+= Substitua um DIMM no seu AFF A900 para corrigir erros de memória
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Substitua um DIMM no seu sistema AFF A900 quando o sistema de storage encontrar erros de memória corrigíveis (CECC) ou incorrigíveis em excesso. Esses erros podem impedir que o sistema de storage inicialize o ONTAP.
+
 Você deve substituir um DIMM no controlador quando seu sistema de armazenamento encontrar erros como erros CECC excessivos (códigos de correção de erros Correctable) que são baseados em alertas do Monitor de integridade ou erros ECC incorrigíveis, geralmente causados por uma única falha de DIMM que impede o sistema de armazenamento de inicializar o ONTAP.
 
 .Antes de começar

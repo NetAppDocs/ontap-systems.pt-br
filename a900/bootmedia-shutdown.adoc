@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a900, shut down the controller 
 summary: Você pode desligar ou assumir o controlador prejudicado usando procedimentos diferentes, dependendo da configuração do hardware do sistema de armazenamento. 
 ---
-= Desligue o controlador para recuperação manual da mídia de inicialização - AFF A900
+= Desligue o controlador do seu sistema AFF A900 durante o processo de recuperação de inicialização manual
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Encerre ou assuma o controlador afetado utilizando o procedimento adequado para a sua configuração.
+Desligue o controlador com defeito no seu sistema de storage AFF A900 para evitar perda de dados e manter a estabilidade do sistema durante o processo de recuperação de inicialização manual.
 
 Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use olink:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"] .  Se o seu sistema estiver executando uma versão anterior do ONTAP, você deverá usar o procedimento de recuperação de inicialização manual.
 

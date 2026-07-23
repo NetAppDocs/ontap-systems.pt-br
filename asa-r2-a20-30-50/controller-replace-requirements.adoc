@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa a20, asa a30, asa a50, prerequisite, replace the controller module 
 summary: Antes de substituir o controlador no seu sistema de armazenamento ASA A20, ASA A30 ou ASA A50, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida.  Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, verificar se você tem o controlador de substituição correto e salvar a saída do console do controlador em um arquivo de log de texto. 
 ---
-= Requisitos para substituir o controlador - ASA A20, ASA A30 e ASA A50
+= Verifique os requisitos antes de substituir o controlador no seu sistema ASA A20, ASA A30 ou ASA A50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

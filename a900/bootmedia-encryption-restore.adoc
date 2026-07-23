@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a900, post boot media replacement steps for okm, nse, and nve 
 summary: Restaure a criptografia na mídia de inicialização de substituição. Conclua as etapas específicas para sistemas que têm o Onboard Key Manager, NetApp Storage Encryption ou NetApp Volume Encryption ativados. 
 ---
-= Restaurar encriptação - AFF A900
+= Restaure a criptografia na mídia de inicialização do seu sistema AFF A900 após o processo de recuperação manual de inicialização
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Restaure a criptografia no nó.
+Restaure a criptografia na mídia de inicialização de substituição do seu AFF A900 para garantir a proteção contínua dos dados. O processo de substituição envolve verificar a disponibilidade da chave, reaplicar as configurações de criptografia e confirmar o acesso seguro aos seus dados.
 
 Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use olink:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"] .  Se o seu sistema estiver executando uma versão anterior do ONTAP, você deverá usar o procedimento de recuperação de inicialização manual.
 

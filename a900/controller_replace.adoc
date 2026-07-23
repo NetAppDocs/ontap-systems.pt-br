@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: AFF A900, open controller, download service image to USB drive, transfer boot image, USB drive, service image 
 summary: Para substituir o hardware do módulo do controlador, é necessário remover o controlador prejudicado, mover os componentes FRU para o módulo do controlador de substituição, instalar o módulo do controlador de substituição no chassis e, em seguida, inicializar o sistema para o modo de manutenção. 
 ---
-= Substitua o hardware do módulo do controlador - AFF A900
+= Substitua o controlador no seu sistema AFF A900
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Substitua o controlador no seu sistema AFF A900 quando uma falha de hardware exigir. O processo de substituição envolve remover o módulo controlador com problema, transferir os componentes FRU para o controlador de substituição, instalar o módulo controlador de substituição no chassi e inicializar o sistema no modo de manutenção.
+
 Para substituir o hardware do módulo do controlador, é necessário remover o controlador prejudicado, mover os componentes FRU para o módulo do controlador de substituição, instalar o módulo do controlador de substituição no chassis e, em seguida, inicializar o sistema para o modo de manutenção.
 
 A animação a seguir mostra todo o processo de movimentação de componentes do controlador prejudicado para o controlador de substituição.

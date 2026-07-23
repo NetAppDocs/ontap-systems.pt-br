@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a150, a150, aff, detailed, guide, prepare, install, hardware, cable, controllers, node, switchless, cluster, network, configuration, system, setup, discovery 
 summary: Este guia fornece instruções detalhadas passo a passo para instalar um sistema NetApp típico. 
 ---
-= Guia detalhado - AFF A150
+= Instale seu sistema AFF A150 usando instruções detalhadas passo a passo
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Esta seção fornece instruções detalhadas passo a passo para a instalação de um sistema AFF A150.
+Instale seu sistema de storage AFF A150 seguindo estas instruções detalhadas passo a passo, desde a preparação do local até a inicialização do cluster ONTAP.
 
 Se você tiver uma configuração do MetroCluster, use o https://docs.netapp.com/us-en/ontap-metrocluster/index.html["Documentação do MetroCluster"^].
 

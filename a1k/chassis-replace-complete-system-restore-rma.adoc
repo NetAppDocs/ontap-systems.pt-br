@@ -4,21 +4,21 @@ sidebar: sidebar
 keywords: aff a1k,  verify and set HA state, complete the replacement process 
 summary: Reinicie o controlador, verifique a integridade do sistema e devolva a peça com falha à NetApp para concluir a etapa final do procedimento de substituição do chassi AFF A1K . 
 ---
-= Substituição completa do chassi - AFF A1K
+= Conclua a substituição do chassi do seu sistema AFF A1K
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Reinicie o controlador, verifique a integridade do sistema e devolva a peça com falha à NetApp para concluir a etapa final do procedimento de substituição do chassi AFF A1K .
+Reinicialize o controlador, verifique a integridade do sistema e devolva a unidade com falha para NetApp para concluir a etapa final da substituição do chassi do seu sistema AFF A1K.
 
 
 
 [[step-1-boot-the-controllers-and-verify-system-health]]
 == Passo 1: Inicialize os controladores e verifique a integridade do sistema.
 
-Após a reinicialização dos controladores, inicialize o ONTAP, devolva os controladores e verifique a integridade do sistema de armazenamento.
+Após reinicializar os controladores, inicialize o ONTAP, devolva os controladores e verifique a integridade do sistema.
 
 .Passos
 . Verifique a saída da consola:

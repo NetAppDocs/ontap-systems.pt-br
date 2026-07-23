@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a1k, replace the boot media 
 summary: A recuperação manual da imagem de inicialização envolve o uso de uma unidade USB para reinstalar o ONTAP na mídia de inicialização de substituição do sistema AFF A1K . Você deve baixar a imagem de recuperação do ONTAP apropriada do site de suporte da NetApp e copiá-la para uma unidade USB. Essa unidade USB preparada é então usada para executar a recuperação e restaurar o sistema ao status operacional. 
 ---
-= Fluxo de trabalho de recuperação manual de mídia de inicialização - AFF A1K
+= Fluxo de trabalho de substituição da mídia de inicialização AFF A1K usando o processo de recuperação de inicialização manual
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
