@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff a700, fas9000, replace, io, module, shut, down, impaired, controller, node, metrocluster, pcie, replacement, switch, back, aggregates, return, failed, part 
 summary: Para substituir um módulo de e/S, tem de executar uma sequência específica de tarefas. 
 ---
-= Substitua um módulo de e/S - AFF A700 e FAS9000
+= Substitua um módulo de E/S em seu sistema AFF A700 ou FAS9000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Substitua um módulo de E/S em seu sistema AFF A700 ou FAS9000 desconectando os cabos, removendo a placa riser, substituindo o módulo e reconectando os cabos.
+
 Para substituir um módulo de e/S, tem de executar uma sequência específica de tarefas.
 
 * Pode utilizar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema

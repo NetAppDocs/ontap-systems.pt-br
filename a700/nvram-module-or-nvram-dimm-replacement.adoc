@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff a700, replace, nvram, module, dimm, manually, reassign, system, id, ha, system, disk, two, node, restore, storage, volume, encryption, functionality 
 summary: 'O módulo NVRAM consiste no NVRAM10 e DIMMs e até dois módulos de cache flash SSD NVMe (módulos de cache ou cache) por módulo NVRAM.' 
 ---
-= Substitua o módulo NVRAM ou DIMMs NVRAM - AFF A700
+= Substitua o módulo NVRAM ou os DIMMs NVRAM no seu sistema AFF A700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Substitua o módulo NVRAM ou os DIMMs NVRAM no seu AFF A700 para restaurar a funcionalidade adequada do NVRAM e o desempenho do sistema.
+
 O módulo NVRAM consiste no NVRAM10 e DIMMs e até dois módulos de cache flash SSD NVMe (módulos de cache ou cache) por módulo NVRAM. Você pode substituir um módulo NVRAM com falha ou os DIMMs dentro do módulo NVRAM.
 
 Para substituir um módulo NVRAM com falha, você deve removê-lo do chassi, remover o módulo Flash Cache ou módulos do módulo NVRAM, mover os DIMMs para o módulo de substituição, reinstalar o módulo Flash Cache ou módulos e instalar o módulo NVRAM de substituição no chassi.

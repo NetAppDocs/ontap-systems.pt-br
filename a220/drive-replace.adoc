@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff, a220, replace the drives 
 summary: Você deve substituir uma unidade quando a plataforma Registrar uma mensagem de aviso no console do sistema indicando que uma unidade falhou. Além disso, o LED de avaria no painel do visor do operador e o LED de avaria na unidade avariada acendem-se. 
 ---
-= Substitua a unidade SSD ou a unidade HDD - AFF A220
+= Substitua uma unidade de disco no seu sistema AFF A220
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Substitua uma unidade com falha no seu sistema AFF A220 sem interromper as operações de E/S. O AFF A220 é compatível com unidades SSD e HDDs, cada uma com um procedimento de substituição específico.
+
 Você pode substituir uma unidade com falha sem interrupções enquanto a e/S estiver em andamento. O procedimento para substituir um SSD destina-se a unidades não giratórias e o procedimento para substituir um HDD destina-se a unidades giratórias.
 
 Quando uma unidade falha, a plataforma Registra uma mensagem de aviso no console do sistema indicando qual unidade falhou. Além disso, o LED de avaria no painel do visor do operador e o LED de avaria na unidade avariada acendem-se.

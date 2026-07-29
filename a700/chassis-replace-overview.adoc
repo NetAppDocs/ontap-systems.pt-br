@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff a700, fas9000, chassis replacement 
 summary: Substituir um chassis com deficiência o novo chassis do mesmo modelo que o chassis com deficiência. 
 ---
-= Descrição geral da substituição do chassis - AFF A700
+= Analise os requisitos antes de substituir o chassi AFF A700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Antes de substituir o chassi do seu AFF A700, revise os requisitos para uma substituição bem-sucedida. O procedimento de substituição do chassi move todos os componentes do chassi com problema para o chassi de substituição e é um processo que causa interrupções.
+
 Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
 
 * Pode utilizar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema.

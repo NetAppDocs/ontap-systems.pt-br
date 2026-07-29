@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff a700, replace, controller, module, hardware, install, controller, system, dimms, move, boot, media 
 summary: Para substituir o hardware do módulo do controlador, você deve remover o nó prejudicado, mover os componentes FRU para o módulo do controlador de substituição, instalar o módulo do controlador de substituição no chassi e, em seguida, inicializar o sistema para o modo de manutenção. 
 ---
-= Substitua o hardware do módulo do controlador - AFF A700
+= Substitua o controlador no seu sistema AFF A700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Substitua o controlador no seu sistema AFF A700 removendo o controlador com problema, transferindo os componentes FRU para o módulo de substituição, instalando-o no chassi e inicializando no modo de manutenção.
+
 Para substituir o hardware do módulo do controlador, você deve remover o nó prejudicado, mover os componentes FRU para o módulo do controlador de substituição, instalar o módulo do controlador de substituição no chassi e, em seguida, inicializar o sistema para o modo de manutenção.
 
 

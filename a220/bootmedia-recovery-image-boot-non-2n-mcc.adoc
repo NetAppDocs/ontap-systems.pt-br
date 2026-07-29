@@ -4,13 +4,14 @@ sidebar: sidebar
 keywords: aff 220, boot, recovery, image, restore, file, system, environmental, varible, manual, manual boot recovery 
 summary: Você deve inicializar a imagem do ONTAP a partir da unidade USB, restaurar o sistema de arquivos e verificar as variáveis ​​de ambiente. O sistema AFF A220 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. 
 ---
-= Inicie a imagem de recuperação - AFF A220
+= Inicialize a imagem de recuperação no seu sistema AFF A220
 :allow-uri-read: 
+:icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-O sistema AFF A220 suporta apenas procedimentos manuais de recuperação de mídia de inicialização.
+Inicialize a imagem de recuperação do ONTAP a partir da unidade USB no seu sistema AFF A220 para restaurar a mídia de inicialização usando o processo de recuperação de inicialização manual.
 
 Você deve inicializar a imagem ONTAP a partir da unidade USB, restaurar o sistema de arquivos e verificar as variáveis ambientais.
 

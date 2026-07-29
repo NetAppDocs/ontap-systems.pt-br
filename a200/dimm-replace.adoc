@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a200, replace the dimms 
 summary: Você deve substituir um DIMM no controlador quando seu sistema de storage encontrar erros como erros CECC excessivos com base em alertas do Health Monitor ou erros ECC incorrigíveis, normalmente causados por uma única falha de DIMM que impede o sistema de storage de inicializar o ONTAP. 
 ---
-= Substitua um DIMM - AFF A200
+= Substitua um módulo DIMM no seu sistema AFF A200
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Você deve substituir um DIMM no controlador quando seu sistema de armazenamento encontrar erros como erros CECC excessivos (códigos de correção de erros Correctable) que são baseados em alertas do Monitor de integridade ou erros ECC incorrigíveis, geralmente causados por uma única falha de DIMM que impede o sistema de armazenamento de inicializar o ONTAP.
+Substitua um DIMM no seu AFF A200 quando o sistema de storage apresentar um número excessivo de erros ECC corrigíveis ou um erro ECC incorrigível, o que normalmente é causado pela falha de um único DIMM.
 
 .Sobre esta tarefa
 * Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.

@@ -1,16 +1,18 @@
 ---
 permalink: a700/x91148a-modules-with-open-slots-add.html 
 sidebar: sidebar 
-keywords: aff a700, ass, x91148a, module, open, slots, nic, storage 
+keywords: aff a700, x91148a, module, open, slots, nic, storage 
 summary: Você pode adicionar um módulo X91148A em um slot de módulo vazio em seu sistema como uma NIC 100GbE ou um módulo de armazenamento para as NS224 prateleiras de armazenamento. 
 ---
-= Adicione um módulo X91148A em um sistema com slots abertos - A700
+= Adicione um módulo X91148A ao seu sistema AFF A700 usando um slot disponível
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Adicione um módulo X91148A ao seu sistema AFF A700 usando um slot disponível no chassi.
+
 Você pode adicionar um módulo X91148A em um slot de módulo vazio em seu sistema como uma NIC 100GbE ou um módulo de armazenamento para as NS224 prateleiras de armazenamento.
 
 * Seu sistema deve estar executando o ONTAP 9.8 e posterior.

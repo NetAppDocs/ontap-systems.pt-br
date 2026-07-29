@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa c400, restore and verify the system configuration, verify and set the ha state of the controller module 
 summary: 'Verifique se a configuração de alta disponibilidade (HA) do controlador está ativa e funcionando corretamente no seu sistema de storage ASA C400 e confirme se as portas de storage do sistema listam todos os caminhos para os discos.' 
 ---
-= Restaure e verifique a configuração do sistema - ASA C400
+= Restaure e verifique a configuração do controlador no seu sistema ASA C400
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

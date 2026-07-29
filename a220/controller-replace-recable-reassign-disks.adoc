@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: fas2700, aff a220, how to recable the system, how to reassign disks 
 summary: Você deve remarcar o armazenamento e confirmar a reatribuição do disco. 
 ---
-= Recable o sistema e reatribuir discos - AFF A220
+= Reconecte os cabos do sistema e reatribua os discos no seu AFF A220
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Conclua a substituição do controlador do seu AFF A220 reconectando os cabos de armazenamento e confirmando a reatribuição dos discos.
+
 Para concluir o procedimento de substituição e restaurar o sistema para o funcionamento completo, tem de voltar a efetuar a remarcação do armazenamento, confirmar a reatribuição do disco, restaurar a configuração da encriptação de armazenamento NetApp (se necessário) e instalar licenças para o novo controlador. Você deve concluir uma série de tarefas antes de restaurar o sistema para a operação completa.
 
 

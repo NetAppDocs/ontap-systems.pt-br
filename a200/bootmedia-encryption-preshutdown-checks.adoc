@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a200, pre-shutdown checks for onboard encryption keys, manual, manual boot recovery 
 summary: Antes de desligar o controlador com defeito e verificar o status das chaves de criptografia integradas, você deve verificar o status do controlador com defeito, desativar a devolução automática e verificar qual versão do ONTAP o sistema está executando. O sistema AFF A200 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. 
 ---
-= Verifique o suporte e o status da chave de criptografia - AFF A200
+= Verifique o suporte à criptografia na sua mídia de inicialização no seu sistema AFF A200
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

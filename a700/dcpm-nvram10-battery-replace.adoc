@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff a700, fas9000, replace, destage, controller, power, module, nvram10, battery, dcpm, dispose, return, failed, part 
 summary: Para substituir com o equipamento em funcionamento o módulo de alimentação do controlador de desestágio, que contém a bateria NVRAM10, localize o módulo DCPM com defeito, remova-o do chassi e instale o módulo DCPM de substituição. 
 ---
-= Módulo de alimentação do controlador de fase de troca a quente (DCPM) - AFF A700
+= Substitua a quente um módulo de alimentação do controlador de de-stage (DCPM) no seu sistema AFF A700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Faça a troca a quente de um módulo de alimentação do controlador de desestágio (DCPM) em seu sistema AFF A700 para substituir o módulo com defeito sem interromper o serviço.
+
 Para trocar a quente um módulo de alimentação do controlador de estágio (DCPM), que contém a bateria de NVRAM10 V, você deve localizar o módulo DCPM com falha, removê-lo do chassi e instalar o módulo DCPM de substituição.
 
 Tem de ter um módulo DCPM de substituição em mãos antes de remover o módulo com falha do chassis e este tem de ser substituído no prazo de cinco minutos após a remoção. Uma vez que o módulo DCPM é removido do chassi, não há proteção de desligamento para o módulo do controlador que possui o módulo DCPM, além de failover para o outro módulo do controlador.

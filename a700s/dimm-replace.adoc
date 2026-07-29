@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a700s, aff, a700s, replace, fimm, controller, module, system, register, increase, increasing, number, correctable, error, correction, code, ecc, failure, system, panic, dimm, shut, down, impair, complete, replacement, process, replace a dimmm, shut down the impaired controller, remove the controller module, replace a dimm, reinstall the controller module and booting the system, complete the replacement process 
 summary: Substitua um DIMM no módulo do controlador AFF A700s quando o sistema registrar um número crescente de códigos de correção de erro corrigíveis ou erros ECC incorrigíveis. A não substituição de um DIMM defeituoso pode causar um pânico no sistema. 
 ---
-= Substitua um DIMM - AFF A700s
+= Substitua um módulo DIMM no seu sistema AFF A700s
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Você deve substituir um DIMM no controlador quando seu sistema de armazenamento encontrar erros como erros CECC excessivos (códigos de correção de erros Correctable) que são baseados em alertas do Monitor de integridade ou erros ECC incorrigíveis, geralmente causados por uma única falha de DIMM que impede o sistema de armazenamento de inicializar o ONTAP.
+Substitua um DIMM no seu AFF A700s quando o sistema de storage apresentar um número excessivo de erros ECC corrigíveis ou um erro ECC incorrigível, o que normalmente é causado pela falha de um único DIMM.
 
 Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
 

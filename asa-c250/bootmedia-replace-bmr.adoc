@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa c250, replace the boot media 
 summary: A mídia de inicialização no seu sistema ASA C250 armazena dados essenciais de firmware e configuração. O processo de substituição envolve remover o módulo controlador, remover a mídia de inicialização com problema, instalar a mídia de inicialização de substituição no módulo controlador e, em seguida, reinstalar o módulo controlador. 
 ---
-= Substitua a mídia de inicialização para recuperação automática de boot - ASA C250
+= Substitua a mídia de inicialização no seu sistema ASA C250 usando o processo automatizado de recuperação de inicialização
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

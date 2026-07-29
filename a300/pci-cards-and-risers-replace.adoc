@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a300, replace a pcie card 
 summary: Para substituir uma placa PCIe, é necessário executar uma sequência específica de tarefas. 
 ---
-= Substitua uma placa PCIe - AFF A300
+= Substitua uma placa PCIe no seu sistema AFF A300
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Para substituir uma placa PCIe, é necessário executar uma sequência específica de tarefas.
+Substitua uma placa PCIe no seu AFF A300 desconectando os cabos, removendo a placa, instalando a substituição e reconectando os cabos.
 
 * Pode utilizar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema
 * Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
