@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff c800, replace a fan 
 summary: Tem de remover o módulo do controlador do chassis quando substituir um módulo da ventoinha avariado e substituí-lo por um novo módulo da ventoinha. 
 ---
-= Substitua uma ventoinha - AFF C800
+= Substitua uma ventoinha no seu sistema AFF C800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -91,7 +91,7 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 [[step-2-remove-the-controller-module]]
 == Passo 2: Remova o módulo do controlador
 
-Deve remover o módulo do controlador do chassis quando substituir o módulo do controlador ou substituir um componente dentro do módulo do controlador.
+Remova o módulo controlador do chassi ao substituir o módulo controlador ou substituir um componente interno do módulo controlador.
 
 .Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.

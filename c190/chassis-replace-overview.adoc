@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff c190, replace the chassis 
 summary: Substituir um chassis com deficiência o novo chassis do mesmo modelo que o chassis com deficiência. 
 ---
-= Descrição geral da substituição do chassis - AFF C190
+= Analise os requisitos antes de substituir o chassi AFF C190
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Para substituir o chassi, você deve mover as fontes de alimentação, os discos rígidos e o módulo ou módulos do controlador do chassi com deficiência para o novo chassi e trocar o chassi com deficiência do rack de equipamentos ou do gabinete do sistema pelo novo chassi do mesmo modelo que o chassi com deficiência.
+Antes de substituir o chassi do seu AFF C190, revise os requisitos para uma substituição bem-sucedida. O procedimento de substituição do chassi exige a transferência de todas as unidades, fontes de alimentação e módulos de controle do chassi com problema para o chassi de substituição e é um processo disruptivo.
 
 Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
 

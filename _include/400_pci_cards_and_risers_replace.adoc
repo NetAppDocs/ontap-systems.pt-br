@@ -13,14 +13,12 @@ Para substituir uma placa PCIe ou mezzanine, você deve desconetar os cabos e to
 [[step-1-shut-down-the-impaired-controller]]
 == Passo 1: Desligue o controlador desativado
 
-[role="lead"]
 Você pode desligar ou assumir o controlador prejudicado usando procedimentos diferentes, dependendo da configuração do hardware do sistema de armazenamento.
 
 [role="tabbed-block"]
 ====
 .Opção 1: A maioria das configurações
 --
-[role="lead"]
 Assuma o controle e interrompa o controlador com defeito para que o controlador em bom estado continue a fornecer dados do armazenamento do controlador com defeito. Para fazer isso, você suprime a criação automática de casos em AutoSupport, desativa o giveback automático e leva o controlador com defeito ao prompt LOADER. O prompt LOADER é o estado de parada segura a partir do qual você pode substituir a FRU.
 
 .Sobre esta tarefa
@@ -90,7 +88,6 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 --
 .Opção 2: O controlador está em um MetroCluster de dois nós
 --
-[role="lead"]
 Para desligar o controlador desativado, você deve determinar o status do controlador e, se necessário, trocar o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador prejudicado.
 
 .Sobre esta tarefa
@@ -189,9 +186,9 @@ mcc1A::> metrocluster operation show
 [[step-2-remove-the-controller-module]]
 == Passo 2: Remova o módulo do controlador
 
-[role="lead"]
 Para aceder aos componentes no interior do módulo do controlador, tem de remover o módulo do controlador do chassis.
 
+.Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Solte os fixadores do cabo de alimentação e, em seguida, desconete os cabos das fontes de alimentação.
 . Solte o gancho e a alça de loop que prendem os cabos ao dispositivo de gerenciamento de cabos e, em seguida, desconete os cabos do sistema e os SFPs (se necessário) do módulo do controlador, mantendo o controle de onde os cabos estavam conetados.
@@ -236,7 +233,6 @@ Certifique-se de que suporta a parte inferior do módulo do controlador enquanto
 [[step-3-replace-a-pcie-card]]
 == Etapa 3: Substitua uma placa PCIe
 
-[role="lead"]
 Para substituir uma placa PCIe, você deve localizar a placa PCIe com falha, remover a riser que contém a placa do módulo da controladora, substituir a placa e reinstalar a riser PCIe no módulo da controladora.
 
 Você pode usar a animação, ilustração ou as etapas escritas a seguir para substituir uma placa PCIe.
@@ -276,6 +272,7 @@ image:../media/icon_round_4.png["Legenda número 4"]
 Placa PCI
 
 |===
+.Passos
 . Remova o riser que contém a placa a ser substituída:
 +
 .. Abra a conduta de ar premindo as patilhas de bloqueio nas laterais da conduta de ar, deslize-a em direção à parte de trás do módulo do controlador e, em seguida, rode-a para a posição completamente aberta.
@@ -317,7 +314,6 @@ NOTE: Se você estiver instalando uma placa no slot inferior e não conseguir ve
 [[step-4-replace-the-mezzanine-card]]
 == Passo 4: Substitua a placa mezzanine
 
-[role="lead"]
 A placa mezzanine está localizada sob o riser número 3 (slots 4 e 5). Você deve remover esse riser para acessar a placa mezzanine, substituir a placa mezzanine e reinstalar o riser número 3. Consulte o mapa da FRU no módulo do controlador para obter mais informações.
 
 Você pode usar a animação, ilustração ou as etapas escritas a seguir para substituir a placa mezzanine.
@@ -350,6 +346,7 @@ image:../media/icon_round_3.png["Legenda número 3"]
 Placa riser
 
 |===
+.Passos
 . Remova o riser número 3 (slots 4 e 5):
 +
 .. Abra a conduta de ar premindo as patilhas de bloqueio nas laterais da conduta de ar, deslize-a em direção à parte de trás do módulo do controlador e, em seguida, rode-a para a posição completamente aberta.
@@ -389,6 +386,7 @@ NOTE: Aperte completamente os parafusos de fixação da placa mezzanine. Se esti
 
 Depois de ter substituído o componente no módulo do controlador, tem de reinstalar o módulo do controlador no chassis e, em seguida, iniciá-lo no modo de manutenção.
 
+.Passos
 . Se ainda não o tiver feito, feche a conduta de ar.
 . Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
 +
@@ -434,6 +432,7 @@ NOTE: Se o sistema parar no menu de inicialização, selecione a opção para in
 
 Para restaurar o controlador, tem de voltar a ligar o sistema, devolver o módulo do controlador e, em seguida, voltar a ativar a giveback automática.
 
+.Passos
 . Recable o sistema, conforme necessário.
 +
 Se você removeu os conversores de Mídia (QSFPs ou SFPs), lembre-se de reinstalá-los se você estiver usando cabos de fibra ótica.

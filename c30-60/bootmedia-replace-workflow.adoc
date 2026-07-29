@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff c30, aff c60, replace the boot media 
 summary: A recuperação manual da imagem de inicialização envolve o uso de uma unidade USB para reinstalar o ONTAP na mídia de inicialização de substituição do sistema de armazenamento AFF C30 ou AFF C60. Você deve baixar a imagem de recuperação do ONTAP apropriada no site de suporte da NetApp e copiá-la para uma unidade USB. Essa unidade USB preparada é então usada para executar a recuperação e restaurar o sistema ao status operacional. 
 ---
-= Fluxo de trabalho de recuperação manual de mídia de inicialização - AFF C30 e AFF C60
+= Fluxo de trabalho de substituição da mídia de inicialização do AFF C30 e AFF C60 usando o processo de recuperação de inicialização manual
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

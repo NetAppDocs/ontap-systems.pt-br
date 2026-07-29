@@ -4,16 +4,16 @@ sidebar: sidebar
 keywords: aff c400, aff, c400, shut, down, impair, controller, check, status, onboard, encryption, keys, status, disable, automatic, giveback, version, ontap, system, run, pre-shutdown, check, pre-shutdown checks for onboard encryption keys 
 summary: Antes de desligar o controlador com deficiência e verificar o estado das chaves de encriptação integradas, tem de verificar o estado do controlador com deficiência, desativar a giveback automática e verificar a versão do ONTAP em execução. 
 ---
-= Verifique o suporte e o status da chave de criptografia - AFF C400
+= Verifique o suporte à criptografia na sua mídia de inicialização no seu sistema de storage AFF C400
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Para garantir a segurança dos dados no sistema de armazenamento, é necessário verificar o suporte e o status da chave de criptografia na Mídia de inicialização. Verifique se sua versão do ONTAP suporta criptografia de volume NetApp (NVE) e, antes de desligar a controladora, verifique se o gerenciador de chaves está ativo.
+Verifique o suporte à criptografia na sua mídia de inicialização no seu sistema de storage AFF C400 antes de desligar o controlador com falha. Isso inclui verificar a compatibilidade da versão do ONTAP com NetApp Volume Encryption (NVE) e confirmar a configuração do gerenciador de chaves.
 
-Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use olink:bootmedia-replace-workflow.html["procedimento de recuperação de inicialização manual"]
+Se o seu sistema de storage estiver executando ONTAP 9.17.1 ou posterior, use o link:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"].
 
 
 

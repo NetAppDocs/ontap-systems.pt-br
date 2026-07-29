@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff c400, replace a power supply 
 summary: 'A substituição de uma fonte de alimentação envolve desconetar a fonte de alimentação de destino (PSU) da fonte de alimentação, desconetar o cabo de alimentação, remover a fonte de alimentação antiga e instalar a fonte de alimentação de substituição e conectá-la novamente à fonte de alimentação.' 
 ---
-= Troca a quente de uma fonte de alimentação - AFF C400
+= Substitua a fonte de alimentação com hot-swap no seu sistema de storage AFF C400
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Substitua a quente a fonte de alimentação no seu sistema de storage AFF C400 para manter o fornecimento contínuo de energia sem interromper o serviço.
+
 A substituição de uma fonte de alimentação (PSU) envolve desconetar a fonte de alimentação de destino, desconetar o cabo de alimentação, remover a fonte de alimentação antiga e instalar a fonte de alimentação de substituição e, em seguida, reconetar a fonte de alimentação de substituição à fonte de alimentação.
 
 * As fontes de alimentação são redundantes e intercambiáveis a quente. Não é necessário desligar o controlador para substituir uma PSU.

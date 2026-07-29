@@ -22,7 +22,6 @@ Todos os outros componentes do sistema devem estar funcionando corretamente; cas
 [[step-1-shut-down-the-impaired-controller]]
 == Passo 1: Desligue o controlador desativado
 
-[role="lead"]
 Assuma o controle e interrompa o controlador com defeito para que o controlador em bom estado continue a fornecer dados do armazenamento do controlador com defeito. Para fazer isso, você suprime a criação automática de casos em AutoSupport, desativa o giveback automático e leva o controlador com defeito ao prompt LOADER. O prompt LOADER é o estado de parada segura a partir do qual você pode substituir a FRU.
 
 .Sobre esta tarefa
@@ -95,7 +94,6 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 [[step-2-remove-controller-module]]
 == Passo 2: Remova o módulo do controlador
 
-[role="lead"]
 Para aceder aos componentes no interior do controlador, tem de remover primeiro o módulo do controlador do sistema e, em seguida, remover a tampa do módulo do controlador.
 
 .Passos
@@ -121,7 +119,6 @@ image::../media/drw_2240_x_opening_cam_latch.png[Abrir o trinco do puxador da á
 [[step-3-replace-the-nvmem-battery]]
 == Passo 3: Substitua a bateria do NVMEM
 
-[role="lead"]
 Para substituir a bateria NVMEM no sistema, tem de remover a bateria NVMEM avariada do sistema e substituí-la por uma nova bateria NVMEM.
 
 .Passos
@@ -165,7 +162,6 @@ image::../media/drw_2600_nvmem_batt_repl_animated_gif.png[Substituição da bate
 [[step-4-reinstall-the-controller-module]]
 == Etapa 4: Reinstale o módulo do controlador
 
-[role="lead"]
 Depois de substituir os componentes no módulo do controlador, volte a instalá-lo no chassis.
 
 .Passos
@@ -227,7 +223,6 @@ NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para de
 [[step-5-switch-back-aggregates-in-a-two-node-metrocluster-configuration]]
 == Etapa 5: Alterne agregados de volta em uma configuração de MetroCluster de dois nós
 
-[role="lead"]
 Esta tarefa só se aplica a configurações de MetroCluster de dois nós.
 
 .Passos
@@ -285,5 +280,4 @@ Se um switchback estiver demorando muito tempo para terminar, você pode verific
 [[step-6-return-the-failed-part-to-netapp]]
 == Passo 6: Devolva a peça com falha ao NetApp
 
-[role="lead"]
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

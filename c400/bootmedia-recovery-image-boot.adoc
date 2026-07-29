@@ -4,16 +4,16 @@ sidebar: sidebar
 keywords: aff c400, aff, c400, procedure, boot, impair, controller, recovery, image, system, two-node, metrocluster, configuration, boot the recovery image 
 summary: O procedimento para inicializar o controlador prejudicado a partir da imagem de recuperação depende se o sistema está em uma configuração de MetroCluster de dois nós. 
 ---
-= Recuperação manual de mídia de inicialização de uma unidade USB - AFF C400
+= Inicialize a imagem de recuperação no seu sistema de storage AFF C400 usando o processo de recuperação de inicialização manual
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Depois de instalar o novo dispositivo multimédia de arranque no seu sistema, pode arrancar a imagem de recuperação a partir de uma unidade USB e restaurar a configuração a partir do nó do parceiro.
+Inicialize a imagem de recuperação no seu sistema de storage AFF C400 a partir de uma unidade USB para restaurar a configuração do nó parceiro.
 
-Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use olink:bootmedia-replace-workflow.html["procedimento de recuperação de inicialização manual"]
+Se o seu sistema de storage estiver executando ONTAP 9.17.1 ou posterior, use o link:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"].
 
 .Antes de começar
 * Certifique-se de que seu console esteja conectado ao controle com defeito.

@@ -2,16 +2,16 @@
 permalink: c30-60/bootmedia-recovery-image-boot-bmr.html 
 sidebar: sidebar 
 keywords: aff c30, aff c60, boot the recovery image 
-summary: Após instalar o novo dispositivo de mídia de inicialização no seu sistema de armazenamento AFF C30 e AFF C80, você pode iniciar o processo automatizado de recuperação de mídia de inicialização para restaurar a configuração do nó parceiro. Durante o processo de recuperação, o sistema verifica se a criptografia está habilitada e determina o tipo de criptografia de chave em uso. Se a criptografia de chave estiver habilitada, o sistema o guiará pelas etapas apropriadas para restaurá-la. 
+summary: Após instalar o novo dispositivo de mídia de inicialização no seu sistema de storage AFF C30 ou AFF C60, você pode iniciar o processo automatizado de recuperação da mídia de inicialização para restaurar a configuração do nó parceiro. Durante o processo de recuperação, o sistema verifica se a criptografia está ativada e determina o tipo de criptografia de chave em uso. Se a criptografia de chave estiver ativada, o sistema orienta você pelos passos apropriados para restaurá-la. 
 ---
-= Recuperação automatizada de mídia de inicialização do nó parceiro - AFF C30 e AFF C80
+= Restaure a imagem de inicialização no seu sistema de storage AFF C30 ou AFF C60 usando o processo automatizado de recuperação de inicialização
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Após instalar o novo dispositivo de mídia de inicialização no seu sistema de armazenamento AFF C30 e AFF C80, você pode iniciar o processo automatizado de recuperação de mídia de inicialização para restaurar a configuração do nó parceiro. Durante o processo de recuperação, o sistema verifica se a criptografia está habilitada e determina o tipo de criptografia de chave em uso. Se a criptografia de chave estiver habilitada, o sistema o guiará pelas etapas apropriadas para restaurá-la.
+Após instalar o novo dispositivo de mídia de inicialização no seu sistema de storage AFF C30 ou AFF C60, você pode iniciar o processo automatizado de recuperação da mídia de inicialização para restaurar a configuração do nó parceiro. Durante o processo de recuperação, o sistema verifica se a criptografia está ativada e determina o tipo de criptografia de chave em uso. Se a criptografia de chave estiver ativada, o sistema orienta você pelos passos apropriados para restaurá-la.
 
 O processo automatizado de recuperação de mídia de inicialização é compatível apenas com o ONTAP 9.17.1 e versões posteriores. Se o seu sistema de armazenamento estiver executando uma versão anterior do ONTAP, use o link:bootmedia-replace-workflow.html["procedimento de recuperação de inicialização manual"] .
 

@@ -2,7 +2,6 @@
 :allow-uri-read: 
 
 
-[role="lead"]
 Você pode substituir uma unidade com falha sem interrupções enquanto a e/S estiver em andamento. O procedimento para substituir um SSD destina-se a unidades não giratórias e o procedimento para substituir um HDD destina-se a unidades giratórias.
 
 Quando uma unidade falha, a plataforma Registra uma mensagem de aviso no console do sistema indicando qual unidade falhou. Além disso, o LED de avaria no painel do visor do operador e o LED de avaria na unidade avariada acendem-se.
