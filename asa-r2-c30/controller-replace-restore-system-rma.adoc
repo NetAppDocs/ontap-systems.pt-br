@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa c30, how to restore NetApp Storage Encryption, how to complete the replacement process 
 summary: Para concluir a substituição do controlador do seu sistema de storage ASA C30, primeiro restaure a configuração de criptografia de storage NetApp, se necessário, e instale as licenças necessárias no novo controlador. Em seguida, confirme se as interfaces lógicas estão relatando para suas portas iniciais e execute uma verificação de integridade do cluster. Por fim, registre o número de série do novo controlador e, em seguida, devolva a peça com defeito para a NetApp. 
 ---
-= Substituição completa do controlador - ASA C30
+= Conclua a substituição do controlador do seu sistema ASA C30
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

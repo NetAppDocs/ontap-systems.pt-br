@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa r2 a70, asa r2 a90, how to restore NetApp Storage Encryption, how to complete the replacement process 
 summary: Para concluir a substituição do controlador do seu sistema ASA A70 ou ASA A90, primeiro restaure a configuração de criptografia de storage NetApp conforme necessário. Em seguida, confirme se as interfaces lógicas estão relatando para suas portas iniciais e execute uma verificação de integridade do cluster. Por fim, devolva a peça com defeito para a NetApp. 
 ---
-= Substituição completa do controlador - ASA A70 e ASA A90
+= Conclua a substituição do controlador do seu sistema ASA A70 ou ASA A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

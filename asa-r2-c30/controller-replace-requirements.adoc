@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa c30, prerequisite, replace the controller module 
 summary: Antes de substituir o controlador no seu sistema de armazenamento ASA C30, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, verificar se você tem o controlador de substituição correto e salvar a saída do console do controlador em um arquivo de log de texto. 
 ---
-= Requisitos para substituir o controlador - ASA C30
+= Verifique os requisitos antes de substituir o controlador no seu sistema ASA C30
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

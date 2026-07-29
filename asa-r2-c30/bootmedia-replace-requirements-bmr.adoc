@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa c30, replace the boot media 
 summary: Antes de substituir a mídia de inicialização no seu ASA C30 sistema de storage, certifique-se de atender aos requisitos e considerações necessários para uma substituição bem-sucedida. Isso inclui verificar se você possui a mídia de inicialização de substituição correta, confirmar se a porta e0M wrench no controlador com defeito está funcionando corretamente e determinar se o Onboard Key Manager ou o External Key Manager está habilitado. 
 ---
-= Requisitos para substituir o suporte de arranque - ASA C30
+= Analise os requisitos para recuperação automática da mídia de inicialização no seu sistema ASA C30
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

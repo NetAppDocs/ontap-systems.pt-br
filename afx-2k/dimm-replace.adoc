@@ -2,9 +2,9 @@
 permalink: afx-2k/dimm-replace.html 
 sidebar: sidebar 
 keywords: afx 2k, replace a dimm 
-summary: Substitua um DIMM em seu sistema de storage afx 2k se forem detectados erros de memória excessivos, corrigíveis ou não corrigíveis. Esses erros podem impedir que o sistema de storage inicialize o ONTAP. O processo de substituição envolve desligar o controlador com defeito, removê-lo, substituir o DIMM, reinstalar o controlador e, em seguida, devolver a peça com defeito para a NetApp. 
+summary: Substitua um DIMM no seu sistema de storage AFX 2K se forem detectados erros de memória excessivos, corrigíveis ou não corrigíveis. Esses erros podem impedir que o sistema de storage inicialize o ONTAP. O processo de substituição envolve desligar o controlador com defeito, removê-lo, substituir o DIMM, reinstalar o controlador e, em seguida, devolver a peça com defeito para a NetApp. 
 ---
-= Substituir um módulo DIMM - AFX 2K
+= Substitua um módulo DIMM no seu sistema de storage AFX 2K para corrigir erros de memória
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

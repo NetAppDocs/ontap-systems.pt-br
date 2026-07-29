@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa c30, replace the drives 
 summary: Substitua uma unidade no seu sistema de armazenamento ASA C30 quando uma unidade falhar ou precisar de uma atualização. O processo de substituição envolve identificar a unidade com defeito, removê-la com segurança e instalar uma nova unidade para garantir o acesso contínuo aos dados e o desempenho do sistema. 
 ---
-= Substituir uma unidade - ASA C30
+= Faça a troca a quente de uma unidade no seu sistema ASA C30
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,7 +13,7 @@ summary: Substitua uma unidade no seu sistema de armazenamento ASA C30 quando um
 [role="lead"]
 Substitua uma unidade no seu sistema de armazenamento ASA C30 quando uma unidade falhar ou precisar de uma atualização. O processo de substituição envolve identificar a unidade com defeito, removê-la com segurança e instalar uma nova unidade para garantir o acesso contínuo aos dados e o desempenho do sistema.
 
-Você pode substituir uma unidade com falha sem interrupções enquanto a e/S estiver em andamento.
+Você pode trocar um disco rígido sem interrupção enquanto as operações de E/S estão em andamento.
 
 .Antes de começar
 * A unidade que você está instalando deve ser suportada pelo seu sistema de armazenamento.

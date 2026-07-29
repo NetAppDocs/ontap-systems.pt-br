@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa r2 a70, asa r2 a90, restore and verify the system configuration, verify and set the ha state of the controller module 
 summary: Verifique se a configuração de HA do controlador está ativa e funcionando corretamente no sistema de storage ASA A70 ou ASA A90 e confirme se os adaptadores do sistema listam todos os caminhos para os discos. 
 ---
-= Restaure e verifique a configuração do sistema - ASA A70 e ASA A90
+= Restaure e verifique a configuração do controlador no seu sistema ASA A70 ou ASA A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

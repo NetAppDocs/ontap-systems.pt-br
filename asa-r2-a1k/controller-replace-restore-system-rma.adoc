@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa r2 a1k, how to restore NetApp Storage Encryption, how to complete the replacement process 
 summary: Para concluir a substituição do controlador do seu sistema ASA A1K, primeiro restaure a configuração de NetApp Storage Encryption, se necessário. Em seguida, confirme se as interfaces lógicas estão relatando para suas portas iniciais e execute uma verificação de integridade do cluster. Por fim, devolva a peça com defeito para a NetApp. 
 ---
-= Substituição completa do controlador - ASA A1K
+= Conclua a substituição do controlador do seu sistema ASA A1K
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

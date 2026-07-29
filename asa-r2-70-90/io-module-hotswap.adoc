@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa r2 a70, asa r2 a90, hot swap a cluster ha card, hot swap ethernet client io module, hotswap io module, hot swap io module 
 summary: Você pode realizar a substituição a quente de um módulo de E/S Ethernet em seu ASA A70 ou ASA A90 sistema de storage caso um módulo apresente falha e seu sistema de storage atenda a todos os requisitos de versão do ONTAP. 
 ---
-= Substituição a quente de um módulo de E/S - ASA A70 e ASA A90
+= Troque um módulo de E/S com substituição a quente no seu sistema ASA A70 ou ASA A90 sem desligá-lo
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -159,7 +159,7 @@ O resultado deve mostrar  `_powered-off_` na  `_status_` coluna para o módulo c
 [[step-3-replace-the-failed-io-module]]
 == Etapa 3: substitua o módulo de E/S com defeito
 
-Substitua o módulo de I/O com defeito por um módulo de I/O equivalente.
+Substitua o módulo de E/S com defeito por um módulo de E/S equivalente.
 
 .Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.

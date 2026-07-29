@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa r2 a70, asa r2 a90, replace the boot media 
 summary: A Mídia de inicialização no seu sistema ASA A70 ou ASA A90 armazena dados essenciais de firmware e configuração. O processo de substituição envolve a remoção do módulo de gestão do sistema, remoção do suporte de arranque com problemas, instalação do suporte de arranque de substituição no módulo de gestão do sistema e, em seguida, reinstalação do módulo de gestão do sistema. 
 ---
-= Substitua o suporte de arranque - ASA A70 e ASA A90
+= Substitua a mídia de inicialização no seu sistema ASA A70 ou ASA A90 usando o processo automatizado de recuperação de inicialização
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
