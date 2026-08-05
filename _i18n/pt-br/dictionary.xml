@@ -1720,7 +1720,6 @@
   <block id="85fd23f64df6d6e4c54bd55af7b58c44" category="paragraph">Módulo NIC nos slots 3 ou 7,</block>
   <block id="86cf1151f6e6623b20e6f28b8eb846ea" category="paragraph">Use o<block ref="9dedaa5871e5e9684cbae52f5e1b987d" prefix=" " category="inline-code"></block> comando para cada porta.</block>
   <block id="3cb2d50b71ca167f282d29cc4a2f763f" category="paragraph">Módulo de armazenamento</block>
-  <block id="2e8e8fd780cc78a14b825cad663b2611" category="paragraph">ONTAP 9.16,0 ou anterior</block>
   <block id="09ea0908fbfc4cde85bf416e35dc55c8" category="inline-link">Suporte à NetApp</block>
   <block id="3a7af7582257ad98ccfd3cbcc0364cd8" category="paragraph">Tem de desligar o módulo do controlador, remover e abrir o módulo do controlador, localizar e substituir o suporte de arranque no controlador e, em seguida, transferir a imagem para o suporte de arranque de substituição.</block>
   <block id="4cc95bf9d5b32fe7d0352f48b0791827" category="list-text">Deslize o botão terra cotta na pega do came para baixo até que este se destranque.</block>
@@ -10223,7 +10222,6 @@
   <block id="f56ae7fd8ac660d55ee476cc2b6b6715" category="paragraph">Capacidade máxima de matéria-prima: 0,5472 PB</block>
   <block id="2ce22d99495ad1d67f2afd59b9d15465" category="paragraph">Memória: 64.0000 GB</block>
   <block id="eab43815aa6ddac6523fe001702557fd" category="paragraph">Fator de forma: chassi 2U com 2 controladores HA e 24 slots de unidade</block>
-  <block id="dce6354c7432d233d30699f4fa1dab1b" category="paragraph">Versão ONTAP : b_startONTAP: 9.16.1P2b_end</block>
   <block id="2b13b0d1b04399d702b8569a3b81c7fb" category="paragraph">Slots de expansão PCIe:</block>
   <block id="467c14d27cfd498baa41b5de62cbe35b" category="paragraph">Versão mínima do ONTAP : ONTAP 9.10.1P12</block>
   <block id="4d15157e07692c77bdeff6cb8bc45844" category="section-title">Máximos de Escalabilidade</block>
@@ -10271,7 +10269,6 @@
   <block id="810944644ddbd9a71f9a53ebcd73f51d" category="list-text">Normas EMC/EMI: BS-EN-55024, BS-EN55035, CISPR 32, EN55022, EN55024, EN55032, EN55035, EN61000-3-2, EN61000-3-3, FCC Parte 15 Classe A, ICES-003, KS C 9832, KS C 9835</block>
   <block id="9b3b75c67a53d54bba73c70cd1786aed" category="list-text">Normas de segurança: ANSI/UL60950-1, ANSI/UL62368-1, BS-EN62368-1, CAN/CSA C22.2 No. 60950-1, CAN/CSA C22.2 No. 62368-1, CNS 14336, EN60825-1, EN62368-1, IEC 62368-1, IEC60950-1, IS 13252 (parte 1)</block>
   <block id="520b661a272c9e6f55f469cc9c24193d" category="section-title">Alta disponibilidade</block>
-  <block id="f5046e4779952c40dda2055325e842f6" category="list-text">Versão ONTAP : ONTAP: 9.16.1P2</block>
   <block id="014e996a6a164aaf40b8b3e72704fc2e" category="section-title">E/S</block>
   <block id="c9517cd5cbe4fac6d0c526d61f3fcc39" category="section-title">E/S integradas</block>
   <block id="81754037ddc5b97d9b806acad96f8815" category="list-text">Protocolo: Ethernet 10 Gbps; Portas: 12</block>
@@ -11678,8 +11675,6 @@
   <block id="27b8025bf920b2fdec95f4719d7e3772" category="paragraph">As PSUs são redundantes e intercambiáveis a quente. Não é necessário desligar o controlador para substituir uma PSU.</block>
   <block id="41221ad2b8f379d044b6e4c034575270" category="list-text">Localize os números de série do sistema (SSN) para cada controlador que está sendo instalado.</block>
   <block id="5ea0f09670f21c71300695e92b2cd256" category="admonition">Não utilize as portas e1b e e7b para conexões de rede do host. Use um cartão host separado.</block>
-  <block id="e0c35bf779836a3b5e187a211457a2b9" category="list-text">Gerenciamento de banda SAS em conexões SAS para prateleiras externas [//] 2025-10-15 ontap-systems-internal/issues/1357</block>
-  <block id="30432b9617d110e91bb55e0ee6592cdb" category="paragraph">Controlador de gerenciamento de placa de base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP ; Controladores redundantes de troca a quente; Fontes de alimentação redundantes de troca a quente; Gerenciamento SAS em banda por meio de conexões SAS para prateleiras externas; [//] 2025-10-15 ontap-systems-internal/issues/1357</block>
   <block id="bb9a46a830b86006c64c8c357fbcb73c" category="doc">Troca a quente de uma fonte de alimentação - FAS70 e FAS90</block>
   <block id="c0fb977424a2b5bca01ac503e2f1b009" category="doc">Troca a quente de uma fonte de alimentação - FAS2700</block>
   <block id="58c298876292ce3ccb07434a6eb98ee8" category="doc">Troca a quente de uma fonte de alimentação - FAS500f</block>
@@ -11801,7 +11796,6 @@
   <block id="9fa7c02bb45265f34f4f69d65e4ba585" category="paragraph"><block ref="ec44bfe32a6d575f528cbdeeb29c9942" prefix="" category="inline-code"></block></block>
   <block id="1a68286f23d4e481b013070b3fb1b2c5" category="paragraph">A imagem de recuperação é baixada da unidade flash USB.</block>
   <block id="0e99a276251e3e975397503d3c6c3d07" category="list-text">Quando solicitado, digite o nome da imagem ou pressione *Enter* para aceitar a imagem padrão exibida entre colchetes.</block>
-  <block id="c9e381b8fb72130d3dfe11557316b5b4" category="list-text">Restaure o sistema de arquivos var usando o procedimento para sua versão do ONTAP :</block>
   <block id="510eb69f55221f0ff4cc891c4ba7a6d9" category="paragraph">Conclua as seguintes etapas no controlador incapacitado e no controlador parceiro:</block>
   <block id="268c64a36efe2137fa47de3437bd4bd0" category="list-text">*No controlador com defeito:* Pressione<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block> quando você vê<block ref="aa48693d0248bb57512e373cd7f7eebc" prefix=" " category="inline-code"></block></block>
   <block id="9cf62becb6c08190789fafc5e01382fe" category="list-text">*No controlador com defeito:* Se solicitado, pressione<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block> para sobrescrever _/etc/ssh/ssh_host_ecdsa_key_.</block>
@@ -11818,7 +11812,6 @@
   <block id="88c59cc215089054320add9ac5600ce2" category="list-text">*No controlador inoperante:* Faça um dos seguintes procedimentos:</block>
   <block id="c15238078a77edc2ef4bd593196971b8" category="list-text">Se o sistema não usar criptografia, selecione _Opção 1 Inicialização Normal_ no Menu de Inicialização.</block>
   <block id="99ae95872c3913a9ded71370c70a8cc7" category="list-text">Se o sistema usar criptografia, acesse<block ref="d767082d20397ebb99e586749eda3a08" category="inline-link-macro-rx"></block> .</block>
-  <block id="fe96aa95930d10c2f5829bc437157a9c" category="open-title">ONTAP 9.16.1 ou posterior</block>
   <block id="f9dbd529813df9b97e2450323ae00565" category="paragraph">Conclua os seguintes passos no controlador comprometido:</block>
   <block id="3b554643290ff3791f79c55bfc5ead66" category="paragraph">Após o procedimento de restauração ser concluído com sucesso, esta mensagem é exibida:<block ref="92080c75f9b065e263d7fea155b1d733" prefix=" " category="inline-code"></block></block>
   <block id="ea673c9d0e265c7c75644bc9baaa8689" category="list-text">Imprensa<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block> quando solicitado a confirmar que a restauração do backup foi bem-sucedida.</block>
@@ -12730,7 +12723,6 @@
   <block id="9b2d40af21d64d80278ee173eee93493" category="doc">Especificações principais para FAS500f</block>
   <block id="7971c747973f656fa0a258fe576a59ce" category="paragraph">A seguir, apresentamos algumas especificações selecionadas para o FAS500f. Visite<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> (HWU) para obter uma lista completa das especificações do FAS500f. Esta página refere-se a um único par de alta disponibilidade.</block>
   <block id="2993484ef64a91db7d4ffb4091f706d0" category="paragraph">Configuração da plataforma: FAS500f par HA de chassi único</block>
-  <block id="9301497e894d25c1a5d8e0997da7a7eb" category="paragraph">Versão do ONTAP: 9.16.1P2</block>
   <block id="5a4e86e80e1a2b65d5e11606283fa0e6" category="inline-link-macro">AFF A250 (recuperação automática)</block>
   <block id="48f357e077fea73ea971448bfba251ef" category="list-text"><block ref="48f357e077fea73ea971448bfba251ef" category="inline-link-macro-rx"></block></block>
   <block id="2c196d8c70003da4749b8a9477ed6300" category="inline-link-macro">AFF A250 (Recuperação manual)</block>
@@ -15325,4 +15317,9 @@
   <block id="75f43aac1b3f7478f7dd28c21285aa4f" category="sidebar">Os novos sistemas ONTAP ASA r2 (ASA A1K, ASA A70, ASA A90, ASA A20, ASA A30 e ASA A50) oferecem uma solução unificada de hardware e software que cria uma experiência simplificada específica para as necessidades de clientes que utilizam apenas SAN.</block>
   <block id="2f1ec7862d30d363bcd985b98d0405ea" category="sidebar">Sistemas ONTAP ASA r2</block>
   <block id="e39a75fc031fe75db1eb9bd7bb630df0" category="sidebar">A documentação do sistema de storage ONTAP ASA r2 permite que você instale, configure e faça a manutenção do seu sistema ASA r2.</block>
+  <block id="b17965ed7656eaefd5896d5e8bc8220f" category="paragraph">Uma conexão de rede e está executando ONTAP 9.16.0 ou anterior</block>
+  <block id="3db85ee708765a863ca7bcba163f6a4e" category="paragraph">Uma conexão de rede e está executando ONTAP 9.16.1 ou posterior</block>
+  <block id="e77843037570fc2dc04cabc4bbe0c856" category="list-text">Pressione <block ref="8d9c307cb7f3c4a32822a51922d1ceaa" prefix=" " category="inline-code"></block> quando solicitado para restaurar a configuração de backup.</block>
+  <block id="20c74d497df9de076409b88163fc27bf" category="paragraph">Se for solicitado que você continue com a atualização, pressione <block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block>.</block>
+  <block id="9ada4cfd3f8a4a843a3a72db74213052" category="list-text">Pressione <block ref="76be6883bcf9e8a6aed3a347ac20e41f" prefix=" " category="inline-code"></block>quando você vir o Menu de Inicialização.</block>
 </blocks>

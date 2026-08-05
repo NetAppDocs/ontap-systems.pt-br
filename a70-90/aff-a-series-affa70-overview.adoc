@@ -26,8 +26,6 @@ Memória: 256.0000 GB
 
 Fator de forma: chassi 4U com 2 controladores HA e 48 slots de unidade
 
-Versão ONTAP : b_startONTAP: 9.16.1P2b_end
-
 Slots de expansão PCIe: 18
 
 Versão mínima do ONTAP : ONTAP 9.15.1RC2
@@ -116,4 +114,4 @@ CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NFSv3/RDMA; NFSv4/RDMA; N
 [[high-availability]]
 === Alta disponibilidade
 
-Controlador de gerenciamento de placa de base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP ; Controladores redundantes de troca a quente; Fontes de alimentação redundantes de troca a quente; Gerenciamento SAS em banda por meio de conexões SAS para prateleiras externas; [//] 2025-10-15 ontap-systems-internal/issues/1357
+Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP ; Controladores redundantes de troca a quente; Fontes de alimentação redundantes de troca a quente; Gerenciamento SAS em banda por meio de conexões SAS para prateleiras externas;
