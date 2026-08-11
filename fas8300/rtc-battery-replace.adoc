@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas8300, fas8700, replace, real, time, clock, battery, shut, down, impaired, controller, controller, metrocluster, module, rtc, battery, date, time, aggregates, replace, reinstall, open, switch 
 summary: 'Você substitui a bateria do relógio em tempo real (RTC) no módulo do controlador para que os serviços e aplicativos do sistema que dependem da sincronização precisa de tempo continuem funcionando.' 
 ---
-= Substitua a bateria do relógio em tempo real - FAS8300 e FAS8700
+= Substitua a bateria do relógio em tempo real do seu FAS8300 ou FAS8700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,7 +14,7 @@ summary: 'Você substitui a bateria do relógio em tempo real (RTC) no módulo d
 Você substitui a bateria do relógio em tempo real (RTC) no módulo do controlador para que os serviços e aplicativos do sistema que dependem da sincronização precisa de tempo continuem funcionando.
 
 * Pode utilizar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema
-* Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+* Todos os outros componentes do sistema devem estar funcionando corretamente. Caso contrário, entre em contato com o suporte técnico.
 
 
 
@@ -261,8 +261,8 @@ NOTE: Observe a polaridade da bateria ao removê-la do suporte. A bateria está 
 
 
 
-[[step-4-reinstall-the-controller-module-and-sett-timedate-after-rtc-battery-replacement]]
-== Passo 4: Reinstale o módulo do controlador e defina a hora/data após a substituição da bateria do RTC
+[[step-4-reinstall-the-controller-module-and-set-timedate-after-rtc-battery-replacement]]
+== Etapa 4: Reinstale o módulo do controlador e defina a hora/data após a substituição da bateria do RTC
 
 Depois de substituir um componente no módulo do controlador, tem de reinstalar o módulo do controlador no chassis do sistema, repor a hora e a data no controlador e, em seguida, iniciá-lo.
 

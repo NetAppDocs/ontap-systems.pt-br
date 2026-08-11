@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas50, cabling, cluster cabling, host network cabling, management network cabling, shelf cabling 
 summary: Depois de instalar o hardware do sistema de storage FAS50, faça o cabeamento das controladoras à rede e às gavetas. 
 ---
-= Cable the hardware - FAS50
+= Conecte seu hardware FAS50 para conectividade de rede e de storage
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -164,7 +164,7 @@ Os procedimentos a seguir mostram como vincular os controladores a uma ou duas g
 .Sobre esta tarefa
 * Os exemplos de cabeamento mostram DS460C gavetas. No entanto, há suporte para gavetas SAS adicionais, link:https://hwu.netapp.com["NetApp Hardware Universe"^]consulte .
 +
-O cabeamento para outras gavetas SAS com suporte é semelhante. link:../sas3/install-new-system.html["Instale e as gavetas de cabos para uma nova instalação do sistema"^]Consulte . Você também pode se referir link:../sas3/overview-cabling-rules-examples.html["Visão geral de rues, planilhas e exemplos de cabeamento SAS"^]a .
+A cablagem para outros shelves SAS suportados é semelhante. Consulte link:../sas3/install-new-system.html["Instale e as gavetas de cabos para uma nova instalação do sistema"^]. Você também pode consultar link:../sas3/overview-cabling-rules-examples.html["Visão geral das regras, planilhas e exemplos de cabeamento SAS"^].
 
 * Para obter o número máximo de gavetas compatíveis com o sistema de storage e todas as opções de cabeamento, como ótico e conectado a switch, link:https://hwu.netapp.com["NetApp Hardware Universe"^]consulte .
 * Os gráficos mostram o cabeamento A do controlador em azul e o cabeamento B do controlador em amarelo.

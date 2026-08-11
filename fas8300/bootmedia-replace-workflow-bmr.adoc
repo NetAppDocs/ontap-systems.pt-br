@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: fas8300, replace the boot media 
 summary: Comece a substituir a mídia de inicialização no seu sistema de armazenamento FAS8300 ou FAS8700 revisando os requisitos de substituição, desligando o controlador, substituindo a mídia de inicialização, restaurando a imagem na mídia de inicialização e verificando a funcionalidade do sistema. 
 ---
-= Fluxo de trabalho de recuperação automatizada de mídia de inicialização - FAS8300 e FAS8700
+= Fluxo de trabalho de substituição da mídia de inicialização do FAS8300 e do FAS8700 usando o processo automatizado de recuperação de inicialização
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-A recuperação automatizada da imagem de inicialização envolve a identificação e seleção automáticas pelo sistema da opção de menu de inicialização apropriada. Ele usa a imagem de inicialização no nó parceiro para reinstalar o ONTAP na mídia de inicialização de substituição no seu sistema de armazenamento FAS8300 ou FAS8700 .
+Comece a substituir a mídia de inicialização do seu FAS8300 ou FAS8700 sistema de storage usando o processo automatizado de recuperação de inicialização. O sistema identifica e seleciona automaticamente a opção de menu de inicialização apropriada e, em seguida, usa a imagem de inicialização no nó parceiro para reinstalar o ONTAP na mídia de inicialização de substituição. Para concluir a substituição, você revisa os requisitos, desliga o controlador, substitui a mídia de inicialização, permite que o sistema restaure a imagem e verifica a funcionalidade do sistema.
 
 O processo automatizado de recuperação de mídia de inicialização é compatível apenas com o ONTAP 9.17.1 e versões posteriores. Se o seu sistema de armazenamento estiver executando uma versão anterior do ONTAP, use o link:bootmedia-replace-workflow.html["procedimento de recuperação de inicialização manual"] .
 
@@ -23,7 +23,7 @@ Reveja os requisitos para substituição do suporte de arranque.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"]link:bootmedia-shutdown-bmr.html["Desligue o controlador"]
 [role="quick-margin-para"]
-Desligue o controlador no sistema de armazenamento quando precisar substituir a Mídia de inicialização.
+Desligue o controlador no seu sistema de armazenamento quando precisar substituir a mídia de inicialização.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"]link:bootmedia-replace-bmr.html["Substitua o suporte de arranque"]
 [role="quick-margin-para"]

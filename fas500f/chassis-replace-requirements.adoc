@@ -2,16 +2,16 @@
 permalink: fas500f/chassis-replace-requirements.html 
 sidebar: sidebar 
 keywords: fas500f, replace the chassis 
-summary: Antes de substituir o chassi no seu sistema FAS500f, certifique-se de que atende aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, se você possui as credenciais de administrador local para ONTAP, o chassi de substituição correto e as ferramentas necessárias. 
+summary: Antes de substituir o chassi do seu FAS500f, verifique se você atende aos requisitos necessários para uma substituição bem-sucedida. Isso inclui confirmar que todos os outros componentes do sistema estão funcionando corretamente, verificar se você possui as credenciais de administrador local para o ONTAP, o chassi de substituição correto e as ferramentas necessárias. 
 ---
-= Requisitos para substituir o chassi - FAS500f
+= Analise os requisitos antes de substituir o FAS500f chassi
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Antes de substituir o chassi no seu sistema FAS500f, certifique-se de que atende aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, se você possui as credenciais de administrador local para ONTAP, o chassi de substituição correto e as ferramentas necessárias.
+Antes de substituir o chassi do seu FAS500f, verifique se você atende aos requisitos necessários para uma substituição bem-sucedida. Isso inclui confirmar que todos os outros componentes do sistema estão funcionando corretamente, verificar se você possui as credenciais de administrador local para o ONTAP, o chassi de substituição correto e as ferramentas necessárias.
 
 O chassi é o gabinete físico que abriga todos os componentes do controlador, como a unidade controladora/CPU, fonte de alimentação e e/S.
 

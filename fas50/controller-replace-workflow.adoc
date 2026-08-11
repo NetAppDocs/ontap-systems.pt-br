@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas50, replace the controller workflow 
 summary: Siga estas etapas do fluxo de trabalho para substituir seu controlador no seu sistema de armazenamento FAS50. 
 ---
-= Fluxo de trabalho de substituição do controlador - FAS50
+= Fluxo de trabalho de substituição do controlador FAS50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -23,7 +23,7 @@ Encerre ou assuma o controlador afetado para que o controlador íntegro continue
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"]link:controller-replace-move-hardware.html["Substitua o controlador"]
 [role="quick-margin-para"]
-A substituição do controlador inclui a remoção do controlador afetado, a movimentação dos componentes FRU para o controlador de substituição, a instalação do controlador de substituição no chassis, a definição da hora e da data e, em seguida, a desativação.
+A substituição do controlador envolve remover o controlador com problema, transferir os componentes FRU para o controlador de substituição, instalar o controlador de substituição, configurar a hora e a data e reconectar os cabos.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"]link:controller-replace-system-config-restore-and-verify.html["Restaure e verifique a configuração do sistema"]
 [role="quick-margin-para"]

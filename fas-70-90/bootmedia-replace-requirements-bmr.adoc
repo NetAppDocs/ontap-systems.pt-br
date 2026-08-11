@@ -2,16 +2,16 @@
 permalink: fas-70-90/bootmedia-replace-requirements-bmr.html 
 sidebar: sidebar 
 keywords: fas70, fas90, replace the boot media 
-summary: Antes de substituir a mídia de inicialização no seu sistema de armazenamento FAS70 ou FAS90, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. 
+summary: Antes de substituir a mídia de inicialização em seu sistema de storage FAS70 ou FAS90, verifique se você atende aos requisitos necessários para uma substituição bem-sucedida. 
 ---
-= Requisitos para recuperação automatizada de mídia de inicialização - FAS70 e FAS90
+= Analise os requisitos para recuperação automática de mídia de inicialização em seu sistema FAS70 ou FAS90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Antes de substituir a mídia de inicialização no seu sistema de armazenamento FAS70 ou FAS90, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se você possui a mídia de inicialização de substituição correta, confirmar se as portas do cluster no controlador danificado estão funcionando corretamente e determinar se o Gerenciador de Chaves Onboard (OKM) ou o Gerenciador de Chaves Externo (EKM) está habilitado.
+Antes de substituir a mídia de inicialização no seu sistema de storage FAS70 ou FAS90, verifique se você atende aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se você possui a mídia de inicialização de substituição correta, confirmar se as portas do cluster no controlador com defeito estão funcionando corretamente e determinar se o Onboard Key Manager (OKM) ou o External Key Manager (EKM) está habilitado.
 
 O processo automatizado de recuperação de mídia de inicialização é compatível apenas com o ONTAP 9.17.1 e versões posteriores. Se o seu sistema de armazenamento estiver executando uma versão anterior do ONTAP, use o link:bootmedia-replace-workflow.html["procedimento de recuperação de inicialização manual"] .
 

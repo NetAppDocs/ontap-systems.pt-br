@@ -4,17 +4,17 @@ sidebar: sidebar
 keywords: fas9500, replace a dimm 
 summary: Você deve substituir um DIMM no controlador quando seu sistema de storage encontrar erros como erros CECC excessivos com base em alertas do Health Monitor ou erros ECC incorrigíveis, normalmente causados por uma única falha de DIMM que impede o sistema de storage de inicializar o ONTAP. 
 ---
-= Substitua um DIMM - FAS9500
+= Substitua um módulo DIMM no seu FAS9500 para corrigir erros de memória
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Você deve substituir um DIMM no controlador quando seu sistema de armazenamento encontrar erros como erros CECC excessivos (códigos de correção de erros Correctable) que são baseados em alertas do Monitor de integridade ou erros ECC incorrigíveis, geralmente causados por uma única falha de DIMM que impede o sistema de armazenamento de inicializar o ONTAP.
+Você deve substituir um módulo DIMM no controlador quando seu sistema de storage apresentar erros como excesso de erros CECC (Códigos de Correção de Erros Corrigíveis) com base em alertas do Health Monitor, ou erros ECC não corrigíveis. Esses erros geralmente são causados por uma única falha no módulo DIMM, impedindo o sistema de storage de inicializar o ONTAP.
 
 .Antes de começar
-Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+Todos os outros componentes do sistema devem estar funcionando corretamente; se um componente não estiver funcionando corretamente, você deve entrar em contato com o suporte técnico.
 
 Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor.
 
@@ -264,7 +264,7 @@ NOTE: Não introduza completamente o módulo do controlador no chassis até ser 
 . Faça o cabeamento apenas das portas de gerenciamento e console, para que você possa acessar o sistema para executar as tarefas nas seções a seguir.
 +
 
-NOTE: Você conetará o resto dos cabos ao módulo do controlador posteriormente neste procedimento.
+NOTE: Você conectará o restante dos cabos ao módulo controlador mais tarde neste procedimento.
 
 . Conclua a reinstalação do módulo do controlador:
 +

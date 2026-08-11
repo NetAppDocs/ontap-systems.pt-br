@@ -1,17 +1,17 @@
 ---
 permalink: fas2700/chassis-replace-shutdown.html 
 sidebar: sidebar 
-keywords: fas2700, aff a220, replace, chassis, shut down, controller, metrocluster, power, supply, ha, state, controller, configuration, switch, aggregates, replace, move, remove, swap 
-summary: Para substituir o chassi, você deve desligar os controladores. 
+keywords: fas2700, replace, chassis, shut down, controller, metrocluster, power, supply, ha, state, controller, configuration, switch, aggregates, replace, move, remove, swap 
+summary: Desligue ou assuma o controle do controlador com problema no seu sistema FAS2700 usando o procedimento apropriado para sua configuração antes de substituir o chassi. 
 ---
-= Desligue os controladores - FAS2700
+= Desligue o seu controlador FAS2700 para substituir o chassi
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Encerre ou assuma o controlador afetado utilizando o procedimento adequado para a sua configuração.
+Desligue ou assuma o controle do controlador com problema no seu sistema FAS2700 usando o procedimento apropriado para sua configuração antes de substituir o chassi.
 
 
 

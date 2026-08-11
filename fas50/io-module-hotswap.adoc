@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas50, hot swap a cluster ha card, hot swap ethernet client io module, hotswap io module, hot swap io module 
 summary: Você pode realizar a substituição a quente de um módulo de E/S Ethernet em seu sistema de storage FAS50 caso um módulo apresente falha e seu sistema de storage atenda a todos os requisitos de versão do ONTAP. 
 ---
-= Substituição a quente de um módulo de E/S - FAS50
+= Substitua um módulo de E/S com substituição a quente no seu sistema FAS50.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,7 +13,7 @@ summary: Você pode realizar a substituição a quente de um módulo de E/S Ethe
 [role="lead"]
 Você pode realizar a substituição a quente de um módulo de E/S Ethernet em seu sistema de storage FAS50 caso um módulo apresente falha e seu sistema de storage atenda a todos os requisitos de versão do ONTAP.
 
-Para substituir a quente um módulo de E/S, certifique-se de que seu sistema de storage atenda aos requisitos de versão do ONTAP, prepare seu sistema de storage e o módulo de E/S, faça a substituição a quente do módulo com defeito, coloque o módulo de substituição online, restaure o sistema de storage à operação normal e devolva o módulo com defeito para a NetApp.
+Para substituir a quente um módulo de E/S, verifique se o seu sistema de storage atende aos requisitos da versão do ONTAP, prepare o seu sistema de storage e o módulo de E/S, faça a substituição a quente do módulo com defeito, coloque o módulo de substituição online, restaure o sistema de storage à operação normal e devolva o módulo com defeito à NetApp.
 
 .Sobre esta tarefa
 * A substituição a quente do módulo de E/S significa que você não precisa realizar um takeover manual antes de substituir o módulo de E/S com defeito.
@@ -34,8 +34,8 @@ Você pode desativá-los digitando o `system location-led _off_` comando. Se nã
 
 
 
-[[step-1-ensure-the-storage-system-meets-the-procedure-requirements]]
-== Etapa 1: Certifique-se de que o sistema de armazenamento atenda aos requisitos do procedimento
+[[step-1-verify-the-storage-system-meets-the-procedure-requirements]]
+== Etapa 1: Verifique se o sistema de storage atende aos requisitos do procedimento
 
 Para utilizar este procedimento, seu sistema de storage deve estar executando ONTAP 9.17.1 ou posterior, e seu sistema de storage deve atender a todos os requisitos para a versão do ONTAP que seu sistema de storage está executando.
 

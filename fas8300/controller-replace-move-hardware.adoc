@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas8300, fas8700, move the controller module hardware 
 summary: Substitua o controlador no seu sistema FAS8300 ou FAS8700 quando uma falha de hardware assim o exigir. Remova o controlador com defeito, transfira seus componentes para o controlador de substituição, instale o novo controlador e reinicialize-o. 
 ---
-= Substitua o controlador - FAS8300 e FAS8700
+= Substitua o controlador no seu FAS8300 ou FAS8700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,7 +14,7 @@ summary: Substitua o controlador no seu sistema FAS8300 ou FAS8700 quando uma fa
 Substitua o controlador no seu sistema FAS8300 ou FAS8700 quando uma falha de hardware assim o exigir. Remova o controlador com defeito, transfira seus componentes para o controlador de substituição, instale o novo controlador e reinicialize-o.
 
 
-NOTE: O módulo controlador Ver2 tem apenas um soquete de módulo de cache (slot 6) no FAS8300. O FAS8700 não tem um módulo controlador Ver2. A funcionalidade do módulo de armazenamento em cache não é afetada pela remoção do socket.
+NOTE: O módulo controlador Ver2 possui apenas um soquete para módulo de armazenamento em cache (Slot 6) no FAS8300. O FAS8700 não possui um módulo controlador Ver2. A funcionalidade do módulo de armazenamento em cache não é afetada pela remoção do soquete.
 
 
 

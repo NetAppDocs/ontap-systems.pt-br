@@ -2,16 +2,16 @@
 permalink: fas2600/controller-replace-move-hardware.html 
 sidebar: sidebar 
 keywords: fas2600, move the components 
-summary: Para substituir o hardware do módulo do controlador, é necessário remover o controlador prejudicado, mover os componentes FRU para o módulo do controlador de substituição, instalar o módulo do controlador de substituição no chassis e, em seguida, inicializar o sistema para o modo de manutenção. 
+summary: Substitua o controlador do seu sistema FAS2600 removendo o controlador com problema, transferindo os componentes FRU para o módulo do controlador de substituição, instalando-o no chassi e inicializando o sistema no modo de manutenção. 
 ---
-= Substitua o hardware do módulo do controlador - FAS2600
+= Substitua o controlador no seu sistema FAS2600
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Para substituir o módulo do controlador, é necessário remover o controlador prejudicado, mover os componentes da FRU para o módulo do controlador de substituição, instalar o módulo do controlador de substituição no chassis e, em seguida, inicializar o sistema para o modo de manutenção.
+Substitua o controlador do seu sistema FAS2600 removendo o controlador com problema, transferindo os componentes FRU para o módulo do controlador de substituição, instalando o módulo do controlador de substituição no chassi e, em seguida, inicializando o sistema no modo de manutenção.
 
 link:https://youtu.be/2_uWRt_iJqk["Vídeo de substituição do controlador AFF FAS2600"]
 
@@ -141,7 +141,7 @@ image::../media/drw_2600_dimms.png[Localização dos DIMMs do sistema]
 . Localize o slot onde você está instalando o DIMM.
 . Certifique-se de que as abas do ejetor DIMM no conetor estão na posição aberta e insira o DIMM diretamente no slot.
 +
-O DIMM encaixa firmemente no slot, mas deve entrar facilmente. Caso contrário, realinhar o DIMM com o slot e reinseri-lo.
+O módulo DIMM encaixa-se firmemente no slot, mas deve entrar com facilidade. Se isso não acontecer, realinhe o módulo DIMM com o slot e reinsira-o.
 
 +
 
@@ -159,9 +159,9 @@ Certifique-se de que a ficha fica fixa no módulo do controlador.
 [[step-5-move-the-caching-module]]
 == Passo 5: Mova o módulo de cache
 
-Para mover um módulo de armazenamento em cache chamado de placa PCIe M,2 na etiqueta do controlador, localize-o e mova-o do controlador antigo para o controlador de substituição e siga a sequência específica de passos.
+Para transferir o módulo de armazenamento em cache, também conhecido como placa M.2 PCIe na etiqueta do controlador, do módulo controlador antigo para o módulo controlador de substituição, siga esta sequência de etapas.
 
-Você deve ter o novo módulo de controlador pronto para que você possa mover o módulo de cache diretamente do módulo de controlador antigo para o slot correspondente no novo. Todos os outros componentes do sistema de armazenamento devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+Você precisa ter o novo módulo controlador pronto para que possa mover o módulo de armazenamento em cache diretamente do módulo controlador antigo para o slot correspondente no novo. Todos os outros componentes do sistema de storage devem estar funcionando corretamente. Caso contrário, entre em contato com o suporte técnico.
 
 .Passos
 . Localize o módulo de armazenamento em cache na parte traseira do módulo do controlador e retire-o.
@@ -190,7 +190,7 @@ Se necessário, remova o módulo de cache e recoloque-o no soquete.
 
 Depois de instalar os componentes do antigo módulo do controlador no novo módulo do controlador, tem de instalar o novo módulo do controlador no chassis do sistema e arrancar o sistema operativo.
 
-Para pares de HA com dois módulos de controlador no mesmo chassi, a sequência em que você instala o módulo de controlador é especialmente importante porque ele tenta reiniciar assim que você o senta completamente no chassi.
+Para sistemas HA com dois módulos controladores no mesmo chassi, a ordem em que você instala os módulos controladores é especialmente importante, pois um módulo controlador tenta reinicializar assim que estiver totalmente encaixado no chassi.
 
 
 NOTE: O sistema pode atualizar o firmware do sistema quando ele é inicializado. Não aborte este processo. O procedimento requer que você interrompa o processo de inicialização, o que você normalmente pode fazer a qualquer momento depois de solicitado a fazê-lo. No entanto, se o sistema atualizar o firmware do sistema quando ele é inicializado, você deve esperar até que a atualização seja concluída antes de interromper o processo de inicialização.
@@ -206,7 +206,7 @@ NOTE: Não introduza completamente o módulo do controlador no chassis até ser 
 . Faça o cabeamento apenas das portas de gerenciamento e console, para que você possa acessar o sistema para executar as tarefas nas seções a seguir.
 +
 
-NOTE: Você conetará o resto dos cabos ao módulo do controlador posteriormente neste procedimento.
+NOTE: Você conectará o restante dos cabos ao módulo controlador mais tarde neste procedimento.
 
 . Conclua a reinstalação do módulo do controlador:
 +

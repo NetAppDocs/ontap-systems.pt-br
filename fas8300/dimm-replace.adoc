@@ -4,16 +4,16 @@ sidebar: sidebar
 keywords: fas8300, fas8700, replace, dimm, shut, down, impaired, controller, module, reinstall,  system, controller, aggregates, metrocluster, replacement 
 summary: Você deve substituir um DIMM no controlador quando seu sistema de storage encontrar erros como códigos de correção de erros corrigíveis em excesso ou erros incorrigíveis, normalmente causados por uma única falha de DIMM que impede o sistema de storage de inicializar o ONTAP. 
 ---
-= Substitua um DIMM - FAS8300 e FAS8700
+= Substitua um módulo DIMM no seu FAS8300 ou FAS8700 para corrigir erros de memória
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Você deve substituir um DIMM no controlador quando seu sistema de armazenamento encontrar erros como erros CECC excessivos (códigos de correção de erros Correctable) que são baseados em alertas do Monitor de integridade ou erros ECC incorrigíveis, geralmente causados por uma única falha de DIMM que impede o sistema de armazenamento de inicializar o ONTAP.
+Você deve substituir um módulo DIMM no controlador quando seu sistema de storage apresentar erros como excesso de erros CECC (Código de Correção de Erros Corrigível) com base em alertas do Health Monitor, ou erros ECC não corrigíveis. Esses erros geralmente são causados por uma falha em um único módulo DIMM que impede o sistema de storage de inicializar o ONTAP.
 
-Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+Todos os outros componentes do sistema devem estar funcionando corretamente. Se algum componente não estiver funcionando corretamente, você deve entrar em contato com o suporte técnico.
 
 Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor.
 
@@ -238,7 +238,7 @@ NOTE: A animação e a ilustração mostram slots vazios para soquetes sem DIMMs
 video::175c6597-449e-4dc8-8c02-aad9012f08b5[panopto]
 image::../media/drw_A400_Replace-NVDIMM-DIMM.png[Mover os DIMMs]
 
-O número e a localização dos DIMMS no seu sistema dependem do modelo do seu sistema. Consulte o mapa da FRU na conduta de ar para obter mais informações.
+O número e a localização dos módulos DIMM no seu sistema dependem do modelo do seu sistema. Consulte o mapa de FRU no duto de ar para obter mais informações.
 
 * Se você tiver um sistema FAS8300, os DIMMs do sistema estão localizados nos soquetes 2, 4, 13 e 15.
 * Se você tiver um sistema FAS8700, os DIMMs do sistema estão localizados nos slots 2, 4, 7, 9, 13, 15, 18 e 20.
@@ -265,7 +265,7 @@ O entalhe entre os pinos no DIMM deve estar alinhado com a guia no soquete.
 
 . Certifique-se de que as abas do ejetor DIMM no conetor estão na posição aberta e insira o DIMM diretamente no slot.
 +
-O DIMM encaixa firmemente no slot, mas deve entrar facilmente. Caso contrário, realinhar o DIMM com o slot e reinseri-lo.
+O módulo DIMM encaixa-se firmemente no slot, mas deve entrar com facilidade. Se isso não acontecer, realinhe o módulo DIMM com o slot e reinsira-o.
 
 +
 
@@ -298,11 +298,11 @@ NOTE: Não introduza completamente o módulo do controlador no chassis até ser 
 . Faça o cabeamento apenas das portas de gerenciamento e console, para que você possa acessar o sistema para executar as tarefas nas seções a seguir.
 +
 
-NOTE: Você conetará o resto dos cabos ao módulo do controlador posteriormente neste procedimento.
+NOTE: Você conectará o restante dos cabos ao módulo controlador mais tarde neste procedimento.
 
 . Conclua a instalação do módulo do controlador:
 +
-.. Utilizando os trincos de bloqueio, empurre firmemente o módulo do controlador para dentro do chassis até que os trincos de bloqueio comecem a subir.
+.. Empurre firmemente o módulo controlador para dentro do chassi usando as travas de segurança até que as travas comecem a subir.
 +
 
 NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.

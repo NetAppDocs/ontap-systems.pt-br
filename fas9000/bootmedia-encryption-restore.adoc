@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a700, fas9000, post, boot, media, replacement, steps, okm, nse, nve, manual, manual boot recovery 
 summary: Após verificar as variáveis de ambiente, você deve concluir as etapas específicas para sistemas que possuem Onboard Key Manager OKM, NetApp Storage Encryption NSE ou NetApp Volume Encryption NVE ativados. O sistema FAS9000 suporta apenas procedimentos manuais de recuperação da mídia de inicialização. 
 ---
-= Restaurar encriptação - FAS9000
+= Restaure a criptografia na mídia de inicialização do seu FAS9000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Restaure a criptografia na mídia de inicialização de substituição. O sistema FAS9000 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada.
+Restaure a criptografia na mídia de inicialização de substituição do seu FAS9000 seguindo os passos para o seu tipo de gerenciador de chaves, como o Onboard Key Manager (OKM). O FAS9000 suporta apenas procedimentos manuais de recuperação da mídia de inicialização.
 
 Siga os passos adequados para restaurar a criptografia no seu sistema, de acordo com o tipo de gerenciador de chaves utilizado.  Se você não tiver certeza de qual gerenciador de chaves seu sistema utiliza, verifique as configurações que você registrou no início do procedimento de substituição da mídia de inicialização.
 

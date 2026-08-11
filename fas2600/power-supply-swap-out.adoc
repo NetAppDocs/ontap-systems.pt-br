@@ -2,24 +2,24 @@
 permalink: fas2600/power-supply-swap-out.html 
 sidebar: sidebar 
 keywords: fas2600, power supply replacement 
-summary: Trocar uma fonte de alimentação envolve desligar, desconetar e remover a fonte de alimentação antiga e instalar, conetar e ligar a fonte de alimentação de substituição. 
+summary: Substitua a fonte de alimentação do seu sistema FAS2600 com o sistema em funcionamento desligando, desconectando e removendo a unidade com falha e, em seguida, instalando e reconectando a unidade de substituição. 
 ---
-= Troque uma fonte de alimentação - FAS2600
+= Substitua a fonte de alimentação no seu sistema FAS2600 em funcionamento
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Trocar uma fonte de alimentação envolve desligar, desconetar e remover a fonte de alimentação antiga e instalar, conetar e ligar a fonte de alimentação de substituição.
+Substitua a fonte de alimentação no seu sistema FAS2600 desligando, desconectando e removendo a fonte de alimentação antiga e, em seguida, instalando, conectando e ligando a fonte de alimentação de reposição.
 
-Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+Se algum outro componente do sistema não estiver funcionando corretamente, entre em contato com o suporte técnico.
 
 * As fontes de alimentação são redundantes e hot-swap.
 * Este procedimento é escrito para substituir uma fonte de alimentação de cada vez.
 +
 
-NOTE: O resfriamento é integrado à fonte de alimentação, portanto, você deve substituir a fonte de alimentação dentro de dois minutos após a remoção para evitar o superaquecimento devido à redução do fluxo de ar. Como o chassi fornece uma configuração de resfriamento compartilhada para os dois nós de HA, um atraso maior que dois minutos encerrará todos os módulos de controladora no chassi. Se ambos os módulos do controlador desligarem, certifique-se de que ambas as fontes de alimentação estão inseridas, desligue ambas durante 30 segundos e, em seguida, ligue ambas.
+NOTE: O sistema de refrigeração é integrado à fonte de alimentação, portanto, você deve recolocar a fonte de alimentação em até dois minutos após a remoção para evitar superaquecimento devido à redução do fluxo de ar. Como o chassi oferece uma configuração de refrigeração compartilhada para os dois nós HA, um atraso superior a dois minutos desliga todos os módulos controladores do chassi. Se ambos os módulos controladores forem desligados, certifique-se de que ambas as fontes de alimentação estejam conectadas, desligue ambas por 30 segundos e, em seguida, ligue ambas novamente.
 
 * O número de fontes de alimentação no sistema depende do modelo.
 * As fontes de alimentação são auto-variando.
@@ -62,7 +62,7 @@ NOTE: Não utilize força excessiva ao deslizar a fonte de alimentação para o 
 
 
 +
-Uma vez que a alimentação é restaurada à fonte de alimentação, o LED de estado deve estar verde.
+Após o restabelecimento da energia na fonte de alimentação, o LED indicador de status deve ficar verde.
 
 . Ligue a alimentação da nova fonte de alimentação e, em seguida, verifique o funcionamento dos LEDs de atividade da fonte de alimentação.
 +

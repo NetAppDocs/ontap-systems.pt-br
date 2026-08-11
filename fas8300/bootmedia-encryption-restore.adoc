@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: fas8300, fas8700, environment, variable, complete, system, onboard, key, manager, okm, storage, volume, netapp, encryption, post, boot, media, replacement, post boot media replacement stpes for okm nse and nve 
 summary: Restaure a encriptação no suporte de arranque de substituição. 
 ---
-= Restaurar criptografia - FAS8300 e FAS8700
+= Restaure a criptografia na mídia de inicialização do seu sistema FAS8300 ou FAS8700 após o processo de recuperação manual de inicialização.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Restaure a encriptação no suporte de arranque de substituição.
+Após substituir a mídia de inicialização no seu FAS8300 ou FAS8700, restaure a criptografia seguindo as etapas para o seu tipo de gerenciador de chaves, como o Onboard Key Manager (OKM).
 
 Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use olink:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"] .  Se o seu sistema estiver executando uma versão anterior do ONTAP, você deverá usar o procedimento de recuperação de inicialização manual.
 

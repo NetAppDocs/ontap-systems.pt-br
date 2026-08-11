@@ -2,15 +2,17 @@
 permalink: fas2600/chassis-replace-shutdown.html 
 sidebar: sidebar 
 keywords: fas2600, shutdown the controllers 
-summary: Para substituir o chassi, você deve desligar os controladores. 
+summary: Desligue ou assuma o controle do controlador com problema no seu sistema FAS2600 usando o procedimento apropriado para sua configuração antes de substituir o chassi. 
 ---
-= Desligue os controladores - FAS2600
+= Desligue o seu controlador FAS2600 para substituir o chassi
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Desligue ou assuma o controle do controlador com problema no seu sistema FAS2600 usando o procedimento apropriado para sua configuração antes de substituir o chassi.
+
 Este procedimento destina-se a sistemas com duas configurações de nós. Para obter mais informações sobre o desligamento normal ao fazer manutenção de um cluster, https://kb.netapp.com/on-prem/ontap/OHW/OHW-KBs/What_is_the_procedure_for_graceful_shutdown_and_power_up_of_a_storage_system_during_scheduled_power_outage["Desligue e ligue o seu sistema de armazenamento de dados - base de dados de Conhecimento da NetApp"] consulte .
 
 .Antes de começar

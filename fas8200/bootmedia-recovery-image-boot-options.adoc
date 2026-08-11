@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas8200, boot the recovery image, manual, manual boot recovery 
 summary: Inicialize a imagem de recuperação do ONTAP a partir da unidade USB em um sistema FAS8200 para restaurar a mídia de inicialização. O sistema FAS8200 suporta apenas procedimentos manuais de recuperação da mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada. 
 ---
-= Inicie a imagem de recuperação - FAS8200
+= Inicialize a imagem de recuperação no seu FAS8200.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -62,7 +62,7 @@ Se for solicitado que você continue com a atualização, `y` pressione .
 
 
 |===
-. Certifique-se de que as variáveis ambientais estão definidas como esperado:
+. Verifique se as variáveis de ambiente estão configuradas conforme o esperado:
 +
 .. Leve o controlador para o prompt Loader.
 .. Verifique as configurações de variáveis de ambiente com o `printenv` comando.
@@ -70,7 +70,7 @@ Se for solicitado que você continue com a atualização, `y` pressione .
 .. Salve suas alterações usando o `savenv` comando.
 
 
-. O próximo depende da configuração do sistema:
+. A próxima etapa depende da configuração do sistema:
 +
 ** Se o sistema tiver o gerenciador de chaves integrado, NSE ou NVE configurado, vá para xref:bootmedia-encryption-restore.adoc[Restaure OKM, NSE e NVE conforme necessário]
 ** Se o sistema não tiver o gerenciador de chaves integrado, NSE ou NVE configurado, execute as etapas nesta seção.

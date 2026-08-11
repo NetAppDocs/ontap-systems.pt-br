@@ -1,21 +1,21 @@
 ---
 permalink: fas2800/chassis-replace-overview.html 
 sidebar: sidebar 
-keywords: fas2800, replace, chassis, shut down, controller, metrocluster, power, supply, ha, state, controller, configuration, switch, aggregates, replace, move, remove, swap 
-summary: Substituir um chassis com deficiência o novo chassis do mesmo modelo que o chassis com deficiência. 
+keywords: fas2820, replace, chassis, shut down, controller, metrocluster, power, supply, ha, state, controller, configuration, switch, aggregates, replace, move, remove, swap 
+summary: 'Para substituir o chassi do seu FAS2820, você deve transferir as fontes de alimentação, os discos rígidos e o(s) módulo(s) controlador(es) do chassi com problema para o novo chassi do mesmo modelo.' 
 ---
-= Descrição geral da substituição do chassis - FAS2820
+= Verifique os requisitos antes de substituir o chassi no seu FAS2820
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Para substituir o chassi, você deve mover as fontes de alimentação, os discos rígidos e o módulo ou módulos do controlador do chassi com deficiência para o novo chassi e trocar o chassi com deficiência do rack de equipamentos ou do gabinete do sistema pelo novo chassi do mesmo modelo que o chassi com deficiência.
+Para substituir o chassi do seu FAS2820, transfira as fontes de alimentação, os discos rígidos e os módulos controladores do chassi com problema para o novo chassi. Em seguida, remova o chassi com problema do rack de equipamentos ou do gabinete do sistema e instale o novo chassi do mesmo modelo no lugar dele.
 
-Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+Todos os outros componentes do sistema devem estar funcionando corretamente. Caso contrário, entre em contato com o suporte técnico.
 
 * Pode utilizar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema.
 * Este procedimento é escrito com a suposição de que você está movendo todas as unidades e módulos de controladora ou módulos para o novo chassi e que o chassi é um novo componente da NetApp.
-* Este procedimento é disruptivo. Para um cluster de duas controladoras, você terá uma interrupção de serviço completa e uma interrupção parcial em um cluster de vários nós.
+* Este procedimento é disruptivo. Para um cluster com dois controladores, este procedimento causa uma interrupção completa do serviço e uma interrupção parcial em um cluster com vários nós.
 

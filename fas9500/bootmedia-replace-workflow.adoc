@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas9500, replace the boot media 
 summary: Comece a substituir a mídia de inicialização no seu sistema de armazenamento FAS9500 revisando os requisitos de substituição, verificando o status da criptografia, desligando o controlador, substituindo a mídia de inicialização, inicializando a imagem de recuperação, restaurando a criptografia e verificando a funcionalidade do sistema. 
 ---
-= Fluxo de trabalho de recuperação manual de mídia de inicialização - FAS9500
+= Fluxo de trabalho de substituição da mídia de inicialização do FAS9500 usando o processo de recuperação manual de inicialização
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -25,7 +25,7 @@ Determine se o sistema tem o gerenciador de chaves de segurança ativado ou disc
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"]link:bootmedia-shutdown.html["Desligue o controlador"]
 [role="quick-margin-para"]
-Desligue o controlador quando precisar de substituir o suporte de arranque.
+Desligue o controlador quando precisar substituir a mídia de inicialização.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"]link:bootmedia-replace.html["Substitua o suporte de arranque"]
 [role="quick-margin-para"]
@@ -37,7 +37,7 @@ Inicie a imagem ONTAP a partir da unidade USB, restaure o sistema de ficheiros e
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Seis"]link:bootmedia-encryption-restore.html["Restaure a criptografia"]
 [role="quick-margin-para"]
-Restaure a configuração do gerenciador de chaves integrado ou do gerenciador de chaves externo no menu de inicialização do ONATP .
+Restaure a configuração do gerenciador de chaves integrado ou do gerenciador de chaves externo no menu de inicialização do ONTAP .
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png["Sete"]link:bootmedia-complete-rma.html["Devolva a peça com falha ao NetApp"]
 [role="quick-margin-para"]

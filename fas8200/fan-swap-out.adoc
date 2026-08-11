@@ -2,16 +2,16 @@
 permalink: fas8200/fan-swap-out.html 
 sidebar: sidebar 
 keywords: fas8200, swap out a fan 
-summary: Para trocar um módulo de ventilador sem interromper o serviço, você deve executar uma sequência específica de tarefas. 
+summary: Substitua o módulo de ventoinha com falha no seu FAS8200 sem interromper o serviço. Conclua a substituição em até dois minutos para evitar o superaquecimento do controlador. 
 ---
-= Troque um ventilador - FAS8200
+= Troque a ventoinha no seu sistema FAS8200 com o sistema em funcionamento.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Para trocar um módulo de ventilador sem interromper o serviço, você deve executar uma sequência específica de tarefas.
+Substitua o módulo de ventoinha com falha no seu FAS8200 sem interromper o serviço. Conclua a substituição em até dois minutos para evitar o superaquecimento do controlador.
 
 
 NOTE: Tem de substituir o módulo da ventoinha no espaço de dois minutos após o retirar do chassis. O fluxo de ar do sistema é interrompido e o módulo do controlador ou módulos são desligados após dois minutos para evitar o sobreaquecimento.
@@ -21,7 +21,7 @@ NOTE: Tem de substituir o módulo da ventoinha no espaço de dois minutos após 
 . Identifique o módulo da ventoinha que deve substituir verificando as mensagens de erro da consola e observando o LED de atenção em cada módulo da ventoinha.
 . Pressione o trinco de desbloqueio no manípulo do excêntrico do módulo da ventoinha e, em seguida, puxe o manípulo do excêntrico para baixo.
 +
-O módulo da ventoinha afasta-se um pouco do chassis.
+O módulo da ventoinha se afasta ligeiramente do chassi.
 
 +
 image::../media/drw_fas32xx_fan.png[Retirar a ventoinha]
@@ -55,7 +55,7 @@ image:../media/icon_round_4.png["Legenda número 4"]
 LED de atenção do módulo da ventoinha
 
 |===
-. Puxe o módulo da ventoinha diretamente para fora do chassis, certificando-se de que o apoia com a mão livre para que não saia do chassis.
+. Puxe o módulo da ventoinha para fora do chassi. Apoie-o com sua mão livre para que não se solte do chassi.
 +
 
 CAUTION: Os módulos da ventoinha são curtos. Apoie sempre a parte inferior do módulo da ventoinha com a mão livre para que não caia subitamente do chassis e o machuque.
@@ -66,7 +66,7 @@ CAUTION: Os módulos da ventoinha são curtos. Apoie sempre a parte inferior do 
 +
 O manípulo do came levanta-se ligeiramente quando o módulo do ventilador está completamente encaixado.
 
-. Desloque o manípulo do excêntrico para a posição fechada, certificando-se de que o trinco de libertação do manípulo do excêntrico encaixa na posição de bloqueio.
+. Gire a alavanca da came para cima até a posição fechada, até que a trava de liberação da alavanca da came se encaixe na posição travada.
 +
 O LED do ventilador deve estar verde depois que o ventilador estiver sentado e tiver girado até a velocidade operacional.
 

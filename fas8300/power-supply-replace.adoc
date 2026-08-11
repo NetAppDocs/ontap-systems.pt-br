@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas8300, fas8700, replace, power, supply, psu, disconnect, source, cable, install, reconnect 
 summary: 'A substituição de uma fonte de alimentação (PSU) envolve desconetar a fonte de alimentação de destino, desconetar o cabo de alimentação, remover a fonte de alimentação antiga e instalar a fonte de alimentação de substituição e, em seguida, reconetar a fonte de alimentação de substituição à fonte de alimentação.' 
 ---
-= Troca a quente de uma fonte de alimentação - FAS8300 e FAS8700
+= Substitua a fonte de alimentação com o sistema FAS8300 ou FAS8700 em funcionamento
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -49,7 +49,7 @@ image::../media/drw_A400_psu.png[Substituição da fonte de alimentação]
 
 . Utilizando ambas as mãos, apoie e alinhe as extremidades da fonte de alimentação com a abertura no módulo do controlador e, em seguida, empurre cuidadosamente a fonte de alimentação para o módulo do controlador até que a patilha de bloqueio encaixe no lugar.
 +
-As fontes de alimentação apenas engatarão adequadamente com o conetor interno e trancam no lugar de uma forma.
+A fonte de alimentação se encaixa no conector interno e trava no lugar apenas de uma maneira.
 
 +
 
@@ -63,7 +63,7 @@ NOTE: Para evitar danificar o conetor interno, não utilize força excessiva ao 
 
 
 +
-Uma vez que a alimentação é restaurada à fonte de alimentação, o LED de estado deve estar verde.
+Após o restabelecimento da energia na fonte de alimentação, o LED indicador de status deve ficar verde.
 
 . Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"^] página para obter mais informações.
 

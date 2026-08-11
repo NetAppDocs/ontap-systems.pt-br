@@ -2,19 +2,19 @@
 permalink: fas8200/pci-cards-and-risers-replace.html 
 sidebar: sidebar 
 keywords: fas8200, replace a pcie card 
-summary: Para substituir uma placa PCIe, é necessário executar uma sequência específica de tarefas. 
+summary: Para substituir uma placa PCIe, você deve remover o módulo controlador do sistema, abrir o painel lateral, remover a placa com defeito, instalar a placa de substituição e, em seguida, reinstalar o módulo controlador. 
 ---
-= Substitua uma placa PCIe - FAS8200
+= Substitua uma placa PCIe em seu sistema FAS8200
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Para substituir uma placa PCIe, é necessário executar uma sequência específica de tarefas.
+Para substituir uma placa PCIe, você deve remover o módulo controlador do sistema, abrir o painel lateral, remover a placa com defeito, instalar a placa de substituição e, em seguida, reinstalar o módulo controlador.
 
 * Pode utilizar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema
-* Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+* Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em contato com o suporte técnico.
 
 
 

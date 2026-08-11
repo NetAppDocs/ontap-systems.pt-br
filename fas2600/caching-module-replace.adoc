@@ -2,16 +2,16 @@
 permalink: fas2600/caching-module-replace.html 
 sidebar: sidebar 
 keywords: fas2600, replace the caching module 
-summary: Você deve substituir o módulo de armazenamento em cache no módulo controlador quando o sistema registrar uma única mensagem AutoSupport indicando que o módulo ficou offline. A não realização dessa ação resulta em degradação do desempenho. 
+summary: Substitua o módulo de armazenamento em cache no seu sistema FAS2600 quando o seu sistema registrar uma única mensagem AutoSupport informando que o módulo ficou offline. Se você não fizer isso, haverá degradação do desempenho. 
 ---
-= Substitua o módulo de armazenamento em cache - FAS2600
+= Substitua o módulo de armazenamento em cache no seu sistema FAS2600
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Você deve substituir o módulo de cache no módulo do controlador quando o sistema Registrar uma única mensagem AutoSupport (ASUP) informando que o módulo ficou offline; se não o fizer, isso resultará na degradação do desempenho.
+Substitua o módulo de armazenamento em cache no seu sistema FAS2600 quando seu sistema registrar uma única mensagem AutoSupport (ASUP) indicando que o módulo ficou offline. Se você não fizer isso, ocorrerá degradação do desempenho.
 
 * Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor.
 
@@ -29,8 +29,6 @@ Você pode desligar ou assumir o controlador prejudicado usando procedimentos di
 Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro mostrar falso quanto à qualificação e integridade, você deve corrigir o problema antes de desligar o controlador prejudicado.
 
 link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]
-
-Você pode querer apagar o conteúdo do seu módulo de cache antes de substituí-lo.
 
 . Embora os dados no módulo de cache sejam criptografados, você pode querer apagar todos os dados do módulo de cache prejudicado e verificar se o módulo de cache não tem dados:
 +
@@ -112,7 +110,7 @@ image::../media/drw_2600_opening_pcm_cover.png[Abrir ou fechar o módulo do cont
 [[step-3-replace-a-caching-module]]
 == Passo 3: Substitua um módulo de cache
 
-Para substituir um módulo de armazenamento em cache chamado de placa PCIe M,2 na etiqueta da controladora, localize o slot dentro da controladora e siga a sequência específica de etapas.
+O módulo de armazenamento em cache é identificado como a placa M.2 PCIe na etiqueta do controlador. Localize o slot dentro do controlador e siga esta sequência de etapas.
 
 Dependendo da situação, seu sistema de storage precisa atender a certos critérios:
 

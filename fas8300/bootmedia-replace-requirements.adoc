@@ -2,16 +2,16 @@
 permalink: fas8300/bootmedia-replace-requirements.html 
 sidebar: sidebar 
 keywords: fas8300, fas8700, replace the boot media 
-summary: Antes de substituir a mídia de inicialização no seu sistema FAS8300 e FAS8700 , certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. Isso inclui certificar-se de que você possui um pen drive USB com a capacidade de armazenamento adequada e verificar se você possui o dispositivo de inicialização de substituição correto. 
+summary: Antes de substituir a mídia de inicialização no seu FAS8300 ou FAS8700, verifique se você atende aos requisitos necessários para uma substituição bem-sucedida. Isso inclui certificar-se de que você possui um pen drive USB com a quantidade adequada de armazenamento e verificar se você tem o dispositivo de inicialização de substituição correto. 
 ---
-= Requisitos para recuperação manual de mídia de inicialização - FAS8300 e FAS8700
+= Verifique os requisitos para recuperação manual da mídia de inicialização no seu FAS8300 ou FAS8700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Antes de substituir a mídia de inicialização no seu sistema FAS8300 ou FAS8700, certifique-se de que atende aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se você possui a mídia de inicialização de substituição correta, confirmar se a porta e0S (chave inglesa e0M) no controlador com defeito não está com problemas e determinar se Onboard Key Manager (OKM) ou External Key Manager (EKM) está habilitado.
+Antes de substituir a mídia de inicialização no seu FAS8300 ou FAS8700, verifique se você atende aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se você possui a mídia de inicialização de substituição correta, confirmar se a porta e0S (chave inglesa e0M) no controlador com defeito não está com problemas e determinar se o Onboard Key Manager (OKM) ou o External Key Manager (EKM) está habilitado.
 
 Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use olink:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"] .  Se o seu sistema estiver executando uma versão anterior do ONTAP, você deverá usar o procedimento de recuperação de inicialização manual.
 

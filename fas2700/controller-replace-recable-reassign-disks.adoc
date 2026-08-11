@@ -1,16 +1,18 @@
 ---
 permalink: fas2700/controller-replace-recable-reassign-disks.html 
 sidebar: sidebar 
-keywords: fas2700, aff a220, how to recable the system, how to reassign disks 
-summary: Você deve remarcar o armazenamento e confirmar a reatribuição do disco. 
+keywords: fas2700, how to recable the system, how to reassign disks 
+summary: Reconecte o armazenamento, confirme a reatribuição do disco e conclua as tarefas restantes para devolver o controlador e restaurar o pleno funcionamento do seu sistema FAS2700. 
 ---
-= Recable o sistema e reatribuir discos - FAS2700
+= Devolva o controlador ao seu sistema FAS2700 para retomar as operações normais
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Reconecte o armazenamento, confirme a reatribuição do disco e conclua as tarefas restantes para devolver o controlador e restaurar o pleno funcionamento do seu sistema FAS2700.
+
 Para concluir o procedimento de substituição e restaurar o sistema para o funcionamento completo, tem de voltar a efetuar a remarcação do armazenamento, confirmar a reatribuição do disco, restaurar a configuração da encriptação de armazenamento NetApp (se necessário) e instalar licenças para o novo controlador. Você deve concluir uma série de tarefas antes de restaurar o sistema para a operação completa.
 
 

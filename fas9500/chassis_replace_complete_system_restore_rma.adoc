@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff fas9500, verify and set HA state, complete the replacement process 
 summary: Você deve verificar o estado de HA do chassi e devolver a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. 
 ---
-= Restaure e verifique a configuração - FAS9500
+= Conclua a substituição do chassi do seu FAS9500
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Para concluir a substituição do chassis, tem de concluir tarefas específicas.
+Para concluir a substituição do chassi no seu sistema FAS9500, você deve verificar e definir o estado HA do chassi, reiniciar o sistema e devolver o chassi com defeito à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit.
 
 
 
@@ -47,9 +47,9 @@ O valor para HA-State pode ser um dos seguintes:
 == Passo 2: Abra o sistema
 
 . Se você não tiver feito isso, conete os cabos de alimentação de volta às PSUs.
-. Ligue as PSUs alternando o botão BASCULANTE para *ON* e aguarde até que os controladores se liguem completamente.
+. Ligue as fontes de alimentação movendo o interruptor basculante para a posição *LIGADO* e aguarde até que os controladores estejam completamente ligados.
 . Verifique a parte dianteira e traseira do chassis e dos controladores quanto a quaisquer luzes de avaria após o arranque.
-. Conete-se ao endereço IP SP ou BMC dos nós via SSH. Esse será o mesmo endereço usado para encerrar os nós.
+. Conecte-se ao endereço IP do SP ou BMC dos nós via SSH. Este é o mesmo endereço usado para desligar os nós.
 . Execute verificações de integridade adicionais conforme descrito em https://kb.netapp.com/onprem/ontap/os/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["How_to_Perform_a_cluster_health_check_with_a_script_in_ONTAP"^]
 . Ligue novamente o AutoSupport (termine a mensagem da janela de manutenção):
 `system node autosupport invoke -node * -type all -message MAINT=end`

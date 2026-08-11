@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas500f, replace real-time clock battery 
 summary: Você substitui a bateria do relógio de tempo real no módulo controlador para que os serviços e aplicativos do seu sistema que dependem da sincronização precisa do tempo continuem funcionando. 
 ---
-= Substitua a bateria do relógio em tempo real
+= Substitua a bateria do relógio em tempo real do seu FAS500f
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,7 +14,7 @@ summary: Você substitui a bateria do relógio de tempo real no módulo controla
 Você substitui a bateria do relógio em tempo real (RTC) no módulo do controlador para que os serviços e aplicativos do sistema que dependem da sincronização precisa de tempo continuem funcionando.
 
 * Pode utilizar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema
-* Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+* Todos os outros componentes do sistema devem estar funcionando corretamente. Caso contrário, entre em contato com o suporte técnico.
 
 
 
@@ -190,7 +190,7 @@ A bateria deve ser ejetada.
 
 |===
 +
-A bateria será ejetada para fora.
+A bateria é ejetada.
 
 . Retire a bateria de substituição do saco de transporte antiestático.
 . Localize o suporte da bateria RTC entre o dissipador de calor e o midplane e insira-o exatamente como mostrado no gráfico.
@@ -203,7 +203,7 @@ image::../media/drw_a250_install_rtc_batt.png[Instalar a bateria do RTC]
 
  a| 
 image:../media/icon_round_1.png["Legenda número 1"]
-| Com a polaridade positiva virada para cima, deslize a bateria por baixo da patilha do compartimento da bateria. 
+| Deslize a bateria sob a aba do compartimento da bateria com a polaridade positiva voltada para cima. 
 
 
  a| 
@@ -238,7 +238,7 @@ Se você removeu os conversores de Mídia (QSFPs ou SFPs), lembre-se de reinstal
 . Se as fontes de alimentação estiverem desconetadas, conete-as novamente e reinstale os retentores do cabo de alimentação.
 . Insira o módulo do controlador no chassis:
 +
-.. Certifique-se de que os braços do mecanismo de engate estão bloqueados na posição totalmente estendida.
+.. Verifique se os braços do mecanismo de travamento estão travados na posição totalmente estendida.
 .. Utilizando ambas as mãos, alinhe e deslize suavemente o módulo do controlador para dentro dos braços do mecanismo de bloqueio até parar.
 .. Coloque os dedos indicadores através dos orifícios dos dedos a partir do interior do mecanismo de bloqueio.
 .. Pressione os polegares para baixo nas patilhas cor-de-laranja na parte superior do mecanismo de bloqueio e empurre suavemente o módulo do controlador sobre o batente.

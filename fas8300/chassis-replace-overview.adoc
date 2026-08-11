@@ -4,15 +4,15 @@ sidebar: sidebar
 keywords: fas8300, fas8700, shut, chassis, controller, replace, remove, swap, verify, install, power, supply, metrocluster, aggregates, replacement, process, equipment, rack, ha, state, system 
 summary: Substituir um chassis com deficiência o novo chassis do mesmo modelo que o chassis com deficiência. 
 ---
-= Descrição geral da substituição do chassis - FAS8300 e FAS8700
+= Analise os requisitos antes de substituir o FAS8300 ou o FAS8700 chassi
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+Antes de substituir o chassi do seu FAS8300 ou FAS8700, todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em contato com o suporte técnico. Este procedimento é compatível com todas as versões do ONTAP, mas causa uma interrupção completa em um cluster de dois controladores e uma interrupção parcial em um cluster com vários nós.
 
 * Pode utilizar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema.
-* Este procedimento é disruptivo. Para um cluster de duas controladoras, você terá uma interrupção de serviço completa e uma interrupção parcial em um cluster de vários nós.
+* Este procedimento é disruptivo: um cluster com dois controladores sofre uma interrupção completa de serviço, e um cluster com vários nós sofre uma interrupção parcial.
 

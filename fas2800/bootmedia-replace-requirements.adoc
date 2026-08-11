@@ -1,17 +1,17 @@
 ---
 permalink: fas2800/bootmedia-replace-requirements.html 
 sidebar: sidebar 
-keywords: fas2800, replace the boot media 
-summary: Antes de substituir a mídia de inicialização no seu sistema FAS2800, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. Isso inclui certificar-se de que você possui um pen drive USB com a capacidade de armazenamento adequada e verificar se você possui o dispositivo de inicialização de substituição correto. 
+keywords: fas2820, replace the boot media 
+summary: Antes de substituir a mídia de inicialização do seu sistema FAS2820, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. Isso inclui garantir que você tenha um pen drive USB com a quantidade adequada de armazenamento e verificar se você possui o dispositivo de inicialização de substituição correto. 
 ---
-= Requisitos para recuperação manual de mídia de inicialização - FAS2800
+= Verifique os requisitos para recuperação manual da mídia de inicialização no seu FAS2820
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Antes de substituir a mídia de inicialização no seu sistema FAS2800, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. Isso inclui certificar-se de que você possui um pen drive USB com a capacidade de armazenamento adequada e verificar se você possui o dispositivo de inicialização de substituição correto.
+Antes de substituir a mídia de inicialização no seu FAS2820, verifique se você atende aos requisitos necessários para uma substituição bem-sucedida. Isso inclui certificar-se de que você possui um pen drive USB com a capacidade de armazenamento adequada e verificar se você tem o dispositivo de inicialização de substituição correto.
 
 Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use olink:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"] .  Se o seu sistema estiver executando uma versão anterior do ONTAP, você deverá usar o procedimento de recuperação de inicialização manual.
 

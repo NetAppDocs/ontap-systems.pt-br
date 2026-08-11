@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas8300, fas8700, replace, pcie, mezzanine, card, controller, metrocluster, reinstall, controller, aggregate, reinstall, controller 
 summary: Para substituir uma placa PCIe ou mezzanine, você deve desconetar os cabos e todos os módulos SFP e QSFP das placas, substituir a placa PCIe ou mezzanine com falha e, em seguida, voltar a digitalizar as placas. 
 ---
-= Substitua uma placa PCIe ou mezzanine - FAS8300 e FAS8700
+= Substitua uma placa PCIe ou mezzanine em seu FAS8300 ou FAS8700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,7 +14,7 @@ summary: Para substituir uma placa PCIe ou mezzanine, você deve desconetar os c
 Para substituir uma placa PCIe ou mezzanine, você deve desconetar os cabos e todos os módulos SFP e QSFP das placas, substituir a placa PCIe ou mezzanine com falha e, em seguida, voltar a digitalizar as placas.
 
 * Pode utilizar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema
-* Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+* Todos os outros componentes do sistema devem estar funcionando corretamente. Caso contrário, você deve entrar em contato com o suporte técnico.
 
 
 
@@ -244,7 +244,7 @@ image:../media/drw_A400_Replace-PCIe-cards.png["Remover as placas PCIe"]
 +
 A riser levanta-se ligeiramente do módulo do controlador.
 
-.. Levante a riser para cima e coloque-a de lado sobre uma superfície plana estável,
+.. Levante o suporte verticalmente e coloque-o de lado sobre uma superfície estável e plana.
 
 
 . Remova a placa PCIe da riser:
@@ -255,7 +255,7 @@ A riser levanta-se ligeiramente do módulo do controlador.
 .. Remova a placa PCIe da riser empurrando cuidadosamente o suporte e levante a placa diretamente para fora do soquete.
 
 
-. Instale a placa PCIe de substituição na riser alinhando a placa com o soquete, pressione a placa no soquete e feche o painel lateral na riser, se houver.
+. Instale a placa PCIe de substituição no riser alinhando a placa com o soquete, pressionando a placa no soquete e, em seguida, fechando o painel lateral do riser, se houver.
 +
 Certifique-se de que alinha corretamente a placa na ranhura e exerce uma pressão uniforme sobre a placa quando a coloca na tomada. A placa PCIe deve estar totalmente e uniformemente encaixada no slot.
 

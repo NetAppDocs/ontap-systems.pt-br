@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas500f, detailed installation 
 summary: Esta seção fornece instruções detalhadas passo a passo para a instalação de um sistema FAS500f. 
 ---
-= Passos detalhados - FAS500f
+= Instale seu FAS500f sistema de storage usando etapas detalhadas
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -448,7 +448,7 @@ image::../media/drw_autodiscovery_controler_select.png[Selecione um ícone ONTAP
 
 +
 .. Abra o Explorador de ficheiros.
-.. Clique em *rede* no painel esquerdo.
+.. Selecione *Rede* no painel esquerdo.
 .. Clique com o botão direito do rato e selecione *Refresh*.
 .. Clique duas vezes no ícone ONTAP e aceite quaisquer certificados exibidos na tela.
 +

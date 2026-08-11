@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas8300, fas8700, nvdimm, battery, remove, controller, module, controller, metrocluster, configuration, aggregate, configuration, reinstall, run, system, switch, shut, down 
 summary: Para substituir a bateria NVDIMM, é necessário remover o módulo do controlador, remover a bateria, substituir a bateria e reinstalar o módulo do controlador. 
 ---
-= Substitua a bateria NVDIMM - FAS8300 e FAS8700
+= Substitua a bateria NVDIMM no seu FAS8300 ou FAS8700.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,7 +13,7 @@ summary: Para substituir a bateria NVDIMM, é necessário remover o módulo do c
 [role="lead"]
 Para substituir a bateria NVDIMM, é necessário remover o módulo do controlador, remover a bateria, substituir a bateria e reinstalar o módulo do controlador.
 
-Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+Todos os outros componentes do sistema devem estar funcionando corretamente. Caso contrário, você deve entrar em contato com o suporte técnico.
 
 
 

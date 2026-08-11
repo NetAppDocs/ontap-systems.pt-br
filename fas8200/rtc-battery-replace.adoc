@@ -2,9 +2,9 @@
 permalink: fas8200/rtc-battery-replace.html 
 sidebar: sidebar 
 keywords: fas8200, replace the rtc battery 
-summary: Você substitui a bateria do relógio de tempo real no módulo controlador para que os serviços e aplicativos do seu sistema que dependem da sincronização precisa do tempo continuem funcionando. 
+summary: Você substitui a bateria do relógio de tempo real no módulo controlador para que seus serviços e aplicativos que dependem da sincronização precisa do tempo continuem funcionando. 
 ---
-= Substitua a bateria do relógio em tempo real - FAS8200
+= Substitua a bateria do relógio em tempo real do seu FAS8200
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,7 +14,7 @@ summary: Você substitui a bateria do relógio de tempo real no módulo controla
 Você substitui a bateria do relógio em tempo real (RTC) no módulo do controlador para que os serviços e aplicativos do sistema que dependem da sincronização precisa de tempo continuem funcionando.
 
 * Pode utilizar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema
-* Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+* Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em contato com o suporte técnico.
 
 
 
@@ -259,8 +259,8 @@ NOTE: Observe a polaridade da bateria ao removê-la do suporte. A bateria está 
 
 
 
-[[step-4-reinstall-the-controller-module-and-setting-timedate-after-rtc-battery-replacement]]
-== Etapa 4: Reinstale o módulo do controlador e ajuste a hora/data após a substituição da bateria do RTC
+[[step-4-reinstall-the-controller-module-and-reset-the-time-and-date-after-rtc-battery-replacement]]
+== Passo 4: reinstale o módulo controlador e redefina a hora e a data após a substituição da bateria RTC
 
 Depois de substituir um componente no módulo do controlador, tem de reinstalar o módulo do controlador no chassis do sistema, repor a hora e a data no controlador e, em seguida, iniciá-lo.
 

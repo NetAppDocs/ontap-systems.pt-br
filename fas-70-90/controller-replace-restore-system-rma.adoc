@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: fas70, fas90, how to restore NetApp Storage Encryption, how to complete the replacement process 
 summary: 'Verifique se as interfaces lógicas (LIFs) estão reportando à sua porta inicial, execute uma verificação de integridade e, em seguida, retorne a parte com falha para NetApp para concluir a etapa final do procedimento de substituição do controlador FAS70 ou FAS90.' 
 ---
-= Substituição completa do controlador - FAS70 e FAS90
+= Conclua a substituição do controlador do seu sistema FAS70 ou FAS90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Para concluir a substituição do controlador do seu sistema AFF A1K, primeiro restaure a configuração do NetApp Storage Encryption (se necessário). Em seguida, confirme se as interfaces lógicas (LIFs) estão relatando para suas portas domésticas e execute uma verificação de integridade do cluster. Por fim, devolva a peça com defeito à NetApp.
+Para concluir a substituição do controlador do seu sistema FAS70 ou FAS90, primeiro restaure a configuração de NetApp Storage Encryption (se necessário). Em seguida, confirme se as interfaces lógicas (LIFs) estão relatando para suas portas de origem e execute uma verificação de integridade do cluster. Por fim, devolva a peça com defeito para a NetApp.
 
 
 

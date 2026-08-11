@@ -11,7 +11,7 @@ summary: Especificações principais do FAS70
 
 
 [role="lead"]
-A seguir estão especificações selecionadas para o sistema de armazenamento FAS70 em um único par de alta disponibilidade.  Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.
+Estas são algumas especificações selecionadas para o sistema de storage FAS70 em um único par de alta disponibilidade. Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de storage.
 
 
 
@@ -21,7 +21,7 @@ A seguir estão especificações selecionadas para o sistema de armazenamento FA
 * Configuração da plataforma: Par de chassi duplo FAS70 HA
 * Capacidade Máxima de Bruto: 15.0000 PB
 * Memória: 256.0000 GB
-* Fator de forma: chassi 2U com 1 controlador HA
+* Formato: chassi 2U com um controlador HA
 * Slots de expansão PCIe: 18
 * Versão mínima do ONTAP : ONTAP 9.15.1
 

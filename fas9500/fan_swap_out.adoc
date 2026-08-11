@@ -4,17 +4,17 @@ sidebar: sidebar
 keywords: fas9500, swap out a fan 
 summary: Para trocar um módulo de ventilador sem interromper o serviço, você deve executar uma sequência específica de tarefas. 
 ---
-= Troque um ventilador - FAS9500
+= Substitua a ventoinha no seu FAS9500 com o sistema em funcionamento.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Para trocar um módulo de ventilador sem interromper o serviço, você deve executar uma sequência específica de tarefas.
+Para substituir a quente um módulo de ventoinha no seu FAS9500 sem interromper o serviço, você deve executar uma sequência específica de tarefas.
 
 
-IMPORTANT: É uma prática recomendada substituir a fonte de alimentação dentro de dois minutos após a remoção do chassi. O sistema continua a funcionar, mas o ONTAP envia mensagens ao console sobre a fonte de alimentação degradada até que a fonte de alimentação seja substituída.
+IMPORTANT: É uma boa prática substituir o módulo de ventoinha em até dois minutos após removê-lo do chassi. O sistema continua funcionando, mas o ONTAP envia mensagens ao console sobre o módulo de ventoinha degradado até que o módulo de ventoinha seja substituído.
 
 .Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.

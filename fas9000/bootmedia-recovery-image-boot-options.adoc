@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a700, fas9000, boot, recovery, image, two, node, metrocluster, configuration, manual, manual boot recovery 
 summary: O procedimento para inicializar o nó com problemas a partir da imagem de recuperação depende de o sistema estar em uma configuração MetroCluster de dois nós. O sistema FAS9000 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. 
 ---
-= Inicie a imagem de recuperação - FAS9000
+= Inicialize a imagem de recuperação no seu FAS9000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-O procedimento para inicializar o nó com problemas a partir da imagem de recuperação depende de o sistema estar em uma configuração MetroCluster de dois nós. O sistema FAS9000 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada.
+Após instalar a mídia de inicialização de substituição no seu FAS9000, inicialize a imagem de recuperação a partir de uma unidade USB. O procedimento para inicializar o controlador com defeito depende se o sistema está em uma configuração de dois nós do MetroCluster. O FAS9000 suporta apenas procedimentos manuais de recuperação por mídia de inicialização.
 
 O procedimento para inicializar o nó prejudicado a partir da imagem de recuperação depende se o sistema está em uma configuração MetroCluster de dois nós.
 

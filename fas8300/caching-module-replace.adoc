@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas8300, fas8700, fas8200, replace, caching, module, shut, down, impaired, controller, fru, metrocluster, add, aggregates, switch, reinstall 
 summary: Você deve substituir o módulo de armazenamento em cache no módulo controlador quando o seu sistema registrar uma única mensagem AutoSupport indicando que o módulo ficou offline. 
 ---
-= Substitua o módulo de armazenamento em cache - FAS8300 e FAS8700
+= Substitua o módulo de armazenamento em cache no seu FAS8300 ou FAS8700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,7 +14,7 @@ summary: Você deve substituir o módulo de armazenamento em cache no módulo co
 Você deve substituir o módulo de cache no módulo do controlador quando o sistema Registrar uma única mensagem AutoSupport (ASUP) informando que o módulo ficou offline; se não o fizer, isso resultará na degradação do desempenho.
 
 
-NOTE: O módulo controlador Ver2 tem apenas um soquete de módulo de cache no FAS8300. O FAS8700 não tem um módulo controlador Ver2. A funcionalidade do módulo de armazenamento em cache não é afetada pela remoção do socket.
+NOTE: O módulo controlador VER2 possui apenas um soquete para módulo de armazenamento em cache no FAS8300. O FAS8700 não possui um módulo controlador VER2. A funcionalidade do módulo de armazenamento em cache não é afetada pela remoção do soquete.
 
 * Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor.
 
@@ -32,7 +32,7 @@ Você pode desligar ou assumir o controlador prejudicado usando procedimentos di
 --
 Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência.
 
-.Sobre estas tarefas
+.Sobre esta tarefa
 Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro mostrar falso quanto à qualificação e integridade, você deve corrigir o problema antes de desligar o controlador prejudicado.
 
 link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]
@@ -220,18 +220,18 @@ Certifique-se de que suporta a parte inferior do módulo do controlador enquanto
 Para substituir um módulo de cache, chamado de Flash Cache na etiqueta do controlador, localize o slot dentro do controlador e siga a sequência específica de etapas. Consulte o mapa da FRU no módulo do controlador para obter a localização do Flash Cache.
 
 
-NOTE: O slot 6 só está disponível no controlador FAS8300 Ver2.
+NOTE: O slot 6 está disponível apenas no FAS8300 VER2 controller.
 
 Dependendo da situação, seu sistema de storage precisa atender a certos critérios:
 
 * Ele deve ter o sistema operacional apropriado para o módulo de cache que você está instalando.
 * A TI precisa dar suporte à capacidade de armazenamento em cache.
-* Embora o conteúdo do módulo de cache seja criptografado, é uma prática recomendada apagar o conteúdo do módulo antes de substituí-lo. Para obter mais informações, consulte https://mysupport.netapp.com/info/web/ECMP1132988.html["Declaração de volatilidade"] o para o seu sistema no site de suporte da NetApp.
+* Embora o conteúdo do módulo de armazenamento em cache esteja criptografado, é uma boa prática apagar o conteúdo do módulo antes de substituí-lo. Para obter mais informações, consulte a  https://mysupport.netapp.com/info/web/ECMP1132988.html["Declaração de volatilidade"] documentação do seu sistema no NetApp Support Site.
 +
 
 NOTE: Você deve fazer login no site de suporte da NetApp para exibir a _Declaração de volatilidade_ para o seu sistema.
 
-* Todos os outros componentes do sistema de armazenamento devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+* Todos os outros componentes do sistema de storage devem estar funcionando corretamente. Caso contrário, entre em contato com o suporte técnico.
 
 
 Você pode usar a animação, ilustração ou as etapas escritas a seguir para substituir um módulo de cache.
@@ -248,9 +248,9 @@ image::../media/drw_8300_Replace-flashcache.png[Retire e substitua o módulo de 
 .. Faça deslizar a conduta de ar em direção à parte de trás do módulo do controlador e, em seguida, rode-a para cima até à posição completamente aberta.
 
 
-. Usando o mapa FRU no módulo do controlador, localize o módulo de cache com falha e remova-o:
+. Localize o módulo de armazenamento em cache com falha usando o mapa FRU no módulo controlador e remova-o:
 +
-Dependendo da sua configuração, pode haver zero, um ou dois módulos de cache no módulo controlador. Use o mapa FRU dentro do módulo do controlador para ajudar a localizar o módulo de cache.
+Dependendo da sua configuração, pode haver zero, um ou dois módulos de armazenamento em cache no módulo controlador. Use o mapa de FRU dentro do módulo controlador para ajudar a localizar o módulo de armazenamento em cache.
 
 +
 .. Prima a patilha de libertação azul.
@@ -341,8 +341,8 @@ Se você removeu os conversores de Mídia (QSFPs ou SFPs), lembre-se de reinstal
 
 
 
-[[step-7-switch-back-aggregates-in-a-two-node-metrocluster-configuration]]
-== Etapa 7: Alterne agregados de volta em uma configuração de MetroCluster de dois nós
+[[step-6-switch-back-aggregates-in-a-two-node-metrocluster-configuration]]
+== Etapa 6: Alterne agregados de volta em uma configuração de MetroCluster de dois nós
 
 Esta tarefa só se aplica a configurações de MetroCluster de dois nós.
 
@@ -398,7 +398,7 @@ Se um switchback estiver demorando muito tempo para terminar, você pode verific
 
 
 
-[[step-8-complete-the-replacement-process]]
-== Passo 8: Conclua o processo de substituição
+[[step-7-complete-the-replacement-process]]
+== Etapa 7: conclua o processo de substituição
 
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"] página para obter mais informações.

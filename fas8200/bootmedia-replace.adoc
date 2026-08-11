@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas8200, replace the boot media, manual, manual boot recovery 
 summary: Substitua a mídia de inicialização com falha em um módulo controlador FAS8200 . O sistema FAS8200 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada. 
 ---
-= Substitua o suporte de arranque - FAS8200
+= Substitua a mídia de inicialização no seu FAS8200
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -100,7 +100,7 @@ Pode instalar a imagem do sistema no suporte de arranque de substituição utili
 * Você deve ter uma unidade flash USB, formatada para FAT32, com pelo menos 4GBGB de capacidade.
 +
 
-NOTE: O arquivo tar.gz deve ser colocado em uma partição formatada FAT32 que seja no mínimo 4GB. Embora as partições FAT32 possam ser tão grandes quanto 2TB, as ferramentas internas do Windows (por exemplo, diskpart) não podem formatar partições FAT32 maiores que 32GB.
+NOTE: O arquivo tar.gz deve ser colocado em uma partição formatada em FAT32 com no mínimo 4GB. Embora as partições FAT32 possam ter até 2TB, as ferramentas incorporadas do Windows (por exemplo, DiskPart) não conseguem formatar partições FAT32 maiores que 32GB.
 
 * Uma cópia da mesma versão de imagem do ONTAP que a que o controlador afetado estava a executar. Você pode baixar a imagem apropriada da seção Downloads no site de suporte da NetApp
 +
@@ -167,6 +167,6 @@ NOTE: Outros parâmetros podem ser necessários para sua interface. Você pode d
 
 
 +
-As alterações serão implementadas quando o sistema for inicializado.
+O sistema implementa as alterações quando é inicializado.
 
 

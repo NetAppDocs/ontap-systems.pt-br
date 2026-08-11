@@ -2,18 +2,18 @@
 permalink: fas8200/dimm-replace.html 
 sidebar: sidebar 
 keywords: fas8200, replace a dimm 
-summary: Você deve substituir um módulo DIMM no controlador quando o sistema registrar um número crescente de códigos de correção de erro corrigíveis. A falha em fazer isso causa um pânico no sistema. 
+summary: 'Você deve substituir um DIMM no módulo controlador quando seu sistema de storage relatar um número excessivo de erros de código de correção corrigíveis (CECC) identificados por alertas do Health Monitor, ou erros ECC não corrigíveis causados por uma única falha de DIMM que impeça o sistema de storage de inicializar o ONTAP.' 
 ---
-= Substitua um DIMM - FAS8200
+= Substitua um módulo DIMM no seu FAS8200 para corrigir erros de memória
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Você deve substituir um DIMM no controlador quando seu sistema de armazenamento encontrar erros como erros CECC excessivos (códigos de correção de erros Correctable) que são baseados em alertas do Monitor de integridade ou erros ECC incorrigíveis, geralmente causados por uma única falha de DIMM que impede o sistema de armazenamento de inicializar o ONTAP.
+Você deve substituir um DIMM no módulo controlador quando seu sistema de storage relatar um número excessivo de erros de código de correção corrigíveis (CECC) identificados por alertas do Health Monitor, ou erros ECC não corrigíveis causados por uma única falha de DIMM que impeça o sistema de storage de inicializar o ONTAP.
 
-Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+Todos os outros componentes do sistema devem estar funcionando corretamente. Caso contrário, entre em contato com o suporte técnico.
 
 Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor.
 
@@ -306,7 +306,7 @@ O entalhe entre os pinos no DIMM deve estar alinhado com a guia no soquete.
 
 . Certifique-se de que as abas do ejetor DIMM no conetor estão na posição aberta e insira o DIMM diretamente no slot.
 +
-O DIMM encaixa firmemente no slot, mas deve entrar facilmente. Caso contrário, realinhar o DIMM com o slot e reinseri-lo.
+O módulo DIMM encaixa-se firmemente no slot, mas deve entrar com facilidade. Se isso não acontecer, realinhe o módulo DIMM com o slot e reinsira-o.
 
 +
 

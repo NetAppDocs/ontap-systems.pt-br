@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas70, fas90, hot swap, replace, Flash Cache module carrier, caching module, Flash Cache 
 summary: 'O suporte do módulo NVMe SSD Flash Cache no seu sistema FAS70 ou FAS90 contém um ou dois módulos Flash Cache (módulos de cache) com uma única unidade SSD Flash Cache integrada a cada módulo de cache.' 
 ---
-= Substitua o suporte do módulo Flash Cache ou um módulo de cache - FAS70 e FAS90
+= Substitua o módulo portador do Flash Cache ou o módulo de armazenamento em cache no seu sistema FAS70 ou FAS90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -29,8 +29,8 @@ Você pode executar qualquer um dos seguintes procedimentos dependendo do compon
 O suporte do módulo Flash Cache está localizado no slot 6 e abriga até dois módulos Flash Cache. Não é possível trocar a operadora do módulo Flash Cache
 
 .Antes de começar
-* Certifique-se de que o seu sistema de armazenamento tem o sistema operativo adequado para o suporte do módulo Flash Cache de substituição.
-* Confirme se todos os outros componentes estão funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+* Verifique se o seu sistema de storage possui o sistema operacional apropriado para o carrier do módulo de Flash Cache de substituição.
+* Confirme se todos os outros componentes estão funcionando corretamente. Caso contrário, entre em contato com o suporte técnico.
 
 
 
@@ -284,8 +284,8 @@ Os módulos Flash Cache (módulos de cache) estão localizados no slot 6-1 ou no
 Você pode trocar os módulos de armazenamento em cache individuais por módulos de armazenamento em cache da mesma capacidade do mesmo fornecedor ou de um fornecedor compatível diferente.
 
 .Antes de começar
-* Verifique se o módulo de armazenamento em cache de substituição tem a mesma capacidade que o com falha, do mesmo fornecedor ou de um fornecedor compatível diferente.
-* Confirme se todos os outros componentes estão funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+* Verifique se o módulo de armazenamento em cache de substituição tem a mesma capacidade que o com defeito, seja do mesmo fornecedor ou de um fornecedor diferente compatível.
+* Confirme se todos os outros componentes estão funcionando corretamente. Caso contrário, entre em contato com o suporte técnico.
 * As unidades nos módulos de armazenamento em cache não são unidades substituíveis em campo (FRU). Você deve substituir todo o módulo de armazenamento em cache.
 
 
@@ -341,7 +341,7 @@ LED de avaria do módulo de armazenamento em cache
 .. Gire a bandeja de gerenciamento de cabos para baixo puxando os botões de ambos os lados no interior da bandeja de gerenciamento de cabos e, em seguida, gire a bandeja para baixo.
 .. Prima o botão de libertação de terra cotta na parte frontal do módulo de armazenamento em cache.
 .. Rode o manípulo do excêntrico o mais longe possível.
-.. Remova o módulo do módulo de cache do compartimento prendendo o dedo na abertura da alavanca do came e puxando o módulo para fora do suporte do módulo Flash Cache.
+.. Remova o módulo de armazenamento em cache do compartimento encaixando o dedo na abertura da alavanca de came e puxando o módulo para fora do suporte do módulo Flash Cache.
 +
 Certifique-se de que suporta o módulo de cache enquanto o remove do suporte do módulo Flash Cache.
 
@@ -371,7 +371,7 @@ The module has been successfully powered on, initialized and placed into service
 ----
 . Verifique o status do slot usando o `system controller slot module show` comando.
 +
-Certifique-se de que a saída do comando reporta o status para o as `powered-on` e pronto para operação.
+Certifique-se de que a saída do comando reporte o status como  `powered-on` e pronto para operação.
 
 . Verifique se o módulo de armazenamento em cache de substituição está on-line e reconhecido e, em seguida, confirme visualmente se o LED de atenção âmbar não está aceso: `sysconfig -av slot_number`
 +

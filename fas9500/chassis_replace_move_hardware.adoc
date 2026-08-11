@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas9500, move hardware components, replace the chassis 
 summary: Para substituir o chassis, tem de remover os componentes do chassis danificado e instalá-los no chassis de substituição. 
 ---
-= Mova e substitua o hardware - FAS9500
+= Substitua o chassi do seu sistema FAS9500
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -59,7 +59,7 @@ Botão de bloqueio terra cotta
 [[step-2-remove-the-fans]]
 == Passo 2: Remova os ventiladores
 
-Ao substituir o chassis, é necessário remover os seis módulos da ventoinha, localizados na parte dianteira do chassis.
+Você deve remover os seis módulos de ventilador, localizados na parte frontal do chassi, ao substituir o chassi.
 
 .Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
@@ -136,7 +136,7 @@ Pega do came
 +
 Certifique-se de que suporta a parte inferior do módulo do controlador enquanto o desliza para fora do chassis.
 
-. Coloque o módulo do controlador de lado em um local seguro e mantenha o controle de qual slot do chassi veio, de modo que ele possa ser instalado no mesmo slot no chassi de substituição.
+. Guarde o módulo controlador em um local seguro e anote de qual slot do chassi ele foi retirado, para que possa ser instalado no mesmo slot no chassi de substituição.
 . Repita estes passos se tiver outro módulo de controlador no chassis.
 
 
@@ -288,7 +288,7 @@ NOTE: Se o sistema estiver em um gabinete do sistema, talvez seja necessário re
 [[step-8-install-the-de-stage-controller-power-module-when-replacing-the-chassis]]
 == Passo 8: Instale o módulo de alimentação do controlador de estágio ao substituir o chassi
 
-Uma vez que o chassi de substituição é instalado no rack ou no gabinete do sistema, você deve reinstalar os módulos de alimentação do controlador de estágio nele.
+Após a instalação do chassi de substituição no rack ou gabinete do sistema, você deve reinstalar os módulos de alimentação do controlador de de-stage nele.
 
 .Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
@@ -366,7 +366,7 @@ IMPORTANT: Ligue apenas o cabo de alimentação à fonte de alimentação. Não 
 
 
 [[step-12-install-the-usb-led-modules]]
-== Passo 12 instale os módulos LED USB
+== Passo 12: Instale os módulos LED USB
 
 Instale os módulos LED USB no chassis de substituição.
 

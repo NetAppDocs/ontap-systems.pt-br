@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas500f, replace power supply 
 summary: A substituição de uma fonte de alimentação envolve desconetar a fonte de alimentação de destino da fonte de alimentação, desconetar o cabo de alimentação, remover a fonte de alimentação antiga e instalar a fonte de alimentação de substituição e conectá-la novamente à fonte de alimentação. 
 ---
-= Troca a quente de uma fonte de alimentação - FAS500f
+= Substitua a fonte de alimentação no seu sistema FAS500f em funcionamento.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -33,7 +33,7 @@ video::86487f5e-20ff-43e6-99ae-ac5b015c1aa5[panopto]
 .. Desconete o cabo de alimentação da fonte de alimentação.
 
 
-. Rode a pega do excêntrico de forma a que possa ser utilizada para retirar a fonte de alimentação do módulo do controlador enquanto prime a patilha de bloqueio.
+. Gire a alavanca de came para puxar a fonte de alimentação para fora do módulo controlador enquanto pressiona a trava de segurança.
 +
 [CAUTION]
 ====
@@ -60,7 +60,7 @@ Fonte de alimentação
 |===
 . Utilizando ambas as mãos, apoie e alinhe as extremidades da fonte de alimentação com a abertura no módulo do controlador e, em seguida, empurre cuidadosamente a fonte de alimentação para o módulo do controlador até que a patilha de bloqueio encaixe no lugar.
 +
-As fontes de alimentação apenas engatarão adequadamente com o conetor interno e trancam no lugar de uma forma.
+As fontes de alimentação se encaixam no conector interno e travam no lugar de apenas uma maneira.
 
 +
 
@@ -73,7 +73,7 @@ NOTE: Para evitar danificar o conetor interno, não utilize força excessiva ao 
 
 
 +
-Uma vez que a alimentação é restaurada à fonte de alimentação, o LED de estado deve estar verde.
+Após o restabelecimento da energia na fonte de alimentação, o LED indicador de status deve ficar verde.
 
 . Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Devolução de peças e substituições"^] página para obter mais informações.
 

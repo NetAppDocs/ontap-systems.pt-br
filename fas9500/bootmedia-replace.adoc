@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: FAS9500, replace, boot, media, controller, directions. replace boot media, transfer image 
 summary: Tem de remover e abrir o módulo do controlador, localizar e substituir o suporte de arranque no controlador e, em seguida, transferir a imagem para o suporte de arranque de substituição. 
 ---
-= Substitua a mídia de inicialização e prepare-se para recuperação de inicialização manual - FAS9500
+= Substitua a mídia de inicialização no seu FAS9500 usando o processo manual de recuperação de inicialização
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Tem de desligar o módulo do controlador, remover e abrir o módulo do controlador, localizar e substituir o suporte de arranque no controlador e, em seguida, transferir a imagem para o suporte de arranque de substituição.
+Tem de remover e abrir o módulo do controlador, localizar e substituir o suporte de arranque no controlador e, em seguida, transferir a imagem para o suporte de arranque de substituição.
 
 Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use olink:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"] .  Se o seu sistema estiver executando uma versão anterior do ONTAP, você deverá usar o procedimento de recuperação de inicialização manual.
 

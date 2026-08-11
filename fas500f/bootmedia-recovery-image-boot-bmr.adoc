@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas500f, boot the recovery image 
 summary: Após instalar o novo dispositivo de mídia de inicialização no seu FAS500f, você pode iniciar o processo automatizado de recuperação da mídia de inicialização para restaurar a configuração do nó parceiro. 
 ---
-= Recuperação automatizada da mídia de inicialização do nó parceiro - FAS500f
+= Restaure a imagem de inicialização no seu sistema FAS500f usando o processo automatizado de recuperação de inicialização
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -301,4 +301,4 @@ Vá para <<reenable-auto-giveback,reativando a devolução automática>> se esti
 
 
 .O que vem a seguir
-Depois de restaurar a imagem ONTAP e o nó estiver ativo e fornecendo dados, link:bootmedia-complete-rma-bmr.html["Devolva a peça com falha ao NetApp"]você .
+Depois de restaurar a imagem do ONTAP e o nó estiver ativo e fornecendo dados, link:bootmedia-complete-rma-bmr.html["Devolva a peça com falha ao NetApp"].

@@ -1,17 +1,17 @@
 ---
 permalink: fas2800/controller-replace-recable-reassign-disks.html 
 sidebar: sidebar 
-keywords: fas2800, how to recable the system, how to reassign disks 
-summary: Você deve remarcar o armazenamento e confirmar a reatribuição do disco. 
+keywords: fas2820, how to recable the system, how to reassign disks 
+summary: 'Para concluir a substituição do controlador e restaurar o seu sistema FAS2820 ao funcionamento completo, você deve recabelar o armazenamento, confirmar a reatribuição dos discos, restaurar a configuração de criptografia de armazenamento da NetApp (se necessário) e instalar as licenças para o novo controlador.' 
 ---
-= Recable o sistema e reatribuir discos - FAS2820
+= Devolva o controlador no seu sistema FAS2820 para retomar as operações normais
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Para concluir o procedimento de substituição e restaurar o sistema para o funcionamento completo, tem de voltar a efetuar a remarcação do armazenamento, confirmar a reatribuição do disco, restaurar a configuração da encriptação de armazenamento NetApp (se necessário) e instalar licenças para o novo controlador. Você deve concluir uma série de tarefas antes de restaurar o sistema para a operação completa.
+Para concluir o procedimento de substituição e restaurar o funcionamento completo do seu sistema FAS2820, você deve reconectar o armazenamento, confirmar a reatribuição do disco, restaurar a configuração de criptografia de armazenamento da NetApp (se necessário) e instalar as licenças para o novo controlador.
 
 
 
@@ -34,7 +34,7 @@ Verifique as conexões de armazenamento e rede do módulo controlador usando htt
 
 Você deve confirmar a alteração do ID do sistema quando você inicializar o controlador _replacement_ e, em seguida, verificar se a alteração foi implementada.
 
-. Se o controlador _replacement_ estiver no modo Manutenção (mostrando o `*>` prompt, saia do modo Manutenção e vá para o prompt Loader: `halt`
+. Se o controlador _replacement_ estiver no modo Manutenção (mostrando o `*>` prompt), saia do modo Manutenção e vá para o prompt Loader: `halt`
 . A partir do prompt Loader no controlador _replacement_, inicialize o controlador, inserindo `y` se for solicitado a substituir o ID do sistema devido a uma incompatibilidade de ID do sistema:``boot_ontap``
 . Aguarde até que a `Waiting for giveback...` mensagem seja exibida no console do controlador _replacement_ e, em seguida, a partir do controlador saudável, verifique se o novo ID do sistema do parceiro foi atribuído automaticamente: `storage failover show`
 +

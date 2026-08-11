@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: FAS9500 
 summary: 'Para substituir a quente um módulo de alimentação do controlador de desengate (DCPM), que contém a bateria NVRAM11, você deve localizar o módulo DCPM com defeito, removê-lo do chassi e instalar o módulo DCPM de substituição.' 
 ---
-= Substitua o módulo de alimentação de controlo de destino que contém a bateria de NVRAM11 V - FAS9500
+= Substitua o módulo DCPM e a bateria NVRAM11 no seu sistema FAS9500
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,7 +13,7 @@ summary: 'Para substituir a quente um módulo de alimentação do controlador de
 [role="lead"]
 Para trocar a quente um módulo de alimentação do controlador de destage (DCPM), que contém a bateria de NVRAM11 V, você deve localizar o módulo DCPM com falha, removê-lo do chassi e instalar o módulo DCPM de substituição.
 
-Tem de ter um módulo DCPM de substituição em mãos antes de remover o módulo com falha do chassis e este tem de ser substituído no prazo de cinco minutos após a remoção. Uma vez que o módulo DCPM é removido do chassi, não há proteção de desligamento para o módulo do controlador que possui o módulo DCPM, além de failover para o outro módulo do controlador.
+Você deve ter um módulo DCPM de substituição em mãos antes de remover o módulo com defeito do chassi. Você deve substituí-lo em até cinco minutos após a remoção. Depois que o módulo DCPM for removido do chassi, não haverá proteção contra desligamento para o módulo controlador que possui o módulo DCPM, exceto pela transferência automática para o outro módulo controlador.
 
 
 
@@ -26,7 +26,7 @@ Para substituir o módulo DCPM em seu sistema, você deve remover o módulo DCPM
 . Retire a moldura na parte frontal do sistema e coloque-a de lado.
 . Localize o módulo DCPM com falha na parte frontal do sistema, procurando o LED de atenção no módulo.
 +
-O LED ficará âmbar fixo se o módulo estiver avariado.
+O LED fica aceso em âmbar fixo se o módulo estiver com defeito.
 
 +
 

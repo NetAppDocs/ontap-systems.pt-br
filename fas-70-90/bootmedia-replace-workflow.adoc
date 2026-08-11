@@ -2,16 +2,16 @@
 permalink: fas-70-90/bootmedia-replace-workflow.html 
 sidebar: sidebar 
 keywords: fas70, fas90, replace the boot media 
-summary: A recuperação manual da imagem de inicialização envolve o uso de uma unidade USB para reinstalar o ONTAP na mídia de inicialização de substituição do sistema FAS70 ou FAS90. Você deve baixar a imagem de recuperação do ONTAP apropriada no site de suporte da NetApp e copiá-la para uma unidade USB. Essa unidade USB preparada é então usada para executar a recuperação e restaurar o sistema ao status operacional. 
+summary: Este fluxo de trabalho utiliza uma unidade USB para reinstalar o ONTAP na mídia de inicialização de substituição do seu sistema FAS70 ou FAS90. Baixe a imagem de recuperação do ONTAP apropriada do NetApp site de suporte, copie-a para a unidade USB e utilize-a para restaurar o sistema ao estado operacional. 
 ---
-= Fluxo de trabalho de recuperação manual de mídia de inicialização - FAS70 e FAS90
+= Fluxo de trabalho de substituição da mídia de inicialização FAS70 e FAS90 usando o processo de recuperação manual de inicialização
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-A recuperação manual da imagem de inicialização envolve o uso de uma unidade USB para reinstalar o ONTAP na mídia de inicialização de substituição do sistema FAS70 ou FAS90. Você deve baixar a imagem de recuperação do ONTAP apropriada no site de suporte da NetApp e copiá-la para uma unidade USB. Essa unidade USB preparada é então usada para executar a recuperação e restaurar o sistema ao status operacional.
+Este fluxo de trabalho utiliza uma unidade USB para reinstalar o ONTAP na mídia de inicialização de substituição do seu sistema FAS70 ou FAS90. Baixe a imagem de recuperação do ONTAP apropriada do NetApp site de suporte, copie-a para a unidade USB e utilize-a para restaurar o sistema ao estado operacional.
 
 Se o seu sistema estiver executando o ONTAP 9.17.1 e posterior, use o link:bootmedia-replace-workflow-bmr.html["procedimento de recuperação de inicialização automática"] .
 
@@ -27,7 +27,7 @@ Determine se o sistema tem o gerenciador de chaves de segurança ativado ou disc
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"]link:bootmedia-shutdown.html["Desligue o controlador desativado"]
 [role="quick-margin-para"]
-Desligue o controlador quando precisar de substituir o suporte de arranque.
+Desligue o controlador quando precisar substituir a mídia de inicialização.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"]link:bootmedia-replace.html["Substitua o suporte de arranque"]
 [role="quick-margin-para"]

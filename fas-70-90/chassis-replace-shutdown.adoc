@@ -2,16 +2,16 @@
 permalink: fas-70-90/chassis-replace-shutdown.html 
 sidebar: sidebar 
 keywords: fas70, fas90, shutdown the controller 
-summary: Desligue o controlador no seu sistema de armazenamento FAS70 ou FAS90 para evitar perda de dados e garantir a estabilidade do sistema ao substituir o chassi. 
+summary: Desligue o controlador do seu sistema de storage FAS70 ou FAS90 para evitar perda de dados e manter a estabilidade do sistema ao substituir o chassi. 
 ---
-= Desligue o controlador para substituir o chassi - FAS70 e FAS90
+= Desligue o seu controlador FAS70 ou FAS90 para substituir o chassi
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Desligue o controlador no seu sistema de armazenamento FAS70 ou FAS90 para evitar perda de dados e garantir a estabilidade do sistema ao substituir o chassi.
+Desligue o controlador do seu sistema de storage FAS70 ou FAS90 para evitar perda de dados e manter a estabilidade do sistema ao substituir o chassi.
 
 Assuma o controle e interrompa o controlador com defeito para que o controlador em bom estado continue a fornecer dados do armazenamento do controlador com defeito. Para fazer isso, você suprime a criação automática de casos em AutoSupport, desativa o giveback automático e leva o controlador com defeito ao prompt LOADER. O prompt LOADER é o estado de parada segura a partir do qual você pode substituir a FRU.
 

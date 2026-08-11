@@ -1,17 +1,17 @@
 ---
 permalink: fas2800/bootmedia-shutdown-bmr.html 
 sidebar: sidebar 
-keywords: fas2800, shut down the controller 
-summary: Desligue o controlador danificado no seu sistema de armazenamento FAS2800 para evitar perda de dados e garantir a estabilidade do sistema ao substituir a mídia de inicialização. 
+keywords: fas2820, shut down the controller 
+summary: Desligue o controlador com defeito no seu sistema de storage FAS2820 para evitar perda de dados e manter a estabilidade do sistema ao substituir a mídia de inicialização. 
 ---
-= Desligue o controlador para recuperação automatizada da mídia de inicialização - FAS2800
+= Desligue o controlador com defeito no seu sistema FAS2820 durante o processo de recuperação automática de inicialização
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Desligue o controlador danificado no seu sistema de armazenamento FAS2800 para evitar perda de dados e manter a estabilidade do sistema durante o processo automatizado de recuperação da mídia de inicialização.
+Desligue o controlador com defeito no seu sistema de storage FAS2820 para evitar perda de dados e manter a estabilidade do sistema durante o processo automatizado de recuperação da mídia de boot.
 
 O processo automatizado de recuperação de mídia de inicialização é compatível apenas com o ONTAP 9.17.1 e versões posteriores. Se o seu sistema de armazenamento estiver executando uma versão anterior do ONTAP, use o link:bootmedia-replace-workflow.html["procedimento de recuperação de inicialização manual"] .
 

@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: fas2600 maintenance, maintenance, repairing fas2600, repairing fas2600, replace aff fas2600 components, replace aff fas2600 components 
 summary: Mantenha o hardware fas2600 
 ---
-= Mantenha o hardware FAS2600
+= Saiba mais sobre a manutenção do seu sistema de storage FAS2600
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Para o sistema de armazenamento FAS2600, pode executar procedimentos de manutenção nos seguintes componentes.
+Você pode realizar procedimentos de manutenção nesses componentes do seu sistema de storage FAS2600.
 
 
 
@@ -57,8 +57,8 @@ Uma unidade é um dispositivo que fornece a Mídia de armazenamento físico para
 
 
 
-[[nvem-battery]]
-== Bateria NVEM
+[[nvmem-battery]]
+== Bateria NVMEM
 
 Uma bateria é incluída com um controlador e preserva os dados em cache se a energia CA falhar.
 

@@ -2,16 +2,16 @@
 permalink: fas8300/controller-replace-system-config-restore-and-verify.html 
 sidebar: sidebar 
 keywords: fas8300, fas8700, restore and verify the system configuration, verify and set the ha state of the controller module 
-summary: 'Verifique se a configuração de alta disponibilidade (HA) do controlador está ativa e funcionando corretamente em seu FAS8300 e FAS8700 sistema de storage e confirme se as portas de storage do sistema listam todos os caminhos para os discos.' 
+summary: 'Verifique se a configuração de alta disponibilidade (HA) do controlador está ativa e funcionando corretamente no seu FAS8300 ou FAS8700 sistema de storage e confirme se as portas de storage do sistema listam todos os caminhos para os discos.' 
 ---
-= Restaure e verifique a configuração do sistema - FAS8300 e FAS8700
+= Restaure e verifique a configuração do controlador no seu FAS8300 ou FAS8700.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Verifique se a configuração de alta disponibilidade (HA) do controlador está ativa e funcionando corretamente em seu FAS8300 e FAS8700 sistema de storage e confirme se as portas de storage do sistema listam todos os caminhos para os discos.
+Verifique se a configuração de alta disponibilidade (HA) do controlador está ativa e funcionando corretamente no seu FAS8300 ou FAS8700 sistema de storage e confirme se as portas de storage do sistema listam todos os caminhos para os discos.
 
 Verifique as configurações de alta disponibilidade (HA) e a lista de discos antes de colocar o sistema em funcionamento novamente.
 

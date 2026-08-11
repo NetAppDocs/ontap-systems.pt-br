@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas8200, replace caching module 
 summary: Você deve substituir o módulo de armazenamento em cache no módulo controlador quando o sistema registrar uma única mensagem AutoSupport indicando que o módulo ficou offline. A não realização dessa ação resulta em degradação do desempenho. 
 ---
-= Substitua o módulo de armazenamento em cache - FAS8200
+= Substitua o módulo de armazenamento em cache no seu FAS8200
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -256,7 +256,7 @@ Dependendo da situação, seu sistema de storage precisa atender a certos crité
 
 * Ele deve ter o sistema operacional apropriado para o módulo de cache que você está instalando.
 * A TI precisa dar suporte à capacidade de armazenamento em cache.
-* Todos os outros componentes do sistema de armazenamento devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+* Todos os outros componentes do sistema de storage devem estar funcionando corretamente; caso contrário, entre em contato com o suporte técnico.
 +
 .. Localize o módulo de armazenamento em cache na parte traseira do módulo do controlador e retire-o.
 +
@@ -300,7 +300,7 @@ Se você removeu os conversores de Mídia (QSFPs ou SFPs), lembre-se de reinstal
 
 . Conclua a reinstalação do módulo do controlador:
 +
-O módulo do controlador começa a arrancar assim que estiver totalmente assente no chassis
+O módulo do controlador começa a arrancar assim que estiver totalmente assente no chassis.
 
 +
 .. Com a alavanca do came na posição aberta, empurre firmemente o módulo do controlador até que ele atenda ao plano médio e esteja totalmente assentado e, em seguida, feche a alavanca do came para a posição travada.

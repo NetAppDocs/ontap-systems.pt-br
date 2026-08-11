@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: fas9500, recable the system, reassign disks 
 summary: Recabeie o sistema e reatribua os discos. 
 ---
-= Recable o sistema - FAS9500
+= Devolva o controlador no seu sistema FAS9500 para retomar as operações normais
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Continue o procedimento de substituição reativando as configurações de armazenamento e rede.
+Devolva o controle dos recursos de storage ao controlador de substituição para que seu sistema FAS9500 possa retomar a operação normal.
 
 
 
@@ -25,27 +25,27 @@ Continue o procedimento de substituição reativando as configurações de armaz
 . Verifique se o cabeamento está correto usando https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]o .
 +
 .. Baixe e instale o Config Advisor.
-.. Insira as informações do sistema de destino e clique em coletar dados.
-.. Clique na guia cabeamento e examine a saída. Certifique-se de que todos os compartimentos de disco sejam exibidos e todos os discos apareçam na saída, corrigindo quaisquer problemas de cabeamento encontrados.
-.. Verifique outro cabeamento clicando na guia apropriada e, em seguida, examinando a saída do Config Advisor.
+.. Insira as informações do sistema de destino e selecione Coletar Dados.
+.. Selecione a guia Cabeamento e, em seguida, examine a saída. Certifique-se de que todas as gavetas de disco estejam exibidas e que todos os discos apareçam na saída, corrigindo quaisquer problemas de cabeamento que você encontrar.
+.. Verifique outros cabos selecionando a guia apropriada e, em seguida, examinando a saída do Config Advisor.
 
 
 
 
 
-NOTE: As informações de identificação do sistema e atribuição de disco residem no módulo NVRAM, que está em um módulo separado do módulo do controlador e não é afetado pela substituição do módulo do controlador.
+NOTE: As informações de ID do sistema e de atribuição de disco residem no módulo NVRAM, que está em um módulo separado do módulo controlador e não é afetado pela substituição do módulo controlador.
 
 
 
 [[step-2-reassign-disks]]
 == Etapa 2: Reatribuir discos
 
-Se o sistema de storage estiver em um par de HA, a ID do sistema do novo módulo de controladora será automaticamente atribuída aos discos quando o giveback ocorrer no final do procedimento. Você deve confirmar a alteração do ID do sistema quando você inicializar o nó _replacement_ e, em seguida, verificar se a alteração foi implementada.
+Se o sistema de storage estiver em um par de HA, o ID do sistema do novo módulo controlador será atribuído automaticamente aos discos quando o giveback ocorrer ao final do procedimento. Você deve confirmar a alteração do ID do sistema ao inicializar o nó de substituição e, em seguida, verificar se a alteração está correta.
 
 Este procedimento aplica-se apenas a sistemas que executam o ONTAP em um par de HA.
 
 . Se o nó _replacement_ estiver no modo Manutenção (mostrando o `*>` prompt), saia do modo Manutenção e vá para o prompt Loader: `halt`
-. A partir do prompt Loader no nó _replacement_, inicialize o nó, inserindo `y` se for solicitado a substituir o ID do sistema devido a uma incompatibilidade de ID do sistema.``boot_ontap``
+. A partir do prompt LOADER no nó _replacement_, inicialize o nó, digitando  `y` se você for solicitado a substituir o ID do sistema devido a uma incompatibilidade de ID do sistema: `boot_ontap`
 . Aguarde até que a `Waiting for giveback...` mensagem seja exibida no console do nó _replacement_ e, em seguida, a partir do nó de integridade, verifique se a nova ID do sistema do parceiro foi atribuída automaticamente: Exibição de failover de armazenamento
 +
 Na saída do comando, você verá uma mensagem informando que a ID do sistema foi alterada no nó prejudicado, mostrando as IDs antigas e novas corretas. No exemplo a seguir, o node2 foi substituído e tem um novo ID de sistema de 151759706.

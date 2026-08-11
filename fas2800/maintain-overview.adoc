@@ -1,10 +1,10 @@
 ---
 permalink: fas2800/maintain-overview.html 
 sidebar: sidebar 
-keywords: fas2800 maintenance, maintenance, repairing, repairing fas2800, replace fas2800 components, replace fas2800 components 
-summary: Mantenha o hardware FAS2820 
+keywords: fas2820 maintenance, maintenance, repairing, repairing fas2820, replace fas2820 components, replace fas2820 components 
+summary: Faça a manutenção do hardware do seu sistema de storage FAS2820 para garantir confiabilidade a longo prazo e desempenho ideal. 
 ---
-= Mantenha o hardware FAS2820
+= Saiba mais sobre a manutenção do seu sistema de storage FAS2820
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -20,7 +20,7 @@ Os procedimentos de manutenção pressupõem que o sistema de armazenamento FAS2
 [[system-components]]
 == Componentes do sistema
 
-Para o sistema de armazenamento FAS2820, pode executar procedimentos de manutenção nos seguintes componentes.
+Você pode realizar procedimentos de manutenção nesses componentes do seu sistema de storage FAS2820.
 
 [cols="25,65"]
 |===
@@ -85,7 +85,7 @@ Uma bateria é incluída com o controlador e preserva os dados em cache se a ene
  a| 
 link:pci-cards-and-risers-replace.html["Placa mezzanine"]
  a| 
-Uma placa Mezzanine é uma placa de expansão projetada para ser inserida em um slot especializado na placa-mãe e contém as placas de E/S.
+Uma placa mezzanine é uma placa de expansão que se encaixa em um slot específico na placa-mãe e abriga as placas de E/S.
 
 
 

@@ -2,15 +2,17 @@
 permalink: fas2600/controller-replace-shutdown.html 
 sidebar: sidebar 
 keywords: fas2600, shut down, impaired controller, take over 
-summary: Para encerrar o controlador com deficiência, você deve determinar o status do controlador e, se necessário, assumir o controlador para que o controlador saudável continue fornecendo dados do armazenamento do controlador com deficiência. 
+summary: Desligue o controlador com defeito no seu sistema FAS2600 antes da substituição, verificando seu status e, se necessário, assumindo-o para que o controlador em bom funcionamento continue a fornecer dados. 
 ---
-= Desligue o controlador - FAS2600
+= Desligue o controlador com problema do seu sistema FAS2600 antes de substituí-lo
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Desligue o controlador com defeito no seu sistema FAS2600 antes da substituição, determinando seu status e, se necessário, assumindo-o para que o controlador em bom funcionamento continue a fornecer dados do armazenamento do controlador com defeito.
+
 Assuma o controle e interrompa o controlador com defeito para que o controlador em bom estado continue a fornecer dados do armazenamento do controlador com defeito. Para fazer isso, você suprime a criação automática de casos em AutoSupport, desativa o giveback automático e leva o controlador com defeito ao prompt LOADER. O prompt LOADER é o estado de parada segura a partir do qual você pode substituir a FRU.
 
 Se você tiver um cluster com mais de dois nós, ele deverá estar no quórum. Se o cluster não estiver em quórum ou se um controlador íntegro exibir false para qualificação e integridade, você deverá corrigir o problema antes de encerrar o controlador prejudicado; link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["Sincronize um nó com o cluster"^]consulte .

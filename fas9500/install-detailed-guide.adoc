@@ -2,16 +2,16 @@
 permalink: fas9500/install-detailed-guide.html 
 sidebar: sidebar 
 keywords: FAS9500 
-summary: Este a fornece instruções detalhadas passo a passo para a instalação de um sistema NetApp típico. 
+summary: Esta página fornece instruções detalhadas passo a passo para instalar o seu sistema FAS9500. 
 ---
-= Passos detalhados - FAS9500
+= Instale seu sistema FAS9500 usando instruções detalhadas
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-este artigo fornece instruções detalhadas passo a passo para instalar um sistema NetApp típico. Use este artigo se você quiser instruções de instalação mais detalhadas.
+Esta página fornece instruções detalhadas passo a passo para a instalação do seu FAS9500. Use estas instruções se você quiser instruções de instalação mais detalhadas.
 
 
 
@@ -279,7 +279,7 @@ image::../media/oie_cable_sfp_gbe_copper.png[Conetor de cobre GbE SFP]
 
 40GbE switches de rede de host:
 
-Portas b do lado do host do cabo no slot A4 e B4 (e4b) e no slot A8 e B8 (e8b) para o switch do host.
+Conecte os cabos das portas b do lado do host nos slots A4 e B4 (e4b) e nos slots A8 e B8 (e8b) ao switch host.
 
 image::../media/oie_cable100_gbe_qsfp28.png[Conetor QSFP de 100 GbE]
 
@@ -300,7 +300,7 @@ image::../media/oie_cable_sfp_gbe_copper.png[Conetor de cobre GbE SFP]
 image::../media/icon_square_5_grey.png[Ícone de legenda 4]
  a| 
 ** Prenda os cabos aos braços de gestão do cabo (não ilustrado).
-** Ligue os cabos de alimentação às PSUs e ligue-os a diferentes fontes de alimentação (não apresentadas). A PSU 1 e 3 fornecem energia para todos os componentes do lado A, enquanto PSU2 e PSU4 fornecem energia para todos os componentes do lado B.
+** Conecte os cabos de alimentação às fontes de alimentação e ligue-as a diferentes fontes de energia (não mostradas). As fontes de alimentação PSU1 e PSU3 fornecem energia a todos os componentes do lado A, enquanto as fontes de alimentação PSU2 e PSU4 fornecem energia a todos os componentes do lado B.
 
 
 image::../media/oie_cable_power.png[Cabos de alimentação]
@@ -372,7 +372,7 @@ image::../media/oie_cable_sfp_gbe_copper.png[Conetor de cobre GbE SFP]
 
 40GbE switches de rede de host:
 
-Portas b do lado do host do cabo no slot A4 e B4 (e4b) e no slot A8 e B8 (e8b) para o switch do host.
+Conecte os cabos das portas b do lado do host nos slots A4 e B4 (e4b) e nos slots A8 e B8 (e8b) ao switch host.
 
 image::../media/oie_cable100_gbe_qsfp28.png[Conetor QSFP de 100 GbE]
 
@@ -393,7 +393,7 @@ image::../media/oie_cable_sfp_gbe_copper.png[Conetor de cobre de 100 GbE]
 image::../media/icon_square_4_red.png[Ícone de legenda 4]
  a| 
 ** Prenda os cabos aos braços de gestão do cabo (não ilustrado).
-** Ligue os cabos de alimentação às PSUs e ligue-os a diferentes fontes de alimentação (não apresentadas). A PSU 1 e 3 fornecem energia para todos os componentes do lado A, enquanto PSU2 e PSU4 fornecem energia para todos os componentes do lado B.
+** Conecte os cabos de alimentação às fontes de alimentação e ligue-as a diferentes fontes de energia (não mostradas). As fontes de alimentação PSU1 e PSU3 fornecem energia a todos os componentes do lado A, enquanto as fontes de alimentação PSU2 e PSU4 fornecem energia a todos os componentes do lado B.
 
 
 image::../media/oie_cable_power.png[Cabos de alimentação]
@@ -417,7 +417,7 @@ NOTE: Para obter mais informações sobre cabeamento SAS e planilhas, consulte l
 
 .Antes de começar
 * Conclua a Planilha de cabeamento SAS do seu sistema. link:../sas3/overview-cabling-rules-examples.html["Visão geral das regras de cabeamento SAS, planilhas e exemplos - prateleiras com IOM12 módulos"]Consulte .
-* Certifique-se de que verifica a seta da ilustração para a orientação adequada da presilha de puxar do conetor do cabo. A presilha de puxar do cabo para os módulos de armazenamento está para cima, enquanto as presilhas de puxar nas prateleiras estão para baixo.
+* Verifique a seta na ilustração para a orientação correta da aba de puxar do conector do cabo. A aba de puxar do cabo dos módulos de armazenamento está voltada para cima, enquanto as abas de puxar das prateleiras estão voltadas para baixo.
 
 
 image::../media/oie_cable_pull_tab_up.png[Direção da patilha de puxar do cabo]
@@ -428,7 +428,7 @@ image::../media/oie_cable_pull_tab_down.png[Direção da patilha de puxar do cab
 NOTE: Ao inserir o conetor, você deve sentir que ele clique no lugar; se você não sentir que ele clique, remova-o, vire-o e tente novamente.
 
 .Passos
-. Use a animação a seguir ou os desenhos para cabeamento das controladoras para três (stack de 1 PB de um compartimento de unidades e uma stack de dois compartimentos de unidades) gavetas de DS224C unidades.
+. Utilize a animação ou os desenhos a seguir para conectar seus controladores a três (uma pilha com uma gaveta de unidades e uma pilha com duas gavetas de unidades) gavetas de unidades DS224C.
 +
 .Animação Conecte seus cabos às prateleiras da unidade
 video::c958aae6-9d08-4d3d-a213-ae7c017040cd[panopto]

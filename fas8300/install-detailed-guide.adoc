@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: fas8300, fas8700, install, detailed, guide, prepare, hardware, cable, controller, switchless, cluster, sas, drive, two, node, configuration 
 summary: Este guia fornece instruções detalhadas passo a passo para instalar um sistema NetApp típico. Use este guia se quiser instruções de instalação mais detalhadas. 
 ---
-= Guia detalhado - FAS8300 e FAS8700
+= Instale seu FAS8300 ou FAS8700 usando instruções detalhadas
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Este guia fornece instruções detalhadas passo a passo para instalar um sistema NetApp típico. Use este guia se quiser instruções de instalação mais detalhadas.
+Estas instruções detalhadas, passo a passo, orientam você na instalação do seu FAS8300 ou FAS8700, desde a montagem no rack e cabeamento até a configuração inicial. Use estas etapas se você quiser orientações de instalação mais detalhadas do que as etapas rápidas fornecem.
 
 
 
@@ -156,7 +156,7 @@ image:../media/oie_cable_power.png["Cabos de alimentação"]
 Ligar o sistema
 
 |===
-. Revise o _Guia de Confiuração do NetApp ONTAP_ e colete as informações necessárias listadas nesse guia.
+. Reveja o _Guia de Configuração do NetApp ONTAP_ e recolha as informações necessárias listadas nesse guia.
 +
 https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["Guia de configuração do ONTAP"]
 
@@ -194,7 +194,7 @@ image::../media/drw_a320_cable_management_arms.png[Remover ou instalar os braço
 Você pode conetar os controladores à rede usando o método de cluster sem switch de dois nós ou usando a rede de interconexão de cluster.
 
 
-NOTE: Se as etiquetas de porta na placa não estiverem visíveis, verifique a orientação de instalação da placa (o soquete do conetor PCIe está no lado esquerdo do slot da placa no A400 e no FAS8300/8700) e, em seguida, procure a placa, por número de peça, no https://hwu.netapp.com["NetApp Hardware Universe"^] para obter um gráfico da moldura que mostrará as etiquetas da porta. O número de peça do cartão pode ser encontrado usando o `sysconfig -a` comando ou na lista de embalagem do sistema.
+NOTE: Se as etiquetas das portas na placa não estiverem visíveis, verifique a orientação de instalação da placa (o soquete do conector PCIe está no lado esquerdo do slot da placa nos modelos A400 e FAS8300/8700) e, em seguida, procure a placa pelo número de peça no  https://hwu.netapp.com["NetApp Hardware Universe"^] para ver uma imagem do painel que mostra as etiquetas das portas. O número de peça da placa pode ser encontrado usando o comando  `sysconfig -a` ou na lista de embalagem do sistema.
 
 
 
@@ -318,11 +318,11 @@ image::../media/drw_autodiscovery_controler_select_ieops-1849.svg[Selecione um �
 
 +
 .. Abra o Explorador de ficheiros.
-.. Clique em *rede* no painel esquerdo e clique com o botão direito do rato e selecione *atualizar*.
+.. Selecione *Rede* no painel esquerdo, clique com o botão direito do mouse em *Rede* e selecione *Atualizar*.
 .. Clique duas vezes no ícone ONTAP e aceite quaisquer certificados exibidos na tela.
 +
 
-NOTE: XXXXX é o número de série do sistema para o nó de destino.
+NOTE: Neste exemplo, XXXXX representa o número de série do sistema para o nó de destino.
 
 +
 O System Manager é aberto.

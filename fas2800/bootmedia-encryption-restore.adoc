@@ -1,17 +1,17 @@
 ---
 permalink: fas2800/bootmedia-encryption-restore.html 
 sidebar: sidebar 
-keywords: fas 2800, post, boot, media, okm, nse, nve, onboard key manager, netapp storage encryption, netapp volume encryption 
-summary: Restaure a encriptação no suporte de arranque de substituição. 
+keywords: fas2820, post, boot, media, okm, nse, nve, onboard key manager, netapp storage encryption, netapp volume encryption 
+summary: Restaure a criptografia na mídia de inicialização de substituição em seu FAS2820. 
 ---
-= Restaurar encriptação - FAS2820
+= Restaure a criptografia na mídia de inicialização do seu sistema FAS2820 após o processo de recuperação manual de inicialização
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Restaure a encriptação no suporte de arranque de substituição.
+Após substituir a mídia de inicialização no seu FAS2820, restaure a criptografia no novo dispositivo para manter a segurança dos dados e retornar o sistema à sua configuração original.
 
 Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use olink:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"] .  Se o seu sistema estiver executando uma versão anterior do ONTAP, você deverá usar o procedimento de recuperação de inicialização manual.
 

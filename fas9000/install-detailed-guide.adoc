@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a700, fas9000, detailed, guide, prepare, install, hardware, two, node, switchless, cluster, cable, controller, ds212c, ds224c, ns224, drive, shelf, complete, system, setup, configuration, network, discovery 
 summary: Este guia fornece instruções detalhadas passo a passo para instalar um sistema NetApp típico. 
 ---
-= Guia detalhado - FAS9000
+= Instale seu sistema FAS9000 usando instruções detalhadas
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Este guia fornece instruções detalhadas passo a passo para instalar um sistema NetApp típico. Use este guia se quiser instruções de instalação mais detalhadas.
+Estas instruções detalhadas, passo a passo, guiam você na instalação do seu FAS9000, desde a montagem no rack e cabeamento até a configuração inicial. Use estas etapas se você quiser orientações de instalação mais aprofundadas do que as etapas rápidas fornecem.
 
 
 
@@ -171,7 +171,7 @@ image:../media/oie_cable_power.png["Cabos de alimentação"]
 Ligar o sistema
 
 |===
-. Revise o _Guia de Confiuração do NetApp ONTAP_ e colete as informações necessárias listadas nesse guia.
+. Reveja o _Guia de Configuração do NetApp ONTAP_ e recolha as informações necessárias listadas nesse guia.
 +
 https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["Guia de configuração do ONTAP"]
 
@@ -219,7 +219,7 @@ Você pode conetar os controladores à rede usando o método de cluster sem swit
 
 A rede de gerenciamento, a rede de dados e as portas de gerenciamento nos controladores são conetadas aos switches. As portas de interconexão de cluster são cabeadas em ambos os controladores.
 
-Tem de ter contactado o administrador da rede para obter informações sobre a ligação do sistema aos comutadores.
+Contacte o administrador da rede para obter informações sobre como ligar o sistema aos comutadores.
 
 Certifique-se de que verifica a direção das patilhas de puxar do cabo ao inserir os cabos nas portas. As presilhas de cabos estão disponíveis para todas as portas do módulo de rede.
 
@@ -246,7 +246,7 @@ image::../media/drw_9000_TNSC_composite_cabling.png[Diagrama de cabeamento compo
 
 A rede de gerenciamento, a rede de dados e as portas de gerenciamento nos controladores são conetadas aos switches. A interconexão de cluster e as portas de HA são cabeadas para o switch cluster/HA.
 
-Tem de ter contactado o administrador da rede para obter informações sobre a ligação do sistema aos comutadores.
+Contacte o administrador da rede para obter informações sobre como ligar o sistema aos comutadores.
 
 Certifique-se de que verifica a direção das patilhas de puxar do cabo ao inserir os cabos nas portas. As presilhas de cabos estão disponíveis para todas as portas do módulo de rede.
 
@@ -271,7 +271,7 @@ image:../media/drw_9000_switched_cluster_cabling.png["Diagrama de cabeamento com
 [[step-4-cable-controllers-to-drive-shelves]]
 == Etapa 4: Controladores de cabos para compartimentos de unidades
 
-Você pode enviar seu novo sistema por cabo para DS212C, DS224C ou NS224 gavetas, dependendo se for um sistema AFF ou FAS.
+Você pode conectar seu novo sistema às prateleiras DS212C, DS224C ou NS224, dependendo se é um AFF ou um sistema FAS.
 
 
 
@@ -330,10 +330,10 @@ image:../media/Cable_shelves_new_system_IOM12_shelves.png["Cabeamento do sistema
 [[option-2-cable-the-controllers-to-a-single-ns224-drive-shelf-in-asa-aff-a700-systems-running-ontap-9-8-and-later-only]]
 === Opção 2: Faça o cabeamento das controladoras a uma única gaveta de unidade de NS224 TB nos sistemas ASA AFF A700 que executam o ONTAP 9.8 e versões posteriores apenas
 
-Você deve enviar cada controlador por cabo aos módulos NSM no compartimento de unidades NS224 em um AFF A700 ou ASA AFF A700 executando o sistema ONTAP 9.8 ou posterior.
+Você deve conectar cada controlador aos módulos NSM no shelf de unidades NS224 em um AFF A700 ou ASA AFF A700 executando o ONTAP 9.8 ou posterior.
 
 * Esta tarefa aplica-se apenas ao ASA AFF A700 executando o ONTAP 9.8 ou posterior.
-* Os sistemas devem ter pelo menos um módulo X91148A instalado nos slots 3 e/ou 7 para cada controlador. A animação ou ilustrações mostram este módulo instalado em ambos os slots 3 e 7.
+* Os sistemas devem ter pelo menos um módulo X91148A instalado no slot 3 ou 7 de cada controlador. A animação ou as ilustrações mostram este módulo instalado nos slots 3 e 7.
 * Certifique-se de que verifica a seta da ilustração para a orientação adequada da presilha de puxar do conetor do cabo. A presilha de puxar do cabo para os módulos de armazenamento está para cima, enquanto as presilhas de puxar nas prateleiras estão para baixo.
 +
 image::../media/oie_cable_pull_tab_up.png[Conetor de cabo com patilha na parte superior]
@@ -366,7 +366,7 @@ image::../media/single_NS224_shelf.png[Cabeamento de compartimento único]
 [[option-3-cable-the-controllers-to-two-ns224-drive-shelves-in-asa-aff-a700-systems-running-ontap-9-8-and-later-only]]
 === Opção 3: Faça o cabeamento das controladoras para dois compartimentos de unidades NS224 em sistemas ASA AFF A700 que executam o ONTAP 9.8 e versões posteriores somente
 
-Você precisa vincular cada controladora aos módulos do NSM nos NS224 compartimentos de unidades em um AFF A700 ou ASA AFF A700 executando o sistema ONTAP 9.8 ou posterior.
+Você deve conectar cada controlador aos módulos NSM nos shelves de discos NS224 em um AFF A700 ou ASA AFF A700 executando o ONTAP 9.8 ou posterior.
 
 * Esta tarefa aplica-se apenas ao ASA AFF A700 executando o ONTAP 9.8 ou posterior.
 * Os sistemas devem ter dois módulos X91148A, por controlador, instalados nos slots 3 e 7.
@@ -414,7 +414,7 @@ Se tiver a deteção de rede ativada no seu computador portátil, pode concluir 
 .Passos
 . Use a animação a seguir para definir uma ou mais IDs de gaveta de unidade:
 +
-Se o seu sistema tiver NS224 compartimentos de unidades, as gavetas serão pré-configuradas para ID do compartimento 00 e 01. Se você quiser alterar as IDs de gaveta, você deve criar uma ferramenta para inserir no orifício onde o botão está localizado.
+Se o seu sistema tiver gavetas de unidades NS224, as gavetas vêm pré-configuradas com o ID 00 e 01. Se você quiser alterar os IDs das gavetas, é necessário criar uma ferramenta para inserir no orifício onde o botão está localizado.
 
 +
 .Animação - defina IDs de gaveta de unidade SAS ou NVMe
@@ -442,11 +442,11 @@ image::../media/drw_autodiscovery_controler_select.png[Selecione um ícone ONTAP
 
 +
 .. Abra o Explorador de ficheiros.
-.. Clique em *rede* no painel esquerdo e clique com o botão direito do rato e selecione *atualizar*.
+.. Selecione *Rede* no painel esquerdo, clique com o botão direito do mouse em *Rede* e selecione *Atualizar*.
 .. Clique duas vezes no ícone ONTAP e aceite quaisquer certificados exibidos na tela.
 +
 
-NOTE: XXXXX é o número de série do sistema para o nó de destino.
+NOTE: O valor exibido é o número de série do sistema para o nó de destino.
 
 +
 O System Manager é aberto.
@@ -501,7 +501,7 @@ image::../media/drw_9000_cable_console_switch_controller.png[Cabeamento de conso
 
 . Use a animação a seguir para definir uma ou mais IDs de gaveta de unidade:
 +
-Se o seu sistema tiver NS224 compartimentos de unidades, as gavetas serão pré-configuradas para ID do compartimento 00 e 01. Se você quiser alterar as IDs de gaveta, você deve criar uma ferramenta para inserir no orifício onde o botão está localizado.
+Se o seu sistema tiver gavetas de unidades NS224, as gavetas vêm pré-configuradas com o ID 00 e 01. Se você quiser alterar os IDs das gavetas, é necessário criar uma ferramenta para inserir no orifício onde o botão está localizado.
 
 +
 .Animação - defina IDs de gaveta de unidade SAS ou NVMe

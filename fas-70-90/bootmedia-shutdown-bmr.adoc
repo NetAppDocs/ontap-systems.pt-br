@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: fas70, fas90, shut down the controller 
 summary: Desligue o controlador desativado no seu sistema de armazenamento FAS70 ou FAS90 para evitar a perda de dados e garantir a estabilidade do sistema ao substituir o suporte de arranque. 
 ---
-= Desligue o controlador para recuperação automatizada da mídia de inicialização - FAS70 e FAS90
+= Desligue o controlador com defeito no seu sistema FAS70 ou FAS90 durante o processo de recuperação automática de inicialização
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Desligue o controlador danificado no seu sistema de armazenamento FAS70 ou FAS90 para evitar perda de dados e manter a estabilidade do sistema durante o processo de recuperação automática da mídia de inicialização.
+Desligue o controlador com defeito no seu sistema de storage FAS70 ou FAS90 para evitar perda de dados e manter a estabilidade do sistema durante o processo automatizado de recuperação da mídia de inicialização.
 
 O processo automatizado de recuperação de mídia de inicialização é compatível apenas com o ONTAP 9.17.1 e versões posteriores. Se o seu sistema de armazenamento estiver executando uma versão anterior do ONTAP, use o link:bootmedia-replace-workflow.html["procedimento de recuperação de inicialização manual"] .
 

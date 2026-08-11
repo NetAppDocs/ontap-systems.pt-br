@@ -2,15 +2,17 @@
 permalink: fas2600/drive-replace.html 
 sidebar: sidebar 
 keywords: fas2600, replace the drives 
-summary: Você deve substituir uma unidade quando a plataforma Registrar uma mensagem de aviso no console do sistema indicando que uma unidade falhou. Além disso, o LED de avaria no painel do visor do operador e o LED de avaria na unidade avariada acendem-se. 
+summary: Substitua uma unidade no seu sistema FAS2600 quando a plataforma registrar uma mensagem de aviso no console do sistema indicando que uma unidade com falha foi detectada. Tanto o LED de falha no painel de exibição do operador quanto o LED de falha na unidade com falha estarão acesos. 
 ---
-= Substitua a unidade SSD ou a unidade HDD - FAS2600
+= Substitua uma unidade no seu sistema FAS2600
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Substitua uma unidade no seu sistema FAS2600 quando a plataforma registrar uma mensagem de aviso no console do sistema indicando que uma unidade com falha foi detectada. Tanto o LED de falha no painel de exibição do operador quanto o LED de falha na unidade com falha estarão acesos.
+
 Você pode substituir uma unidade com falha sem interrupções enquanto a e/S estiver em andamento. O procedimento para substituir um SSD destina-se a unidades não giratórias e o procedimento para substituir um HDD destina-se a unidades giratórias.
 
 Quando uma unidade falha, a plataforma Registra uma mensagem de aviso no console do sistema indicando qual unidade falhou. Além disso, o LED de avaria no painel do visor do operador e o LED de avaria na unidade avariada acendem-se.

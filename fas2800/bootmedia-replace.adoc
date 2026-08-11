@@ -1,17 +1,17 @@
 ---
 permalink: fas2800/bootmedia-replace.html 
 sidebar: sidebar 
-keywords: fas2800, replace, boot, media, controller, module, fru map 
-summary: Você deve localizar o suporte de inicialização no controlador e seguir as instruções para substituí-lo. 
+keywords: fas2820, replace, boot, media, controller, module, fru map 
+summary: A mídia de inicialização do seu FAS2820 armazena dados essenciais de firmware e configuração. Para substituí-la, você remove e abre o módulo do controlador com defeito, localiza e substitui a mídia de inicialização, transfere a imagem de inicialização para uma unidade USB e, em seguida, inicializa o controlador. 
 ---
-= Substitua a mídia de inicialização e prepare-se para recuperação de inicialização manual - FAS2820
+= Substitua a mídia de inicialização no seu FAS2820 usando o processo manual de recuperação de inicialização
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Você deve remover e abrir o módulo do controlador danificado, localizar e recolocar a mídia de inicialização no controlador, transferir a imagem de inicialização para uma unidade USB, inserir a unidade USB no controlador e, em seguida, inicializar o controlador.
+A mídia de inicialização do seu FAS2820 armazena dados essenciais de firmware e configuração. Para substituí-la, você remove e abre o módulo do controlador com problema, localiza e substitui a mídia de inicialização, transfere a imagem de inicialização para uma unidade USB, insere a unidade USB no controlador e, em seguida, inicializa o controlador.
 
 Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use olink:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"] .  Se o seu sistema estiver executando uma versão anterior do ONTAP, você deverá usar o procedimento de recuperação de inicialização manual.
 
@@ -51,7 +51,7 @@ Botão de liberação da tampa do módulo do controlador
 [[step-2-replace-the-boot-media]]
 == Passo 2: Substitua o suporte de arranque
 
-Localize a Mídia de inicialização no módulo do controlador, localizado sob a placa mezzanine e siga as instruções para substituí-la.
+Localize a mídia de inicialização, que está sob a placa mezzanine no módulo controlador, e siga as instruções para substituí-la.
 
 image:../media/drw_2850_replace_boot_media_IEOPS-696.svg["Substitua o suporte de arranque"]
 

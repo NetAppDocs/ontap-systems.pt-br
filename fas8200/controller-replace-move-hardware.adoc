@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas8200, move the controller module hardware 
 summary: Para substituir o hardware do módulo do controlador, é necessário remover o controlador prejudicado, mover os componentes FRU para o módulo do controlador de substituição, instalar o módulo do controlador de substituição no chassis e, em seguida, inicializar o sistema para o modo de manutenção. 
 ---
-= Substitua o hardware do módulo do controlador - FAS8200
+= Substitua o controlador no seu sistema FAS8200
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -67,7 +67,7 @@ Você deve localizar o suporte de inicialização e seguir as instruções para 
 
 . Localize a Mídia de inicialização usando a ilustração a seguir ou o mapa da FRU no módulo do controlador:
 +
-image::../media/drw_rxl_boot_media.png[Removendo Mídia de inicialização hte]
+image::../media/drw_rxl_boot_media.png[Remover o suporte de arranque]
 
 . Prima o botão azul no alojamento do suporte do suporte de arranque para soltar o suporte de arranque do respetivo alojamento e, em seguida, puxe-o cuidadosamente para fora do suporte de suporte de arranque.
 +
@@ -162,7 +162,7 @@ image::../media/drw_rxl_dimms.png[Substituição de DIMMs]
 . Localize o slot onde você está instalando o DIMM.
 . Certifique-se de que as abas do ejetor DIMM no conetor estão na posição aberta e insira o DIMM diretamente no slot.
 +
-O DIMM encaixa firmemente no slot, mas deve entrar facilmente. Caso contrário, realinhar o DIMM com o slot e reinseri-lo.
+O módulo DIMM encaixa-se firmemente no slot, mas deve entrar com facilidade. Se não entrar, realinhe o módulo DIMM com o slot e reinsira-o.
 
 +
 
@@ -233,7 +233,7 @@ Você deve mover os módulos de cache dos módulos do controlador prejudicados p
 O sistema de armazenamento vem com dois slots disponíveis para o módulo de cache e apenas um slot é ocupado, por padrão.
 
 +
-image::../media/drw_rxl_fcache.png[Remova e substitua o módulo de armazenamento em cache]
+image::../media/drw_rxl_fcache.png[Retire e substitua o módulo de armazenamento em cache]
 
 
 
@@ -265,7 +265,7 @@ NOTE: Não introduza completamente o módulo do controlador no chassis até ser 
 . Faça o cabeamento apenas das portas de gerenciamento e console, para que você possa acessar o sistema para executar as tarefas nas seções a seguir.
 +
 
-NOTE: Você conetará o resto dos cabos ao módulo do controlador posteriormente neste procedimento.
+NOTE: Você conectará o restante dos cabos ao módulo controlador mais tarde neste procedimento.
 
 . Conclua a reinstalação do módulo do controlador:
 +
@@ -278,7 +278,7 @@ NOTE: Você conetará o resto dos cabos ao módulo do controlador posteriormente
 Um par de HA
  a| 
  The controller module begins to boot as soon as it is fully seated in the chassis. Be prepared to interrupt the boot process.
-.. Com a alavanca do came na posição aberta, empurre firmemente o módulo do controlador até que ele atenda ao plano médio e esteja totalmente assentado e, em seguida, feche a alavanca do came para a posição travada. Aperte o parafuso de aperto manual na pega do came na parte de trás do módulo do controlador.
+.. Com a alavanca de came na posição aberta, empurre firmemente o módulo controlador até que ele encoste no plano médio e esteja totalmente encaixado e, em seguida, feche a alavanca de came até a posição travada. Aperte o parafuso de fixação na alavanca de came na parte traseira do módulo controlador.
 +
 
 NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.
@@ -301,7 +301,7 @@ NOTE: Se você perder o prompt e o módulo do controlador inicializar no ONTAP, 
  a| 
 Uma configuração autônoma
  a| 
-.. Com a alavanca do came na posição aberta, empurre firmemente o módulo do controlador até que ele atenda ao plano médio e esteja totalmente assentado e, em seguida, feche a alavanca do came para a posição travada. Aperte o parafuso de aperto manual na pega do came na parte de trás do módulo do controlador.
+.. Com a alavanca de came na posição aberta, empurre firmemente o módulo controlador até que ele encoste no plano médio e esteja totalmente encaixado e, em seguida, feche a alavanca de came até a posição travada. Aperte o parafuso de fixação na alavanca de came na parte traseira do módulo controlador.
 +
 
 NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para dentro do chassis para evitar danificar os conetores.

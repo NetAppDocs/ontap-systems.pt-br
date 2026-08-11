@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas50, how to restore NetApp Storage Encryption, how to complete the replacement process 
 summary: Para concluir a substituição do controlador do seu sistema FAS50, primeiro restaure a configuração de NetApp Storage Encryption, se necessário, e instale as licenças necessárias no novo controlador. Em seguida, confirme se as interfaces lógicas estão relatando para suas portas iniciais e execute uma verificação de integridade. Por fim, registre o número de série do novo controlador e depois devolva a peça com defeito para a NetApp. 
 ---
-= Substituição completa do controlador - FAS50
+= Conclua a substituição do controlador do seu sistema FAS50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

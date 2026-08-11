@@ -1,16 +1,18 @@
 ---
 permalink: fas2700/nvmem-nvram-battery-replace.html 
 sidebar: sidebar 
-keywords: fas2700, aff a220, replace, nvmem, battery, shut, down, impaired, controller, controller, system, aggregates, metrocluster, configuration, reinstall 
-summary: Para substituir uma bateria NVMEM no sistema, tem de remover o módulo do controlador do sistema, abri-lo, substituir a bateria e fechar e substituir o módulo do controlador. 
+keywords: fas2700, replace, nvmem, battery, shut, down, impaired, controller, controller, system, aggregates, metrocluster, configuration, reinstall 
+summary: Substitua a bateria NVMEM do seu sistema FAS2700 removendo o módulo controlador, substituindo a bateria e reinstalando o módulo controlador. 
 ---
-= Substitua a bateria do NVMEM - FAS2700
+= Substitua a bateria NVMEM no seu sistema FAS2700.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Substitua a bateria NVMEM do seu sistema FAS2700 removendo o módulo controlador, substituindo a bateria e reinstalando o módulo controlador.
+
 Para substituir uma bateria NVMEM no sistema, tem de remover o módulo do controlador do sistema, abri-lo, substituir a bateria e fechar e substituir o módulo do controlador.
 
 Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.

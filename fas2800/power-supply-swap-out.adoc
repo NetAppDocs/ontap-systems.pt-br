@@ -1,25 +1,25 @@
 ---
 permalink: fas2800/power-supply-swap-out.html 
 sidebar: sidebar 
-keywords: fas2800, swap, power, supply, turn off, disconnect, remove, install, connect, turn on, replacement 
-summary: A troca de uma fonte de alimentação envolve desligar, desligar e remover a fonte de alimentação prejudicada e instalar, ligar e ligar a fonte de alimentação de substituição. 
+keywords: fas2820, swap, power, supply, turn off, disconnect, remove, install, connect, turn on, replacement 
+summary: A substituição a quente de uma fonte de alimentação no seu FAS2820 envolve desligar, desconectar e remover a fonte de alimentação com problema e instalar, conectar e ligar a fonte de alimentação de substituição. 
 ---
-= Troque uma fonte de alimentação - FAS2820
+= Substitua a fonte de alimentação no seu sistema FAS2820 em funcionamento.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-A troca de uma fonte de alimentação envolve desligar, desligar e remover a fonte de alimentação prejudicada e instalar, ligar e ligar a fonte de alimentação de substituição.
+Substitua a fonte de alimentação do seu sistema FAS2820 por meio de substituição a quente se ela falhar ou apresentar degradação, sem interromper a operação do sistema. Este procedimento envolve desligar e remover a fonte de alimentação com problema e, em seguida, instalar e ligar a fonte de alimentação de substituição.
 
-Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+Se algum outro componente do sistema não estiver funcionando corretamente, entre em contato com o suporte técnico.
 
 * As fontes de alimentação são redundantes e hot-swap.
 * Este procedimento é escrito para substituir uma fonte de alimentação de cada vez.
 +
 
-NOTE: É uma prática recomendada substituir a fonte de alimentação dentro de dois minutos após a remoção do chassi. O sistema continua a funcionar, mas o ONTAP envia mensagens ao console sobre a fonte de alimentação degradada até que a fonte de alimentação seja substituída.
+NOTE: Substitua a fonte de alimentação em até dois minutos após removê-la do chassi. O sistema continua funcionando, mas o ONTAP envia mensagens ao console sobre a fonte de alimentação degradada até que a fonte de alimentação seja substituída.
 
 * As fontes de alimentação são auto-variando.
 
@@ -46,7 +46,7 @@ image::../media/drw_2850_replace_PSU_IEOPS-702.svg[Substitua uma PSU]
 CAUTION: Ao remover uma fonte de alimentação, utilize sempre duas mãos para suportar o seu peso.
 
 . Certifique-se de que o interrutor ligar/desligar da nova fonte de alimentação está na posição desligada.
-. Utilizando ambas as mãos, apoie e alinhe as extremidades da fonte de alimentação com a abertura no chassis do sistema e, em seguida, empurre cuidadosamente a fonte de alimentação para o chassis utilizando a pega do excêntrico.
+. Apoie e alinhe as bordas da fonte de alimentação com a abertura no chassi usando ambas as mãos e, em seguida, empurre suavemente a fonte de alimentação para dentro do chassi usando a alça de came.
 +
 As fontes de alimentação são chaveadas e só podem ser instaladas de uma forma.
 
@@ -62,7 +62,7 @@ NOTE: Não utilize força excessiva ao deslizar a fonte de alimentação para o 
 
 
 +
-Uma vez que a alimentação é restaurada à fonte de alimentação, o LED de estado deve estar verde.
+Após o restabelecimento da energia na fonte de alimentação, o LED indicador de status deve ficar verde.
 
 . Ligue a alimentação da nova fonte de alimentação e, em seguida, verifique o funcionamento dos LEDs de atividade da fonte de alimentação.
 +

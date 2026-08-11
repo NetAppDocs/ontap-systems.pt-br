@@ -4,18 +4,18 @@ sidebar: sidebar
 keywords: fas9500, add io module 
 summary: Você pode adicionar um módulo de e/S ao seu sistema, substituindo um módulo de e/S existente por um novo módulo de e/S em um sistema totalmente preenchido ou adicionando um novo módulo de e/S em um slot vazio no chassi. 
 ---
-= Adicionar um módulo de e/S - FAS9500
+= Adicione um módulo de E/S ao seu sistema FAS9500
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Você pode adicionar um módulo de e/S ao sistema substituindo uma NIC ou um adaptador de armazenamento por um novo em um sistema totalmente preenchido ou adicionando uma nova NIC ou adaptador de armazenamento em um slot de chassi vazio no sistema.
+Você pode adicionar um módulo de E/S ao seu FAS9500 substituindo uma placa de rede ou um adaptador de armazenamento por um novo em um sistema totalmente populado, ou adicionando uma nova placa de rede ou um adaptador de armazenamento em um slot vazio do chassi.
 
 .Antes de começar
 * Verifique o https://hwu.netapp.com/["NetApp Hardware Universe"] para se certificar de que o novo módulo de e/S é compatível com o seu sistema e a versão do ONTAP que você está executando.
-* Se houver vários slots disponíveis, verifique as prioridades do slot https://hwu.netapp.com/["NetApp Hardware Universe"] e use a melhor disponível para seu módulo de e/S.
+* Se houver vários slots disponíveis, verifique as prioridades dos slots em  https://hwu.netapp.com/["NetApp Hardware Universe"] e use o melhor disponível para o seu módulo de E/S.
 * Para adicionar sem interrupções um módulo de e/S, você deve assumir o controlador de destino, remover a tampa cega do slot no slot de destino ou remover um módulo de e/S existente, adicionar o módulo de e/S novo ou de substituição e, em seguida, giveback o controlador de destino.
 * Certifique-se de que todos os outros componentes estão a funcionar corretamente.
 
@@ -184,7 +184,7 @@ Você pode adicionar um novo módulo de e/S a um sistema de armazenamento com sl
 . Se o módulo de e/S de substituição for uma NIC, faça o cabo do módulo para os comutadores de dados.
 +
 
-NOTE: Certifique-se de que quaisquer slots de e/S não utilizados tenham espaços em branco instalados para evitar possíveis problemas térmicos.
+NOTE: Certifique-se de instalar tampas em todos os slots de E/S não utilizados para evitar possíveis problemas térmicos.
 
 . Reinicie o controlador a partir do prompt Loader: _Bye_
 +
@@ -193,7 +193,7 @@ NOTE: Isso reinicializa as placas PCIe e outros componentes e reinicializa o nó
 
 . Devolver o nó do nó do parceiro. `storage failover giveback -ofnode target_node_name`
 . Ative o giveback automático se ele foi desativado: `storage failover modify -node local -auto-giveback true`
-. Se você estiver usando os slots 3 e/ou 7 para rede, use o `storage port modify -node __<node name>__ -port __<port name>__ -mode network` comando para converter o slot para uso em rede.
+. Se você estiver usando o slot 3 ou 7 para rede, use o comando  `storage port modify -node __<node name>__ -port __<port name>__ -mode network` para converter o slot para uso em rede.
 . Repita estes passos para o controlador B.
 . Se você instalou um módulo de e/S de storage, instale e faça o cabeamento das gavetas SAS, conforme descrito em link:../sas3/install-hot-add-shelf.html["Adição automática de uma gaveta SAS"].
 
@@ -214,7 +214,7 @@ Certifique-se de que compreende os seguintes cenários para adicionar um novo m�
  a| 
 NIC para NIC (mesmo número de portas)
  a| 
-Os LIFs migrarão automaticamente quando seu módulo de controlador for desligado.
+Os LIFs migram automaticamente quando o módulo controlador é desligado.
 
 
 

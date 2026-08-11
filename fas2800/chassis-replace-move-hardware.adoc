@@ -1,17 +1,17 @@
 ---
 permalink: fas2800/chassis-replace-move-hardware.html 
 sidebar: sidebar 
-keywords: fas2800, replace, chassis, shut down, controller, metrocluster, power, supply, ha, state, controller, configuration, switch, aggregates, replace, move, remove, swap 
-summary: Mova as fontes de alimentação, as unidades de disco rígido e o módulo ou módulos do controlador do chassis danificado para o chassis de substituição e troque o chassis danificado do rack de equipamentos ou do armário do sistema pelo chassis de substituição do mesmo modelo que o chassis danificado. 
+keywords: fas2820, replace, chassis, shut down, controller, metrocluster, power, supply, ha, state, controller, configuration, switch, aggregates, replace, move, remove, swap 
+summary: 'No seu sistema FAS2820, mova as fontes de alimentação, os discos rígidos e o(s) módulo(s) controlador(es) do chassi com problema para o chassi de substituição e troque o chassi com problema do rack de equipamentos ou gabinete do sistema pelo chassi de substituição do mesmo modelo do chassi com problema.' 
 ---
-= Mova e substitua o hardware - FAS2820
+= Substitua o chassi no seu sistema FAS2820
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Mova as fontes de alimentação, as unidades de disco rígido e o módulo ou módulos do controlador do chassis danificado para o chassis de substituição e troque o chassis danificado do rack de equipamentos ou do armário do sistema pelo chassis de substituição do mesmo modelo que o chassis danificado.
+No seu sistema FAS2820, mova as fontes de alimentação, os discos rígidos e o(s) módulo(s) controlador(es) do chassi com problema para o chassi de substituição e troque o chassi com problema do rack de equipamentos ou gabinete do sistema pelo chassi de substituição do mesmo modelo do chassi com problema.
 
 
 
@@ -35,7 +35,7 @@ A remoção de uma fonte de alimentação ao substituir um chassi envolve deslig
 CAUTION: Ao remover uma fonte de alimentação, utilize sempre duas mãos para suportar o seu peso.
 
 . Repita as etapas anteriores para qualquer fonte de alimentação restante.
-. Utilizando ambas as mãos, apoie e alinhe as extremidades da fonte de alimentação com a abertura no chassis do sistema e, em seguida, empurre cuidadosamente a fonte de alimentação para o chassis utilizando a pega do excêntrico.
+. Apoie e alinhe as bordas da fonte de alimentação com a abertura no chassi usando ambas as mãos e, em seguida, empurre suavemente a fonte de alimentação para dentro do chassi usando a alça de came.
 +
 As fontes de alimentação são chaveadas e só podem ser instaladas de uma forma.
 
@@ -103,7 +103,7 @@ O manípulo do excêntrico engata e começa a rodar para a posição fechada.
 
 . Empurre firmemente a unidade o resto do caminho para dentro do chassis e, em seguida, bloqueie a pega do excêntrico empurrando-a contra o suporte da unidade.
 +
-Certifique-se de que fecha lentamente o manípulo do excêntrico de forma a que fique corretamente alinhado com a parte dianteira do suporte da transmissão. Ele clica quando está seguro.
+Certifique-se de que fecha lentamente o manípulo do excêntrico de forma a que fique corretamente alinhado com a parte dianteira do suporte da transmissão. Ele clica quando é seguro.
 
 . Repita o processo para as unidades restantes no sistema.
 
@@ -116,9 +116,9 @@ Certifique-se de que fecha lentamente o manípulo do excêntrico de forma a que 
 Remova o chassi existente do rack de equipamentos ou do gabinete do sistema e instale o chassi de substituição no rack de equipamentos ou no gabinete do sistema.
 
 . Retire os parafusos dos pontos de montagem do chassis.
-. Com a ajuda de duas ou três pessoas, deslize o chassi prejudicado dos trilhos do rack em um gabinete do sistema ou suportes _L_ em um rack de equipamentos e, em seguida, coloque-o de lado.
+. Com a ajuda de duas ou três pessoas, deslize o chassi danificado para fora dos trilhos do rack em um gabinete de sistema ou dos suportes em L em um rack de equipamentos e, em seguida, coloque-o de lado.
 . Se você ainda não está aterrado, aterre-se adequadamente.
-. Usando duas ou três pessoas, instale o chassi de substituição no rack de equipamentos ou no gabinete do sistema guiando o chassi para os trilhos do rack em um gabinete do sistema ou suportes _L_ em um rack de equipamentos.
+. Instale o chassi de substituição no rack ou gabinete do sistema com a ajuda de duas ou três pessoas, guiando o chassi sobre os trilhos do rack em um gabinete de sistema ou sobre os suportes em L em um rack.
 . Deslize o chassi até o rack de equipamentos ou o gabinete do sistema.
 . Fixe a parte frontal do chassis ao rack de equipamentos ou ao gabinete do sistema, usando os parafusos que você removeu do chassi danificado.
 . Se ainda não o tiver feito, instale a moldura.
@@ -129,7 +129,7 @@ Remova o chassi existente do rack de equipamentos ou do gabinete do sistema e in
 [[step-5-install-the-controller]]
 == Passo 5: Instale o controlador
 
-Instale o módulo do controlador e quaisquer outros componentes no chassis de substituição, inicialize-o no modo de manutenção.
+Instale o módulo controlador e quaisquer outros componentes no chassi de substituição e, em seguida, inicialize-o no modo de manutenção.
 
 Para pares de HA com dois módulos de controlador no mesmo chassi, a sequência em que você instala o módulo de controlador é especialmente importante porque ele tenta reiniciar assim que você o senta completamente no chassi.
 
@@ -155,7 +155,7 @@ NOTE: Não utilize força excessiva ao deslizar o módulo do controlador para de
 . Ligue as fontes de alimentação a diferentes fontes de alimentação e, em seguida, ligue-as.
 . Inicialize cada controlador para o modo de manutenção:
 +
-.. À medida que cada controlador inicia o arranque, prima `Ctrl-C` para interromper o processo de arranque quando vir a mensagem `Press Ctrl-C for Boot Menu`.
+.. Assim que cada controlador começar a inicializar, pressione  `Ctrl-C` para interromper o processo de inicialização quando vir a mensagem  `Press Ctrl-C for Boot Menu`.
 +
 
 NOTE: Se você perder o prompt e os módulos do controlador iniciarem no ONTAP, digite `halt` e, em seguida, no prompt Loader ENTER `boot_ontap`, pressione `Ctrl-C` quando solicitado e, em seguida, repita esta etapa.

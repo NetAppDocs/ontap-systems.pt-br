@@ -1,17 +1,17 @@
 ---
 permalink: fas2800/controller-replace-move-hardware.html 
 sidebar: sidebar 
-keywords: fas2800, move the controller module hardware 
-summary: Para substituir o hardware do módulo do controlador, é necessário remover o controlador prejudicado, mover os componentes FRU para o módulo do controlador de substituição, instalar o módulo do controlador de substituição no chassis e, em seguida, inicializar o sistema para o modo de manutenção. 
+keywords: fas2820, move the controller module hardware 
+summary: No seu FAS2820, substitua o hardware do módulo controlador com problema removendo o controlador com problema, movendo os componentes FRU para o módulo controlador de substituição, instalando o módulo controlador de substituição no chassi e, em seguida, inicializando o módulo controlador de substituição. 
 ---
-= Substitua o hardware do módulo do controlador - FAS2820
+= Substitua o controlador no seu sistema FAS2820
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Substitua o hardware do módulo do controlador prejudicado removendo o controlador prejudicado, movendo os componentes da FRU para o módulo do controlador de substituição, instalando o módulo do controlador de substituição no chassi e, em seguida, inicializando o módulo do controlador de substituição.
+No seu FAS2820, substitua o hardware do módulo controlador com problema removendo o controlador com problema, movendo os componentes FRU para o módulo controlador de substituição, instalando o módulo controlador de substituição no chassi e, em seguida, inicializando o módulo controlador de substituição.
 
 .Animação - substitua um módulo do controlador
 video::c83a3301-3161-4d65-86e8-af540147576a[panopto]
@@ -88,11 +88,11 @@ Ficha da bateria NVMEM
 
 . Desloque a bateria para o módulo do controlador de substituição e instale-a:
 +
-.. Alinhar a bateria com os suportes de fixação na parede lateral de chapa metálica.
+.. Alinhe a bateria com os suportes de fixação na parede lateral de chapa metálica.
 .. Deslize a bateria para baixo até que o trinco da bateria encaixe e encaixe na abertura na parede lateral.
 +
 
-NOTE: Não ligue ainda a bateria. Você o conetará assim que o restante dos componentes for movido para o módulo de substituição do controlador.
+NOTE: Não conecte a bateria ainda. Você deve conectá-la somente depois que os demais componentes forem transferidos para o módulo controlador de substituição.
 
 
 
@@ -165,7 +165,7 @@ NOTE: Não torça nem puxe o suporte de arranque diretamente para cima, pois ist
 
 
 
-. Instale o suporte de arranque no módulo do controlador de substituição:
+. Instale a mídia de inicialização no módulo controlador de substituição:
 +
 .. Alinhe as extremidades do suporte de arranque de substituição com a tomada de suporte de arranque e, em seguida, empurre-o cuidadosamente para dentro do encaixe.
 .. Verifique o suporte de arranque para se certificar de que está encaixado corretamente e completamente no encaixe.
@@ -243,7 +243,7 @@ NOTE: Segure cuidadosamente o DIMM pelas bordas para evitar a pressão nos compo
 +
 .. Empurre com cuidado, mas firmemente, na borda superior do DIMM até que as abas do ejetor se encaixem no lugar sobre os entalhes nas extremidades do DIMM.
 +
-O DIMM encaixa firmemente no slot, mas deve entrar facilmente. Caso contrário, realinhar o DIMM com o slot e reinseri-lo.
+O módulo DIMM encaixa-se firmemente no slot, mas deve entrar com facilidade. Se isso não acontecer, realinhe o módulo DIMM com o slot e reinsira-o.
 
 +
 
@@ -259,7 +259,7 @@ NOTE: Inspecione visualmente o DIMM para verificar se ele está alinhado uniform
 [[step-7-move-a-caching-module]]
 == Passo 7: Mova um módulo de cache
 
-Retire o módulo de armazenamento em cache do módulo do controlador afetado, instale-o no módulo do controlador de substituição.
+Remova o módulo de armazenamento em cache do módulo controlador com defeito e instale-o no módulo controlador de substituição.
 
 image::../media/drw_2850_replace_caching module_IEOPS-697.svg[Mover o módulo de cache]
 
@@ -311,7 +311,7 @@ Instale a bateria NV no módulo do controlador de substituição.
 +
 Certifique-se de que a ficha se fixa à tomada da bateria na placa-mãe.
 
-. Alinhar a bateria com os suportes de fixação na parede lateral de chapa metálica.
+. Alinhe a bateria com os suportes de fixação na parede lateral de chapa metálica.
 . Deslize a bateria para baixo até que o trinco da bateria encaixe e encaixe na abertura na parede lateral.
 . Volte a instalar a tampa do módulo do controlador e bloqueie-a no lugar.
 
@@ -328,7 +328,7 @@ NOTE: O sistema pode atualizar o firmware do sistema quando ele é inicializado.
 
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Se ainda não o tiver feito, substitua a tampa no módulo do controlador.
-. Rode o módulo do controlador.
+. Vire o módulo controlador.
 . Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.
 +
 

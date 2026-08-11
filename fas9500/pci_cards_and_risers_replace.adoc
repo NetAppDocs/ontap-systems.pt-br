@@ -4,17 +4,17 @@ sidebar: sidebar
 keywords: fas9500, replace an io module 
 summary: Para substituir um módulo de e/S, tem de executar uma sequência específica de tarefas. 
 ---
-= Substitua um módulo de e/S - FAS9500
+= Substitua um módulo de E/S em seu sistema FAS9500
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Para substituir um módulo de e/S, tem de executar uma sequência específica de tarefas.
+Para substituir um módulo de E/S no seu FAS9500, você deve desligar o nó com defeito, remover e instalar o módulo de E/S e, em seguida, reinicializar o nó.
 
 * Pode utilizar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema.
-* Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+* Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em contato com o suporte técnico.
 
 
 

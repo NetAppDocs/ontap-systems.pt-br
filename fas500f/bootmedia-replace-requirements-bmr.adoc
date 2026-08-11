@@ -2,16 +2,16 @@
 permalink: fas500f/bootmedia-replace-requirements-bmr.html 
 sidebar: sidebar 
 keywords: fas500f, replace the boot media 
-summary: Antes de substituir a mídia de inicialização no seu FAS500f, certifique-se de que atende aos requisitos necessários para uma substituição bem-sucedida. 
+summary: Antes de substituir a mídia de inicialização no seu FAS500f, verifique se você atende aos requisitos necessários para uma substituição bem-sucedida. 
 ---
-= Requisitos para recuperação automatizada de mídia de inicialização - FAS500f
+= Analise os requisitos para recuperação automática da mídia de inicialização no seu sistema FAS500f
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Antes de substituir a mídia de inicialização do seu FAS500f, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se você possui a mídia de inicialização de substituição correta, confirmar se a porta e0S (e0M wrench) no controlador com problema não está com defeito e determinar se o Onboard Key Manager (OKM) ou o External Key Manager (EKM) está habilitado.
+Antes de substituir a mídia de inicialização no seu FAS500f, verifique se você atende aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se você possui a mídia de inicialização de substituição correta, confirmar se a porta e0S (chave inglesa e0M) no controlador com defeito não está com problemas e determinar se o Onboard Key Manager (OKM) ou o External Key Manager (EKM) está habilitado.
 
 O processo automatizado de recuperação de mídia de inicialização é compatível apenas com ONTAP 9.18.1 e versões posteriores. Se o seu sistema de storage estiver executando uma versão anterior do ONTAP, use o link:bootmedia-replace-workflow.html["procedimento de recuperação de inicialização manual"].
 

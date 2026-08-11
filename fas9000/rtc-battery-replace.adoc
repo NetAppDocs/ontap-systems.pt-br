@@ -2,15 +2,17 @@
 permalink: fas9000/rtc-battery-replace.html 
 sidebar: sidebar 
 keywords: fas9000, replace, real, time, battery, shut, down, impaired, node, controller, metrocluster, module, rtc, battery, reinstall, date, time, complete, process 
-summary: 'Você substitui a bateria do relógio de tempo real (RTC) no módulo controlador para que os serviços e aplicativos do seu sistema que dependem da sincronização precisa do tempo continuem funcionando.' 
+summary: 'Você substitui a bateria do relógio em tempo real (RTC) no módulo do controlador para que os serviços e aplicativos do sistema que dependem da sincronização precisa de tempo continuem funcionando.' 
 ---
-= Substitua a bateria do relógio em tempo real - AFF 9000
+= Substitua a bateria do relógio em tempo real do seu FAS9000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Você substitui a bateria do relógio em tempo real (RTC) no módulo do controlador para que os serviços e aplicativos do sistema que dependem da sincronização precisa de tempo continuem funcionando.
+
 Você substitui a bateria do relógio em tempo real (RTC) no módulo do controlador para que os serviços e aplicativos do sistema que dependem da sincronização precisa de tempo continuem funcionando.
 
 * Pode utilizar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema

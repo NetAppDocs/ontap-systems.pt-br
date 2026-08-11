@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas8300, fas8700, locate, boot, media, controller, module, fre, map, direction, replace, replace the boot media 
 summary: Para substituir o suporte de arranque, tem de remover o módulo do controlador afetado, instalar o suporte de arranque de substituição e transferir a imagem de arranque para uma unidade flash USB. 
 ---
-= Substitua a mídia de inicialização e prepare-se para recuperação de inicialização manual - FAS8300 e FAS8700
+= Substitua a mídia de inicialização no seu FAS8300 ou FAS8700 usando o processo manual de recuperação de inicialização.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -74,7 +74,7 @@ Certifique-se de que suporta a parte inferior do módulo do controlador enquanto
 Deve localizar o suporte de arranque no módulo do controlador (consulte o mapa da FRU no módulo do controlador) e, em seguida, seguir as instruções para o substituir.
 
 .Antes de começar
-Embora o conteúdo da Mídia de inicialização seja criptografado, é uma prática recomendada apagar o conteúdo da Mídia de inicialização antes de substituí-la. Para obter mais informações, consulte https://mysupport.netapp.com/info/web/ECMP1132988.html["Declaração de volatilidade"] o para o seu sistema no site de suporte da NetApp.
+Embora o conteúdo da mídia de inicialização esteja criptografado, é uma boa prática apagar o conteúdo da mídia de inicialização antes de substituí-la. Para obter mais informações, consulte a  https://mysupport.netapp.com/info/web/ECMP1132988.html["Declaração de volatilidade"] documentação do seu sistema no NetApp Support Site.
 
 
 NOTE: Você deve fazer login no site de suporte da NetApp para exibir a _Declaração de volatilidade_ para o seu sistema.

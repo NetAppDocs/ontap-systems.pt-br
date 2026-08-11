@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas50, hot swap, replace, Flash Cache 
 summary: Você pode fazer a troca a quente de um módulo de cache SSD NVMe, módulo Flash Cache, da mesma capacidade do mesmo fornecedor suportado ou de um fornecedor diferente para seu sistema de armazenamento FAS50. 
 ---
-= Hot-swap um módulo de cache - FAS50
+= Substitua a quente um módulo de armazenamento em cache no seu sistema FAS50.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -18,7 +18,7 @@ Dependendo da situação, seu sistema de storage precisa atender a certos crité
 
 * Seu sistema de armazenamento deve ter o sistema operacional apropriado para o módulo de armazenamento em cache que você está instalando.
 * O módulo de armazenamento em cache de substituição deve ter a mesma capacidade que o módulo de armazenamento em cache com falha, mas pode ser de um fornecedor compatível diferente.
-* Todos os outros componentes do sistema de armazenamento devem estar a funcionar corretamente; caso contrário, contacte https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de continuar.
+* Todos os outros componentes do sistema de storage devem estar funcionando corretamente. Caso contrário, entre em contato  https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de prosseguir.
 
 
 .Passos

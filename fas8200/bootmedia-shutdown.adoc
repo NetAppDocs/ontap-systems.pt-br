@@ -4,16 +4,11 @@ sidebar: sidebar
 keywords: fas8200, shut down the impaired controller, manual, manual boot recovery 
 summary: Após concluir as verificações de criptografia, desligue o controlador com defeito em um sistema FAS8200 . O sistema FAS8200 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada. 
 ---
-= Desligue o controlador desativado - FAS8200
+= Desligue o controlador com defeito no seu sistema FAS8200 durante o processo de recuperação de inicialização manual
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
-
-
-
-[[option-1-most-systems]]
-== Opção 1: A maioria dos sistemas
 
 [role="lead"]
 Após concluir as verificações de criptografia, desligue o controlador com defeito em um sistema FAS8200 . Este procedimento inclui levar o controlador ao prompt LOADER, capturar as variáveis ​​de ambiente de inicialização para referência e preparar o controlador para a substituição da mídia de inicialização, com etapas específicas que variam dependendo da configuração do seu sistema.

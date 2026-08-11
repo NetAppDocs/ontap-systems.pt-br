@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas500f, replace nvmem battery, replace nvmem nvram battery 
 summary: Para substituir uma bateria NVMEM no sistema, tem de remover o módulo do controlador do sistema, abri-lo, substituir a bateria e fechar e substituir o módulo do controlador. 
 ---
-= Substitua a bateria do NVMEM - FAS500f
+= Substitua a bateria NVMEM no seu sistema FAS500f
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,7 +13,7 @@ summary: Para substituir uma bateria NVMEM no sistema, tem de remover o módulo 
 [role="lead"]
 Para substituir uma bateria NVMEM no sistema, tem de remover o módulo do controlador do sistema, abri-lo, substituir a bateria e fechar e substituir o módulo do controlador.
 
-Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+Todos os outros componentes do sistema devem estar funcionando corretamente. Caso contrário, entre em contato com o suporte técnico.
 
 
 
@@ -204,7 +204,7 @@ Levante a bateria para fora do suporte e do módulo do controlador.
 [[step-4-install-the-controller-module]]
 == Passo 4: Instale o módulo do controlador
 
-Depois de ter substituído o componente no módulo do controlador, tem de reinstalar o módulo do controlador no chassis e, em seguida, iniciá-lo.
+Após substituir o componente no módulo controlador, você deve reinstalar o módulo controlador no chassi e, em seguida, inicializá-lo.
 
 Você pode usar a ilustração a seguir ou as etapas escritas para instalar o módulo do controlador de substituição no chassi.
 
@@ -229,7 +229,7 @@ Parafuso de aperto manual
 |===
 . Insira o módulo do controlador no chassis:
 +
-.. Certifique-se de que os braços do mecanismo de engate estão bloqueados na posição totalmente estendida.
+.. Verifique se os braços do mecanismo de travamento estão travados na posição totalmente estendida.
 .. Utilizando ambas as mãos, alinhe e deslize suavemente o módulo do controlador para dentro dos braços do mecanismo de bloqueio até parar.
 .. Coloque os dedos indicadores através dos orifícios dos dedos a partir do interior do mecanismo de bloqueio.
 .. Pressione os polegares para baixo nas patilhas cor-de-laranja na parte superior do mecanismo de bloqueio e empurre suavemente o módulo do controlador sobre o batente.
@@ -245,7 +245,7 @@ O módulo do controlador deve ser totalmente inserido e alinhado com as bordas d
 . Faça o cabeamento apenas das portas de gerenciamento e console, para que você possa acessar o sistema para executar as tarefas nas seções a seguir.
 +
 
-NOTE: Você conetará o resto dos cabos ao módulo do controlador posteriormente neste procedimento.
+NOTE: Você conectará o restante dos cabos ao módulo controlador mais tarde neste procedimento.
 
 
 

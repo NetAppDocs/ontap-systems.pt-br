@@ -1,19 +1,19 @@
 ---
 permalink: fas2800/nvmem-nvram-battery-replace.html 
 sidebar: sidebar 
-keywords: fas2800, replace, nvmem, battery, shut, down, impaired, controller, controller, system, aggregates, metrocluster, configuration, reinstall 
-summary: Para substituir uma bateria NVMEM no sistema, tem de remover o módulo do controlador do sistema, abri-lo, substituir a bateria e fechar e substituir o módulo do controlador. 
+keywords: fas2820, replace, nvmem, battery, shut, down, impaired, controller, controller, system, aggregates, metrocluster, configuration, reinstall 
+summary: Para substituir a bateria NVMEM no seu FAS2820, você deve remover o módulo controlador, abri-lo, substituir a bateria e, em seguida, fechar e reinstalar o módulo controlador. 
 ---
-= Substitua a bateria do NVMEM - FAS2820
+= Substitua a bateria NVMEM no seu FAS2820.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Para substituir uma bateria NVMEM no sistema, tem de remover o módulo do controlador do sistema, abri-lo, substituir a bateria e fechar e substituir o módulo do controlador.
+Para substituir a bateria NVMEM no seu FAS2820, você deve remover o módulo controlador, abri-lo, substituir a bateria e, em seguida, fechar e reinstalar o módulo controlador.
 
-Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"]Contato com .
+Se algum outro componente do sistema não estiver funcionando corretamente, entre em contato com  https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"].
 
 
 
@@ -94,15 +94,15 @@ image::../media/drw_hw_nvram_icon.svg[Ícone NV]
 
 +
 
-NOTE: O LED verde NV na placa frontal começará a piscar quando a energia for removida do controlador se o sistema estiver no estado "aguardando a giveback" ou se o sistema não tiver sido tomado ou parado corretamente (dados não confirmados). Se o módulo do controlador afetado não tiver sido tomado com sucesso pelo módulo do controlador parceiro, contacte https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"]
+NOTE: O LED verde NV no painel frontal começa a piscar quando a alimentação é removida do controlador se o sistema estava no estado "aguardando giveback" ou se o sistema não foi assumido ou interrompido corretamente (dados não confirmados). Se o módulo controlador com defeito não foi assumido com sucesso pelo controlador do parceiro, entre em contato com https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"]
 
 +
 ** Se o LED verde de estado NV começar a piscar quando o módulo do controlador é removido do chassis:
 +
-*** Confirme se o controlador teve uma aquisição limpa pelo módulo do controlador parceiro ou se o controlador afetado mostra _aguardando giveback_, o LED intermitente pode ser ignorado e você pode concluir a remoção do controlador prejudicado do chassis.
+*** Confirme se o controlador foi assumido corretamente pelo controlador do parceiro ou se o controlador com defeito exibe _aguardando giveback_. Nesse caso, você pode ignorar o LED piscando e continuar removendo o controlador com defeito do chassi.
 
 
-** Se o LED NV verde estiver desligado, pode concluir a remoção do controlador afetado do chassis.
+** Se o LED verde NV estiver apagado, você pode concluir a remoção do controlador com problema do chassi.
 
 
 
@@ -116,7 +116,7 @@ Retire a bateria NVMEM avariada do sistema e substitua-a por uma nova bateria NV
 
 .Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
-. Retire o módulo de controlo do chassis.
+. Remova o módulo controlador do chassi.
 . Vire o módulo do controlador ao contrário e coloque-o numa superfície plana e estável.
 . Abra a tampa pressionando os botões azuis nas laterais do módulo do controlador para soltar a tampa e, em seguida, gire a tampa para cima e para fora do módulo do controlador.
 +
@@ -154,13 +154,14 @@ Conetor de alimentação da bateria
 .. Desligue a bateria do módulo do controlador
 
 
-. Retire a bateria de substituição da respetiva embalagem. Instale a bateria de substituição:
+. Retire a bateria de substituição da respetiva embalagem.
+. Instale a bateria de substituição:
 +
 .. Volte a ligar a ficha da bateria à tomada no módulo do controlador.
 +
 Certifique-se de que a ficha se fixa à tomada da bateria na placa-mãe.
 
-.. Alinhar a bateria com os suportes de fixação na parede lateral de chapa metálica.
+.. Alinhe a bateria com os suportes de fixação na parede lateral de chapa metálica.
 .. Deslize a bateria para baixo até que o trinco da bateria encaixe e encaixe na abertura na parede lateral.
 
 
@@ -215,8 +216,8 @@ NOTE: Durante o processo de inicialização, você pode ver os seguintes prompts
 
 
 
-[[step-5-restore-automatic-giveback-and-autsupport]]
-== Passo 5: Restaurar a giveback automática e AutSupport
+[[step-5-restore-automatic-giveback-and-autosupport]]
+== Passo 5: Restaurar a giveback automática e AutoSupport
 
 Restaure a giveback automática e o AutoSupport se tiverem sido desativados.
 

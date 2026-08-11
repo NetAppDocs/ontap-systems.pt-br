@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas2600, locate, boot, media, controller, direction, replace, manual, manual boot recovery 
 summary: Substitua a mídia de inicialização com falha em um módulo controlador FAS2600. O sistema FAS2600 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada. 
 ---
-= Substitua o suporte de arranque - FAS2600
+= Substitua a mídia de inicialização no seu sistema FAS2600
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -81,7 +81,7 @@ Pode instalar a imagem do sistema no suporte de arranque de substituição utili
 
 
 * Se o seu sistema for um par de HA, tem de ter uma ligação de rede.
-* Se o seu sistema for um sistema autónomo, não necessita de uma ligação de rede, mas tem de efetuar uma reinicialização adicional ao restaurar o sistema de ficheiros var.
+* Se o seu sistema for autônomo, você não precisa de uma conexão de rede, mas deve realizar uma reinicialização adicional ao restaurar o sistema de arquivos var.
 
 
 .Passos
@@ -111,7 +111,7 @@ O sistema começa a inicializar e pára no prompt DO Loader.
 ** Se estiver a configurar DHCP: `ifconfig e0a -auto`
 +
 
-NOTE: A porta de destino configurada é a porta de destino utilizada para comunicar com o controlador afetado a partir do controlador saudável durante a restauração do sistema de ficheiros var com uma ligação de rede. Você também pode usar a porta e0M neste comando.
+NOTE: A porta de destino que você configurar é a porta que você usa para se comunicar com o controlador com problemas a partir do controlador em funcionamento durante a restauração do sistema de arquivos var por meio de uma conexão de rede. Você também pode usar a porta e0M neste comando.
 
 ** Se estiver a configurar ligações manuais: `ifconfig e0a -addr=filer_addr -mask=netmask -gw=gateway-dns=dns_addr-domain=dns_domain`
 +

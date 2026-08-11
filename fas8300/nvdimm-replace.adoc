@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas8300, fas8700, replace, nvmem, battery, remove, controller, module, controller, metrocluster, configuration, aggregate, configuration, reinstall, run, system, switch, shut, down 
 summary: Você deve substituir o NVDIMM no módulo controlador quando o sistema registrar que a vida útil da flash está quase no fim ou que o NVDIMM identificado não está saudável em geral. 
 ---
-= Substitua um NVDIMM - FAS8300 e FAS8700
+= Substitua o NVDIMM no seu FAS8300 ou FAS8700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,7 +13,7 @@ summary: Você deve substituir o NVDIMM no módulo controlador quando o sistema 
 [role="lead"]
 Você deve substituir o NVDIMM no módulo do controlador quando o sistema Registrar que a vida útil do flash está quase no fim ou que o NVDIMM identificado não está funcionando em geral; a falha em fazê-lo causa um pânico no sistema.
 
-Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+Todos os outros componentes do sistema devem estar funcionando corretamente. Caso contrário, você deve entrar em contato com o suporte técnico.
 
 Você deve substituir o componente com falha por um componente FRU de substituição que você recebeu de seu provedor.
 
@@ -197,7 +197,7 @@ mcc1A::> metrocluster operation show
 
 Para aceder aos componentes no interior do módulo do controlador, tem de remover o módulo do controlador do chassis.
 
-Você pode usar a ilustração a seguir ou as etapas escritas para remover o módulo do controlador do chassi.
+Você pode usar a animação, ilustração ou as etapas escritas a seguir para remover o módulo do controlador do chassi.
 
 .Animação - retire o módulo do controlador
 video::75b6fa91-96b9-4323-b156-aae10007c9a5[panopto]
@@ -227,10 +227,10 @@ Certifique-se de que suporta a parte inferior do módulo do controlador enquanto
 [[step-3-replace-the-nvdimm]]
 == Passo 3: Substitua o NVDIMM
 
-Para substituir o NVDIMM, você deve localizá-lo no módulo do controlador usando o mapa da FRU na parte superior do duto de ar o mapa da FRU na parte superior do riser do slot 1.
+Para substituir o NVDIMM, você deve localizá-lo no módulo controlador usando o mapa FRU na parte superior da placa riser do slot 1.
 
 * O LED NVDIMM fica intermitente durante a remoção de conteúdo quando o sistema é interrompido. Depois que o destage estiver completo, o LED desliga-se.
-* Embora o conteúdo do NVDIMM seja criptografado, é uma prática recomendada apagar o conteúdo do NVDIMM antes de substituí-lo. Para obter mais informações, consulte o https://mysupport.netapp.com/info/web/ECMP1132988.html["Declaração de volatilidade"] no site de suporte da NetApp.
+* Embora o conteúdo do NVDIMM esteja criptografado, é uma boa prática apagar o conteúdo do NVDIMM antes de substituí-lo. Para obter mais informações, consulte o  https://mysupport.netapp.com/info/web/ECMP1132988.html["Declaração de volatilidade"]NetApp site de suporte.
 +
 
 NOTE: Você deve fazer login no site de suporte da NetApp para exibir a _Declaração de volatilidade_ para o seu sistema.
@@ -264,7 +264,7 @@ O entalhe entre os pinos no NVDIMM deve estar alinhado com a guia no soquete.
 . Localize o slot onde você está instalando o NVDIMM.
 . Insira o NVDIMM diretamente no slot.
 +
-O NVDIMM encaixa firmemente no slot, mas deve entrar facilmente. Caso contrário, realinhar o NVDIMM com o slot e reinseri-lo.
+O módulo NVDIMM encaixa-se firmemente no slot, mas deve entrar com facilidade. Se isso não acontecer, realinhe o NVDIMM com o slot e reinsira-o.
 
 +
 

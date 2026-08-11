@@ -2,16 +2,16 @@
 permalink: fas-70-90/chassis-replace-requirements.html 
 sidebar: sidebar 
 keywords: fas70, fas90, replace the chassis 
-summary: Antes de substituir o chassi do seu sistema FAS70 ou FAS90, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida.  Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, verificar se você tem credenciais de administrador local para o ONTAP, o chassi de substituição correto e as ferramentas necessárias. 
+summary: Antes de substituir o chassi do seu sistema FAS70 ou FAS90, verifique se você atende aos requisitos necessários para uma substituição bem-sucedida. Isso inclui confirmar que todos os outros componentes do sistema estão funcionando corretamente, verificar se você possui as credenciais de administrador local para o ONTAP, o chassi de substituição correto e as ferramentas necessárias. 
 ---
-= Requisitos para substituição do chassi - FAS70 e FAS90
+= Analise os requisitos antes de substituir o seu chassi FAS70 ou FAS90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Antes de substituir o chassi do seu sistema FAS70 ou FAS90, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida.  Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, verificar se você tem credenciais de administrador local para o ONTAP, o chassi de substituição correto e as ferramentas necessárias.
+Antes de substituir o chassi do seu sistema FAS70 ou FAS90, verifique se você atende aos requisitos necessários para uma substituição bem-sucedida. Isso inclui confirmar que todos os outros componentes do sistema estão funcionando corretamente, verificar se você possui as credenciais de administrador local para o ONTAP, o chassi de substituição correto e as ferramentas necessárias.
 
 O chassi é o chassi físico que abriga todos os componentes do sistema, como ventiladores, unidade controladora/CPU, NVRAM12, módulo de gerenciamento do sistema, placas de E/S e módulos de bloqueio e PSUs.
 

@@ -2,16 +2,16 @@
 permalink: fas500f/bootmedia-replace-requirements.html 
 sidebar: sidebar 
 keywords: fas500f, replace the boot media 
-summary: Antes de substituir a mídia de inicialização do seu sistema FAS500f, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. Isso inclui garantir que você tenha um pen drive USB com a quantidade adequada de armazenamento e verificar se você possui o dispositivo de inicialização de substituição correto. 
+summary: Antes de substituir a mídia de inicialização no seu FAS500f, verifique se você atende aos requisitos necessários para uma substituição bem-sucedida. Isso inclui confirmar se você possui um pen drive USB com a capacidade de armazenamento adequada e o dispositivo de inicialização de substituição correto. 
 ---
-= Requisitos para recuperação manual da mídia de inicialização - FAS500f
+= Verifique os requisitos para recuperação manual da mídia de inicialização no seu sistema FAS500f
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Antes de substituir a mídia de inicialização do seu sistema FAS500f, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. Isso inclui garantir que você tenha um pen drive USB com a quantidade adequada de armazenamento e verificar se você possui o dispositivo de inicialização de substituição correto.
+Antes de substituir a mídia de inicialização no seu FAS500f, verifique se você atende aos requisitos necessários para uma substituição bem-sucedida. Isso inclui confirmar se você possui um pen drive USB com a capacidade de armazenamento adequada e o dispositivo de inicialização de substituição correto.
 
 Se o seu sistema de storage estiver executando ONTAP 9.18.1 ou posterior, use o link:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"]. Se o seu sistema estiver executando uma versão anterior do ONTAP, você deve usar o procedimento de recuperação de inicialização manual.
 

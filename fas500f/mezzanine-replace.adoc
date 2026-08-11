@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas500f, replace or install a mezzanine card 
 summary: Para substituir uma placa mezzanine com falha, você deve remover os cabos e quaisquer módulos SFP ou QSFP, substituir a placa, reinstalar os módulos SFP ou QSFP e reabilitar as placas. Para instalar uma nova placa mezzanine, você deve ter os cabos apropriados e módulos SFP ou QSFP. 
 ---
-= Substitua ou instale uma placa mezzanine - FAS500f
+= Substitua ou instale uma placa mezzanine no seu FAS500f.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,7 +14,7 @@ summary: Para substituir uma placa mezzanine com falha, você deve remover os ca
 Para substituir uma placa mezzanine com falha, você deve remover os cabos e quaisquer módulos SFP ou QSFP, substituir a placa, reinstalar os módulos SFP ou QSFP e reabilitar as placas. Para instalar uma nova placa mezzanine, você deve ter os cabos apropriados e módulos SFP ou QSFP.
 
 * Pode utilizar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema
-* Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
+* Todos os outros componentes do sistema devem estar funcionando corretamente. Caso contrário, entre em contato com o suporte técnico.
 
 
 
@@ -250,7 +250,7 @@ Parafuso de aperto manual
 |===
 . Insira o módulo do controlador no chassis
 +
-.. Certifique-se de que os braços do mecanismo de engate estão bloqueados na posição totalmente estendida.
+.. Verifique se os braços do mecanismo de travamento estão travados na posição totalmente estendida.
 .. Utilizando ambas as mãos, alinhe e deslize suavemente o módulo do controlador para dentro dos braços do mecanismo de bloqueio até parar.
 .. Coloque os dedos indicadores através dos orifícios dos dedos a partir do interior do mecanismo de bloqueio.
 .. Pressione os polegares para baixo nas patilhas cor-de-laranja na parte superior do mecanismo de bloqueio e empurre suavemente o módulo do controlador sobre o batente.

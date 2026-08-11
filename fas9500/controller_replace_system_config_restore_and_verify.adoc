@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: fas9500, restore and verify the system configuration 
 summary: Depois de concluir a substituição de hardware e iniciar o modo de manutenção, você verifica a configuração de sistema de baixo nível do controlador de substituição, reconfigura as configurações do sistema conforme necessário. 
 ---
-= Restaure e verifique a configuração do sistema - FAS9500
+= Restaure e verifique a configuração do controlador no seu FAS9500
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Depois de concluir a substituição de hardware, verifique a configuração de sistema de baixo nível do controlador de substituição e reconfigure as definições do sistema conforme necessário.
+Após concluir a substituição do hardware, você verifica a configuração de baixo nível do sistema do controlador de substituição, incluindo a hora do sistema e o estado de HA, e reconfigura as configurações do sistema conforme necessário.
 
 
 

@@ -1,17 +1,17 @@
 ---
 permalink: fas8200/maintain-overview.html 
 sidebar: sidebar 
-keywords: fas2600 maintenance, maintenance, repairing fas2600, repairing fas2600, replace aff fas2600 components, replace aff fas2600 components 
-summary: Mantenha o hardware fas2600 
+keywords: fas8200 maintenance, maintenance, repairing fas8200, replace fas8200 components 
+summary: Você pode realizar procedimentos de manutenção nos componentes do sistema de storage FAS8200, incluindo a mídia de inicialização, o chassi, o controlador, os DIMMs e a fonte de alimentação. 
 ---
-= Mantenha o hardware FAS8200
+= Saiba mais sobre a manutenção do seu sistema de storage FAS8200
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Para o sistema de armazenamento FAS8200, pode executar procedimentos de manutenção nos seguintes componentes.
+Você pode realizar procedimentos de manutenção nos componentes do sistema de storage FAS8200, incluindo a mídia de inicialização, o chassi, o controlador, os DIMMs e a fonte de alimentação.
 
 
 
@@ -57,8 +57,8 @@ Uma unidade é um dispositivo que fornece a Mídia de armazenamento físico para
 
 
 
-[[nvem-battery]]
-== Bateria NVEM
+[[nvmem-battery]]
+== Bateria NVMEM
 
 Uma bateria é incluída com um controlador e preserva os dados em cache se a energia CA falhar.
 

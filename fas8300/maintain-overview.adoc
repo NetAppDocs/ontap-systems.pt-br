@@ -1,17 +1,17 @@
 ---
 permalink: fas8300/maintain-overview.html 
 sidebar: sidebar 
-keywords: fas8300 maintenance, maintenance, repairing, repairing fas8300, replace fas8300 components, replace fas8300 components 
-summary: Faça a manutenção do hardware do seu sistema de armazenamento FAS8300 e FAS8700 para garantir confiabilidade a longo prazo e desempenho ideal. Realize tarefas de manutenção regulares, como a substituição de componentes defeituosos, pois isso ajuda a evitar tempo de inatividade e perda de dados. 
+keywords: fas8300 maintenance, fas8700 maintenance, maintenance, repairing fas8300, repairing fas8700, replace fas8300 components, replace fas8700 components 
+summary: Faça a manutenção do hardware do seu sistema de storage FAS8300 ou FAS8700 para garantir confiabilidade a longo prazo e desempenho ideal. Execute tarefas de manutenção regulares, como a substituição de componentes defeituosos, pois isso ajuda a evitar tempo de inatividade e perda de dados. 
 ---
-= Mantenha o hardware FAS8300 e FAS8700
+= Saiba mais sobre a manutenção do seu FAS8300 ou FAS8700 sistema de storage
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Faça a manutenção do hardware do seu sistema de armazenamento FAS8300 e FAS8700 para garantir confiabilidade a longo prazo e desempenho ideal. Realize tarefas de manutenção regulares, como a substituição de componentes defeituosos, pois isso ajuda a evitar tempo de inatividade e perda de dados.
+Faça a manutenção do hardware do seu sistema de storage FAS8300 ou FAS8700 para garantir confiabilidade a longo prazo e desempenho ideal. Execute tarefas de manutenção regulares, como a substituição de componentes defeituosos, pois isso ajuda a evitar tempo de inatividade e perda de dados.
 
 Os procedimentos de manutenção pressupõem que o sistema de armazenamento FAS8300 e FAS8700 já tenha sido implantado como um nó de armazenamento no ambiente ONTAP .
 
@@ -85,7 +85,7 @@ O NVDIMM (módulo de memória em linha dupla não volátil) gerencia a transfer�
  a| 
 link:nvdimm-battery-replace.html["Bateria NVDIMM"]
  a| 
-Uma bateria NVDIMM é responsável por manter a energia do módulo NVDIMM.
+A bateria NVDIMM é responsável por manter a energia ligada ao módulo NVDIMM.
 
 
 

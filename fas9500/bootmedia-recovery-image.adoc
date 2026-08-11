@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: fas9500, boot the recovery image 
 summary: O procedimento para inicializar o nó prejudicado a partir da imagem de recuperação depende se o sistema está em uma configuração MetroCluster de dois nós. 
 ---
-= Recuperação manual de mídia de inicialização de uma unidade USB - FAS9500
+= Inicialize a imagem de recuperação no seu FAS9500 usando o processo de recuperação de inicialização manual
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Depois de instalar o novo dispositivo multimédia de arranque no seu sistema, pode arrancar a imagem de recuperação a partir de uma unidade USB e restaurar a configuração a partir do nó do parceiro.
+Após instalar o novo dispositivo de mídia de inicialização no seu FAS9500, você pode inicializar a imagem de recuperação a partir de uma unidade USB e restaurar a configuração do nó parceiro.
 
 Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use olink:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"] .  Se o seu sistema estiver executando uma versão anterior do ONTAP, você deverá usar o procedimento de recuperação de inicialização manual.
 

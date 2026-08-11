@@ -2,22 +2,22 @@
 permalink: fas-70-90/io-module-hotswap.html 
 sidebar: sidebar 
 keywords: fas70, fas90, hot swap a cluster ha card, hot swap ethernet client io module, hotswap io module, hot swap io module 
-summary: Você pode realizar a substituição a quente de um módulo de E/S Ethernet em seu sistema de storage FAS 70 ou FAS 90 caso um módulo apresente falha e seu sistema de storage atenda a todos os requisitos de versão do ONTAP. 
+summary: Você pode realizar a substituição a quente de um módulo de E/S Ethernet em seu sistema de storage FAS70 ou FAS90 caso um módulo apresente falha e seu sistema de storage atenda a todos os requisitos de versão do ONTAP. 
 ---
-= Substituição a quente de um módulo de I/O - FAS 70 e FAS 90
+= Substitua a quente um módulo de E/S no seu sistema FAS70 ou FAS90 sem desligá-lo
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Você pode realizar a substituição a quente de um módulo de E/S Ethernet em seu sistema de storage FAS 70 ou FAS 90 caso um módulo apresente falha e seu sistema de storage atenda a todos os requisitos de versão do ONTAP.
+Você pode realizar a substituição a quente de um módulo de E/S Ethernet em seu sistema de storage FAS70 ou FAS90 caso um módulo apresente falha e seu sistema de storage atenda a todos os requisitos de versão do ONTAP.
 
 Para substituição a quente de um módulo de E/S, certifique-se de que seu sistema de storage esteja executando ONTAP 9.18.1 GA ou posterior, prepare seu sistema de storage e o módulo de E/S, realize a substituição a quente do módulo com falha, coloque o módulo de substituição online, restaure o sistema de storage à operação normal e devolva o módulo com falha à NetApp.
 
 .Sobre esta tarefa
 * Você não precisa realizar um takeover manual antes de substituir o módulo de E/S com defeito.
-* Aplique os comandos ao controlador e ao slot de E/S corretos durante a substituição a quente:
+* Certifique-se de aplicar os comandos ao controlador e ao slot de E/S corretos durante a substituição a quente:
 +
 ** O _controlador com defeito_ é o controlador no qual você está substituindo o módulo de E/S.
 ** O _controlador saudável_ é o parceiro HA do controlador prejudicado.

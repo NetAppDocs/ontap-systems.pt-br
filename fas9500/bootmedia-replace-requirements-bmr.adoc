@@ -2,16 +2,16 @@
 permalink: fas9500/bootmedia-replace-requirements-bmr.html 
 sidebar: sidebar 
 keywords: fas9500, replace the boot media 
-summary: Antes de substituir a mídia de inicialização no seu sistema FAS9500 , certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. 
+summary: Antes de substituir a mídia de inicialização no seu FAS9500, verifique se você atende aos requisitos necessários para uma substituição bem-sucedida. 
 ---
-= Requisitos para recuperação automatizada de mídia de inicialização - FAS9500
+= Analise os requisitos para recuperação automática da mídia de inicialização no seu sistema FAS9500
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Antes de substituir a mídia de inicialização no seu FAS9500, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida.  Isso inclui verificar se você tem a mídia de inicialização de substituição correta, confirmar se a porta e0S (chave e0M) no controlador danificado não está com defeito e determinar se o Onboard Key Manager (OKM) ou o External Key Manager (EKM) está habilitado.
+Antes de substituir a mídia de inicialização no seu FAS9500, verifique se você atende aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se você possui a mídia de inicialização de substituição correta, confirmar se a porta e0S (chave inglesa e0M) no controlador com defeito não está com problemas e determinar se o Onboard Key Manager (OKM) ou o External Key Manager (EKM) está habilitado.
 
 O processo automatizado de recuperação de mídia de inicialização é compatível apenas com o ONTAP 9.17.1 e versões posteriores. Se o seu sistema de armazenamento estiver executando uma versão anterior do ONTAP, use o link:bootmedia-replace-workflow.html["procedimento de recuperação de inicialização manual"] .
 
