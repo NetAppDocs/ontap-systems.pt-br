@@ -2,7 +2,7 @@
 permalink: c80/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: aff c80, shut down the controller 
-summary: Desligue o controlador danificado no seu sistema de armazenamento AFF C80 para evitar perda de dados e manter a estabilidade do sistema durante o processo de recuperação de mídia de inicialização manual. 
+summary: Desligue o controlador do seu AFF C800 sistema de storage para evitar perda de dados e manter a estabilidade do sistema durante o processo de recuperação manual da mídia de inicialização. 
 ---
 = Desligue o controlador do seu AFF C80 sistema de storage durante o processo de recuperação de inicialização manual
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Desligue o controlador danificado no seu sistema de armazenamento AFF C
 
 
 [role="lead"]
-Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador desativado. Encerre ou assuma o controlador afetado utilizando o procedimento adequado para a sua configuração.
+Desligue o controlador do seu AFF C800 sistema de storage para evitar perda de dados e manter a estabilidade do sistema durante o processo de recuperação manual da mídia de inicialização.
 
 Se o seu sistema estiver executando o ONTAP 9.17.1 e posterior, use o link:bootmedia-replace-workflow-bmr.html["procedimento de recuperação de inicialização automática"] .
 

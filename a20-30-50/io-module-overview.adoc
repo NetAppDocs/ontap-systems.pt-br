@@ -19,7 +19,7 @@ Você pode adicionar módulos de E/S para melhorar a redundância, ajudando a ga
 
 * link:io-module-hotswap.html["Substituição a quente de um módulo de E/S"]
 +
-É possível realizar a substituição a quente de determinados módulos de E/S por um módulo de E/S equivalente para restaurar o sistema de storage ao seu estado operacional ideal. A substituição a quente é feita sem a necessidade de realizar uma tomada manual.
+Você pode substituir a quente determinados módulos de E/S por um módulo de E/S equivalente para restaurar o sistema de storage ao seu estado operacional ideal. Você não precisa realizar uma transferência manual para substituir o módulo a quente.
 
 +
 Para utilizar este procedimento, seu sistema de storage deve estar executando ONTAP 9.17.1 ou posterior e atender aos requisitos específicos para a versão do ONTAP que seu sistema está executando.

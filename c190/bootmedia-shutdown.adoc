@@ -2,16 +2,16 @@
 permalink: c190/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: aff c190, shut down the controller, manual, manual boot recovery 
-summary: Após concluir as verificações de criptografia, desligue o controlador com defeito em um sistema AFF C190 . O sistema AFF C190 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada. 
+summary: Desligue o controlador do seu AFF C190 sistema de storage para evitar perda de dados e manter a estabilidade do sistema durante o processo de recuperação manual da mídia de inicialização. 
 ---
-= Desligue o controlador com defeito no seu sistema AFF C190 durante o processo de recuperação de inicialização manual
+= Desligue o controlador do seu sistema AFF C190 durante o processo de recuperação de inicialização manual
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Após concluir as verificações de criptografia, desligue o controlador com defeito em um sistema AFF C190 . Este procedimento inclui levar o controlador ao prompt LOADER, capturar as variáveis ​​de ambiente de inicialização para referência e preparar o controlador para a substituição da mídia de inicialização.
+Desligue o controlador do seu AFF C190 sistema de storage para evitar perda de dados e manter a estabilidade do sistema durante o processo de recuperação manual da mídia de inicialização.
 
 O sistema AFF C190 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada.
 

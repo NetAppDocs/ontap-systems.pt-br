@@ -2,7 +2,7 @@
 permalink: a800/bootmedia-replace-requirements.html 
 sidebar: sidebar 
 keywords: a800, replace the boot media 
-summary: Antes de substituir a mídia de inicialização no seu sistema AFF A800, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. Isso inclui certificar-se de que você possui um pen drive USB com a capacidade de armazenamento adequada e verificar se você possui o dispositivo de inicialização de substituição correto. 
+summary: Antes de substituir a mídia de inicialização do seu AFF A800, verifique se você atende aos requisitos necessários para uma substituição bem-sucedida. Isso inclui certificar-se de que você possui um pen drive USB com a capacidade de armazenamento adequada e verificar se você tem o dispositivo de inicialização de substituição correto. 
 ---
 = Verifique os requisitos para recuperação manual da mídia de inicialização no seu sistema AFF A800
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Antes de substituir a mídia de inicialização no seu sistema AFF A800
 
 
 [role="lead"]
-Antes de substituir a mídia de inicialização no seu sistema AFF A800, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. Isso inclui certificar-se de que você possui um pen drive USB com a capacidade de armazenamento adequada e verificar se você possui o dispositivo de inicialização de substituição correto.
+Antes de substituir a mídia de inicialização do seu AFF A800, verifique se você atende aos requisitos necessários para uma substituição bem-sucedida. Isso inclui certificar-se de que você possui um pen drive USB com a capacidade de armazenamento adequada e verificar se você tem o dispositivo de inicialização de substituição correto.
 
 Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use olink:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"] .  Se o seu sistema estiver executando uma versão anterior do ONTAP, você deverá usar o procedimento de recuperação de inicialização manual.
 

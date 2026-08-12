@@ -2,16 +2,16 @@
 permalink: fas2800/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: fas2820, shut, down, impaired, controller, take, over 
-summary: Desligue o controlador com defeito no seu FAS2820 sistema de storage para evitar perda de dados e manter a estabilidade do sistema durante o processo de recuperação de inicialização manual. 
+summary: Desligue o controlador do seu FAS2820 sistema de storage para evitar perda de dados e manter a estabilidade do sistema durante o processo de recuperação manual da mídia de boot. 
 ---
-= Desligue o controlador com defeito no seu sistema FAS2820 durante o processo de recuperação de inicialização manual
+= Desligue o controlador do seu sistema FAS2820 durante o processo de recuperação de inicialização manual
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Desligue o controlador com defeito no seu FAS2820 sistema de storage para evitar perda de dados e manter a estabilidade do sistema durante o processo de recuperação de inicialização manual.
+Desligue o controlador do seu FAS2820 sistema de storage para evitar perda de dados e manter a estabilidade do sistema durante o processo de recuperação manual da mídia de boot.
 
 Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use olink:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"] .  Se o seu sistema estiver executando uma versão anterior do ONTAP, você deverá usar o procedimento de recuperação de inicialização manual.
 

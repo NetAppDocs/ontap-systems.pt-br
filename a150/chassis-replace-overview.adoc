@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a150, a150, aff, replace, chassis, shut down, controller, metrocluster, power, supply, ha, state, controller, configuration, switch, aggregates, replace, move, remove, swap 
 summary: Você substitui um chassi com problema por um novo chassi do mesmo modelo que o chassi com problema. 
 ---
-= Analise os requisitos para a substituição do chassi no seu sistema AFF A150
+= Verifique os requisitos antes de substituir o chassi do seu AFF A150
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Antes de substituir o chassi no seu sistema AFF A150, certifique-se de que atende aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente e entender que o procedimento é disruptivo e requer o desligamento de ambos os controladores.
+Antes de substituir o chassi do seu AFF A150, certifique-se de que você atende aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente e entender que o procedimento é disruptivo e exige o desligamento de ambos os controladores.
 
 Para substituir o chassi, você deve mover as fontes de alimentação, os discos rígidos e o módulo ou módulos do controlador do chassi com deficiência para o novo chassi e trocar o chassi com deficiência do rack de equipamentos ou do gabinete do sistema pelo novo chassi do mesmo modelo que o chassi com deficiência.
 

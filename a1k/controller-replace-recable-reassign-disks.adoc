@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a1k, how to recable the system, how to reassign disks 
 summary: Retorne o controle dos recursos de armazenamento ao controlador de substituição para que seu sistema AFF A1K possa retomar a operação normal. 
 ---
-= Devolva o controlador no seu sistema AFF A1K para retomar as operações normais
+= Devolva o controlador no seu AFF A1K
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Retorne o controle dos recursos de armazenamento ao controlador de substituição para que seu sistema AFF A1K possa retomar a operação normal. O procedimento de devolução varia de acordo com o tipo de criptografia usado pelo seu sistema: sem criptografia ou criptografia Onboard Key Manager (OKM).
+Devolva o controle dos recursos de storage ao controlador de substituição para que seu AFF A1K possa retomar a operação normal. O procedimento de devolução varia de acordo com o tipo de criptografia usado pelo seu sistema: sem criptografia ou criptografia Onboard Key Manager (OKM).
 
 [role="tabbed-block"]
 ====

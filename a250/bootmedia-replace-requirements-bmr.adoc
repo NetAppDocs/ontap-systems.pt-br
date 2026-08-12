@@ -2,7 +2,7 @@
 permalink: a250/bootmedia-replace-requirements-bmr.html 
 sidebar: sidebar 
 keywords: a250, replace the boot media 
-summary: Antes de substituir a mídia de inicialização no seu AFF A250, certifique-se de que atende aos requisitos necessários para uma substituição bem-sucedida. 
+summary: Antes de substituir a mídia de inicialização no seu AFF A250, verifique se você atende aos requisitos necessários para uma substituição bem-sucedida. 
 ---
 = Analise os requisitos para recuperação automática da mídia de inicialização no seu sistema AFF A250
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Antes de substituir a mídia de inicialização no seu AFF A250, certif
 
 
 [role="lead"]
-Antes de substituir a mídia de inicialização do seu AFF A250, certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se você possui a mídia de inicialização de substituição correta, confirmar se a porta e0S (e0M wrench) no controlador com problema não está com defeito e determinar se Onboard Key Manager (OKM) ou External Key Manager (EKM) está ativado.
+Antes de substituir a mídia de inicialização no seu AFF A250, verifique se você atende aos requisitos necessários para uma substituição bem-sucedida. Isso inclui confirmar se você possui a mídia de inicialização de substituição correta, confirmar se a porta e0S (chave inglesa e0M) no controlador com defeito não está com problemas e determinar se o Onboard Key Manager (OKM) ou o External Key Manager (EKM) está ativado.
 
 O processo automatizado de recuperação de mídia de inicialização é compatível apenas com ONTAP 9.18.1 e versões posteriores. Se o seu sistema de storage estiver executando uma versão anterior do ONTAP, use o link:bootmedia-replace-workflow.html["procedimento de recuperação de inicialização manual"].
 

@@ -14,7 +14,7 @@ summary: Substitua um módulo de E/S no seu sistema de armazenamento AFF C30 ou 
 Substitua um módulo de E/S no seu sistema de armazenamento AFF C30 ou AFF C60 quando o módulo falhar ou precisar de uma atualização para oferecer suporte a maior desempenho ou recursos adicionais. O processo de substituição envolve desligar o controlador, substituir o módulo de E/S com falha, reinicializar o controlador e devolver a peça com falha à NetApp.
 
 .Antes de começar
-Todos os outros componentes do sistema de armazenamento devem estar a funcionar corretamente; caso contrário, contacte https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de continuar com este procedimento.
+Todos os outros componentes do sistema de storage devem estar funcionando corretamente. Caso contrário, entre em contato  https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de prosseguir com este procedimento.
 
 .Sobre esta tarefa
 Se necessário, você pode ligar os LEDs de localização do sistema de armazenamento (azul) para ajudar a localizar fisicamente o sistema de armazenamento afetado. Faça login no BMC usando SSH e digite o `system location-led _on_` comando.
@@ -25,10 +25,10 @@ Você pode desativá-los digitando o `system location-led _off_` comando. Se nã
 
 
 
-[[step-1-shut-down-the-impaired-controller]]
-== Passo 1: Desligue o controlador desativado
+[[step-1-shut-down-the-controller-with-the-impaired-io-module]]
+== Passo 1: desligue o controlador com o módulo de E/S defeituoso
 
-Encerre ou assuma o controlador afetado utilizando uma das seguintes opções.
+Desligue ou assuma o controle do controlador com o módulo de E/S com problema usando uma das seguintes opções.
 
 [role="tabbed-block"]
 ====

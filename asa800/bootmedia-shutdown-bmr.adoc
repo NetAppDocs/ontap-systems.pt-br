@@ -2,7 +2,7 @@
 permalink: asa800/bootmedia-shutdown-bmr.html 
 sidebar: sidebar 
 keywords: asa800, shut down the controller 
-summary: Desligue o controlador danificado no seu sistema de armazenamento ASA A800 para evitar perda de dados e garantir a estabilidade do sistema ao substituir a mídia de inicialização. 
+summary: Desligue o controlador do seu ASA A800 sistema de storage para evitar perda de dados e garantir a estabilidade do sistema ao substituir a mídia de inicialização. 
 ---
 = Desligue o controlador do seu sistema ASA A800 durante o processo de recuperação automática de inicialização
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Desligue o controlador danificado no seu sistema de armazenamento ASA A
 
 
 [role="lead"]
-Desligue o controlador danificado no seu sistema de armazenamento ASA A800 para evitar perda de dados e manter a estabilidade do sistema durante o processo automatizado de recuperação da mídia de inicialização.
+Desligue o controlador do seu ASA A800 sistema de storage para evitar perda de dados e manter a estabilidade do sistema durante o processo automatizado de recuperação da mídia de inicialização.
 
 O processo automatizado de recuperação de mídia de inicialização é compatível apenas com o ONTAP 9.17.1 e versões posteriores. Se o seu sistema de armazenamento estiver executando uma versão anterior do ONTAP, use o link:bootmedia-replace-workflow.html["procedimento de recuperação de inicialização manual"] .
 
@@ -82,4 +82,4 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 
 
 .O que vem a seguir
-Depois de desligar o controlador desativado, você link:bootmedia-replace-bmr.html["substitua o suporte de arranque"].
+Depois de desligar o controlador, você link:bootmedia-replace-bmr.html["substitua o suporte de arranque"].

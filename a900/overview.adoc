@@ -11,7 +11,7 @@ summary: Especificações principais para o grupo de plataformas A900
 
 
 [role="lead"]
-A seguir estão especificações selecionadas para o sistema de armazenamento AFF A900 em um único par de alta disponibilidade. Visite o NetApp Hardware Universe (HWU) para obter as especificações completas deste sistema de armazenamento.
+Os sistemas de storage AFF A900 em um único par de HA oferecem estas especificações principais. Visite  https://hwu.netapp.com["NetApp Hardware Universe"^] para ver as especificações completas deste sistema de storage.
 
 
 
@@ -130,7 +130,7 @@ Não há dados de E/S integrados.
 [[high-availability]]
 == Alta disponibilidade
 
-* Controlador de gerenciamento de placa base baseado em Ethernet (BMC) e interface de gerenciamento ONTAP
+* Controlador de gerenciamento de placa-mãe (BMC) baseado em Ethernet e interface de gerenciamento do ONTAP
 * Controladores redundantes hot-swappable
 * Fontes de alimentação redundantes com troca a quente
 * Gerenciamento de banda SAS em conexões SAS

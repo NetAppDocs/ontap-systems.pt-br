@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a20, aff a30, aff a50, hot swap a cluster ha card, hot swap ethernet client io module, hotswap io module, hot swap io module 
 summary: Você pode realizar a substituição a quente de um módulo de E/S Ethernet no seu sistema de storage AFF A20, AFF A30 ou AFF A50 caso um módulo apresente falha e seu sistema de storage atenda a todos os requisitos de versão do ONTAP. 
 ---
-= Troque um módulo de E/S com substituição a quente no seu sistema AFF A20, AFF A30 ou AFF A50 sem desligá-lo
+= Substitua a quente um módulo de E/S no seu sistema AFF A20, AFF A30 ou AFF A50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,7 +13,7 @@ summary: Você pode realizar a substituição a quente de um módulo de E/S Ethe
 [role="lead"]
 Você pode realizar a substituição a quente de um módulo de E/S Ethernet no seu sistema de storage AFF A20, AFF A30 ou AFF A50 caso um módulo apresente falha e seu sistema de storage atenda a todos os requisitos de versão do ONTAP.
 
-Para substituir a quente um módulo de E/S, certifique-se de que seu sistema de storage atenda aos requisitos de versão do ONTAP, prepare seu sistema de storage e o módulo de E/S, faça a substituição a quente do módulo com defeito, coloque o módulo de substituição online, restaure o sistema de storage à operação normal e devolva o módulo com defeito para a NetApp.
+Para substituir a quente um módulo de E/S, verifique se o seu sistema de storage atende aos requisitos da versão do ONTAP, prepare o seu sistema de storage e o módulo de E/S, faça a substituição a quente do módulo com defeito, coloque o módulo de substituição online, restaure o sistema de storage à operação normal e devolva o módulo com defeito à NetApp.
 
 .Sobre esta tarefa
 * A substituição a quente do módulo de E/S significa que você não precisa realizar um takeover manual antes de substituir o módulo de E/S com defeito.
@@ -28,7 +28,7 @@ Para substituir a quente um módulo de E/S, certifique-se de que seu sistema de 
 Um sistema de armazenamento tem três LEDs de localização: Um no painel de visualização do operador e um em cada controlador. Os LEDs de localização permanecem acesos durante 30 minutos.
 
 +
-Você pode desativá-los digitando o `system location-led _off_` comando. Se não tiver a certeza se os LEDs estão ligados ou desligados, pode verificar o seu estado introduzindo o `system location-led show` comando.
+Você pode desligá-los digitando o comando  `system location-led _off_`. Se não tiver certeza se os LEDs estão acesos ou apagados, você pode verificar o estado deles digitando o comando  `system location-led show`.
 
 
 

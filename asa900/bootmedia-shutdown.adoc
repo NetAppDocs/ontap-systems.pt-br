@@ -2,7 +2,7 @@
 permalink: asa900/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: asa a900, shut down the controller 
-summary: Você pode desligar ou assumir o controlador prejudicado usando procedimentos diferentes, dependendo da configuração do hardware do sistema de armazenamento. 
+summary: Desligue o controlador do seu ASA A900 sistema de storage para evitar perda de dados e manter a estabilidade do sistema durante o processo de recuperação manual da mídia de inicialização. 
 ---
 = Desligue o controlador do seu sistema ASA A900 durante o processo de recuperação de inicialização manual
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Você pode desligar ou assumir o controlador prejudicado usando procedi
 
 
 [role="lead"]
-Encerre ou assuma o controlador afetado utilizando o procedimento adequado para a sua configuração.
+Desligue o controlador do seu ASA A900 sistema de storage para evitar perda de dados e manter a estabilidade do sistema durante o processo de recuperação manual da mídia de inicialização.
 
 Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use olink:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"] .  Se o seu sistema estiver executando uma versão anterior do ONTAP, você deverá usar o procedimento de recuperação de inicialização manual.
 
@@ -19,7 +19,7 @@ Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior
 ====
 .A maioria das configurações
 --
-Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador desativado.
+Após concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador.
 
 Assuma o controle e interrompa o controlador com defeito para que o controlador em bom estado continue a fornecer dados do armazenamento do controlador com defeito. Para fazer isso, você suprime a criação automática de casos em AutoSupport, desativa o giveback automático e leva o controlador com defeito ao prompt LOADER. O prompt LOADER é o estado de parada segura a partir do qual você pode substituir a FRU.
 
@@ -90,7 +90,7 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 --
 .O controlador está em um MetroCluster
 --
-Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador desativado.
+Após concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador.
 
 
 NOTE: Não use este procedimento se o sistema estiver em uma configuração de MetroCluster de dois nós.

@@ -13,7 +13,7 @@ summary: Você pode realizar a substituição a quente de um módulo de E/S Ethe
 [role="lead"]
 Você pode realizar a substituição a quente de um módulo de E/S Ethernet em seu sistema de storage AFF A1K caso um módulo apresente falha e seu sistema de storage atenda a todos os requisitos de versão do ONTAP.
 
-Para substituição a quente de um módulo de E/S, certifique-se de que seu sistema de storage esteja executando ONTAP 9.18.1 GA ou posterior, prepare seu sistema de storage e o módulo de E/S, realize a substituição a quente do módulo com falha, coloque o módulo de substituição online, restaure o sistema de storage à operação normal e devolva o módulo com falha à NetApp.
+Para substituição a quente de um módulo de E/S, verifique se o seu sistema de storage está executando o ONTAP 9.18.1 GA ou posterior. Em seguida, prepare o sistema de storage e o módulo de E/S, realize a substituição a quente do módulo com falha, coloque o módulo de substituição online, restaure a operação normal e devolva o módulo com falha para a NetApp.
 
 .Sobre esta tarefa
 * Você não precisa realizar um takeover manual antes de substituir o módulo de E/S com defeito.

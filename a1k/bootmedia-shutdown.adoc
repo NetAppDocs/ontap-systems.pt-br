@@ -2,7 +2,7 @@
 permalink: a1k/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: aff a1k, shut down the controller 
-summary: Desligue o controlador com defeito no seu sistema de storage AFF A1K para evitar perda de dados e manter a estabilidade do sistema durante o processo de recuperação de inicialização manual. 
+summary: Desligue o controlador do seu AFF A1K sistema de storage para evitar perda de dados e manter a estabilidade do sistema durante o processo de recuperação manual da mídia de inicialização. 
 ---
 = Desligue o controlador do seu sistema AFF A1K durante o processo de recuperação de inicialização manual
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Desligue o controlador com defeito no seu sistema de storage AFF A1K pa
 
 
 [role="lead"]
-Desligue o controlador com defeito no seu sistema de storage AFF A1K para evitar perda de dados e manter a estabilidade do sistema durante o processo de recuperação de inicialização manual.
+Desligue o controlador do seu AFF A1K sistema de storage para evitar perda de dados e manter a estabilidade do sistema durante o processo de recuperação manual da mídia de inicialização.
 
 Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use olink:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"] .  Se o seu sistema estiver executando uma versão anterior do ONTAP, você deverá usar o procedimento de recuperação de inicialização manual.
 

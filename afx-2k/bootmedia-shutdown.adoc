@@ -2,7 +2,7 @@
 permalink: afx-2k/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: afx 2k, shut down the controller 
-summary: Desligue o controlador com defeito no seu sistema de storage AFX 2K para evitar perda de dados e garantir a estabilidade do sistema ao substituir a mídia de inicialização. 
+summary: Desligue o controlador do seu sistema de storage AFX 2K para evitar perda de dados e garantir a estabilidade do sistema ao substituir a mídia de inicialização. 
 ---
 = Desligue o controlador do seu sistema de storage AFX 2K durante o processo de recuperação automática de inicialização
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Desligue o controlador com defeito no seu sistema de storage AFX 2K par
 
 
 [role="lead"]
-Desligue o controlador com defeito no seu sistema de storage AFX 2K para evitar perda de dados e garantir a estabilidade do sistema ao substituir a mídia de inicialização.
+Desligue o controlador do seu sistema de storage AFX 2K para evitar perda de dados e garantir a estabilidade do sistema ao substituir a mídia de inicialização.
 
 Assuma o controle e interrompa o controlador com defeito para que o controlador em bom estado continue a fornecer dados do armazenamento do controlador com defeito. Para fazer isso, você suprime a criação automática de casos em AutoSupport, desativa o giveback automático e leva o controlador com defeito ao prompt LOADER. O prompt LOADER é o estado de parada segura a partir do qual você pode substituir a FRU.
 

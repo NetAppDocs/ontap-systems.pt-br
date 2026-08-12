@@ -2,18 +2,18 @@
 permalink: fas9500/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: fas9500, shut down the controller 
-summary: Você pode desligar ou assumir o controlador prejudicado usando procedimentos diferentes, dependendo da configuração do hardware do sistema de armazenamento. 
+summary: Desligue o controlador do seu FAS9500 sistema de storage para evitar perda de dados e manter a estabilidade do sistema durante o processo de recuperação manual da mídia de boot. 
 ---
-= Desligue o controlador com defeito no seu sistema FAS9500 durante o processo de recuperação de inicialização manual
+= Desligue o controlador do seu sistema FAS9500 durante o processo de recuperação de inicialização manual
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Encerre ou assuma o controlador afetado utilizando uma das seguintes opções.
+Desligue o controlador do seu FAS9500 sistema de storage para evitar perda de dados e manter a estabilidade do sistema durante o processo de recuperação manual da mídia de boot.
 
-Após concluir as tarefas NVE ou NSE, desligue o nó com problemas.
+Após concluir as tarefas NVE ou NSE, desligue o nó.
 
 Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use olink:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"] .  Se o seu sistema estiver executando uma versão anterior do ONTAP, você deverá usar o procedimento de recuperação de inicialização manual.
 

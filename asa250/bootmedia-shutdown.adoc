@@ -2,7 +2,7 @@
 permalink: asa250/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: asa a250, shutdown 
-summary: Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador desativado. 
+summary: Desligue o controlador do seu ASA A250 sistema de storage para evitar perda de dados e manter a estabilidade do sistema durante o processo de recuperação manual da mídia de inicialização. 
 ---
 = Desligue o controlador no seu sistema ASA A250 antes de substituir a mídia de inicialização
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desl
 
 
 [role="lead"]
-Encerre ou assuma o controlador afetado utilizando o procedimento adequado para a sua configuração.
+Desligue o controlador do seu ASA A250 sistema de storage para evitar perda de dados e manter a estabilidade do sistema durante o processo de recuperação manual da mídia de inicialização.
 
 
 
@@ -62,7 +62,7 @@ NOTE: Este comando pode não funcionar se o dispositivo de inicialização estiv
 [[option-2-systems-in-a-metrocluster]]
 == Opção 2: Sistemas em um MetroCluster
 
-Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador desativado.
+Após concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador.
 
 
 NOTE: Não use este procedimento se o sistema estiver em uma configuração de MetroCluster de dois nós.

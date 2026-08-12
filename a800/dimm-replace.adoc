@@ -14,7 +14,7 @@ summary: Substitua um DIMM no seu AFF A800 controller module quando o sistema re
 Substitua um DIMM no seu sistema AFF A800 quando o sistema de storage encontrar erros de memória corrigíveis (CECC) ou incorrigíveis em excesso. Esses erros podem impedir que o sistema de storage inicialize o ONTAP.
 
 .Antes de começar
-* Certifique-se de que todos os outros componentes do sistema estão a funcionar corretamente; caso contrário, tem de contactar a assistência técnica.
+* Certifique-se de que todos os outros componentes do sistema estejam funcionando corretamente. Se eles não estiverem funcionando corretamente, entre em contato com o suporte técnico.
 * Certifique-se de que substitui o componente com falha por um componente de substituição que recebeu da NetApp.
 
 

@@ -11,7 +11,7 @@ summary: Especificações principais para o sistema de armazenamento AFF A90
 
 
 [role="lead"]
-A seguir estão algumas especificações selecionadas para o AFF A90.  Visita https://hwu.netapp.com["NetApp Hardware Universe"^] (HWU) para uma lista completa das especificações do AFF A90 .  Esta página reflete um único par de alta disponibilidade.
+Consulte as especificações selecionadas do AFF A90 sistema de storage em uma configuração de par de HA único. Visite  https://hwu.netapp.com["NetApp Hardware Universe"^] (HWU) para obter uma lista completa das especificações do AFF A90.
 
 
 
@@ -87,12 +87,12 @@ CIFS; FC; iSCSI; NFS v3; NFS v4.0; NFS v4.1; NFS v4.2; NFSv3/RDMA; NFSv4/RDMA; N
 
 * Potência típica: 8304 BTU/h
 * Pior cenário de potência: 10948 BTU/h
-* Peso: 118,0 lb 53,5 kg
+* Peso: 118,0 lb, 53,5 kg
 * Altura: 4U
 * Largura: 19” compatível com rack IEC (17,6” 44,7 cm)
 * Profundidade: 34,5” (36,6” com suporte para gerenciamento de cabos)
-* Temperatura/Altitude/Umidade de operação: 10°C a 35°C (50°F a 95°F) a 3048 m (10000 pés) de altitude; 8% a 80% de umidade relativa, sem condensação
-* Temperatura/Umidade fora de operação: -40 °C a 70 °C (-40 °F a 158 °F) até 12.192 m (40.000 pés), 10% a 95% de umidade relativa, sem condensação, na embalagem original.
+* Temperatura/Altitude/Umidade de operação: 10°C a 35°C (50°F a 95°F) em altitudes de até 3048 m (10000 pés); umidade relativa de 8% a 80%, sem condensação.
+* Temperatura/Umidade fora de operação: -40 °C a 70 °C (-40 °F a 158 °F) até 12.192 m (40.000 pés); 10% a 95% de umidade relativa, sem condensação, na embalagem original.
 * Ruído acústico: Potência sonora declarada (LwAd): 8,6; Pressão sonora (LpAm) (posições de observador): 71,6 dB
 
 

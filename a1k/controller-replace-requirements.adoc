@@ -2,7 +2,7 @@
 permalink: a1k/controller-replace-requirements.html 
 sidebar: sidebar 
 keywords: aff a1k, prerequisite, replace the controller module 
-summary: Antes de substituir o controlador no seu sistema AFF A1K, certifique-se de que cumpre os requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, verificar se você tem o controlador de substituição correto e salvar a saída do console do controlador em um arquivo de log de texto. 
+summary: Antes de substituir o controlador no seu AFF A1K, verifique se você atende aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, verificar se você possui o controlador de substituição correto e salvar a saída do console do controlador em um arquivo de log. 
 ---
 = Verifique os requisitos antes de substituir o controlador no seu sistema AFF A1K
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Antes de substituir o controlador no seu sistema AFF A1K, certifique-se
 
 
 [role="lead"]
-Antes de substituir o controlador no seu sistema AFF A1K, certifique-se de que cumpre os requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, verificar se você tem o controlador de substituição correto e salvar a saída do console do controlador em um arquivo de log de texto.
+Antes de substituir o controlador no seu AFF A1K, verifique se você atende aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, verificar se você possui o controlador de substituição correto e salvar a saída do console do controlador em um arquivo de log.
 
 Reveja os requisitos para substituir o controlador.
 
@@ -42,4 +42,4 @@ NetApp recomenda fortemente que você habilite o registro de logs no console nos
 
 
 .O que se segue?
-Depois de analisar os requisitos para substituir o controlador AFF A1K, é necessário link:controller-replace-shutdown.html["desligue o controlador desativado"].
+Após analisar os requisitos para substituir o seu AFF A1K, você precisa link:controller-replace-shutdown.html["desligue o controlador desativado"].

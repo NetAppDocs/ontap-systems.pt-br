@@ -11,7 +11,7 @@ summary: Para garantir a segurança dos dados no seu AFF A70 ou AFF A90 sistema 
 
 
 [role="lead"]
-Para garantir a segurança dos dados no sistema de armazenamento AFF A70 ou AFF A90, é necessário verificar o suporte e o status da chave de criptografia na Mídia de inicialização. Verifique se sua versão do ONTAP suporta criptografia de volume NetApp (NVE) e, antes de desligar a controladora, verifique se o gerenciador de chaves está ativo.
+Para garantir a segurança dos dados no seu AFF A70 ou AFF A90 sistema de storage, você precisa verificar o suporte e o status da chave de criptografia na sua mídia de inicialização. Verifique se a sua versão do ONTAP suporta o NetApp Volume Encryption (NVE). Antes de desligar o controlador, verifique se o gerenciador de chaves está ativo.
 
 Se o seu sistema estiver executando o ONTAP 9.17.1 e posterior, use o link:bootmedia-replace-workflow-bmr.html["procedimento de recuperação de inicialização automática"] .
 

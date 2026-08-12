@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a20, aff a30, aff a50, add IO module 
 summary: Adicione um módulo de e/S ao seu sistema AFF A20, AFF A30 ou AFF A50 para melhorar a conetividade de rede e expandir a capacidade do seu sistema de lidar com o tráfego de dados. 
 ---
-= Adicione um módulo de E/S ao seu sistema AFF A20, AFF A30 ou AFF A50 para melhorar a conectividade de rede
+= Adicione um módulo de E/S ao seu sistema AFF A20, AFF A30 ou AFF A50.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,7 +13,7 @@ summary: Adicione um módulo de e/S ao seu sistema AFF A20, AFF A30 ou AFF A50 p
 [role="lead"]
 Adicione um módulo de E/S ao seu sistema de armazenamento AFF A20, AFF A30 ou AFF A50 para melhorar a conectividade de rede e expandir a capacidade do seu sistema de lidar com o tráfego de dados.
 
-O processo de adição envolve desligar um controlador, adicionar o novo módulo de E/S, reiniciar o controlador, desligar o outro controlador, adicionar o novo módulo de E/S, e reiniciar o controlador.
+A adição do módulo de E/S envolve desligar um controlador, adicionar o módulo e reinicializá-lo, e então repetir essas etapas para o outro controlador.
 
 .Sobre esta tarefa
 * Você pode adicionar um módulo de E/S aos seus sistemas de storage quando houver slots disponíveis ou quando todos os slots estiverem totalmente ocupados.
@@ -22,7 +22,7 @@ O processo de adição envolve desligar um controlador, adicionar o novo módulo
 Um sistema de armazenamento tem três LEDs de localização: Um no painel de visualização do operador e um em cada controlador. Os LEDs de localização permanecem acesos durante 30 minutos.
 
 +
-Você pode desativá-los digitando o `system location-led _off_` comando. Se não tiver a certeza se os LEDs estão ligados ou desligados, pode verificar o seu estado introduzindo o `system location-led show` comando.
+Você pode desligá-los digitando o comando  `system location-led _off_`. Se não tiver certeza se os LEDs estão acesos ou apagados, você pode verificar o estado deles digitando o comando  `system location-led show`.
 
 
 

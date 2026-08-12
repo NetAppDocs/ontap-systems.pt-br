@@ -2,7 +2,7 @@
 permalink: c250/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: aff c250, shutdown 
-summary: Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador desativado. 
+summary: Desligue o controlador do seu AFF C250 sistema de storage para evitar perda de dados e manter a estabilidade do sistema durante o processo de recuperação manual da mídia de inicialização. 
 ---
 = Desligue o controlador do seu sistema de storage AFF C250 durante o processo de recuperação de inicialização manual
 :allow-uri-read: 
@@ -60,7 +60,7 @@ NOTE: Este comando pode não funcionar se o dispositivo de inicialização estiv
 [[option-2-systems-in-a-metrocluster]]
 == Opção 2: Sistemas em um MetroCluster
 
-Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador desativado.
+Após concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador.
 
 
 NOTE: Não use este procedimento se o sistema estiver em uma configuração de MetroCluster de dois nós.

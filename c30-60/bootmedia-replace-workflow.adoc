@@ -25,13 +25,13 @@ Reveja os requisitos para substituir o suporte de arranque.
 [role="quick-margin-para"]
 Determine se o sistema tem o gerenciador de chaves de segurança ativado ou discos criptografados.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Dois"]link:bootmedia-shutdown.html["Desligue o controlador desativado"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Dois"]link:bootmedia-shutdown.html["Desligue o controlador"]
 [role="quick-margin-para"]
-Desligue o controlador quando precisar de substituir o suporte de arranque.
+Desligue o controlador quando precisar substituir a mídia de inicialização.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Três"]link:bootmedia-replace.html["Substitua o suporte de arranque"]
 [role="quick-margin-para"]
-Remova a mídia de inicialização com falha do controlador danificado, instale a mídia de inicialização de substituição e, em seguida, transfira uma imagem ONTAP usando uma unidade flash USB.
+Remova a mídia de inicialização com falha do controlador e instale a mídia de inicialização de substituição e, em seguida, transfira uma imagem do ONTAP usando uma unidade flash USB.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Quatro"]link:bootmedia-recovery-image-boot.html["Inicie a imagem de recuperação"]
 [role="quick-margin-para"]

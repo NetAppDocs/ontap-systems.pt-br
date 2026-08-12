@@ -11,12 +11,12 @@ summary: Para substituir a bateria NVDIMM, é necessário remover o módulo do c
 
 
 [role="lead"]
-Substitua a bateria NV do seu AFF A800 quando ela começar a perder carga ou falhar, pois ela preserva dados críticos do sistema durante quedas de energia. O processo de substituição envolve a remoção do módulo controlador, a troca da bateria e a reinstalação do módulo controlador.
+Substitua a bateria NVDIMM do seu AFF A800 quando ela começar a perder carga ou falhar, pois ela preserva dados críticos do sistema durante quedas de energia. O processo de substituição envolve a remoção do módulo controlador, a troca da bateria e a reinstalação do módulo controlador.
 
 
 
-[[step-1-shutdown-the-impaired-controller]]
-== Passo 1: Desligue o controlador com defeito
+[[step-1-shut-down-the-impaired-controller]]
+== Passo 1: Desligue o controlador desativado
 
 Desligue ou assuma o controlador desativado.
 

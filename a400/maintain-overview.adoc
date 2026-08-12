@@ -2,7 +2,7 @@
 permalink: a400/maintain-overview.html 
 sidebar: sidebar 
 keywords: aff A400 maintenance, maintenance, repairing A400, repairing aff A400, replace aff A400 components, replace aff A400 components 
-summary: Faça a manutenção do hardware do seu sistema de armazenamento AFF A400 para garantir confiabilidade a longo prazo e desempenho ideal. Realize tarefas de manutenção regulares, como a substituição de componentes defeituosos, pois isso ajuda a evitar tempo de inatividade e perda de dados. 
+summary: Faça a manutenção do hardware do seu sistema de storage AFF A400 para garantir confiabilidade a longo prazo e desempenho ideal. Tarefas regulares de manutenção, como a substituição de componentes defeituosos, ajudam a evitar tempo de inatividade e perda de dados. 
 ---
 = Saiba mais sobre a manutenção do seu sistema de storage AFF A400
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Faça a manutenção do hardware do seu sistema de armazenamento AFF A4
 
 
 [role="lead"]
-Faça a manutenção do hardware do seu sistema de armazenamento AFF A400 para garantir confiabilidade a longo prazo e desempenho ideal. Realize tarefas de manutenção regulares, como a substituição de componentes defeituosos, pois isso ajuda a evitar tempo de inatividade e perda de dados.
+Faça a manutenção do hardware do seu sistema de storage AFF A400 para garantir confiabilidade a longo prazo e desempenho ideal. Tarefas regulares de manutenção, como a substituição de componentes defeituosos, ajudam a evitar tempo de inatividade e perda de dados.
 
 Os procedimentos de manutenção pressupõem que o sistema de armazenamento AFF A400 já tenha sido implantado como um nó de armazenamento no ambiente ONTAP .
 
@@ -78,7 +78,7 @@ O NVDIMM (módulo de memória em linha dupla não volátil) gerencia a transfer�
  a| 
 link:nvdimm-battery-replace.html["Bateria NVDIMM"]
  a| 
-Uma bateria NVDIMM é responsável por manter a energia do módulo NVDIMM.
+A bateria NVDIMM é responsável por manter a energia ligada ao módulo NVDIMM.
 
 
 

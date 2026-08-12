@@ -2,7 +2,7 @@
 permalink: a1k/chassis-replace-requirements.html 
 sidebar: sidebar 
 keywords: aff a1k, replace the chassis 
-summary: Antes de substituir o chassi do seu sistema AFF A1K , certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida.  Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, verificar se você tem credenciais de administrador local para o ONTAP, o chassi de substituição correto e as ferramentas necessárias. 
+summary: Antes de substituir o chassi do seu AFF A1K, verifique se você atende aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, se você possui as credenciais de administrador local para o ONTAP, se você tem o chassi de substituição correto e as ferramentas necessárias. 
 ---
 = Verifique os requisitos antes de substituir o chassi AFF A1K
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Antes de substituir o chassi do seu sistema AFF A1K , certifique-se de 
 
 
 [role="lead"]
-Antes de substituir o chassi do seu sistema AFF A1K , certifique-se de atender aos requisitos necessários para uma substituição bem-sucedida.  Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, verificar se você tem credenciais de administrador local para o ONTAP, o chassi de substituição correto e as ferramentas necessárias.
+Antes de substituir o chassi do seu AFF A1K, verifique se você atende aos requisitos necessários para uma substituição bem-sucedida. Isso inclui verificar se todos os outros componentes do sistema estão funcionando corretamente, se você possui as credenciais de administrador local para o ONTAP, se você tem o chassi de substituição correto e as ferramentas necessárias.
 
 O chassi é o chassi físico que abriga todos os componentes do sistema, como ventiladores, unidade controladora/CPU, NVRAM12, módulo de gerenciamento do sistema, placas de E/S e módulos de bloqueio e PSUs.
 

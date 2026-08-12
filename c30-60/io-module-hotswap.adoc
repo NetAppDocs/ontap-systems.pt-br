@@ -13,14 +13,14 @@ summary: Você pode realizar a substituição a quente de um módulo de E/S Ethe
 [role="lead"]
 Você pode realizar a substituição a quente de um módulo de E/S Ethernet em seu sistema de storage AFF C30 ou AFF C60 caso um módulo apresente falha e seu sistema de storage atenda a todos os requisitos de versão do ONTAP.
 
-Para substituir a quente um módulo de E/S, certifique-se de que seu sistema de storage atenda aos requisitos de versão do ONTAP, prepare seu sistema de storage e o módulo de E/S, faça a substituição a quente do módulo com defeito, coloque o módulo de substituição online, restaure o sistema de storage à operação normal e devolva o módulo com defeito para a NetApp.
+Para substituir a quente um módulo de E/S, verifique se o seu sistema de storage atende aos requisitos da versão do ONTAP, prepare o seu sistema de storage e o módulo de E/S, faça a substituição a quente do módulo com defeito, coloque o módulo de substituição online, restaure o sistema de storage à operação normal e devolva o módulo com defeito à NetApp.
 
 .Sobre esta tarefa
 * A substituição a quente do módulo de E/S significa que você não precisa realizar um takeover manual antes de substituir o módulo de E/S com defeito.
 * Aplique os comandos ao controlador e ao slot de E/S corretos ao realizar a substituição a quente do módulo de E/S:
 +
-** O _controlador com defeito_ é o controlador no qual você está realizando a substituição a quente do módulo de E/S.
-** O _controlador saudável_ é o parceiro HA do controlador prejudicado.
+** O controlador com o módulo de E/S com problema é o controlador no qual você está realizando a troca a quente do módulo de E/S.
+** O _controlador saudável_ é o par de HA do controlador com o módulo de E/S com defeito.
 
 
 * Você pode ativar os LEDs de localização (azuis) do sistema de storage para auxiliar na localização física do sistema de storage. Faça login no BMC usando SSH e insira o comando  `system location-led _on_`.
@@ -34,8 +34,8 @@ Você pode desativá-los digitando o `system location-led _off_` comando. Se nã
 
 
 
-[[step-1-ensure-the-storage-system-meets-the-procedure-requirements]]
-== Etapa 1: Certifique-se de que o sistema de armazenamento atenda aos requisitos do procedimento
+[[step-1-verify-the-storage-system-meets-the-procedure-requirements]]
+== Etapa 1: Verifique se o sistema de storage atende aos requisitos do procedimento
 
 Para utilizar este procedimento, seu sistema de storage deve estar executando ONTAP 9.17.1 ou posterior, e seu sistema de storage deve atender a todos os requisitos para a versão do ONTAP que seu sistema de storage está executando.
 

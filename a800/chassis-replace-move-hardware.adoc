@@ -122,9 +122,9 @@ Substitua o chassi danificado no rack de equipamentos ou gabinete do sistema pel
 [[step-4-install-the-controller-modules-into-the-new-chassis]]
 == Etapa 4: Instale os módulos de controle no novo chassi.
 
-Depois de instalar os módulos do controlador no novo chassi, você precisa iniciá-lo.
+Após instalar os módulos do controlador no novo chassi, inicialize o chassi.
 
-Para pares de HA com dois módulos de controlador no mesmo chassi, a sequência em que você instala o módulo de controlador é especialmente importante porque ele tenta reiniciar assim que você o senta completamente no chassi.
+Para pares de HA com dois módulos controladores no mesmo chassi, a sequência em que você instala os módulos controladores é especialmente importante, pois cada módulo tenta reinicializar assim que você o encaixa completamente no chassi.
 
 .Passos
 . Alinhe a extremidade do módulo do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o módulo do controlador até meio do sistema.

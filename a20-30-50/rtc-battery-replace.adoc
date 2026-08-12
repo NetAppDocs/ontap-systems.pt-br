@@ -14,7 +14,7 @@ summary: Substitua a bateria do relógio em tempo real, geralmente conhecida com
 Substitua a bateria do relógio em tempo real (RTC), comumente conhecida como bateria de célula tipo moeda, no seu sistema de armazenamento AFF A20, AFF A30 ou AFF A50 para garantir que os serviços e aplicativos que dependem da sincronização de tempo precisa permaneçam operacionais.
 
 .Antes de começar
-Todos os outros componentes do sistema de armazenamento devem estar a funcionar corretamente; caso contrário, contacte https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de continuar com este procedimento.
+Todos os outros componentes do sistema de storage devem estar funcionando corretamente. Caso contrário, entre em contato  https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de prosseguir com este procedimento.
 
 .Sobre esta tarefa
 * Você pode usar esse procedimento com todas as versões do ONTAP compatíveis com seu sistema de storage.
@@ -283,7 +283,7 @@ image::../media/icon_round_3.png[Legenda número 3]
 Se necessário, rode as pegas para a posição vertical (junto às patilhas) para as retirar do caminho.
 
 |===
-. Abra a tampa do controlador rodando o parafuso de aperto manual no sentido contrário ao dos ponteiros do relógio para soltar e, em seguida, abra a tampa.
+. Gire o parafuso de aperto manual no sentido anti-horário para soltá-lo e, em seguida, abra a tampa do controlador.
 
 
 
@@ -445,7 +445,7 @@ FONTE DE ALIMENTAÇÃO CC
 == Passo 5: Redefina a hora e a data no controlador
 
 
-NOTE: Depois de substituir a bateria RTC, inserir o controlador e ligar a primeira reinicialização do BIOS, você verá as seguintes mensagens de erro:
+NOTE: Após substituir a bateria RTC, inserir o controlador e ligar o sistema para a primeira reinicialização da BIOS, você verá as seguintes mensagens de erro:
 `RTC date/time error. Reset date/time to default`
 `RTC power failure error` Essas mensagens são esperadas e você pode continuar com este procedimento.
 
@@ -455,7 +455,7 @@ NOTE: Depois de substituir a bateria RTC, inserir o controlador e ligar a primei
 
 +
 
-NOTE: Se o seu sistema de armazenamento parar no menu de inicialização, selecione a opção  `Reboot node`e responda _y_ quando solicitado e, em seguida, inicialize no Loader pressionando _Ctrl-C_.
+NOTE: Se o seu sistema de storage parar no menu de inicialização, selecione a opção  `Reboot node` e responda _y_ quando solicitado, depois inicialize o LOADER pressionando _Ctrl-C_.
 
 . No controlador com defeito, no prompt LOADER, verifique a hora e a data:
 +
@@ -473,7 +473,7 @@ NOTE: Se o seu sistema de armazenamento parar no menu de inicialização, seleci
 .. Confirme a data e a hora.
 
 
-. No prompt Loader, digite `bye` para reinicializar os módulos de e/S, outros componentes e deixe o controlador reinicializar.
+. No prompt do LOADER, digite  `bye` para reinicializar os módulos de E/S e outros componentes e para reinicializar o controlador.
 
 
 

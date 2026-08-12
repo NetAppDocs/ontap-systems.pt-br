@@ -13,7 +13,7 @@ summary: Os sistemas de armazenamento AFF C30 e AFF C60 oferecem flexibilidade n
 [role="lead"]
 Os sistemas de armazenamento AFF C30 e AFF C60 oferecem flexibilidade na expansão ou substituição de módulos de E/S para aprimorar a conectividade e o desempenho da rede. Adicionar, fazer hot swap ou substituir um módulo de E/S é essencial ao atualizar os recursos da rede ou solucionar um módulo com falha.
 
-Você pode substituir um módulo de E/S com defeito no seu sistema de armazenamento pelo mesmo tipo de módulo de E/S ou por um tipo diferente. Você pode fazer hot-swap de um cluster e de um módulo de E/S de alta disponibilidade quando o seu sistema de armazenamento atender a requisitos específicos. Você também pode adicionar um módulo de E/S a um sistema de armazenamento com slots disponíveis.
+Você pode substituir um módulo de E/S com defeito em seu sistema de storage por um módulo de E/S do mesmo tipo ou por um de tipo diferente. Você pode realizar a troca a quente de um módulo de E/S de cluster e de par de HA quando seu sistema de storage atender a requisitos específicos. Você também pode adicionar um módulo de E/S a um sistema de storage com slots disponíveis.
 
 * link:io-module-add.html["Adicione um módulo de e/S."]
 +
@@ -21,7 +21,7 @@ A adição de módulos de e/S adicionais pode melhorar a redundância, ajudando 
 
 * link:io-module-hotswap.html["Substituição a quente de um módulo de E/S"]
 +
-É possível realizar a substituição a quente de determinados módulos de E/S por um módulo de E/S equivalente para restaurar o sistema de storage ao seu estado operacional ideal. A substituição a quente é feita sem a necessidade de realizar uma tomada manual.
+A troca a quente de determinados módulos de E/S por um módulo equivalente pode restaurar o sistema de storage ao seu estado operacional ideal. A troca a quente é feita sem a necessidade de realizar uma transferência manual.
 
 +
 Para usar este procedimento, seu sistema de armazenamento deve estar executando o ONTAP 9.17.1 ou posterior e atender a requisitos específicos do sistema.

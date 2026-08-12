@@ -11,7 +11,7 @@ summary: Você deve remarcar o armazenamento e confirmar a reatribuição do dis
 
 
 [role="lead"]
-Devolva o controle dos recursos de armazenamento ao controlador de substituição para que seu sistema AFF A800 possa retomar a operação normal.  O procedimento de devolução varia de acordo com o tipo de criptografia usado pelo seu sistema: sem criptografia ou com criptografia Onboard Key Manager (OKM).
+Recableie o seu sistema AFF A800 após a substituição do controlador e reatribua os discos ao controlador de substituição. Se o seu sistema estiver em um par de HA, o processo de giveback atribui automaticamente o ID do sistema aos discos; os passos exatos dependem se o seu sistema não usa criptografia ou se usa criptografia Onboard Key Manager (OKM).
 
 
 
@@ -32,9 +32,9 @@ Verifique as conexões de armazenamento e rede do módulo controlador usando htt
 [[step-2-reassign-disks]]
 == Etapa 2: Reatribuir discos
 
-Se o sistema de storage estiver em um par de HA, a ID do sistema do novo módulo de controladora será automaticamente atribuída aos discos quando o giveback ocorrer no final do procedimento. Você deve confirmar a alteração do ID do sistema quando você inicializar o controlador _replacement_ e, em seguida, verificar se a alteração foi implementada.
+Se o sistema de storage estiver em um par de HA, o ID do sistema do novo módulo controlador será atribuído automaticamente aos discos quando o giveback ocorrer ao final do procedimento. Você deve confirmar a alteração do ID do sistema ao inicializar o controlador de substituição e, em seguida, verificar se o sistema aplicou a alteração.
 
-Esta etapa aplica-se somente a sistemas que executam o ONTAP em um par de alta disponibilidade (HA).
+Esta etapa aplica-se apenas a sistemas que executam o ONTAP em um par de HA.
 
 .Passos
 . Se o controlador _replacement_ estiver no modo Manutenção (mostrando o `*>` prompt, saia do modo Manutenção e vá para o prompt Loader: `halt`

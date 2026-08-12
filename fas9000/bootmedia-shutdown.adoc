@@ -2,16 +2,16 @@
 permalink: fas9000/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: aff a700, fas9000, shut, down, impaired, controller, take, over, manual, manual boot recovery 
-summary: Você pode desligar ou assumir o controle do controlador com defeito usando procedimentos diferentes, dependendo da configuração de hardware do sistema de armazenamento. O sistema FAS9000 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. 
+summary: Desligue o controlador do seu FAS9000 sistema de storage para evitar perda de dados e manter a estabilidade do sistema durante o processo de recuperação manual da mídia de boot. 
 ---
-= Desligue o controlador com defeito no seu sistema FAS9000 durante o processo de recuperação de inicialização manual
+= Desligue o controlador do seu sistema FAS9000 durante o processo de recuperação de inicialização manual
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Desligue ou assuma o controle do controlador com defeito usando o procedimento apropriado para sua configuração. O sistema FAS9000 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada.
+Desligue o controlador do seu FAS9000 sistema de storage para evitar perda de dados e manter a estabilidade do sistema durante o processo de recuperação manual da mídia de boot.
 
 
 
@@ -62,7 +62,7 @@ NOTE: Este comando pode não funcionar se o dispositivo de inicialização estiv
 [[option-2-controller-is-in-a-metrocluster]]
 === Opção 2: O controlador está em um MetroCluster
 
-Após concluir as tarefas NVE ou NSE, desligue o nó com problemas. NOTA: Não utilize este procedimento se o seu sistema estiver em uma configuração de dois nós do MetroCluster.
+Após concluir as tarefas NVE ou NSE, desligue o nó. NOTA: Não utilize este procedimento se o seu sistema estiver em uma configuração de dois nós MetroCluster.
 
 Assuma o controle e interrompa o controlador com defeito para que o controlador em bom estado continue a fornecer dados do armazenamento do controlador com defeito. Para fazer isso, você suprime a criação automática de casos em AutoSupport, desativa o giveback automático e leva o controlador com defeito ao prompt LOADER. O prompt LOADER é o estado de parada segura a partir do qual você pode substituir a FRU.
 
@@ -121,7 +121,7 @@ Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctr
 [[option-3-controller-is-in-a-two-node-metrocluster]]
 == Opção 3: O controlador está em um MetroCluster de dois nós
 
-Após concluir as tarefas NVE ou NSE, desligue o nó com problemas.
+Após concluir as tarefas NVE ou NSE, desligue o nó.
 
 
 NOTE: Não use este procedimento se o sistema estiver em uma configuração de MetroCluster de dois nós.

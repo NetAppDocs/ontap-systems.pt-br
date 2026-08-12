@@ -196,7 +196,7 @@ image::../media/drw_affa800_install_cable_mgmt.png[Ligar o dispositivo de gestã
 [[step-3-cable-controllers]]
 == Passo 3: Controladores de cabo
 
-Há cabeamento necessário para o cluster da sua plataforma usando o método de cluster sem switch de dois nós ou o método de rede de interconexão de cluster. Há cabeamento opcional para as redes de host Fibre Channel ou iSCSI ou armazenamento de conexão direta. Este cabeamento não é exclusivo; você pode ter um cabo para uma rede host e armazenamento.
+Há cabeamento obrigatório para o cluster da sua plataforma, usando o método de cluster sem switch de dois nós ou o método de rede de interconexão de cluster. Há cabeamento opcional para as redes de host Fibre Channel ou iSCSI, ou para o armazenamento conectado diretamente. Esse cabeamento não é exclusivo; você pode ter cabeamento para uma rede de host e para o armazenamento.
 
 
 
@@ -565,7 +565,7 @@ image::../media/drw_autodiscovery_controler_select_ieops-1849.svg[Selecione um �
 
 +
 .. Abra o Explorador de ficheiros.
-.. Clique em *rede* no painel esquerdo e clique com o botão direito do rato e selecione *atualizar*.
+.. Selecione *Rede* no painel esquerdo, clique com o botão direito do mouse e selecione *atualizar*.
 .. Clique duas vezes no ícone ONTAP e aceite quaisquer certificados exibidos na tela.
 +
 

@@ -15,9 +15,8 @@ Substitua uma placa PCIe no seu sistema AFF A800 quando a placa apresentar falha
 
 .Antes de começar
 * Você precisa ter a peça nova ou de reposição da NetApp disponível.
-* Certifique-se de que todos os outros componentes do sistema de armazenamento estão a funcionar corretamente; caso contrário, contacte o suporte técnico.
+* Certifique-se de que todos os outros componentes do sistema de storage estejam funcionando corretamente. Caso contrário, entre em contato com o suporte técnico.
 * Pode utilizar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema.
-* Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
 
 
 
@@ -187,7 +186,7 @@ Ao deslizar o módulo controlador para fora do chassi, apoie a parte inferior.
 [[step-3-replace-the-pcie-card]]
 == Etapa 3: Substitua a placa PCIe
 
-Para substituir uma placa PCIe, remova os cabos e quaisquer QSFPs e SFPs das portas das placas PCIe no riser de destino, remova o riser do módulo controlador, remova e substitua a placa PCIe, reinstale o riser e quaisquer QSFPs e SFPs nas portas e reconecte os cabos das portas.
+Substitua uma placa PCIe removendo a fiação e quaisquer QSFPs e SFPs das portas das placas PCIe no riser de destino, removendo o riser do módulo do controlador, removendo e substituindo a placa PCIe, reinstalando o riser e quaisquer QSFPs e SFPs nas portas, e recabeando as portas.
 
 .Passos
 . Determine se o cartão que você está substituindo é do Riser 1 ou se é do Riser 2 ou 3.

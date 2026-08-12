@@ -197,7 +197,7 @@ image::../media/drw_a320_cable_management_arms.png[Remover ou instalar os braço
 Você pode conetar os controladores à rede usando o método de cluster sem switch de dois nós ou usando a rede de interconexão de cluster.
 
 
-NOTE: Se as etiquetas de porta na placa não estiverem visíveis, verifique a orientação de instalação da placa (o soquete do conetor PCIe está no lado esquerdo do slot da placa no A400 e no FAS8300/8700) e, em seguida, procure a placa, por número de peça, no https://hwu.netapp.com["NetApp Hardware Universe"^] para obter um gráfico da moldura que mostrará as etiquetas da porta. O número de peça do cartão pode ser encontrado usando o `sysconfig -a` comando ou na lista de embalagem do sistema.
+NOTE: Se as etiquetas das portas na placa não estiverem visíveis, verifique a orientação de instalação da placa. O soquete do conector PCIe está no lado esquerdo do slot da placa no A400 e no FAS8300/8700. Em seguida, procure a placa pelo número de peça na  https://hwu.netapp.com["NetApp Hardware Universe"^] para ver uma imagem do painel que mostra as etiquetas das portas. Você pode encontrar o número de peça da placa usando o comando  `sysconfig -a` ou na lista de embalagem do sistema.
 
 
 NOTE: Se você estiver fazendo o cabeamento de uma configuração IP do MetroCluster, as portas e0a/e0b estarão disponíveis para hospedar LIFs de dados (geralmente no IPSpace padrão).
@@ -265,7 +265,7 @@ image::../media/drw_a400_switched_network_cabling.png[Cabeamento de rede comutad
 [[step-4-cable-controllers-to-drive-shelves]]
 == Etapa 4: Controladores de cabos para compartimentos de unidades
 
-Você pode vincular gavetas NSS224 ou SAS ao sistema.
+Você pode conectar os chassis NS224 ou SAS ao seu sistema por meio de cabos.
 
 
 
@@ -378,7 +378,7 @@ image::../media/drw_autodiscovery_controler_select_ieops-1849.svg[Selecione um �
 
 +
 .. Abra o Explorador de ficheiros.
-.. Clique em *rede* no painel esquerdo e clique com o botão direito do rato e selecione *atualizar*.
+.. Selecione *Rede* no painel esquerdo, clique com o botão direito do mouse e selecione *atualizar*.
 .. Clique duas vezes no ícone ONTAP e aceite quaisquer certificados exibidos na tela.
 +
 

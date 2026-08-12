@@ -2,7 +2,7 @@
 permalink: c400/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: aff c400, aff, c400, shut, down, take, over, impair, controller, procedure, storage, system, hardware, configuration, shut down the impaired controller 
-summary: Você pode desligar ou assumir o controlador prejudicado usando procedimentos diferentes, dependendo da configuração do hardware do sistema de armazenamento. 
+summary: Desligue o controlador do seu AFF C400 sistema de storage para evitar perda de dados e manter a estabilidade do sistema durante o processo de recuperação manual da mídia de inicialização. 
 ---
 = Desligue o controlador do seu sistema de storage AFF C400 durante o processo de recuperação de inicialização manual
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Você pode desligar ou assumir o controlador prejudicado usando procedi
 
 
 [role="lead"]
-Desligue o controlador com defeito no seu sistema de storage AFF C400 após concluir as verificações de criptografia e antes de substituir a mídia de inicialização.
+Desligue o controlador do seu AFF C400 sistema de storage para evitar perda de dados e manter a estabilidade do sistema durante o processo de recuperação manual da mídia de inicialização.
 
 Se o seu sistema de storage estiver executando ONTAP 9.17.1 ou posterior, use o link:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"].
 

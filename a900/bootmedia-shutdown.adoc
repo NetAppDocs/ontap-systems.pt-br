@@ -2,7 +2,7 @@
 permalink: a900/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: aff a900, shut down the controller 
-summary: Você pode desligar ou assumir o controlador prejudicado usando procedimentos diferentes, dependendo da configuração do hardware do sistema de armazenamento. 
+summary: Desligue o controlador do seu AFF A900 sistema de storage para evitar perda de dados e manter a estabilidade do sistema durante o processo de recuperação manual da mídia de inicialização. 
 ---
 = Desligue o controlador do seu sistema AFF A900 durante o processo de recuperação de inicialização manual
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Você pode desligar ou assumir o controlador prejudicado usando procedi
 
 
 [role="lead"]
-Desligue o controlador com defeito no seu sistema de storage AFF A900 para evitar perda de dados e manter a estabilidade do sistema durante o processo de recuperação de inicialização manual.
+Desligue o controlador do seu AFF A900 sistema de storage para evitar perda de dados e manter a estabilidade do sistema durante o processo de recuperação manual da mídia de inicialização.
 
 Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use olink:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"] .  Se o seu sistema estiver executando uma versão anterior do ONTAP, você deverá usar o procedimento de recuperação de inicialização manual.
 
@@ -19,7 +19,7 @@ Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior
 ====
 .A maioria das configurações
 --
-Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador desativado.
+Após concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador.
 
 Se o seu sistema de armazenamento estiver executando o ONTAP 9.17.1 ou posterior, use o procedimento de recuperação de inicialização automatizada.  Se o seu sistema estiver executando uma versão anterior do ONTAP, você deverá usar o processo de recuperação de inicialização manual.
 
@@ -92,7 +92,7 @@ O parâmetro _-halt True_ traz para o prompt Loader.
 --
 .O controlador está em um MetroCluster
 --
-Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador desativado.
+Após concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do controlador.
 
 
 NOTE: Não use este procedimento se o sistema estiver em uma configuração de MetroCluster de dois nós.

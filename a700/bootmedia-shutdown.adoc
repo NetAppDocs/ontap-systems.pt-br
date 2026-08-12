@@ -2,16 +2,16 @@
 permalink: a700/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: aff a700, shut, down, impaired, controller, take, over, manual, manual boot recovery 
-summary: Após concluir as verificações de criptografia, desligue o controlador com defeito em um sistema AFF A700 . O sistema AFF A700 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada. 
+summary: Desligue o controlador do seu AFF A700 sistema de storage para evitar perda de dados e manter a estabilidade do sistema durante o processo de recuperação manual da mídia de inicialização. 
 ---
-= Desligue o controlador com defeito no seu sistema AFF A700 durante o processo de recuperação de inicialização manual
+= Desligue o controlador do seu sistema AFF A700 durante o processo de recuperação de inicialização manual
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Após concluir as verificações de criptografia, desligue o controlador com defeito em um sistema AFF A700 . Este procedimento inclui levar o controlador ao prompt LOADER, capturar as variáveis ​​de ambiente de inicialização para referência e preparar o controlador para a substituição da mídia de inicialização, com etapas específicas que variam dependendo da configuração do seu sistema.
+Desligue o controlador do seu AFF A700 sistema de storage para evitar perda de dados e manter a estabilidade do sistema durante o processo de recuperação manual da mídia de inicialização.
 
 O sistema AFF A700 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada.
 
@@ -64,7 +64,7 @@ NOTE: Este comando pode não funcionar se o dispositivo de inicialização estiv
 [[option-2-controller-is-in-a-metrocluster]]
 === Opção 2: O controlador está em um MetroCluster
 
-Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do nó afetado. OBSERVAÇÃO: Não use este procedimento se o sistema estiver em uma configuração de MetroCluster de dois nós.
+Após concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do nó. NOTA: Não utilize este procedimento se o seu sistema estiver em uma configuração de dois nós MetroCluster.
 
 Assuma o controle e interrompa o controlador com defeito para que o controlador em bom estado continue a fornecer dados do armazenamento do controlador com defeito. Para fazer isso, você suprime a criação automática de casos em AutoSupport, desativa o giveback automático e leva o controlador com defeito ao prompt LOADER. O prompt LOADER é o estado de parada segura a partir do qual você pode substituir a FRU.
 
@@ -123,7 +123,7 @@ Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctr
 [[option-3-controller-is-in-a-two-node-metrocluster]]
 == Opção 3: O controlador está em um MetroCluster de dois nós
 
-Depois de concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do nó afetado.
+Após concluir as tarefas NVE ou NSE, você precisa concluir o desligamento do nó.
 
 
 NOTE: Não use este procedimento se o sistema estiver em uma configuração de MetroCluster de dois nós.

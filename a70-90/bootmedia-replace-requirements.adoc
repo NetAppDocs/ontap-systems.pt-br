@@ -13,7 +13,7 @@ summary: Antes de substituir o suporte de arranque no sistema AFF A70 ou AFF A90
 [role="lead"]
 Antes de substituir o suporte de arranque no sistema AFF A70 ou AFF A90, certifique-se de que cumpre os requisitos necessários para uma substituição bem-sucedida. Isso inclui garantir que você tenha uma unidade flash USB com a quantidade adequada de armazenamento e verificar se você tem o dispositivo de inicialização de substituição correto.
 
-Se o seu sistema estiver executando o ONTAP 9.17.1 e posterior, use o link:bootmedia-replace-workflow-bmr.html["procedimento de recuperação de inicialização automática"] .
+Se o seu sistema estiver executando o ONTAP 9.17.1 ou posterior, use o link:bootmedia-replace-workflow-bmr.html["procedimento automatizado de recuperação de inicialização"].
 
 [NOTE]
 ====

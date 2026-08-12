@@ -2,7 +2,7 @@
 permalink: a1k/bootmedia-replace-bmr.html 
 sidebar: sidebar 
 keywords: aff a1k, replace the boot media 
-summary: A mídia de inicialização do seu sistema AFF A1K armazena dados essenciais de firmware e configuração. O processo de substituição envolve a remoção do módulo de Gerenciamento do Sistema, a remoção da mídia de inicialização danificada, a instalação da mídia de inicialização de substituição no módulo de Gerenciamento do Sistema e, em seguida, a reinstalação do módulo de Gerenciamento do Sistema. 
+summary: A mídia de inicialização do seu AFF A1K armazena dados essenciais de firmware e configuração. A substituição dessa mídia envolve remover o módulo de gerenciamento do sistema, remover a mídia de inicialização com problema, instalar a mídia de inicialização de substituição e reinstalar o módulo. 
 ---
 = Substitua a mídia de inicialização no seu sistema AFF A1K usando o processo automatizado de recuperação de inicialização
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: A mídia de inicialização do seu sistema AFF A1K armazena dados essen
 
 
 [role="lead"]
-A mídia de inicialização do seu sistema AFF A1K armazena dados essenciais de firmware e configuração. O processo de substituição envolve a remoção do módulo de Gerenciamento do Sistema, a remoção da mídia de inicialização danificada, a instalação da mídia de inicialização de substituição no módulo de Gerenciamento do Sistema e, em seguida, a reinstalação do módulo de Gerenciamento do Sistema.
+A mídia de inicialização do seu AFF A1K armazena dados essenciais de firmware e configuração. A substituição dessa mídia envolve remover o módulo de gerenciamento do sistema, remover a mídia de inicialização com problema, instalar a mídia de inicialização de substituição e reinstalar o módulo.
 
 O processo automatizado de recuperação de mídia de inicialização é compatível apenas com o ONTAP 9.17.1 e versões posteriores. Se o seu sistema de armazenamento estiver executando uma versão anterior do ONTAP, use o link:bootmedia-replace-workflow.html["procedimento de recuperação de inicialização manual"] .
 
