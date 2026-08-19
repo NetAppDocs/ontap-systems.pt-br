@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: asa a250, replace a fan 
 summary: Para substituir uma ventoinha, retire o módulo da ventoinha com avaria e substitua-o por um novo módulo da ventoinha. 
 ---
-= Substitua uma ventoinha no seu sistema ASA A250
+= Substitua uma ventoinha em um sistema ASA A250
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Para substituir uma ventoinha, retire o módulo da ventoinha com avaria e substitua-o por um novo módulo da ventoinha.
+Substitua um módulo de ventoinha com defeito em um ASA A250 desligando o controlador com defeito, abrindo o módulo do controlador e instalando a ventoinha de substituição. Este procedimento mantém os componentes do controlador resfriados e evita falhas do sistema relacionadas à temperatura.
 
 
 

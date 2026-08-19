@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: asa a250, replace a power supply 
 summary: A substituição de uma fonte de alimentação envolve desconetar a fonte de alimentação de destino da fonte de alimentação, desconetar o cabo de alimentação, remover a fonte de alimentação antiga e instalar a fonte de alimentação de substituição e conectá-la novamente à fonte de alimentação. 
 ---
-= Substitua a fonte de alimentação com substituição a quente no seu sistema ASA A250
+= Troque a quente uma fonte de alimentação em um sistema ASA A250
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-A substituição de uma fonte de alimentação (PSU) envolve desconetar a fonte de alimentação de destino, desconetar o cabo de alimentação, remover a fonte de alimentação antiga e instalar a fonte de alimentação de substituição e, em seguida, reconectá-la à fonte de alimentação.
+Substitua uma fonte de alimentação (PSU) com defeito em um ASA A250 sem desligar o controlador. As PSUs são redundantes e possuem seleção automática de faixa, portanto, substituir uma PSU com defeito por uma do mesmo tipo mantém o sistema funcionando sem interrupção.
 
 * As fontes de alimentação são redundantes e intercambiáveis a quente. Não é necessário desligar o controlador para substituir uma PSU.
 * Este procedimento é escrito para substituir uma PSU de cada vez.

@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: asa c400, asa, c400, boot, media, store, primary, secondary, set, system, boot, image, file, replace, replace the boot media 
 summary: A Mídia de inicialização armazena um conjunto primário e secundário de arquivos de imagem de inicialização que o sistema usa quando ele é inicializado. 
 ---
-= Saiba mais sobre a substituição da mídia de inicialização no seu sistema ASA C400
+= Saiba mais sobre a substituição da mídia de inicialização em um ASA C400
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Saiba o que a mídia de inicialização faz e o que esperar antes de substituí-la em um ASA C400, incluindo os requisitos de unidade flash USB e de rede.
+
 A Mídia de inicialização armazena um conjunto primário e secundário de arquivos do sistema (imagem de inicialização) que o sistema usa quando ele é inicializado. Dependendo da configuração da rede, você pode realizar uma substituição sem interrupções ou disruptiva.
 
 [NOTE]

@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: asa a400, verify and set HA state, complete the replacement process 
 summary: Você precisa verificar o estado de HA do chassi e devolver a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. 
 ---
-= Conclua a substituição do chassi do seu sistema ASA A400
+= Conclua a substituição do chassi para um sistema ASA A400
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Você deve verificar o estado de HA do chassi e devolver a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit.
+Conclua a substituição do chassi de um sistema ASA A400 verificando o estado de HA, revertendo os agregados se o sistema estiver em uma configuração de dois nós do MetroCluster e enviando o chassi com falha de volta para a NetApp.
 
 
 

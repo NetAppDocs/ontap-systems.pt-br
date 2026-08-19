@@ -2,16 +2,16 @@
 permalink: asa-c250/nvmem-nvram-battery-replace.html 
 sidebar: sidebar 
 keywords: asa c250, nvmem battery replacement 
-summary: Para substituir uma bateria NVMEM no sistema, tem de remover o módulo do controlador do sistema, abri-lo, substituir a bateria e fechar e substituir o módulo do controlador. 
+summary: Para substituir uma bateria NVMEM em um ASA C250, você deve remover o módulo controlador do sistema, abri-lo, substituir a bateria e, em seguida, fechar e recolocar o módulo controlador. 
 ---
-= Substitua a bateria NVMEM no seu sistema ASA C250
+= Substitua a bateria NVMEM em um ASA C250
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Para substituir uma bateria NVMEM no sistema, tem de remover o módulo do controlador do sistema, abri-lo, substituir a bateria e fechar e substituir o módulo do controlador.
+Para substituir uma bateria NVMEM em um ASA C250, você deve remover o módulo controlador do sistema, abri-lo, substituir a bateria e, em seguida, fechar e recolocar o módulo controlador.
 
 Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
 

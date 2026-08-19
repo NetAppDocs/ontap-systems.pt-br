@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff c250, replace the drives 
 summary: Você deve substituir uma unidade quando a plataforma Registrar uma mensagem de aviso no console do sistema indicando que uma unidade falhou. Além disso, o LED de avaria no painel do visor do operador e o LED de avaria na unidade avariada acendem-se. 
 ---
-= Substitua a unidade SSD no seu sistema de storage AFF C250
+= Substitua uma unidade SSD em um AFF C250
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Substitua uma unidade SSD com falha em um AFF C250 de forma não disruptiva enquanto a E/S está em andamento.
+
 Você pode substituir uma unidade SSD com falha sem interrupções enquanto a e/S estiver em andamento.
 
 Quando uma unidade falha, a plataforma Registra uma mensagem de aviso no console do sistema indicando qual unidade falhou. Além disso, o LED de avaria no painel do visor do operador e o LED de avaria na unidade avariada acendem-se.

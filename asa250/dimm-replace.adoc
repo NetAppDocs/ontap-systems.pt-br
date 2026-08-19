@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: asa a250, replace a dimm 
 summary: 'Você deve substituir um módulo DIMM no controlador quando o sistema registrar um número crescente de códigos de correção de erros corrigíveis (ECC). Caso contrário, o sistema entrará em pânico.' 
 ---
-= Substitua um módulo DIMM no seu sistema ASA A250
+= Substitua um módulo DIMM em um sistema ASA A250
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Você deve substituir um DIMM no controlador quando seu sistema de armazenamento encontrar erros como erros CECC excessivos (códigos de correção de erros Correctable) que são baseados em alertas do Monitor de integridade ou erros ECC incorrigíveis, geralmente causados por uma única falha de DIMM que impede o sistema de armazenamento de inicializar o ONTAP.
+Substitua um módulo DIMM em um ASA A250 quando o sistema reportar um número crescente de erros ECC corrigíveis. Este procedimento inclui desligar o controlador com defeito, abrir o módulo do controlador e instalar o módulo DIMM de substituição para evitar um pânico do sistema.
 
 .Sobre esta tarefa
 Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.

@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff c250, replace a dimm 
 summary: Você deve substituir um módulo DIMM no controlador quando o sistema registrar um número crescente de códigos de correção de erro corrigíveis. A falha em fazer isso causa um pânico no sistema. 
 ---
-= Substitua um módulo DIMM no seu sistema de storage AFF C250 para corrigir erros de memória
+= Substitua um módulo DIMM em um sistema AFF C250 para corrigir erros de memória
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Você deve substituir um DIMM no controlador quando seu sistema de armazenamento encontrar erros como erros CECC excessivos (códigos de correção de erros Correctable) que são baseados em alertas do Monitor de integridade ou erros ECC incorrigíveis, geralmente causados por uma única falha de DIMM que impede o sistema de armazenamento de inicializar o ONTAP.
+Substitua um módulo DIMM em um AFF C250 quando o sistema registrar um número crescente de códigos de correção de erro corrigíveis, para evitar um pânico do sistema.
 
 .Sobre esta tarefa
 Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.

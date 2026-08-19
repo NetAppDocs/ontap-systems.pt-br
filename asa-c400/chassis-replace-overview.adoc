@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: asa c400, asa, c400, component, system, function, properly, contact, technical, support, replace, chassis, shut, down, controller, replacing, remove, module, fan, equipment, rack, cabinet, ha, state, switch, back, aggregate, two-node, metrocluster, configuration, complete, replacement, process, replace the chassis, shut down the controllers when replacing a chassis, remove the controller modules, move the fans, replace a chassis from within the equipment rack or system cabinet, install the controller modules, verify and set the ha state of the chassis, switch back aggregates in a two-node metrocluster configuration, complete the replacement process 
 summary: Substituir um chassis com deficiência o novo chassis do mesmo modelo que o chassis com deficiência. 
 ---
-= Descrição geral da substituição do chassis - ASA C400
+= Fluxo de trabalho de substituição do chassi ASA C400
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Revise o que esperar, incluindo o nível de interrupção e os pré-requisitos, antes de substituir o chassi em um sistema ASA C400.
+
 Para substituir o chassis, tem de mover as ventoinhas e os módulos do controlador do chassis afetado para o novo chassis do mesmo modelo que o chassis danificado.
 
 Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
