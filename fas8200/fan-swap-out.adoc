@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas8200, swap out a fan 
 summary: Substitua o módulo de ventoinha com falha no seu FAS8200 sem interromper o serviço. Conclua a substituição em até dois minutos para evitar o superaquecimento do controlador. 
 ---
-= Troque a ventoinha no seu sistema FAS8200 com o sistema em funcionamento.
+= Troque a quente um módulo de ventoinha em um sistema FAS8200
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -16,6 +16,7 @@ Substitua o módulo de ventoinha com falha no seu FAS8200 sem interromper o serv
 
 NOTE: Tem de substituir o módulo da ventoinha no espaço de dois minutos após o retirar do chassis. O fluxo de ar do sistema é interrompido e o módulo do controlador ou módulos são desligados após dois minutos para evitar o sobreaquecimento.
 
+.Passos
 . Se você ainda não está aterrado, aterre-se adequadamente.
 . Retire a moldura (se necessário) com duas mãos, segurando as aberturas de cada lado da moldura e puxando-a na sua direção até que a moldura se solte dos pernos esféricos na estrutura do chassis.
 . Identifique o módulo da ventoinha que deve substituir verificando as mensagens de erro da consola e observando o LED de atenção em cada módulo da ventoinha.

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas8200, switch back aggregate in a two-node metrocluster configuration, manual, manual boot recovery 
 summary: Execute a operação de reversão do MetroCluster em um sistema FAS8200 após concluir a substituição da mídia de inicialização em uma configuração MetroCluster de dois nós. O sistema FAS8200 suporta apenas procedimentos manuais de recuperação de mídia de inicialização. A recuperação automática de mídia de inicialização não é suportada. 
 ---
-= Reative os agregados em uma configuração de dois nós do MetroCluster para o seu FAS8200
+= Alternar agregados de volta em uma configuração de dois nós do MetroCluster para o FAS8200
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

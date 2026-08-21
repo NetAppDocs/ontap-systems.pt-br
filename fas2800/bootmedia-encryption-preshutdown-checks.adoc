@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas2820, shutdown, checks, onboard, encryption, keys, impaired controller, disable, automatic, feedback 
 summary: Para garantir a segurança dos dados no seu sistema de storage FAS2820, você precisa verificar o suporte e o status da chave de criptografia na sua mídia de inicialização. Verifique se a sua versão do ONTAP suporta o NetApp Volume Encryption e, antes de desligar o controlador, verifique se o gerenciador de chaves está ativo. 
 ---
-= Verifique o suporte à criptografia na sua mídia de inicialização no seu sistema FAS2820
+= Verifique o suporte à criptografia na mídia de inicialização em um sistema FAS2820 usando o processo manual de recuperação de inicialização
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

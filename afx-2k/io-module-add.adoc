@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: afx 2k, add IO module 
 summary: Adicione um módulo de E/S ao seu sistema de storage AFX 2K para melhorar a conectividade de rede e expandir a capacidade do seu sistema de lidar com o tráfego de dados. 
 ---
-= Adicione um módulo de E/S ao seu sistema de storage AFX 2K para melhorar a conectividade de rede
+= Adicione um módulo de E/S a um sistema AFX 2K para aprimorar a conectividade de rede
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -84,8 +84,8 @@ O `-halt true` parâmetro leva você ao prompt do LOADER.
 Se o sistema de armazenamento tiver slots disponíveis, instale o novo módulo de e/S em um dos slots disponíveis. Se todos os slots estiverem ocupados, remova um módulo de e/S existente para criar espaço e, em seguida, instale o novo.
 
 .Antes de começar
-* Verifique o https://hwu.netapp.com/["NetApp Hardware Universe"^] para garantir que o novo módulo de E/S seja compatível com seu sistema de armazenamento e versão do ONTAP .
-* Se houver vários slots disponíveis, verifique as prioridades do slot https://hwu.netapp.com/["NetApp Hardware Universe"^] e use a melhor disponível para seu módulo de e/S.
+* Verifique o  https://hwu.netapp.com["NetApp Hardware Universe"^] para garantir que o novo módulo de E/S seja compatível com seu sistema de storage e versão do ONTAP.
+* Se houver vários slots disponíveis, verifique as prioridades dos slots em  https://hwu.netapp.com["NetApp Hardware Universe"^] e use o melhor disponível para o seu módulo de E/S.
 * Certifique-se de que todos os outros componentes estão a funcionar corretamente.
 * Certifique-se de ter o componente de substituição que você recebeu da NetApp.
 

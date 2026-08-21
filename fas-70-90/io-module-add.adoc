@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas70, fas90, add IO module 
 summary: Adicione um módulo de E/S ao seu sistema FAS70 ou FAS90 para melhorar a conectividade de rede e expandir a capacidade do seu sistema de lidar com tráfego de dados. 
 ---
-= Adicione um módulo de E/S ao seu sistema FAS70 ou FAS90 para aprimorar a conectividade de rede
+= Adicionar um módulo de E/S a um sistema FAS70 ou FAS90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -155,8 +155,8 @@ Quando o controlador prejudicado mostrar aguardando a giveback..., pressione Ctr
 Se o sistema de armazenamento tiver slots disponíveis, instale o novo módulo de e/S em um dos slots disponíveis. Se todos os slots estiverem ocupados, remova um módulo de e/S existente para criar espaço e, em seguida, instale o novo.
 
 .Antes de começar
-* Verifique o https://hwu.netapp.com/["NetApp Hardware Universe"^] para se certificar de que o novo módulo de e/S é compatível com o sistema de armazenamento e a versão do ONTAP que você está executando.
-* Se houver vários slots disponíveis, verifique as prioridades do slot https://hwu.netapp.com/["NetApp Hardware Universe"^] e use a melhor disponível para seu módulo de e/S.
+* Verifique o  https://hwu.netapp.com["NetApp Hardware Universe"^] para garantir que o novo módulo de E/S é compatível com seu sistema de storage e com a versão do ONTAP que você está utilizando.
+* Se houver vários slots disponíveis, verifique as prioridades dos slots em  https://hwu.netapp.com["NetApp Hardware Universe"^] e use o melhor disponível para o seu módulo de E/S.
 * Certifique-se de que todos os outros componentes estão a funcionar corretamente.
 * Certifique-se de ter o componente de substituição que você recebeu da NetApp.
 

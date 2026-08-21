@@ -2,15 +2,17 @@
 permalink: fas9000/x91148a-modules-with-open-slots-add.html 
 sidebar: sidebar 
 keywords: aff a700, fas9000, ass, x91148a, module, open, slots, nic, storage 
-summary: Você pode adicionar um módulo X91148A em um slot de módulo vazio em seu sistema como uma NIC 100GbE ou um módulo de armazenamento para as NS224 prateleiras de armazenamento. 
+summary: Adicione um módulo X91148A a um slot de módulo vazio em um sistema FAS9000, seja como uma NIC 100GbE ou como um módulo de storage para prateleiras de storage NS224. 
 ---
-= Adicione um módulo X91148A ao seu sistema FAS9000 com slots disponíveis
+= Adicione um módulo X91148A a um sistema FAS9000 usando um slot disponível
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Adicione um módulo X91148A a um slot de módulo vazio em um sistema FAS9000, seja como uma NIC 100GbE ou como um módulo de storage para prateleiras de storage NS224.
+
 Você pode adicionar um módulo X91148A em um slot de módulo vazio em seu sistema como uma NIC 100GbE ou um módulo de armazenamento para as NS224 prateleiras de armazenamento.
 
 * Seu sistema deve estar executando o ONTAP 9.8 e posterior.

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas500f, replace the drives 
 summary: Substitua uma unidade com falha no seu FAS500f sistema de storage de forma não disruptiva enquanto a E/S está em andamento. A plataforma registra uma mensagem de aviso e acende os LEDs de falha quando uma unidade falha, e o procedimento de substituição varia ligeiramente dependendo se a unidade é um SSD ou um HDD. 
 ---
-= Faça a troca a quente de uma unidade no seu sistema FAS500f
+= Troque a quente uma unidade em um sistema FAS500f
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

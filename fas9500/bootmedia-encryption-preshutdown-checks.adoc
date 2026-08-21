@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas9500, pre-shutdown checks for onboard encryption keys 
 summary: Antes de desligar o nó prejudicado e verificar o status das chaves de criptografia integradas, você deve verificar o status do nó prejudicado, desativar a giveback automática e verificar qual versão do ONTAP o sistema está sendo executado. 
 ---
-= Verifique o suporte à criptografia na sua mídia de inicialização no seu FAS9500
+= Verifique o suporte à criptografia na mídia de inicialização em um sistema FAS9500
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

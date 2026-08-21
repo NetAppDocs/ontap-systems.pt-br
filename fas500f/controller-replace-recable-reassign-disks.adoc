@@ -2,16 +2,16 @@
 permalink: fas500f/controller-replace-recable-reassign-disks.html 
 sidebar: sidebar 
 keywords: fas500f, how to recable the system, how to reassign disks 
-summary: Você deve remarcar o armazenamento e confirmar a reatribuição do disco. 
+summary: Devolva o controle dos recursos de storage ao controlador de substituição para que o FAS500f possa retomar as operações normais. 
 ---
-= Devolva o controlador no seu sistema FAS500f para retomar as operações normais
+= Devolva o controlador em um sistema FAS500f para retomar as operações normais
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Devolva o controle dos recursos de storage ao controlador de substituição para que seu sistema FAS500f possa retomar a operação normal. Após restaurar e verificar a configuração do sistema, reconecte os cabos e reatribua os discos.
+Devolva o controle dos recursos de storage ao controlador de substituição para que seu sistema FAS500f possa retomar as operações normais. Após restaurar e verificar a configuração do sistema, reconecte os cabos e reatribua os discos.
 
 Continue o procedimento de substituição reativando o armazenamento e confirmando a reatribuição do disco.
 

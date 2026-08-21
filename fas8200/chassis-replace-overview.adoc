@@ -2,16 +2,16 @@
 permalink: fas8200/chassis-replace-overview.html 
 sidebar: sidebar 
 keywords: fas8200, replace the chassis 
-summary: Substituir um chassis com deficiência o novo chassis do mesmo modelo que o chassis com deficiência. 
+summary: Antes de substituir o chassi em um sistema FAS8200, verifique se todos os outros componentes estão funcionando corretamente e se o chassi de substituição é um componente novo da NetApp do mesmo modelo. O procedimento requer mover as fontes de alimentação, ventoinhas e módulos controladores para o novo chassi e é disruptivo, causando uma interrupção completa em um cluster com dois controladores ou uma interrupção parcial em um cluster com vários nós. 
 ---
-= Analise os requisitos antes de substituir o chassi do FAS8200
+= Analise os requisitos antes de substituir o chassi em um sistema FAS8200
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Para substituir o chassis, tem de mover as fontes de alimentação, as ventoinhas e os módulos do controlador do chassis danificado para o novo chassis e trocar o chassis danificado do rack de equipamento ou do armário do sistema pelo novo chassis do mesmo modelo que o chassis danificado.
+Antes de substituir o chassi em um sistema FAS8200, verifique se todos os outros componentes estão funcionando corretamente e se o chassi de substituição é um componente novo da NetApp do mesmo modelo. O procedimento requer mover as fontes de alimentação, ventoinhas e módulos controladores para o novo chassi e é disruptivo, causando uma interrupção completa em um cluster com dois controladores ou uma interrupção parcial em um cluster com vários nós.
 
 Todos os outros componentes do sistema devem estar funcionando corretamente. Caso contrário, entre em contato com o suporte técnico.
 

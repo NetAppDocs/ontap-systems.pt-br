@@ -2,16 +2,16 @@
 permalink: fas2600/dimm-replace.html 
 sidebar: sidebar 
 keywords: fas2600, replace dimm 
-summary: Substitua um módulo DIMM no seu sistema FAS2600 quando o sistema de storage apresentar um número excessivo de erros ECC corrigíveis com base em alertas do Health Monitor, ou erros ECC não corrigíveis causados por uma única falha de módulo DIMM que impeça o sistema de inicializar o ONTAP. 
+summary: Substitua o módulo DIMM no seu sistema FAS2600 quando o sistema de storage apresentar um número excessivo de erros ECC corrigíveis com base nos alertas do Health Monitor, ou erros ECC não corrigíveis causados por uma única falha no módulo DIMM que impeça o sistema de inicializar o ONTAP. 
 ---
-= Substitua um módulo DIMM no seu sistema FAS2600 para corrigir erros de memória
+= Substitua um módulo DIMM em um sistema FAS2600 para corrigir erros de memória
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Substitua um módulo DIMM no seu sistema FAS2600 quando o sistema de storage apresentar um número excessivo de erros CECC (Códigos de Correção de Erros Corrigíveis) com base em alertas do Health Monitor, ou erros ECC não corrigíveis, normalmente causados por uma única falha de módulo DIMM que impede o sistema de storage de inicializar o ONTAP.
+Substitua o módulo DIMM no seu sistema FAS2600 quando o sistema de storage apresentar um número excessivo de erros CECC (Códigos de Correção de Erros Corrigíveis) com base em alertas do Health Monitor, ou erros ECC não corrigíveis, normalmente causados por uma única falha no módulo DIMM que impede o sistema de storage de inicializar o ONTAP.
 
 Se algum outro componente não estiver funcionando corretamente, entre em contato com o suporte técnico.
 

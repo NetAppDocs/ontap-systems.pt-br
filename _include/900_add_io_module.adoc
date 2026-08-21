@@ -5,8 +5,8 @@
 Se o sistema de armazenamento tiver slots vazios, instale o novo módulo de e/S em um dos slots disponíveis. Se todos os slots estiverem ocupados, remova um módulo de e/S existente para criar espaço e, em seguida, instale o novo.
 
 .Antes de começar
-* Verifique o https://hwu.netapp.com/["NetApp Hardware Universe"^] para se certificar de que o novo módulo de e/S é compatível com o seu sistema e a versão do ONTAP que você está executando.
-* Se houver vários slots disponíveis, verifique as prioridades do slot https://hwu.netapp.com/["NetApp Hardware Universe"^] e use a melhor disponível para seu módulo de e/S.
+* Verifique o  https://hwu.netapp.com["NetApp Hardware Universe"^] para garantir que o novo módulo de E/S é compatível com o seu sistema e com a versão do ONTAP que você está utilizando.
+* Se houver vários slots disponíveis, verifique as prioridades dos slots em  https://hwu.netapp.com["NetApp Hardware Universe"^] e use o melhor disponível para o seu módulo de E/S.
 * Para adicionar sem interrupções um módulo de e/S, você deve assumir o controlador de destino, remover a tampa cega do slot no slot de destino ou remover um módulo de e/S existente, adicionar o módulo de e/S novo ou de substituição e, em seguida, giveback o controlador de destino.
 * Certifique-se de que todos os outros componentes estão a funcionar corretamente.
 

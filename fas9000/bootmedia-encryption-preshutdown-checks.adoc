@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a700, fas9000, shutdown, check, onboard, encryption, key, manual, manual boot recovery 
 summary: Antes de desligar o controlador com defeito e verificar o status das chaves de criptografia integradas, você deve verificar o status do controlador com defeito, desativar o giveback automático e verificar qual versão do ONTAP o sistema está executando. O sistema FAS9000 oferece suporte apenas a procedimentos manuais de recuperação da mídia de inicialização. 
 ---
-= Verifique o suporte à criptografia na sua mídia de inicialização no seu FAS9000
+= Verifique o suporte à criptografia na mídia de inicialização em um sistema FAS9000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

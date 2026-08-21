@@ -2,15 +2,17 @@
 permalink: fas9000/chassis-replace-overview.html 
 sidebar: sidebar 
 keywords: aff a700, fas9000, chassis replacement 
-summary: Substituir um chassis com deficiência o novo chassis do mesmo modelo que o chassis com deficiência. 
+summary: Antes de substituir o chassi em um sistema FAS9000, verifique se todos os outros componentes estão funcionando corretamente e se o chassi de substituição é do mesmo modelo que o chassi com problema. 
 ---
-= Analise os requisitos antes de substituir o chassi do FAS9000
+= Analise os requisitos antes de substituir o chassi em um sistema FAS9000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Antes de substituir o chassi em um sistema FAS9000, verifique se todos os outros componentes estão funcionando corretamente e se o chassi de substituição é do mesmo modelo que o chassi com problema. O procedimento é disruptivo, causando uma interrupção completa em um cluster de dois nós ou uma interrupção parcial em um cluster com vários nós.
+
 Todos os outros componentes do sistema devem estar funcionando corretamente; caso contrário, você deve entrar em Contato com o suporte técnico.
 
 * Pode utilizar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema.

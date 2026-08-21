@@ -2,15 +2,17 @@
 permalink: fas9000/x91148a-modules-with-no-open-slots-add.html 
 sidebar: sidebar 
 keywords: aff a700, fas9000, add, x91148a, storage, module, no, open, slots, system, nic 
-summary: Você deve remover mais um ou mais módulos de NIC ou armazenamento existentes em seu sistema para instalar um ou mais módulos de armazenamento X91148A em seu sistema totalmente preenchido. 
+summary: Remova uma ou mais placas de rede ou módulos de armazenamento existentes de um sistema FAS9000 totalmente equipado para instalar um ou mais módulos de armazenamento X91148A. 
 ---
-= Adicione um módulo X91148A ao seu sistema FAS9000 sem slots disponíveis
+= Adicione um módulo de armazenamento X91148A a um sistema FAS9000 quando todos os slots estiverem ocupados
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Remova uma ou mais placas de rede ou módulos de armazenamento existentes de um sistema FAS9000 totalmente equipado para instalar um ou mais módulos de armazenamento X91148A.
+
 Você deve remover mais um ou mais módulos de NIC ou armazenamento existentes em seu sistema para instalar um ou mais módulos de armazenamento X91148A em seu sistema totalmente preenchido.
 
 * Seu sistema deve estar executando o ONTAP 9.8 e posterior.

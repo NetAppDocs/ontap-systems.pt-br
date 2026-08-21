@@ -2,16 +2,16 @@
 permalink: fas50/fan-replace.html 
 sidebar: sidebar 
 keywords: fas50, aff, swap, out, fan, module, interrupt, service, sequence, task, hot-swap, hot-swap a fan module 
-summary: Substitua um módulo de ventilador no sistema FAS50 quando um ventilador falhar ou não estiver funcionando de forma eficiente, pois isso pode afetar o resfriamento do sistema e o desempenho geral. O processo de substituição envolve desligar o controlador, remover o controlador, substituir o ventilador, reinstalar o controlador e devolver a peça com falha ao NetApp. 
+summary: Substitua o módulo de ventoinha do seu sistema FAS50 quando uma ventoinha falhar ou não estiver funcionando de forma eficiente, pois isso pode afetar o resfriamento do sistema e o desempenho geral. O processo de substituição envolve desligar o controlador, remover o controlador, substituir a ventoinha, reinstalar o controlador e devolver a peça com defeito para NetApp. 
 ---
-= Substitua a ventoinha no seu sistema FAS50
+= Substitua o módulo do ventilador em um sistema FAS50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Substitua um módulo de ventilador no sistema FAS50 quando um ventilador falhar ou não estiver funcionando de forma eficiente, pois isso pode afetar o resfriamento do sistema e o desempenho geral. O processo de substituição envolve desligar o controlador, remover o controlador, substituir o ventilador, reinstalar o controlador e devolver a peça com falha ao NetApp.
+Substitua o módulo de ventoinha do seu sistema FAS50 quando uma ventoinha falhar ou não estiver funcionando de forma eficiente, pois isso pode afetar o resfriamento do sistema e o desempenho geral. O processo de substituição envolve desligar o controlador, remover o controlador, substituir a ventoinha, reinstalar o controlador e devolver a peça com defeito para NetApp.
 
 .Sobre esta tarefa
 Se necessário, você pode ligar os LEDs de localização do sistema de armazenamento (azul) para ajudar a localizar fisicamente o sistema de armazenamento afetado. Faça login no BMC usando SSH e digite o `system location-led _on_` comando.

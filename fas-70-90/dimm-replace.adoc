@@ -2,16 +2,16 @@
 permalink: fas-70-90/dimm-replace.html 
 sidebar: sidebar 
 keywords: fas70, fas90, replace a dimm 
-summary: Substitua um DIMM no seu sistema FAS70 ou FAS90 se forem detetados erros de memória corrigíveis excessivos ou incorrigíveis. Tais erros podem impedir que o sistema de armazenamento inicialize o ONTAP. O processo de substituição envolve desligar o controlador prejudicado, removê-lo, substituir o DIMM, reinstalar o controlador e, em seguida, devolver a peça com falha ao NetApp. 
+summary: Substitua o módulo DIMM em seu sistema FAS70 ou FAS90 se forem detectados erros de memória excessivos, corrigíveis ou não corrigíveis. Esses erros podem impedir que o sistema de storage inicialize o ONTAP. O processo de substituição envolve desligar o controlador com defeito, removê-lo, substituir o módulo DIMM, reinstalar o controlador e, em seguida, devolver a peça com defeito para a NetApp. 
 ---
-= Substitua um módulo DIMM no seu sistema FAS70 ou FAS90 para corrigir erros de memória
+= Substitua um módulo DIMM em um sistema FAS70 ou FAS90 para corrigir erros de memória
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Substitua um DIMM no seu sistema FAS70 ou FAS90 se forem detetados erros de memória corrigíveis excessivos ou incorrigíveis. Tais erros podem impedir que o sistema de armazenamento inicialize o ONTAP. O processo de substituição envolve desligar o controlador prejudicado, removê-lo, substituir o DIMM, reinstalar o controlador e, em seguida, devolver a peça com falha ao NetApp.
+Substitua o módulo DIMM em seu sistema FAS70 ou FAS90 se forem detectados erros de memória excessivos, corrigíveis ou não corrigíveis. Esses erros podem impedir que o sistema de storage inicialize o ONTAP. O processo de substituição envolve desligar o controlador com defeito, removê-lo, substituir o módulo DIMM, reinstalar o controlador e, em seguida, devolver a peça com defeito para a NetApp.
 
 .Antes de começar
 * Certifique-se de que todos os outros componentes do sistema estão a funcionar corretamente; caso contrário, tem de contactar a assistência técnica.

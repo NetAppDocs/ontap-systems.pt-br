@@ -2,16 +2,16 @@
 permalink: fas8200/dimm-replace.html 
 sidebar: sidebar 
 keywords: fas8200, replace a dimm 
-summary: 'Você deve substituir um DIMM no módulo controlador quando seu sistema de storage relatar um número excessivo de erros de código de correção corrigíveis (CECC) identificados por alertas do Health Monitor, ou erros ECC não corrigíveis causados por uma única falha de DIMM que impeça o sistema de storage de inicializar o ONTAP.' 
+summary: Substitua o DIMM em um FAS8200 quando o sistema reportar excesso de erros de memória ECC corrigíveis por meio de alertas do Health Monitor ou erros ECC não corrigíveis. Um DIMM com defeito pode impedir que o sistema de storage inicialize o ONTAP, portanto, substituí-lo restaura a operação estável. 
 ---
-= Substitua um módulo DIMM no seu FAS8200 para corrigir erros de memória
+= Substitua um módulo DIMM em um FAS8200 para corrigir erros de memória
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Você deve substituir um DIMM no módulo controlador quando seu sistema de storage relatar um número excessivo de erros de código de correção corrigíveis (CECC) identificados por alertas do Health Monitor, ou erros ECC não corrigíveis causados por uma única falha de DIMM que impeça o sistema de storage de inicializar o ONTAP.
+Substitua o DIMM em um FAS8200 quando o sistema reportar excesso de erros de memória ECC corrigíveis por meio de alertas do Health Monitor ou erros ECC não corrigíveis. Um DIMM com defeito pode impedir que o sistema de storage inicialize o ONTAP, portanto, substituí-lo restaura a operação estável.
 
 Todos os outros componentes do sistema devem estar funcionando corretamente. Caso contrário, entre em contato com o suporte técnico.
 

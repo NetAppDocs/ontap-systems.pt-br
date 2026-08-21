@@ -2,15 +2,17 @@
 permalink: fas9000/dcpm-power-replace.html 
 sidebar: sidebar 
 keywords: aff a700, fas9000, replace, dcpm, module, fail 
-summary: Para substituir o módulo DCPM em seu sistema, você deve remover o módulo DCPM com falha do sistema e, em seguida, substituí-lo por um novo módulo DCPM. 
+summary: Substitua um módulo DCPM com defeito em um sistema FAS9000. O módulo deve ser substituído no chassi em até cinco minutos após a remoção ou o controlador associado será desligado. 
 ---
-= Substitua o módulo DCPM no seu FAS9000
+= Substitua o módulo DCPM em um sistema FAS9000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Substitua um módulo DCPM com defeito em um sistema FAS9000. O módulo deve ser substituído no chassi em até cinco minutos após a remoção ou o controlador associado será desligado.
+
 Para substituir o módulo DCPM em seu sistema, você deve remover o módulo DCPM com falha do sistema e, em seguida, substituí-lo por um novo módulo DCPM.
 
 .Passos

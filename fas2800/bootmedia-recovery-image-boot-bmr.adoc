@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas2820, boot the recovery image 
 summary: Restaure a imagem do ONTAP na mídia de inicialização de substituição do seu sistema FAS2820. O processo envolve iniciar o processo de recuperação da inicialização a partir do prompt do LOADER e monitorar a recuperação até que ela seja concluída e o nó reinicie. 
 ---
-= Restaure a imagem de inicialização no seu sistema FAS2820 usando o processo automatizado de recuperação de inicialização
+= Inicialize a imagem de recuperação em um sistema FAS2820 usando o processo automatizado de recuperação de inicialização
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
