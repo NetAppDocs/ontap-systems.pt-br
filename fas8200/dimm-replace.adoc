@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas8200, replace a dimm 
 summary: Substitua o DIMM em um FAS8200 quando o sistema reportar excesso de erros de memória ECC corrigíveis por meio de alertas do Health Monitor ou erros ECC não corrigíveis. Um DIMM com defeito pode impedir que o sistema de storage inicialize o ONTAP, portanto, substituí-lo restaura a operação estável. 
 ---
-= Substitua um módulo DIMM em um FAS8200 para corrigir erros de memória
+= Substitua um módulo DIMM em um sistema FAS8200
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

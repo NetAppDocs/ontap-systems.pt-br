@@ -2,15 +2,17 @@
 permalink: asa150/drive-replace.html 
 sidebar: sidebar 
 keywords: asa a150, a150, asa, replace the drives 
-summary: Você deve substituir uma unidade quando a plataforma Registrar uma mensagem de aviso no console do sistema indicando que uma unidade falhou. Além disso, o LED de avaria no painel do visor do operador e o LED de avaria na unidade avariada acendem-se. 
+summary: É necessário substituir a unidade a quente quando a plataforma registra uma mensagem de aviso no console do sistema indicando que uma unidade com falha foi detectada. Além disso, tanto o LED de falha no painel de exibição do operador quanto o LED de falha na unidade com falha acendem. 
 ---
-= Substitua uma unidade em um sistema ASA A150
+= Substitua a quente uma unidade em um ASA A150
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Substitua uma unidade com falha no seu sistema ASA A150 sem interromper as operações de E/S.
+
 Você pode substituir uma unidade com falha sem interrupções enquanto a e/S estiver em andamento. O procedimento para substituir um SSD destina-se a unidades não giratórias e o procedimento para substituir um HDD destina-se a unidades giratórias.
 
 Quando uma unidade falha, a plataforma Registra uma mensagem de aviso no console do sistema indicando qual unidade falhou. Além disso, o LED de avaria no painel do visor do operador e o LED de avaria na unidade avariada acendem-se.

@@ -14,12 +14,12 @@ entries:
 - title: Manutenção
   pdf-filename: Manutenção da AFF A200
   entries:
-  - title: Visão geral
+  - title: Visão geral da manutenção
     url: "/a200/maintain-overview.html"
   - title: Suporte de arranque
     pdf-filename: Mídia de inicialização do AFF A200
     entries:
-    - title: Visão geral
+    - title: Visão geral da mídia de inicialização
       url: "/a200/bootmedia-replace-overview.html"
     - title: Verifique as chaves de criptografia
       url: "/a200/bootmedia-encryption-preshutdown-checks.html"
@@ -36,7 +36,7 @@ entries:
   - title: Chassis
     pdf-filename: Chassis AFF A200
     entries:
-    - title: Visão geral
+    - title: Rever os requisitos
       url: "/a200/chassis-replace-overview.html"
     - title: Desligue o controlador desativado
       url: "/a200/chassis-replace-shutdown.html"
@@ -47,7 +47,7 @@ entries:
   - title: Módulo do controlador
     pdf-filename: Módulo do controlador AFF A200
     entries:
-    - title: Visão geral
+    - title: Rever os requisitos
       url: "/a200/controller-replace-overview.html"
     - title: Desligue o controlador desativado
       url: "/a200/controller-replace-shutdown.html"

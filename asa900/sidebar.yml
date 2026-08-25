@@ -36,8 +36,10 @@ entries:
   - title: Mídia de inicialização - recuperação manual
     pdf-filename: Manual de mídia de inicialização AFF ASA 900
     entries:
-    - title: Visão geral
-      url: "/asa900/bootmedia_replace_overview.html"
+    - title: Fluxo de trabalho de substituição de Mídia de inicialização
+      url: "/asa900/bootmedia-replace-workflow.html"
+    - title: Rever os requisitos
+      url: "/asa900/bootmedia-replace-requirements.html"
     - title: Verifique as chaves de criptografia
       url: "/asa900/bootmedia_encryption_preshutdown_checks.html"
     - title: Desligue o controlador desativado
@@ -53,7 +55,7 @@ entries:
   - title: Chassis
     pdf-filename: Chassis ASA A900
     entries:
-    - title: Visão geral
+    - title: Rever os requisitos
       url: "/asa900/chassis_replace_overview.html"
     - title: Desligue o controlador desativado
       url: "/asa900/chassis_replace_shutdown.html"
@@ -64,7 +66,7 @@ entries:
   - title: Controlador
     pdf-filename: Módulo do controlador ASA A900
     entries:
-    - title: Visão geral
+    - title: Rever os requisitos
       url: "/asa900/controller_replace_overview.html"
     - title: Desligue o controlador desativado
       url: "/asa900/controller_replace_shutdown.html"

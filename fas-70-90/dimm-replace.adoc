@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas70, fas90, replace a dimm 
 summary: Substitua o módulo DIMM em seu sistema FAS70 ou FAS90 se forem detectados erros de memória excessivos, corrigíveis ou não corrigíveis. Esses erros podem impedir que o sistema de storage inicialize o ONTAP. O processo de substituição envolve desligar o controlador com defeito, removê-lo, substituir o módulo DIMM, reinstalar o controlador e, em seguida, devolver a peça com defeito para a NetApp. 
 ---
-= Substitua um módulo DIMM em um sistema FAS70 ou FAS90 para corrigir erros de memória
+= Substitua um módulo DIMM em um sistema FAS70 ou FAS90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

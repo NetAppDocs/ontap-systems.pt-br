@@ -14,12 +14,12 @@ entries:
 - title: Manutenção
   pdf-filename: Manutenção da FAS8200
   entries:
-  - title: Visão geral
+  - title: Visão geral da manutenção
     url: "/fas8200/maintain-overview.html"
   - title: Suporte de arranque
     pdf-filename: Mídia de inicialização do FAS8200
     entries:
-    - title: Visão geral
+    - title: Visão geral da mídia de inicialização
       url: "/fas8200/bootmedia-replace-overview.html"
     - title: Verifique as chaves de criptografia
       url: "/fas8200/bootmedia-encryption-preshutdown-checks.html"
@@ -40,7 +40,7 @@ entries:
   - title: Chassis
     pdf-filename: Chassis FAS8200
     entries:
-    - title: Visão geral
+    - title: Rever os requisitos
       url: "/fas8200/chassis-replace-overview.html"
     - title: Desligue o controlador desativado
       url: "/fas8200/chassis-replace-shutdown.html"
@@ -51,7 +51,7 @@ entries:
   - title: Controlador
     pdf-filename: Módulo do controlador FAS8200
     entries:
-    - title: Visão geral
+    - title: Rever os requisitos
       url: "/fas8200/controller-replace-overview.html"
     - title: Desligue o controlador desativado
       url: "/fas8200/controller-replace-shutdown.html"

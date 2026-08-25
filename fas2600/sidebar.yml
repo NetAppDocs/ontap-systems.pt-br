@@ -16,12 +16,12 @@ entries:
 - title: Manutenção
   pdf-filename: FAS2600 manter
   entries:
-  - title: Visão geral
+  - title: Visão geral da manutenção
     url: "/fas2600/maintain-overview.html"
   - title: Suporte de arranque
     pdf-filename: FAS2600 suporte de arranque
     entries:
-    - title: Visão geral
+    - title: Visão geral da mídia de inicialização
       url: "/fas2600/bootmedia-replace-overview.html"
     - title: Verifique as chaves de criptografia
       url: "/fas2600/bootmedia-encryption-preshutdown-checks.html"
@@ -40,7 +40,7 @@ entries:
   - title: Chassis
     pdf-filename: FAS2600 chassis
     entries:
-    - title: Visão geral
+    - title: Rever os requisitos
       url: "/fas2600/chassis-replace-overview.html"
     - title: Desligue o controlador desativado
       url: "/fas2600/chassis-replace-shutdown.html"
@@ -51,7 +51,7 @@ entries:
   - title: Módulo do controlador
     pdf-filename: FAS2600 módulo do controlador
     entries:
-    - title: Visão geral
+    - title: Rever os requisitos
       url: "/fas2600/controller-replace-overview.html"
     - title: Desligue o controlador desativado
       url: "/fas2600/controller-replace-shutdown.html"

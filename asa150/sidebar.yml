@@ -16,12 +16,12 @@ entries:
 - title: Manutenção
   pdf-filename: Manutenção da ASA A150
   entries:
-  - title: Visão geral
+  - title: Visão geral da manutenção
     url: "/asa150/maintain-overview.html"
   - title: Suporte de arranque
     pdf-filename: Mídia de inicialização do ASA A150
     entries:
-    - title: Visão geral
+    - title: Rever os requisitos
       url: "/asa150/bootmedia-replace-overview.html"
     - title: Verifique as chaves de criptografia
       url: "/asa150/bootmedia-encryption-preshutdown-checks.html"
@@ -38,7 +38,7 @@ entries:
   - title: Chassis
     pdf-filename: Chassis ASA A150
     entries:
-    - title: Visão geral
+    - title: Rever os requisitos
       url: "/asa150/chassis-replace-overview.html"
     - title: Desligue o controlador desativado
       url: "/asa150/chassis-replace-shutdown.html"
@@ -49,7 +49,7 @@ entries:
   - title: Controlador
     pdf-filename: Controlador ASA A150
     entries:
-    - title: Visão geral
+    - title: Rever os requisitos
       url: "/asa150/controller-replace-overview.html"
     - title: Desligue o controlador desativado
       url: "/asa150/controller-replace-shutdown.html"

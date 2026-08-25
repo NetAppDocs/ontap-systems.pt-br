@@ -55,7 +55,7 @@ entries:
   - title: Chassis
     pdf-filename: Chassis AFF A900
     entries:
-    - title: Visão geral
+    - title: Fluxo de trabalho de substituição do chassis
       url: "/a900/chassis_replace_overview.html"
     - title: Desligue o controlador desativado
       url: "/a900/chassis_replace_shutdown.html"
@@ -66,7 +66,7 @@ entries:
   - title: Controlador
     pdf-filename: Módulo do controlador AFF A900
     entries:
-    - title: Visão geral
+    - title: Fluxo de trabalho de substituição do controlador
       url: "/a900/controller_replace_overview.html"
     - title: Desligue o controlador desativado
       url: "/a900/controller_replace_shutdown.html"

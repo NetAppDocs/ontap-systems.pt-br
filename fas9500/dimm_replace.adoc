@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas9500, replace a dimm 
 summary: Substitua o DIMM em um sistema FAS9500 quando o sistema reportar excesso de erros de memória ECC corrigíveis por meio de alertas do Health Monitor ou erros ECC não corrigíveis. Um DIMM com defeito pode impedir que o sistema de storage inicialize o ONTAP, portanto, a substituição restaura a operação estável. 
 ---
-= Substitua um DIMM em um sistema FAS9500 para corrigir erros de memória
+= Substitua um módulo DIMM em um sistema FAS9500
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

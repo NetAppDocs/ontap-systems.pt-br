@@ -16,12 +16,12 @@ entries:
 - title: Manutenção
   pdf-filename: Manutenção da AFF A700
   entries:
-  - title: Visão geral
+  - title: Visão geral da manutenção
     url: "/a700/maintain-overview.html"
   - title: Suporte de arranque
     pdf-filename: Mídia de inicialização do AFF A700
     entries:
-    - title: Visão geral
+    - title: Visão geral da mídia de inicialização
       url: "/a700/bootmedia-replace-overview.html"
     - title: Verifique as chaves de criptografia
       url: "/a700/bootmedia-encryption-preshutdown-checks.html"
@@ -40,7 +40,7 @@ entries:
   - title: Chassis
     pdf-filename: Chassis AFF A700
     entries:
-    - title: Visão geral
+    - title: Rever os requisitos
       url: "/a700/chassis-replace-overview.html"
     - title: Desligue o controlador desativado
       url: "/a700/chassis-replace-shutdown.html"
@@ -51,7 +51,7 @@ entries:
   - title: Módulo do controlador
     pdf-filename: Controlador AFF A700
     entries:
-    - title: Visão geral
+    - title: Rever os requisitos
       url: "/a700/controller-replace-overview.html"
     - title: Desligue o controlador desativado
       url: "/a700/controller-replace-shutdown.html"
@@ -83,7 +83,7 @@ entries:
   - title: Módulo X91148A
     pdf-filename: Módulo AFF A700 X91148A
     entries:
-    - title: Visão geral
+    - title: Visão geral do módulo X91148A
       url: "/a700/x91148a-module-install-overview.html"
     - title: Sistema AFF A700 com slots abertos
       url: "/a700/x91148a-modules-with-open-slots-add.html"

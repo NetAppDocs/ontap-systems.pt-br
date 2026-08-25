@@ -17,12 +17,12 @@ entries:
 - title: Manutenção
   pdf-filename: Manutenção da AFF C190
   entries:
-  - title: Visão geral
+  - title: Visão geral da manutenção
     url: "/c190/maintain-overview.html"
   - title: Suporte de arranque
     pdf-filename: Mídia de inicialização do AFF C190
     entries:
-    - title: Visão geral
+    - title: Rever os requisitos
       url: "/c190/bootmedia-replace-overview.html"
     - title: Verifique as chaves de criptografia
       url: "/c190/bootmedia-encryption-preshutdown-checks.html"
@@ -39,7 +39,7 @@ entries:
   - title: Chassis
     pdf-filename: Chassis AFF C190
     entries:
-    - title: Visão geral
+    - title: Rever os requisitos
       url: "/c190/chassis-replace-overview.html"
     - title: Desligue o controlador desativado
       url: "/c190/chassis-replace-shutdown.html"
@@ -50,7 +50,7 @@ entries:
   - title: Controlador
     pdf-filename: Módulo do controlador AFF C190
     entries:
-    - title: Visão geral
+    - title: Rever os requisitos
       url: "/c190/controller-replace-overview.html"
     - title: Desligue o controlador desativado
       url: "/c190/controller-replace-shutdown.html"

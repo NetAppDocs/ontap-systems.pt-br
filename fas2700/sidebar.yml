@@ -16,12 +16,12 @@ entries:
 - title: Manutenção
   pdf-filename: FAS2700 manter
   entries:
-  - title: Visão geral
+  - title: Visão geral da manutenção
     url: "/fas2700/maintain-overview.html"
   - title: Suporte de arranque
     pdf-filename: FAS2700 suporte de arranque
     entries:
-    - title: Visão geral
+    - title: Visão geral da mídia de inicialização
       url: "/fas2700/bootmedia-replace-overview.html"
     - title: Verifique as chaves de criptografia
       url: "/fas2700/bootmedia-encryption-preshutdown-checks.html"
@@ -41,7 +41,7 @@ entries:
   - title: Chassis
     pdf-filename: FAS2700 chassis
     entries:
-    - title: Visão geral
+    - title: Rever os requisitos
       url: "/fas2700/chassis-replace-overview.html"
     - title: Desligue o controlador desativado
       url: "/fas2700/chassis-replace-shutdown.html"
@@ -52,7 +52,7 @@ entries:
   - title: Controlador
     pdf-filename: Controlador FAS2700
     entries:
-    - title: Visão geral
+    - title: Rever os requisitos
       url: "/fas2700/controller-replace-overview.html"
     - title: Desligue o controlador desativado
       url: "/fas2700/controller-replace-shutdown.html"

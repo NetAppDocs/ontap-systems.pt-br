@@ -1,8 +1,8 @@
 ---
 permalink: fas2800/drive-replace.html 
 sidebar: sidebar 
-keywords: fas2820, hot-swap, drives 
-summary: Faça a substituição a quente de uma unidade em um FAS2820 quando a plataforma registrar uma mensagem de aviso no console do sistema e os LEDs de falha no painel de exibição do operador e na unidade com falha acenderem. Você pode substituir a unidade sem interromper a E/S, e as etapas variam ligeiramente dependendo se a unidade é um SSD ou um HDD. 
+keywords: fas2820, replace the drives 
+summary: Você deve realizar a troca a quente de uma unidade no seu sistema FAS2820 quando a plataforma registrar uma mensagem de aviso no console do sistema indicando que uma unidade apresentou falha. Tanto o LED de falha no painel de exibição do operador quanto o LED de falha na unidade com falha ficam acesos. 
 ---
 = Trocar uma unidade a quente em um sistema FAS2820
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Faça a substituição a quente de uma unidade em um FAS2820 quando a p
 
 
 [role="lead"]
-Faça a substituição a quente de uma unidade em um FAS2820 quando a plataforma registrar uma mensagem de aviso no console do sistema e os LEDs de falha no painel de exibição do operador e na unidade com falha acenderem. Você pode substituir a unidade sem interromper a E/S, e as etapas variam ligeiramente dependendo se a unidade é um SSD ou um HDD.
+Substitua a unidade com falha no seu sistema FAS2820 sem interrupção, enquanto as operações de E/S estiverem em andamento, para restaurar a capacidade de storage e o desempenho.
 
 Você pode substituir uma unidade com falha sem interrupções enquanto a e/S estiver em andamento. O procedimento para substituir um SSD destina-se a unidades não giratórias e o procedimento para substituir um HDD destina-se a unidades giratórias.
 
