@@ -13,8 +13,6 @@ summary: Faça a troca a quente de uma unidade no seu ASA A70 ou ASA A90 quando 
 [role="lead"]
 Faça a troca a quente de uma unidade no seu ASA A70 ou ASA A90 quando uma unidade apresentar falha ou precisar de upgrade. Esse processo envolve identificar a unidade com falha, removê-la com segurança e instalar uma nova unidade para garantir o acesso contínuo aos dados e o desempenho do sistema.
 
-Você pode substituir uma unidade SSD com falha sem interrupções enquanto a e/S estiver em andamento.
-
 Quando uma unidade falha, a plataforma Registra uma mensagem de aviso no console do sistema indicando qual unidade falhou. Além disso, o LED de avaria no painel do visor do operador e o LED de avaria na unidade avariada acendem-se.
 
 .Antes de começar

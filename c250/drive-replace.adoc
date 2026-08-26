@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff c250, replace the drives 
 summary: É necessário substituir a unidade a quente quando a plataforma registra uma mensagem de aviso no console do sistema indicando que uma unidade com falha foi detectada. Além disso, tanto o LED de falha no painel de exibição do operador quanto o LED de falha na unidade com falha acendem. 
 ---
-= Troque a quente uma unidade SSD em um AFF C250
+= Substitua a quente uma unidade em um AFF C250
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,8 +12,6 @@ summary: É necessário substituir a unidade a quente quando a plataforma regist
 
 [role="lead"]
 Substitua a quente uma unidade SSD com falha em um AFF C250 de forma não disruptiva enquanto a E/S está em andamento.
-
-Você pode substituir uma unidade SSD com falha sem interrupções enquanto a e/S estiver em andamento.
 
 Quando uma unidade falha, a plataforma Registra uma mensagem de aviso no console do sistema indicando qual unidade falhou. Além disso, o LED de avaria no painel do visor do operador e o LED de avaria na unidade avariada acendem-se.
 

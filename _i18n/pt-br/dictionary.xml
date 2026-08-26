@@ -5425,7 +5425,6 @@
   <block id="81fe716194ccbf369a36b4896558ebf6" category="paragraph">Chave crescente</block>
   <block id="8f5552a8f76c90502d6d347229346036" category="paragraph">A chave crescente é utilizada para remover os suportes de fixação na palete de embalagem, ajustar os pés de nivelamento do armário do sistema e instalar os suportes do kit de parafusos, se tiverem sido encomendados.</block>
   <block id="0d3dccbe0e804739d481b2318646849d" category="summary">Seu gabinete do sistema tem alguns trilhos de suporte já instalados nele. Se você precisar de trilhos de suporte adicionais para o seu sistema, você deve instalá-los antes de instalar os componentes do sistema.</block>
-  <block id="766ceed182488f716e50814e69e8d1c4" category="doc">Instale trilhos de suporte adicionais</block>
   <block id="470cb711568432436799010f6ef4aae7" category="paragraph">Essa tarefa se aplica a todas as controladoras e gavetas de disco, exceto as gavetas de disco DS212C e DE212C. Use as instruções no folheto do kit de trilho aplicável a essas duas prateleiras de disco.</block>
   <block id="b48b10c07334cd1f7b6cc752fac90f0e" category="inline-link">Instalação de uma prateleira de DE212C ou DS212CU em um rack de dois ou quatro colunas</block>
   <block id="ad64d68204105d0c3d29cf63f354df89" category="paragraph"><block ref="ad64d68204105d0c3d29cf63f354df89" category="inline-link-rx"></block></block>
@@ -5436,7 +5435,6 @@
   <block id="84362391cde89925e3ad3550a96b7cd2" category="list-text">Se os flanges de montagem do seu equipamento se estenderem além dos orifícios dos parafusos no trilho de suporte, instale as porcas da gaiola acima do trilho de suporte, onde necessário.</block>
   <block id="6fb023b413c1f113940c64b778b1ea19" category="image-alt">Como instalar as porcas da gaiola</block>
   <block id="68c2d553d90a1e1b09caccba97e62a65" category="summary">Você pode fixar o gabinete do sistema ao chão instalando o kit opcional de aparafusar. A instalação do kit impede que os gabinetes do sistema sejam removidos da posição.</block>
-  <block id="51096157b524c7405d973a26f6a00303" category="doc">Instale o kit de parafusos</block>
   <block id="4630806a49f3d566c73da0208c0cd76a" category="paragraph">Tem de fornecer o parafuso de fixação adequado para o seu piso para cada suporte aparafusado.</block>
   <block id="147a1dc5cec13c688326299559be22ae" category="list-text">Marque a área em seu chão onde o gabinete do sistema será instalado e, em seguida, role o gabinete no lugar.</block>
   <block id="71d0706f6b47786d0dedd60322ca91a7" category="image-alt">Localização dos suportes inferiores dos parafusos dianteiros e traseiros e do ponto de fixação do piso no suporte</block>
@@ -5450,7 +5448,6 @@
   <block id="131f9169d272bf0fbe306fc9b0e34e67" category="list-text">Aparafuse os suportes dianteiros ao piso e, em seguida, utilizando os parafusos do kit, aparafuse os suportes à estrutura do armário.</block>
   <block id="57a537e94c3c764c4939059e4832e28c" category="list-text">Baixe os pés de nivelamento conforme necessário e, em seguida, aperte os suportes de fixação traseiros no piso.</block>
   <block id="1dfe210483cc644ace5f6ac4cd8d6781" category="summary">Você pode conetar gabinetes de sistema juntos usando o kit opcional de interconexão de gabinete. Recomenda-se que instale o kit para evitar que os gabinetes se separem e danifiquem os cabos do sistema.</block>
-  <block id="0d8d91428b593d6310bf06611b9f0541" category="doc">Instale o kit de interconexão do gabinete</block>
   <block id="7da5e55afa45a5604cc061fdce9dc962" category="list-text">Coloque os armários do sistema junto.</block>
   <block id="7c80ef4e3a52ad55cdb70e82f071636c" category="paragraph">Os gabinetes devem ser dispostos de forma semelhante à ilustração a seguir, com o gabinete com os módulos do controlador no meio e os gabinetes com prateleiras de disco adicionais em ambos os lados. Os lados dos armários devem estar próximos, mas não precisam tocar um ao outro ainda.</block>
   <block id="3ff2609e0326dafc2efce7519a6960a3" category="image-alt">A ilustração é descrita no texto circundante.</block>
@@ -5487,7 +5484,6 @@
   <block id="6ffc5df4a17461423317852eab42d605" category="list-text">Repita o processo para quaisquer gabinetes de sistema restantes.</block>
   <block id="9513dbed5687d13ec78a5ed7ab3503cc" category="list-text">Aperte todos os parafusos do suporte de interconexão.</block>
   <block id="d351abcbb11dcaf6e66ff33c4d15a5ea" category="summary">Depois de instalar quaisquer trilhos de suporte adicionais no gabinete do sistema, você pode adicionar mais componentes do sistema ao gabinete do sistema pré-preenchido ou adicionar os componentes do sistema existentes a um gabinete do sistema vazio.</block>
-  <block id="abcf9a9ca99b818d8f81b23edc5ef425" category="doc">Instale o equipamento no gabinete do sistema</block>
   <block id="b7ba26421fe04c0ccebbe429b0f66e1d" category="list-text">Destranque e abra as portas traseiras do armário do sistema e da porta dianteira, se ainda não estiverem abertas.</block>
   <block id="3bd4251422fadada51c1d1b650d91658" category="list-text">Instale o equipamento no armário do sistema conforme descrito nas instruções de instalação que acompanham o equipamento.</block>
   <block id="1b27409723962508b456362d95ff81f8" category="paragraph">Os controladores de armazenamento devem estar no meio do gabinete do sistema. Os compartimentos de disco devem estar acima e abaixo dos controladores de storage. Todos os interrutores devem estar no topo do gabinete do sistema.</block>
@@ -5497,9 +5493,7 @@
   <block id="ba6c2986da775e910e79b1ca95b73c8d" category="image-alt">Como remover os trilhos de fixação</block>
   <block id="cc32f847114f40b46bd875dc4bc7b049" category="list-text">Volte a instalar as portas dianteiras e traseiras do armário do sistema.</block>
   <block id="c9c398d96e19f76a792dde6c40d97674" category="summary">Você pode encomendar um gabinete do sistema com controladores de armazenamento NetApp e compartimentos de disco instalados nele ou um gabinete de sistema vazio, se você já tiver equipamento NetApp. Vários gabinetes de sistema podem ser conetados em conjunto usando o kit opcional de interconexão e podem ser ancorados ao piso do data center usando o kit opcional de aparafusar.</block>
-  <block id="04dd3356a6ed1dc409a57e068d7f5007" category="doc">Instale um gabinete do sistema</block>
   <block id="0c637ccaaf64b14f56fb1ef4956d2041" category="summary">Você deve mover a fonte de alimentação e o cabeamento iluminado do emblema para o lado oposto da estrutura do gabinete do sistema antes de inverter a porta e reinstalar o emblema iluminado.</block>
-  <block id="d237bc050f1a552b06f9d0db44ebc654" category="doc">Mova a fonte de alimentação e o cabeamento do emblema</block>
   <block id="736acae917c9f78d8fe5ef43508ac7ce" category="paragraph">Você deve ter removido a porta do gabinete do sistema e os painéis laterais.</block>
   <block id="6389d85f34f387a4ea8fe4528c426e25" category="paragraph">Você deve mover a fonte de alimentação, o cabo de alimentação e o canal de cabeamento iluminados para o lado oposto do gabinete do sistema quando você inverter a porta do gabinete do sistema. O conjunto é projetado de modo que o cabo do emblema esteja na lateral do gabinete onde a dobradiça da porta está instalada.</block>
   <block id="709ddaede46e6b855beff61d58586373" category="list-text">Abra o grampo de fixação do cabo de alimentação e, em seguida, desligue o cabo de alimentação da fonte de alimentação.</block>
@@ -5528,7 +5522,6 @@
   <block id="f6fd32c0375af84905b62ee7c499c0f3" category="list-text">Instale os grampos de fixação da conduta do outro lado do gabinete sobre a conduta para prendê-la à estrutura do gabinete.</block>
   <block id="ca2f1d75952196e0940183d0bf21cf4c" category="list-text">Conete o cabo do emblema novamente à fonte de alimentação, mas não reconete a fonte de alimentação à fonte de alimentação.</block>
   <block id="9682abea21a8105e25e53a664815f083" category="summary">É necessário conetar os componentes do sistema às PDUs, encaminhar os cabos PDU para as fontes de alimentação CA, conectá-los às fontes de alimentação e ligar o sistema.</block>
-  <block id="de377ff4f06113db5f03b6d5d7501baa" category="doc">Ligue o gabinete do sistema</block>
   <block id="93f637af8ac5da333e550231ad3ba0fa" category="admonition">Para evitar uma interrupção do sistema se uma PDU falhar, não conete ambos os cabos de alimentação de qualquer componente em uma PDU. Distribua a carga através dos PDS que estão ligados a diferentes circuitos, como mostra a ilustração.</block>
   <block id="44626aa3377a470ee951473cc16b9064" category="paragraph">Você deve ter circuitos de alimentação separados disponíveis para cada PDU em seu gabinete do sistema.</block>
   <block id="c8d15ffad402fb5c47edd1a01fc0bddc" category="list-text">Ligue o equipamento às PDUs:</block>
@@ -5546,7 +5539,6 @@
   <block id="2dfbf4884a2bb3ae09ba7f32bd318abc" category="list-text">Ligue a alimentação dos seus componentes e, em seguida, inicie o sistema.</block>
   <block id="78a5c15479f8785439b1e31dad8ef39f" category="list-text">Feche e tranque as portas do armário do sistema.</block>
   <block id="119f03ea1c250f1b97c5928c1d9e5432" category="summary">Depois de mover a fonte de alimentação e os componentes para o outro lado do gabinete do sistema e mover as dobradiças e o trinco de bloqueio, você deve reinstalar a porta do gabinete do sistema e o emblema iluminado e, em seguida, reconetar o emblema à fonte de alimentação.</block>
-  <block id="643cfac87180d8379362af941dea318b" category="doc">Volte a instalar a porta e o emblema iluminado</block>
   <block id="cd7c79424e1d80a931ac6ce8733129b9" category="section-title">Volte a instalar a porta do armário do sistema</block>
   <block id="cf0255b2706527c123b430224b973ffa" category="paragraph">Depois de inverter a dobradiça da porta e o trinco da porta, tem de reinstalar o conjunto e o fio de ligação à terra e o fio e a porta dianteira do armário do sistema antes de reinstalar o emblema iluminado.</block>
   <block id="9916831c694e8fa7873f994991742d8d" category="list-text">Rode a porta 180 graus.</block>
@@ -5565,7 +5557,6 @@
   <block id="af93e1aa65228f426ca0975df51e9263" category="image-alt">Como reinstalar o emblema iluminado na porta dianteira</block>
   <block id="07fe9225534f4404a2e26cdf7452dbe0" category="list-text">Feche e tranque a porta dianteira.</block>
   <block id="176cf5dfe0545aace2d630a3f6ef2208" category="summary">É necessário remover a porta do armário do sistema e os painéis laterais para mover o emblema e os componentes iluminados e para inverter a porta.</block>
-  <block id="0983ab86dcc412b07fb9139c43a350fb" category="doc">Retire a porta do armário do sistema</block>
   <block id="9ebafe9f71b91c97d7138894316e164d" category="list-text">Abra a porta do armário do sistema se ainda não estiver aberta.</block>
   <block id="5f3c4fad5ddb550e58d4e35d650a015e" category="list-text">Execute a ação apropriada dependendo se seus gabinetes estão conetados ao kit de interconexão.</block>
   <block id="e5225257170c4f1fef53ed68e6ad6452" category="cell">Se o seu gabinete do sistema é...</block>
@@ -5578,7 +5569,6 @@
   <block id="9ef7c89c9097e658423c2005558a17bf" category="list-text">Desaperte o conjunto da patilha de ligação à terra da porta do armário do sistema e coloque-o de lado.</block>
   <block id="828cd57cf312dbc7141b1f0b78c1d193" category="list-text">Levante a porta da dobradiça inferior e coloque-a de lado.</block>
   <block id="525de838b0b63aa03a438e94f2a28f29" category="summary">A remoção do emblema iluminado exige que você abra a porta frontal do gabinete do sistema, desconete o cabo de alimentação da parte traseira do emblema e remova os componentes do emblema da porta do gabinete do sistema.</block>
-  <block id="fcb9814ec0f783887dac12f72d00226b" category="doc">Retire o emblema iluminado</block>
   <block id="c4f952bf2e8da62bbec89d8b25f01d71" category="inline-image-macro">Como remover o emblema iluminado</block>
   <block id="c10739aa61a9c6b713b87668c827de5b" category="paragraph">Use a ilustração a seguir, juntamente com os seguintes passos:<block ref="1afa4d7311a14b4db10f850c473bef34" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5e431905274e59cf132f091a54196f47" category="list-text">Destranque e abra a porta dianteira do armário do sistema.</block>
@@ -5610,21 +5600,18 @@
   <block id="a30d841057f0a416dd0bbc795c01e012" category="list-text">Ligue os interrutores de alimentação da PDU ou os disjuntores da PDU.</block>
   <block id="f520ae6a21fe8875386bf25f0f70cc17" category="paragraph">Para disjuntores PDU, o botão está ligado quando está alinhado com a estrutura PDU.</block>
   <block id="9f34692e20394559868d838e60e139bf" category="summary">Antes de desembalar e instalar no gabinete do sistema, você deve reunir as ferramentas e equipamentos necessários para mover o gabinete do sistema para o lugar e instalá-lo ou para realizar manutenção nele.</block>
-  <block id="3ed6da3ce264f0c66cef48e19cd15c73" category="doc">Ferramentas e equipamentos necessários</block>
   <block id="f9fe90b9a7c32c659a86cfe53f6587b1" category="list-text">O guia de hardware apropriado para as gavetas de disco</block>
   <block id="bcf8fb15c418590ecd335df2dcfad4e4" category="list-text">As instruções de instalação e configuração apropriadas para o seu sistema</block>
   <block id="45b8f0b842002ec85fb07171d4b0d278" category="list-text">Chaves de fenda Phillips nº 1 e nº 2</block>
   <block id="ac6201b7b810f81cfaef54d4d8fe63d5" category="list-text">Controlador TORQ para parafusos do armário do sistema</block>
   <block id="830cb2795d80d2d868f65bf4fc0302ba" category="list-text">Ferramenta de nivelamento para nivelamento do armário do sistema</block>
   <block id="7d309cda2d3359be8b443f7451192e61" category="summary">Você pode alterar a direção que a porta frontal abre removendo o emblema iluminado, a porta, a dobradiça superior e o hardware relacionado, e depois instalá-los no lado oposto da parte frontal da estrutura do gabinete do sistema.</block>
-  <block id="cb60a8dc869953f0c81e001801098d91" category="doc">Inverta a porta dianteira do armário do sistema</block>
   <block id="0a4a8cbec44f07cf1fa6adeb0d46999d" category="paragraph">Você precisa das seguintes ferramentas e equipamentos para completar a reversão da porta para armários de sistema com emblemas iluminados:</block>
   <block id="9cffe40731208ca60bb5bf36565901c8" category="list-text">Uma chave de fendas Phillips</block>
   <block id="5f30a9d35470ff036b30560b74bc4d16" category="list-text">Recomenda-se uma chave Allen de 5 mm; uma chave Allen magnética</block>
   <block id="c9f2ca71bb583b06442d98c0b1f94b50" category="list-text">Alicate de pontas</block>
   <block id="fda016ce78ed407e18786222751251c3" category="list-text">Uma escada para que você possa facilmente acessar os parafusos Allen na dobradiça superior</block>
   <block id="158164ba02e099ef26a07a4dc2f190fb" category="summary">Ao inverter a porta do gabinete do sistema, você deve mover a dobradiça da porta do gabinete do sistema e trava para o gabinete do sistema frontal oposto na vertical.</block>
-  <block id="4870418b0a18b6824d4496cb1208d178" category="doc">Inverta a dobradiça da porta e o trinco da fechadura</block>
   <block id="44d110429706a22974a0a9f495eecabd" category="paragraph">Você precisa das seguintes ferramentas:</block>
   <block id="400b2ac06aa0fa1e54ad61840d28a766" category="list-text">Chave de fendas Phillips</block>
   <block id="4ba712d4ea2e8b9f5e7e3a977d3cd5a6" category="list-text">Chave Allen de 5 mm; chave Allen magnética é recomendada</block>
@@ -5654,7 +5641,6 @@
   <block id="45c0d75f9a5b23a971e2dc3ca0a0f6c2" category="list-text">Retire os parafusos do trinco de bloqueio e, em seguida, desloque o trinco de bloqueio para o armário do sistema dianteiro oposto na vertical.</block>
   <block id="6df4950fb076868b0e9a60e4ef9e05db" category="list-text">Rode o trinco 180 graus e, em seguida, fixe-o na vertical do compartimento do sistema.</block>
   <block id="696dd736b666ee17e46c95a26790f5d2" category="summary">Ao desembalar o gabinete do sistema, você deve se certificar de que você tem espaço suficiente para remover o gabinete do sistema do material de embalagem. Certifique-se também de que o local pretendido para o gabinete do sistema é grande o suficiente para que você mova o gabinete para o lugar.</block>
-  <block id="595603bdc0003748af53e4c42b7507a5" category="doc">Requisitos de espaço e dimensões do gabinete do sistema</block>
   <block id="a257ee96979da8c46a7e618b50a2de66" category="section-title">Espaço necessário para desembalar o armário do sistema</block>
   <block id="e231b2f03b9f4c8eb9e846fa70e1f1a4" category="paragraph">A tabela a seguir define o requer espaço necessário para descompactar e instalar o gabinete do sistema:</block>
   <block id="f4843c1c797abf1a256c8802b6cd9f51" category="cell">Dimensões</block>
@@ -5707,11 +5693,9 @@
   <block id="3d916345d2d4b88d59baeb4da4d032c2" category="paragraph">As ilustrações a seguir mostram as vistas superior e inferior do gabinete do sistema e identificam as aberturas através das quais você pode executar pacotes de cabos do piso do data center para o gabinete do sistema. As ilustrações também mostram a localização dos rodízios do armário do sistema e dos pés niveladores.</block>
   <block id="03e181c9a4ee916b1c6394530dfe5d25" category="paragraph">Para evitar que o gabinete do sistema caia através do piso do data center, não tente rolar o gabinete do sistema sobre uma abertura de piso que seja mais larga do que a abertura de acesso ao cabo na parte inferior do gabinete do sistema.</block>
   <block id="4f5967d6e1e7c3a8ebe7ff7cb13d297f" category="image-alt">Vistas superior e inferior do armário do sistema</block>
-  <block id="3536220b5e80ece536e76091bbcde43f" category="doc">Tipos e especificações de PDU suportados</block>
   <block id="345f336ebbb6b879b90d461c9ead417e" category="paragraph">O gabinete do sistema suporta diferentes tipos de Unidade de distribuição de Energia (PDU). As PDUs estão em conformidade com NEMA ou IEC.</block>
   <block id="fa010c3e95aca618a783f3f5f398a8ba" category="paragraph">As informações mais atuais para PDUs suportadas no gabinete do sistema estão listadas no Hardware Universe.</block>
   <block id="d971400e841652c0674351e1776f8782" category="summary">Você deve remover o material de embalagem que envolve o gabinete do sistema antes de movê-lo para o lugar. Você também deve reciclar o material de embalagem depois que o gabinete é desembalado.</block>
-  <block id="a95834c1a8ed59ab3858580d175bb665" category="doc">Desembale o gabinete do sistema</block>
   <block id="041e3dc0c2e09769718a5527ab4196a5" category="image-alt">Como desembalar o gabinete do sistema</block>
   <block id="70150c1a82fd194a31cb4375a5daa21c" category="summary">O SuperRail pode ser instalado em um rack padrão de quatro colunas de orifício quadrado ou em um rack padrão de quatro colunas de orifício redondo usando os suportes adaptadores de orifício redondo a quadrado.</block>
   <block id="98c84c18c84bbdb869a3af52fb92fee5" category="admonition">A profundidade mínima entre os pontos de conexão dianteiro e traseiro para a instalação do SuperRail é de 24 polegadas e enquanto a profundidade máxima é de 32 polegadas.</block>
@@ -12179,7 +12163,6 @@
   <block id="da2ac8d5a8e144d9801128279d269441" category="summary">Após verificar as variáveis de ambiente, você deve concluir as etapas específicas para sistemas que possuem Onboard Key Manager OKM, NetApp Storage Encryption NSE ou NetApp Volume Encryption NVE ativados. O sistema FAS9000 suporta apenas procedimentos manuais de recuperação da mídia de inicialização.</block>
   <block id="d500e2b8a53910c2f8ca210ea9270774" category="summary">Para substituir o chassi, você deve remover as fontes de alimentação, ventoinhas, módulos controladores, módulos de E/S, módulos DCPM e o módulo LED USB do chassi com problema e instalá-los no chassi de substituição.</block>
   <block id="e94f76ed4f789e51d45eda953f52349d" category="summary">Para substituir a quente um módulo de alimentação do controlador de desengate (DCPM), que contém a bateria NVRAM11, você deve localizar o módulo DCPM com defeito, removê-lo do chassi e instalar o módulo DCPM de substituição.</block>
-  <block id="aa211743815898551dd144cdebabd4e6" category="doc">Procedimentos de substituição do módulo de E/S por família de plataforma</block>
   <block id="284f3d864e67ec64454ad1382833e490" category="summary">Encontre os procedimentos de substituição do módulo NVMe para a sua prateleira de storage NetApp, organizados por modelo de prateleira. Esta referência fornece links diretos para fluxos de trabalho passo a passo de substituição de NSM para as prateleiras NS224 e NX224, ajudando você a localizar rapidamente o procedimento correto para o seu modelo específico de prateleira.</block>
   <block id="a461d5a3ec6eff00835d5b1479552285" category="doc">Procedimentos de substituição da bateria NVMEM ou NVRAM por família de plataforma</block>
   <block id="66439d0b114daf635ee9ba53d5e8d568" category="summary">O gabinete do sistema suporta diferentes tipos de Unidades de Distribuição de Energia (PDUs). As PDUs são compatíveis com NEMA ou IEC.</block>
@@ -13059,7 +13042,6 @@
   <block id="a4a27b37630453b53def3d02aa2138ae" category="doc">Fluxo de trabalho de substituição do controlador AFF C400</block>
   <block id="69529956d219369eea8aeb6b4cc119d9" category="paragraph">Substitua um DIMM no seu sistema de storage AFF C400 quando o sistema apresentar um número excessivo de erros ECC corrigíveis ou um erro ECC não corrigível, o que normalmente é causado pela falha de um único DIMM.</block>
   <block id="486b1ab7671e7cb630a201d3cfad0128" category="paragraph">Substitua o módulo de ventoinha no seu sistema de storage AFF C400 sem interromper o funcionamento para manter o fluxo de ar e o resfriamento adequados do sistema.</block>
-  <block id="9a4a9bec9574e2ea168e6b50a5d8baef" category="paragraph">Instale e configure seu sistema de storage AFF C400 utilizando o guia detalhado, que fornece instruções passo a passo, desde a montagem em racks e cabeamento até a inicialização do sistema.</block>
   <block id="09f8bb302a248f42bf1bbe95753d829e" category="paragraph">Instale e configure seu sistema de storage AFF C400, escolhendo entre diferentes formatos de conteúdo de acordo com sua preferência.</block>
   <block id="faf2da819e0c7d2aed627979c207fbac" category="paragraph">Instale e configure seu sistema de storage AFF C400 usando as instruções em vídeo que mostram como instalar e conectar seu sistema.</block>
   <block id="04c77b27be39aa578244a75783c7caf8" category="paragraph">Substitua a bateria NVDIMM no seu sistema de storage AFF C400 removendo o módulo controlador, substituindo a bateria e reinstalando o módulo controlador.</block>
@@ -13735,7 +13717,6 @@
   <block id="91ad55857c70fdeac7dcde36de99bfa5" category="paragraph">Analise as especificações selecionadas para o FAS9500 sistema de storage em um único par de HA e visite <block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> (HWU) para obter uma lista completa das especificações do FAS9500.</block>
   <block id="985854a195aa686ca6c4432cefb3052f" category="paragraph">Para substituir um módulo de E/S no seu FAS9500, você deve desligar o nó com defeito, remover e instalar o módulo de E/S e, em seguida, reinicializar o nó.</block>
   <block id="af54525abc3171fa500a45dd92721714" category="paragraph">Após substituir a bateria do RTC, você deve reinstalar o módulo controlador. Se a bateria do RTC tiver ficado fora do módulo controlador por mais de 10 minutos, talvez seja necessário redefinir a hora e a data.</block>
-  <block id="5734120d50126564c7154ac7926db380" category="doc">Características do gabinete do sistema ONTAP</block>
   <block id="66474c10be348c1070ece95b6d3ee3b0" category="paragraph">O gabinete do sistema de hardware ONTAP consiste em painéis laterais, portas frontal e traseira, um kit de fixação opcional, um kit de interconexão opcional, PDUs para seus equipamentos e um sistema integrado de gerenciamento de cabos.</block>
   <block id="e0aa22d805433603bc2d47464941a024" category="paragraph">Antes de substituir a mídia de inicialização no seu AFF A150, verifique se você atende aos requisitos necessários para uma substituição bem-sucedida. Isso inclui ter um pen drive formatado em FAT32 com espaço de armazenamento suficiente para a imagem de recuperação do ONTAP e entender se você está realizando uma substituição não disruptiva ou disruptiva.</block>
   <block id="8a3c5dbfa53414ab5660114e22494ee3" category="summary">Desligue o controlador do seu AFF A150 sistema de storage para evitar perda de dados e manter a estabilidade do sistema durante o processo de recuperação manual da mídia de inicialização.</block>
@@ -13985,10 +13966,7 @@
   <block id="7e60ede96f48b6ba8d0d47f2b8035f4c" category="summary">Desligue o controlador do seu FAS9500 sistema de storage para evitar perda de dados e manter a estabilidade do sistema durante o processo de recuperação manual da mídia de boot.</block>
   <block id="77e872222aa64b0ce342d4087f408161" category="doc">Verifique o suporte à criptografia na mídia de inicialização em um AFF A150</block>
   <block id="c62860d1247fef919a90aaa84a1dc9e7" category="doc">Restaurar a criptografia na mídia de inicialização em um AFF A150</block>
-  <block id="55e63eb194f1607cd9ec28b515055799" category="doc">Inicialize a imagem de recuperação em um AFF A150 usando o processo de recuperação de inicialização manual</block>
-  <block id="65628aac9d8136073fdd8bc9e2bfbf92" category="doc">Analise os requisitos para a substituição da mídia de inicialização em um AFF A150</block>
   <block id="6a937e573bf11d96725f27c3c25d5361" category="doc">Substitua a mídia de inicialização em um AFF A150</block>
-  <block id="acfbef481b6b5af8dd403b385265ac92" category="doc">Desligue o controlador em um AFF A150 durante o processo de recuperação de inicialização manual.</block>
   <block id="688c5c62b9824aa9422f308bd0a1eb33" category="doc">Conclua a substituição do chassi para um sistema AFF A150</block>
   <block id="b27391e479a0b809fae44fd2fd3a0129" category="doc">Substitua o chassi em um AFF A150</block>
   <block id="4537a3c38c191b1d2767916c8ba78bd8" category="doc">Desligue os controladores AFF A150 para substituir o chassi</block>
@@ -14043,9 +14021,7 @@
   <block id="16b34d7a31dd2ff6fdb1fe6f0c6f750b" category="doc">Desligue o controlador em um sistema AFF A20, AFF A30 ou AFF A50 durante o processo de recuperação de inicialização manual</block>
   <block id="52212641e87206abc8d5209e161c6b3c" category="doc">Conclua a substituição do chassi para um sistema AFF A20, AFF A30 ou AFF A50</block>
   <block id="475c74408561352b4a717b25e0d57af5" category="doc">Substitua o chassi em um sistema AFF A20, AFF A30 ou AFF A50</block>
-  <block id="f5629b7dd61134a1717382dc476f3025" category="doc">Desligue um AFF A20, AFF A30 ou AFF A50 para substituir o chassi</block>
   <block id="e6b6e212a0094ee9b8cb07a680e14557" category="doc">Substitua o controlador em um sistema AFF A20, AFF A30 ou AFF A50</block>
-  <block id="498774ca236117dbc913131881a0fe1c" category="doc">Devolva o controlador em um AFF A20, AFF A30 ou AFF A50 para retomar as operações normais</block>
   <block id="0f82cd5236663c6e94ef8c7f9728153e" category="doc">Conclua a substituição do controlador para um sistema AFF A20, AFF A30 ou AFF A50</block>
   <block id="74e6f08c422d59cbb3a512c69842af19" category="doc">Restaure e verifique a configuração do controlador em um AFF A20, AFF A30 ou AFF A50.</block>
   <block id="4495cc2cb1d64fab3f6960c395b15b0f" category="doc">Substitua a quente um módulo de ventoinha em um AFF A20, AFF A30 ou AFF A50.</block>
@@ -14272,7 +14248,6 @@
   <block id="2a01f144ed587285692ab18f4406a613" category="doc">Saiba mais sobre a substituição da mídia de inicialização em um AFF A700s</block>
   <block id="8331a3d2cf20eaf1f279088099bbe139" category="doc">Substitua a mídia de inicialização em um AFF A700s</block>
   <block id="1111db0e2ab1b6207e3db67bb452facf" category="doc">Desligue o controlador em um AFF A700s durante o processo de recuperação de inicialização manual</block>
-  <block id="96801df09e5a3e391a3bae74eee01769" category="doc">Transfira a imagem de inicialização para a mídia de inicialização em um AFF A700s usando um pen drive USB</block>
   <block id="e340650c7f7d03f39f4afed4cb8d24d5" category="doc">Conclua a substituição do chassi para o AFF A700s</block>
   <block id="668633d699fd6e34119395b6686fba8f" category="doc">Substitua o chassi em um sistema AFF A700s</block>
   <block id="935e6572d8253e599578e98b08dd2797" category="doc">Desligue os controladores AFF A700s para substituir o chassi</block>
@@ -14511,7 +14486,6 @@
   <block id="28cfe668e93efd2e44043a1364ad0098" category="paragraph">Transfira os componentes de hardware do chassi com problema para o novo chassi e reinstale os módulos controladores em um sistema ASA A400.</block>
   <block id="64b432929cd1d8edf489dd556440b946" category="doc">Desligue os controladores ASA A400 para substituir o chassi</block>
   <block id="4828f0152cc6fbddee731db2752fef8a" category="doc">Substitua o controlador em um sistema ASA A400</block>
-  <block id="93beb3e4f5e34ce500648aed6d65f71a" category="doc">Devolva o controlador em um ASA A400 para retomar as operações normais</block>
   <block id="a159d1806f5c50ce4ba418f654f651f1" category="doc">Conclua a substituição do controlador para o ASA A400</block>
   <block id="d1bf96657c89730167214a4a3dbcaaf0" category="doc">Restaure e verifique a configuração do controlador em um sistema ASA A400</block>
   <block id="3b618fe2d7fd571ea3c7ea61ae4a8eed" category="doc">Substitua um módulo DIMM em um sistema ASA A400</block>
@@ -14538,7 +14512,6 @@
   <block id="8a55044181ae98c3bce1202fc31a4f8d" category="doc">Prepare-se para substituir o chassi ASA A800</block>
   <block id="66aff38e0c45c6192afd12b9425e8b02" category="doc">Desligue os controladores ASA A800 para substituir o chassi</block>
   <block id="b726c8abaf725a57ca5063798a5f72d0" category="doc">Substitua o controlador em um sistema ASA A800</block>
-  <block id="074112cff7716e2384de4f56ac4dcff5" category="doc">Devolva o controlador em um ASA A800 para retomar as operações normais.</block>
   <block id="9afe70815c1bb9558218db27a96294ca" category="doc">Conclua a substituição do controlador para o ASA A800</block>
   <block id="acd746fd94e32377502cfd6b1169e494" category="doc">Restaure e verifique a configuração do controlador em um sistema ASA A800</block>
   <block id="a5228b426deb77ac6fcd882cccd12c5d" category="doc">Substitua um módulo DIMM em um sistema ASA A800</block>
@@ -14559,7 +14532,6 @@
   <block id="3f51feafb7d3ea3f3bba91f6dae4014d" category="doc">Analise os requisitos para recuperação manual da mídia de inicialização em um sistema ASA A900</block>
   <block id="52a3b471da64fbdcfe841b61a64e2249" category="doc">Desligue o controlador em um sistema ASA A900 durante o processo de recuperação automática de inicialização.</block>
   <block id="9a9e79dd633d8c03983caa69e8a9f6be" category="doc">Desligue o controlador em um ASA A900 durante o processo de recuperação de inicialização manual.</block>
-  <block id="7685419f9f2518f19b2090b00e0be856" category="doc">Verifique o suporte à criptografia na mídia de inicialização em um sistema ASA A900</block>
   <block id="799f2d84ebe68dad2105f4e0946e7ff8" category="doc">Inicialize a imagem de recuperação em um sistema ASA A900 usando o processo de recuperação de inicialização manual</block>
   <block id="f35af1c226e5a44d8d3e29b690c923b8" category="doc">Conclua a substituição do chassi para um sistema ASA A900</block>
   <block id="fd06cef551af8bddc5fff7deeb37dbc4" category="doc">Substitua o chassi em um sistema ASA A900</block>
@@ -14568,7 +14540,6 @@
   <block id="9fb844aa0c8a0553f3f978c58477fedf" category="doc">Conclua a substituição do controlador para o ASA A900</block>
   <block id="f61a4d5e5ac62fe51dde43be34a35539" category="doc">Devolva o controlador em um ASA A900 para retomar as operações normais.</block>
   <block id="042dae10de35652f8b5ba6e1b3eed109" category="doc">Restaure e verifique a configuração do controlador em um sistema ASA A900</block>
-  <block id="77c241e8dfc2226834a1c7eb941e6e3a" category="doc">Substitua o DCPM que contém a bateria NVRAM11 em um ASA A900</block>
   <block id="c92b313b7ec9b27262d215855edca8eb" category="doc">Substitua um módulo DIMM em um sistema ASA A900</block>
   <block id="fd038a2bd8ffe91a325eb865fa5a73f8" category="doc">Troque a quente uma ventoinha em um sistema ASA A900</block>
   <block id="59cab780351f226c1acd77ec01bfcbf7" category="doc">Instale o ASA A900 sistema de storage com instruções detalhadas</block>
@@ -14690,7 +14661,6 @@
   <block id="f7925f2a583752b15a5e8d0ff3154664" category="doc">Conclua a substituição do controlador para o AFF C400</block>
   <block id="ed3403d3debdf369fb0a3502329d6871" category="doc">Restaure e verifique a configuração do controlador em um sistema AFF C400</block>
   <block id="01755578d326613e42a728396cbd8426" category="doc">Troque a quente um módulo de ventoinha em um sistema AFF C400</block>
-  <block id="40acc01957bd5d7d00371de00f8dd48e" category="doc">Instale e configure o AFF C400 usando instruções detalhadas passo a passo</block>
   <block id="fd94dd82fee559f65c13c3e7216fcb46" category="summary">Instale e configure o AFF C400 utilizando instruções gráficas que abrangem a montagem no rack, a fiação e a inicialização do sistema.</block>
   <block id="76b9c13f0d3b8258f2d7d5b3b7fd8980" category="doc">Instale e configure o AFF C400 usando instruções gráficas</block>
   <block id="1615ed911deb3b8e0378fd31dcadda09" category="doc">Instale e configure o AFF C400 usando instruções em vídeo</block>
@@ -14744,14 +14714,9 @@
   <block id="28b125b296bfc6350f71872a44eb2393" category="doc">Prepare-se para substituir o chassi em um AFF C800</block>
   <block id="13dafe725bfe1f5df61f79d3ea3c0d74" category="doc">Desligue os controladores AFF C800 para substituir o chassi</block>
   <block id="c6657220770aae9c73d8b991240d2506" category="doc">Substitua o controlador em um sistema AFF C800</block>
-  <block id="b3edfe1a6f0c9fb1dcb205b50f0fe8c8" category="doc">Recableie e devolva o controlador em um sistema AFF C800</block>
   <block id="263470b0b5fa072943ccb67c514d8d5e" category="doc">Conclua a substituição do controlador para o AFF C800</block>
-  <block id="17cd739adc9922e4ba05f0892b8fd6a7" category="doc">Restaure e verifique a configuração do controlador em um sistema AFF C800</block>
   <block id="4b3e388925fb3eea2ceda381953eea9d" category="doc">Substitua uma ventoinha em um sistema AFF C800</block>
-  <block id="6f7a6d8655057a0c6fcfeea09a5ad813" category="doc">Instale e configure o AFF C800 usando instruções detalhadas passo a passo</block>
-  <block id="193c1df4a9f36df03b2ff8c639ca3f90" category="doc">Instale e configure um AFF C800 usando instruções gráficas</block>
   <block id="96c48740677e9b496e17bff2b48d4d23" category="paragraph">Instale e configure um AFF C800 sistema de storage usando o formato de conteúdo que melhor se adapte às suas necessidades: instruções rápidas, instruções em vídeo ou instruções detalhadas.</block>
-  <block id="dc10af1f670e3b5ffcdcfec0e9087d6d" category="doc">Instale e configure um AFF C800 usando instruções em vídeo</block>
   <block id="495f7f46345313b8ce3cd938da81623e" category="doc">Saiba mais sobre a manutenção de um AFF C800 sistema de storage</block>
   <block id="12ccd44bd92170c032a49b6f3e37050d" category="doc">Substitua a bateria NVDIMM em um AFF C800</block>
   <block id="6ec214d475fc383f44d96949c756a333" category="doc">Substitua um NVDIMM em um sistema AFF C800</block>
@@ -14924,7 +14889,6 @@
   <block id="52b072dce0b3f7b70c0c5ffaff86db5d" category="doc">Conclua a substituição do chassi para um sistema FAS70 ou FAS90</block>
   <block id="d0b731a32c4637af395301cff1616bbf" category="doc">Substitua o chassi em um sistema FAS70 ou FAS90</block>
   <block id="0f1bfa979a1a062b26cd789d48fcab88" category="doc">Prepare-se para substituir o chassi em um sistema FAS70 ou FAS90</block>
-  <block id="b7768eb4698168e4a00aa8dc8303d46c" category="doc">Desligue um controlador FAS70 ou FAS90 para substituir o chassi</block>
   <block id="dbfbafb190bd8c02a748792c1095dfcf" category="doc">Substitua o controlador em um sistema FAS70 ou FAS90</block>
   <block id="a825fa370424c42e0d6cd11f14c3ba5e" category="doc">Devolva o controlador em um sistema FAS70 ou FAS90 para retomar as operações normais</block>
   <block id="411005fc2fb14b40c7386390959ff535" category="doc">Conclua a substituição do controlador para um sistema FAS70 ou FAS90</block>
@@ -14951,7 +14915,6 @@
   <block id="1b887bad5ccd0037b0e30739aa655c6e" category="doc">Inicialize a imagem de recuperação em um sistema FAS2600</block>
   <block id="b457987b6e23d0495ffb5f7611137c27" category="doc">Saiba mais sobre a substituição da mídia de inicialização em um sistema FAS2600</block>
   <block id="591d9073a132b36c9133302a9b8f0ae7" category="doc">Substitua a mídia de inicialização em um sistema FAS2600</block>
-  <block id="12e3e73e402d3c86e91d08796ea3c22b" category="doc">Desligue o controlador em um sistema FAS2600 durante a recuperação da mídia de inicialização</block>
   <block id="0434e9d3d8f9a92d992df12fe2b1d576" category="doc">Substitua o módulo de armazenamento em cache em um sistema FAS2600</block>
   <block id="3df76e4791edb795e63d3395da36a016" category="doc">Conclua a substituição do chassi para um sistema FAS2600.</block>
   <block id="ff0b2e7f118545bcbb6b0de09ced7cf7" category="doc">Substitua o chassi em um sistema FAS2600</block>
@@ -14971,8 +14934,6 @@
   <block id="6c68c38d5cffeee6d8cf5b0dd5fd6dfd" category="doc">Utilize a planilha de configuração de cluster para um sistema FAS2600</block>
   <block id="a49478ba64ccc3bd429c1441b7888131" category="doc">Saiba mais sobre a manutenção de um sistema de storage FAS2600</block>
   <block id="2cb9e214bd9847bd5e9b83b85187b4ed" category="doc">Substitua a bateria NVMEM em um sistema FAS2600.</block>
-  <block id="a4a4e39291fab67ca4b5bfb8e0edaa73" category="doc">Troque a quente uma fonte de alimentação em um sistema FAS2600</block>
-  <block id="824c0483b4d6ee17100fd5e0d751e90b" category="doc">Substitua a bateria do relógio de tempo real em um sistema FAS2600</block>
   <block id="3986677af59eed7ff3a3762582b900e0" category="doc">Verifique o suporte à criptografia na mídia de inicialização em um sistema FAS2700</block>
   <block id="58473fda1fd8f73a3cc61873d3222f2e" category="doc">Restaurar criptografia na mídia de inicialização em um sistema FAS2700</block>
   <block id="54dc9cfdfa7d91f1131a81825929b7d1" category="doc">Inicialize a imagem de recuperação em um sistema FAS2700</block>
@@ -14993,8 +14954,6 @@
   <block id="35da425717980cb046c961c47201ea6f" category="doc">Troque a quente uma unidade em um sistema FAS2700</block>
   <block id="68d6d5ccd8594ef8cb8bc5d67e9d4e3f" category="doc">Instale um sistema FAS2700 usando instruções detalhadas</block>
   <block id="fa95e09df0b1097f91bc9f6cf1bee930" category="doc">Instale um sistema FAS2700 usando passos rápidos</block>
-  <block id="f960eb61feb4c1c115a8876e6b78ca5b" category="doc">Escolha uma experiência de instalação e configuração do FAS2700</block>
-  <block id="8b34d956e94e87a0685990341e9b17eb" category="doc">Assista ao vídeo de instalação e configuração do sistema FAS2700</block>
   <block id="49354f6ca1c87d6e08256785d50a131a" category="doc">Saiba mais sobre a manutenção de um sistema de storage FAS2700</block>
   <block id="9a5d17c20e21610a8aafad8e6d648ecd" category="doc">Substitua a bateria NVMEM em um sistema FAS2700.</block>
   <block id="33808676d3b13bb07198c96afb425599" category="summary">A substituição de uma fonte de alimentação envolve desligar, desconectar e remover a fonte de alimentação antiga e instalar, conectar e ligar a fonte de alimentação de substituição.</block>
@@ -15021,7 +14980,6 @@
   <block id="cea644c38fc26b4118c964dba7768166" category="doc">Trocar uma unidade a quente em um sistema FAS2820</block>
   <block id="650bd8b48eb6d3aa9975f0886c305dc1" category="doc">Instale um sistema FAS2820 usando instruções detalhadas</block>
   <block id="9e5fe02bc198c42a0b88d7d197984784" category="doc">Instale o FAS2820 usando passos rápidos</block>
-  <block id="592fa18d41cef3f3fb6a4f7301a30172" category="doc">Escolha uma experiência de instalação e configuração do FAS2820</block>
   <block id="bf0b748da400b64bdb1abb8d0a8ccd72" category="doc">Assista ao vídeo de instalação e configuração do FAS2820</block>
   <block id="ab9365b1e0a1eeb4086ed2b8b759ada1" category="doc">Saiba mais sobre a manutenção de um FAS2820 sistema de storage</block>
   <block id="05a2c1f309e4a47d537c560b799dcf61" category="doc">Substitua a bateria NVMEM em um sistema FAS2820</block>
@@ -15034,8 +14992,6 @@
   <block id="1d5452fa298a54bc2a24db7577749b1c" category="doc">Restaurar a criptografia na mídia de inicialização em um sistema FAS50 usando o processo manual de recuperação de inicialização</block>
   <block id="3995e5c15996093fa455f16f2c9bd8ac" category="doc">Inicialize a imagem de recuperação em um sistema FAS50 usando o processo automatizado de recuperação de inicialização</block>
   <block id="2703ae11a7b2b11aa93946ec93cb0333" category="doc">Inicialize a imagem de recuperação em um sistema FAS50 usando o processo de recuperação de inicialização manual</block>
-  <block id="39ca41ee05d70d8d7f736eaf3b21c996" category="doc">Revise os requisitos para recuperação automatizada de mídia de inicialização em um sistema FAS50</block>
-  <block id="a19ea697fe3833b1c6f159d5ca5ce6d6" category="doc">Analise os requisitos para recuperação manual da mídia de inicialização em um sistema FAS50</block>
   <block id="881878007ffdc09eef3a70c814778d65" category="doc">Desligue o controlador em um sistema FAS50 durante o processo de recuperação de inicialização automática</block>
   <block id="a949c31353f793cba86c2939add8eb69" category="doc">Desligue o controlador em um sistema FAS50 durante o processo de recuperação de inicialização manual</block>
   <block id="22236e322f3e9dfdd94a8095dd2d8af7" category="doc">Troque a quente um módulo de armazenamento em cache em um sistema FAS50</block>
@@ -15044,7 +15000,6 @@
   <block id="972e00e16ac6f05ddd86e3aff8c7d5a9" category="doc">Prepare-se para substituir o chassi em um sistema FAS50</block>
   <block id="870e10fb786126f07de662fbe54f90e9" category="doc">Desligue os controladores FAS50 para substituir o chassi</block>
   <block id="2c1493c207afe21f05fe5dc1be0537ef" category="doc">Substitua o controlador em um sistema FAS50</block>
-  <block id="5eab48858187cdfc060ba28cd6c82434" category="doc">Devolva o controlador em um sistema FAS50 para retomar as operações normais</block>
   <block id="49b80cf5f219dd90c21f1696f739da48" category="doc">Conclua a substituição do controlador para um sistema FAS50</block>
   <block id="aa2913561d4aa35dfcc9e4e0abb22917" category="doc">Restaure e verifique a configuração do controlador em um sistema FAS50</block>
   <block id="456f7f3e0c3d440c46a11022c8e83d8f" category="summary">Substitua o DIMM no seu sistema de storage FAS50 se forem detectados erros de memória excessivos, corrigíveis ou não corrigíveis. Esses erros podem impedir que o sistema de storage inicialize o ONTAP. O processo de substituição envolve desligar o controlador com defeito, removê-lo, substituir o DIMM, reinstalar o controlador e, em seguida, devolver a peça com defeito para a NetApp.</block>
@@ -15056,7 +15011,6 @@
   <block id="0a24631873ddda16ba3b5da26773e8c8" category="doc">Instale o hardware FAS50 em um gabinete ou rack</block>
   <block id="e6cafc6e67881458d17b1a923027f393" category="doc">Ligue um sistema de storage FAS50</block>
   <block id="f2b4734072bc1f269202373cdf9ac873" category="doc">Prepare-se para instalar um sistema de storage FAS50</block>
-  <block id="983d8a8605178cffa2ebc07ca706f61c" category="doc">Analise os requisitos para a instalação de um sistema de storage FAS50</block>
   <block id="63c046f71a970069d835e78815f83b7d" category="doc">Adicionar um módulo de E/S a um sistema FAS50</block>
   <block id="b90c708522545f875bf6b160abea8da8" category="doc">Troque a quente um módulo de E/S em um sistema FAS50</block>
   <block id="49fcd5cb41873b7d8b5dcf4c73a50360" category="doc">Saiba como adicionar e substituir módulos de E/S em um sistema FAS50</block>
@@ -15069,8 +15023,6 @@
   <block id="f96f6e4da7fb02ceec4124ff41ce9a9d" category="doc">Restaurar a criptografia na mídia de inicialização em um sistema FAS500f após o processo de recuperação manual de inicialização</block>
   <block id="81d3d70c9551524e9dc34280d7e46dbf" category="doc">Inicialize a imagem de recuperação em um sistema FAS500f usando o processo de recuperação de inicialização automatizado</block>
   <block id="e5c901e587061db9be3b95576d66c72b" category="doc">Inicialize a imagem de recuperação em um sistema FAS500f usando o processo de recuperação de inicialização manual</block>
-  <block id="1009d38c60f6a5b0d8a8c029a49518cd" category="doc">Analise os requisitos para recuperação automatizada da mídia de inicialização em um sistema FAS500f</block>
-  <block id="abc31b51f27c56d6583a3603e20bf420" category="doc">Analise os requisitos para recuperação manual da mídia de inicialização em um FAS500f</block>
   <block id="fcac36c80955afd2857cbae7f3e33748" category="doc">Desligue o controlador em um sistema FAS500f durante o processo de recuperação de inicialização automática</block>
   <block id="12e2f88d8189c43b6fce5e3c4bdf2f37" category="doc">Desligue o controlador em um sistema FAS500f durante o processo de recuperação de inicialização manual</block>
   <block id="480d899f1dc5ac12abd82f64c9422af7" category="doc">Conclua a substituição do chassi para o FAS500f</block>
@@ -15079,7 +15031,6 @@
   <block id="091d119c4567ea6a255a2ea430bc30fe" category="doc">Desligue os controladores FAS500f para substituir o chassi</block>
   <block id="e39d70dd19d7efd6470e90084a310e4f" category="doc">Substitua o controlador em um sistema FAS500f</block>
   <block id="2690773fde10f47adc3ccb720b6a58a2" category="summary">Devolva o controle dos recursos de storage ao controlador de substituição para que o FAS500f possa retomar as operações normais.</block>
-  <block id="85b1aea7890b699ddd68216d08632e5b" category="doc">Devolva o controlador em um sistema FAS500f para retomar as operações normais</block>
   <block id="385f24f4ab0cb372ac520299897f4ca3" category="paragraph">Devolva o controle dos recursos de storage ao controlador de substituição para que seu sistema FAS500f possa retomar as operações normais. Após restaurar e verificar a configuração do sistema, reconecte os cabos e reatribua os discos.</block>
   <block id="abbd31a8ec4a712f2cd33dcde8b9e700" category="doc">Conclua a substituição do controlador para o FAS500f</block>
   <block id="25debe63c998c6c2032668c7bd37638d" category="doc">Restaure e verifique a configuração do controlador em um FAS500f</block>
@@ -15099,7 +15050,6 @@
   <block id="4724d795f52e0093841c4933339b611b" category="doc">Alternar agregados de volta em uma configuração de dois nós do MetroCluster para o FAS8200</block>
   <block id="c01f60e95a24a7d6ab30023b4d818b07" category="doc">Verifique o suporte à criptografia na mídia de inicialização em um sistema FAS8200</block>
   <block id="2db51a58ba499d9176ce5c80f25aa11e" category="doc">Restaurar a criptografia na mídia de inicialização em um sistema FAS8200</block>
-  <block id="a796ae1961743f68bd47652fbac3af57" category="doc">Inicialize a imagem de recuperação em um sistema FAS8200</block>
   <block id="db71eeaef90f51f499476d496e59f6ba" category="doc">Saiba mais sobre a substituição da mídia de inicialização em um sistema FAS8200</block>
   <block id="1137c105afe8c49fbf06924d66ceac6d" category="doc">Substitua a mídia de inicialização em um sistema FAS8200</block>
   <block id="253dd000970aa0d8ba4193814f3f0908" category="doc">Desligue o controlador em um sistema FAS8200 durante o processo de recuperação de inicialização manual</block>
@@ -15130,8 +15080,6 @@
   <block id="cf811b16f9ff31641cb4dab24409ada7" category="doc">Restaurar a criptografia na mídia de inicialização em um sistema FAS8300 ou FAS8700 após o processo de recuperação manual de inicialização</block>
   <block id="607fcc987cd9c2748b91dd79ca253f63" category="doc">Inicialize a imagem de recuperação em um FAS8300 ou FAS8700 usando o processo de recuperação de inicialização automatizado</block>
   <block id="0f274b7d6d6859427ca3492375e0a76e" category="doc">Inicialize a imagem de recuperação em um FAS8300 ou FAS8700 usando o processo de recuperação de inicialização manual</block>
-  <block id="8ec3d1b3dc37303f25e679c08c6c4c56" category="doc">Analise os requisitos para recuperação automatizada da mídia de inicialização em um sistema FAS8300 ou FAS8700</block>
-  <block id="5c9230d4452b4beb12d90d2385627164" category="doc">Analise os requisitos para recuperação manual da mídia de inicialização em um sistema FAS8300 ou FAS8700</block>
   <block id="d17bd9c7aae2054d46726ebe654be63f" category="doc">Desligue o controlador em um sistema FAS8300 ou FAS8700 durante o processo de recuperação automática de inicialização.</block>
   <block id="1990b81e237bc7ec359ae3cc88d3d13b" category="doc">Desligue o controlador em um sistema FAS8300 ou FAS8700 durante o processo de recuperação de inicialização manual.</block>
   <block id="fbd3f5c1b0137fa27f196aeb989a86dc" category="doc">Substitua o módulo de armazenamento em cache em um sistema FAS8300 ou FAS8700</block>
@@ -15139,7 +15087,6 @@
   <block id="a0e62501a00665a76eabb4b011abbb2a" category="doc">Substitua o chassi em um sistema FAS8300 ou FAS8700</block>
   <block id="8abf9d49dd5fb355dcbbccb5a89c651e" category="doc">Desligue os controladores FAS8300 ou FAS8700 para substituir o chassi</block>
   <block id="f358bf0a2f5f0dc2b9152c5eb5b68c9b" category="doc">Substitua o controlador em um sistema FAS8300 ou FAS8700</block>
-  <block id="eccadb6486f93b0ec3929e4295e90236" category="doc">Devolva o controlador em um sistema FAS8300 ou FAS8700 para retomar as operações normais</block>
   <block id="56c2480bbb6102ed6b9dced55bd639f9" category="doc">Conclua a substituição do controlador para um sistema FAS8300 ou FAS8700</block>
   <block id="2fd600090a751320a8067d0215775719" category="doc">Restaure e verifique a configuração do controlador em um sistema FAS8300 ou FAS8700</block>
   <block id="89bf9eb39bb3cc717358aa4b436e494c" category="summary">Você deve substituir o módulo DIMM no controlador quando seu sistema de storage encontrar erros como excesso de erros de memória ECC corrigíveis ou erros ECC não corrigíveis, normalmente causados por uma única falha no módulo DIMM que impede o sistema de storage de inicializar o ONTAP.</block>
@@ -15206,12 +15153,9 @@
   <block id="2d4a1ecb0656e11651445135ef47dc3c" category="summary">Substitua a quente uma fonte de alimentação em um sistema FAS9000 sem interromper o serviço. Este procedimento inclui desligar, desconectar e remover a fonte de alimentação antiga e, em seguida, instalar, conectar e ligar a fonte de alimentação de substituição.</block>
   <block id="8e4d2b600acd3ac1d3086c3860f74c15" category="doc">Troque a quente uma fonte de alimentação em um sistema FAS9000</block>
   <block id="3921a2c62a3f56ae8559cfac07dc33ff" category="summary">Substitua a bateria do relógio de tempo real no módulo controlador de um sistema FAS9000 para que os serviços e aplicativos que dependem da sincronização precisa do tempo continuem funcionando.</block>
-  <block id="7bea08a9e19ad6c71824116d06b06fa2" category="doc">Substitua a bateria do relógio em tempo real em um sistema FAS9000</block>
   <block id="282beabff48471d02dd0a9e5a417dd60" category="paragraph">Substitua a bateria do relógio de tempo real (RTC) no módulo do controlador de um sistema FAS9000 para que os serviços e aplicativos que dependem da sincronização precisa do tempo continuem funcionando.</block>
   <block id="b89ec8d204634ce1402ad395d0e8a21d" category="summary">Adicione um módulo X91148A a um FAS9000 substituindo uma placa de rede ou um adaptador de armazenamento por um novo em um sistema totalmente equipado, ou adicionando uma nova placa de rede ou um adaptador de armazenamento em um slot vazio do chassi.</block>
-  <block id="222af1987cba2e77d0589122a7fbdaae" category="doc">Saiba como adicionar um módulo X91148A a um sistema FAS9000</block>
   <block id="3cc4a19284bc8b75b02bd8aee220fb22" category="summary">Remova uma ou mais placas de rede ou módulos de armazenamento existentes de um sistema FAS9000 totalmente equipado para instalar um ou mais módulos de armazenamento X91148A.</block>
-  <block id="02d30ccd409d971529e4ce34becc6306" category="doc">Adicione um módulo de armazenamento X91148A a um sistema FAS9000 quando todos os slots estiverem ocupados</block>
   <block id="4eb4209c4ed74e862a15cdf81371ebe8" category="summary">Adicione um módulo X91148A a um slot de módulo vazio em um sistema FAS9000, seja como uma NIC 100GbE ou como um módulo de storage para prateleiras de storage NS224.</block>
   <block id="dec34dff58116feee568458333c13074" category="doc">Adicione um módulo X91148A a um sistema FAS9000 usando um slot disponível</block>
   <block id="822c45d446bafb64d30d43ccd6641b2c" category="doc">Adicionar um módulo de E/S a um sistema FAS9500</block>
@@ -15220,8 +15164,6 @@
   <block id="458f8f1699087bc585e7735c5bfac540" category="doc">Restaurar a criptografia na mídia de inicialização em um sistema FAS9500 após o processo de recuperação manual de inicialização</block>
   <block id="087d0ab0c9289d6b48aa1305610b9d1a" category="doc">Inicialize a imagem de recuperação em um sistema FAS9500 usando o processo de recuperação de inicialização automatizado</block>
   <block id="a090a9140b59f7d8b30dcda30f991081" category="doc">Inicialize a imagem de recuperação em um sistema FAS9500 usando o processo de recuperação de inicialização manual</block>
-  <block id="195916b5ffbfe42dcebe0a8b94478681" category="doc">Analise os requisitos para recuperação automatizada da mídia de inicialização em um sistema FAS9500</block>
-  <block id="574039df747795db0321d6927e026678" category="doc">Analise os requisitos para recuperação manual da mídia de inicialização em um sistema FAS9500</block>
   <block id="826e21bb8f9933627635b3339aefe9cf" category="doc">Desligue o controlador em um sistema FAS9500 durante o processo de recuperação de inicialização automática</block>
   <block id="319cbfe86723e5e264dc2bb52b81faa2" category="doc">Desligue o controlador em um sistema FAS9500 durante o processo de recuperação de inicialização manual</block>
   <block id="6085a595dbc005028cd5699a485d389c" category="doc">Troque a quente um módulo de armazenamento em cache em um sistema FAS9500</block>
@@ -15489,7 +15431,6 @@
   <block id="2e958160ddb960bf9a8212020c63e8a4" category="doc">Analise os requisitos para a substituição de um controlador em um AFF C250</block>
   <block id="a14abca33f31e880e45b51448e160f5a" category="doc">Desligue o controlador com defeito em um AFF C250</block>
   <block id="c32acaf1886b1043c34b4b422fe7d54a" category="doc">Substitua um módulo DIMM em um sistema AFF C250</block>
-  <block id="435fef3a56aa8d9c1df074da7c748a7f" category="doc">Troque a quente uma unidade SSD em um AFF C250</block>
   <block id="65fd91fea777bff5023bc13ed86a36ea" category="paragraph">Substitua a quente uma unidade SSD com falha em um AFF C250 de forma não disruptiva enquanto a E/S está em andamento.</block>
   <block id="c4fa6b139e7754ef9468873c03146f0a" category="doc">Especificações principais para o AFF C250</block>
   <block id="6bb676a8216018353662982b0514357d" category="doc">Substitua a mídia de inicialização em um AFF C30 ou AFF C60 durante o processo de recuperação automática de inicialização</block>
@@ -15671,4 +15612,65 @@
   <block id="dfe9112790d09e7b6b0e61cc72aba9d4" category="sidebar">Sistema AFF A700 sem slots abertos</block>
   <block id="8d77e37cb58d140158a1ddafaadb659a" category="sidebar">Visão geral do chassi</block>
   <block id="bbcce8e36885580102fe78ece6a5936a" category="sidebar">Adicione o módulo X91148A em um sistema sem slots livres</block>
+  <block id="4974d1d68f1f5751ab2cab7615ee0b6e" category="doc">Inicialize a imagem de recuperação em um sistema AFF A150</block>
+  <block id="e0474f90358917d163b90761b21fc8a6" category="doc">Analise os requisitos para substituir a mídia de inicialização em um AFF A150</block>
+  <block id="6b3d7723930a5d5c499f6bbdf32fb84c" category="doc">Desligue o controlador em um AFF A150</block>
+  <block id="d623bd5bf274a1905ce130ef48674109" category="doc">Desligue os controladores AFF A20, AFF A30 ou AFF A50 para substituir o chassi</block>
+  <block id="b5ca9b2d002e0c2340fa33ee4ab86368" category="doc">Devolva o controlador em um AFF A20, AFF A30 ou AFF A50.</block>
+  <block id="6e2dd8dffef6a2fd7ec926a02d45c8cd" category="doc">Transfira a imagem de inicialização para a mídia de inicialização em um AFF A700s</block>
+  <block id="fa8a2e26b1abdbf50abd090b331cf664" category="doc">Devolva o controlador em um ASA A400</block>
+  <block id="d22502c006cc64728ccf0ee4a7cc180d" category="doc">Devolva o controlador em um ASA A800</block>
+  <block id="86c93166fd8e988c76fc29c5c275fdac" category="doc">Verifique o suporte à criptografia na mídia de inicialização em um ASA A900 usando o processo manual de recuperação de inicialização</block>
+  <block id="41efbe634732e37f4c6cc6e47bed6a0a" category="doc">Substitua o módulo DCPM em um ASA A900.</block>
+  <block id="46f4fb4233f418426f930274e802f9a2" category="doc">Substitua a quente uma unidade em um AFF C250</block>
+  <block id="a477f1342caef4c6105a77677aaad41a" category="doc">Instale o AFF C400 usando instruções detalhadas</block>
+  <block id="7421b083591a1e83d04acab2dedbd1ce" category="paragraph">Instale e configure o seu AFF C400 sistema de storage seguindo instruções passo a passo, desde a montagem no rack e cabeamento até a inicialização do sistema.</block>
+  <block id="089b61741df9aec375723ca8fabd05e6" category="doc">Devolva o controlador em um AFF C800</block>
+  <block id="86dfab1d0524f3af34bfd19d2792ac64" category="doc">Restaurar e verificar a configuração do sistema em um AFF C800</block>
+  <block id="e99b506a7f112ee8be5d6162e2b40c5e" category="doc">Instale e configure o AFF C800 usando instruções detalhadas</block>
+  <block id="ab7192484a2ffc71336d7b98445bfb04" category="doc">Instale o AFF C800 usando instruções gráficas</block>
+  <block id="9563887009ddc79d5cde510c275e0de0" category="doc">Instale um sistema AFF C800 usando as instruções em vídeo</block>
+  <block id="8dc64d43e2783724961d5523e7b12289" category="doc">Desligue os controladores FAS70 ou FAS90 para substituir o chassi</block>
+  <block id="c3354a7d715a8827a6a086244b011277" category="doc">Desligue o controlador em um sistema FAS2600 durante o processo de recuperação de inicialização</block>
+  <block id="da5b4dca4c04377dde753992f7961b63" category="doc">Troque a fonte de alimentação a quente em um sistema FAS2600</block>
+  <block id="abfd786ff21d96ae2c5e7a83fcbb9bf3" category="doc">Substitua a bateria RTC em um sistema FAS2600</block>
+  <block id="347ca1965792d437cd2e37c0e30b0182" category="doc">Escolha como instalar o FAS2700 sistema de storage</block>
+  <block id="bf3c4b57d1ae46c1b5e5c0cd11d9d4d3" category="doc">Instale o FAS2700 usando instruções em vídeo</block>
+  <block id="9cd80467b0e6ab919ab90756ccc839ca" category="doc">Escolha como instalar o FAS2820 sistema de storage</block>
+  <block id="a44a6fc61c54e8e0583b279d458f555e" category="doc">Analise os requisitos para recuperação automatizada de mídia de inicialização em um sistema FAS50</block>
+  <block id="5f4524ce8a52ded91ffcf32ac158ddf2" category="doc">Analise os requisitos para recuperação manual da mídia de inicialização em um sistema FAS50</block>
+  <block id="fa2d59f85a5b5d8b03c66b34b6894a83" category="doc">Devolva o controlador em um sistema FAS50</block>
+  <block id="21a590b1f3d712f3faad6122ec68bb09" category="doc">Analise os requisitos para a instalação de um sistema de storage FAS50</block>
+  <block id="668acba44abfa6d4a1cdd5949980e367" category="doc">Analise os requisitos para recuperação automatizada de mídia de inicialização em um sistema FAS500f</block>
+  <block id="e7e3dacdd36bee30bc80b2fa619774d1" category="doc">Revise os requisitos para recuperação manual da mídia de inicialização em um FAS500f</block>
+  <block id="1c6b8b355a4705cb890bca3394d862b8" category="doc">Devolva o controlador em um sistema FAS500f</block>
+  <block id="6fc3a4125410f2c87a19afde813d0b3b" category="doc">Inicialize a imagem de recuperação em um sistema FAS8200 usando o processo de recuperação de inicialização manual</block>
+  <block id="3ded6073b02891d7630b0885e246f67f" category="doc">Analise os requisitos para recuperação automatizada de mídia de inicialização em um sistema FAS8300 ou FAS8700</block>
+  <block id="066e589860863f1b5b0990e0eb55a26a" category="doc">Analise os requisitos para recuperação manual da mídia de inicialização em um sistema FAS8300 ou FAS8700</block>
+  <block id="de7c80eab8b43253b81066c8d54c303d" category="doc">Devolva o controlador em um sistema FAS8300 ou FAS8700</block>
+  <block id="18759ef44d8091ddfddf4aea1ba4f9a2" category="doc">Substitua a bateria RTC em um sistema FAS9000</block>
+  <block id="33e6ac4a4f35be5bf14be58d65642869" category="doc">Saiba como adicionar módulos X91148A a um sistema de storage FAS9000</block>
+  <block id="1949bb7fb58f80a4315c95f64c31bdcc" category="doc">Adicione um módulo de armazenamento X91148A a um sistema de storage FAS9000 totalmente equipado</block>
+  <block id="df4145aa60dc03515523b1f3c8da9e56" category="doc">Analise os requisitos para recuperação automatizada de mídia de inicialização em um FAS9500</block>
+  <block id="d92dbb9fbf5415aa8abb6325d687fe75" category="doc">Analise os requisitos para recuperação manual da mídia de inicialização em um sistema FAS9500</block>
+  <block id="ade554b9dd3913961cccafe3afa99fba" category="doc">Procedimentos de substituição de módulos de I/O por família de plataforma</block>
+  <block id="f795e413d29d9debf161122a22f214c0" category="doc">Características do gabinete do sistema de hardware ONTAP</block>
+  <block id="5cc9f83899a6c580e3108fb3c4a0f556" category="doc">Instale trilhos de suporte adicionais em um gabinete de sistema de hardware ONTAP</block>
+  <block id="fe265017b8491cba6934c7b98a0d05fb" category="doc">Instale o kit de fixação por parafusos em um gabinete do sistema de hardware ONTAP</block>
+  <block id="39a2eeae669afc9be33ba6b43e4c1ed5" category="doc">Instale o kit de interconexão de gabinetes para o gabinete do sistema de hardware ONTAP</block>
+  <block id="0d08902b99fdc7b92d532b3441abdd05" category="doc">Instale os equipamentos em um gabinete de sistema de hardware ONTAP</block>
+  <block id="088b04b793faf327753a260138e7c61e" category="doc">Saiba mais sobre a instalação de um gabinete de sistema de hardware ONTAP</block>
+  <block id="582e7086ed20d12fe8daa1d1ecd0bd6d" category="doc">Mova a fonte de alimentação e a fiação do badge em um gabinete de sistema de hardware ONTAP</block>
+  <block id="3ddeea559c213d9f6ee6bc9afef7294a" category="doc">Ligue o gabinete do sistema de hardware ONTAP</block>
+  <block id="c0c2df1df0384016fe2787d45f3570e4" category="doc">Reinstale a porta do gabinete do sistema de hardware ONTAP e o emblema iluminado</block>
+  <block id="78ff5bf0a3caa11f8bc0bffd4407990c" category="doc">Remova a porta do gabinete do sistema de hardware ONTAP</block>
+  <block id="b74f554391eb5bd12637539b3b43882b" category="doc">Remova o emblema iluminado de um gabinete do sistema de hardware ONTAP</block>
+  <block id="1d71776e5fe39ab54c0ef3378d8124f5" category="doc">Substitua as PDUs em um gabinete de sistema de hardware ONTAP</block>
+  <block id="75bec75cf89863af53127aeba9031646" category="doc">Ferramentas e equipamentos necessários para um gabinete de sistema de hardware ONTAP</block>
+  <block id="91ba7bd4f6ef36d3da4c83b19b649983" category="doc">Inverta a porta frontal do gabinete do sistema de hardware ONTAP</block>
+  <block id="10f17d4703a2b0cf97622d032b4cf379" category="doc">Inverta a dobradiça e a trava na porta do gabinete do sistema de hardware ONTAP</block>
+  <block id="fc3c0ff0828c3fdf86f57f3e72f3cf31" category="doc">Requisitos de espaço e dimensões do gabinete do sistema de hardware ONTAP</block>
+  <block id="a0d51b97ecebc4a2164c80e9993b43b7" category="doc">Tipos e especificações de PDUs suportados para um gabinete de sistema de hardware ONTAP</block>
+  <block id="d4f15e3529c28c34230d8c8c8157f378" category="doc">Desembale o gabinete do sistema de hardware ONTAP</block>
+  <block id="4fce94ed1c415c154afd3821b10ac5ec" category="doc">Instale um kit SuperRail em um rack de quatro postes para um sistema de hardware ONTAP</block>
 </blocks>
