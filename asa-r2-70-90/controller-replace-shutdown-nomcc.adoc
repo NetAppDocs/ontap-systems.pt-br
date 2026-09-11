@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa r2 a70, asa r2 a90, shut down the impaired controller 
 summary: Desligue o controlador do sistema de armazenamento ASA A70 ou ASA A90 para evitar a perda de dados e garantir a estabilidade do sistema ao substituir o controlador. 
 ---
-= Desligue o controlador com defeito em um sistema ASA A70 ou ASA A90 em uma configuração que não seja o MetroCluster
+= Desligue o controlador com defeito em um sistema ASA A70 ou ASA A90 que não seja o MetroCluster
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

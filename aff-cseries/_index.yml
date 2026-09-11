@@ -3,7 +3,7 @@ indexpage:
   title: Sistemas ONTAP AFF C-Series
   summary: A documentação do sistema de storage permite que você instale, configure
     e faça a manutenção do seu sistema AFF C-Series.
-  keywords: aff c-series, datasheet, C250, C400, C800
+  keywords: aff c-series, datasheet, C30, C60, C80
   lead: Os sistemas ONTAP AFF Série C são construídos com tecnologia flash NVMe de
     alta densidade.
   tiles:
@@ -19,24 +19,12 @@ indexpage:
       url: "../c30-60/install-overview.html"
     - title: AFF C80
       url: "../c80/install-overview.html"
-    - title: AFF C250
-      url: "../c250/install-setup.html"
-    - title: AFF C400
-      url: "../c400/install-setup.html"
-    - title: AFF C800
-      url: "../c800/install-setup.html"
   - title: Mantenha o seu sistema
     links:
     - title: AFF C30 e AFF C60
       url: "../c30-60/maintain-overview.html"
     - title: AFF C80
       url: "../c80/maintain-overview.html"
-    - title: AFF C250
-      url: "../c250/maintain-overview.html"
-    - title: AFF C400
-      url: "../c400/maintain-overview.html"
-    - title: AFF C800
-      url: "../c800/maintain-overview.html"
   - title: Interrutores suportados
     links:
     - title: BES-53248 com suporte Broadcom

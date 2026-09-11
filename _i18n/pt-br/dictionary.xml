@@ -2172,7 +2172,6 @@
   <block id="f77eef718a5ddb0006a44a75016370bf" category="list-text">Se a lista estiver correta, remova as licenças não utilizadas:<block ref="288b5ec1c29101426e7991b13fe689ce" prefix=" " category="inline-code"></block></block>
   <block id="bfe787834fd9e46156b1d62f2f5029f8" category="list-text">Registre o número de série do sistema com o suporte da NetApp.</block>
   <block id="523f153f577513ed6f7ddd1f4d6a7cac" category="list-text">Se o AutoSupport estiver ativado, envie uma mensagem AutoSupport para Registrar o número de série.</block>
-  <block id="69d8be94d5b9ba35360160c6e3097920" category="list-text">Se o AutoSupport não estiver ativado, ligue<block ref="201cec37350c6561a61e79fe67dd46bf" category="inline-link-rx"></block> para registar o número de série.</block>
   <block id="6181ce929bc404494408989e6b8a9b52" category="paragraph">Para substituir um módulo de e/S, localize-o no módulo do controlador e siga a sequência específica de passos.</block>
   <block id="8a9a8a0db84d9dd59b0f006930b47193" category="list-text">Prima o botão do trinco do excêntrico.</block>
   <block id="c053808d9acb931bed74754155a6e86f" category="list-text">Rode o trinco do excêntrico para baixo o mais longe possível. Para módulos horizontais, gire o came para longe do módulo o mais longe possível.</block>
@@ -8146,7 +8145,6 @@
   <block id="8019bdcaff5849ab8015533c8674f305" category="paragraph">Prenda cada controladora aos módulos do NSM em ambas as gavetas NS224. Os gráficos mostram o cabeamento A do controlador em azul e o cabeamento B do controlador em amarelo.</block>
   <block id="546125971d4fce23d0f562118f0ce95f" category="open-title">Opção 3: Duas prateleiras DS460C</block>
   <block id="8994222dc8e3118b755e00531cef6a1c" category="paragraph">Cable cada controladora aos módulos IOM nas duas gavetas DS460C. Os gráficos mostram o cabeamento A do controlador em azul e o cabeamento B do controlador em amarelo.</block>
-  <block id="98aab8017242eea1d6e23ba928b20ae5" category="list-text"><block ref="98aab8017242eea1d6e23ba928b20ae5" category="inline-link-macro-rx"></block></block>
   <block id="4e3c3284590d1aa1440e67b3bd65ba6e" category="list-text"><block ref="4e3c3284590d1aa1440e67b3bd65ba6e" category="inline-link-macro-rx"></block></block>
   <block id="370d2e6f20948d3881708f9706576691" category="sidebar">Prepare-se para substituir</block>
   <block id="7e8bda9aef5e8fb9e3018b4afe5250d1" category="list-text">Para EKM, você precisa de cópias dos seguintes arquivos do nó do parceiro:</block>
@@ -11292,8 +11290,6 @@
   <block id="88cf8f1d92159c3cdea53a734f1d7a26" category="paragraph">Após substituir o controlador AFF C80 defeituoso, você precisa<block ref="ba0281d4e0b6e4cebf5e13fd7e583c92" category="inline-link-macro-rx"></block> .</block>
   <block id="345fb173829c711fcd65d0471db9547b" category="paragraph">Substitua um módulo de E/S em seu sistema AFF C80 quando o módulo apresentar defeito ou precisar de uma atualização para oferecer maior desempenho ou recursos adicionais. O processo de substituição envolve desligar o controlador, substituir o módulo de E/S com falha, reinicializar o controlador e devolver a peça com falha à NetApp.  Você pode usar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema de armazenamento.</block>
   <block id="cf99c258aade4f04e63c51a37a560c71" category="paragraph">Substitua a NVRAM no seu sistema AFF C80 quando a memória não volátil estiver com defeito ou precisar de uma atualização. O processo de substituição envolve desligar o controlador danificado, remover completamente a energia puxando o controlador alguns centímetros, substituir o módulo NVRAM ou o DIMM NVRAM , reatribuir os discos e devolver a peça com defeito à NetApp.</block>
-  <block id="3898e1d169485951c2a49a4a69789502" category="sidebar">Instalar e configurar sistemas ASA</block>
-  <block id="10b7e05447c2dbec670e886811f71bcb" category="sidebar">Manter sistemas ASA</block>
   <block id="c239ad11021e49c97ea2bf8272c6588a" category="paragraph">O processo tenta restaurar os arquivos apropriados do nó parceiro e reinicia o nó. Continue para a próxima etapa.</block>
   <block id="774ee8b1398c2f16e1d77ddac27a50b0" category="inline-xref">reativando a devolução automática</block>
   <block id="d3218fd897781ec8a86658de26e1ddf1" category="list-text">Vá para <block ref="7aacd8b9a7e4a74d04304c7c616e940e" category="inline-xref-macro-rx"></block> se estivesse desativado.</block>
@@ -13078,8 +13074,6 @@
   <block id="006a0aef44a1bb691e9f644d1926371a" category="sidebar">Os sistemas ONTAP ASA C-Series oferecem soluções de storage flash econômicas e de alta densidade, projetadas para aplicações empresariais críticas em data centers.</block>
   <block id="f448eec7530f30238deeb7ca09ca08e9" category="sidebar">Sistemas ONTAP ASA C-Series</block>
   <block id="f0cd4cc041c2ccdc2d72f5a039979218" category="sidebar">A documentação do sistema de storage permite que você instale, configure e mantenha seu sistema ONTAP ASA C-Series.</block>
-  <block id="ca646f85328c55542ec98da8c23da4d7" category="sidebar">Os sistemas ONTAP ASA oferecem uma experiência SAN simplificada e dedicada, que proporciona disponibilidade contínua de dados para bancos de dados de missão crítica corporativos e outras cargas de trabalho SAN usando o protocolo FCP ou iSCSI.</block>
-  <block id="f94409f7a4264c1d1b67dc1dae9ed979" category="sidebar">Sistemas ONTAP ASA</block>
   <block id="31d02e17d6f4955e62ee34e8f375593c" category="sidebar">Consulte as principais especificações de hardware para seus sistemas ONTAP ASA r2. Selecione sua plataforma abaixo para visualizar as especificações detalhadas.</block>
   <block id="ace8b1e16ed586fc025071917e7ada76" category="sidebar">Especificações principais para sistemas ONTAP ASA r2</block>
   <block id="2b5c7860c45fbda4f791baa717f7406c" category="sidebar">Conheça as principais especificações dos sistemas ONTAP ASA r2 A1K, A70, A90, A20, A30 e A50.</block>
@@ -13087,7 +13081,6 @@
   <block id="c765d0e07cb0eb6f3c1d05edb0ddec3b" category="sidebar">Manter sistemas ONTAP ASA r2</block>
   <block id="95d8b2944144fc1dea9bb18dfd4bcab6" category="sidebar">Aprenda como realizar a manutenção dos seus sistemas ONTAP ASA r2.</block>
   <block id="46bf8af591b2eda39968cb80a0f47b49" category="sidebar">Os sistemas de hardware ONTAP descontinuados não estão mais disponíveis para compra, mas ainda recebem suporte.</block>
-  <block id="e3100a1ed15b6e04bfa241435608c305" category="sidebar">Fim da disponibilidade para sistemas de hardware ONTAP</block>
   <block id="16b1cc12b78f6d1dcc110d94859b49e4" category="sidebar">A documentação do sistema de storage permite que você instale, configure e mantenha seus sistemas de hardware ONTAP.</block>
   <block id="26762e33a00f4bd9df870ba0826976fe" category="sidebar">Referência de substituição de componentes do sistema para sistemas de hardware ONTAP</block>
   <block id="0104e66d9e929de2c820eda8a168d62f" category="doc">Devolva a mídia de inicialização AFF A200 com falha para NetApp</block>
@@ -13486,7 +13479,6 @@
   <block id="26f692511332eb8a8c46cde212670b50" category="admonition">A inicialização inicial pode levar até oito minutos.</block>
   <block id="842fdbb17f378e39c5d026c1d0241d75" category="list-text">Use o gráfico ou as etapas para descobrir o nó do sistema de storage a configurar:</block>
   <block id="b1375c0a5eb317dec19cb1588768cd82" category="list-text">Clique com o botão direito do mouse em *Network* no painel esquerdo e selecione *refresh*.</block>
-  <block id="b759fa52fabc1d89d76df0334748bdc2" category="list-text">Selecione<block ref="47d83efabc4122be28a80bdea228d0a5" category="inline-link-rx"></block></block>
   <block id="9e7d792ddf8505940beb1c9535d35ee3" category="list-text">Selecione _Criar conta_ se você precisar criar uma conta ou entrar na sua conta.</block>
   <block id="8dd4868355d21e4201d5f6312ccdcf2f" category="list-text">Configure o sistema de storage usando os dados que você coletou em <block ref="d0fb50e606c7cb2fa74e99fa5a3520a8" category="inline-xref-macro-rx"></block>.</block>
   <block id="dda5c0a3cc3bfed1a3c6bd195954d71f" category="summary">Este guia fornece instruções gráficas para a instalação do seu FAS2820, desde a montagem no rack e a passagem de cabos até a inicialização do sistema.</block>
@@ -14737,13 +14729,10 @@
   <block id="274783e4c9519d6e916e56a3cf4668b5" category="doc">Escolha como instalar um sistema de storage AFF A700s</block>
   <block id="45bc957c869f2f300b10f32fa7b6b0bb" category="doc">Substitua a quente o módulo DCPM em um sistema AFF A900</block>
   <block id="e98bdae8da84c5676493dd607a729deb" category="paragraph">Substitua a fonte de alimentação do seu AFF A900 quando ela falhar ou apresentar defeito. As fontes de alimentação são redundantes e com substituição a quente, portanto, você não precisa desligar o controlador para realizar essa substituição.</block>
-  <block id="efc9a5938fda5ed50d2f5f5241924dec" category="doc">Instalar e configurar um sistema de storage AFX 1K</block>
   <block id="e4ac995c054eac52cadbd3879943fa29" category="doc">Inicialize a imagem de recuperação em um sistema AFX 1K usando o processo automatizado de recuperação de inicialização</block>
-  <block id="d98bf0bdec0e5b1623e19177b77bccb9" category="doc">Analise os requisitos para recuperação automatizada da mídia de inicialização em um sistema AFX 1K</block>
   <block id="1709008a9441435e032e5515637baaaa" category="doc">Desligue o controlador em um sistema AFX 1K durante o processo de recuperação automática de inicialização</block>
   <block id="1cf079175d8c51ae4d882b569de2b842" category="doc">Conclua a substituição do chassi para um sistema AFX 1K.</block>
   <block id="5208f118595d995f31abb89fc26ad1da" category="doc">Substitua o chassi em um sistema AFX 1K</block>
-  <block id="b657cd45a1f1b70458977b03547ac662" category="doc">Prepare-se para substituir um chassi AFX 1K</block>
   <block id="f0e2ddc53dde528f7a98f4f940c4dc5b" category="doc">Desligue um controlador AFX 1K para substituir o chassi</block>
   <block id="19020709050dc2f86d35da4dd00394a1" category="doc">Substitua o controlador em um sistema AFX 1K</block>
   <block id="676b5e1e4f790332d891111042ab81b9" category="doc">Devolva o controlador em um sistema AFX 1K</block>
@@ -14761,12 +14750,10 @@
   <block id="6befef2beb7e8511ae8624712db1017e" category="doc">Substitua o módulo de gerenciamento do sistema em um sistema AFX 1K</block>
   <block id="beeb0855a5513cdd5e0028ae3dc0552d" category="doc">Instale e configure um sistema de storage AFX 2K</block>
   <block id="8e36303970ba7d3956f3abcccba9a642" category="doc">Inicialize a imagem de recuperação em um sistema AFX 2K usando o processo automatizado de recuperação de inicialização</block>
-  <block id="d4eecea550cbd08b714e9062c130e09d" category="doc">Analise os requisitos para recuperação automatizada da mídia de inicialização em um sistema AFX 2K</block>
   <block id="a0031011edafc327be949a39236f6208" category="doc">Desligue o controlador em um sistema AFX 2K durante o processo de recuperação automática de inicialização</block>
   <block id="103eab4add6d34021094e3f8efaaef45" category="doc">Conclua a substituição do chassi para um sistema AFX 2K</block>
   <block id="74bc862166a5d0f18c49dff569345112" category="doc">Substitua o chassi em um sistema AFX 2K</block>
   <block id="e68bc2c0512e029a09a2b43d7b516d78" category="doc">Prepare-se para substituir um chassi AFX 2K</block>
-  <block id="9595dfd40a827967c7b3e0ca5f891707" category="doc">Desligue um controlador AFX 2K para substituir o chassi</block>
   <block id="a13213071540e6838727c5b862a2aa77" category="doc">Substitua o controlador em um sistema AFX 2K</block>
   <block id="db9abee8374f171bcd3c39af2f6b286f" category="doc">Devolva o controlador em um sistema AFX 2K</block>
   <block id="a6b3c0f78c4c1cc2c97efd06b5d7e9bb" category="doc">Conclua a substituição do controlador para um sistema AFX 2K</block>
@@ -14786,14 +14773,12 @@
   <block id="b9e029bf8bccfe4bfab480ba4680eae0" category="doc">Escolha como instalar um sistema de storage ASA C400</block>
   <block id="7498ff6b06fbb7a38808334a73d974ee" category="doc">Escolha como instalar um sistema de storage ASA C800</block>
   <block id="b2b0363f93ea261182923a404dd77bf0" category="doc">Inicialize a imagem de recuperação em um ASA A70 ou ASA A90 usando o processo automatizado de recuperação de inicialização</block>
-  <block id="02d9cdc893988160a99d8f286258dc19" category="doc">Analise os requisitos para recuperação automatizada da mídia de inicialização em um ASA A70 ou ASA A90</block>
   <block id="a6c94e9cab922026890d67a2e4ee57a7" category="doc">Desligue o controlador em um ASA A70 ou ASA A90 durante o processo de recuperação automática de inicialização.</block>
   <block id="86cfd19cdbf8951311b8fa5909e4911d" category="doc">Conclua a substituição do chassi para um sistema ASA A70 ou ASA A90</block>
   <block id="b15a01da7fa12798e93ca373ae9a925a" category="doc">Substitua o chassi em um sistema ASA A70 ou ASA A90</block>
   <block id="3586b11f868b72d4c7ad32d86823ba74" category="doc">Prepare-se para substituir um ASA A70 ou ASA A90 chassi</block>
   <block id="b1d86d89fc2b0f59650f835cd77633cd" category="doc">Desligue os controladores ASA A70 ou ASA A90 para substituir o chassi</block>
   <block id="601975ac54f8d964829f27da2e20876b" category="doc">Substitua o controlador em um sistema ASA A70 ou ASA A90</block>
-  <block id="7fdbe7a7edfb77da7d41245ac2a0bfb9" category="doc">Devolva o controlador em um ASA A70 ou ASA A90 para retomar as operações normais</block>
   <block id="c5008eda2a2f8db468f6c3af42814c65" category="doc">Conclua a substituição do controlador para um sistema ASA A70 ou ASA A90</block>
   <block id="19f705c85d6025a20edb5ddaf235f8aa" category="doc">Restaure e verifique a configuração do controlador em um ASA A70 ou ASA A90</block>
   <block id="7f7215a99f74f69753fe853a9f9b01e7" category="doc">Substitua a quente uma unidade SSD em um ASA A70 ou ASA A90</block>
@@ -14809,11 +14794,9 @@
   <block id="f77de2e285a1cea61968935e58b21d1d" category="doc">Substitua a bateria do relógio em tempo real em um ASA A70 ou ASA A90</block>
   <block id="d07bc2fc56daaa173c6c923d5163266d" category="doc">Substitua o módulo de gerenciamento do sistema em um ASA A70 ou ASA A90</block>
   <block id="836c19dad0cf94c91fb6de1d0a018810" category="doc">Inicialize a imagem de recuperação em um sistema ASA A1K usando o processo automatizado de recuperação de inicialização</block>
-  <block id="1cda8cc0351603337d5d63d375d91d51" category="doc">Analise os requisitos para recuperação automatizada da mídia de inicialização em um sistema ASA A1K</block>
   <block id="0e94aedffe9d3659cff4d25672255ad0" category="doc">Desligue o controlador em um sistema ASA A1K durante o processo de recuperação automática de inicialização.</block>
   <block id="f1956fe49e4dd855917e39097b21dea0" category="doc">Conclua a substituição do chassi para um sistema ASA A1K</block>
   <block id="5e938aed06be2dbd80d4d8809e4ae4cc" category="doc">Substitua o chassi em um sistema ASA A1K</block>
-  <block id="d774e2173945e6f19e68652bd0f8b317" category="doc">Prepare-se para substituir o chassi ASA A1K</block>
   <block id="98f50493f4174671c85dce9168d98a09" category="doc">Desligue o ASA A1K para substituir o chassi</block>
   <block id="0184b584e2742be7788f777737da5c1b" category="doc">Substitua o controlador em um sistema ASA A1K</block>
   <block id="e30f60539bf1941b9e2a3676e2bcf029" category="doc">Devolva o controlador em um ASA A1K</block>
@@ -14829,27 +14812,23 @@
   <block id="29c2d04574d08bf524e15db6962dcbb9" category="doc">Substitua a bateria do relógio em tempo real em um ASA A1K</block>
   <block id="c9d58bcf41c4c5b622a55606caae132f" category="doc">Substitua o módulo de gerenciamento do sistema em um ASA A1K.</block>
   <block id="c10b72934e01f3d15443daa79a737fd5" category="doc">Inicialize a imagem de recuperação em um ASA A20, ASA A30 ou ASA A50 usando o processo automatizado de recuperação de inicialização</block>
-  <block id="48e99abe6eac2b4c2493ed3f0846c0b0" category="doc">Analise os requisitos para recuperação automatizada da mídia de inicialização em um sistema ASA A20, ASA A30 ou ASA A50</block>
   <block id="f479c87512824f9b290221a7329e4703" category="doc">Desligue o controlador em um ASA A20, ASA A30 ou ASA A50 durante o processo de recuperação automática de inicialização.</block>
   <block id="47b45901ff39f4c57f6371788bc83760" category="doc">Conclua a substituição do chassi para um sistema ASA A20, ASA A30 ou ASA A50</block>
   <block id="fa41ec5f52fd7ef75eddecf8222f3b7b" category="doc">Substitua o chassi em um sistema ASA A20, ASA A30 ou ASA A50</block>
   <block id="3acdaaf770d6ffeacf4cb950ec737eb4" category="doc">Desligue os controladores ASA A20, ASA A30 ou ASA A50 para substituir o chassi</block>
   <block id="39e57a4038d157f98d61c35726c02cf2" category="doc">Substitua o controlador em um sistema ASA A20, ASA A30 ou ASA A50</block>
-  <block id="44f7a97bcc3d20061b3e933e121c905a" category="doc">Devolva o controlador em um ASA A20, ASA A30 ou ASA A50 para retomar as operações normais</block>
   <block id="be64f3352744c9588b4126995810a8ed" category="doc">Conclua a substituição do controlador para um sistema ASA A20, ASA A30 ou ASA A50</block>
   <block id="bffe16cafbe5f64d52b3cc926849a79d" category="doc">Restaure e verifique a configuração do controlador em um ASA A20, ASA A30 ou ASA A50.</block>
   <block id="1f15468020d9ff40a9112c28083938cd" category="doc">Substituir uma unidade com substituição a quente em um ASA A20, ASA A30 ou ASA A50</block>
   <block id="a244144dad24a0a79ab9d337f7850af4" category="doc">Substitua o módulo de ventoinha em um sistema ASA A20, ASA A30 ou ASA A50.</block>
   <block id="c564f4f97b4ac4ec8e8888d08b9da9f2" category="doc">Adicione um módulo de E/S a um ASA A20, ASA A30 ou ASA A50</block>
   <block id="d1c3ca0183fb2cf5b2fa04e2fe4561b1" category="doc">Troque a quente um módulo de E/S em um ASA A20, ASA A30 ou ASA A50.</block>
-  <block id="a9e87d8266d1d94c0fb792a7022d7ed6" category="doc">Saiba como adicionar e substituir módulos de E/S em um sistema ASA A20, ASA A30 ou ASA A50</block>
   <block id="7fdf84bf8dd6eee380bd39f9c252cab8" category="doc">Substitua um módulo de E/S em um ASA A20, ASA A30 ou ASA A50.</block>
   <block id="0da070a23c109f1968d4506ebd0eea7b" category="doc">Saiba mais sobre a manutenção de um ASA A20, ASA A30 ou ASA A50 sistema de storage</block>
   <block id="9c32f1ffddb4c3d6ad5e89cb872c1000" category="doc">Substitua a bateria NV em um sistema ASA A20, ASA A30 ou ASA A50</block>
   <block id="1851f6b6551b0f9064265d074923a21a" category="doc">Substitua a quente uma fonte de alimentação em um sistema ASA A20, ASA A30 ou ASA A50</block>
   <block id="96021c96ad6c958c6608b296bd39242f" category="doc">Substitua a bateria do relógio em tempo real em um sistema ASA A20, ASA A30 ou ASA A50</block>
   <block id="049196dd46767e094268def22b419750" category="doc">Inicialize a imagem de recuperação em um sistema ASA C30 usando o processo automatizado de recuperação de inicialização</block>
-  <block id="1e7dc4c5b9d0af9d56b5b257647b73ee" category="doc">Analise os requisitos para recuperação automatizada da mídia de inicialização em um sistema ASA C30</block>
   <block id="f152bba8e894d6a036fe7eb74627716a" category="doc">Desligue o controlador em um sistema ASA C30 durante o processo de recuperação automática de inicialização.</block>
   <block id="206164985e80d2629f28ef4a4deff219" category="doc">Conclua a substituição do chassi para um sistema ASA C30</block>
   <block id="32d92ee3c8de99c61a1b8d4d5825b788" category="doc">Substitua o chassi em um sistema ASA C30</block>
@@ -14865,7 +14844,6 @@
   <block id="e6a66fce79a2141b833431148d24c962" category="doc">Troque a quente um módulo de E/S em um ASA C30</block>
   <block id="ec87291c3a0efed1108e585af46a67d7" category="doc">Saiba como adicionar e substituir módulos de E/S em um ASA C30</block>
   <block id="866befee7698560ba2183cae7fb89e1b" category="doc">Substitua um módulo de E/S em um sistema ASA C30</block>
-  <block id="f48e607781605c9a94882f3b9aab2e6d" category="doc">Saiba mais sobre a manutenção de um sistema ASA C30.</block>
   <block id="54dc5021d8076b003e3b7d7edaa20fa7" category="doc">Substitua a bateria NV em um ASA C30</block>
   <block id="1e42266af5c16cfcb9613150b455e8e2" category="doc">Troque a quente uma fonte de alimentação em um sistema ASA C30</block>
   <block id="e12c61e12d93c730b94baf56b89e1b22" category="doc">Substitua a bateria do relógio em tempo real em um ASA C30</block>
@@ -15345,7 +15323,6 @@
   <block id="8cb263247980423572b1994df1d56aac" category="doc">Fluxo de trabalho de substituição da mídia de inicialização para um sistema ASA A70 ou ASA A90 usando o processo automatizado de recuperação de inicialização</block>
   <block id="0ad6347c37b40e5d2a3a457000c685f9" category="doc">Analise os requisitos para a substituição de um chassi em um sistema ASA A70 ou ASA A90</block>
   <block id="7aaa8195a7b7e29e00746b1bac4a784d" category="doc">Analise os requisitos para a substituição de um controlador em um sistema ASA A70 ou ASA A90</block>
-  <block id="5c5b6a966b6a5f5f8d3e0e46bda2a351" category="doc">Desligue o controlador com defeito em um sistema ASA A70 ou ASA A90 em uma configuração que não seja o MetroCluster</block>
   <block id="535fed17356555fa8bd69a05cd88aa0b" category="doc">Substitua um módulo DIMM em um sistema ASA A70 ou ASA A90</block>
   <block id="475c61f2af3c595642b312469829062f" category="summary">Faça a troca a quente de uma unidade no seu ASA A70 ou ASA A90 quando uma unidade apresentar falha ou precisar de upgrade. Esse processo envolve identificar a unidade com falha, removê-la com segurança e instalar uma nova unidade para garantir o acesso contínuo aos dados e o desempenho do sistema.</block>
   <block id="a1c542e365496917997fb298ea65cb54" category="doc">Substitua a mídia de inicialização em um sistema ASA A1K durante o processo de recuperação automática de inicialização</block>
@@ -15673,4 +15650,30 @@
   <block id="a0d51b97ecebc4a2164c80e9993b43b7" category="doc">Tipos e especificações de PDUs suportados para um gabinete de sistema de hardware ONTAP</block>
   <block id="d4f15e3529c28c34230d8c8c8157f378" category="doc">Desembale o gabinete do sistema de hardware ONTAP</block>
   <block id="4fce94ed1c415c154afd3821b10ac5ec" category="doc">Instale um kit SuperRail em um rack de quatro postes para um sistema de hardware ONTAP</block>
+  <block id="e21e1556ec068a5df6e695e6905205a6" category="list-text">Caso AutoSupport não esteja habilitado, entre em contato <block ref="b4370becb2f960357cf9c0c2a970626e" category="inline-link-rx"></block> para registrar o número de série.</block>
+  <block id="e57dd029768411dcacc988bedd650b42" category="doc">Instalar e configurar um sistema de storage AFX 1K</block>
+  <block id="fbcdc30a876ddf09596fed9d6b612d18" category="doc">Analise os requisitos para recuperação automatizada de mídia de inicialização em um sistema AFX 1K</block>
+  <block id="13fdab105307b71d347784a3f91b5b68" category="doc">Prepare-se para substituir o chassi em um sistema AFX 1K</block>
+  <block id="ec3fab985a2a90c34ebfe24d3912e300" category="doc">Revise os requisitos para recuperação automatizada de mídia de inicialização em um sistema AFX 2K</block>
+  <block id="dbbf1e9e4f69be89b7edcd1f5eb53004" category="doc">Desligue os controladores AFX 2K para substituir o chassi</block>
+  <block id="f4d3d3a30282dbd88d419461171ac62d" category="doc">Analise os requisitos para recuperação automatizada de mídia de inicialização em um sistema ASA A70 ou ASA A90</block>
+  <block id="8d3d19afcc431c3469f48d9cc5c44a0f" category="doc">Devolva o controlador em um sistema ASA A70 ou ASA A90.</block>
+  <block id="315af91e6f1729d6435f1c2c8d03d2d6" category="doc">Desligue o controlador com defeito em um sistema ASA A70 ou ASA A90 que não seja o MetroCluster</block>
+  <block id="91c53e53fda253c2111535e334a024ac" category="doc">Analise os requisitos para recuperação automatizada de mídia de inicialização em um sistema ASA A1K.</block>
+  <block id="db3d30f61d5398419368d752f7a491ea" category="doc">Prepare-se para substituir o chassi em um ASA A1K</block>
+  <block id="d2302a996bd8c8d136c137469bf09018" category="doc">Analise os requisitos para recuperação automatizada de mídia de inicialização em um sistema ASA A20, ASA A30 ou ASA A50</block>
+  <block id="60503bd281def9806ee60e603e323a2f" category="doc">Devolva o controlador em um ASA A20, ASA A30 ou ASA A50.</block>
+  <block id="4b587cd5fee1ca71bd5e4db3b2f8d3e6" category="doc">Saiba mais sobre os módulos de E/S em um sistema ASA A20, ASA A30 ou ASA A50</block>
+  <block id="bd36fcdbe1840e814985a3deea33381f" category="doc">Analise os requisitos para recuperação automatizada de mídia de inicialização em um sistema ASA C30.</block>
+  <block id="26c6a17702d6ba3531c668e8f92083a0" category="doc">Saiba mais sobre a manutenção de um ASA C30 sistema de storage</block>
+  <block id="a09aa4a77d03faefd31c42961a3d5b3c" category="list-text">Selecione<block ref="ad0b04bb56ceedcbeec8dbcc205dcbdf" category="inline-link-rx"></block></block>
+  <block id="ba2104f74aeb79e7496e1678f8510db4" category="sidebar">Fim da disponibilidade para os sistemas de hardware ONTAP</block>
+  <block id="a17781ff643a089b45aa6c0809af728c" category="sidebar">Os sistemas AFF - Instalação e configuração</block>
+  <block id="749054ac8df8397a9ccaa9c736554a3c" category="sidebar">Os sistemas ASA - Instalação e configuração</block>
+  <block id="bace621924db181d3b82ad092a96a17d" category="sidebar">Os sistemas FAS - Instalação e configuração</block>
+  <block id="d0712c7405e84d87021b738cac4d8959" category="sidebar">Os sistemas AFF - Faça a manutenção do seu sistema</block>
+  <block id="30b5e67a49c607bf48d7d3cb030979e1" category="sidebar">Os sistemas ASA - Faça a manutenção do seu sistema</block>
+  <block id="71cc958203e2189f72e51984a78e2cff" category="sidebar">Os sistemas FAS - Faça a manutenção do seu sistema</block>
+  <block id="dfcc398099d6a64026e51ab282e16253" category="sidebar">Mais recursos</block>
+  <block id="608111b6d6e17c7658e3ddc5bd4c7784" category="sidebar">Sistemas em Fim de Disponibilidade</block>
 </blocks>

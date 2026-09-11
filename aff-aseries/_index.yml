@@ -3,7 +3,7 @@ indexpage:
   title: Sistemas ONTAP AFF A-Series
   summary: A documentação do sistema de storage permite instalar, configurar e manter
     seu sistema AFF Série A.
-  keywords: aff a-series, a150, a250, a800, a900, a400, datasheet, install, setup
+  keywords: aff a-series, a1k, a20, a30, a50, a70, a90, datasheet, install, setup
   lead: Os sistemas ONTAP AFF Série A foram projetados para ajudar as organizações
     a transformar sua infraestrutura mais rapidamente e impulsionar estratégias orientadas
     por dados.
@@ -22,16 +22,6 @@ indexpage:
       url: "../a70-90/install-overview.html"
     - title: AFF A20, A30 e A50
       url: "../a20-30-50/install-overview.html"
-    - title: AFF A150
-      url: "../a150/install-setup.html"
-    - title: AFF A250
-      url: "../a250/install-setup.html"
-    - title: AFF A400
-      url: "../a400/install-setup.html"
-    - title: AFF A800
-      url: "../a800/install-setup.html"
-    - title: AFF A900
-      url: "../a900/install-setup.html"
   - title: Mantenha o seu sistema
     links:
     - title: AFF A1K
@@ -40,16 +30,6 @@ indexpage:
       url: "../a70-90/maintain-overview.html"
     - title: AFF A20, A30 e A50
       url: "../a20-30-50/maintain-overview.html"
-    - title: AFF A150
-      url: "../a150/maintain-overview.html"
-    - title: AFF A250
-      url: "../a250/maintain-overview.html"
-    - title: AFF A400
-      url: "../a400/maintain-overview.html"
-    - title: AFF A800
-      url: "../a800/maintain-overview.html"
-    - title: AFF A900
-      url: "../a900/maintain-overview.html"
   - title: Interrutores suportados
     links:
     - title: BES-53248 com suporte Broadcom

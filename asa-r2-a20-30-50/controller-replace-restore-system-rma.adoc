@@ -62,7 +62,7 @@ Se algum LIFs estiver listado como false, reverta-os para suas portas iniciais: 
 . Registre o número de série do sistema com o suporte da NetApp.
 +
 ** Se o AutoSupport estiver ativado, envie uma mensagem AutoSupport para Registrar o número de série.
-** Se o AutoSupport não estiver ativado, ligue https://mysupport.netapp.com["Suporte à NetApp"] para registar o número de série.
+** Caso AutoSupport não esteja habilitado, entre em contato  https://mysupport.netapp.com["Suporte à NetApp"^] para registrar o número de série.
 
 
 . Verifique a integridade do cluster. Consulte o https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["Como realizar uma verificação de integridade do cluster com um script no ONTAP"^] artigo da KB para obter mais informações.
