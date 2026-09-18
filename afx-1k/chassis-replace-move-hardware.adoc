@@ -64,6 +64,36 @@ NOTE: Os cabos devem ter sido identificados no início deste procedimento.
 [[step-2-remove-the-io-cards-nvram12-and-system-management-module]]
 == Etapa 2: Remova as placas de E/S, NVRAM12 e o módulo de gerenciamento do sistema
 
+. Verifique o LED de status do NVRAM localizado no slot 4/5 do sistema. Há também um LED NVRAM no painel frontal do módulo do controlador. Procure o ícone NV:
++
+image::../media/drw_a1K-70-90_nvram-led_ieops-1463.svg[Gráfico de localização do LED de estado e atenção do NVRAM]
+
++
+[cols="1,4"]
+|===
+
+
+2+| *NVRAM* 
+
+
+ a| 
+image:../media/icon_round_1.png["Legenda número 1"]
+ a| 
+LED de estado do NVRAM
+
+
+
+ a| 
+image:../media/icon_round_2.png["Legenda número 2"]
+ a| 
+LED de atenção NVRAM
+
+|===
++
+** Se o LED NV estiver desligado, passe à próxima etapa.
+** Se o LED NV estiver intermitente, aguarde que o intermitente pare. Se a intermitência continuar durante mais de 5 minutos, contacte o suporte técnico para obter assistência.
+
+
 . Retire o módulo de e/S alvo do chassis:
 +
 image:../media/drw_a1k_io_remove_replace_ieops-1382.svg["Remova o módulo de e/S."]
@@ -84,7 +114,8 @@ Trinco do came de e/S.
 .. Rode o trinco do excêntrico para longe do módulo o mais longe possível.
 .. Remova o módulo do chassi colocando o dedo na abertura da alavanca do came e puxando o módulo para fora do chassi.
 +
-Certifique-se de manter o controle de qual slot o módulo de e/S estava.
+
+NOTE: Certifique-se de manter o controle de qual slot o módulo de e/S estava.
 
 .. Deixe o módulo de E/S de lado e repita essas etapas para quaisquer outros módulos de E/S.
 
@@ -202,6 +233,10 @@ Após a instalação do chassi de substituição, você precisa instalar o módu
 . Instale as placas de E/S na parte traseira do chassi:
 +
 .. Alinhe a extremidade do módulo de E/S com o mesmo slot no chassi de substituição que no chassi danificado e, em seguida, empurre cuidadosamente o módulo até o interior do chassi.
++
+
+NOTE: Certifique-se de instalar os módulos de E/S nos mesmos slots em que estavam no chassi com problema.
+
 .. Gire a trava do came para cima até a posição travada.
 .. Repita essas etapas para quaisquer outros módulos de E/S.
 
