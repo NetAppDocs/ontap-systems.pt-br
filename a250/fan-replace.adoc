@@ -2,16 +2,16 @@
 permalink: a250/fan-replace.html 
 sidebar: sidebar 
 keywords: aff a250, replace a fan 
-summary: Para substituir uma ventoinha, retire o módulo da ventoinha com avaria e substitua-o por um novo módulo da ventoinha. 
+summary: Substitua um módulo de ventoinha no seu sistema AFF A250 quando uma ventoinha falhar ou não estiver funcionando corretamente. O processo de substituição envolve desligar o controlador com defeito, remover o módulo do controlador, substituir a ventoinha, reinstalar o módulo do controlador e devolver a peça com defeito à NetApp. 
 ---
-= Troque a quente uma ventoinha em um sistema AFF A250
+= Substitua uma ventoinha em um sistema AFF A250
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Substitua o módulo de ventoinha com falha no seu AFF A250 para manter o resfriamento adequado e evitar problemas de desempenho. Os módulos de ventoinha são com substituição a quente e podem ser trocados sem desligar o sistema.
+Substitua um módulo de ventoinha no seu sistema AFF A250 quando uma ventoinha falhar ou não estiver funcionando corretamente. O processo de substituição envolve desligar o controlador com defeito, remover o módulo do controlador, substituir a ventoinha, reinstalar o módulo do controlador e devolver a peça com defeito à NetApp.
 
 
 
@@ -46,7 +46,7 @@ A seguinte mensagem AutoSupport suprime a criação automática de casos por dua
 +
 .. Digite o seguinte comando no console do controlador íntegro:
 +
-`storage failover modify -node _impaired_node_name_ -auto-giveback false`
+`storage failover modify -node local -auto-giveback false`
 
 .. Digitar `y` quando você vê o prompt _Você quer desabilitar o retorno automático?_
 

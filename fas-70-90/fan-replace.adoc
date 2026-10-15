@@ -2,7 +2,7 @@
 permalink: fas-70-90/fan-replace.html 
 sidebar: sidebar 
 keywords: fas70, fas90, replace a fan 
-summary: Substitua um módulo de ventilador no sistema FAS70 ou FAS90 quando um ventilador falhar ou não estiver funcionando de forma eficiente, pois isso pode afetar o resfriamento do sistema e o desempenho geral. O processo de substituição envolve desligar o controlador, remover o controlador, substituir o ventilador, reinstalar o controlador e devolver a peça com falha ao NetApp. 
+summary: Substitua o módulo de ventoinha do seu sistema FAS70 ou FAS90 quando uma ventoinha falhar ou não estiver funcionando de forma eficiente, pois isso pode afetar o resfriamento do sistema e o desempenho geral. Os módulos de ventoinha nos sistemas FAS70 e FAS90 são componentes com substituição a quente. O processo de substituição envolve identificar o módulo de ventoinha com defeito, removê-lo, instalar o módulo de ventoinha de substituição e devolver a peça com defeito para NetApp. 
 ---
 = Substitua o módulo de ventoinha em um sistema FAS70 ou FAS90
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Substitua um módulo de ventilador no sistema FAS70 ou FAS90 quando um 
 
 
 [role="lead"]
-Substitua um módulo de ventilador no sistema FAS70 ou FAS90 quando um ventilador falhar ou não estiver funcionando de forma eficiente, pois isso pode afetar o resfriamento do sistema e o desempenho geral. O processo de substituição envolve desligar o controlador, remover o controlador, substituir o ventilador, reinstalar o controlador e devolver a peça com falha ao NetApp.
+Substitua o módulo de ventoinha do seu sistema FAS70 ou FAS90 quando uma ventoinha falhar ou não estiver funcionando de forma eficiente, pois isso pode afetar o resfriamento do sistema e o desempenho geral. Os módulos de ventoinha nos sistemas FAS70 e FAS90 são componentes com substituição a quente. O processo de substituição envolve identificar o módulo de ventoinha com defeito, removê-lo, instalar o módulo de ventoinha de substituição e devolver a peça com defeito para NetApp.
 
 
 CAUTION: Use sempre uma pulseira antiestática aterrada, conectada a um ponto de aterramento verificado durante a instalação e os procedimentos de manutenção. A não observância das precauções adequadas contra ESD pode causar danos permanentes aos nós controladores, prateleiras de armazenamento e switches de rede.
