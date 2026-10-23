@@ -21,26 +21,26 @@ Para começar, revise os requisitos de recuperação, desligue o controlador, su
 [role="quick-margin-para"]
 Reveja os requisitos para substituir o suporte de arranque.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Um"]link:bootmedia-encryption-preshutdown-checks.html["Verifique as chaves de criptografia integradas"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"]link:bootmedia-encryption-preshutdown-checks.html["Verifique as chaves de criptografia integradas"]
 [role="quick-margin-para"]
 Determine se o sistema tem o gerenciador de chaves de segurança ativado ou discos criptografados.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Dois"]link:bootmedia-shutdown.html["Desligue o controlador desativado"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"]link:bootmedia-shutdown.html["Desligue o controlador desativado"]
 [role="quick-margin-para"]
 Desligue o controlador quando precisar substituir a mídia de inicialização.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Três"]link:bootmedia-replace.html["Substitua o suporte de arranque"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"]link:bootmedia-replace.html["Substitua o suporte de arranque"]
 [role="quick-margin-para"]
 Remova a mídia de inicialização com falha do controlador danificado, instale a mídia de inicialização de substituição e, em seguida, transfira uma imagem ONTAP usando uma unidade flash USB.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Quatro"]link:bootmedia-recovery-image-boot.html["Inicie a imagem de recuperação"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinco"]link:bootmedia-recovery-image-boot.html["Inicie a imagem de recuperação"]
 [role="quick-margin-para"]
 Inicie a imagem ONTAP a partir da unidade USB, restaure o sistema de ficheiros e verifique as variáveis ambientais.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Cinco"]link:bootmedia-encryption-restore.html["Restaure a criptografia"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Seis"]link:bootmedia-encryption-restore.html["Restaure a criptografia"]
 [role="quick-margin-para"]
 Restaure a configuração do gerenciador de chaves integrado ou do gerenciador de chaves externo no menu de inicialização do ONTAP .
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png["Seis"]link:bootmedia-complete-rma.html["Devolva a peça com falha ao NetApp"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png["Sete"]link:bootmedia-complete-rma.html["Devolva a peça com falha ao NetApp"]
 [role="quick-margin-para"]
 Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit.
