@@ -2,7 +2,7 @@
 permalink: c30-60/io-module-overview.html 
 sidebar: sidebar 
 keywords: AFF c30, AFF c60, replace io module, add io module, hotswap io module 
-summary: Os sistemas de armazenamento AFF C30 e AFF C60 oferecem flexibilidade na expansão ou substituição de módulos de E/S para aprimorar a conectividade e o desempenho da rede. Adicionar, fazer hot swap ou substituir um módulo de E/S é essencial ao atualizar os recursos da rede ou solucionar um módulo com falha. 
+summary: Os sistemas de storage AFF C30 e AFF C60 oferecem flexibilidade na expansão ou substituição de módulos de E/S para aprimorar a conectividade e o desempenho da rede. A adição de um módulo de E/S é essencial ao atualizar os recursos de rede. A troca a quente ou a substituição de um módulo de E/S é essencial ao lidar com um módulo com falha. 
 ---
 = Saiba mais sobre como adicionar e substituir módulos de E/S em um AFF C30 ou AFF C60
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Os sistemas de armazenamento AFF C30 e AFF C60 oferecem flexibilidade n
 
 
 [role="lead"]
-Os sistemas de armazenamento AFF C30 e AFF C60 oferecem flexibilidade na expansão ou substituição de módulos de E/S para aprimorar a conectividade e o desempenho da rede. Adicionar, fazer hot swap ou substituir um módulo de E/S é essencial ao atualizar os recursos da rede ou solucionar um módulo com falha.
+Os sistemas de storage AFF C30 e AFF C60 oferecem flexibilidade na expansão ou substituição de módulos de E/S para aprimorar a conectividade e o desempenho da rede. A adição de um módulo de E/S é essencial ao atualizar os recursos de rede. A troca a quente ou a substituição de um módulo de E/S é essencial ao lidar com um módulo com falha.
 
 Você pode substituir um módulo de E/S com defeito em seu sistema de storage por um módulo de E/S do mesmo tipo ou por um de tipo diferente. Você pode realizar a troca a quente de um módulo de E/S de cluster e de par de HA quando seu sistema de storage atender a requisitos específicos. Você também pode adicionar um módulo de E/S a um sistema de storage com slots disponíveis.
 

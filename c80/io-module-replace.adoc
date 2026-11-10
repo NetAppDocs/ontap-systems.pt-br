@@ -2,7 +2,7 @@
 permalink: c80/io-module-replace.html 
 sidebar: sidebar 
 keywords: aff c80, replace a pcie card 
-summary: Substitua um módulo de E/S em seu sistema AFF C80 quando o módulo apresentar defeito ou precisar de uma atualização para oferecer maior desempenho ou recursos adicionais. 
+summary: Substitua um módulo de E/S no seu sistema AFF C80 quando o módulo apresentar defeito. 
 ---
 = Substitua um módulo de E/S em um sistema AFF C80
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Substitua um módulo de E/S em seu sistema AFF C80 quando o módulo apr
 
 
 [role="lead"]
-Substitua um módulo de E/S em seu sistema AFF C80 quando o módulo apresentar defeito ou precisar de uma atualização para oferecer maior desempenho ou recursos adicionais. O processo de substituição envolve desligar o controlador, substituir o módulo de E/S com falha, reinicializar o controlador e devolver a peça com falha à NetApp.  Você pode usar este procedimento com todas as versões do ONTAP suportadas pelo seu sistema de armazenamento.
+Substitua um módulo de E/S no seu sistema AFF C80 quando o módulo falhar. O processo de substituição envolve desligar o controlador, substituir o módulo de E/S com defeito, reiniciar o controlador e devolver a peça com defeito à NetApp. Você pode usar este procedimento com todas as versões do ONTAP compatíveis com o seu sistema de storage.
 
 .Antes de começar
 * Tem de ter a peça de substituição disponível.

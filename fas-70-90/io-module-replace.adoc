@@ -2,7 +2,7 @@
 permalink: fas-70-90/io-module-replace.html 
 sidebar: sidebar 
 keywords: fas70, fas90, replace a pcie card 
-summary: Substitua um módulo de e/S no seu sistema FAS70 ou FAS90 quando o módulo falhar ou precisar de uma atualização para suportar desempenho superior ou recursos adicionais. O processo de substituição envolve desligar o controlador, substituir o módulo de e/S com falha, reiniciar o controlador e devolver a peça com falha ao NetApp. 
+summary: Substitua um módulo de E/S em seu sistema FAS70 ou FAS90 quando o módulo falhar. O processo de substituição envolve desligar o controlador, substituir o módulo de E/S com defeito, reinicializar o controlador e devolver a peça com defeito para a NetApp. 
 ---
 = Substitua um módulo de E/S em um sistema FAS70 ou FAS90
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Substitua um módulo de e/S no seu sistema FAS70 ou FAS90 quando o mód
 
 
 [role="lead"]
-Substitua um módulo de e/S no seu sistema FAS70 ou FAS90 quando o módulo falhar ou precisar de uma atualização para suportar desempenho superior ou recursos adicionais. O processo de substituição envolve desligar o controlador, substituir o módulo de e/S com falha, reiniciar o controlador e devolver a peça com falha ao NetApp.
+Substitua um módulo de E/S em seu sistema FAS70 ou FAS90 quando o módulo falhar. O processo de substituição envolve desligar o controlador, substituir o módulo de E/S com defeito, reinicializar o controlador e devolver a peça com defeito para a NetApp.
 
 Você pode usar esse procedimento com todas as versões do ONTAP compatíveis com seu sistema de storage.
 

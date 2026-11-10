@@ -2,7 +2,7 @@
 permalink: asa-r2-70-90/io-module-overview.html 
 sidebar: sidebar 
 keywords: asa r2 a70, asa r2 a90, replace io module 
-summary: Os sistemas ASA A70 e ASA A90 oferecem flexibilidade na expansão ou substituição de módulos de e/S para melhorar a conetividade e o desempenho da rede. Adicionar ou substituir um módulo de e/S é essencial ao atualizar recursos de rede ou endereçar um módulo com falha. 
+summary: Os sistemas ASA A70 e ASA A90 oferecem flexibilidade para expandir ou substituir módulos de E/S e melhorar a conectividade e o desempenho da rede. Adicionar um módulo de E/S é essencial ao atualizar os recursos da rede. Substituir um módulo de E/S é essencial ao lidar com um módulo com falha. 
 ---
 = Saiba mais sobre como adicionar e substituir módulos de E/S em um ASA A70 ou ASA A90
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Os sistemas ASA A70 e ASA A90 oferecem flexibilidade na expansão ou su
 
 
 [role="lead"]
-Os sistemas ASA A70 e ASA A90 oferecem flexibilidade na expansão ou substituição de módulos de e/S para melhorar a conetividade e o desempenho da rede. Adicionar ou substituir um módulo de e/S é essencial ao atualizar recursos de rede ou endereçar um módulo com falha.
+Os sistemas ASA A70 e ASA A90 oferecem flexibilidade para expandir ou substituir módulos de E/S e melhorar a conectividade e o desempenho da rede. Adicionar um módulo de E/S é essencial ao atualizar os recursos da rede. Substituir um módulo de E/S é essencial ao lidar com um módulo com falha.
 
 Você pode substituir um módulo de e/S com falha em seu sistema de storage ASA A70 ou ASA A90 pelo mesmo tipo de módulo de e/S ou por um tipo diferente de módulo de e/S. Você também pode adicionar um módulo de e/S a um sistema com slots vazios.
 

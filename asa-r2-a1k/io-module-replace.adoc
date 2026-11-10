@@ -2,7 +2,7 @@
 permalink: asa-r2-a1k/io-module-replace.html 
 sidebar: sidebar 
 keywords: asa r2 a1k, replace a pcie card 
-summary: Substitua um módulo de e/S no seu sistema ASA A1K quando o módulo falhar ou precisar de uma atualização para suportar desempenho superior ou recursos adicionais. O processo de substituição envolve desligar o controlador, substituir o módulo de e/S com falha, reiniciar o controlador e devolver a peça com falha ao NetApp. 
+summary: Substitua um módulo de E/S em seu sistema ASA A1K quando o módulo falhar. O processo de substituição envolve desligar o controlador, substituir o módulo de E/S com defeito, reiniciar o controlador e devolver a peça com defeito à NetApp. 
 ---
 = Substitua um módulo de E/S em um sistema ASA A1K
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Substitua um módulo de e/S no seu sistema ASA A1K quando o módulo fal
 
 
 [role="lead"]
-Substitua um módulo de e/S no seu sistema ASA A1K quando o módulo falhar ou precisar de uma atualização para suportar desempenho superior ou recursos adicionais. O processo de substituição envolve desligar o controlador, substituir o módulo de e/S com falha, reiniciar o controlador e devolver a peça com falha ao NetApp.
+Substitua um módulo de E/S em seu sistema ASA A1K quando o módulo falhar. O processo de substituição envolve desligar o controlador, substituir o módulo de E/S com defeito, reiniciar o controlador e devolver a peça com defeito à NetApp.
 
 Você pode usar esse procedimento com todas as versões do ONTAP compatíveis com seu sistema de storage.
 
