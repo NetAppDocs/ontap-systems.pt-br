@@ -30,4 +30,14 @@ Em determinadas situações, ONTAP pode realizar automaticamente um takeover de 
 
 
 * Todos os outros componentes do sistema de armazenamento devem estar a funcionar corretamente; caso contrário, contacte https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"] antes de continuar com este procedimento.
+* O cluster deve ter o descarregamento de IPsec desativado ou a placa Ethernet de E/S que está sendo substituída não deve oferecer suporte ao descarregamento de IPsec.
++
+Se o descarregamento de IPsec estiver ativado e a placa de E/S oferecer suporte ao descarregamento de IPsec, a troca a quente do módulo de E/S não é suportada.
+
++
+Você pode verificar isso digitando o `security ipsec config show` comando e verificando se o resultado inclui `Offload Enabled: false`.
+
++
+Se o descarregamento de IPsec estiver ativado, confirme se o módulo de E/S Ethernet suporta o descarregamento de IPsec em link:https://docs.netapp.com/us-en/ontap/networking/ipsec-prepare.html#requirements-and-recommendations["Saiba mais sobre segurança IP na rede ONTAP"^].
+
 
